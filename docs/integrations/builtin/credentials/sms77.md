@@ -1,25 +1,30 @@
 ---
-title: sms77 credentials
-description: Documentation for sms77 credentials. Use these credentials to authenticate sms77 in n8n, a workflow automation platform.
-contentType: integration
+title: seven credentials
+description: Documentation for seven credentials. Use these credentials to authenticate seven in n8n, a workflow automation platform.
+contentType: [integration, reference]
 ---
 
-# sms77 credentials
+# seven credentials
 
-You can use these credentials to authenticate the following nodes with sms77.
+You can use these credentials to authenticate the following nodes:
 
-- [sms77](/integrations/builtin/app-nodes/n8n-nodes-base.sms77/)
+- [seven](/integrations/builtin/app-nodes/n8n-nodes-base.sms77.md)
 
 ## Prerequisites
 
-Create an [sms77](https://sms77.io/) account.
+Create a [seven](https://www.seven.io/en) developer account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your sms77 dashboard.
-2. Click on the gear icon in the bottom left.
-3. Click on the HTTP API tab.
-4. Use the API key provided with your sms77 node credentials in n8n.
+- API key
 
-![Getting sms77 credentials](/_images/integrations/builtin/credentials/sms77/using-access-token.gif)
+## Related resources
+
+Refer to [seven's API documentation](https://docs.seven.io/en) for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API key**: Go to **Account > Developer >** [**API Keys**](https://app.seven.io/developer#create-api-key) to create an API key. Refer to [API First Steps](https://docs.seven.io/en/rest-api/first-steps) for more information.
 

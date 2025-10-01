@@ -10,7 +10,7 @@ contentType: reference
 * You need access to the n8n instance owner account to create variables.
 ///	
 
-`vars` contains all [Variables](/code/variables/) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.
+`vars` contains all [Variables](/code/variables.md) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.
 
 === "JavaScript"
 	```js
@@ -24,5 +24,5 @@ contentType: reference
 	```
 
 /// note | `vars` and `env`
-`vars` gives access to user-created variables. It's part of the [Environments](/source-control-environments/) feature. `env` gives access to the [configuration environment variables](/hosting/configuration/environment-variables/) for your n8n instance. 
+`vars` gives access to user-created variables. It's part of the [Environments](/source-control-environments/index.md) feature. `env` gives access to the [configuration environment variables](/hosting/configuration/environment-variables/index.md) for your n8n instance. 
 ///

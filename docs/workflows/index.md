@@ -5,13 +5,13 @@ contentType: overview
 
 # Workflows
 
-A workflow is a connection of nodes connected together to automate a process.
+A [workflow](/glossary.md#workflow-n8n) is a collection of nodes connected together to automate a process.
 
 
-* [Create](/workflows/create/) a workflow.
-* Use [Workflow templates](/workflows/templates/) to help you get started.
-* Learn about the key [components](/workflows/components/) of an automation in n8n.
-* Debug using the [Executions](/workflows/executions/) list.
-* [Share](/workflows/sharing/) workflows between users.
+* [Create](/workflows/create.md) a workflow.
+* Use [Workflow templates](/workflows/templates.md) to help you get started.
+* Learn about the key [components](/workflows/components/index.md) of an automation in n8n.
+* Debug using the [Executions](/workflows/executions/index.md) list.
+* [Share](/workflows/sharing.md) workflows between users.
 
-If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.
+If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.

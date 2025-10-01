@@ -6,6 +6,10 @@ contentType: explanation
 
 n8n doesn't restrict the amount of data each node can fetch and process. While this gives you freedom, it can lead to errors when workflow executions require more memory than available. This page explains how to identify and avoid these errors.
 
+/// note | Only for self-hosted n8n
+This page describes memory-related errors when [self-hosting n8n](/hosting/index.md). Visit [Cloud data management](/manage-cloud/cloud-data-management.md) to learn about memory limits for [n8n Cloud](/manage-cloud/overview.md).
+///
+
 ## Identifying out of memory situations
 
 n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.
@@ -20,10 +24,10 @@ On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when 
 
 Such problems occur when a workflow execution requires more memory than available to an n8n instance. Factors increasing the memory usage for a workflow execution include:
 
-- Amount of [JSON data](/data/data-structure/).
+- Amount of [JSON data](/data/data-structure.md).
 - Size of binary data.
 - Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Function node can increase memory consumption significantly.
+- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node and the older Function node can increase memory consumption significantly.
 - Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
 - Additional workflows running at the same time.
 
@@ -41,15 +45,8 @@ On n8n cloud you need to upgrade to a larger plan.
 
 This approach is more complex and means re-building the workflows causing the issue. This section provides some guidelines on how to reduce memory consumption. Not all suggestions are applicable to all workflows.
 
-* Split the data processed into smaller chunks. For example, instead of fetching 10,000 rows with each execution, process 200 rows with each execution.
-* Avoid using the Code node where possible.
-* Avoid manual executions when processing larger amounts of data.
-* Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
-
-Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two additional nodes: the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node to start the sub-workflow.
-
-However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, the memory consumption is reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
+--8<-- "_snippets/self-hosting/scaling/reduce-memory-consumption.md"
 
 ### Increase old memory
 
-This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it's often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
+This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it's often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes) `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions).

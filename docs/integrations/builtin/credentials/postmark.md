@@ -1,26 +1,29 @@
 ---
 title: Postmark credentials
 description: Documentation for Postmark credentials. Use these credentials to authenticate Postmark in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Postmark credentials
 
-You can use these credentials to authenticate the following nodes with Postmark.
+You can use these credentials to authenticate the following nodes:
 
-- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger/)
+- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md)
 
 ## Prerequisites
 
-Create a [Postmark](https://postmarkapp.com/) account.
+Create a [Postmark](https://postmarkapp.com/) account on a Postmark server.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access the [Postmark API Tokens page](https://account.postmarkapp.com/api_tokens).
-2. Enter your postmark server name in the ***Search for a server*** field.
-3. From the displayed dropdown list, select your server and click on the ***Get a server API token*** button.
-4. Use the displayed ***Server API token*** with your Postmark API credentials in n8n.
-5. Click the ***Save*** button to save your credentials in n8n.
+- API token
 
-![Getting Postmark credentials](/_images/integrations/builtin/credentials/postmark/using-access-token.gif)
+## Related resources
 
+Refer to [Postmark's API documentation](https://postmarkapp.com/developer/api/overview) for more information about the service.
+
+## Using API token
+
+To configure this credential, you'll need:
+
+- A **Server API Token**: The Server API token is accessible by Account Owners, Account Admins, and users who have Server Admin privileges on a server. Get yours from the [**API Tokens**](https://account.postmarkapp.com/api_tokens) tab under your Postmark server. Refer to [API Authentication](https://postmarkapp.com/developer/api/overview#authentication) for more information.

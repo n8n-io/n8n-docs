@@ -1,20 +1,17 @@
 ---
-title: Sentry.io
-description: Documentation for the Sentry.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Sentry.io node documentation
+description: Learn how to use the Sentry.io node in n8n. Follow technical documentation to integrate Sentry.io node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Sentry.io
+# Sentry.io node
 
 Use the Sentry.io node to automate work in Sentry.io, and integrate Sentry.io with other applications. n8n has built-in support for a wide range of Sentry.io features, including creating, updating, deleting, and getting, issues, projects, and releases, as well as getting all events.
 
 On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Sentry.io integrations](https://n8n.io/integrations/sentryio/){:target="_blank" .external-link} list.
+Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -51,11 +48,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all teams
     * Update a team
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'sentryio') ]]
+
 ## Related resources
 
-
-Refer to [Sentry.io's documentation](https://docs.sentry.io/api/){:target=_blank .external-link} for more information about the service.
-	
-View [example workflows and related content](https://n8n.io/integrations/sentryio/){:target=_blank .external-link} on n8n's website.
+Refer to [Sentry.io's documentation](https://docs.sentry.io/api/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

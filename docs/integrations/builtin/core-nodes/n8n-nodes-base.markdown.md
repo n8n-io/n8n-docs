@@ -1,25 +1,35 @@
 ---
 title: Markdown
 description: Documentation for the Markdown node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Markdown
 
 The Markdown node converts between Markdown and HTML formats.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Markdown integrations](https://n8n.io/integrations/markdown/){:target=_blank .external-link} page.
-///
+## Operations
 
-## Options
+This node's operations are **Modes**:
 
-You can configure the node's output using **Options**. Click **Add Option** to view and select your options.
+* **Markdown to HTML**: Use this mode to convert from Markdown to HTML.
+* **HTML to Markdown**: Use this mode to convert from HTML to Markdown.
+
+## Node parameters
+
+* **HTML** or **Markdown**: Enter the data you want to convert. The field name changes based on which **Mode** you select.
+* **Destination Key**: Enter the field you want to put the output in. Specify nested fields using dots, for example `level1.level2.newKey`.
+
+## Node options
+
+The node's **Options** depend on the **Mode** selected.
 
 /// note | Test out the options
-Some of the options depend on each other, or can interact. We recommend testing out options to check the effects are what you want.
+Some of the options depend on each other or can interact. We recommend testing out options to confirm the effects are what you want.
 ///
-### Markdown to HTML
+
+### Markdown to HTML options
 
 | Option | Description | Default |
 | ------ | ----------- | ------- |
@@ -53,7 +63,7 @@ Some of the options depend on each other, or can interact. We recommend testing 
 | **Tables Header ID** | Whether to add an ID to table header tags (enabled) or not (disabled). | Disabled |
 | **Tables Support** | Whether to support tables (enabled) or not (disabled). | Disabled |
 
-### HTML to Markdown
+### HTML to Markdown options
 
 | Option | Description | Default |
 | ------ | ----------- | ------- |
@@ -71,11 +81,16 @@ Some of the options depend on each other, or can interact. We recommend testing 
 | **Text Replacement Pattern** | Define a text replacement pattern using regex. | None |
 | **Treat As Blocks** | Specify HTML elements to treat as blocks (surround with blank lines) | None |
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'markdown') ]]
+
 ## Parsers
 
 n8n uses the following parsers:
 
-* To convert from HTML to Markdown: [node-html-markdown](https://www.npmjs.com/package/node-html-markdown)
+* To convert from HTML to Markdown: [node-html-markdown](https://www.npmjs.com/package/node-html-markdown).
 * To convert from Markdown to HTML: [Showdown](https://www.npmjs.com/package/showdown). Some options allow you to extend your Markdown with [GitHub Flavored Markdown](https://github.github.com/gfm/).
 
 

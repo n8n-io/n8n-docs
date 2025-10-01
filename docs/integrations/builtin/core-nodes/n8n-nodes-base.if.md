@@ -1,6 +1,8 @@
 ---
 title: If
 description: Documentation for the If node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: [integration, reference]
+priority: critical
 tags:
   - if
   - if node
@@ -14,89 +16,26 @@ hide:
 
 Use the If node to split a workflow conditionally based on comparison operations.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [IF integrations](https://n8n.io/integrations/if/){:target=_blank .external-link} list.
-///
-
 ## Add conditions
 
-Add comparison conditions using the **Add Condition** filter. The available comparison operations vary for each data type.
+Create comparison **Conditions** for your If node.
 
-**String**:
+- Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
+- The fields and values to enter into the condition change based on the data type and comparison you select. Refer to [Available data type comparisons](#available-data-type-comparisons) for a full list of all comparisons by data type.
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- contains
-- doesn't contain
-- starts with
-- doesn't start with
-- ends with
-- doesn't end with
-- matches regex
-- doesn't match regex
+Select **Add condition** to create more conditions.
 
-**Number**:
+### Combining conditions
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- is greater than
-- is less than
-- is greater than or equal
-- is less than or equal
+You can choose to keep data:
 
-**Date & Time**:
+* When it meets all conditions: Create two or more conditions and select **AND** in the dropdown between them.
+* When it meets any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- is after
-- is before
-- is after or equal
-- is before or equal
+## Templates and examples
 
-**Boolean**:
-
-- exists
-- doesn't exist
-- is true
-- is false
-- is equal to
-- isn't equal to
-
-**Array**:
-
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- contains
-- doesn't contain
-- length equal to
-- length not equal to
-- length greater than
-- length less than
-- length greater than or equal
-- length less than or equal
-
-**Object**:
-
-- exists
-- doesn't exist
-- is empty
-- isn't empty
-
-## AND / OR
-
-If you have more than one condition, you can choose either:
-
-* **AND**: data must match all conditions to be true.
-* **OR**: data only needs to match one of the conditions to be true.
-
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'if') ]]
 
 ## Branch execution with If and Merge nodes
 
@@ -104,11 +43,9 @@ If you have more than one condition, you can choose either:
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/if/){:target=_blank .external-link} on n8n's website.
+Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
 
-Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex logic in n8n.
+If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md).
 
-If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/).
-
-
+--8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

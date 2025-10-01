@@ -11,7 +11,7 @@ In n8n you can reference data from any previous node. This doesn't have to be th
 <figcaption markdown>Diagram of threads for different items. Due to the item linking, you can get the actor for each movie using `$('Get famous movie actors').item`.</figcaption>
 </figure>
 
-Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for detailed information on how this works.
+Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md) for detailed information on how this works.
 
 `.item` fails if information is missing. To figure out which item to use, n8n maintains a thread back through the workflow's nodes for each item. For a given item, this thread tells n8n which items in previous nodes generated it. To find the matching item in a given previous node, n8n follows this thread back until it reaches the node in question.
 
@@ -22,7 +22,7 @@ When using `.item`, n8n displays an error when:
 
 To solve these errors, you can either avoid using `.item`, or fix the root cause.
 
-You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you’re targeting within the target node's output items. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes/) for more detail on these methods.
+You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you’re targeting within the target node's output items. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
 
 The fix for the root cause depends on the exact error.
 
@@ -34,8 +34,8 @@ If you see this error message:
 
 There's a node in the chain that doesn't return pairing information. The solution here depends on the type of the previous node:
 
-- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for more information.
-- Custom or community nodes: the node creator needs to update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
+- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node.md) for more information.
+- Custom or community nodes: the node creator needs to update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md) for more information.
 
 ### Fix for 'Multiple matching items for expression'
 
@@ -47,5 +47,5 @@ Sometimes n8n uses multiple items to create a single item. Examples include the 
 
 When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 
-- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes/) for more detail on these methods.
+- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.

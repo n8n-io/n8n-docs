@@ -1,10 +1,10 @@
 ---
-title: OpenThesaurus
-description: Documentation for the OpenThesaurus node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: OpenThesaurus node documentation
+description: Learn how to use the OpenThesaurus node in n8n. Follow technical documentation to integrate OpenThesaurus node into your workflows.
+contentType: [integration, reference]
 ---
 
-# OpenThesaurus
+# OpenThesaurus node
 
 Use the OpenThesaurus node to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n supports synonym look-up for German words. 
 
@@ -13,11 +13,12 @@ On this page, you'll find a list of operations the OpenThesaurus node supports a
 /// note | Credentials
 OpenThesaurus node doesn't require authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [OpenThesaurus integrations](https://n8n.io/integrations/openthesaurus/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
 * Get synonyms for a German word in German
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'openthesaurus') ]]

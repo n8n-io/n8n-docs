@@ -1,27 +1,32 @@
 ---
 title: Segment credentials
 description: Documentation for Segment credentials. Use these credentials to authenticate Segment in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Segment credentials
 
-You can use these credentials to authenticate the following nodes with Segment.
+You can use these credentials to authenticate the following nodes:
 
-- [Segment](/integrations/builtin/app-nodes/n8n-nodes-base.segment/)
+- [Segment](/integrations/builtin/app-nodes/n8n-nodes-base.segment.md)
 
 ## Prerequisites
 
 Create a [Segment](https://segment.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Segment Dashboard.
-2. Click on Sources, on the left panel.
-3. Click on Add Source.
-4. Select Node.js.
-5. Copy write key.
-6. Use session write key for your Segment node credentials in n8n.
+- API key
 
-![Getting Segment credentials](/_images/integrations/builtin/credentials/segment/using-access-token.gif)
+## Related resources
+
+Refer to [Segment's Sources documentation](https://segment.com/docs/connections/sources/) for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **Write Key**: To get a Write Key, go to **Sources > Add Source**. Add a **Node.js** source and copy that write key to add to your n8n credential.
+
+Refer to [Locate your Write Key](https://segment.com/docs/connections/find-writekey/) for more information.
 

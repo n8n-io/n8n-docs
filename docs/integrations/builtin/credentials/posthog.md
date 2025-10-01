@@ -1,34 +1,37 @@
 ---
 title: PostHog credentials
 description: Documentation for PostHog credentials. Use these credentials to authenticate PostHog in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # PostHog credentials
 
-You can use these credentials to authenticate the following nodes with PostHog.
+You can use these credentials to authenticate the following nodes:
 
-- [PostHog](/integrations/builtin/app-nodes/n8n-nodes-base.posthog/)
-
+- [PostHog](/integrations/builtin/app-nodes/n8n-nodes-base.posthog.md)
 
 ## Prerequisites
 
 Create a [PostHog](https://posthog.com/) account or host PostHog on your server.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your PostHog dashboard.
-2. Click on ***Project*** on the left sidebar.
-3. Click on the ***Safety & Privacy*** tab.
-4. Scroll down to the ***Project API Key*** section and copy the displayed API key.
-5. Enter a name for your credentials in the ***Credentials Name*** field in the 'PostHog API' credentials in n8n.
-6. If you're hosting PostHog on your own server, update the URL of your PostHog instance in the ***URL*** field.
-7. Paste the API key in the ***API Key*** field in the 'PostHog API' credentials in n8n.
-8. Click on the ***Create*** button to create your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/zK1sy6kUarE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [PostHog's API documentation](https://posthog.com/docs/api) for more information about the service.
 
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- The API **URL**: Enter the correct domain for your API requests:
+    - On US Cloud, use `https://us.i.posthog.com` for public POST-only endpoints or `https://us.posthog.com` for private endpoints.
+    - On EU Cloud, use `https://eu.i.posthog.com` for public POST-only endpoints or `https://eu.posthog.com` for private endpoints.
+    - For self-hosted instances, use your self-hosted domain. 
+    - Confirm yours by checking your PostHog instance URL.
+- An **API Key**: The API key you use depends on whether you're accessing public or private endpoints:
+    - For public POST-only endpoints, use a [Project API key](https://app.posthog.com/project/settings) from your project's **General** Settings.
+    - For private endpoints, use a [Personal API key](https://app.posthog.com/settings/user-api-keys) from your User account's **Personal API Keys** Settings. Refer to [How to obtain a personal API key](https://posthog.com/docs/api#private-endpoint-authentication) for more information.

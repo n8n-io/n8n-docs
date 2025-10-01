@@ -1,20 +1,17 @@
 ---
-title: Coda
-description: Documentation for the Coda node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Coda node documentation
+description: Learn how to use the Coda node in n8n. Follow technical documentation to integrate Coda node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Coda
+# Coda node
 
 Use the Coda node to automate work in Coda, and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, including creating, getting, and deleting controls, formulas, tables, and views.
 
 On this page, you'll find a list of operations the Coda node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Coda credentials](/integrations/builtin/credentials/coda/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Coda integrations](https://n8n.io/integrations/coda/){:target="_blank" .external-link} list.
+Refer to [Coda credentials](/integrations/builtin/credentials/coda.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -41,3 +38,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all views rows
     * Update row
     * Push view button
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'coda') ]]

@@ -1,29 +1,37 @@
 ---
 title: Rocket.Chat credentials
 description: Documentation for Rocket.Chat credentials. Use these credentials to authenticate Rocket.Chat in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Rocket.Chat credentials
 
-You can use these credentials to authenticate the following nodes with Rocket.Chat.
+You can use these credentials to authenticate the following nodes:
 
-- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat/)
+- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat.md)
 
 ## Prerequisites
 
 - Create a [Rocket.Chat](https://rocket.chat/) account.
-- Have the necessary permission `create-personal-access-tokens` (from administrator) to be able to generate personal access tokens.
+- Your account must have the `create-personal-access-tokens` permission to generate personal access tokens.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Rocket.Chat instance.
-2. Click on the profile icon in the top left.
-3. Click on My Account.
-4. Click on Personal Access Tokens from the panel on the left.
-5. Enter a name for your Personal access token and click on the *Add* button.
-6. Copy the *Token* and enter that in the *Auth Key* field in n8n.
-7. Copy the *User Id* and enter that in the *User Id* field in n8n.
-<!-- vale off -->
-![Getting Rocket.Chat credentials](/_images/integrations/builtin/credentials/rocketchat/using-access-token.gif)
-<!-- vale on -->
+- API access token
+
+## Related resources
+
+<!--vale off-->
+Refer to [Rocket.Chat's API documentation](https://developer.rocket.chat/reference/api/rest-api) for more information about the service.
+<!--vale on-->
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- Your **User ID**: Displayed when you generate an access token.
+- An **Auth Key**: Your personal access token. To generate an access token, go to your **avatar > Account > Personal Access Tokens**. Copy the token and add it as the n8n **Auth Key**.
+- Your Rocket.Chat **Domain**: Also known as your default URL or workspace URL.
+
+Refer to [Personal Access Tokens](https://docs.rocket.chat/docs/manage-your-account-settings#personal-access-tokens) for more information.
+

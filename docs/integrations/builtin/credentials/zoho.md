@@ -1,33 +1,47 @@
 ---
 title: Zoho credentials
 description: Documentation for Zoho credentials. Use these credentials to authenticate Zoho in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zoho credentials
 
-You can use these credentials to authenticate the following nodes with Zoho.
+You can use these credentials to authenticate the following nodes:
 
-- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/)
+- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md)
 
 ## Prerequisites
 
 Create a [Zoho](https://www.zoho.com/) account.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Zoho account to n8n.
-///
+- OAuth2
 
-1. Access your [Zoho Developer Console](https://api-console.zoho.com/).
-2. Click on the 'GET STARTED' button.
-3. Click on the 'Server-based Applications' box.
-4. Copy the 'OAuth Callback URL' provided in the Zoho OAuth2 API credentials in n8n and paste it in the *Authorized Redirect URIs* field in the Zoho API Console app creation page.
-5. Fill in any other necessary information and click on the 'CREATE' button.
-6. Use the 'Client ID' and the 'Client Secret' displayed with your Zoho OAuth2 API credentials in n8n.
-7. Click on the circle button in the OAuth section to connect a Zoho CRM account to n8n.
-8. Click the *Save* button to save your credentials.
+## Related resources
 
-![Getting Zoho credentials](/_images/integrations/builtin/credentials/zoho/getting-oauth-credentials.gif)
+Refer to [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/) for more information about the service.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- An **Access Token URL**: Zoho provides region-specific access token URLs. Select the region that best fits your Zoho data center:
+    - **AU**: Select this option for Australia data center.
+    - **CN**: Select this option for Canada data center.
+    - **EU**: Select this option for the European Union data center.
+    - **IN**: Select this option for the India data center.
+    - **US**: Select this option for the United States data center.
+
+Refer to [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html) for more information about selecting a data center.
+
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth2 from scratch, [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html) with Zoho.
+
+Use these settings for your application:
+
+- Select **Server-based Applications** as the **Client Type**.
+- Copy the **OAuth Callback URL** from n8n and enter it in the Zoho **Authorized Redirect URIs** field.
+- Copy the **Client ID** and **Client Secret** from the application and enter them in your n8n credential.
 

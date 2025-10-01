@@ -14,9 +14,9 @@ You need to understand this behavior if you're:
 
 This section provides:
 
-* A conceptual overview of [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/). 
-* Information on [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/).
-* Support for end users who need to [Work with the data path](/data/data-mapping/data-item-linking/item-linking-code-node/) to retrieve item data from previous nodes, and link items when using the Code node.
-* Guidance on troubleshooting [Errors](/data/data-mapping/data-item-linking/item-linking-errors/).
+* A conceptual overview of [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md). 
+* Information on [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md).
+* Support for end users who need to [Work with the data path](/data/data-mapping/data-item-linking/item-linking-code-node.md) to retrieve item data from previous nodes, and link items when using the Code node.
+* Guidance on troubleshooting [Errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
 
 

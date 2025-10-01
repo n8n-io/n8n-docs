@@ -1,10 +1,11 @@
 ---
-title: monday.com
-description: Documentation for the monday.com node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: monday.com node documentation
+description: Learn how to use the monday.com node in n8n. Follow technical documentation to integrate monday.com node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# monday.com
+# monday.com node
 
 Use the monday.com node to automate work in monday.com, and integrate monday.com with other applications. n8n has built-in support for a wide range of monday.com features, including creating a new board, and adding, deleting, and getting items on the board.
 
@@ -15,14 +16,12 @@ This node requires n8n version 1.22.6 or above.
 ///
 
 /// note | Credentials
-Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [monday.com integrations](https://n8n.io/integrations/mondaycom/){:target="_blank" .external-link} list.
+Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-## Basic Operations
+## Operations
 
 * Board
     * Archive a board
@@ -46,5 +45,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all items
     * Get items by column value
     * Move item to group
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'mondaycom') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

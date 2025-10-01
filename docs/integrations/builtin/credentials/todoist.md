@@ -1,42 +1,57 @@
 ---
 title: Todoist credentials
 description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Todoist credentials
 
-You can use these credentials to authenticate the following nodes with Todoist.
+You can use these credentials to authenticate the following nodes:
 
-- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/)
+- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist.md)
 
-## Prerequisites
+## Supported authentication methods
 
-Create a [Todoist](https://todoist.com/) account.
+- API key
+- OAuth2
 
-## Using OAuth
+## Related resources
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Todoist account to n8n.
-///
+Refer to [Todoist's REST API documentation](https://developer.todoist.com/rest/v2/#overview) for more information about the service.
 
-1. Access your Todoist [App Management Console](https://developer.todoist.com/appconsole.html)
-2. Enter a name in the ***App display name*** field and click on the ***Create app*** button.
-3. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***OAuth redirect URL*** field.
-4. Click on the ***Save settings*** button.
-5. Use the provided ***Client ID*** and ***Client secret*** with your Todoist OAuth2 API credentials in n8n.
-6. Click on the circle button in the OAuth section to connect a Todoist account to n8n.
-7. Click the ***Save*** button to save your credentials in n8n.
+## Using API key
 
-![Getting Todoist OAuth credentials](/_images/integrations/builtin/credentials/todoist/using-oauth.gif)
+To configure this credential, you'll need a [Todoist](https://todoist.com/) account and:
 
-## Using Access Token
+- An **API Key**
 
-1. Access your Todoist dashboard.
-2. Click on the gear icon in the top right.
-3. Select Integrations on the left panel.
-4. Scroll down to see your API token.
-5. Use the API token with your Todoist node credentials in n8n.
+To get your **API Key**:
 
-![Getting Todoist credentials](/_images/integrations/builtin/credentials/todoist/using-access-token.gif)
+1. In Todoist, open your [**Integration settings**](https://todoist.com/prefs/integrations).
+2. Select the **Developer** tab.
+3. Copy your **API token** and enter it as the **API Key** in your n8n credential.
 
+Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-token-Jpzx9IIlB) for more information.
+
+## Using OAuth2
+
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Todoist](https://todoist.com/) account and:
+
+- A **Client ID**
+- A **Client Secret**
+
+Get both by creating an application:
+
+1. Open the Todoist [App Management Console](https://developer.todoist.com/appconsole.html).
+2. Select **Create a new app**.
+3. Enter an **App name** for your app, like `n8n integration`.
+4. Select **Create app**.
+5. Copy the n8n **OAuth Redirect URL** and enter it as the **OAuth redirect URL** in Todoist.
+6. Copy the **Client ID** from Todoist and enter it in your n8n credential.
+7. Copy the **Client Secret** from Todoist and enter it in your n8n credential.
+8. Configure the rest of your Todoist app as it makes sense for your use case.
+
+Refer to the Todoist [Authorization Guide](https://developer.todoist.com/guides/#authorization) for more information.

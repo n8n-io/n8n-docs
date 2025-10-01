@@ -1,24 +1,22 @@
 ---
-title: Google Slides
-description: Documentation for the Google Slides node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Google Slides node documentation
+description: Learn how to use the Google Slides node in n8n. Follow technical documentation to integrate Google Slides node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Google Slides
+# Google Slides node
 
 Use the Google Slides node to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating presentations, and getting pages. 
 
 On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Slides integrations](https://n8n.io/integrations/google-slides/){:target="_blank" .external-link} list.
-///
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-## Basic Operations
+## Operations
 
 * Page
     * Get a page
@@ -28,5 +26,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a presentation
     * Get presentation slides
     * Replace text in a presentation
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'google-slides') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

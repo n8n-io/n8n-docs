@@ -17,7 +17,7 @@ You need an Okta Workforce Identity account, and the redirect URL and entity ID 
 
 Okta Workforce may enforce two factor authentication for users, depending on your Okta configuration.
 
-Read the [Set up SAML](/user-management/saml/setup/) guide first.
+Read the [Set up SAML](/user-management/saml/setup.md) guide first.
 
 ## Setup
 
@@ -37,10 +37,10 @@ Read the [Set up SAML](/user-management/saml/setup/) guide first.
 	
 	| **Name** | **Name format** | **Value** |
 	| -------- | --------------- | --------- |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname | URI Reference | user.firstName |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname | URI Reference | user.lastName |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn | URI Reference | user.login |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress | URI Reference | user.email |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname` | URI Reference | user.firstName |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname` | URI Reference | user.lastName |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn` | URI Reference | user.login |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` | URI Reference | user.email |
 	
 1. Select **Next**. Okta may prompt you to complete a marketing form, or may take you directly to your new n8n Okta app.
 1. Assign the n8n app to people:

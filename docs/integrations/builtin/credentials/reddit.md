@@ -1,41 +1,43 @@
 ---
 title: Reddit credentials
 description: Documentation for Reddit credentials. Use these credentials to authenticate Reddit in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Reddit credentials
 
-You can use these credentials to authenticate the following nodes with Reddit.
+You can use these credentials to authenticate the following nodes:
 
-- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit/)
-
+- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit.md)
 
 ## Prerequisites
 
 Create a [Reddit](https://reddit.com/) account.
 
-## Using OAuth
+## Supported authentication methods
 
-1. Open [Reddit](https://reddit.com).
-2. Click on your avatar on the top right and select 'User Settings'.
-3. Click on the ***Safety & Privacy*** tab.
-4. Scroll to the bottom and click on ***Manage third-party app authorization***.
-5. Click on the ***are you a developer? create an app...*** button.
-6. Enter the name of your application in the ***name*** field.
-7. Copy the 'OAuth Callback URL' provided in the 'Reddit OAuth2 API' credentials in n8n.
-8. Paste the URL in the ***redirect uri*** field.
-9. Click on the ***create app*** button.
-10. Copy the client ID displayed next to the app's icon.
-11. Enter a name for your credentials in the ***Credentials Name*** field in the 'Reddit OAuth2 API' credentials in n8n.
-12. Paste the client ID in the ***Client ID*** field in the 'Reddit OAuth2 API' credentials in n8n.
-13. Copy the client secret from Reddit and paste it in the ***Client Secret*** field in the 'Reddit OAuth2 API' credentials in n8n.
-14. Click on the circle button in the OAuth section to connect a Reddit account to n8n.
-15. Click on the ***Save*** button to save your credentials.
+- OAuth2
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/YpsxuUHonVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Reddit's developer documentation](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data) for more information about the service.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**
+- A **Client Secret**
+
+/// note | Developer program
+Reddit's developer program is in a closed beta. The instructions below are for regular Reddit users, not members of the developer platform.
+///
+
+Generate both by creating a [third-party app](https://www.reddit.com/prefs/apps). Visit the previous link or go to your **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**.
+
+Use these settings for your app:
+
+- Copy the **OAuth Callback URL** from n8n and use it as your app's **redirect uri**.
+- The app's client ID displays underneath your app name. Copy that and add it as your n8n **Client ID**.
+- Copy the app's **secret** and add it as your n8n **Client Secret**.
 

@@ -1,75 +1,54 @@
 ---
 title: Zendesk credentials
 description: Documentation for Zendesk credentials. Use these credentials to authenticate Zendesk in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zendesk credentials
 
-You can use these credentials to authenticate the following nodes with Zendesk.
+You can use these credentials to authenticate the following nodes:
 
-- [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/)
-- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/)
+- [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md)
+- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md)
 
 ## Prerequisites
 
-Create a [Zendesk](https://zendesk.com/) account.
+- Create a [Zendesk](https://zendesk.com/) account.
+- For API token authentication, enable token access to the API in Admin Center under **Apps and integrations > APIs > Zendesk APIs**.
 
-## Using OAuth
+## Supported authentication methods
 
-1. Open your Zendesk dashboard.
-2. Click on the gear icon on the left.
-3. Click on 'API' under the ***CHANNELS*** section in the sidebar.
-4. Click on the ***OAuth Clients*** tab.
-5. Click on the ***Add OAuth client*** button.
-6. Enter the client name in the ***Client Name*** field.
-7. Enter a description in the ***Description*** field.
-8. Copy the 'OAuth Callback URL' provided in the 'Zendesk OAuth2 API' credentials in n8n.
-9. Paste it in the ***Redirect URLs*** field on the Zendesk API credentials page.
-10. Click on the ***Save*** button.
-11. Click on the ***OK*** button on the ***Please store the secret that will appear*** pop-up.
-12. Scroll down to the ***Secret*** section and copy the displayed ***Secret***.
-13. Paste this secret in the ***Client Secret*** field in the 'Zendesk OAuth2 API' credentials in n8n.
-14. Copy the ***Unique identifier*** from the Zendesk API credentials page.
-15. Paste it in the ***Client ID*** field in the 'Zendesk OAuth2 API' credentials in n8n.
-16. Enter your Zendesk subdomain in the ***Subdomain*** field in the 'Zendesk OAuth2 API' credentials in n8n. Refer to the [FAQs](#how-do-i-get-my-zendesk-subdomain) to learn more about subdomain.
-17. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a Zendesk account to n8n.
-19. Click on the ***Save*** button to save your credentials.
+- API token
+- OAuth2
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/ieNHkgUVNhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Zendesk's API documentation](https://developer.zendesk.com/api-reference/) for more information about the service.
 
-## Using Access Token
+## Using API token
 
-1. Open your Zendesk dashboard.
-2. Click on the gear icon on the left.
-3. Click on 'API' under the ***CHANNELS*** section in the sidebar.
-4. If ***Token access*** is disabled, click on the switch to toggle it to 'Enabled'.
-5. Click on the ***Add API token*** button.
-6. Enter a description in the ***API token description*** field.
-7. Click on the ***Copy*** button to copy the API token.
-8. Click on the ***Save*** button.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Zendesk API' credentials in n8n.
-10. Enter your Zendesk subdomain in the ***Subdomain*** field. Refer to the [FAQs](#how-do-i-get-my-zendesk-subdomain) to learn more about subdomain.
-11. Enter your Zendesk email address in the ***Email*** field.
-12. Paste the ***API token*** in the ***API Token*** field.
-13. Click on the ***Save*** button to save your credentials.
+To configure this credential, you'll need:
 
-The following video demonstrates the steps mentioned above.
+- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
+- An **Email** address: Enter the email address you use to log in to Zendesk.
+- An **API Token**: Generate an API token in **Apps and integrations > APIs > Zendesk API**. Refer to [API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token) for more information.
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/AvduoHrFJdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+## Using OAuth2
 
-## FAQs
+To configure this credential, you'll need:
 
-### How do I get my Zendesk subdomain?
+- A **Client ID**: Generated when you create a new OAuth client.
+- A **Client Secret**: Generated when you create a new OAuth client.
+- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
 
-To get your Zendesk subdomain, follow the steps mentioned below.
-1. Access your Zendesk dashboard.
-2. Copy the string of characters located between `https://` and `.zendesk.com/agent/dashboard` in your Zendesk URL. This string is the subdomain. For example, if your Zendesk URL is `https://example.zendesk.com/agent/dashboard`, the subdomain will be `example`.
+To create a new OAuth client, go to **Apps and integrations > APIs > Zendesk API > OAuth Clients**.
+
+Use these settings:
+
+ - Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URL** in the OAuth client.
+ - Copy the **Unique identifier** for the Zendesk client and enter this as your n8n **Client ID**.
+ - Copy the **Secret** from Zendesk and enter this as your n8n **Client Secret**
+ 
+ 
+ Refer to [Registering your application with Zendesk](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application#topic_s21_lfs_qk) for more information.
 

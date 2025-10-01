@@ -1,7 +1,8 @@
 ---
-title: Google Ads
-description: Documentation for the Google Ads node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Google Ads node documentation
+description: Learn how to use the Google Ads node in n8n. Follow technical documentation to integrate Google Ads node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Google Ads node
@@ -11,10 +12,7 @@ Use the Google Ads node to automate work in Google Ads, and integrate Google Ads
 On this page, you'll find a list of operations the Google Ads node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Ads credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Ads integrations](https://n8n.io/integrations/google-ads/){:target="_blank" .external-link} list.
+Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -23,10 +21,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
   * Get all campaigns
   * Get a campaign
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'google-ads') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/google-ads/){:target=_blank .external-link} on n8n's website.
-
-Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
+Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

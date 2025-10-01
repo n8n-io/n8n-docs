@@ -1,24 +1,38 @@
 ---
 title: Rename Keys
 description: Documentation for the Rename Keys node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Rename Keys
 
-The Rename Keys node is used to rename the keys of a key-value pair in n8n.
+Use the Rename Keys node to rename the keys of a key-value pair in n8n.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Rename Keys integrations](https://n8n.io/integrations/rename-keys/){:target=_blank .external-link} page.
+## Node parameters
+
+You can rename one or multiple keys using the Rename Keys node. Select the **Add new key** button to rename a key.
+
+For each key, enter the:
+
+- **Current Key Name**: The current name of the key you want to rename.
+- **New Key Name**: The new name you want to assign to the key.
+
+## Node options
+
+Choose whether to use a **Regex** regular expression to identify keys to rename. To use this option, you must also enter:
+
+* The **Regular Expression** you'd like to use.
+* **Replace With**: Enter the new name you want to assign to the key(s) that match the **Regular Expression**.
+* You can also choose these Regex-specific options:
+    * **Case Insensitive**: Set whether the regular expression should match case (turned off) or be case insensitive (turned on).
+    * **Max Depth**: Enter the maximum depth to replace keys, using `-1` for unlimited and `0` for top-level only.
+
+/// warning | Regex impacts
+Using a regular expression can affect any keys that match the expression, including keys you've already renamed.
 ///
 
-## Node Reference
+## Templates and examples
 
-You can rename one or multiple keys using the Rename Keys node. Click on the *Add new key* button to rename a key.
-
-There are two properties in the Rename Keys node.
-
-- **Current Key Name** field: The current name of the key that you would like to rename.
-- **New Key Name** field: The new name that you would like to assign to the key.
-
-
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'rename-keys') ]]

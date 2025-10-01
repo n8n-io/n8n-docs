@@ -1,22 +1,21 @@
 ---
-title: Microsoft Outlook
-description: Documentation for the Microsoft Outlook node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Microsoft Outlook node documentation
+description: Learn how to use the Microsoft Outlook node in n8n. Follow technical documentation to integrate Microsoft Outlook node into your workflows.
+contentType: [integration, reference]
+priority: high
 ---
 
-# Microsoft Outlook
+# Microsoft Outlook node
 
 Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
 
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft Outlook credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Microsoft Outlook integrations](https://n8n.io/integrations/microsoft-outlook/){:target="_blank" .external-link} list.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -59,6 +58,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Move
 	* Reply
 	* Send
+	* Send and Wait for Response
 	* Update
 * Message Attachment
 	* Add
@@ -66,10 +66,15 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Get Many
 
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'microsoft-outlook') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/microsoft-outlook/){:target=_blank .external-link} on n8n's website.
-
-Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
+Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

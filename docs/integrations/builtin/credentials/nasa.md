@@ -1,22 +1,32 @@
 ---
 title: NASA credentials
 description: Documentation for NASA credentials. Use these credentials to authenticate NASA in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # NASA credentials
 
-You can use these credentials to authenticate the following nodes with NASA.
+You can use these credentials to authenticate the following nodes:
 
-- [NASA](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/)
+- [NASA](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md)
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/) for more information about the service.
 
 ## Using an API key
 
-1. Access the [NASA Open APIs](https://api.nasa.gov/) page.
-2. Scroll down to the **Generate API Key** section.
-3. Enter the required information.
-3. Click on the **Signup** button.
-4. Use this **API Key** with your NASA node credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting NASA credentials](/_images/integrations/builtin/credentials/nasa/using-api.gif)
+- An **API Key**
 
+To generate an API key:
+
+1. Go to the [NASA Open APIs](https://api.nasa.gov/) page.
+2. Complete the fields in the **Generate API Key** section.
+3. Copy the **API Key** and enter it in your n8n credential.

@@ -79,7 +79,7 @@ Some notes about the possible fields:
 
 ## Example
 
-For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts){:target=_blank .external-link}.
+For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).
 
 ## Deprecation of the previous helper
 
@@ -87,7 +87,7 @@ The previous helper implementation using `this.helpers.request(options)` used an
 
 To minimize incompatibility, n8n made a transparent conversion to another library called `Axios`.
 
-If you are having issues, please report them in the [Community Forums](https://community.n8n.io/){:target=_blank .external-link} or on [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}.
+If you are having issues, please report them in the [Community Forums](https://community.n8n.io/) or on [GitHub](https://github.com/n8n-io/n8n/issues).
 
 ## Migration guide to the new helper
 

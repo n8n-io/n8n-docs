@@ -1,7 +1,12 @@
 ---
-contentType: integration
+contentType: [integration, reference]
+tags:
+  - code node
+  - code
+hide:
+  - tags
 ---
 
-# Code node
+# Using the Code node
 
 --8<-- "_snippets/integrations/builtin/core-nodes/code-node.md"

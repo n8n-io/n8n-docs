@@ -2,15 +2,38 @@
 
 If you want to contribute to this repository - thank you! Before you start, have a look at the existing documentation to get an idea of the structure and writing conventions n8n uses. In writing your documentation, please follow the guidelines described below, to ensure quality and consistency with n8n styles.
 
-## Before you start
+## Docs issues only
 
-### Style
+This repo is for the documentation site.
+
+- Need help? [Ask on the forum](https://community.n8n.io/c/questions/12).
+- Got a feature request or product idea? [Propose it on the forum](https://community.n8n.io/c/feature-requests/5).
+- Found a bug in the product? [Product repo](https://github.com/n8n-io/n8n)
+
+## No course contributions
+
+n8n is working on replacing the course. n8n isn't accepting reports or changes to the current course.
+
+## Why n8n might reject your contribution
+
+Due to an increase in spam and poor quality contributions, n8n has introduced new criteria and processes. n8n will close issues and PRs that are low-effort and poor quality.
+
+| Label | Action | Notes |
+| ----- | ------ | ----- |
+| `spam` | Close PR/issue; account blocked | This label is for things like empty issues. |
+| `ai-slop` |	Close PR/issue; account blocked | This label is for when content is bad, wrong, and looks like it's probably the result of using AI. n8n isn't banning use of AI in contributions, so long as the contributions are high quality. |
+| `low-effort-unusable` |	Close PR/issue; comment with contribution guidance; a second `low-effort-unusable` leads to a block. | n8n uses this for minor changes which have issues. To avoid this, test your work to make sure it's accurate; follow the [style guide](https://github.com/n8n-io/n8n-docs/wiki/Styles); write meaningful titles and descriptions on your PR/issue. |
+| `low-effort-usable` |	No action initially. n8n will accept these, but not in large quantities. Too many occurences in a single month will result in n8n reviewing the activity. |
+| `duplicate` |	Close PR/issue; comment with contribution guidance. | To avoid this, check existing issues and PRs. |
+
+
+## Style
 
 n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
 
 Refer to [Styles](https://github.com/n8n-io/n8n-docs/wiki/Styles/) for a quickstart, and guidance on style linting.
 
-### n8n's license
+## n8n's license
 
 Be aware that n8n is fair code licensed. For more information, refer to the [License](https://docs.n8n.io/reference/license/) documentation.
 
@@ -31,21 +54,7 @@ You need Git installed, and a GitHub account.
 
 [Fork the documentation repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
-Then clone your fork:
-
-```
-git clone https://github.com/<your-username>/n8n-docs.git
-cd n8n-docs
-git checkout -b <branch-name>
-```
-
-Make your changes. Push your branch:
-
-```
-git add *
-git commit -m "<short summary of changes>"
-git push --set-upstream origin <branch-name>
-```
+Then follow the instructions for external contributors in the [README](https://github.com/n8n-io/n8n-docs?tab=readme-ov-file#steps).
 
 In GitHub, [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) to merge the work from your fork to `main` in the docs repository.
 
@@ -63,13 +72,14 @@ You can build the docs locally to preview them, or submit a pull request. All pu
 
 For instructions on previewing the docs locally, refer to the [README](https://github.com/n8n-io/n8n-docs/blob/main/README.md).
 
-### General checklist
+## General checklist
 
 Before submitting a PR, make sure your contribution ticks all these boxes:
 
 - [ ] All necessary files and images are included.
+- [ ] All formatting follows the [style guide](https://github.com/n8n-io/n8n-docs/wiki/Styles).
+- [ ] All images are optimized.
 - [ ] All links are working and direct to the right location.
-- [ ] All documentation files end with an empty newline.
 - [ ] The commit message describes the changes you made.
 - [ ] The PR explains the changes you made and why they're necessary.
 - [ ] You have read and accepted the [code of conduct](https://github.com/n8n-io/n8n-docs/blob/master/CODE_OF_CONDUCT.md) and [contributor license agreement](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md).

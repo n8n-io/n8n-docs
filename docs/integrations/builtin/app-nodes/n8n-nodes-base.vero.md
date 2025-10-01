@@ -1,23 +1,20 @@
 ---
-title: VERO
-description: Documentation for the VERO node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Vero node documentation
+description: Learn how to use the Vero node in n8n. Follow technical documentation to integrate Vero node into your workflows.
+contentType: [integration, reference]
 ---
 
-# VERO
+# Vero node
 
-Use the VERO node to automate work in VERO, and integrate VERO with other applications. n8n has built-in support for a wide range of VERO features, including creating and deleting users. 
+Use the Vero node to automate work in Vero and integrate Vero with other applications. n8n has built-in support for a wide range of Vero features, including creating and deleting users. 
 
-On this page, you'll find a list of operations the VERO node supports and links to more resources.
+On this page, you'll find a list of operations the Vero node supports and links to more resources.
 
 /// note | Credentials
-Refer to [VERO credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [VERO integrations](https://n8n.io/integrations/vero/){:target="_blank" .external-link} list.
+Refer to [Vero credentials](/integrations/builtin/credentials/vero.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * User
     * Create or update a user profile
@@ -30,4 +27,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Event
     * Track an event for a specific customer
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'vero') ]]

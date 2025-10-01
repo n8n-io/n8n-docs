@@ -1,0 +1,156 @@
+#############################  Display  #############################
+
+# Verbose program output
+# Accepts log level: "error", "warn", "info", "debug", "trace"
+verbose = "warn"
+
+# Don't show interactive progress bar while checking links.
+no_progress = true
+
+# Path to summary output file.
+output = "_lychee/output.md"
+format = "markdown"
+
+#############################  Cache  ###############################
+
+# Enable link caching. This can be helpful to avoid checking the same links on
+# multiple runs.
+cache = true
+
+# Discard all cached requests older than this duration.
+max_cache_age = "2d"
+
+#############################  Runtime  #############################
+
+# Number of threads to utilize.
+# Defaults to number of cores available to the system if omitted.
+threads = 2
+
+# Maximum number of allowed redirects.
+max_redirects = 5
+
+# Maximum number of allowed retries before a link is declared dead.
+max_retries = 2
+
+# Maximum number of concurrent link checks.
+max_concurrency = 5
+
+#############################  Requests  ############################
+
+# User agent to send with each request.
+user_agent = "lychee/0.18.1"
+
+# Website timeout from connect to response finished.
+timeout = 20
+
+# Minimum wait time in seconds between retries of failed requests.
+retry_wait_time = 10
+
+# Comma-separated list of accepted status codes for valid links.
+# Supported values are:
+#
+# accept = ["200..=204", "429"]
+# accept = "200..=204, 429"
+# accept = ["200", "429"]
+# accept = "200, 429"
+accept = ["200", "429", "403"]
+
+# Proceed for server connections considered insecure (invalid TLS).
+insecure = false
+
+# Only test links with the given schemes (e.g. https).
+# Omit to check links with any other scheme.
+# At the moment, we support http, https, file, and mailto.
+scheme = ["https", "http"]
+
+# When links are available using HTTPS, treat HTTP links as errors.
+require_https = true
+
+# Request method
+method = "get"
+
+# Custom request headers
+headers = []
+
+# Remap URI matching pattern to different URI.
+# remap = ["https://example.com http://example.invalid"]
+
+# Base URL or website root directory to check relative URLs.
+base = "https://docs.n8n.io"
+
+# HTTP basic auth support. This will be the username and password passed to the
+# authorization HTTP header. See
+# <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization>
+# basic_auth = ["example.com user:pwd"]
+
+#############################  Exclusions  ##########################
+
+# Skip missing input files (default is to error if they don't exist).
+skip_missing = false
+
+# Check links inside `<code>` and `<pre>` blocks as well as Markdown code
+# blocks.
+include_verbatim = false
+
+# Ignore case of paths when matching glob patterns.
+glob_ignore_case = false
+
+# Exclude URLs and mail addresses from checking (supports regex).
+exclude = [
+  '^https://www\.linkedin\.com', 
+  '^https://www\.notion\.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
+  '^https://docs\.n8n\.io/.*',
+  '^https://support\.discord\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
+  '^https://platform\.openai\.com/.*',                   # Actively blocks linkchecks
+  '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
+  '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
+  '^https://platform\.deepseek\.com/.*',                 # Actively blocks linkchecks
+  '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
+  '^https://reddit\.com/.*',                             # Actively blocks linkchecks
+  '^https://www\.mysql\.com/.*',                         # Actively blocks linkchecks
+  '^https://dev\.mysql\.com/.*',
+  '^https://help\.activecampaign\.com/hc/en-us/.*',
+  '^https://support\.ouraring\.com/hc/en-us/.*',
+  '^https://help\.mailgun\.com/hc/en-us/.*',
+  '^https://documentation\.mailjet\.com/hc/en-us/.*',
+  '^https://github\.com/n8n-io/n8n/compare/.*',          # We don't need to check these
+  '^https://github\.com/n8n-io/n8n/pull/.*',             # These are automated and likely valid
+  '^https://app\.pipedrive\.com/settings/api',           # Auth check
+  '^https://www\.convertapi\.com/a/signin',
+  '^https://app\.asana\.com/0/my-apps',
+  '^https://support\.onfleet\.com/hc/en-us/.*',
+  '^https://help\.shopify\.com/.*',
+  '^https://www\.goto\.com/.*',
+  '^https://internal\.users\.n8n\.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b',  # Node submission form, it has the 'ignore bots' option enabled
+  '^https://(console|admin)\.mistral\.ai/.*',  # Redirect loop that ends up at login page
+  '^https://workable\.com/backend/settings/integrations',  # Redirect loop that ends up at login page
+  '^https://www\.trellix\.com/products/epo/',  # timeouts
+  '^https://admin\.google\.com/',  # Too many redirects
+  '^https://(docs\.)?msg91.com/',  # Throws 500 error on automated checks
+  '^https://api\.mist\.com/',  # Only works when logged in
+  '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
+  '^https://developer\.paddle\.com/',  # Times out on automated checks
+  ]
+
+# Exclude these filesystem paths from getting checked.
+exclude_path = ["file/path/to/Ignore", "./other/file/path/to/Ignore"]
+
+# URLs to check (supports regex). Has preference over all excludes.
+# include = ['gist\.github\.com.*']
+
+# Exclude all private IPs from checking.
+# Equivalent to setting `exclude_private`, `exclude_link_local`, and
+# `exclude_loopback` to true.
+exclude_all_private = true
+
+# Exclude private IP address ranges from checking.
+# exclude_private = false
+
+# Exclude link-local IP address range from checking.
+# exclude_link_local = true
+
+# Exclude loopback IP address range and localhost from checking.
+# exclude_loopback = true
+
+# Check mail addresses
+include_mail = false

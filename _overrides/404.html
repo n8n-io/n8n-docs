@@ -2,58 +2,6 @@
 {% block htmltitle %}
 <title>404</title>
 {% endblock %}
-{% block extrahead %}
-<script>
-    // Create an object containing all your redirects
-    const redirects = {
-      // The big key concepts split
-      "/getting-started/key-concepts/": "/flow-logic/",
-      "/getting-started/key-concepts/#expression": "/code-examples/expressions/",
-      "/getting-started/key-concepts/#item": "/data/data-structure/",
-      "/getting-started/key-concepts/#function": "/data/code/",
-      "/getting-started/key-concepts/#data": "/data/",
-      "/getting-started/key-concepts/#data-structure": "/data/data-structure/",
-      "/key-concepts/#data-flow": "/data/data-structure/",
-      "/key-concepts/#error-workflow": "/flow-logic/error-handling/error-workflows/",
-      "/key-concepts/#security": "/hosting/authentication/",
-      // Other IA redirects that seemed essential
-      "/getting-started/whats-next.html": "/quickstart/#whats-next",
-      "/getting-started/installation/advanced/server-setup.html": "/hosting/installation/server-setups/",
-			"/getting-started/installation/advanced/server-setup.html#server-setup": "/hosting/installation/server-setups/",
-      "/getting-started/installation/advanced/server-setup.html#docker-compose-example": "/hosting/installation/server-setups/docker-compose/",
-      "/reference/faq.html#integrations": "/integrations/#requesting-new-integrations-or-integration-features",
-      "/reference/faq.html": "/reference/license/",
-      "/reference/faq.html#license": "/reference/license/",
-      "/reference/faq.html#n8n-cloud": "/choose-n8n/cloud/",
-      "/nodes/expressions.html#expressions": "/code-examples/expressions/",
-      // High traffic anchor tag landing pages (if not covered by the above or by /docs/_redirects)
-      "/#what-is-n8n": "/",
-      "/getting-started/tutorials.html#blogposts": "https://n8n.io/blog/tag/tutorial/",
-      "/#/server-setup": "/hosting/installation/server-setups/",
-      "/code-examples/expressions/expressions.html": "/code-examples/expressions/",
-			// Editor UI split
-			"/editor-ui/workflows": "/workflows/",
-			"/editor-ui/credentials": "/credentials/",
-			"/editor-ui/executions": "/workflows/executions/",
-			"/editor-ui/admin-panel": "/hosting/updating/cloud/",
-			// New code node
-			"/hosting/configuration/#use-built-in-and-external-modules-in-function-nodes": "/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node"
-
-    };
-
-    (function redirect(){
-        
-            const currentPath = window.location.pathname + (window.location.hash ? window.location.hash : '');
-            const redirectUrl = redirects[currentPath];
-            if (redirectUrl) {
-                window.location.href = `${window.location.origin}${redirectUrl}`;
-                return;
-            }
-          
-    })();	
-  
-</script>
-{% endblock %}
 {% block content %}
   <h1>404 - Page not found</h1>
   <h2>Go <a href="/">home</a></h2>

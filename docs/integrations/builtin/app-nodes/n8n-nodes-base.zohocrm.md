@@ -1,23 +1,22 @@
 ---
-title: Zoho CRM
-description: Documentation for the Zoho CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Zoho CRM node documentation
+description: Learn how to use the Zoho CRM node in n8n. Follow technical documentation to integrate Zoho CRM node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Zoho CRM
+# Zoho CRM node
 
 Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Zoho CRM integrations](https://n8n.io/integrations/zoho-crm/){:target="_blank" .external-link} list.
+Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Account
     * Create an account
@@ -90,5 +89,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a vendor
     * Get all vendors
     * Update a vendor
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'zoho-crm') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

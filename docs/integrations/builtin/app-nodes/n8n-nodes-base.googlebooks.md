@@ -1,24 +1,20 @@
 ---
-title: Google Books
-description: Documentation for the Google Books node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Google Books node documentation
+description: Learn how to use the Google Books node in n8n. Follow technical documentation to integrate Google Books node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Google Books
+# Google Books node
 
 Use the Google Books node to automate work in Google Books, and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving a specific bookshelf resource for the specified user, adding volume to a bookshelf, and getting volume.
 
 On this page, you'll find a list of operations the Google Books node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Books integrations](https://n8n.io/integrations/google-books/){:target="_blank" .external-link} list.
-///
-
-## Basic Operations
+## Operations
 
 * Bookshelf
     * Retrieve a specific bookshelf resource for the specified user
@@ -32,5 +28,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Volume
     * Get a volume resource based on ID
     * Get all volumes filtered by query
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'google-books') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

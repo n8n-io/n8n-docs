@@ -1,32 +1,37 @@
 ---
 title: SeaTable credentials
 description: Documentation for SeaTable credentials. Use these credentials to authenticate SeaTable in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SeaTable credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/)
-- [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger/)
+- [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seatable.md)
+- [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md)
 
 ## Prerequisites
 
-You need to have a [SeaTable](https://seatable.io/en/) instance or cloud account.
+Create a [SeaTable](https://seatable.io/en/) account on either a cloud or self-hosted SeaTable server.
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [SeaTable's API documentation](https://api.seatable.io) for more information about the service.
 
 ## Using API key
 
-From your SeaTable dashboard:
+To configure this credential, you'll need:
 
-1. From the **Bases** menu select the base you want to enable access for.
-2. Navigate to the base options > **Advanced** > **API Token**.
-3. In the modal, enter a name for this token and select the **Read-Write** permission.
-4. Click **Submit** and copy the new API token.
-
-From n8n:
-
-1. Select your environment type: **Cloud-hosted** or **Self-hosted**.
-2. For **Self-hosted** environments enter the domain of your instance.
-3. Enter the API token obtained above and click **Save** to create your credential.
+- An **Environment**: Select the environment that matches your SeaTable instance:
+    - **Cloud-Hosted**
+    - **Self-Hosted**
+- An **API Token (of a Base)**: Generate a **Base-Token** in SeaTable from the base options > **Advanced > API Token**.
+    - Use **Read-Write** permission for your token.
+    - Refer to [Creating an API token](https://seatable.io/en/docs/seatable-api/erzeugen-eines-api-tokens/) for more information.
+- A **Timezone**: Select the timezone of your SeaTable server.
 

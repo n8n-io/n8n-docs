@@ -1,35 +1,44 @@
 ---
-title: Local File trigger
-description: Documentation for the Local File trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+title: Local File Trigger node documentation
+description: Learn how to use the Local File Trigger node in n8n. Follow technical documentation to integrate Local File Trigger node into your workflows.
+contentType: [integration, reference]
+priority: high
 ---
 
-# Local File trigger
+# Local File Trigger node
 
-The Local File trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed or deleted.
+The Local File Trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed, or deleted.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Local File Trigger's integrations](https://n8n.io/integrations/local-file-trigger/){:target=_blank .external-link} page.
+/// note | Self-hosted n8n only
+This node isn't available on n8n Cloud.
 ///
-## Parameters
 
-You can choose what event to watch for:
+## Node parameters
 
-**Trigger On**:
+You can choose what event to watch for using the **Trigger On** parameter.
 
-- **Changes to a Specific File**: triggers when the specified file changes.
-	- **File to Watch**: the path to the file to watch.
-- **Changes Involving a Specific Folder**: triggers when a change occurs in the selected folder.
-	- **Folder to Watch**: the path of the folder to watch.
-	- **Watch for**: the type of change to watch for.
+## Changes to a Specific File
+
+The node triggers when the specified file changes.
+
+Enter the path for the file to watch in **File to Watch**.
+
+## Changes Involving a Specific Folder
+
+The node triggers when a change occurs in the selected folder.
+
+Configure these parameters:
+
+- **Folder to Watch**: Enter the path of the folder to watch.
+- **Watch for**: Select the type of change to watch for.
 
 
-## Options
+## Node options
 
-Use **Options** settings to include or exclude files and folders.
+Use the node **Options** to include or exclude files and folders.
 
 - **Include Linked Files/Folders**: also watch for changes to linked files or folders.
-- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch){:target=_blank .external-link} syntax.
+- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch) syntax.
 - **Max Folder Depth**: how deep into the folder structure to watch for changes.
 
 ### Examples for Ignore
@@ -48,6 +57,7 @@ Ignore a sub-directory of a directory you're watching:
 # For example, **/myDirectory/**
 ```
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/local-file-trigger/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'local-file-trigger') ]]

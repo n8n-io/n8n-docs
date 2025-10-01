@@ -1,26 +1,30 @@
 ---
 title: MessageBird credentials
 description: Documentation for MessageBird credentials. Use these credentials to authenticate MessageBird in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MessageBird credentials
 
-You can use these credentials to authenticate the following nodes with MessageBird.
+You can use these credentials to authenticate the following nodes:
 
-- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/)
+- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird.md)
 
 ## Prerequisites
 
-Create a [MessageBird](https://www.messagebird.com/en/) account. 
+Create a [Bird](https://bird.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your MessageBird dashboard.
-2. Go to the [Developers section](https://dashboard.messagebird.com/en/developers/access).
-3. Click on API access.
-4. Click on 'Add access key' and create a new API key.
-5. Use this API key with your MessageBird API node credentials in n8n.
+- API key
 
-![Getting MessageBird API credentials](/_images/integrations/builtin/credentials/messagebird/using-access-token.gif)
+## Related resources
+
+Refer to [MessageBird's API documentation](https://docs.bird.com/api) for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To generate an appropriate key, visit the [Access keys](https://app.bird.com/settings/access-keys) page in MessageBird. Refer to the [API authorization documentation](https://docs.bird.com/api/api-access/api-authorization) for detailed instructions. 
 

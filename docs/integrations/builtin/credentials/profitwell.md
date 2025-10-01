@@ -1,26 +1,30 @@
 ---
 title: ProfitWell credentials
 description: Documentation for ProfitWell credentials. Use these credentials to authenticate ProfitWell in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ProfitWell credentials
 
-You can use these credentials to authenticate the following nodes with ProfitWell.
+You can use these credentials to authenticate the following nodes:
 
-- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell/)
+- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md)
 
 ## Prerequisites
 
-Create a [ProfitWell](https://www.profitwell.com/) account.
+Create a [ProfitWell](https://www2.profitwell.com/signup/start) account.
 
-## Using API
+## Supported authentication methods
 
-1. Access the [ProfitWell dashboard](https://www2.profitwell.com/app/dashboard) page.
-2. Click on the gears icon on the left panel and select 'Integrations'.
-3. Click on the ***API KEYS/DEV KIT*** tab.
-4. Copy the ***YOUR PRIVATE KEY*** displayed.
-5. Use this ***Private Key*** with your ProfitWell node credentials in n8n.
+- API token
 
-![Getting ProfitWell credentials](/_images/integrations/builtin/credentials/profitwell/using-api.gif)
+## Related resources
+
+Refer to [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/) for more information about the service.
+
+## Using API token
+
+To configure this credential, you'll need:
+
+- An **API Token**: To get an API key or token, go to **Account Settings > Integrations** and select **ProfitWell API**. 
 

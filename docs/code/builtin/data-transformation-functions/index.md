@@ -6,18 +6,18 @@ contentType: overview
 
 # Data transformation functions
 
-Data transformation functions are helper functions to make data transformation easier in expressions.
+Data transformation functions are helper functions to make data transformation easier in [expressions](/glossary.md#expression-n8n).
 
 /// note | JavaScript in expressions
-You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions/) for more information.
+You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.
 ///
 For a list of available functions, refer to the page for your data type:
 
-* [Arrays](/code/builtin/data-transformation-functions/arrays/)
-* [Dates](/code/builtin/data-transformation-functions/dates/)
-* [Numbers](/code/builtin/data-transformation-functions/numbers/)
-* [Objects](/code/builtin/data-transformation-functions/objects/)
-* [Strings](/code/builtin/data-transformation-functions/strings/)
+* [Arrays](/code/builtin/data-transformation-functions/arrays.md)
+* [Dates](/code/builtin/data-transformation-functions/dates.md)
+* [Numbers](/code/builtin/data-transformation-functions/numbers.md)
+* [Objects](/code/builtin/data-transformation-functions/objects.md)
+* [Strings](/code/builtin/data-transformation-functions/strings.md)
 
 ## Usage
 

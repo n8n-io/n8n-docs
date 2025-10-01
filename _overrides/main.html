@@ -27,25 +27,24 @@
 	<!-- End Google Tag Manager -->
 
 
-	<!-- Plausible analytics -->
-	<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.pageview-props.js"></script>
-	
-	<script>
-		window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
-		document.addEventListener("DOMContentLoaded", function () {
-			/* Set up search tracking */
-			if (document.forms.search) {				
-				//var query = document.forms.search.query;		
-				document.forms.search.addEventListener("click", function() {
-					plausible("search");
-					//if (this.value && this.value.length > 3) { plausible("search", { props: { search_term: this.value } })};
-				})
-			}
-		});
-	</script>
+<!-- Plausible analytics -->
+<!--
+https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-extensions
+ -->
+
+<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.file-downloads.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+
+
+
+<!-- n8n Workflow Preview Service -->
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+<script src="https://www.unpkg.com/lit@2.0.0-rc.2/polyfill-support.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@n8n_io/n8n-demo-component/n8n-demo.bundled.js"></script>
+
 
 {% endblock %}
-
 
 
 {% block container %}
@@ -55,8 +54,116 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
 {{ super() }}
 
 {% endblock %}
 
+
+{% block scripts %}
+  <!-- Add scripts that need to run before here -->
+
+  {{ super() }}
+  <!-- Add scripts that need to run afterwards here -->
+  <script>
+	// Track video plays with Plausible
+	if (document.readyState === 'loading') { 
+  		document.addEventListener('DOMContentLoaded', trackVideoWithPlausible);
+	} else { 
+		trackVideoWithPlausible();
+	}
+
+	// used for tracking time played even when multiple videos on page
+	var videoTrackingObj = {};
+
+
+	function trackVideoWithPlausible() {
+	  // If Plausible does not exist, stop
+	  if (typeof plausible !== "function") {
+		return;
+	  }
+	  // If there are no videos on page, stop
+	  const videos = document.querySelectorAll("video");
+	  if (videos.length === 0) {
+		return;
+	  }
+	  // Add event listeners
+	  videos.forEach((video) => {	
+		// for <video src="">
+		if (video.src) {	
+        videoTrackingObj[new URL(video.src).pathname] =  {
+			"played": false,
+		    "played25": false,
+		    "played50": false,
+	        "played75": false
+		  }
+		} else if (video.getElementsByTagName('source').length > 0) {
+			videoTrackingObj[new URL(video.getElementsByTagName('source')[0].src).pathname] =  {
+			"played": false,
+		    "played25": false,
+		    "played50": false,
+	        "played75": false
+		  }
+		} else {
+			let currentPage = window.location.href;
+			fetch('https://internal.users.n8n.cloud/webhook/docs-video-not-tracking?docsPage='+currentPage);
+		}
+		
+		video.addEventListener("play", trackVideoPlayWithPlausible);
+		video.addEventListener("timeupdate", trackTimeIntervalsWithPlausible);
+		video.addEventListener("ended", trackVideoEndedWithPlausible);
+	  });
+	}
+
+	function trackVideoPlayWithPlausible(event) {
+	  let pagePath = new URL(event.target.baseURI).pathname;
+	  let videoPath = new URL(event.target.currentSrc).pathname;
+	  // Only register the first play event
+	  if (videoTrackingObj[videoPath].played === true) {
+		return;
+	  }
+	  // Track play
+	  plausible("Video: Play", { props: { page: pagePath, video: videoPath } });
+	  videoTrackingObj[videoPath].played === true;
+	}
+
+	function trackTimeIntervalsWithPlausible(event) {
+	  let pagePath = new URL(event.target.baseURI).pathname;
+	  let videoPath = new URL(event.target.currentSrc).pathname;
+	  // If less than 25% played, do nothing
+	  if (event.target.currentTime < (event.target.duration / 4)) {
+		return;
+	  }
+	  if (event.target.currentTime > (event.target.duration / 4) && event.target.currentTime < (event.target.duration / 2) && videoTrackingObj[videoPath].played25 === false) {
+	    plausible("Video: 25% Played", { props: { page: pagePath, video: videoPath } });
+		videoTrackingObj[videoPath].played25 = true;
+	  }
+	  if (event.target.currentTime > (event.target.duration / 2) && event.target.currentTime < ((event.target.duration / 4) * 3) && videoTrackingObj[videoPath].played50 === false) {
+	    plausible("Video: 50% Played", { props: { page: pagePath, video: videoPath } });
+		videoTrackingObj[videoPath].played50 = true;
+	  }
+	  if (event.target.currentTime > ((event.target.duration / 4) * 3) && videoTrackingObj[videoPath].played75 === false) {
+	    plausible("Video: 75% Played", { props: { page: pagePath, video: videoPath } });
+		videoTrackingObj[videoPath].played75 = true;
+	  }
+
+	}
+
+	function trackVideoEndedWithPlausible(event) {
+	  let pagePath = new URL(event.target.baseURI).pathname;
+	  let videoPath = new URL(event.target.currentSrc).pathname;
+	  // Track video reached end
+	  plausible("Video: Ended", { props: { page: pagePath, video: videoPath } });
+	}
+  </script>
+
+  <!---->
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+{% with inContent=true %}
+	{% include "partials/kapaButton.html" %}
+{% endwith %}
+{% include "partials/n8nFeedback.html" %}
+{% endblock %}

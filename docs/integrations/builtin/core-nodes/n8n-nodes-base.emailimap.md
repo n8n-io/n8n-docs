@@ -1,28 +1,65 @@
 ---
-title: Email trigger (IMAP)
-description: Documentation for the Email trigger (IMAP) node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+title: Email Trigger (IMAP) node documentation
+description: Learn how to use the Email Trigger (IMAP) Trigger node in n8n. Follow technical documentation to integrate Email Trigger (IMAP) Trigger node into your workflows.
+contentType: [integration, reference]
+priority: high
 ---
 
-# Email trigger (IMAP)
+# Email Trigger (IMAP) node
 
 Use the IMAP Email node to receive emails using an IMAP email server. This node is a trigger node.
 
 /// note | Credential
-You can find authentication information for this node [here](/integrations/builtin/credentials/imap/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/imap/index.md).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Email Trigger (IMAP) integrations](https://n8n.io/integrations/email-trigger-imap/){:target=_blank .external-link} page.
-///
-
-## Basic Operations
+## Operations
 
 - Receive an email
 
-## Node Reference
+## Node parameters
 
-- **Mailbox Name** field: The mailbox from which you want to receive emails.
-- **Action** field: Used to specify whether an email should be marked as read when n8n receives it.
-- **Download Attachment** field: Used to specify whether you want to download any attachments received with the emails.
+Configure the node using the following parameters.
 
+### Credential to connect with
+
+Select or create an [IMAP credential](/integrations/builtin/credentials/imap/index.md) to connect to the server with.
+
+### Mailbox Name
+
+Enter the mailbox from which you want to receive emails.
+
+### Action
+
+Choose whether you want an email marked as read when n8n receives it. **None** will leave it marked unread. **Mark as Read** will mark it as read.
+
+### Download Attachments
+
+This toggle controls whether to download email attachments (turned on) or not (turned off). Only set this if necessary, since it increases processing.
+
+### Format
+
+Choose the format to return the message in from these options:
+
+* **RAW**: This format returns the full email message data with body content in the raw field as a base64url encoded string. It doesn't use the payload field.
+* **Resolved**: This format returns the full email with all data resolved and attachments saved as binary data.
+* **Simple**: This format returns the full email. Don't use it if you want to gather inline attachments.
+
+## Node options
+
+You can further configure the node using these **Options**.
+
+### Custom Email Rules
+
+Enter custom email fetching rules to determine which emails the node fetches.
+
+Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap) for more information.
+
+### Force Reconnect Every Minutes
+
+Set an interval in minutes to force reconnection.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'email-trigger-imap') ]]

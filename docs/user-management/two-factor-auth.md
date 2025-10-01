@@ -1,5 +1,6 @@
 ---
 description: How to enable 2FA for your n8n account
+contentType: howto
 ---
 
 # Two-factor authentication (2FA)
@@ -21,4 +22,4 @@ To enable 2FA in n8n:
 
 ## Disable 2FA for your instance
 
-Self-hosted users can configure their n8n instance to disable 2FA for all users by setting `N8N_MFA_ENABLED` to false. Note that n8n ignores this if existing users have 2FA enabled. Refer to [Configuration methods](/hosting/configuration/configuration-methods/) for more information on configuring your n8n instance with environment variables.
+Self-hosted users can configure their n8n instance to disable 2FA for all users by setting `N8N_MFA_ENABLED` to false. Note that n8n ignores this if existing users have 2FA enabled. Refer to [Configuration methods](/hosting/configuration/configuration-methods.md) for more information on configuring your n8n instance with environment variables.

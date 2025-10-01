@@ -1,25 +1,31 @@
 ---
 title: npm credentials
 description: Documentation for the npm credentials. Use these credentials to authenticate npm in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # npm credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/)
+- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm.md)
 
 ## Prerequisites
 
-* An npm account
-* An Access Token. Follow [npm's documentation](https://docs.npmjs.com/creating-and-viewing-access-tokens){:target=_blank .external-link} to get your token.
+Create an [npm](https://www.npmjs.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
---8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
+- API access token
 
-1. Copy the Access token from npm into **Access Token**.
-2. If you are using a custom npm registry set the **Registry Url**.
-3. Select **Save**. n8n tests your credentials and confirms that they work.
+## Related resources
+
+Refer to [npm's external integrations documentation](https://docs.npmjs.com/integrations/integrating-npm-with-external-services) for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: Create an access token by selecting **Access Tokens** from your profile menu. Refer to [npm's Creating and viewing access tokens documentation](https://docs.npmjs.com/creating-and-viewing-access-tokens) for more detailed instructions.
+- A **Registry URL**: If you're using a custom npm registry, update the **Registry URL** to that custom registry. Otherwise, keep the public registry value.
 

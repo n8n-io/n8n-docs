@@ -1,21 +1,21 @@
 ---
-title: GitLab
-description: Documentation for the GitLab node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: GitLab node documentation
+description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# GitLab
+# GitLab node
 
 Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab/) for guidance on setting up authentication. 
+Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [GitLab integrations](https://n8n.io/integrations/gitlab/){:target="_blank" .external-link} list.
-///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -43,15 +43,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * User
     * Returns the repositories of a user
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'gitlab') ]]
 
 ## Related resources
 
+Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/) for more information about the service.
 
-Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} for more information about the service.
-
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/).
-	
-View [example workflows and related content](https://n8n.io/integrations/gitlab/){:target=_blank .external-link} on n8n's website.
+n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

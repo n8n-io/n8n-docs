@@ -20,7 +20,7 @@ n8n isn't CPU intensive so even small instances (of providers such as AWS and GC
 
 ## Database considerations
 
-n8n uses its database to store credentials, past executions, and workflows.
+n8n uses its database to store [credentials](/glossary.md#credential-n8n), past executions, and workflows.
 
 A core feature of n8n is the flexibility to choose a database. All the supported databases have different advantages and disadvantages, which you have to consider individually and pick the one that best suits your needs. By default n8n creates an SQLite database if no database exists at the given location.
 
@@ -40,4 +40,4 @@ For Postgres, the database must already exist on the DB-instance. The database u
 
 An n8n instance doesn't typically require large amounts of available memory. For example an n8n Cloud instance at idle requires ~100MB. It's the nature of your workflows and the data being processed that determines your memory requirements.
 
-For example, while most nodes just pass data to the next node in the workflow, `Function` nodes create a pre-processing and post-processing copy of the data. When dealing will large binary files, this can consume all available resources.
+For example, while most nodes just pass data to the next node in the workflow, the [Code node](/code/code-node.md) creates a pre-processing and post-processing copy of the data. When dealing will large binary files, this can consume all available resources.

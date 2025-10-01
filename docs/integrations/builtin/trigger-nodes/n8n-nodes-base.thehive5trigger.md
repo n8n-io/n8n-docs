@@ -1,19 +1,21 @@
 ---
-title: TheHive 5 trigger
-description: Documentation for the TheHive 5 trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: TheHive 5 Trigger node documentation
+description: Learn how to use the TheHive 5 Trigger node in n8n. Follow technical documentation to integrate TheHive 5 Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# TheHive 5 trigger
+# TheHive 5 Trigger node
 
-On this page, you'll find a list of events the TheHive5 trigger node can respond to, and links to more resources.
+Use the TheHive 5 Trigger node to respond to events in [TheHive](https://strangebee.com/thehive/) and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive events, including alerts, cases, comments, pages, and tasks.
+
+On this page, you'll find a list of events the TheHive5 Trigger node can respond to and links to more resources.
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive 5 trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
+n8n provides two nodes for TheHive. Use this node (TheHive 5 Trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [TheHive 5 Trigger integrations](https://n8n.io/integrations/thehive-5-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [TheHive 5 Trigger integrations](https://n8n.io/integrations/thehive-5-trigger/) page.
 ///
 
 ## Events
@@ -49,36 +51,43 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources
 
-n8n provides an app node for TheHive 5. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/).
+n8n provides an app node for TheHive 5. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md).
 
-<!--
-View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.
--->
-
-Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.
+Refer to TheHive's [documentation](https://docs.strangebee.com/) for more information about the service.
 
 
 ## Configure a webhook in TheHive
 
 To configure the webhook for your TheHive instance:
 
-1. Copy the webhook URL from TheHive Trigger node.
-2. Add the following lines to the application.conf file. This is TheHive configuration file.
+1. Copy the testing and production webhook URLs from TheHive Trigger node.
+2. Add the following lines to the `application.conf` file. This is TheHive configuration file:
+
 	```
 	notification.webhook.endpoints = [
 		{
-			name: WEBHOOK_NAME
-			url: WEBHOOK_URL
-			version: 0
+			name: TESTING_WEBHOOK_NAME
+			url: TESTING_WEBHOOK_URL
+			version: 1
+			wsConfig: {}
+			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
+			excludedTheHiveOrganisations: []
+		},
+		{
+			name: PRODUCTION_WEBHOOK_NAME
+			url: PRODUCTION_WEBHOOK_URL
+			version: 1
 			wsConfig: {}
 			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
 			excludedTheHiveOrganisations: []
 		}
 	]
 	```
-3. Replace `WEBHOOK_URL` with the URL you copied in the previous step.
-4. Replace `ORGANIZATION_NAME` with your organization name.
-5. Execute the following cURL command to enable notifications:
+
+3. Replace `TESTING_WEBHOOK_URL` and `PRODUCTION_WEBHOOK_URL` with the URLs you copied in the previous step.
+4. Replace `TESTING_WEBHOOK_NAME` and `PRODUCTION_WEBHOOK_NAME` with your preferred endpoint names.
+5. Replace `ORGANIZATION_NAME` with your organization name.
+6. Execute the following cURL command to enable notifications:
 	```sh
 	curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/json' THEHIVE_URL/api/config/organisation/notification -d '
 	{
@@ -86,7 +95,12 @@ To configure the webhook for your TheHive instance:
 			{
 			"delegate": false,
 			"trigger": { "name": "AnyEvent"},
-			"notifier": { "name": "webhook", "endpoint": "WEBHOOK_NAME" }
+			"notifier": { "name": "webhook", "endpoint": "TESTING_WEBHOOK_NAME" }
+			},
+			{
+			"delegate": false,
+			"trigger": { "name": "AnyEvent"},
+			"notifier": { "name": "webhook", "endpoint": "PRODUCTION_WEBHOOK_NAME" }
 			}
 		]
 	}'

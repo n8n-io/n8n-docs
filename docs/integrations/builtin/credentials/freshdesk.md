@@ -1,18 +1,18 @@
 ---
 title: Freshdesk credentials
 description: Documentation for Freshdesk credentials. Use these credentials to authenticate Freshdesk in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Freshdesk credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk/)
+- [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk.md)
 
 ## Prerequisites
 
-Create a [Freshdesk](https://freshdesk.com/){:target=_blank .external-link} account.
+Create a [Freshdesk](https://freshdesk.com/) account.
 
 ## Supported authentication methods
 
@@ -20,12 +20,12 @@ Create a [Freshdesk](https://freshdesk.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Freshdesk's API documentation](https://developers.freshdesk.com/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Freshdesk's API documentation](https://developers.freshdesk.com/api/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Freshdesk API authenticaton documentation](https://developers.freshdesk.com/api/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
+- An **API Key**: Refer to the [Freshdesk API authenticaton documentation](https://developers.freshdesk.com/api/#authentication) for detailed instructions on getting your API key.
 - A Freshdesk **Domain**: Use the subdomain of your Freshdesk account. This is part of the URL, for example `https://<subdomain>.freshdesk.com`. So if you access Freshdesk through `https://n8n.freshdesk.com`, enter `n8n` as your **Domain**.
 

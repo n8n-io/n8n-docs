@@ -13,7 +13,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data. 
+By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data. 
 
 
 | Variable | Type  | Default  | Description |

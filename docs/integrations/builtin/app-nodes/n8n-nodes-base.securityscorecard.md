@@ -1,23 +1,20 @@
 ---
-title: SecurityScorecard
-description: Documentation for the SecurityScorecard node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: SecurityScorecard node documentation
+description: Learn how to use the SecurityScorecard node in n8n. Follow technical documentation to integrate SecurityScorecard node into your workflows.
+contentType: [integration, reference]
 ---
 
-# SecurityScorecard
+# SecurityScorecard node
 
 Use the SecurityScorecard node to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting portfolio, as well as getting a company's data.
 
 On this page, you'll find a list of operations the SecurityScorecard node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [SecurityScorecard integrations](https://n8n.io/integrations/securityscorecard/){:target="_blank" .external-link} list.
+Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Company
     * Get company factor scores and issue counts
@@ -45,3 +42,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Generate a report
     * Get list of recently generated report
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'securityscorecard') ]]

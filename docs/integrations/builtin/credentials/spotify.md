@@ -1,30 +1,39 @@
 ---
 title: Spotify credentials
 description: Documentation for Spotify credentials. Use these credentials to authenticate Spotify in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Spotify credentials
 
-You can use these credentials to authenticate the following nodes with Spotify.
+You can use these credentials to authenticate the following nodes:
 
-- [Spotify](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/)
+- [Spotify](/integrations/builtin/app-nodes/n8n-nodes-base.spotify.md)
 
+## Supported authentication methods
 
-## Prerequisites
+- OAuth2
 
-Create a [Spotify Developer](https://developer.spotify.com/dashboard/login) account.
+## Related resources
 
-## Using OAuth
+Refer to [Spotify's Web API documentation](https://developer.spotify.com/documentation/web-api) for more information about the service.
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Spotify account to n8n.
-///
+## Using OAuth2
 
-1. Access your [Spotify for Developers](https://developer.spotify.com/dashboard/login) dashboard.
-2. Click the *Create an App* button at the top of your dashboard. Enter in the app's name and description and click *Create*.
-3. Use provided Client Secret and Client ID with your Spotify node credentials in n8n.
-4. Open the app settings and add the n8n provided redirect URL to the app's redirect URI list. Redirect URL Explanation [here](/).
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-![The Spotify App Dashboard](/_images/integrations/builtin/credentials/spotify/dashboard.gif)
+If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/) account so you can create a Spotify app:
 
+1. Open the [Spotify developer dashboard](https://developer.spotify.com/dashboard).
+2. Select **Create an app**.
+3. Enter an **App name**, like `n8n integration`.
+4. Enter an **App description**.
+5. Copy the **OAuth Redirect URL** from n8n and enter it as the **Redirect URI** in your Spotify app.
+6. Check the box to agree to the Spotify Terms of Service and Branding Guidelines.
+7. Select **Create**. The **App overview** page opens.
+8. Copy the **Client ID** and enter it in your n8n credential.
+9. Copy the **Client Secret** and enter it in your n8n credential.
+10. Select **Connect my account** and follow the on-screen prompts to finish authorizing the credential.
+
+Refer to [Spotify Apps](https://developer.spotify.com/documentation/web-api/concepts/apps) for more information.

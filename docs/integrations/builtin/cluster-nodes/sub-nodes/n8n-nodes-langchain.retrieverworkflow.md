@@ -1,17 +1,15 @@
 ---
-title: Workflow Retriever
-description: Documentation for the Workflow Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Workflow Retriever node documentation
+description: Learn how to use the Workflow Retriever node in n8n. Follow technical documentation to integrate Workflow Retriever node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Workflow Retriever
+# Workflow Retriever node
 
 Use the Workflow Retriever node to retrieve data from an n8n workflow for use in a Retrieval QA Chain or another Retriever node.
 
 On this page, you'll find the node parameters for the Workflow Retriever node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/workflow-retriever/){:target=_blank .external-link} page.
-///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -21,19 +19,21 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 
 Tell n8n which workflow to call. You can choose either:
 
-* **Database**, then enter a workflow ID.
-* **Parameter**, then copy in a complete [workflow JSON](/workflows/export-import/).
+* **Database** and enter a workflow ID.
+* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import.md).
 
 ### Workflow values
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'workflow-retriever') ]]
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/workflow-retriever/){:target=_blank .external-link} on n8n's website.
-
-Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/modules/data_connection/retrievers/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

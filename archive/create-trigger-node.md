@@ -47,14 +47,11 @@ Since n8n's repository already has a Autopilot Trigger node, we will name this n
 
 ```typescript
 import {
-   IHookFunctions,
-   IWebhookFunctions,
-} from 'n8n-core';
-
-import {
    IDataObject,
+   IHookFunctions,
    INodeType,
    INodeTypeDescription,
+   IWebhookFunctions,
    IWebhookResponseData,
 } from 'n8n-workflow';
 
@@ -336,17 +333,11 @@ Let's see how this would look for our current use-case:
 
 ```typescript
 import {
-	OptionsWithUri,
-} from 'request';
-
-import {
-	IExecuteFunctions,
-	ILoadOptionsFunctions,
-} from 'n8n-core';
-
-import {
 	IDataObject,
+	IExecuteFunctions,
 	IHookFunctions,
+	ILoadOptionsFunctions,
+	IRequestOptions,
 	IWebhookFunctions,
 } from 'n8n-workflow';
 
@@ -358,7 +349,7 @@ export async function autofriendApiRequest(this: IExecuteFunctions | IWebhookFun
 
 	const endpoint = 'https://api2.autopilothq.com/v1';
 
-	const options: OptionsWithUri = {
+	const options: IRequestOptions = {
 		headers: {
 			'Content-Type': 'application/json',
 			autopilotapikey: apiKey,
@@ -469,5 +460,5 @@ Since our server is running locally, we need a tool that lets us proxy all reque
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).

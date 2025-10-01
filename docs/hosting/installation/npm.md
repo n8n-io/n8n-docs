@@ -4,7 +4,7 @@ contentType: tutorial
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
@@ -12,13 +12,14 @@ npm is a quick way to get started with n8n on your local machine. You must have 
 
 You can try n8n without installing it using npx.
 
+
 From the terminal, run:
 
 ```bash
 npx n8n
 ```
 
-This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
+This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
 
 ## Install globally with npm
 
@@ -48,12 +49,10 @@ n8n
 n8n start
 ```
 
-/// note | Keep in mind
-Windows users remember to change into the `.n8n` directory of your Home folder (`~/.n8n`) before running `n8n start`.
-///
+
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/).
+Try out n8n using the [Quickstarts](/try-it-out/index.md).
 
 ## Updating
 
@@ -88,4 +87,4 @@ If the upgrade involved a database migration:
 
 ## Windows troubleshooting
 
-If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}.
+If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).

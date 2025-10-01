@@ -1,26 +1,23 @@
 ---
-title: Webex by Cisco
-description: Documentation for the Webex by Cisco node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Webex by Cisco node documentation
+description: Learn how to use the Webex by Cisco node in n8n. Follow technical documentation to integrate Webex by Cisco node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Webex by Cisco
+# Webex by Cisco node
 
 Use the Webex by Cisco node to automate work in Webex, and integrate Webex with other applications. n8n has built-in support for a wide range of Webex features, including creating, getting, updating, and deleting meetings and messages.
 
 On this page, you'll find a list of operations the Webex node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Webex credentials](/integrations/builtin/credentials/ciscowebex/) for guidance on setting up authentication. 
+Refer to [Webex credentials](/integrations/builtin/credentials/ciscowebex.md) for guidance on setting up authentication. 
 ///
 /// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} list.
+For usage examples and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/) list.
 ///
 
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} list.
-///
-## Basic operations
+## Operations
 
 * Meeting
     * Create
@@ -35,6 +32,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get All
     * Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'webex-by-cisco') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

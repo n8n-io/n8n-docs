@@ -1,23 +1,21 @@
 ---
-title: Spotify
-description: Documentation for the Spotify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Spotify node documentation
+description: Learn how to use the Spotify node in n8n. Follow technical documentation to integrate Spotify node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Spotify
+# Spotify node
 
 Use the Spotify node to automate work in Spotify, and integrate Spotify with other applications. n8n has built-in support for a wide range of Spotify features, including getting album and artist information. 
 
 On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Spotify integrations](https://n8n.io/integrations/spotify/){:target="_blank" .external-link} list.
+Refer to [Spotify credentials](/integrations/builtin/credentials/spotify.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Album
     * Get an album by URI or ID.
@@ -56,5 +54,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a track by its URI or ID.
     * Get audio features for a track by URI or ID.
     * Search tracks by keyword
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'spotify') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

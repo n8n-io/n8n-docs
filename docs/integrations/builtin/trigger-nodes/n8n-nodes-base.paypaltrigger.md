@@ -1,17 +1,17 @@
 ---
-title: PayPal trigger
-description: Documentation for the PayPal trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: PayPal Trigger node documentation
+description: Learn how to use the PayPal Trigger node in n8n. Follow technical documentation to integrate PayPal Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# PayPal trigger
+# PayPal Trigger node
 
 [PayPal](https://paypal.com) is a digital payment service that supports online fund transfers that customers can use when shopping online.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/paypal/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/paypal.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [PayPal Trigger integrations](https://n8n.io/integrations/paypal-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [PayPal Trigger integrations](https://n8n.io/integrations/paypal-trigger/) page.
 ///

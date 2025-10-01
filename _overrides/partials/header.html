@@ -7,15 +7,6 @@
 <!-- Header -->
 <header class="{{ class }}" data-md-component="header">
 
-	<nav class="md-tabs n8n-top-nav" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
-		<div class="md-grid">
-		  <ul class="md-tabs__list n8n-top-nav-list" >
-			<li class="md-tabs__item"><a href="https://n8n.io/" class="md-tabs__link" target="_blank">n8n home</a></li>
-			<li class="md-tabs__item"><a href="https://community.n8n.io/" class="md-tabs__link" target="_blank">Forum</a></li>
-			<li class="md-tabs__item"><a href="https://blog.n8n.io/" class="md-tabs__link" target="_blank">Blog</a></li>
-		  </ul>
-		</div>
-	  </nav>
   <nav
     class="md-header__inner md-grid"
     aria-label="{{ lang.t('header.title') }}"
@@ -38,7 +29,7 @@
     </label>
 
     <!-- Header title -->
-		<!-- CUSTOM: remove the page title section. This pairs with custom CSS to keep the site
+		<!-- n8n CUSTOM: remove the page title section. This pairs with custom CSS to keep the site
 		title in place on scroll -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -121,19 +112,28 @@
         </div>
       </div>
     {% endif %}
+    
+  <!-- n8n CUSTOM: Kapa -->
+  {% include "partials/kapaButton.html" %}  
 
-    <!-- Button to open search modal -->
+  <!-- Button to open search modal -->
     {% if "material/search" in config.plugins %}
-      <label class="md-header__button md-icon" for="__search">
-        {% include ".icons/material/magnify.svg" %}
-      </label>
+      {% set search = config.plugins["material/search"] | attr("config") %}
 
-      <!-- Search interface -->
-      {% include "partials/search.html" %}
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </label>
+
+        <!-- Search interface -->
+        {% include "partials/search.html" %}
+      {% endif %}
     {% endif %}
 
     <!-- Repository information -->
-	  <!-- CUSTOM: don't show GitHub link -->
+	  <!-- n8n CUSTOM: don't show GitHub link -->
   </nav>
 
   <!-- Navigation tabs (sticky) -->

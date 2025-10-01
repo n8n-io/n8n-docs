@@ -1,0 +1,16 @@
+{% import "partials/tabs-item.html" as item with context %}
+<nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+  <div class="md-grid n8n-other-sites">
+    <ul class="md-tabs__list">
+      {% for nav_item in nav %}
+        {{ item.render(nav_item) }}
+      {% endfor %}
+    </ul>
+	<!-- n8n CUSTOM: additional nav to link to other n8n sites -->
+	<ul class="md-tabs__list">
+		<li class="md-tabs__item"><a href="https://n8n.io/" class="md-tabs__link" target="_blank">n8n home ↗</a></li>
+		<li class="md-tabs__item"><a href="https://community.n8n.io/" class="md-tabs__link" target="_blank">Forum ↗</a></li>
+		<li class="md-tabs__item"><a href="https://blog.n8n.io/tag/tutorial/" class="md-tabs__link" target="_blank">Tutorials (blog) ↗</a></li>
+	  </ul>
+  </div>
+</nav>

@@ -1,22 +1,22 @@
 ---
-title: Onfleet trigger
-description: Documentation for the Onfleet trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Onfleet Trigger node documentation
+description: Learn how to use the Onfleet Trigger node in n8n. Follow technical documentation to integrate Onfleet Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Onfleet trigger
+# Onfleet Trigger node
 
 [Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/) page.
 ///
 
-## Operations
+## Events
 
 Trigger a workflow on:
 

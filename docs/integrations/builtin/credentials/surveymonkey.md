@@ -1,41 +1,71 @@
 ---
 title: SurveyMonkey credentials
 description: Documentation for SurveyMonkey credentials. Use these credentials to authenticate SurveyMonkey in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SurveyMonkey credentials
 
-You can use these credentials to authenticate the following nodes with SurveyMonkey.
+You can use these credentials to authenticate the following nodes:
 
-- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger/)
+- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md)
 
 
 ## Prerequisites
 
-Create a [SurveyMonkey](https://surveymonkey.com/) account.
+- Create a [SurveyMonkey](https://www.surveymonkey.com) account.
+- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app) from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/).
+    - Refer to [Required app scopes](#required-app-scopes) for information on the scopes you must use.
+
+## Supported authentication methods
+
+- API access token
+- OAuth2
+
+## Related resources
+
+Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api) for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: Generated once you create an app.
+- A **Client ID**: Generated once you create an app.
+- A **Client Secret**: Generated once you create an app.
+
+Once you've created your app and assigned appropriate scopes, go to **Settings > Credentials**. Copy the **Access Token**, **Client ID**, and **Secret** and add them to n8n.
 
 ## Using OAuth
 
-1. Access your SurveyMonkey dashboard.
-2. Click on the context menu in the top right.
-3. Click on Integrations & Plug-ins
-4. Click on Develop.
-5. Click on My Apps in the top panel.
-6. Create a new app, fill in details.
-7. Once created, go to settings.
-8. Use the client ID and client secret with your SurveyMonkey OAuth API credentials in n8n.
+To configure this credential, you'll need:
 
-## Using Access Token
+- A **Client ID**: Generated once you create an app.
+- A **Client Secret**: Generated once you create an app.
 
-1. Access your SurveyMonkey dashboard.
-2. Click on the context menu in the top right.
-3. Click on Integrations & Plug-ins
-4. Click on Develop.
-5. Click on My Apps in the top panel.
-6. Create a new app, fill in details.
-7. Once created, go to settings.
-8. Use the access token, client ID and client secret with your SurveyMonkey node credentials in n8n.
+Once you've created your app and assigned appropriate scopes:
 
-![Getting SurveyMonkey credentials](/_images/integrations/builtin/credentials/surveymonkey/getting-credentials.gif)
+1. Go to the app's **Settings > Settings**.
+2. From n8n, copy the **OAuth Redirect URL**.
+3. Overwrite the app's existing **OAuth Redirect URL** with that URL.
+4. Select **Submit Changes**.
+5. Be sure the **Scopes** section contains the [Required app scopes](#required-app-scopes).
 
+From the app's **Settings > Credentials**, copy the **Client ID** and **Client Secret** and add them to your n8n credential. You can now select **Connect my account** from n8n.
+
+/// note | SurveyMonkey Test OAuth Flow
+This option only works if you keep the default SurveyMonkey **OAuth Redirect URL** and add the n8n OAuth Redirect URL as an **Additional Redirect URL**.
+///
+
+## Required app scopes
+
+Once you create your app, go to **Settings > Scopes**. Select these scopes for your n8n credential to work:
+
+- **View Surveys**
+- **View Collectors**
+- **View Responses**
+- **View Response Details**
+- **Create/Modify Webhooks**
+- **View Webhooks**
+
+Select **Update Scopes** to save them.

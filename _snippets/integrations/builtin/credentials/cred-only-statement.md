@@ -1,0 +1,1 @@
+You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to make a [Custom API call](/integrations/custom-operations.md).

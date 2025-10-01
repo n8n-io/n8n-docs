@@ -1,48 +1,60 @@
 ---
 title: Zoom credentials
 description: Documentation for Zoom credentials. Use these credentials to authenticate Zoom in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zoom credentials
 
-You can use these credentials to authenticate the following nodes with Zoom.
+You can use these credentials to authenticate the following nodes:
 
-- [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom/)
+- [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md)
 
 ## Prerequisites
 
-Create a [Zoom](https://zoom.us/) account.
+Create a [Zoom](https://zoom.us/) account. Your account must have one of the following permissions:
 
-## Using OAuth
+- Account owner
+- Account admin
+- Zoom for developers role
 
-<!-- !!! tip  Note for n8n Cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Zoom account to n8n.
- -->
+## Supported authentication methods
 
-1. Visit the [Zoom App Marketplace](https://marketplace.zoom.us/) and select the 'Build App' option in the *Develop* dropdown on the top-right corner.
-2. Create a new OAuth app.
-3. Select 'User-managed app'.
-4. Set the "Would you like to publish this app on Zoom App Marketplace?" slider to off.
-5. Click on the *Create* button.
-6. Copy the 'OAuth Callback URL' provided in the Zoom OAuth2 API credentials in n8n and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
-7. Copy the Whitelist URL' provided in the Zoom OAuth2 API credentials in n8n and paste it in the 'Redirect URL for OAuth' section in the Zoom app creation page.
-8. Copy the Client ID and Client Secret provided in the Zoom app creation page and paste it in the Zoom OAuth2 API credentials in n8n.
-9. Enter any necessary information and click continue.
-10. In the 'Scopes' section, click *Add Scopes* and choose the scopes that you plan to use.
-11. Click on the circle button in the OAuth section to connect your Zoom account to n8n.
-12. Click the *Save* button to save your credentials.
+- API JWT token
+- OAuth2
 
-![Getting Zoom OAuth credentials](/_images/integrations/builtin/credentials/zoom/using-oauth.gif)
+/// warning | API JWT token deprecation
+Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
+///
 
-## Using Access Token
+## Related resources
 
-1. Visit the [Zoom App Marketplace](https://marketplace.zoom.us/) and select the 'Build App' option in the *Develop* dropdown on the top-right corner.
-2. Create a new JWT app and enter any necessary information.
-3. Go to the 'App Credentials' tab.
-4. Click on *View JWT Token* and copy the given token. <!-- Typo in code repo, needs PR -->
-5. Go to the 'Activation' tab and click on the *Activate your app* button.
-6. Use the JWT token you copied with your Zoom API credentials in n8n.
+Refer to [Zoom's API documentation](https://developers.zoom.us/docs/api/) for more information about the service.
 
-![Getting Zoom JWT credentials](/_images/integrations/builtin/credentials/zoom/using-access-token.gif)
+## Using API JWT token
 
+This authentication method has been fully deprecated by Zoom. Don't create new credentials with it.
+
+To configure this credential, you'll need:
+
+- A **JWT token**: To create a JWT token, create a new JWT app in the [Zoom App Marketplace](https://marketplace.zoom.us/).
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated when you create an OAuth app on the Zoom App Marketplace.
+- A **Client Secret**: Generated when you create an OAuth app.
+
+To generate your **Client ID** and **Client Secret**, [create an OAuth app](https://developers.zoom.us/docs/integrations/create/).
+
+Use these settings for your OAuth app:
+
+- Select **User-managed app** for **Select how the app is managed**.
+- Copy the **OAuth Callback URL** from n8n and enter it as an **OAuth Redirect URL** in Zoom.
+- If your n8n credential displays a **Whitelist URL**, also enter that URL as a an **OAuth Redirect URL**.
+- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md) node, select:
+    - `meeting:read`
+    - `meeting:write`
+    - Refer to [OAuth scopes | Meeting scopes](https://developers.zoom.us/docs/integrations/oauth-scopes/#meeting-scopes) for more information on meeting scopes.
+- Copy the **Client ID** and **Client Secret** provided in the Zoom app and enter them in your n8n credential.

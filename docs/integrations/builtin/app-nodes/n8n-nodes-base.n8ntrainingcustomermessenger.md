@@ -1,10 +1,11 @@
 ---
-title: Customer Messenger (n8n Training)
-description: Documentation for the Customer Messenger (n8n Training) node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Customer Messenger (n8n Training) node documentation
+description: Learn how to use the Customer Messenger (n8n Training) node in n8n. Follow technical documentation to integrate Customer Messenger (n8n Training) node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Customer Messenger (n8n Training)
+# Customer Messenger (n8n Training) node
 
-This node is used exclusively for the n8n new user onboarding tutorial. It provides no further functionality.
+Use this node only for the n8n new user onboarding tutorial. It provides no further functionality.
 

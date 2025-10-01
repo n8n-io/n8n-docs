@@ -15,7 +15,7 @@ Data mocking is simulating or faking data. It's useful when developing a workflo
 
 ## Mocking with real data using data pinning
 
-Using [data pinning](/data/data-pinning/), you load real data into your workflow, then pin it in the output panel of a node. Using this approach you have realistic data, with only one call to your data source. You can [edit pinned data](/data/data-editing/).
+Using [data pinning](/data/data-pinning.md), you load real data into your workflow, then pin it in the output panel of a node. Using this approach you have realistic data, with only one call to your data source. You can [edit pinned data](/data/data-editing.md).
 
 Use this approach when you need to configure your workflow to handle the exact data structure and parameters provided by your data source.
 
@@ -24,7 +24,7 @@ Use this approach when you need to configure your workflow to handle the exact d
 
 ## Generate custom data using the Code or Edit Fields nodes
 
-You can create a custom dataset in your workflow using either the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) or the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set/).
+You can create a custom dataset in your workflow using either the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) or the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md).
 
 In the Code node, you can create any data set you want, and return it as the node output. In the Edit Fields node, select **Add fields** to add your custom data.
 

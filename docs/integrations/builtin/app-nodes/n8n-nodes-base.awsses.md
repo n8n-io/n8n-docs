@@ -1,24 +1,22 @@
 ---
-title: AWS SES
-description: Documentation for the AWS SES node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: AWS SES node documentation
+description: Learn how to use the AWS SES node in n8n. Follow technical documentation to integrate AWS SES node into your workflows.
+contentType: [integration, reference]
 ---
 
-# AWS SES
+# AWS SES node
 
 Use the AWS SES node to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
 
 On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS SES credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
-///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS SES integrations](https://n8n.io/integrations/aws-ses/){:target=_blank .external-link} list.
+Refer to [AWS SES credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-## Basic Operations
+## Operations
 
 * Custom Verification Email
     * Create a new custom verification email template
@@ -36,6 +34,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a template
     * Get all templates
     * Update a template
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'aws-ses') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

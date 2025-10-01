@@ -11,7 +11,7 @@ Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
 
 Workflow sharing allows you to share workflows between users of the same n8n instance.
 
-Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
+Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Account types](/user-management/account-types.md) for more information about owners and admins.
 
 ## Share a workflow
 
@@ -24,7 +24,7 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 You can browse and search workflows on the **Workflows** list. The workflows in the list depend on the project:
 
-* **Home** lists all workflows you can access. This includes:
+* **Overview** lists all workflows you can access. This includes:
 	* Your own workflows.
 	* Workflows shared with you.
 	* Workflows in projects you're a member of.
@@ -38,7 +38,7 @@ There are two workflow roles: creator and editor. The creator is the user who cr
 You can't change the workflow owner, except when deleting the user.
 
 /// note | Credentials
-Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
+Workflow sharing allows editors to use all [credentials](/glossary.md#credential-n8n) used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing.md).
 ///
 ### Permissions
 
@@ -56,4 +56,4 @@ Workflow sharing allows editors to use all credentials used in the workflow. Thi
 
 Sharing in n8n works on the principle of least privilege. This means that if a user shares a workflow with you, but they don't share their credentials, you can't edit the nodes within the workflow that use those credentials. You can view and run the workflow, and edit nodes that don't use unshared credentials.
 
-Refer to [Credential sharing](/credentials/credential-sharing/) for guidance on sharing credentials.
+Refer to [Credential sharing](/credentials/credential-sharing.md) for guidance on sharing credentials.

@@ -1,34 +1,31 @@
 ---
 title: Quick Base credentials
 description: Documentation for Quick Base credentials. Use these credentials to authenticate Quick Base in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Quick Base credentials
 
-You can use these credentials to authenticate the following nodes with Quick Base.
+You can use these credentials to authenticate the following nodes:
 
-- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase/)
+- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase.md)
 
 ## Prerequisites
 
 Create a [Quick Base](https://www.quickbase.com/) account.
 
-## Using API
+## Supported authentication methods
 
-1. Access your Quick Base dashboard.
-2. Click on your name on the top right and select 'My preferences' from the dropdown list.
-3. Click on ***Manage my user tokens*** under the ***My User Information*** section.
-4. Click on the ***+ New user token*** button.
-5. Enter a name in the ***Name*** field.
-6. Select an app from the ***Assign token to apps*** dropdown list.
-7. Click on the ***Save*** button.
-8. Copy the string of characters located between `https://` and `/db` in your Quick Base URL. This string is the hostname.
-9. Use this ***Hostname*** and ***User Token*** with your Quick Base node credentials in n8n.
+- API key
 
-![Getting Quick Base credentials](/_images/integrations/builtin/credentials/quickbase/using-api.gif)
+## Related resources
 
-## Further Reference
+Refer to [Quick Base's API documentation](https://developer.quickbase.com/auth/) for more information about the service.
 
-- [Quick Base API Portal](https://developer.quickbase.com/auth)
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **Hostname**: The string of characters located between `https://` and `/db` in your Quick Base URL.
+- A **User Token**: To generate a token, select your **Profile > My preferences > My User Information > Manage my user tokens**. Refer to [Creating and using user tokens](https://helpv2.quickbase.com/hc/en-us/articles/4570374095124-Creating-and-using-user-tokens) for detailed instructions.
 

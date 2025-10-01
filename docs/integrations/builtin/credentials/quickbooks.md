@@ -1,50 +1,45 @@
 ---
 title: QuickBooks credentials
 description: Documentation for QuickBooks credentials. Use these credentials to authenticate QuickBooks in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # QuickBooks credentials
 
-You can use these credentials to authenticate the following nodes with QuickBooks.
+You can use these credentials to authenticate the following nodes:
 
-- [QuickBooks](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks/)
+- [QuickBooks](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks.md)
 
 ## Prerequisites
 
-Create a [Intuit developer](https://developer.intuit.com/) account.
+Create an [Intuit developer](https://developer.intuit.com/) account.
 
-## Using OAuth
+## Supported authentication methods
 
-<!-- !!! tip  Note for n8n Cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your QuickBooks account to n8n.
- -->
+- OAuth2
 
-1. Open the Intuit Developer [dashboard](https://developer.intuit.com/app/developer/dashboard) page.
-2. Click on the ***+ Create an app*** button.
-3. Select the ***QuickBooks Online and Payments*** platform.
-4. Enter the name of the app in the ***What's your app name?*** field.
-5. Select the required scopes under the ***Select Scope*** section.
-6. Click on the ***Create app*** button.
-7. Click on ***Keys & OAuth*** under the ***Development*** section.
-8. Scroll down to the ***Redirect URIs*** section and click on the ***Add URI*** button.
-9. Copy the 'OAuth Callback URL' provided in the 'QuickBooks OAuth2 API' credentials in n8n.
-10. Paste the URL in the ***Link*** field.
-11. Click on the ***Save*** button.
-12. Copy the displayed ***Client ID***.
-13. Enter a name for your credentials in the ***Credentials Name*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
-14. Paste the client ID in the ***Client ID*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
-15. Copy the displayed ***Client Secret*** from the Keys page.
-16. Paste the client secret in the ***Client Secret*** field in the 'QuickBooks OAuth2 API' credentials in n8n.
-17. Select 'Sandbox' from the ***Environment*** dropdown list in the 'QuickBooks OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a QuickBooks account to n8n.
-19. Click the ***Save*** button to save your credentials in n8n.
+## Related resources
 
-**Note:** To build the application in production, you will have to fulfill all the requirements mentioned by Intuit. You can learn more on Intuit's [documentation](https://developer.intuit.com/app/developer/qbo/docs/go-live).
+Refer to [Intuit's API documentation](https://developer.intuit.com/app/developer/qbo/docs/develop) for more information about the service.
 
-The following video demonstrates the steps mentioned above.
+## Using OAuth2
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/yAUDkgK74XY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+To configure this credential, you'll need:
 
+- A **Client ID**: Generated when you create an app.
+- A **Client Secret**: Generated when you create an app.
+- An **Environment**: Select whether this credential should access your **Production** or **Sandbox** environment. 
+
+To generate your **Client ID** and **Client Secret**, [create an app](https://developer.intuit.com/app/developer/qbo/docs/get-started/start-developing-your-app#create-an-app).
+
+Use these settings when creating your app:
+
+- Select appropriate scopes for your app. Refer to [Learn about scopes](https://developer.intuit.com/app/developer/qbo/docs/learn/scopes) for more information.
+- Enter the **OAuth Redirect URL** from n8n as a **Redirect URI** in the app's **Development > Keys & OAuth** section.
+- Copy the **Client ID** and **Client Secret** from the app's **Development > Keys & OAuth** section to enter in n8n. Refer to [Get the Client ID and Client Secret for your app](https://developer.intuit.com/app/developer/qbo/docs/get-started/get-client-id-and-client-secret) for more information.
+
+Refer to Intuit's [Set up OAuth 2.0 documentation](https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0) for more information on the entire process.
+
+/// note | Environment selection
+If you're creating a new app from scratch, start with the **Sandbox** environment. Production apps need to fulfill all Intuit's requirements. Refer to Intuit's [Publish your app documentation](https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app) for more information.
+///

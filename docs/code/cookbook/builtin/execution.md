@@ -19,9 +19,11 @@ Contains the unique ID of the current workflow execution.
 
 ## `execution.resumeUrl`
 
-The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) workflow.
+The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) workflow.
 
-See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait/#webhook-call) documentation to learn more.
+See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) documentation to learn more.
+
+`execution.resumeUrl` is available in workflows containing a Wait node, along with a node that waits for a webhook response.
 
 ## `execution.customData`
 
@@ -56,4 +58,8 @@ This is only available in the Code node.
 	customData = _execution.customData.get("key")
 	```
 
-Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for more information.
+Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+
+---
+
+

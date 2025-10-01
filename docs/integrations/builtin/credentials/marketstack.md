@@ -1,29 +1,33 @@
 ---
 title: Marketstack credentials
 description: Documentation for Marketstack credentials. Use these credentials to authenticate Marketstack in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Marketstack credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack/)
+- [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack.md)
 
 ## Prerequisites
 
-Create an account on [Marketstack](https://marketstack.com/).
+Create a [Marketstack](https://marketstack.com/) account.
 
-## Using API Key
+## Supported authentication methods
 
-From Marketstack:
+- API key
 
-1. Access your Marketstack dashboard.
-2. Copy the key provided in the ***Your API Access Key*** field.
+## Related resources
 
-From n8n:
+Refer to [Marketstack's API documentation](https://marketstack.com/documentation) for more information about the service.
 
-3. Enter a descriptive ***Credentials Name***.
-4. Under ***Credential Data***, enter the key obtained above in the corresponding field.
-5. Click **Save** to create your new credentials.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: View and generate API keys in your Marketstack [account dashboard](https://marketstack.com/dashboard).
+- Select whether to **Use HTTPS**: Make this selection based on your Marketstack account plan level:
+    - Free plan: Turn off **Use HTTPS**
+    - All other plans: Turn on **Use HTTPS**
 

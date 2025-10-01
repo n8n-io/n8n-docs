@@ -7,6 +7,6 @@ contentType: overview
 
 This section contains:
 
-* [Nodes](/workflows/components/nodes/): integrations and operations.
-* [Connections](/workflows/components/connections/): node connectors.
-* [Sticky notes](/workflows/components/sticky-notes/): document your workflows.
+* [Nodes](/workflows/components/nodes.md): integrations and operations.
+* [Connections](/workflows/components/connections.md): node connectors.
+* [Sticky notes](/workflows/components/sticky-notes.md): document your workflows.

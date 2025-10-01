@@ -5,13 +5,13 @@ contentType: howto
 
 # Custom executions data
 
-You can set custom data on your workflow using the Code node or the [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
+You can set custom data on your workflow using the Code node or the [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
 
 --8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
 ## Set and access custom data using the Code node
 
-This section describes how to set and access data using the Code node. Refer to [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
+This section describes how to set and access data using the Code node. Refer to [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
 
 ### Set custom executions data
 

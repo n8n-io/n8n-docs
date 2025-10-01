@@ -1,57 +1,63 @@
 ---
 title: Mattermost credentials
 description: Documentation for Mattermost credentials. Use these credentials to authenticate Mattermost in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Mattermost credentials
 
-You can use these credentials to authenticate the following nodes with Mattermost.
+You can use these credentials to authenticate the following nodes:
 
-- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md)
 
-## Prerequisites
+## Supported authentication methods
 
-- Create a [Mattermost](https://www.mattermost.com/) account.
+- API access token
 
-**Note:** A system administrator has to grant permission to the user to generate an access token. Refer to the [FAQs](#_1-how-to-grant-permissions-to-the-users-to-generate-access-tokens) to learn how a system administrator can grant this permission.
+## Related resources
 
-## Using Access Token
+Refer to [Mattermost's API documentation](https://api.mattermost.com/) for more information about the service.
 
-1. Click on your username on the top left corner and select 'Account Settings' from the dropdown list.
-2. Click on the ***Security*** tab.
-3. Click on ***Edit*** in the ***Personal Access Tokens*** section.
-4. Click on the ***Create Token*** button.
-5. Enter a description in the ***Token Description*** field.
-6. Click on the ***Save*** button.
-7. Click on the ***Yes, Create*** button.
-8. Use this ***Acess Token*** with your Mattermost node credentials in n8n.
+## Using API access token
 
-![Generating Access Token](/_images/integrations/builtin/credentials/mattermost/using-access-token.gif)
+To configure this credential, you'll need a [Mattermost](https://www.mattermost.com/) account and:
 
-## FAQs
+- A personal **Access Token**
+- Your Mattermost **Base URL**.
 
-### How to grant permissions to the users to generate access tokens?
+To set it up:
 
-A system admin has to grant permissions to the users for the user to create access tokens. If you're a system admin, follow the steps mentioned below.
+1. In Mattermost, go to **Profile > Security > Personal Access Tokens**.
 
-1. Click on your username on the top left corner and select 'System Console' from the dropdown list.
-2. Click on ***Integration Management*** under the ***INTEGRATIONS*** section on the left sidebar.
-3. Go to Integration Management.
-4. Scroll down to the ***Enable Personal Access Tokens*** and enable personal access tokens.
-5. Click on the ***Save*** button.
-6. Click on ***Users*** under the ***USER MANAGEMENT*** section on the left sidebar.
-7. Personal access tokens are generated for individual users, so they must be enabled for each user. Click on ***Member*** next to the user you want to grant permission to, and select 'Manage Roles' from the dropdown list.
-8. Check the ***Allow this account to generate personal access tokens*** checkbox.
-9. Select any additional permissions you want to grant the user and click on the ***Save*** button.
+    /// warning | No Personal Access Tokens option
+    If you don't see the Personal Access Tokens option, refer to the troubleshooting steps in [Enable personal access tokens](#enable-personal-access-tokens) below.
+    ///
 
-**Note:** You may also create a bot account and apply the same for it.
+2. Select **Create Token**.
+3. Enter a **Token description**, like `n8n integration`.
+4. Select **Save**.
+5. Copy the **Token ID** and enter it as the **Access Token** in your n8n credential.
+6. Enter your Mattermost URL as the **Base URL**.
+7. By default, n8n connects only if SSL certificate validation succeeds. To connect even if SSL certificate validation fails, turn on **Ignore SSL Issues**.
 
-The user can now generate a personal access token by going to  their account settings and following the steps mentioned [above](#using-access-token).
+Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/) for more information.
 
-![Granting permission to user](/_images/integrations/builtin/credentials/mattermost/granting-permission.gif)
+## Enable personal access tokens
 
+Not seeing the **Personal Access Tokens** option has two possible causes:
 
+- Mattermost doesn't have the personal access tokens integration enabled.
+- You're trying to generate a personal access token as a non-admin user who doesn't have permission to generate personal access tokens.
 
-- [Personal Access Tokens](https://docs.mattermost.com/developer/personal-access-tokens.html)
+To identify the root cause and resolve it:
 
+1. Log in to Mattermost as an admin.
+2. Go to **System Console > Integrations > Integration Management**.
+3. Confirm that **Enable personal access tokens** is set to **true**. If it's not, change.
+4. Go to **System Console > User Management > Users**.
+5. Search for the user account you want to allow to generate personal access tokens.
+6. Select the **Actions** dropdown for the user and select **Manage roles**.
+7. Check the box for **Allow this account to generate personal access tokens** and **Save**.
+
+Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/) for more information.

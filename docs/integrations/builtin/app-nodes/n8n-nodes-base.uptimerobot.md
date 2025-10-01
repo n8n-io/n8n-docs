@@ -1,23 +1,20 @@
 ---
-title: UptimeRobot
-description: Documentation for the UptimeRobot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: UptimeRobot node documentation
+description: Learn how to use the UptimeRobot node in n8n. Follow technical documentation to integrate UptimeRobot node into your workflows.
+contentType: [integration, reference]
 ---
 
-# UptimeRobot
+# UptimeRobot node
 
 Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
 
 On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
 /// note | Credentials
-Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [UptimeRobot integrations](https://n8n.io/integrations/uptimerobot/){:target="_blank" .external-link} list.
+Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Account
     * Get account details
@@ -46,4 +43,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a public status page
     * Get all a public status pages
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'uptimerobot') ]]

@@ -1,17 +1,17 @@
 ---
-title: Formstack trigger
-description: Documentation for the Formstack trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Formstack Trigger node documentation
+description: Learn how to use the Formstack Trigger node in n8n. Follow technical documentation to integrate Formstack Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Formstack trigger
+# Formstack Trigger node
 
 [Formstack](https://www.formstack.com/) is a workplace productivity platform that helps organizations streamline digital work through no-code online forms, documents, and signatures.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Formstack Trigger integrations](https://n8n.io/integrations/formstack-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Formstack Trigger integrations](https://n8n.io/integrations/formstack-trigger/) page.
 ///

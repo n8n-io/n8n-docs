@@ -1,20 +1,17 @@
 ---
-title: Strapi
-description: Documentation for the Strapi node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Strapi node documentation
+description: Learn how to use the Strapi node in n8n. Follow technical documentation to integrate Strapi node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Strapi
+# Strapi node
 
 Use the Strapi node to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
 
 On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
+Refer to [Strapi credentials](/integrations/builtin/credentials/strapi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -26,11 +23,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get Many
     * Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'strapi') ]]
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/strapi/){:target=_blank .external-link} on n8n's website.
-
-Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

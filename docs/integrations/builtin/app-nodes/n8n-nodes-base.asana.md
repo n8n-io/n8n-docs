@@ -1,28 +1,27 @@
 ---
-title: Asana
-description: Documentation for the Asana node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Asana node documentation
+description: Learn how to use the Asana node in n8n. Follow technical documentation to integrate Asana node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Asana
+# Asana node
 
 Use the Asana node to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
 
 On this page, you'll find a list of operations the Asana node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Asana credentials](/integrations/builtin/credentials/asana/) for guidance on setting up authentication. 
-///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Asana integrations](https://n8n.io/integrations/asana/){:target="_blank" .external-link} list.
+Refer to [Asana credentials](/integrations/builtin/credentials/asana.md) for guidance on setting up authentication.
 ///
 
 /// note | Update to 1.22.2 or above
 Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Project
     * Create a new project
@@ -54,5 +53,9 @@ Due to changes in Asana's API, some operations in this node stopped working on 1
     * Get a user
     * Get all users
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'asana') ]]
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

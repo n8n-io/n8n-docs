@@ -23,7 +23,7 @@ One node can contain more than one version, allowing small version increments wi
 1. Change the main `version` parameter to an array, and add your version numbers, including your existing version. 
 2. You can then access the version parameter with `@version` in your `displayOptions` in any object (to control which versions n8n displays the object with). You can also query the version from a function using `const nodeVersion = this.getNode().typeVersion;`.
 
-As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node/), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
+As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node.md), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
 
 ```js
 {
@@ -31,7 +31,7 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
     name: 'NasaPics',
     icon: 'file:nasapics.svg',
     // List the available versions
-    version: [1,2,3]
+    version: [1,2,3],
     // More basic parameters here
     properties: [
         // Add a resource that's only displayed for version2
@@ -52,7 +52,7 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
 
 This isn't available for declarative-style nodes.
 
-As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}.
+As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost).
 
 Full versioning summary:
 

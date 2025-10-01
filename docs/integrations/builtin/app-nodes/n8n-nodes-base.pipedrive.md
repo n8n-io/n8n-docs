@@ -1,23 +1,23 @@
 ---
-title: Pipedrive
-description: Documentation for the Pipedrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Pipedrive node documentation
+description: Learn how to use the Pipedrive node in n8n. Follow technical documentation to integrate Pipedrive node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Pipedrive
+# Pipedrive node
 
 Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
 
 On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Pipedrive integrations](https://n8n.io/integrations/pipedrive/){:target="_blank" .external-link} list.
+Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Activity
     * Create an activity
@@ -73,5 +73,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Update a person
 * Product
     * Get data of all products
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'pipedrive') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -11,7 +11,7 @@ You can map data in the following ways:
 * Using the expressions editor.
 * By dragging and dropping data from the **INPUT** into parameters. This generates the expression for you.
 
-For information on errors with mapping and linking items, refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/).
+For information on errors with mapping and linking items, refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
 
 ## How to drag and drop data
 

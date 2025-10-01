@@ -9,7 +9,7 @@ Instance owners can access the admin dashboard to manage their Cloud instance. T
 
 ## Access the dashboard from the app
 
-1. [Log in to n8n](https://app.n8n.cloud/magic-link){:target=_blank .external-link}
+1. [Log in to n8n](https://app.n8n.cloud/magic-link)
 1. Select **Admin Dashboard**. n8n opens the dashboard.
 
 ## Access the dashboard if the app is offline

@@ -1,24 +1,25 @@
 ---
-title: Wikipedia
-description: Documentation for the Wikipedia node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Wikipedia node documentation
+description: Learn how to use the Wikipedia node in n8n. Follow technical documentation to integrate Wikipedia node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Wikipedia
+# Wikipedia node
 
-The Wikipedia node is a tool that allows an agent to search and return information from Wikipedia.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Wikipedia integrations](https://n8n.io/integrations/wikipedia/){:target=_blank .external-link} page.
-///
+The Wikipedia node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to search and return information from Wikipedia.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/wikipedia/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'wikipedia') ]]
+
+## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

@@ -1,48 +1,40 @@
 ---
 title: Raindrop credentials
 description: Documentation for Raindrop credentials. Use these credentials to authenticate Raindrop in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Raindrop credentials
 
-You can use these credentials to authenticate the following nodes with Raindrop.
+You can use these credentials to authenticate the following nodes:
 
-- [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/)
+- [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop.md)
 
 ## Prerequisites
 
 Create a [Raindrop](https://raindrop.io/) account.
 
+## Supported authentication methods
+
+- OAuth2
+
+## Related resources
+
+Refer to [Raindrop's API documentation](https://developer.raindrop.io/) for more information about the service.
+
 ## Using OAuth
 
-<!-- !!! tip  Note for n8n Cloud users
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Raindrop account to n8n.
- -->
+To configure this credential, you'll need:
 
-1. Open the [Raindrop dashboard](https://app.raindrop.io/my/0) page.
-2. Click on your username on the top left and select 'Settings' from the dropdown list.
-3. Click on the ***Integrations*** tab.
-4. Click on ***+ Create new app*** under the ***For Developers*** section.
-5. Enter the name of the app in the ***Name*** field.
-6. Accept the ***Raindrop.io API Terms and Guidelines***.
-7. Click on the ***Create*** button.
-8. Under the ***For Developers*** section, select the app that you created.
-9. Enter a description in the ***Description*** field.
-10. Enter a URL in the ***Site*** field.
-11. Copy the 'OAuth Callback URL' provided in the 'Raindrop OAuth2 API' credentials in n8n.
-12. Paste the URL in the ***Redirect URI*** field and click on the ***Save*** button.
-13. Copy the displayed ***Client ID***.
-14. Enter a name for your credentials in the ***Credentials Name*** field in the 'Raindrop OAuth2 API' credentials in n8n.
-15. Paste the client ID in the ***Client ID*** field in the 'Raindrop OAuth2 API' credentials in n8n.
-16. Copy the displayed ***Client secret*** from the Raindrop.
-17. Paste the client secret in the ***Client Secret*** field in the 'Raindrop OAuth2 API' credentials in n8n.
-18. Click on the circle button in the OAuth section to connect a Raindrop account to n8n.
-19. Click the ***Save*** button to save your credentials in n8n.
+- A **Client ID**
+- A **Client Secret**
 
-The following video demonstrates the steps mentioned above.
+Generate both by creating a Raindrop app.
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/O-8Idq2WCu0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+To create an app, go to **Settings >** [**Integrations**](https://app.raindrop.io/settings/integrations) and select **+ Create new app** in the **For Developers** section.
+
+Use these settings for your app:
+
+- Copy the **OAuth Redirect URL** from n8n and add it as a **Redirect URI** in your app.
+- Copy the **Client ID** and **Client Secret** from the Raindrop app and enter them in your n8n credential.
 

@@ -1,23 +1,22 @@
 ---
-title: QuickBooks
-description: Documentation for the QuickBooks node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: QuickBooks Online node documentation
+description: Learn how to use the QuickBooks Online node in n8n. Follow technical documentation to integrate QuickBooks Online node into your workflows.
+contentType: [integration, reference]
 ---
 
-# QuickBooks
+# QuickBooks Online node
 
 Use the QuickBooks node to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
 
 On this page, you'll find a list of operations the QuickBooks node supports and links to more resources.
 
 /// note | Credentials
-Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [QuickBooks integrations](https://n8n.io/integrations/quickbooks-online/){:target="_blank" .external-link} list.
+Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Bill
     * Create
@@ -71,5 +70,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
     * Get All
     * Update
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'quickbooks-online') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

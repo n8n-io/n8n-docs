@@ -1,18 +1,17 @@
 ---
-title: CoinGecko
-description: Documentation for the CoinGecko node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: CoinGecko node documentation
+description: Learn how to use the CoinGecko node in n8n. Follow technical documentation to integrate CoinGecko node into your workflows.
+contentType: [integration, reference]
 ---
 
-# CoinGecko
+# CoinGecko node
 
 Use the CoinGecko node to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
 
 On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [CoinGecko integrations](https://n8n.io/integrations/coingecko/){:target="_blank" .external-link} list.
-///
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Coin
@@ -26,3 +25,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get coin tickers
 * Event
     * Get all events
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'coingecko') ]]

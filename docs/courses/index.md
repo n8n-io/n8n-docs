@@ -1,8 +1,10 @@
 ---
+title: Text courses
+description: Access n8n text courses. Find beginner and intermediate courses to learn how to build automation workflows using n8n. 
 contentType: overview
 ---
 
-# Courses
+# Text courses
 
 If you've found your way here, it means you're serious about your interest in automation. Maybe you're tired of manually entering data into the same spreadsheet every day, of clicking through a series of tabs and buttons for that one piece of information you need, of managing tens of different tools and systems.
 
@@ -12,5 +14,5 @@ These tasks can and should be automated! And you don't need advanced technical k
 
 ## Available courses
 
-- [Level 1: Beginner course](/courses/level-one/)
-- [Level 2: Intermediate course](/courses/level-two/)
+- [Level 1: Beginner course](/courses/level-one/index.md)
+- [Level 2: Intermediate course](/courses/level-two/index.md)

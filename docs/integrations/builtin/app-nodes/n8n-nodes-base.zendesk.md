@@ -1,23 +1,22 @@
 ---
-title: Zendesk
-description: Documentation for the Zendesk node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Zendesk node documentation
+description: Learn how to use the Zendesk node in n8n. Follow technical documentation to integrate Zendesk node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Zendesk
+# Zendesk node
 
 Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations. 
 
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Zendesk integrations](https://n8n.io/integrations/zendesk/){:target="_blank" .external-link} list.
+Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Ticket
     * Create a ticket
@@ -46,5 +45,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all organizations
     * Get data related to the organization
     * Update a organization
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'zendesk') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -1,0 +1,5 @@
+.n8n-workflow-preview {
+	background-color: var(--color-background-light);
+	border: 1px solid var(--color-foreground-base);
+	text-align: center;
+}

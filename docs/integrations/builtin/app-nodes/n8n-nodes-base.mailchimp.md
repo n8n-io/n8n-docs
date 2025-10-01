@@ -1,23 +1,20 @@
 ---
-title: Mailchimp
-description: Documentation for the Mailchimp node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Mailchimp node documentation
+description: Learn how to use the Mailchimp node in n8n. Follow technical documentation to integrate Mailchimp node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Mailchimp
+# Mailchimp node
 
 Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
 
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mailchimp integrations](https://n8n.io/integrations/mailchimp/){:target="_blank" .external-link} list.
+Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Campaign
     * Delete a campaign
@@ -37,5 +34,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Member Tag
     * Add tags from a list member
     * Remove tags from a list member
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'mailchimp') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

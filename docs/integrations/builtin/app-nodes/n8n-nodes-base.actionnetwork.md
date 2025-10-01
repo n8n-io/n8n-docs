@@ -1,21 +1,21 @@
 ---
-title: Action Network
-description: Documentation for the Action Network node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Action Network node documentation
+description: Learn how to use the Action Network node in n8n. Follow technical documentation to integrate Action Network node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Action Network
+# Action Network node
 
 Use the Action Network node to automate work in Action Network, and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures. 
 
 On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
 
 /// note | Credentials
-Refer to [Action Network credentials](/integrations/builtin/credentials/actionnetwork/) for guidance on setting up authentication. 
+Refer to [Action Network credentials](/integrations/builtin/credentials/actionnetwork.md) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Action Network integrations](https://n8n.io/integrations/action-network/){:target="_blank" .external-link} list.
-///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -49,6 +49,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create
     * Get
     * Get All
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'action-network') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

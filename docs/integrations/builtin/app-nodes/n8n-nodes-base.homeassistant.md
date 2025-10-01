@@ -1,21 +1,21 @@
 ---
-title: Home Assistant
-description: Documentation for the Home Assistant node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Home Assistant node documentation
+description: Learn how to use the Home Assistant node in n8n. Follow technical documentation to integrate Home Assistant node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Home Assistant
+# Home Assistant node
 
 Use the Home Assistant node to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configurations, logs, services, and templates. 
 
 On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
+Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Home Assistant integrations](https://n8n.io/integrations/home-assistant/){:target="_blank" .external-link} list.
-///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -40,10 +40,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Template
     * Create a template
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'home-assistant') ]]
+
 ## Related resources
 
-
-View [example workflows and related content](https://n8n.io/integrations/home-assistant/){:target=_blank .external-link} on n8n's website.
-
-
-Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/) for more information about the service.

@@ -1,28 +1,30 @@
 ---
-title: DeepL
-description: Documentation for the DeepL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: DeepL node documentation
+description: Learn how to use the DeepL node in n8n. Follow technical documentation to integrate DeepL node into your workflows.
+contentType: [integration, reference]
 ---
 
-# DeepL
+# DeepL node
 
 Use the DeepL node to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
 
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 
 /// note | Credentials
-Refer to [DeepL credentials](/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [DeepL integrations](https://n8n.io/integrations/deepl/){:target="_blank" .external-link} list.
+Refer to [DeepL credentials](/integrations/builtin/credentials/deepl.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-## Basic Operations
+## Operations
 
 * Language
     * Translate data
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'deepl') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

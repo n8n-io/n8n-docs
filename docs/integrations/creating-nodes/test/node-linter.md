@@ -12,7 +12,7 @@ n8n's node linter, [`eslint-plugin-n8n-nodes-base`](https://github.com/ivov/esli
 
 If using the [n8n node starter](https://github.com/n8n-io/n8n-nodes-starter): Run `npm install` in the starter project to install all dependencies. Once the installation finishes, the linter is available to you. 
 
-If using VS Code, install the [ESLint VS Code extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.VS Code-eslint). For other IDEs, refer to their ESLint integrations.
+If using VS Code, install the [ESLint VS Code extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). For other IDEs, refer to their ESLint integrations.
 
 /// note | Don't edit the configuration file
 [`.eslintrc.js`](https://github.com/n8n-io/n8n-nodes-starter/blob/master/.eslintrc.js) contains the configuration for `eslint-plugin-n8n-nodes-base`. Don't edit this file.
@@ -24,7 +24,7 @@ You can use the linter in a community package or in the main n8n repository.
 
 ### Linting
 
-In a community package, the linter runs automatically after installing dependencies and before publishing the package to npm. In the [main n8n repository](https://github.com/n8n-io/n8n){:target=_blank .external-link}, the linter runs automatically using GitHub Actions whenever you push to your pull request.
+In a community package, the linter runs automatically after installing dependencies and before publishing the package to npm. In the [main n8n repository](https://github.com/n8n-io/n8n), the linter runs automatically using GitHub Actions whenever you push to your pull request.
 
 In both cases, VS Code lints in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
 

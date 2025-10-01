@@ -1,23 +1,20 @@
 ---
-title: PayPal
-description: Documentation for the PayPal node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: PayPal node documentation
+description: Learn how to use the PayPal node in n8n. Follow technical documentation to integrate PayPal node into your workflows.
+contentType: [integration, reference]
 ---
 
-# PayPal
+# PayPal node
 
 Use the PayPal node to automate work in PayPal, and integrate PayPal with other applications. n8n has built-in support for a wide range of PayPal features, including creating a batch payout and canceling unclaimed payout items. 
 
 On this page, you'll find a list of operations the PayPal node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PayPal credentials](/integrations/builtin/credentials/paypal/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [PayPal integrations](https://n8n.io/integrations/paypal/){:target="_blank" .external-link} list.
+Refer to [PayPal credentials](/integrations/builtin/credentials/paypal.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Payout
     * Create a batch payout
@@ -25,3 +22,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Payout Item
     * Cancels an unclaimed payout item
     * Show payout item details
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'paypal') ]]

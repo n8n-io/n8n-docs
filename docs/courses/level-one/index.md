@@ -2,10 +2,11 @@
 contentType: overview
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # Level one: Introduction
 
 Welcome to the **n8n Course Level 1**!
-
 
 ## Is this course right for me?
 
@@ -17,6 +18,7 @@ This course is for you if you:
 - Are looking for some extra help creating your first workflow.
 - Want to automate processes in your personal or working life.
 
+This course introduces n8n concepts and demonstrates practical workflow building without assuming any prior familiarity with n8n. If you'd like to get a feel for the basics without as much explanation, consult our [quickstart guide](/try-it-out/tutorial-first-workflow.md).
 
 ## What will I learn in this course?
 
@@ -38,10 +40,10 @@ You will build two workflows:
 
 ## What do I need to get started?
 
-1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/manage-cloud/overview/){:target="_blank" .external}.
-2. **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
-3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but isn't necessary.
-4. An [account on the n8n community forum](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
+1. **n8n set up**: You can use [n8n Cloud](/manage-cloud/overview.md) (or the [self-hosted version](/hosting/installation/docker.md) if you have experience hosting services).
+2. **A course user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI) to get your unique ID and other credentials you will need in this course (Level 1).
+3. Basic knowledge of JavaScript and [APIs](https://blog.n8n.io/what-are-apis-how-to-use-them-with-no-code/) would be helpful, but isn't necessary.
+4. An [account on the n8n community forum](https://community.n8n.io/) if you wish to receive a profile badge and avatar upon successful completion.
 
 ## How long does the course take?
 
@@ -51,15 +53,13 @@ Completing the course should take around **two hours**. You don't have to comple
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external}
-- [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
+- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1.md)
+- [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA) at the end of the course
 
 /// note | Check your progress
-You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank" .external}.
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify).
 ///
 
-If you complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank" .external-link} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
+If you complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1) in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 
-<div style="text-align:center;">
-	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-one/chapter-1/" style="color: #fff;">Let's get started!</a></button>
-</div>
+[Let's get started!](/courses/level-one/chapter-1.md){ .md-button }

@@ -4,7 +4,7 @@ contentType: tutorial
 
 # Build a programmatic-style node
 
-This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
+This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information.
 
 ## Prerequisites
 
@@ -17,12 +17,12 @@ You need some understanding of:
 - JavaScript/TypeScript
 - REST APIs
 - git
-- Expressions in n8n
+- [Expressions](/glossary.md#expression-n8n) in n8n
 
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/){:target=_blank .external-link}. You'll create a node that implements one piece of SendGrid functionality: create a contact.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/). You'll create a node that implements one piece of SendGrid functionality: create a contact.
 
 /// note | Existing node
 n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -33,7 +33,7 @@ n8n provides a starter repository for node development. Using the starter ensure
 
 Clone the repository and navigate into the directory:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate){:target=_blank .external-link} from the template repository.
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
@@ -54,7 +54,7 @@ Now create the following directories and files:
 `nodes/FriendGrid/FriendGrid.node.ts`  
 `credentials/FriendGridApi.credentials.ts`  
 
-These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
+These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information on required files and recommended organization.
 
 Now install the project dependencies:
 
@@ -64,7 +64,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `friendGrid.svg` in `nodes/FriendGrid/`.
+Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -72,9 +72,9 @@ Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master
 
 ### Step 3: Define the node in the base file
 
-Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for detailed information about base file parameters.
 
-In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information.
 
 #### Step 3.1: Imports
 
@@ -90,6 +90,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+    NodeConnectionType
 } from 'n8n-workflow';
 
 import {
@@ -132,8 +133,8 @@ description: 'Consume SendGrid API',
 defaults: {
 	name: 'FriendGrid',
 },
-inputs: ['main'],
-outputs: ['main'],
+inputs: [NodeConnectionType.Main],
+outputs: [NodeConnectionType.Main],
 credentials: [
 	{
 		name: 'friendGridApi',
@@ -166,7 +167,7 @@ The resource object defines the API resource that the node uses. In this tutoria
 },
 ```
 
-`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
 
 #### Step 3.5: Add operations
 
@@ -262,7 +263,7 @@ For this tutorial, you'll add two additional fields, to allow users to enter the
 
 ### Step 4: Add the execute method
 
-Step 5 set up the node UI and basic information. It's time to map the node UI to API requests, and make the node actually do something.
+You've set up the node UI and basic information. It's time to map the node UI to API requests, and make the node actually do something.
 
 The `execute` method runs every time the node runs. In this method, you have access to the input items and to the parameters that the user set in the UI, including the credentials.
 
@@ -378,7 +379,7 @@ export class FriendGridApi implements ICredentialType {
 
 ```
 
-For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
+For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files.md).
 
 ### Step 6: Add node metadata
 
@@ -409,7 +410,7 @@ Add the following code to the JSON file:
 }
 ```
 
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files.md).
 
 
 ### Step 7: Update the npm package details
@@ -464,7 +465,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 
 
@@ -474,7 +475,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Next steps
 
-* [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. This is an example of a more complex programmatic node structure.
-* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
-* Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts/) and [data structures](/data/data-structure/).
+* [Deploy your node](/integrations/creating-nodes/deploy/index.md).
+* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
+* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
+* Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts.md) and [data structures](/data/data-structure.md).

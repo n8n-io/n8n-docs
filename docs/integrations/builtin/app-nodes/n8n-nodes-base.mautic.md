@@ -1,23 +1,23 @@
 ---
-title: Mautic
-description: Documentation for the Mautic node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Mautic node documentation
+description: Learn how to use the Mautic node in n8n. Follow technical documentation to integrate Mautic node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Mautic
+# Mautic node
 
 Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campaign contacts. 
 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mautic credentials](/integrations/builtin/credentials/mautic/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mautic integrations](https://n8n.io/integrations/mautic/){:target="_blank" .external-link} list.
+Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Campaign Contact
     * Add contact to a campaign
@@ -45,5 +45,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Remove contact from a segment
 * Segment Email
     * Send
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'mautic') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

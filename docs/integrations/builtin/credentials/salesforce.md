@@ -1,64 +1,114 @@
 ---
 title: Salesforce credentials
 description: Documentation for Salesforce credentials. Use these credentials to authenticate Salesforce in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Salesforce credentials
 
-You can use these credentials to authenticate the following nodes with Salesforce.
+You can use these credentials to authenticate the following nodes:
 
-- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/)
-- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/)
+- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md)
+- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md)
 
-## Prerequisites
+## Supported authentication methods
 
-Create a [Salesforce](https://www.salesforce.com/) account.
+- JWT
+- OAuth2
 
-## Using OAuth
+## Related resources
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
-///
+Refer to [Salesforce's developer documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for more information about the service.
 
-1. Access your Salesforce Dashboard.
-2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.
-3. In the ***Platform Tools*** category of the sidebar, select ***App Manager*** under the ***Apps*** section.
-4. Click on the ***New Connected App*** button.
-5. Enter any necessary information and click on the ***Enable OAuth Settings*** checkbox.
-6. Copy the ***OAuth Callback URL*** provided in the 'Salesforce OAuth2 API' credentials in n8n.
-7. On the Salesforce app creation page, paste the URL in the ***Callback URL*** field.
-8. Add the **Perform requests on your behalf at any time (refresh_token, offline_access)** scope in the ***Selected OAuth Scopes*** section.
-9. Add any other scopes you plan to use in the  ***Selected OAuth Scopes*** section.
-10. Click on the ***Save*** button at the bottom of the page.
-11. On the ***New Connected App*** page, click on the ***Continue*** button.
-12. In the 'API (Enable OAuth Settings)' section of the page, click on the ***Click to reveal*** button to reveal the consumer secret.
-13. Copy the displayed ***Consumer Key*** and the ***Consumer Secret*** and use these with your Salesforce OAuth2 API credentials in n8n.
-14. In the n8n credentials window select your ***Environment Type***, where Production or Sandbox.
-15. Click on the circle button in the OAuth section to connect a Salesforce account to n8n.
-16. Click on the ***Save*** button to save your credentials.
+## Using JWT
 
-![Getting Salesforce OAuth credentials](/_images/integrations/builtin/credentials/salesforce/using-oauth.gif)
+To configure this credential, you'll need a [Salesforce](https://www.salesforce.com/) account and:
 
-## Using OAuth JWT
+- Your **Environment Type** (Production or Sandbox)
+- A **Client ID**: Generated when you create a connected app.
+- Your Salesforce **Username**
+- A **Private Key** for a self-signed digital certificate
 
-To use the OAuth JWT authentication method with the Salesforce node you need to create a private key. Follow the instructions mentioned in the documentation [here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm) to create a private key.
+To set things up, first you'll create a private key and certificate, then a connected app:
 
-1. Access your Salesforce Dashboard.
-2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.
-3. In the ***Platform Tools*** category of the sidebar, select ***App Manager*** under the ***Apps*** section.
-4. Click on the ***New Connected App*** button.
-5. Enter any necessary information and click on the ***Enable OAuth Settings*** checkbox.
-6. Copy the ***OAuth Callback URL*** provided in the 'Salesforce OAuth2 API' credentials in n8n.
-7. On the Salesforce app creation page, paste the URL in the ***Callback URL*** field.
-8. Click on the ***Use digital signatures*** checkbox.
-9. Upload the private key that you created earlier.
-10. Add the **Perform requests on your behalf at any time (refresh_token, offline_access)** scope in the ***Selected OAuth Scopes*** section.
-11. Add any other scopes you plan to use in the  ***Selected OAuth Scopes*** section.
-12. Click on the ***Save*** button at the bottom of the page.
-13. On the ***New Connected App*** page, click on the ***Continue*** button.
-14. Copy the displayed ***Consumer Key*** and paste it in the ***Client ID*** field in your Salesforce JWT API credentials in n8n.
-15. Use your Salesforce username in the ***Username*** field.
-16. Copy the private key that you created earlier and paste it in the ***Private Key*** field in your Salesforce JWT API credentials in n8n.
-17. Click on the ***Save*** button to save your credentials.
+1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
+2. Enter your Salesforce **Username**.
+1. Log in to your org in Salesforce.
+2. You'll need a private key and certificate issued by a certification authority. Use your own key/cert or use OpenSSL to create a key and a self-signed digital certificate. Refer to the Salesforce [Create a Private Key and Self-Signed Digital Certificate documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm) for instructions on creating your own key and certificate.
+3. From **Setup** in Salesforce, enter `App Manager` in the Quick Find box, then select **App Manager**.
+3. On the App Manager page, select **New Connected App**.
+4. Enter the required **Basic Info** for your connected app, including a **Name** and **Contact Email address**. Refer to Salesforce's [Configure Basic Connected App Settings](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5) documentation for more information.
+5. Check the box to **Enable OAuth Settings**.
+6. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
+7. Check the box to **Use digital signatures**.
+8. Select **Choose File** and upload the file that contains your digital certificate, such as `server.crt`.
+9. Add these **OAuth scopes**:
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
+10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
+11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
+12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
+13. Enter the contents of the private key file in n8n as **Private Key**.
+	- Use the multi-line editor in n8n.
+	- Enter the private key in standard PEM key format:
+        ```
+        -----BEGIN PRIVATE KEY-----
+        KEY DATA GOES HERE
+        -----END PRIVATE KEY-----
+        ```
 
+These steps are what's required on the n8n side. Salesforce recommends setting refresh token policies, session policies, and OAuth policies too:
+
+14. In Salesforce, select **Back to Manage Connected Apps**.
+15. Select **Manage**.
+16. Select **Edit Policies**.
+17. Review the **Refresh Token Policy** field. Salesforce recommends using expire refresh token after 90 days.
+18. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
+19. In the **OAuth Policies** section, select **Admin approved users are pre-authorized for permitted users** for **Permitted Users**, and select **OK**.
+20. Select **Save**.
+21. Select **Manage Profiles**, select the profiles that are pre-authorized to use this connected app, and select **Save**.
+22. Select **Manage Permission Sets** to select the permission sets. Create permission sets if necessary.
+
+Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.
+
+
+## Using OAuth2
+
+To configure this credential, you'll need a [Salesforce](https://www.salesforce.com/) account.
+
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
+
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
+
+1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
+2. Enter your Salesforce **Username**.
+1. Log in to your org in Salesforce.
+3. From **Setup** in Salesforce, enter `App Manager` in the Quick Find box, then select **App Manager**.
+3. On the App Manager page, select **New Connected App**.
+4. Enter the required **Basic Info** for your connected app, including a **Name** and **Contact Email address**. Refer to Salesforce's [Configure Basic Connected App Settings](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5) documentation for more information.
+5. Check the box to **Enable OAuth Settings**.
+6. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
+9. Add these **OAuth scopes**:
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
+10. Make sure the following settings are unchecked:
+	- **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
+	- **Require Secret for Web Server Flow**
+	- **Require Secret for Refresh Token Flow**
+10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
+11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
+12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
+13. Copy the **Consumer Secret** and add it to your n8n credential as the **Client Secret**.
+
+These steps are what's required on the n8n side. Salesforce recommends setting refresh token policies and session policies, too:
+
+14. In Salesforce, select **Back to Manage Connected Apps**.
+15. Select **Manage**.
+16. Select **Edit Policies**.
+17. Review the **Refresh Token Policy** field. Salesforce recommends using expire refresh token after 90 days.
+18. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
+
+Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.

@@ -1,22 +1,21 @@
 ---
-title: LinkedIn
-description: Documentation for the LinkedIn node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: LinkedIn node documentation
+description: Learn how to use the LinkedIn node in n8n. Follow technical documentation to integrate LinkedIn node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# LinkedIn
+# LinkedIn node
 
 Use the LinkedIn node to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
 
 On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
 
 /// note | Credentials
-Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
+Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [LinkedIn integrations](https://n8n.io/integrations/linkedin/){:target="_blank" .external-link} list.
-///
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -35,12 +34,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * **Text**: the post contents.
 * **Media Category**: use this when including images or article URLs in your post.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'linkedin') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/linkedin/){:target=_blank .external-link} on n8n's website.
-
-Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/){:target=_blank .external-link} for more information about the service.
-
+Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -11,9 +11,9 @@ This page describes the purpose of each table in the n8n database.
 
 By default, n8n uses SQLite as the database. If you are using another database the structure will be similar, but the data-types may be different depending on the database.
 
-n8n uses [TypeORM](https://github.com/typeorm/typeorm){:target=_blank .external-link} for queries and migrations.
+n8n uses [TypeORM](https://github.com/typeorm/typeorm) for queries and migrations.
 
-To inspect the n8n database, you can use [DBeaver](https://dbeaver.io){:target=_blank .external-link}, which is an open-source universal database tool.
+To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
 
 ## Tables
 
@@ -21,7 +21,7 @@ These are the tables n8n creates during setup.
 <!-- vale off -->
 ### auth_identity
 
-Stores details of external authentication providers when using [SAML](/user-management/saml/).
+Stores details of external authentication providers when using [SAML](/user-management/saml/index.md).
 
 ### auth_provider_sync_history
 
@@ -29,11 +29,11 @@ Stores the history of a SAML connection.
 
 ### credentials_entity
 
-Stores the credentials used to authenticate with integrations.
+Stores the [credentials](/glossary.md#credential-n8n) used to authenticate with integrations.
 
 ### event_destinations
 
-Contains the destination configurations for [Log streaming](/log-streaming/).
+Contains the destination configurations for [Log streaming](/log-streaming.md).
 
 ### execution_data
 
@@ -45,11 +45,11 @@ Stores all saved workflow executions. Workflow settings can affect which executi
 
 ### execution_metadata
 
-Stores [Custom executions data](/workflows/executions/custom-executions-data/).
+Stores [Custom executions data](/workflows/executions/custom-executions-data.md).
 
 ### installed_nodes
 
-Lists the [community nodes](/integrations/community-nodes/installation/) installed in your n8n instance.
+Lists the [community nodes](/integrations/community-nodes/installation/index.md) installed in your n8n instance.
 
 ### installed_packages
 
@@ -57,19 +57,19 @@ Details of npm community nodes packages installed in your n8n instance. [install
 
 ### migrations
 
-A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md){:target=_blank .external-link} in TypeORM's documentation.
+A log of all database migrations. Read more about [Migrations](https://typeorm.io/docs/advanced-topics/migrations/) in TypeORM's documentation.
 
 ### project
 
-Lists the [projects](/user-management/rbac/projects/) in your instance.
+Lists the [projects](/user-management/rbac/projects.md) in your instance.
 
 ### project_relation
 
-Describes the relationship between a user and a [project](/user-management/rbac/projects/), including the user's [role type](/user-management/rbac/role-types/).
+Describes the relationship between a user and a [project](/user-management/rbac/projects.md), including the user's [role type](/user-management/rbac/role-types.md).
 
 ### role
 
-Not currently used. Foruse in future work on custom roles. 
+Not currently used. For use in future work on custom roles. 
 
 ### settings
 
@@ -77,6 +77,7 @@ Records custom instance settings. These are settings that you can't control usin
 
 * Whether the instance owner is set up
 * Whether the user chose to skip owner and user management setup
+* Whether certain types of authentication, including SAML and LDAP, are on
 * License key
 
 ### shared_credentials
@@ -97,7 +98,7 @@ Contains user data.
 
 ### variables
 
-Store [variables](/code/variables/).
+Store [variables](/code/variables.md).
 
 ### webhook_entity
 

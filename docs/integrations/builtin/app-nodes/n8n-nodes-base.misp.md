@@ -1,24 +1,20 @@
 ---
-title: MISP
-description: Documentation for the MISP node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: MISP node documentation
+description: Learn how to use the MISP node in n8n. Follow technical documentation to integrate MISP node into your workflows.
+contentType: [integration, reference]
 ---
 
-# MISP
+# MISP node
 
 Use the MISP node to automate work in MISP, and integrate MISP with other applications. n8n has built-in support for a wide range of MISP features, including creating, updating, deleting and getting events, feeds, and organizations. 
 
 On this page, you'll find a list of operations the MISP node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MISP credentials](/integrations/builtin/credentials/misp/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [MISP integrations](https://n8n.io/integrations/misp/){:target="_blank" .external-link} list.
+Refer to [MISP credentials](/integrations/builtin/credentials/misp.md) for guidance on setting up authentication. 
 ///
 
-
-## Basic Operations
+## Operations
 
 * Attribute
     * Create
@@ -75,5 +71,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Warninglist
     * Get
     * Get All
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'misp') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

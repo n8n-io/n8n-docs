@@ -13,5 +13,5 @@ This section contains examples and recipes for tasks you can do with the Code no
 
 ## Related resources
 
-* [Built-in methods and variables reference](/code/builtin/overview/)
-* [Code node](/code/code-node/)
+* [Built-in methods and variables reference](/code/builtin/overview.md)
+* [Code node](/code/code-node.md)

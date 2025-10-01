@@ -1,32 +1,33 @@
 ---
 title: Plivo credentials
 description: Documentation for Plivo credentials. Use these credentials to authenticate Plivo in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Plivo credentials
 
-You can use these credentials to authenticate the following nodes with Plivo.
+You can use these credentials to authenticate the following nodes:
 
-- [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo/)
+- [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo.md)
 
 ## Prerequisites
 
-Create a [Plivo](https://console.plivo.com/accounts/register/) account.
+Create a [Plivo](https://www.plivo.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Plivo [console](https://console.plivo.com/dashboard/).
-2. Copy the displayed Auth ID under the ***Account and Payments*** section.
-3. Enter a name for your credentials in the ***Credentials Name*** field in the 'Plivo API' credentials in n8n.
-4. Paste the Auth ID in the ***Auth ID*** field in the 'Plivo API' credentials in n8n.
-5. Copy the Auth Token displayed on your Plivo console.
-6. Paste the Auth Token in the ***Auth Token*** field in the 'Plivo API' credentials in n8n.
-7. Click on the ***Create*** button to create your credentials.
+- Basic auth
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/Zui5fzFtO1E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Plivo's API documentation](https://www.plivo.com/docs/voice/api/overview/) for more information about the service.
+
+## Using basic auth
+
+To configure this credential, you'll need:
+
+- An **Auth ID**: Acts like your username. Copy yours from the **Overview** page of the Plivo [console](https://console.plivo.com/dashboard/).
+- An **Auth Token**: Acts like a password. Copy yours from the **Overview** page of the Plivo [console](https://console.plivo.com/dashboard/).
+
+Refer to [How can I change my Auth ID or Auth Token?](https://support.plivo.com/hc/en-us/articles/360041731231-How-can-I-change-my-Auth-ID-or-Auth-Token) for more detailed instructions.
 

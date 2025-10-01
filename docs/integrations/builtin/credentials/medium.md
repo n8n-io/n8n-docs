@@ -1,49 +1,51 @@
 ---
 title: Medium credentials
 description: Documentation for Medium credentials. Use these credentials to authenticate Medium in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Medium credentials
 
-You can use these credentials to authenticate the following nodes with Medium.
+You can use these credentials to authenticate the following nodes:
 
-- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium/)
+- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium.md)
+
+/// warning | Medium API no longer supported
+Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.
+///
 
 ## Prerequisites
 
 - Create an account on [Medium](https://www.medium.com/).
-- Request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com).
+- For OAuth2, request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com).
 
+## Supported authentication methods
 
-## Using OAuth
+- API access token
+- OAuth2
 
-1. Log in to your Medium account.
-2. Click on the avatar on the top right corner.
-3. Select '[Settings](https://medium.com/me/settings)' in the drop-down menu.
-4. Select 'Developers' from the menu on the left.
-5. Click on the 'Manage applications' button.
-6. Click on the 'New application' button.
-7. Give your application a Name, and provide a Description.
-8. Select the 'OAuth 2' option from the *Authorization Protocol* dropdown list.
-9. Copy the 'OAuth Callback URL' provided in the Medium OAuth2 API credentials in n8n and paste it in the 'Callback URLs' field in the Medium application page.
-10. Click on 'Save' to generate the credentials.
-11. Copy and paste ***Client ID*** and ***Client Secret*** in the Medium OAuth2 API credentials in n8n.
-12. Click on the circle button in the OAuth section to connect a Medium account to n8n.
-13. Click the ***Save*** button to save your credentials in n8n.
+## Related resources
 
-![Getting Medium OAuth credentials](/_images/integrations/builtin/credentials/medium/using-oauth.gif)
+Refer to [Medium's API documentation](https://github.com/Medium/medium-api-docs) for more information about the service.
 
-## Using Access Token
+## Using API access token
 
-1. Log in to your Medium account.
-2. Click on the avatar on the top right corner.
-3. Select '[Settings](https://medium.com/me/settings)' in the drop-down menu.
-4. Select 'Integration tokens' from the menu on the left.
-5. Enter a description for your token in the field.
-6. Click on the 'Get integration token' button.
-7. Copy and paste ***Token*** in the Medium API credentials in n8n.
-8. Click the ***Save*** button to save your credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting Medium Access Token](/_images/integrations/builtin/credentials/medium/using-access-token.gif)
+- An API **Access Token**: Generate a token in **Settings >** [**Security and apps**](https://medium.com/me/settings/security) **> Integration tokens**. Use the integration token this generates as your n8n **Access Token**.
 
+Refer to the Medium API [Self-issued access tokens documentation](https://github.com/Medium/medium-api-docs?tab=readme-ov-file#21-self-issued-access-tokens) for more information.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**
+- A **Client Secret**
+
+To generate a **Client ID** and **Client Secret**, you'll need access to the **Developers** menu. From there, create a new application to generate the Client ID and Secret.
+
+Use these settings for your new application:
+
+- Select **OAuth 2** as the **Authorization Protocol**
+- Copy the **OAuth Callback URL** from n8n and use this as the **Callback URL** in Medium.

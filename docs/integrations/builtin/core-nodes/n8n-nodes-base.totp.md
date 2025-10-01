@@ -1,7 +1,7 @@
 ---
 title: TOTP
 description: Documentation for the TOTP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # TOTP
@@ -9,25 +9,40 @@ contentType: integration
 The TOTP node provides a way to generate a TOTP (time-based one-time password).
 
 /// note | Credentials
-Refer to [TOTP credentials](/integrations/builtin/credentials/totp/) for guidance on setting up authentication. 
+Refer to [TOTP credentials](/integrations/builtin/credentials/totp.md) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [TOTP integrations](https://n8n.io/integrations/totp/){:target="_blank" .external-link} list.
-///
-## Operations
 
-Generate Secret
+## Node parameters
 
-## Options
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-Select **Add Option** to view and add node options.
+Configure this node with these parameters.
 
-You can choose:
+### Credential to connect with
 
-* **Algorithm**: the HMAC hashing algorithm. Default is SHA1.
-* **Digits**: number of digits in the generated code. Default is 6.
-* **Period**: how many seconds the TOTP is valid for. Default is 30 seconds.
+Select or create a [TOTP credential](/integrations/builtin/credentials/totp.md) for the node to use.
 
-## Related resources
+### Operation
 
-View [example workflows and related content](https://n8n.io/integrations/totp/){:target=_blank .external-link} on n8n's website.
+**Generate Secret** is the only operation currently supported.
+
+## Node options
+
+Use these **Options** to further configure the node.
+
+### Algorithm
+
+Select the HMAC hashing algorithm to use. Default is SHA1.
+
+### Digits
+
+Enter the number of digits in the generated code. Default is `6`.
+
+### Period
+
+Enter how many seconds the TOTP is valid for. Default is `30`.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'totp') ]]

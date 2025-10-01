@@ -1,34 +1,33 @@
 ---
 title: SecurityScorecard credentials
 description: Documentation for SecurityScorecard credentials. Use these credentials to authenticate SecurityScorecard in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SecurityScorecard credentials
 
-You can use these credentials to authenticate the following nodes with SecurityScorecard.
+You can use these credentials to authenticate the following nodes:
 
-- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard/)
+- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard.md)
 
 
 ## Prerequisites
 
 Create a [SecurityScorecard](https://securityscorecard.com/) account.
 
-## Using API
+## Supported authentication methods
 
-1. Open your SecurityScorecard [dashboard](https://platform.securityscorecard.io/#/home).
-2. Click on ***Integrations*** and select 'Get an API Key'.
-3. Click on ***Generate new API token***.
-4. Click on the ***Confirm*** button.
-5. Copy the generated API key.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'SecurityScorecard API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Security Scorecard API' credentials in n8n.
-8. Click on the ***Create*** button to create your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/0g1YLkNBfnM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [SecurityScorecard's Developer documentation](https://securityscorecard.readme.io/docs/integrate-ratings-platform-services) and [API documentation](https://securityscorecard.readme.io/reference/introduction) for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Generate an API key in one of two ways:
+    * As a user in [**My Settings > API**](https://platform.securityscorecard.io/#/my-settings/api). Refer to [Get an API key](https://securityscorecard.readme.io/docs/getting-started#step-1-get-an-api-key) for more information.
+    * As a bot user: View the bot user and select **create token**. Refer to [Authenticate with a bot user](https://securityscorecard.readme.io/docs/authentication#) for more information.
 

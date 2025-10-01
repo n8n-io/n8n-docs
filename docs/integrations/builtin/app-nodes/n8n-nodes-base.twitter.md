@@ -1,23 +1,23 @@
 ---
-title: Twitter
-description: Documentation for the Twitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: X (Formerly Twitter) node documentation
+description: Learn how to use the X (Formerly Twitter) node in n8n. Follow technical documentation to integrate X (Formerly Twitter) node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Twitter
+# X (Formerly Twitter) node
 
-Use the Twitter node to automate work in Twitter, and integrate Twitter with other applications. n8n has built-in support for a wide range of Twitter features, including creating direct messages, and deleting, searching, liking and retweeting a tweet. 
+Use the X node to automate work in X and integrate X with other applications. n8n has built-in support for a wide range of X features, including creating direct messages and deleting, searching, liking, and retweeting a tweet. 
 
-On this page, you'll find a list of operations the Twitter node supports and links to more resources.
+On this page, you'll find a list of operations the X node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twitter credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Twitter integrations](https://n8n.io/integrations/twitter/){:target="_blank" .external-link} list.
+Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Direct Message
     * Create a direct message
@@ -27,3 +27,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Search tweets
     * Like a tweet
     * Retweet a tweet
+* User
+  	* Get a user
+* List 
+    * Add a member to a list
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'twitter') ]]

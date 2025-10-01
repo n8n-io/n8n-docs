@@ -1,43 +1,49 @@
 ---
 title: Sentry.io credentials
 description: Documentation for Sentry.io credentials. Use these credentials to authenticate Sentry.io in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Sentry.io credentials
 
-You can use these credentials to authenticate the following nodes with Sentry.io.
+You can use these credentials to authenticate the following nodes:
 
-- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/)
+- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md)
 
 ## Prerequisites
 
 Create a [Sentry.io](https://sentry.io/) account.
 
+## Supported authentication methods
+
+- API token
+- OAuth2
+- Server API token: Use for [self-hosted Sentry](https://develop.sentry.dev/self-hosted/).
+
+## Related resources
+
+Refer to [Sentry.io's API documentation](https://docs.sentry.io/api/) for more information about the service.
+
+## Using API token
+
+To configure this credential, you'll need:
+
+- An API **Token**: Generate a [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/) in **Account > Settings > User Auth Tokens**. Refer to [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens) for more information.
+
 ## Using OAuth
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Sentry.io account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-1. Access your [Sentry.io Applications Page](https://sentry.io/settings/account/api/applications/).
-2. Click on the ***Create New Application*** button in the top right.
-3. Enter a name in the ***Name*** field.
-4. Copy the 'OAuth Callback URL' provided in the 'Sentry.io OAuth2 API' credentials in n8n and paste it in the ***Authorized Redirect URIs*** field in the *Sentry.io Application Details* page.
-5. Use the displayed ***Client ID*** and ***Client Secret*** with your Sentry.io OAuth2 API credentials in n8n.
-6. Click on the circle button in the OAuth section to connect a Sentry.io account to n8n.
-7. Click on the ***Save*** button to save your credentials.
+If you need to configure OAuth2 from scratch, [create an integration](https://docs.sentry.io/organization/integrations/integration-platform/#creating-an-integration) with these settings:
 
-![Getting Sentry.io OAuth credentials](/_images/integrations/builtin/credentials/sentryio/using-oauth.gif)
+- Copy the n8n **OAuth Callback URL** and add it as an **Authorized Redirect URI**.
+- Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
 
+Refer to [Public integrations](https://docs.sentry.io/organization/integrations/integration-platform/public-integration/) for more information on creating the integration.
 
-## Using Access Token
+## Using Server API token
 
-1. Access your [Sentry.io Auth Tokens page](https://sentry.io/settings/account/api/auth-tokens/).
-2. Click on the ***Create New Token*** button in the top right.
-3. Select any scopes you plan to use and then click on ***Create Token***.
-4. Use the generated access token with your Sentry.io API credentials in n8n.
-5. Click on the ***Save*** button to save your credentials.
+To configure this credential, you'll need:
 
-![Getting Sentry.io access token](/_images/integrations/builtin/credentials/sentryio/using-access-token.gif)
-
+- An API **Token**: Generate a [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/) in **Account > Settings > User Auth Tokens**. Refer to [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens) for more information.
+- The **URL** of your self-hosted Sentry instance.

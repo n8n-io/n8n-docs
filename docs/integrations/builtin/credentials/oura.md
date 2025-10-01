@@ -1,31 +1,31 @@
 ---
 title: Oura credentials
 description: Documentation for Oura credentials. Use these credentials to authenticate Oura in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Oura credentials
 
-You can use these credentials to authenticate the following nodes with Oura.
+You can use these credentials to authenticate the following nodes:
 
-- [Oura](/integrations/builtin/app-nodes/n8n-nodes-base.oura/)
+- [Oura](/integrations/builtin/app-nodes/n8n-nodes-base.oura.md)
 
 ## Prerequisites
 
-Create a [Oura](https://www.ouraring.com/) account.
+Create an [Oura](https://ouraring.com/developer) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open the [Personal Access Tokens](https://cloud.ouraring.com/personal-access-tokens) page.
-2. On the top-right corner of the page, click on the ***Create A New Personal Access Token*** button.
-3. Enter a note for the new Personal Access Token you are about to generate.
-4. Click on the ***Create Personal Access Token*** to create the Personal Access Token.
-5. Copy the displayed Personal Access Token.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Oura API' credentials in n8n.
-7. Paste the Personal Access Token in the ***Personal Access Token*** field in the 'Oura API' credentials in n8n.
-8. Click on the ***Create*** button to create your credentials.
+- API access token
 
+## Related resources
 
+Refer to [Oura's API documentation](https://cloud.ouraring.com/v2/docs) for more information about the service.
 
-- [Oura API Documentation](https://cloud.ouraring.com/docs/authentication)
+## Using API access token
 
+To configure this credential, you'll need:
+
+- A **Personal Access Token**: To generate a personal access token, go to the [Personal Access Tokens](https://cloud.ouraring.com/personal-access-tokens) page and select **Create A New Personal Access Token**.
+
+Refer to [How to Generate Personal Access Tokens](https://support.ouraring.com/hc/en-us/articles/4415266939155-The-Oura-API#h_01H5B94SP4P9YHG9ZKN1H69E7Z) for more information.

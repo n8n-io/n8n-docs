@@ -6,7 +6,7 @@ contentType: explanation
 
 --8<-- "_snippets/embed-license.md"
 
-See the [hosting documentation](https://docs.n8n.io/reference/server-setup.html) for detailed setup options.
+See the [hosting documentation](/hosting/installation/server-setups/index.md) for detailed setup options.
 
 ## User data
 

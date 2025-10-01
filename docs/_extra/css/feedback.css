@@ -1,0 +1,79 @@
+/*
+This file contains the styling for the n8nFeedback.html partial
+*/
+
+.n8n-feedback-container {
+    border-top: 1px solid #eee;
+    color: #666;
+    margin-top: 1em; 
+    padding-top: 1em; 
+}
+
+.n8n-feedback-button-positive, .n8n-feedback-button-negative, .n8n-feedback-submit-button {
+    align-items: center;    
+    border: none;
+    border-radius: .1rem; 
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.n8n-feedback-button-positive {
+    background: #90EE90;
+}
+
+.n8n-feedback-button-negative {
+    background: #FFB6C1;
+}
+
+.n8n-feedback-submit-button {
+    background: var(--color-primary);
+    color: white;
+}
+
+#n8n-feedback-comment {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.4em; 
+    width: 100%;
+}
+
+.n8n-feedback-comment-inner {
+    display: flex; 
+    gap: 1em; 
+    align-items: center; 
+    width: 100%;
+}
+
+#n8n-feedback-input {
+    flex: 1; 
+    font-size: 1em; 
+    padding: 0.5em; 
+    border: 1px solid #ddd; 
+    border-radius: 0.1rem;
+}
+
+.n8n-feedback-comment-hint {
+    font-size: 0.75em;
+}
+
+#n8n-ratings-feedback {
+    display: flex; 
+    gap: 1em; 
+    align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+
+#n8n-ratings-feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.n8n-feedback-button-positive, .n8n-feedback-button-negative {
+    min-width: 8.5em;
+}
+
+}

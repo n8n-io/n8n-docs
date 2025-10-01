@@ -12,9 +12,9 @@ When you delete a workflow, n8n deletes its execution history as well. This mean
 ///
 
 /// note | Execution history and workflow history
-Don't confuse the execution list with [Workflow history](/workflows/history/).
+Don't confuse the execution list with [Workflow history](/workflows/history.md).
 
-Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
+Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug.md) in your current workflow.
 
 Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
 ///
@@ -33,7 +33,7 @@ You can filter the executions list.
 3. Enter your filters. You can filter by:
 	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
 	* **Execution start**: see executions that started in the given time.
-	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for information on adding custom data.
+	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for information on adding custom data.
 
 		--8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
@@ -43,5 +43,5 @@ You can filter the executions list.
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
 1. Open the **Executions** list.
-2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
+2. For the workflow execution you want to retry, select **Refresh** <span class="n8n-inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"

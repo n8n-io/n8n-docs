@@ -24,9 +24,9 @@ A common pattern is:
 1. Do work in your developments instance.
 1. Push the work to the development branch in Git.
 1. Merge your development branch into your production branch.	Refer to the documentation for your Git provider for guidance on doing this:  
-	* [GitHub: Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request){:target=_blank .external-link}
-	* [GitLab: Creating merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html){:target=_blank .external-link}
-	* [Git: Basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging){:target=_blank .external-link}
+	* [GitHub: Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+	* [GitLab: Creating merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+	* [Git: Basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 1. In your production n8n instance, pull the changes. You can [automate pulls](#automatically-send-changes-to-n8n).
 
 ## Automatically send changes to n8n
@@ -34,9 +34,11 @@ A common pattern is:
 You can automate parts of the process of copying work, using the `/source-control/pull` API endpoint. Call the API after merging the changes:
 
 ```curl
-curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
+curl --request POST \
+	--location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
 	--header 'Content-Type: application/json' \
-	--header 'X-N8N-API-KEY: <YOUR-API-KEY>'
+	--header 'X-N8N-API-KEY: <YOUR-API-KEY>' \
+	--data '{"force": true}'
 ```
 
 This means you can use a GitHub Action or GitLab CI/CD to automatically pull changes to the production instance on merge.

@@ -1,17 +1,15 @@
 ---
-title: Summarization Chain
-description: Documentation for the Summarization Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Summarization Chain node documentation
+description: Learn how to use the Summarize Chain node in n8n. Follow technical documentation to integrate Summarize Chain node into your workflows.
+contentType: [integration, reference]
+priority: high
 ---
 
-# Summarization Chain
+# Summarization Chain node
 
 Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Summarization Chain integrations](https://n8n.io/integrations/summarization-chain/){:target=_blank .external-link} page.
-///	
 
 ## Node parameters
 
@@ -29,17 +27,20 @@ You can configure the summarization method and prompts. Select **Add Option** > 
 
 Options in **Summarization Method**:
 
-* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/docs/modules/chains/document/map_reduce){:target=_blank .external-link} in the LangChain documentation.
-* **Refine**: learn more about [Refine](https://js.langchain.com/docs/modules/chains/document/refine){:target=_blank .external-link} in the LangChain documentation.
-* **Stuff**: learn more about [Stuff](https://js.langchain.com/docs/modules/chains/document/stuff){:target=_blank .external-link} in the LangChain documentation.
+* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/) in the LangChain documentation.
+* **Refine**: learn more about [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/) in the LangChain documentation.
+* **Stuff**: learn more about [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/) in the LangChain documentation.
 
 You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'summarization-chain') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/summarization-chain/){:target=_blank .external-link} on n8n's website.
-
-Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/modules/chains/popular/summarize){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

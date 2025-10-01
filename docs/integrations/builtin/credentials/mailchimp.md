@@ -1,47 +1,46 @@
 ---
 title: Mailchimp credentials
 description: Documentation for Mailchimp credentials. Use these credentials to authenticate Mailchimp in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mailchimp credentials
 
-You can use these credentials to authenticate the following nodes with Mailchimp.
+You can use these credentials to authenticate the following nodes:
 
-- [Mailchimp](/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp/)
-- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger/)
+- [Mailchimp](/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp.md)
+- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md)
 
 ## Prerequisites
 
 Create a [Mailchimp](https://www.mailchimp.com/) account.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
-///
+- API key
+- OAuth2
 
-1. Access your Mailchimp dashboard.
-2. Click on your user icon on the top right.
-3. Click on 'Account' in the dropdown list.
-4. Click on the *Extras* dropdown list and then select 'Registered apps'.
-5. Click on the *Register An App* button.
-6. Copy the 'OAuth Callback URL' from your n8n Mailchimp OAuth2 API credentials and paste it in the 'Redirect URI' field of the Mailchimp form.
-7. Fill out any other necessary details and click on the *Create* button.
-8. Use the generated Client ID and Client secret with your Mailchimp OAuth2 API node credentials in n8n.
-9. Click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
-10. Click the *Save* button to save your credentials.
+Refer to [Selecting an authentication method](#selecting-an-authentication-method) for guidance on which method to use.
 
-![Getting Mailchimp credentials](/_images/integrations/builtin/credentials/mailchimp/using-oauth.gif)
+## Related resources
 
-## Using Access Token
+Refer to [Mailchimp's API documentation](https://mailchimp.com/developer/marketing/api/) for more information about the service.
 
-1. Access your Mailchimp dashboard.
-2. Click on your user icon on the top right.
-3. Click on 'Account' in the dropdown list.
-4. Click on the *Extras* dropdown list and then select 'API Keys'.
-5. Scroll down and create a new key by clicking on 'Create a Key' under the 'Your API keys' section.
-6. Use the API key with your Mailchimp node credentials in n8n.
+## Using API key
 
-![Getting Mailchimp credentials](/_images/integrations/builtin/credentials/mailchimp/using-access-token.gif)
+To configure this credential, you'll need:
+
+- An **API Key**: Generate an API key in the [API keys section](https://us1.admin.mailchimp.com/account/api/) of your Mailchimp account. Refer to [Mailchimp's Generate your API key documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) for more detailed instructions.
+
+## Using OAuth2
+
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth2 from scratch, [register an application](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#register-your-application). Refer to the [Mailchimp OAuth2 documentation](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) for more information.
+
+## Selecting an authentication method
+
+Mailchimp suggests using an API key if you're only accessing your own Mailchimp account's data:
+
+> Use an API key if you're writing code that tightly couples _your_ application's data to _your_ Mailchimp account's data. If you ever need to access _someone else's_ Mailchimp account's data, you should be using OAuth 2 ([source](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#when-not-to-use-oauth-2))
 

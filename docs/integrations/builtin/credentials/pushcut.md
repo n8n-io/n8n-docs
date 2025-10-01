@@ -1,27 +1,31 @@
 ---
 title: Pushcut credentials
 description: Documentation for Pushcut credentials. Use these credentials to authenticate Pushcut in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pushcut credentials
 
-You can use these credentials to authenticate the following nodes with Pushcut.
+You can use these credentials to authenticate the following nodes:
 
-- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut/)
-- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/)
+- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut.md)
+- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md)
 
 ## Prerequisites
 
 Download the [Pushcut](https://www.pushcut.io) app.
 
-## Using API Key
+## Supported authentication methods
 
-1. Access the Pushcut application on your device.
-2. Click on the ***Account*** button.
-3. Click on the ***Add API Key*** under the ***INTEGRATIONS*** section.
-4. Click on the ***Generate*** button.
-5. Use the ***API Key*** with your Pushcut node credentials in n8n.
+- API key
 
-![Getting Pushcut credentials](/_images/integrations/builtin/credentials/pushcut/using-api-key.gif)
+## Related resources
+
+Refer to [Pushcut's Guides documentation](https://www.pushcut.io/guides) for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To generate an API key, go to **Account > Integrations > Add API Key**. Refer to [Create an API key](https://www.pushcut.io/guides/homekit-api-schedule-cancel#step_2) for more information.
 

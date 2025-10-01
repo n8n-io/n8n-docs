@@ -1,47 +1,68 @@
 ---
 title: MongoDB credentials
 description: Documentation for MongoDB credentials. Use these credentials to authenticate MongoDB in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # MongoDB credentials
 
-You can use these credentials to authenticate the following nodes with MongoDB:
+You can use these credentials to authenticate the following nodes:
 
-- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/)
+- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md)
+- [MongoDB Atlas Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md)
+- [MongoDB Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
 
 ## Prerequisites
 
-Create a user account with the appropriate permissions on a MongoDB server.
+- Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/) server.
+- As a Project Owner, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
 
-## Using connection string or values
+If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
 
-Choose how to connect to MongoDB by selecting the type of connection in **Configuration Type**.
-For formatting details for **Connection String**, refer to [Connection String URI Format](https://www.mongodb.com/docs/manual/reference/connection-string/){:target=_blank .external-link}.
+## Supported authentication methods
 
+- Database connection - Connection string
+- Database connection - Values
 
-## Connecting to MongoDB Atlas
+## Related resources
 
-You need to configure your MongoDB database, then configure your n8n credential.
+Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
 
-### MongoDB Atlas settings
+## Using database connection - Connection string
 
-1. Inside your MongoDB organization, set up your database cluster. Your cluster will be visible in **Organization > Project**, in the **Database** section.
-![Setting up the cluster in MongoDB Atlas](/_images/integrations/builtin/credentials/mongodb/cluster.png)
-2. Inside the cluster, you need to have a database to connect to. If you don't have a database yet, you can go to **Collections** and select **Add My Own Data**. A dialog will show up: enter the name of the database in the **Database name** field and the name of the collection in the **Collection name** field.
-![The dialog to create a new database in MongoDB Atlas](/_images/integrations/builtin/credentials/mongodb/database_create.png)
-3. Once ready, you'll see the database in **Organization > Project > Databases > Collections**.
-![A database and collection in MongoDB Atlas](/_images/integrations/builtin/credentials/mongodb/collections.png)
-4. In the **Network Access** section of your project you need to allow list the n8n IPs. Select **Add IP Address** button and add all the IPs listed [here](/choose-n8n/cloud/#cloud-ip-addresses). The allow list IPs will be visible in the **IP Access List** table.
-![The list of IPs allowed to connect to the cluster in MongoDB Atlas](/_images/integrations/builtin/credentials/mongodb/network_access.png)
+To configure this credential, you'll need the [Prerequisites](#prerequisites) listed above. Then:
 
-### n8n settings
+1. Select **Connection String** as the **Configuration Type**.
+2. Enter your MongoDB **Connection String**. To get your connection string in MongoDB, go to **Database > Connect**.
+    1. Select **Drivers**.
+    2. Copy the code you see in **Add your connection string into your application code**. It will be something like: `mongodb+srv://yourName:yourPassword@clusterName.mongodb.net/?retryWrites=true&w=majority`.
+    3. Replace the `<password>` and `<username>` in the connection string with the database user's credentials you'll be using.
+    4. Enter that connection string into n8n.
+    5. Refer to [Connection String](https://www.mongodb.com/docs/manual/reference/connection-string/) for information on finding and formatting your connection string.
+3. Enter your **Database** name. This is the name of the database that the user whose details you added to the connection string is logging into.
+4. Select whether to **Use TLS**: Turn on to use TLS. You must have your MongoDB database configured to use TLS and have an x.509 certificate generated. Add information for these certificate fields in n8n:
+    - **CA Certificate**
+    - **Public Client Certificate**
+    - **Private Client Key**
+    - **Passphrase**
 
-1. In MongoDB Atlas, go to the cluster page and select **Connect**. A dialog will open. Select **Drivers**.
-1. In the MongoDB dialog, copy the code you see in **Add your connection string into your application code**. It will be something like: `mongodb+srv://yourName:yourPassword@clusterName.5j5fpzo.mongodb.net/?retryWrites=true&w=majority`. You can find details on how to format the connection string [here](https://www.mongodb.com/docs/manual/reference/connection-string/){:target=_blank .external-link}.
-![The connect dialog where to copy the connection string](/_images/integrations/builtin/credentials/mongodb/connect.png)
-1. In the MongoDB credential dialog set **Configuration Type** as **Connection string**.
-1. Paste the code you copied from the MongoDB dialog in the **Connection String** parameter in the n8n dialog.
-1. Replace `<password>` with your user's password.
-1. Input the name of the database you created in the **Database** field.
-1. Click **Save**. A green box will confirm the connection was successful.
+Refer to [MongoDB's x.509 documentation](https://www.mongodb.com/docs/manual/core/security-x.509/#std-label-client-x509-certificates-requirements) for more information on working with x.509 certificates.
+
+## Using database connection - Values
+
+To configure this credential, you'll need the [Prerequisites](#prerequisites) listed above. Then:
+
+1. Select **Values** as the **Configuration Type**.
+2. Enter the database **Host** name or address.
+3. Enter the **Database** name.
+4. Enter the **User** you'd like to log in as.
+5. Enter the user's **Password**.
+6. Enter the **Port** to connect over. This is the port number your server uses to listen for incoming connections.
+7. Select whether to **Use TLS**: Turn on to use TLS. You must have your MongoDB database configured to use TLS and have an x.509 certificate generated. Add information for these certificate fields in n8n:
+    - **CA Certificate**
+    - **Public Client Certificate**
+    - **Private Client Key**
+    - **Passphrase**
+
+Refer to [MongoDB's x.509 documentation](https://www.mongodb.com/docs/manual/core/security-x.509/#std-label-client-x509-certificates-requirements) for more information on working with x.509 certificates.

@@ -1,27 +1,30 @@
 ---
 title: Pushover credentials
 description: Documentation for Pushover credentials. Use these credentials to authenticate Pushover in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pushover credentials
 
-You can use these credentials to authenticate the following nodes with Pushover.
+You can use these credentials to authenticate the following nodes:
 
-- [Pushover](/integrations/builtin/app-nodes/n8n-nodes-base.pushover/)
+- [Pushover](/integrations/builtin/app-nodes/n8n-nodes-base.pushover.md)
 
 ## Prerequisites
 
 Create a [Pushover](https://pushover.net) account.
 
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [Pushover's API documentation](https://pushover.net/api) for more information about authenticating with the service.
+
 ## Using API Key
 
-1. Access the [Pushover dashboard](https://pushover.net/).
-2. Scroll down to the bottom and click on ***Create an Application/API Token***.
-3. Enter the name of your application in the ***Name*** field.
-4. Read the 'Terms of Services' and the 'Guide to Being Friendly to our API' and, if you agree to them, check the checkbox.
-5. Click on the ***Create Application*** button.
-6. Use this ***API Key*** with your Pushover node credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting Pushover credentials](/_images/integrations/builtin/credentials/pushover/using-api-key.gif)
+- An **API Key**: Generated when you [register an application](https://pushover.net/apps/build). Refer to [Application Registration](https://pushover.net/api#registration) for more information.
 

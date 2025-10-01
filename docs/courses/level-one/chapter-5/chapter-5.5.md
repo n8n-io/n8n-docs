@@ -2,9 +2,13 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 5. Calculating Booked Orders
 
-In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the Code node.
+In this step of the workflow you will learn how n8n structures data and how to add custom JavaScript code to perform calculations using the Code node. After this step, your workflow should look like this:
+
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.5.json") ]]
 
 The next step in Nathan's workflow is to calculate two values from the booked orders:
 
@@ -16,81 +20,94 @@ To calculate data and add more functionality to your workflows you can use the C
 ## About the Code node
 
 /// warning | Code node modes
-The Code node has two operational **Modes** that change the way it processes data. The **Run Once for All Items** mode allows you to accumulate data from all items on the input list. The **Run Once for Each Item** is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
-///
-- Create your own node.
-- Write custom expressions.
-- Use the Code node.
-- Get the most out of n8n.
+The Code node has two operational **modes**, depending on how you want to process items:
 
-In n8n, the data that's passed between nodes is an array of objects with the following structure:
+* **Run Once for All Items** allows you to write code to process all input items at once, as a group.
+* **Run Once for Each Item** executes your code once for each input item.
+
+Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+///
+
+In n8n, the data that's passed between nodes is an array of objects with the following JSON structure:
 
 ```json
 [
     {
-   	 // Each item has to contain a "json" property. But it can be an empty object like {}.
-   	 // Any kind of JSON data is allowed. So arrays and the data being deeply nested is fine.
-   	 json: { // The actual data n8n operates on (required)
-   		 // This data is only an example, it could be any kind of JSON data
-   		 apple: 'beets',
-   		 carrot: {
-   			 dill: 1
+   	 "json": { // (1)!
+   		 "apple": "beets",
+   		 "carrot": {
+   			 "dill": 1
    		 }
    	 },
-   	 // Binary data of item. Most items in n8n do not contain any (optional)
-   	 binary: {
-   		 // The key-name "apple" is only an example. Any kind of key-name is possible.
-   		 apple-picture: {
-   			 data: '....', // Base64 encoded binary data (required)
-   			 mimeType: 'image/png', // Optional but should be set if possible (optional)
-   			 fileExtension: 'png', // Optional but should be set if possible (optional)
-   			 fileName: 'example.png', // Optional but should be set if possible (optional)
+   	 "binary": { // (2)!
+   		 "apple-picture": { // (3)!
+   			 "data": "....", // (4)!
+   			 "mimeType": "image/png", // (5)!
+   			 "fileExtension": "png", // (6)!
+   			 "fileName": "example.png", // (7)!
    		 }
    	 }
     },
     ...
 ]
 ```
+
+1. (required) n8n stores the actual data within a nested `json` key. This property is required, but can be set to anything from an empty object (like `{}`) to arrays and deeply nested data. The code node automatically wraps the data in a `json` object and parent array (`[]`) if it's missing.
+2. (optional) Binary data of item. Most items in n8n don't contain binary data.
+3. (required) Arbitrary key name for the binary data.
+4. (required) Base64-encoded binary data.
+5. (optional) Should set if possible.
+6. (optional) Should set if possible.
+7. (optional) Should set if possible.
+
+You can learn more about the expected format on the [n8n data structure](/data/data-structure.md) page.
+
 ## Configure the Code node
 
-Now let's see how to implement this.
+Now let's see how to accomplish Nathan's task using the Code node.
 
-In your workflow, add a Code node** connected to the `false` branch of the **If node. 
+In your workflow, add a **Code node** connected to the `false` branch of the **If node**. 
 
 With the Code node window open, configure these parameters:
 
-- **Mode**: Select **Run Once for All Items**
-- **Language**: Select **JavaScript**
-- Copy the Code below and paste it into the **Code** box:
+- **Mode**: Select **Run Once for All Items**.
+- **Language**: Select **JavaScript**.
+
+	/// note | Using Python in code nodes
+	While we use JavaScript below, you can also use Python in the Code node. To learn more, refer to the [Code node](/code/code-node.md) documentation.
+	///
+	
+- Copy the Code below and paste it into the **Code** box to replace the existing code:
+
+	```javascript
+	let items = $input.all();
+	let totalBooked = items.length;
+	let bookedSum = 0;
+
+	for (let i=0; i < items.length; i++) {
+	  bookedSum = bookedSum + items[i].json.orderPrice;
+	}
+
+	return [{ json: {totalBooked, bookedSum} }];
+	```
+
+Notice the format in which we return the results of the calculation:
+
 ```javascript
-let items = $input.all();
-let totalBooked = items.length;
-let bookedSum = 0;
-
-for(let i=0; i < items.length; i++) {
-  bookedSum = bookedSum + items[i].json.orderPrice;
-}
-return [{json:{totalBooked, bookedSum}}];
+return [{ json: {totalBooked, bookedSum} }]
 ```
-
-Notice the format in which we return the results of the calculation:<br>
-`return [{json:{totalBooked, bookedSum}}]`
 
 /// warning | Data structure error
 If you don't use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
 ///
 
-Now select **Test step** and you should see the following results:
+Now select **Execute step** and you should see the following results:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node output" style="width:100%"><figcaption align = "center"><i>Code node output</i></figcaption></figure>
 
-/// note | Using Python in code nodes
-You can also use Python in the Code node. To learn more about this, refer to the [Code node](/code/code-node/) documentation.
-///
-
 ## What's next?
 
-**Nathan 🙋**: Wow, the Code node is really powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
+**Nathan 🙋**: Wow, the Code node is powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
 
 **You 👩‍🔧**: Yes! You can progress from no-code to low-code!
 

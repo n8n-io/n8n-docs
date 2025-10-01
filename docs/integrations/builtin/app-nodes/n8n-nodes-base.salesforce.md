@@ -1,23 +1,23 @@
 ---
-title: Salesforce
-description: Documentation for the Salesforce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Salesforce node documentation
+description: Learn how to use the Salesforce node in n8n. Follow technical documentation to integrate Salesforce node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Salesforce
+# Salesforce node
 
 Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
 
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Salesforce integrations](https://n8n.io/integrations/salesforce/){:target="_blank" .external-link} list.
+Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Account
     * Add note to an account
@@ -97,6 +97,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a user
     * Get all users
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'salesforce') ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Working with Salesforce custom fields
@@ -107,7 +112,3 @@ To add custom fields to your request:
 2. In the dropdown, select **Custom Fields**.
 
 You can then find and add your custom fields.
-
-
-
-

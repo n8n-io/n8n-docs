@@ -12,9 +12,9 @@ they get saved to the database. If the key isn't yet in the settings file,
 you can set it using an environment variable, so that n8n 
 uses your custom key instead of generating a new one.
 
-In [queue mode](/hosting/scaling/queue-mode/), you must specify the encryption key environment variable for all workers.
+In [queue mode](/hosting/scaling/queue-mode.md), you must specify the encryption key environment variable for all workers.
 
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment/) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on this variable.

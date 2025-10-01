@@ -1,23 +1,23 @@
 ---
-title: ClickUp
-description: Documentation for the ClickUp node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: ClickUp node documentation
+description: Learn how to use the ClickUp node in n8n. Follow technical documentation to integrate ClickUp node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# ClickUp
+# ClickUp node
 
 Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
 
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [ClickUp integrations](https://n8n.io/integrations/clickup/){:target="_blank" .external-link} list.
+Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+## Operations
 
 * Checklist
     * Create a checklist
@@ -90,6 +90,20 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Add tag to time entry
     * Get all time entry tags
     * Remove tag from time entry
+
+## Operation details
+
+### Get a task
+
+When using the **Get a task** operation, you can optionally enable the following:
+
+- **Include Subtasks**: When enabled, also fetches and includes subtasks for the specified task.
+- **Include Markdown Description**: When enabled, includes the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'clickup') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

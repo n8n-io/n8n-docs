@@ -32,7 +32,7 @@ Even though this is possible, it isn't recommended. Environment variables aren't
 
 #### Using REST APIs
 
-The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available. You can also set `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` to be a token that is required to access the endpoint. If this token is set, the endpoint will only be accessible if the token is provided in the `Authorization` header as a Bearer token.
+The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available. You can set `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` to require a token for accessing the endpoint. When this token is configured, the endpoint is only accessible if the token is included in the `Authorization` header as a ``Bearer` token.
 
 /// note
 The endpoints can be called just one at a time for security reasons, unless `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set.

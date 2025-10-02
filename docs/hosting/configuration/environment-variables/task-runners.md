@@ -69,6 +69,6 @@ hide:
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_RUNNERS_STDLIB_ALLOW` | String | - | Permit users to import specific Python standard library modules in the Code node. Use `*` to allow all. n8n disables all Python standard library imports by default. |
-| `N8N_RUNNERS_EXTERNAL_ALLOW` | String | - | Permit users to import specific third-party Python modules (if available in the `n8nio/runners` image) in the Code node. Use `*` to allow all. n8n disables all third-party Python modules by default. |
-| `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__` | List of insecure Python built-ins aren't allowed. Set to an empty string to allow all. | 
+| `N8N_RUNNERS_STDLIB_ALLOW` | String | - | Python standard library modules that are allowed to be used in the Code node, including their submodules. Use `*` to allow all stdlib modules. n8n disables all Python standard library imports by default. |
+| `N8N_RUNNERS_EXTERNAL_ALLOW` | String | - | Third-party Python modules that are allowed to be used in the Code node, including their submodules. Use `*` to allow all external modules. n8n disables all third-party Python modules by default. Third-party Python modules must be [included](/hosting/configuration/task-runners/#adding-extra-dependencies) in the `n8nio/runners` image. |
+| `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__,globals,locals` | Python built-ins that aren't allowed to be used in the Code node. Set to an empty string to allow all built-ins. | 

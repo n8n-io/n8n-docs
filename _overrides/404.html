@@ -11,6 +11,7 @@
 
     (function redirect(){
         const incomingPath =  window.location.pathname;
+        const hasExtension = /\.[a-zA-Z0-9]+$/.test(incomingPath);
 
         // handle uppercase URLs
         if (incomingPath !== incomingPath.toLowerCase()) {
@@ -20,7 +21,7 @@
         }
 
         // handle missing trailing `/`
-        if (!incomingPath.endsWith('/') && !incomingPath.includes('.html')) {
+        if (!incomingPath.endsWith('/') && !hasExtension) {
             window.location.href = `${window.location.origin}${incomingPath}/`;
             return;
         }

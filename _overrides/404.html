@@ -2,6 +2,38 @@
 {% block htmltitle %}
 <title>404</title>
 {% endblock %}
+{% block extrahead %}
+<script>
+    // Create an object containing redirects to headings
+    const redirects = {
+
+    };
+
+    (function redirect(){
+        const incomingPath =  window.location.pathname;
+
+        // handle uppercase URLs   
+        if (incomingPath !== pathname.toLowerCase()) {
+            const lowercasePath = pathname.toLowerCase();
+            window.location.href = `${window.location.origin}${lowercasePath}`;
+            return;
+        }
+           
+        // handle missing trailing `/`
+
+
+
+        // handle redirects for headings
+        const currentPath = incomingPath + (window.location.hash ? window.location.hash : '');
+        const redirectUrl = redirects[currentPath];
+        if (redirectUrl) {
+            window.location.href = `${window.location.origin}${redirectUrl}`;
+            return;
+        }          
+    })();	
+  
+</script>
+{% endblock %}
 {% block content %}
   <h1>404 - Page not found</h1>
   <h2>Go <a href="/">home</a></h2>

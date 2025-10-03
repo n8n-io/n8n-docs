@@ -32,10 +32,10 @@ Even though this is possible, it isn't recommended. Environment variables aren't
 
 #### Using REST APIs
 
-The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
+The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available. You can set `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` to require a token for accessing the endpoint. When this token is configured, the endpoint is only accessible if the token is included in the `Authorization` header as a `Bearer` token.
 
 /// note
-The endpoints can be called just one at a time for security reasons.
+The endpoint can be called just once for security reasons, unless `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set.
 ///
 
 For example:
@@ -71,6 +71,12 @@ For example:
 There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`.
 In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) for all child-credentials (`googleSheetsOAuth2Api`) to use.
 ///
+
+In case `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set to `secure-token`, the curl command will be:
+
+    ```sh
+    curl -H "Content-Type: application/json" -H "Authorization: Bearer secure-token" --data @oauth-credentials.json http://localhost:5678/send-credentials
+    ```
 
 ## Environment variables
 

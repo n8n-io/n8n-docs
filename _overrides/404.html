@@ -20,7 +20,7 @@
         }
 
         // handle missing trailing `/`
-        if (!incomingPath.endsWith('/') && !incomingPath.includes('.')) {
+        if (!incomingPath.endsWith('/') && !incomingPath.includes('.html')) {
             window.location.href = `${window.location.origin}${incomingPath}/`;
             return;
         }

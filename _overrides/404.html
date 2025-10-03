@@ -12,14 +12,18 @@
     (function redirect(){
         const incomingPath =  window.location.pathname;
 
-        // handle uppercase URLs   
-        if (incomingPath !== pathname.toLowerCase()) {
-            const lowercasePath = pathname.toLowerCase();
+        // handle uppercase URLs
+        if (incomingPath !== incomingPath.toLowerCase()) {
+            const lowercasePath = incomingPath.toLowerCase();
             window.location.href = `${window.location.origin}${lowercasePath}`;
             return;
         }
-           
+
         // handle missing trailing `/`
+        if (!incomingPath.endsWith('/') && !incomingPath.includes('.')) {
+            window.location.href = `${window.location.origin}${incomingPath}/`;
+            return;
+        }
 
 
 

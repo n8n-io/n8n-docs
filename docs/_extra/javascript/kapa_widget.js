@@ -25,7 +25,6 @@ Kapa(
   "onAskAIAnswerCompleted",
   ({ threadId, questionAnswerId, question, answer, conversation }) => {
     let currentPage = window.location.href;
-    console.log("Answer completed.", { currentPage, threadId, questionAnswerId, question, answer, conversation });
     plausible("Kapa Question", {props: {
       page: currentPage,
       kapaThreadId: threadId,
@@ -41,7 +40,6 @@ Kapa(
   "onAskAILinkClick",
   ({ href, threadId, questionAnswerId, question, answer }) => {
     let currentPage = window.location.href;
-    console.log("Link clicked.", { currentPage, href, threadId, questionAnswerId, question, answer });
     plausible("Kapa Link In Answer Clicked", {props: {
       page: currentPage,
       link: href,
@@ -58,7 +56,6 @@ Kapa(
   "onAskAISourceClick",
   ({ source, threadId, questionAnswerId, question, answer }) => {
     let currentPage = window.location.href;
-    console.log("Source clicked.", { currentPage, source, threadId, questionAnswerId, question, answer });
     plausible("Kapa Link In Listed Sources Clicked", {props: {
       page: currentPage,
       source: source.url,

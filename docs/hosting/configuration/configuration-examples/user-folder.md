@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Specify user folder path
 description: Specify location of the folder that stores user-specific data. 
 contentType: howto

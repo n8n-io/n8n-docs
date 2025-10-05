@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -91,6 +90,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+    NodeConnectionType
 } from 'n8n-workflow';
 
 import {
@@ -133,8 +133,8 @@ description: 'Consume SendGrid API',
 defaults: {
 	name: 'FriendGrid',
 },
-inputs: ['main'],
-outputs: ['main'],
+inputs: [NodeConnectionType.Main],
+outputs: [NodeConnectionType.Main],
 credentials: [
 	{
 		name: 'friendGridApi',

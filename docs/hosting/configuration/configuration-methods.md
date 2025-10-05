@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Configuration methods
 description: How to set environment variables for n8n.
 contentType: howto
@@ -45,61 +44,8 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-## Set environment variables using a file
 
-You can also configure n8n using a configuration file.
-
-Only define the values that need to be different from the default in your configuration file. You can use multiple files. For example, you can have a file with generic base settings, and files with specific values for different environments.
-
-### npm
-
-Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`:
-
-```shell
-# Bash - Single file
-export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
-# Bash - Multiple files are comma-separated
-export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
-
-# PowerShell - Single file, persist for current user
-# Note that setting scope (Process, User, Machine) has no effect on Unix systems
-[Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
-```
-
-Example file:
-
-```json
-{
- "executions": {
-  "saveDataOnSuccess": "none"
- },
- "generic": {
-  "timezone": "Europe/Berlin"
- },
- "nodes": {
-  "exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
- }
-}
-```
-
-/// note | Formatting as JSON
-You can't always work out the correct JSON from the [Environment variables reference](/hosting/configuration/environment-variables/index.md). For example, to set `N8N_METRICS` to `true`, you need to do:
-
-```json
-{
-	"endpoints": {
-		"metrics": {
-			"enable": true
-		}
-	}
-}
-```
-
-Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts) for full details of the expected settings.
-///
-
-
-### Docker
+## Docker Compose file
 
 In Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file.
 
@@ -111,7 +57,7 @@ n8n:
       - N8N_TEMPLATES_ENABLED=false
 ```
 
-### Keeping sensitive data in separate files
+## Keeping sensitive data in separate files
 
 You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/) and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
 

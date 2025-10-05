@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: TheHive credentials
 description: Documentation for TheHive credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -17,7 +16,7 @@ n8n provides two nodes for TheHive. Use these credentials with TheHive node for 
 
 ## Prerequisites
 
-Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md) on your server.
+Install [TheHive](https://docs.strangebee.com/thehive/installation/installation-methods/) on your server.
 
 ## Supported authentication methods
 

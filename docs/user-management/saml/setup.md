@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Set up SAML
 description: Generic setup instructions for using SAML SSO with n8n.
 contentType: howto
@@ -7,14 +6,7 @@ contentType: howto
 
 # Set up SAML
 
-/// info | Feature availability
-* Available on Enterprise plans.
-* You need access to the n8n instance owner account to enable and configure SAML
-
-Available from version 0.225.0.
-///	
-
-This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes you're familiar with SAML. If you're not, [SAML Explained in Plain English](https://www.onelogin.com/learn/saml) can help you understand how SAML works, and its benefits.
+--8<-- "_snippets/user-management/sso-saml-availability.md"
 
 ## Enable SAML
 
@@ -55,7 +47,7 @@ Documentation links for common IdPs.
 | IdP | Documentation |
 | --- | ------------- |
 | Auth0 | [Configure Auth0 as SAML Identity Provider: Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations) |
-| Authentik | [Applications](https://goauthentik.io/docs/applications) and the [SAML Provider](https://goauthentik.io/docs/providers/saml/) |
+| Authentik | [Applications](https://goauthentik.io/docs/applications) and the [SAML Provider](https://docs.goauthentik.io/add-secure-apps/providers/saml/) |
 | Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml) |
 | JumpCloud | [How to setup SAML (SSO) applications with JumpCloud](https://jumpcloud.com/support/integrate-with-zoom#configuring-the-sso-integration) (using `Zoom` as an example) |
 | Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started) guide depending on your hosting. |

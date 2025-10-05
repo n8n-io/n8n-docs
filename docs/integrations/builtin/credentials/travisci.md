@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Travis CI credentials
 description: Documentation for Travis CI credentials. Use these credentials to authenticate Travis CI in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Travis CI](https://travis-ci.org/) account.
+Create a [Travis CI](https://travis-ci.com/) account.
 
 ## Supported authentication methods
 

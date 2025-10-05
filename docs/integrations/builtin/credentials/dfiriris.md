@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: DFIR-IRIS credentials
 description: Documentation for the DFIR-IRIS credentials. Use these credentials to authenticate DFIR-IRIS in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -16,7 +15,7 @@ An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_
 
 Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dfir-iris/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/iris-dfir/) on n8n's website.
 
 
 ## Using API Key

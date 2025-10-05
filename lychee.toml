@@ -126,6 +126,10 @@ exclude = [
   '^https://workable\.com/backend/settings/integrations',  # Redirect loop that ends up at login page
   '^https://www\.trellix\.com/products/epo/',  # timeouts
   '^https://admin\.google\.com/',  # Too many redirects
+  '^https://(docs\.)?msg91.com/',  # Throws 500 error on automated checks
+  '^https://api\.mist\.com/',  # Only works when logged in
+  '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
+  '^https://developer\.paddle\.com/',  # Times out on automated checks
   ]
 
 # Exclude these filesystem paths from getting checked.

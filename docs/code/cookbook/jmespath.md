@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Query JSON with JMESPath
 description: n8n supports the JMESPath library, to simplify working with JSON formatted data.
 contentType: howto

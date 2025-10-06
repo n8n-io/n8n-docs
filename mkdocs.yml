@@ -75,8 +75,7 @@ extra_css:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/feedback.js
-  - _extra/javascript/init_kapa_widget.js
-
+  - _extra/javascript/kapa_widget.js
 watch:
   - _snippets
   - _overrides

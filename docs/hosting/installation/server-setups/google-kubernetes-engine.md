@@ -8,12 +8,12 @@ Google Cloud offers several options suitable for hosting n8n, including Cloud Ru
 
 This guide uses the Google Kubernetes Engine (GKE) as the hosting option. If you want to use Cloud Run, refer to [these instructions](/hosting/installation/server-setups/google-cloud-run.md).
 
-Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link} instead to undertake all the steps.
+Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
 ## Prerequisites
 
-- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
-- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
+- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
+- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke) (install the gcloud CLI first)
 
 --8<-- "_snippets/self-hosting/warning.md"
 

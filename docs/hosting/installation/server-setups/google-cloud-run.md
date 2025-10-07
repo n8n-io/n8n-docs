@@ -8,6 +8,10 @@ This hosting guide shows you how to self-host n8n on Google Cloud Run, a serverl
 
 If you want to deploy to Google Kubernetes Engine (GKE) instead, you can refer to [these instructions](/hosting/installation/server-setups/google-kubernetes-engine.md).
 
+--8<-- "_snippets/self-hosting/warning.md"
+
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Before you begin: get a Google Cloud project
 
 If you have not yet created a Google Cloud project, [do this first](https://developers.google.com/workspace/guides/create-project) (and ensure you have billing enabled on the project; even if your Cloud Run service runs for free you must have billing activated to deploy). Otherwise, navigate to the project where you want to deploy n8n.
@@ -110,7 +114,7 @@ Once complete, you can add the database that n8n will use:
 gcloud sql databases create n8n --instance=n8n-db
 ```
 
-Also greate the DB user for n8n (change the password value, of course):
+Create the DB user for n8n (change the password value, of course):
 
 ```sh
 gcloud sql users create n8n-user \

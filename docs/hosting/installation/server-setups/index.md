@@ -10,11 +10,15 @@ Self-host with Docker Compose:
 * [Heroku](/hosting/installation/server-setups/heroku.md)
 * [Hetzner Cloud](/hosting/installation/server-setups/hetzner.md)
 
+Self-host with Google Cloud Run:
+
+* [Google Cloud Run](/hosting/installation/server-setups/google-cloud-run.md)
+
 Starting points for a Kubernetes setup:
 
 * [AWS](/hosting/installation/server-setups/aws.md)
 * [Azure](/hosting/installation/server-setups/azure.md)
-* [Google Cloud Platform](/hosting/installation/server-setups/google-cloud.md)
+* [Google Cloud Platform](/hosting/installation/server-setups/google-kubernetes-engine.md)
 
 Configuration guides to help you get started on other platforms:
 

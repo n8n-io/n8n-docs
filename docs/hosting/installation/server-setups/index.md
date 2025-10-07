@@ -18,7 +18,7 @@ Starting points for a Kubernetes setup:
 
 * [AWS](/hosting/installation/server-setups/aws.md)
 * [Azure](/hosting/installation/server-setups/azure.md)
-* [Google Cloud Platform](/hosting/installation/server-setups/google-kubernetes-engine.md)
+* [Google Kubernetes Engine (GKE)](/hosting/installation/server-setups/google-kubernetes-engine.md)
 
 Configuration guides to help you get started on other platforms:
 

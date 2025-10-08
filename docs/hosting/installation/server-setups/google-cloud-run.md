@@ -18,11 +18,11 @@ If you have not yet created a Google Cloud project, [do this first](https://deve
 
 ## Easy mode
 
-These instructions will deploy n8n on Cloud Run with just a single command. For this deployment, n8n's data is in-memory so this is only recommended for demo purposes. **Anytime this Cloud Run service scales to zero or is redeployed, the n8n data will be lost.** Refer to the durable mode instructions below if you need a production-grade deployment.
+This is the fastest way to deploy n8n on Cloud Run. For this deployment, n8n's data is in-memory so this is only recommended for demo purposes. **Anytime this Cloud Run service scales to zero or is redeployed, the n8n data will be lost.** Refer to the durable mode instructions below if you need a production-grade deployment.
 
 If you have not yet created a Google Cloud project, [do this first](https://developers.google.com/workspace/guides/create-project) (and ensure you have billing enabled on the project; even if your Cloud Run service will run for free you must have billing enabled to activated to deploy). Otherwise, navigate to the project where you want to deploy n8n.
 
-Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right side) and run this command in the terminal session.
+Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right).
 
 Once your session is open, you may need to run this command first to login (and follow the steps it asks you to complete):
 
@@ -77,9 +77,12 @@ The following instructions are intended for a more durable, production-grade dep
 
 ## Enable APIs and set env vars
 
-Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right side) and run these commands in the terminal session:
+Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right) and run these commands in the terminal session:
 
 ```sh
+## You may need to login first
+gcloud auth login
+
 gcloud services enable run.googleapis.com
 gcloud services enable sqladmin.googleapis.com
 gcloud services enable secretmanager.googleapis.com

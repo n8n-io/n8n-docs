@@ -33,15 +33,45 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+## n8n@1.115.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.0...n8n@1.115.0) for this version.<br />
+**Release date:** 2025-10-06
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+### Contributors
+
+[baileympearson](https://github.com/baileympearson)  
+[h40huynh](https://github.com/h40huynh)  
+[Ankit-69k](https://github.com/Ankit-69k)  
+[francisfontoura](https://github.com/francisfontoura)  
+[iocanel](https://github.com/iocanel)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.114.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.2...n8n@1.114.3) for this version.<br />
+**Release date:** 2025-10-06
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+This release contains bug fixes.
 
 ## n8n@1.114.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) for this version.<br />
 **Release date:** 2025-10-02
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -80,9 +110,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.2...n8n@1.113.3) for this version.<br />
 **Release date:** 2025-09-26
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

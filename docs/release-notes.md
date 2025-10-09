@@ -63,6 +63,7 @@ You can now connect to Git repositories via HTTPS in addition to SSH, making Sou
     <figcaption>HTTPS is now supported as a connection type in Environments. </figcaption>
 </figure>
 <br>
+
 ### Contributors
 
 [baileympearson](https://github.com/baileympearson)  

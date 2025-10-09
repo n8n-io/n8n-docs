@@ -54,7 +54,15 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 ///
 
 This release contains bug fixes.
+### Source Control: Added HTTPS support
 
+You can now connect to Git repositories via HTTPS in addition to SSH, making Source Control usable in environments where SSH is restricted.
+<br> 
+<figure markdown="span">
+    ![Source Control](/_images/release-notes/HTTPSSupport.png)
+    <figcaption>HTTPS is now supported as a connection type in Environments. </figcaption>
+</figure>
+<br>
 ### Contributors
 
 [baileympearson](https://github.com/baileympearson)  

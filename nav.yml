@@ -1178,7 +1178,8 @@ nav:
         - Hetzner: hosting/installation/server-setups/hetzner.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
-        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Google Cloud Run: hosting/installation/server-setups/google-cloud-run.md
+        - Google Kubernetes Engine: hosting/installation/server-setups/google-kubernetes-engine.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration:

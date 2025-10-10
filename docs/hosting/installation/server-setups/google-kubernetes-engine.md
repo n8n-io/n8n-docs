@@ -2,9 +2,13 @@
 contentType: tutorial
 ---
 
-# Hosting n8n on Google Cloud
+# Hosting n8n on Google Kubernetes Engine
 
-This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
+Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
+
+This guide uses the Google Kubernetes Engine (GKE) as the hosting option. If you want to use Cloud Run, refer to [these instructions](/hosting/installation/server-setups/google-cloud-run.md).
+
+Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
 ## Prerequisites
 
@@ -14,14 +18,6 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 --8<-- "_snippets/self-hosting/warning.md"
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
-
-## Hosting options
-
-Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
-
-This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
-
-Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
 ## Create project
 

@@ -39,31 +39,27 @@ gcloud services enable run.googleapis.com
 To deploy n8n:
 
 ```sh
-gcloud run deploy n8n 
+gcloud run deploy n8n \
     --image=n8nio/n8n \
     --region=us-west1 \
     --allow-unauthenticated \
     --port=5678 \
-    --add-volume=name=n8n_data,type=in-memory \
-    --add-volume-mount=volume=n8n_data,mount-path=/home/node/.n8n  \
     --no-cpu-throttling \
     --memory=2Gi
 ```
 
 (you can specify whichever region you prefer, instead of "us-west1")
 
-Once the deployment finishes, open another tab to navigate to the Service URL. You should see the n8n login screen.
+Once the deployment finishes, open another tab to navigate to the Service URL. n8n may still be loading and you will see a "n8n is starting up. Please wait" message, but shortly thereafter you should see the n8n login screen. 
 
 Optional: If you want to keep this n8n service running for as long as possible to avoid data loss, you can also set manual scale to 1 to prevent it from autoscaling to 0. 
 
 ```sh
-gcloud run deploy n8n 
+gcloud run deploy n8n \
     --image=n8nio/n8n \
     --region=us-west1 \
     --allow-unauthenticated \
     --port=5678 \
-    --add-volume=name=n8n_data,type=in-memory \
-    --add-volume-mount=volume=n8n_data,mount-path=/home/node/.n8n  \
     --no-cpu-throttling \
     --memory=2Gi \
     --scaling=1

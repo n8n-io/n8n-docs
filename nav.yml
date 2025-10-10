@@ -1299,6 +1299,7 @@ nav:
               - Pagination: code/cookbook/http-node/pagination.md
   - Advanced AI:
       - advanced-ai/index.md
+      - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

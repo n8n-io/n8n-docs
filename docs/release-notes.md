@@ -54,8 +54,8 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 ///
 
 This release contains bug fixes.
-
-## AI Workflow Builder (Beta)
+<div class="n8n-new-features" markdown> 
+### AI Workflow Builder (Beta)
 
 **AI Workflow Builder** turns your natural language prompts into working automations. Describe what you want to build, and n8n will generate a draft workflow by adding and configuring nodes and wiring up the logic for you. From there, you can refine, expand, or adjust the workflow directly in the editor.
 
@@ -86,7 +86,7 @@ Learn more about how we we’re building this feature in our [forum post](https:
 - At this time, there will not be a way to access additional credits within your plan, however we are we are exploring this.
 
 Learn more about AI Workflow Builder in [documentation](https://docs.n8n.io/advanced-ai/ai-workflow-builder/).
-
+</div>
 ### Source Control: Added HTTPS support
 
 You can now connect to Git repositories via HTTPS in addition to SSH, making Source Control usable in environments where SSH is restricted.

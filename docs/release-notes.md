@@ -61,13 +61,13 @@ This release contains bug fixes.
 
 This feature helps you move from idea to implementation faster and without losing technical control. It’s especially helpful when starting from a blank canvas, validating an approach, or exploring new nodes and capabilities. Multi-turn interaction lets you iterate in conversation, turning your ideas into structured, production-ready workflows step by step.
 
+
 Learn more about how we we’re building this feature in our [forum post](https://community.n8n.io/t/ai-powered-workflow-building-coming-soon/196499).
 
 <br>
 <video src="/_video/release-notes/AI_Workflow_Builder.webm" controls width="100%"></video>
 <br>
 
-🧠 Keep in mind
 
 **Availability:**  
 

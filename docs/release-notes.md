@@ -65,6 +65,39 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 ///
 
 This release contains bug fixes.
+<div class="n8n-new-features" markdown> 
+### AI Workflow Builder (Beta)
+
+**AI Workflow Builder** turns your natural language prompts into working automations. Describe what you want to build, and n8n will generate a draft workflow by adding and configuring nodes and wiring up the logic for you. From there, you can refine, expand, or adjust the workflow directly in the editor.
+
+This feature helps you move from idea to implementation faster and without losing technical control. It’s especially helpful when starting from a blank canvas, validating an approach, or exploring new nodes and capabilities. Multi-turn interaction lets you iterate in conversation, turning your ideas into structured, production-ready workflows step by step.
+
+
+Learn more about how we we’re building this feature in our [forum post](https://community.n8n.io/t/ai-powered-workflow-building-coming-soon/196499).
+
+<br>
+<video src="/_video/release-notes/AI_Workflow_Builder.webm" controls width="100%"></video>
+<br>
+
+
+**Availability:**  
+
+- This feature is initially going to be available for Cloud users on the 14-day Trial, Starter and Pro plans.
+- Availability for Enterprise users on Cloud will follow in a future update.
+- We are actively exploring the best way to bring this feature to self-hosted users.
+
+**Rollout timing:** 
+
+- To ensure the smoothest experience for all users, this feature will be rolled out to users on version 1.115.0 over the course of a week so you may not have access to the feature immediately when you upgrade to 1.115.0.
+
+**Credit limits by plan:** This feature will have monthly credit limits [by plan](https://n8n.io/pricing/). 
+
+- Each prompt/interaction with the AI Workflow Builder consumes one credit.
+- Trial users have access to 20 credits, Starter plans have 50 per month and Pro plans will have 150 credits per month.
+- At this time, there will not be a way to access additional credits within your plan, however we are we are exploring this.
+
+Learn more about AI Workflow Builder in [documentation](https://docs.n8n.io/advanced-ai/ai-workflow-builder/).
+</div>
 ### Source Control: Added HTTPS support
 
 You can now connect to Git repositories via HTTPS in addition to SSH, making Source Control usable in environments where SSH is restricted.
@@ -223,22 +256,22 @@ Data tables are available today on all plans. They currently support numbers, st
     <figcaption>[Overview of data tables](https://www.youtube.com/watch?v=ljkiIkt6lZ4)</figcaption>
 </figure>
 
-### How to
+🛠️ **How to:**
 
-#### Create a data table
+**Create a data table**
 
 - From the canvas, open the **Create workflow** dropdown and select **Create Data table**.
 - Or, go to the **Overview** panel on the left-side navigation bar and open the **Data tables** tab.
 
-#### Use a data table in your workflow
+**Use a data table in your workflow**
 
 - Add the **Data table node** to your workflow to get, update, insert, upsert, or delete rows.
 
-#### Adjust the storage limit (self-hosted only)
+**Adjust the storage limit** (self-hosted only)
 
 - Change the default 50 MB limit with the environment variable: `N8N_DATA_TABLES_MAX_SIZE_BYTES`. [See configuration docs](https://docs.n8n.io/hosting/configuration/configuration-methods/).
 
-### Keep in mind
+🧠**Keep in mind**
 
 - Data tables don’t currently support foreign keys or default values.
 - For now, all data tables are accessible to everyone in a project.  More granular permissions and sharing options are planned.

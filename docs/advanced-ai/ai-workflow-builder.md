@@ -10,9 +10,7 @@ AI Workflow Builder enables you to create, refine, and debug workflows using nat
 
 It handles the entire workflow construction process, including node selection, placement, and configuration, thereby reducing the time required to build functional workflows.
 
-/// Pricing and availability
 For details of pricing and availability of AI Workflow Builder, see [n8n Plans and Pricing](https://n8n.io/pricing/).
-///
 
 ## Working with the builder
 

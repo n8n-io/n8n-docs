@@ -52,6 +52,24 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
+## n8n@1.116.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
+**Release date:** 2025-10-13
+
+This release contains bug fixes.
+
+### Contributors
+
+[JHTosas](https://github.com/JHTosas)  
+[clesecq](https://github.com/clesecq)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+[tishun](https://github.com/tishun)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.115.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.1...n8n@1.115.2) for this version.<br />

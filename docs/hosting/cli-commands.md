@@ -60,6 +60,22 @@ Set the active status to true for all the workflows:
 n8n update:workflow --all --active=true
 ```
 
+## Export entities
+
+You can export your database entities from n8n using the CLI. This tooling allows you to export all entity types from one database type, such as SQLite, and import them into another database type, such as Postgres.
+
+Command flags:
+
+| Flag | Description |
+|-------------|-------|
+| --help | Help prompt. |
+| --outputDir | Output directory path |
+| --includeExecutionHistoryDataTables | Include execution history data tables, these are excluded by default as they can be very large  |
+
+```bash
+n8n export:entities --outputDir ./outputs --includeExecutionHistoryDataTables true
+```
+
 ## Export workflows and credentials
 
 You can export your workflows and credentials from n8n using the CLI.
@@ -137,6 +153,24 @@ All sensitive information is visible in the files.
 
 ```bash
 n8n export:credentials --all --decrypted --output=backups/decrypted.json
+```
+
+## Import entities
+
+You can import entities from a previous `export:entities` command using this command, it allows importing of entities into a database type that differs from the exported database type. Current supported database types include: SQLite, Postgres.
+
+The database is expected to be empty prior to import, this can be forced with the `--truncateTables` parameter.
+
+Command flags:
+
+| Flag | Description |
+|-------------|-------|
+| --help | Help prompt. |
+| --inputDir | Input directory that holds output files for import |
+| --truncateTables | Truncate tables before import  |
+
+```bash
+n8n import:entities --inputDir ./outputs --truncateTables true
 ```
 
 ## Import workflows and credentials

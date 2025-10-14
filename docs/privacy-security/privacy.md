@@ -44,7 +44,7 @@ This is a list of sub-processors authorized to process customer data for n8n's s
 | OpenAI | AI provider	| 1455 3rd Street <br /> San Francisco, CA 94158 <br /> United States |	US |
 | Anthropic	| AI provider	| Anthropic Ireland, Limited <br /> 6th Floor South Bank House, Barrow Street, Dublin 4 <br /> Ireland	| US |
 | Google Vertex AI | AI provider | Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States | EU, US |
-| LangChain | AI provider | LangChain,Inc. <br /> Delaware | US |
+| LangChain | AI provider | LangChain, Inc. <br /> Delaware | US |
 
 Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=n8n.io) to receive updates when n8n adds or changes a sub-processor.
 

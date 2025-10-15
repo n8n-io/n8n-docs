@@ -253,37 +253,6 @@ When your workflow is ready, switch to using the n8n Form Trigger's **Production
 
 When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
 
-## Customizing Form node behavior
-
-### Populate dropdown options dynamically from external sources
-
-You can use one of the following approaches to dynamically populate dropdown options:
-
-• Create a separate workflow that fetches external data and uses the n8n API to update the Form Trigger workflow
-• Use the n8n node with **Update Workflow** operation to modify the form dropdown options dynamically
-• Set up a scheduled workflow to refresh dropdown options periodically
-• Store n8n API credentials and reference the target Form Trigger workflow ID
-• Implement a Wait node approach with multiple form pages where the second form contains the dynamically populated dropdown
-• Set the first form to redirect to the Wait node's resume URL for seamless user experience
-
-### Format response text with line breaks
-
-You can use one of the following methods to add line breaks to form response text:
-
-• Use HTML formatting instead of plain text in the formSubmittedText field
-• Replace newline characters (`\n`) with HTML break tags (`<br>`) before sending the response
-• Consider using a custom HTML response page if more formatting control is needed
-
-### Restrict form access with authentication
-
-You can use one of the following options to add authentication to your form:
-
-• Add username and password fields to the form and validate credentials within the workflow
-• Use the OTP (One-Time Password) field with TOTP node validation for token-based authentication
-• Implement a Wait node with form authentication as a secondary form page
-• Store hashed passwords in a database and compare against form submissions for validation
-• Use external authentication providers like Google Forms if advanced authentication is required
-
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

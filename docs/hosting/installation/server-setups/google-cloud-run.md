@@ -193,3 +193,7 @@ gcloud run deploy n8n \
 ```
 
 Once the deployment finishes, open another tab to navigate to the Service URL. You should see the n8n login screen.
+
+## Troubleshooting
+
+If you see a "Cannot GET /" screen this usually indicates that n8n is still starting up. You can refresh the page and it should eventually load.

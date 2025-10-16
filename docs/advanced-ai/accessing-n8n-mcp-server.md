@@ -12,7 +12,7 @@ The server allows clients such as Lovable to connect securely to an n8n instance
 
 - Search within workflows marked as available in MCP
 - Retrieve metadata and webhook information for workflows
-- Trigger and run workflows via webhook endpoints
+- Trigger and run workflows using webhook endpoints
 
 ## Enabling MCP access
 
@@ -45,7 +45,7 @@ This removes MCP endpoints and hides all related UI elements.
 When you first visit the MCP Access page, n8n automatically generates a personal MCP Access Token tied to your user account.
 
 /// info
-Copy your token immediately. On subsequent visits, you'll only see a redacted value and the copy button will be disabled.
+Copy your token right away. On future visits, you'll only see a redacted value and the copy button will be disabled.
 ///
 
 ### Rotating your token
@@ -55,7 +55,7 @@ If you lose your token or need to rotate it:
 1. Navigate to **Settings > MCP Access**.
 2. Generate a new token.
     
-    The previous token is revoked immediately upon generation.
+    The previous token is revoked right away upon generation.
     
 3. Update all connected MCP clients with the new value.
 
@@ -92,8 +92,29 @@ For MCP clients using JSON configuration files, copy the sample configuration fr
 
 Here, replace:
 
-- `<your-n8n-domain>` – Your n8n base URL (shown on the **MCP Access** page)
-- `<YOUR_N8N_MCP_TOKEN>` – Your generated token
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+
+### TOML configuration
+
+For MCP clients using TOML configuration files (like Codex CLI), use the following configuration:
+
+```toml
+[mcp_servers.n8n_mcp]
+command = "npx"
+args = [
+    "-y",
+    "supergateway",
+    "--streamableHttp",
+    "https://<your-n8n-domain>/mcp-server/http",
+    "--header",
+    "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
+]
+```
+
+Here, replace:
+- `<your-n8n-domain>`: Your n8n base URL, which is shown on the MCP Access page
+- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Exposing workflows to MCP clients
 
@@ -119,10 +140,10 @@ By default, no workflows are visible to MCP clients. You must explicitly enable 
 
 ### Managing access
 
-The **MCP Access settings page** shows all workflows currently available to MCP clients. From this list you can:
+The **MCP Access settings page** shows all workflows available to MCP clients. From this list you can:
 
 - Open a workflow directly
-- Revoke access via the action menu (or use **Disable MCP access** from the workflow card menu)
+- Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
 
 ## **Example: Connecting Lovable to n8n MCP server**
 
@@ -131,7 +152,7 @@ The **MCP Access settings page** shows all workflows currently available to MCP 
     - Add a new MCP server connection:
         - Enter the **Server URL** (copy from n8n instance settings).
         - Provide the **Bearer Token** (API key) from the n8n instance's settings page.
-    - Save the connection; upon success, a confirmation message appears, and available MCP tools are listed.
+    - Save the connection. Upon success, a confirmation message appears and available MCP tools are listed.
 2. Verify connectivity.
     - Once connected, Lovable can query for workflows with MCP access enabled.
     - Example: asking Lovable to build a workflow UI that lists users and allows deleting them.

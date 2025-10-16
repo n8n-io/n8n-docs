@@ -931,7 +931,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/variable'
+              $ref: '#/components/schemas/variable.create'
         required: true
       responses:
         '201':
@@ -950,6 +950,21 @@ paths:
       parameters:
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/cursor'
+        - name: projectId
+          in: query
+          required: false
+          explode: false
+          allowReserved: true
+          schema:
+            type: string
+            example: VmwOO9HeTEj20kxM
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - empty
       responses:
         '200':
           description: Operation successful.
@@ -990,7 +1005,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/variable'
+              $ref: '#/components/schemas/variable.create'
         required: true
       responses:
         '204':
@@ -1801,6 +1816,20 @@ components:
                     type: string
                   tagId:
                     type: string
+    project:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        type:
+          type: string
+          readOnly: true
     variable:
       type: object
       additionalProperties: false
@@ -1819,6 +1848,8 @@ components:
         type:
           type: string
           readOnly: true
+        project:
+          $ref: '#/components/schemas/project'
     variableList:
       type: object
       properties:
@@ -1831,20 +1862,28 @@ components:
           description: Paginate through variables by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
           nullable: true
           example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
-    project:
+    variable.create:
       type: object
       additionalProperties: false
       required:
-        - name
+        - key
+        - value
       properties:
         id:
           type: string
           readOnly: true
-        name:
+        key:
           type: string
+        value:
+          type: string
+          example: test
         type:
           type: string
           readOnly: true
+        projectId:
+          type: string
+          example: VmwOO9HeTEj20kxM
+          nullable: true
     projectList:
       type: object
       properties:

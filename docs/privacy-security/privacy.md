@@ -37,10 +37,14 @@ Email privacy@n8n.io to request data deletion.
 
 This is a list of sub-processors authorized to process customer data for n8n's service. n8n audits each sub-processor's security controls and applicable regulations for the protection of personal data.
 
-| Sub-processor name | Contact details | Geographic location of processing |
-| ------------------ | --------------- | --------------------------------- |
-| Microsoft Azure | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | Germany (West Central Region) |
-| Hetzner Online | Hetzner Online GmbH <br /> Industriestr. 25 <br /> 91710 Gunzenhausen <br /> Germany <br /> data-protection@hetzner.com | Germany |
+| Sub-processor name | Purpose | Contact details | Geographic location of processing |
+| ------------------ | --------------- | --------------- | --------------------------------- |
+| Microsoft Azure | Cloud service provider | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | Germany (West Central Region) |
+| Hetzner Online | Cloud service provider | Hetzner Online GmbH <br /> Industriestr. 25 <br /> 91710 Gunzenhausen <br /> Germany <br /> data-protection@hetzner.com | Germany |
+| OpenAI | AI provider	| 1455 3rd Street <br /> San Francisco, CA 94158 <br /> United States |	US |
+| Anthropic	| AI provider	| Anthropic Ireland, Limited <br /> 6th Floor South Bank House, Barrow Street, Dublin 4 <br /> Ireland	| US |
+| Google Vertex AI | AI provider | Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States | EU, US |
+| LangChain | AI provider | LangChain, Inc. <br /> Delaware | US |
 
 Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=n8n.io) to receive updates when n8n adds or changes a sub-processor.
 

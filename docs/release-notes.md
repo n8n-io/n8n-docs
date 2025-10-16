@@ -34,10 +34,209 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.116.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.116.1) for this version.<br />
+**Release date:** 2025-10-14
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.116.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
+**Release date:** 2025-10-13
+
+This release contains bug fixes.
+
+### Contributors
+
+[JHTosas](https://github.com/JHTosas)  
+[clesecq](https://github.com/clesecq)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+[tishun](https://github.com/tishun)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.116.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
+**Release date:** 2025-10-13
+
+This release contains bug fixes.
+
+### Contributors
+
+[JHTosas](https://github.com/JHTosas)  
+[clesecq](https://github.com/clesecq)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+[tishun](https://github.com/tishun)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.115.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.2...n8n@1.115.3) for this version.<br />
+**Release date:** 2025-10-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.115.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.1...n8n@1.115.2) for this version.<br />
+**Release date:** 2025-10-10
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.114.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.3...n8n@1.114.4) for this version.<br />
+**Release date:** 2025-10-07
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.115.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.0...n8n@1.115.0) for this version.<br />
+**Release date:** 2025-10-06
+
+
+
+This release contains bug fixes.
+<div class="n8n-new-features" markdown> 
+### AI Workflow Builder (Beta)
+
+**AI Workflow Builder** turns your natural language prompts into working automations. Describe what you want to build, and n8n will generate a draft workflow by adding and configuring nodes and wiring up the logic for you. From there, you can refine, expand, or adjust the workflow directly in the editor.
+
+This feature helps you move from idea to implementation faster and without losing technical control. It’s especially helpful when starting from a blank canvas, validating an approach, or exploring new nodes and capabilities. Multi-turn interaction lets you iterate in conversation, turning your ideas into structured, production-ready workflows step by step.
+
+
+Learn more about how we we’re building this feature in our [forum post](https://community.n8n.io/t/ai-powered-workflow-building-coming-soon/196499).
+
+<br>
+<video src="/_video/release-notes/AI_Workflow_Builder.webm" controls width="100%"></video>
+<br>
+
+
+**Availability:**  
+
+- This feature is initially going to be available for Cloud users on the 14-day Trial, Starter and Pro plans.
+- Availability for Enterprise users on Cloud will follow in a future update.
+- We are actively exploring the best way to bring this feature to self-hosted users.
+
+**Rollout timing:** 
+
+- To ensure the smoothest experience for all users, this feature will be rolled out to users on version 1.115.0 over the course of a week so you may not have access to the feature immediately when you upgrade to 1.115.0.
+
+**Credit limits by plan:** This feature will have monthly credit limits [by plan](https://n8n.io/pricing/). 
+
+- Each prompt/interaction with the AI Workflow Builder consumes one credit.
+- Trial users have access to 20 credits, Starter plans have 50 per month and Pro plans will have 150 credits per month.
+- At this time, there will not be a way to access additional credits within your plan, however we are we are exploring this.
+
+Learn more about AI Workflow Builder in [documentation](https://docs.n8n.io/advanced-ai/ai-workflow-builder/).
+</div>
+### Source Control: Added HTTPS support
+
+You can now connect to Git repositories via HTTPS in addition to SSH, making Source Control usable in environments where SSH is restricted.
+<br> 
+<figure markdown="span">
+    ![Source Control](/_images/release-notes/HTTPSSupport.png)
+    <figcaption>HTTPS is now supported as a connection type in Environments. </figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[baileympearson](https://github.com/baileympearson)  
+[h40huynh](https://github.com/h40huynh)  
+[Ankit-69k](https://github.com/Ankit-69k)  
+[francisfontoura](https://github.com/francisfontoura)  
+[iocanel](https://github.com/iocanel)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.114.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.2...n8n@1.114.3) for this version.<br />
+**Release date:** 2025-10-06
+
+
+
+
+This release contains bug fixes.
+
+## n8n@1.114.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) for this version.<br />
+**Release date:** 2025-10-02
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.114.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.0...n8n@1.114.1) for this version.<br />
+**Release date:** 2025-10-02
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.114.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.0...n8n@1.114.0) for this version.<br />
+**Release date:** 2025-09-29
+
+
+
+This release contains core updates, editor improvements, project updates, performance improvements, and bug fixes.
+
+### Contributors
+
+[nealzhu3](https://github.com/nealzhu3)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.113.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.2...n8n@1.113.3) for this version.<br />
 **Release date:** 2025-09-26
+
+
+
+
+
+
 
 This release contains a bug fix.
 
@@ -47,6 +246,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.5...n8n@1.112.6) for this version.<br />
 **Release date:** 2025-09-26
+
+
 
 This release contains a bug fix.
 
@@ -59,9 +260,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.1...n8n@1.113.2) for this version.<br />
 **Release date:** 2025-09-24
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -85,9 +284,7 @@ The native Python runner is currently in beta and is subject to change as we fin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.4...n8n@1.112.5) for this version.<br />
 **Release date:** 2025-09-24
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -117,22 +314,22 @@ Data tables are available today on all plans. They currently support numbers, st
     <figcaption>[Overview of data tables](https://www.youtube.com/watch?v=ljkiIkt6lZ4)</figcaption>
 </figure>
 
-### How to
+🛠️ **How to:**
 
-#### Create a data table
+**Create a data table**
 
 - From the canvas, open the **Create workflow** dropdown and select **Create Data table**.
 - Or, go to the **Overview** panel on the left-side navigation bar and open the **Data tables** tab.
 
-#### Use a data table in your workflow
+**Use a data table in your workflow**
 
 - Add the **Data table node** to your workflow to get, update, insert, upsert, or delete rows.
 
-#### Adjust the storage limit (self-hosted only)
+**Adjust the storage limit** (self-hosted only)
 
 - Change the default 50 MB limit with the environment variable: `N8N_DATA_TABLES_MAX_SIZE_BYTES`. [See configuration docs](https://docs.n8n.io/hosting/configuration/configuration-methods/).
 
-### Keep in mind
+🧠**Keep in mind**
 
 - Data tables don’t currently support foreign keys or default values.
 - For now, all data tables are accessible to everyone in a project.  More granular permissions and sharing options are planned.

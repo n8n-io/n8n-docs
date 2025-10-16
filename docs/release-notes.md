@@ -34,6 +34,50 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.116.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.116.1) for this version.<br />
+**Release date:** 2025-10-14
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.116.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
+**Release date:** 2025-10-13
+
+This release contains bug fixes.
+
+### Contributors
+
+[JHTosas](https://github.com/JHTosas)  
+[clesecq](https://github.com/clesecq)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+[tishun](https://github.com/tishun)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.116.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
+**Release date:** 2025-10-13
+
+This release contains bug fixes.
+
+### Contributors
+
+[JHTosas](https://github.com/JHTosas)  
+[clesecq](https://github.com/clesecq)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+[tishun](https://github.com/tishun)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@1.115.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.2...n8n@1.115.3) for this version.<br />
@@ -42,43 +86,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.2...n8n@1.115
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
-## n8n@1.116.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
-**Release date:** 2025-10-13
-
-This release contains bug fixes.
-
-### Contributors
-
-[JHTosas](https://github.com/JHTosas)  
-[clesecq](https://github.com/clesecq)  
-[Gulianrdgd](https://github.com/Gulianrdgd)  
-[tishun](https://github.com/tishun)  
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
-## n8n@1.116.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
-**Release date:** 2025-10-13
-
-This release contains bug fixes.
-
-### Contributors
-
-[JHTosas](https://github.com/JHTosas)  
-[clesecq](https://github.com/clesecq)  
-[Gulianrdgd](https://github.com/Gulianrdgd)  
-[tishun](https://github.com/tishun)  
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@1.115.2

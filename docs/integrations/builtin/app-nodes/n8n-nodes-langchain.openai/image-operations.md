@@ -18,7 +18,7 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Analayze Image**.
-- **Model**: Select the model you want to use to generate an image. 
+- **Model**: Select the model you want to use to analyze an image. 
 - **Text Input**: Ask a question about the image.
 - **Input Type**: Select how you'd like to input the image. Options include:
     - **Image URL(s)**: Enter the **URL(s)** of the image(s) to analyze. Add multiple URLs in a comma-separated list.

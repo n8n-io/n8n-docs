@@ -13,8 +13,9 @@ Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other a
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 
-/// note | OpenAI Assistant node
+/// note | Previous node versions
 The OpenAI node replaces the OpenAI assistant node from version 1.29.0 on.
+n8n version 1.117.0 introduces V2 of the OpenAI node that supports the OpenAI Responses API and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
 ///
 
 /// note | Credentials
@@ -69,10 +70,9 @@ Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.
 
 ### Operations that support tool connectors
 
-- **Assistant**
-	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#message-an-assistant)
 - **Text**
-	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#message-a-model)
+	- [**Generate a chat completion**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#generate-a-chat-completion)
+	- [**Generate a model response**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#generate-a-model-response)
 
 ## Common issues
 

@@ -87,7 +87,7 @@ Enter these parameters:
 #### Insert options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.
@@ -110,7 +110,7 @@ Enter these parameters:
 #### Insert or Update options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.
@@ -156,7 +156,7 @@ Enter these parameters:
 #### Update options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.

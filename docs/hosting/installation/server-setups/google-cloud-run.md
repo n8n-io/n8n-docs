@@ -216,7 +216,7 @@ gcloud services enable docs.googleapis.com
 gcloud services enable calendar-json.googleapis.com
 ```
 
-Re-deploy n8n with the necessary OAuth callback URLs as environment variables:
+Re-deploy n8n on Cloud Run with the necessary OAuth callback URLs as environment variables:
 
 ```sh
 export SERVICE_URL="your-n8n-service-URL"
@@ -227,8 +227,9 @@ gcloud run services update n8n \
     --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
 ```
 
-Now you must setup OAuth for these services. Visit `https://console.cloud.google.com/auth` and follow these steps:
-1. Click "Get Started" if this button shows (when you have not yet setup OAuth in this Cloud project)
+Lastly, you must setup OAuth for these services. Visit `https://console.cloud.google.com/auth` and follow these steps:
+
+1. Click "Get Started" if this button shows (when you have not yet setup OAuth in this Cloud project).
 1. For "App Information", enter whichever "App Name" and "User Support Email" you prefer.
 1. For "Audience", select "Internal" if you intend to only enable access to your user(s) within this same Google Workspace. Otherwise, you can select "External".
 1. Enter "Contact Information".

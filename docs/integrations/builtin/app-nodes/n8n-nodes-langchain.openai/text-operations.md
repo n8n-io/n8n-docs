@@ -67,7 +67,6 @@ The OpenAI Responses API provides a range of [built-in tools](https://platform.o
 - **Web Search**: Allows models to search the web for the latest information before generating a response.
 - **MCP Servers**: Allows models to connect to remote MCP servers. Find out more about using remote MCP servers as tools [here](https://platform.openai.com/docs/guides/tools-connectors-mcp).
 - **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
-- **Local Shell**: Allows agents to run shell commands locally on a machine the user provides. It is designed to work with the `codex-mini-latest` model. You can use it to generate shell commands that are executed via the [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md)
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
 ### Options

@@ -10,7 +10,7 @@ Self-host with Docker Compose:
 * [Heroku](/hosting/installation/server-setups/heroku.md)
 * [Hetzner Cloud](/hosting/installation/server-setups/hetzner.md)
 
-Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, e.g. GMail, Drive):
+Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, e.g. Gmail, Drive):
 
 * [Google Cloud Run](/hosting/installation/server-setups/google-cloud-run.md)
 

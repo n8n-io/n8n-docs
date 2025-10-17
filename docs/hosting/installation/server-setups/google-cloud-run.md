@@ -6,6 +6,8 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on Google Cloud Run, a serverless container runtime. If you're just getting started with n8n and don't need a production-grade deployment, you can go with the "easy mode" option below for deployment. Otherwise, if you intend to use this n8n deployment at-scale, refer to the "durable mode" instructions further down.
 
+You can also enable access via OAuth to Google Workspace, such as GMail and Drive, to use these services as n8n workflow tools. Instructions for granting n8n access to these services are at the end of of this documentation.
+
 If you want to deploy to Google Kubernetes Engine (GKE) instead, you can refer to [these instructions](/hosting/installation/server-setups/google-kubernetes-engine.md).
 
 --8<-- "_snippets/self-hosting/warning.md"
@@ -197,3 +199,41 @@ Once the deployment finishes, open another tab to navigate to the Service URL. Y
 ## Troubleshooting
 
 If you see a "Cannot GET /" screen this usually indicates that n8n is still starting up. You can refresh the page and it should eventually load.
+
+## Enabling Google Workspace services as n8n tools
+
+If you want to use Google Workspace services (GMail, Calendar, Drive, etc.) to use as tools in n8n, it's recommended to setup OAuth credentials to access these services.
+
+First ensure the respective APIs you want are enabled:
+
+```sh
+## Enable whichever APIs you need
+## Note: If you want Sheets/Docs, it's not enough to just enable Drive; these services each have their own API
+gcloud services enable gmail.googleapis.com
+gcloud services enable drive.googleapis.com
+gcloud services enable sheets.googleapis.com
+gcloud services enable docs.googleapis.com
+gcloud services enable calendar-json.googleapis.com
+```
+
+Then you can re-deploy n8n with the necessary OAuth callback URLs as environment variables:
+
+```sh
+export SERVICE_URL="your-n8n-service-URL"
+## e.g. https://n8n-12345678.us-west1.run.app
+
+gcloud run services update n8n \
+    --region=$REGION \
+    --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
+```
+
+Now you must setup OAuth for these services. Vist `https://console.cloud.google.com/auth` and follow these steps:
+1. Click "Get Started" if this button shows (when you have not yet setup OAuth in this Cloud project)
+2. For "App Information", enter whichever "App Name" and "User Support Email" you prefer.
+3. For "Audience", select "Internal" if you intend to only enable access to your user(s) within this same Google Workspace. Otherwise, you can select "External".
+4. Enter "Contact Information".
+5. If you selected "External", then click "Audience" and add any test users you need to grant access.
+6. Click "Clients" > "Create client", select "Web application" for "Application type", enter your n8n service URL into "Authorized JavaScript origins", and "<YOUR-N8N-URL>/rest/oauth2-credential/callback" into "Authorized redirect URIs" where your YOUR-N8N-URL is also the n8n service URL (e.g. `https://n8n-12345678.us-west1.run.app/rest/oauth2-credential/callback`). Make sure you download the created client's JSON file since it contains the client secret which you will not be able to see later in the Console.
+7. Click "Data Access" and add the scopes you want n8n to have access (e.g. to access Google Sheets, you need `https://googleapis.com/auth/drive.file` and `https://googleapis.com/auth/spreadsheets`)
+8. Now you should be able to use these workspace services. You can test if it works by logging into n8n, add a Tool for the respective service and add its credentials using the information in the OAuth client JSON file from step 6.
+

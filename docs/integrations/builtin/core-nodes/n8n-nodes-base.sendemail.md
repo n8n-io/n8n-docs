@@ -1,4 +1,4 @@
----
+amin.sorkheh@gmail.com---
 title: Send Email
 description: Documentation for the Send Email node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

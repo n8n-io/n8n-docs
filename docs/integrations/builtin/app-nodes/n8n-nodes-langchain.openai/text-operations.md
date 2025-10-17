@@ -9,9 +9,13 @@ priority: critical
 
 Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
-## Message a Model
+/// note | Previous node versions
+n8n version 1.117.0 introduces the OpenAI node V2 that supports the OpenAI Responses API. It renames the 'Message a Model' operation to 'Generate a Chat Completion' to clarify its association with the Chat Completions API and introduces a separate 'Generate a Model Response' operation that uses the Responses API.
+///
 
-Use this operation to send a message or prompt to an OpenAI model and receive a response.
+## Generate a Chat Completion
+
+Use this operation to send a message or prompt to an OpenAI model - using the Chat Completions API - and receive a response.
 
 Enter these parameters:
 
@@ -35,7 +39,13 @@ Enter these parameters:
 - **Output Randomness (Temperature)**: Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around `0.7`) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. Defaults to `1.0`. 
 - **Output Randomness (Top P)**: Adjust the Top P setting to control the diversity of the assistant's responses. For example, `0.5` means half of all likelihood-weighted options are considered. We recommend altering this or **Output Randomness (Temperature)** but not both. Defaults to `1.0`. 
 
-Refer to [Message a Model | OpenAI](https://platform.openai.com/docs/api-reference/text-completion/create) documentation for more information.
+Refer to [Chat Completions | OpenAI](https://platform.openai.com/docs/api-reference/chat) documentation for more information.
+
+## Generate a Model Response
+
+Use this operation to send a message or prompt to an OpenAI model - using the Responses API - and receive a response.
+
+Refer to [Responses | OpenAI](https://platform.openai.com/docs/api-reference/responses/create) documentation for more information.
 
 ## Classify Text for Violations
 

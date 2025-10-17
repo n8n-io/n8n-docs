@@ -123,6 +123,7 @@ nav:
         - Data editing: data/data-editing.md
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
+        - Data tables: data/data-tables.md
         - Binary data: data/binary-data.md
         - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
@@ -193,6 +194,7 @@ nav:
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
         - integrations/builtin/core-nodes/n8n-nodes-base.set.md
@@ -274,7 +276,6 @@ nav:
         - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
-        - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
         - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
         - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
         - AWS Cognito: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
@@ -524,7 +525,6 @@ nav:
         - Slack: integrations/builtin/app-nodes/n8n-nodes-base.slack.md
         - Snowflake: integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md
         - Splunk: integrations/builtin/app-nodes/n8n-nodes-base.splunk.md
-        - Spontit: integrations/builtin/app-nodes/n8n-nodes-base.spontit.md
         - Spotify: integrations/builtin/app-nodes/n8n-nodes-base.spotify.md
         - Stackby: integrations/builtin/app-nodes/n8n-nodes-base.stackby.md
         - Storyblok: integrations/builtin/app-nodes/n8n-nodes-base.storyblok.md
@@ -811,7 +811,6 @@ nav:
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
         - integrations/builtin/credentials/auth0management.md
-        - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
@@ -1050,7 +1049,6 @@ nav:
         - integrations/builtin/credentials/solarwindsipam.md
         - integrations/builtin/credentials/solarwindsobservability.md
         - integrations/builtin/credentials/splunk.md
-        - integrations/builtin/credentials/spontit.md
         - integrations/builtin/credentials/spotify.md
         - integrations/builtin/credentials/ssh.md
         - integrations/builtin/credentials/stackby.md
@@ -1138,6 +1136,7 @@ nav:
       - Build your node:
         - integrations/creating-nodes/build/index.md
         - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+        - Using the n8n-node tool: integrations/creating-nodes/build/n8n-node.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
         - Reference:
@@ -1303,6 +1302,7 @@ nav:
               - Pagination: code/cookbook/http-node/pagination.md
   - Advanced AI:
       - advanced-ai/index.md
+      - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

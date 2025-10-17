@@ -52,4 +52,4 @@ n8n provides an app node for ClickUp. You can find the node docs [here](/integra
 
 View [example workflows and related content](https://n8n.io/integrations/clickup-trigger/) on n8n's website.
 
-Refer to [ClickUp's documentation](https://developer.clickup.com/docs/index) for details about their API.
+Refer to [ClickUp's documentation](https://developer.clickup.com/docs/authentication) for details about their API.

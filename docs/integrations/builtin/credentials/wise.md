@@ -54,5 +54,5 @@ To use endpoints requiring SCA, generate an RSA key pair and add the relevant ke
 2. Add the content of the public key `public.pem` to your Wise **user menu > Settings > API tokens > Manage public keys**.
 3. Add the content of the private key `private.pem` in n8n to the **Private Key (Optional)**.
 
-Refer to [Personal Token SCA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa/personal-token-sca) for more information.
+Refer to [Personal Token SCA](https://docs.wise.com/api-docs/guides/strong-customer-authentication-2fa/personal-token-sca) for more information.
 

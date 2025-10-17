@@ -9,6 +9,10 @@ priority: high
 
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
+/// warning | Security considerations
+The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, n8n recommends [disabling](/hosting/securing/blocking-nodes.md#exclude-nodes) it in such setups.
+///
+
 /// note | Which shell runs the command?
 This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 

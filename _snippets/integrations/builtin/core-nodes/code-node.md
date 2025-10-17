@@ -54,9 +54,11 @@ The syntax to use the built-in methods and variables is `$variableName` or `$met
 
 ### Keyboard shortcuts
 
-The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. A full list can be found in the [list of keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
 
-## Python
+## Python (Pyodide - legacy)
+
+Pyodide is a legacy feature. Future versions of n8n will no longer support this feature.
 
 n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
 
@@ -71,7 +73,7 @@ The syntax to use the built-in methods and variables is `_variableName` or `_met
 
 ### Keyboard shortcuts
 
-The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. A full list can be found in the [list of keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. See the full list of [keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
 
 ## File system and HTTP requests
 
@@ -79,6 +81,21 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 
 * [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
+
+## Python (Native - beta)
+
+n8n added native Python support using task runners (beta) in version 1.111.0. 
+
+Main differences from Pyodide:
+
+- Native Python supports only `_items` in all-items mode and `_item` in per-item mode. It doesn't support other n8n built-in methods and variables.
+- Native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](/hosting/configuration/task-runners.md/#adding-extra-dependencies) for more details.
+- Native Python denies insecure built-ins by default. See [task runners environment variables](/hosting/configuration/environment-variables/task-runners.md) for more details.
+- Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
+
+Keep in mind upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
+
+This feature is in beta and is subject to change. As it becomes stable, n8n will roll it out progressively to n8n cloud users during 2025. Self-hosting users can [try it out](/hosting/configuration/task-runners.md) and provide feedback.
 
 ## Coding in n8n
 

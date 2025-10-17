@@ -78,3 +78,7 @@ https://{your-domain}.auth0.com/.well-known/openid-configuration
 ```
 https://{your-domain}.okta.com/.well-known/openid-configuration
 ```
+- **Amazon Cognito discovery endpoint example**:
+```
+https://cognito-idp.{region}.amazonaws.com/{user-pool-id}/.well-known/openid-configuration
+```

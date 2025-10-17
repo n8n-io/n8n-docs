@@ -227,13 +227,13 @@ gcloud run services update n8n \
     --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
 ```
 
-Now you must setup OAuth for these services. Vist `https://console.cloud.google.com/auth` and follow these steps:
+Now you must setup OAuth for these services. Visit `https://console.cloud.google.com/auth` and follow these steps:
 1. Click "Get Started" if this button shows (when you have not yet setup OAuth in this Cloud project)
-2. For "App Information", enter whichever "App Name" and "User Support Email" you prefer.
-3. For "Audience", select "Internal" if you intend to only enable access to your user(s) within this same Google Workspace. Otherwise, you can select "External".
-4. Enter "Contact Information".
-5. If you selected "External", then click "Audience" and add any test users you need to grant access.
-6. Click "Clients" > "Create client", select "Web application" for "Application type", enter your n8n service URL into "Authorized JavaScript origins", and "<YOUR-N8N-URL>/rest/oauth2-credential/callback" into "Authorized redirect URIs" where your YOUR-N8N-URL is also the n8n service URL (e.g. `https://n8n-12345678.us-west1.run.app/rest/oauth2-credential/callback`). Make sure you download the created client's JSON file since it contains the client secret which you will not be able to see later in the Console.
-7. Click "Data Access" and add the scopes you want n8n to have access for (e.g. to access Google Sheets, you need `https://googleapis.com/auth/drive.file` and `https://googleapis.com/auth/spreadsheets`)
-8. Now you should be able to use these workspace services. You can test if it works by logging into n8n, add a Tool for the respective service and add its credentials using the information in the OAuth client JSON file from step 6.
+1. For "App Information", enter whichever "App Name" and "User Support Email" you prefer.
+1. For "Audience", select "Internal" if you intend to only enable access to your user(s) within this same Google Workspace. Otherwise, you can select "External".
+1. Enter "Contact Information".
+1. If you selected "External", then click "Audience" and add any test users you need to grant access.
+1. Click "Clients" > "Create client", select "Web application" for "Application type", enter your n8n service URL into "Authorized JavaScript origins", and "<YOUR-N8N-URL>/rest/oauth2-credential/callback" into "Authorized redirect URIs" where your YOUR-N8N-URL is also the n8n service URL (e.g. `https://n8n-12345678.us-west1.run.app/rest/oauth2-credential/callback`). Make sure you download the created client's JSON file since it contains the client secret which you will not be able to see later in the Console.
+1. Click "Data Access" and add the scopes you want n8n to have access for (e.g. to access Google Sheets, you need `https://googleapis.com/auth/drive.file` and `https://googleapis.com/auth/spreadsheets`)
+1. Now you should be able to use these workspace services. You can test if it works by logging into n8n, add a Tool for the respective service and add its credentials using the information in the OAuth client JSON file from step 6.
 

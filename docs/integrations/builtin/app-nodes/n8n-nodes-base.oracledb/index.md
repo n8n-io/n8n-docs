@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Oracle Database node documentation
 description: Learn how to use the Oracle Database node in n8n. Follow technical documentation to integrate Oracle Database node into your workflows.
 contentType: [integration, reference]
@@ -55,7 +54,7 @@ Enter these parameters:
 
 ### Execute SQL
 
-Use this operation to execute an SQL query.
+Use this operation to execute an SQL statement.
 
 Enter these parameters:
 
@@ -88,7 +87,7 @@ Enter these parameters:
 #### Insert options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose from the list, or specify IDs using an expression.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.
@@ -111,6 +110,7 @@ Enter these parameters:
 #### Insert or Update options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.
@@ -156,6 +156,7 @@ Enter these parameters:
 #### Update options
 
 - **Auto Commit**: Whether this property is true, then the transaction in the current connection is automatically committed at the end of statement execution.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns.
 - **Statement Batching**: The way to send queries to the database:
 	- **Single Statement**: A single Statement for all incoming items.
 	- **Independently**: Execute one Statement per incoming item of the execution.

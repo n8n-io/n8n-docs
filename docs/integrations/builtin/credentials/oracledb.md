@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Oracle Database credentials
 description: Documentation for Oracle Database credentials. Use these credentials to authenticate Oracle Database in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,8 +12,8 @@ You can use these credentials to authenticate the following nodes:
 - [OracleDB](/integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md)
 - [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
 
-/// note | Agent node users
-The Agent node doesn't support SSH tunnels.
+/// note
+These nodes do not support SSH tunnels.
 ///
 
 ## Prerequisites
@@ -36,13 +35,13 @@ To configure this credential, you'll need:
 - A **User** name.
 - A **Password** for that user.
 - **Connection String**: The Oracle database instance to connect to. The string can be an Easy Connect string, or a Net Service Name from a tnsnames.ora file, or the name of a local Oracle database instance.
+- **Use Optional Oracle Client Libraries**: If you want to use node-oracledb Thick mode, turn this on. This option will not be available in official n8n docker images. Additional settings to enable thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information.
 - **Use SSL**: If your Connection String is using SSL, turn this on and configure additional details for the SSL Authentication.
 - **Wallet Password**: The password to decrypt the Privacy Enhanced Mail (PEM)-encoded private certificate, if it is encrypted.
 - **Wallet Content**: The security credentials required to establish a mutual TLS (mTLS) connection to Oracle Database.
 - **Distinguished Name**: The distinguished name (DN) that should be matched with the certificate DN.
 - **Match Distinguished Name**: Whether the server certificate DN should be matched in addition to the regular certificate verification that is performed.
 - **Allow Weak Distinguished Name Match**: Whether the secure DN matching behavior which checks both the listener and server certificates has to be performed.
-- **Use Optional Oracle Client Libraries**: If you want to use node-oracledb Thick mode, turn this on. The process environment variables, **NODE_ORACLEDB_CLIENT_LIB_DIR** and **NODE_ORACLEDB_CLIENT_CONFIG_DIR** have to be defined for Thick mode to work.
 - **Pool Min**: The number of connections established to the database when a pool is created.
 - **Pool Max**: The maximum number of connections to which a connection pool can grow.
 - **Pool Increment**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
@@ -70,8 +69,6 @@ To set up your database connection credential:
 
 3. If your database uses SSL and you'd like to use **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information of your OracleDB SSL certificate in these fields:
       1. Enter the output of PEM-encoded wallet file, **ewallet.pem** contents after retaining the new lines. The command
-
-
 
        ```bash
        node -e "console.log('{{\"' + require('fs').readFileSync('ewallet.pem', 'utf8').split('\n').join('\\\\n') + '\"}}')"

@@ -18,15 +18,19 @@ You can use CLI commands with self-hosted n8n. Depending on how you choose to in
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
     ```
 
-## Start a workflow
+## Execute a workflow
 
-You can start workflows directly using the CLI.
+You can execute a workflow directly using the CLI.
 
 Execute a saved workflow by its ID:
 
 ```bash
 n8n execute --id <ID>
 ```
+
+/// note | Task broker server port
+This CLI command requires its own task broker server to service Code node tasks. Therefore, please ensure port `5679` is available, else change it for this CLI command using the env var `N8N_RUNNERS_BROKER_PORT`.
+///
 
 ## Change the active status of a workflow
 

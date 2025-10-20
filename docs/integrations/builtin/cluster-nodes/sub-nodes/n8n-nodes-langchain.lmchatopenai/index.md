@@ -78,7 +78,7 @@ Use this option to set the probability the completion should use. Use a lower va
 The conversation that this response belongs to. Input items and output items from this response are automatically added to this conversation after this response completes.
 
 ###  Prompt Cache Key
-Utilize this key for caching similar requests to optimize cache hit rates.
+Use this key for caching similar requests to optimize cache hit rates.
 
 ### Safety Identifier
 Apply an identifier to track users who may violate usage policies.
@@ -87,7 +87,7 @@ Apply an identifier to track users who may violate usage policies.
 Select the service tier that fits your needs: Auto, Flex, Default, or Priority.
 
 ### Metadata
-A set of key-value pairs for storing structured information. You can attach up to 16 pairs to an object, which is useful for adding custom data that can be used for searching via the API or in the dashboard.
+A set of key-value pairs for storing structured information. You can attach up to 16 pairs to an object, which is useful for adding custom data that can be used for searching by the API or in the dashboard.
 
 ### Top Logprobs
 Define an integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability.

@@ -27,42 +27,12 @@ Select the model to use to generate the completion.
 n8n dynamically loads models from OpenAI, and you'll only see the models available to your account.
 
 ### Built-in Tools
-**Built-in Tools** parameters allow you to add various built-in capabilities such as **Web Search**, **MCP Servers**, **File Search**, and **Code Interpreter**.
+The OpenAI Responses API provides a range of [built-in tools](https://platform.openai.com/docs/guides/tools) to enrich the model's response:
 
-**Web Search** - Configure options for search context size, allowed domains, country, city, and region.
-
-**MCP Servers** - Add MCP server details with server label, connection type, URL, connector ID, authorization, headers, description, and allowed tools.
-
-**File Search** - Set vector store IDs, filters, and maximum results.
-
-**Code Interpreter** - Toggle code execution within a local environment.
-
-### Conversation ID
-Assign a unique identifier to group response items under a single conversation.
-
-###  Prompt Cache Key
-Utilize this key for caching similar requests to optimize cache hit rates.
-
-### Safety Identifier
-Apply an identifier to track users who may violate usage policies.
-
-### Service Tier
-Select the service tier that fits your needs: Auto, Flex, Default, or Priority.
-
-### Metadata
-Include additional key-value pairs to catalog information in a structured format. Restricted to 64 character keys and 512 character values.
-
-### Top Logprobs
-Define an integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability.
-
-### Output Format
-Choose a response format: Text, JSON Schema, or JSON Object. Use of JSON Schema is recommended, if you want to receive data in JSON format.
-
-### Prompt
-Configure the prompt filled with a unique ID, its version, and substitutable variables.
-
-### Reasoning Effort
-Control the reasoning level of AI results: Low, Medium, or High.
+- **Web Search**: Allows models to search the web for the latest information before generating a response.
+- **MCP Servers**: Allows models to connect to remote MCP servers. Find out more about using remote MCP servers as tools [here](https://platform.openai.com/docs/guides/tools-connectors-mcp).
+- **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
+- **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
 ## Node options
 
@@ -103,6 +73,33 @@ Enter the maximum number of times to retry a request.
 ### Top P
 
 Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+
+### Conversation ID
+The conversation that this response belongs to. Input items and output items from this response are automatically added to this conversation after this response completes.
+
+###  Prompt Cache Key
+Utilize this key for caching similar requests to optimize cache hit rates.
+
+### Safety Identifier
+Apply an identifier to track users who may violate usage policies.
+
+### Service Tier
+Select the service tier that fits your needs: Auto, Flex, Default, or Priority.
+
+### Metadata
+A set of key-value pairs for storing structured information. You can attach up to 16 pairs to an object, which is useful for adding custom data that can be used for searching via the API or in the dashboard.
+
+### Top Logprobs
+Define an integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability.
+
+### Output Format
+Choose a response format: Text, JSON Schema, or JSON Object. Use of JSON Schema is recommended, if you want to receive data in JSON format.
+
+### Prompt
+Configure the prompt filled with a unique ID, its version, and substitutable variables.
+
+### Reasoning Effort
+Control the reasoning level of AI results: Low, Medium, or High.
 
 ## Templates and examples
 

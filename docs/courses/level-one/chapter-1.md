@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -41,7 +40,8 @@ On the left side of the **Editor UI**, there is a panel which contains the core 
 
 The panel contains the following sections:
 
--   **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
+
+-   **Overview**: Contains all the workflows, credentials, and executions you have access to. During this course, create new workflows here.
 -   **Personal**: Every user gets a default personal project. If you don’t create a custom project, your workflows and credentials are stored here.
 -   **Projects**: Projects let you group workflows and credentials together. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do. Projects aren’t available on the Community edition.
 -   **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
@@ -50,6 +50,7 @@ The panel contains the following sections:
 -   **Insights**: Provides analytics and insights about your workflows.
 -   **Help**: Contains resources around n8n product and community.
 -   **What’s New**: Shows the latest product updates and features.
+
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 

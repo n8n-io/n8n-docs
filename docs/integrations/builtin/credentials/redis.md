@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Redis credentials
 description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -39,5 +38,6 @@ To configure this credential:
     - This number should match the `tcp_port` listed when you run the `INFO` command.
 4. Enter the **Database Number**. The default is `0`.
 5. If the connection should use SSL, turn on the **SSL** toggle. If this toggle is off, the connection uses TCP only.
+6. If you enable **SSL**, you have the option to **disable TLS verification**. Toggle to use self-signed certificates. WARNING: This makes the connection less secure.
 
 Refer to [Connecting to Redis | Generic client](https://redis.readthedocs.io/en/stable/connections.html) for more information.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Elastic Security node documentation
 description: Learn how to use the Elastic Security node in n8n. Follow technical documentation to integrate Elastic Security node into your workflows.
 contentType: [integration, reference]

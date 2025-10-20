@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Paddle credentials
 description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -35,4 +34,4 @@ To configure this credential, you'll need:
 - A **Vendor ID**: Displayed when you generate an API key.
 - **Use Sandbox Environment API**: When turned on, nodes using this credential will hit the Sandbox API endpoint instead of the live API endpoint.
 
-To generate an auth code and view your Vendor ID, go to **Paddle > Developer Tools > Authentication > Generate Auth Code**. Select **Reveal Auth Code** to display the Auth Code. Refer to [API Authentication](https://developer.paddle.com/classic/api-reference/zg9joji1mzuzotg5-api-authentication) for more information.
+To generate an auth code and view your Vendor ID, go to **Paddle > Developer Tools > Authentication > Generate Auth Code**. Select **Reveal Auth Code** to display the Auth Code. Refer to [API Authentication](https://developer.paddle.com/api-reference/about/authentication) for more information.

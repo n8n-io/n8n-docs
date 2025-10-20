@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RBAC projects
 description: Understand how n8n uses project for RBAC. Learn how to create and manage projects.
 contentType: howto
@@ -38,7 +37,7 @@ To remove a user from a project:
 
 1. Select the project.
 1. Select **Project settings**.
-1. In the role type dropdown for the user you want to remove, select **Remove access**.
+1. In the **three-dot menu** for the user you want to remove, select **Remove user**.
 1. Select **Save**.
 
 ## Delete a project

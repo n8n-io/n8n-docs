@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -108,7 +107,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 
 ```typescript
 displayName: 'NASA Pics',
-name: 'NasaPics',
+name: 'nasaPics',
 icon: 'file:nasapics.svg',
 group: ['transform'],
 version: 1,

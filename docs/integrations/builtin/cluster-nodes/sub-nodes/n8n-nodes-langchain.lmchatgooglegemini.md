@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Gemini Chat Model node documentation
 description: Learn how to use the Google Gemini Chat Model node in n8n. Follow technical documentation to integrate Google Gemini Chat Model node into your workflows.
 contentType: [integration, reference]
@@ -31,6 +30,16 @@ n8n dynamically loads models from the Google Gemini API and you'll only see the 
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 * **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini) for information on the available filters and levels.
+
+## Limitations
+
+###  No proxy support
+
+The Google Gemini Chat Model node uses Google's SDK, which doesn't support proxy configuration.
+
+If you need to proxy your connection, as a work around, you can set up a dedicated reverse proxy for Gemini requests and change the **Host** parameter in your [Google Gemini credentials](/integrations/builtin/credentials/googleai.md) to point to your proxy address:
+
+![Google Gemini credentials proxy configuration](/_images/integrations/builtin/cluster-nodes/google-gemini-proxy-config.png)
 
 ## Templates and examples
 

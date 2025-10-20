@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Set up source control
 description: Link n8n to your Git provider.
 contentType: howto
@@ -13,7 +12,10 @@ n8n uses source control to provide environments. Refer to [Environments in n8n](
 
 ## Prerequisites
 
-To use source control with n8n, you need a Git repository that allows SSH access. 
+To use source control with n8n, you need a Git repository with either:
+
+- SSH access (using deploy keys), or 
+- HTTPS access (using Personal Access Tokens)
 
 This document assumes you are familiar with Git and your Git provider.
 
@@ -30,14 +32,34 @@ To help decide what branches you need for your use case, refer to [Branch patter
 
 --8<-- "_snippets/source-control-environments/configure-git-in-n8n.md"
 
-## Step 3: Set up a deploy key
+## Step 3: Set up authentication
 
-Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. 
+Configure authentication based on your chosen connection method.
+
+### SSH authentication (using deploy keys)
+
+Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access.
 
 The steps depend on your Git provider. Help links for common providers:
 
 * [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys)
 * [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/)
+
+### HTTPS authentication (using Personal Access Tokens)
+
+Create a Personal Access Token (PAT) with repository access permissions.
+
+Help links for creating PATs with common providers:
+
+* [GitHub | Managing personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+* [GitLab | Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+* [Bitbucket | App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)
+
+Required permissions for your token:
+
+- Repository read/write access
+- Contents read/write (for GitHub)
+- Source code pull/push (for GitLab)
 
 ## Step 4: Connect n8n and configure your instance
 

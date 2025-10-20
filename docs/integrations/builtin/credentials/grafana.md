@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grafana credentials
 description: Documentation for Grafana credentials. Use these credentials to authenticate Grafana in n8n, a workflow automation platform.
 contentType: [integration, reference]

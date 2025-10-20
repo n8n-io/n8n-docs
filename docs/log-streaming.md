@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Stream events from n8n to your logging tools.
 contentType: howto
 ---
@@ -7,7 +6,7 @@ contentType: howto
 # Log streaming
 
 /// info | Feature availability
-Log streaming is available on Enterprise Self-hosted and Cloud plans.
+Log Streaming is available on all Enterprise plans.
 ///
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.

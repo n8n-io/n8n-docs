@@ -6,7 +6,7 @@ Adalo
 [Aa]ggregate
 Airtable
 Airtop
-[Aa]llowlist
+[Aa]llowlists?
 Anthropic
 APIs
 ARNs
@@ -43,7 +43,7 @@ Calendly
 Capterra
 cartesian
 Chargebee
-[Cc]hatbot
+[Cc]hatbots?
 ChromeOS
 Citrix
 Clearbit
@@ -118,6 +118,7 @@ Imperva
 indexable
 invalid
 Infisical
+[Ii]nitializers?
 Intuit
 IP
 [Ii]terable
@@ -262,6 +263,7 @@ Typeform
 [Uu]npublish
 [Uu]nshare
 Untrash
+[Uu]ntrusted
 UpLead
 uProc
 [Uu]psert

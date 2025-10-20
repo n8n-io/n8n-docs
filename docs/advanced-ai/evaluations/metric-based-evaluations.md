@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Metric-based evaluations
 description: Use metric-based evaluations to measure, score, and improve production AI-based workflow performance over time.
 contentType: howto
@@ -26,8 +25,8 @@ Metrics can be deterministic functions (such as the distance between two strings
 
 ## How it works
 
-/// note | Requires Google Sheets
-Evaluations use Google Sheets to store the test dataset. To use evaluations, you must configure a [Google Sheets credential](/integrations/builtin/credentials/google/index.md).
+/// note | Credentials for Google Sheets
+Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](/integrations/builtin/credentials/google/index.md).
 ///
 
 1. Set up [light evaluation](/advanced-ai/evaluations/light-evaluations.md)

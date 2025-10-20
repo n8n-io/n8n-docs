@@ -24,7 +24,45 @@ You can find authentication information for this node [here](/integrations/built
 
 Select the model to use to generate the completion.
 
-n8n dynamically loads models from OpenAI and you'll only see the models available to your account.
+n8n dynamically loads models from OpenAI, and you'll only see the models available to your account.
+
+### Built-in Tools
+**Built-in Tools** parameters allow you to add various built-in capabilities such as **Web Search**, **MCP Servers**, **File Search**, and **Code Interpreter**.
+
+**Web Search** - Configure options for search context size, allowed domains, country, city, and region.
+
+**MCP Servers** - Add MCP server details with server label, connection type, URL, connector ID, authorization, headers, description, and allowed tools.
+
+**File Search** - Set vector store IDs, filters, and maximum results.
+
+**Code Interpreter** - Toggle code execution within a local environment.
+
+### Conversation ID
+Assign a unique identifier to group response items under a single conversation.
+
+###  Prompt Cache Key
+Utilize this key for caching similar requests to optimize cache hit rates.
+
+### Safety Identifier
+Apply an identifier to track users who may violate usage policies.
+
+### Service Tier
+Select the service tier that fits your needs: Auto, Flex, Default, or Priority.
+
+### Metadata
+Include additional key-value pairs to catalog information in a structured format. Restricted to 64 character keys and 512 character values.
+
+### Top Logprobs
+Define an integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability.
+
+### Output Format
+Choose a response format: Text, JSON Schema, or JSON Object. Use of JSON Schema is recommended, if you want to receive data in JSON format.
+
+### Prompt
+Configure the prompt filled with a unique ID, its version, and substitutable variables.
+
+### Reasoning Effort
+Control the reasoning level of AI results: Low, Medium, or High.
 
 ## Node options
 
@@ -74,6 +112,8 @@ Use this option to set the probability the completion should use. Use a lower va
 ## Related resources
 
 Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the service.
+
+Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/responses/create) for more information about the parameters.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

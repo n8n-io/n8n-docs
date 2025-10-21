@@ -32,6 +32,48 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
+## n8n@1.117.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117.0) for this version.<br />
+**Release date:** 2025-10-21
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+### Contributors
+
+[jackfrancismurphy](https://github.com/jackfrancismurphy)  
+[JiriDeJonghe](https://github.com/JiriDeJonghe)  
+[ramkrishna2910](https://github.com/ramkrishna2910)  
+[sudarshan12s](https://github.com/sudarshan12s)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.116.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.1...n8n@1.116.2) for this version.<br />
+**Release date:** 2025-10-21
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a bug fix.
+
+
+## n8n@1.115.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.3...n8n@1.115.4) for this version.<br />
+**Release date:** 2025-10-21
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 
 ## n8n@1.116.1
@@ -50,6 +92,23 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116
 **Release date:** 2025-10-13
 
 This release contains bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### Data migration tool
+You can now easily migrate n8n data between different database types. This new tooling currently supports SQLite and Postgres, making the transition to a scaling database choice simpler, allowing you to take your data with you.
+<br>
+The tooling comes in the form of two new CLI commands, `export:entities` and `import:entities`
+<br>
+**`Export`**
+The new export command lets you export data from your existing n8n database (SQLite / Postgres), producing a set of encrypted files within a compressed directory for you to move around and use with the import commands.
+
+For details, see [Export entities](/hosting/cli-commands.md#export-entities)
+<br>
+**`Import`**
+The new import command allows you to read from a compressed and encrypted set of files generated from the new export command, and import them in to your new database of choice (SQLite / Postgres) to be used with your n8n instance.
+
+For details, see [Import entities](/hosting/cli-commands.md#import-entities)
+</div>
 
 ### Contributors
 
@@ -93,13 +152,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.1...n8n@1.115.2) for this version.<br />
 **Release date:** 2025-10-10
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
 
 This release contains bug fixes.
 

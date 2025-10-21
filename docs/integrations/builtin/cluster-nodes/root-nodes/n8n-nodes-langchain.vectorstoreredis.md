@@ -18,16 +18,14 @@ You can find authentication information for this node [here](/integrations/built
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Prerequisites
-
-Before using this node, you need to have a Redis database with the RediSearch module enabled.
-   - Redis Open Source (8.x and later) has RediSearch built-in
-   - Redis Stack (includes RediSearch) for older versions of Redis
-   - Redis Cloud or Redis Enterprise with RediSearch enabled
+Before using this node, you need a Redis database with the [Redis Query Engine](https://redis.io/docs/latest/develop/ai/search-and-query/?utm_source=n8n&utm_medium=docs) enabled. Use one of the following:
+   - Redis Open Source (v8.0 and later) - includes the Redis Query Engine by default 
+   - [Redis Cloud](https://cloud.redis.io/?utm_source=n8n&utm_medium=docs) - fully managed service 
+   - [Redis Software](https://redis.io/software/?utm_source=n8n&utm_medium=docs) - self-managed deployment
 
 /// note | A new index will be created if you don't have one.
 Creating your own indices in advance is only necessary if you want to use a custom index schema or reuse an existing index.
 Otherwise, you can skip this step and let the node create a new index for you based on the options you specify.
-Make sure your index follows the schema specified in the [LangChain documentation](https://js.langchain.com/docs/integrations/vectorstores/redis).
 ///
 
 ## Node usage patterns

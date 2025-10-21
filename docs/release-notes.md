@@ -69,6 +69,23 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116
 
 This release contains bug fixes.
 
+<div class="n8n-new-features" markdown> 
+### Data migration tool
+You can now easily migrate n8n data between different database types. This new tooling currently supports SQLite and Postgres, making the transition to a scaling database choice simpler, allowing you to take your data with you.
+<br>
+The tooling comes in the form of two new CLI commands, `export:entities` and `import:entities`
+<br>
+**`Export`**
+The new export command lets you export data from your existing n8n database (SQLite / Postgres), producing a set of encrypted files within a compressed directory for you to move around and use with the import commands.
+
+For details, see [Export entities](/hosting/cli-commands.md#export-entities)
+<br>
+**`Import`**
+The new import command allows you to read from a compressed and encrypted set of files generated from the new export command, and import them in to your new database of choice (SQLite / Postgres) to be used with your n8n instance.
+
+For details, see [Import entities](/hosting/cli-commands.md#import-entities)
+</div>
+
 ### Contributors
 
 [JHTosas](https://github.com/JHTosas)  

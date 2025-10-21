@@ -472,9 +472,11 @@ nav:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
           - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
           - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - Conversation operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/conversation-operations.md
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - Video operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md

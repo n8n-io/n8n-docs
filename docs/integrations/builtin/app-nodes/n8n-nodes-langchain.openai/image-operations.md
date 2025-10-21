@@ -69,14 +69,14 @@ Enter these parameters:
 - **Image(s)**: Add one or more binary fields to include images with your prompt. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.
 - **Number of Images**: The number of images to generate. Must be between 1 and 10.
 - **Size**: The size and dimensions of the generated images (in px).
-- **Quality**: The quality of the image that will be generated (auto, low, medium, high, standard).
+- **Quality**: The quality of the image that will be generated (auto, low, medium, high, standard). Only supported for `gpt-image-1`.
 - **Output Format**: The format in which the generated images are returned (png, webp, or jpg). Only supported for gpt-image-1.
-- **Output Compression**: The compression level (0-100%) for the generated images. Only supported for gpt-image-1 with webp or jpeg output formats.
+- **Output Compression**: The compression level (0-100%) for the generated images. Only supported for `gpt-image-1` with webp or jpeg output formats.
 
 ### Options
-- **Background**: Allows to set transparency for the background of the generated image(s). Only supported for gpt-image-1.
-- **Input Fidelity**: Control how much effort the model will exert to match the style and features of input images. Only supported for gpt-image-1.
-- **Image Mask**: Name of the binary property which contains the image. An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.
+- **Background**: Allows to set transparency for the background of the generated image(s). Only supported for `gpt-image-1`.
+- **Input Fidelity**: Control how much effort the model will exert to match the style and features of input images. Only supported for `gpt-image-1`.
+- **Image Mask**: Name of the binary property that contains the image. A second image whose fully transparent areas (for example, where alpha is zero) shows where the image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.
 - **User**: A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
 
 ## Common issues

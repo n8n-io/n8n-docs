@@ -26,13 +26,13 @@ Refer to [Nextcloud's user manual](https://docs.nextcloud.com/server/stable/user
 
 To configure this credential, you'll need a [Nextcloud](https://nextcloud.com/) account and:
 
-- Your **Web DAV URL**
+- Your **WebDAV URL**
 - Your **User** name
 - Your **Password** or an app password
 
 To set it up:
 
-1. To create your **Web DAV URL**: If Nextcloud is in the root of your domain: Enter the URL you use to access Nextcloud and add `/remote.php/webdav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/webdav`.
+1. To create your **WebDAV URL**: If Nextcloud is in the root of your domain: Enter the URL you use to access Nextcloud and add `/remote.php/webdav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/webdav`.
     - If you have Nextcloud installed in a subdirectory, enter the URL you use to access Nextcloud and add `/<subdirectory>/remote.php/webdav/`. Replace `<subdirectory>` with the subdirectory Nextcloud's installed in.
     - Refer to Nextcloud's [Third-party WebDAV clients](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html#third-party-webdav-clients) documentation for more information on constructing your WebDAV URL.
 2. Enter your **User** name.
@@ -49,7 +49,7 @@ To configure this credential, you'll need a [Nextcloud](https://nextcloud.com/) 
 - An **Authorization URL** and **Access Token URL**: These depend on the URL you use to access Nextcloud.
 - A **Client ID**: Generated once you add an OAuth2 client application in **Administrator Security Settings**.
 - A **Client Secret**: Generated once you add an OAuth2 client application in **Administrator Security Settings**.
-- A **Web DAV URL**: This depends on the URL you use to access Nextcloud.
+- A **WebDAV URL**: This depends on the URL you use to access Nextcloud.
 
 To set it up:
 
@@ -67,7 +67,7 @@ To set it up:
     
 8. Copy the Nextcloud **Client Identifier** for your OAuth2 client and enter it as the **Client ID** in n8n.
 9. Copy the Nextcloud **Secret** and enter it as the **Client Secret** in n8n.
-10. In n8n, to create your **Web DAV URL**: If Nextcloud is in the root of your domain, enter the URL you use to access Nextcloud and add `/remote.php/webdav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/webdav`.
+10. In n8n, to create your **WebDAV URL**: If Nextcloud is in the root of your domain, enter the URL you use to access Nextcloud and add `/remote.php/webdav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/webdav`.
     - If you have Nextcloud installed in a subdirectory, enter the URL you use to access Nextcloud and add `/<subdirectory>/remote.php/webdav/`. Replace `<subdirectory>` with the subdirectory Nextcloud's installed in.
     - Refer to Nextcloud's [Third-party WebDAV clients](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html#third-party-webdav-clients) documentation for more information on constructing your WebDAV URL.
 

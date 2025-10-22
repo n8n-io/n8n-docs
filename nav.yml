@@ -472,9 +472,11 @@ nav:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
           - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
           - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - Conversation operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/conversation-operations.md
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - Video operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
@@ -1178,7 +1180,8 @@ nav:
         - Hetzner: hosting/installation/server-setups/hetzner.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
-        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Google Cloud Run: hosting/installation/server-setups/google-cloud-run.md
+        - Google Kubernetes Engine: hosting/installation/server-setups/google-kubernetes-engine.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration:
@@ -1299,6 +1302,7 @@ nav:
               - Pagination: code/cookbook/http-node/pagination.md
   - Advanced AI:
       - advanced-ai/index.md
+      - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

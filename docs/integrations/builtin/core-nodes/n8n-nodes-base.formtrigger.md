@@ -128,17 +128,6 @@ Select **Add Option** to view more configuration options:
 
 ## Customizing Form Trigger node behavior
 
-### Populate dropdown options dynamically from external sources
-
-You can use one of the following approaches to dynamically populate dropdown options:
-
-• Create a separate workflow that fetches external data and uses the n8n API to update the Form Trigger workflow
-• Use the n8n node with **Update Workflow** operation to change the form dropdown options dynamically
-• Set up a scheduled workflow to refresh dropdown options periodically
-• Store n8n API credentials and reference the target Form Trigger workflow ID
-• Add a Wait node with multiple form pages where the second form contains the dynamically populated dropdown
-• Set the first form to redirect to the Wait node's resume URL for seamless user experience
-
 ### Format response text with line breaks
 
 You can use one of the following methods to add line breaks to form response text:
@@ -151,7 +140,6 @@ You can use one of the following methods to add line breaks to form response tex
 
 You can use one of the following options to add authentication to your form:
 
-• Add username and password fields to the form and validate credentials within the workflow
 • Use the OTP (One-Time Password) field with TOTP node validation for token-based authentication
 • Add a Wait node with form authentication as a secondary form page
 • Store hashed passwords in a database and compare against form submissions for validation

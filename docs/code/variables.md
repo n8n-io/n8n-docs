@@ -8,9 +8,7 @@ contentType: howto
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise and Pro Cloud plans.
-* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
-
-Available in version 0.225.0 and above.
+* Only Instnace owners and admins can create variables either globally visibile to everyone or within a specific project visible to members in the relevant project
 ///
 
 Custom variables are read-only variables that you can use to store and reuse values in n8n workflows.
@@ -19,7 +17,7 @@ Custom variables are read-only variables that you can use to store and reuse val
 
 * **Global variables** are available to everyone on your n8n instance, across all projects.
 * **Project-scoped variables** are available only within the specific project they're created in.
-* Project-scoped variables are available in version vX.Y.Z and above. Previous versions only support global variables accessible from the main menu.
+* Project-scoped variables are available in version vX.Y.Z and above. Previous versions only support global variables accessible from the main side menu.
 
 ///
 
@@ -30,7 +28,7 @@ You can access the **Variables** tab from either the overview page or a specific
 To create a new variable:
 
 1. On the **Variables** tab, select **Add Variable**.
-2. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 220 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
+2. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 1000 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
 3. Select the **Scope** (only available when creating from the overview page):
     * **Global**: The variable is available across all projects in the n8n instance.
     * **Project**: The variable is available only within a specific project (you can select which project).

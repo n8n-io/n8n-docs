@@ -8,7 +8,8 @@ contentType: howto
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise and Pro Cloud plans.
-* Only Instnace owners and admins can create variables either globally visibile to everyone or within a specific project visible to members in the relevant project
+* Only instance owners and admins can create variables.
+
 ///
 
 Custom variables are read-only variables that you can use to store and reuse values in n8n workflows.
@@ -23,7 +24,7 @@ Custom variables are read-only variables that you can use to store and reuse val
 
 ## Create variables
 
-You can access the **Variables** tab from either the overview page or a specific project page.
+You can access the **Variables** tab from either the overview page or a specific project.
 
 To create a new variable:
 

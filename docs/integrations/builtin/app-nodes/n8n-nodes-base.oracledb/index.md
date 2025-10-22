@@ -162,11 +162,6 @@ Enter these parameters:
 	- **Independently**: Execute one Statement per incoming item of the execution.
 	- **Transaction**: Execute all Statements in a transaction. If a failure occurs, Oracle Database rolls back all changes.
 
-## Templates and examples
-
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'oracledb') ]]
-
 ## Related resources
 
 Refer to [SQL Language Reference](https://docs.oracle.com/en/database/oracle/oracle-database/23/sqlrf/index.html) for more information about the service.

@@ -31,8 +31,15 @@ To configure this credential, you'll need:
 - A **User** email address
 - A **Password**: This may be the user's password or an app password. Refer to the documentation for your email provider.
 - The **Host**: The SMTP host address for your email provider, often formatted as `smtp.<provider>.com`. Check with your provider.
-- A **Port** number: The default is port `465`, commonly used for SSL. Other common ports are `587` for TLS or `25` for no encryption. Check with your provider.
-- **SSL/TLS**: When turned on, SMTP will use SSL/TLS.
+- A **Port** number: The port depends on the encryption method:
+  - Port `465` for SSL/TLS (implicit encryption)
+  - Port `587` for STARTTLS (explicit encryption)
+  - Port `25` for no encryption (not recommended)
+    Check with your email provider for their specific requirements.
+- **SSL/TLS**: This toggle controls the encryption method:
+  - Turn **ON** for port `465` (uses implicit SSL/TLS encryption)
+  - Turn **OFF** for port `587` (uses STARTTLS explicit encryption)
+  - Turn **OFF** for port `25` (no encryption)
 - **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS). Turning this on prevents that behaviour.
 - **Client Host Name**: If needed by your provider, add a client host name. This name identifies the client to the server.
 

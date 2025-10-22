@@ -126,6 +126,25 @@ Select **Add Option** to view more configuration options:
 - **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
 - **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 
+## Customizing Form Trigger node behavior
+
+### Format response text with line breaks
+
+You can use one of the following methods to add line breaks to form response text:
+
+• Use HTML formatting instead of plain text in the formSubmittedText field
+• Replace newline characters (`\n`) with HTML break tags (`<br>`) before sending the response
+• Consider using a custom HTML response page if you need more formatting control
+
+### Restrict form access with authentication
+
+You can use one of the following options to add authentication to your form:
+
+• Use the OTP (One-Time Password) field with TOTP node validation for token-based authentication
+• Add a Wait node with form authentication as a secondary form page
+• Store hashed passwords in a database and compare against form submissions for validation
+• Use external authentication providers like Google Forms if you need advanced authentication
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

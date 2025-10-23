@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 /// note
 These nodes do not support SSH tunnels.
-These nodes require Oracle Database 19c or later. For thick mode, use Oracle Client Libraries 19c or later.
+They require Oracle Database 19c or later. For thick mode, use Oracle Client Libraries 19c or later.
 ///
 
 ## Prerequisites
@@ -48,7 +48,7 @@ To configure this credential, you'll need:
 - **Pool Increment**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
 - **Pool Maximum Session Life Time**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
 - **Pool Connection Idle Timeout**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
-- **Connection Class Name**: DRCP/PRCP Connection Class. Refer to [Enabling DRCP](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-D4F9DBD7-7DC6-4233-B831-933809173E39) for more information.
+- **Connection Class Name**: DRCP/PRCP Connection Class. Refer to [Enabling DRCP](https://docs.oracle.com/en/database/oracle/oracle-database/26/admin/managing-processes.html#GUID-BB76E57C-3F16-4C85-AEF6-BA14FC1B4777) for more information.
 - **Connection Timeout**: The timeout duration in seconds for an application to establish an Oracle Net connection.
 - **Transport Connection Timeout**: The maximum number of seconds to wait to establish a connection to the database host.
 - **Keepalive Probe Interval**: The number of minutes between the sending of keepalive probes.
@@ -71,4 +71,4 @@ To set up your database connection credential:
 
        can be used to dump file contents in the **Wallet Content** field.
 
-Refer to [node-oracledb ](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.
+Refer to [node-oracledb](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.

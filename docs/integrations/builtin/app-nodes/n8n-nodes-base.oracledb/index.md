@@ -166,7 +166,7 @@ Enter these parameters:
 
 Refer to [SQL Language Reference](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=SQLRF) for more information about the service.
 
-Refer to [Node OracleDB ](https://node-oracledb.readthedocs.io/en/latest/) for more information about the oracledb client driver.
+Refer to [node-oracledb](https://node-oracledb.readthedocs.io/en/latest/) for more information about the oracledb client driver.
 
 ## Use bind parameters
 

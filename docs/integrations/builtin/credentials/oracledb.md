@@ -14,11 +14,12 @@ You can use these credentials to authenticate the following nodes:
 
 /// note
 These nodes do not support SSH tunnels.
+These nodes require Oracle Database 19c or later. For thick mode, use Oracle Client Libraries 19c or later.
 ///
 
 ## Prerequisites
 
-Create a user account on a [OracleDB](https://docs.oracle.com/en/database/oracle/oracle-database/23/sqlrf/CREATE-USER.html) server database.
+Create a user account on a [OracleDB](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server database.
 
 ## Supported authentication methods
 
@@ -26,7 +27,7 @@ Create a user account on a [OracleDB](https://docs.oracle.com/en/database/oracle
 
 ## Related resources
 
-Refer to [OracleDB's documentation](https://docs.oracle.com/en/database/oracle/oracle-database) for more information about the service.
+Refer to [Oracle Database documentation](https://docs.oracle.com/en/database/oracle/oracle-database) for more information about the service.
 
 ## Using database connection
 
@@ -34,8 +35,8 @@ To configure this credential, you'll need:
 
 - A **User** name.
 - A **Password** for that user.
-- **Connection String**: The Oracle database instance to connect to. The string can be an Easy Connect string, or a Net Service Name from a tnsnames.ora file, or the name of a local Oracle database instance.
-- **Use Optional Oracle Client Libraries**: If you want to use node-oracledb Thick mode, turn this on. This option will not be available in official n8n docker images. Additional settings to enable thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information.
+- **Connection String**: The Oracle database instance to connect to. The string can be an Easy Connect string, or a TNS Alias from a tnsnames.ora file, or the Oracle database instance.
+- **Use Optional Oracle Client Libraries**: If you want to use node-oracledb Thick mode for working with Oracle Database advanced features, turn this on. This option is not available in official n8n docker images. Additional settings to enable Thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information.
 - **Use SSL**: If your Connection String is using SSL, turn this on and configure additional details for the SSL Authentication.
 - **Wallet Password**: The password to decrypt the Privacy Enhanced Mail (PEM)-encoded private certificate, if it is encrypted.
 - **Wallet Content**: The security credentials required to establish a mutual TLS (mTLS) connection to Oracle Database.
@@ -47,7 +48,7 @@ To configure this credential, you'll need:
 - **Pool Increment**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
 - **Pool Maximum Session Life Time**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
 - **Pool Connection Idle Timeout**: The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
-- **Connection Class Name**: DRCP/PRCP Connection Class.
+- **Connection Class Name**: DRCP/PRCP Connection Class. Refer to [Enabling DRCP](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-D4F9DBD7-7DC6-4233-B831-933809173E39) for more information.
 - **Connection Timeout**: The timeout duration in seconds for an application to establish an Oracle Net connection.
 - **Transport Connection Timeout**: The maximum number of seconds to wait to establish a connection to the database host.
 - **Keepalive Probe Interval**: The number of minutes between the sending of keepalive probes.
@@ -55,19 +56,13 @@ To configure this credential, you'll need:
 
 To set up your database connection credential:
 
-1. Enter your database's username as the **User** in your n8n credential. Run this query to confirm the username:
+1. Enter your database's username as the **User** in your n8n credential. 
 
-    ```
-    SELECT SYS_CONTEXT('USERENV', 'SESSION_USER') AS session_user FROM dual;
-    ```
+2. Enter the user's **Password**.
 
-2. Enter your database's connection string as the **Connection String** in your n8n credential. Run this query to confirm the database name:
+3. Enter your database's connection string as the **Connection String** in your n8n credential.
 
-    ```
-    SELECT SYS_CONTEXT('USERENV', 'CON_NAME') AS current_pdb FROM dual;
-    ```
-
-3. If your database uses SSL and you'd like to use **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information of your OracleDB SSL certificate in these fields:
+4. If your database uses SSL and you'd like to configure **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information of your Oracle Database SSL certificate in these fields:
       1. Enter the output of PEM-encoded wallet file, **ewallet.pem** contents after retaining the new lines. The command
 
        ```bash
@@ -76,4 +71,4 @@ To set up your database connection credential:
 
        can be used to dump file contents in the **Wallet Content** field.
 
-Refer to [Node OracleDB ](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.
+Refer to [node-oracledb ](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.

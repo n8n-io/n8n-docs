@@ -7,7 +7,7 @@ priority: critical
 
 # Oracle Database node
 
-Use the Oracle Database node to automate work in Oracle Database, and integrate Oracle Database with other applications. n8n has built-in support for a wide range of Oracle Database features which includes executing an SQL statement, fetching, inserting, updating or deleting data from Oracle Database. This node uses [node-oracledb driver](https://github.com/oracle/node-oracledb) internally.
+Use the Oracle Database node to automate work in Oracle Database, and integrate Oracle Database with other applications. n8n has built-in support for a wide range of Oracle Database features which includes executing an SQL statement, fetching, inserting, updating or deleting data from Oracle Database. This node uses the [node-oracledb driver](https://github.com/oracle/node-oracledb) internally.
 
 On this page, you'll find a list of operations the Oracle Database node supports and links to more resources.
 

@@ -7,12 +7,15 @@ priority: critical
 
 # Oracle Database node
 
-Use the Oracle Database node to automate work in Oracle Database, and integrate Oracle Database with other applications. n8n has built-in support for a wide range of Oracle Database features which includes executing an SQL statement, fetching, inserting, updating or deleting data from Oracle Database.
+Use the Oracle Database node to automate work in Oracle Database, and integrate Oracle Database with other applications. n8n has built-in support for a wide range of Oracle Database features which includes executing an SQL statement, fetching, inserting, updating or deleting data from Oracle Database. This node uses [node-oracledb driver](https://github.com/oracle/node-oracledb) internally.
 
 On this page, you'll find a list of operations the Oracle Database node supports and links to more resources.
 
-/// note | Credentials
+/// note
 Refer to [Oracle Database credentials](/integrations/builtin/credentials/oracledb.md) for guidance on setting up authentication.
+
+Requires Oracle Database **19c or later**.
+For thick mode, use Oracle Client Libraries **19c or later**.
 ///
 
 --8<-- "/_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -166,7 +169,7 @@ Enter these parameters:
 
 Refer to [SQL Language Reference](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=SQLRF) for more information about the service.
 
-Refer to [node-oracledb](https://node-oracledb.readthedocs.io/en/latest/) for more information about the oracledb client driver.
+Refer to [node-oracledb documentation](https://node-oracledb.readthedocs.io/en/latest/) for more information about the node-oracledb driver.
 
 ## Use bind parameters
 

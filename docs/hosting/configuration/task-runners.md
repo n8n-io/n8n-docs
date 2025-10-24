@@ -114,6 +114,56 @@ path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 
 For further information about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
 
+## Setting up external task runners in Kubernetes as an additional deployment
+
+While you can configure a task runner to run as a sidecar, it is also possible to have a dedicated task runner pod talk to the broker using a service. In the following example the worker is the sole task broker and a new service is created to expose the broker's port inside the cluster:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: n8n-task-broker
+  namespace: n8n-test
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/instance: n8n-test
+    app.kubernetes.io/type: worker
+  ports:
+    - name: broker
+      port: 5679
+      targetPort: 5679
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n-runners
+  namespace: n8n-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: n8n-runners
+      app.kubernetes.io/instance: n8n-test
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: n8n-runners
+        app.kubernetes.io/instance: n8n-test
+    spec:
+      containers:
+        - name: task-runners
+          image: n8nio/runners:1.112.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: N8N_RUNNERS_TASK_BROKER_URI
+              value: http://n8n-task-broker.n8n-test.svc.cluster.local:5679
+            - name: N8N_RUNNERS_AUTH_TOKEN
+              value: "mysecr3t"
+            - name: N8N_NATIVE_PYTHON_RUNNER
+              value: "true"
+```
+
 ## Adding extra dependencies 
 
 You can customize the `n8nio/runners` image. To do so, you will find the runners Dockerfile at [this directory](https://github.com/n8n-io/n8n/tree/master/docker/images/runners) in the n8n repository. The manifests referred to below are also found in this directory.

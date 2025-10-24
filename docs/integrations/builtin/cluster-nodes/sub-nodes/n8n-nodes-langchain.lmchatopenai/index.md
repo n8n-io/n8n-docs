@@ -25,21 +25,26 @@ Select the model to use to generate the completion.
 
 n8n dynamically loads models from OpenAI, and you'll only see the models available to your account.
 
+### Use Responses API
+OpenAI provides two endpoints for generating output from a model:
+- **Chat Completions**: The Chat Completions API endpoint generates a model response from a list of messages that comprise a conversation. The API requires the user to handle conversation state manually, for example by adding a [Simple Memory](docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) subnode. For new projects, OpenAI recommends to use the Responses API.
+- **Responses**: The Responses API is an agentic loop, allowing the model to call multiple built-in tools within the span of one API request. It also supports persistent conversations by passing a `conversation_id`.
+
+Toggle to **Use Responses API** if you want the model to generate output using the Responses API. Otherwise, the OpenAI Chat Model node will default to using the Chat Completions API.
+
+Refer to the OpenAI documentation for a [comparison of the Chat Completions and Responses APIs](https://platform.openai.com/docs/guides/migrate-to-responses).
+
+
 ### Built-in Tools
-The OpenAI Responses API provides a range of [built-in tools](https://platform.openai.com/docs/guides/tools) to enrich the model's response:
+The OpenAI Responses API provides a range of [built-in tools](https://platform.openai.com/docs/guides/tools) to enrich the model's response. Toggle to **Use Responses API** if you want the model to have access to the following built-in tools:
 
 - **Web Search**: Allows models to search the web for the latest information before generating a response.
-- **MCP Servers**: Allows models to connect to remote MCP servers. Find out more about using remote MCP servers as tools [here](https://platform.openai.com/docs/guides/tools-connectors-mcp).
 - **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
 ## Node options
 
-Use these options to further refine the node's behavior.
-
-### Base URL
-
-Enter a URL here to override the default URL for the API.
+Use these options to further refine the node's behavior. The following options are available whether you use the Responses API to generate model output or not.
 
 ### Frequency Penalty
 
@@ -48,10 +53,6 @@ Use this option to control the chances of the model repeating itself. Higher val
 ### Maximum Number of Tokens
 
 Enter the maximum number of tokens used, which sets the completion length.
-
-### Response Format
-
-Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
 
 ### Presence Penalty
 
@@ -72,6 +73,9 @@ Enter the maximum number of times to retry a request.
 ### Top P
 
 Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+
+## Additional node options (Responses API only)
+The following, additional options are available when toggling to **Use Responses API**.
 
 ### Conversation ID
 The conversation that this response belongs to. Input items and output items from this response are automatically added to this conversation after this response completes.
@@ -95,10 +99,7 @@ Define an integer between 0 and 20 specifying the number of most likely tokens t
 Choose a response format: Text, JSON Schema, or JSON Object. Use of JSON Schema is recommended, if you want to receive data in JSON format.
 
 ### Prompt
-Configure the prompt filled with a unique ID, its version, and substitutable variables.
-
-### Reasoning Effort
-Control the reasoning level of AI results: Low, Medium, or High.
+Configure the prompt filled with a unique ID, its version, and substitutable variables. Prompts are configured via the OpenAI dashboard.
 
 ## Templates and examples
 

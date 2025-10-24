@@ -159,7 +159,10 @@ spec:
             - name: N8N_RUNNERS_TASK_BROKER_URI
               value: http://n8n-task-broker.n8n-test.svc.cluster.local:5679
             - name: N8N_RUNNERS_AUTH_TOKEN
-              value: "mysecr3t"
+              valueFrom:
+                secretKeyRef:
+                  name: n8n-test-auth-token
+                  key: auth-token
             - name: N8N_NATIVE_PYTHON_RUNNER
               value: "true"
 ```

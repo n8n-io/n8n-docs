@@ -16,22 +16,30 @@ Create a [Bitbucket](https://www.bitbucket.com/) account.
 
 ## Supported authentication methods
 
-- API username and app password
+- Atlassian email and a scoped API token
 
 ## Related resources
 
 Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication) for more information about the service.
 
-## Using API username/app password
+## Using Atlassian email/scoped API token
 
 To configure this credential, you'll need:
 
-- A **Username**: Visible in your Bitbucket profile settings **Personal settings > Account settings**.
-- An **App Password**: Refer to the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/).
+- An Atlassian **email**: Visible in your **Atlassian account settings**.
+- A **Scoped API Token**: Refer to the Bitbucket instructions to [Create an API token](https://support.atlassian.com/bitbucket-cloud/docs/create-an-api-token/).
 
-## App password permissions
+## API token permissions
 
-Bitbucket API credentials will only work if the user account you generated the app password for has the appropriate privilege scopes for the selected app password permissions. The n8n credentials dialog will throw an error if the user account lacks the appropriate permissions for the selected scope, like `Your credentials lack one or more required privilege scopes`.
+Bitbucket API credentials will only work if the API token has the appropriate scopes. The n8n credentials dialog will throw an error if the API token lacks the appropriate permissions for the selected scope.
 
-See the [Bitbucket App password permissions documentation](https://support.atlassian.com/bitbucket-cloud/docs/app-password-permissions/) for more information on working with these permissions.
+See the [Bitbucket Api token permissions documentation](https://support.atlassian.com/bitbucket-cloud/docs/api-token-permissions/) for more information on working with these permissions.
+
+Important scopes:
+
+- `read:webhook:bitbucket`
+- `write:webhook:bitbucket`
+- `delete:webhook:bitbucket`
+- `read:repository:bitbucket`
+- `read:workspace:bitbucket`
 

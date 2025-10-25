@@ -30,7 +30,7 @@ You can find a list of n8n sub-processors [here](#sub-processors).
 For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
 ///
 
-### Submitting an Account deletion request
+### Submitting an account deletion request
 
 Email help@n8n.io to make an account deletion request.
 

@@ -51,9 +51,9 @@ You can contribute to the n8n documentation, for example by documenting nodes or
 
 The repository for the docs is [here](https://github.com/n8n-io/n8n-docs) and the guidelines for contributing to the docs are [here](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md).
 
-## Contribute to the blog
+## Contribute to community tutorials
 
-You can write an article for the [n8n blog](https://blog.n8n.io/). Your article can be, for example, a [workflow tutorial](https://blog.n8n.io/tag/tutorial/), an opinion piece on automation, or some domain-specific [automation guides](https://blog.n8n.io/tag/guide/).
+Share your own video or written guides on our [community-driven, searchable library of n8n tutorials and training materials](https://community.n8n.io/t/how-to-share-your-tutorials/48398). Tag them for easy discovery, and post in your language’s subcategory. Follow the contribution guidelines to help keep our growing library high-quality and accessible to everyone.
 
 ### How to submit a post
 

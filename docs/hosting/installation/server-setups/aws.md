@@ -57,13 +57,13 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Configure volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2), is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp3](https://docs.aws.amazon.com/ebs/latest/userguide/general-purpose.html#gp3-ebs-volume-type), is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
 
 
 ```yaml
 …
 spec:
-  storageClassName: gp2
+  storageClassName: gp3
   accessModes:
     - ReadWriteOnce
 …

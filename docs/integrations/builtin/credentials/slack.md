@@ -114,25 +114,30 @@ Scopes determine what permissions an app has.
 
 Here's the list of scopes the OAuth credential requires, which are a good starting point:
 
-| **Scope name** | **Notes** |
-| --- | --- |
-| `channels:read` | |
-| `channels:write` | Not available as a bot token scope |
-| `chat:write` | |
-| `files:read` | |
-| `files:write` | |
-| `groups:read` | |
-| `im:read` | |
-| `mpim:read` | |
-| `reactions:read` | |
-| `reactions:write` | |
-| `stars:read`| Not available as a bot token scope |
-| `stars:write` | Not available as a bot token scope |
-| `usergroups:read` | |
-| `usergroups:write` | | 
-| `users.profile:read` | |
+| **Scope name**        | **Notes** |
+|-----------------------| -- |
+| `channels:read`       | |
+| `channels:write`      | Not available as a bot token scope |
+| `channels:history`    | |
+| `chat:write`          | |
+| `files:read`          | |
+| `files:write`         | |
+| `groups:read`         | |
+| `groups:history`      | |
+| `im:read`             | |
+| `im:history`          | |
+| `mpim:read`           | |
+| `mpim:history`        | |
+| `reactions:read`      | |
+| `reactions:write`     | |
+| `stars:read`          | Not available as a bot token scope |
+| `stars:write`         | Not available as a bot token scope |
+| `usergroups:read`     | |
+| `usergroups:write`    | | 
+| `users.profile:read`  | |
 | `users.profile:write` | Not available as a bot token scope |
-| `users:read` | |
+| `users:read`          | |
+| `search:read`         | |
 
 ## Common issues
 

@@ -107,7 +107,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 
 ```typescript
 displayName: 'NASA Pics',
-name: 'NasaPics',
+name: 'nasaPics',
 icon: 'file:nasapics.svg',
 group: ['transform'],
 version: 1,

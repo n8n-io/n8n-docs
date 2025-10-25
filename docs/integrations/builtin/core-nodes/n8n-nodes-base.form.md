@@ -6,7 +6,7 @@ contentType: [integration, reference]
 
 # n8n Form node
 
-Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md).
+Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md).
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
@@ -14,7 +14,7 @@ Use the n8n Form node to create user-facing forms with multiple steps. You can a
 
 ### Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger node URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
@@ -49,6 +49,8 @@ Because custom HTML content is read-only, these fields aren't included in the fo
 
 The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
 
+If you're using the [Form Ending](#form-ending) Page Type, you can fully customize the final page that you send users (including the use of `<script>`, `<style>`, and `<input>` elements) by selecting the **On n8n Form Submission** parameter to **Show Text**.
+
 ### Including hidden fields
 
 It's possible to include fields in a form without displaying them to users. This is useful when you want to pass extra data to the form that doesn't require interactive user input.
@@ -76,7 +78,7 @@ An example JSON that shows the general format required and the keys available:
 ```javascript
 // Use the "requiredField" key on any field to mark it as mandatory
 // Use the "placeholder" key to specify placeholder data for all fields
-//     except 'dropdown', 'date' and 'file'
+// except 'dropdown', 'date' and 'file'
 
 [
   {
@@ -238,7 +240,7 @@ Select **Add Option** to view more configuration options:
 
 ### Build and test workflows
 
-While building or testing a workflow, use the **Test URL** in the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
+While building or testing a workflow, use the **Test URL** in the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
 
 There are two ways to test:
 

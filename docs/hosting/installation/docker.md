@@ -10,6 +10,12 @@ You can also use n8n in Docker with [Docker Compose](/hosting/installation/serve
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+You can also follow along with our video guide here:
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/6ET3G7GiqZA?si=mwCKbtyLqNCRc2pa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Prerequisites
 
 Before proceeding, install Docker:

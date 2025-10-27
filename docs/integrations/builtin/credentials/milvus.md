@@ -32,3 +32,4 @@ To configure this credential, you'll need:
 * **Base URL**: The base URL of your Milvus instance. The default is `http://localhost:19530`.
 * **Username**: The username to authenticate to your Milvus instance. The default value is `root`.
 * **Password**: The password to authenticate to your Milvus instance. The default value is `Milvus`.
+* **Database Name**: The name of the database to use. The default is `default`.

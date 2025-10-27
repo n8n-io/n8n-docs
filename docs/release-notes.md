@@ -92,6 +92,16 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117
 
 This release contains bug fixes.
 
+<div class="n8n-new-features" markdown> 
+### Guardrails Node
+The Guardrails node provides a set of rules and policies that control an AI agent's behavior by filtering its inputs and outputs. This helps safeguard from malicious input and from generating unsafe or undesirable responses.
+<br>
+The default presets and prompts are adapted from the open-source [guardrails package](https://github.com/openai/openai-guardrails-js) made available by OpenAI.
+<br>	
+For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
+</div>
+
+
 ### Contributors
 
 [jackfrancismurphy](https://github.com/jackfrancismurphy)  

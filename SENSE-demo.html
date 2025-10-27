@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENSE - Fitness Tracker</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef, useCallback } = React;
+
+    // Config
+    const XP_PER_COIN = 3;
+    const MISSION_COOLDOWN_S = 25 * 60;
+    const EXTRA_SLOTS = 4;
+    const XP_PER_25_KCAL = 1;
+    const DAILY_KCAL_TARGET = 2000;
+    const STORAGE_KEY = 'sense_app_v1';
+    const STORAGE_DATE_KEY = 'sense_last_date';
+
+    // Sound Hook
+    function useSmoothClickSound() {
+      const ctxRef = useRef(null);
+      const ensureCtx = useCallback(() => {
+        if (!ctxRef.current) {
+          try {
+            ctxRef.current = new (window.AudioContext || window.webkitAudioContext)();
+          } catch {
+            return null;
+          }
+        }
+        return ctxRef.current;
+      }, []);
+
+      const play = useCallback(() => {
+        const ctx = ensureCtx();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(420, now);
+        filter.type = "lowpass";
+        filter.frequency.setValueAtTime(1200, now);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.15);
+      }, [ensureCtx]);
+
+      return { play };
+    }
+
+    // Storage functions
+    function saveToStorage(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem(STORAGE_DATE_KEY, getTodayDateString());
+      } catch (e) {
+        console.warn('Failed to save to localStorage:', e);
+      }
+    }
+
+    function loadFromStorage() {
+      try {
+        const data = localStorage.getItem(STORAGE_KEY);
+        if (!data) return null;
+        return JSON.parse(data);
+      } catch (e) {
+        console.warn('Failed to load from localStorage:', e);
+        return null;
+      }
+    }
+
+    function getTodayDateString() {
+      const tz = "America/New_York";
+      const formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: tz,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      });
+      const parts = formatter.formatToParts(new Date());
+      const year = parts.find(p => p.type === 'year')?.value || '';
+      const month = parts.find(p => p.type === 'month')?.value || '';
+      const day = parts.find(p => p.type === 'day')?.value || '';
+      return `${year}-${month}-${day}`;
+    }
+
+    function shouldResetDaily() {
+      const lastDate = localStorage.getItem(STORAGE_DATE_KEY);
+      const today = getTodayDateString();
+      return lastDate !== today;
+    }
+
+    // Data
+    const dailyTasks = [
+      { id: "weights", label: "Weights Workout (60 min)", xp: 60, required: true },
+      { id: "cardio", label: "Cardio (45 min)", xp: 45, required: true },
+      { id: "ai_learning", label: "AI Learning (60 min)", xp: 70, required: true },
+      { id: "content_creation", label: "Create & Post Content", xp: 45, required: true },
+      { id: "bible", label: "Read Bible (15 min)", xp: 30, required: true },
+    ];
+
+    const missionPool = [
+      { id: "cold_shower", label: "Cold Shower Challenge", xp: 25 },
+      { id: "bonus_edit", label: "Edit a bonus video", xp: 40 },
+      { id: "gratitude", label: "Write 3 gratitude lines", xp: 20 },
+      { id: "stretch", label: "10‑min mobility", xp: 20 },
+      { id: "no_sugar", label: "No sugar for the day", xp: 30 },
+      { id: "clean_space", label: "10‑min workspace reset", xp: 15 },
+      { id: "read_research", label: "Read 1 AI research abstract", xp: 20 },
+      { id: "meditation", label: "10‑min meditation", xp: 25 },
+      { id: "meal_prep", label: "Meal prep for tomorrow", xp: 30 },
+      { id: "deep_work", label: "90‑min deep work block", xp: 50 },
+    ];
+
+    const storeItems = [
+      { id: "reward_cheat_meal", name: "Cheat Meal", cost: 300, desc: "One planned indulgence (track it)." },
+      { id: "reward_movie_night", name: "Movie Night", cost: 200, desc: "Relax + refill mental energy." },
+      { id: "reward_new_gym_shirt", name: "New Gym Shirt", cost: 450, desc: "Small upgrade for momentum." },
+      { id: "reward_massage", name: "Recovery Massage", cost: 700, desc: "Deep recovery session." },
+      { id: "reward_rest_day_pass", name: "Rest Day Pass", cost: 600, desc: "One guilt-free rest day." },
+      { id: "reward_new_book", name: "New Book", cost: 250, desc: "Invest in knowledge." },
+      { id: "reward_gaming_session", name: "2hr Gaming Pass", cost: 350, desc: "Guilt-free gaming time." },
+    ];
+
+    // Helper functions
+    function thresholdForLevel(level) {
+      return Math.round(100 * Math.pow(level, 1.2));
+    }
+
+    function computeLevelProgress(totalXP) {
+      let level = 1;
+      let xpPool = Math.max(0, totalXP);
+      let need = thresholdForLevel(level);
+      while (xpPool >= need) {
+        xpPool -= need;
+        level += 1;
+        need = thresholdForLevel(level);
+      }
+      const pct = need ? Math.min(99.9, (xpPool / need) * 100) : 0;
+      return { level, current: xpPool, need, pct };
+    }
+
+    function secondsToEasternMidnight(now = new Date()) {
+      const tz = "America/New_York";
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: tz,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).formatToParts(now);
+      const get = (t) => Number(parts.find((p) => p.type === t)?.value || "0");
+      const y = get("year"), m = get("month"), d = get("day");
+      const h = get("hour"), min = get("minute"), s = get("second");
+      const easternNow = Date.UTC(y, m - 1, d, h, min, s);
+      const nextEasternMidnight = Date.UTC(y, m - 1, d + 1, 0, 0, 0);
+      const diffMs = nextEasternMidnight - easternNow;
+      return Math.max(0, Math.floor(diffMs / 1000));
+    }
+
+    function fmtTime(secs) {
+      const h = Math.floor(secs / 3600).toString().padStart(2, "0");
+      const m = Math.floor((secs % 3600) / 60).toString().padStart(2, "0");
+      const s = Math.floor(secs % 60).toString().padStart(2, "0");
+      return `${h}:${m}:${s}`;
+    }
+
+    function pickMission(excludeId) {
+      const pool = excludeId ? missionPool.filter((m) => m.id !== excludeId) : missionPool.slice();
+      return pool[Math.floor(Math.random() * pool.length)];
+    }
+
+    // UI Components
+    const Card = React.memo(({ title, className = "", children }) => (
+      <div className={`w-full max-w-md bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4 shadow-lg transition-all hover:shadow-xl ${className}`}>
+        {title && <h2 className="text-base font-semibold mb-3 text-white">{title}</h2>}
+        {children}
+      </div>
+    ));
+
+    function Header({ coins, levelInfo, remaining, streak }) {
+      return (
+        <div className="w-full max-w-md mb-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-3">
+              <div className="h-12 w-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shadow-xl">
+                <svg viewBox="0 0 24 24" className="h-6 w-6 text-sky-400">
+                  <path fill="currentColor" d="M12 2l3.5 6.5L22 10l-5 4.9L18.5 22 12 18.7 5.5 22 7 14.9 2 10l6.5-1.5z" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="text-xl font-bold tracking-tight text-sky-400">SENSE</h1>
+                <p className="text-[11px] text-slate-400">Complete your daily requirements before midnight EST</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-end gap-1">
+              <span className="text-sm px-2 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200">
+                Coins: {coins}
+              </span>
+              {streak > 0 && (
+                <span className="text-xs px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-400/40 text-orange-200">
+                  🔥 {streak} day{streak !== 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="mt-2 flex items-center justify-between">
+            <div className="text-[11px] text-slate-400">
+              Lv {levelInfo.level} · {levelInfo.current}/{levelInfo.need} XP
+            </div>
+            <span className={`text-[11px] px-2 py-1 rounded-full border ${
+              remaining <= 900
+                ? 'bg-red-600/30 border-red-500/50 text-red-200 animate-pulse'
+                : 'bg-white/10 border-white/20 text-slate-200'
+            }`}>
+              ⏳ {fmtTime(remaining)} to ET midnight
+            </span>
+          </div>
+          <div className="w-full h-4 rounded-full bg-white/10 border border-white/20 overflow-hidden relative">
+            <div
+              className="absolute top-0 left-0 h-full bg-gradient-to-r from-sky-400 via-blue-500 to-red-500 transition-all duration-500"
+              style={{ width: `${levelInfo.pct}%` }}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    function Tabs({ tab, setTab }) {
+      const base = "px-3 py-1.5 rounded-xl border text-xs transition-all";
+      const active = "bg-white/20 border-white/30 shadow-lg";
+      const idle = "bg-white/5 border-white/10 hover:bg-white/10";
+      return (
+        <div className="w-full max-w-md flex gap-2 mb-4">
+          <button className={`${base} ${tab === 'dashboard' ? active : idle}`} onClick={() => setTab('dashboard')}>Dashboard</button>
+          <button className={`${base} ${tab === 'store' ? active : idle}`} onClick={() => setTab('store')}>Store</button>
+          <button className={`${base} ${tab === 'stats' ? active : idle}`} onClick={() => setTab('stats')}>Stats</button>
+        </div>
+      );
+    }
+
+    function DashboardPage({ state, updateState }) {
+      const { completed, coins, missionSlots } = state;
+      const { play } = useSmoothClickSound();
+
+      useEffect(() => {
+        const t = setInterval(() => {
+          updateState((prev) => {
+            const newSlots = prev.missionSlots.map(sl => ({ ...sl }));
+            let changed = false;
+            for (let i = 0; i < newSlots.length; i++) {
+              if (newSlots[i].cooldown > 0) {
+                newSlots[i].cooldown -= 1;
+                changed = true;
+                if (newSlots[i].cooldown === 0 && !newSlots[i].mission) {
+                  newSlots[i].mission = pickMission(newSlots[i].lastId);
+                  newSlots[i].lastId = newSlots[i].mission?.id;
+                }
+              }
+            }
+            return changed ? { ...prev, missionSlots: newSlots } : prev;
+          });
+        }, 1000);
+        return () => clearInterval(t);
+      }, [updateState]);
+
+      const completeTask = useCallback((id, xpVal) => {
+        if (completed[id]) return;
+        updateState((prev) => {
+          const gained = Math.floor(xpVal / XP_PER_COIN);
+          return {
+            ...prev,
+            completed: { ...prev.completed, [id]: true },
+            xp: prev.xp + xpVal,
+            coins: prev.coins + gained,
+          };
+        });
+        play();
+      }, [completed, updateState, play]);
+
+      const completeExtra = useCallback((idx) => {
+        const slot = missionSlots[idx];
+        if (!slot.mission || slot.cooldown > 0) return;
+        const m = slot.mission;
+        const gained = Math.floor(m.xp / XP_PER_COIN);
+        updateState((prev) => {
+          const newSlots = [...prev.missionSlots];
+          newSlots[idx] = { cooldown: MISSION_COOLDOWN_S, lastId: m.id };
+          return {
+            ...prev,
+            xp: prev.xp + m.xp,
+            coins: prev.coins + gained,
+            missionSlots: newSlots,
+          };
+        });
+        play();
+      }, [missionSlots, updateState, play]);
+
+      const allReqDone = dailyTasks.every((t) => completed[t.id]);
+
+      return (
+        <>
+          <Card title="📋 Daily Requirements">
+            {dailyTasks.map((t) => {
+              const done = completed[t.id];
+              return (
+                <div key={t.id} className={`flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-none last:pb-0 last:mb-0 transition-all ${done ? 'opacity-60' : ''}`}>
+                  <div className="flex-1">
+                    <p className={`text-sm font-medium ${done ? 'line-through text-emerald-300' : ''}`}>{t.label}</p>
+                    <p className="text-[11px] text-slate-400">+{t.xp} XP</p>
+                  </div>
+                  {done ? (
+                    <span className="text-xs px-2 py-1 rounded-lg bg-green-600 text-white">✓ Done</span>
+                  ) : (
+                    <button onClick={() => completeTask(t.id, t.xp)} className="text-xs px-3 py-1 rounded-lg bg-sky-500 hover:bg-sky-400 text-white transition-colors">Complete</button>
+                  )}
+                </div>
+              );
+            })}
+            {allReqDone && (
+              <div className="mt-3 p-2 rounded-lg bg-emerald-600/30 border border-emerald-500/50 text-emerald-200 text-xs text-center animate-pulse">
+                🎉 All requirements complete! Great work!
+              </div>
+            )}
+          </Card>
+
+          <Card title="⚡ Extra Missions (25m respawn)" className="mt-4">
+            {missionSlots.map((sl, i) => (
+              <div key={i} className="flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-none last:pb-0 last:mb-0">
+                {sl.cooldown > 0 ? (
+                  <>
+                    <div className="flex-1">
+                      <p className="text-sm">Next mission incoming…</p>
+                      <p className="text-[11px] text-slate-400">Available in</p>
+                    </div>
+                    <span className="text-xs px-2 py-1 rounded-lg bg-slate-700 text-slate-300 font-medium">{fmtTime(sl.cooldown)}</span>
+                  </>
+                ) : sl.mission ? (
+                  <>
+                    <div className="flex-1">
+                      <p className="text-sm">{sl.mission.label}</p>
+                      <p className="text-[11px] text-slate-400">+{sl.mission.xp} XP</p>
+                    </div>
+                    <button onClick={() => completeExtra(i)} className="text-xs px-3 py-1 rounded-lg bg-purple-600 hover:bg-purple-500 text-white transition-colors">Complete</button>
+                  </>
+                ) : (
+                  <p className="text-xs text-slate-500">Preparing…</p>
+                )}
+              </div>
+            ))}
+          </Card>
+        </>
+      );
+    }
+
+    function StorePage({ state, updateState }) {
+      const { coins, inventory } = state;
+
+      const buyItem = useCallback((item) => {
+        if (coins < item.cost) return;
+        updateState((prev) => ({
+          ...prev,
+          coins: prev.coins - item.cost,
+          inventory: { ...prev.inventory, [item.id]: (prev.inventory[item.id] || 0) + 1 },
+        }));
+      }, [coins, updateState]);
+
+      return (
+        <>
+          <Card title="🛒 Store">
+            {storeItems.map((item) => (
+              <div key={item.id} className="border-b border-white/10 pb-2 mb-2 last:border-none last:pb-0 last:mb-0">
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-[11px] text-slate-400">{item.desc}</p>
+                    <p className="text-[10px] text-slate-500 mt-1">{item.cost} coins</p>
+                  </div>
+                  <button
+                    onClick={() => buyItem(item)}
+                    disabled={coins < item.cost}
+                    className="text-xs px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  >
+                    Buy
+                  </button>
+                </div>
+              </div>
+            ))}
+          </Card>
+
+          <Card title="🎒 Inventory" className="mt-4">
+            {Object.keys(inventory).length === 0 ? (
+              <p className="text-xs text-slate-500">Your inventory is empty.</p>
+            ) : (
+              Object.entries(inventory).map(([id, count]) => {
+                const item = storeItems.find((s) => s.id === id);
+                return (
+                  <div key={id} className="flex items-center justify-between border-b border-white/10 pb-1 mb-1 last:border-none last:pb-0 last:mb-0">
+                    <span className="text-sm">{item?.name || id}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-white/10">×{count}</span>
+                  </div>
+                );
+              })
+            )}
+          </Card>
+        </>
+      );
+    }
+
+    function StatsPage({ state }) {
+      return (
+        <Card title="📊 Statistics">
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-slate-300">Total XP Earned</span>
+              <span className="text-lg font-bold text-sky-400">{state.xp}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-slate-300">Total Coins</span>
+              <span className="text-lg font-bold text-emerald-400">{state.coins}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-slate-300">Current Streak</span>
+              <span className="text-lg font-bold text-orange-400">{state.currentStreak} days</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-slate-300">Days Completed</span>
+              <span className="text-lg font-bold text-purple-400">{state.totalDaysCompleted}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-slate-300">Tasks Completed Today</span>
+              <span className="text-lg font-bold text-blue-400">
+                {Object.keys(state.completed).length}/{dailyTasks.length}
+              </span>
+            </div>
+          </div>
+        </Card>
+      );
+    }
+
+    // Main App
+    function SENSE() {
+      const [tab, setTab] = useState('dashboard');
+      const [remaining, setRemaining] = useState(() => secondsToEasternMidnight());
+
+      const [state, setState] = useState(() => {
+        if (shouldResetDaily()) {
+          const saved = loadFromStorage();
+          if (saved) {
+            const allReqsCompleted = dailyTasks.every((t) => saved.completed[t.id]);
+            return {
+              ...saved,
+              completed: {},
+              missionSlots: Array.from({ length: EXTRA_SLOTS }, () => ({ mission: pickMission(), cooldown: 0 })),
+              totalDaysCompleted: saved.totalDaysCompleted + (allReqsCompleted ? 1 : 0),
+              currentStreak: allReqsCompleted ? saved.currentStreak + 1 : 0,
+            };
+          }
+        }
+        const saved = loadFromStorage();
+        if (saved) return saved;
+        return {
+          completed: {},
+          xp: 0,
+          coins: 0,
+          inventory: {},
+          missionSlots: Array.from({ length: EXTRA_SLOTS }, () => ({ mission: pickMission(), cooldown: 0 })),
+          totalDaysCompleted: 0,
+          currentStreak: 0,
+        };
+      });
+
+      useEffect(() => {
+        saveToStorage(state);
+      }, [state]);
+
+      useEffect(() => {
+        const t = setInterval(() => {
+          const newRemaining = secondsToEasternMidnight();
+          setRemaining(newRemaining);
+          if (newRemaining > remaining && shouldResetDaily()) {
+            window.location.reload();
+          }
+        }, 1000);
+        return () => clearInterval(t);
+      }, [remaining]);
+
+      const levelInfo = useMemo(() => computeLevelProgress(state.xp), [state.xp]);
+
+      return (
+        <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col items-center p-6">
+          <Header coins={state.coins} levelInfo={levelInfo} remaining={remaining} streak={state.currentStreak} />
+          <Tabs tab={tab} setTab={setTab} />
+          {tab === 'dashboard' && <DashboardPage state={state} updateState={setState} />}
+          {tab === 'store' && <StorePage state={state} updateState={setState} />}
+          {tab === 'stats' && <StatsPage state={state} />}
+        </div>
+      );
+    }
+
+    // Render
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<SENSE />);
+  </script>
+</body>
+</html>

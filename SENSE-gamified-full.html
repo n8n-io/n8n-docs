@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENSE - Gamified Life RPG</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .animate-slideIn { animation: slideIn 0.3s ease-out; }
+    .animate-scaleIn { animation: scaleIn 0.3s ease-out; }
+    .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+    .glow-gold { box-shadow: 0 0 20px rgba(234, 179, 8, 0.3); }
+    .glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+    .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef, useCallback } = React;
+
+    // ============= CONFIGURATION =============
+    const XP_PER_COIN = 3;
+    const MISSION_COOLDOWN_MS = 25 * 60 * 1000;
+    const STORAGE_KEY = 'sense_gamified_v1';
+    const UNDO_WINDOW_MS = 5000;
+
+    // ============= DATA STRUCTURES =============
+    const characterClasses = {
+      warrior: { name: 'Warrior', icon: '🗡️', desc: 'Physical fitness master', bonus: 'strength' },
+      scholar: { name: 'Scholar', icon: '🧠', desc: 'Knowledge seeker', bonus: 'intelligence' },
+      entrepreneur: { name: 'Entrepreneur', icon: '💼', desc: 'Wealth builder', bonus: 'wealth' },
+      creator: { name: 'Creator', icon: '🎨', desc: 'Content legend', bonus: 'charisma' },
+      hybrid: { name: 'Hybrid', icon: '⚖️', desc: 'Balanced approach', bonus: 'discipline' },
+    };
+
+    const dailyTasks = [
+      { id: 'weights', label: 'Forge Your Body (Weights 60min)', xp: 60, stats: { strength: 3, discipline: 2 } },
+      { id: 'cardio', label: "Warrior's Endurance (Cardio 45min)", xp: 45, stats: { endurance: 3, discipline: 2 } },
+      { id: 'ai_learning', label: 'Study the Craft (AI 60min)', xp: 70, stats: { intelligence: 4, discipline: 2 } },
+      { id: 'content', label: 'Share Your Journey (Post)', xp: 45, stats: { charisma: 3, discipline: 1 } },
+      { id: 'bible', label: 'Spiritual Strength (Bible 15min)', xp: 30, stats: { discipline: 3, intelligence: 2 } },
+    ];
+
+    const missionPool = [
+      { id: 'cold_shower', label: 'Cold Shower Challenge', xp: 25, stats: { discipline: 2, endurance: 1 } },
+      { id: 'bonus_edit', label: 'Edit bonus video', xp: 40, stats: { charisma: 2 } },
+      { id: 'gratitude', label: 'Write 3 gratitude lines', xp: 20, stats: { discipline: 2 } },
+      { id: 'stretch', label: '10-min mobility', xp: 20, stats: { endurance: 2 } },
+      { id: 'no_sugar', label: 'No sugar today', xp: 30, stats: { discipline: 3 } },
+      { id: 'meditation', label: '10-min meditation', xp: 25, stats: { discipline: 2 } },
+      { id: 'deep_work', label: '90-min deep work', xp: 50, stats: { discipline: 3, intelligence: 2 } },
+    ];
+
+    const achievements = [
+      { id: 'first_task', name: 'First Steps', desc: 'Complete first task', icon: '🎯', check: (s) => Object.keys(s.completed).length > 0, reward: {xp: 100, coins: 10} },
+      { id: 'level_5', name: 'Novice', desc: 'Reach Level 5', icon: '🌱', check: (s) => computeLevel(s.xp).level >= 5, reward: {xp: 200, coins: 20} },
+      { id: 'level_10', name: 'Apprentice', desc: 'Reach Level 10', icon: '⚔️', check: (s) => computeLevel(s.xp).level >= 10, reward: {xp: 500, coins: 50} },
+      { id: 'streak_7', name: 'Week Warrior', desc: '7-day streak', icon: '🔥', check: (s) => s.streak >= 7, reward: {xp: 300, coins: 30} },
+      { id: 'streak_30', name: 'Iron Will', desc: '30-day streak', icon: '💪', check: (s) => s.streak >= 30, reward: {xp: 1500, coins: 150} },
+      { id: 'perfect_day', name: 'Perfect Day', desc: 'Complete all dailies', icon: '🎉', check: (s) => dailyTasks.every(t => s.completed[t.id]), reward: {xp: 250, coins: 25} },
+      { id: 'strength_50', name: 'Iron Body', desc: 'STR 50+', icon: '💪', check: (s) => s.stats.strength >= 50, reward: {xp: 500, coins: 50} },
+      { id: 'intelligence_50', name: 'Sharp Mind', desc: 'INT 50+', icon: '🧠', check: (s) => s.stats.intelligence >= 50, reward: {xp: 500, coins: 50} },
+      { id: 'discipline_50', name: 'Disciplined', desc: 'DIS 50+', icon: '🎯', check: (s) => s.stats.discipline >= 50, reward: {xp: 500, coins: 50} },
+    ];
+
+    const storeItems = [
+      { id: 'cheat_meal', name: 'Cheat Meal Pass', cost: 300, desc: 'Guilt-free indulgence', usable: true },
+      { id: 'rest_pass', name: 'Rest Day Pass', cost: 600, desc: 'Skip without losing streak', usable: true },
+      { id: 'xp_boost', name: 'XP Boost (24h)', cost: 500, desc: '+50% XP', usable: true },
+      { id: 'streak_shield', name: 'Streak Shield', cost: 800, desc: 'Protect streak once', usable: true },
+      { id: 'movie_night', name: 'Movie Night', cost: 200, desc: 'Relax time', usable: true },
+    ];
+
+    // ============= HELPER FUNCTIONS =============
+    function computeLevel(xp) {
+      let level = 1, pool = xp;
+      while (pool >= Math.round(100 * Math.pow(level, 1.2))) {
+        pool -= Math.round(100 * Math.pow(level, 1.2));
+        level++;
+      }
+      const need = Math.round(100 * Math.pow(level, 1.2));
+      return { level, current: pool, need, pct: (pool / need) * 100 };
+    }
+
+    function rollLoot() {
+      const rolls = [
+        { r: 'common', items: [{ name: '+50 XP', type: 'xp', v: 50 }, { name: '+10 coins', type: 'coins', v: 10 }], chance: 0.7 },
+        { r: 'uncommon', items: [{ name: '+100 XP', type: 'xp', v: 100 }, { name: '+25 coins', type: 'coins', v: 25 }], chance: 0.2 },
+        { r: 'rare', items: [{ name: '+250 XP', type: 'xp', v: 250 }], chance: 0.08 },
+        { r: 'epic', items: [{ name: '+500 XP', type: 'xp', v: 500 }], chance: 0.018 },
+        { r: 'legendary', items: [{ name: '+1000 XP!', type: 'xp', v: 1000 }], chance: 0.002 },
+      ];
+
+      const loot = [];
+      for (let i = 0; i < 2; i++) {
+        const roll = Math.random();
+        let cum = 0;
+        for (const {r, items, chance} of rolls) {
+          cum += chance;
+          if (roll < cum) {
+            const item = items[Math.floor(Math.random() * items.length)];
+            loot.push({ ...item, rarity: r });
+            break;
+          }
+        }
+      }
+      return loot;
+    }
+
+    function pickMission(exclude) {
+      const pool = missionPool.filter(m => m.id !== exclude);
+      return pool[Math.floor(Math.random() * pool.length)];
+    }
+
+    function fmtTime(secs) {
+      const h = Math.floor(secs / 3600).toString().padStart(2, '0');
+      const m = Math.floor((secs % 3600) / 60).toString().padStart(2, '0');
+      const s = Math.floor(secs % 60).toString().padStart(2, '0');
+      return `${h}:${m}:${s}`;
+    }
+
+    function save(state) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        console.warn('Save failed:', e);
+      }
+    }
+
+    function load() {
+      try {
+        const data = localStorage.getItem(STORAGE_KEY);
+        return data ? JSON.parse(data) : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // ============= COMPONENTS =============
+    function LootModal({ loot, onClose }) {
+      const colors = { common: 'gray', uncommon: 'green', rare: 'blue', epic: 'purple', legendary: 'yellow' };
+      return (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 animate-fadeIn" onClick={onClose}>
+          <div className="bg-slate-900 border-2 border-yellow-500 rounded-2xl p-6 max-w-md animate-scaleIn glow-gold" onClick={e => e.stopPropagation()}>
+            <h2 className="text-2xl font-bold text-center mb-4 text-yellow-400">🎁 LOOT! 🎁</h2>
+            <div className="space-y-2 mb-4">
+              {loot.map((item, i) => (
+                <div key={i} className={`p-3 rounded-lg bg-${colors[item.rarity]}-500/20 border border-${colors[item.rarity]}-500/50`}>
+                  <span className={`text-${colors[item.rarity]}-400 uppercase text-xs font-bold`}>[{item.rarity}]</span>
+                  <span className="text-white ml-2 font-semibold">{item.name}</span>
+                </div>
+              ))}
+            </div>
+            <button onClick={onClose} className="w-full py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-white font-bold">
+              Awesome!
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    function AchievementToast({ achievement, onClose }) {
+      useEffect(() => {
+        const t = setTimeout(onClose, 4000);
+        return () => clearTimeout(t);
+      }, [onClose]);
+
+      return (
+        <div className="fixed top-4 right-4 bg-gradient-to-r from-yellow-500 to-orange-500 border-2 border-yellow-300 rounded-lg p-4 shadow-2xl z-50 animate-slideIn max-w-sm">
+          <div className="flex items-center gap-3">
+            <span className="text-4xl">{achievement.icon}</span>
+            <div>
+              <h3 className="font-bold text-white">Achievement Unlocked!</h3>
+              <p className="text-white/90 font-semibold">{achievement.name}</p>
+              <p className="text-white/70 text-sm">{achievement.desc}</p>
+              <p className="text-yellow-200 text-xs">+{achievement.reward.xp} XP, +{achievement.reward.coins} coins</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function UndoButton({ lastAction, onUndo }) {
+      const [remaining, setRemaining] = useState(0);
+
+      useEffect(() => {
+        if (!lastAction) return;
+        const updateRemaining = () => {
+          const left = Math.max(0, UNDO_WINDOW_MS - (Date.now() - lastAction.timestamp));
+          setRemaining(left);
+          if (left === 0) return;
+        };
+        updateRemaining();
+        const t = setInterval(updateRemaining, 100);
+        return () => clearInterval(t);
+      }, [lastAction]);
+
+      if (!lastAction || remaining === 0) return null;
+
+      return (
+        <div className="fixed bottom-4 left-4 right-4 max-w-md mx-auto bg-orange-500 border-2 border-orange-300 rounded-lg p-3 shadow-xl z-50 animate-slideIn">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-white font-semibold text-sm">{lastAction.desc}</p>
+              <p className="text-orange-100 text-xs">{(remaining / 1000).toFixed(1)}s to undo</p>
+            </div>
+            <button onClick={onUndo} className="px-4 py-1 rounded-lg bg-white text-orange-600 font-bold text-sm hover:bg-orange-100">
+              UNDO
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    function ClassSelect({ onSelect }) {
+      const [sel, setSel] = useState(null);
+      return (
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center p-4 z-50">
+          <div className="bg-slate-900 border-2 border-sky-500 rounded-2xl p-6 max-w-2xl glow-blue">
+            <h2 className="text-2xl font-bold text-center mb-4 text-sky-400">Choose Your Path</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+              {Object.entries(characterClasses).map(([key, cls]) => (
+                <button
+                  key={key}
+                  onClick={() => setSel(key)}
+                  className={`p-4 rounded-xl border-2 ${sel === key ? 'border-sky-400 bg-sky-500/20' : 'border-white/20 bg-white/5'}`}
+                >
+                  <div className="text-3xl mb-2">{cls.icon}</div>
+                  <h3 className="font-bold text-white">{cls.name}</h3>
+                  <p className="text-xs text-slate-400">{cls.desc}</p>
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => sel && onSelect(sel)}
+              disabled={!sel}
+              className="w-full py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-white font-bold disabled:opacity-50"
+            >
+              Begin Journey
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // ============= MAIN APP =============
+    function SENSE() {
+      const [state, setState] = useState(() => {
+        const saved = load();
+        return saved || {
+          characterClass: null,
+          completed: {},
+          xp: 0,
+          coins: 0,
+          stats: { strength: 0, endurance: 0, intelligence: 0, charisma: 0, discipline: 0, wealth: 0 },
+          streak: 0,
+          missions: Array(4).fill(null).map(() => ({ mission: pickMission(), endTime: 0 })),
+          unlocked: [],
+          inventory: {},
+          lastAction: null,
+        };
+      });
+
+      const [tab, setTab] = useState('quests');
+      const [loot, setLoot] = useState(null);
+      const [achievementToast, setAchievementToast] = useState(null);
+
+      const levelInfo = useMemo(() => computeLevel(state.xp), [state.xp]);
+
+      useEffect(() => {
+        save(state);
+      }, [state]);
+
+      // Check achievements
+      useEffect(() => {
+        achievements.forEach(ach => {
+          if (!state.unlocked.includes(ach.id) && ach.check(state)) {
+            setState(prev => ({
+              ...prev,
+              xp: prev.xp + ach.reward.xp,
+              coins: prev.coins + ach.reward.coins,
+              unlocked: [...prev.unlocked, ach.id],
+            }));
+            setAchievementToast(ach);
+          }
+        });
+      }, [state.xp, state.streak, state.completed, state.stats]);
+
+      // Mission cooldown tick
+      useEffect(() => {
+        const t = setInterval(() => {
+          setState(prev => {
+            const missions = prev.missions.map(m => {
+              if (m.endTime > Date.now()) return m;
+              if (m.endTime > 0 && !m.mission) return { mission: pickMission(m.lastId), endTime: 0, lastId: m.lastId };
+              return m;
+            });
+            return { ...prev, missions };
+          });
+        }, 1000);
+        return () => clearInterval(t);
+      }, []);
+
+      const updateState = useCallback((updater) => {
+        setState(prev => {
+          const next = updater(prev);
+          return next;
+        });
+      }, []);
+
+      const completeTask = useCallback((task) => {
+        if (state.completed[task.id]) return;
+
+        const newLoot = rollLoot();
+        let xpGain = task.xp;
+        let coinGain = Math.floor(task.xp / XP_PER_COIN);
+
+        newLoot.forEach(item => {
+          if (item.type === 'xp') xpGain += item.v;
+          if (item.type === 'coins') coinGain += item.v;
+        });
+
+        updateState(prev => {
+          const newStats = { ...prev.stats };
+          Object.entries(task.stats || {}).forEach(([k, v]) => {
+            newStats[k] = (newStats[k] || 0) + v;
+          });
+
+          return {
+            ...prev,
+            completed: { ...prev.completed, [task.id]: true },
+            xp: prev.xp + xpGain,
+            coins: prev.coins + coinGain,
+            stats: newStats,
+            lastAction: {
+              type: 'task',
+              timestamp: Date.now(),
+              desc: `Completed ${task.label}`,
+              prev: { completed: prev.completed, xp: prev.xp, coins: prev.coins, stats: prev.stats },
+            },
+          };
+        });
+
+        setLoot(newLoot);
+      }, [state.completed, updateState]);
+
+      const completeMission = useCallback((idx) => {
+        const mission = state.missions[idx];
+        if (!mission.mission || mission.endTime > Date.now()) return;
+
+        const newLoot = rollLoot();
+        let xpGain = mission.mission.xp;
+        let coinGain = Math.floor(mission.mission.xp / XP_PER_COIN);
+
+        newLoot.forEach(item => {
+          if (item.type === 'xp') xpGain += item.v;
+          if (item.type === 'coins') coinGain += item.v;
+        });
+
+        updateState(prev => {
+          const newStats = { ...prev.stats };
+          Object.entries(mission.mission.stats || {}).forEach(([k, v]) => {
+            newStats[k] = (newStats[k] || 0) + v;
+          });
+
+          const missions = [...prev.missions];
+          missions[idx] = { endTime: Date.now() + MISSION_COOLDOWN_MS, lastId: mission.mission.id };
+
+          return {
+            ...prev,
+            xp: prev.xp + xpGain,
+            coins: prev.coins + coinGain,
+            stats: newStats,
+            missions,
+            lastAction: {
+              type: 'mission',
+              timestamp: Date.now(),
+              desc: `Completed ${mission.mission.label}`,
+              prev: { xp: prev.xp, coins: prev.coins, stats: prev.stats, missions: prev.missions },
+            },
+          };
+        });
+
+        setLoot(newLoot);
+      }, [state.missions, updateState]);
+
+      const buyItem = useCallback((item) => {
+        if (state.coins < item.cost) return;
+        updateState(prev => ({
+          ...prev,
+          coins: prev.coins - item.cost,
+          inventory: { ...prev.inventory, [item.id]: (prev.inventory[item.id] || 0) + 1 },
+          lastAction: {
+            type: 'buy',
+            timestamp: Date.now(),
+            desc: `Bought ${item.name}`,
+            prev: { coins: prev.coins, inventory: prev.inventory },
+          },
+        }));
+      }, [state.coins, updateState]);
+
+      const useItem = useCallback((itemId) => {
+        if ((state.inventory[itemId] || 0) === 0) return;
+        updateState(prev => ({
+          ...prev,
+          inventory: { ...prev.inventory, [itemId]: prev.inventory[itemId] - 1 },
+        }));
+        alert(`Used item! (Implementation depends on item type)`);
+      }, [state.inventory, updateState]);
+
+      const undo = useCallback(() => {
+        if (!state.lastAction || Date.now() - state.lastAction.timestamp > UNDO_WINDOW_MS) return;
+        updateState(prev => ({
+          ...prev,
+          ...prev.lastAction.prev,
+          lastAction: null,
+        }));
+      }, [state.lastAction, updateState]);
+
+      if (!state.characterClass) {
+        return <ClassSelect onSelect={(cls) => updateState(prev => ({ ...prev, characterClass: cls }))} />;
+      }
+
+      const classInfo = characterClasses[state.characterClass];
+
+      return (
+        <div className="min-h-screen bg-slate-950 text-slate-100 p-6">
+          {/* Header */}
+          <div className="max-w-md mx-auto mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-3">
+                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-600 border-2 border-white/20 flex items-center justify-center shadow-xl">
+                  <span className="text-2xl">{classInfo.icon}</span>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-sky-400">SENSE <span className="text-sm text-slate-400">{classInfo.name}</span></h1>
+                  <p className="text-xs text-slate-400">Level {levelInfo.level} Hero</p>
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm px-2 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 font-bold">
+                  💰 {state.coins}
+                </div>
+                {state.streak > 0 && (
+                  <div className="text-xs px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-400/40 text-orange-200 mt-1">
+                    🔥 {state.streak} days
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="w-full h-4 rounded-full bg-white/10 border border-white/20 overflow-hidden mb-2">
+              <div className="h-full bg-gradient-to-r from-sky-400 to-purple-500 transition-all duration-500" style={{ width: `${levelInfo.pct}%` }} />
+            </div>
+
+            <div className="grid grid-cols-6 gap-1 text-center">
+              {Object.entries(state.stats).map(([k, v]) => (
+                <div key={k} className="bg-white/5 rounded p-1 border border-white/10">
+                  <div className="text-[9px] text-slate-400 uppercase">{k.slice(0,3)}</div>
+                  <div className="text-xs font-bold">{v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tabs */}
+          <div className="max-w-md mx-auto flex gap-2 mb-4">
+            {['quests', 'character', 'achievements', 'store'].map(t => (
+              <button
+                key={t}
+                onClick={() => setTab(t)}
+                className={`px-3 py-1.5 rounded-xl border text-xs ${tab === t ? 'bg-white/20 border-white/30' : 'bg-white/5 border-white/10'}`}
+              >
+                {t === 'quests' && '⚔️'} {t === 'character' && '🎯'} {t === 'achievements' && '🏆'} {t === 'store' && '🛒'} {t.charAt(0).toUpperCase() + t.slice(1)}
+              </button>
+            ))}
+          </div>
+
+          {/* Content */}
+          <div className="max-w-md mx-auto">
+            {tab === 'quests' && (
+              <>
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4 mb-4">
+                  <h2 className="font-bold mb-3">📋 Daily Quests</h2>
+                  {dailyTasks.map(task => {
+                    const done = state.completed[task.id];
+                    return (
+                      <div key={task.id} className={`flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-0 ${done ? 'opacity-60' : ''}`}>
+                        <div className="flex-1">
+                          <p className={`text-sm font-medium ${done ? 'line-through text-emerald-300' : ''}`}>{task.label}</p>
+                          <p className="text-xs text-slate-400">+{task.xp} XP</p>
+                        </div>
+                        {done ? (
+                          <span className="text-xs px-2 py-1 rounded bg-green-600 text-white">✓</span>
+                        ) : (
+                          <button onClick={() => completeTask(task)} className="text-xs px-3 py-1 rounded bg-sky-500 hover:bg-sky-400 text-white">
+                            Complete
+                          </button>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4">
+                  <h2 className="font-bold mb-3">⚡ Bonus Missions (25m cooldown)</h2>
+                  {state.missions.map((m, i) => {
+                    const cooldown = m.endTime > Date.now() ? Math.floor((m.endTime - Date.now()) / 1000) : 0;
+                    return (
+                      <div key={i} className="flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-0">
+                        {cooldown > 0 ? (
+                          <>
+                            <div className="flex-1">
+                              <p className="text-sm">Next mission incoming...</p>
+                              <p className="text-xs text-slate-400">Available in</p>
+                            </div>
+                            <span className="text-xs px-2 py-1 rounded bg-slate-700 text-slate-300">{fmtTime(cooldown)}</span>
+                          </>
+                        ) : m.mission ? (
+                          <>
+                            <div className="flex-1">
+                              <p className="text-sm">{m.mission.label}</p>
+                              <p className="text-xs text-slate-400">+{m.mission.xp} XP</p>
+                            </div>
+                            <button onClick={() => completeMission(i)} className="text-xs px-3 py-1 rounded bg-purple-600 hover:bg-purple-500 text-white">
+                              Complete
+                            </button>
+                          </>
+                        ) : (
+                          <p className="text-xs text-slate-500">Preparing...</p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+
+            {tab === 'character' && (
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4">
+                <h2 className="font-bold mb-3">🎯 Character Stats</h2>
+                <div className="text-center mb-4">
+                  <div className="text-6xl mb-2">{classInfo.icon}</div>
+                  <h3 className="text-xl font-bold text-sky-400">{classInfo.name}</h3>
+                  <p className="text-sm text-slate-400">Level {levelInfo.level}</p>
+                </div>
+                <div className="space-y-2">
+                  {Object.entries(state.stats).map(([k, v]) => (
+                    <div key={k}>
+                      <div className="flex justify-between text-sm mb-1">
+                        <span className="text-slate-300 capitalize">{k}</span>
+                        <span className="text-slate-400">{v}/100</span>
+                      </div>
+                      <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden">
+                        <div className="h-full bg-sky-500" style={{ width: `${Math.min(100, v)}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {tab === 'achievements' && (
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4">
+                <h2 className="font-bold mb-3">🏆 Achievements ({state.unlocked.length}/{achievements.length})</h2>
+                <div className="space-y-2">
+                  {achievements.map(ach => {
+                    const unlocked = state.unlocked.includes(ach.id);
+                    return (
+                      <div key={ach.id} className={`p-3 rounded-lg border ${unlocked ? 'bg-green-500/20 border-green-500/50' : 'bg-white/5 border-white/10'}`}>
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{ach.icon}</span>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-sm">{ach.name}</h3>
+                            <p className="text-xs text-slate-400">{ach.desc}</p>
+                            {unlocked && <p className="text-xs text-green-400 mt-1">Unlocked! +{ach.reward.xp} XP</p>}
+                          </div>
+                          {unlocked && <span className="text-xl">✓</span>}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {tab === 'store' && (
+              <>
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4 mb-4">
+                  <h2 className="font-bold mb-3">🛒 Store</h2>
+                  {storeItems.map(item => (
+                    <div key={item.id} className="flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-0">
+                      <div className="flex-1">
+                        <p className="text-sm font-medium">{item.name}</p>
+                        <p className="text-xs text-slate-400">{item.desc}</p>
+                        <p className="text-xs text-slate-500">{item.cost} coins</p>
+                      </div>
+                      <button
+                        onClick={() => buyItem(item)}
+                        disabled={state.coins < item.cost}
+                        className="text-xs px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white disabled:opacity-50"
+                      >
+                        Buy
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-4">
+                  <h2 className="font-bold mb-3">🎒 Inventory</h2>
+                  {Object.keys(state.inventory).length === 0 ? (
+                    <p className="text-sm text-slate-500">Empty</p>
+                  ) : (
+                    Object.entries(state.inventory).map(([id, count]) => {
+                      if (count === 0) return null;
+                      const item = storeItems.find(s => s.id === id);
+                      return (
+                        <div key={id} className="flex items-center justify-between border-b border-white/10 pb-2 mb-2 last:border-0">
+                          <div className="flex-1">
+                            <p className="text-sm">{item?.name || id}</p>
+                            <p className="text-xs text-slate-400">×{count}</p>
+                          </div>
+                          {item?.usable && (
+                            <button onClick={() => useItem(id)} className="text-xs px-3 py-1 rounded bg-sky-500 hover:bg-sky-400 text-white">
+                              Use
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Modals */}
+          {loot && <LootModal loot={loot} onClose={() => setLoot(null)} />}
+          {achievementToast && <AchievementToast achievement={achievementToast} onClose={() => setAchievementToast(null)} />}
+          {state.lastAction && <UndoButton lastAction={state.lastAction} onUndo={undo} />}
+        </div>
+      );
+    }
+
+    // Render
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<SENSE />);
+  </script>
+</body>
+</html>

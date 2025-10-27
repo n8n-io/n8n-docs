@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENSE - Your Life RPG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --dark-blue: #19183B;
+      --teal: #708993;
+      --mint: #A1C2BB;
+      --light-mint: #E7F2EF;
+    }
+
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #E7F2EF 0%, #A1C2BB 100%);
+      min-height: 100vh;
+    }
+
+    /* Glassmorphism with new colors */
+    .glass {
+      background: rgba(231, 242, 239, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(161, 194, 187, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(25, 24, 59, 0.1);
+    }
+
+    .glass-dark {
+      background: rgba(25, 24, 59, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(112, 137, 147, 0.3);
+    }
+
+    .status-window {
+      background: rgba(231, 242, 239, 0.95);
+      backdrop-filter: blur(30px);
+      border: 2px solid rgba(112, 137, 147, 0.4);
+      box-shadow: 0 10px 40px rgba(25, 24, 59, 0.15);
+    }
+
+    /* Color utilities */
+    .text-dark-blue { color: #19183B; }
+    .text-teal { color: #708993; }
+    .text-mint { color: #A1C2BB; }
+    .bg-dark-blue { background: #19183B; }
+    .bg-teal { background: #708993; }
+    .bg-mint { background: #A1C2BB; }
+    .bg-light-mint { background: #E7F2EF; }
+    .border-teal { border-color: #708993; }
+    .border-mint { border-color: #A1C2BB; }
+
+    /* Progress Bars */
+    .progress-bar {
+      background: linear-gradient(90deg, #708993 0%, #A1C2BB 100%);
+      height: 10px;
+      border-radius: 5px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(112, 137, 147, 0.4);
+    }
+
+    .progress-container {
+      background: rgba(161, 194, 187, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(112, 137, 147, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(112, 137, 147, 0.4);
+    }
+
+    .btn-success {
+      background: linear-gradient(135deg, #A1C2BB 0%, #E7F2EF 100%);
+      color: #19183B;
+      border: 2px solid #A1C2BB;
+    }
+
+    .btn-buy {
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
+      color: white;
+    }
+
+    /* Task Cards */
+    .task-card {
+      background: rgba(231, 242, 239, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(161, 194, 187, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .task-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(25, 24, 59, 0.15);
+    }
+
+    .task-card.completed {
+      background: rgba(161, 194, 187, 0.3);
+      border: 2px solid #A1C2BB;
+    }
+
+    /* Mission Badge */
+    .mission-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-extra {
+      background: rgba(112, 137, 147, 0.2);
+      color: #708993;
+      border: 2px solid #708993;
+    }
+
+    .badge-weekly {
+      background: rgba(161, 194, 187, 0.2);
+      color: #A1C2BB;
+      border: 2px solid #A1C2BB;
+    }
+
+    .badge-epic {
+      background: rgba(25, 24, 59, 0.2);
+      color: #19183B;
+      border: 2px solid #19183B;
+    }
+
+    /* Countdown Timer */
+    .timer-critical {
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
+      color: white;
+      animation: pulse 2s infinite;
+    }
+
+    .timer-warning {
+      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
+      color: white;
+    }
+
+    .timer-good {
+      background: linear-gradient(135deg, #A1C2BB 0%, #E7F2EF 100%);
+      color: #19183B;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-up {
+      animation: slideUp 0.5s ease-out;
+    }
+
+    /* Level Badge */
+    .level-badge {
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 24px;
+      font-weight: 700;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(25, 24, 59, 0.3);
+    }
+
+    /* Tab Navigation */
+    .tab {
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(231, 242, 239, 0.5);
+      color: #708993;
+      font-size: 13px;
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(25, 24, 59, 0.3);
+    }
+
+    /* Store Item */
+    .store-item {
+      background: rgba(231, 242, 239, 0.9);
+      border: 2px solid rgba(161, 194, 187, 0.4);
+      border-radius: 16px;
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .store-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(25, 24, 59, 0.2);
+      border-color: #708993;
+    }
+
+    .store-item.owned {
+      opacity: 0.6;
+      border-color: #A1C2BB;
+    }
+
+    /* Stat tooltip */
+    .stat-tooltip {
+      position: relative;
+      cursor: help;
+    }
+
+    .stat-tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(25, 24, 59, 0.95);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      width: 200px;
+      text-align: center;
+      transition: opacity 0.3s;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(231, 242, 239, 0.98);
+      backdrop-filter: blur(20px);
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(25, 24, 59, 0.2);
+      border: 1px solid rgba(161, 194, 187, 0.5);
+      z-index: 9999;
+      animation: slideInRight 0.4s ease-out;
+      max-width: 300px;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Level Up Reward Badge */
+    .reward-badge {
+      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+      margin: 4px;
+      box-shadow: 0 2px 8px rgba(112, 137, 147, 0.3);
+    }
+  </style>
+</head>
+<body class="p-4 pb-24">
+  <div id="app" class="max-w-md mx-auto"></div>
+
+  <script>
+    // ==================== STATE ====================
+    const STORAGE_KEY = 'sense_final_v3';
+    const DEFAULT_STATE = {
+      currentWeight: 260,
+      targetWeight: 175,
+      startWeight: 260,
+      weightHistory: [{date: new Date().toISOString().split('T')[0], weight: 260}],
+
+      level: 1,
+      xp: 0,
+      coins: 0,
+      streak: 0,
+      consecutiveMisses: 0,
+
+      stats: {
+        str: 40,
+        end: 35,
+        int: 70,
+        cha: 65,
+        dis: 50,
+        wea: 55
+      },
+
+      debuff: null,
+      completed: {},
+      taskStreak: {},
+      meals: [],
+      waterCups: 0,
+      calorieTarget: 2100,
+      proteinTarget: 190,
+      carbTarget: 165,
+      fatTarget: 70,
+
+      currentDay: 'push',
+      workoutLog: [],
+      contentLog: [],
+      notificationsEnabled: false,
+      lastNotification: null,
+
+      extraMissions: {},
+      inventory: [],
+      journal: [],
+      lastDate: new Date().toISOString().split('T')[0],
+      currentTab: 'home'
+    };
+
+    let state = { ...DEFAULT_STATE };
+
+    // ==================== DAILY TASKS ====================
+    const DAILY_TASKS = [
+      {
+        id: 'bible',
+        name: '📖 Read Bible',
+        desc: '15 minutes of reading',
+        xp: 50,
+        coins: 20,
+        stats: {dis: 5, int: 2}
+      },
+      {
+        id: 'workout',
+        name: '💪 Complete Workout',
+        desc: 'Push/Pull/Legs routine',
+        xp: 100,
+        coins: 50,
+        stats: {str: 5, end: 5, dis: 3}
+      },
+      {
+        id: 'ai',
+        name: '🤖 Learn AI',
+        desc: '30-60 minutes',
+        xp: 75,
+        coins: 30,
+        stats: {int: 5, dis: 2}
+      },
+      {
+        id: 'short',
+        name: '📱 Short-Form Content',
+        desc: 'Create 1+ video',
+        xp: 60,
+        coins: 40,
+        stats: {cha: 5, wea: 3}
+      },
+      {
+        id: 'long',
+        name: '🎬 Long-Form Content',
+        desc: 'YouTube/Blog',
+        xp: 80,
+        coins: 60,
+        stats: {cha: 5, wea: 5, int: 3}
+      },
+      {
+        id: 'calories',
+        name: '🍽️ Track Calories',
+        desc: 'Stay in deficit',
+        xp: 40,
+        coins: 25,
+        stats: {dis: 3}
+      },
+      {
+        id: 'water',
+        name: '💧 Drink 8 Cups',
+        desc: '64 oz water',
+        xp: 30,
+        coins: 15,
+        stats: {end: 2}
+      }
+    ];
+
+    // ==================== EXTRA MISSIONS (These are BONUS activities) ====================
+    const EXTRA_MISSIONS = [
+      // Extra Daily Missions
+      {
+        id: 'extra_workout',
+        name: 'Second Workout',
+        desc: 'Do a second workout session today',
+        type: 'extra',
+        xp: 150,
+        coins: 75,
+        cooldown: 24,
+        canComplete: () => true
+      },
+      {
+        id: 'read_chapter',
+        name: 'Read Extra Chapter',
+        desc: 'Read an additional Bible chapter',
+        type: 'extra',
+        xp: 50,
+        coins: 25,
+        cooldown: 24,
+        canComplete: () => true
+      },
+      {
+        id: 'meditate',
+        name: 'Meditation Session',
+        desc: '10 minutes of meditation',
+        type: 'extra',
+        xp: 60,
+        coins: 30,
+        stats: {dis: 3, end: 2},
+        cooldown: 24,
+        canComplete: () => true
+      },
+      {
+        id: 'cold_shower',
+        name: 'Cold Shower',
+        desc: 'Take a 2-minute cold shower',
+        type: 'extra',
+        xp: 70,
+        coins: 35,
+        stats: {end: 3, dis: 3},
+        cooldown: 24,
+        canComplete: () => true
+      },
+      {
+        id: 'journal',
+        name: 'Journal Entry',
+        desc: 'Write a reflection journal entry',
+        type: 'extra',
+        xp: 40,
+        coins: 20,
+        stats: {int: 2, dis: 2},
+        cooldown: 24,
+        canComplete: () => true
+      },
+      {
+        id: 'extra_content',
+        name: 'Bonus Content',
+        desc: 'Create an extra piece of content',
+        type: 'extra',
+        xp: 100,
+        coins: 60,
+        stats: {cha: 5, wea: 4},
+        cooldown: 24,
+        canComplete: () => true
+      },
+
+      // Weekly Extra Missions
+      {
+        id: 'weekly_fast',
+        name: '24-Hour Fast',
+        desc: 'Complete a 24-hour fast',
+        type: 'weekly',
+        xp: 300,
+        coins: 150,
+        stats: {dis: 10, end: 5},
+        cooldown: 168,
+        canComplete: () => true
+      },
+      {
+        id: 'finish_book',
+        name: 'Finish a Book',
+        desc: 'Complete reading a book',
+        type: 'weekly',
+        xp: 400,
+        coins: 200,
+        stats: {int: 10, dis: 5},
+        cooldown: 168,
+        canComplete: () => true
+      },
+      {
+        id: 'perfect_week',
+        name: 'Perfect Week',
+        desc: 'Complete all daily tasks for 7 days',
+        type: 'weekly',
+        xp: 500,
+        coins: 250,
+        stats: {dis: 15},
+        cooldown: 168,
+        canComplete: () => state.streak >= 7
+      },
+
+      // Epic Missions
+      {
+        id: 'weight_10',
+        name: 'First 10 Pounds',
+        desc: 'Lose 10 pounds (260 → 250 lbs)',
+        type: 'epic',
+        xp: 1000,
+        coins: 500,
+        stats: {str: 10, end: 10, dis: 10},
+        cooldown: 0,
+        canComplete: () => state.currentWeight <= 250
+      },
+      {
+        id: 'level_10',
+        name: 'Level 10 Hunter',
+        desc: 'Reach Level 10',
+        type: 'epic',
+        xp: 1500,
+        coins: 750,
+        cooldown: 0,
+        canComplete: () => state.level >= 10
+      },
+      {
+        id: 'month_streak',
+        name: '30-Day Streak',
+        desc: 'Maintain 30 consecutive days',
+        type: 'epic',
+        xp: 2000,
+        coins: 1000,
+        stats: {dis: 20},
+        cooldown: 0,
+        canComplete: () => state.streak >= 30
+      }
+    ];
+
+    // ==================== LEVEL UP REWARDS ====================
+    const LEVEL_REWARDS = {
+      2: { coins: 100, item: null, bonus: 'Unlocked: Store access' },
+      5: { coins: 250, item: 'exp_boost_1', bonus: '+5% XP gain permanently' },
+      10: { coins: 500, item: 'coin_boost_1', bonus: '+10% coin gain permanently' },
+      15: { coins: 750, item: 'exp_boost_2', bonus: '+10% XP gain permanently' },
+      20: { coins: 1000, item: 'stat_boost', bonus: '+5 to all stats' },
+      25: { coins: 1500, item: 'exp_boost_3', bonus: '+15% XP gain permanently' },
+      30: { coins: 2000, item: 'legendary_badge', bonus: 'Legendary Status unlocked' }
+    };
+
+    // ==================== STORE ITEMS ====================
+    const STORE_ITEMS = [
+      {
+        id: 'exp_boost_1',
+        name: 'XP Boost I',
+        desc: '+5% XP gain (permanent)',
+        price: 500,
+        type: 'boost',
+        effect: { xpMultiplier: 1.05 }
+      },
+      {
+        id: 'exp_boost_2',
+        name: 'XP Boost II',
+        desc: '+10% XP gain (permanent)',
+        price: 1000,
+        type: 'boost',
+        effect: { xpMultiplier: 1.10 },
+        requires: 'exp_boost_1'
+      },
+      {
+        id: 'coin_boost_1',
+        name: 'Coin Boost I',
+        desc: '+10% coin gain (permanent)',
+        price: 750,
+        type: 'boost',
+        effect: { coinMultiplier: 1.10 }
+      },
+      {
+        id: 'coin_boost_2',
+        name: 'Coin Boost II',
+        desc: '+20% coin gain (permanent)',
+        price: 1500,
+        type: 'boost',
+        effect: { coinMultiplier: 1.20 },
+        requires: 'coin_boost_1'
+      },
+      {
+        id: 'streak_shield',
+        name: 'Streak Shield',
+        desc: 'Protects streak for 1 missed day (consumable)',
+        price: 300,
+        type: 'consumable',
+        effect: { streakProtection: true }
+      },
+      {
+        id: 'stat_elixir',
+        name: 'Stat Elixir',
+        desc: '+10 to all stats (consumable)',
+        price: 400,
+        type: 'consumable',
+        effect: { statBoost: 10 }
+      },
+      {
+        id: 'debuff_cure',
+        name: 'Debuff Cure',
+        desc: 'Remove current debuff instantly',
+        price: 200,
+        type: 'consumable',
+        effect: { removeDebuff: true }
+      },
+      {
+        id: 'legendary_badge',
+        name: 'Legendary Badge',
+        desc: 'Show your legendary status',
+        price: 2500,
+        type: 'cosmetic',
+        effect: { badge: 'legendary' }
+      }
+    ];
+
+    // ==================== STAT INFO ====================
+    const STAT_INFO = {
+      str: {
+        name: 'Strength',
+        desc: 'Physical power',
+        color: '#708993',
+        gains: 'Workouts, physical challenges'
+      },
+      end: {
+        name: 'Endurance',
+        desc: 'Stamina & resilience',
+        color: '#A1C2BB',
+        gains: 'Workouts, water, cold showers'
+      },
+      int: {
+        name: 'Intelligence',
+        desc: 'Knowledge & learning',
+        color: '#19183B',
+        gains: 'AI learning, Bible, books'
+      },
+      cha: {
+        name: 'Charisma',
+        desc: 'Influence & communication',
+        color: '#708993',
+        gains: 'Content creation'
+      },
+      dis: {
+        name: 'Discipline',
+        desc: 'Self-control',
+        color: '#19183B',
+        gains: 'All tasks, streaks, fasting'
+      },
+      wea: {
+        name: 'Wealth',
+        desc: 'Financial growth',
+        color: '#A1C2BB',
+        gains: 'Content creation, business'
+      }
+    };
+
+    // ==================== FOOD DATABASE ====================
+    const FOOD_DATABASE = [
+      { id: 'chicken', name: 'Chicken Breast', serving: '8oz', cal: 280, pro: 52, carb: 0, fat: 6 },
+      { id: 'yogurt', name: 'Greek Yogurt', serving: '1 cup', cal: 150, pro: 20, carb: 10, fat: 4 },
+      { id: 'eggs', name: 'Eggs', serving: '2 large', cal: 140, pro: 12, carb: 1, fat: 10 },
+      { id: 'rice', name: 'White Rice', serving: '1 cup', cal: 200, pro: 4, carb: 45, fat: 0 },
+      { id: 'oatmeal', name: 'Oatmeal', serving: '1/2 cup', cal: 150, pro: 5, carb: 27, fat: 3 },
+      { id: 'protein', name: 'Protein Shake', serving: '1 scoop', cal: 120, pro: 25, carb: 3, fat: 1 },
+      { id: 'banana', name: 'Banana', serving: '1 medium', cal: 105, pro: 1, carb: 27, fat: 0 },
+      { id: 'salmon', name: 'Salmon', serving: '6oz', cal: 350, pro: 40, carb: 0, fat: 20 },
+      { id: 'broccoli', name: 'Broccoli', serving: '1 cup', cal: 55, pro: 4, carb: 11, fat: 0 },
+      { id: 'sweetpotato', name: 'Sweet Potato', serving: '1 medium', cal: 110, pro: 2, carb: 26, fat: 0 }
+    ];
+
+    // ==================== EXERCISES ====================
+    const EXERCISES = {
+      push: [
+        { id: 'bench', name: 'Bench Press', muscle: 'Chest' },
+        { id: 'ohp', name: 'Overhead Press', muscle: 'Shoulders' },
+        { id: 'incline', name: 'Incline DB Press', muscle: 'Chest' },
+        { id: 'lateral', name: 'Lateral Raises', muscle: 'Shoulders' },
+        { id: 'dips', name: 'Tricep Dips', muscle: 'Triceps' },
+        { id: 'pushdown', name: 'Tricep Pushdowns', muscle: 'Triceps' }
+      ],
+      pull: [
+        { id: 'deadlift', name: 'Deadlifts', muscle: 'Back' },
+        { id: 'pullup', name: 'Pull-ups', muscle: 'Back' },
+        { id: 'row', name: 'Barbell Rows', muscle: 'Back' },
+        { id: 'face', name: 'Face Pulls', muscle: 'Rear Delts' },
+        { id: 'bicep', name: 'Bicep Curls', muscle: 'Biceps' },
+        { id: 'hammer', name: 'Hammer Curls', muscle: 'Biceps' }
+      ],
+      legs: [
+        { id: 'squat', name: 'Squats', muscle: 'Quads' },
+        { id: 'rdl', name: 'Romanian Deadlifts', muscle: 'Hamstrings' },
+        { id: 'legpress', name: 'Leg Press', muscle: 'Quads' },
+        { id: 'curl', name: 'Leg Curls', muscle: 'Hamstrings' },
+        { id: 'calf', name: 'Calf Raises', muscle: 'Calves' },
+        { id: 'lunge', name: 'Lunges', muscle: 'Glutes' }
+      ]
+    };
+
+    // ==================== HELPER FUNCTIONS ====================
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        state = { ...DEFAULT_STATE, ...JSON.parse(saved) };
+        checkDailyReset();
+      }
+    }
+
+    function checkDailyReset() {
+      const today = new Date().toISOString().split('T')[0];
+      if (state.lastDate !== today) {
+        const allCompleted = DAILY_TASKS.every(t => state.completed[t.id]);
+
+        if (!allCompleted) {
+          applyPunishment();
+        } else {
+          state.streak++;
+          state.consecutiveMisses = 0;
+        }
+
+        state.completed = {};
+        state.meals = [];
+        state.waterCups = 0;
+        state.lastDate = today;
+        saveState();
+      }
+    }
+
+    function applyPunishment() {
+      state.consecutiveMisses++;
+
+      // Check if user has streak shield
+      const hasShield = state.inventory.some(item => item.id === 'streak_shield' && !item.used);
+
+      if (hasShield && state.consecutiveMisses === 1) {
+        // Use shield
+        const shield = state.inventory.find(item => item.id === 'streak_shield' && !item.used);
+        shield.used = true;
+        showToast('Streak Shield Activated', 'Your streak is protected!', 'success');
+        return;
+      }
+
+      if (state.consecutiveMisses === 1) {
+        state.xp = Math.max(0, state.xp - 200);
+        state.coins = Math.max(0, state.coins - 100);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(1, state.stats[key] - 10);
+        });
+        state.debuff = {
+          type: 'WEAKENED',
+          xpPenalty: 0.3,
+          endsAt: Date.now() + (24 * 60 * 60 * 1000)
+        };
+        state.streak = 0;
+      } else if (state.consecutiveMisses === 2) {
+        state.xp = Math.max(0, state.xp - 400);
+        state.coins = Math.max(0, state.coins - 200);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(1, state.stats[key] - 20);
+        });
+        state.debuff = {
+          type: 'SEVERELY WEAKENED',
+          xpPenalty: 0.6,
+          endsAt: Date.now() + (48 * 60 * 60 * 1000)
+        };
+      } else {
+        if (state.level > 1) state.level--;
+        state.xp = Math.max(0, state.xp - 600);
+        state.coins = Math.max(0, state.coins - 300);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(1, state.stats[key] - 30);
+        });
+        state.debuff = {
+          type: 'DEVASTATED',
+          xpPenalty: 0.9,
+          endsAt: Date.now() + (72 * 60 * 60 * 1000)
+        };
+      }
+    }
+
+    function getXPMultiplier() {
+      let multiplier = 1.0;
+      state.inventory.forEach(item => {
+        const storeItem = STORE_ITEMS.find(si => si.id === item.id);
+        if (storeItem && storeItem.effect.xpMultiplier) {
+          multiplier *= storeItem.effect.xpMultiplier;
+        }
+      });
+      return multiplier;
+    }
+
+    function getCoinMultiplier() {
+      let multiplier = 1.0;
+      state.inventory.forEach(item => {
+        const storeItem = STORE_ITEMS.find(si => si.id === item.id);
+        if (storeItem && storeItem.effect.coinMultiplier) {
+          multiplier *= storeItem.effect.coinMultiplier;
+        }
+      });
+      return multiplier;
+    }
+
+    function toggleTask(taskId) {
+      state.completed[taskId] = !state.completed[taskId];
+
+      if (state.completed[taskId]) {
+        const task = DAILY_TASKS.find(t => t.id === taskId);
+        let xpGain = task.xp * getXPMultiplier();
+        let coinGain = task.coins * getCoinMultiplier();
+
+        if (state.debuff && Date.now() < state.debuff.endsAt) {
+          xpGain = Math.floor(xpGain * (1 - state.debuff.xpPenalty));
+        }
+
+        state.xp += Math.floor(xpGain);
+        state.coins += Math.floor(coinGain);
+
+        for (const [stat, value] of Object.entries(task.stats || {})) {
+          state.stats[stat] += value;
+        }
+
+        checkLevelUp();
+        state.taskStreak[taskId] = (state.taskStreak[taskId] || 0) + 1;
+
+        if (taskId === 'short' || taskId === 'long') {
+          state.contentLog.push({
+            date: new Date().toISOString(),
+            type: taskId === 'short' ? 'short' : 'long'
+          });
+        }
+
+        if (taskId === 'workout') {
+          state.workoutLog.push({
+            date: new Date().toISOString(),
+            type: state.currentDay
+          });
+        }
+
+        playSound('complete');
+        showToast(task.name, `+${Math.floor(xpGain)} XP, +${Math.floor(coinGain)} coins`, 'success');
+      }
+
+      saveState();
+      render();
+    }
+
+    function checkLevelUp() {
+      const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+      if (state.xp >= xpNeeded) {
+        state.level++;
+        state.xp -= xpNeeded;
+
+        // Check for level rewards
+        const reward = LEVEL_REWARDS[state.level];
+        if (reward) {
+          state.coins += reward.coins;
+          if (reward.item) {
+            state.inventory.push({ id: reward.item, acquired: Date.now() });
+          }
+          if (reward.bonus.includes('all stats')) {
+            Object.keys(state.stats).forEach(key => state.stats[key] += 5);
+          }
+          showToast(`Level ${state.level}!`, reward.bonus, 'success');
+        } else {
+          showToast('Level Up!', `You reached level ${state.level}`, 'success');
+        }
+        return true;
+      }
+      return false;
+    }
+
+    function completeExtraMission(missionId) {
+      const mission = EXTRA_MISSIONS.find(m => m.id === missionId);
+      if (!mission) return;
+
+      // Check cooldown
+      if (state.extraMissions[missionId]) {
+        const lastCompletion = state.extraMissions[missionId];
+        const hoursPassed = (Date.now() - lastCompletion) / (1000 * 60 * 60);
+        if (hoursPassed < mission.cooldown) {
+          showToast('On Cooldown', `Wait ${Math.ceil(mission.cooldown - hoursPassed)} hours`, 'error');
+          return;
+        }
+      }
+
+      // Check if can complete
+      if (!mission.canComplete()) {
+        showToast('Cannot Complete', 'Requirements not met', 'error');
+        return;
+      }
+
+      let xpGain = mission.xp * getXPMultiplier();
+      let coinGain = mission.coins * getCoinMultiplier();
+
+      if (state.debuff && Date.now() < state.debuff.endsAt) {
+        xpGain = Math.floor(xpGain * (1 - state.debuff.xpPenalty));
+      }
+
+      state.xp += Math.floor(xpGain);
+      state.coins += Math.floor(coinGain);
+
+      if (mission.stats) {
+        for (const [stat, value] of Object.entries(mission.stats)) {
+          state.stats[stat] += value;
+        }
+      }
+
+      state.extraMissions[missionId] = Date.now();
+
+      checkLevelUp();
+      playSound('complete');
+      showToast(`Mission Complete: ${mission.name}`, `+${Math.floor(xpGain)} XP, +${Math.floor(coinGain)} coins`, 'success');
+
+      saveState();
+      render();
+    }
+
+    function buyItem(itemId) {
+      const item = STORE_ITEMS.find(i => i.id === itemId);
+      if (!item) return;
+
+      // Check if already owned (for permanent items)
+      if (item.type !== 'consumable' && state.inventory.some(i => i.id === itemId)) {
+        showToast('Already Owned', 'You already have this item', 'error');
+        return;
+      }
+
+      // Check requirements
+      if (item.requires && !state.inventory.some(i => i.id === item.requires)) {
+        showToast('Requirements Not Met', `Need ${item.requires} first`, 'error');
+        return;
+      }
+
+      // Check coins
+      if (state.coins < item.price) {
+        showToast('Not Enough Coins', `Need ${item.price} coins`, 'error');
+        return;
+      }
+
+      state.coins -= item.price;
+      state.inventory.push({ id: itemId, acquired: Date.now(), used: false });
+
+      // Apply consumable effects immediately
+      if (item.type === 'consumable') {
+        if (item.effect.statBoost) {
+          Object.keys(state.stats).forEach(key => state.stats[key] += item.effect.statBoost);
+        }
+        if (item.effect.removeDebuff) {
+          state.debuff = null;
+        }
+      }
+
+      showToast('Item Purchased!', item.name, 'success');
+      playSound('complete');
+      saveState();
+      render();
+    }
+
+    function addFood(foodId) {
+      const food = FOOD_DATABASE.find(f => f.id === foodId);
+      if (!food) return;
+
+      state.meals.push({
+        ...food,
+        time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+      });
+
+      saveState();
+      render();
+    }
+
+    function addWater() {
+      state.waterCups++;
+      if (state.waterCups >= 8 && !state.completed.water) {
+        toggleTask('water');
+      }
+      saveState();
+      render();
+    }
+
+    function getTotals() {
+      const cal = state.meals.reduce((sum, m) => sum + m.cal, 0);
+      const pro = state.meals.reduce((sum, m) => sum + m.pro, 0);
+      const carb = state.meals.reduce((sum, m) => sum + m.carb, 0);
+      const fat = state.meals.reduce((sum, m) => sum + m.fat, 0);
+      return { cal, pro, carb, fat };
+    }
+
+    function secondsToMidnight() {
+      const now = new Date();
+      const options = { timeZone: 'America/New_York', hour12: false };
+      const etString = now.toLocaleString('en-US', options);
+      const etDate = new Date(etString);
+
+      const midnight = new Date(etDate);
+      midnight.setHours(23, 0, 0, 0);
+
+      if (etDate > midnight) {
+        midnight.setDate(midnight.getDate() + 1);
+      }
+
+      const diff = midnight - etDate;
+      return Math.max(0, Math.floor(diff / 1000));
+    }
+
+    function formatTime(seconds) {
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+      return `${h}h ${m}m ${s}s`;
+    }
+
+    function getTimerClass(seconds) {
+      if (seconds < 600) return 'timer-critical';
+      if (seconds < 1800) return 'timer-warning';
+      return 'timer-good';
+    }
+
+    function showToast(title, message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `
+        <div class="font-bold text-sm mb-1 text-dark-blue">${title}</div>
+        <div class="text-xs text-teal">${message}</div>
+      `;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification(title, { body: message });
+      }
+    }
+
+    function requestNotificationPermission() {
+      if ('Notification' in window && Notification.permission === 'default') {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            state.notificationsEnabled = true;
+            saveState();
+            showToast('Notifications Enabled', 'Daily reminders activated', 'success');
+          }
+        });
+      }
+    }
+
+    function playSound(type) {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      if (type === 'complete') {
+        osc.frequency.value = 800;
+        gain.gain.setValueAtTime(0.05, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.1);
+      }
+    }
+
+    function logWeight(weight) {
+      state.currentWeight = weight;
+      state.weightHistory.push({
+        date: new Date().toISOString().split('T')[0],
+        weight: weight
+      });
+      saveState();
+      render();
+      showToast('Weight Logged', `${weight} lbs recorded`, 'success');
+    }
+
+    function switchTab(tab) {
+      state.currentTab = tab;
+      render();
+    }
+
+    // ==================== RENDER ====================
+    function render() {
+      const app = document.getElementById('app');
+      const totals = getTotals();
+      const remaining = secondsToMidnight();
+      const tasksComplete = DAILY_TASKS.filter(t => state.completed[t.id]).length;
+      const tasksTotal = DAILY_TASKS.length;
+      const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+      const xpPercent = (state.xp / xpNeeded) * 100;
+      const weightLost = state.startWeight - state.currentWeight;
+      const weightRemaining = state.currentWeight - state.targetWeight;
+      const progressPercent = ((weightLost) / (state.startWeight - state.targetWeight)) * 100;
+
+      if (totals.cal >= state.calorieTarget * 0.9 && totals.cal <= state.calorieTarget * 1.1 && !state.completed.calories) {
+        state.completed.calories = true;
+        saveState();
+      }
+
+      if (state.currentTab === 'home') {
+        app.innerHTML = `
+          <!-- Status Window -->
+          <div class="status-window rounded-2xl p-6 mb-4 slide-up">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h1 class="text-3xl font-bold text-dark-blue mb-1">SENSE</h1>
+                <p class="text-sm text-teal">Level up your life</p>
+              </div>
+              <div class="level-badge text-lg">
+                LV ${state.level}
+              </div>
+            </div>
+
+            <!-- Weight Progress -->
+            <div class="mb-4">
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold text-dark-blue">Weight</span>
+                <span class="text-teal">${state.currentWeight} → ${state.targetWeight} lbs</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: ${progressPercent}%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-teal mt-1">
+                <span>${weightLost} lbs lost</span>
+                <span>${weightRemaining} lbs to go</span>
+              </div>
+            </div>
+
+            <!-- XP Progress -->
+            <div class="mb-4">
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold text-dark-blue">Experience</span>
+                <span class="text-teal">${state.xp} / ${xpNeeded} XP</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: ${xpPercent}%"></div>
+              </div>
+              ${getXPMultiplier() > 1 ? `
+                <div class="text-xs text-teal mt-1">+${Math.round((getXPMultiplier() - 1) * 100)}% XP boost active</div>
+              ` : ''}
+            </div>
+
+            <!-- Coins & Streak -->
+            <div class="flex justify-between items-center">
+              <div class="flex gap-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-dark-blue">${state.coins}</div>
+                  <div class="text-xs text-teal">Coins</div>
+                  ${getCoinMultiplier() > 1 ? `<div class="text-xs text-teal">+${Math.round((getCoinMultiplier() - 1) * 100)}%</div>` : ''}
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-dark-blue">${state.streak}</div>
+                  <div class="text-xs text-teal">Streak</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Countdown Timer -->
+          <div class="glass rounded-2xl p-5 mb-4 text-center ${getTimerClass(remaining)}">
+            <div class="text-sm font-semibold mb-2 opacity-90">⏰ Time Until 11:00 PM ET</div>
+            <div class="text-4xl font-bold mb-2">${formatTime(remaining)}</div>
+            <div class="text-sm opacity-90">${tasksComplete}/${tasksTotal} tasks complete</div>
+          </div>
+
+          <!-- Daily Tasks -->
+          <div class="glass rounded-2xl p-6 mb-4">
+            <h2 class="text-xl font-bold text-dark-blue mb-4">📋 Daily Tasks</h2>
+            ${DAILY_TASKS.map(task => `
+              <div class="task-card ${state.completed[task.id] ? 'completed' : ''}">
+                <div class="flex items-center justify-between">
+                  <div class="flex-1">
+                    <div class="font-semibold text-dark-blue mb-1">${task.name}</div>
+                    <div class="text-xs text-teal mb-2">${task.desc}</div>
+                    <div class="flex gap-2 text-xs text-teal">
+                      <span>+${Math.floor(task.xp * getXPMultiplier())} XP</span>
+                      <span>+${Math.floor(task.coins * getCoinMultiplier())} coins</span>
+                    </div>
+                  </div>
+                  <button
+                    onclick="toggleTask('${task.id}')"
+                    class="${state.completed[task.id] ? 'btn-success' : 'btn-primary'}"
+                    style="min-width: 90px;"
+                  >
+                    ${state.completed[task.id] ? '✓ Done' : 'Complete'}
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          ${!state.notificationsEnabled ? `
+            <div class="glass rounded-2xl p-4 mb-4 border-2 border-teal">
+              <div class="text-sm font-semibold text-dark-blue mb-2">🔔 Notifications</div>
+              <div class="text-xs text-teal mb-3">Get daily reminders</div>
+              <button onclick="requestNotificationPermission()" class="btn-primary w-full">
+                Enable
+              </button>
+            </div>
+          ` : ''}
+
+          <!-- Tab Nav -->
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-2 justify-around">
+            <button onclick="switchTab('home')" class="tab active">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('store')" class="tab">Store</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'missions') {
+        const extraMissions = EXTRA_MISSIONS.filter(m => m.type === 'extra');
+        const weeklyMissions = EXTRA_MISSIONS.filter(m => m.type === 'weekly');
+        const epicMissions = EXTRA_MISSIONS.filter(m => m.type === 'epic');
+
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-dark-blue mb-2">🎯 Extra Missions</h1>
+              <p class="text-sm text-teal">Bonus tasks for extra rewards</p>
+            </div>
+
+            <!-- Extra Missions -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-dark-blue mb-4">
+                <span class="mission-badge badge-extra">EXTRA</span> Daily Bonus
+              </h2>
+              ${extraMissions.map(mission => {
+                const lastCompletion = state.extraMissions[mission.id];
+                const hoursPassed = lastCompletion ? (Date.now() - lastCompletion) / (1000 * 60 * 60) : 999;
+                const canDo = hoursPassed >= mission.cooldown && mission.canComplete();
+                return `
+                  <div class="task-card ${!canDo ? 'opacity-50' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-dark-blue mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${Math.floor(mission.xp * getXPMultiplier())} XP, +${Math.floor(mission.coins * getCoinMultiplier())} coins</div>
+                        ${!canDo && lastCompletion ? `
+                          <div class="text-xs text-teal mt-1">⏱️ ${Math.ceil(mission.cooldown - hoursPassed)}h cooldown</div>
+                        ` : ''}
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo ? 'disabled' : ''}
+                      >
+                        ${canDo ? 'Complete' : 'Done'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Weekly Missions -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-dark-blue mb-4">
+                <span class="mission-badge badge-weekly">WEEKLY</span> Weekly Bonus
+              </h2>
+              ${weeklyMissions.map(mission => {
+                const lastCompletion = state.extraMissions[mission.id];
+                const hoursPassed = lastCompletion ? (Date.now() - lastCompletion) / (1000 * 60 * 60) : 999;
+                const canDo = hoursPassed >= mission.cooldown && mission.canComplete();
+                return `
+                  <div class="task-card ${!canDo ? 'opacity-50' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-dark-blue mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${Math.floor(mission.xp * getXPMultiplier())} XP, +${Math.floor(mission.coins * getCoinMultiplier())} coins</div>
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo ? 'disabled' : ''}
+                      >
+                        ${canDo ? 'Complete' : 'Done'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Epic Missions -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-dark-blue mb-4">
+                <span class="mission-badge badge-epic">EPIC</span> Epic Challenges
+              </h2>
+              ${epicMissions.map(mission => {
+                const completed = state.extraMissions[mission.id];
+                const canDo = !completed && mission.canComplete();
+                return `
+                  <div class="task-card ${completed ? 'opacity-50' : canDo ? 'border-2 border-dark-blue' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-dark-blue mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo ? 'disabled' : ''}
+                      >
+                        ${completed ? '✓ Claimed' : canDo ? 'Claim' : 'Locked'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-2 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab active">Missions</button>
+            <button onclick="switchTab('store')" class="tab">Store</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'store') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-dark-blue mb-2">🏪 Store</h1>
+              <p class="text-sm text-teal">Spend your coins wisely</p>
+              <div class="text-3xl font-bold text-dark-blue mt-2">${state.coins} coins</div>
+            </div>
+
+            <!-- Store Items -->
+            <div class="grid grid-cols-1 gap-4 mb-4">
+              ${STORE_ITEMS.map(item => {
+                const owned = state.inventory.some(i => i.id === item.id);
+                const canBuy = state.coins >= item.price && (!item.requires || state.inventory.some(i => i.id === item.requires));
+                return `
+                  <div class="store-item ${owned && item.type !== 'consumable' ? 'owned' : ''}">
+                    <div class="flex justify-between items-start mb-2">
+                      <div class="flex-1">
+                        <div class="font-bold text-dark-blue text-lg mb-1">${item.name}</div>
+                        <div class="text-sm text-teal mb-2">${item.desc}</div>
+                        <div class="text-xs text-teal uppercase font-semibold">${item.type}</div>
+                        ${item.requires ? `
+                          <div class="text-xs text-teal mt-1">Requires: ${item.requires}</div>
+                        ` : ''}
+                      </div>
+                      <div class="text-right ml-4">
+                        <div class="text-2xl font-bold text-dark-blue mb-2">${item.price}</div>
+                        <div class="text-xs text-teal">coins</div>
+                      </div>
+                    </div>
+                    <button
+                      onclick="buyItem('${item.id}')"
+                      class="${canBuy && (item.type === 'consumable' || !owned) ? 'btn-buy' : 'btn-success opacity-50'} w-full"
+                      ${!canBuy || (owned && item.type !== 'consumable') ? 'disabled' : ''}
+                    >
+                      ${owned && item.type !== 'consumable' ? '✓ Owned' : canBuy ? 'Buy Now' : 'Not Enough Coins'}
+                    </button>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Level Rewards Preview -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-dark-blue mb-4">🎁 Level Rewards</h2>
+              <div class="space-y-2 text-sm">
+                ${Object.entries(LEVEL_REWARDS).map(([level, reward]) => `
+                  <div class="flex justify-between items-center ${state.level >= parseInt(level) ? 'opacity-50' : ''}">
+                    <div>
+                      <span class="font-bold text-dark-blue">Level ${level}</span>
+                      <span class="text-teal ml-2">${reward.bonus}</span>
+                    </div>
+                    <div class="text-teal">+${reward.coins} coins</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-2 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('store')" class="tab active">Store</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'stats') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-dark-blue mb-2">📊 Your Stats</h1>
+              <p class="text-sm text-teal">Track your growth</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              ${Object.entries(state.stats).map(([key, val]) => {
+                const info = STAT_INFO[key];
+                return `
+                  <div class="glass rounded-2xl p-5 text-center stat-tooltip">
+                    <div class="text-4xl font-bold mb-2" style="color: ${info.color};">
+                      ${val}
+                    </div>
+                    <div class="text-sm font-semibold text-dark-blue">${info.name}</div>
+                    <div class="text-xs text-teal mt-1">${info.desc}</div>
+                    <div class="tooltip-text">
+                      <strong>${info.name}</strong><br>
+                      ${info.desc}<br>
+                      <em>Gain: ${info.gains}</em>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+              <h2 class="text-lg font-bold text-dark-blue mb-4">Stat Guide</h2>
+              <div class="space-y-3 text-sm">
+                ${Object.entries(STAT_INFO).map(([key, info]) => `
+                  <div class="flex items-start gap-3">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white text-xs"
+                         style="background: ${info.color};">
+                      ${key.toUpperCase()}
+                    </div>
+                    <div>
+                      <div class="font-semibold text-dark-blue">${info.name}</div>
+                      <div class="text-xs text-teal">${info.desc}</div>
+                      <div class="text-xs text-teal mt-1">From: ${info.gains}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-2 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('store')" class="tab">Store</button>
+            <button onclick="switchTab('stats')" class="tab active">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'track') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <!-- Nutrition -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-dark-blue mb-4">🍽️ Nutrition</h2>
+              <div class="mb-4">
+                <div class="flex justify-between text-sm mb-2">
+                  <span class="font-semibold text-dark-blue">Calories</span>
+                  <span class="text-teal">${totals.cal} / ${state.calorieTarget}</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: ${Math.min(100, (totals.cal / state.calorieTarget) * 100)}%"></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-3 mb-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${totals.pro}g</div>
+                  <div class="text-xs text-teal">Protein</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${totals.carb}g</div>
+                  <div class="text-xs text-teal">Carbs</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${totals.fat}g</div>
+                  <div class="text-xs text-teal">Fats</div>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-2">
+                ${FOOD_DATABASE.slice(0, 6).map(food => `
+                  <button onclick="addFood('${food.id}')" class="task-card p-2 text-xs font-semibold hover:scale-105 transition">
+                    ${food.name}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Water -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-dark-blue mb-4">💧 Water</h2>
+              <div class="flex gap-2 mb-4 justify-center">
+                ${Array(8).fill(0).map((_, i) => `
+                  <div class="w-10 h-10 rounded-full ${i < state.waterCups ? 'bg-mint' : 'bg-light-mint border-2 border-mint'}
+                       flex items-center justify-center text-dark-blue font-bold">
+                    ${i < state.waterCups ? '✓' : ''}
+                  </div>
+                `).join('')}
+              </div>
+              <button onclick="addWater()" class="btn-primary w-full">
+                + Add Cup (${state.waterCups}/8)
+              </button>
+            </div>
+
+            <!-- Workout -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-dark-blue mb-4">💪 Workout</h2>
+              <div class="flex gap-2 mb-4">
+                ${['push', 'pull', 'legs'].map(day => `
+                  <button
+                    onclick="state.currentDay='${day}'; saveState(); render();"
+                    class="${state.currentDay === day ? 'btn-primary' : 'task-card'} flex-1 py-2 text-sm font-bold"
+                  >
+                    ${day.toUpperCase()}
+                  </button>
+                `).join('')}
+              </div>
+              <div class="space-y-1">
+                ${EXERCISES[state.currentDay].map(ex => `
+                  <div class="task-card p-2 flex justify-between text-sm">
+                    <span class="font-semibold text-dark-blue">${ex.name}</span>
+                    <span class="text-teal">${ex.muscle}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Weight -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-dark-blue mb-4">⚖️ Weight</h2>
+              <div class="flex gap-2">
+                <input
+                  type="number"
+                  id="weightInput"
+                  placeholder="${state.currentWeight}"
+                  class="flex-1 glass rounded-xl px-4 py-3 text-dark-blue font-semibold"
+                  step="0.1"
+                />
+                <button
+                  onclick="const w = parseFloat(document.getElementById('weightInput').value); if(w) logWeight(w);"
+                  class="btn-primary px-6"
+                >
+                  LOG
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-2 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('store')" class="tab">Store</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab active">Track</button>
+          </div>
+        `;
+      }
+    }
+
+    // ==================== INIT ====================
+    loadState();
+    render();
+    setInterval(() => render(), 1000);
+
+    window.toggleTask = toggleTask;
+    window.completeExtraMission = completeExtraMission;
+    window.buyItem = buyItem;
+    window.addFood = addFood;
+    window.addWater = addWater;
+    window.requestNotificationPermission = requestNotificationPermission;
+    window.logWeight = logWeight;
+    window.switchTab = switchTab;
+    window.state = state;
+    window.saveState = saveState;
+    window.render = render;
+  </script>
+</body>
+</html>

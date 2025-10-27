@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"="width=device-width, initial-scale=1.0">
+  <title>SENSE - Personal Edition</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    .stat-bar {
+      background: linear-gradient(90deg, #dc2626 0%, #fbbf24 100%);
+      height: 8px;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+    .accent-gold { color: #fbbf24; }
+    .accent-red { color: #dc2626; }
+    .bg-dark { background: #1a1a1a; }
+    .bg-darker { background: #0f0f0f; }
+    .border-gold { border-color: #fbbf24; }
+    .border-red { border-color: #dc2626; }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    .shake { animation: shake 0.3s; }
+    @keyframes pulse-red {
+      0%, 100% { background-color: #dc2626; }
+      50% { background-color: #b91c1c; }
+    }
+    .pulse-red { animation: pulse-red 1s infinite; }
+    .debuff-badge {
+      background: #450a0a;
+      border: 1px solid #991b1b;
+      color: #fca5a5;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="p-4 pb-24">
+  <div id="app" class="max-w-md mx-auto"></div>
+
+  <script>
+    // ==================== STATE ====================
+    const STORAGE_KEY = 'sense_personal_v1';
+    const DEFAULT_STATE = {
+      // Profile
+      currentWeight: 260,
+      targetWeight: 175,
+      startWeight: 260,
+      weightHistory: [{date: new Date().toISOString().split('T')[0], weight: 260}],
+
+      // RPG Stats
+      level: 1,
+      xp: 0,
+      coins: 0,
+      streak: 0,
+      consecutiveMisses: 0,
+
+      stats: {
+        str: 40,
+        end: 35,
+        int: 70,
+        cha: 65,
+        dis: 50,
+        wea: 55
+      },
+
+      // Debuffs
+      debuff: null, // {type: 'WEAKENED', xpPenalty: 0.3, endsAt: timestamp}
+
+      // Daily Tasks
+      completed: {},
+      taskStreak: {},
+
+      // Nutrition
+      meals: [],
+      waterCups: 0,
+      calorieTarget: 2100,
+      proteinTarget: 190,
+      carbTarget: 165,
+      fatTarget: 70,
+
+      // Workout
+      currentDay: 'push', // push, pull, legs
+      workoutLog: [],
+
+      // Content
+      contentLog: [],
+
+      // Notifications
+      notificationsEnabled: false,
+      lastNotification: null,
+
+      // Missions
+      missions: [],
+
+      // Items/Loot
+      inventory: [],
+
+      // Journal
+      journal: [],
+
+      lastDate: new Date().toISOString().split('T')[0]
+    };
+
+    let state = { ...DEFAULT_STATE };
+
+    // ==================== DAILY TASKS ====================
+    const DAILY_TASKS = [
+      {
+        id: 'bible',
+        name: '📖 Read Bible',
+        desc: '15 minutes',
+        xp: 50,
+        coins: 20,
+        stats: {dis: 5, int: 2}
+      },
+      {
+        id: 'workout',
+        name: '💪 Complete Workout',
+        desc: 'PPL rotation',
+        xp: 100,
+        coins: 50,
+        stats: {str: 5, end: 5, dis: 3}
+      },
+      {
+        id: 'ai',
+        name: '🤖 Learn AI',
+        desc: '30-60 min',
+        xp: 75,
+        coins: 30,
+        stats: {int: 5, dis: 2}
+      },
+      {
+        id: 'short',
+        name: '📱 Short-Form Content',
+        desc: 'TikTok/Reels/Shorts',
+        xp: 60,
+        coins: 40,
+        stats: {cha: 5, wea: 3}
+      },
+      {
+        id: 'long',
+        name: '🎬 Long-Form Content',
+        desc: 'YouTube/Blog',
+        xp: 80,
+        coins: 60,
+        stats: {cha: 5, wea: 5, int: 3}
+      },
+      {
+        id: 'calories',
+        name: '🍽️ Track Calories',
+        desc: 'Stay in deficit',
+        xp: 40,
+        coins: 25,
+        stats: {dis: 3}
+      },
+      {
+        id: 'water',
+        name: '💧 Drink 8 Cups Water',
+        desc: '64 oz total',
+        xp: 30,
+        coins: 15,
+        stats: {end: 2}
+      }
+    ];
+
+    // ==================== FOOD DATABASE ====================
+    const FOOD_DATABASE = [
+      { id: 'chicken', name: 'Chicken Breast', serving: '8oz', cal: 280, pro: 52, carb: 0, fat: 6 },
+      { id: 'yogurt', name: 'Greek Yogurt', serving: '1 cup', cal: 150, pro: 20, carb: 10, fat: 4 },
+      { id: 'eggs', name: 'Eggs', serving: '2 large', cal: 140, pro: 12, carb: 1, fat: 10 },
+      { id: 'rice', name: 'White Rice', serving: '1 cup', cal: 200, pro: 4, carb: 45, fat: 0 },
+      { id: 'oatmeal', name: 'Oatmeal', serving: '1/2 cup dry', cal: 150, pro: 5, carb: 27, fat: 3 },
+      { id: 'protein', name: 'Protein Shake', serving: '1 scoop', cal: 120, pro: 25, carb: 3, fat: 1 },
+      { id: 'banana', name: 'Banana', serving: '1 medium', cal: 105, pro: 1, carb: 27, fat: 0 },
+      { id: 'salmon', name: 'Salmon', serving: '6oz', cal: 350, pro: 40, carb: 0, fat: 20 },
+      { id: 'broccoli', name: 'Broccoli', serving: '1 cup', cal: 55, pro: 4, carb: 11, fat: 0 },
+      { id: 'sweetpotato', name: 'Sweet Potato', serving: '1 medium', cal: 110, pro: 2, carb: 26, fat: 0 },
+      { id: 'almonds', name: 'Almonds', serving: '1oz', cal: 160, pro: 6, carb: 6, fat: 14 },
+      { id: 'turkey', name: 'Ground Turkey', serving: '4oz', cal: 160, pro: 20, carb: 0, fat: 8 }
+    ];
+
+    // ==================== EXERCISES ====================
+    const EXERCISES = {
+      push: [
+        { id: 'bench', name: 'Bench Press', muscle: 'Chest' },
+        { id: 'ohp', name: 'Overhead Press', muscle: 'Shoulders' },
+        { id: 'incline', name: 'Incline DB Press', muscle: 'Chest' },
+        { id: 'lateral', name: 'Lateral Raises', muscle: 'Shoulders' },
+        { id: 'dips', name: 'Tricep Dips', muscle: 'Triceps' },
+        { id: 'pushdown', name: 'Tricep Pushdowns', muscle: 'Triceps' }
+      ],
+      pull: [
+        { id: 'deadlift', name: 'Deadlifts', muscle: 'Back' },
+        { id: 'pullup', name: 'Pull-ups', muscle: 'Back' },
+        { id: 'row', name: 'Barbell Rows', muscle: 'Back' },
+        { id: 'face', name: 'Face Pulls', muscle: 'Rear Delts' },
+        { id: 'bicep', name: 'Bicep Curls', muscle: 'Biceps' },
+        { id: 'hammer', name: 'Hammer Curls', muscle: 'Biceps' }
+      ],
+      legs: [
+        { id: 'squat', name: 'Squats', muscle: 'Quads' },
+        { id: 'rdl', name: 'Romanian Deadlifts', muscle: 'Hamstrings' },
+        { id: 'legpress', name: 'Leg Press', muscle: 'Quads' },
+        { id: 'curl', name: 'Leg Curls', muscle: 'Hamstrings' },
+        { id: 'calf', name: 'Calf Raises', muscle: 'Calves' },
+        { id: 'lunge', name: 'Lunges', muscle: 'Glutes' }
+      ]
+    };
+
+    // ==================== HELPER FUNCTIONS ====================
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        state = { ...DEFAULT_STATE, ...JSON.parse(saved) };
+        checkDailyReset();
+      }
+    }
+
+    function checkDailyReset() {
+      const today = new Date().toISOString().split('T')[0];
+      if (state.lastDate !== today) {
+        const allCompleted = DAILY_TASKS.every(t => state.completed[t.id]);
+
+        if (!allCompleted) {
+          // Apply punishment
+          applyPunishment();
+        } else {
+          // Success! Increment streak, reset consecutive misses
+          state.streak++;
+          state.consecutiveMisses = 0;
+        }
+
+        // Reset daily tasks
+        state.completed = {};
+        state.meals = [];
+        state.waterCups = 0;
+        state.lastDate = today;
+        saveState();
+      }
+    }
+
+    function applyPunishment() {
+      state.consecutiveMisses++;
+
+      if (state.consecutiveMisses === 1) {
+        // Tier 1
+        state.xp = Math.max(0, state.xp - 200);
+        state.coins = Math.max(0, state.coins - 100);
+        state.stats.str = Math.max(1, state.stats.str - 10);
+        state.stats.end = Math.max(1, state.stats.end - 10);
+        state.stats.int = Math.max(1, state.stats.int - 5);
+        state.stats.cha = Math.max(1, state.stats.cha - 5);
+        state.stats.dis = Math.max(1, state.stats.dis - 5);
+        state.stats.wea = Math.max(1, state.stats.wea - 5);
+        state.debuff = {
+          type: 'WEAKENED',
+          xpPenalty: 0.3,
+          endsAt: Date.now() + (24 * 60 * 60 * 1000)
+        };
+        state.streak = 0;
+        showNotification('❌ DAY FAILED', 'Day 1 FAILED. You\'re still 260 lbs. Do better tomorrow.', 'penalty');
+      } else if (state.consecutiveMisses === 2) {
+        // Tier 2
+        state.xp = Math.max(0, state.xp - 400);
+        state.coins = Math.max(0, state.coins - 200);
+        state.stats.str = Math.max(1, state.stats.str - 20);
+        state.stats.end = Math.max(1, state.stats.end - 20);
+        state.stats.int = Math.max(1, state.stats.int - 10);
+        state.stats.cha = Math.max(1, state.stats.cha - 10);
+        state.stats.dis = Math.max(1, state.stats.dis - 10);
+        state.stats.wea = Math.max(1, state.stats.wea - 10);
+        state.debuff = {
+          type: 'SEVERELY WEAKENED',
+          xpPenalty: 0.6,
+          endsAt: Date.now() + (48 * 60 * 60 * 1000)
+        };
+        if (state.inventory.length > 0) {
+          state.inventory.splice(Math.floor(Math.random() * state.inventory.length), 1);
+        }
+        showNotification('💀 2 DAYS FAILED', '260 lbs isn\'t changing itself. Stop lying to yourself.', 'penalty');
+      } else {
+        // Tier 3
+        if (state.level > 1) state.level--;
+        state.xp = Math.max(0, state.xp - 600);
+        state.coins = Math.max(0, state.coins - 300);
+        state.stats.str = Math.max(1, state.stats.str - 30);
+        state.stats.end = Math.max(1, state.stats.end - 30);
+        state.stats.int = Math.max(1, state.stats.int - 20);
+        state.stats.cha = Math.max(1, state.stats.cha - 20);
+        state.stats.dis = Math.max(1, state.stats.dis - 20);
+        state.stats.wea = Math.max(1, state.stats.wea - 20);
+        state.debuff = {
+          type: 'DEVASTATED',
+          xpPenalty: 0.9,
+          endsAt: Date.now() + (72 * 60 * 60 * 1000)
+        };
+        for (let i = 0; i < 2; i++) {
+          if (state.inventory.length > 0) {
+            state.inventory.splice(Math.floor(Math.random() * state.inventory.length), 1);
+          }
+        }
+        showNotification('☠️ LEVEL DROP', '3 DAYS FAILED. Level dropped. You\'re proving you don\'t want 175 lbs. Change or quit.', 'penalty');
+      }
+    }
+
+    function toggleTask(taskId) {
+      state.completed[taskId] = !state.completed[taskId];
+
+      if (state.completed[taskId]) {
+        const task = DAILY_TASKS.find(t => t.id === taskId);
+        let xpGain = task.xp;
+
+        // Apply debuff penalty
+        if (state.debuff && Date.now() < state.debuff.endsAt) {
+          xpGain = Math.floor(xpGain * (1 - state.debuff.xpPenalty));
+        }
+
+        state.xp += xpGain;
+        state.coins += task.coins;
+
+        // Add stats
+        for (const [stat, value] of Object.entries(task.stats)) {
+          state.stats[stat] += value;
+        }
+
+        // Check level up
+        const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+        if (state.xp >= xpNeeded) {
+          state.level++;
+          state.xp -= xpNeeded;
+          showNotification('🎉 LEVEL UP!', `Level ${state.level} reached!`, 'success');
+        }
+
+        // Task streak
+        state.taskStreak[taskId] = (state.taskStreak[taskId] || 0) + 1;
+
+        playSound('complete');
+      }
+
+      saveState();
+      render();
+    }
+
+    function addFood(foodId) {
+      const food = FOOD_DATABASE.find(f => f.id === foodId);
+      if (!food) return;
+
+      state.meals.push({
+        ...food,
+        time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+      });
+
+      saveState();
+      render();
+    }
+
+    function addWater() {
+      state.waterCups++;
+      if (state.waterCups >= 8 && !state.completed.water) {
+        toggleTask('water');
+      }
+      saveState();
+      render();
+    }
+
+    function getTotals() {
+      const cal = state.meals.reduce((sum, m) => sum + m.cal, 0);
+      const pro = state.meals.reduce((sum, m) => sum + m.pro, 0);
+      const carb = state.meals.reduce((sum, m) => sum + m.carb, 0);
+      const fat = state.meals.reduce((sum, m) => sum + m.fat, 0);
+      return { cal, pro, carb, fat };
+    }
+
+    function secondsToMidnight() {
+      const now = new Date();
+      const options = { timeZone: 'America/New_York', hour12: false };
+      const etString = now.toLocaleString('en-US', options);
+      const etDate = new Date(etString);
+
+      const midnight = new Date(etDate);
+      midnight.setHours(23, 0, 0, 0); // 11:00 PM cutoff
+
+      if (etDate > midnight) {
+        midnight.setDate(midnight.getDate() + 1);
+      }
+
+      const diff = midnight - etDate;
+      return Math.max(0, Math.floor(diff / 1000));
+    }
+
+    function formatTime(seconds) {
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+      return `${h}h ${m}m ${s}s`;
+    }
+
+    function getTimerColor(seconds) {
+      if (seconds < 300) return 'bg-red-600 pulse-red'; // < 5 min
+      if (seconds < 600) return 'bg-red-500'; // < 10 min
+      if (seconds < 1800) return 'bg-orange-500'; // < 30 min
+      if (seconds < 7200) return 'bg-yellow-500'; // < 2 hours
+      return 'bg-green-500';
+    }
+
+    function showNotification(title, body, type = 'info') {
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification(title, { body, icon: '⚔️' });
+      }
+
+      // Visual notification
+      const notif = document.createElement('div');
+      notif.className = `fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 py-3 rounded-lg shadow-lg ${
+        type === 'success' ? 'bg-green-600' : type === 'penalty' ? 'bg-red-600' : 'bg-blue-600'
+      } text-white font-bold animate-bounce`;
+      notif.innerHTML = `<div class="text-sm">${title}</div><div class="text-xs opacity-90">${body}</div>`;
+      document.body.appendChild(notif);
+      setTimeout(() => notif.remove(), 4000);
+
+      state.lastNotification = Date.now();
+    }
+
+    function requestNotificationPermission() {
+      if ('Notification' in window && Notification.permission === 'default') {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            state.notificationsEnabled = true;
+            saveState();
+            showNotification('✅ Notifications Enabled', 'You\'ll receive reminders throughout the day', 'success');
+          }
+        });
+      }
+    }
+
+    function checkScheduledNotifications() {
+      const now = new Date();
+      const etOptions = { timeZone: 'America/New_York', hour12: false, hour: '2-digit', minute: '2-digit' };
+      const etTime = now.toLocaleString('en-US', etOptions);
+      const [hour, minute] = etTime.split(':').map(Number);
+      const currentMinutes = hour * 60 + minute;
+
+      const schedules = [
+        { time: 6 * 60 + 30, msg: 'Morning reminder: Bible + Plan your day', title: '☀️ MORNING' },
+        { time: 12 * 60, msg: 'Midday check: Have you worked out yet?', title: '🏋️ MIDDAY' },
+        { time: 15 * 60, msg: 'Afternoon status: Content creation progress?', title: '📱 AFTERNOON' },
+        { time: 19 * 60, msg: 'Evening check: Track calories, finish tasks', title: '🌆 EVENING' },
+        { time: 21 * 60, msg: '2 hours left - what\'s incomplete?', title: '⏰ WARNING' },
+        { time: 22 * 60 + 30, msg: '30 MINUTES LEFT. FINISH NOW.', title: '🚨 FINAL WARNING' },
+        { time: 22 * 60 + 50, msg: 'PENALTIES INCOMING. DO NOT QUIT.', title: '☠️ EMERGENCY' }
+      ];
+
+      for (const sched of schedules) {
+        if (currentMinutes === sched.time && (!state.lastNotification || Date.now() - state.lastNotification > 50000)) {
+          const incomplete = DAILY_TASKS.filter(t => !state.completed[t.id]).length;
+          showNotification(sched.title, `${sched.msg} (${incomplete} tasks left)`, incomplete > 3 ? 'penalty' : 'info');
+          break;
+        }
+      }
+    }
+
+    function playSound(type) {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      if (type === 'complete') {
+        osc.frequency.value = 800;
+        gain.gain.setValueAtTime(0.1, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.1);
+      }
+    }
+
+    function logWeight(weight) {
+      state.currentWeight = weight;
+      state.weightHistory.push({
+        date: new Date().toISOString().split('T')[0],
+        weight: weight
+      });
+      saveState();
+      render();
+      showNotification('⚖️ Weight Logged', `${weight} lbs recorded`, 'success');
+    }
+
+    // ==================== RENDER ====================
+    function render() {
+      const app = document.getElementById('app');
+      const totals = getTotals();
+      const remaining = secondsToMidnight();
+      const tasksComplete = DAILY_TASKS.filter(t => state.completed[t.id]).length;
+      const tasksTotal = DAILY_TASKS.length;
+      const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+      const xpPercent = (state.xp / xpNeeded) * 100;
+      const weightLost = state.startWeight - state.currentWeight;
+      const weightRemaining = state.currentWeight - state.targetWeight;
+
+      // Check if calories goal is met
+      if (totals.cal >= state.calorieTarget * 0.9 && totals.cal <= state.calorieTarget * 1.1 && !state.completed.calories) {
+        state.completed.calories = true;
+        saveState();
+      }
+
+      app.innerHTML = `
+        <!-- Header -->
+        <div class="bg-darker rounded-lg p-4 mb-4 border-2 border-gold">
+          <div class="flex justify-between items-center mb-2">
+            <div>
+              <h1 class="text-2xl font-bold accent-gold">⚔️ SENSE</h1>
+              <p class="text-xs text-gray-400">Discipline Is Freedom. No Excuses.</p>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold accent-red">${state.currentWeight} lbs</div>
+              <div class="text-xs text-gray-400">Target: ${state.targetWeight} lbs</div>
+            </div>
+          </div>
+
+          <!-- Weight Progress -->
+          <div class="mb-2">
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-400">Lost: ${weightLost} lbs</span>
+              <span class="text-gray-400">Remaining: ${weightRemaining} lbs</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-3">
+              <div class="stat-bar" style="width: ${((weightLost) / (state.startWeight - state.targetWeight)) * 100}%"></div>
+            </div>
+          </div>
+
+          <!-- Level & XP -->
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold">Level ${state.level} Hybrid</span>
+            <span class="text-sm">${state.xp}/${xpNeeded} XP</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2 mb-2">
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: ${xpPercent}%"></div>
+          </div>
+
+          <!-- Streak & Coins -->
+          <div class="flex justify-between text-sm">
+            <div>🔥 Streak: ${state.streak} days</div>
+            <div>💰 ${state.coins} coins</div>
+          </div>
+
+          ${state.debuff && Date.now() < state.debuff.endsAt ? `
+            <div class="mt-2 debuff-badge">
+              ⚠️ ${state.debuff.type} (-${state.debuff.xpPenalty * 100}% XP)
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="bg-darker rounded-lg p-4 mb-4 border-2 ${remaining < 300 ? 'border-red' : 'border-gray-600'} ${remaining < 300 ? 'shake' : ''}">
+          <div class="text-center">
+            <div class="text-xs text-gray-400 mb-1">TIME UNTIL 11:00 PM ET</div>
+            <div class="text-3xl font-bold mb-2">${formatTime(remaining)}</div>
+            <div class="w-full ${getTimerColor(remaining)} h-2 rounded-full mb-2"></div>
+            <div class="text-xs text-gray-300">${tasksComplete}/${tasksTotal} tasks complete</div>
+            ${tasksComplete < tasksTotal && remaining < 1800 ? `
+              <div class="text-xs accent-red font-bold mt-1">⚠️ ${tasksTotal - tasksComplete} TASKS INCOMPLETE</div>
+            ` : ''}
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">📊 Your Stats</h2>
+          <div class="grid grid-cols-3 gap-2 text-sm">
+            ${Object.entries(state.stats).map(([key, val]) => `
+              <div class="text-center">
+                <div class="text-gray-400 text-xs uppercase">${key}</div>
+                <div class="font-bold text-lg">${val}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Daily Tasks -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">✅ Daily Tasks</h2>
+          ${DAILY_TASKS.map(task => `
+            <div class="bg-dark rounded p-3 mb-2 flex items-center justify-between ${state.completed[task.id] ? 'opacity-50' : ''}">
+              <div class="flex-1">
+                <div class="font-bold">${task.name}</div>
+                <div class="text-xs text-gray-400">${task.desc} • +${task.xp} XP • +${task.coins} coins</div>
+                ${state.taskStreak[task.id] ? `<div class="text-xs accent-gold">🔥 ${state.taskStreak[task.id]} day streak</div>` : ''}
+              </div>
+              <button
+                onclick="toggleTask('${task.id}')"
+                class="ml-3 px-4 py-2 rounded font-bold ${state.completed[task.id] ? 'bg-green-600' : 'bg-gray-600 hover:bg-gray-500'}"
+              >
+                ${state.completed[task.id] ? '✓' : 'DO'}
+              </button>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Nutrition Tracker -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">🍽️ Nutrition (${totals.cal}/${state.calorieTarget} cal)</h2>
+
+          <!-- Macros -->
+          <div class="mb-3 grid grid-cols-3 gap-2 text-xs">
+            <div class="text-center">
+              <div class="text-gray-400">Protein</div>
+              <div class="font-bold ${totals.pro >= state.proteinTarget ? 'text-green-400' : 'text-yellow-400'}">${totals.pro}/${state.proteinTarget}g</div>
+            </div>
+            <div class="text-center">
+              <div class="text-gray-400">Carbs</div>
+              <div class="font-bold">${totals.carb}/${state.carbTarget}g</div>
+            </div>
+            <div class="text-center">
+              <div class="text-gray-400">Fats</div>
+              <div class="font-bold">${totals.fat}/${state.fatTarget}g</div>
+            </div>
+          </div>
+
+          <!-- Calorie Bar -->
+          <div class="w-full bg-gray-700 rounded-full h-3 mb-3">
+            <div class="h-3 rounded-full ${totals.cal > state.calorieTarget * 1.1 ? 'bg-red-500' : 'bg-green-500'}"
+                 style="width: ${Math.min(100, (totals.cal / state.calorieTarget) * 100)}%"></div>
+          </div>
+
+          <!-- Quick Add Foods -->
+          <div class="mb-3">
+            <div class="text-xs text-gray-400 mb-2">Quick Add:</div>
+            <div class="grid grid-cols-3 gap-2">
+              ${FOOD_DATABASE.slice(0, 6).map(food => `
+                <button onclick="addFood('${food.id}')" class="bg-dark hover:bg-gray-700 rounded px-2 py-1 text-xs">
+                  ${food.name}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Meals Log -->
+          ${state.meals.length > 0 ? `
+            <div class="text-xs space-y-1">
+              <div class="text-gray-400 mb-1">Today's meals:</div>
+              ${state.meals.slice(-5).map(m => `
+                <div class="bg-dark rounded px-2 py-1 flex justify-between">
+                  <span>${m.name} (${m.serving})</span>
+                  <span class="text-gray-400">${m.cal} cal</span>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Water Tracker -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">💧 Water (${state.waterCups}/8 cups)</h2>
+          <div class="flex gap-2 mb-2">
+            ${Array(8).fill(0).map((_, i) => `
+              <div class="w-8 h-8 rounded-full ${i < state.waterCups ? 'bg-blue-500' : 'bg-gray-700'}"></div>
+            `).join('')}
+          </div>
+          <button onclick="addWater()" class="w-full bg-blue-600 hover:bg-blue-500 rounded py-2 font-bold">
+            + Add Cup
+          </button>
+        </div>
+
+        <!-- Workout Logger -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">💪 Today's Workout: ${state.currentDay.toUpperCase()}</h2>
+          <div class="text-xs space-y-1 mb-3">
+            ${EXERCISES[state.currentDay].map(ex => `
+              <div class="bg-dark rounded px-2 py-1 flex justify-between">
+                <span>${ex.name}</span>
+                <span class="text-gray-400">${ex.muscle}</span>
+              </div>
+            `).join('')}
+          </div>
+          <div class="flex gap-2">
+            ${['push', 'pull', 'legs'].map(day => `
+              <button
+                onclick="state.currentDay='${day}'; saveState(); render();"
+                class="flex-1 px-3 py-2 rounded text-sm font-bold ${state.currentDay === day ? 'bg-red-600' : 'bg-gray-700 hover:bg-gray-600'}"
+              >
+                ${day.toUpperCase()}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Weight Logger -->
+        <div class="bg-darker rounded-lg p-4 mb-4">
+          <h2 class="font-bold mb-3 accent-gold">⚖️ Log Weight</h2>
+          <div class="flex gap-2">
+            <input
+              type="number"
+              id="weightInput"
+              placeholder="${state.currentWeight}"
+              class="flex-1 bg-dark rounded px-3 py-2 text-white"
+              step="0.1"
+            />
+            <button
+              onclick="const w = parseFloat(document.getElementById('weightInput').value); if(w) logWeight(w);"
+              class="px-4 py-2 bg-gold text-black font-bold rounded hover:bg-yellow-500"
+            >
+              LOG
+            </button>
+          </div>
+          ${state.weightHistory.length > 1 ? `
+            <div class="mt-3 text-xs text-gray-400">
+              Last 7 days: ${state.weightHistory.slice(-7).map(w => `${w.weight} lbs`).join(', ')}
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Notifications -->
+        ${!state.notificationsEnabled ? `
+          <div class="bg-darker rounded-lg p-4 mb-4 border-2 border-yellow-500">
+            <h2 class="font-bold mb-2 text-yellow-400">🔔 Enable Notifications</h2>
+            <p class="text-xs text-gray-300 mb-3">Get 7 daily reminders to stay on track (6:30 AM, 12 PM, 3 PM, 7 PM, 9 PM, 10:30 PM, 10:50 PM)</p>
+            <button onclick="requestNotificationPermission()" class="w-full bg-yellow-600 hover:bg-yellow-500 rounded py-2 font-bold">
+              Enable Reminders
+            </button>
+          </div>
+        ` : ''}
+
+        <!-- Bottom Nav -->
+        <div class="fixed bottom-0 left-0 right-0 bg-darker border-t-2 border-gold flex">
+          <button class="flex-1 py-4 font-bold accent-gold">Home</button>
+          <button class="flex-1 py-4 font-bold text-gray-400">Stats</button>
+          <button class="flex-1 py-4 font-bold text-gray-400">Profile</button>
+        </div>
+      `;
+    }
+
+    // ==================== INIT ====================
+    loadState();
+    render();
+
+    // Update timer every second
+    setInterval(() => {
+      render();
+      if (state.notificationsEnabled) {
+        checkScheduledNotifications();
+      }
+    }, 1000);
+
+    // Make functions global for onclick
+    window.toggleTask = toggleTask;
+    window.addFood = addFood;
+    window.addWater = addWater;
+    window.requestNotificationPermission = requestNotificationPermission;
+    window.logWeight = logWeight;
+    window.state = state;
+    window.saveState = saveState;
+    window.render = render;
+  </script>
+</body>
+</html>

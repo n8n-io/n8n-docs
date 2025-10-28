@@ -9,10 +9,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --dark-green: #18230F;
-      --forest: #27391C;
-      --green: #255F38;
-      --teal: #1F7D53;
+      --dark-blue: #19183B;
+      --teal: #708993;
+      --mint: #A1C2BB;
+      --light-mint: #E7F2EF;
     }
 
     * {
@@ -20,54 +20,56 @@
     }
 
     body {
-      background: linear-gradient(135deg, #18230F 0%, #27391C 100%);
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(39, 57, 28, 0.6);
+      background: rgba(112, 137, 147, 0.2);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(31, 125, 83, 0.3);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(161, 194, 187, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(25, 24, 59, 0.2);
     }
 
     .glass-dark {
-      background: rgba(24, 35, 15, 0.9);
+      background: rgba(25, 24, 59, 0.9);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(31, 125, 83, 0.2);
+      border: 1px solid rgba(112, 137, 147, 0.3);
     }
 
     .status-window {
-      background: rgba(39, 57, 28, 0.8);
+      background: rgba(231, 242, 239, 0.95);
       backdrop-filter: blur(30px);
-      border: 2px solid rgba(31, 125, 83, 0.4);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(161, 194, 187, 0.5);
+      box-shadow: 0 10px 40px rgba(25, 24, 59, 0.2);
     }
 
-    .text-teal { color: #1F7D53; }
-    .text-green { color: #255F38; }
-    .text-light { color: #E8F5E9; }
-    .bg-teal { background: #1F7D53; }
-    .bg-green { background: #255F38; }
-    .border-teal { border-color: #1F7D53; }
+    .text-teal { color: #708993; }
+    .text-mint { color: #A1C2BB; }
+    .text-light { color: #E7F2EF; }
+    .text-dark { color: #19183B; }
+    .bg-teal { background: #708993; }
+    .bg-mint { background: #A1C2BB; }
+    .border-teal { border-color: #708993; }
+    .border-mint { border-color: #A1C2BB; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #255F38 0%, #1F7D53 100%);
+      background: linear-gradient(90deg, #708993 0%, #A1C2BB 100%);
       height: 10px;
       border-radius: 5px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(31, 125, 83, 0.4);
+      box-shadow: 0 2px 8px rgba(161, 194, 187, 0.4);
     }
 
     .progress-container {
-      background: rgba(24, 35, 15, 0.5);
+      background: rgba(25, 24, 59, 0.3);
       border-radius: 5px;
       overflow: hidden;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
       color: white;
       font-weight: 600;
       border: none;
@@ -75,44 +77,44 @@
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.3);
+      box-shadow: 0 4px 12px rgba(112, 137, 147, 0.3);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(31, 125, 83, 0.5);
+      box-shadow: 0 6px 20px rgba(112, 137, 147, 0.5);
     }
 
     .btn-success {
-      background: rgba(31, 125, 83, 0.3);
-      color: #1F7D53;
-      border: 2px solid #1F7D53;
+      background: rgba(161, 194, 187, 0.3);
+      color: #708993;
+      border: 2px solid #A1C2BB;
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #18230F 0%, #255F38 100%);
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
       color: white;
     }
 
     .task-card {
-      background: rgba(39, 57, 28, 0.7);
+      background: rgba(231, 242, 239, 0.9);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(31, 125, 83, 0.3);
+      border: 1px solid rgba(161, 194, 187, 0.3);
       transition: all 0.3s ease;
     }
 
     .task-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      border-color: #1F7D53;
+      box-shadow: 0 8px 24px rgba(25, 24, 59, 0.15);
+      border-color: #A1C2BB;
     }
 
     .task-card.completed {
-      background: rgba(31, 125, 83, 0.2);
-      border: 2px solid #1F7D53;
+      background: rgba(161, 194, 187, 0.3);
+      border: 2px solid #A1C2BB;
     }
 
     .mission-badge {
@@ -126,15 +128,15 @@
     }
 
     .badge-extra {
-      background: rgba(37, 95, 56, 0.3);
-      color: #1F7D53;
-      border: 2px solid #255F38;
+      background: rgba(112, 137, 147, 0.3);
+      color: #708993;
+      border: 2px solid #708993;
     }
 
     .badge-weekly {
-      background: rgba(31, 125, 83, 0.3);
-      color: #1F7D53;
-      border: 2px solid #1F7D53;
+      background: rgba(161, 194, 187, 0.3);
+      color: #708993;
+      border: 2px solid #A1C2BB;
     }
 
     .timer-urgent {
@@ -149,13 +151,13 @@
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
       color: white;
       padding: 6px 16px;
       border-radius: 24px;
       font-weight: 700;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.4);
+      box-shadow: 0 4px 12px rgba(112, 137, 147, 0.4);
     }
 
     .tab {
@@ -164,20 +166,20 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      background: rgba(39, 57, 28, 0.5);
-      color: #1F7D53;
+      background: rgba(112, 137, 147, 0.2);
+      color: #708993;
       font-size: 12px;
     }
 
     .tab.active {
-      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
       color: white;
-      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.4);
+      box-shadow: 0 4px 12px rgba(25, 24, 59, 0.4);
     }
 
     .reward-item {
-      background: rgba(39, 57, 28, 0.8);
-      border: 2px solid rgba(31, 125, 83, 0.4);
+      background: rgba(231, 242, 239, 0.9);
+      border: 2px solid rgba(161, 194, 187, 0.4);
       border-radius: 16px;
       padding: 16px;
       transition: all 0.3s ease;
@@ -185,25 +187,25 @@
 
     .reward-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-      border-color: #1F7D53;
+      box-shadow: 0 12px 32px rgba(25, 24, 59, 0.2);
+      border-color: #708993;
     }
 
     .reward-item.owned {
       opacity: 0.5;
-      border-color: #255F38;
+      border-color: #A1C2BB;
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(39, 57, 28, 0.95);
+      background: rgba(231, 242, 239, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(31, 125, 83, 0.5);
+      box-shadow: 0 8px 32px rgba(25, 24, 59, 0.2);
+      border: 1px solid rgba(161, 194, 187, 0.5);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -215,8 +217,8 @@
     }
 
     .workout-card {
-      background: rgba(39, 57, 28, 0.7);
-      border: 1px solid rgba(31, 125, 83, 0.3);
+      background: rgba(231, 242, 239, 0.8);
+      border: 1px solid rgba(161, 194, 187, 0.3);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
@@ -228,7 +230,7 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 8px;
-      background: rgba(24, 35, 15, 0.5);
+      background: rgba(25, 24, 59, 0.1);
     }
   </style>
 </head>
@@ -610,25 +612,25 @@
       str: {
         name: 'Strength',
         desc: 'Physical power',
-        color: '#1F7D53',
+        color: '#708993',
         gains: 'Workouts, lifting'
       },
       end: {
         name: 'Endurance',
         desc: 'Stamina',
-        color: '#255F38',
+        color: '#A1C2BB',
         gains: 'Workouts, consistency'
       },
       int: {
         name: 'Intelligence',
         desc: 'Knowledge',
-        color: '#1F7D53',
+        color: '#708993',
         gains: 'AI learning, Bible, content'
       },
       dis: {
         name: 'Discipline',
         desc: 'Self-control',
-        color: '#255F38',
+        color: '#A1C2BB',
         gains: 'All tasks, streaks'
       }
     };
@@ -1077,7 +1079,7 @@
 
             <div class="glass rounded-2xl p-6 mb-4">
               <h2 class="text-lg font-bold text-light mb-4">
-                <span class="mission-badge badge-epic" style="background: rgba(31,125,83,0.3); border-color: #1F7D53;">EPIC</span> Epic
+                <span class="mission-badge badge-epic" style="background: rgba(25,24,59,0.2); color: #19183B; border: 2px solid #19183B;">EPIC</span> Epic
               </h2>
               ${epicMissions.map(mission => {
                 const completed = state.extraMissions[mission.id];

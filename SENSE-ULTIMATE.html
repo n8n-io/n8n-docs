@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENSE - Your Life RPG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --dark-green: #18230F;
+      --forest: #27391C;
+      --green: #255F38;
+      --teal: #1F7D53;
+    }
+
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #18230F 0%, #27391C 100%);
+      min-height: 100vh;
+    }
+
+    .glass {
+      background: rgba(39, 57, 28, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(31, 125, 83, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .glass-dark {
+      background: rgba(24, 35, 15, 0.9);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(31, 125, 83, 0.2);
+    }
+
+    .status-window {
+      background: rgba(39, 57, 28, 0.8);
+      backdrop-filter: blur(30px);
+      border: 2px solid rgba(31, 125, 83, 0.4);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .text-teal { color: #1F7D53; }
+    .text-green { color: #255F38; }
+    .text-light { color: #E8F5E9; }
+    .bg-teal { background: #1F7D53; }
+    .bg-green { background: #255F38; }
+    .border-teal { border-color: #1F7D53; }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #255F38 0%, #1F7D53 100%);
+      height: 10px;
+      border-radius: 5px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(31, 125, 83, 0.4);
+    }
+
+    .progress-container {
+      background: rgba(24, 35, 15, 0.5);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(31, 125, 83, 0.5);
+    }
+
+    .btn-success {
+      background: rgba(31, 125, 83, 0.3);
+      color: #1F7D53;
+      border: 2px solid #1F7D53;
+    }
+
+    .btn-reward {
+      background: linear-gradient(135deg, #18230F 0%, #255F38 100%);
+      color: white;
+    }
+
+    .task-card {
+      background: rgba(39, 57, 28, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(31, 125, 83, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .task-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-color: #1F7D53;
+    }
+
+    .task-card.completed {
+      background: rgba(31, 125, 83, 0.2);
+      border: 2px solid #1F7D53;
+    }
+
+    .mission-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-extra {
+      background: rgba(37, 95, 56, 0.3);
+      color: #1F7D53;
+      border: 2px solid #255F38;
+    }
+
+    .badge-weekly {
+      background: rgba(31, 125, 83, 0.3);
+      color: #1F7D53;
+      border: 2px solid #1F7D53;
+    }
+
+    .timer-urgent {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      color: white;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.02); }
+    }
+
+    .level-badge {
+      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 24px;
+      font-weight: 700;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.4);
+    }
+
+    .tab {
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(39, 57, 28, 0.5);
+      color: #1F7D53;
+      font-size: 12px;
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #255F38 0%, #1F7D53 100%);
+      color: white;
+      box-shadow: 0 4px 12px rgba(31, 125, 83, 0.4);
+    }
+
+    .reward-item {
+      background: rgba(39, 57, 28, 0.8);
+      border: 2px solid rgba(31, 125, 83, 0.4);
+      border-radius: 16px;
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .reward-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      border-color: #1F7D53;
+    }
+
+    .reward-item.owned {
+      opacity: 0.5;
+      border-color: #255F38;
+    }
+
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(39, 57, 28, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(31, 125, 83, 0.5);
+      z-index: 9999;
+      animation: slideInRight 0.4s ease-out;
+      max-width: 300px;
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .workout-card {
+      background: rgba(39, 57, 28, 0.7);
+      border: 1px solid rgba(31, 125, 83, 0.3);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .workout-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      background: rgba(24, 35, 15, 0.5);
+    }
+  </style>
+</head>
+<body class="p-4 pb-24">
+  <div id="app" class="max-w-md mx-auto"></div>
+
+  <script>
+    const STORAGE_KEY = 'sense_ultimate_v4';
+    const DEFAULT_STATE = {
+      currentWeight: 260,
+      targetWeight: 175,
+      startWeight: 260,
+      weightHistory: [],
+      lastWeighIn: null,
+
+      level: 1,
+      xp: 0,
+      coins: 0,
+      streak: 0,
+      consecutiveMisses: 0,
+
+      // Only 4 stats, all start at 0
+      stats: {
+        str: 0,  // Strength
+        end: 0,  // Endurance
+        int: 0,  // Intelligence
+        dis: 0   // Discipline
+      },
+
+      debuff: null,
+      completed: {},
+      taskStreak: {},
+
+      // Calorie tracking
+      manualCalories: 0,
+      manualProtein: 0,
+      manualCarbs: 0,
+      manualFats: 0,
+      calorieTarget: 2100,
+
+      currentDay: 'push',
+      shortFormCount: 0,
+
+      extraMissions: {},
+      rewards: [],
+      lastDate: new Date().toISOString().split('T')[0],
+      currentTab: 'home'
+    };
+
+    let state = { ...DEFAULT_STATE };
+
+    // Daily tasks - NO long-form content, short-form is 2 videos
+    const DAILY_TASKS = [
+      {
+        id: 'bible',
+        name: '📖 Read Bible',
+        desc: '15 minutes',
+        xp: 50,
+        coins: 20,
+        stats: {dis: 5, int: 3}
+      },
+      {
+        id: 'workout',
+        name: '💪 Complete Workout',
+        desc: 'Push/Pull/Legs',
+        xp: 100,
+        coins: 50,
+        stats: {str: 10, end: 10, dis: 5}
+      },
+      {
+        id: 'ai',
+        name: '🤖 Learn AI',
+        desc: '30-60 min',
+        xp: 75,
+        coins: 30,
+        stats: {int: 10, dis: 3}
+      },
+      {
+        id: 'short',
+        name: '📱 Short-Form (2 videos)',
+        desc: 'Create 2 short videos',
+        xp: 80,
+        coins: 50,
+        stats: {int: 5, dis: 5}
+      },
+      {
+        id: 'calories',
+        name: '🍽️ Track Calories',
+        desc: 'Log your food',
+        xp: 40,
+        coins: 25,
+        stats: {dis: 5}
+      }
+    ];
+
+    // Extra missions focused on main goals
+    const EXTRA_MISSIONS = [
+      // Extra Daily
+      {
+        id: 'second_workout',
+        name: 'Double Training',
+        desc: 'Complete a second workout session',
+        type: 'extra',
+        xp: 150,
+        coins: 75,
+        stats: {str: 10, end: 10},
+        cooldown: 24
+      },
+      {
+        id: 'extra_bible',
+        name: 'Deep Study',
+        desc: 'Read an additional Bible chapter',
+        type: 'extra',
+        xp: 50,
+        coins: 25,
+        stats: {dis: 5, int: 3},
+        cooldown: 24
+      },
+      {
+        id: 'long_form',
+        name: 'Long-Form Content',
+        desc: 'Create YouTube/Blog content',
+        type: 'extra',
+        xp: 120,
+        coins: 80,
+        stats: {int: 10, dis: 5},
+        cooldown: 24
+      },
+      {
+        id: 'ai_project',
+        name: 'AI Project',
+        desc: 'Build something with AI',
+        type: 'extra',
+        xp: 150,
+        coins: 100,
+        stats: {int: 15, dis: 10},
+        cooldown: 24
+      },
+
+      // Weekly
+      {
+        id: 'perfect_week',
+        name: 'Perfect Week',
+        desc: 'Complete all daily tasks for 7 days',
+        type: 'weekly',
+        xp: 500,
+        coins: 250,
+        stats: {dis: 20},
+        cooldown: 168
+      },
+      {
+        id: 'content_week',
+        name: 'Content Streak',
+        desc: 'Create content 7 days straight',
+        type: 'weekly',
+        xp: 400,
+        coins: 200,
+        stats: {int: 15, dis: 10},
+        cooldown: 168
+      },
+
+      // Epic
+      {
+        id: 'weight_10',
+        name: 'First 10 Pounds',
+        desc: 'Lose 10 lbs (260 → 250)',
+        type: 'epic',
+        xp: 1000,
+        coins: 500,
+        stats: {str: 15, end: 15, dis: 20},
+        cooldown: 0
+      },
+      {
+        id: 'level_10',
+        name: 'Level 10',
+        desc: 'Reach Level 10',
+        type: 'epic',
+        xp: 1500,
+        coins: 750,
+        stats: {dis: 25},
+        cooldown: 0
+      },
+      {
+        id: 'month_streak',
+        name: '30-Day Streak',
+        desc: 'Maintain 30 days',
+        type: 'epic',
+        xp: 2000,
+        coins: 1000,
+        stats: {dis: 30},
+        cooldown: 0
+      }
+    ];
+
+    // Lifestyle rewards in store
+    const REWARDS = [
+      {
+        id: 'day_off',
+        name: 'Day Off Pass',
+        desc: 'Take 1 day off without penalties (protects streak)',
+        price: 500,
+        type: 'consumable',
+        icon: '🏖️'
+      },
+      {
+        id: 'cheat_meal',
+        name: 'Cheat Meal',
+        desc: 'Enjoy a guilt-free cheat meal',
+        price: 300,
+        type: 'consumable',
+        icon: '🍕'
+      },
+      {
+        id: 'movie_night',
+        name: 'Movie Night',
+        desc: 'Relax with a movie night',
+        price: 200,
+        type: 'consumable',
+        icon: '🎬'
+      },
+      {
+        id: 'gaming_session',
+        name: '2-Hour Gaming',
+        desc: 'Guilt-free gaming session',
+        price: 250,
+        type: 'consumable',
+        icon: '🎮'
+      },
+      {
+        id: 'sleep_in',
+        name: 'Sleep In',
+        desc: 'Skip morning routine, sleep in',
+        price: 150,
+        type: 'consumable',
+        icon: '😴'
+      },
+      {
+        id: 'takeout',
+        name: 'Takeout Meal',
+        desc: 'Order your favorite food',
+        price: 200,
+        type: 'consumable',
+        icon: '🥡'
+      },
+      {
+        id: 'social_media',
+        name: 'Social Media Hour',
+        desc: '1 hour of mindless scrolling',
+        price: 100,
+        type: 'consumable',
+        icon: '📱'
+      },
+      {
+        id: 'rest_day',
+        name: 'Rest Day',
+        desc: 'Skip workout, full recovery day',
+        price: 400,
+        type: 'consumable',
+        icon: '🛋️'
+      }
+    ];
+
+    // Workout knowledge base
+    const WORKOUT_KB = {
+      push: [
+        {
+          name: 'Bench Press',
+          muscle: 'Chest',
+          desc: 'Lie on bench, lower bar to chest, press up',
+          tips: 'Keep feet flat, arch lower back slightly',
+          img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Overhead Press',
+          muscle: 'Shoulders',
+          desc: 'Press barbell from shoulders overhead',
+          tips: 'Keep core tight, don\'t lean back',
+          img: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Incline Dumbbell Press',
+          muscle: 'Upper Chest',
+          desc: 'Press dumbbells on incline bench',
+          tips: 'Set bench to 30-45 degrees',
+          img: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Lateral Raises',
+          muscle: 'Shoulders',
+          desc: 'Raise dumbbells to sides',
+          tips: 'Slight bend in elbows, control the weight',
+          img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Tricep Dips',
+          muscle: 'Triceps',
+          desc: 'Lower body between parallel bars',
+          tips: 'Lean forward slightly, full range of motion',
+          img: 'https://images.unsplash.com/photo-1597347316833-f0b3d5d0e622?w=400&h=300&fit=crop'
+        }
+      ],
+      pull: [
+        {
+          name: 'Deadlifts',
+          muscle: 'Back/Hamstrings',
+          desc: 'Lift barbell from ground to standing',
+          tips: 'Keep back straight, drive through heels',
+          img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Pull-ups',
+          muscle: 'Back/Lats',
+          desc: 'Pull body up to bar',
+          tips: 'Full hang, pull chin over bar',
+          img: 'https://images.unsplash.com/photo-1598632640487-6ea4a4e8b963?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Barbell Rows',
+          muscle: 'Back',
+          desc: 'Row barbell to lower chest',
+          tips: 'Hinge at hips, keep back flat',
+          img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Face Pulls',
+          muscle: 'Rear Delts',
+          desc: 'Pull rope to face level',
+          tips: 'External rotation at end, squeeze',
+          img: 'https://images.unsplash.com/photo-1574680088814-a04e3e4e6e9a?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Bicep Curls',
+          muscle: 'Biceps',
+          desc: 'Curl weight to shoulders',
+          tips: 'Don\'t swing, control the negative',
+          img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=300&fit=crop'
+        }
+      ],
+      legs: [
+        {
+          name: 'Squats',
+          muscle: 'Quads/Glutes',
+          desc: 'Lower hips below parallel',
+          tips: 'Knees track over toes, chest up',
+          img: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Romanian Deadlifts',
+          muscle: 'Hamstrings',
+          desc: 'Hinge at hips, lower bar to shins',
+          tips: 'Slight knee bend, feel hamstring stretch',
+          img: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Leg Press',
+          muscle: 'Quads',
+          desc: 'Press weight with legs',
+          tips: 'Feet shoulder width, full range',
+          img: 'https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Leg Curls',
+          muscle: 'Hamstrings',
+          desc: 'Curl weight to glutes',
+          tips: 'Control the weight, squeeze at top',
+          img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop'
+        },
+        {
+          name: 'Calf Raises',
+          muscle: 'Calves',
+          desc: 'Rise up on toes',
+          tips: 'Full stretch, pause at top',
+          img: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop'
+        }
+      ]
+    };
+
+    const STAT_INFO = {
+      str: {
+        name: 'Strength',
+        desc: 'Physical power',
+        color: '#1F7D53',
+        gains: 'Workouts, lifting'
+      },
+      end: {
+        name: 'Endurance',
+        desc: 'Stamina',
+        color: '#255F38',
+        gains: 'Workouts, consistency'
+      },
+      int: {
+        name: 'Intelligence',
+        desc: 'Knowledge',
+        color: '#1F7D53',
+        gains: 'AI learning, Bible, content'
+      },
+      dis: {
+        name: 'Discipline',
+        desc: 'Self-control',
+        color: '#255F38',
+        gains: 'All tasks, streaks'
+      }
+    };
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        state = { ...DEFAULT_STATE, ...JSON.parse(saved) };
+        checkDailyReset();
+      }
+    }
+
+    function checkDailyReset() {
+      const today = new Date().toISOString().split('T')[0];
+      if (state.lastDate !== today) {
+        const allCompleted = DAILY_TASKS.every(t => state.completed[t.id]);
+
+        if (!allCompleted) {
+          // Check for day off pass
+          const hasPass = state.rewards.some(r => r.id === 'day_off' && !r.used);
+          if (hasPass) {
+            const pass = state.rewards.find(r => r.id === 'day_off' && !r.used);
+            pass.used = true;
+            showToast('Day Off Pass Used', 'Your streak is protected!', 'success');
+          } else {
+            applyPunishment();
+          }
+        } else {
+          state.streak++;
+          state.consecutiveMisses = 0;
+        }
+
+        state.completed = {};
+        state.shortFormCount = 0;
+        state.manualCalories = 0;
+        state.manualProtein = 0;
+        state.manualCarbs = 0;
+        state.manualFats = 0;
+        state.lastDate = today;
+        saveState();
+      }
+    }
+
+    function applyPunishment() {
+      state.consecutiveMisses++;
+      state.streak = 0;
+
+      if (state.consecutiveMisses === 1) {
+        state.xp = Math.max(0, state.xp - 200);
+        state.coins = Math.max(0, state.coins - 100);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(0, state.stats[key] - 10);
+        });
+      } else if (state.consecutiveMisses === 2) {
+        state.xp = Math.max(0, state.xp - 400);
+        state.coins = Math.max(0, state.coins - 200);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(0, state.stats[key] - 20);
+        });
+      } else {
+        if (state.level > 1) state.level--;
+        state.xp = Math.max(0, state.xp - 600);
+        state.coins = Math.max(0, state.coins - 300);
+        Object.keys(state.stats).forEach(key => {
+          state.stats[key] = Math.max(0, state.stats[key] - 30);
+        });
+      }
+    }
+
+    function toggleTask(taskId) {
+      state.completed[taskId] = !state.completed[taskId];
+
+      if (state.completed[taskId]) {
+        const task = DAILY_TASKS.find(t => t.id === taskId);
+        state.xp += task.xp;
+        state.coins += task.coins;
+
+        for (const [stat, value] of Object.entries(task.stats || {})) {
+          state.stats[stat] += value;
+        }
+
+        checkLevelUp();
+        playSound('complete');
+        showToast(task.name, `+${task.xp} XP, +${task.coins} coins`, 'success');
+      }
+
+      saveState();
+      renderStatic();
+    }
+
+    function checkLevelUp() {
+      const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+      if (state.xp >= xpNeeded) {
+        state.level++;
+        state.xp -= xpNeeded;
+        showToast('Level Up!', `You reached level ${state.level}`, 'success');
+        return true;
+      }
+      return false;
+    }
+
+    function completeExtraMission(missionId) {
+      const mission = EXTRA_MISSIONS.find(m => m.id === missionId);
+      if (!mission) return;
+
+      if (state.extraMissions[missionId]) {
+        const lastCompletion = state.extraMissions[missionId];
+        const hoursPassed = (Date.now() - lastCompletion) / (1000 * 60 * 60);
+        if (hoursPassed < mission.cooldown) {
+          showToast('On Cooldown', `Wait ${Math.ceil(mission.cooldown - hoursPassed)} hours`, 'error');
+          return;
+        }
+      }
+
+      state.xp += mission.xp;
+      state.coins += mission.coins;
+
+      if (mission.stats) {
+        for (const [stat, value] of Object.entries(mission.stats)) {
+          state.stats[stat] += value;
+        }
+      }
+
+      state.extraMissions[missionId] = Date.now();
+      checkLevelUp();
+      playSound('complete');
+      showToast(`Mission: ${mission.name}`, `+${mission.xp} XP, +${mission.coins} coins`, 'success');
+
+      saveState();
+      renderStatic();
+    }
+
+    function buyReward(rewardId) {
+      const reward = REWARDS.find(r => r.id === rewardId);
+      if (!reward) return;
+
+      if (state.coins < reward.price) {
+        showToast('Not Enough Coins', `Need ${reward.price} coins`, 'error');
+        return;
+      }
+
+      state.coins -= reward.price;
+      state.rewards.push({ id: rewardId, acquired: Date.now(), used: false });
+
+      showToast('Reward Claimed!', reward.name, 'success');
+      playSound('complete');
+      saveState();
+      renderStatic();
+    }
+
+    function updateCalories() {
+      const cal = parseFloat(document.getElementById('calInput').value) || 0;
+      const pro = parseFloat(document.getElementById('proInput').value) || 0;
+      const carb = parseFloat(document.getElementById('carbInput').value) || 0;
+      const fat = parseFloat(document.getElementById('fatInput').value) || 0;
+
+      state.manualCalories += cal;
+      state.manualProtein += pro;
+      state.manualCarbs += carb;
+      state.manualFats += fat;
+
+      document.getElementById('calInput').value = '';
+      document.getElementById('proInput').value = '';
+      document.getElementById('carbInput').value = '';
+      document.getElementById('fatInput').value = '';
+
+      saveState();
+      renderStatic();
+    }
+
+    function logWeight(weight) {
+      const today = new Date().toISOString().split('T')[0];
+      const lastWeighIn = state.lastWeighIn;
+
+      if (lastWeighIn) {
+        const lastDate = new Date(lastWeighIn);
+        const daysSince = Math.floor((new Date(today) - lastDate) / (1000 * 60 * 60 * 24));
+
+        if (daysSince < 7) {
+          showToast('Too Soon', `Weigh in every 7 days (${7 - daysSince} days left)`, 'error');
+          return;
+        }
+      }
+
+      state.currentWeight = weight;
+      state.weightHistory.push({ date: today, weight: weight });
+      state.lastWeighIn = today;
+
+      saveState();
+      renderStatic();
+      showToast('Weight Logged', `${weight} lbs recorded`, 'success');
+    }
+
+    function secondsToMidnight() {
+      const now = new Date();
+      const options = { timeZone: 'America/New_York', hour12: false };
+      const etString = now.toLocaleString('en-US', options);
+      const etDate = new Date(etString);
+
+      const midnight = new Date(etDate);
+      midnight.setHours(24, 0, 0, 0); // 12:00 AM next day
+
+      if (etDate > midnight) {
+        midnight.setDate(midnight.getDate() + 1);
+      }
+
+      const diff = midnight - etDate;
+      return Math.max(0, Math.floor(diff / 1000));
+    }
+
+    function formatTime(seconds) {
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+      return `${h}h ${m}m ${s}s`;
+    }
+
+    function showToast(title, message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `
+        <div class="font-bold text-sm mb-1 text-light">${title}</div>
+        <div class="text-xs text-teal">${message}</div>
+      `;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    function playSound(type) {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      if (type === 'complete') {
+        osc.frequency.value = 800;
+        gain.gain.setValueAtTime(0.05, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.1);
+      }
+    }
+
+    function switchTab(tab) {
+      state.currentTab = tab;
+      renderStatic();
+    }
+
+    function addShortForm() {
+      state.shortFormCount++;
+      if (state.shortFormCount >= 2 && !state.completed.short) {
+        toggleTask('short');
+      }
+      saveState();
+      renderStatic();
+    }
+
+    // Separate render for static content (doesn't update every second)
+    function renderStatic() {
+      const app = document.getElementById('app');
+      const tasksComplete = DAILY_TASKS.filter(t => state.completed[t.id]).length;
+      const tasksTotal = DAILY_TASKS.length;
+      const xpNeeded = Math.floor(100 * Math.pow(state.level, 1.2));
+      const xpPercent = (state.xp / xpNeeded) * 100;
+      const weightLost = state.startWeight - state.currentWeight;
+      const weightRemaining = state.currentWeight - state.targetWeight;
+      const progressPercent = ((weightLost) / (state.startWeight - state.targetWeight)) * 100;
+
+      if (state.currentTab === 'home') {
+        app.innerHTML = `
+          <!-- Status Window (Static) -->
+          <div class="status-window rounded-2xl p-6 mb-4">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h1 class="text-3xl font-bold text-light mb-1">SENSE</h1>
+                <p class="text-sm text-teal">Level up your life</p>
+              </div>
+              <div class="level-badge text-lg">
+                LV ${state.level}
+              </div>
+            </div>
+
+            <!-- Weight -->
+            <div class="mb-4">
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold text-light">Weight</span>
+                <span class="text-teal">${state.currentWeight} → ${state.targetWeight} lbs</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: ${progressPercent}%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-teal mt-1">
+                <span>${weightLost} lbs lost</span>
+                <span>${weightRemaining} lbs to go</span>
+              </div>
+            </div>
+
+            <!-- XP -->
+            <div class="mb-4">
+              <div class="flex justify-between text-sm mb-2">
+                <span class="font-semibold text-light">Experience</span>
+                <span class="text-teal">${state.xp} / ${xpNeeded} XP</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: ${xpPercent}%"></div>
+              </div>
+            </div>
+
+            <!-- Coins & Streak -->
+            <div class="flex gap-6">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-light">${state.coins}</div>
+                <div class="text-xs text-teal">Coins</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-light">${state.streak}</div>
+                <div class="text-xs text-teal">Streak</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timer (will update separately) -->
+          <div id="timer" class="glass rounded-2xl p-5 mb-4 text-center timer-urgent">
+            <div class="text-sm font-semibold mb-2 opacity-90">⏰ Time Until 12:00 AM ET</div>
+            <div class="text-4xl font-bold mb-2">--:--:--</div>
+            <div class="text-sm opacity-90">${tasksComplete}/${tasksTotal} tasks complete</div>
+          </div>
+
+          <!-- Daily Tasks -->
+          <div class="glass rounded-2xl p-6 mb-4">
+            <h2 class="text-xl font-bold text-light mb-4">📋 Daily Tasks</h2>
+            ${DAILY_TASKS.map(task => `
+              <div class="task-card ${state.completed[task.id] ? 'completed' : ''}">
+                <div class="flex items-center justify-between">
+                  <div class="flex-1">
+                    <div class="font-semibold text-light mb-1">${task.name}</div>
+                    <div class="text-xs text-teal mb-2">${task.desc}</div>
+                    ${task.id === 'short' ? `
+                      <div class="text-xs text-teal mb-2">Videos: ${state.shortFormCount}/2</div>
+                      ${!state.completed.short && state.shortFormCount < 2 ? `
+                        <button onclick="addShortForm()" class="btn-primary text-xs px-3 py-1 mb-2">
+                          +1 Video
+                        </button>
+                      ` : ''}
+                    ` : ''}
+                    <div class="text-xs text-teal">+${task.xp} XP, +${task.coins} coins</div>
+                  </div>
+                  <button
+                    onclick="toggleTask('${task.id}')"
+                    class="${state.completed[task.id] ? 'btn-success' : 'btn-primary'}"
+                    style="min-width: 90px;"
+                    ${task.id === 'short' && state.shortFormCount < 2 ? 'disabled' : ''}
+                  >
+                    ${state.completed[task.id] ? '✓ Done' : 'Complete'}
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab active">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'missions') {
+        const extraMissions = EXTRA_MISSIONS.filter(m => m.type === 'extra');
+        const weeklyMissions = EXTRA_MISSIONS.filter(m => m.type === 'weekly');
+        const epicMissions = EXTRA_MISSIONS.filter(m => m.type === 'epic');
+
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-light mb-2">🎯 Extra Missions</h1>
+              <p class="text-sm text-teal">Bonus tasks for extra rewards</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-light mb-4">
+                <span class="mission-badge badge-extra">EXTRA</span> Daily Bonus
+              </h2>
+              ${extraMissions.map(mission => {
+                const lastCompletion = state.extraMissions[mission.id];
+                const hoursPassed = lastCompletion ? (Date.now() - lastCompletion) / (1000 * 60 * 60) : 999;
+                const canDo = hoursPassed >= mission.cooldown;
+                return `
+                  <div class="task-card ${!canDo ? 'opacity-50' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-light mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                        ${!canDo && lastCompletion ? `
+                          <div class="text-xs text-teal mt-1">⏱️ ${Math.ceil(mission.cooldown - hoursPassed)}h</div>
+                        ` : ''}
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo ? 'disabled' : ''}
+                      >
+                        ${canDo ? 'Complete' : 'Done'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-light mb-4">
+                <span class="mission-badge badge-weekly">WEEKLY</span> Weekly
+              </h2>
+              ${weeklyMissions.map(mission => {
+                const lastCompletion = state.extraMissions[mission.id];
+                const hoursPassed = lastCompletion ? (Date.now() - lastCompletion) / (1000 * 60 * 60) : 999;
+                const canDo = hoursPassed >= mission.cooldown;
+                return `
+                  <div class="task-card ${!canDo ? 'opacity-50' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-light mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo ? 'disabled' : ''}
+                      >
+                        ${canDo ? 'Complete' : 'Done'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-lg font-bold text-light mb-4">
+                <span class="mission-badge badge-epic" style="background: rgba(31,125,83,0.3); border-color: #1F7D53;">EPIC</span> Epic
+              </h2>
+              ${epicMissions.map(mission => {
+                const completed = state.extraMissions[mission.id];
+                let canDo = false;
+
+                if (mission.id === 'weight_10') canDo = state.currentWeight <= 250;
+                if (mission.id === 'level_10') canDo = state.level >= 10;
+                if (mission.id === 'month_streak') canDo = state.streak >= 30;
+
+                return `
+                  <div class="task-card ${completed ? 'opacity-50' : canDo ? 'border-2 border-teal' : ''}">
+                    <div class="flex items-center justify-between">
+                      <div class="flex-1">
+                        <div class="font-semibold text-light mb-1">${mission.name}</div>
+                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
+                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                      </div>
+                      <button
+                        onclick="completeExtraMission('${mission.id}')"
+                        class="${canDo && !completed ? 'btn-primary' : 'btn-success opacity-50'}"
+                        ${!canDo || completed ? 'disabled' : ''}
+                      >
+                        ${completed ? '✓ Claimed' : canDo ? 'Claim' : 'Locked'}
+                      </button>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab active">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'rewards') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-light mb-2">🏪 Lifestyle Rewards</h1>
+              <p class="text-sm text-teal">Earn rewards for staying disciplined</p>
+              <div class="text-3xl font-bold text-light mt-2">${state.coins} coins</div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 mb-4">
+              ${REWARDS.map(reward => {
+                const owned = state.rewards.filter(r => r.id === reward.id && !r.used).length;
+                return `
+                  <div class="reward-item">
+                    <div class="flex justify-between items-start mb-3">
+                      <div class="flex items-start gap-3 flex-1">
+                        <div class="text-4xl">${reward.icon}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-light text-lg mb-1">${reward.name}</div>
+                          <div class="text-sm text-teal mb-2">${reward.desc}</div>
+                          ${owned > 0 ? `
+                            <div class="text-xs text-teal">Owned: ${owned}</div>
+                          ` : ''}
+                        </div>
+                      </div>
+                      <div class="text-right ml-4">
+                        <div class="text-2xl font-bold text-light mb-1">${reward.price}</div>
+                        <div class="text-xs text-teal">coins</div>
+                      </div>
+                    </div>
+                    <button
+                      onclick="buyReward('${reward.id}')"
+                      class="${state.coins >= reward.price ? 'btn-reward' : 'btn-success opacity-50'} w-full"
+                      ${state.coins < reward.price ? 'disabled' : ''}
+                    >
+                      ${state.coins >= reward.price ? 'Claim Reward' : 'Not Enough Coins'}
+                    </button>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab active">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'stats') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-light mb-2">📊 Your Stats</h1>
+              <p class="text-sm text-teal">Track your growth</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              ${Object.entries(state.stats).map(([key, val]) => {
+                const info = STAT_INFO[key];
+                return `
+                  <div class="glass rounded-2xl p-5 text-center">
+                    <div class="text-5xl font-bold mb-2" style="color: ${info.color};">
+                      ${val}
+                    </div>
+                    <div class="text-sm font-semibold text-light">${info.name}</div>
+                    <div class="text-xs text-teal mt-1">${info.desc}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+              <h2 class="text-lg font-bold text-light mb-4">Stat Guide</h2>
+              <div class="space-y-3 text-sm">
+                ${Object.entries(STAT_INFO).map(([key, info]) => `
+                  <div class="flex items-start gap-3">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-white text-xs"
+                         style="background: ${info.color};">
+                      ${key.toUpperCase()}
+                    </div>
+                    <div>
+                      <div class="font-semibold text-light">${info.name}</div>
+                      <div class="text-xs text-teal">${info.desc}</div>
+                      <div class="text-xs text-teal mt-1">Gain: ${info.gains}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab active">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'track') {
+        const daysSinceWeighIn = state.lastWeighIn ?
+          Math.floor((new Date() - new Date(state.lastWeighIn)) / (1000 * 60 * 60 * 24)) : 999;
+        const canWeighIn = daysSinceWeighIn >= 7;
+
+        app.innerHTML = `
+          <div class="mb-20">
+            <!-- Calorie Calculator -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-light mb-4">🍽️ Calorie Tracker</h2>
+
+              <div class="mb-4">
+                <div class="flex justify-between text-sm mb-2">
+                  <span class="font-semibold text-light">Calories</span>
+                  <span class="text-teal">${state.manualCalories} / ${state.calorieTarget}</span>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: ${Math.min(100, (state.manualCalories / state.calorieTarget) * 100)}%"></div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 mb-4">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${state.manualProtein}g</div>
+                  <div class="text-xs text-teal">Protein</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${state.manualCarbs}g</div>
+                  <div class="text-xs text-teal">Carbs</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-teal">${state.manualFats}g</div>
+                  <div class="text-xs text-teal">Fats</div>
+                </div>
+              </div>
+
+              <div class="space-y-2 mb-3">
+                <input type="number" id="calInput" placeholder="Calories" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
+                <input type="number" id="proInput" placeholder="Protein (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
+                <input type="number" id="carbInput" placeholder="Carbs (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
+                <input type="number" id="fatInput" placeholder="Fats (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
+              </div>
+
+              <button onclick="updateCalories()" class="btn-primary w-full">Add to Daily Total</button>
+            </div>
+
+            <!-- Workout Knowledge Base -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-light mb-4">💪 Workout Library</h2>
+
+              <div class="flex gap-2 mb-4">
+                ${['push', 'pull', 'legs'].map(day => `
+                  <button
+                    onclick="state.currentDay='${day}'; saveState(); renderStatic();"
+                    class="${state.currentDay === day ? 'btn-primary' : 'task-card'} flex-1 py-2 text-sm font-bold text-light"
+                  >
+                    ${day.toUpperCase()}
+                  </button>
+                `).join('')}
+              </div>
+
+              <div class="space-y-3">
+                ${WORKOUT_KB[state.currentDay].map(ex => `
+                  <div class="workout-card">
+                    <img src="${ex.img}" alt="${ex.name}" class="workout-img" onerror="this.style.display='none'" />
+                    <div class="font-semibold text-light mb-1">${ex.name}</div>
+                    <div class="text-xs text-teal mb-1">Target: ${ex.muscle}</div>
+                    <div class="text-xs text-light mb-1">${ex.desc}</div>
+                    <div class="text-xs text-teal">💡 ${ex.tips}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Weekly Weight Check-in -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-light mb-4">⚖️ Weekly Weight Check-in</h2>
+
+              ${state.lastWeighIn ? `
+                <div class="text-sm text-teal mb-3">
+                  Last weigh-in: ${state.lastWeighIn} (${daysSinceWeighIn} days ago)
+                </div>
+              ` : ''}
+
+              ${!canWeighIn ? `
+                <div class="text-sm text-teal mb-3">
+                  ⏱️ Next weigh-in in ${7 - daysSinceWeighIn} days
+                </div>
+              ` : ''}
+
+              <div class="flex gap-2 mb-3">
+                <input
+                  type="number"
+                  id="weightInput"
+                  placeholder="${state.currentWeight}"
+                  class="flex-1 glass rounded-xl px-4 py-3 text-light font-semibold"
+                  step="0.1"
+                  ${!canWeighIn ? 'disabled' : ''}
+                />
+                <button
+                  onclick="const w = parseFloat(document.getElementById('weightInput').value); if(w) logWeight(w);"
+                  class="${canWeighIn ? 'btn-primary' : 'btn-success opacity-50'} px-6"
+                  ${!canWeighIn ? 'disabled' : ''}
+                >
+                  LOG
+                </button>
+              </div>
+
+              ${state.weightHistory.length > 0 ? `
+                <div class="text-xs text-teal">
+                  History: ${state.weightHistory.slice(-4).map(w => `${w.weight} lbs`).join(', ')}
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab active">Track</button>
+          </div>
+        `;
+      }
+    }
+
+    // Timer updates every second (separate from static content)
+    function updateTimer() {
+      const timerEl = document.getElementById('timer');
+      if (timerEl) {
+        const remaining = secondsToMidnight();
+        const tasksComplete = DAILY_TASKS.filter(t => state.completed[t.id]).length;
+        const tasksTotal = DAILY_TASKS.length;
+
+        timerEl.querySelector('.text-4xl').textContent = formatTime(remaining);
+        timerEl.querySelector('.text-sm.opacity-90:last-child').textContent = `${tasksComplete}/${tasksTotal} tasks complete`;
+      }
+    }
+
+    loadState();
+    renderStatic();
+    setInterval(updateTimer, 1000);
+
+    window.toggleTask = toggleTask;
+    window.completeExtraMission = completeExtraMission;
+    window.buyReward = buyReward;
+    window.updateCalories = updateCalories;
+    window.logWeight = logWeight;
+    window.switchTab = switchTab;
+    window.addShortForm = addShortForm;
+    window.state = state;
+    window.saveState = saveState;
+    window.renderStatic = renderStatic;
+  </script>
+</body>
+</html>

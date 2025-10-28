@@ -33,6 +33,33 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+## n8n@1.118.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.0...n8n@1.118.0) for this version.<br />
+**Release date:** 2025-10-27
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.117.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.1...n8n@1.117.2) for this version.<br />
+**Release date:** 2025-10-27
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 ## n8n@1.117.1
 
@@ -41,6 +68,19 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.0...n8n@1.117
 
 This release contains bug fixes.
 
+<div class="n8n-new-features" markdown> 
+### AI Workflow Builder is now available to Enterprise Cloud users.
+AI Workflow Builder turns prompts into workflows. Describe what you want to build, and n8n will generate a draft workflow by adding, configuring, and connecting nodes for you. From there, you can refine and expand the workflow directly in the editor.<br>
+<br>
+**What’s new:**
+
+- Previously available to Starter and Pro users, AI Workflow Builder is now accessible to Enterprise Cloud users as well, with 1,000 monthly credits.
+- Supported on n8n version 1.115+. **If you don’t see the feature yet, open /settings/usage to trigger a license refresh.**
+- We’ve fixed a bug and now cloud users on v1.117.1 onwards will have access to a more reliable builder.
+- We’re currently working on bringing AI Workflow Builder to self-hosted users as well, including Community, Business, and Enterprise.
+  
+</div>
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 ## n8n@1.117.0
@@ -48,9 +88,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117.0) for this version.<br />
 **Release date:** 2025-10-21
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -69,9 +107,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.1...n8n@1.116.2) for this version.<br />
 **Release date:** 2025-10-21
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
 
 This release contains a bug fix.
 

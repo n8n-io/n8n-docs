@@ -42,6 +42,10 @@ The OpenAI Responses API provides a range of [built-in tools](https://platform.o
 - **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
+/// note | Use with AI Agent node
+Built-in tools are only supported when using the OpenAI Chat Model node in combination with the AI Agent node. Built-in tools are not available when using the OpenAI Chat Model node in combination with a Basic LLM Chain node, for example.
+///
+
 ## Node options
 
 Use these options to further refine the node's behavior. The following options are available whether you use the Responses API to generate model output or not.

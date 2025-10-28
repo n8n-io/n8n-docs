@@ -9,10 +9,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --dark-blue: #19183B;
-      --teal: #708993;
-      --mint: #A1C2BB;
-      --light-mint: #E7F2EF;
+      --darkest: #181C14;
+      --dark: #3C3D37;
+      --medium: #697565;
+      --cream: #ECDFCC;
     }
 
     * {
@@ -20,101 +20,103 @@
     }
 
     body {
-      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
+      background: linear-gradient(135deg, #181C14 0%, #3C3D37 100%);
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(112, 137, 147, 0.2);
+      background: rgba(60, 61, 55, 0.6);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(161, 194, 187, 0.3);
-      box-shadow: 0 8px 32px 0 rgba(25, 24, 59, 0.2);
+      border: 1px solid rgba(105, 117, 101, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     }
 
     .glass-dark {
-      background: rgba(25, 24, 59, 0.9);
+      background: rgba(24, 28, 20, 0.95);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(112, 137, 147, 0.3);
+      border: 1px solid rgba(105, 117, 101, 0.3);
     }
 
     .status-window {
-      background: rgba(231, 242, 239, 0.95);
+      background: rgba(236, 223, 204, 0.98);
       backdrop-filter: blur(30px);
-      border: 2px solid rgba(161, 194, 187, 0.5);
-      box-shadow: 0 10px 40px rgba(25, 24, 59, 0.2);
+      border: 2px solid rgba(105, 117, 101, 0.6);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .text-teal { color: #708993; }
-    .text-mint { color: #A1C2BB; }
-    .text-light { color: #E7F2EF; }
-    .text-dark { color: #19183B; }
-    .bg-teal { background: #708993; }
-    .bg-mint { background: #A1C2BB; }
-    .border-teal { border-color: #708993; }
-    .border-mint { border-color: #A1C2BB; }
+    .text-cream { color: #ECDFCC; }
+    .text-medium { color: #697565; }
+    .text-dark { color: #181C14; }
+    .bg-cream { background: #ECDFCC; }
+    .bg-medium { background: #697565; }
+    .bg-dark { background: #3C3D37; }
+    .border-medium { border-color: #697565; }
+    .border-cream { border-color: #ECDFCC; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #708993 0%, #A1C2BB 100%);
+      background: linear-gradient(90deg, #697565 0%, #ECDFCC 100%);
       height: 10px;
       border-radius: 5px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(161, 194, 187, 0.4);
+      box-shadow: 0 2px 8px rgba(105, 117, 101, 0.5);
     }
 
     .progress-container {
-      background: rgba(25, 24, 59, 0.3);
+      background: rgba(24, 28, 20, 0.5);
       border-radius: 5px;
       overflow: hidden;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
-      color: white;
-      font-weight: 600;
+      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
+      color: #181C14;
+      font-weight: 700;
       border: none;
       border-radius: 12px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(112, 137, 147, 0.3);
+      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.4);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(112, 137, 147, 0.5);
+      box-shadow: 0 6px 20px rgba(105, 117, 101, 0.6);
     }
 
     .btn-success {
-      background: rgba(161, 194, 187, 0.3);
-      color: #708993;
-      border: 2px solid #A1C2BB;
+      background: rgba(236, 223, 204, 0.3);
+      color: #ECDFCC;
+      border: 2px solid #ECDFCC;
+      font-weight: 700;
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
-      color: white;
+      background: linear-gradient(135deg, #3C3D37 0%, #697565 100%);
+      color: #ECDFCC;
+      font-weight: 700;
     }
 
     .task-card {
-      background: rgba(231, 242, 239, 0.9);
+      background: rgba(236, 223, 204, 0.95);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(161, 194, 187, 0.3);
+      border: 1px solid rgba(105, 117, 101, 0.3);
       transition: all 0.3s ease;
     }
 
     .task-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(25, 24, 59, 0.15);
-      border-color: #A1C2BB;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border-color: #697565;
     }
 
     .task-card.completed {
-      background: rgba(161, 194, 187, 0.3);
-      border: 2px solid #A1C2BB;
+      background: rgba(105, 117, 101, 0.4);
+      border: 2px solid #697565;
     }
 
     .mission-badge {
@@ -128,15 +130,15 @@
     }
 
     .badge-extra {
-      background: rgba(112, 137, 147, 0.3);
-      color: #708993;
-      border: 2px solid #708993;
+      background: rgba(105, 117, 101, 0.3);
+      color: #ECDFCC;
+      border: 2px solid #697565;
     }
 
     .badge-weekly {
-      background: rgba(161, 194, 187, 0.3);
-      color: #708993;
-      border: 2px solid #A1C2BB;
+      background: rgba(236, 223, 204, 0.2);
+      color: #ECDFCC;
+      border: 2px solid #ECDFCC;
     }
 
     .timer-urgent {
@@ -151,35 +153,35 @@
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #708993 0%, #A1C2BB 100%);
-      color: white;
+      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
+      color: #181C14;
       padding: 6px 16px;
       border-radius: 24px;
-      font-weight: 700;
+      font-weight: 800;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(112, 137, 147, 0.4);
+      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.5);
     }
 
     .tab {
       padding: 10px 16px;
       border-radius: 12px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
-      background: rgba(112, 137, 147, 0.2);
-      color: #708993;
+      background: rgba(60, 61, 55, 0.5);
+      color: #ECDFCC;
       font-size: 12px;
     }
 
     .tab.active {
-      background: linear-gradient(135deg, #19183B 0%, #708993 100%);
-      color: white;
-      box-shadow: 0 4px 12px rgba(25, 24, 59, 0.4);
+      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
+      color: #181C14;
+      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.5);
     }
 
     .reward-item {
-      background: rgba(231, 242, 239, 0.9);
-      border: 2px solid rgba(161, 194, 187, 0.4);
+      background: rgba(236, 223, 204, 0.95);
+      border: 2px solid rgba(105, 117, 101, 0.5);
       border-radius: 16px;
       padding: 16px;
       transition: all 0.3s ease;
@@ -187,25 +189,25 @@
 
     .reward-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(25, 24, 59, 0.2);
-      border-color: #708993;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      border-color: #697565;
     }
 
     .reward-item.owned {
       opacity: 0.5;
-      border-color: #A1C2BB;
+      border-color: #697565;
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(231, 242, 239, 0.98);
+      background: rgba(236, 223, 204, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(25, 24, 59, 0.2);
-      border: 1px solid rgba(161, 194, 187, 0.5);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(105, 117, 101, 0.6);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -217,8 +219,8 @@
     }
 
     .workout-card {
-      background: rgba(231, 242, 239, 0.8);
-      border: 1px solid rgba(161, 194, 187, 0.3);
+      background: rgba(236, 223, 204, 0.95);
+      border: 1px solid rgba(105, 117, 101, 0.4);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
@@ -230,7 +232,7 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 8px;
-      background: rgba(25, 24, 59, 0.1);
+      background: rgba(60, 61, 55, 0.2);
     }
   </style>
 </head>
@@ -612,25 +614,25 @@
       str: {
         name: 'Strength',
         desc: 'Physical power',
-        color: '#708993',
+        color: '#697565',
         gains: 'Workouts, lifting'
       },
       end: {
         name: 'Endurance',
         desc: 'Stamina',
-        color: '#A1C2BB',
+        color: '#ECDFCC',
         gains: 'Workouts, consistency'
       },
       int: {
         name: 'Intelligence',
         desc: 'Knowledge',
-        color: '#708993',
+        color: '#697565',
         gains: 'AI learning, Bible, content'
       },
       dis: {
         name: 'Discipline',
         desc: 'Self-control',
-        color: '#A1C2BB',
+        color: '#ECDFCC',
         gains: 'All tasks, streaks'
       }
     };
@@ -856,8 +858,8 @@
       const toast = document.createElement('div');
       toast.className = 'toast';
       toast.innerHTML = `
-        <div class="font-bold text-sm mb-1 text-light">${title}</div>
-        <div class="text-xs text-teal">${message}</div>
+        <div class="font-bold text-sm mb-1 text-dark">${title}</div>
+        <div class="text-xs text-medium">${message}</div>
       `;
       document.body.appendChild(toast);
       setTimeout(() => toast.remove(), 3000);
@@ -910,8 +912,8 @@
           <div class="status-window rounded-2xl p-6 mb-4">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h1 class="text-3xl font-bold text-light mb-1">SENSE</h1>
-                <p class="text-sm text-teal">Level up your life</p>
+                <h1 class="text-3xl font-bold text-dark mb-1">SENSE</h1>
+                <p class="text-sm text-medium">Level up your life</p>
               </div>
               <div class="level-badge text-lg">
                 LV ${state.level}
@@ -921,13 +923,13 @@
             <!-- Weight -->
             <div class="mb-4">
               <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold text-light">Weight</span>
-                <span class="text-teal">${state.currentWeight} → ${state.targetWeight} lbs</span>
+                <span class="font-semibold text-dark">Weight</span>
+                <span class="text-medium">${state.currentWeight} → ${state.targetWeight} lbs</span>
               </div>
               <div class="progress-container">
                 <div class="progress-bar" style="width: ${progressPercent}%"></div>
               </div>
-              <div class="flex justify-between text-xs text-teal mt-1">
+              <div class="flex justify-between text-xs text-medium mt-1">
                 <span>${weightLost} lbs lost</span>
                 <span>${weightRemaining} lbs to go</span>
               </div>
@@ -936,8 +938,8 @@
             <!-- XP -->
             <div class="mb-4">
               <div class="flex justify-between text-sm mb-2">
-                <span class="font-semibold text-light">Experience</span>
-                <span class="text-teal">${state.xp} / ${xpNeeded} XP</span>
+                <span class="font-semibold text-dark">Experience</span>
+                <span class="text-medium">${state.xp} / ${xpNeeded} XP</span>
               </div>
               <div class="progress-container">
                 <div class="progress-bar" style="width: ${xpPercent}%"></div>
@@ -947,12 +949,12 @@
             <!-- Coins & Streak -->
             <div class="flex gap-6">
               <div class="text-center">
-                <div class="text-2xl font-bold text-light">${state.coins}</div>
-                <div class="text-xs text-teal">Coins</div>
+                <div class="text-2xl font-bold text-dark">${state.coins}</div>
+                <div class="text-xs text-medium">Coins</div>
               </div>
               <div class="text-center">
-                <div class="text-2xl font-bold text-light">${state.streak}</div>
-                <div class="text-xs text-teal">Streak</div>
+                <div class="text-2xl font-bold text-dark">${state.streak}</div>
+                <div class="text-xs text-medium">Streak</div>
               </div>
             </div>
           </div>
@@ -966,22 +968,22 @@
 
           <!-- Daily Tasks -->
           <div class="glass rounded-2xl p-6 mb-4">
-            <h2 class="text-xl font-bold text-light mb-4">📋 Daily Tasks</h2>
+            <h2 class="text-xl font-bold text-cream mb-4">📋 Daily Tasks</h2>
             ${DAILY_TASKS.map(task => `
               <div class="task-card ${state.completed[task.id] ? 'completed' : ''}">
                 <div class="flex items-center justify-between">
                   <div class="flex-1">
-                    <div class="font-semibold text-light mb-1">${task.name}</div>
-                    <div class="text-xs text-teal mb-2">${task.desc}</div>
+                    <div class="font-semibold text-dark mb-1">${task.name}</div>
+                    <div class="text-xs text-medium mb-2">${task.desc}</div>
                     ${task.id === 'short' ? `
-                      <div class="text-xs text-teal mb-2">Videos: ${state.shortFormCount}/2</div>
+                      <div class="text-xs text-medium mb-2">Videos: ${state.shortFormCount}/2</div>
                       ${!state.completed.short && state.shortFormCount < 2 ? `
                         <button onclick="addShortForm()" class="btn-primary text-xs px-3 py-1 mb-2">
                           +1 Video
                         </button>
                       ` : ''}
                     ` : ''}
-                    <div class="text-xs text-teal">+${task.xp} XP, +${task.coins} coins</div>
+                    <div class="text-xs text-medium">+${task.xp} XP, +${task.coins} coins</div>
                   </div>
                   <button
                     onclick="toggleTask('${task.id}')"
@@ -1012,12 +1014,12 @@
         app.innerHTML = `
           <div class="mb-20">
             <div class="status-window rounded-2xl p-6 mb-4">
-              <h1 class="text-2xl font-bold text-light mb-2">🎯 Extra Missions</h1>
-              <p class="text-sm text-teal">Bonus tasks for extra rewards</p>
+              <h1 class="text-2xl font-bold text-dark mb-2">🎯 Extra Missions</h1>
+              <p class="text-sm text-medium">Bonus tasks for extra rewards</p>
             </div>
 
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-lg font-bold text-light mb-4">
+              <h2 class="text-lg font-bold text-cream mb-4">
                 <span class="mission-badge badge-extra">EXTRA</span> Daily Bonus
               </h2>
               ${extraMissions.map(mission => {
@@ -1028,11 +1030,11 @@
                   <div class="task-card ${!canDo ? 'opacity-50' : ''}">
                     <div class="flex items-center justify-between">
                       <div class="flex-1">
-                        <div class="font-semibold text-light mb-1">${mission.name}</div>
-                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
-                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                        <div class="font-semibold text-dark mb-1">${mission.name}</div>
+                        <div class="text-xs text-medium mb-2">${mission.desc}</div>
+                        <div class="text-xs text-medium">+${mission.xp} XP, +${mission.coins} coins</div>
                         ${!canDo && lastCompletion ? `
-                          <div class="text-xs text-teal mt-1">⏱️ ${Math.ceil(mission.cooldown - hoursPassed)}h</div>
+                          <div class="text-xs text-medium mt-1">⏱️ ${Math.ceil(mission.cooldown - hoursPassed)}h</div>
                         ` : ''}
                       </div>
                       <button
@@ -1049,7 +1051,7 @@
             </div>
 
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-lg font-bold text-light mb-4">
+              <h2 class="text-lg font-bold text-cream mb-4">
                 <span class="mission-badge badge-weekly">WEEKLY</span> Weekly
               </h2>
               ${weeklyMissions.map(mission => {
@@ -1060,9 +1062,9 @@
                   <div class="task-card ${!canDo ? 'opacity-50' : ''}">
                     <div class="flex items-center justify-between">
                       <div class="flex-1">
-                        <div class="font-semibold text-light mb-1">${mission.name}</div>
-                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
-                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                        <div class="font-semibold text-dark mb-1">${mission.name}</div>
+                        <div class="text-xs text-medium mb-2">${mission.desc}</div>
+                        <div class="text-xs text-medium">+${mission.xp} XP, +${mission.coins} coins</div>
                       </div>
                       <button
                         onclick="completeExtraMission('${mission.id}')"
@@ -1078,8 +1080,8 @@
             </div>
 
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-lg font-bold text-light mb-4">
-                <span class="mission-badge badge-epic" style="background: rgba(25,24,59,0.2); color: #19183B; border: 2px solid #19183B;">EPIC</span> Epic
+              <h2 class="text-lg font-bold text-cream mb-4">
+                <span class="mission-badge badge-epic" style="background: rgba(105,117,101,0.3); color: #ECDFCC; border: 2px solid #697565;">EPIC</span> Epic
               </h2>
               ${epicMissions.map(mission => {
                 const completed = state.extraMissions[mission.id];
@@ -1093,9 +1095,9 @@
                   <div class="task-card ${completed ? 'opacity-50' : canDo ? 'border-2 border-teal' : ''}">
                     <div class="flex items-center justify-between">
                       <div class="flex-1">
-                        <div class="font-semibold text-light mb-1">${mission.name}</div>
-                        <div class="text-xs text-teal mb-2">${mission.desc}</div>
-                        <div class="text-xs text-teal">+${mission.xp} XP, +${mission.coins} coins</div>
+                        <div class="font-semibold text-dark mb-1">${mission.name}</div>
+                        <div class="text-xs text-medium mb-2">${mission.desc}</div>
+                        <div class="text-xs text-medium">+${mission.xp} XP, +${mission.coins} coins</div>
                       </div>
                       <button
                         onclick="completeExtraMission('${mission.id}')"
@@ -1123,9 +1125,9 @@
         app.innerHTML = `
           <div class="mb-20">
             <div class="status-window rounded-2xl p-6 mb-4">
-              <h1 class="text-2xl font-bold text-light mb-2">🏪 Lifestyle Rewards</h1>
-              <p class="text-sm text-teal">Earn rewards for staying disciplined</p>
-              <div class="text-3xl font-bold text-light mt-2">${state.coins} coins</div>
+              <h1 class="text-2xl font-bold text-dark mb-2">🏪 Lifestyle Rewards</h1>
+              <p class="text-sm text-medium">Earn rewards for staying disciplined</p>
+              <div class="text-3xl font-bold text-dark mt-2">${state.coins} coins</div>
             </div>
 
             <div class="grid grid-cols-1 gap-4 mb-4">
@@ -1137,16 +1139,16 @@
                       <div class="flex items-start gap-3 flex-1">
                         <div class="text-4xl">${reward.icon}</div>
                         <div class="flex-1">
-                          <div class="font-bold text-light text-lg mb-1">${reward.name}</div>
-                          <div class="text-sm text-teal mb-2">${reward.desc}</div>
+                          <div class="font-bold text-dark text-lg mb-1">${reward.name}</div>
+                          <div class="text-sm text-medium mb-2">${reward.desc}</div>
                           ${owned > 0 ? `
-                            <div class="text-xs text-teal">Owned: ${owned}</div>
+                            <div class="text-xs text-medium">Owned: ${owned}</div>
                           ` : ''}
                         </div>
                       </div>
                       <div class="text-right ml-4">
-                        <div class="text-2xl font-bold text-light mb-1">${reward.price}</div>
-                        <div class="text-xs text-teal">coins</div>
+                        <div class="text-2xl font-bold text-dark mb-1">${reward.price}</div>
+                        <div class="text-xs text-medium">coins</div>
                       </div>
                     </div>
                     <button
@@ -1174,8 +1176,8 @@
         app.innerHTML = `
           <div class="mb-20">
             <div class="status-window rounded-2xl p-6 mb-4">
-              <h1 class="text-2xl font-bold text-light mb-2">📊 Your Stats</h1>
-              <p class="text-sm text-teal">Track your growth</p>
+              <h1 class="text-2xl font-bold text-dark mb-2">📊 Your Stats</h1>
+              <p class="text-sm text-medium">Track your growth</p>
             </div>
 
             <div class="grid grid-cols-2 gap-4 mb-4">
@@ -1186,15 +1188,15 @@
                     <div class="text-5xl font-bold mb-2" style="color: ${info.color};">
                       ${val}
                     </div>
-                    <div class="text-sm font-semibold text-light">${info.name}</div>
-                    <div class="text-xs text-teal mt-1">${info.desc}</div>
+                    <div class="text-sm font-semibold text-dark">${info.name}</div>
+                    <div class="text-xs text-medium mt-1">${info.desc}</div>
                   </div>
                 `;
               }).join('')}
             </div>
 
             <div class="glass rounded-2xl p-6">
-              <h2 class="text-lg font-bold text-light mb-4">Stat Guide</h2>
+              <h2 class="text-lg font-bold text-cream mb-4">Stat Guide</h2>
               <div class="space-y-3 text-sm">
                 ${Object.entries(STAT_INFO).map(([key, info]) => `
                   <div class="flex items-start gap-3">
@@ -1203,9 +1205,9 @@
                       ${key.toUpperCase()}
                     </div>
                     <div>
-                      <div class="font-semibold text-light">${info.name}</div>
-                      <div class="text-xs text-teal">${info.desc}</div>
-                      <div class="text-xs text-teal mt-1">Gain: ${info.gains}</div>
+                      <div class="font-semibold text-dark">${info.name}</div>
+                      <div class="text-xs text-medium">${info.desc}</div>
+                      <div class="text-xs text-medium mt-1">Gain: ${info.gains}</div>
                     </div>
                   </div>
                 `).join('')}
@@ -1230,12 +1232,12 @@
           <div class="mb-20">
             <!-- Calorie Calculator -->
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-xl font-bold text-light mb-4">🍽️ Calorie Tracker</h2>
+              <h2 class="text-xl font-bold text-cream mb-4">🍽️ Calorie Tracker</h2>
 
               <div class="mb-4">
                 <div class="flex justify-between text-sm mb-2">
-                  <span class="font-semibold text-light">Calories</span>
-                  <span class="text-teal">${state.manualCalories} / ${state.calorieTarget}</span>
+                  <span class="font-semibold text-dark">Calories</span>
+                  <span class="text-medium">${state.manualCalories} / ${state.calorieTarget}</span>
                 </div>
                 <div class="progress-container">
                   <div class="progress-bar" style="width: ${Math.min(100, (state.manualCalories / state.calorieTarget) * 100)}%"></div>
@@ -1244,24 +1246,24 @@
 
               <div class="grid grid-cols-3 gap-3 mb-4">
                 <div class="text-center">
-                  <div class="text-2xl font-bold text-teal">${state.manualProtein}g</div>
-                  <div class="text-xs text-teal">Protein</div>
+                  <div class="text-2xl font-bold text-medium">${state.manualProtein}g</div>
+                  <div class="text-xs text-medium">Protein</div>
                 </div>
                 <div class="text-center">
-                  <div class="text-2xl font-bold text-teal">${state.manualCarbs}g</div>
-                  <div class="text-xs text-teal">Carbs</div>
+                  <div class="text-2xl font-bold text-medium">${state.manualCarbs}g</div>
+                  <div class="text-xs text-medium">Carbs</div>
                 </div>
                 <div class="text-center">
-                  <div class="text-2xl font-bold text-teal">${state.manualFats}g</div>
-                  <div class="text-xs text-teal">Fats</div>
+                  <div class="text-2xl font-bold text-medium">${state.manualFats}g</div>
+                  <div class="text-xs text-medium">Fats</div>
                 </div>
               </div>
 
               <div class="space-y-2 mb-3">
-                <input type="number" id="calInput" placeholder="Calories" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
-                <input type="number" id="proInput" placeholder="Protein (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
-                <input type="number" id="carbInput" placeholder="Carbs (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
-                <input type="number" id="fatInput" placeholder="Fats (g)" class="w-full glass rounded-lg px-4 py-3 text-light font-semibold" />
+                <input type="number" id="calInput" placeholder="Calories" class="w-full glass rounded-lg px-4 py-3 text-dark font-semibold" />
+                <input type="number" id="proInput" placeholder="Protein (g)" class="w-full glass rounded-lg px-4 py-3 text-dark font-semibold" />
+                <input type="number" id="carbInput" placeholder="Carbs (g)" class="w-full glass rounded-lg px-4 py-3 text-dark font-semibold" />
+                <input type="number" id="fatInput" placeholder="Fats (g)" class="w-full glass rounded-lg px-4 py-3 text-dark font-semibold" />
               </div>
 
               <button onclick="updateCalories()" class="btn-primary w-full">Add to Daily Total</button>
@@ -1269,13 +1271,13 @@
 
             <!-- Workout Knowledge Base -->
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-xl font-bold text-light mb-4">💪 Workout Library</h2>
+              <h2 class="text-xl font-bold text-cream mb-4">💪 Workout Library</h2>
 
               <div class="flex gap-2 mb-4">
                 ${['push', 'pull', 'legs'].map(day => `
                   <button
                     onclick="state.currentDay='${day}'; saveState(); renderStatic();"
-                    class="${state.currentDay === day ? 'btn-primary' : 'task-card'} flex-1 py-2 text-sm font-bold text-light"
+                    class="${state.currentDay === day ? 'btn-primary' : 'task-card'} flex-1 py-2 text-sm font-bold text-dark"
                   >
                     ${day.toUpperCase()}
                   </button>
@@ -1286,10 +1288,10 @@
                 ${WORKOUT_KB[state.currentDay].map(ex => `
                   <div class="workout-card">
                     <img src="${ex.img}" alt="${ex.name}" class="workout-img" onerror="this.style.display='none'" />
-                    <div class="font-semibold text-light mb-1">${ex.name}</div>
-                    <div class="text-xs text-teal mb-1">Target: ${ex.muscle}</div>
-                    <div class="text-xs text-light mb-1">${ex.desc}</div>
-                    <div class="text-xs text-teal">💡 ${ex.tips}</div>
+                    <div class="font-semibold text-dark mb-1">${ex.name}</div>
+                    <div class="text-xs text-medium mb-1">Target: ${ex.muscle}</div>
+                    <div class="text-xs text-dark mb-1">${ex.desc}</div>
+                    <div class="text-xs text-medium">💡 ${ex.tips}</div>
                   </div>
                 `).join('')}
               </div>
@@ -1297,16 +1299,16 @@
 
             <!-- Weekly Weight Check-in -->
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-xl font-bold text-light mb-4">⚖️ Weekly Weight Check-in</h2>
+              <h2 class="text-xl font-bold text-cream mb-4">⚖️ Weekly Weight Check-in</h2>
 
               ${state.lastWeighIn ? `
-                <div class="text-sm text-teal mb-3">
+                <div class="text-sm text-medium mb-3">
                   Last weigh-in: ${state.lastWeighIn} (${daysSinceWeighIn} days ago)
                 </div>
               ` : ''}
 
               ${!canWeighIn ? `
-                <div class="text-sm text-teal mb-3">
+                <div class="text-sm text-medium mb-3">
                   ⏱️ Next weigh-in in ${7 - daysSinceWeighIn} days
                 </div>
               ` : ''}
@@ -1316,7 +1318,7 @@
                   type="number"
                   id="weightInput"
                   placeholder="${state.currentWeight}"
-                  class="flex-1 glass rounded-xl px-4 py-3 text-light font-semibold"
+                  class="flex-1 glass rounded-xl px-4 py-3 text-dark font-semibold"
                   step="0.1"
                   ${!canWeighIn ? 'disabled' : ''}
                 />
@@ -1330,7 +1332,7 @@
               </div>
 
               ${state.weightHistory.length > 0 ? `
-                <div class="text-xs text-teal">
+                <div class="text-xs text-medium">
                   History: ${state.weightHistory.slice(-4).map(w => `${w.weight} lbs`).join(', ')}
                 </div>
               ` : ''}

@@ -64,6 +64,12 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [Oracle Database credential](/integrations/builtin/credentials/oracledb.md).
 - **Operation**: Execute SQL **Execute SQL**.
 - **Statement**: The SQL statement to execute. You can use n8n [expressions](/code/expressions.md) and positional parameters like `:1`, `:2`, or named parameters like `:name`, `:id` to use with [Use bind parameters](#use-bind-parameters).
+To run a PL/SQL procedure, for example `demo`, you can use:
+```sql
+BEGIN
+  demo;
+END;
+```
 
 #### Execute Statement options
 
@@ -131,7 +137,13 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list, or select **By Name** to enter the table name.
 - **Return All**: Whether to return all results or only up to a given limit.
 - **Limit**: The maximum number of items to return when **Return All** is disabled.
-- **Select Rows**: Set the conditions to select rows. Define a **Column**, **Operator**, and **Value**(as `json`) to match rows on. If you don't select anything, Oracle Database selects all rows.
+- **Select Rows**: Set the conditions to select rows. Define a **Column**, **Operator**, and **Value**(as `json`) to match rows on.
+The **Value** can vary by type — for example with Fixed mode:
+	- String: "hello", hellowithoutquotes, "hello with space"
+	- Number: 12
+	- JSON: { "key": "val" }
+
+If you don't select anything, Oracle Database selects all rows.
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. The **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 

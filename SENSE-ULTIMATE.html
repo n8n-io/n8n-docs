@@ -234,13 +234,85 @@
       margin-bottom: 8px;
       background: rgba(60, 61, 55, 0.2);
     }
+
+    /* Photo Modal */
+    .photo-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      padding: 20px;
+    }
+
+    .photo-modal-content {
+      background: rgba(236, 223, 204, 0.98);
+      border-radius: 20px;
+      padding: 24px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .photo-preview {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 16px 0;
+      background: rgba(60, 61, 55, 0.2);
+    }
+
+    .camera-input {
+      display: none;
+    }
+
+    /* Calendar View */
+    .calendar-day {
+      background: rgba(236, 223, 204, 0.95);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 2px solid rgba(105, 117, 101, 0.4);
+    }
+
+    .proof-image {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .proof-image:hover {
+      transform: scale(1.05);
+    }
+
+    .task-badge {
+      display: inline-block;
+      background: rgba(105, 117, 101, 0.3);
+      color: #181C14;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body class="p-4 pb-24">
   <div id="app" class="max-w-md mx-auto"></div>
 
   <script>
-    const STORAGE_KEY = 'sense_ultimate_v4';
+    const STORAGE_KEY = 'sense_ultimate_v5';
     const DEFAULT_STATE = {
       currentWeight: 260,
       targetWeight: 175,
@@ -265,6 +337,7 @@
       debuff: null,
       completed: {},
       taskStreak: {},
+      completionHistory: [],  // Store all task completions with photos and dates
 
       // Calorie tracking
       manualCalories: 0,
@@ -708,22 +781,124 @@
     }
 
     function toggleTask(taskId) {
-      state.completed[taskId] = !state.completed[taskId];
+      // If marking as complete, require photo proof
+      if (!state.completed[taskId]) {
+        showPhotoModal(taskId, 'daily');
+      } else {
+        // Uncompleting - just toggle and remove from history
+        state.completed[taskId] = false;
+        // Remove from today's history
+        const today = new Date().toISOString().split('T')[0];
+        state.completionHistory = state.completionHistory.filter(
+          h => !(h.date === today && h.taskId === taskId && h.taskType === 'daily')
+        );
+        saveState();
+        renderStatic();
+      }
+    }
 
-      if (state.completed[taskId]) {
-        const task = DAILY_TASKS.find(t => t.id === taskId);
-        state.xp += task.xp;
-        state.coins += task.coins;
+    function showPhotoModal(taskId, taskType = 'daily') {
+      const task = taskType === 'daily'
+        ? DAILY_TASKS.find(t => t.id === taskId)
+        : EXTRA_MISSIONS.find(m => m.id === taskId);
 
-        for (const [stat, value] of Object.entries(task.stats || {})) {
-          state.stats[stat] += value;
+      if (!task) return;
+
+      const modal = document.createElement('div');
+      modal.className = 'photo-modal';
+      modal.innerHTML = `
+        <div class="photo-modal-content">
+          <h2 class="text-2xl font-bold text-dark mb-2">📸 Proof Required</h2>
+          <p class="text-sm text-medium mb-4">Take a photo to verify: ${task.name}</p>
+
+          <input type="file" id="photoInput" class="camera-input" accept="image/*" capture="environment">
+          <img id="photoPreview" class="photo-preview" style="display: none;">
+
+          <div class="flex gap-2">
+            <button onclick="document.getElementById('photoInput').click()" class="btn-primary flex-1">
+              📷 Take Photo
+            </button>
+            <button onclick="closePhotoModal()" class="btn-success flex-1">
+              Cancel
+            </button>
+          </div>
+
+          <button id="confirmBtn" onclick="confirmTaskWithPhoto('${taskId}', '${taskType}')" class="btn-success w-full mt-3" style="display: none;">
+            ✓ Confirm Completion
+          </button>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      // Handle photo selection
+      document.getElementById('photoInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            const preview = document.getElementById('photoPreview');
+            preview.src = event.target.result;
+            preview.style.display = 'block';
+            document.getElementById('confirmBtn').style.display = 'block';
+            window.currentPhoto = event.target.result;
+          };
+          reader.readAsDataURL(file);
         }
+      });
+    }
 
-        checkLevelUp();
-        playSound('complete');
-        showToast(task.name, `+${task.xp} XP, +${task.coins} coins`, 'success');
+    function closePhotoModal() {
+      const modal = document.querySelector('.photo-modal');
+      if (modal) modal.remove();
+      window.currentPhoto = null;
+    }
+
+    function confirmTaskWithPhoto(taskId, taskType) {
+      if (!window.currentPhoto) {
+        showToast('No Photo', 'Please take a photo first', 'error');
+        return;
       }
 
+      const task = taskType === 'daily'
+        ? DAILY_TASKS.find(t => t.id === taskId)
+        : EXTRA_MISSIONS.find(m => m.id === taskId);
+
+      if (!task) return;
+
+      // Mark as complete
+      if (taskType === 'daily') {
+        state.completed[taskId] = true;
+      } else {
+        state.extraMissions[taskId] = Date.now();
+      }
+
+      // Add rewards
+      state.xp += task.xp;
+      state.coins += task.coins;
+
+      for (const [stat, value] of Object.entries(task.stats || {})) {
+        state.stats[stat] += value;
+      }
+
+      // Save to completion history with photo
+      const today = new Date().toISOString().split('T')[0];
+      state.completionHistory.push({
+        taskId: taskId,
+        taskType: taskType,
+        taskName: task.name,
+        date: today,
+        timestamp: Date.now(),
+        photo: window.currentPhoto,
+        xp: task.xp,
+        coins: task.coins
+      });
+
+      checkLevelUp();
+      playSound('complete');
+      showToast(task.name, `+${task.xp} XP, +${task.coins} coins`, 'success');
+
+      closePhotoModal();
       saveState();
       renderStatic();
     }
@@ -752,22 +927,8 @@
         }
       }
 
-      state.xp += mission.xp;
-      state.coins += mission.coins;
-
-      if (mission.stats) {
-        for (const [stat, value] of Object.entries(mission.stats)) {
-          state.stats[stat] += value;
-        }
-      }
-
-      state.extraMissions[missionId] = Date.now();
-      checkLevelUp();
-      playSound('complete');
-      showToast(`Mission: ${mission.name}`, `+${mission.xp} XP, +${mission.coins} coins`, 'success');
-
-      saveState();
-      renderStatic();
+      // Show photo modal for extra mission
+      showPhotoModal(missionId, 'extra');
     }
 
     function buyReward(rewardId) {
@@ -1023,6 +1184,7 @@
             <button onclick="switchTab('rewards')" class="tab">Rewards</button>
             <button onclick="switchTab('stats')" class="tab">Stats</button>
             <button onclick="switchTab('track')" class="tab">Track</button>
+            <button onclick="switchTab('profile')" class="tab">Profile</button>
           </div>
         `;
       } else if (state.currentTab === 'missions') {
@@ -1138,6 +1300,7 @@
             <button onclick="switchTab('rewards')" class="tab">Rewards</button>
             <button onclick="switchTab('stats')" class="tab">Stats</button>
             <button onclick="switchTab('track')" class="tab">Track</button>
+            <button onclick="switchTab('profile')" class="tab">Profile</button>
           </div>
         `;
       } else if (state.currentTab === 'rewards') {
@@ -1225,6 +1388,7 @@
             <button onclick="switchTab('rewards')" class="tab active">Rewards</button>
             <button onclick="switchTab('stats')" class="tab">Stats</button>
             <button onclick="switchTab('track')" class="tab">Track</button>
+            <button onclick="switchTab('profile')" class="tab">Profile</button>
           </div>
         `;
       } else if (state.currentTab === 'stats') {
@@ -1276,6 +1440,7 @@
             <button onclick="switchTab('rewards')" class="tab">Rewards</button>
             <button onclick="switchTab('stats')" class="tab active">Stats</button>
             <button onclick="switchTab('track')" class="tab">Track</button>
+            <button onclick="switchTab('profile')" class="tab">Profile</button>
           </div>
         `;
       } else if (state.currentTab === 'track') {
@@ -1409,6 +1574,110 @@
             <button onclick="switchTab('rewards')" class="tab">Rewards</button>
             <button onclick="switchTab('stats')" class="tab">Stats</button>
             <button onclick="switchTab('track')" class="tab active">Track</button>
+            <button onclick="switchTab('profile')" class="tab">Profile</button>
+          </div>
+        `;
+      } else if (state.currentTab === 'profile') {
+        // Group completions by date
+        const groupedByDate = {};
+        state.completionHistory.forEach(completion => {
+          if (!groupedByDate[completion.date]) {
+            groupedByDate[completion.date] = [];
+          }
+          groupedByDate[completion.date].push(completion);
+        });
+
+        // Sort dates in descending order (newest first)
+        const sortedDates = Object.keys(groupedByDate).sort((a, b) => b.localeCompare(a));
+
+        app.innerHTML = `
+          <div class="mb-20">
+            <div class="status-window rounded-2xl p-6 mb-4">
+              <h1 class="text-2xl font-bold text-dark mb-2">📅 Completion History</h1>
+              <p class="text-sm text-medium">Your verified task completions with photo proof</p>
+              <div class="flex gap-4 mt-3">
+                <div>
+                  <div class="text-2xl font-bold text-dark">${state.streak}</div>
+                  <div class="text-xs text-medium">Day Streak</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-dark">${state.completionHistory.length}</div>
+                  <div class="text-xs text-medium">Total Completions</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-dark">${sortedDates.length}</div>
+                  <div class="text-xs text-medium">Active Days</div>
+                </div>
+              </div>
+            </div>
+
+            ${sortedDates.length === 0 ? `
+              <div class="glass rounded-2xl p-8 text-center">
+                <div class="text-6xl mb-4">📸</div>
+                <h3 class="text-xl font-bold text-cream mb-2">No Completions Yet</h3>
+                <p class="text-sm text-medium">Complete tasks with photo proof to see your history here!</p>
+              </div>
+            ` : ''}
+
+            ${sortedDates.map(date => {
+              const completions = groupedByDate[date];
+              const dateObj = new Date(date);
+              const isToday = date === new Date().toISOString().split('T')[0];
+              const dayName = isToday ? 'Today' : dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+              const dateStr = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+              return `
+                <div class="glass rounded-2xl p-4 mb-4">
+                  <div class="flex justify-between items-center mb-3">
+                    <div>
+                      <h3 class="text-lg font-bold text-cream">${dayName}</h3>
+                      <p class="text-xs text-medium">${dateStr}</p>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-sm font-bold text-cream">${completions.length} tasks</div>
+                      <div class="text-xs text-medium">+${completions.reduce((sum, c) => sum + c.xp, 0)} XP</div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-3">
+                    ${completions.map(completion => `
+                      <div class="calendar-day">
+                        <div class="flex justify-between items-start mb-2">
+                          <div class="flex-1">
+                            <div class="font-bold text-dark mb-1">${completion.taskName}</div>
+                            <div class="flex gap-1 flex-wrap">
+                              <span class="task-badge">${completion.taskType.toUpperCase()}</span>
+                              <span class="task-badge">+${completion.xp} XP</span>
+                              <span class="task-badge">+${completion.coins} coins</span>
+                            </div>
+                          </div>
+                          <div class="text-xs text-medium">
+                            ${new Date(completion.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
+                          </div>
+                        </div>
+                        ${completion.photo ? `
+                          <img
+                            src="${completion.photo}"
+                            class="proof-image"
+                            onclick="viewFullImage('${completion.photo.replace(/'/g, "\\'")}')"
+                            alt="Task proof photo"
+                          />
+                        ` : ''}
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">Home</button>
+            <button onclick="switchTab('missions')" class="tab">Missions</button>
+            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
+            <button onclick="switchTab('stats')" class="tab">Stats</button>
+            <button onclick="switchTab('track')" class="tab">Track</button>
+            <button onclick="switchTab('profile')" class="tab active">Profile</button>
           </div>
         `;
       }
@@ -1445,6 +1714,25 @@
       }
     }
 
+    // View full-size image modal
+    function viewFullImage(imageSrc) {
+      const modal = document.createElement('div');
+      modal.className = 'photo-modal';
+      modal.onclick = function(e) {
+        if (e.target === modal) modal.remove();
+      };
+      modal.innerHTML = `
+        <div class="photo-modal-content" style="max-width: 90%; max-height: 90vh;">
+          <div class="flex justify-between items-center mb-3">
+            <h2 class="text-xl font-bold text-dark">Task Proof</h2>
+            <button onclick="this.closest('.photo-modal').remove()" class="text-dark font-bold text-2xl">&times;</button>
+          </div>
+          <img src="${imageSrc}" style="width: 100%; height: auto; border-radius: 12px; max-height: 70vh; object-fit: contain;">
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
     loadState();
     renderStatic();
     setInterval(updateTimer, 1000);
@@ -1457,6 +1745,9 @@
     window.logWeight = logWeight;
     window.switchTab = switchTab;
     window.addShortForm = addShortForm;
+    window.closePhotoModal = closePhotoModal;
+    window.confirmTaskWithPhoto = confirmTaskWithPhoto;
+    window.viewFullImage = viewFullImage;
     window.state = state;
     window.saveState = saveState;
     window.renderStatic = renderStatic;

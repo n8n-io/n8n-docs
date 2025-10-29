@@ -278,6 +278,7 @@
 
       extraMissions: {},
       rewards: [],
+      inventory: [],  // Store purchased items here
       lastDate: new Date().toISOString().split('T')[0],
       currentTab: 'home'
     };
@@ -427,13 +428,13 @@
       }
     ];
 
-    // Lifestyle rewards in store
+    // Lifestyle rewards in store - INCREASED PRICES
     const REWARDS = [
       {
         id: 'day_off',
         name: 'Day Off Pass',
         desc: 'Take 1 day off without penalties (protects streak)',
-        price: 500,
+        price: 1500,
         type: 'consumable',
         icon: '🏖️'
       },
@@ -441,7 +442,7 @@
         id: 'cheat_meal',
         name: 'Cheat Meal',
         desc: 'Enjoy a guilt-free cheat meal',
-        price: 300,
+        price: 800,
         type: 'consumable',
         icon: '🍕'
       },
@@ -449,7 +450,7 @@
         id: 'movie_night',
         name: 'Movie Night',
         desc: 'Relax with a movie night',
-        price: 200,
+        price: 600,
         type: 'consumable',
         icon: '🎬'
       },
@@ -457,7 +458,7 @@
         id: 'gaming_session',
         name: '2-Hour Gaming',
         desc: 'Guilt-free gaming session',
-        price: 250,
+        price: 700,
         type: 'consumable',
         icon: '🎮'
       },
@@ -465,7 +466,7 @@
         id: 'sleep_in',
         name: 'Sleep In',
         desc: 'Skip morning routine, sleep in',
-        price: 150,
+        price: 400,
         type: 'consumable',
         icon: '😴'
       },
@@ -473,7 +474,7 @@
         id: 'takeout',
         name: 'Takeout Meal',
         desc: 'Order your favorite food',
-        price: 200,
+        price: 600,
         type: 'consumable',
         icon: '🥡'
       },
@@ -481,7 +482,7 @@
         id: 'social_media',
         name: 'Social Media Hour',
         desc: '1 hour of mindless scrolling',
-        price: 100,
+        price: 300,
         type: 'consumable',
         icon: '📱'
       },
@@ -489,7 +490,7 @@
         id: 'rest_day',
         name: 'Rest Day',
         desc: 'Skip workout, full recovery day',
-        price: 400,
+        price: 1200,
         type: 'consumable',
         icon: '🛋️'
       }
@@ -781,7 +782,23 @@
       state.coins -= reward.price;
       state.rewards.push({ id: rewardId, acquired: Date.now(), used: false });
 
-      showToast('Reward Claimed!', reward.name, 'success');
+      showToast('Reward Purchased!', `${reward.name} added to inventory`, 'success');
+      playSound('complete');
+      saveState();
+      renderStatic();
+    }
+
+    function claimReward(rewardId, acquired) {
+      const reward = REWARDS.find(r => r.id === rewardId);
+      if (!reward) return;
+
+      // Find the specific item in inventory and mark as used
+      const item = state.rewards.find(r => r.id === rewardId && r.acquired === acquired && !r.used);
+      if (!item) return;
+
+      item.used = true;
+
+      showToast('Reward Claimed!', `Enjoy your ${reward.name}!`, 'success');
       playSound('complete');
       saveState();
       renderStatic();
@@ -1132,6 +1149,42 @@
               <div class="text-3xl font-bold text-dark mt-2">${state.coins} coins</div>
             </div>
 
+            <!-- Inventory Section -->
+            ${state.rewards.filter(r => !r.used).length > 0 ? `
+              <div class="glass rounded-2xl p-6 mb-4">
+                <h2 class="text-xl font-bold text-cream mb-4">🎒 Your Inventory</h2>
+                <div class="space-y-3">
+                  ${state.rewards.filter(r => !r.used).map(item => {
+                    const reward = REWARDS.find(rw => rw.id === item.id);
+                    if (!reward) return '';
+                    return `
+                      <div class="reward-item">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center gap-3 flex-1">
+                            <div class="text-3xl">${reward.icon}</div>
+                            <div class="flex-1">
+                              <div class="font-bold text-dark">${reward.name}</div>
+                              <div class="text-xs text-medium">${reward.desc}</div>
+                            </div>
+                          </div>
+                          <button
+                            onclick="claimReward('${item.id}', ${item.acquired})"
+                            class="btn-success px-6 py-2 text-sm"
+                          >
+                            Claim
+                          </button>
+                        </div>
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h2 class="text-xl font-bold text-cream mb-4">🛒 Store</h2>
+            </div>
+
             <div class="grid grid-cols-1 gap-4 mb-4">
               ${REWARDS.map(reward => {
                 const owned = state.rewards.filter(r => r.id === reward.id && !r.used).length;
@@ -1158,7 +1211,7 @@
                       class="${state.coins >= reward.price ? 'btn-reward' : 'btn-success opacity-50'} w-full"
                       ${state.coins < reward.price ? 'disabled' : ''}
                     >
-                      ${state.coins >= reward.price ? 'Claim Reward' : 'Not Enough Coins'}
+                      ${state.coins >= reward.price ? 'Buy & Add to Inventory' : 'Not Enough Coins'}
                     </button>
                   </div>
                 `;
@@ -1310,10 +1363,19 @@
               ` : ''}
 
               ${!canWeighIn ? `
-                <div class="text-sm text-medium mb-3">
-                  ⏱️ Next weigh-in in ${7 - daysSinceWeighIn} days
+                <div class="bg-medium rounded-xl p-4 mb-3">
+                  <div class="text-sm font-semibold text-cream mb-2">⏱️ Next Check-in Available In:</div>
+                  <div id="weighInTimer" class="text-2xl font-bold text-cream mb-3">--d --h --m</div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: ${(daysSinceWeighIn / 7) * 100}%"></div>
+                  </div>
+                  <div class="text-xs text-cream mt-2 opacity-75">${daysSinceWeighIn} of 7 days completed</div>
                 </div>
-              ` : ''}
+              ` : `
+                <div class="bg-medium rounded-xl p-4 mb-3">
+                  <div class="text-lg font-bold text-cream text-center">✅ Ready to Check In!</div>
+                </div>
+              `}
 
               <div class="flex gap-2 mb-3">
                 <input
@@ -1363,6 +1425,24 @@
         timerEl.querySelector('.text-4xl').textContent = formatTime(remaining);
         timerEl.querySelector('.text-sm.opacity-90:last-child').textContent = `${tasksComplete}/${tasksTotal} tasks complete`;
       }
+
+      // Update weight check-in timer
+      const weighInTimerEl = document.getElementById('weighInTimer');
+      if (weighInTimerEl && state.lastWeighIn) {
+        const lastDate = new Date(state.lastWeighIn);
+        const nextWeighIn = new Date(lastDate.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days later
+        const now = new Date();
+        const diff = nextWeighIn - now;
+
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          weighInTimerEl.textContent = `${days}d ${hours}h ${minutes}m`;
+        } else {
+          weighInTimerEl.textContent = 'Ready!';
+        }
+      }
     }
 
     loadState();
@@ -1372,6 +1452,7 @@
     window.toggleTask = toggleTask;
     window.completeExtraMission = completeExtraMission;
     window.buyReward = buyReward;
+    window.claimReward = claimReward;
     window.updateCalories = updateCalories;
     window.logWeight = logWeight;
     window.switchTab = switchTab;

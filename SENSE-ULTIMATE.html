@@ -10,11 +10,15 @@
 
     :root {
       --darkest: #0A1628;
-      --dark: #132F63;
+      --dark: #1A237E;
       --medium: #4A5F8C;
-      --gold: #FABB5A;
+      --gold: #FFD700;
       --cream: #F7F1EA;
-      --red: #F6554D;
+      --red: #FF1744;
+      --purple: #A02BBE;
+      --cyan: #00E5FF;
+      --teal: #1DE9B6;
+      --pink: #FF4081;
       --white: #FFFFFF;
     }
 
@@ -23,50 +27,67 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0A1628 0%, #132F63 100%);
+      background: linear-gradient(135deg, #0A1628 0%, #1A237E 50%, #311B92 100%);
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(19, 47, 99, 0.7);
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.8) 0%, rgba(74, 20, 140, 0.6) 100%);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(74, 95, 140, 0.4);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(160, 43, 190, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(160, 43, 190, 0.2),
+                  0 0 40px rgba(0, 229, 255, 0.1);
     }
 
     .glass-dark {
-      background: rgba(10, 22, 40, 0.95);
+      background: linear-gradient(135deg, rgba(10, 22, 40, 0.98) 0%, rgba(26, 35, 126, 0.95) 100%);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(74, 95, 140, 0.3);
+      border: 1px solid rgba(160, 43, 190, 0.3);
     }
 
     .status-window {
-      background: rgba(247, 241, 234, 0.98);
+      background: linear-gradient(135deg, rgba(247, 241, 234, 0.98) 0%, rgba(255, 215, 0, 0.1) 100%);
       backdrop-filter: blur(30px);
-      border: 2px solid rgba(250, 187, 90, 0.6);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 215, 0, 0.6);
+      box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3),
+                  0 0 60px rgba(160, 43, 190, 0.2);
     }
 
     .text-cream { color: #F7F1EA; }
-    .text-medium { color: #4A5F8C; }
+    .text-medium { color: #00E5FF; }
     .text-dark { color: #0A1628; }
-    .text-gold { color: #FABB5A; }
+    .text-gold { color: #FFD700; }
+    .text-purple { color: #A02BBE; }
+    .text-cyan { color: #00E5FF; }
     .text-white { color: #FFFFFF; }
     .bg-cream { background: #F7F1EA; }
     .bg-medium { background: #4A5F8C; }
-    .bg-dark { background: #132F63; }
-    .bg-gold { background: #FABB5A; }
-    .border-medium { border-color: #4A5F8C; }
+    .bg-dark { background: #1A237E; }
+    .bg-gold { background: #FFD700; }
+    .border-medium { border-color: #00E5FF; }
     .border-cream { border-color: #F7F1EA; }
-    .border-gold { border-color: #FABB5A; }
+    .border-gold { border-color: #FFD700; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #FABB5A 0%, #F7F1EA 100%);
-      height: 10px;
-      border-radius: 5px;
+      background: linear-gradient(90deg, #00E5FF 0%, #1DE9B6 50%, #FFD700 100%);
+      height: 12px;
+      border-radius: 6px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(250, 187, 90, 0.5);
+      box-shadow: 0 2px 12px rgba(0, 229, 255, 0.6),
+                  0 0 20px rgba(29, 233, 182, 0.4);
+      animation: progressGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes progressGlow {
+      0%, 100% {
+        box-shadow: 0 2px 12px rgba(0, 229, 255, 0.6),
+                    0 0 20px rgba(29, 233, 182, 0.4);
+      }
+      50% {
+        box-shadow: 0 2px 16px rgba(0, 229, 255, 0.9),
+                    0 0 30px rgba(29, 233, 182, 0.6);
+      }
     }
 
     .progress-container {
@@ -76,7 +97,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
       color: #0A1628;
       font-weight: 700;
       border: none;
@@ -84,50 +105,79 @@
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.4);
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5),
+                  0 0 25px rgba(255, 64, 129, 0.3);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(250, 187, 90, 0.6);
+      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.8),
+                  0 0 40px rgba(255, 64, 129, 0.5);
     }
 
     .btn-success {
-      background: rgba(247, 241, 234, 0.2);
-      color: #F7F1EA;
-      border: 2px solid #F7F1EA;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(160, 43, 190, 0.2) 100%);
+      color: #00E5FF;
+      border: 2px solid #00E5FF;
       font-weight: 700;
       border-radius: 12px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    }
+
+    .btn-success:hover {
+      border-color: #A02BBE;
+      color: #A02BBE;
+      box-shadow: 0 0 25px rgba(160, 43, 190, 0.5);
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #132F63 0%, #4A5F8C 100%);
-      color: #FABB5A;
+      background: linear-gradient(135deg, #A02BBE 0%, #D592E6 100%);
+      color: #FFFFFF;
       font-weight: 700;
+      box-shadow: 0 4px 15px rgba(160, 43, 190, 0.5);
     }
 
     .task-card {
-      background: rgba(247, 241, 234, 0.95);
+      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(255, 215, 0, 0.05) 100%);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(74, 95, 140, 0.3);
+      border: 1px solid rgba(0, 229, 255, 0.3);
       transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
     }
 
     .task-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      border-color: #FABB5A;
+      box-shadow: 0 8px 24px rgba(0, 229, 255, 0.4),
+                  0 0 30px rgba(160, 43, 190, 0.2);
+      border-color: #00E5FF;
     }
 
     .task-card.completed {
-      background: rgba(250, 187, 90, 0.3);
-      border: 2px solid #FABB5A;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.3) 0%, rgba(29, 233, 182, 0.3) 50%, rgba(255, 215, 0, 0.3) 100%);
+      border: 2px solid #1DE9B6;
+      box-shadow: 0 4px 20px rgba(29, 233, 182, 0.6),
+                  0 0 40px rgba(0, 229, 255, 0.4);
+      animation: taskComplete 0.5s ease-out;
+    }
+
+    @keyframes taskComplete {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .mission-badge {
@@ -141,36 +191,51 @@
     }
 
     .badge-extra {
-      background: rgba(74, 95, 140, 0.4);
-      color: #F7F1EA;
-      border: 2px solid #4A5F8C;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.3) 0%, rgba(160, 43, 190, 0.3) 100%);
+      color: #00E5FF;
+      border: 2px solid #00E5FF;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
     }
 
     .badge-weekly {
-      background: rgba(250, 187, 90, 0.2);
-      color: #FABB5A;
-      border: 2px solid #FABB5A;
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(255, 64, 129, 0.3) 100%);
+      color: #FFD700;
+      border: 2px solid #FFD700;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
     }
 
     .timer-urgent {
-      background: linear-gradient(135deg, #F6554D 0%, #dc2626 100%);
+      background: linear-gradient(135deg, #FF1744 0%, #F50057 50%, #C51162 100%);
       color: white;
       animation: pulse 2s infinite;
+      box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5),
+                  0 0 50px rgba(245, 0, 87, 0.3);
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.9; transform: scale(1.02); }
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5),
+                    0 0 50px rgba(245, 0, 87, 0.3);
+      }
+      50% {
+        opacity: 0.9;
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(255, 23, 68, 0.7),
+                    0 0 70px rgba(245, 0, 87, 0.5);
+      }
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
       color: #0A1628;
       padding: 6px 16px;
       border-radius: 24px;
       font-weight: 800;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.5);
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6),
+                  0 0 25px rgba(255, 64, 129, 0.4);
     }
 
     /* Shiny Streak Badge */
@@ -298,34 +363,46 @@
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
-      background: rgba(19, 47, 99, 0.5);
-      color: #F7F1EA;
+      background: linear-gradient(135deg, rgba(26, 35, 126, 0.5) 0%, rgba(74, 20, 140, 0.5) 100%);
+      color: #00E5FF;
       font-size: 12px;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+    }
+
+    .tab:hover {
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(160, 43, 190, 0.2) 100%);
+      border-color: #00E5FF;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
     }
 
     .tab.active {
-      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
       color: #0A1628;
-      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.5);
+      border: none;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6),
+                  0 0 25px rgba(255, 64, 129, 0.4);
     }
 
     .reward-item {
-      background: rgba(247, 241, 234, 0.95);
-      border: 2px solid rgba(74, 95, 140, 0.5);
+      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(255, 215, 0, 0.05) 100%);
+      border: 2px solid rgba(160, 43, 190, 0.3);
       border-radius: 16px;
       padding: 16px;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(160, 43, 190, 0.1);
     }
 
     .reward-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-      border-color: #FABB5A;
+      box-shadow: 0 12px 32px rgba(160, 43, 190, 0.4),
+                  0 0 40px rgba(255, 215, 0, 0.3);
+      border-color: #A02BBE;
+      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(160, 43, 190, 0.1) 100%);
     }
 
     .reward-item.owned {
-      opacity: 0.5;
-      border-color: #4A5F8C;
+      opacity: 0.6;
+      border-color: #00E5FF;
     }
 
     .toast {

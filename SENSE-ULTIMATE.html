@@ -173,6 +173,125 @@
       box-shadow: 0 4px 12px rgba(250, 187, 90, 0.5);
     }
 
+    /* Shiny Streak Badge */
+    .streak-badge {
+      position: relative;
+      background: linear-gradient(135deg, #FF6F00 0%, #FFB74D 50%, #FF6F00 100%);
+      padding: 16px 24px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 24px rgba(255, 111, 0, 0.5),
+                  0 0 40px rgba(255, 183, 77, 0.3),
+                  inset 0 2px 0 rgba(255, 255, 255, 0.3);
+      animation: streakPulse 2s ease-in-out infinite;
+      overflow: hidden;
+    }
+
+    .streak-badge::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: streakShine 3s linear infinite;
+    }
+
+    .streak-number {
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5),
+                   0 0 20px rgba(255, 183, 77, 0.8);
+      position: relative;
+      z-index: 1;
+    }
+
+    .streak-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes streakPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px rgba(255, 111, 0, 0.5),
+                    0 0 40px rgba(255, 183, 77, 0.3),
+                    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 32px rgba(255, 111, 0, 0.7),
+                    0 0 60px rgba(255, 183, 77, 0.5),
+                    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    @keyframes streakShine {
+      0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      }
+      100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+      }
+    }
+
+    /* Rank Badge */
+    .rank-badge {
+      position: relative;
+      padding: 12px 20px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+    }
+
+    .rank-badge::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: rankShine 4s linear infinite;
+    }
+
+    @keyframes rankShine {
+      0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      }
+      100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+      }
+    }
+
+    .rank-icon {
+      font-size: 28px;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .rank-name {
+      font-size: 18px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
     .tab {
       padding: 10px 16px;
       border-radius: 12px;
@@ -702,28 +821,124 @@
       str: {
         name: 'Strength',
         desc: 'Physical power',
-        color: '#697565',
+        color: '#F6554D',
         gains: 'Workouts, lifting'
       },
       end: {
         name: 'Endurance',
         desc: 'Stamina',
-        color: '#ECDFCC',
+        color: '#4A5F8C',
         gains: 'Workouts, consistency'
       },
       int: {
         name: 'Intelligence',
         desc: 'Knowledge',
-        color: '#697565',
+        color: '#FABB5A',
         gains: 'AI learning, Bible, content'
       },
       dis: {
         name: 'Discipline',
         desc: 'Self-control',
-        color: '#ECDFCC',
+        color: '#F7F1EA',
         gains: 'All tasks, streaks'
       }
     };
+
+    // Rank system based on total stats
+    const RANKS = [
+      {
+        name: 'Unranked',
+        icon: '⚪',
+        minStats: 0,
+        color: '#8B8B8B',
+        gradient: 'linear-gradient(135deg, #6B6B6B 0%, #8B8B8B 100%)'
+      },
+      {
+        name: 'Bronze',
+        icon: '🥉',
+        minStats: 50,
+        color: '#CD7F32',
+        gradient: 'linear-gradient(135deg, #CD7F32 0%, #E8A87C 100%)'
+      },
+      {
+        name: 'Silver',
+        icon: '🥈',
+        minStats: 150,
+        color: '#C0C0C0',
+        gradient: 'linear-gradient(135deg, #A8A8A8 0%, #E8E8E8 100%)'
+      },
+      {
+        name: 'Gold',
+        icon: '🥇',
+        minStats: 300,
+        color: '#FFD700',
+        gradient: 'linear-gradient(135deg, #FFD700 0%, #FFF176 100%)'
+      },
+      {
+        name: 'Platinum',
+        icon: '💎',
+        minStats: 500,
+        color: '#E5E4E2',
+        gradient: 'linear-gradient(135deg, #B4C6DA 0%, #E5E4E2 100%)'
+      },
+      {
+        name: 'Diamond',
+        icon: '💠',
+        minStats: 800,
+        color: '#B9F2FF',
+        gradient: 'linear-gradient(135deg, #4FC3F7 0%, #B9F2FF 100%)'
+      },
+      {
+        name: 'Master',
+        icon: '👑',
+        minStats: 1200,
+        color: '#9C27B0',
+        gradient: 'linear-gradient(135deg, #7B1FA2 0%, #BA68C8 100%)'
+      },
+      {
+        name: 'Grandmaster',
+        icon: '⚡',
+        minStats: 1800,
+        color: '#FF6F00',
+        gradient: 'linear-gradient(135deg, #F57C00 0%, #FFB74D 100%)'
+      },
+      {
+        name: 'Legendary',
+        icon: '🔥',
+        minStats: 2500,
+        color: '#FF1744',
+        gradient: 'linear-gradient(135deg, #D50000 0%, #FF5252 100%)'
+      }
+    ];
+
+    // Calculate current rank based on total stats
+    function getCurrentRank() {
+      const totalStats = Object.values(state.stats).reduce((sum, val) => sum + val, 0);
+      let currentRank = RANKS[0];
+
+      for (const rank of RANKS) {
+        if (totalStats >= rank.minStats) {
+          currentRank = rank;
+        } else {
+          break;
+        }
+      }
+
+      return { rank: currentRank, totalStats };
+    }
+
+    function getNextRank() {
+      const { rank: currentRank, totalStats } = getCurrentRank();
+      const currentIndex = RANKS.findIndex(r => r.name === currentRank.name);
+
+      if (currentIndex < RANKS.length - 1) {
+        const nextRank = RANKS[currentIndex + 1];
+        const progress = ((totalStats - currentRank.minStats) / (nextRank.minStats - currentRank.minStats)) * 100;
+        return { nextRank, progress: Math.min(100, Math.max(0, progress)), statsNeeded: nextRank.minStats - totalStats };
+      }
+
+      return { nextRank: null, progress: 100, statsNeeded: 0 };
+    }
 
     function saveState() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -824,7 +1039,7 @@
         if (e.target === modal) closePhotoModal();
       };
       modal.innerHTML = `
-        <div class="photo-modal-content">
+        <div class="photo-modal-content" onclick="event.stopPropagation()">
           <h2 class="text-2xl font-bold text-dark mb-2">📸 Proof Required</h2>
           <p class="text-sm text-medium mb-4">Take a photo to verify: ${task.name}</p>
 
@@ -840,7 +1055,7 @@
             </button>
           </div>
 
-          <button id="confirmBtn" onclick="confirmTaskWithPhoto('${taskId}', '${taskType}')" class="btn-success w-full mt-3" style="display: none;">
+          <button id="confirmBtn" onclick="confirmTaskWithPhoto('${taskId}', '${taskType}')" class="btn-primary w-full mt-3" style="display: none;">
             ✓ Confirm Completion
           </button>
         </div>
@@ -1141,18 +1356,52 @@
               </div>
             </div>
 
-            <!-- Coins & Streak -->
+            <!-- Coins -->
             <div class="flex gap-6">
               <div class="text-center">
                 <div class="text-2xl font-bold text-dark">${state.coins}</div>
                 <div class="text-xs text-medium">Coins</div>
               </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-dark">${state.streak}</div>
-                <div class="text-xs text-medium">Streak</div>
-              </div>
             </div>
           </div>
+
+          <!-- Shiny Streak Badge -->
+          <div class="mb-4 text-center">
+            <div class="streak-badge">
+              <div class="streak-number">🔥 ${state.streak}</div>
+              <div class="streak-label">Day Streak</div>
+            </div>
+          </div>
+
+          <!-- Rank Badge -->
+          ${(() => {
+            const { rank, totalStats } = getCurrentRank();
+            const { nextRank, progress, statsNeeded } = getNextRank();
+            return `
+              <div class="glass rounded-2xl p-4 mb-4">
+                <div class="flex justify-between items-center mb-3">
+                  <div class="rank-badge" style="background: ${rank.gradient};">
+                    <span class="rank-icon">${rank.icon}</span>
+                    <span class="rank-name" style="color: ${rank.name === 'Unranked' ? '#FFFFFF' : '#0A1628'};">${rank.name}</span>
+                  </div>
+                  <div class="text-cream text-sm font-semibold">${totalStats} Stats</div>
+                </div>
+                ${nextRank ? `
+                  <div>
+                    <div class="flex justify-between text-xs text-medium mb-1">
+                      <span>Next: ${nextRank.icon} ${nextRank.name}</span>
+                      <span>${statsNeeded} stats needed</span>
+                    </div>
+                    <div class="progress-container">
+                      <div class="progress-bar" style="width: ${progress}%;"></div>
+                    </div>
+                  </div>
+                ` : `
+                  <div class="text-center text-sm font-bold text-gold">⭐ MAX RANK ACHIEVED ⭐</div>
+                `}
+              </div>
+            `;
+          })()}
 
           <!-- Timer (will update separately) -->
           <div id="timer" class="glass rounded-2xl p-5 mb-4 text-center timer-urgent">
@@ -1431,7 +1680,7 @@
               }).join('')}
             </div>
 
-            <div class="glass rounded-2xl p-6">
+            <div class="glass rounded-2xl p-6 mb-4">
               <h2 class="text-lg font-bold text-cream mb-4">Stat Guide</h2>
               <div class="space-y-3 text-sm">
                 ${Object.entries(STAT_INFO).map(([key, info]) => `
@@ -1441,12 +1690,35 @@
                       ${key.toUpperCase()}
                     </div>
                     <div>
-                      <div class="font-semibold text-dark">${info.name}</div>
+                      <div class="font-semibold text-cream">${info.name}</div>
                       <div class="text-xs text-medium">${info.desc}</div>
                       <div class="text-xs text-medium mt-1">Gain: ${info.gains}</div>
                     </div>
                   </div>
                 `).join('')}
+              </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+              <h2 class="text-lg font-bold text-cream mb-4">🏆 Rank System</h2>
+              <p class="text-xs text-medium mb-4">Rank up by gaining total stats from completing tasks!</p>
+              <div class="space-y-3 text-sm">
+                ${RANKS.map((rank, index) => {
+                  const { rank: currentRank } = getCurrentRank();
+                  const isCurrent = rank.name === currentRank.name;
+                  return `
+                    <div class="flex items-center gap-3 ${isCurrent ? 'bg-gold bg-opacity-20 p-2 rounded-lg' : ''}">
+                      <div class="rank-badge" style="background: ${rank.gradient}; padding: 8px 12px;">
+                        <span class="rank-icon" style="font-size: 20px;">${rank.icon}</span>
+                        <span class="rank-name" style="font-size: 14px; color: ${rank.name === 'Unranked' ? '#FFFFFF' : '#0A1628'};">${rank.name}</span>
+                      </div>
+                      <div class="flex-1">
+                        <div class="text-xs text-cream font-semibold">${rank.minStats} Total Stats</div>
+                        ${isCurrent ? `<div class="text-xs text-gold font-bold">← You are here</div>` : ''}
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
               </div>
             </div>
           </div>

@@ -9,10 +9,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --darkest: #181C14;
-      --dark: #3C3D37;
-      --medium: #697565;
-      --cream: #ECDFCC;
+      --darkest: #0A1628;
+      --dark: #132F63;
+      --medium: #4A5F8C;
+      --gold: #FABB5A;
+      --cream: #F7F1EA;
+      --red: #F6554D;
+      --white: #FFFFFF;
     }
 
     * {
@@ -20,103 +23,111 @@
     }
 
     body {
-      background: linear-gradient(135deg, #181C14 0%, #3C3D37 100%);
+      background: linear-gradient(135deg, #0A1628 0%, #132F63 100%);
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(60, 61, 55, 0.6);
+      background: rgba(19, 47, 99, 0.7);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(105, 117, 101, 0.4);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(74, 95, 140, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
     }
 
     .glass-dark {
-      background: rgba(24, 28, 20, 0.95);
+      background: rgba(10, 22, 40, 0.95);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(105, 117, 101, 0.3);
+      border: 1px solid rgba(74, 95, 140, 0.3);
     }
 
     .status-window {
-      background: rgba(236, 223, 204, 0.98);
+      background: rgba(247, 241, 234, 0.98);
       backdrop-filter: blur(30px);
-      border: 2px solid rgba(105, 117, 101, 0.6);
+      border: 2px solid rgba(250, 187, 90, 0.6);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .text-cream { color: #ECDFCC; }
-    .text-medium { color: #697565; }
-    .text-dark { color: #181C14; }
-    .bg-cream { background: #ECDFCC; }
-    .bg-medium { background: #697565; }
-    .bg-dark { background: #3C3D37; }
-    .border-medium { border-color: #697565; }
-    .border-cream { border-color: #ECDFCC; }
+    .text-cream { color: #F7F1EA; }
+    .text-medium { color: #4A5F8C; }
+    .text-dark { color: #0A1628; }
+    .text-gold { color: #FABB5A; }
+    .text-white { color: #FFFFFF; }
+    .bg-cream { background: #F7F1EA; }
+    .bg-medium { background: #4A5F8C; }
+    .bg-dark { background: #132F63; }
+    .bg-gold { background: #FABB5A; }
+    .border-medium { border-color: #4A5F8C; }
+    .border-cream { border-color: #F7F1EA; }
+    .border-gold { border-color: #FABB5A; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #697565 0%, #ECDFCC 100%);
+      background: linear-gradient(90deg, #FABB5A 0%, #F7F1EA 100%);
       height: 10px;
       border-radius: 5px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(105, 117, 101, 0.5);
+      box-shadow: 0 2px 8px rgba(250, 187, 90, 0.5);
     }
 
     .progress-container {
-      background: rgba(24, 28, 20, 0.5);
+      background: rgba(10, 22, 40, 0.6);
       border-radius: 5px;
       overflow: hidden;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
-      color: #181C14;
+      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      color: #0A1628;
       font-weight: 700;
       border: none;
       border-radius: 12px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.4);
+      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.4);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(105, 117, 101, 0.6);
+      box-shadow: 0 6px 20px rgba(250, 187, 90, 0.6);
     }
 
     .btn-success {
-      background: rgba(236, 223, 204, 0.3);
-      color: #ECDFCC;
-      border: 2px solid #ECDFCC;
+      background: rgba(247, 241, 234, 0.2);
+      color: #F7F1EA;
+      border: 2px solid #F7F1EA;
       font-weight: 700;
+      border-radius: 12px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #3C3D37 0%, #697565 100%);
-      color: #ECDFCC;
+      background: linear-gradient(135deg, #132F63 0%, #4A5F8C 100%);
+      color: #FABB5A;
       font-weight: 700;
     }
 
     .task-card {
-      background: rgba(236, 223, 204, 0.95);
+      background: rgba(247, 241, 234, 0.95);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(105, 117, 101, 0.3);
+      border: 1px solid rgba(74, 95, 140, 0.3);
       transition: all 0.3s ease;
     }
 
     .task-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      border-color: #697565;
+      border-color: #FABB5A;
     }
 
     .task-card.completed {
-      background: rgba(105, 117, 101, 0.4);
-      border: 2px solid #697565;
+      background: rgba(250, 187, 90, 0.3);
+      border: 2px solid #FABB5A;
     }
 
     .mission-badge {
@@ -130,19 +141,19 @@
     }
 
     .badge-extra {
-      background: rgba(105, 117, 101, 0.3);
-      color: #ECDFCC;
-      border: 2px solid #697565;
+      background: rgba(74, 95, 140, 0.4);
+      color: #F7F1EA;
+      border: 2px solid #4A5F8C;
     }
 
     .badge-weekly {
-      background: rgba(236, 223, 204, 0.2);
-      color: #ECDFCC;
-      border: 2px solid #ECDFCC;
+      background: rgba(250, 187, 90, 0.2);
+      color: #FABB5A;
+      border: 2px solid #FABB5A;
     }
 
     .timer-urgent {
-      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      background: linear-gradient(135deg, #F6554D 0%, #dc2626 100%);
       color: white;
       animation: pulse 2s infinite;
     }
@@ -153,13 +164,13 @@
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
-      color: #181C14;
+      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      color: #0A1628;
       padding: 6px 16px;
       border-radius: 24px;
       font-weight: 800;
       display: inline-block;
-      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.5);
+      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.5);
     }
 
     .tab {
@@ -168,20 +179,20 @@
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
-      background: rgba(60, 61, 55, 0.5);
-      color: #ECDFCC;
+      background: rgba(19, 47, 99, 0.5);
+      color: #F7F1EA;
       font-size: 12px;
     }
 
     .tab.active {
-      background: linear-gradient(135deg, #697565 0%, #ECDFCC 100%);
-      color: #181C14;
-      box-shadow: 0 4px 12px rgba(105, 117, 101, 0.5);
+      background: linear-gradient(135deg, #FABB5A 0%, #FFD17A 100%);
+      color: #0A1628;
+      box-shadow: 0 4px 12px rgba(250, 187, 90, 0.5);
     }
 
     .reward-item {
-      background: rgba(236, 223, 204, 0.95);
-      border: 2px solid rgba(105, 117, 101, 0.5);
+      background: rgba(247, 241, 234, 0.95);
+      border: 2px solid rgba(74, 95, 140, 0.5);
       border-radius: 16px;
       padding: 16px;
       transition: all 0.3s ease;
@@ -190,24 +201,24 @@
     .reward-item:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-      border-color: #697565;
+      border-color: #FABB5A;
     }
 
     .reward-item.owned {
       opacity: 0.5;
-      border-color: #697565;
+      border-color: #4A5F8C;
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(236, 223, 204, 0.98);
+      background: rgba(247, 241, 234, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(105, 117, 101, 0.6);
+      border: 1px solid rgba(250, 187, 90, 0.6);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -219,8 +230,8 @@
     }
 
     .workout-card {
-      background: rgba(236, 223, 204, 0.95);
-      border: 1px solid rgba(105, 117, 101, 0.4);
+      background: rgba(247, 241, 234, 0.95);
+      border: 1px solid rgba(74, 95, 140, 0.4);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
@@ -232,7 +243,7 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 8px;
-      background: rgba(60, 61, 55, 0.2);
+      background: rgba(19, 47, 99, 0.2);
     }
 
     /* Photo Modal */
@@ -251,12 +262,13 @@
     }
 
     .photo-modal-content {
-      background: rgba(236, 223, 204, 0.98);
+      background: rgba(247, 241, 234, 0.98);
       border-radius: 20px;
       padding: 24px;
       max-width: 400px;
       width: 100%;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      border: 2px solid #FABB5A;
     }
 
     .photo-preview {
@@ -274,11 +286,11 @@
 
     /* Calendar View */
     .calendar-day {
-      background: rgba(236, 223, 204, 0.95);
+      background: rgba(247, 241, 234, 0.95);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
-      border: 2px solid rgba(105, 117, 101, 0.4);
+      border: 2px solid rgba(250, 187, 90, 0.4);
     }
 
     .proof-image {
@@ -289,16 +301,18 @@
       margin-top: 8px;
       cursor: pointer;
       transition: transform 0.2s;
+      border: 2px solid rgba(74, 95, 140, 0.2);
     }
 
     .proof-image:hover {
       transform: scale(1.05);
+      border-color: #FABB5A;
     }
 
     .task-badge {
       display: inline-block;
-      background: rgba(105, 117, 101, 0.3);
-      color: #181C14;
+      background: rgba(74, 95, 140, 0.3);
+      color: #0A1628;
       padding: 4px 12px;
       border-radius: 12px;
       font-size: 11px;
@@ -806,6 +820,9 @@
 
       const modal = document.createElement('div');
       modal.className = 'photo-modal';
+      modal.onclick = function(e) {
+        if (e.target === modal) closePhotoModal();
+      };
       modal.innerHTML = `
         <div class="photo-modal-content">
           <h2 class="text-2xl font-bold text-dark mb-2">📸 Proof Required</h2>

@@ -9,17 +9,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --darkest: #000000;
-      --dark: #0a0a0a;
-      --medium: #0f1419;
-      --cyan: #00D9FF;
-      --cyan-bright: #00FFFF;
-      --blue: #0288D1;
-      --orange: #FF6C00;
-      --orange-bright: #FF9100;
-      --electric-blue: #1FB4FF;
-      --glow-cyan: rgba(0, 217, 255, 0.5);
-      --glow-orange: rgba(255, 108, 0, 0.5);
+      --black: #000000;
+      --purple: #8B5CF6;
+      --white: #FFFFFF;
     }
 
     * {
@@ -27,131 +19,118 @@
     }
 
     body {
-      background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #0f1419 100%);
+      background: #000000;
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(10, 10, 10, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(0, 217, 255, 0.3);
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.6);
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 16px;
     }
 
     .glass-dark {
-      background: rgba(0, 0, 0, 0.98);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
+      background: rgba(0, 0, 0, 0.95);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 16px;
     }
 
     .status-window {
-      background: rgba(10, 10, 10, 0.98);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(0, 217, 255, 0.5);
-      box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), 0 4px 16px rgba(0, 0, 0, 0.6);
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 16px;
     }
 
-    .text-cream { color: #00FFFF; }
-    .text-medium { color: #1FB4FF; }
+    .text-cream { color: #FFFFFF; }
+    .text-medium { color: rgba(255, 255, 255, 0.6); }
     .text-dark { color: #FFFFFF; }
-    .text-gold { color: #00D9FF; }
-    .text-purple { color: #FF9100; }
-    .text-cyan { color: #00D9FF; }
+    .text-gold { color: #8B5CF6; }
+    .text-purple { color: #8B5CF6; }
+    .text-cyan { color: #8B5CF6; }
     .text-white { color: #FFFFFF; }
-    .bg-cream { background: #0f1419; }
-    .bg-medium { background: #0f1419; }
-    .bg-dark { background: #0a0a0a; }
-    .bg-gold { background: #00D9FF; }
-    .border-medium { border-color: #00D9FF; }
-    .border-cream { border-color: #00FFFF; }
-    .border-gold { border-color: #00D9FF; }
+    .bg-cream { background: #000000; }
+    .bg-medium { background: #000000; }
+    .bg-dark { background: #000000; }
+    .bg-gold { background: #8B5CF6; }
+    .border-medium { border-color: #8B5CF6; }
+    .border-cream { border-color: rgba(255, 255, 255, 0.2); }
+    .border-gold { border-color: #8B5CF6; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #00D9FF 0%, #1FB4FF 50%, #0288D1 100%);
+      background: #8B5CF6;
       height: 8px;
       border-radius: 4px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
     }
 
     .progress-container {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(139, 92, 246, 0.1);
       border-radius: 4px;
       overflow: hidden;
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.2);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #00D9FF 0%, #0288D1 100%);
-      color: #000000;
-      font-weight: 700;
-      border: 1px solid #00FFFF;
+      background: #8B5CF6;
+      color: #FFFFFF;
+      font-weight: 600;
+      border: none;
       border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.2s ease;
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #00FFFF 0%, #1FB4FF 100%);
+      background: #7C3AED;
       transform: translateY(-1px);
-      box-shadow: 0 0 25px rgba(0, 217, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
     .btn-success {
-      background: rgba(0, 0, 0, 0.8);
-      color: #00FFFF;
-      border: 1px solid rgba(0, 217, 255, 0.5);
-      font-weight: 700;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      font-weight: 600;
       border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.2s ease;
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
     }
 
     .btn-success:hover {
-      background: rgba(0, 217, 255, 0.1);
-      border-color: rgba(0, 255, 255, 0.8);
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+      background: rgba(139, 92, 246, 0.1);
+      border-color: rgba(139, 92, 246, 0.5);
+      color: #FFFFFF;
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #FF6C00 0%, #FF9100 100%);
-      color: #000000;
-      font-weight: 700;
-      border: 1px solid #FF9100;
-      box-shadow: 0 0 15px rgba(255, 108, 0, 0.5);
+      background: #8B5CF6;
+      color: #FFFFFF;
+      font-weight: 600;
+      border: none;
     }
 
     .btn-reward:hover {
-      box-shadow: 0 0 25px rgba(255, 108, 0, 0.8);
+      background: #7C3AED;
     }
 
     .task-card {
-      background: rgba(0, 0, 0, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(15, 15, 15, 0.6);
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       transition: all 0.2s ease;
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .task-card:hover {
-      background: rgba(15, 20, 25, 0.9);
-      border-color: rgba(0, 217, 255, 0.6);
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      background: rgba(20, 20, 20, 0.8);
+      border-color: rgba(139, 92, 246, 0.4);
     }
 
     .task-card.completed {
-      background: rgba(0, 217, 255, 0.1);
-      border: 1px solid rgba(0, 217, 255, 0.8);
-      box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.5);
     }
 
     .mission-badge {
@@ -165,32 +144,28 @@
     }
 
     .badge-extra {
-      background: rgba(0, 217, 255, 0.2);
-      color: #00FFFF;
-      border: 1px solid rgba(0, 217, 255, 0.6);
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+      background: rgba(139, 92, 246, 0.15);
+      color: #8B5CF6;
+      border: 1px solid rgba(139, 92, 246, 0.4);
     }
 
     .badge-weekly {
-      background: rgba(31, 180, 255, 0.2);
-      color: #1FB4FF;
-      border: 1px solid rgba(31, 180, 255, 0.6);
-      box-shadow: 0 0 10px rgba(31, 180, 255, 0.3);
+      background: rgba(139, 92, 246, 0.15);
+      color: #8B5CF6;
+      border: 1px solid rgba(139, 92, 246, 0.4);
     }
 
     .badge-epic {
-      background: rgba(255, 108, 0, 0.2);
-      color: #FF9100;
-      border: 1px solid rgba(255, 108, 0, 0.6);
-      box-shadow: 0 0 10px rgba(255, 108, 0, 0.3);
+      background: rgba(139, 92, 246, 0.15);
+      color: #8B5CF6;
+      border: 1px solid rgba(139, 92, 246, 0.4);
     }
 
     .timer-urgent {
-      background: rgba(255, 108, 0, 0.2);
-      border: 1px solid rgba(255, 108, 0, 0.6);
-      color: #FF9100;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      color: #8B5CF6;
       animation: pulse 2s infinite;
-      box-shadow: 0 0 15px rgba(255, 108, 0, 0.4);
     }
 
     @keyframes pulse {
@@ -205,14 +180,12 @@
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #00D9FF 0%, #0288D1 100%);
-      color: #000000;
+      background: #8B5CF6;
+      color: #FFFFFF;
       padding: 6px 16px;
       border-radius: 6px;
       font-weight: 700;
       display: inline-block;
-      border: 1px solid #00FFFF;
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
     }
 
     /* Streak Badge - Fire Animation Style */
@@ -259,19 +232,18 @@
     .streak-number {
       font-size: 22px;
       font-weight: 700;
-      color: #FF9100;
-      text-shadow: 0 0 10px rgba(255, 108, 0, 0.8);
+      color: #FFFFFF;
     }
 
     .streak-label {
       font-size: 10px;
       font-weight: 600;
-      color: #1FB4FF;
+      color: rgba(255, 255, 255, 0.6);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    /* Rank Badge - Tron Style */
+    /* Rank Badge - Minimal Style */
     .rank-badge {
       padding: 8px 16px;
       border-radius: 8px;
@@ -279,8 +251,7 @@
       align-items: center;
       gap: 8px;
       font-weight: 700;
-      border: 2px solid;
-      box-shadow: 0 0 15px;
+      border: 1px solid;
     }
 
     .rank-icon {
@@ -298,55 +269,48 @@
       cursor: pointer;
       transition: all 0.2s ease;
       background: transparent;
-      color: #1FB4FF;
+      color: rgba(255, 255, 255, 0.5);
       font-size: 12px;
-      border: 1px solid transparent;
+      border: none;
     }
 
     .tab:hover {
-      color: #00FFFF;
-      border-color: rgba(0, 217, 255, 0.3);
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+      color: rgba(255, 255, 255, 0.8);
     }
 
     .tab.active {
-      background: rgba(0, 217, 255, 0.2);
-      color: #00FFFF;
-      border: 1px solid rgba(0, 217, 255, 0.6);
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+      background: rgba(139, 92, 246, 0.15);
+      color: #FFFFFF;
+      border: 1px solid rgba(139, 92, 246, 0.3);
     }
 
     .reward-item {
-      background: rgba(0, 0, 0, 0.9);
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       border-radius: 12px;
       padding: 16px;
       transition: all 0.2s ease;
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .reward-item:hover {
-      background: rgba(15, 20, 25, 0.9);
-      border-color: rgba(255, 108, 0, 0.5);
-      box-shadow: 0 0 20px rgba(255, 108, 0, 0.3);
+      background: rgba(20, 20, 20, 0.9);
+      border-color: rgba(139, 92, 246, 0.4);
     }
 
     .reward-item.owned {
-      opacity: 0.6;
-      border-color: rgba(0, 217, 255, 0.5);
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+      opacity: 0.5;
+      border-color: rgba(139, 92, 246, 0.3);
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(0, 0, 0, 0.98);
+      background: rgba(15, 15, 15, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 8px 32px rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(0, 217, 255, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.5);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -358,19 +322,17 @@
     }
 
     .workout-card {
-      background: rgba(0, 0, 0, 0.95);
-      border: 1px solid rgba(0, 217, 255, 0.3);
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
       transition: all 0.2s ease;
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .workout-card:hover {
-      background: rgba(15, 20, 25, 0.95);
-      border-color: rgba(0, 217, 255, 0.6);
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      background: rgba(20, 20, 20, 0.9);
+      border-color: rgba(139, 92, 246, 0.4);
     }
 
     .workout-img {
@@ -380,7 +342,7 @@
       border-radius: 8px;
       margin-bottom: 8px;
       background: rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.15);
     }
 
     /* Photo Modal */
@@ -399,13 +361,12 @@
     }
 
     .photo-modal-content {
-      background: rgba(0, 0, 0, 0.98);
+      background: rgba(15, 15, 15, 0.98);
       border-radius: 20px;
       padding: 24px;
       max-width: 400px;
       width: 100%;
-      box-shadow: 0 0 40px rgba(0, 217, 255, 0.6), 0 20px 60px rgba(0, 0, 0, 0.9);
-      border: 2px solid rgba(0, 217, 255, 0.8);
+      border: 1px solid rgba(139, 92, 246, 0.4);
     }
 
     .photo-preview {
@@ -415,8 +376,7 @@
       border-radius: 12px;
       margin: 16px 0;
       background: rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(0, 217, 255, 0.4);
-      box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.2);
     }
 
     .camera-input {
@@ -425,12 +385,11 @@
 
     /* Calendar View */
     .calendar-day {
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(15, 15, 15, 0.8);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
-      border: 1px solid rgba(0, 217, 255, 0.3);
-      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
     }
 
     .proof-image {
@@ -441,28 +400,25 @@
       margin-top: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
-      border: 1px solid rgba(0, 217, 255, 0.3);
-      box-shadow: 0 0 5px rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
     }
 
     .proof-image:hover {
       transform: scale(1.05);
-      border-color: rgba(0, 217, 255, 0.8);
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+      border-color: rgba(139, 92, 246, 0.5);
     }
 
     .task-badge {
       display: inline-block;
-      background: rgba(0, 217, 255, 0.2);
-      color: #00FFFF;
+      background: rgba(139, 92, 246, 0.15);
+      color: #8B5CF6;
       padding: 4px 12px;
       border-radius: 12px;
       font-size: 11px;
       font-weight: 700;
       margin-right: 6px;
       margin-bottom: 6px;
-      border: 1px solid rgba(0, 217, 255, 0.4);
-      box-shadow: 0 0 5px rgba(0, 217, 255, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.3);
     }
   </style>
 </head>

@@ -78,6 +78,16 @@ In case `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set to `secure-token`, th
     curl -H "Content-Type: application/json" -H "Authorization: Bearer secure-token" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
+#### Persistence
+
+To store credential overwrites in the database and propagate them automatically to all workers in multi-instance/queue mode, enable:
+
+```sh
+export CREDENTIALS_OVERWRITE_PERSISTENCE=true
+```
+
+When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so workers reload the latest values. If disabled, overwrites remain in-memory on the process that loaded them and are not propagated to workers or preserved across restarts.
+
 ## Environment variables
 
 n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:

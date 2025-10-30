@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SENSE - Your Life RPG</title>
+  <title>Peruchito - Your Life RPG</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
@@ -11,7 +11,8 @@
 
     :root {
       --black: #000000;
-      --purple: #8B5CF6;
+      --purple: #A78BFA;
+      --purple-dark: #7C3AED;
       --white: #FFFFFF;
     }
 
@@ -25,54 +26,55 @@
     }
 
     .glass {
-      background: rgba(15, 15, 15, 0.8);
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      background: rgba(15, 15, 15, 0.9);
+      border: 1px solid rgba(167, 139, 250, 0.3);
       border-radius: 16px;
     }
 
     .glass-dark {
       background: rgba(0, 0, 0, 0.95);
-      border: 1px solid rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(167, 139, 250, 0.2);
       border-radius: 16px;
     }
 
     .status-window {
-      background: rgba(15, 15, 15, 0.8);
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      background: rgba(15, 15, 15, 0.9);
+      border: 1px solid rgba(167, 139, 250, 0.4);
       border-radius: 16px;
     }
 
     .text-cream { color: #FFFFFF; }
-    .text-medium { color: rgba(255, 255, 255, 0.6); }
+    .text-medium { color: rgba(255, 255, 255, 0.7); }
     .text-dark { color: #FFFFFF; }
-    .text-gold { color: #8B5CF6; }
-    .text-purple { color: #8B5CF6; }
-    .text-cyan { color: #8B5CF6; }
+    .text-gold { color: #A78BFA; }
+    .text-purple { color: #A78BFA; }
+    .text-cyan { color: #A78BFA; }
     .text-white { color: #FFFFFF; }
     .bg-cream { background: #000000; }
     .bg-medium { background: #000000; }
     .bg-dark { background: #000000; }
-    .bg-gold { background: #8B5CF6; }
-    .border-medium { border-color: #8B5CF6; }
+    .bg-gold { background: #A78BFA; }
+    .border-medium { border-color: #A78BFA; }
     .border-cream { border-color: rgba(255, 255, 255, 0.2); }
-    .border-gold { border-color: #8B5CF6; }
+    .border-gold { border-color: #A78BFA; }
 
     .progress-bar {
-      background: #8B5CF6;
+      background: linear-gradient(90deg, #A78BFA 0%, #7C3AED 100%);
       height: 8px;
       border-radius: 4px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
     }
 
     .progress-container {
-      background: rgba(139, 92, 246, 0.1);
+      background: rgba(167, 139, 250, 0.1);
       border-radius: 4px;
       overflow: hidden;
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(167, 139, 250, 0.3);
     }
 
     .btn-primary {
-      background: #8B5CF6;
+      background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
       color: #FFFFFF;
       font-weight: 600;
       border: none;
@@ -80,17 +82,19 @@
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(167, 139, 250, 0.4);
     }
 
     .btn-primary:hover {
-      background: #7C3AED;
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, #C4B5FD 0%, #8B5CF6 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(167, 139, 250, 0.6);
     }
 
     .btn-success {
       background: transparent;
-      color: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(167, 139, 250, 0.4);
       font-weight: 600;
       border-radius: 8px;
       padding: 12px 24px;
@@ -99,39 +103,43 @@
     }
 
     .btn-success:hover {
-      background: rgba(139, 92, 246, 0.1);
-      border-color: rgba(139, 92, 246, 0.5);
+      background: rgba(167, 139, 250, 0.15);
+      border-color: rgba(167, 139, 250, 0.7);
       color: #FFFFFF;
     }
 
     .btn-reward {
-      background: #8B5CF6;
+      background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
       color: #FFFFFF;
       font-weight: 600;
       border: none;
+      box-shadow: 0 4px 15px rgba(167, 139, 250, 0.4);
     }
 
     .btn-reward:hover {
-      background: #7C3AED;
+      background: linear-gradient(135deg, #C4B5FD 0%, #8B5CF6 100%);
+      box-shadow: 0 6px 20px rgba(167, 139, 250, 0.6);
     }
 
     .task-card {
-      background: rgba(15, 15, 15, 0.6);
+      background: rgba(15, 15, 15, 0.7);
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(167, 139, 250, 0.3);
       transition: all 0.2s ease;
     }
 
     .task-card:hover {
-      background: rgba(20, 20, 20, 0.8);
-      border-color: rgba(139, 92, 246, 0.4);
+      background: rgba(20, 20, 20, 0.9);
+      border-color: rgba(167, 139, 250, 0.5);
+      box-shadow: 0 4px 15px rgba(167, 139, 250, 0.2);
     }
 
     .task-card.completed {
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid rgba(139, 92, 246, 0.5);
+      background: rgba(167, 139, 250, 0.15);
+      border: 1px solid rgba(167, 139, 250, 0.7);
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
     }
 
     .mission-badge {
@@ -145,28 +153,32 @@
     }
 
     .badge-extra {
-      background: rgba(139, 92, 246, 0.15);
-      color: #8B5CF6;
-      border: 1px solid rgba(139, 92, 246, 0.4);
+      background: rgba(167, 139, 250, 0.2);
+      color: #C4B5FD;
+      border: 1px solid rgba(167, 139, 250, 0.5);
+      box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
     }
 
     .badge-weekly {
-      background: rgba(139, 92, 246, 0.15);
-      color: #8B5CF6;
-      border: 1px solid rgba(139, 92, 246, 0.4);
+      background: rgba(167, 139, 250, 0.2);
+      color: #C4B5FD;
+      border: 1px solid rgba(167, 139, 250, 0.5);
+      box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
     }
 
     .badge-epic {
-      background: rgba(139, 92, 246, 0.15);
-      color: #8B5CF6;
-      border: 1px solid rgba(139, 92, 246, 0.4);
+      background: rgba(167, 139, 250, 0.2);
+      color: #C4B5FD;
+      border: 1px solid rgba(167, 139, 250, 0.5);
+      box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
     }
 
     .timer-urgent {
-      background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.5);
-      color: #8B5CF6;
+      background: rgba(167, 139, 250, 0.2);
+      border: 1px solid rgba(167, 139, 250, 0.6);
+      color: #C4B5FD;
       animation: pulse 2s infinite;
+      box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
     }
 
     @keyframes pulse {
@@ -181,12 +193,13 @@
     }
 
     .level-badge {
-      background: #8B5CF6;
+      background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
       color: #FFFFFF;
       padding: 6px 16px;
       border-radius: 6px;
       font-weight: 700;
       display: inline-block;
+      box-shadow: 0 4px 15px rgba(167, 139, 250, 0.5);
     }
 
     /* Streak Badge - Compact Fire Style */
@@ -194,15 +207,16 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(139, 92, 246, 0.1);
+      background: rgba(167, 139, 250, 0.15);
       padding: 6px 12px;
       border-radius: 8px;
-      border: 1px solid rgba(139, 92, 246, 0.3);
+      border: 1px solid rgba(167, 139, 250, 0.4);
+      box-shadow: 0 0 15px rgba(167, 139, 250, 0.3);
     }
 
     .fire-icon {
       font-size: 18px;
-      color: #8B5CF6;
+      color: #A78BFA;
       animation: fireFlicker 1.5s infinite alternate;
     }
 
@@ -231,15 +245,20 @@
       letter-spacing: 0.5px;
     }
 
-    /* Rank Badge - Minimal Style */
+    /* Rank Badge - Vibrant Gradient Style */
     .rank-badge {
-      padding: 8px 16px;
-      border-radius: 8px;
+      padding: 10px 18px;
+      border-radius: 10px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       font-weight: 700;
-      border: 1px solid;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .rank-badge:hover {
+      transform: scale(1.05);
     }
 
     .rank-icon {
@@ -447,6 +466,7 @@
       manualCarbs: 0,
       manualFats: 0,
       calorieTarget: 2100,
+      foodsLogged: [],  // Array of logged foods for the day
 
       currentDay: 'push',
       shortFormCount: 0,
@@ -507,6 +527,52 @@
         coins: 25,
         stats: {dis: 5}
       }
+    ];
+
+    // Food Database - Popular foods and brands for scanner
+    const FOOD_DATABASE = [
+      // Fast Food
+      { id: 'mcdonalds_bigmac', name: 'Big Mac', brand: 'McDonald\'s', calories: 550, protein: 25, carbs: 45, fats: 30, logo: '🍔' },
+      { id: 'mcdonalds_fries', name: 'Medium Fries', brand: 'McDonald\'s', calories: 340, protein: 4, carbs: 44, fats: 16, logo: '🍟' },
+      { id: 'kfc_chicken', name: 'Original Recipe Chicken', brand: 'KFC', calories: 320, protein: 29, carbs: 11, fats: 18, logo: '🍗' },
+      { id: 'pizzahut_pepperoni', name: 'Pepperoni Pizza Slice', brand: 'Pizza Hut', calories: 300, protein: 13, carbs: 30, fats: 13, logo: '🍕' },
+      { id: 'subway_footlong', name: 'Italian BMT Footlong', brand: 'Subway', calories: 800, protein: 42, carbs: 85, fats: 34, logo: '🥖' },
+      { id: 'tacobell_taco', name: 'Crunchy Taco', brand: 'Taco Bell', calories: 170, protein: 8, carbs: 13, fats: 10, logo: '🌮' },
+      { id: 'chickfila_sandwich', name: 'Chicken Sandwich', brand: 'Chick-fil-A', calories: 440, protein: 28, carbs: 40, fats: 19, logo: '🍗' },
+      { id: 'starbucks_latte', name: 'Grande Latte', brand: 'Starbucks', calories: 190, protein: 12, carbs: 18, fats: 7, logo: '☕' },
+
+      // Snacks & Drinks
+      { id: 'coke', name: 'Coca-Cola (12oz)', brand: 'Coca-Cola', calories: 140, protein: 0, carbs: 39, fats: 0, logo: '🥤' },
+      { id: 'pepsi', name: 'Pepsi (12oz)', brand: 'Pepsi', calories: 150, protein: 0, carbs: 41, fats: 0, logo: '🥤' },
+      { id: 'redbull', name: 'Red Bull (8.4oz)', brand: 'Red Bull', calories: 110, protein: 1, carbs: 27, fats: 0, logo: '🔋' },
+      { id: 'monster', name: 'Monster Energy (16oz)', brand: 'Monster', calories: 210, protein: 2, carbs: 54, fats: 0, logo: '⚡' },
+      { id: 'lays_chips', name: 'Classic Chips (1oz)', brand: 'Lay\'s', calories: 160, protein: 2, carbs: 15, fats: 10, logo: '🥔' },
+      { id: 'doritos', name: 'Nacho Cheese (1oz)', brand: 'Doritos', calories: 150, protein: 2, carbs: 18, fats: 8, logo: '🔺' },
+      { id: 'snickers', name: 'Snickers Bar', brand: 'Mars', calories: 250, protein: 4, carbs: 33, fats: 12, logo: '🍫' },
+      { id: 'kitkat', name: 'Kit Kat Bar', brand: 'Nestlé', calories: 210, protein: 3, carbs: 27, fats: 11, logo: '🍫' },
+      { id: 'oreos', name: 'Oreo Cookies (3)', brand: 'Nabisco', calories: 160, protein: 2, carbs: 25, fats: 7, logo: '🍪' },
+
+      // Breakfast
+      { id: 'cheerios', name: 'Cheerios (1 cup)', brand: 'General Mills', calories: 100, protein: 3, carbs: 20, fats: 2, logo: '🥣' },
+      { id: 'frosted_flakes', name: 'Frosted Flakes (1 cup)', brand: 'Kellogg\'s', calories: 150, protein: 2, carbs: 37, fats: 0, logo: '🥣' },
+      { id: 'poptarts', name: 'Pop-Tarts (1 pastry)', brand: 'Kellogg\'s', calories: 200, protein: 3, carbs: 37, fats: 5, logo: '🧇' },
+      { id: 'eggs_scrambled', name: 'Scrambled Eggs (2)', brand: 'Fresh', calories: 200, protein: 14, carbs: 2, fats: 15, logo: '🍳' },
+      { id: 'bacon_strips', name: 'Bacon (3 strips)', brand: 'Fresh', calories: 130, protein: 9, carbs: 0, fats: 10, logo: '🥓' },
+
+      // Protein & Healthy
+      { id: 'chicken_breast', name: 'Chicken Breast (6oz)', brand: 'Fresh', calories: 280, protein: 53, carbs: 0, fats: 6, logo: '🍗' },
+      { id: 'protein_shake', name: 'Protein Shake', brand: 'Optimum Nutrition', calories: 120, protein: 24, carbs: 3, fats: 1, logo: '🥤' },
+      { id: 'greek_yogurt', name: 'Greek Yogurt', brand: 'Chobani', calories: 100, protein: 17, carbs: 6, fats: 0, logo: '🥛' },
+      { id: 'almonds', name: 'Almonds (1oz)', brand: 'Bulk', calories: 160, protein: 6, carbs: 6, fats: 14, logo: '🥜' },
+      { id: 'banana', name: 'Banana', brand: 'Fresh', calories: 105, protein: 1, carbs: 27, fats: 0, logo: '🍌' },
+      { id: 'apple', name: 'Apple', brand: 'Fresh', calories: 95, protein: 0, carbs: 25, fats: 0, logo: '🍎' },
+      { id: 'avocado', name: 'Avocado', brand: 'Fresh', calories: 240, protein: 3, carbs: 12, fats: 22, logo: '🥑' },
+
+      // Restaurant Meals
+      { id: 'chipotle_bowl', name: 'Chicken Bowl', brand: 'Chipotle', calories: 650, protein: 42, carbs: 65, fats: 24, logo: '🥙' },
+      { id: 'panera_sandwich', name: 'Turkey Sandwich', brand: 'Panera', calories: 520, protein: 32, carbs: 52, fats: 18, logo: '🥪' },
+      { id: 'olive_garden_pasta', name: 'Fettuccine Alfredo', brand: 'Olive Garden', calories: 1220, protein: 47, carbs: 95, fats: 75, logo: '🍝' },
+      { id: 'outback_steak', name: 'Outback Special (12oz)', brand: 'Outback', calories: 700, protein: 72, carbs: 0, fats: 45, logo: '🥩' },
     ];
 
     // Extra missions focused on main goals
@@ -824,64 +890,73 @@
         name: 'Unranked',
         icon: '⚪',
         minStats: 0,
-        color: '#8B8B8B',
-        gradient: 'linear-gradient(135deg, #6B6B6B 0%, #8B8B8B 100%)'
+        color: '#9CA3AF',
+        gradient: 'linear-gradient(135deg, #6B7280 0%, #9CA3AF 50%, #D1D5DB 100%)',
+        shadow: '0 0 20px rgba(156, 163, 175, 0.4)'
       },
       {
         name: 'Bronze',
         icon: '🥉',
         minStats: 50,
-        color: '#CD7F32',
-        gradient: 'linear-gradient(135deg, #CD7F32 0%, #E8A87C 100%)'
+        color: '#F59E0B',
+        gradient: 'linear-gradient(135deg, #92400E 0%, #F59E0B 50%, #FCD34D 100%)',
+        shadow: '0 0 20px rgba(245, 158, 11, 0.6)'
       },
       {
         name: 'Silver',
         icon: '🥈',
         minStats: 150,
-        color: '#C0C0C0',
-        gradient: 'linear-gradient(135deg, #A8A8A8 0%, #E8E8E8 100%)'
+        color: '#E5E7EB',
+        gradient: 'linear-gradient(135deg, #9CA3AF 0%, #D1D5DB 50%, #F3F4F6 100%)',
+        shadow: '0 0 20px rgba(229, 231, 235, 0.7)'
       },
       {
         name: 'Gold',
         icon: '🥇',
         minStats: 300,
-        color: '#FFD700',
-        gradient: 'linear-gradient(135deg, #FFD700 0%, #FFF176 100%)'
+        color: '#FDE047',
+        gradient: 'linear-gradient(135deg, #CA8A04 0%, #FACC15 50%, #FEF08A 100%)',
+        shadow: '0 0 25px rgba(250, 204, 21, 0.8)'
       },
       {
         name: 'Platinum',
         icon: '💎',
         minStats: 500,
-        color: '#E5E4E2',
-        gradient: 'linear-gradient(135deg, #B4C6DA 0%, #E5E4E2 100%)'
+        color: '#A5F3FC',
+        gradient: 'linear-gradient(135deg, #0891B2 0%, #06B6D4 50%, #A5F3FC 100%)',
+        shadow: '0 0 25px rgba(6, 182, 212, 0.7)'
       },
       {
         name: 'Diamond',
         icon: '💠',
         minStats: 800,
-        color: '#B9F2FF',
-        gradient: 'linear-gradient(135deg, #4FC3F7 0%, #B9F2FF 100%)'
+        color: '#60A5FA',
+        gradient: 'linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #93C5FD 100%)',
+        shadow: '0 0 30px rgba(59, 130, 246, 0.8)'
       },
       {
         name: 'Master',
         icon: '👑',
         minStats: 1200,
-        color: '#9C27B0',
-        gradient: 'linear-gradient(135deg, #7B1FA2 0%, #BA68C8 100%)'
+        color: '#C084FC',
+        gradient: 'linear-gradient(135deg, #7C3AED 0%, #A78BFA 50%, #DDD6FE 100%)',
+        shadow: '0 0 30px rgba(167, 139, 250, 0.9)'
       },
       {
         name: 'Grandmaster',
         icon: '⚡',
         minStats: 1800,
-        color: '#FF6F00',
-        gradient: 'linear-gradient(135deg, #F57C00 0%, #FFB74D 100%)'
+        color: '#FB923C',
+        gradient: 'linear-gradient(135deg, #EA580C 0%, #FB923C 50%, #FED7AA 100%)',
+        shadow: '0 0 35px rgba(251, 146, 60, 0.9)'
       },
       {
         name: 'Legendary',
         icon: '🔥',
         minStats: 2500,
-        color: '#FF1744',
-        gradient: 'linear-gradient(135deg, #D50000 0%, #FF5252 100%)'
+        color: '#F87171',
+        gradient: 'linear-gradient(135deg, #DC2626 0%, #EF4444 25%, #F87171 50%, #FCA5A5 75%, #FECACA 100%)',
+        shadow: '0 0 40px rgba(239, 68, 68, 1)'
       }
     ];
 
@@ -1191,6 +1266,46 @@
       renderStatic();
     }
 
+    // Food Scanner Functions
+    function showFoodScanner() {
+      state.currentTab = 'foodScanner';
+      renderStatic();
+    }
+
+    function logFood(foodId) {
+      const food = FOOD_DATABASE.find(f => f.id === foodId);
+      if (!food) return;
+
+      state.foodsLogged.push({
+        ...food,
+        timestamp: new Date().toISOString()
+      });
+
+      state.manualCalories += food.calories;
+      state.manualProtein += food.protein;
+      state.manualCarbs += food.carbs;
+      state.manualFats += food.fats;
+
+      saveState();
+      showToast(`✅ Added ${food.name} (${food.calories} cal)`);
+      renderStatic();
+    }
+
+    function removeFoodLog(index) {
+      const food = state.foodsLogged[index];
+      if (!food) return;
+
+      state.manualCalories -= food.calories;
+      state.manualProtein -= food.protein;
+      state.manualCarbs -= food.carbs;
+      state.manualFats -= food.fats;
+
+      state.foodsLogged.splice(index, 1);
+
+      saveState();
+      renderStatic();
+    }
+
     function logWeight(weight) {
       const today = new Date().toISOString().split('T')[0];
       const lastWeighIn = state.lastWeighIn;
@@ -1296,7 +1411,7 @@
           <div class="status-window rounded-2xl p-6 mb-4">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h1 class="text-3xl font-bold text-dark mb-1">SENSE</h1>
+                <h1 class="text-3xl font-bold text-dark mb-1">Peruchito</h1>
                 <p class="text-sm text-medium">Level up your life</p>
               </div>
               <div class="level-badge text-lg">
@@ -1353,9 +1468,9 @@
             return `
               <div class="glass rounded-2xl p-4 mb-4">
                 <div class="flex justify-between items-center mb-3">
-                  <div class="rank-badge" style="background: ${rank.gradient};">
+                  <div class="rank-badge" style="background: ${rank.gradient}; box-shadow: ${rank.shadow};">
                     <span class="rank-icon">${rank.icon}</span>
-                    <span class="rank-name" style="color: ${rank.name === 'Unranked' ? '#FFFFFF' : '#0A1628'};">${rank.name}</span>
+                    <span class="rank-name" style="color: #FFFFFF; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">${rank.name}</span>
                   </div>
                   <div class="text-cream text-sm font-semibold">${totalStats} Stats</div>
                 </div>
@@ -1725,9 +1840,9 @@
                   const isCurrent = rank.name === currentRank.name;
                   return `
                     <div class="flex items-center gap-3 ${isCurrent ? 'bg-gold bg-opacity-20 p-2 rounded-lg' : ''}">
-                      <div class="rank-badge" style="background: ${rank.gradient}; padding: 8px 12px;">
+                      <div class="rank-badge" style="background: ${rank.gradient}; box-shadow: ${rank.shadow}; padding: 8px 12px;">
                         <span class="rank-icon" style="font-size: 20px;">${rank.icon}</span>
-                        <span class="rank-name" style="font-size: 14px; color: ${rank.name === 'Unranked' ? '#FFFFFF' : '#0A1628'};">${rank.name}</span>
+                        <span class="rank-name" style="font-size: 14px; color: #FFFFFF; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">${rank.name}</span>
                       </div>
                       <div class="flex-1">
                         <div class="text-xs text-cream font-semibold">${rank.minStats} Total Stats</div>
@@ -1770,7 +1885,14 @@
           <div class="mb-20">
             <!-- Calorie Calculator -->
             <div class="glass rounded-2xl p-6 mb-4">
-              <h2 class="text-xl font-bold text-cream mb-4">🍽️ Calorie Tracker</h2>
+              <h2 class="text-xl font-bold text-cream mb-4">
+                <i class="fa-solid fa-utensils mr-2" style="color: #8B5CF6;"></i>Calorie Tracker
+              </h2>
+
+              <!-- Food Scanner Button -->
+              <button onclick="showFoodScanner()" class="btn-primary w-full mb-4">
+                <i class="fa-solid fa-camera mr-2"></i>Scan Food Logo
+              </button>
 
               <div class="mb-4">
                 <div class="flex justify-between text-sm mb-2">
@@ -2018,6 +2140,174 @@
               <i class="fa-solid fa-dumbbell"></i>
             </button>
             <button onclick="switchTab('profile')" class="tab active">
+              <i class="fa-solid fa-user"></i>
+            </button>
+          </div>
+        `;
+      } else if (state.currentTab === 'foodScanner') {
+        app.innerHTML = `
+          <div class="mb-20">
+            <!-- Header -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-dark">
+                  <i class="fa-solid fa-camera mr-2" style="color: #8B5CF6;"></i>Food Scanner
+                </h2>
+                <button onclick="switchTab('track')" class="btn-success px-4 py-2">
+                  <i class="fa-solid fa-arrow-left mr-2"></i>Back
+                </button>
+              </div>
+              <p class="text-sm text-medium">Scan or select food items to log calories instantly!</p>
+            </div>
+
+            <!-- Today's Logged Foods -->
+            ${state.foodsLogged.length > 0 ? `
+              <div class="glass rounded-2xl p-6 mb-4">
+                <h3 class="text-xl font-bold text-dark mb-4">
+                  <i class="fa-solid fa-list mr-2" style="color: #8B5CF6;"></i>Today's Food Log
+                </h3>
+                <div class="space-y-3">
+                  ${state.foodsLogged.map((food, index) => `
+                    <div class="task-card">
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3 flex-1">
+                          <div class="text-3xl">${food.logo}</div>
+                          <div class="flex-1">
+                            <div class="font-bold text-dark">${food.name}</div>
+                            <div class="text-xs text-medium">${food.brand}</div>
+                            <div class="text-xs" style="color: #8B5CF6;">${food.calories} cal • P: ${food.protein}g • C: ${food.carbs}g • F: ${food.fats}g</div>
+                          </div>
+                        </div>
+                        <button onclick="removeFoodLog(${index})" class="btn-success px-3 py-2">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Food Categories -->
+            <div class="glass rounded-2xl p-6 mb-4">
+              <h3 class="text-xl font-bold text-dark mb-4">
+                <i class="fa-solid fa-utensils mr-2" style="color: #8B5CF6;"></i>Quick Add Foods
+              </h3>
+
+              <!-- Fast Food -->
+              <div class="mb-4">
+                <h4 class="font-bold text-dark mb-3" style="color: #8B5CF6;">Fast Food</h4>
+                <div class="grid grid-cols-2 gap-3">
+                  ${FOOD_DATABASE.filter((f, i) => i < 8).map(food => `
+                    <button onclick="logFood('${food.id}')" class="task-card text-left hover:scale-105 transition-transform">
+                      <div class="flex items-center gap-2 mb-2">
+                        <div class="text-2xl">${food.logo}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-dark text-sm">${food.name}</div>
+                          <div class="text-xs text-medium">${food.brand}</div>
+                        </div>
+                      </div>
+                      <div class="text-xs font-bold" style="color: #8B5CF6;">${food.calories} cal</div>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Snacks & Drinks -->
+              <div class="mb-4">
+                <h4 class="font-bold text-dark mb-3" style="color: #8B5CF6;">Snacks & Drinks</h4>
+                <div class="grid grid-cols-2 gap-3">
+                  ${FOOD_DATABASE.filter((f, i) => i >= 8 && i < 17).map(food => `
+                    <button onclick="logFood('${food.id}')" class="task-card text-left hover:scale-105 transition-transform">
+                      <div class="flex items-center gap-2 mb-2">
+                        <div class="text-2xl">${food.logo}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-dark text-sm">${food.name}</div>
+                          <div class="text-xs text-medium">${food.brand}</div>
+                        </div>
+                      </div>
+                      <div class="text-xs font-bold" style="color: #8B5CF6;">${food.calories} cal</div>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Breakfast -->
+              <div class="mb-4">
+                <h4 class="font-bold text-dark mb-3" style="color: #8B5CF6;">Breakfast</h4>
+                <div class="grid grid-cols-2 gap-3">
+                  ${FOOD_DATABASE.filter((f, i) => i >= 17 && i < 22).map(food => `
+                    <button onclick="logFood('${food.id}')" class="task-card text-left hover:scale-105 transition-transform">
+                      <div class="flex items-center gap-2 mb-2">
+                        <div class="text-2xl">${food.logo}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-dark text-sm">${food.name}</div>
+                          <div class="text-xs text-medium">${food.brand}</div>
+                        </div>
+                      </div>
+                      <div class="text-xs font-bold" style="color: #8B5CF6;">${food.calories} cal</div>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Healthy & Protein -->
+              <div class="mb-4">
+                <h4 class="font-bold text-dark mb-3" style="color: #8B5CF6;">Healthy & Protein</h4>
+                <div class="grid grid-cols-2 gap-3">
+                  ${FOOD_DATABASE.filter((f, i) => i >= 22 && i < 29).map(food => `
+                    <button onclick="logFood('${food.id}')" class="task-card text-left hover:scale-105 transition-transform">
+                      <div class="flex items-center gap-2 mb-2">
+                        <div class="text-2xl">${food.logo}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-dark text-sm">${food.name}</div>
+                          <div class="text-xs text-medium">${food.brand}</div>
+                        </div>
+                      </div>
+                      <div class="text-xs font-bold" style="color: #8B5CF6;">${food.calories} cal</div>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Restaurant Meals -->
+              <div>
+                <h4 class="font-bold text-dark mb-3" style="color: #8B5CF6;">Restaurant Meals</h4>
+                <div class="grid grid-cols-2 gap-3">
+                  ${FOOD_DATABASE.filter((f, i) => i >= 29).map(food => `
+                    <button onclick="logFood('${food.id}')" class="task-card text-left hover:scale-105 transition-transform">
+                      <div class="flex items-center gap-2 mb-2">
+                        <div class="text-2xl">${food.logo}</div>
+                        <div class="flex-1">
+                          <div class="font-bold text-dark text-sm">${food.name}</div>
+                          <div class="text-xs text-medium">${food.brand}</div>
+                        </div>
+                      </div>
+                      <div class="text-xs font-bold" style="color: #8B5CF6;">${food.calories} cal</div>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
               <i class="fa-solid fa-user"></i>
             </button>
           </div>

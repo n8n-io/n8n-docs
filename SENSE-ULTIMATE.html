@@ -9,17 +9,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --darkest: #121212;
-      --dark: #1E1E1E;
-      --medium: #2C2C2C;
-      --green: #4CAF50;
-      --orange: #FF9800;
-      --red: #F44336;
-      --light-gray: #E0E0E0;
-      --white: #FFFFFF;
-      --green-bright: #66BB6A;
-      --orange-bright: #FFA726;
-      --red-bright: #EF5350;
+      --darkest: #000000;
+      --dark: #0a0a0a;
+      --medium: #0f1419;
+      --cyan: #00D9FF;
+      --cyan-bright: #00FFFF;
+      --blue: #0288D1;
+      --orange: #FF6C00;
+      --orange-bright: #FF9100;
+      --electric-blue: #1FB4FF;
+      --glow-cyan: rgba(0, 217, 255, 0.5);
+      --glow-orange: rgba(255, 108, 0, 0.5);
     }
 
     * {
@@ -27,115 +27,131 @@
     }
 
     body {
-      background: #121212;
+      background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #0f1419 100%);
       min-height: 100vh;
     }
 
     .glass {
-      background: rgba(30, 30, 30, 0.95);
+      background: rgba(10, 10, 10, 0.95);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(224, 224, 224, 0.1);
-      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.15), 0 4px 16px rgba(0, 0, 0, 0.6);
     }
 
     .glass-dark {
-      background: rgba(18, 18, 18, 0.98);
+      background: rgba(0, 0, 0, 0.98);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(224, 224, 224, 0.08);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.1);
     }
 
     .status-window {
-      background: rgba(30, 30, 30, 0.98);
+      background: rgba(10, 10, 10, 0.98);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(76, 175, 80, 0.3);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 217, 255, 0.5);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.3), 0 4px 16px rgba(0, 0, 0, 0.6);
     }
 
-    .text-cream { color: #E0E0E0; }
-    .text-medium { color: #B0B0B0; }
+    .text-cream { color: #00FFFF; }
+    .text-medium { color: #1FB4FF; }
     .text-dark { color: #FFFFFF; }
-    .text-gold { color: #4CAF50; }
-    .text-purple { color: #FF9800; }
-    .text-cyan { color: #4CAF50; }
+    .text-gold { color: #00D9FF; }
+    .text-purple { color: #FF9100; }
+    .text-cyan { color: #00D9FF; }
     .text-white { color: #FFFFFF; }
-    .bg-cream { background: #2C2C2C; }
-    .bg-medium { background: #2C2C2C; }
-    .bg-dark { background: #1E1E1E; }
-    .bg-gold { background: #4CAF50; }
-    .border-medium { border-color: #4CAF50; }
-    .border-cream { border-color: #E0E0E0; }
-    .border-gold { border-color: #4CAF50; }
+    .bg-cream { background: #0f1419; }
+    .bg-medium { background: #0f1419; }
+    .bg-dark { background: #0a0a0a; }
+    .bg-gold { background: #00D9FF; }
+    .border-medium { border-color: #00D9FF; }
+    .border-cream { border-color: #00FFFF; }
+    .border-gold { border-color: #00D9FF; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 100%);
+      background: linear-gradient(90deg, #00D9FF 0%, #1FB4FF 50%, #0288D1 100%);
       height: 8px;
       border-radius: 4px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
     }
 
     .progress-container {
-      background: rgba(44, 44, 44, 0.8);
+      background: rgba(0, 0, 0, 0.8);
       border-radius: 4px;
       overflow: hidden;
+      border: 1px solid rgba(0, 217, 255, 0.2);
     }
 
     .btn-primary {
-      background: #4CAF50;
-      color: #FFFFFF;
+      background: linear-gradient(135deg, #00D9FF 0%, #0288D1 100%);
+      color: #000000;
       font-weight: 700;
-      border: none;
+      border: 1px solid #00FFFF;
       border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.2s ease;
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     .btn-primary:hover {
-      background: #66BB6A;
+      background: linear-gradient(135deg, #00FFFF 0%, #1FB4FF 100%);
       transform: translateY(-1px);
+      box-shadow: 0 0 25px rgba(0, 217, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
     .btn-success {
-      background: rgba(224, 224, 224, 0.1);
-      color: #E0E0E0;
-      border: 1px solid rgba(224, 224, 224, 0.3);
+      background: rgba(0, 0, 0, 0.8);
+      color: #00FFFF;
+      border: 1px solid rgba(0, 217, 255, 0.5);
       font-weight: 700;
       border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
       transition: all 0.2s ease;
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
     }
 
     .btn-success:hover {
-      background: rgba(224, 224, 224, 0.15);
-      border-color: rgba(224, 224, 224, 0.5);
+      background: rgba(0, 217, 255, 0.1);
+      border-color: rgba(0, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
     }
 
     .btn-reward {
-      background: #FF9800;
-      color: #FFFFFF;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF9100 100%);
+      color: #000000;
       font-weight: 700;
+      border: 1px solid #FF9100;
+      box-shadow: 0 0 15px rgba(255, 108, 0, 0.5);
+    }
+
+    .btn-reward:hover {
+      box-shadow: 0 0 25px rgba(255, 108, 0, 0.8);
     }
 
     .task-card {
-      background: rgba(30, 30, 30, 0.9);
+      background: rgba(0, 0, 0, 0.9);
       backdrop-filter: blur(10px);
       border-radius: 12px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.3);
       transition: all 0.2s ease;
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .task-card:hover {
-      background: rgba(44, 44, 44, 0.9);
-      border-color: rgba(76, 175, 80, 0.3);
+      background: rgba(15, 20, 25, 0.9);
+      border-color: rgba(0, 217, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
     }
 
     .task-card.completed {
-      background: rgba(76, 175, 80, 0.15);
-      border: 1px solid rgba(76, 175, 80, 0.5);
+      background: rgba(0, 217, 255, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.8);
+      box-shadow: 0 0 25px rgba(0, 217, 255, 0.4);
     }
 
     .mission-badge {
@@ -149,28 +165,32 @@
     }
 
     .badge-extra {
-      background: rgba(76, 175, 80, 0.2);
-      color: #66BB6A;
-      border: 1px solid rgba(76, 175, 80, 0.5);
+      background: rgba(0, 217, 255, 0.2);
+      color: #00FFFF;
+      border: 1px solid rgba(0, 217, 255, 0.6);
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
     }
 
     .badge-weekly {
-      background: rgba(255, 152, 0, 0.2);
-      color: #FFA726;
-      border: 1px solid rgba(255, 152, 0, 0.5);
+      background: rgba(31, 180, 255, 0.2);
+      color: #1FB4FF;
+      border: 1px solid rgba(31, 180, 255, 0.6);
+      box-shadow: 0 0 10px rgba(31, 180, 255, 0.3);
     }
 
     .badge-epic {
-      background: rgba(244, 67, 54, 0.2);
-      color: #EF5350;
-      border: 1px solid rgba(244, 67, 54, 0.5);
+      background: rgba(255, 108, 0, 0.2);
+      color: #FF9100;
+      border: 1px solid rgba(255, 108, 0, 0.6);
+      box-shadow: 0 0 10px rgba(255, 108, 0, 0.3);
     }
 
     .timer-urgent {
-      background: rgba(244, 67, 54, 0.2);
-      border: 1px solid rgba(244, 67, 54, 0.5);
-      color: #EF5350;
+      background: rgba(255, 108, 0, 0.2);
+      border: 1px solid rgba(255, 108, 0, 0.6);
+      color: #FF9100;
       animation: pulse 2s infinite;
+      box-shadow: 0 0 15px rgba(255, 108, 0, 0.4);
     }
 
     @keyframes pulse {
@@ -185,40 +205,44 @@
     }
 
     .level-badge {
-      background: #4CAF50;
-      color: #FFFFFF;
+      background: linear-gradient(135deg, #00D9FF 0%, #0288D1 100%);
+      color: #000000;
       padding: 6px 16px;
       border-radius: 6px;
       font-weight: 700;
       display: inline-block;
+      border: 1px solid #00FFFF;
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
     }
 
-    /* Streak Badge - Arise Style */
+    /* Streak Badge - Tron Style */
     .streak-badge {
-      background: rgba(255, 152, 0, 0.2);
+      background: rgba(0, 0, 0, 0.9);
       padding: 12px 20px;
       border-radius: 8px;
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      border: 1px solid rgba(255, 152, 0, 0.5);
+      border: 1px solid rgba(255, 108, 0, 0.8);
+      box-shadow: 0 0 20px rgba(255, 108, 0, 0.5);
     }
 
     .streak-number {
       font-size: 24px;
       font-weight: 700;
-      color: #FFA726;
+      color: #FF9100;
+      text-shadow: 0 0 10px rgba(255, 108, 0, 0.8);
     }
 
     .streak-label {
       font-size: 14px;
       font-weight: 600;
-      color: #E0E0E0;
+      color: #00FFFF;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    /* Rank Badge - Arise Style */
+    /* Rank Badge - Tron Style */
     .rank-badge {
       padding: 8px 16px;
       border-radius: 8px;
@@ -226,7 +250,8 @@
       align-items: center;
       gap: 8px;
       font-weight: 700;
-      border: 1px solid;
+      border: 2px solid;
+      box-shadow: 0 0 15px;
     }
 
     .rank-icon {
@@ -244,49 +269,55 @@
       cursor: pointer;
       transition: all 0.2s ease;
       background: transparent;
-      color: #B0B0B0;
+      color: #1FB4FF;
       font-size: 12px;
-      border: none;
+      border: 1px solid transparent;
     }
 
     .tab:hover {
-      color: #E0E0E0;
+      color: #00FFFF;
+      border-color: rgba(0, 217, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
     }
 
     .tab.active {
-      background: rgba(76, 175, 80, 0.2);
-      color: #66BB6A;
-      border: 1px solid rgba(76, 175, 80, 0.5);
+      background: rgba(0, 217, 255, 0.2);
+      color: #00FFFF;
+      border: 1px solid rgba(0, 217, 255, 0.6);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
     }
 
     .reward-item {
-      background: rgba(30, 30, 30, 0.9);
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      background: rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(0, 217, 255, 0.3);
       border-radius: 12px;
       padding: 16px;
       transition: all 0.2s ease;
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .reward-item:hover {
-      background: rgba(44, 44, 44, 0.9);
-      border-color: rgba(255, 152, 0, 0.3);
+      background: rgba(15, 20, 25, 0.9);
+      border-color: rgba(255, 108, 0, 0.5);
+      box-shadow: 0 0 20px rgba(255, 108, 0, 0.3);
     }
 
     .reward-item.owned {
       opacity: 0.6;
-      border-color: rgba(76, 175, 80, 0.3);
+      border-color: rgba(0, 217, 255, 0.5);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(30, 30, 30, 0.98);
+      background: rgba(0, 0, 0, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(76, 175, 80, 0.5);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 8px 32px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 217, 255, 0.8);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -298,17 +329,19 @@
     }
 
     .workout-card {
-      background: rgba(30, 30, 30, 0.95);
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      background: rgba(0, 0, 0, 0.95);
+      border: 1px solid rgba(0, 217, 255, 0.3);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
       transition: all 0.2s ease;
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .workout-card:hover {
-      background: rgba(44, 44, 44, 0.95);
-      border-color: rgba(76, 175, 80, 0.3);
+      background: rgba(15, 20, 25, 0.95);
+      border-color: rgba(0, 217, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
     }
 
     .workout-img {
@@ -317,7 +350,8 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 8px;
-      background: rgba(44, 44, 44, 0.8);
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 217, 255, 0.2);
     }
 
     /* Photo Modal */
@@ -336,13 +370,13 @@
     }
 
     .photo-modal-content {
-      background: rgba(30, 30, 30, 0.98);
+      background: rgba(0, 0, 0, 0.98);
       border-radius: 20px;
       padding: 24px;
       max-width: 400px;
       width: 100%;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(76, 175, 80, 0.5);
+      box-shadow: 0 0 40px rgba(0, 217, 255, 0.6), 0 20px 60px rgba(0, 0, 0, 0.9);
+      border: 2px solid rgba(0, 217, 255, 0.8);
     }
 
     .photo-preview {
@@ -351,8 +385,9 @@
       object-fit: cover;
       border-radius: 12px;
       margin: 16px 0;
-      background: rgba(44, 44, 44, 0.8);
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
     }
 
     .camera-input {
@@ -361,11 +396,12 @@
 
     /* Calendar View */
     .calendar-day {
-      background: rgba(30, 30, 30, 0.95);
+      background: rgba(0, 0, 0, 0.95);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
     }
 
     .proof-image {
@@ -376,25 +412,28 @@
       margin-top: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
-      border: 1px solid rgba(224, 224, 224, 0.1);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      box-shadow: 0 0 5px rgba(0, 217, 255, 0.1);
     }
 
     .proof-image:hover {
       transform: scale(1.05);
-      border-color: rgba(76, 175, 80, 0.5);
+      border-color: rgba(0, 217, 255, 0.8);
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
     }
 
     .task-badge {
       display: inline-block;
-      background: rgba(76, 175, 80, 0.2);
-      color: #66BB6A;
+      background: rgba(0, 217, 255, 0.2);
+      color: #00FFFF;
       padding: 4px 12px;
       border-radius: 12px;
       font-size: 11px;
       font-weight: 700;
       margin-right: 6px;
       margin-bottom: 6px;
-      border: 1px solid rgba(76, 175, 80, 0.3);
+      border: 1px solid rgba(0, 217, 255, 0.4);
+      box-shadow: 0 0 5px rgba(0, 217, 255, 0.2);
     }
   </style>
 </head>

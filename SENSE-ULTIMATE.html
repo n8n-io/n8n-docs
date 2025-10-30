@@ -9,17 +9,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-      --darkest: #0A1628;
-      --dark: #1A237E;
-      --medium: #4A5F8C;
-      --gold: #FFD700;
-      --cream: #F7F1EA;
-      --red: #FF1744;
-      --purple: #A02BBE;
-      --cyan: #00E5FF;
-      --teal: #1DE9B6;
-      --pink: #FF4081;
+      --darkest: #121212;
+      --dark: #1E1E1E;
+      --medium: #2C2C2C;
+      --green: #4CAF50;
+      --orange: #FF9800;
+      --red: #F44336;
+      --light-gray: #E0E0E0;
       --white: #FFFFFF;
+      --green-bright: #66BB6A;
+      --orange-bright: #FFA726;
+      --red-bright: #EF5350;
     }
 
     * {
@@ -27,157 +27,115 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0A1628 0%, #1A237E 50%, #311B92 100%);
+      background: #121212;
       min-height: 100vh;
     }
 
     .glass {
-      background: linear-gradient(135deg, rgba(26, 35, 126, 0.8) 0%, rgba(74, 20, 140, 0.6) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(160, 43, 190, 0.3);
-      box-shadow: 0 8px 32px 0 rgba(160, 43, 190, 0.2),
-                  0 0 40px rgba(0, 229, 255, 0.1);
+      background: rgba(30, 30, 30, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(224, 224, 224, 0.1);
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4);
     }
 
     .glass-dark {
-      background: linear-gradient(135deg, rgba(10, 22, 40, 0.98) 0%, rgba(26, 35, 126, 0.95) 100%);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(160, 43, 190, 0.3);
+      background: rgba(18, 18, 18, 0.98);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(224, 224, 224, 0.08);
     }
 
     .status-window {
-      background: linear-gradient(135deg, rgba(247, 241, 234, 0.98) 0%, rgba(255, 215, 0, 0.1) 100%);
-      backdrop-filter: blur(30px);
-      border: 2px solid rgba(255, 215, 0, 0.6);
-      box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3),
-                  0 0 60px rgba(160, 43, 190, 0.2);
+      background: rgba(30, 30, 30, 0.98);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(76, 175, 80, 0.3);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     }
 
-    .text-cream { color: #F7F1EA; }
-    .text-medium { color: #00E5FF; }
-    .text-dark { color: #0A1628; }
-    .text-gold { color: #FFD700; }
-    .text-purple { color: #A02BBE; }
-    .text-cyan { color: #00E5FF; }
+    .text-cream { color: #E0E0E0; }
+    .text-medium { color: #B0B0B0; }
+    .text-dark { color: #FFFFFF; }
+    .text-gold { color: #4CAF50; }
+    .text-purple { color: #FF9800; }
+    .text-cyan { color: #4CAF50; }
     .text-white { color: #FFFFFF; }
-    .bg-cream { background: #F7F1EA; }
-    .bg-medium { background: #4A5F8C; }
-    .bg-dark { background: #1A237E; }
-    .bg-gold { background: #FFD700; }
-    .border-medium { border-color: #00E5FF; }
-    .border-cream { border-color: #F7F1EA; }
-    .border-gold { border-color: #FFD700; }
+    .bg-cream { background: #2C2C2C; }
+    .bg-medium { background: #2C2C2C; }
+    .bg-dark { background: #1E1E1E; }
+    .bg-gold { background: #4CAF50; }
+    .border-medium { border-color: #4CAF50; }
+    .border-cream { border-color: #E0E0E0; }
+    .border-gold { border-color: #4CAF50; }
 
     .progress-bar {
-      background: linear-gradient(90deg, #00E5FF 0%, #1DE9B6 50%, #FFD700 100%);
-      height: 12px;
-      border-radius: 6px;
+      background: linear-gradient(90deg, #4CAF50 0%, #66BB6A 100%);
+      height: 8px;
+      border-radius: 4px;
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 12px rgba(0, 229, 255, 0.6),
-                  0 0 20px rgba(29, 233, 182, 0.4);
-      animation: progressGlow 2s ease-in-out infinite;
-    }
-
-    @keyframes progressGlow {
-      0%, 100% {
-        box-shadow: 0 2px 12px rgba(0, 229, 255, 0.6),
-                    0 0 20px rgba(29, 233, 182, 0.4);
-      }
-      50% {
-        box-shadow: 0 2px 16px rgba(0, 229, 255, 0.9),
-                    0 0 30px rgba(29, 233, 182, 0.6);
-      }
     }
 
     .progress-container {
-      background: rgba(10, 22, 40, 0.6);
-      border-radius: 5px;
+      background: rgba(44, 44, 44, 0.8);
+      border-radius: 4px;
       overflow: hidden;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
-      color: #0A1628;
+      background: #4CAF50;
+      color: #FFFFFF;
       font-weight: 700;
       border: none;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5),
-                  0 0 25px rgba(255, 64, 129, 0.3);
+      transition: all 0.2s ease;
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.8),
-                  0 0 40px rgba(255, 64, 129, 0.5);
+      background: #66BB6A;
+      transform: translateY(-1px);
     }
 
     .btn-success {
-      background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(160, 43, 190, 0.2) 100%);
-      color: #00E5FF;
-      border: 2px solid #00E5FF;
+      background: rgba(224, 224, 224, 0.1);
+      color: #E0E0E0;
+      border: 1px solid rgba(224, 224, 224, 0.3);
       font-weight: 700;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 12px 24px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+      transition: all 0.2s ease;
     }
 
     .btn-success:hover {
-      border-color: #A02BBE;
-      color: #A02BBE;
-      box-shadow: 0 0 25px rgba(160, 43, 190, 0.5);
+      background: rgba(224, 224, 224, 0.15);
+      border-color: rgba(224, 224, 224, 0.5);
     }
 
     .btn-reward {
-      background: linear-gradient(135deg, #A02BBE 0%, #D592E6 100%);
+      background: #FF9800;
       color: #FFFFFF;
       font-weight: 700;
-      box-shadow: 0 4px 15px rgba(160, 43, 190, 0.5);
     }
 
     .task-card {
-      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(255, 215, 0, 0.05) 100%);
+      background: rgba(30, 30, 30, 0.9);
       backdrop-filter: blur(10px);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 16px;
       margin-bottom: 12px;
-      border: 1px solid rgba(0, 229, 255, 0.3);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 229, 255, 0.1);
+      border: 1px solid rgba(224, 224, 224, 0.1);
+      transition: all 0.2s ease;
     }
 
     .task-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 229, 255, 0.4),
-                  0 0 30px rgba(160, 43, 190, 0.2);
-      border-color: #00E5FF;
+      background: rgba(44, 44, 44, 0.9);
+      border-color: rgba(76, 175, 80, 0.3);
     }
 
     .task-card.completed {
-      background: linear-gradient(135deg, rgba(0, 229, 255, 0.3) 0%, rgba(29, 233, 182, 0.3) 50%, rgba(255, 215, 0, 0.3) 100%);
-      border: 2px solid #1DE9B6;
-      box-shadow: 0 4px 20px rgba(29, 233, 182, 0.6),
-                  0 0 40px rgba(0, 229, 255, 0.4);
-      animation: taskComplete 0.5s ease-out;
-    }
-
-    @keyframes taskComplete {
-      0% {
-        transform: scale(0.95);
-        opacity: 0.5;
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+      background: rgba(76, 175, 80, 0.15);
+      border: 1px solid rgba(76, 175, 80, 0.5);
     }
 
     .mission-badge {
@@ -191,230 +149,144 @@
     }
 
     .badge-extra {
-      background: linear-gradient(135deg, rgba(0, 229, 255, 0.3) 0%, rgba(160, 43, 190, 0.3) 100%);
-      color: #00E5FF;
-      border: 2px solid #00E5FF;
-      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+      background: rgba(76, 175, 80, 0.2);
+      color: #66BB6A;
+      border: 1px solid rgba(76, 175, 80, 0.5);
     }
 
     .badge-weekly {
-      background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(255, 64, 129, 0.3) 100%);
-      color: #FFD700;
-      border: 2px solid #FFD700;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      background: rgba(255, 152, 0, 0.2);
+      color: #FFA726;
+      border: 1px solid rgba(255, 152, 0, 0.5);
+    }
+
+    .badge-epic {
+      background: rgba(244, 67, 54, 0.2);
+      color: #EF5350;
+      border: 1px solid rgba(244, 67, 54, 0.5);
     }
 
     .timer-urgent {
-      background: linear-gradient(135deg, #FF1744 0%, #F50057 50%, #C51162 100%);
-      color: white;
+      background: rgba(244, 67, 54, 0.2);
+      border: 1px solid rgba(244, 67, 54, 0.5);
+      color: #EF5350;
       animation: pulse 2s infinite;
-      box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5),
-                  0 0 50px rgba(245, 0, 87, 0.3);
     }
 
     @keyframes pulse {
       0%, 100% {
         opacity: 1;
         transform: scale(1);
-        box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5),
-                    0 0 50px rgba(245, 0, 87, 0.3);
       }
       50% {
         opacity: 0.9;
-        transform: scale(1.02);
-        box-shadow: 0 12px 40px rgba(255, 23, 68, 0.7),
-                    0 0 70px rgba(245, 0, 87, 0.5);
+        transform: scale(1.01);
       }
     }
 
     .level-badge {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
-      color: #0A1628;
+      background: #4CAF50;
+      color: #FFFFFF;
       padding: 6px 16px;
-      border-radius: 24px;
-      font-weight: 800;
+      border-radius: 6px;
+      font-weight: 700;
       display: inline-block;
-      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6),
-                  0 0 25px rgba(255, 64, 129, 0.4);
     }
 
-    /* Shiny Streak Badge */
+    /* Streak Badge - Arise Style */
     .streak-badge {
-      position: relative;
-      background: linear-gradient(135deg, #FF6F00 0%, #FFB74D 50%, #FF6F00 100%);
-      padding: 16px 24px;
-      border-radius: 20px;
+      background: rgba(255, 152, 0, 0.2);
+      padding: 12px 20px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      box-shadow: 0 8px 24px rgba(255, 111, 0, 0.5),
-                  0 0 40px rgba(255, 183, 77, 0.3),
-                  inset 0 2px 0 rgba(255, 255, 255, 0.3);
-      animation: streakPulse 2s ease-in-out infinite;
-      overflow: hidden;
-    }
-
-    .streak-badge::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      animation: streakShine 3s linear infinite;
+      border: 1px solid rgba(255, 152, 0, 0.5);
     }
 
     .streak-number {
-      font-size: 32px;
-      font-weight: 900;
-      color: #FFFFFF;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5),
-                   0 0 20px rgba(255, 183, 77, 0.8);
-      position: relative;
-      z-index: 1;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFA726;
     }
 
     .streak-label {
       font-size: 14px;
-      font-weight: 700;
-      color: #FFFFFF;
+      font-weight: 600;
+      color: #E0E0E0;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      z-index: 1;
+      letter-spacing: 0.5px;
     }
 
-    @keyframes streakPulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 8px 24px rgba(255, 111, 0, 0.5),
-                    0 0 40px rgba(255, 183, 77, 0.3),
-                    inset 0 2px 0 rgba(255, 255, 255, 0.3);
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 12px 32px rgba(255, 111, 0, 0.7),
-                    0 0 60px rgba(255, 183, 77, 0.5),
-                    inset 0 2px 0 rgba(255, 255, 255, 0.4);
-      }
-    }
-
-    @keyframes streakShine {
-      0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-      }
-      100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-      }
-    }
-
-    /* Rank Badge */
+    /* Rank Badge - Arise Style */
     .rank-badge {
-      position: relative;
-      padding: 12px 20px;
-      border-radius: 16px;
+      padding: 8px 16px;
+      border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.3);
-      overflow: hidden;
-    }
-
-    .rank-badge::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      animation: rankShine 4s linear infinite;
-    }
-
-    @keyframes rankShine {
-      0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-      }
-      100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-      }
+      gap: 8px;
+      font-weight: 700;
+      border: 1px solid;
     }
 
     .rank-icon {
-      font-size: 28px;
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      font-size: 20px;
     }
 
     .rank-name {
-      font-size: 18px;
-      position: relative;
-      z-index: 1;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      font-size: 14px;
     }
 
     .tab {
-      padding: 10px 16px;
-      border-radius: 12px;
-      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.3s ease;
-      background: linear-gradient(135deg, rgba(26, 35, 126, 0.5) 0%, rgba(74, 20, 140, 0.5) 100%);
-      color: #00E5FF;
+      transition: all 0.2s ease;
+      background: transparent;
+      color: #B0B0B0;
       font-size: 12px;
-      border: 1px solid rgba(0, 229, 255, 0.2);
+      border: none;
     }
 
     .tab:hover {
-      background: linear-gradient(135deg, rgba(0, 229, 255, 0.2) 0%, rgba(160, 43, 190, 0.2) 100%);
-      border-color: #00E5FF;
-      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+      color: #E0E0E0;
     }
 
     .tab.active {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA726 50%, #FF4081 100%);
-      color: #0A1628;
-      border: none;
-      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6),
-                  0 0 25px rgba(255, 64, 129, 0.4);
+      background: rgba(76, 175, 80, 0.2);
+      color: #66BB6A;
+      border: 1px solid rgba(76, 175, 80, 0.5);
     }
 
     .reward-item {
-      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(255, 215, 0, 0.05) 100%);
-      border: 2px solid rgba(160, 43, 190, 0.3);
-      border-radius: 16px;
+      background: rgba(30, 30, 30, 0.9);
+      border: 1px solid rgba(224, 224, 224, 0.1);
+      border-radius: 12px;
       padding: 16px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(160, 43, 190, 0.1);
+      transition: all 0.2s ease;
     }
 
     .reward-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(160, 43, 190, 0.4),
-                  0 0 40px rgba(255, 215, 0, 0.3);
-      border-color: #A02BBE;
-      background: linear-gradient(135deg, rgba(247, 241, 234, 0.95) 0%, rgba(160, 43, 190, 0.1) 100%);
+      background: rgba(44, 44, 44, 0.9);
+      border-color: rgba(255, 152, 0, 0.3);
     }
 
     .reward-item.owned {
       opacity: 0.6;
-      border-color: #00E5FF;
+      border-color: rgba(76, 175, 80, 0.3);
     }
 
     .toast {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: rgba(247, 241, 234, 0.98);
+      background: rgba(30, 30, 30, 0.98);
       backdrop-filter: blur(20px);
       padding: 16px 24px;
       border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(250, 187, 90, 0.6);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(76, 175, 80, 0.5);
       z-index: 9999;
       animation: slideInRight 0.4s ease-out;
       max-width: 300px;
@@ -426,11 +298,17 @@
     }
 
     .workout-card {
-      background: rgba(247, 241, 234, 0.95);
-      border: 1px solid rgba(74, 95, 140, 0.4);
+      background: rgba(30, 30, 30, 0.95);
+      border: 1px solid rgba(224, 224, 224, 0.1);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .workout-card:hover {
+      background: rgba(44, 44, 44, 0.95);
+      border-color: rgba(76, 175, 80, 0.3);
     }
 
     .workout-img {
@@ -439,7 +317,7 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 8px;
-      background: rgba(19, 47, 99, 0.2);
+      background: rgba(44, 44, 44, 0.8);
     }
 
     /* Photo Modal */
@@ -458,13 +336,13 @@
     }
 
     .photo-modal-content {
-      background: rgba(247, 241, 234, 0.98);
+      background: rgba(30, 30, 30, 0.98);
       border-radius: 20px;
       padding: 24px;
       max-width: 400px;
       width: 100%;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      border: 2px solid #FABB5A;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(76, 175, 80, 0.5);
     }
 
     .photo-preview {
@@ -473,7 +351,8 @@
       object-fit: cover;
       border-radius: 12px;
       margin: 16px 0;
-      background: rgba(60, 61, 55, 0.2);
+      background: rgba(44, 44, 44, 0.8);
+      border: 1px solid rgba(224, 224, 224, 0.1);
     }
 
     .camera-input {
@@ -482,11 +361,11 @@
 
     /* Calendar View */
     .calendar-day {
-      background: rgba(247, 241, 234, 0.95);
+      background: rgba(30, 30, 30, 0.95);
       border-radius: 12px;
       padding: 12px;
       margin-bottom: 12px;
-      border: 2px solid rgba(250, 187, 90, 0.4);
+      border: 1px solid rgba(224, 224, 224, 0.1);
     }
 
     .proof-image {
@@ -496,25 +375,26 @@
       border-radius: 8px;
       margin-top: 8px;
       cursor: pointer;
-      transition: transform 0.2s;
-      border: 2px solid rgba(74, 95, 140, 0.2);
+      transition: all 0.2s ease;
+      border: 1px solid rgba(224, 224, 224, 0.1);
     }
 
     .proof-image:hover {
       transform: scale(1.05);
-      border-color: #FABB5A;
+      border-color: rgba(76, 175, 80, 0.5);
     }
 
     .task-badge {
       display: inline-block;
-      background: rgba(74, 95, 140, 0.3);
-      color: #0A1628;
+      background: rgba(76, 175, 80, 0.2);
+      color: #66BB6A;
       padding: 4px 12px;
       border-radius: 12px;
       font-size: 11px;
       font-weight: 700;
       margin-right: 6px;
       margin-bottom: 6px;
+      border: 1px solid rgba(76, 175, 80, 0.3);
     }
   </style>
 </head>
@@ -1605,7 +1485,7 @@
 
             <div class="glass rounded-2xl p-6 mb-4">
               <h2 class="text-lg font-bold text-cream mb-4">
-                <span class="mission-badge badge-epic" style="background: rgba(105,117,101,0.3); color: #ECDFCC; border: 2px solid #697565;">EPIC</span> Epic
+                <span class="mission-badge badge-epic">EPIC</span> Epic
               </h2>
               ${epicMissions.map(mission => {
                 const completed = state.extraMissions[mission.id];

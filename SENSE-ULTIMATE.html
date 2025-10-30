@@ -215,29 +215,58 @@
       box-shadow: 0 0 15px rgba(0, 217, 255, 0.6);
     }
 
-    /* Streak Badge - Tron Style */
+    /* Streak Badge - Fire Animation Style */
     .streak-badge {
-      background: rgba(0, 0, 0, 0.9);
-      padding: 12px 20px;
-      border-radius: 8px;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      border: 1px solid rgba(255, 108, 0, 0.8);
-      box-shadow: 0 0 20px rgba(255, 108, 0, 0.5);
+      gap: 4px;
+    }
+
+    .fire-icon {
+      font-size: 28px;
+      animation: fireFlicker 1.5s infinite alternate;
+      filter: drop-shadow(0 0 8px rgba(255, 108, 0, 0.8));
+    }
+
+    @keyframes fireFlicker {
+      0% {
+        transform: scale(1) rotate(-2deg);
+        filter: drop-shadow(0 0 8px rgba(255, 108, 0, 0.8))
+                drop-shadow(0 0 12px rgba(255, 145, 0, 0.6));
+      }
+      25% {
+        transform: scale(1.05) rotate(2deg);
+        filter: drop-shadow(0 0 12px rgba(255, 108, 0, 1))
+                drop-shadow(0 0 16px rgba(255, 145, 0, 0.8));
+      }
+      50% {
+        transform: scale(1.02) rotate(-1deg);
+        filter: drop-shadow(0 0 10px rgba(255, 108, 0, 0.9))
+                drop-shadow(0 0 14px rgba(255, 145, 0, 0.7));
+      }
+      75% {
+        transform: scale(1.08) rotate(1deg);
+        filter: drop-shadow(0 0 14px rgba(255, 108, 0, 1))
+                drop-shadow(0 0 18px rgba(255, 145, 0, 0.9));
+      }
+      100% {
+        transform: scale(1.03) rotate(-2deg);
+        filter: drop-shadow(0 0 10px rgba(255, 108, 0, 0.8))
+                drop-shadow(0 0 15px rgba(255, 145, 0, 0.7));
+      }
     }
 
     .streak-number {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       color: #FF9100;
       text-shadow: 0 0 10px rgba(255, 108, 0, 0.8);
     }
 
     .streak-label {
-      font-size: 14px;
+      font-size: 10px;
       font-weight: 600;
-      color: #00FFFF;
+      color: #1FB4FF;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -1352,20 +1381,19 @@
               </div>
             </div>
 
-            <!-- Coins -->
-            <div class="flex gap-6">
+            <!-- Coins & Streak -->
+            <div class="flex gap-8 items-center">
               <div class="text-center">
                 <div class="text-2xl font-bold text-dark">${state.coins}</div>
                 <div class="text-xs text-medium">Coins</div>
               </div>
-            </div>
-          </div>
-
-          <!-- Shiny Streak Badge -->
-          <div class="mb-4 text-center">
-            <div class="streak-badge">
-              <div class="streak-number">🔥 ${state.streak}</div>
-              <div class="streak-label">Day Streak</div>
+              <div class="text-center">
+                <div class="streak-badge justify-center mb-1">
+                  <div class="fire-icon">🔥</div>
+                  <div class="streak-number">${state.streak}</div>
+                </div>
+                <div class="streak-label">Day Streak</div>
+              </div>
             </div>
           </div>
 

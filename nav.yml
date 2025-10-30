@@ -480,6 +480,8 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -990,6 +992,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md

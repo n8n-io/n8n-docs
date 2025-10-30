@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SENSE - Your Life RPG</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -188,57 +189,44 @@
       display: inline-block;
     }
 
-    /* Streak Badge - Fire Animation Style */
+    /* Streak Badge - Compact Fire Style */
     .streak-badge {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      background: rgba(139, 92, 246, 0.1);
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(139, 92, 246, 0.3);
     }
 
     .fire-icon {
-      font-size: 28px;
+      font-size: 18px;
+      color: #8B5CF6;
       animation: fireFlicker 1.5s infinite alternate;
-      filter: drop-shadow(0 0 8px rgba(255, 108, 0, 0.8));
     }
 
     @keyframes fireFlicker {
-      0% {
-        transform: scale(1) rotate(-2deg);
-        filter: drop-shadow(0 0 8px rgba(255, 108, 0, 0.8))
-                drop-shadow(0 0 12px rgba(255, 145, 0, 0.6));
-      }
-      25% {
-        transform: scale(1.05) rotate(2deg);
-        filter: drop-shadow(0 0 12px rgba(255, 108, 0, 1))
-                drop-shadow(0 0 16px rgba(255, 145, 0, 0.8));
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
       }
       50% {
-        transform: scale(1.02) rotate(-1deg);
-        filter: drop-shadow(0 0 10px rgba(255, 108, 0, 0.9))
-                drop-shadow(0 0 14px rgba(255, 145, 0, 0.7));
-      }
-      75% {
-        transform: scale(1.08) rotate(1deg);
-        filter: drop-shadow(0 0 14px rgba(255, 108, 0, 1))
-                drop-shadow(0 0 18px rgba(255, 145, 0, 0.9));
-      }
-      100% {
-        transform: scale(1.03) rotate(-2deg);
-        filter: drop-shadow(0 0 10px rgba(255, 108, 0, 0.8))
-                drop-shadow(0 0 15px rgba(255, 145, 0, 0.7));
+        transform: scale(1.1);
+        opacity: 0.9;
       }
     }
 
     .streak-number {
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 700;
       color: #FFFFFF;
     }
 
     .streak-label {
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -476,7 +464,8 @@
     const DAILY_TASKS = [
       {
         id: 'bible',
-        name: '📖 Read Bible',
+        name: 'Read Bible',
+        icon: 'fa-book-bible',
         desc: '15 minutes',
         xp: 50,
         coins: 20,
@@ -484,7 +473,8 @@
       },
       {
         id: 'workout',
-        name: '💪 Complete Workout',
+        name: 'Complete Workout',
+        icon: 'fa-dumbbell',
         desc: 'Push/Pull/Legs',
         xp: 100,
         coins: 50,
@@ -492,7 +482,8 @@
       },
       {
         id: 'ai',
-        name: '🤖 Learn AI',
+        name: 'Learn AI',
+        icon: 'fa-brain',
         desc: '30-60 min',
         xp: 75,
         coins: 30,
@@ -500,7 +491,8 @@
       },
       {
         id: 'short',
-        name: '📱 Short-Form (2 videos)',
+        name: 'Short-Form (2 videos)',
+        icon: 'fa-video',
         desc: 'Create 2 short videos',
         xp: 80,
         coins: 50,
@@ -508,7 +500,8 @@
       },
       {
         id: 'calories',
-        name: '🍽️ Track Calories',
+        name: 'Track Calories',
+        icon: 'fa-utensils',
         desc: 'Log your food',
         xp: 40,
         coins: 25,
@@ -623,7 +616,7 @@
         desc: 'Take 1 day off without penalties (protects streak)',
         price: 1500,
         type: 'consumable',
-        icon: '🏖️'
+        icon: 'fa-umbrella-beach'
       },
       {
         id: 'cheat_meal',
@@ -631,7 +624,7 @@
         desc: 'Enjoy a guilt-free cheat meal',
         price: 800,
         type: 'consumable',
-        icon: '🍕'
+        icon: 'fa-pizza-slice'
       },
       {
         id: 'movie_night',
@@ -639,7 +632,7 @@
         desc: 'Relax with a movie night',
         price: 600,
         type: 'consumable',
-        icon: '🎬'
+        icon: 'fa-film'
       },
       {
         id: 'gaming_session',
@@ -647,7 +640,7 @@
         desc: 'Guilt-free gaming session',
         price: 700,
         type: 'consumable',
-        icon: '🎮'
+        icon: 'fa-gamepad'
       },
       {
         id: 'sleep_in',
@@ -655,7 +648,7 @@
         desc: 'Skip morning routine, sleep in',
         price: 400,
         type: 'consumable',
-        icon: '😴'
+        icon: 'fa-bed'
       },
       {
         id: 'takeout',
@@ -663,7 +656,7 @@
         desc: 'Order your favorite food',
         price: 600,
         type: 'consumable',
-        icon: '🥡'
+        icon: 'fa-bowl-food'
       },
       {
         id: 'social_media',
@@ -671,7 +664,7 @@
         desc: '1 hour of mindless scrolling',
         price: 300,
         type: 'consumable',
-        icon: '📱'
+        icon: 'fa-mobile-screen'
       },
       {
         id: 'rest_day',
@@ -679,7 +672,7 @@
         desc: 'Skip workout, full recovery day',
         price: 1200,
         type: 'consumable',
-        icon: '🛋️'
+        icon: 'fa-couch'
       }
     ];
 
@@ -1345,10 +1338,10 @@
               </div>
               <div class="text-center">
                 <div class="streak-badge justify-center mb-1">
-                  <div class="fire-icon">🔥</div>
+                  <i class="fa-solid fa-fire-flame-curved fire-icon"></i>
                   <div class="streak-number">${state.streak}</div>
                 </div>
-                <div class="streak-label">Day Streak</div>
+                <div class="streak-label">Streak</div>
               </div>
             </div>
           </div>
@@ -1399,7 +1392,9 @@
               <div class="task-card ${state.completed[task.id] ? 'completed' : ''}">
                 <div class="flex items-center justify-between">
                   <div class="flex-1">
-                    <div class="font-semibold text-dark mb-1">${task.name}</div>
+                    <div class="font-semibold text-dark mb-1">
+                      <i class="fa-solid ${task.icon} mr-2" style="color: #8B5CF6;"></i>${task.name}
+                    </div>
                     <div class="text-xs text-medium mb-2">${task.desc}</div>
                     ${task.id === 'short' ? `
                       <div class="text-xs text-medium mb-2">Videos: ${state.shortFormCount}/2</div>
@@ -1425,12 +1420,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab active">Home</button>
-            <button onclick="switchTab('missions')" class="tab">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab">Stats</button>
-            <button onclick="switchTab('track')" class="tab">Track</button>
-            <button onclick="switchTab('profile')" class="tab">Profile</button>
+            <button onclick="switchTab('home')" class="tab active">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       } else if (state.currentTab === 'missions') {
@@ -1541,12 +1548,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab">Home</button>
-            <button onclick="switchTab('missions')" class="tab active">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab">Stats</button>
-            <button onclick="switchTab('track')" class="tab">Track</button>
-            <button onclick="switchTab('profile')" class="tab">Profile</button>
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab active">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       } else if (state.currentTab === 'rewards') {
@@ -1561,7 +1580,9 @@
             <!-- Inventory Section -->
             ${state.rewards.filter(r => !r.used).length > 0 ? `
               <div class="glass rounded-2xl p-6 mb-4">
-                <h2 class="text-xl font-bold text-cream mb-4">🎒 Your Inventory</h2>
+                <h2 class="text-xl font-bold text-cream mb-4">
+                  <i class="fa-solid fa-bag-shopping mr-2" style="color: #8B5CF6;"></i>Your Inventory
+                </h2>
                 <div class="space-y-3">
                   ${state.rewards.filter(r => !r.used).map(item => {
                     const reward = REWARDS.find(rw => rw.id === item.id);
@@ -1570,7 +1591,9 @@
                       <div class="reward-item">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center gap-3 flex-1">
-                            <div class="text-3xl">${reward.icon}</div>
+                            <div class="text-3xl" style="color: #8B5CF6;">
+                              <i class="fa-solid ${reward.icon}"></i>
+                            </div>
                             <div class="flex-1">
                               <div class="font-bold text-dark">${reward.name}</div>
                               <div class="text-xs text-medium">${reward.desc}</div>
@@ -1601,7 +1624,9 @@
                   <div class="reward-item">
                     <div class="flex justify-between items-start mb-3">
                       <div class="flex items-start gap-3 flex-1">
-                        <div class="text-4xl">${reward.icon}</div>
+                        <div class="text-4xl" style="color: #8B5CF6;">
+                          <i class="fa-solid ${reward.icon}"></i>
+                        </div>
                         <div class="flex-1">
                           <div class="font-bold text-dark text-lg mb-1">${reward.name}</div>
                           <div class="text-sm text-medium mb-2">${reward.desc}</div>
@@ -1629,12 +1654,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab">Home</button>
-            <button onclick="switchTab('missions')" class="tab">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab active">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab">Stats</button>
-            <button onclick="switchTab('track')" class="tab">Track</button>
-            <button onclick="switchTab('profile')" class="tab">Profile</button>
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab active">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       } else if (state.currentTab === 'stats') {
@@ -1704,12 +1741,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab">Home</button>
-            <button onclick="switchTab('missions')" class="tab">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab active">Stats</button>
-            <button onclick="switchTab('track')" class="tab">Track</button>
-            <button onclick="switchTab('profile')" class="tab">Profile</button>
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab active">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       } else if (state.currentTab === 'track') {
@@ -1838,12 +1887,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab">Home</button>
-            <button onclick="switchTab('missions')" class="tab">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab">Stats</button>
-            <button onclick="switchTab('track')" class="tab active">Track</button>
-            <button onclick="switchTab('profile')" class="tab">Profile</button>
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab active">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       } else if (state.currentTab === 'profile') {
@@ -1941,12 +2002,24 @@
           </div>
 
           <div class="fixed bottom-0 left-0 right-0 glass-dark p-3 flex gap-1 justify-around">
-            <button onclick="switchTab('home')" class="tab">Home</button>
-            <button onclick="switchTab('missions')" class="tab">Missions</button>
-            <button onclick="switchTab('rewards')" class="tab">Rewards</button>
-            <button onclick="switchTab('stats')" class="tab">Stats</button>
-            <button onclick="switchTab('track')" class="tab">Track</button>
-            <button onclick="switchTab('profile')" class="tab active">Profile</button>
+            <button onclick="switchTab('home')" class="tab">
+              <i class="fa-solid fa-house"></i>
+            </button>
+            <button onclick="switchTab('missions')" class="tab">
+              <i class="fa-solid fa-trophy"></i>
+            </button>
+            <button onclick="switchTab('rewards')" class="tab">
+              <i class="fa-solid fa-gift"></i>
+            </button>
+            <button onclick="switchTab('stats')" class="tab">
+              <i class="fa-solid fa-chart-simple"></i>
+            </button>
+            <button onclick="switchTab('track')" class="tab">
+              <i class="fa-solid fa-dumbbell"></i>
+            </button>
+            <button onclick="switchTab('profile')" class="tab active">
+              <i class="fa-solid fa-user"></i>
+            </button>
           </div>
         `;
       }

@@ -117,6 +117,8 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
 | `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
 | `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
+| `workflow.afterArchive` | `[workflowId: string]` | Called after workflow is archived. |
+| `workflow.afterUnarchive` | `[workflowId: string]` | Called after workflow is unarchived. |
 
 ### Registering hooks
 

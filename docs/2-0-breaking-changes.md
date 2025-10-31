@@ -104,9 +104,9 @@ The legacy SQLite driver has a lot of issues and will be removed. SQLite's pooli
 
 **Migration path:** The `sqlite-pooled` driver will automatically become the default. It can already be setting `DB_SQLITE_POOL_SIZE` to a value higher than 0. The default will become `2`.
 
-### Disable binary data in-memory mode by default
+### Remove in-memory binary data mode
 
-The `N8N_DEFAULT_BINARY_DATA_MODE` `default` mode (which keeps execution binary data in-memory) will be removed. Filesystem mode will become the default for better performance and stability.
+The `N8N_DEFAULT_BINARY_DATA_MODE` `default` mode (which keeps execution binary data in-memory) will be removed. Filesystem mode will become the default for better performance and stability. Also `N8N_AVAILABLE_BINARY_DATA_MODES` will be removed, and the mode is solely selected based on `N8N_DEFAULT_BINARY_DATA_MODE`.
 
 **Migration path:** Filesystem mode will automatically become the default. Ensure your n8n instance has appropriate disk space for storing binary data. See the [binary data configuration](/hosting/configuration/environment-variables/binary-data/) for more details.
 

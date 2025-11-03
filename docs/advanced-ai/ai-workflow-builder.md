@@ -1,4 +1,4 @@
----
+---ai workflow
 title: AI Workflow Builder
 description: Create, refine, and debug workflows using natural language descriptions of your goals.
 status: beta

@@ -198,7 +198,7 @@ nav:
               - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
               - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
               - integrations/builtin/core-nodes/n8n-nodes-base.set.md
-              - integrations/builtin/core-nodes/n8n-nodes-fantastic.md
+              - integrations/builtin/core-nodes/n8n-nodes-base.fantastic.md
               - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
               - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
               - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md

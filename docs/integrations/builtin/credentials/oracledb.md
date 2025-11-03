@@ -14,7 +14,8 @@ You can use these credentials to authenticate the following nodes:
 
 /// note
 These nodes do not support SSH tunnels.
-They require Oracle Database 19c or later. For thick mode, use Oracle Client Libraries 19c or later.
+They require Oracle Database **19c or later**.
+Use Oracle Client Libraries **19c or later** for advanced Oracle Database features like High Availability (HA) and Sharding.
 ///
 
 ## Prerequisites

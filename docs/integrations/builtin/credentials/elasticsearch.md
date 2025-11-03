@@ -43,7 +43,7 @@ To set up the credential:
 
 ## Using basic auth
 
-To configure this credential method, you'll need an [Elasticsearch](https://www.elastic.co/) account with a [deployment](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) and:
+To configure this credential, you'll need an [Elasticsearch](https://www.elastic.co/) account with a [deployment](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) and:
 
 - A **Username**
 - A **Password**

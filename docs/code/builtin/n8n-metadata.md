@@ -40,7 +40,12 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `$workflow.active` | Whether the workflow is active (true) or not (false). | :white_check_mark: |
 	| `$workflow.id` | The workflow ID. | :white_check_mark: |
 	| `$workflow.name` | The workflow name. | :white_check_mark: |
-=== "Python"
+=== "Python (native, beta)"
+	| Method | Description |
+	| ------ | ----------- |
+	| `_items` | Contains incoming items in "Run once for all items" mode. |
+	| `_item` | Contains the item being iterated on in "Run once for each item" mode. |
+=== "Python (Pyodide, deprecated)"
 	| Method | Description |
 	| ------ | ----------- |
 	| `_env` | Contains n8n instance configuration [environment variables](/hosting/configuration/environment-variables/index.md). |

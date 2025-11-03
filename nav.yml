@@ -480,6 +480,8 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -720,6 +722,7 @@ nav:
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
@@ -989,6 +992,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md

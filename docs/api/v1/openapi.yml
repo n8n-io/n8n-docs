@@ -181,6 +181,38 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
+  /credentials/{id}/transfer:
+    put:
+      x-eov-operation-id: transferCredential
+      x-eov-operation-handler: v1/handlers/credentials/credentials.handler
+      tags:
+        - Credential
+      summary: Transfer a credential to another project.
+      description: Transfer a credential to another project.
+      parameters:
+        - $ref: '#/components/parameters/credentialId'
+      requestBody:
+        description: Destination project for the credential transfer.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                destinationProjectId:
+                  type: string
+                  description: The ID of the project to transfer the credential to.
+              required:
+                - destinationProjectId
+        required: true
+      responses:
+        '200':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /executions:
     get:
       x-eov-operation-id: getExecutions
@@ -647,38 +679,6 @@ paths:
                 destinationProjectId:
                   type: string
                   description: The ID of the project to transfer the workflow to.
-              required:
-                - destinationProjectId
-        required: true
-      responses:
-        '200':
-          description: Operation successful.
-        '400':
-          $ref: '#/components/responses/badRequest'
-        '401':
-          $ref: '#/components/responses/unauthorized'
-        '404':
-          $ref: '#/components/responses/notFound'
-  /credentials/{id}/transfer:
-    put:
-      x-eov-operation-id: transferCredential
-      x-eov-operation-handler: v1/handlers/credentials/credentials.handler
-      tags:
-        - Workflow
-      summary: Transfer a credential to another project.
-      description: Transfer a credential to another project.
-      parameters:
-        - $ref: '#/components/parameters/credentialId'
-      requestBody:
-        description: Destination project for the credential transfer.
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                destinationProjectId:
-                  type: string
-                  description: The ID of the project to transfer the credential to.
               required:
                 - destinationProjectId
         required: true
@@ -1989,10 +1989,10 @@ components:
       description: Unauthorized
     notFound:
       description: The specified resource was not found.
-    conflict:
-      description: Conflict
     badRequest:
       description: The request is invalid or provides malformed data.
+    conflict:
+      description: Conflict
     forbidden:
       description: Forbidden
     NotFound:
@@ -2006,6 +2006,13 @@ components:
     Forbidden:
       $ref: '#/components/responses/forbidden'
   parameters:
+    credentialId:
+      name: id
+      in: path
+      description: The ID of the credential.
+      required: true
+      schema:
+        type: string
     includeData:
       name: includeData
       in: query
@@ -2049,13 +2056,6 @@ components:
       name: id
       in: path
       description: The ID of the workflow.
-      required: true
-      schema:
-        type: string
-    credentialId:
-      name: id
-      in: path
-      description: The ID of the credential.
       required: true
       schema:
         type: string

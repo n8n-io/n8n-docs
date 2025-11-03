@@ -337,6 +337,7 @@ nav:
         - Emelia: integrations/builtin/app-nodes/n8n-nodes-base.emelia.md
         - ERPNext: integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md
         - Facebook Graph API: integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md
+        - Fantastic: integrations/builtin/app-nodes/n8n-nodes-base.fantastic.md
         - FileMaker: integrations/builtin/app-nodes/n8n-nodes-base.filemaker.md
         - Flow: integrations/builtin/app-nodes/n8n-nodes-base.flow.md
         - Freshdesk: integrations/builtin/app-nodes/n8n-nodes-base.freshdesk.md

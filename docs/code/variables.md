@@ -18,7 +18,7 @@ Custom variables are read-only variables that you can use to store and reuse val
 
 * **Global variables** are available to everyone on your n8n instance, across all projects.
 * **Project-scoped variables** are available only within the specific project they're created in.
-* Project-scoped variables are available in version vX.Y.Z and above. Previous versions only support global variables accessible from the left side menu.
+* Project-scoped variables are available in 1.118.0 and above. Previous versions only support global variables accessible from the left side menu.
 
 ///
 

@@ -210,6 +210,7 @@ nav:
         - Execute Sub-workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.fantastic.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md

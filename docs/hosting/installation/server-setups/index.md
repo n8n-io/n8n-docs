@@ -8,6 +8,7 @@ Self-host with Docker Compose:
 
 * [Digital Ocean](/hosting/installation/server-setups/digital-ocean.md)
 * [Heroku](/hosting/installation/server-setups/heroku.md)
+* [Northflank](/hosting/installation/server-setups/northflank.md)
 * [Hetzner Cloud](/hosting/installation/server-setups/hetzner.md)
 
 Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, e.g. Gmail, Drive):

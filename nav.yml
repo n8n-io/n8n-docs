@@ -1182,6 +1182,7 @@ nav:
         - hosting/installation/server-setups/index.md
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
+        - Northflank: hosting/installation/server-setups/northflank.md
         - Hetzner: hosting/installation/server-setups/hetzner.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md

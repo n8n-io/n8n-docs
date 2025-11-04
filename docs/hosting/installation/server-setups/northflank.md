@@ -4,6 +4,10 @@ contentType: tutorial
 
 # Hosting n8n on Northflank
 
+## Requirements
+
+- A [Northflank account](https://app.northflank.com/signup)
+
 This guide shows you how to self-host n8n on [Northflank](https://northflank.com/). Your deployment will include:
 
 

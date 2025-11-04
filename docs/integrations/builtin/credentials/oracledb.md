@@ -20,7 +20,7 @@ For advanced Oracle Database features like High Availability (HA) and Sharding, 
 
 ## Prerequisites
 
-Create a user account on an [Oracle](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server database.
+Create a user account on an [Oracle Database](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server.
 
 ## Supported authentication methods
 

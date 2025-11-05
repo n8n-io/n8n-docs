@@ -51,8 +51,8 @@ The Guardrails node provides a set of rules and policies that control an AI agen
 
 - Check Text for Violations: Validate text against a set of policies (e.g. NSFW, prompt injection).
 - Sanitize Text: Detects and replaces specific data such as PII, URLs, or secrets with placeholders.
-<br>
-<br>
+
+
 The default presets and prompts are adapted from the open-source [guardrails package](https://github.com/openai/openai-guardrails-js) made available by OpenAI.
 <br>	
 For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)

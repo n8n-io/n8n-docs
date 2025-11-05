@@ -36,7 +36,7 @@ To configure this credential, you'll need:
 
 - A **User** name.
 - A **Password** for that user.
-- **Connection String**: The Oracle database instance to connect to. The string can be an Easy Connect string, or a TNS Alias from a tnsnames.ora file, or the Oracle database instance.
+- **Connection String**: The Oracle Database instance to connect to. The string can be an Easy Connect string, or a TNS Alias from a tnsnames.ora file, or the Oracle Database instance.
 - **Use Optional Oracle Client Libraries**: If you want to work with Oracle Database advanced features, turn this on. This option internally uses node-oracledb Thick mode. Additional settings to enable node-oracledb Thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information. This option is not available in the official n8n docker images.
 - **Use SSL**: If your Connection String is using SSL, turn this on and configure additional details for the SSL Authentication.
 - **Wallet Password**: The password to decrypt the Privacy Enhanced Mail (PEM)-encoded private certificate, if it is encrypted.

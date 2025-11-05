@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 /// note
 These nodes do not support SSH tunnels.
 They require Oracle Database **19c or later**.
-For advanced Oracle Database features like High Availability (HA) and Sharding, they also require Oracle Client Libraries **19c or later**.
+For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, they also require Oracle Client Libraries **19c or later**.
 ///
 
 ## Prerequisites

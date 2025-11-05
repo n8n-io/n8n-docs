@@ -15,7 +15,7 @@ On this page, you'll find a list of operations the Oracle Database node supports
 Refer to [Oracle Database credentials](/integrations/builtin/credentials/oracledb.md) for guidance on setting up authentication.
 
 Requires Oracle Database **19c or later**.
-For advanced Oracle Database features like High Availability (HA) and Sharding, also requires Oracle Client Libraries **19c or later**.
+For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, also requires Oracle Client Libraries **19c or later**.
 ///
 
 --8<-- "/_snippets/integrations/builtin/app-nodes/ai-tools.md"

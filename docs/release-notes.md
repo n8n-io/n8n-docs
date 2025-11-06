@@ -45,6 +45,19 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release includes multiple bug fixes for AI Agent, task runners, editor, and integrations, as well as new features like improved workflow settings, AWS Assume Role credentials, and enhanced security and audit capabilities.
 
+<div class="n8n-new-features" markdown> 
+### Guardrails Node
+The Guardrails node provides a set of rules and policies that control an AI agent's behavior by filtering its inputs and outputs. This helps safeguard from malicious input and from generating unsafe or undesirable responses. There are two operations:
+
+- Check Text for Violations: Validate text against a set of policies (e.g. NSFW, prompt injection).
+- Sanitize Text: Detects and replaces specific data such as PII, URLs, or secrets with placeholders.
+
+
+The default presets and prompts are adapted from the open-source [guardrails package](https://github.com/openai/openai-guardrails-js) made available by OpenAI.
+<br>	
+For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
+</div>
+
 ### Contributors
 
 [cesars-gh](https://github.com/cesars-gh)  

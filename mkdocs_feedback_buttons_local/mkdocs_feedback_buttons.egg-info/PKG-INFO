@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: mkdocs-feedback-buttons
+Version: 0.1.0
+Summary: A MkDocs plugin that adds feedback buttons to the bottom of each page
+Author: n8n
+Author-email: info@n8n.io

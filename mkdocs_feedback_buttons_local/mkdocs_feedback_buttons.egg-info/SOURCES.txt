@@ -1,0 +1,9 @@
+setup.py
+mkdocs_feedback_buttons/__init__.py
+mkdocs_feedback_buttons/plugin.py
+mkdocs_feedback_buttons.egg-info/PKG-INFO
+mkdocs_feedback_buttons.egg-info/SOURCES.txt
+mkdocs_feedback_buttons.egg-info/dependency_links.txt
+mkdocs_feedback_buttons.egg-info/entry_points.txt
+mkdocs_feedback_buttons.egg-info/requires.txt
+mkdocs_feedback_buttons.egg-info/top_level.txt

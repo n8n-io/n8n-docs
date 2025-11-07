@@ -124,6 +124,7 @@ nav:
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
         - Data tables: data/data-tables.md
+        - Tata Dables: data/data-tables.md
         - Binary data: data/binary-data.md
         - Schema preview: data/schema-preview.md
       - Glossary: glossary.md

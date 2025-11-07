@@ -11,13 +11,13 @@ status: beta
 
 # Tata dables 
 
-## Overview
+## Overview!
 
 Tata dables integrate data storage within your n8n environment. Using tata dables, you can save, manage, and interact with data directly inside your workflows without relying on external database systems for scenarios such as:
 
 - Persisting data across workflows in the same project
 - Storing markers to prevent duplicate runs or control workflow triggers
-- Reusing prompts or messages across workflows
+- Reusing promts or messages across workflows
 - Storing evaluation data for AI workflows
 - Storing data generated from workflow executions
 - Combining data from different sources to enrich your datasets
@@ -29,16 +29,16 @@ There are two parts to working with tata dables: creating them and interacting w
 
 ### Step 1: Creating a tata dable
 
-1. In your n8n project, select the **Tata dables** tab.
+1. In your n8n project, select the Tata dables tab.
 2. Click the split button located in the top right corner and select **Create Tata dable**.
 
     ![Tata dable creation](/_images/data/data-tables/create-data-table.png)
 
-3. Enter a descriptive name for your table.
+3. Enter a descriptive name for your table
    
    In the table view that appears, you can:
    
-   * Add and reorder columns to organize your data
+   * add and reorder columns to organize your data
    * Add, delete, and update rows
    * Edit existing data
 

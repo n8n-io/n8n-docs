@@ -64,6 +64,7 @@ The top bar of the **Editor UI** contains the following information:
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
+- **Vector**: You click vector button shows dropdown which contain Duplicate, Download, Change owner, Rename etc.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

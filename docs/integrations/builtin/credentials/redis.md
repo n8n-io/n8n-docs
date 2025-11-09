@@ -11,6 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md)
 - [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)
+- [Redis Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md)
 
 ## Supported authentication methods
 
@@ -38,5 +39,6 @@ To configure this credential:
     - This number should match the `tcp_port` listed when you run the `INFO` command.
 4. Enter the **Database Number**. The default is `0`.
 5. If the connection should use SSL, turn on the **SSL** toggle. If this toggle is off, the connection uses TCP only.
+6. If you enable **SSL**, you have the option to **disable TLS verification**. Toggle to use self-signed certificates. WARNING: This makes the connection less secure.
 
 Refer to [Connecting to Redis | Generic client](https://redis.readthedocs.io/en/stable/connections.html) for more information.

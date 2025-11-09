@@ -13,9 +13,9 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create an [Azure](https://azure.microsoft.com) subscription.
-- Create an Azure AI Search service in the [Azure Portal](https://portal.azure.com/).
-- Configure appropriate access to your search service (API key or managed identity).
+- An [Azure subscription](https://azure.microsoft.com)
+- An Azure AI Search service created in the [Azure Portal](https://portal.azure.com/)
+- Appropriate authentication configured (API key or managed identity)
 
 ## Supported authentication methods
 
@@ -31,93 +31,119 @@ Refer to [Azure AI Search documentation](https://learn.microsoft.com/azure/searc
 
 To configure this credential, you'll need:
 
-- An **Endpoint**: The URL of your Azure AI Search service (e.g., `https://your-service.search.windows.net`)
-- An **API Key**: The admin or query key for your service
+- **Endpoint**: Your Azure AI Search service URL (format: `https://your-service.search.windows.net`)
+- **API Key**: Admin key (read-write) or query key (read-only)
 
-To get the information above:
+To get these values:
 
-1. Navigate to your Azure AI Search service in the [Azure Portal](https://portal.azure.com/).
-2. In the **Overview** section, copy the **URL** for your endpoint.
-3. In the **Settings** > **Keys** section, copy either:
-   - **Admin key** (for read-write access)
-   - **Query key** (for read-only access)
-4. Enter these values into the corresponding fields in n8n.
+1. Navigate to your Azure AI Search service in the [Azure Portal](https://portal.azure.com/)
+2. Copy the **URL** from the **Overview** section
+3. Go to **Settings** > **Keys** and copy:
+   - **Admin key** for full read-write access, or
+   - **Query key** for read-only querying
+4. Enter these values in n8n
 
 /// note | API key permissions
-Admin keys provide full access to the search service, including the ability to create and delete indexes. Query keys provide read-only access for querying data. Choose the appropriate key based on your workflow requirements.
+Admin keys provide full access including index creation and deletion. Query keys provide read-only access. Choose based on your workflow requirements.
 ///
 
 ## Using Managed Identity (System-Assigned)
 
-System-assigned managed identity (SAMI) is automatically created and managed by Azure for your specific resource. This identity is tied directly to the Azure resource lifecycle and is recommended for single-resource scenarios. To configure:
+System-assigned managed identity (SAMI) is automatically created with your Azure resource and follows its lifecycle. Use this for single-resource scenarios.
 
-1. Enable system-assigned managed identity on your Azure resource (e.g., Azure VM, App Service, Function App).
+To configure:
+
+1. Enable system-assigned managed identity on your Azure resource (VM, App Service, Container Instance, etc.)
 2. In your Azure AI Search service:
-   1. Navigate to **Settings** > **Keys**.
-   2. Select **Role-based access control** as the authentication method.
-   3. Go to **Access control (IAM)** > **Add role assignment**.
-   4. Assign the appropriate role to your system-assigned managed identity:
-      - **Search Index Data Contributor** for read-write access
-      - **Search Index Data Reader** for read-only access
-3. In n8n, enter only the **Endpoint** URL.
-4. Select **Managed Identity (System-Assigned)** as the authentication method.
+   1. Go to **Settings** > **Keys**
+   2. Enable **Role-based access control**
+   3. Go to **Access control (IAM)** > **Add role assignment**
+   4. Assign one of these roles to your system-assigned managed identity:
+      - **Search Index Data Contributor** (read-write)
+      - **Search Index Data Reader** (read-only)
+3. In n8n:
+   1. Enter the **Endpoint** URL
+   2. Select **Managed Identity (System-Assigned)**
 
-/// note | When to use System-Assigned Managed Identity
-Use SAMI when your n8n instance runs on a single Azure resource and you want the identity to be automatically managed with the resource lifecycle. The identity is automatically deleted when the resource is deleted.
+/// note | Credential test behavior
+The managed identity credential test will fail in n8n's credential interface, but this is expected. The test uses HTTP requests that cannot authenticate with Azure's SDK-based token credential. The credentials will work correctly when the node executes.
+///
+
+/// note | When to use SAMI
+Use SAMI when n8n runs on a single Azure resource and you want automatic identity lifecycle management. The identity is deleted when the resource is deleted.
 ///
 
 ## Using Managed Identity (User-Assigned)
 
-User-assigned managed identity (UAMI) allows you to create and manage the identity separately from Azure resources. This identity can be shared across multiple resources and persists independently of resource lifecycles. To configure:
+User-assigned managed identity (UAMI) is created independently and can be shared across multiple resources. Use this for multi-resource deployments or when you need identity persistence beyond resource lifecycles.
 
-1. Create a user-assigned managed identity in the [Azure Portal](https://portal.azure.com/):
-   1. Search for "Managed Identities" and select **Create**.
-   2. Provide a name and select your subscription and resource group.
-   3. After creation, copy the **Client ID** from the identity's overview page.
-2. Assign the identity to your Azure resource (e.g., Azure VM, App Service, Function App).
+To configure:
+
+1. Create a user-assigned managed identity:
+   1. In [Azure Portal](https://portal.azure.com/), search for "Managed Identities"
+   2. Click **Create**
+   3. Provide name, subscription, and resource group
+   4. After creation, copy the **Client ID**
+2. Assign the identity to your Azure resource
 3. In your Azure AI Search service:
-   1. Navigate to **Settings** > **Keys**.
-   2. Select **Role-based access control** as the authentication method.
-   3. Go to **Access control (IAM)** > **Add role assignment**.
-   4. Assign the appropriate role to your user-assigned managed identity:
-      - **Search Index Data Contributor** for read-write access
-      - **Search Index Data Reader** for read-only access
+   1. Go to **Settings** > **Keys**
+   2. Enable **Role-based access control**
+   3. Go to **Access control (IAM)** > **Add role assignment**
+   4. Assign one of these roles to your user-assigned managed identity:
+      - **Search Index Data Contributor** (read-write)
+      - **Search Index Data Reader** (read-only)
 4. In n8n:
-   1. Enter the **Endpoint** URL.
-   2. Select **Managed Identity (User-Assigned)** as the authentication method.
-   3. Enter the **Client ID** of your user-assigned managed identity.
+   1. Enter the **Endpoint** URL
+   2. Select **Managed Identity (User-Assigned)**
+   3. Enter the **Client ID**
 
-/// note | When to use User-Assigned Managed Identity
-Use UAMI when you need to share the same identity across multiple Azure resources, when you want the identity to persist beyond the lifecycle of individual resources, or when you need more granular control over identity management. This is ideal for enterprise scenarios with multiple n8n instances or complex multi-resource deployments.
+/// note | Credential test behavior
+Like system-assigned, the credential test will fail for user-assigned managed identity. This is expected—the credentials work correctly at runtime when the node executes.
 ///
 
-/// note | Managed Identity availability
-Managed identity authentication is only available when n8n is running on Azure infrastructure (Azure VM, App Service, Container Instances, etc.). It won't work for local development or non-Azure deployments.
+/// note | When to use UAMI
+Use UAMI for multi-instance deployments, when identity should persist independently of resources, or when you need centralized identity management across multiple Azure resources.
+///
+
+/// note | Managed identity availability
+Managed identity authentication requires n8n to run on Azure infrastructure (VM, App Service, Container Instances, Functions, etc.). It won't work for local development or non-Azure environments.
+
+For local testing, use `az login` to authenticate via Azure CLI—the Azure SDK will use CLI credentials as a fallback.
 ///
 
 ## Understanding Microsoft Entra ID Integration
 
-Managed identity authentication uses Microsoft Entra ID (formerly Azure Active Directory) as the underlying identity platform. When you configure managed identity for Azure AI Search:
+Managed identity authentication uses Microsoft Entra ID (formerly Azure Active Directory) for identity and access management:
 
-- The identity is registered in your Microsoft Entra ID tenant
-- Role assignments are managed through Entra ID's Role-Based Access Control (RBAC)
-- Authentication tokens are issued by the Microsoft Entra ID token service
-- This provides enterprise-grade security with centralized identity management
+- Identities are registered in your Entra ID tenant
+- Role assignments use Entra ID Role-Based Access Control (RBAC)
+- Authentication tokens are issued by the Entra ID token service
+- Centralized identity governance with enterprise security policies
 
-This integration ensures that your n8n workflows benefit from the same identity and access management policies that govern your organization's other Azure resources.
+This provides the same identity and access management for n8n workflows as your other Azure resources.
 
 ## Troubleshooting
 
+### Credential test failures
+
+**Managed identity credential tests fail**: This is expected behavior. The test uses HTTP requests that cannot authenticate with Azure SDK token credentials. The credentials work correctly when nodes execute.
+
 ### Authentication errors
 
-If you encounter authentication errors:
-
-- **API key**: Verify the key is correct and hasn't been regenerated in Azure Portal.
-- **System-Assigned Managed Identity**: Ensure the identity is enabled on your Azure resource and has the correct role assignments in both Azure AI Search and Microsoft Entra ID.
-- **User-Assigned Managed Identity**: Verify the Client ID is correct, the identity is assigned to your Azure resource, and has proper role assignments. Check that the identity exists in your Microsoft Entra ID tenant.
+- **API key**: Verify the key is correct and hasn't been regenerated
+- **System-Assigned Managed Identity**:
+  - Confirm identity is enabled on your Azure resource
+  - Verify correct role assignments in Azure AI Search IAM
+  - Check that the Azure resource has network access to the search service
+- **User-Assigned Managed Identity**:
+  - Verify the Client ID is correct
+  - Confirm identity is assigned to your Azure resource
+  - Check role assignments in both Azure AI Search and Entra ID
+  - Ensure the identity exists in your Entra ID tenant
 
 ### Connection issues
 
-- Verify the endpoint URL is correct and includes the protocol (https://).
-- Check that your Azure AI Search service is running and accessible.
-- Ensure network security rules allow access from your n8n instance.
+- Verify endpoint URL format: `https://your-service.search.windows.net`
+- Confirm Azure AI Search service is running
+- Check network security rules and firewall settings allow access from your n8n instance
+- For managed identity, verify the Azure resource can reach Azure services

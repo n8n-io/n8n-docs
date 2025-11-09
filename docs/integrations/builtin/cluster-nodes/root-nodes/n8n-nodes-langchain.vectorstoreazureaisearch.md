@@ -7,7 +7,7 @@ priority: medium
 
 # Azure AI Search Vector Store node
 
-Azure AI Search (formerly Azure Cognitive Search) is a cloud search service that provides vector search capabilities through its Vector Search feature. Use this node to interact with Vector Search indexes in your Azure AI Search service. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+Azure AI Search (formerly Azure Cognitive Search) is a cloud search service with vector search capabilities for RAG and semantic search applications. Use this node to store, retrieve, and query vector embeddings alongside their content and metadata.
 
 On this page, you'll find the node parameters for the Azure AI Search Vector Store node, and links to more resources.
 
@@ -19,94 +19,108 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Prerequisites
 
-Before using this node, create a [Vector Search index](https://learn.microsoft.com/azure/search/vector-search-overview) in your Azure AI Search service. Follow these steps to create one:
+Before using this node, you need:
 
-1. Log in to the [Azure Portal](https://portal.azure.com/).
+1. An [Azure subscription](https://azure.microsoft.com)
+2. An [Azure AI Search service](https://learn.microsoft.com/azure/search/search-create-service-portal)
+3. Authentication configured—choose based on your deployment:
+   - **API key**: Simple setup, works anywhere
+   - **Managed identity**: Recommended for Azure-hosted production deployments
 
-2. Navigate to your Azure AI Search service or create a new one.
-3. Select "Indexes" from the left navigation menu.
-4. Click "Add Index" and create a new index with vector fields.
-5. Configure your index schema with:
-   - A vector field for embeddings with appropriate dimensions
-   - Metadata fields for filtering and content
-   - Configure the vector search profile with the similarity metric (cosine, euclidean, or dotProduct)
+   See [credentials documentation](/integrations/builtin/credentials/azureaisearch.md) for detailed setup instructions.
 
-   Example index JSON configuration:
-   ```json
-   {
-     "fields": [
-       {
-         "name": "content_vector",
-         "type": "Collection(Edm.Single)",
-         "searchable": true,
-         "retrievable": true,
-         "dimensions": 1536,
-         "vectorSearchProfile": "vector-profile"
-       },
-       {
-         "name": "content",
-         "type": "Edm.String",
-         "searchable": true,
-         "retrievable": true
-       }
-     ],
-     "vectorSearch": {
-       "profiles": [
-         {
-           "name": "vector-profile",
-           "algorithm": "hnsw-algorithm"
-         }
-       ],
-       "algorithms": [
-         {
-           "name": "hnsw-algorithm",
-           "kind": "hnsw",
-           "parameters": {
-             "metric": "cosine"
-           }
-         }
-       ]
-     }
-   }
-   ```
+### Index configuration
 
-6. Note down your service endpoint URL and index name for configuration.
+The node automatically creates indexes if they don't exist. When auto-creating, the node configures:
 
-7. (Optional) If using managed identity authentication, ensure your Microsoft Entra ID (formerly Azure AD) tenant is properly configured with the necessary role assignments for your managed identities.
+- Vector fields with appropriate dimensions based on your embeddings model
+- HNSW algorithm for efficient similarity search with cosine metric
+- Content and metadata fields for filtering and retrieval
 
-Make sure to note the following values which are required when configuring the node:
+You can also pre-create indexes in Azure Portal for custom configurations. Example schema:
 
-- Azure AI Search endpoint URL
-- Index name
-- Authentication method (API key, system-assigned managed identity, or user-assigned managed identity)
+```json
+{
+  "name": "n8n-vectorstore",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "key": true,
+      "filterable": true
+    },
+    {
+      "name": "content",
+      "type": "Edm.String",
+      "searchable": true
+    },
+    {
+      "name": "content_vector",
+      "type": "Collection(Edm.Single)",
+      "searchable": true,
+      "vectorSearchDimensions": 1536,
+      "vectorSearchProfileName": "n8n-vector-profile"
+    },
+    {
+      "name": "metadata",
+      "type": "Edm.String",
+      "filterable": true
+    }
+  ],
+  "vectorSearch": {
+    "profiles": [
+      {
+        "name": "n8n-vector-profile",
+        "algorithm": "n8n-vector-algorithm"
+      }
+    ],
+    "algorithms": [
+      {
+        "name": "n8n-vector-algorithm",
+        "kind": "hnsw",
+        "hnswParameters": {
+          "metric": "cosine",
+          "m": 4,
+          "efConstruction": 400,
+          "efSearch": 500
+        }
+      }
+    ]
+  }
+}
+```
+
+/// note | Vector dimensions
+The `vectorSearchDimensions` value must match your embeddings model output.
+///
 
 ## Node usage patterns
 
-You can use the Azure AI Search Vector Store node in the following patterns:
-
 ### Use as a regular node to insert and retrieve documents
 
-You can use the Azure AI Search Vector Store as a regular node to insert or get documents. This pattern places the Azure AI Search Vector Store in the regular connection flow without using an agent.
-
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (the template uses the Supabase Vector Store, but the pattern is the same).
+Use the node directly in workflows to insert or retrieve documents without an agent. See [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) for an example pattern (uses Supabase, but the pattern is identical).
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Azure AI Search Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use the vector store as a resource when answering queries.
+Connect to an [AI agent's](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) tool connector to use the vector store as a searchable knowledge base:
 
-Here, the connection would be: AI agent (tools connector) -> Azure AI Search Vector Store node.
+AI agent (tools connector) → Azure AI Search Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Azure AI Search Vector Store node to fetch documents from the Azure AI Search Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+Use with [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) for retrieval-augmented generation:
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Azure AI Search Vector Store.
+Question and Answer Chain (Retriever) → Vector Store Retriever (Vector Store) → Azure AI Search Vector Store
 
-### Use the Vector Store Question Answer Tool to answer questions
+See [this example workflow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/).
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Azure AI Search Vector Store node. Rather than connecting the Azure AI Search Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
+### Use the Vector Store Question Answer Tool
 
-The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the In-Memory Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Azure AI Search Vector Store.
+Use [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize and answer questions:
+
+AI agent (tools) → Vector Store Question Answer Tool (Vector Store) → Azure AI Search Vector Store
+
+See [this example](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/).
 
 ## Node parameters
 
@@ -116,49 +130,108 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
+/// note | Azure AI Search semantic reranking
+Azure AI Search has built-in [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) available when you use **Semantic Hybrid** query mode with a semantic configuration. To use it:
+
+1. Set **Query Mode** to **Semantic Hybrid** in Options
+2. Set **Semantic Configuration** to your configuration name (defaults to `semantic-search-config` if not specified)
+
+The built-in semantic reranker uses machine learning models to improve relevance. You can chain an additional reranking node after semantic reranking for further refinement.
+
+[Semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) is only available if your index has a semantic configuration defined.
+///
+
 <!-- vale off -->
 ### Get Many parameters
 <!-- vale on -->
 
-- **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
-- **Index Name**: Enter the name of the Azure AI Search index to use.
-- **Results Count**: Enter the maximum number of documents to return (default: 50).
+- **Endpoint**: Your Azure AI Search endpoint (format: `https://your-service.search.windows.net`)
+- **Index Name**: The index to query
+- **Results Count**: Maximum documents to return (default: 50)
 
 ### Insert Documents parameters
 
-- **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
-- **Index Name**: Enter the name of the Azure AI Search index to use.
-- **Batch Size**: Controls the number of documents uploaded to Azure AI Search in each indexing batch. This parameter manages document upload batching to the search service, not embedding generation batching (which is configured in upstream embedding nodes).
+- **Endpoint**: Your Azure AI Search endpoint
+- **Index Name**: The index to use (created automatically if it doesn't exist)
+- **Batch Size**: Number of documents uploaded per batch to Azure AI Search. Adjust based on document size and your service tier limits. This controls upload batching only—embedding generation batching is configured in embedding nodes.
 
 ### Update Documents parameters
 
-- **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
-- **Index Name**: Enter the name of the Azure AI Search index to use.
+- **Endpoint**: Your Azure AI Search endpoint
+- **Index Name**: The index to update
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool)
 
-- **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
-- **Index Name**: Enter the name of the Azure AI Search index to use.
+- **Endpoint**: Your Azure AI Search endpoint
+- **Index Name**: The index to query
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-- **Name**: The name of the vector store.
-- **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-- **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
-- **Index Name**: Enter the name of the Azure AI Search index to use.
-- **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+- **Name**: Tool name shown to the LLM
+- **Description**: Explain to the LLM what this tool does. Be specific to help the LLM choose when to use this tool.
+- **Endpoint**: Your Azure AI Search endpoint
+- **Index Name**: The index to query
+- **Limit**: Maximum results to retrieve (e.g., `10` for ten best matches)
 
 ## Node options
 
 ### Options
 
-- **Filter**: Use [OData filter expressions](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results based on metadata fields.
-- **Query Mode**: Choose how to search the index:
-  - **Vector**: Use only vector search
-  - **Keyword**: Use only keyword search
-  - **Hybrid** (default): Combine vector and keyword search
-  - **Semantic Hybrid**: Combine vector, keyword, and semantic ranking (optional semantic configuration can enhance results)
-- **Semantic Configuration**: (Optional) Enter the name of the semantic configuration if you want to use semantic ranking with Semantic Hybrid query mode.
+- **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by metadata (e.g., `metadata/source eq 'manual.pdf'`)
+- **Query Mode**: Search strategy to use:
+  - **Vector**: Similarity search using embeddings only
+  - **Keyword**: Full-text search using BM25 ranking
+  - **Hybrid** (default): Combines vector and keyword search with Reciprocal Rank Fusion (RRF)
+  - **Semantic Hybrid**: Hybrid search with [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) for improved relevance
+- **Semantic Configuration**: Name of the semantic configuration to use for [semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview). Defaults to `semantic-search-config` if not specified. Only required if you pre-created an index with a custom semantic configuration name.
+
+/// note | Query mode selection
+Use **Vector** for semantic similarity, **Keyword** for exact term matching, **Hybrid** for balanced results, or **Semantic Hybrid** when you've configured semantic search in your index for maximum relevance.
+///
+
+## Azure AI Search specific features
+
+### Hybrid search with RRF
+
+Azure AI Search's hybrid search uses Reciprocal Rank Fusion to merge vector and keyword results, providing better accuracy than either method alone.
+
+### [Semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview)
+
+Semantic Hybrid mode applies machine learning models to rerank results based on semantic understanding of your query. This requires a semantic configuration in your index.
+
+### OData filters
+
+Use OData syntax to filter by metadata fields before vector search executes. This improves performance and precision when you need results from specific sources or with certain attributes.
+
+### HNSW algorithm
+
+Azure AI Search uses Hierarchical Navigable Small World (HNSW) graphs for approximate nearest neighbor search, providing fast retrieval at scale with configurable accuracy/speed tradeoffs.
+
+## Troubleshooting
+
+### Index issues
+
+**Index not found**: Verify the index name is correct (case-sensitive) and exists in your Azure AI Search service. If using auto-creation, check that the index was created successfully.
+
+**Vector dimension mismatch**: Ensure your embedding model dimensions match the index vector field dimensions. Check the index schema to confirm the `vectorSearchDimensions` setting.
+
+**Document insert failures**:
+- Verify write permissions (admin API key or Search Index Data Contributor role)
+- Check document fields match your index schema
+- Ensure required fields are provided in documents
+- Review batch size settings if experiencing timeouts with large document sets
+
+### Connection issues
+
+**Unable to connect**:
+- Verify endpoint URL format: `https://your-service.search.windows.net`
+- Confirm your Azure AI Search service is running and accessible
+- Check network security groups, firewall rules, and private endpoint configurations
+- For Azure-hosted n8n, verify virtual network peering or service endpoint configuration if using private endpoints
+
+### Authentication issues
+
+For authentication troubleshooting including credential test failures, API key errors, and managed identity issues, refer to the [credentials documentation troubleshooting section](/integrations/builtin/credentials/azureaisearch.md#troubleshooting).
 
 ## Templates and examples
 
@@ -167,11 +240,9 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 ## Related resources
 
-Refer to:
-
-- [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview) for more information about the service.
-- [LangChain's Azure AI Search documentation](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch) for more information about the integration.
-- [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/) for detailed API information.
+- [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
+- [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
+- [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

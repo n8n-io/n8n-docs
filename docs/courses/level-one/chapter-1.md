@@ -99,6 +99,7 @@ You can move the workflow canvas around in three ways:
 ///
 
 
+
 Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
 
 ## Nodes

@@ -73,7 +73,7 @@ The top bar of the **Editor UI** contains the following information:
   - **Import from URL**: Imports a workflow using a public or shared URL.
   - **Import from File**: Uploads and imports a workflow from a local file.
   - **Settings**: Opens workflow-level settings such as execution options or triggers.
-  - **Archive**: Moves the workflow to the archived list without deleting it.
+  0  - **Archive**: Moves the workflow to the archived list without deleting it.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

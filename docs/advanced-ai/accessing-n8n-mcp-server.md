@@ -51,7 +51,7 @@ The **How to connect** section on the **MCP Access** page provides two authentic
 Copy your instance server URL from the **oAuth** tab and use it to configure your MCP client.
 After connecting, the client will redirect you to n8n to authorize access.
 
-### Revoking client access
+#### Revoking client access
 
 To revoke access for connected MCP clients:
 

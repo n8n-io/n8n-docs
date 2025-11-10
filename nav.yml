@@ -214,6 +214,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - Guardrails: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
@@ -472,12 +473,16 @@ nav:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
           - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
           - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - Conversation operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/conversation-operations.md
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - Video operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -718,6 +723,7 @@ nav:
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
@@ -987,6 +993,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
@@ -1178,7 +1185,8 @@ nav:
         - Hetzner: hosting/installation/server-setups/hetzner.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
-        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Google Cloud Run: hosting/installation/server-setups/google-cloud-run.md
+        - Google Kubernetes Engine: hosting/installation/server-setups/google-kubernetes-engine.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration:

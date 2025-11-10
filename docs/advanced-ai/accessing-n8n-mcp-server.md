@@ -42,9 +42,8 @@ This removes MCP endpoints and hides all related UI elements.
 
 The **How to connect** section on the **MCP Access** page provides two authentication methods for MCP clients:
 
-- oAuth2
-- Access Token
-
+- **oAuth2**
+- **Access Token**
 
 ### Using oAuth2
 
@@ -59,7 +58,6 @@ To revoke access for connected MCP clients:
 2. Make sure you are on the **oAuth** tab in the **How to connect** section.
 3. You should see a table of connected clients in the **Connected oAuth clients** section.
 3. Use the action menu to revoke access for specific clients.
-
 
 ### Using Access Token
 
@@ -164,8 +162,7 @@ The **MCP Access settings page** shows all workflows available to MCP clients. F
 
 ### Workflow descriptions
 
-To help MCP clients identify workflows, you can add free-text descriptions.
-To add or edit a description:
+To help MCP clients identify workflows, you can add free-text descriptions as follows:
 
 1. Open the workflow.
 2. Click the pencil icon next to the workflow name.
@@ -173,10 +170,10 @@ To add or edit a description:
 
 	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
 
-## **Example: Connecting Lovable to n8n MCP server**
+## Example: Connecting Lovable to n8n MCP server
 
 1. Configure MCP Server in Lovable (oAuth).
-    - Navigate to **Settings → Integrations**.
+    - Navigate to **Settings > Integrations**.
     - Add a new MCP server connection (Custom):
     	- Enter your desired connector name.
         - Enter the **Server URL** (copy from n8n instance settings).
@@ -186,16 +183,16 @@ To add or edit a description:
     - Example: asking Lovable to build a workflow UI that lists users and allows deleting them.
      
 /// info
-Native n8n connector is coming soon to Lovable where you should be able to connect directly with your server URL.
+A native n8n connector is coming soon to Lovable. You can use it to connect directly with your server URL.
 ///
 
 ## Troubleshooting
 
 If you encounter issues connecting MCP clients to your n8n instance, consider the following:
 
-- Ensure your n8n instance is publicly accessible if using cloud-based MCP clients.
+- Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 - Verify that the MCP access is enabled in n8n settings.
 - Check that the workflows you want to access are marked as available in MCP.
 - Confirm that the authentication method (oAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
-- If using desktop MCP clients, make sure you have latest[ Node.js](https://nodejs.org/en/download) version installed.
+- If you are using desktop MCP clients, make sure you have latest [ Node.js](https://nodejs.org/en/download) version installed.

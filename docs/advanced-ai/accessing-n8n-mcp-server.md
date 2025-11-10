@@ -21,7 +21,7 @@ The server allows clients such as Lovable to connect securely to an n8n instance
 1. Navigate to **Settings > MCP Access**
 2. Toggle **Enable MCP access** (requires instance owner or admin permissions).
 
-   ![ai-workflow-builder.png](/_images/advanced-ai/enable-mcp-access.png)
+   ![enable-mcp-access.png](/_images/advanced-ai/enable-mcp-access.png)
 
 Once enabled, you'll see:
 
@@ -40,33 +40,48 @@ This removes MCP endpoints and hides all related UI elements.
 
 ## Setting up MCP authentication
 
-### Generating your access token
+The **How to connect** section on the **MCP Access** page provides two authentication methods for MCP clients:
 
-When you first visit the MCP Access page, n8n automatically generates a personal MCP Access Token tied to your user account.
+- **oAuth2**
+- **Access Token**
+
+### Using oAuth2
+
+Copy your instance server URL from the **oAuth** tab and use it to configure your MCP client.
+After connecting, the client will redirect you to n8n to authorize access.
+
+#### Revoking client access
+
+To revoke access for connected MCP clients:
+
+1. Navigate to **Settings > MCP Access**.
+2. Make sure you are on the **oAuth** tab in the **How to connect** section.
+3. You should see a table of connected clients in the **Connected oAuth clients** section.
+3. Use the action menu to revoke access for specific clients.
+
+### Using Access Token
+
+Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the settings page.
+
+When you first visit the **MCP Access page**, n8n automatically generates a personal MCP Access Token tied to your user account.
 
 /// info
 Copy your token right away. On future visits, you'll only see a redacted value and the copy button will be disabled.
 ///
 
-### Rotating your token
+#### Rotating your token
 
 If you lose your token or need to rotate it:
 
 1. Navigate to **Settings > MCP Access**.
+2. Make sure you are on the **Access Token** tab in the **How to connect** section.
 2. Generate a new token.
     
     The previous token is revoked right away upon generation.
     
 3. Update all connected MCP clients with the new value.
 
-## Connecting an MCP client
-
-### Basic connection
-
-Most MCP clients require two pieces of information from the **MCP Access** page:
-
-- Server URL
-- Your MCP Access Token
+## Connecting an MCP client using configuration files
 
 ### JSON configuration
 
@@ -145,14 +160,39 @@ The **MCP Access settings page** shows all workflows available to MCP clients. F
 - Open a workflow directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
 
-## **Example: Connecting Lovable to n8n MCP server**
+### Workflow descriptions
 
-1. Configure MCP Server in Lovable.
-    - Navigate to **Settings → Connection**.
-    - Add a new MCP server connection:
+To help MCP clients identify workflows, you can add free-text descriptions as follows:
+
+1. Open the workflow.
+2. Click the pencil icon next to the workflow name.
+3. Enter your description in the **Description** field.
+
+	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
+
+## Example: Connecting Lovable to n8n MCP server
+
+1. Configure MCP Server in Lovable (oAuth).
+    - Navigate to **Settings > Integrations**.
+    - Add a new MCP server connection (Custom):
+    	- Enter your desired connector name.
         - Enter the **Server URL** (copy from n8n instance settings).
-        - Provide the **Bearer Token** (API key) from the n8n instance's settings page.
-    - Save the connection. Upon success, a confirmation message appears and available MCP tools are listed.
+    - Save the connection. Upon success, you will be redirected to n8n to authorize Lovable.
 2. Verify connectivity.
     - Once connected, Lovable can query for workflows with MCP access enabled.
     - Example: asking Lovable to build a workflow UI that lists users and allows deleting them.
+     
+/// info
+A native n8n connector is coming soon to Lovable. You can use it to connect directly with your server URL.
+///
+
+## Troubleshooting
+
+If you encounter issues connecting MCP clients to your n8n instance, consider the following:
+
+- Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
+- Verify that the MCP access is enabled in n8n settings.
+- Check that the workflows you want to access are marked as available in MCP.
+- Confirm that the authentication method (oAuth2 or Access Token) is correctly configured in your MCP client.
+- Review n8n server logs for any error messages related to MCP connections.
+- If you are using desktop MCP clients, make sure you have latest [ Node.js](https://nodejs.org/en/download) version installed.

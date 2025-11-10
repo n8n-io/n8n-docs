@@ -44,6 +44,12 @@ This release contains bug fixes.
 ### Contributors
 
 [rothenbergt](https://github.com/rothenbergt)  
+## n8n@1.119.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.119.1) for this version.<br />
+**Release date:** 2025-11-10
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

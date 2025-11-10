@@ -65,15 +65,15 @@ The top bar of the **Editor UI** contains the following information:
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
 - **Vector**: Opens a dropdown menu with workflow management options:
-  - **Duplicate**: Creates a copy of the current workflow.
-  - **Download**: Exports the workflow so you can save or share it.
-  - **Change Owner**: Assigns the workflow to another user in your workspace.
-  - **Rename**: Allows you to edit the workflow name.
-  - **Push to Git**: Pushes the workflow to a connected Git repository (available when Git is configured).
-  - **Import from URL...**: Imports a workflow using a public or shared URL.
-  - **Import from File...**: Uploads and imports a workflow from a local file.
-  - **Settings**: Opens workflow-level settings such as execution options or triggers.
-  - **Archive**: Moves the workflow to the archived list without deleting it.
+  - Duplicate: Creates a copy of the current workflow.
+  - Download: Exports the workflow so you can save or share it.
+  - Change Owner: Assigns the workflow to another user in your workspace.
+  - Rename: Allows you to edit the workflow name.
+  - Push to Git: Pushes the workflow to a connected Git repository (available when Git is configured).
+  - Import from URL: Imports a workflow using a public or shared URL.
+  - Import from File: Uploads and imports a workflow from a local file.
+  - Settings: Opens workflow-level settings such as execution options or triggers.
+  - Archive: Moves the workflow to the archived list without deleting it.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

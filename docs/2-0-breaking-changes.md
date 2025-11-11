@@ -48,7 +48,7 @@ n8n will require strict file permissions for configuration files to improve secu
 
 n8n will enable [task runners](/hosting/configuration/task-runners.md) by default to improve security and isolation. All Code node executions will run on task runners.
 
-**Migration path:** Before upgrading to v2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](/hosting/configuration/task-runners.md#External_mode).
+**Migration path:** Before upgrading to v2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](/hosting/configuration/task-runners.md#external_mode).
 
 ### Remove task runner from `n8nio/n8n` docker image
 
@@ -58,9 +58,9 @@ Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the
 
 ### Remove Pyodide-based Python Code node
 
-n8n will remove the Pyodide-based Python Code node and replace it with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#External_mode).
+n8n will remove the Pyodide-based Python Code node and replace it with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external_mode).
 
-The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code/#python-native-beta).
+The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code.md#python-native-beta).
 
 **Migration path:** To continue using Python in Code nodes, set up task runners in external mode and review your existing Python Code nodes for compatibility.
 

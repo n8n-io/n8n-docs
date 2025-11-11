@@ -30,12 +30,6 @@ The following nodes have been removed because the external services they connect
 
 **Migration path:** If your workflows use any of these nodes, update or remove those workflows to avoid errors.
 
-## Public API
-
-## The public API endpoint `PUT /workflows/{id}` will be changed
-
-TODO
-
 ## Security
 
 ### Block environment variable access from Code Node by default

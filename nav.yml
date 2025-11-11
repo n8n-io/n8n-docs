@@ -603,6 +603,7 @@ nav:
         - ConvertKit Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
         - Copper Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
         - crowd.dev Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
+        - CSVbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.csvboxtrigger.md
         - Customer.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
         - Emelia Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - Eventbrite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
@@ -854,6 +855,7 @@ nav:
         - integrations/builtin/credentials/cratedb.md
         - integrations/builtin/credentials/crowddev.md
         - integrations/builtin/credentials/crowdstrike.md
+        - integrations/builtin/credentials/csvbox.md
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/datadog.md
         - integrations/builtin/credentials/deepl.md

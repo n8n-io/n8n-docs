@@ -214,6 +214,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - Guardrails: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
@@ -480,6 +481,8 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -990,6 +993,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
@@ -1304,6 +1308,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
+      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

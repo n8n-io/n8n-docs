@@ -214,6 +214,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - Guardrails: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
@@ -1307,6 +1308,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
+      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

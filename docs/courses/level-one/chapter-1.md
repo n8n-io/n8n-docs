@@ -47,7 +47,7 @@ The panel contains the following sections:
 -   **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
 -   **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
 -   **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
--   **Insights**: Provides analytics and insights about your workflows.
+-   **Insights**: This feature is only available in n8n’s Pro and Enterprise Plans. It provides analytics and insights about your workflows and is not available in the local/self-hosted version.
 -   **Help**: Contains resources around n8n product and community.
 -   **What’s New**: Shows the latest product updates and features.
 

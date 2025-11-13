@@ -6,7 +6,7 @@ contentType: reference
 
 # n8n v2.0 breaking changes
 
-This document provides a summary of breaking changes planned for version 2.0 of n8n. These changes improve security, simplify configuration, and remove legacy features.
+n8n v2.0 will be released soon. This document highlights important breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 

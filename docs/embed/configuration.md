@@ -86,7 +86,7 @@ To store credential overwrites in the database and propagate them automatically 
 export CREDENTIALS_OVERWRITE_PERSISTENCE=true
 ```
 
-When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so workers reload the latest values. If disabled, overwrites remain in-memory on the process that loaded them and are not propagated to workers or preserved across restarts.
+When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so that workers reload the latest values. When disabled, overwrites remain in memory on the process that loaded them and aren't propagated to workers or preserved across restarts.
 
 ## Environment variables
 

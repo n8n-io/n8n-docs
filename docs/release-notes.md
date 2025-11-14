@@ -32,14 +32,188 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
+
+## n8n@1.120.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.1...n8n@1.120.2) for this version.<br />
+**Release date:** 2025-11-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.120.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.120.1) for this version.<br />
+**Release date:** 2025-11-11
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.120.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.120.0) for this version.<br />
+**Release date:** 2025-11-10
+
+This release contains bug fixes.
+
+### Contributors
+
+[rothenbergt](https://github.com/rothenbergt)  
+
+## n8n@1.119.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.1...n8n@1.119.2) for this version.<br />
+**Release date:** 2025-11-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.119.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.119.1) for this version.<br />
+**Release date:** 2025-11-10
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.118.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.118.1...n8n@1.118.2) for this version.<br />
+**Release date:** 2025-11-05
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.119.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.118.0...n8n@1.119.0) for this version.<br />
+**Release date:** 2025-11-03
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+
+
+
+This release includes multiple bug fixes for AI Agent, task runners, editor, and integrations, as well as new features like improved workflow settings, AWS Assume Role credentials, and enhanced security and audit capabilities.
+
+<div class="n8n-new-features" markdown> 
+### Guardrails Node
+The Guardrails node provides a set of rules and policies that control an AI agent's behavior by filtering its inputs and outputs. This helps safeguard from malicious input and from generating unsafe or undesirable responses. There are two operations:
+
+- Check Text for Violations: Validate text against a set of policies (e.g. NSFW, prompt injection).
+- Sanitize Text: Detects and replaces specific data such as PII, URLs, or secrets with placeholders.
+
+
+The default presets and prompts are adapted from the open-source [guardrails package](https://github.com/openai/openai-guardrails-js) made available by OpenAI.
+<br>	
+For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
+</div>
+
+### Contributors
+
+[cesars-gh](https://github.com/cesars-gh)  
+[ongdisheng](https://github.com/ongdisheng)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.118.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.118.0...n8n@1.118.1) for this version.<br />
+**Release date:** 2025-10-28
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.117.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.2...n8n@1.117.3) for this version.<br />
+**Release date:** 2025-10-28
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.118.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.0...n8n@1.118.0) for this version.<br />
+**Release date:** 2025-10-27
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.117.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.1...n8n@1.117.2) for this version.<br />
+**Release date:** 2025-10-27
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.117.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.0...n8n@1.117.1) for this version.<br />
+**Release date:** 2025-10-24
+
+This release contains bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### AI Workflow Builder is now available to Enterprise Cloud users.
+AI Workflow Builder turns prompts into workflows. Describe what you want to build, and n8n will generate a draft workflow by adding, configuring, and connecting nodes for you. From there, you can refine and expand the workflow directly in the editor.<br>
+<br>
+**What’s new:**
+
+- Previously available to Starter and Pro users, AI Workflow Builder is now accessible to Enterprise Cloud users as well, with 1,000 monthly credits.
+- Supported on n8n version 1.115+. **If you don’t see the feature yet, open /settings/usage to trigger a license refresh.**
+- We’ve fixed a bug and now cloud users on v1.117.1 onwards will have access to a more reliable builder.
+- We’re currently working on bringing AI Workflow Builder to self-hosted users as well, including Community, Business, and Enterprise.
+  
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@1.117.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117.0) for this version.<br />
 **Release date:** 2025-10-21
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -58,9 +232,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.1...n8n@1.116.2) for this version.<br />
 **Release date:** 2025-10-21
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
 
 This release contains a bug fix.
 

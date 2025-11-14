@@ -162,6 +162,7 @@ nav:
       - Release notes:
         - 1.x: release-notes.md
         - 0.x: release-notes/0-x.md
+      - v2.0 breaking changes: 2-0-breaking-changes.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md
@@ -214,6 +215,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - Guardrails: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
@@ -480,6 +482,8 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -720,6 +724,7 @@ nav:
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
@@ -989,6 +994,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
@@ -1187,6 +1193,7 @@ nav:
     - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - AI Assistant: hosting/configuration/environment-variables/ai-assistant.md
         - Binary data: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
@@ -1303,6 +1310,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
+      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

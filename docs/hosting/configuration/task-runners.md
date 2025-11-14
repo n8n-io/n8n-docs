@@ -116,57 +116,20 @@ For further information about the launcher config file, see [here](https://githu
 
 ## Adding extra dependencies 
 
-You can customize the `n8nio/runners` image. To do so, you will find the runners Dockerfile at [this directory](https://github.com/n8n-io/n8n/tree/master/docker/images/runners) in the n8n repository. The manifests referred to below are also found in this directory.
+### 1) Extend the `n8nio/runners` image
 
-To make additional packages available on the Code node, you can bake extra packages into your custom runners image at build time:
+You can extend the `n8nio/runners` image to add extra dependencies to the runners. (Requires `n8nio/runners:1.121.0` or later.)
 
-* JavaScript: edit `docker/images/runners/package.json`
-  (package.json manifest used to install runtime-only deps into the JS runner)
-* Python (Native): edit `docker/images/runners/extras.txt`
-  (requirements.txt-style list installed into the Python runner venv)
-
-> Important: for security, any external libraries must be explicitly allowed for Code node use. Update `n8n-task-runners.json` to allowlist what you add.
-
-### 1) JavaScript packages
-
-Edit the runtime extras manifest `docker/images/runners/package.json`:
-
-```json
-{
-  "name": "task-runner-runtime-extras",
-  "description": "Runtime-only deps for the JS task-runner image, installed at image build.",
-  "private": true,
-  "dependencies": {
-    "moment": "2.30.1"
-  }
-}
+```dockerfile
+FROM n8nio/runners:1.121.0
+USER root
+RUN cd /opt/runners/task-runner-javascript && pnpm add moment uuid
+RUN cd /opt/runners/task-runner-python && uv pip install numpy pandas
+COPY n8n-task-runners.json /etc/n8n-task-runners.json
+USER runner
 ```
 
-Add any packages you want under `"dependencies"` (pin them for reproducibility), e.g.:
-
-```json
-"dependencies": {
-  "moment": "2.30.1",
-  "uuid": "9.0.0"
-}
-```
-
-### 2) Python packages
-
-Edit the requirements file `docker/images/runners/extras.txt`:
-
-```
-# Runtime-only extras for the Python task runner (installed at image build)
-numpy==2.3.2
-# add more, one per line, e.g.:
-# pandas==2.2.2
-```
-
-Pin versions (for example, `==2.3.2`) for deterministic builds.
-
-### 3) Allowlist packages for the Code node
-
-Open `docker/images/runners/n8n-task-runners.json` and add your packages to the env overrides:
+You must also allowlist any first- or third-party packages for use by the Code node. Do this by editing the config file `n8n-task-runners.json` to include in your extended image.
 
 ```json
 {
@@ -174,16 +137,16 @@ Open `docker/images/runners/n8n-task-runners.json` and add your packages to the 
     {
       "runner-type": "javascript",
       "env-overrides": {
-        "NODE_FUNCTION_ALLOW_BUILTIN": "crypto",
-        "NODE_FUNCTION_ALLOW_EXTERNAL": "moment,uuid",   // <-- add JS packages here
+        "NODE_FUNCTION_ALLOW_BUILTIN": "crypto",         // <-- allowlist Node.js builtin modules here
+        "NODE_FUNCTION_ALLOW_EXTERNAL": "moment,uuid",   // <-- allowlist third-party JS packages here
       }
     },
     {
       "runner-type": "python",
       "env-overrides": {
         "PYTHONPATH": "/opt/runners/task-runner-python",
-        "N8N_RUNNERS_STDLIB_ALLOW": "json",
-        "N8N_RUNNERS_EXTERNAL_ALLOW": "numpy,pandas"     // <-- add Python packages here
+        "N8N_RUNNERS_STDLIB_ALLOW": "json",              // <-- allowlist Python standard library packages here
+        "N8N_RUNNERS_EXTERNAL_ALLOW": "numpy,pandas"     // <-- allowlist third-party Python packages here
       }
     }
   ]
@@ -195,7 +158,7 @@ Open `docker/images/runners/n8n-task-runners.json` and add your packages to the 
 * `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
 * `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
 
-### 4) Build your custom image
+### 2) Build your custom image
 
 For example, from the n8n repository root:
 
@@ -206,7 +169,7 @@ docker buildx build \
   .
 ```
 
-### 5) Run it
+### 3) Run it
 
 For example:
 

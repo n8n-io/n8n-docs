@@ -16,4 +16,4 @@ You can require all new accounts to be verified by email. This prevents maliciou
 
 Set the environment variable `N8N_INVITE_LINKS_EMAIL_ONLY` to `true`. This locks down your instance so that only users with verified email addresses can register.
 
-For more details on configuring SMTP, see [Set up SMTP](/hosting/configuration/user-management-self-hosted/#step-one-smtp).
+For more details on configuring SMTP, see [Set up SMTP](/hosting/configuration/user-management-self-hosted.md/#step-one-smtp).

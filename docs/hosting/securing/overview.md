@@ -19,4 +19,4 @@ More granularly, consider blocking or opting out of features or data collection 
 * [Disable the public API](/hosting/securing/disable-public-api.md) if you aren't using it.
 * [Opt out of data collection](/hosting/securing/telemetry-opt-out.md) of the anonymous data n8n collects automatically.
 * [Block certain nodes](/hosting/securing/blocking-nodes.md) from being available to your users.
-* [Restrict account registration](hosting/securing/restrict-by-email-verification.md) to email-verified users.
+* [Restrict account registration](/hosting/securing/restrict-by-email-verification.md) to email-verified users.

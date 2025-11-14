@@ -116,9 +116,9 @@ For further information about the launcher config file, see [here](https://githu
 
 ## Adding extra dependencies 
 
-### 1) Extend the `n8nio/runners` image
+### 1. Extend the `n8nio/runners` image
 
-You can extend the `n8nio/runners` image to add extra dependencies to the runners. (Requires `n8nio/runners:1.121.0` or later.)
+You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need `n8nio/runners:1.121.0` or later to do this.
 
 ```dockerfile
 FROM n8nio/runners:1.121.0
@@ -129,7 +129,7 @@ COPY n8n-task-runners.json /etc/n8n-task-runners.json
 USER runner
 ```
 
-You must also allowlist any first- or third-party packages for use by the Code node. Do this by editing the config file `n8n-task-runners.json` to include in your extended image.
+You must also allowlist any first-party or third-party packages for use by the Code node. Do this by editing the configuration file `n8n-task-runners.json` to include the packages in your extended image.
 
 ```json
 {
@@ -158,7 +158,7 @@ You must also allowlist any first- or third-party packages for use by the Code n
 * `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
 * `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
 
-### 2) Build your custom image
+### 2. Build your custom image
 
 For example, from the n8n repository root:
 
@@ -169,7 +169,7 @@ docker buildx build \
   .
 ```
 
-### 3) Run it
+### 3. Run the image
 
 For example:
 

@@ -67,7 +67,7 @@ n8n prunes executions when **either** of the following condition occur:
 Keep in mind:
 
 - Executions with the `new`, `running`, or `waiting` status aren't eligible for pruning.
-- Annotated executions are permanently exempt from pruning.
+- Annotated executions (e.g. executions with tags or ratings) are never pruned.
 - Pruning honors a safety buffer period of `EXECUTIONS_DATA_HARD_DELETE_BUFFER` hours (default: 1h), to ensure recent data remains available while the user is building or debugging a workflow.
 
 ```sh

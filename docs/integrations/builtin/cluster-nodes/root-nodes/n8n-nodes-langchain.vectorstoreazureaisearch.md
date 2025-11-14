@@ -23,11 +23,9 @@ Before using this node, you need:
 
 1. An [Azure subscription](https://azure.microsoft.com)
 2. An [Azure AI Search service](https://learn.microsoft.com/azure/search/search-create-service-portal)
-3. Authentication configured—choose based on your deployment:
-   - **API key**: Simple setup, works anywhere
-   - **Managed identity**: Recommended for Azure-hosted production deployments
+3. API key authentication configured (admin key for write operations, query key for read-only)
 
-   See [credentials documentation](/integrations/builtin/credentials/azureaisearch.md) for detailed setup instructions.
+   See [credentials documentation](/integrations/builtin/credentials/azureaisearch.md) for setup instructions.
 
 ### Index configuration
 
@@ -147,7 +145,7 @@ The built-in semantic reranker uses machine learning models to improve relevance
 
 - **Endpoint**: Your Azure AI Search endpoint (format: `https://your-service.search.windows.net`)
 - **Index Name**: The index to query
-- **Results Count**: Maximum documents to return (default: 50)
+- **Limit**: Maximum documents to return (default: 4)
 
 ### Insert Documents parameters
 
@@ -177,7 +175,7 @@ The built-in semantic reranker uses machine learning models to improve relevance
 
 ### Options
 
-- **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by metadata (e.g., `metadata/source eq 'manual.pdf'`)
+- **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by document fields or metadata. See filter examples below.
 - **Query Mode**: Search strategy to use:
   - **Vector**: Similarity search using embeddings only
   - **Keyword**: Full-text search using BM25 ranking
@@ -187,6 +185,50 @@ The built-in semantic reranker uses machine learning models to improve relevance
 
 /// note | Query mode selection
 Use **Vector** for semantic similarity, **Keyword** for exact term matching, **Hybrid** for balanced results, or **Semantic Hybrid** when you've configured semantic search in your index for maximum relevance.
+///
+
+### OData filter examples
+
+Azure AI Search uses [OData syntax](https://learn.microsoft.com/azure/search/search-query-odata-filter) for filtering. Metadata fields are accessed using `metadata/fieldName` format.
+
+**Filter by document ID:**
+```
+id eq '3da6491a-f930-4a4e-9471-c05dcd450ba0'
+```
+
+**Filter by metadata field:**
+```
+metadata/source eq 'user-guide'
+```
+
+**Complex AND filter:**
+```
+metadata/category eq 'technology' and metadata/author eq 'John'
+```
+
+**Complex OR filter:**
+```
+metadata/source eq 'user-guide' or metadata/rating ge 4
+```
+
+**Numeric comparison:**
+```
+metadata/rating ge 4 and metadata/rating lt 10
+```
+
+**String matching with NOT:**
+```
+metadata/category eq 'technology' and metadata/title ne 'Deprecated'
+```
+
+**Supported OData operators:**
+- Comparison: `eq`, `ne`, `gt`, `ge`, `lt`, `le`
+- Logical: `and`, `or`, `not`
+- String functions: `startswith()`, `endswith()`, `contains()`
+- Collection functions: `any()`, `all()`
+
+/// note | Filter format
+Filters work across all query modes (Vector, Keyword, Hybrid, Semantic Hybrid) and all operation modes (retrieve, load, retrieve-as-tool).
 ///
 
 ## Azure AI Search specific features
@@ -201,7 +243,7 @@ Semantic Hybrid mode applies machine learning models to rerank results based on 
 
 ### OData filters
 
-Use OData syntax to filter by metadata fields before vector search executes. This improves performance and precision when you need results from specific sources or with certain attributes.
+Use OData syntax to filter by document fields or metadata before vector search executes. This improves performance and precision when you need results from specific sources or with certain attributes.
 
 ### HNSW algorithm
 
@@ -216,10 +258,23 @@ Azure AI Search uses Hierarchical Navigable Small World (HNSW) graphs for approx
 **Vector dimension mismatch**: Ensure your embedding model dimensions match the index vector field dimensions. Check the index schema to confirm the `vectorSearchDimensions` setting.
 
 **Document insert failures**:
-- Verify write permissions (admin API key or Search Index Data Contributor role)
+- Verify write permissions (admin API key required)
 - Check document fields match your index schema
 - Ensure required fields are provided in documents
 - Review batch size settings if experiencing timeouts with large document sets
+
+### Filter issues
+
+**Filter not working**:
+- Verify OData syntax is correct
+- Ensure metadata fields use `metadata/` prefix: `metadata/source eq 'value'`
+- Check that filtered fields are marked as `filterable` in your index schema
+- Test with simple filters first (`id eq 'value'`) before complex expressions
+
+**Invalid OData syntax**:
+- Use single quotes for string values: `metadata/source eq 'value'`
+- Use proper operators: `eq`, `ne`, `gt`, `ge`, `lt`, `le`, `and`, `or`, `not`
+- Refer to [OData filter documentation](https://learn.microsoft.com/azure/search/search-query-odata-filter) for syntax details
 
 ### Connection issues
 
@@ -231,7 +286,7 @@ Azure AI Search uses Hierarchical Navigable Small World (HNSW) graphs for approx
 
 ### Authentication issues
 
-For authentication troubleshooting including credential test failures, API key errors, and managed identity issues, refer to the [credentials documentation troubleshooting section](/integrations/builtin/credentials/azureaisearch.md#troubleshooting).
+For authentication troubleshooting including API key errors, refer to the [credentials documentation troubleshooting section](/integrations/builtin/credentials/azureaisearch.md#troubleshooting).
 
 ## Templates and examples
 
@@ -243,6 +298,7 @@ For authentication troubleshooting including credential test failures, API key e
 - [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
 - [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
 - [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
+- [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -14,7 +14,7 @@ The release of n8n 2.0 continues n8n's commitment to providing a secure, reliabl
 
 ### Return expected sub-workflow data when it contains a wait node
 
-Previously, when a workflow (parent) called a subworkflow (child) that contained a Wait node, the parent workflow incorrectly received the input items to the Wait node from the child workflow.
+Previously, when a workflow (parent) called a subworkflow (child) that contained a node that waits (e.g. a Wait node or a human-in-the-loop node), the parent workflow incorrectly received the input items to the waiting node from the child workflow.
 
 In v2, the parent workflow now receives the output data from the end of the child workflow instead.
 

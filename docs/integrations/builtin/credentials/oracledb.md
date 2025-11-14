@@ -14,12 +14,13 @@ You can use these credentials to authenticate the following nodes:
 
 /// note
 These nodes do not support SSH tunnels.
-They require Oracle Database 19c or later. For thick mode, use Oracle Client Libraries 19c or later.
+They require Oracle Database **19c or later**.
+For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, they also require Oracle Client Libraries **19c or later**.
 ///
 
 ## Prerequisites
 
-Create a user account on a [OracleDB](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server database.
+Create a user account on an [Oracle Database](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server.
 
 ## Supported authentication methods
 
@@ -35,8 +36,8 @@ To configure this credential, you'll need:
 
 - A **User** name.
 - A **Password** for that user.
-- **Connection String**: The Oracle database instance to connect to. The string can be an Easy Connect string, or a TNS Alias from a tnsnames.ora file, or the Oracle database instance.
-- **Use Optional Oracle Client Libraries**: If you want to use node-oracledb Thick mode for working with Oracle Database advanced features, turn this on. This option is not available in official n8n docker images. Additional settings to enable Thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information.
+- **Connection String**: The Oracle Database instance to connect to. The string can be an Easy Connect string, or a TNS Alias from a tnsnames.ora file, or the Oracle Database instance.
+- **Use Optional Oracle Client Libraries**: If you want to work with Oracle Database advanced features, turn this on. This option internally uses node-oracledb Thick mode. Additional settings to enable node-oracledb Thick mode are required. Refer to [Enabling Thick mode documentation](https://node-oracledb.readthedocs.io/en/latest/user_guide/initialization.html#enabling-node-oracledb-thick-mode) for more information. This option is not available in the official n8n docker images.
 - **Use SSL**: If your Connection String is using SSL, turn this on and configure additional details for the SSL Authentication.
 - **Wallet Password**: The password to decrypt the Privacy Enhanced Mail (PEM)-encoded private certificate, if it is encrypted.
 - **Wallet Content**: The security credentials required to establish a mutual TLS (mTLS) connection to Oracle Database.

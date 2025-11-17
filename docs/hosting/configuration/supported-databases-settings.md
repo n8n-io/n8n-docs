@@ -6,6 +6,27 @@ contentType: reference
 
 By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB.
 
+## Database type by n8n installation
+
+The database type used varies depending on your n8n installation:
+
+### Self-hosted n8n
+By default, self-hosted installations use **SQLite**. You can optionally configure PostgreSQL by setting the appropriate environment variables (see [PostgresDB configuration](#postgresdb)).
+
+### n8n Cloud
+
+n8n Cloud installations use different databases depending on your plan tier:
+
+- **SQLite**: Trial, Starter, and Pro plans, as well as standard Enterprise plans
+- **PostgreSQL**: Enterprise Scaling plans only
+
+**Important considerations for n8n Cloud:**
+- PostgreSQL is only available on Enterprise Scaling plans
+- Migration from SQLite to PostgreSQL requires manual data migration
+- Enterprise Scaling plans also enable queue mode, which requires PostgreSQL
+
+If you need to migrate an existing n8n Cloud instance to PostgreSQL, contact n8n support to discuss Enterprise Scaling plan options.
+
 ## Shared settings
 
 The following environment variables get used by all databases:

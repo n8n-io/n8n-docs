@@ -8,7 +8,7 @@ status: beta
 
 Connect supported MCP clients to your n8n workflows through n8n's built-in MCP server.
 
-The server allows clients such as Lovable to connect securely to an n8n instance. Once connected, these clients can:
+The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
 - Search within workflows marked as available in MCP
 - Retrieve metadata and webhook information for workflows
@@ -81,61 +81,19 @@ If you lose your token or need to rotate it:
     
 3. Update all connected MCP clients with the new value.
 
-## Connecting an MCP client using configuration files
-
-### JSON configuration
-
-For MCP clients using JSON configuration files, copy the sample configuration from the MCP Access page:
-
-```json
-{
-  "mcpServers": {
-    "n8n-mcp": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "supergateway",
-        "--streamableHttp",
-        "https://<your-n8n-domain>/mcp-server/http",
-        "--header",
-        "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
-      ]
-    }
-  }
-}
-```
-
-Here, replace:
-
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
-
-### TOML configuration
-
-For MCP clients using TOML configuration files (like Codex CLI), use the following configuration:
-
-```toml
-[mcp_servers.n8n_mcp]
-command = "npx"
-args = [
-    "-y",
-    "supergateway",
-    "--streamableHttp",
-    "https://<your-n8n-domain>/mcp-server/http",
-    "--header",
-    "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
-]
-```
-
-Here, replace:
-- `<your-n8n-domain>`: Your n8n base URL, which is shown on the MCP Access page
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Exposing workflows to MCP clients
 
 ### Workflow eligibility
 
-Only **active, webhook-triggered workflows** can be exposed to MCP clients.
+In order for a workflow to be available to MCP clients, it must meet the following criteria:
+
+1. Be active
+2. Contain one of the following trigger nodes:
+    - Webhook
+    - Schedule
+    - Chat
+    - Form
 
 By default, no workflows are visible to MCP clients. You must explicitly enable access.
 
@@ -170,7 +128,33 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
 
-## Example: Connecting Lovable to n8n MCP server
+## Executing workflows trough MCP
+
+MCP clients can execute eligible workflows on your request. When a workflow is triggered, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the client will retrieve the results.
+
+### Providing input data
+
+If a workflow requires input data, in must be provided by the MCP client when triggering the workflow. Input schema is determined by the workflow's trigger node:
+
+1. **Webhook trigger**: MCP client will look for hints in workflow contents and it's description. It is up to workflow author to provide enough information for the client to generate valid input data.
+2. **Schedule trigger**: No input data is required.
+3. **Chat trigger**: Chat input format is determined by the chat node configuration.
+4. **Form trigger**: Form fields are determined by the form node configuration.
+
+### Workflow timeouts
+
+There is a built-in, 5-minute, timeout for workflow executions triggered via MCP. If a workflow does not complete within this time, the execution is aborted, and an error is returned to the MCP client.
+This means that timeout set in workflow settings is ignored for MCP-triggered executions.
+Future versions of n8n may allow mcp server to respect workflow timeouts set in workflow settings.
+
+### Limitations
+
+- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow.
+- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions is not supported.
+
+## Examples
+
+#### Connecting Lovable to n8n MCP server
 
 1. Configure MCP Server in Lovable (oAuth).
     - Navigate to **Settings > Integrations**.
@@ -185,6 +169,101 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 /// info
 A native n8n connector is coming soon to Lovable. You can use it to connect directly with your server URL.
 ///
+
+#### Connecting Claude Desktop to n8n MCP server
+
+##### Using oAuth2
+
+1. Navigate to **Settings** > **Connectors** in Claude Desktop.
+2. Click on **Add custom connector**.
+3. Fill in the following details:
+   	- **Name**: n8n MCP
+    - **Remote MCP Server URL**: Your n8n base URL (shown on the **MCP Access** page)
+4. Save the connector.
+5. When prompted, authorize Claude Desktop to access your n8n instance.
+
+##### Using Access Token
+
+/// info
+This requires latest version of [Node.js](https://nodejs.org/en/download).
+///
+
+Add the following entry to your `claude_desktop_config.json` file:
+
+```json
+{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--streamableHttp",
+        "https://<your-n8n-domain>/mcp-server/http",
+        "--header",
+        "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
+      ]
+    }
+  }
+}
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+
+### Connecting Claude Code to n8n MCP server
+
+Use the following CLI command:
+
+```bash
+claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http \
+  --header "Authorization: Bearer <YOUR_N8N_MCP_TOKEN>"
+```
+
+Alternatively, add the following entry to your `claude.json` file:
+
+```json
+{
+    "mcpServers": {
+        "n8n-local": {
+            "type": "http",
+            "url": "https://<your-n8n-domain>/mcp-server/http",
+            "headers": {
+                "Authorization": "Bearer <YOUR_N8N_MCP_TOKEN>"
+            }
+        }
+    }
+}
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+
+### Connecting Codex CLI to n8n MCP server
+
+Add the following entry to your `codex_cli_config.toml` file:
+
+```toml
+[mcp_servers.n8n_mcp]
+command = "npx"
+args = [
+    "-y",
+    "supergateway",
+    "--streamableHttp",
+    "https://<your-n8n-domain>/mcp-server/http",
+    "--header",
+    "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
+]
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL, which is shown on the MCP Access page
+- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Troubleshooting
 

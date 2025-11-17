@@ -162,6 +162,7 @@ nav:
       - Release notes:
         - 1.x: release-notes.md
         - 0.x: release-notes/0-x.md
+      - v2.0 breaking changes: 2-0-breaking-changes.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md
@@ -1194,6 +1195,7 @@ nav:
     - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - AI Assistant: hosting/configuration/environment-variables/ai-assistant.md
         - Binary data: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
@@ -1310,6 +1312,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
+      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

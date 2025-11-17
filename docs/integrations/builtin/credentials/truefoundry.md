@@ -5,6 +5,7 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+
 # TrueFoundry AI Gateway credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -21,7 +22,7 @@ Create a [TrueFoundry](https://truefoundry.com/) account.
 
 ## Related resources
 
-Refer to the [TrueFoundry AI Gateway documentation](https://www.truefoundry.com/ai-gateway) for more information about the service.
+Click [here](https://www.truefoundry.com/ai-gateway) to learn more about the TrueFoundry AI Gateway. Refer to the [TrueFoundry AI Gateway documentation](https://docs.truefoundry.com/ai-gateway/intro-to-llm-gateway) for more information about the service. 
 
 ## Using API key
 
@@ -48,3 +49,5 @@ To configure this credential, you'll need:
 4. Click on the **New Personal Access Token** button.
 5. Specify the **Name** and optionally, an **Expiration Date**.
 6. Copy your key and add it as the **API Key** in n8n.
+
+For more information on Access Control in the Gateway, click [here](https://docs.truefoundry.com/ai-gateway/gateway-access-control).

@@ -33,6 +33,22 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+
+## n8n@1.121.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.121.0) for this version.<br />
+**Release date:** 2025-11-17
+
+This release contains bug fixes.
+
+### Contributors
+
+[vicalca](https://github.com/vicalca)  
+[datpp-ct](https://github.com/datpp-ct)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.120.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.1...n8n@1.120.2) for this version.<br />

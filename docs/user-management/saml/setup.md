@@ -34,12 +34,14 @@ The steps to configure the IdP vary depending on your chosen IdP. These are some
 * Create an app for n8n in your IdP.
 * Map n8n attributes to IdP attributes:
 
-	| Name | Name format | Value (IdP side) |
-	| ---- | ----------- | ---------------- |
-	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` | URI Reference | User email       |
-	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname`    | URI Reference | User First Name  |
-	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname`     | URI Reference | User Last Name   |
-	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`          | URI Reference | User Email       |
+	| Value (IdP side) | Name format | Name |
+	| ---------------- | ----------- | ---- |
+	| User email       | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
+	| User First Name  | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname`    |
+	| User Last Name   | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname`     |
+	| User Email       | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`          |
+	| appuser.n8n_instance_role | string | n8n_instance_role |
+	| appuser.n8n_projects | array | n8n_projects |
 
 ## Setup resources for common IdPs
 

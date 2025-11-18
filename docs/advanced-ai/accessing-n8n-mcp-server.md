@@ -14,6 +14,18 @@ The server allows clients such as Lovable or Claude Desktop to connect securely 
 - Retrieve metadata and trigger information for workflows
 - Trigger and run exposed workflows
 
+## How this differs from the MCP Server Trigger node?
+
+Instance‑level MCP access provides one connection per instance with centralized authentication and per‑workflow opt‑in so that enabled workflows across your instance are discoverable and runnable without bespoke server setup in each workflow. 
+
+The MCP Server Trigger node is configured inside a single workflow and exposes tools only from that workflow, which is useful when you want to craft a specific MCP server behavior within one workflow.
+
+### What it’s not
+
+- Instance‑level MCP access is not a way to build or edit workflows from an AI client; authoring remains in n8n.
+- It is not blanket exposure. You must enable MCP at the instance level and then enable each workflow individually.
+- It is not per‑client scoping - any connected client sees all workflows you’ve enabled for MCP at this time.
+
 ## Enabling MCP access
 
 ### For Cloud and self-hosted instances

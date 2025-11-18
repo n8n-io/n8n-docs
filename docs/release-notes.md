@@ -58,19 +58,17 @@ To enable workflows through an instance-level MCP connection, both your instance
 - All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
 
 This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
- <br> 
+<br> 
 <figure markdown="span">
     ![Instance MCP](/_images/release-notes/instance_mcp_settings.png)
     <figcaption>Enable MCP for an instance in instance settings.</figcaption>
 </figure>
 <br>
-<br> 
 <figure markdown="span">
     ![Instance MCP](/_images/release-notes/instance_mcp_workflow_settings.png)
     <figcaption>Enable MCP for each workflow in workflow settings.</figcaption>
 </figure>
-<br>
- </div>
+</div>
 
 ### Contributors
 

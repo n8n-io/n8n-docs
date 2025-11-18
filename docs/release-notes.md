@@ -82,52 +82,6 @@ This feature simplifies integration and improves visibility across AI platforms 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
-## n8n@1.121.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.121.0) for this version.<br />
-**Release date:** 2025-11-17
-
-This release contains bug fixes.
-
-<div class="n8n-new-features" markdown>
-### Instance-level MCP connections (beta)
-
-You can now enable MCP connections at the instance level, giving MCP-compatible AI platforms access to all selected workflows through a single oAuth-secured connection.
-	
-Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
-
-🛠️ How to:
-To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
-- To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
-- To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
-
-🧠 Keep in mind:
-- To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
-- All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
-
-This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server/.md)
- <br> 
-<figure markdown="span">
-    ![Instance MCP](/_images/release-notes/Instance_mcp_settings.png)
-    <figcaption>Enable MCP for an instance in instance settings.</figcaption>
-</figure>
-<br>
-<br> 
-<figure markdown="span">
-    ![Instance MCP](/_images/release-notes/instance_mcp_workflow_settings.png)
-    <figcaption>Enable MCP for each workflow in workflow settings.</figcaption>
-</figure>
-<br>
- </div> 
-### Contributors
-
-[vicalca](https://github.com/vicalca)  
-[datpp-ct](https://github.com/datpp-ct)  
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 ## n8n@1.120.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.1...n8n@1.120.2) for this version.<br />

@@ -17,15 +17,8 @@ By default, self-hosted installations use **SQLite**. You can optionally configu
 
 n8n Cloud installations use different databases depending on your plan tier:
 
-- **SQLite**: Trial, Starter, and Pro plans, as well as standard Enterprise plans
+- **SQLite**: Trial, Starter, and Pro plans, as well as legacy Enterprise plans
 - **PostgreSQL**: Enterprise Scaling plans only
-
-**Important considerations for n8n Cloud:**
-- PostgreSQL is only available on Enterprise Scaling plans
-- Migration from SQLite to PostgreSQL requires manual data migration
-- Enterprise Scaling plans also enable queue mode, which requires PostgreSQL
-
-If you need to migrate an existing n8n Cloud instance to PostgreSQL, contact n8n support to discuss Enterprise Scaling plan options.
 
 ## Shared settings
 

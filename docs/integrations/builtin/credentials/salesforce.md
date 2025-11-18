@@ -112,3 +112,19 @@ These steps are what's required on the n8n side. Salesforce recommends setting r
 18. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
 
 Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.
+
+## Common issues
+
+### Connection issues when authenticating with Salesforce from n8n Cloud
+
+If you encounter connection issues when authenticating with Salesforce from n8n Cloud, you might need to enable a specific system permission in your Salesforce user profiles:
+
+1. In Salesforce, go to **Setup**.
+2. In the **Quick Find** box, search for `Profiles`.
+3. Select the profile used by the user connecting to n8n (for example, System Administrator or the relevant profile).
+4. Click **Edit** or use the new **Profile** interface if it's available.
+5. Locate the **Administrative Permissions** section.
+6. Enable the checkbox for **Approve Connected Apps for Non-Admins**. This checkbox might also appear as **Approve apps connected not installed** depending on your Salesforce language or translation.
+7. Click **Save**.
+
+This permission is not enabled by default, even for administrator profiles, and must be manually activated. Without this permission, you might experience authentication failures when trying to connect n8n to Salesforce.

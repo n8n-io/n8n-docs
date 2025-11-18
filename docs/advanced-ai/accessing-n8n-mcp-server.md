@@ -11,8 +11,8 @@ Connect supported MCP clients to your n8n workflows through n8n's built-in MCP s
 The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
 - Search within workflows marked as available in MCP
-- Retrieve metadata and webhook information for workflows
-- Trigger and run workflows using webhook endpoints
+- Retrieve metadata and trigger information for workflows
+- Trigger and run exposed workflows
 
 ## Enabling MCP access
 
@@ -57,7 +57,7 @@ To revoke access for connected MCP clients:
 1. Navigate to **Settings > MCP Access**.
 2. Make sure you are on the **oAuth** tab in the **How to connect** section.
 3. You should see a table of connected clients in the **Connected oAuth clients** section.
-3. Use the action menu to revoke access for specific clients.
+3. Use the action menu in each client's roww to revoke access for specific clients.
 
 ### Using Access Token
 
@@ -96,6 +96,10 @@ In order for a workflow to be available to MCP clients, it must meet the followi
     - Form
 
 By default, no workflows are visible to MCP clients. You must explicitly enable access.
+
+/// info
+Once you deactivate a workflow, its MCP access will be removed automatically. You will have to re-enable it when you activate the workflow again.
+///
 
 ### Enabling access
 
@@ -245,7 +249,7 @@ Here, replace:
 
 ### Connecting Codex CLI to n8n MCP server
 
-Add the following entry to your `codex_cli_config.toml` file:
+Add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
 [mcp_servers.n8n_mcp]

@@ -33,6 +33,53 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+
+## n8n@1.121.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.121.0) for this version.<br />
+**Release date:** 2025-11-18
+
+This release contains bug fixes.
+
+<div class="n8n-new-features" markdown>
+### Instance-level MCP connections (beta)
+
+You can now enable MCP connections at the instance level, giving MCP-compatible AI platforms access to all selected workflows through a single oAuth-secured connection.
+	
+Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
+
+🛠️ How to:
+To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
+- To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
+- To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
+
+🧠 Keep in mind:
+- To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
+- All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
+
+This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
+<br> 
+<figure markdown="span">
+    ![Instance MCP](/_images/release-notes/instance_mcp_settings.png)
+    <figcaption>Enable MCP for an instance in instance settings.</figcaption>
+</figure>
+<br>
+<figure markdown="span">
+    ![Instance MCP](/_images/release-notes/instance_mcp_workflow_settings.png)
+    <figcaption>Enable MCP for each workflow in workflow settings.</figcaption>
+</figure>
+</div>
+
+### Contributors
+
+[vicalca](https://github.com/vicalca)  
+[datpp-ct](https://github.com/datpp-ct)  
+[cesars-gh](https://github.com/cesars-gh)  
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.120.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.1...n8n@1.120.2) for this version.<br />
@@ -172,6 +219,31 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.0...n8n@1.118
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+<div class="n8n-new-features" markdown>
+
+### Project-level variables
+
+You can now create variables at either the global or project level.
+
+- Project-level variables are only visible and usable by members of that project.
+- Global variables can be overridden at the project level for more specific configurations.
+- The maximum character limit has been increased to 1,000 to support longer values.
+
+This update improves security and flexibility as part of our ongoing effort to isolate data and settings per project.
+
+### Improvements to Environments
+
+We’ve made several updates to improve reliability, consistency, and control across environments.
+
+- **Projects are now fully synchronized across environments.** When a workflow is pushed within a project, it’s automatically created and synced in all environments where it’s pulled. Moving, renaming, or deleting projects is now reflected everywhere, keeping instances aligned.
+- **Improved protection for read-only environments.** Read-only instances now block all changes, including folder moves and workflow ownership updates, ensuring production environments stay stable and isolated.
+- **Bug fix: tag mapping synchronization.** Fixed an issue where tag mappings only updated when tags changed. They now sync on every commit for consistent tagging across environments.
+
+### Custom date ranges for Insights
+
+You can now define custom date ranges instead of using fixed ones, giving you more control over the data you analyze.
+</div> 
 
 ## n8n@1.117.2
 

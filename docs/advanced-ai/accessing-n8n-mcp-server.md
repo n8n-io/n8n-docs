@@ -16,15 +16,15 @@ The server allows clients such as Lovable or Claude Desktop to connect securely 
 
 ## Difference between instance-level MCP access and MCP Server Trigger node
 
-Instance-level MCP access lets you create one connection per n8n instance, use centralized authentication, and choose which workflows to enable for access. Enabled workflows are easy to find and run without extra setup for each one.
+Instance-level MCP access lets you create one connection per n8n instance, use centralized authentication, and choose which workflows to enable for access. Enabled workflows are easy to find and run without extra setup for each workflow.
 
 In comparison, you configure an MCP Server Trigger node inside a single workflow. This node exposes tools only from that workflow, a useful approach when you want to craft a specific MCP server behavior within one workflow.
 
 ### Key considerations when using instance-level MCP access
 
-- Instance‑level MCP access isn't a way to build or edit workflows from an AI client; authoring remains in n8n.
-- It's not blanket exposure. You must enable MCP at the instance level and then enable each workflow individually.
-- It's not scoped to each client. Any connected client sees all workflows you’ve enabled for MCP access.
+- It isn't a way to build or edit workflows from an AI client; authoring remains in n8n.
+- It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
+- It's not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
 
 ## Enabling MCP access
 
@@ -67,9 +67,9 @@ After connecting, the client will redirect you to n8n to authorize access.
 To revoke access for connected MCP clients:
 
 1. Navigate to **Settings > MCP Access**.
-2. Make sure you are on the **OAuth** tab in the **How to connect** section.
-3. You should see a table of connected clients in the **Connected OAuth clients** section.
-3. Use the action menu in each client's roww to revoke access for specific clients.
+2. Switch to the **OAuth** tab in the **How to connect** section.
+   You should see a table of connected clients in the **Connected OAuth clients** section.
+3. Use the action menu in each client's row to revoke access for specific clients.
 
 ### Using Access Token
 
@@ -110,18 +110,18 @@ In order for a workflow to be available to MCP clients, it must meet the followi
 By default, no workflows are visible to MCP clients. You must explicitly enable access.
 
 /// info
-Once you deactivate a workflow, its MCP access will be removed automatically. You will have to re-enable it when you activate the workflow again.
+Once you deactivate a workflow, n8n removes its MCP access. You will have to re-enable access when you activate the workflow again.
 ///
 
 ### Enabling access
 
-**Option 1: From the workflow editor**
+#### Option 1: From the workflow editor
 
 1. Open the workflow.
 2. Go to **Settings**.
 3. Toggle **Available in MCP**.
 
-**Option 2: From the workflows list**
+#### Option 2: From the workflows list
 
 1. Go to **Workflows**.
 2. Open the menu on a workflow card.
@@ -144,30 +144,28 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
 
-## Executing workflows trough MCP
+## Executing workflows trough MCP clients
 
-MCP clients can execute eligible workflows on your request. When a workflow is triggered, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the client will retrieve the results.
+MCP clients can execute eligible workflows on your request. When a client triggers a workflow, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
 
 ### Providing input data
 
-If a workflow requires input data, in must be provided by the MCP client when triggering the workflow. Input schema is determined by the workflow's trigger node:
+If a workflow requires input data, the MCP client must provide that data when triggering the workflow. The workflow's trigger node determines the schema of the input data:
 
-1. **Webhook trigger**: MCP client will look for hints in workflow contents and it's description. It's up to workflow author to provide enough information for the client to generate valid input data.
+1. **Webhook trigger**: MCP client will look for hints in workflow contents and its description. It's up to workflow author to provide enough information for the client to generate valid input data.
 2. **Schedule trigger**: No input data is required.
 3. **Chat trigger**: Chat input format is determined by the chat node configuration.
 4. **Form trigger**: Form fields are determined by the form node configuration.
 
 ### Workflow timeouts
 
-There is a built-in, 5-minute, timeout for workflow executions triggered via MCP. If a workflow doesn't complete within this time, the execution is aborted, and an error is returned to the MCP client.
-This means that timeout set in workflow settings is ignored for MCP-triggered executions.
-Future versions of n8n may allow mcp server to respect workflow timeouts set in workflow settings.
+n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients. If a workflow doesn't finish in time, n8n stops the execution and sends an error to the MCP client, ignoring any timeout you set in the workflow settings for MCP-triggered executions.
 
 ### Limitations
 
 - If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow.
-- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions is not supported.
-- Binary input data is not supported. MCP clients can only provide text-based inputs for your workflows.
+- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
+- Binary input data isn't supported. MCP clients can only provide text-based inputs for your workflows.
 
 ## Examples
 
@@ -176,11 +174,11 @@ Future versions of n8n may allow mcp server to respect workflow timeouts set in 
 1. Configure MCP Server in Lovable (OAuth).
     - Navigate to your workspace  **Settings > Integrations**.
     - On the **MCP Servers** section, find **n8n** and click **Connect**.
-    - Fill in your n8n server URL (shown on the **MCP Access** page).
-    - Save the connection. Upon success, you will be redirected to n8n to authorize Lovable.
+    - Enter your n8n server URL (shown on the **MCP Access** page).
+    - Save the connection. If successful, n8n redirects you to authorize Lovable.
 2. Verify connectivity.
     - Once connected, Lovable can query for workflows with MCP access enabled.
-    - Example: asking Lovable to build a workflow UI that lists users and allows deleting them.
+    - **Example:** Asking Lovable to build a workflow UI that lists users and allows deleting them.
 
 #### Connecting Claude Desktop to n8n MCP server
 
@@ -188,8 +186,8 @@ Future versions of n8n may allow mcp server to respect workflow timeouts set in 
 
 1. Navigate to **Settings** > **Connectors** in Claude Desktop.
 2. Click on **Add custom connector**.
-3. Fill in the following details:
-   	- **Name**: n8n MCP
+3. Enter the following details:
+   	- **Name:** n8n MCP
     - **Remote MCP Server URL**: Your n8n base URL (shown on the **MCP Access** page)
 4. Save the connector.
 5. When prompted, authorize Claude Desktop to access your n8n instance.
@@ -274,7 +272,7 @@ args = [
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL, which is shown on the MCP Access page
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
 - `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Troubleshooting
@@ -286,4 +284,4 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Check that the workflows you want to access are marked as available in MCP.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
-- If you are using desktop MCP clients, make sure you have latest [ Node.js](https://nodejs.org/en/download) version installed.
+- If you are using desktop MCP clients, make sure you have latest [Node.js](https://nodejs.org/en/download) version installed.

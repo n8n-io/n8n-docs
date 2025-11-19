@@ -14,17 +14,17 @@ The server allows clients such as Lovable or Claude Desktop to connect securely 
 - Retrieve metadata and trigger information for workflows
 - Trigger and run exposed workflows
 
-## How this differs from the MCP Server Trigger node?
+## Difference between instance-level MCP access and MCP Server Trigger node
 
-Instance‑level MCP access provides one connection per instance with centralized authentication and per‑workflow opt‑in so that enabled workflows across your instance are discoverable and runnable without bespoke server setup in each workflow. 
+Instance-level MCP access lets you create one connection per n8n instance, use centralized authentication, and choose which workflows to enable for access. Enabled workflows are easy to find and run without extra setup for each one.
 
-The MCP Server Trigger node is configured inside a single workflow and exposes tools only from that workflow, which is useful when you want to craft a specific MCP server behavior within one workflow.
+In comparison, you configure an MCP Server Trigger node inside a single workflow. This node exposes tools only from that workflow, a useful approach when you want to craft a specific MCP server behavior within one workflow.
 
-### What it’s not
+### Key considerations when using instance-level MCP access
 
-- Instance‑level MCP access is not a way to build or edit workflows from an AI client; authoring remains in n8n.
-- It is not blanket exposure. You must enable MCP at the instance level and then enable each workflow individually.
-- It is not per‑client scoping - any connected client sees all workflows you’ve enabled for MCP at this time.
+- Instance‑level MCP access isn't a way to build or edit workflows from an AI client; authoring remains in n8n.
+- It's not blanket exposure. You must enable MCP at the instance level and then enable each workflow individually.
+- It's not scoped to each client. Any connected client sees all workflows you’ve enabled for MCP access.
 
 ## Enabling MCP access
 
@@ -48,7 +48,7 @@ To remove the feature entirely, set the environment variable:
 
 `N8N_DISABLED_MODULES=mcp`
 
-This removes MCP endpoints and hides all related UI elements.
+This action removes MCP endpoints and hides all related UI elements.
 
 ## Setting up MCP authentication
 
@@ -89,7 +89,7 @@ If you lose your token or need to rotate it:
 2. Make sure you are on the **Access Token** tab in the **How to connect** section.
 2. Generate a new token.
     
-    The previous token is revoked right away upon generation.
+    n8n revokes the previous token when you generate a new one.
     
 3. Update all connected MCP clients with the new value.
 
@@ -152,14 +152,14 @@ MCP clients can execute eligible workflows on your request. When a workflow is t
 
 If a workflow requires input data, in must be provided by the MCP client when triggering the workflow. Input schema is determined by the workflow's trigger node:
 
-1. **Webhook trigger**: MCP client will look for hints in workflow contents and it's description. It is up to workflow author to provide enough information for the client to generate valid input data.
+1. **Webhook trigger**: MCP client will look for hints in workflow contents and it's description. It's up to workflow author to provide enough information for the client to generate valid input data.
 2. **Schedule trigger**: No input data is required.
 3. **Chat trigger**: Chat input format is determined by the chat node configuration.
 4. **Form trigger**: Form fields are determined by the form node configuration.
 
 ### Workflow timeouts
 
-There is a built-in, 5-minute, timeout for workflow executions triggered via MCP. If a workflow does not complete within this time, the execution is aborted, and an error is returned to the MCP client.
+There is a built-in, 5-minute, timeout for workflow executions triggered via MCP. If a workflow doesn't complete within this time, the execution is aborted, and an error is returned to the MCP client.
 This means that timeout set in workflow settings is ignored for MCP-triggered executions.
 Future versions of n8n may allow mcp server to respect workflow timeouts set in workflow settings.
 

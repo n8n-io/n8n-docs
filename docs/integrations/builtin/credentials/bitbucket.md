@@ -16,7 +16,7 @@ Create a [Bitbucket](https://www.bitbucket.com/) account.
 
 ## Supported authentication methods
 
-- App token
+- App tokens only
 
 ## Related resources
 

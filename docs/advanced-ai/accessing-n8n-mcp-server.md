@@ -174,18 +174,13 @@ Future versions of n8n may allow mcp server to respect workflow timeouts set in 
 #### Connecting Lovable to n8n MCP server
 
 1. Configure MCP Server in Lovable (OAuth).
-    - Navigate to **Settings > Integrations**.
-    - Add a new MCP server connection (Custom):
-    	- Enter your desired connector name.
-        - Enter the **Server URL** (copy from n8n instance settings).
+    - Navigate to your workspace  **Settings > Integrations**.
+    - On the **MCP Servers** section, find **n8n** and click **Connect**.
+    - Fill in your n8n server URL (shown on the **MCP Access** page).
     - Save the connection. Upon success, you will be redirected to n8n to authorize Lovable.
 2. Verify connectivity.
     - Once connected, Lovable can query for workflows with MCP access enabled.
     - Example: asking Lovable to build a workflow UI that lists users and allows deleting them.
-     
-/// info
-A native n8n connector is coming soon to Lovable. You can use it to connect directly with your server URL.
-///
 
 #### Connecting Claude Desktop to n8n MCP server
 

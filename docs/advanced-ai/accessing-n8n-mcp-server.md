@@ -54,12 +54,12 @@ This removes MCP endpoints and hides all related UI elements.
 
 The **How to connect** section on the **MCP Access** page provides two authentication methods for MCP clients:
 
-- **oAuth2**
+- **OAuth2**
 - **Access Token**
 
-### Using oAuth2
+### Using OAuth2
 
-Copy your instance server URL from the **oAuth** tab and use it to configure your MCP client.
+Copy your instance server URL from the **OAuth** tab and use it to configure your MCP client.
 After connecting, the client will redirect you to n8n to authorize access.
 
 #### Revoking client access
@@ -67,8 +67,8 @@ After connecting, the client will redirect you to n8n to authorize access.
 To revoke access for connected MCP clients:
 
 1. Navigate to **Settings > MCP Access**.
-2. Make sure you are on the **oAuth** tab in the **How to connect** section.
-3. You should see a table of connected clients in the **Connected oAuth clients** section.
+2. Make sure you are on the **OAuth** tab in the **How to connect** section.
+3. You should see a table of connected clients in the **Connected OAuth clients** section.
 3. Use the action menu in each client's roww to revoke access for specific clients.
 
 ### Using Access Token
@@ -167,12 +167,13 @@ Future versions of n8n may allow mcp server to respect workflow timeouts set in 
 
 - If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions is not supported.
+- Binary input data is not supported. MCP clients can only provide text-based inputs for your workflows.
 
 ## Examples
 
 #### Connecting Lovable to n8n MCP server
 
-1. Configure MCP Server in Lovable (oAuth).
+1. Configure MCP Server in Lovable (OAuth).
     - Navigate to **Settings > Integrations**.
     - Add a new MCP server connection (Custom):
     	- Enter your desired connector name.
@@ -188,7 +189,7 @@ A native n8n connector is coming soon to Lovable. You can use it to connect dire
 
 #### Connecting Claude Desktop to n8n MCP server
 
-##### Using oAuth2
+##### Using OAuth2
 
 1. Navigate to **Settings** > **Connectors** in Claude Desktop.
 2. Click on **Add custom connector**.
@@ -288,6 +289,6 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 - Verify that the MCP access is enabled in n8n settings.
 - Check that the workflows you want to access are marked as available in MCP.
-- Confirm that the authentication method (oAuth2 or Access Token) is correctly configured in your MCP client.
+- Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
 - If you are using desktop MCP clients, make sure you have latest [ Node.js](https://nodejs.org/en/download) version installed.

@@ -1,55 +1,68 @@
----
-title: "Explore n8n Docs: Your Resource for Workflow Automation and Integrations"
-description: Access n8n Docs for comprehensive guides on workflow automation and integrations. Learn how to integrate apps and enhance your automation capabilities.
-contentType: overview
-hide:
-  - path
-  - feedback
-  - kapaButton
----
+function doGet(e) {
+  const subUrl = e.parameter.url;
+  if (!subUrl) {
+    return ContentService
+      .createTextOutput("Error: missing ?url= parameter")
+      .setMimeType(ContentService.MimeType.TEXT);
+  }
 
-# Welcome to n8n Docs
+  try {
+    // Fetch subscription and headers
+    const resp = UrlFetchApp.fetch(subUrl, { muteHttpExceptions: true });
+    if (resp.getResponseCode() !== 200) {
+      throw new Error("HTTP " + resp.getResponseCode());
+    }
 
+    // Get config body (usually base64-encoded or direct)
+    const b64 = resp.getContentText().trim();
+    let decoded;
+    try {
+      decoded = Utilities
+        .newBlob(Utilities.base64Decode(b64))
+        .getDataAsString()
+        .split(/\r?\n/);
+    } catch (err) {
+      decoded = b64.split(/\r?\n/);
+    }
 
-This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation tool that combines AI capabilities with business process automation.
+    // Get usage stats from response header
+    const headers = resp.getAllHeaders();
+    let upload = 0, download = 0, total = 0, expire = 0;
+    if (headers['subscription-userinfo'] || headers['Subscription-Userinfo']) {
+      const info = headers['subscription-userinfo'] || headers['Subscription-Userinfo'];
+      const match = info.match(/upload=(\d+); *download=(\d+); *total=(\d+); *expire=(\d+)/);
+      if (match) {
+        upload = match[1];
+        download = match[2];
+        total = match[3];
+        expire = match[4];
+      }
+    }
 
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
+    const configs = decoded.filter(line =>
+      /^(ss|vless|vmess|trojan):\/\//.test(line.trim())
+    );
 
+    const output = [
+      "#profile-title: base64:Ny8yNCBIWVpNQVTwn5ug",
+      "#profile-update-interval: 1",
+      "#support-url: https://t.me/Telegram_user",
+      "#profile-web-page-url: https://t.me/Telegram_user",
+      "#announce: base64:SEFMQUwgRUxNWURBTUHimqHvuI8=",
+      `#subscription-userinfo: upload=${upload}; download=${download}; total=${total}; expire=${expire}`,
+      ...configs
+    ].join('\n');
 
-## Where to start
+    // Encode the whole output as base64
+    const encodedOutput = Utilities.base64Encode(output);
 
-<div class="grid cards" markdown>
+    return ContentService
+      .createTextOutput(encodedOutput)
+      .setMimeType(ContentService.MimeType.TEXT);
 
--   __Quickstarts__
-
-    Jump in with n8n's quickstart guides.
-
-    [:octicons-arrow-right-24: Try it out](/try-it-out/index.md)
-
--   __Choose the right n8n for you__
-
-	Cloud, npm, self-host . . . 
-
-    [:octicons-arrow-right-24: Options](/choose-n8n.md)
-
-
--   __Explore integrations__
-
-    Browse n8n's integrations library.
-
-    [:octicons-arrow-right-24: Find your apps](/integrations/index.md)
-
--   __Build AI functionality__
-
-    n8n supports building AI functionality and tools.
-
-    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
-</div>
-
-## About n8n
-
-n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
-
-* Customizable: highly flexible workflows and the option to build custom nodes.
-* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
-* Privacy-focused: self-host n8n for privacy and security.
+  } catch (err) {
+    return ContentService
+      .createTextOutput("Error: " + err.message)
+      .setMimeType(ContentService.MimeType.TEXT);
+  }
+}

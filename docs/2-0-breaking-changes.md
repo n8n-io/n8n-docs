@@ -104,9 +104,15 @@ n8n will remove the legacy SQLite driver due to reliability issues. The pooling 
 
 ### Remove in-memory binary data mode
 
-n8n will remove the default mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which stores execution binary data in memory. Filesystem mode will become the only option for better performance and stability. The `N8N_AVAILABLE_BINARY_DATA_MODES` setting will also be removed, so the mode is now determined only by `N8N_DEFAULT_BINARY_DATA_MODE`.
+n8n will remove the `default` mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which keeps execution binary data in memory during execution. For better performance and stability the following options will be available starting from v2:
 
-**Migration path:** Filesystem mode will be used automatically. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](/hosting/configuration/environment-variables/binary-data.md).
+- `filesystem`: Binary data is stored in the filesystem. Default option in regular mode.
+- `database`: Binary data is stored in the database. Default option in queue mode.
+- `s3`: Binary data is stored in S3 compatible store.
+
+The `N8N_AVAILABLE_BINARY_DATA_MODES` setting will also be removed, so the mode is now determined only by `N8N_DEFAULT_BINARY_DATA_MODE`.
+
+**Migration path:** Filesystem or database mode will be used automatically based on configuration. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](/hosting/configuration/environment-variables/binary-data.md).
 
 ## Configuration & Environment
 

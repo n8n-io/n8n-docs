@@ -139,9 +139,9 @@ You can set the variable to a single file:
 
 `EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon:
+Or to contain multiple files separated by a colon:
 
-`EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
+`EXTERNAL_HOOK_FILES=/data/hook1.js:/data/hook2.js`
 
 ### Backend hook files
 

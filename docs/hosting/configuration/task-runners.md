@@ -158,6 +158,10 @@ You must also allowlist any first-party or third-party packages for use by the C
 * `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
 * `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
 
+#### Multiple runners and the port for the runner's health check server
+
+When a single runner is configured, the *"health-check-server-port"* field found in the `n8n-task-runners.json` configuration file is optional and defaults to 5681. When multiple runners are configured, this is required and must be unique per runner. Refer to the launcher’s [config file documentation](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file) for the full list of options and examples.
+
 ### 2. Build your custom image
 
 For example, from the n8n repository root:

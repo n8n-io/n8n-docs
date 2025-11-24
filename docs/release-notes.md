@@ -33,6 +33,27 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+
+## n8n@1.122.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122.0) for this version.<br />
+**Release date:** 2025-11-24
+
+This release contains bug fixes and the following features.
+
+* Introduces best practices for all builder categories and adds support for global credentials.
+* The AI builder now includes a Python script for workflow comparison and sends validation issues to telemetry.
+* Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
+* The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
+* Additional improvements include a new MCP Client Node, Stripe billing meter events, and updates to binary data handling and workflow search.
+
+### Contributors
+
+[mi1os](https://github.com/mi1os)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.121.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.1...n8n@1.121.2) for this version.<br />
@@ -320,8 +341,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117.0) for this version.<br />
 **Release date:** 2025-10-21
 
-
-
 This release contains bug fixes.
 
 ### Contributors
@@ -339,10 +358,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.1...n8n@1.116.2) for this version.<br />
 **Release date:** 2025-10-21
 
-
-
-
-
 This release contains a bug fix.
 
 
@@ -354,8 +369,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.3...n8n@1.115
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@1.116.1
 
@@ -401,7 +414,6 @@ For details, see [Import entities](/hosting/cli-commands.md#import-entities)
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
 ## n8n@1.116.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
@@ -434,13 +446,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.1...n8n@1.115
 **Release date:** 2025-10-10
 
 
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@1.114.4
@@ -520,15 +528,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.2...n8n@1.114
 **Release date:** 2025-10-06
 
 
-
-
 This release contains bug fixes.
 
 ## n8n@1.114.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) for this version.<br />
 **Release date:** 2025-10-02
-
 
 
 This release contains bug fixes.
@@ -543,7 +548,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.0...n8n@1.114
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@1.114.0
@@ -562,17 +566,10 @@ This release contains core updates, editor improvements, project updates, perfor
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
 ## n8n@1.113.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.2...n8n@1.113.3) for this version.<br />
 **Release date:** 2025-09-26
-
-
-
-
-
-
 
 This release contains a bug fix.
 

@@ -52,13 +52,16 @@ You need to configure these attributes on the groups or individual users in your
 | n8n_projects | array | n8n_projects |
 
 Inside the form on the **Settings** > **SSO** page, you will find a dropdown labeled "User role provisioning" in the form.
+
 By default this is set to "Manged in n8n".
+
 You can choose to set it to:
+
 * Instance role
-	* Only the instance role of each provisioned user will be read from the `n8n_instance_role` attribute from the SAML response. Project access will still be managed inside n8n only.
-	* If there is no value for `n8n_instance_role` configured on your IdP, the `global:member` role is used as fallback.
+  * Only the instance role of each provisioned user will be read from the `n8n_instance_role` attribute from the SAML response. Project access will still be managed inside n8n only.
+  * If there is no value for `n8n_instance_role` configured on your IdP, the `global:member` role is used as fallback.
 * Instance and project roles
-	* Both the instance role and project access of each provisioned user will be read from the `n8n_instance_role` and `n8n_projects` attributes from the SAML response.
+  * Both the instance role and project access of each provisioned user will be read from the `n8n_instance_role` and `n8n_projects` attributes from the SAML response.
 
 /// warning | Data loss
 Once you enable "User role provisioning", the next time any user logs in via SAML, any access they've been granted inside n8n, which is not reflected in the n8n_instance_role and n8n_projects will be removed from that user.

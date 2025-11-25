@@ -89,7 +89,7 @@ For example:
 * 4K3zrg3DvlMFFTB7:editor
 * dCjnYuEpYOUBVaNe:admin
 
-For existing access settings at the time of enabling project access provisioning using your IdP, you can find the project IDs in the downloaded csv file.
+For existing access settings at the time of enabling project access provisioning using your IdP, you can find the project IDs in the downloaded CSV file.
 
 When creating a project from scratch, get the project ID from the URL when viewing the project in your browser:
 

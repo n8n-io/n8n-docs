@@ -62,7 +62,7 @@ You can choose to set it to:
     * Both the instance role and project access of each provisioned user will be read from the `n8n_instance_role` and `n8n_projects` attributes from the SAML response.
 
 /// warning | Existing access will be overwritten
-Once you enable "User role provisioning", the next time any user logs in via SAML, any access they've been granted inside n8n, which is not reflected in the n8n_instance_role and n8n_projects will be removed from that user.
+Once you enable "User role provisioning", the next time any user logs in via SAML, any access they've been granted inside n8n, which isn't reflected in the n8n_instance_role and n8n_projects will be removed from that user.
 
 When activating this feature, you are required to download two CSV files before you can save this change. These files contain all your current access settings should you need to reference them.
 ///

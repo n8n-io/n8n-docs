@@ -55,7 +55,7 @@ Read the [Set up SAML](/user-management/saml/setup.md) guide first.
 
 ### Instance and project access provisioning
 
-See the [Set up SAML page](/user-management/saml/setup/#instance-and-project-access-provisioning) for additional information of this feature.
+See the [Set up SAML page](/user-management/saml/setup.md#instance-and-project-access-provisioning) for additional information of this feature.
 
 **Adding the required attributes**
 

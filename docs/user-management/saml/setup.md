@@ -74,8 +74,9 @@ This is why it is required to download two csv files with the current access set
 The n8n_instance_role attribute is a simple string configured for a group or user on your IdP.
 
 Supported instance roles are:
-- global:member
-- global:admin
+
+* global:member
+* global:admin
 
 **Configuring n8n_projects attribute**
 
@@ -85,6 +86,7 @@ Each element in this array needs to follow this format:
 <project-id>:<role>
 
 For example:
+
 * bHsykgeFirmIhezz:viewer
 * 4K3zrg3DvlMFFTB7:editor
 * dCjnYuEpYOUBVaNe:admin

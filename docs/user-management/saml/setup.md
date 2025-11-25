@@ -92,8 +92,10 @@ For example:
 * dCjnYuEpYOUBVaNe:admin
 
 For existing access settings at the time of enabling project access provisioning via your IdP, you can find the project IDs in the downloaded csv file.
+
 When creating a project from scratch, get the project ID from the URL when viewing the project in your browser:
-In `<your-domain>/projects/VVRWZaq5DRxaf9O1/workflows` for example, the porjec
+
+In the URL `<your-domain>/projects/VVRWZaq5DRxaf9O1/workflows` for example, the project ID is `VVRWZaq5DRxaf9O1`.
 
 
 ## Setup resources for common IdPs

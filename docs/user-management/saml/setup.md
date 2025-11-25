@@ -42,7 +42,7 @@ The steps to configure the IdP vary depending on your chosen IdP. These are some
 
 ### Instance and project access provisioning
 
-From version `1.122.1` upwards, n8n supports provisioning the instance role and project roles via SAML.
+From version `1.122.2` upwards, n8n supports provisioning the instance role and project roles from your IdP.
 
 You need to configure these attributes on the groups or individual users in your IdP:
 

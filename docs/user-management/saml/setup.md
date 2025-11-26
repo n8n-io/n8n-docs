@@ -46,7 +46,7 @@ From version `1.122.2` upwards, n8n supports provisioning the instance role and 
 
 You need to configure these attributes on the groups or individual users in your IdP:
 
-| Value (on IdP side) | Name format | Name |
+| Value (IdP side) | Data type | Name |
 | ---------------- | ----------- | ---- |
 | `n8n_instance_role` | string | `n8n_instance_role` |
 | `n8n_projects` | array | `n8n_projects` |
@@ -107,5 +107,5 @@ Documentation links for common IdPs.
 | Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml) |
 | JumpCloud | [How to setup SAML (SSO) applications with JumpCloud](https://jumpcloud.com/support/integrate-with-zoom#configuring-the-sso-integration) (using `Zoom` as an example) |
 | Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started) guide depending on your hosting. |
-| Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta.md) |
+| Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta.md) as well as a [step-by-step PDF guide](n8n-saml-with-okta.pdf) |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/pingone/getting_started_with_pingone/p1_p1sso_start.html) |

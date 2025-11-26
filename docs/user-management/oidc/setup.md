@@ -42,8 +42,10 @@ You need to add a an additional scope called `n8n` to your OIDC authorization se
 
 On this `n8n` scope, you need to add these two claims:
 
-1. **n8n_instance_role** 
-2. **n8n_projects** 
+| **Name** | **Data type** | **Scope** | **Token type** |
+| -------- | ------------- | --------- | -------------- |
+| n8n_instance_role | string | n8n | ID |
+| n8n_projects | string array | n8n | ID |
 
 These two need to always be included in the "ID Token" from your authorization server.
 
@@ -97,6 +99,14 @@ In the URL `<your-domain>/projects/VVRWZaq5DRxaf9O1/workflows` for example, the 
 
 
 ## Provider-specific OIDC setup
+
+### Okta
+
+The steps to setup OIDC in Okta are similar as with Auth0 described below.
+
+For Okta, you can download a visual step-by-step guide as PDF:
+
+[n8n-oidc-with-okta.pdf](n8n-oidc-with-okta.pdf)
 
 ### Auth0
 

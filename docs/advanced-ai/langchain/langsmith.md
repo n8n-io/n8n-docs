@@ -41,4 +41,3 @@ Self-hosted n8n only.
 1. Restart n8n.
 
 For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/).
-

@@ -78,6 +78,16 @@ In case `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set to `secure-token`, th
     curl -H "Content-Type: application/json" -H "Authorization: Bearer secure-token" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
+#### Persistence
+
+To store credential overwrites in the database and propagate them automatically to all workers in multi-instance/queue mode, enable:
+
+```sh
+export CREDENTIALS_OVERWRITE_PERSISTENCE=true
+```
+
+When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so that workers reload the latest values. When disabled, overwrites remain in memory on the process that loaded them and aren't propagated to workers or preserved across restarts.
+
 ## Environment variables
 
 n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
@@ -117,6 +127,8 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
 | `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
 | `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
+| `workflow.afterArchive` | `[workflowId: string]` | Called after you archive a workflow. |
+| `workflow.afterUnarchive` | `[workflowId: string]` | Called after you restore a workflow from the archive. |
 
 ### Registering hooks
 
@@ -127,9 +139,9 @@ You can set the variable to a single file:
 
 `EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon:
+Or to contain multiple files separated by a colon:
 
-`EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
+`EXTERNAL_HOOK_FILES=/data/hook1.js:/data/hook2.js`
 
 ### Backend hook files
 

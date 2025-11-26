@@ -104,7 +104,9 @@ In the URL `<your-domain>/projects/VVRWZaq5DRxaf9O1/workflows` for example, the 
 
 The steps to setup OIDC in Okta are similar as with Auth0 described below.
 
-For Okta, you can download a visual step-by-step guide as PDF: [n8n-oidc-with-okta.pdf](n8n-oidc-with-okta.pdf)
+For Okta, you can download a visual step-by-step guide as PDF:
+
+[n8n-oidc-with-okta.pdf](n8n-oidc-with-okta.pdf)
 
 ### Auth0
 

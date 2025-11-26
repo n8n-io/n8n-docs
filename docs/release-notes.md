@@ -34,6 +34,21 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.122.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@1.122.2) for this version.<br />
+**Release date:** 2025-11-25
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.122.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122.0) for this version.<br />
@@ -44,6 +59,9 @@ This release contains bug fixes and the following features.
 * Introduces best practices for all builder categories and adds support for global credentials.
 * The AI builder now includes a Python script for workflow comparison and sends validation issues to telemetry.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
+* Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
+  * See the [new SAML documentation](/user-management/saml/setup.md#instance-and-project-access-provisioning)
+  * See the [new OIDC documentation](/user-management/oidc/setup.md#instance-and-project-access-provisioning)
 * The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
 * Additional improvements include a new MCP Client Node, Stripe billing meter events, and updates to binary data handling and workflow search.
 
@@ -61,9 +79,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.1...n8n@1.121
 * Fixed an issue with MCP access scope in the core system.
 * Updated editor to improve notice background colors for better visibility.
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 **Release date:** 2025-11-20
@@ -134,6 +150,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.3...n8n@1.120
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
+
+
 
 * Prepared for release 1.120.4 by updating version numbers across all core, backend, AI/LLM, frontend, and tooling packages.
 * Added a changelog entry for version 1.120.4 to document the release.

@@ -100,6 +100,12 @@ In the URL `<your-domain>/projects/VVRWZaq5DRxaf9O1/workflows` for example, the 
 
 ## Provider-specific OIDC setup
 
+### Okta
+
+The steps to setup OIDC in Okta are similar as with Auth0 described below.
+
+For Okta, you can download a visual step-by-step guide as PDF: [n8n-oidc-with-okta.pdf](n8n-oidc-with-okta.pdf)
+
 ### Auth0
 
 1. **Create an application in Auth0**:

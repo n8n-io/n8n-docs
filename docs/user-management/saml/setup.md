@@ -46,7 +46,7 @@ From version `1.122.2` upwards, n8n supports provisioning the instance role and 
 
 You need to configure these attributes on the groups or individual users in your IdP:
 
-| Value (on IdP side) | Name format | Name |
+| Value (IdP side) | Data type | Name |
 | ---------------- | ----------- | ---- |
 | `n8n_instance_role` | string | `n8n_instance_role` |
 | `n8n_projects` | array | `n8n_projects` |

@@ -21,6 +21,8 @@ Read the [Set up SAML](/user-management/saml/setup.md) guide first.
 
 ## Setup
 
+In addition to the following instructions, [this PDF](n8n-saml-with-okta.pdf) provides visual step-by-step guide on how to setup SAML in n8n with Okta.
+
 1. In your Okta admin panel, select **Applications** > **Applications**.
 1. Select **Create App Integration**. Okta opens the app creation modal.
 1. Select **SAML 2.0**, then select **Next**.
@@ -67,8 +69,8 @@ See the [Set up SAML page](/user-management/saml/setup.md#instance-and-project-a
 
 	| **Name** | **Name format** | **Value** |
 	| -------- | --------------- | --------- |
-	| n8n_instance_role | string | appuser.n8n_instance_role |
-	| n8n_projects | array | appuser.n8n_projects |
+	| n8n_instance_role | Basic | appuser.n8n_instance_role |
+	| n8n_projects | Basic | appuser.n8n_projects |
 
 6. Click **Next**
 7. Click **Finish**

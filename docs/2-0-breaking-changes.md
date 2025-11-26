@@ -78,7 +78,7 @@ n8n will require authentication for OAuth callback endpoints by default. The def
 
 ### Set default value for N8N_RESTRICT_FILE_ACCESS_TO
 
-n8n will set a default value for `N8N_RESTRICT_FILE_ACCESS_TO` to control where file operations can occur. This affects the `ReadWriteFile` and `ReadBinaryFiles` nodes. By default, these nodes can only access files in the `./data` directory inside the n8n home folder.
+n8n will set a default value for `N8N_RESTRICT_FILE_ACCESS_TO` to control where file operations can occur. This affects the `ReadWriteFile` and `ReadBinaryFiles` nodes. By default, these nodes can only access files in the `~/.n8n-files` directory.
 
 **Migration path:** Review your workflows that use file nodes and make sure they only access files in the allowed directory. If you need to allow access to other directories, set the `N8N_RESTRICT_FILE_ACCESS_TO` environment variable to your desired path.
 

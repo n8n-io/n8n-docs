@@ -59,6 +59,9 @@ This release contains bug fixes and the following features.
 * Introduces best practices for all builder categories and adds support for global credentials.
 * The AI builder now includes a Python script for workflow comparison and sends validation issues to telemetry.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
+* Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
+  * See the [new SAML documentation](/user-management/saml/setup/setup.md#instance-and-project-access-provisioning)
+  * See the [new OIDC documentation](/user-management/oidc/setup/setup.md#instance-and-project-access-provisioning)
 * The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
 * Additional improvements include a new MCP Client Node, Stripe billing meter events, and updates to binary data handling and workflow search.
 

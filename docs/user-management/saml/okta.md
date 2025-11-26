@@ -67,8 +67,8 @@ See the [Set up SAML page](/user-management/saml/setup.md#instance-and-project-a
 
 	| **Name** | **Name format** | **Value** |
 	| -------- | --------------- | --------- |
-	| n8n_instance_role | string | appuser.n8n_instance_role |
-	| n8n_projects | array | appuser.n8n_projects |
+	| n8n_instance_role | Basic | appuser.n8n_instance_role |
+	| n8n_projects | Basic | appuser.n8n_projects |
 
 6. Click **Next**
 7. Click **Finish**

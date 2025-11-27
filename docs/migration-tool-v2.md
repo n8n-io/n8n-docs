@@ -8,6 +8,8 @@ contentType: reference
 
 The migration tool helps you prepare your n8n instance for upgrading to version 2.0 by identifying workflows and configurations that need attention before the upgrade.
 
+![Migration tool](/_images/migration-tool-v2/migration-tool.png)
+
 ## Accessing the Tool
 Navigate to **Settings > Migration Report** to view your compatibility status.
 
@@ -36,31 +38,17 @@ What you'll see for each issue:
 * **Documentation link:** Click to read detailed migration explanations
 * **Affected workflow count:** How many of your workflows have this issue
 
-**Example:**
-
-```
-┌─────────────────────────────────────────────────────┐
-│ Gmail Node Authentication Update          [CRITICAL]│
-│                                                     │
-│ The Gmail node now requires OAuth2 authentication   │
-│ instead of API keys. Documentation ↗                │
-│                                                     │
-│                            3 workflows affected  →  │
-└─────────────────────────────────────────────────────┘
-```
-
 #### Workflow Issue Detail Page
 
-If you click on "X workflows affected", you will reach a page that list all affected workflows.
+Click **X workflows affected** to see all affected workflows.
 What you'll see for each workflow:
 
-* **Name:** The workflow name. You can click on this to open the workflow editor
-* **State:** Whether the workflow is activated or deactivated
-* **Node affected:** The list of all the workflow nodes that are affected by the issue. You can click on each to open the workflow editor with the specific node view opened
+* **Name:** The workflow name. Click on the name to open the workflow editor.
+* **State:** Whether workflow is active or deactivated
+* **Node affected:** The list of all the workflow nodes affected by the issue. You can click on each to open the workflow editor with the specific node view opened.
 * **Number of executions:** The total number of executions of the workflow
-* **Last executed:** The date of last execution of the workflow
-* **Last updated:** The date of last update of the workflow
-
+* **Last executed:** The date the workflow was last executed
+* **Last updated:** The date the workflow was last updated
 
 ### Instance Issues Tab
 
@@ -69,17 +57,6 @@ What you'll see for each issue:
 
 * Same information as workflow issues (title, severity, description, docs)
 * **No workflow count:** These are global settings that apply instance-wide
-
-**Example:**
-
-```
-┌─────────────────────────────────────────────────────┐
-│ Environment Variable Changes              [MEDIUM]  │
-│                                                     │
-│ Several environment variables have been renamed     │
-│ or deprecated. Documentation ↗                      │
-└─────────────────────────────────────────────────────┘
-```
 
 The v2.0 migration tool scans your n8n instance to identify potential compatibility issues and configuration changes required for upgrading to v2.0. This reference details each check the tool performs, explains the impact of detected issues, and provides recommendations to prepare your instance for migration.
 

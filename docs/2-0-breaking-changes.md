@@ -14,31 +14,19 @@ The release of n8n 2.0 continues n8n's commitment to providing a secure, reliabl
 
 ### Return expected sub-workflow data when the sub-workflow resumes from waiting (waiting for webhook, forms, HITL, etc.)
 
-Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waitings state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
+Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waiting state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
 
 Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
 The parent-execution would reproduce the sub-execution's input as its output:
 
-<figure markdown="span">
 ![Parent-Workflow](/_images/v2/parentworkflow1.png)
-<figcaption>Parent-Workflow</figcaption>
-</figure>
 
-<figure markdown="span">
 ![Sub-Workflow](/_images/v2/subworkflow.png)
-<figcaption>Sub-Workflow</figcaption>
-</figure>
 
-<figure markdown="span">
-![Result Before v2](/_images/v2/before1.png)
-<figcaption>In v1 the parent execution won't receive the result of the child execution.</figcaption>
-</figure>
+![v1: Parent execution won't receive the result of the child execution](/_images/v2/before1.png)
 
-<figure markdown="span">
-![Result After v2](/_images/v2/after1.png)
-<figcaption>In v2 the parent execution will receive the result of the child execution.</figcaption>
-</figure>
+![v2: Parent execution will receive the result of the child execution](/_images/v2/after1.png)
 
 This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
 

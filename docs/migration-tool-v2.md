@@ -10,7 +10,7 @@ The migration tool helps you prepare your n8n instance for upgrading to version 
 
 ![Migration tool](/_images/migration-tool-v2/migration-tool.png)
 
-You can see all breaking changes for v2 [on this page](/2-0-breaking-changes).
+You can see all breaking changes for v2 [on this page](/2-0-breaking-changes.md).
 
 ## Accessing the Tool
 Navigate to **Settings > Migration Report** to view your compatibility status.

@@ -12,13 +12,25 @@ The release of n8n 2.0 continues n8n's commitment to providing a secure, reliabl
 
 ## Behaviour changes
 
-### Return expected sub-workflow data when it contains a wait node
+### Return expected sub-workflow data when the sub-workflow resumes from waiting (waiting for webhook, forms, HITL, etc.)
 
-Previously, when a workflow (parent) called a subworkflow (child) that contained a node that waits (for example a Wait node or a human-in-the-loop node), the parent workflow incorrectly received the input items to the waiting node from the child workflow.
+Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waiting state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
 
-In v2, the parent workflow now receives the output data from the end of the child workflow instead.
+Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
-**Migration path:** Review any workflows that call subworkflows and expect to receive the input to a Wait node. Update these workflows to handle the new behavior, where the parent workflow receives the output from the end of the child workflow instead.
+The parent-execution would reproduce the sub-execution's input as its output:
+
+![Parent-Workflow](/_images/v2/parentworkflow1.png)
+
+![Sub-Workflow](/_images/v2/subworkflow.png)
+
+![v1: Parent execution won't receive the result of the child execution](/_images/v2/before1.png)
+
+![v2: Parent execution will receive the result of the child execution](/_images/v2/after1.png)
+
+This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
+
+**Migration path:** Review any workflows that call sub-workflows and expect to receive the input to the sub-workflow. Update these workflows to handle the new behavior, where the parent-workflow receives the output from the end of the child-workflow instead.
 
 ### Removed nodes for retired services
 

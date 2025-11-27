@@ -17,7 +17,7 @@ At the top of the page, you'll see:
 
 "X out of Y workflows are compatible with n8n 2.0"
 
-This tells you how many workflows will continue working without changes after upgrading. Your goal is to address the issues preventing the remaining workflows from being compatible.
+This tells you how many workflows will continue working without changes after upgrading. Your goal is to address the issues preventing the remaining workflows from being compatible, as well as global instance issues.
 
 ## Viewing Issues
 The tool organizes potential problems into two categories:
@@ -33,7 +33,7 @@ What you'll see for each issue:
    * **Medium:** May cause unexpected behavior or require attention soon
    * **Low:** Minor changes or deprecations that won't break functionality
 * **Description:** Explanation of what's changing and why it matters
-* **Documentation link:** Click to read detailed migration instructions
+* **Documentation link:** Click to read detailed migration explanations
 * **Affected workflow count:** How many of your workflows have this issue
 
 **Example:**
@@ -48,6 +48,19 @@ What you'll see for each issue:
 │                            3 workflows affected  →  │
 └─────────────────────────────────────────────────────┘
 ```
+
+#### Workflow Issue Detail Page
+
+If you click on "X workflows affected", you will reach a page that list all affected workflows.
+What you'll see for each workflow:
+
+* **Name:** The workflow name. You can click on this to open the workflow editor
+* **State:** Whether the workflow is activated or deactivated
+* **Node affected:** The list of all the workflow nodes that are affected by the issue. You can click on each to open the workflow editor with the specific node view opened
+* **Number of executions:** The total number of executions of the workflow
+* **Last executed:** The date of last execution of the workflow
+* **Last updated:** The date of last update of the workflow
+
 
 ### Instance Issues Tab
 
@@ -104,7 +117,7 @@ Your n8n instance is fully ready to upgrade to version 2.0.
 * Follow documentation for each instance-level change
 
 ### Verify Your Work
-* Click **Refresh** to re-scan
+* Click **Refresh** to re-scan. If you don't see any **Refresh** button, just reload the page to re-scan.
 * Confirm that unresolved issues don't remain
 * Verify compatibility count matches total workflows
 

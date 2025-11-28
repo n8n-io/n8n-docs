@@ -18,14 +18,16 @@ Previously, when an execution (parent) called a sub-execution (child) that conta
 
 Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
-The parent-execution would reproduce the sub-execution's input as its output:
-
+Parent-Workflow:
 ![Parent-Workflow](/_images/v2/parentworkflow1.png)
 
+Sub-Workflow:
 ![Sub-Workflow](/_images/v2/subworkflow.png)
 
+v1: The parent-execution reproduces the sub-execution's input as its output.:
 ![v1: Parent execution won't receive the result of the child execution](/_images/v2/before1.png)
 
+v2: The parent execution receives the result of the child execution:
 ![v2: Parent execution will receive the result of the child execution](/_images/v2/after1.png)
 
 This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.

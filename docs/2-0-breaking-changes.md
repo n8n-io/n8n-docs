@@ -10,7 +10,7 @@ n8n v2.0 will be released soon. This document highlights important breaking chan
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
-## Behaviour changes
+## Behavior changes
 
 ### Return expected sub-workflow data when the sub-workflow resumes from waiting (waiting for webhook, forms, HITL, etc.)
 
@@ -81,7 +81,7 @@ The native Python Code node doesn't support built-in variables like `_input` or 
 
 ### Disable ExecuteCommand and LocalFileTrigger nodes by default
 
-n8n will disable rhe `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
+n8n will disable the `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
 
 **Migration path:** If you need to use these nodes, remove them from the disabled nodes list in your n8n configuration by updating the `NODES_EXCLUDE` environment variable. For example, set `NODES_EXCLUDE="[]"` to enable all nodes, or remove only the specific nodes you need.
 
@@ -141,9 +141,9 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 **Migration path:** Review the [dotenv changelog](https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md) and update your `.env` file to ensure compatibility with the new version.
 
-### Remove n8n --tunnel option
+### Remove `n8n --tunnel` option
 
-The `n8n --tunnel `command-line option will be removed in v2.0.
+The `n8n --tunnel` command-line option will be removed in v2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 

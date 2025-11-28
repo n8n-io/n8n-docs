@@ -154,9 +154,21 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ### Remove CLI command operation to activate all workflows
 
-The CLI command `update:workflow --all --active=true`, which activates all workflows at once, will be removed to prevent accidental activation of workflows in production environments.
+The CLI command `update:workflow` will be deprecated. There will be two new commands for similar functionality and more clarity:
 
-**Migration path:** Activate workflows one at a time or in small, controlled batches using the API or the UI. This helps you avoid unintended consequences and maintain better control over workflow activation.
+- `publish:workflow` with params `id` and `versionId` (optional)
+  - The `--all` parameter will be removed to prevent accidental activation of workflows in production environments
+- `unpublish:workflow` with params `id` and `all`
+
+**Migration path:** Use the new `publish:workflow` command to activate workflows individually by ID, optionally specifying a version. For deactivation, use the new `unpublish:workflow` command. This provides better clarity and control over workflow activation states.
+
+## External Hooks
+
+### Deprecated frontend workflow hooks
+
+The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be deprecated. These will be replaced by a new hook `workflow.published`. The new hook will be triggered when any version of a workflow is published.
+
+**Migration path:** Update your code to use the new `workflow.published` hook instead of `workflow.activeChange` and `workflow.activeChangeCurrent`. This hook provides more consistent behavior and will be triggered whenever a workflow version is published.
 
 ## Reporting issues
 

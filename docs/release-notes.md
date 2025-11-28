@@ -44,6 +44,12 @@ This release contains bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
+## n8n@1.122.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.2...n8n@1.122.3) for this version.<br />
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 ## n8n@1.122.2
 
@@ -57,8 +63,6 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@1.122.0
 
@@ -79,6 +83,15 @@ This release contains bug fixes and the following features.
 ### Contributors
 
 [mi1os](https://github.com/mi1os)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.121.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.2...n8n@1.121.3) for this version.<br />
+**Release date:** 2025-11-26
+
+This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

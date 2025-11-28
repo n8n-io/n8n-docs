@@ -10,7 +10,7 @@ n8n v2.0 will be released soon. This document highlights important breaking chan
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
-## Behaviour changes
+## Behavior changes
 
 ### Return expected sub-workflow data when it contains a wait node
 
@@ -126,7 +126,7 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 **Migration path:** Review the [dotenv changelog](https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md) and update your `.env` file to ensure compatibility with the new version.
 
-### Remove n8n --tunnel option
+### Remove `n8n --tunnel` option
 
 The `n8n --tunnel` command-line option will be removed in v2.0.
 

@@ -154,11 +154,11 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ### Remove CLI command operation to activate all workflows
 
-The CLI command `update:workflow` will be deprecated. There will be two new commands for similar functionality and more clarity:
+The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 
-- `publish:workflow` with params `id` and `versionId` (optional)
+- `publish:workflow` with parameters `id` and `versionId` (optional)
   - The `--all` parameter will be removed to prevent accidental activation of workflows in production environments
-- `unpublish:workflow` with params `id` and `all`
+- `unpublish:workflow` with parameters `id` and `all`
 
 **Migration path:** Use the new `publish:workflow` command to activate workflows individually by ID, optionally specifying a version. For deactivation, use the new `unpublish:workflow` command. This provides better clarity and control over workflow activation states.
 

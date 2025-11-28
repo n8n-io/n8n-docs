@@ -1395,6 +1395,8 @@ components:
             - retry
             - trigger
             - webhook
+            - evaluation
+            - chat
         retryOf:
           type: number
           nullable: true

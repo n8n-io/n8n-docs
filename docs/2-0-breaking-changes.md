@@ -41,6 +41,7 @@ The following nodes have been removed because the external services they connect
 - Spontit node
 - crowd.dev node
 - Kitemaker node
+- Automizy node
 
 **Migration path:** If your workflows use any of these nodes, update or remove those workflows to avoid errors.
 

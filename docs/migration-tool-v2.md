@@ -15,6 +15,10 @@ You can see all breaking changes for v2 [on this page](/2-0-breaking-changes.md)
 ## Accessing the Tool
 Navigate to **Settings > Migration Report** to view your compatibility status.
 
+/// info | User role access
+The migration tool is available for global admins only.
+///
+
 ## Understanding Your Migration Status
 
 At the top of the page, you'll see:

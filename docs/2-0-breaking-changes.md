@@ -66,7 +66,7 @@ The native Python Code node doesn't support built-in variables like `_input` or 
 
 ### Disable ExecuteCommand and LocalFileTrigger nodes by default
 
-n8n will disable rhe `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
+n8n will disable the `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
 
 **Migration path:** If you need to use these nodes, remove them from the disabled nodes list in your n8n configuration by updating the `NODES_EXCLUDE` environment variable. For example, set `NODES_EXCLUDE="[]"` to enable all nodes, or remove only the specific nodes you need.
 
@@ -128,7 +128,7 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 ### Remove n8n --tunnel option
 
-The `n8n --tunnel `command-line option will be removed in v2.0.
+The `n8n --tunnel` command-line option will be removed in v2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 

@@ -107,7 +107,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to v2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 

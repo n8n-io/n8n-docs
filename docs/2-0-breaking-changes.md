@@ -10,15 +10,29 @@ n8n v2.0 will be released soon. This document highlights important breaking chan
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
-## Behaviour changes
+## Behavior changes
 
-### Return expected sub-workflow data when it contains a wait node
+### Return expected sub-workflow data when the sub-workflow resumes from waiting (waiting for webhook, forms, HITL, etc.)
 
-Previously, when a workflow (parent) called a subworkflow (child) that contained a node that waits (for example a Wait node or a human-in-the-loop node), the parent workflow incorrectly received the input items to the waiting node from the child workflow.
+Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waiting state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
 
-In v2, the parent workflow now receives the output data from the end of the child workflow instead.
+Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
-**Migration path:** Review any workflows that call subworkflows and expect to receive the input to a Wait node. Update these workflows to handle the new behavior, where the parent workflow receives the output from the end of the child workflow instead.
+Parent-Workflow:
+![Parent-Workflow](/_images/v2/parentworkflow1.png)
+
+Sub-Workflow:
+![Sub-Workflow](/_images/v2/subworkflow.png)
+
+v1: The parent-execution reproduces the sub-execution's input as its output.:
+![v1: Parent execution won't receive the result of the child execution](/_images/v2/before1.png)
+
+v2: The parent execution receives the result of the child execution:
+![v2: Parent execution will receive the result of the child execution](/_images/v2/after1.png)
+
+This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
+
+**Migration path:** Review any workflows that call sub-workflows and expect to receive the input to the sub-workflow. Update these workflows to handle the new behavior, where the parent-workflow receives the output from the end of the child-workflow instead.
 
 ### Removed nodes for retired services
 
@@ -27,6 +41,7 @@ The following nodes have been removed because the external services they connect
 - Spontit node
 - crowd.dev node
 - Kitemaker node
+- Automizy node
 
 **Migration path:** If your workflows use any of these nodes, update or remove those workflows to avoid errors.
 
@@ -66,7 +81,7 @@ The native Python Code node doesn't support built-in variables like `_input` or 
 
 ### Disable ExecuteCommand and LocalFileTrigger nodes by default
 
-n8n will disable rhe `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
+n8n will disable the `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
 
 **Migration path:** If you need to use these nodes, remove them from the disabled nodes list in your n8n configuration by updating the `NODES_EXCLUDE` environment variable. For example, set `NODES_EXCLUDE="[]"` to enable all nodes, or remove only the specific nodes you need.
 
@@ -92,7 +107,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to v2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
@@ -126,9 +141,9 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 **Migration path:** Review the [dotenv changelog](https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md) and update your `.env` file to ensure compatibility with the new version.
 
-### Remove n8n --tunnel option
+### Remove `n8n --tunnel` option
 
-The `n8n --tunnel `command-line option will be removed in v2.0.
+The `n8n --tunnel` command-line option will be removed in v2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 
@@ -140,11 +155,23 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ## CLI & Workflow
 
-### Remove CLI command operation to activate all workflows
+### Replace CLI command update:workflow
 
-The CLI command `update:workflow --all --active=true`, which activates all workflows at once, will be removed to prevent accidental activation of workflows in production environments.
+The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 
-**Migration path:** Activate workflows one at a time or in small, controlled batches using the API or the UI. This helps you avoid unintended consequences and maintain better control over workflow activation.
+- `publish:workflow` with parameters `id` and `versionId` (optional)
+  - The `--all` parameter will be removed to prevent accidental activation of workflows in production environments
+- `unpublish:workflow` with parameters `id` and `all`
+
+**Migration path:** Use the new `publish:workflow` command to activate workflows individually by ID, optionally specifying a version. For deactivation, use the new `unpublish:workflow` command. This provides better clarity and control over workflow activation states.
+
+## External Hooks
+
+### Deprecated frontend workflow hooks
+
+The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be deprecated. These will be replaced by a new hook `workflow.published`. The new hook will be triggered when any version of a workflow is published.
+
+**Migration path:** Update your code to use the new `workflow.published` hook instead of `workflow.activeChange` and `workflow.activeChangeCurrent`. This hook provides more consistent behavior and will be triggered whenever a workflow version is published.
 
 ## Reporting issues
 

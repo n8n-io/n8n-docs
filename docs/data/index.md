@@ -2,7 +2,7 @@
 contentType: overview
 ---
 
-# Data
+# Overview
 
 Data is the information that n8n nodes receive and process. For basic usage of n8n you don't need to understand data structures and manipulation. However, it becomes important if you want to:
 

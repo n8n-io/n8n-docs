@@ -173,6 +173,10 @@ The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be dep
 
 **Migration path:** Update your code to use the new `workflow.published` hook instead of `workflow.activeChange` and `workflow.activeChangeCurrent`. This hook provides more consistent behavior and will be triggered whenever a workflow version is published.
 
+## Release channels
+
+We have renamed our release channels `latest` and `next` into `stable` and `beta`. The tag `stable` designates the latest stable release, and the `beta` designates the latest experimental release. These tags are available in both npm and Dockerhub. We will also keep tagging releases with the `latest` and `next` tags for now. These will be removed in future major version. We recommend pinning your n8n version to a specific version number (for example `2.0.0`) to avoid surprises.
+
 ## Reporting issues
 
 If you run into any problems while updating to n8n 2.0, visit the community [forum](https://community.n8n.io/) for help and support.

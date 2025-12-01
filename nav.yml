@@ -163,6 +163,7 @@ nav:
         - 1.x: release-notes.md
         - 0.x: release-notes/0-x.md
       - v2.0 breaking changes: 2-0-breaking-changes.md
+      - v2.0 Migration tool: migration-tool-v2.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md

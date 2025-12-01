@@ -155,7 +155,7 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ## CLI & Workflow
 
-### Remove CLI command operation to activate all workflows
+### Replace CLI command update:workflow
 
 The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 

@@ -175,7 +175,11 @@ The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be dep
 
 ## Release channels
 
-We have renamed our release channels `latest` and `next` into `stable` and `beta`. The tag `stable` designates the latest stable release, and the `beta` designates the latest experimental release. These tags are available in both npm and Dockerhub. We will also keep tagging releases with the `latest` and `next` tags for now. These will be removed in future major version. We recommend pinning your n8n version to a specific version number (for example `2.0.0`) to avoid surprises.
+n8n has renamed the release channels from `latest` and `next` to `stable` and `beta`, respectively.
+
+The `stable` tag designates the latest stable release, and the `beta` tag designates the latest experimental release. These tags are available on both npm and Docker Hub. For now, n8n will continue to tag releases as `latest` and `next`. These tags will be removed in a future major version.
+
+**Recommendation:** Pin your n8n version to a specific version number, for example, `2.0.0`.
 
 ## Reporting issues
 

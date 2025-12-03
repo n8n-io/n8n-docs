@@ -116,7 +116,7 @@ This release contains bug fixes and features.
 
 The **MCP Client node** allows you to connect to and use tools exposed by remote MCP servers directly within your workflow.
 <br><br>
-Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call external MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
+Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
 <br><br>
 </div> 
 
@@ -187,7 +187,7 @@ To enable workflows through an instance-level MCP connection, both your instance
 - To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
 
 <br><br>
-🧠 Keep in mind:
+🧠 Keep in mind:<br>
 - To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
 - All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
 

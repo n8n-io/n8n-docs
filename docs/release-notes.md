@@ -115,8 +115,9 @@ This release contains bug fixes and features.
 ### MCP Client node
 
 The **MCP Client node** allows you to connect to and use tools exposed by remote MCP servers directly within your workflow.
-
+<br><br>
 Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call external MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
+<br><br>
 </div> 
 
 * The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
@@ -179,18 +180,18 @@ You can now enable MCP connections at the instance level, giving MCP-compatible 
 	
 Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
 
-
+<br><br>
 🛠️ How to:
 To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
 - To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
 - To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
 
-
+<br><br>
 🧠 Keep in mind:
 - To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
 - All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
 
-
+<br><br>
 This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
 <br> 
 <figure markdown="span">

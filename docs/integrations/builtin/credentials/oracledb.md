@@ -65,7 +65,7 @@ To set up your database connection credential:
 
 4. If your database uses SSL and you'd like to configure **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information of your Oracle Database SSL certificate in these fields:
       1. Enter the wallet password, if any, in the **Wallet Password** field.
-      2. Enter PEM-encoded wallet file, **ewallet.pem** contents in the 'Expanded' layout of the **Wallet Content** field. This will ensure that the newlines and whitespaces from the PEM-encoded wallet file are retained.
+      2. Enter PEM-encoded wallet file, **ewallet.pem** contents in the 'Expanded' layout of the **Wallet Content** field. This will ensure that all the whitespaces from the PEM-encoded wallet file are retained.
          Direct copy-paste into the **Wallet Content** field will strip out the whitespaces and lead to connection errors. 
 
 Refer to [node-oracledb](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.

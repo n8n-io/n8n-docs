@@ -33,6 +33,44 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+
+## n8n@2.0.0-rc.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@2.0.0-rc.0) for this version.<br />
+**Release date:** 2025-12-02
+
+This release contains bug fixes.
+
+### Contributors
+
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.123.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@1.123.0) for this version.<br />
+**Release date:** 2025-12-01
+
+This release contains bug fixes.
+
+### Contributors
+
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.3...n8n@1.122.4) for this version.<br />
+**Release date:** 2025-11-28
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@1.122.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.2...n8n@1.122.3) for this version.<br />
@@ -62,8 +100,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122
 
 This release contains bug fixes and the following features.
 
-* Introduces best practices for all builder categories and adds support for global credentials.
-* The AI builder now includes a Python script for workflow comparison and sends validation issues to telemetry.
+* The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
 * Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
   * See the [new SAML documentation](/user-management/saml/setup.md#instance-and-project-access-provisioning)

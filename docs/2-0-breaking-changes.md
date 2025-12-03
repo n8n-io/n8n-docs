@@ -71,13 +71,15 @@ Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the
 
 **Migration path:** If you run task runners in Docker with external mode, update your setup to use the `n8nio/runners` image instead of `n8nio/n8n`.
 
-### Remove Pyodide-based Python Code node
+### Remove Pyodide-based Python Code node and tool
 
-n8n will remove the Pyodide-based Python Code node and replace it with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external-mode).
+n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external-mode) and native Python tools.
 
 The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md#python-native-beta).
 
-**Migration path:** To continue using Python in Code nodes, set up task runners in external mode and review your existing Python Code nodes for compatibility.
+The native Python tool supports `_query` for the input string that the AI Agent passes to the tool when it calls it.
+
+**Migration path:** To continue using Python in Code nodes, set up task runners in external mode and review your existing Python Code nodes and tools for compatibility.
 
 ### Disable ExecuteCommand and LocalFileTrigger nodes by default
 
@@ -107,7 +109,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to v2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
@@ -155,7 +157,7 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ## CLI & Workflow
 
-### Remove CLI command operation to activate all workflows
+### Replace CLI command update:workflow
 
 The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 
@@ -172,6 +174,14 @@ The `update:workflow` CLI command will be deprecated and replaced by two new com
 The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be deprecated. These will be replaced by a new hook `workflow.published`. The new hook will be triggered when any version of a workflow is published.
 
 **Migration path:** Update your code to use the new `workflow.published` hook instead of `workflow.activeChange` and `workflow.activeChangeCurrent`. This hook provides more consistent behavior and will be triggered whenever a workflow version is published.
+
+## Release channels
+
+n8n has renamed the release channels from `latest` and `next` to `stable` and `beta`, respectively.
+
+The `stable` tag designates the latest stable release, and the `beta` tag designates the latest experimental release. These tags are available on both npm and Docker Hub. For now, n8n will continue to tag releases as `latest` and `next`. These tags will be removed in a future major version.
+
+**Recommendation:** Pin your n8n version to a specific version number, for example, `2.0.0`.
 
 ## Reporting issues
 

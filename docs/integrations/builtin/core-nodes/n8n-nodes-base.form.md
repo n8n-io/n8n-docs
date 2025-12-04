@@ -80,7 +80,7 @@ An example JSON that shows the general format required and the keys available:
 ```javascript
 // Use the "requiredField" key on any field to mark it as mandatory
 // Use the "placeholder" key to specify placeholder data for all fields
-// except 'dropdown', 'date' and 'file'
+// except 'dropdown', 'checkbox', 'radio', 'date' and 'file'
 // Use the "defaultValue" key to pre-fill a form field or pre-select a 
 // value in 'checkbox', 'radio' or 'dropdown' fields
 

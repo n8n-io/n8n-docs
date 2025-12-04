@@ -1256,6 +1256,7 @@ nav:
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
+      - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
     - Architecture:

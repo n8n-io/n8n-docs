@@ -141,7 +141,16 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122.0) for this version.<br />
 **Release date:** 2025-11-24
 
-This release contains bug fixes and the following features.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown> 
+### MCP Client node
+
+The **MCP Client node** allows you to connect to and use tools exposed by remote MCP servers directly within your workflow.
+<br><br>
+Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
+<br><br>
+</div> 
 
 * The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
@@ -149,7 +158,7 @@ This release contains bug fixes and the following features.
   * See the [new SAML documentation](/user-management/saml/setup.md#instance-and-project-access-provisioning)
   * See the [new OIDC documentation](/user-management/oidc/setup.md#instance-and-project-access-provisioning)
 * The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
-* Additional improvements include a new MCP Client Node, Stripe billing meter events, and updates to binary data handling and workflow search.
+* Additional improvements include Stripe billing meter events, and updates to binary data handling and workflow search.
 
 ### Contributors
 
@@ -203,15 +212,18 @@ You can now enable MCP connections at the instance level, giving MCP-compatible 
 	
 Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
 
+<br><br>
 🛠️ How to:
 To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
 - To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
 - To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
 
-🧠 Keep in mind:
+<br><br>
+🧠 Keep in mind:<br>
 - To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
 - All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
 
+<br><br>
 This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
 <br> 
 <figure markdown="span">
@@ -343,6 +355,18 @@ The default presets and prompts are adapted from the open-source [guardrails pac
 For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
 </div>
 
+<div class="n8n-new-features" markdown> 
+### OAuth for MCP Client Tool node
+
+The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) about the MCP Client Tool node.
+<br> 
+<figure markdown="span">
+    ![Authentication options in MCP Client Tool node](/_images/release-notes/oauthmcp.png)
+    <figcaption>Authentication options in MCP Client Tool node</figcaption>
+</figure>
+<br>
+
+</div>
 ### Contributors
 
 [cesars-gh](https://github.com/cesars-gh)  

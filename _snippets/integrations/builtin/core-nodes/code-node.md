@@ -84,7 +84,7 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 
 ## Python (Native)
 
-n8n added native Python support using task runners in version 1.111.0 and is stable as of n8n v2. 
+n8n added native Python support using task runners in version 1.111.0. This feature is stable as of n8n v2. 
 
 Main differences from Pyodide:
 

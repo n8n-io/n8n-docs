@@ -109,7 +109,7 @@ The launcher will read environment variables from runners container environment,
 - pass environment variables from the launcher's own environment to all runners (`allowed-env`)
 - set specific environment variables on specific runners (`env-overrides`)
 
-Which environment variables to pass and to set defined in the [launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json) included in the runners image. This config file is located in the container at `/etc/task-runners.json`. To learn more about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
+Which environment variables to pass and to set are defined in the [launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json) included in the runners image. This config file is located in the container at `/etc/task-runners.json`. To learn more about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
 
 The default launcher configuration file is locked down, but you will likely want to edit this file, for example, to allowlist first- or third-party modules. To customize the launcher configuration file, mount to this path:
 

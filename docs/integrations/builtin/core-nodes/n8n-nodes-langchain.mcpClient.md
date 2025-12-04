@@ -4,7 +4,7 @@ description: Learn how to use the MCP Client node in n8n. Follow technical docum
 contentType: [integration, reference]
 ---
 
-# MCP Client Tool node
+# MCP Client node
 
 The MCP Client node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can use the MCP Client node to use MCP tools as regular workflow steps. If you want to use MCP tools as tools for an AI Agent, use the [MCP Client Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md).
 

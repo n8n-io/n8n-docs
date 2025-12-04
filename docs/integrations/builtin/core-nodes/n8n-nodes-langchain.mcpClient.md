@@ -23,7 +23,6 @@ Configure the node with the following parameters.
 * **Input Mode**: 
 	* **Manual**: Specify each tool parameter manually.
 	* **JSON**: Specify tool parameters as a JSON object. Use this mode for tools with nested parameters.
-	* **All Except**: Activates a **Tools to Exclude** parameter where you can select the tools you want to avoid sharing with the AI Agent. The AI Agent will have access to all MCP server's tools that aren't selected.
 
 ## Options
 

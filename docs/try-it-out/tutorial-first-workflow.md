@@ -138,7 +138,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 
 1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 1. Go back to your Postbin bin. Refresh the page to see the output.
-1. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
+1. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to publish it by click **Publish**.
 
 /// note | Time limit
 Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.

@@ -110,7 +110,7 @@ In order for a workflow to be available to MCP clients, it must meet the followi
 By default, no workflows are visible to MCP clients. You must explicitly enable access.
 
 /// info
-Once you deactivate a workflow, n8n removes its MCP access. You will have to re-enable access when you activate the workflow again.
+Once you unpublish a workflow, n8n removes its MCP access. You will have to re-enable access when you publish the workflow again.
 ///
 
 ### Enabling access

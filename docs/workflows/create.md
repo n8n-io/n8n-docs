@@ -1,5 +1,5 @@
 ---
-description: Create, run, and activate workflows.
+description: Create, run, and publish workflows.
 contentType: howto
 ---
 
@@ -31,8 +31,8 @@ To run manually, select **Execute Workflow**.
 
 All new workflows are inactive by default.
 
-You need to activate workflows that start with a trigger node or Webhook node so that they can run automatically. When a workflow is inactive, you must run it manually.
+You need to publish workflows that start with a trigger node or Webhook node so that they can run automatically. When a workflow is inactive, you must run it manually.
 
-To activate or deactivate your workflow, open your workflow and toggle **Inactive** / **Active**.
+To publish or unpublish your workflow, open your workflow and toggle **Inactive** / **Active**.
 
 Once a workflow is active, it runs whenever its trigger conditions are met.

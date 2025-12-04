@@ -33,7 +33,7 @@ The HTTP Request node has options to [provide the SSL certificate](/integrations
 	* [**Get Many** executions](#get-many-executions)
 	* [**Delete** an execution](#delete-execution)
 * Workflow
-	* [**Activate** a workflow](#activate-deactivate-delete-and-get-workflow)
+	* [**Publish** a workflow](#activate-deactivate-delete-and-get-workflow)
 	* [**Create** a workflow](#create-workflow)
 	* [**Deactivate** a workflow](#activate-deactivate-delete-and-get-workflow)
 	* [**Delete** a workflow](#activate-deactivate-delete-and-get-workflow)

@@ -8,10 +8,6 @@ contentType: howto
 
 Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
-/// note | In beta
-Task runner support for native Python and the `n8nio/runners` image are in beta. Until this feature is stable, you must use the `N8N_NATIVE_PYTHON_RUNNER=true` environment variable to enable the Python runner.
-///
-
 This document describes how task runners work and how you can configure them.
 
 ## How it works
@@ -79,6 +75,8 @@ volumes:
   n8n_data:
 ```
 
+There are three layers of configuration: the n8n container, the runners container, and the launcher inside the runners container.
+
 ### Configuring n8n container in external mode
 
 These are the main environment variables that you can set on the n8n container running in external mode:
@@ -106,13 +104,18 @@ For full list of environment variables see [task runner environment variables](/
 
 ### Configuring launcher in runners container in external mode
 
-The launcher will read environment variables from runners container environment, and will pass them along to each runner as defined in the [default launcher configuration file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. The default launcher configuration file is locked down, but you will likely want to edit this file, for example, to allowlist first- or third-party modules. To customize the launcher configuration file, mount to this path:
+The launcher will read environment variables from runners container environment, and will... 
+
+- pass environment variables from the launcher's own environment to all runners (`allowed-env`)
+- set specific environment variables on specific runners (`env-overrides`)
+
+Which environment variables to pass and to set defined in the [launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json) included in the runners image. This config file is located in the container at `/etc/task-runners.json`. To learn more about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
+
+The default launcher configuration file is locked down, but you will likely want to edit this file, for example, to allowlist first- or third-party modules. To customize the launcher configuration file, mount to this path:
 
 ```
 path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 ```
-
-For further information about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
 
 ## Adding extra dependencies 
 
@@ -157,10 +160,6 @@ You must also allowlist any first-party or third-party packages for use by the C
 * `NODE_FUNCTION_ALLOW_EXTERNAL`: comma-separated list of allowed JS packages.
 * `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
 * `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
-
-#### Multiple runners and the port for the runner's health check server
-
-When a single runner is configured, the *"health-check-server-port"* field found in the `n8n-task-runners.json` configuration file is optional and defaults to 5681. When multiple runners are configured, this is required and must be unique per runner. Refer to the launcher’s [config file documentation](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file) for the full list of options and examples.
 
 ### 2. Build your custom image
 

@@ -81,3 +81,13 @@ n8n provides keyboard shortcuts for some actions.
 ## Within nodes
 
 - **=**: in an empty parameter input, this switches to [expressions](/glossary.md#expression-n8n) mode.
+
+## Command bar
+
+The Command Bar provides quick access to actions and navigation throughout n8n. Access it using **Ctrl/Cmd + K**, or click the magnifying glass icon on the canvas. Commands adapt based on your current view and permissions.
+
+* **Workflow actions:** Add nodes, save, test, tidy up, activate/deactivate, duplicate, import/export, archive, delete
+* **Resource navigation:** Create and open workflows, credentials, data tables, projects; access recent resources
+* **Execution actions:** Debug, copy, retry, stop, or delete executions
+* **General navigation:** Access Templates, Variables, Insights, Settings, Help resources, and Documentation
+

@@ -44,7 +44,7 @@ There are two parts to working with data tables: creating them and interacting w
 
 ### Step 2: Interacting with Data tables in workflows
 
-Interact with data tables in your workflow using the **Data table** node, which allows you to retreive, update, and manipulate the data stored in a Data table.
+Interact with data tables in your workflow using the **Data table** node, which allows you to retrieve, update, and manipulate the data stored in a Data table.
 
 See [Data table node](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md).
 

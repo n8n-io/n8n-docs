@@ -34,6 +34,272 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@2.0.0-rc.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.2...n8n@2.0.0-rc.3) for this version.<br />
+**Release date:** 2025-12-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.0.0-rc.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.0...n8n@2.0.0-rc.1) for this version.<br />
+**Release date:** 2025-12-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.123.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.1...n8n@1.123.2) for this version.<br />
+**Release date:** 2025-12-04
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.0.0-rc.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.1...n8n@2.0.0-rc.2) for this version.<br />
+**Release date:** 2025-12-04
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.123.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.0...n8n@1.123.1) for this version.<br />
+**Release date:** 2025-12-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.0.0-rc.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@2.0.0-rc.0) for this version.<br />
+**Release date:** 2025-12-02
+
+This release contains bug fixes.
+
+### Contributors
+
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.123.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.0...n8n@1.123.1) for this version.<br />
+**Release date:** 2025-12-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.123.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@1.123.0) for this version.<br />
+**Release date:** 2025-12-01
+
+This release contains bug fixes.
+
+### Contributors
+
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.4...n8n@1.122.5) for this version.<br />
+**Release date:** 2025-12-04
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.3...n8n@1.122.4) for this version.<br />
+**Release date:** 2025-11-28
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.2...n8n@1.122.3) for this version.<br />
+**Release date:** 2025-11-26
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@1.122.2) for this version.<br />
+**Release date:** 2025-11-25
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.122.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122.0) for this version.<br />
+**Release date:** 2025-11-24
+
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown> 
+### MCP Client node
+
+The **MCP Client node** allows you to connect to and use tools exposed by remote MCP servers directly within your workflow.
+<br><br>
+Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
+<br><br>
+</div> 
+
+* The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
+* Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
+* Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
+  * See the [new SAML documentation](/user-management/saml/setup.md#instance-and-project-access-provisioning)
+  * See the [new OIDC documentation](/user-management/oidc/setup.md#instance-and-project-access-provisioning)
+* The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
+* Additional improvements include Stripe billing meter events, and updates to binary data handling and workflow search.
+
+### Contributors
+
+[mi1os](https://github.com/mi1os)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.121.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.2...n8n@1.121.3) for this version.<br />
+**Release date:** 2025-11-26
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.121.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.1...n8n@1.121.2) for this version.<br />
+
+* Fixed an issue with MCP access scope in the core system.
+* Updated editor to improve notice background colors for better visibility.
+
+This release also contains bug fixes.
+**Release date:** 2025-11-20
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.121.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.121.1) for this version.<br />
+
+* Prepared patch release 1.121.1 by updating version numbers across all packages.
+* Added a changelog entry for version 1.121.1 to document the release.
+
+**Release date:** 2025-11-19
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.121.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.121.0) for this version.<br />
+
+**Release date:** 2025-11-18
+
+<div class="n8n-new-features" markdown>
+### Instance-level MCP connections (beta)
+
+You can now enable MCP connections at the instance level, giving MCP-compatible AI platforms access to all selected workflows through a single oAuth-secured connection.
+	
+Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
+
+<br><br>
+🛠️ How to:
+To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
+- To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
+- To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
+
+<br><br>
+🧠 Keep in mind:<br>
+- To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
+- All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
+
+<br><br>
+This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
+<br> 
+<figure markdown="span">
+    ![Instance MCP](/_images/release-notes/instance_mcp_settings.png)
+    <figcaption>Enable MCP for an instance in instance settings.</figcaption>
+</figure>
+<br>
+<figure markdown="span">
+    ![Instance MCP](/_images/release-notes/instance_mcp_workflow_settings.png)
+    <figcaption>Enable MCP for each workflow in workflow settings.</figcaption>
+</figure>
+</div>
+
+### Contributors
+
+[vicalca](https://github.com/vicalca)  
+[datpp-ct](https://github.com/datpp-ct)  
+[cesars-gh](https://github.com/cesars-gh)  
+[farzad528](https://github.com/farzad528)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.120.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.3...n8n@1.120.4) for this version.<br />
+
+**Release date:** 2025-11-19
+
+
+
+
+
+* Prepared for release 1.120.4 by updating version numbers across all core, backend, AI/LLM, frontend, and tooling packages.
+* Added a changelog entry for version 1.120.4 to document the release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.120.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.1...n8n@1.120.2) for this version.<br />
+**Release date:** 2025-11-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.120.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.120.1) for this version.<br />
@@ -42,8 +308,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.0...n8n@1.120
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@1.120.0
 
@@ -55,14 +319,22 @@ This release contains bug fixes.
 ### Contributors
 
 [rothenbergt](https://github.com/rothenbergt)  
+
+## n8n@1.119.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.1...n8n@1.119.2) for this version.<br />
+**Release date:** 2025-11-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@1.119.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.119.1) for this version.<br />
 **Release date:** 2025-11-10
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains a bug fix.
 
@@ -88,9 +360,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.118.0...n8n@1.119.0) for this version.<br />
 **Release date:** 2025-11-03
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 
@@ -111,6 +381,18 @@ The default presets and prompts are adapted from the open-source [guardrails pac
 For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
 </div>
 
+<div class="n8n-new-features" markdown> 
+### OAuth for MCP Client Tool node
+
+The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) about the MCP Client Tool node.
+<br> 
+<figure markdown="span">
+    ![Authentication options in MCP Client Tool node](/_images/release-notes/oauthmcp.png)
+    <figcaption>Authentication options in MCP Client Tool node</figcaption>
+</figure>
+<br>
+
+</div>
 ### Contributors
 
 [cesars-gh](https://github.com/cesars-gh)  
@@ -155,6 +437,31 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
+<div class="n8n-new-features" markdown>
+
+### Project-level variables
+
+You can now create variables at either the global or project level.
+
+- Project-level variables are only visible and usable by members of that project.
+- Global variables can be overridden at the project level for more specific configurations.
+- The maximum character limit has been increased to 1,000 to support longer values.
+
+This update improves security and flexibility as part of our ongoing effort to isolate data and settings per project.
+
+### Improvements to Environments
+
+We’ve made several updates to improve reliability, consistency, and control across environments.
+
+- **Projects are now fully synchronized across environments.** When a workflow is pushed within a project, it’s automatically created and synced in all environments where it’s pulled. Moving, renaming, or deleting projects is now reflected everywhere, keeping instances aligned.
+- **Improved protection for read-only environments.** Read-only instances now block all changes, including folder moves and workflow ownership updates, ensuring production environments stay stable and isolated.
+- **Bug fix: tag mapping synchronization.** Fixed an issue where tag mappings only updated when tags changed. They now sync on every commit for consistent tagging across environments.
+
+### Custom date ranges for Insights
+
+You can now define custom date ranges instead of using fixed ones, giving you more control over the data you analyze.
+</div> 
+
 ## n8n@1.117.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.117.1...n8n@1.117.2) for this version.<br />
@@ -195,8 +502,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.0...n8n@1.117.0) for this version.<br />
 **Release date:** 2025-10-21
 
-
-
 This release contains bug fixes.
 
 ### Contributors
@@ -214,10 +519,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.116.1...n8n@1.116.2) for this version.<br />
 **Release date:** 2025-10-21
 
-
-
-
-
 This release contains a bug fix.
 
 
@@ -229,8 +530,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.3...n8n@1.115
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@1.116.1
 
@@ -276,7 +575,6 @@ For details, see [Import entities](/hosting/cli-commands.md#import-entities)
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
 ## n8n@1.116.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.0...n8n@1.116.0) for this version.<br />
@@ -309,13 +607,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.115.1...n8n@1.115
 **Release date:** 2025-10-10
 
 
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@1.114.4
@@ -395,15 +689,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.2...n8n@1.114
 **Release date:** 2025-10-06
 
 
-
-
 This release contains bug fixes.
 
 ## n8n@1.114.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.1...n8n@1.114.2) for this version.<br />
 **Release date:** 2025-10-02
-
 
 
 This release contains bug fixes.
@@ -418,7 +709,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.114.0...n8n@1.114
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@1.114.0
@@ -437,17 +727,10 @@ This release contains core updates, editor improvements, project updates, perfor
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
 ## n8n@1.113.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.2...n8n@1.113.3) for this version.<br />
 **Release date:** 2025-09-26
-
-
-
-
-
-
 
 This release contains a bug fix.
 

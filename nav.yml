@@ -163,6 +163,7 @@ nav:
         - 1.x: release-notes.md
         - 0.x: release-notes/0-x.md
       - v2.0 breaking changes: 2-0-breaking-changes.md
+      - v2.0 Migration tool: migration-tool-v2.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md
@@ -718,6 +719,7 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - Azure AI Search Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
@@ -820,6 +822,7 @@ nav:
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
         - integrations/builtin/credentials/azurecosmosdb.md
+        - integrations/builtin/credentials/azureaisearch.md
         - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
@@ -1193,6 +1196,7 @@ nav:
     - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - AI Assistant: hosting/configuration/environment-variables/ai-assistant.md
         - Binary data: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md

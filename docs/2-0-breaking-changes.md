@@ -10,15 +10,29 @@ n8n v2.0 will be released soon. This document highlights important breaking chan
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
-## Behaviour changes
+## Behavior changes
 
-### Return expected sub-workflow data when it contains a wait node
+### Return expected sub-workflow data when the sub-workflow resumes from waiting (waiting for webhook, forms, HITL, etc.)
 
-Previously, when a workflow (parent) called a subworkflow (child) that contained a Wait node, the parent workflow incorrectly received the input items to the Wait node from the child workflow.
+Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waiting state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
 
-In v2, the parent workflow now receives the output data from the end of the child workflow instead.
+Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
-**Migration path:** Review any workflows that call subworkflows and expect to receive the input to a Wait node. Update these workflows to handle the new behavior, where the parent workflow receives the output from the end of the child workflow instead.
+Parent-Workflow:
+![Parent-Workflow](/_images/v2/parentworkflow1.png)
+
+Sub-Workflow:
+![Sub-Workflow](/_images/v2/subworkflow.png)
+
+v1: The parent-execution reproduces the sub-execution's input as its output.:
+![v1: Parent execution won't receive the result of the child execution](/_images/v2/before1.png)
+
+v2: The parent execution receives the result of the child execution:
+![v2: Parent execution will receive the result of the child execution](/_images/v2/after1.png)
+
+This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
+
+**Migration path:** Review any workflows that call sub-workflows and expect to receive the input to the sub-workflow. Update these workflows to handle the new behavior, where the parent-workflow receives the output from the end of the child-workflow instead.
 
 ### Removed nodes for retired services
 
@@ -27,6 +41,7 @@ The following nodes have been removed because the external services they connect
 - Spontit node
 - crowd.dev node
 - Kitemaker node
+- Automizy node
 
 **Migration path:** If your workflows use any of these nodes, update or remove those workflows to avoid errors.
 
@@ -56,17 +71,19 @@ Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the
 
 **Migration path:** If you run task runners in Docker with external mode, update your setup to use the `n8nio/runners` image instead of `n8nio/n8n`.
 
-### Remove Pyodide-based Python Code node
+### Remove Pyodide-based Python Code node and tool
 
-n8n will remove the Pyodide-based Python Code node and replace it with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external-mode).
+n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external-mode) and native Python tools.
 
 The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md#python-native-beta).
 
-**Migration path:** To continue using Python in Code nodes, set up task runners in external mode and review your existing Python Code nodes for compatibility.
+The native Python tool supports `_query` for the input string that the AI Agent passes to the tool when it calls it.
+
+**Migration path:** To continue using Python in Code nodes, set up task runners in external mode and review your existing Python Code nodes and tools for compatibility.
 
 ### Disable ExecuteCommand and LocalFileTrigger nodes by default
 
-n8n will disable rhe `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
+n8n will disable the `ExecuteCommand` and `LocalFileTrigger` nodes by default because they pose security risks. These nodes allow users to run arbitrary commands and access the file system.
 
 **Migration path:** If you need to use these nodes, remove them from the disabled nodes list in your n8n configuration by updating the `NODES_EXCLUDE` environment variable. For example, set `NODES_EXCLUDE="[]"` to enable all nodes, or remove only the specific nodes you need.
 
@@ -78,7 +95,7 @@ n8n will require authentication for OAuth callback endpoints by default. The def
 
 ### Set default value for N8N_RESTRICT_FILE_ACCESS_TO
 
-n8n will set a default value for `N8N_RESTRICT_FILE_ACCESS_TO` to control where file operations can occur. This affects the `ReadWriteFile` and `ReadBinaryFiles` nodes. By default, these nodes can only access files in the `./data` directory inside the n8n home folder.
+n8n will set a default value for `N8N_RESTRICT_FILE_ACCESS_TO` to control where file operations can occur. This affects the `ReadWriteFile` and `ReadBinaryFiles` nodes. By default, these nodes can only access files in the `~/.n8n-files` directory.
 
 **Migration path:** Review your workflows that use file nodes and make sure they only access files in the allowed directory. If you need to allow access to other directories, set the `N8N_RESTRICT_FILE_ACCESS_TO` environment variable to your desired path.
 
@@ -92,7 +109,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to v2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
@@ -104,9 +121,15 @@ n8n will remove the legacy SQLite driver due to reliability issues. The pooling 
 
 ### Remove in-memory binary data mode
 
-n8n will remove the default mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which stores execution binary data in memory. Filesystem mode will become the only option for better performance and stability. The `N8N_AVAILABLE_BINARY_DATA_MODES` setting will also be removed, so the mode is now determined only by `N8N_DEFAULT_BINARY_DATA_MODE`.
+n8n will remove the `default` mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which keeps execution binary data in memory during execution. For better performance and stability the following options will be available starting from v2:
 
-**Migration path:** Filesystem mode will be used automatically. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](/hosting/configuration/environment-variables/binary-data.md).
+- `filesystem`: Binary data is stored in the filesystem. Default option in regular mode.
+- `database`: Binary data is stored in the database. Default option in queue mode.
+- `s3`: Binary data is stored in S3 compatible store.
+
+The `N8N_AVAILABLE_BINARY_DATA_MODES` setting will also be removed, so the mode is now determined only by `N8N_DEFAULT_BINARY_DATA_MODE`.
+
+**Migration path:** Filesystem or database mode will be used automatically based on configuration. Make sure your n8n instance has enough disk space to store binary data. For details, see the [binary data configuration](/hosting/configuration/environment-variables/binary-data.md).
 
 ## Configuration & Environment
 
@@ -120,9 +143,9 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 **Migration path:** Review the [dotenv changelog](https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md) and update your `.env` file to ensure compatibility with the new version.
 
-### Remove n8n --tunnel option
+### Remove `n8n --tunnel` option
 
-The `n8n --tunnel `command-line option will be removed in v2.0.
+The `n8n --tunnel` command-line option will be removed in v2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 
@@ -134,11 +157,31 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 ## CLI & Workflow
 
-### Remove CLI command operation to activate all workflows
+### Replace CLI command update:workflow
 
-The CLI command `update:workflow --all --active=true`, which activates all workflows at once, will be removed to prevent accidental activation of workflows in production environments.
+The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 
-**Migration path:** Activate workflows one at a time or in small, controlled batches using the API or the UI. This helps you avoid unintended consequences and maintain better control over workflow activation.
+- `publish:workflow` with parameters `id` and `versionId` (optional)
+  - The `--all` parameter will be removed to prevent accidental activation of workflows in production environments
+- `unpublish:workflow` with parameters `id` and `all`
+
+**Migration path:** Use the new `publish:workflow` command to activate workflows individually by ID, optionally specifying a version. For deactivation, use the new `unpublish:workflow` command. This provides better clarity and control over workflow activation states.
+
+## External Hooks
+
+### Deprecated frontend workflow hooks
+
+The hooks `workflow.activeChange` and `workflow.activeChangeCurrent` will be deprecated. These will be replaced by a new hook `workflow.published`. The new hook will be triggered when any version of a workflow is published.
+
+**Migration path:** Update your code to use the new `workflow.published` hook instead of `workflow.activeChange` and `workflow.activeChangeCurrent`. This hook provides more consistent behavior and will be triggered whenever a workflow version is published.
+
+## Release channels
+
+n8n has renamed the release channels from `latest` and `next` to `stable` and `beta`, respectively.
+
+The `stable` tag designates the latest stable release, and the `beta` tag designates the latest experimental release. These tags are available on both npm and Docker Hub. For now, n8n will continue to tag releases as `latest` and `next`. These tags will be removed in a future major version.
+
+**Recommendation:** Pin your n8n version to a specific version number, for example, `2.0.0`.
 
 ## Reporting issues
 

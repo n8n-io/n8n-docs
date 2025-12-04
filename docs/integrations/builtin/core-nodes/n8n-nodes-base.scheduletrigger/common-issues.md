@@ -40,7 +40,7 @@ To set the timezone for an individual workflow:
 
 ### Variables not working as expected
 
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. After publishing the worfklow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then publish a new version of the workflow to apply the updated variable value.
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. After publishing the workflow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then publish a new version of the workflow to apply the updated variable value.
 
 ### Changing the trigger interval
 

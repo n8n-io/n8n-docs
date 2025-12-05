@@ -44,7 +44,7 @@ n8n tries to match the original project name to a project name on the new instan
 
 ### Pulling may cause brief service interruption
 
-If you pull changes to an active workflow, n8n sets the workflow to inactive while pulling, then reactivates it. This may result in a few seconds of downtime for the workflow.
+If you pull changes to a published workflow, n8n unpublishes the workflow while pulling, then republishes it. This may result in a few seconds of downtime for the workflow.
 
 ## Send your work to Git
 

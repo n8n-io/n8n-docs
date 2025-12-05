@@ -221,14 +221,14 @@ Custom project roles is only available on **n8n enterprise**.
 
 If you’re using SAML or OIDC, your Identity Provider (Okta, Azure AD, Google Workspace, etc.) can now automatically assign each user’s instance role and project roles when they log in.
 
-When enabled, administrators can map a group or individual on their SSO identity provider to a instance role and one or more project roles.
+When enabled, administrators can map a group or individual on their SSO identity provider to an instance role and one or more project roles.
 
 This allows you to manage access centrally from your IdP with automated onboarding and off-boarding, eliminating manual access updates inside the n8n UI
 
 Learn more in our dedicated documentation pages.
 
-For [OIDC](/user-management/oidc/setup/#instance-and-project-access-provisioning/index.md) 
-For [SAML](/user-management/saml/setup/#instance-and-project-access-provisioning/index.md)
+For [OIDC](/user-management/oidc/setup/#instance-and-project-access-provisioning.md) 
+For [SAML](/user-management/saml/setup/#instance-and-project-access-provisioning.md)
 
 Notes: User provisioning is not real-time and updates apply on the user’s next login.
 

@@ -199,7 +199,7 @@ Example: a “Workflow Builder” role that can:<br>
 - Use existing credentials but not create or edit credentials
 <br> 
 <figure markdown="span">
-    ![Project roles](/_images/release-notes/Evaluations_node.png)
+    ![Project roles](/_images/release-notes/projectroles.png)
     <figcaption>Project roles is now available in the settings of your n8n Enterprise instance.</figcaption>
 </figure>
 <br>

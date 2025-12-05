@@ -144,7 +144,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
 
-## Executing workflows trough MCP clients
+## Executing workflows through MCP clients
 
 MCP clients can execute eligible workflows on your request. When a client triggers a workflow, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
 
@@ -152,7 +152,7 @@ MCP clients can execute eligible workflows on your request. When a client trigge
 
 If a workflow requires input data, the MCP client must provide that data when triggering the workflow. The workflow's trigger node determines the schema of the input data:
 
-1. **Webhook trigger**: MCP client will look for hints in workflow contents and its description. It's up to workflow author to provide enough information for the client to generate valid input data.
+1. **Webhook trigger**: The MCP client will look for hints in workflow contents and its description. It's up to the workflow author to provide enough information for the client to generate valid input data.
 2. **Schedule trigger**: No input data is required.
 3. **Chat trigger**: Chat input format is determined by the chat node configuration.
 4. **Form trigger**: Form fields are determined by the form node configuration.
@@ -173,7 +173,7 @@ n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients
 
 1. Configure MCP Server in Lovable (OAuth).
     - Navigate to your workspace  **Settings > Integrations**.
-    - On the **MCP Servers** section, find **n8n** and click **Connect**.
+    - In the **MCP Servers** section, find **n8n** and click **Connect**.
     - Enter your n8n server URL (shown on the **MCP Access** page).
     - Save the connection. If successful, n8n redirects you to authorize Lovable.
 2. Verify connectivity.
@@ -195,7 +195,7 @@ n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients
 ##### Using Access Token
 
 /// info
-This requires latest version of [Node.js](https://nodejs.org/en/download).
+This requires the latest version of [Node.js](https://nodejs.org/en/download).
 ///
 
 Add the following entry to your `claude_desktop_config.json` file:
@@ -284,4 +284,4 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Check that the workflows you want to access are marked as available in MCP.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
-- If you are using desktop MCP clients, make sure you have latest [Node.js](https://nodejs.org/en/download) version installed.
+- If you are using desktop MCP clients, make sure you have the latest [Node.js](https://nodejs.org/en/download) version installed.

@@ -44,7 +44,7 @@ nav:
       - Understand workflows:
         - workflows/index.md
         - Create and run: workflows/create.md
-        - Publish and save: workflows/publish.md
+        - Save and publish: workflows/publish.md
         - Components:
           - workflows/components/index.md
           - Nodes: workflows/components/nodes.md

@@ -1,13 +1,31 @@
 ---
-description: Publish, unpublish, and save workflows.
+description: Save, publish, and unpublish workflows.
 contentType: howto
 ---
 
-# Publishing and saving workflows
+# Saving and publishing workflows
 
 You can iterate on, test, and save changes to workflows as many times as you need. Then when you're ready to put the workflow into production, publish your workflow.
 
 This approach prevents accidental production changes while enabling safe iteration and review.
+
+Publishing makes your workflow live and locks it to a specific version. Production executions will use this published version, not your latest edits. When you publish, your workflow will enable the following:
+
+- Webhook and form triggers will use their production URLs
+- Schedules will run at the times you've defined
+- Events from connected apps will trigger this workflow
+
+**Initial state: You open the workflow**
+
+![Initial state when workflow is opened](/_images/publish/open-workflow.png)
+
+**Changed state: You make changes to the the workflow**
+
+![Changes to the workflow](/_images/publish/post-change.png)
+
+**Saved state: Saved changes awaiting publish**
+
+![Saved changes awaiting publish](/_images/publish/post-save.png)
 
 ## Checking publishing status
 
@@ -15,7 +33,10 @@ On the **Workflows** page, each workflow displays an indicator showing whether i
 
 ## Publishing a workflow
 
-When you open a workflow and make changes to it, the **Publish** button in the header indicates whether you have unpublished changes.
+The **Publish** button in the header indicates that a publish action is pending for one of these reasons:
+
+* When you open a workflow and make changes to it
+* When you have saved changes that aren't published
 
 This indicator is independent from the act of saving your changes, which you must still do manually. Each time you save changes to a workflow, n8n creates a new version of the workflow.
 
@@ -38,5 +59,6 @@ View and manage version history by clicking the history icon in the header. In t
 ## Unpublishing a Workflow
 
 Unpublish a workflow from either:
+
 - The workflow settings menu
 - The version history page (unpublish action on published versions)

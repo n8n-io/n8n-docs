@@ -9,8 +9,8 @@ priority: critical
 
 Use the Schedule Trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
-/// note | You must activate the workflow
-If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 
+/// note | You must publish the workflow
+If a workflow uses the Schedule node as a trigger, make sure that you save and publish the workflow. 
 ///
 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
@@ -100,7 +100,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru).
 <!-- vale from-write-good.Weasel = YES -->
 
 /// warning | Using variables in the Cron expression
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. If you alter a variable's value in the settings after a workflow is published, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
 /// 
 
 #### Why there are six asterisks in the Cron expression

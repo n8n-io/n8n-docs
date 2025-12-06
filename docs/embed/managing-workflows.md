@@ -357,7 +357,7 @@ POST https://<n8n-domain>/rest/workflows/
 
 The response will contain the ID of the new workflow, which you will use in the next step.
 
-1. Lastly, activate the new workflow:
+1. Lastly, publish the new workflow:
 ```
 PATCH https://<n8n-domain>/rest/workflows/1012
 ```
@@ -387,7 +387,7 @@ The details and scope of this workflow will vary greatly according to the indivi
 * This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
 * Each node where the user’s credentials are needed should use an [expression](/code/expressions.md) so that the node’s credential field reads the credential provided in the webhook call.
-* Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) for more information.
+* Save and publish the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) for more information.
 
 ### Call the workflow
 

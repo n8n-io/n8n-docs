@@ -50,7 +50,7 @@ Click **X workflows affected** to see all affected workflows.
 What you'll see for each workflow:
 
 * **Name:** The workflow name. Click on the name to open the workflow editor.
-* **State:** Whether workflow is active or deactivated
+* **State:** Whether workflow is published or not
 * **Node affected:** The list of all the workflow nodes affected by the issue. You can click on each to open the workflow editor with the specific node view opened.
 * **Number of executions:** The total number of executions of the workflow
 * **Last executed:** The date the workflow was last executed

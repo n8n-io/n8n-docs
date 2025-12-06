@@ -227,8 +227,8 @@ This allows you to manage access centrally from your IdP with automated onboardi
 
 Learn more in our dedicated documentation pages.
 
-For [OIDC](/user-management/oidc/setup/#instance-and-project-access-provisioning.md) 
-For [SAML](/user-management/saml/setup/#instance-and-project-access-provisioning.md)
+For [OIDC](/user-management/oidc/setup.md/#instance-and-project-access-provisioning) 
+For [SAML](/user-management/saml/setup.md/#instance-and-project-access-provisioning)
 
 Notes: User provisioning is not real-time and updates apply on the user’s next login.
 

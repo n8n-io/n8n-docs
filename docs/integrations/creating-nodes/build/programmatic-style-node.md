@@ -1,10 +1,17 @@
 ---
 contentType: tutorial
 ---
-
 # Build a programmatic-style node
 
 This tutorial walks through building a programmatic-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information.
+
+/// note | ✨ New to n8n node development?
+The fastest way to get started is with the official CLI tool:
+```bash
+npm create @n8n/node
+```
+This scaffolds a complete node package with all correct imports and modern APIs. Continue reading to understand node concepts, or use the CLI for quick setup.
+///
 
 ## Prerequisites
 
@@ -19,7 +26,6 @@ You need some understanding of:
 - git
 - [Expressions](/glossary.md#expression-n8n) in n8n
 
-
 ## Build your node
 
 In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/). You'll create a node that implements one piece of SendGrid functionality: create a contact.
@@ -27,18 +33,20 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 /// note | Existing node
 n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
 ///
+
 ### Step 1: Set up the project
 
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
+n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter.
 
 Clone the repository and navigate into the directory:
 
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository:
-		```shell
-		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
-		cd n8n-nodes-friendgrid
-		```
+
+    ```shell
+    git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
+    cd n8n-nodes-friendgrid
+    ```
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
@@ -52,7 +60,7 @@ Now create the following directories and files:
 `nodes/FriendGrid`  
 `nodes/FriendGrid/FriendGrid.node.json`  
 `nodes/FriendGrid/FriendGrid.node.ts`  
-`credentials/FriendGridApi.credentials.ts`  
+`credentials/FriendGridApi.credentials.ts`
 
 These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information on required files and recommended organization.
 
@@ -66,13 +74,15 @@ npm i
 
 Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
+n8n recommends using an SVG for your node icon, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. Node icons should have a square or near-square aspect ratio.
 
---8<-- "_snippets/integrations/creating-nodes/node-icons.md"
-
+/// note | Don't reference Font Awesome
+If you want to use a Font Awesome icon in your node, download and embed the image.
+///
 
 ### Step 3: Define the node in the base file
 
-Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for detailed information about base file parameters.
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files.md) for detailed information about base file parameters.
 
 In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information.
 
@@ -83,20 +93,21 @@ Start by adding the import statements:
 ```typescript
 import {
 	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
 	IDataObject,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-    NodeConnectionType
+	NodeConnectionType,
+	IRequestOptions,
 } from 'n8n-workflow';
-
-import {
-	OptionsWithUri,
-} from 'request';
 ```
+
+/// warning | Important API Changes (v1.0+)
+- All imports now come from `n8n-workflow` (not `n8n-core`)
+- Use `IRequestOptions` instead of the deprecated `OptionsWithUri`
+- Use `NodeConnectionType` enum instead of string literals
+- The `request` library has been replaced with modern HTTP helpers
+///
 
 #### Step 3.2: Create the main class
 
@@ -105,6 +116,7 @@ The node must export an interface that implements `INodeType`. This interface mu
 /// note | Class names and file names
 Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
 ///
+
 ```typescript
 export class FriendGrid implements INodeType {
 	description: INodeTypeDescription = {
@@ -173,7 +185,7 @@ The resource object defines the API resource that the node uses. In this tutoria
 
 The operations object defines what you can do with a resource. It usually relates to REST API verbs (GET, POST, and so on). In this tutorial, there's one operation: create a contact. It has one required field, the email address for the contact the user creates.
 
-Add the following to the `properties` array, after the `resource` object:
+Add the following to the `properties` array, after the resource object:
 
 ```typescript
 {
@@ -213,9 +225,9 @@ Add the following to the `properties` array, after the `resource` object:
 			],
 		},
 	},
-	default:'',
+	default: '',
 	placeholder: 'name@email.com',
-	description:'Primary email for the contact',
+	description: 'Primary email for the contact',
 },
 ```
 
@@ -223,7 +235,7 @@ Add the following to the `properties` array, after the `resource` object:
 
 Most APIs, including the SendGrid API that you're using in this example, have optional fields you can use to refine your query.
 
-To avoid overwhelming users, n8n displays these under **Additional Fields** in the UI.
+To avoid overwhelming users, n8n displays these under Additional Fields in the UI.
 
 For this tutorial, you'll add two additional fields, to allow users to enter the contact's first name and last name. Add the following to the properties array:
 
@@ -267,7 +279,7 @@ You've set up the node UI and basic information. It's time to map the node UI to
 
 The `execute` method runs every time the node runs. In this method, you have access to the input items and to the parameters that the user set in the UI, including the credentials.
 
-Add the following the `execute` method in the `FriendGrid.node.ts`:
+Add the following the execute method in the `FriendGrid.node.ts`:
 
 ```typescript
 // Handle data coming from previous nodes
@@ -292,7 +304,7 @@ for (let i = 0; i < items.length; i++) {
 			Object.assign(data, additionalFields);
 
 			// Make HTTP request according to https://sendgrid.com/docs/api-reference/
-			const options: OptionsWithUri = {
+			const options: IRequestOptions = {
 				headers: {
 					'Accept': 'application/json',
 				},
@@ -302,10 +314,10 @@ for (let i = 0; i < items.length; i++) {
 						data,
 					],
 				},
-				uri: `https://api.sendgrid.com/v3/marketing/contacts`,
+				url: `https://api.sendgrid.com/v3/marketing/contacts`,
 				json: true,
 			};
-			responseData = await this.helpers.requestWithAuthentication.call(this, 'friendGridApi', options);
+			responseData = await this.helpers.httpRequestWithAuthentication.call(this, 'friendGridApi', options);
 			returnData.push(responseData);
 		}
 	}
@@ -333,12 +345,11 @@ Users can provide data in two ways:
 
 `getInputData()`, and the subsequent loop, allows the node to handle situations where data comes from a previous node. This includes supporting multiple inputs. This means that if, for example, the previous node outputs contact information for five people, your FriendGrid node can create five contacts.
 
-
 ### Step 5: Set up authentication
 
 The SendGrid API requires users to authenticate with an API key.
 
-Add the following to `FriendGridApi.credentials.ts`
+Add the following to `FriendGridApi.credentials.ts`:
 
 ```typescript
 import {
@@ -356,6 +367,7 @@ export class FriendGridApi implements ICredentialType {
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
+			typeOptions: { password: true },
 			default: '',
 		},
 	];
@@ -371,12 +383,11 @@ export class FriendGridApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.sendgrid.com/v3',
-			url: '/marketing/contacts',
+			baseURL: 'https://api.sendgrid.com',
+			url: '/v3/marketing/contacts',
 		},
 	};
 }
-
 ```
 
 For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files.md).
@@ -411,7 +422,6 @@ Add the following code to the JSON file:
 ```
 
 For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files.md).
-
 
 ### Step 7: Update the npm package details
 
@@ -467,15 +477,112 @@ Your npm package details are in the `package.json` at the root of the project. I
 
 You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
-
-
 ## Test your node
 
---8<-- "_snippets/integrations/creating-nodes/testing.md"
+You can test your node as you build it by running it in a local n8n instance.
+
+1. Install n8n using npm:
+
+    ```shell
+    npm install n8n -g
+    ```
+
+2. When you are ready to test your node, build it:
+
+    ```shell
+    # In your node directory
+    npm run build
+    ```
+
+3. Install the node globally:
+
+    ```shell
+    npm install -g .
+    ```
+
+4. Start n8n:
+
+    ```shell
+    n8n start
+    ```
+
+5. Open n8n in your browser. You should see your nodes when you search for them in the nodes panel.
+
+/// note | Node names
+Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`.
+///
+
+## Troubleshooting
+
+If you don't see your custom node:
+
+1. **Check that the node was built successfully** - ensure the `dist/` folder contains compiled `.js` files
+2. **Verify the package.json `n8n` section** - ensure the paths to your node files are correct
+3. **Check n8n startup logs** - look for messages about loading your node package
+4. **Hard refresh your browser** - press `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+5. **Check Node.js version** - ensure you're using Node.js v22 or higher
+
+## Migration Notes for Existing Nodes
+
+If you're updating an existing node from an older tutorial:
+
+### Updated Imports
+
+**Old (❌ Incorrect):**
+```typescript
+import { IExecuteFunctions } from 'n8n-core';
+import { INodeType } from 'n8n-workflow';
+import { OptionsWithUri } from 'request';
+```
+
+**New (✅ Correct):**
+```typescript
+import {
+	IExecuteFunctions,
+	INodeType,
+	IRequestOptions,
+} from 'n8n-workflow';
+```
+
+### Updated Connection Types
+
+**Old (❌ Incorrect):**
+```typescript
+inputs: ['main'],
+outputs: ['main'],
+```
+
+**New (✅ Correct):**
+```typescript
+inputs: [NodeConnectionType.Main],
+outputs: [NodeConnectionType.Main],
+```
+
+### Updated HTTP Requests
+
+**Old (❌ Incorrect):**
+```typescript
+const options: OptionsWithUri = {
+	uri: 'https://api.example.com/endpoint',
+	// ...
+};
+await this.helpers.request(options);
+```
+
+**New (✅ Correct):**
+```typescript
+const options: IRequestOptions = {
+	url: 'https://api.example.com/endpoint',
+	// ...
+};
+await this.helpers.httpRequest(options);
+// Or with authentication:
+await this.helpers.httpRequestWithAuthentication.call(this, 'credentialType', options);
+```
 
 ## Next steps
 
-* [Deploy your node](/integrations/creating-nodes/deploy/index.md).
+* [Deploy your node](/integrations/creating-nodes/deploy/).
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 * Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts.md) and [data structures](/data/data-structure.md).

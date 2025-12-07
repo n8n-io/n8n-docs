@@ -42,6 +42,17 @@ This release contains bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
+## n8n@1.123.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.2...n8n@1.123.3) for this version.<br />
+**Release date:** 2025-12-05
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.0.0-rc.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.2...n8n@2.0.0-rc.3) for this version.<br />
@@ -187,6 +198,61 @@ Previously, this functionality was only available through AI Agents using the **
 <br><br>
 </div> 
 
+<div class="n8n-new-features" markdown> 
+### Custom project roles <br>
+**What's new**<br>
+You can now define **custom project roles** that precisely control what a user can do **inside a project**.
+<br>
+- Three **system roles** remain built‑in and non-editable (Admin, Editor, Viewer)<br>
+- You can **create your own roles** (e.g. “Workflow Builder”, “Credential Manager”, “Read‑only Analyst”) with granular permissions per resource:<br>
+    - Project<br>
+    - Folders<br>
+    - Workflows<br>
+    - Credentials<br>
+    - Data tables / Variables<br>
+    - Pushing changes via source control<br>
+Example: a “Workflow Builder” role that can:<br>
+- View everything in the project<br>
+- Create and edit workflows and folders<br>
+- Use existing credentials but not create or edit credentials
+<br> 
+<figure markdown="span">
+    ![Project roles](/_images/release-notes/projectroles.png)
+    <figcaption>Project roles is now available in the settings of your n8n Enterprise instance.</figcaption>
+</figure>
+<br>
+**How it works** <br>
+1. Go to the new Project roles section (instance admins only).<br>
+2. Start from a preset (Admin, Editor, Viewer) or from scratch.<br>
+3. Configure CRUD‑style permissions. <br>
+4. Save the role. It now becomes available in the project member picker alongside system roles.<br>
+5. Assign these roles to project members.<br>
+
+Custom project roles let you assign permissions that match your organization's needs, improving governance and security in a clear, transparent, and manageable way.<br>
+
+Custom project roles is only available on **n8n enterprise**.
+
+</div> 
+
+<div class="n8n-new-features" markdown> 
+### User provisioning via SSO
+
+If you’re using SAML or OIDC, your Identity Provider (Okta, Azure AD, Google Workspace, etc.) can now automatically assign each user’s instance role and project roles when they log in.
+
+When enabled, administrators can map a group or individual on their SSO identity provider to an instance role and one or more project roles.
+
+This allows you to manage access centrally from your IdP with automated onboarding and off-boarding, eliminating manual access updates inside the n8n UI
+
+Learn more in our dedicated documentation pages.
+
+For [OIDC](/user-management/oidc/setup.md/#instance-and-project-access-provisioning) 
+For [SAML](/user-management/saml/setup.md/#instance-and-project-access-provisioning)
+
+Notes: User provisioning is not real-time and updates apply on the user’s next login.
+
+User provisioning is only available on n8n Enterprise.
+</div> 
+
 * The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
 * Enterprise customers using Single Sign On via SAML or OIDC can now provision the instance role and project role of each user in their organisation from their Identity Provider.
@@ -321,7 +387,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.120.0) for this version.<br />
 **Release date:** 2025-11-10
 
-This release contains bug fixes.
+This release contains **security updates** and bug fixes. We recommend all users upgrade promptly to version 1.120 or higher.
 
 ### Contributors
 

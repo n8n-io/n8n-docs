@@ -43,7 +43,7 @@ The OpenAI Responses API provides a range of [built-in tools](https://platform.o
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
 /// note | Use with AI Agent node
-Built-in tools are only supported when using the OpenAI Chat Model node in combination with the AI Agent node. Built-in tools are not available when using the OpenAI Chat Model node in combination with a Basic LLM Chain node, for example.
+Built-in tools are only supported when using the OpenAI Chat Model node in combination with the AI Agent node. Built-in tools aren't available when using the OpenAI Chat Model node in combination with a Basic LLM Chain node, for example.
 ///
 
 ## Node options
@@ -103,7 +103,7 @@ Define an integer between 0 and 20 specifying the number of most likely tokens t
 Choose a response format: Text, JSON Schema, or JSON Object. Use of JSON Schema is recommended, if you want to receive data in JSON format.
 
 ### Prompt
-Configure the prompt filled with a unique ID, its version, and substitutable variables. Prompts are configured via the OpenAI dashboard.
+Configure the prompt filled with a unique ID, its version, and substitutable variables. Prompts are configured through the OpenAI dashboard.
 
 ## Templates and examples
 

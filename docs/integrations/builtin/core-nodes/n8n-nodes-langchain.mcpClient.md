@@ -6,7 +6,11 @@ contentType: [integration, reference]
 
 # MCP Client node
 
-The MCP Client node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can use the MCP Client node to use MCP tools as regular workflow steps. If you want to use MCP tools as tools for an AI Agent, use the [MCP Client Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md).
+The MCP Client node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client that allows you to use the tools that are exposed by an external MCP server.
+
+You can use the MCP Client node to use MCP tools as regular steps in a workflow.
+
+If you want to use MCP tools as tools for an AI Agent, use the [MCP Client Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) instead.
 
 ///  note  | Credentials
 The MCP Client node supports [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth), generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth), and [OAuth2](/integrations/builtin/credentials/httprequest.md#using-oauth2) authentication methods.
@@ -17,7 +21,7 @@ The MCP Client node supports [Bearer](/integrations/builtin/credentials/httprequ
 Configure the node with the following parameters.
 
 * **Server Transport**: The transport protocol used by the MCP Server endpoint you want to connect to.
-* **MCP Endpoint URL**: The URL of the external MCP Server (e.g. https://mcp.notion.com/mcp).
+* **MCP Endpoint URL**: The URL of the external MCP Server. For example, `https://mcp.notion.com/mcp`.
 * **Authentication**: The authentication method for authentication to your MCP server. The MCP Client node supports [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth), generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth), and [OAuth2](/integrations/builtin/credentials/httprequest.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
 * **Tool**: Select the tool to use in the node. The list of tools is automatically fetched from the external MCP server.
 * **Input Mode**: 
@@ -26,7 +30,7 @@ Configure the node with the following parameters.
 
 ## Options
 
-* **Convert to Binary**: Whether to convert images and audio to binary data. If false, images and audio will be returned as base64 encoded strings.
+* **Convert to Binary**: Whether to convert images and audio to binary data. If false, images and audio are returned as base64 encoded strings.
 * **Timeout**: Time in milliseconds to wait for tool calls to finish.
 
 ## Templates and examples

@@ -73,7 +73,7 @@ Command flags:
 | --includeExecutionHistoryDataTables | Include execution history data tables, these are excluded by default as they can be very large  |
 
 ```bash
-n8n export:entities --outputDir ./outputs --includeExecutionHistoryDataTables true
+n8n export:entities --outputDir=./outputs --includeExecutionHistoryDataTables=true
 ```
 
 ## Export workflows and credentials

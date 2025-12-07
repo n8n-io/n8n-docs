@@ -32,6 +32,36 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
+## n8n@2.0.0-rc.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.3...n8n@2.0.0-rc.4) for this version.<br />
+**Release date:** 2025-12-05
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.123.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.2...n8n@1.123.3) for this version.<br />
+**Release date:** 2025-12-05
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.0.0-rc.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.2...n8n@2.0.0-rc.3) for this version.<br />
+**Release date:** 2025-12-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 ## n8n@2.0.0-rc.1
 
@@ -47,9 +77,23 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.1...n8n@1.123.2) for this version.<br />
 **Release date:** 2025-12-04
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.0.0-rc.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.1...n8n@2.0.0-rc.2) for this version.<br />
+**Release date:** 2025-12-04
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 ## n8n@1.123.1
 
@@ -101,6 +145,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.4...n8n@1.122.5) for this version.<br />
 **Release date:** 2025-12-04
 
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -128,9 +176,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@1.122.2) for this version.<br />
 **Release date:** 2025-11-25
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -141,7 +187,71 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.122.0) for this version.<br />
 **Release date:** 2025-11-24
 
-This release contains bug fixes and the following features.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown> 
+### MCP Client node
+
+The **MCP Client node** allows you to connect to and use tools exposed by remote MCP servers directly within your workflow.
+<br><br>
+Previously, this functionality was only available through AI Agents using the **MCP Client Tool**. With this standalone node, you can now call MCP servers *from any step* in your workflow without relying on an Agent - providing greater flexibility and control over how and where you integrate external tools.
+<br><br>
+</div> 
+
+<div class="n8n-new-features" markdown> 
+### Custom project roles <br>
+**What's new**<br>
+You can now define **custom project roles** that precisely control what a user can do **inside a project**.
+<br>
+- Three **system roles** remain built‑in and non-editable (Admin, Editor, Viewer)<br>
+- You can **create your own roles** (e.g. “Workflow Builder”, “Credential Manager”, “Read‑only Analyst”) with granular permissions per resource:<br>
+    - Project<br>
+    - Folders<br>
+    - Workflows<br>
+    - Credentials<br>
+    - Data tables / Variables<br>
+    - Pushing changes via source control<br>
+Example: a “Workflow Builder” role that can:<br>
+- View everything in the project<br>
+- Create and edit workflows and folders<br>
+- Use existing credentials but not create or edit credentials
+<br> 
+<figure markdown="span">
+    ![Project roles](/_images/release-notes/projectroles.png)
+    <figcaption>Project roles is now available in the settings of your n8n Enterprise instance.</figcaption>
+</figure>
+<br>
+**How it works** <br>
+1. Go to the new Project roles section (instance admins only).<br>
+2. Start from a preset (Admin, Editor, Viewer) or from scratch.<br>
+3. Configure CRUD‑style permissions. <br>
+4. Save the role. It now becomes available in the project member picker alongside system roles.<br>
+5. Assign these roles to project members.<br>
+
+Custom project roles let you assign permissions that match your organization's needs, improving governance and security in a clear, transparent, and manageable way.<br>
+
+Custom project roles is only available on **n8n enterprise**.
+
+</div> 
+
+<div class="n8n-new-features" markdown> 
+### User provisioning via SSO
+
+If you’re using SAML or OIDC, your Identity Provider (Okta, Azure AD, Google Workspace, etc.) can now automatically assign each user’s instance role and project roles when they log in.
+
+When enabled, administrators can map a group or individual on their SSO identity provider to an instance role and one or more project roles.
+
+This allows you to manage access centrally from your IdP with automated onboarding and off-boarding, eliminating manual access updates inside the n8n UI
+
+Learn more in our dedicated documentation pages.
+
+For [OIDC](/user-management/oidc/setup.md/#instance-and-project-access-provisioning) 
+For [SAML](/user-management/saml/setup.md/#instance-and-project-access-provisioning)
+
+Notes: User provisioning is not real-time and updates apply on the user’s next login.
+
+User provisioning is only available on n8n Enterprise.
+</div> 
 
 * The AI Workflow Builder now uses improved internal best-practice instructions, which helps it generate higher quality workflows for users.
 * Core updates allow creating data tables from CSV files, configurable workflow statistics, and improved user role provisioning for enterprise, including SSO settings integration.
@@ -149,7 +259,7 @@ This release contains bug fixes and the following features.
   * See the [new SAML documentation](/user-management/saml/setup.md#instance-and-project-access-provisioning)
   * See the [new OIDC documentation](/user-management/oidc/setup.md#instance-and-project-access-provisioning)
 * The editor features a dismissable callout for scaling mode, CSV download for data tables, custom project roles (Beta), and enhanced data table visibility.
-* Additional improvements include a new MCP Client Node, Stripe billing meter events, and updates to binary data handling and workflow search.
+* Additional improvements include Stripe billing meter events, and updates to binary data handling and workflow search.
 
 ### Contributors
 
@@ -203,15 +313,18 @@ You can now enable MCP connections at the instance level, giving MCP-compatible 
 	
 Once connected, these platforms can discover and interact with your workflows directly from their own interfaces, so you can observe, query, and trigger n8n workflows without switching contexts. As you add new MCP-enabled workflows to your instance, they automatically become available through the same connection without additional setup.
 
+<br><br>
 🛠️ How to:
 To enable workflows through an instance-level MCP connection, both your instance and each workflow must be opted in. 
 - To turn this feature on in your n8n instance, go the settings page for the instance and switch the Enable MCP Access toggle to on.
 - To allow access to individual workflows, go to the settings in each workflow and switch the Available in MCP toggle to on.
 
-🧠 Keep in mind:
+<br><br>
+🧠 Keep in mind:<br>
 - To keep access organized and auditable, consider using a workspace or team account when connecting on behalf of an organization.
 - All platforms connected to your instance MCP will have access to each of the workflows you have enabled. At this time, you cannot limit access of individual workflows to particular platforms.
 
+<br><br>
 This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](/advanced-ai/accessing-n8n-mcp-server.md)
 <br> 
 <figure markdown="span">
@@ -240,9 +353,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.3...n8n@1.120
 
 **Release date:** 2025-11-19
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 
@@ -276,7 +387,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.120.0) for this version.<br />
 **Release date:** 2025-11-10
 
-This release contains bug fixes.
+This release contains **security updates** and bug fixes. We recommend all users upgrade promptly to version 1.120 or higher.
 
 ### Contributors
 
@@ -343,6 +454,18 @@ The default presets and prompts are adapted from the open-source [guardrails pac
 For more info, see [Guardrails documentation](/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md)
 </div>
 
+<div class="n8n-new-features" markdown> 
+### OAuth for MCP Client Tool node
+
+The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) about the MCP Client Tool node.
+<br> 
+<figure markdown="span">
+    ![Authentication options in MCP Client Tool node](/_images/release-notes/oauthmcp.png)
+    <figcaption>Authentication options in MCP Client Tool node</figcaption>
+</figure>
+<br>
+
+</div>
 ### Contributors
 
 [cesars-gh](https://github.com/cesars-gh)  

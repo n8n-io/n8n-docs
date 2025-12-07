@@ -67,15 +67,18 @@ Next, create the OAuth client credentials in Google:
 1. Select **+ Create credentials** > **OAuth client ID**.
 1. In the **Application type** dropdown, select **Web application**.
 1. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
-1. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
+1. **If you're self-hosting:** From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console. 
+If you're using **n8n cloud**, you can leave this field empty as the OAuth setup is pre-configured, and the callback URL is fixed for that configuration.
 1. Select **Create**.
 
 ### Finish your n8n credential
 
 With the Google project and credentials fully configured, finish the n8n credential:
+- If **self-hosted:**
 
 1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
 1. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
+- **If n8n cloud:**
 1. In n8n, select **Sign in with Google** to complete your Google authentication.
 1. **Save** your new credentials.
 

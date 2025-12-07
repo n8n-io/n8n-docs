@@ -6,7 +6,7 @@ contentType: [integration, reference]
 
 # Stripe node
 
-Use the Stripe node to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
+Use the Stripe node to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge and meter events, and deleting customers. 
 
 On this page, you'll find a list of operations the Stripe node supports and links to more resources.
 
@@ -36,6 +36,8 @@ Refer to [Stripe credentials](/integrations/builtin/credentials/stripe.md) for g
     * Add a customer card
     * Get a customer card
     * Remove a customer card
+* Meter Event
+    * Create a meter event
 * Source
     * Create a source
     * Delete a source

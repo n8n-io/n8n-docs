@@ -75,7 +75,7 @@ Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the
 
 n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](/hosting/configuration/task-runners.md) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](/hosting/configuration/task-runners.md#external-mode) and native Python tools.
 
-The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md#python-native-beta).
+The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md#python-native).
 
 The native Python tool supports `_query` for the input string that the AI Agent passes to the tool when it calls it.
 

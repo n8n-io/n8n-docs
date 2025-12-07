@@ -1,45 +1,38 @@
 ---
-description: Choose between our Cloud service, or self-hosting options. Learn more about licenses and n8n payment plans.
-contentType: overview
+description: دليل شامل لصناعة محتوى الفيديو الإخباري ونشره على منصة فيسبوك. يتضمن الأدوات والمصادر الموصى بها.
+contentType: guide
 ---
 
-# Choose your n8n
+# 🎥 دليل صناعة الفيديو الإخباري والنشر على فيسبوك
 
-This section contains information on n8n's range of platforms, pricing plans, and licenses.
+هذا القسم يقدم إرشادات مفصلة لإنشاء محتوى فيديو إخباري جذاب وموثوق، والخطوات اللازمة لنشره بكفاءة عالية على صفحتك في فيسبوك.
 
-## Platforms
+## 🛠️ أدوات التصميم والتحرير
 
-There are different ways to set up n8n depending on how you intend to use it:
+لإنشاء محتوى احترافي ومجاني، نوصي باستخدام هذه الأدوات:
 
-* [n8n Cloud](/manage-cloud/overview.md): hosted solution, no need to install anything.
-* [Self-host](/hosting/index.md): recommended method for production or customized use cases.
-	* [npm](/hosting/installation/npm.md)
-	* [Docker](/hosting/installation/docker.md)
-	* [Server setup guides](/hosting/installation/server-setups/index.md) for popular platforms
-* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/) for pricing and support.
+* **Canva (تصميم الصور والفيديوهات القصيرة):** الأفضل لإنشاء العناوين المصغرة (Thumbnails) والرسومات المتحركة السريعة. [الرابط](https://www.canva.com)
+* **CapCut (تحرير الفيديو):** أداة قوية لتحرير مقاطع الفيديو على الهاتف والكمبيوتر، توفر مؤثرات صوتية وبصرية مجانية. [الرابط](https://www.capcut.com)
+* **DaVinci Resolve (للمحترفين):** نسخة مجانية احترافية بالكامل للتحرير المتقدم وإضافة المؤثرات اللونية. [الرابط](https://www.blackmagicdesign.com/products/davinciresolve)
 
---8<-- "_snippets/self-hosting/warning.md"
+## 📰 مصادر الأخبار الموثوقة
 
+لضمان مصداقية محتواك الإخباري، يجب الاعتماد على مصادر رسمية ومحايدة:
 
-## Licenses
+* **الوكالات الإخبارية العالمية:** مثل رويترز (Reuters) أو أسوشيتد برس (AP).
+* **القنوات الإخبارية المعروفة:** مثل الجزيرة نت أو بي بي سي عربي.
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model.
+> **⚠️ تنبيه هام:** يجب دائماً ذكر المصدر والتحقق من حقوق النشر لأي محتوى مرئي أو صوتي تستخدمه.
 
-For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license.md).
+## 🚀 خطوات النشر على فيسبوك
 
-## Free versions
+لتحقيق أفضل وصول (Reach) لمنشورك الإخباري على صفحة فيسبوك:
 
-n8n offers the following free options:
+1.  **تجهيز الملف:** تأكد من أن الفيديو بصيغة MP4 وبجودة عالية (720p أو 1080p).
+2.  **تحميل الفيديو:** اذهب إلى الصفحة > إنشاء منشور > إضافة صورة/فيديو.
+3.  **العنوان والوصف:**
+    * **العنوان (Headline):** يجب أن يكون جذاباً وملخصاً للخبر.
+    * **الوصف (Description):** اكتب ملخصاً للخبر وأضف دعوة للمتابعين للمشاركة بالرأي.
+4.  **الهاشتاجات (Tags):** استخدم 3-5 هاشتاجات ذات صلة لزيادة الظهور (مثال: `#أخبار_عالمية`، `#تحليل_سياسي`، `#عاجل`).
 
-* A free trial of Cloud
-* A free self-hosted community edition for self-hosted users
-
-## Paid versions
-
-n8n has two paid versions:
-
-* n8n Cloud: choose from a range of paid plans to suit your usage and feature needs.
-* Self-hosted: there are both free and paid versions of self-hosted.
-
-For details of the Cloud plans and contact details for Enterprise Self-hosted, refer to [Pricing](https://n8n.io/pricing/) on the n8n website.
-
+---

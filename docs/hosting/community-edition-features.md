@@ -36,7 +36,7 @@ You can unlock extra features by registering your n8n community edition. You reg
 
 Registering unlocks these features for the community edition:
 
-* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
+* Folders: Organize your workflows into tidy folders
 * [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
 * [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
 

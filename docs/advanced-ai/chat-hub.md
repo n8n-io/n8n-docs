@@ -66,4 +66,4 @@ To manage these settings, go to **Settings > Chat** and edit the providers.
 
 1. You can't add file knowledge when creating simple personal agents.
 2. Tool selection is limited to a few options.
-2. Only workflows with Chat Trigger and streaming-enabled Agent nodes work as workflow agents. Your workflows must meet specific requirements.
+2. Only workflows with [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) and streaming-enabled [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) work as workflow agents. Your workflows must meet specific requirements.

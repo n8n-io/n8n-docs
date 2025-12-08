@@ -37,6 +37,39 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.3...n8n@2.0.0) for this version.<br />
 **Release date:** 2025-12-05
 
-This release contains new features and bug fixes.
+### Major Version Change
+
+n8n 2.0.0 is a hardening release, not a feature release. It strengthens n8n's position as an enterprise-grade platform with secure-by-default execution, removal of legacy options that caused edge-case bugs, and better performance under load. The goal is a more predictable foundation you can rely on for mission-critical workflows.
+
+This release is currently in **beta**. There's no urgency to upgrade immediately — take time to review the breaking changes and assess your workflows using the migration tool before upgrading.
+
+For the full story behind 2.0, read our [announcement blog post](https://blog.n8n.io/introducing-n8n-2-0/).
+
+### Breaking changes
+
+Version 2.0 includes breaking changes across security defaults, data handling, and configuration. Key changes include:
+
+- Task runners enabled by default (Code node executions now run in isolated environments)
+- Environment variable access blocked from Code nodes by default
+- ExecuteCommand and LocalFileTrigger nodes disabled by default
+- In-memory binary data mode removed
+
+Review the complete list and migration guidance in the [v2.0 breaking changes docs.](https://docs.n8n.io/2-0-breaking-changes/)
+
+### Before you upgrade
+
+Use the **Migration Report** tool to identify workflow-level and instance-level issues that need attention before upgrading.
+
+See the [v2.0 migration tool docs](https://docs.n8n.io/migration-tool-v2/) for details.
+
+### Product updates
+
+**Publish / Save workflow paradigm**
+
+n8n 2.0 introduces a safer approach to updating live workflows. The `Save` button now preserves your edits without changing production. A new `Publish` button lets you explicitly push changes live when ready. See [Publish workflows](https://docs.n8n.io/workflows/publish/) for details.
+
+**Canvas and navigation improvements**
+
+Subtle refinements to the workflow editor canvas and reorganized sidebar navigation.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.

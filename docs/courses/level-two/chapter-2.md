@@ -141,7 +141,7 @@ To begin:
 	6. Add a **Schedule Trigger node** at the beginning of the workflow.
 		- Set the **Trigger Interval** to use `Minutes`.
 		- Set the **Minutes Between Triggers** to 30.
-		- To test your schedule, be sure to activate the workflow.
+		- To test your schedule, be sure to publish the workflow.
 		- Be sure to connect this node to the **Customer Datastore (n8n training) node** you began with!
 
 	The workflow should look like this:

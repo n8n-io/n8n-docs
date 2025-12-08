@@ -60,7 +60,7 @@ The top bar of the **Editor UI** contains the following information:
 
 - **Workflow Name**: By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
 - **+ Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
-- **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
+- **Publish**: This button publishes the current workflow. By default, workflows are not published.
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
@@ -89,7 +89,7 @@ You can move the workflow canvas around in three ways:
 ///
 
 
-Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
+Don't worry about workflow execution and publishing for now; we'll explain these concepts later on in the course.
 
 ## Nodes
 

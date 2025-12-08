@@ -256,9 +256,9 @@ There are two ways to test:
 
 ### Production workflows
 
-When your workflow is ready, switch to using the n8n Form Trigger's **Production URL** by opening the trigger node and selecting the **Production URL** in the **From URLS** selector. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
+When your workflow is ready, switch to using the n8n Form Trigger's **Production URL** by opening the trigger node and selecting the **Production URL** in the **From URLS** selector. You can then publish your workflow, and n8n runs it automatically when a user submits the form.
 
-When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
+When working with a production URL, ensure that you have saved and published the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
 
 ## Templates and examples
 

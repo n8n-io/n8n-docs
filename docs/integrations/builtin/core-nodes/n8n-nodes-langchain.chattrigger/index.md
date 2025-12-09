@@ -24,7 +24,7 @@ This node replaces the Manual Chat Trigger node from version 1.24.0.
 
 Set whether the chat should be publicly available (turned on) or only available through the manual chat interface (turned off).
 
-Leave this turned off while you're building the workflow. Turn it on when you're ready to activate the workflow and allow users to access the chat.
+Leave this turned off while you're building the workflow. Turn it on when you're ready to publish the workflow and allow users to access the chat.
 
 ### Mode
 

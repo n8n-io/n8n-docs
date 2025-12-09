@@ -44,6 +44,7 @@ nav:
       - Understand workflows:
         - workflows/index.md
         - Create and run: workflows/create.md
+        - Save and publish: workflows/publish.md
         - Components:
           - workflows/components/index.md
           - Nodes: workflows/components/nodes.md
@@ -160,8 +161,11 @@ nav:
       - License key: license-key.md
     - Releases:
       - Release notes:
-        - 1.x: release-notes.md
+        - 2.x: release-notes.md
+        - 1.x: release-notes/1-x.md
         - 0.x: release-notes/0-x.md
+      - v2.0 breaking changes: 2-0-breaking-changes.md
+      - v2.0 Migration tool: migration-tool-v2.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md
@@ -214,6 +218,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - Guardrails: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
@@ -226,6 +231,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
+        - MCP Client: integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md
         - MCP Server Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
@@ -480,6 +486,8 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oracle Database:
+          - Oracle Database: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -714,12 +722,14 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - Azure AI Search Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
@@ -815,6 +825,7 @@ nav:
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
         - integrations/builtin/credentials/azurecosmosdb.md
+        - integrations/builtin/credentials/azureaisearch.md
         - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
@@ -989,6 +1000,7 @@ nav:
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
@@ -1187,6 +1199,7 @@ nav:
     - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - AI Assistant: hosting/configuration/environment-variables/ai-assistant.md
         - Binary data: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
@@ -1246,6 +1259,7 @@ nav:
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
+      - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
     - Architecture:
@@ -1303,6 +1317,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
+      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

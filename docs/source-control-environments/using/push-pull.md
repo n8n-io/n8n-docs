@@ -44,7 +44,7 @@ n8n tries to match the original project name to a project name on the new instan
 
 ### Pulling may cause brief service interruption
 
-If you pull changes to an active workflow, n8n sets the workflow to inactive while pulling, then reactivates it. This may result in a few seconds of downtime for the workflow.
+If you pull changes to a published workflow, n8n unpublishes the workflow while pulling, then republishes it. This may result in a few seconds of downtime for the workflow.
 
 ## Send your work to Git
 
@@ -59,7 +59,7 @@ You must be an instance owner, instance admin, or project admin to push changes 
 n8n commits the following to Git:
 
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
-* Credential stubs (ID, name, type)
+* Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/code/expressions/). You can choose which credentials to push.
 * Variable stubs (ID and name)
 * Projects
 * Folders

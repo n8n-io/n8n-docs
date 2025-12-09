@@ -58,7 +58,7 @@ The Code node editing environment supports time-saving and useful keyboard short
 
 ## Python (Pyodide - legacy)
 
-Pyodide is a legacy feature. Future versions of n8n will no longer support this feature.
+Pyodide is a legacy feature. n8n v2 no longer supports this feature.
 
 n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
 
@@ -82,9 +82,9 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 * [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
 
-## Python (Native - beta)
+## Python (Native)
 
-n8n added native Python support using task runners (beta) in version 1.111.0. 
+n8n added native Python support using task runners in version 1.111.0. This feature is stable as of n8n v2. 
 
 Main differences from Pyodide:
 
@@ -93,9 +93,7 @@ Main differences from Pyodide:
 - Native Python denies insecure built-ins by default. See [task runners environment variables](/hosting/configuration/environment-variables/task-runners.md) for more details.
 - Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
 
-Keep in mind upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
-
-This feature is in beta and is subject to change. As it becomes stable, n8n will roll it out progressively to n8n cloud users during 2025. Self-hosting users can [try it out](/hosting/configuration/task-runners.md) and provide feedback.
+Upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
 
 ## Coding in n8n
 

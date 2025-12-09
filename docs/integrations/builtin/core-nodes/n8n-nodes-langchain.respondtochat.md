@@ -6,7 +6,7 @@ priority: critical
 
 # Respond to Chat node
 
-Use the Respond to Chat node in correspondence with the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to send a response into the chat and optionally wait for a response from the user. This allows you to have multiple chat interactions within a single execution and enables human-in-the-loop use cases in the chat.
+Use the Respond to Chat node in correspondence with the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to send a response into the chat and optionally wait for a response from the user. This allows you to have multiple chat interactions within a single execution and enables human-in-the-loop use cases in the chat. The Respond to Chat node also works as a tool for AI Agents.
 
 /// note | Chat Trigger node
 The Respond to Chat node requires a [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to be present in the workflow, with the [Response Mode](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#response-mode) set to 'Using Response Nodes'.
@@ -38,4 +38,7 @@ When you enable **Wait for User Reply**, this option decides whether the workflo
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md).
+- The Respond to Chat node does not work when used as a tool of a subagent.
+- The Respond to Chat node does not work when used in a subworkflow. This includes usage in a subworkflow that's being used as a tool for an AI Agent.
+
+For common questions or issues and suggested solutions with the Chat Trigger node, refer to [Common Chat Trigger Node Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md).

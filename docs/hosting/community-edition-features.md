@@ -25,7 +25,6 @@ The community edition doesn't include these features:
 - SSO ([SAML](/hosting/securing/set-up-sso.md), [LDAP](/user-management/ldap.md))
 - Sharing ([workflows](/workflows/sharing.md), [credentials](/credentials/credential-sharing.md)) (Only the instance owner and the user who creates them can access workflows and credentials)
 - [Version control using Git](/source-control-environments/index.md)
-- [Workflow history](/workflows/history.md) (You can get one day of workflow history with the community edition by [registering](#registered-community-edition))
 
 These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
@@ -37,9 +36,8 @@ You can unlock extra features by registering your n8n community edition. You reg
 
 Registering unlocks these features for the community edition:
 
-* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
+* Folders: Organize your workflows into tidy folders
 * [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
-* One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
 * [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
 
 To register a new community edition instance, select the option during your initial account creation.

@@ -232,6 +232,8 @@ Strava
 strikethrough
 [Ss]ubfolder
 sublist
+subnode
+agentic
 [Ss]ubreddit
 [Ss]ubtask
 Supabase

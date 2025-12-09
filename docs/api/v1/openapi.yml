@@ -594,7 +594,7 @@ paths:
       tags:
         - Workflow
       summary: Update a workflow
-      description: Update a workflow.
+      description: Update a workflow. If the workflow is active, the updated version will be automatically reactivated.
       parameters:
         - $ref: '#/components/parameters/workflowId'
       requestBody:
@@ -617,6 +617,34 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
+  /workflows/{id}/{versionId}:
+    get:
+      x-eov-operation-id: getWorkflowVersion
+      x-eov-operation-handler: v1/handlers/workflows/workflows.handler
+      tags:
+        - Workflow
+      summary: Retrieves a specific version of a workflow
+      description: Retrieves a specific version of a workflow from workflow history.
+      parameters:
+        - $ref: '#/components/parameters/workflowId'
+        - name: versionId
+          in: path
+          required: true
+          description: The version ID to retrieve
+          schema:
+            type: string
+          example: abc123-def456-ghi789
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/workflowVersion'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /workflows/{id}/activate:
     post:
       x-eov-operation-id: activateWorkflow
@@ -627,6 +655,23 @@ paths:
       description: Active a workflow.
       parameters:
         - $ref: '#/components/parameters/workflowId'
+      requestBody:
+        description: Optional parameters for workflow activation.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                versionId:
+                  type: string
+                  description: The specific version ID to activate. If not provided, activates the latest version.
+                name:
+                  type: string
+                  description: Optional name for the workflow version during activation.
+                description:
+                  type: string
+                  description: Optional description for the workflow version during activation.
+        required: false
       responses:
         '200':
           description: Workflow object
@@ -634,6 +679,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/workflow'
+        '400':
+          $ref: '#/components/responses/badRequest'
         '401':
           $ref: '#/components/responses/unauthorized'
         '404':
@@ -1328,12 +1375,12 @@ components:
           example: Joe's Github Credentials
         type:
           type: string
-          example: github
+          example: githubApi
         data:
           type: object
           writeOnly: true
           example:
-            token: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
+            accessToken: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
         createdAt:
           type: string
           format: date-time
@@ -1362,7 +1409,7 @@ components:
           example: John's Github account
         type:
           type: string
-          example: github
+          example: githubApi
         createdAt:
           type: string
           format: date-time
@@ -1395,6 +1442,8 @@ components:
             - retry
             - trigger
             - webhook
+            - evaluation
+            - chat
         retryOf:
           type: number
           nullable: true
@@ -1529,6 +1578,7 @@ components:
             - 80
         parameters:
           type: object
+          additionalProperties: true
           example:
             additionalProperties: {}
         credentials:
@@ -1577,6 +1627,52 @@ components:
         executionOrder:
           type: string
           example: v1
+        callerPolicy:
+          type: string
+          enum:
+            - any
+            - none
+            - workflowsFromAList
+            - workflowsFromSameOwner
+          default: workflowsFromSameOwner
+          description: |
+            Controls which workflows are allowed to call this workflow using the Execute Workflow node.
+
+            Available options:
+            - `any`: Any workflow can call this workflow (no restrictions)
+            - `none`: No other workflows can call this workflow (completely blocked)
+            - `workflowsFromSameOwner` (default): Only workflows owned by the same project can call this workflow
+              * For personal projects: Only workflows created by the same user
+              * For team projects: Only workflows within the same team project
+            - `workflowsFromAList`: Only specific workflows listed in the `callerIds` field can call this workflow
+              * Requires the `callerIds` field to specify which workflow IDs are allowed
+              * See `callerIds` field documentation for usage
+          example: workflowsFromSameOwner
+        callerIds:
+          type: string
+          description: Comma-separated list of workflow IDs allowed to call this workflow (only used with workflowsFromAList policy)
+          example: 14, 18, 23
+        timeSavedPerExecution:
+          type: number
+          description: Estimated time saved per execution in minutes
+        availableInMCP:
+          type: boolean
+          default: false
+          description: |
+            Controls whether this workflow is accessible via the Model Context Protocol (MCP).
+
+            When enabled, this workflow can be called by MCP clients (AI assistants and other tools
+            that support MCP). This allows external AI tools to discover and execute this workflow
+            as part of their capabilities.
+
+            Requirements for enabling MCP access:
+            - The workflow must be active (not deactivated)
+            - The workflow must contain at least one active Webhook node
+            - Only webhook-triggered workflows can be exposed via MCP
+
+            Security note: When a workflow is available in MCP, it can be discovered and executed
+            by any MCP client that has the appropriate API credentials for your n8n instance.
+          example: false
     sharedWorkflow:
       type: object
       additionalProperties: false
@@ -1601,6 +1697,49 @@ components:
             type:
               type: string
               readOnly: true
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+    activeVersion:
+      type: object
+      readOnly: true
+      nullable: true
+      additionalProperties: false
+      properties:
+        versionId:
+          type: string
+          readOnly: true
+          description: Unique identifier for this workflow version
+          example: 7c6b9e3f-8d4a-4b2c-9f1e-6a5d3b8c7e4f
+        workflowId:
+          type: string
+          readOnly: true
+          description: The workflow this version belongs to
+          example: 2tUt1wbLX592XDdX
+        nodes:
+          type: array
+          readOnly: true
+          items:
+            $ref: '#/components/schemas/node'
+        connections:
+          type: object
+          readOnly: true
+          example:
+            Jira:
+              main:
+                - - node: Jira
+                    type: main
+                    index: 0
+        authors:
+          type: string
+          readOnly: true
+          description: Comma-separated list of author IDs who contributed to this version
+          example: 1,2,3
         createdAt:
           type: string
           format: date-time
@@ -1668,6 +1807,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/sharedWorkflow'
+        activeVersion:
+          $ref: '#/components/schemas/activeVersion'
     workflowList:
       type: object
       properties:
@@ -1680,6 +1821,66 @@ components:
           description: Paginate through workflows by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
           nullable: true
           example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    workflowVersion:
+      type: object
+      additionalProperties: false
+      required:
+        - versionId
+        - workflowId
+        - nodes
+        - connections
+        - authors
+      properties:
+        versionId:
+          type: string
+          readOnly: true
+          description: The version ID of this workflow snapshot
+          example: abc123-def456
+        workflowId:
+          type: string
+          readOnly: true
+          description: The workflow ID this version belongs to
+          example: 2tUt1wbLX592XDdX
+        nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/node'
+          description: Nodes as they were in this version
+          readOnly: true
+        connections:
+          type: object
+          example:
+            Jira:
+              main:
+                - - node: Jira
+                    type: main
+                    index: 0
+          description: Connections as they were in this version
+          readOnly: true
+        authors:
+          type: string
+          readOnly: true
+          description: Authors who created this version
+          example: John Doe
+        name:
+          type: string
+          nullable: true
+          description: Workflow name at this version
+          example: Workflow 1
+        description:
+          type: string
+          nullable: true
+          description: Workflow description at this version
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When this version was created
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: When this version was last updated
     workflowTags:
       type: array
       items:
@@ -1736,7 +1937,7 @@ components:
           readOnly: true
         role:
           type: string
-          example: owner
+          example: global:owner
           readOnly: true
     userList:
       type: object

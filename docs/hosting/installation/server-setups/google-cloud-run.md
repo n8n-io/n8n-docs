@@ -73,6 +73,8 @@ This does not prevent data loss completely, such as whenever the Cloud Run servi
 
 The following instructions are intended for a more durable, production-grade deployment of n8n on Cloud Run. It includes resources such as a database for persistance and secret manager for sensitive data.
 
+If you want to deploy the following setup via Terraform, refer to this [example](https://github.com/ryanpei/n8n-hosting/tree/main/google-cloud-run) which deploys the same setup as the following (without the OAuth setup for Google Workspace tools).
+
 ## Enable APIs and set env vars
 
 Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right) and run these commands in the terminal session:

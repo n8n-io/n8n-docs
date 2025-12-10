@@ -16,7 +16,7 @@ The release of n8n 2.0 continues n8n's commitment to providing a secure, reliabl
 
 Previously, when an execution (parent) called a sub-execution (child) that contained a node that causes the sub-execution to enter the waiting state and the parent-execution is set up to wait for the sub-execution's completion, the parent-execution would receive incorrect results.
 
-Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 60 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
+Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 65 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
 Parent-Workflow:
 ![Parent-Workflow](/_images/v2/parentworkflow1.png)

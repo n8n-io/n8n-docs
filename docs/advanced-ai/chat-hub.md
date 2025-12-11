@@ -18,11 +18,11 @@ To use Chat Hub, find the **Chat** option in the navigation bar, select a model,
 
 To make AI more reliable for simple, repetitive tasks, you can create Custom Agents with custom instructions. To create a simple personal agent:
 
-1. Click on **Your Agents** and then **+New Agent**.
+1. Click on **Personal Agents** and then **+New Agent**.
 2. Define the name, description, system prompt, preferred model, and access to tools.
 3. Select **Save**.
 
-Once created, you can select your agent from the model selector.
+Once created, you can select the personal agent from the model selector.
 
 ### Using n8n workflows agents
 
@@ -35,7 +35,7 @@ For more complex scenarios, use n8n workflow agents (built by you or your collea
     Only chat triggers of the newest version will work. To get the newest chat trigger version, delete your existing chat trigger and insert a new one.
     ///
     
-3. Enable the **Make Available in n8n Chat** option and set the name and description of your agent.
+3. Enable the **Make Available in n8n Chat** option and set the name and description of the personal agent.
 4. Make sure that your AI Agent node has the **Enable Streaming** option enabled.
 5. Activate your workflow.
 

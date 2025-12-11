@@ -34,6 +34,16 @@ This allows using human-in-the-loop nodes in the sub-workflow and use the result
 
 **Migration path:** Review any workflows that call sub-workflows and expect to receive the input to the sub-workflow. Update these workflows to handle the new behavior, where the parent-workflow receives the output from the end of the child-workflow instead.
 
+### Start node deprecated
+
+The Start node has been deprecated. This node was the original way to begin workflows but has been replaced by more specific trigger nodes.
+
+**Migration path:** Replace the Start node based on how your workflow is used:
+
+- **Manual executions:** Replace the Start node with a [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) node.
+- **Sub-workflows:** If the workflow is called as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/) node and activate the workflow.
+- **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
+
 ### Removed nodes for retired services
 
 The following nodes have been removed because the external services they connect to are no longer available:

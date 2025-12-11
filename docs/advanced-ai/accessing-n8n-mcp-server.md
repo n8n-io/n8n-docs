@@ -279,7 +279,7 @@ Here, replace:
 
 Here's sample code to create an agent that connects to a remote n8n MCP server:
 
-```js
+```python
 from google.adk.agents import Agent
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPServerParams

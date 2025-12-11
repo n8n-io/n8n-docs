@@ -1,6 +1,6 @@
-/// note | Latest and Next versions
-n8n releases a new minor version most weeks. The `latest` version is for production use. `next` is the most recent release. You should treat `next` as a beta: it may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+/// note | Stable and Beta versions
+n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `latest`: 1.121.2
-Current `next`: 1.122.2
+Current `stable`: 1.123.4
+Current `beta`: 2.0.0
 ///

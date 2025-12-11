@@ -14,6 +14,7 @@ Use the S3 node for non-AWS S3 solutions like:
 * [MinIO](https://min.io/)
 * [Wasabi](https://wasabi.com/)
 * [Digital Ocean spaces](https://www.digitalocean.com/products/spaces)
+* [RustFS](https://rustfs.com)
 
 On this page, you'll find a list of operations the S3 node supports and links to more resources.
 

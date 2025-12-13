@@ -275,6 +275,38 @@ Here, replace:
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
 - `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
+### Connecting Google ADK agent to n8n MCP server
+
+Here's sample code to create an agent that connects to a remote n8n MCP server:
+
+```python
+from google.adk.agents import Agent
+from google.adk.tools.mcp_tool import McpToolset
+from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPServerParams
+
+N8N_INSTANCE_URL = "https://localhost:5678"
+N8N_MCP_TOKEN = "YOUR_N8N_MCP_TOKEN"
+
+root_agent = Agent(
+    model="gemini-2.5-pro",
+    name="n8n_agent",
+    instruction="Help users manage and execute workflows in n8n",
+    tools=[
+        McpToolset(
+            connection_params=StreamableHTTPServerParams(
+                url=f"{N8N_INSTANCE_URL}/mcp-server/http",
+                headers={
+                    "Authorization": f"Bearer {N8N_MCP_TOKEN}",
+                },
+            ),
+        )
+    ],
+)
+```
+
+For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-docs/tools/third-party/n8n/).
+
+
 ## Troubleshooting
 
 If you encounter issues connecting MCP clients to your n8n instance, consider the following:

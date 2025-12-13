@@ -34,9 +34,9 @@ This allows using human-in-the-loop nodes in the sub-workflow and use the result
 
 **Migration path:** Review any workflows that call sub-workflows and expect to receive the input to the sub-workflow. Update these workflows to handle the new behavior, where the parent-workflow receives the output from the end of the child-workflow instead.
 
-### Start node deprecated
+### Start node removed
 
-The Start node has been deprecated. This node was the original way to begin workflows but has been replaced by more specific trigger nodes.
+The Start node is no longer supported. This node was the original way to begin workflows but has been replaced by more specific trigger nodes.
 
 **Migration path:** Replace the Start node based on how your workflow is used:
 

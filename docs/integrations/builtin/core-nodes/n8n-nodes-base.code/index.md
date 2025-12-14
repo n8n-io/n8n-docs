@@ -1,21 +1,41 @@
----
-title: Code node documentation
-description: Documentation for the Code node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
-priority: critical
-tags:
-  - code node
-  - code
-hide:
-  - tags
-search:
-  boost: 1.5
----
+// The n8n Code node automatically wraps your code in an 'execute' function.
+// We are expecting one input item, which is common after a Set node.
+const inputItem = $input.first().json;
 
-# Code node
+// 1. Accessing Input Data
+// We access the 'task' property from the data of the first input item.
+const userTask = inputItem.task;
 
---8<-- "_snippets/integrations/builtin/core-nodes/code-node.md"
+// 2. Core Logic (Example Data Processing)
+// Replace this section with the logic your original Python code was performing.
+// REMINDER: No file I/O operations (fs.readFile, etc.) are allowed here.
 
-## Common issues
+let processedResult = "";
+let wordCount = 0;
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md).
+if (userTask) {
+  // Example 1: Convert the task to a title-case format
+  processedResult = userTask.toLowerCase().split(' ').map(word =>
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+
+  // Example 2: Simple calculation (Word Count)
+  wordCount = userTask.trim().split(/\s+/).length;
+} else {
+  processedResult = "No task provided.";
+}
+
+// 3. Output Result
+// We create a new item to pass to the next node.
+// All n8n Code nodes must return an array of objects.
+return [{
+  json: {
+    // The original task we received
+    originalTask: userTask,
+    // The result of our JavaScript logic
+    modifiedTask: processedResult,
+    // The calculated word count
+    count: wordCount,
+    // Add any other key/value pairs you need for the rest of your workflow
+  }
+}];

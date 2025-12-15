@@ -30,17 +30,21 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### For Cloud and self-hosted instances
 
-1. Navigate to **Settings > MCP Access**
+1. Navigate to **Settings > Instance-level MCP**
 2. Toggle **Enable MCP access** (requires instance owner or admin permissions).
 
    ![enable-mcp-access.png](/_images/advanced-ai/enable-mcp-access.png)
 
 Once enabled, you'll see:
 
-- Connection instructions
-- List of workflows exposed to MCP clients
+1. List of workflows exposed to MCP clients
+2. List of connected OAuth clients
+3. Main MCP toggle to enable/disable instance-level access
+4. *Connect* button that shows detailed instructions for connecting MCP clients
 
-**To disable:** Toggle the switch off.
+   ![mcp_page_content.png](/_images/advanced-ai/mcp_page_content.png)
+
+**To disable:** Toggle the main MCP toggle off.
 
 ### For self-hosted: Complete disablement
 
@@ -52,10 +56,12 @@ This action removes MCP endpoints and hides all related UI elements.
 
 ## Setting up MCP authentication
 
-The **How to connect** section on the **MCP Access** page provides two authentication methods for MCP clients:
+The **Connect** popup menu provides two authentication options for MCP clients:
 
 - **OAuth2**
 - **Access Token**
+
+   ![mcp_connect_menu.png](/_images/advanced-ai/mcp_connect_menu.png)
 
 ### Using OAuth2
 
@@ -66,14 +72,16 @@ After connecting, the client will redirect you to n8n to authorize access.
 
 To revoke access for connected MCP clients:
 
-1. Navigate to **Settings > MCP Access**.
-2. Switch to the **OAuth** tab in the **How to connect** section.
-   You should see a table of connected clients in the **Connected OAuth clients** section.
+1. Navigate to **Settings > Instance-level MCP**.
+2. Switch to the **Connected clients** tab.
+   You should see a table of connected OAuth clients.
 3. Use the action menu in each client's row to revoke access for specific clients.
+
+   ![mcp_revoke_client_access.png](/_images/advanced-ai/mcp_revoke_client_access.png)
 
 ### Using Access Token
 
-Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the settings page.
+Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the *Connect* menu.
 
 When you first visit the **MCP Access page**, n8n automatically generates a personal MCP Access Token tied to your user account.
 
@@ -85,14 +93,17 @@ Copy your token right away. On future visits, you'll only see a redacted value a
 
 If you lose your token or need to rotate it:
 
-1. Navigate to **Settings > MCP Access**.
-2. Make sure you are on the **Access Token** tab in the **How to connect** section.
-2. Generate a new token.
+1. Navigate to **Settings > Instance-level MCP**.
+2. Open the *Connect* menu by clicking the **Connect** button in the top-right corner.
+3. Switch to the **Access Token** tab.
+4. Generate a new token using the button next to the redacted token value.
     
     n8n revokes the previous token when you generate a new one.
     
 3. Update all connected MCP clients with the new value.
 
+
+   ![mcp_rotate_token.png](/_images/advanced-ai/mcp_rotate_token.png)
 
 ## Exposing workflows to MCP clients
 
@@ -100,14 +111,16 @@ If you lose your token or need to rotate it:
 
 In order for a workflow to be available to MCP clients, it must meet the following criteria:
 
-1. Be active
+1. Be published
 2. Contain one of the following trigger nodes:
     - Webhook
     - Schedule
     - Chat
     - Form
 
-By default, no workflows are visible to MCP clients. You must explicitly enable access.
+By default, no workflows are visible to MCP clients. You must explicitly enable access for each eligible workflow you want to expose.
+
+When evaluating workflow eligibility, n8n will take into account only the published version of the workflow. Workflows that have a supported trigger added to a draft version will not be considered eligible until the version is published.
 
 /// info
 Once you unpublish a workflow, n8n removes its MCP access. You will have to re-enable access when you publish the workflow again.
@@ -129,20 +142,27 @@ Once you unpublish a workflow, n8n removes its MCP access. You will have to re-e
 
 ### Managing access
 
-The **MCP Access settings page** shows all workflows available to MCP clients. From this list you can:
+The **Instance-level MCP** settings page shows all workflows available to MCP clients. From this list you can:
 
-- Open a workflow directly
+- Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
+- Update workflow description using the action menu (or use the menu in the workflow editor)
 
 ### Workflow descriptions
 
 To help MCP clients identify workflows, you can add free-text descriptions as follows:
 
-1. Open the workflow.
-2. Click the pencil icon next to the workflow name.
-3. Enter your description in the **Description** field.
+1. Option 1: From the **Instance-level MCP** page
+	1. Navigate to **Settings > Instance-level MCP**.
+	2. Make sure you are on the **Workflows** tab.
+    3. Use the action menu in the desired workflow's row and select the **Edit description** action.
+	
+2. Option 2: From the workflow editor
+	1. Open the workflow.
+	2. Click the main workflow menu (`...`) in the top-right corner.
+	3. Select **Edit description**.
 
-	![mcp-access-workflow-descriptions.png](/_images/advanced-ai/mcp-access-workflow-descriptions.png)
+	![mcp_workflow_description.png](/_images/advanced-ai/mcp_workflow_description.png)
 
 ## Executing workflows through MCP clients
 
@@ -188,7 +208,7 @@ n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients
 2. Click on **Add custom connector**.
 3. Enter the following details:
    	- **Name:** n8n MCP
-    - **Remote MCP Server URL**: Your n8n base URL (shown on the **MCP Access** page)
+    - **Remote MCP Server URL**: Your n8n base URL (shown on the **Instance-level MCP** page)
 4. Save the connector.
 5. When prompted, authorize Claude Desktop to access your n8n instance.
 
@@ -220,7 +240,7 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 - `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Claude Code to n8n MCP server
@@ -250,7 +270,7 @@ Alternatively, add the following entry to your `claude.json` file:
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 - `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Codex CLI to n8n MCP server
@@ -272,7 +292,7 @@ args = [
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **MCP Access** page)
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 - `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Google ADK agent to n8n MCP server

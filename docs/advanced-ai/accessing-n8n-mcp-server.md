@@ -170,12 +170,7 @@ MCP clients can execute eligible workflows on your request. When a client trigge
 
 ### Providing input data
 
-If a workflow requires input data, the MCP client must provide that data when triggering the workflow. The workflow's trigger node determines the schema of the input data:
-
-1. **Webhook trigger**: The MCP client will look for hints in workflow contents and its description. It's up to the workflow author to provide enough information for the client to generate valid input data.
-2. **Schedule trigger**: No input data is required.
-3. **Chat trigger**: Chat input format is determined by the chat node configuration.
-4. **Form trigger**: Form fields are determined by the form node configuration.
+MCP clients are typically able to assess what inputs are expected by a workflow. If you have a webhook trigger and If you see a client struggling to determine the right inputs, we recommend you provide this information in the workflow description.
 
 ### Workflow timeouts
 

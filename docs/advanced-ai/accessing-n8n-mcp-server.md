@@ -120,7 +120,7 @@ In order for a workflow to be available to MCP clients, it must meet the followi
 
 By default, no workflows are visible to MCP clients. You must explicitly enable access for each eligible workflow you want to expose.
 
-When evaluating workflow eligibility, n8n will take into account only the published version of the workflow. Workflows that have a supported trigger added to a draft version will not be considered eligible until the version is published.
+When evaluating workflow eligibility, n8n will take into account only the published version of the workflow. Workflows that have a supported trigger added to a draft version won't be considered eligible until the version is published.
 
 /// info
 Once you unpublish a workflow, n8n removes its MCP access. You will have to re-enable access when you publish the workflow again.

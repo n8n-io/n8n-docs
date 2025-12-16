@@ -40,8 +40,8 @@ The Start node is no longer supported. This node was the original way to begin w
 
 **Migration path:** Replace the Start node based on how you use your workflow:
 
-- **Manual executions:** Replace the Start node with a [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) node.
-- **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/) node and activate the workflow.
+- **Manual executions:** Replace the Start node with a [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node.
+- **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node and activate the workflow.
 - **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
 
 ### Removed nodes for retired services

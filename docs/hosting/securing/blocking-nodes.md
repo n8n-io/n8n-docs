@@ -31,9 +31,9 @@ The nodes that can pose security risks vary based on your use case and user prof
 * [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md)
 * [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
 
-## Enabling nodes that are blocked by default
+## Enable nodes that are blocked by default
 
-Some nodes, like for example the Execute Command, are blocked by default. To enable them, you must remove them from the exclude list:
+Some nodes, like Execute Command, are blocked by default. Remove them from the exclude list to enable them:
 
 ```
 NODES_EXCLUDE: "[]"

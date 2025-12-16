@@ -1381,6 +1381,10 @@ components:
           writeOnly: true
           example:
             accessToken: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
+        isResolvable:
+          type: boolean
+          example: false
+          description: Whether this credential has resolvable fields
         createdAt:
           type: string
           format: date-time

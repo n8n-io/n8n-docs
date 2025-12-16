@@ -39,6 +39,17 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.0.0) 
 
 This release contains bug fixes and features.
 
+## n8n@1.123.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.123.5...n8n@1.123.6) for this version.<br />
+**Release date:** 2025-12-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.0.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.1...n8n@2.0.2) for this version.<br />

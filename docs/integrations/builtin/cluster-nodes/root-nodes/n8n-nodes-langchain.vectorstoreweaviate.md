@@ -141,7 +141,7 @@ Whether to show the score fused between hybrid and vector search explanation.
 
 ### Hybrid: Fusion Type
 
-Select the fusion type for combining vector and keyword search results.
+Select the fusion type for combining vector and keyword search results. [Learn more about fusion algorithms](https://weaviate.io/learn/knowledgecards/fusion-algorithm){:target=_blank .external-link}.
 
 Options:
 - **Relative Score**: Uses relative score fusion
@@ -149,15 +149,15 @@ Options:
 
 ### Hybrid: Auto Cut Limit
 
-Limit result groups by detecting sudden jumps in score.
+Limit result groups by detecting sudden jumps in score. [Learn more about autocut](https://docs.weaviate.io/weaviate/api/graphql/additional-operators#autocut){:target=_blank .external-link}.
 
 ### Hybrid: Alpha
 
-Change the relative weights of the keyword and vector components. 1.0 = pure vector, 0.0 = pure keyword. Default is 0.5.
+Change the relative weights of the keyword and vector components. 1.0 = pure vector, 0.0 = pure keyword. Default is 0.5. [Learn more about the alpha parameter](https://weaviate.io/learn/knowledgecards/alpha-parameter){:target=_blank .external-link}.
 
 ### Hybrid: Query Properties
 
-Comma-separated list of properties to include in the query with optionally weighted values, e.g., "question^2,answer".
+Comma-separated list of properties to include in the query with optionally weighted values, e.g., "question^2,answer". [Learn more about setting weights on property values](https://docs.weaviate.io/weaviate/search/hybrid#set-weights-on-property-values){:target=_blank .external-link}.
 
 ### Hybrid: Max Vector Distance
 
@@ -165,7 +165,7 @@ Set the maximum allowable distance for the vector search component.
 
 ### Tenant Name
 
-The specific tenant to store or retrieve documents for.
+The specific tenant to store or retrieve documents for. [Learn more about multi-tenancy](https://weaviate.io/learn/knowledgecards/multi-tenancy){:target=_blank .external-link}.
 
 /// note | Must enable at creation
 You must pass a tenant name at first ingestion to enable multitenancy for a collection. You can't enable or disable multitenancy after creation.

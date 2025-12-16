@@ -36,12 +36,12 @@ This allows using human-in-the-loop nodes in the sub-workflow and use the result
 
 ### Start node removed
 
-The Start node is no longer supported. This node was the original way to begin workflows but has been replaced by more specific trigger nodes.
+The Start node is no longer supported. This node was the original way to begin workflows but more specific trigger nodes now replace it.
 
-**Migration path:** Replace the Start node based on how your workflow is used:
+**Migration path:** Replace the Start node based on how you use your workflow:
 
 - **Manual executions:** Replace the Start node with a [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) node.
-- **Sub-workflows:** If the workflow is called as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/) node and activate the workflow.
+- **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger/) node and activate the workflow.
 - **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
 
 ### Removed nodes for retired services

@@ -131,6 +131,38 @@ You can define which metadata keys you want Weaviate to return on your queries. 
 
 Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
 
+### Hybrid: Query Text
+
+Provide a query text to combine vector search with a keyword/text search.
+
+### Hybrid: Explain Score
+
+Whether to show the score fused between hybrid and vector search explanation.
+
+### Hybrid: Fusion Type
+
+Select the fusion type for combining vector and keyword search results.
+
+Options:
+- **Relative Score**: Uses relative score fusion
+- **Ranked**: Uses ranked fusion
+
+### Hybrid: Auto Cut Limit
+
+Limit result groups by detecting sudden jumps in score.
+
+### Hybrid: Alpha
+
+Change the relative weights of the keyword and vector components. 1.0 = pure vector, 0.0 = pure keyword. Default is 0.5.
+
+### Hybrid: Query Properties
+
+Comma-separated list of properties to include in the query with optionally weighted values, e.g., "question^2,answer".
+
+### Hybrid: Max Vector Distance
+
+Set the maximum allowable distance for the vector search component.
+
 ### Tenant Name
 
 The specific tenant to store or retrieve documents for.

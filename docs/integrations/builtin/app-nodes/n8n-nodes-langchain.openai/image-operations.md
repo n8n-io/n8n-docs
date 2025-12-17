@@ -40,13 +40,13 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Generate an Image**.
-- **Model**: Select the model you want to use to generate an image. 
-- **Prompt**: Enter the text description of the desired image(s). The maximum length is 1000 characters for `dall-e-2` and 4000 characters for `dall-e-3`.
+- **Model**: Select the model you want to use to generate an image. Options include `dall-e-2`, `dall-e-3`, `gpt-image-1`, and `gpt-image-1.5`.
+- **Prompt**: Enter the text description of the desired image(s).
 
 ### Options
 
-- **Quality**: The quality of the image you generate. **HD** creates images with finer details and greater consistency across the image. This option is only supported for `dall-e-3`. Otherwise, choose **Standard**.
-- **Resolution**: Select the resolution of the generated images. Select **1024x1024** for `dall-e-2`. Select one of **1024x1024**, **1792x1024**, or **1024x1792** for `dall-e-3` models.
+- **Quality**: The quality of the image you generate. **HD** creates images with finer details and greater consistency across the image. This option is only supported for `dall-e-3`. For `gpt-image-1` and `gpt-image-1.5`, choose **Auto**, **High**, **Medium**, or **Low**.
+- **Resolution**: Select the resolution of the generated images. Select **1024x1024** for `dall-e-2`. Select one of **1024x1024**, **1792x1024**, or **1024x1792** for `dall-e-3` models. For `gpt-image-1` and `gpt-image-1.5`, select **Auto**, **1024x1024**, **1024x1536**, or **1536x1024**.
 - **Style**: Select the style of the generated images. This option is only supported for `dall-e-3`. 
     - **Natural**: Use this to produce more natural looking images.
     - **Vivid**: Use this to produce hyper-real and dramatic images.
@@ -64,18 +64,18 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Edit Image**.
-- **Model**: Select the model you want to use to generate an image. Supports `dall-e-2` and `gpt-image-1`.
+- **Model**: Select the model you want to use to generate an image. Supports `dall-e-2`, `gpt-image-1`, and `gpt-image-1.5`.
 - **Prompt**: Enter the text description of the desired edits to the input image(s).
 - **Image(s)**: Add one or more binary fields to include images with your prompt. Each image should be a png, webp, or jpg file less than 50MB. You can provide up to 16 images.
 - **Number of Images**: The number of images to generate. Must be between 1 and 10.
 - **Size**: The size and dimensions of the generated images (in px).
-- **Quality**: The quality of the image that will be generated (auto, low, medium, high, standard). Only supported for `gpt-image-1`.
-- **Output Format**: The format in which the generated images are returned (png, webp, or jpg). Only supported for gpt-image-1.
-- **Output Compression**: The compression level (0-100%) for the generated images. Only supported for `gpt-image-1` with webp or jpeg output formats.
+- **Quality**: The quality of the image that will be generated (auto, low, medium, high, standard). Only supported for `gpt-image-1` and `gpt-image-1.5`.
+- **Output Format**: The format in which the generated images are returned (png, webp, or jpg). Only supported for `gpt-image-1` and `gpt-image-1.5`.
+- **Output Compression**: The compression level (0-100%) for the generated images. Only supported for `gpt-image-1` and `gpt-image-1.5` with webp or jpeg output formats.
 
 ### Options
-- **Background**: Allows to set transparency for the background of the generated image(s). Only supported for `gpt-image-1`.
-- **Input Fidelity**: Control how much effort the model will exert to match the style and features of input images. Only supported for `gpt-image-1`.
+- **Background**: Allows to set transparency for the background of the generated image(s). Only supported for `gpt-image-1` and `gpt-image-1.5`.
+- **Input Fidelity**: Control how much effort the model will exert to match the style and features of input images. Only supported for `gpt-image-1` and `gpt-image-1.5`.
 - **Image Mask**: Name of the binary property that contains the image. A second image whose fully transparent areas (for example, where alpha is zero) shows where the image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.
 - **User**: A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
 

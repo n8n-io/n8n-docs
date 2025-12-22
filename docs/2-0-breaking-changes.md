@@ -169,7 +169,7 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 The `N8N_CONFIG_FILES` environment variable has been removed.
 
-**Migration path:** Delete this environment variable from your configuration. Move configuration into environment variables, an `.env` file or [`_FILE`](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) based configuration.
+**Migration path:** Delete this environment variable from your configuration. Move configuration into environment variables, an `.env` file or [`_FILE`](/hosting/configuration/configuration-methods.md#keeping-sensitive-data-in-separate-files) based configuration.
 
 
 ## CLI & Workflow

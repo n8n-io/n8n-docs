@@ -61,6 +61,23 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0...n8n@2.1.0) 
 
 This release contains bug fixes and features.
 
+### **Time Saved node**
+
+Previously, teams could only track a single fixed time saved value for each workflow regardless of which path an execution takes. The new Time Saved node enables more precise time savings calculations where different execution paths will save different amounts of time.
+
+With this release you can now:
+
+- **Choose fixed value or dynamic time tracking**: Use fixed time saved for simple workflows, or use one or many time saved nodes to calculate savings dynamically based on the actual execution path taken
+- **Configure per-item calculations**: When using the Time Saved node, choose whether to calculate time saved once for all items or multiply by the number of items processed
+
+The new Time Saved node provides increased accuracy for complex workflows where different execution paths save different amounts of time.
+
+![time saved node example](/_images/release-notes/time_saved_node_1.png)
+
+n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
+
+![insights dashboard](/_images/release-notes/time_saved_node_2.png)
+
 ### Contributors
 
 [Akcthecoder200](https://github.com/Akcthecoder200)  

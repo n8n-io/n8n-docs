@@ -165,6 +165,13 @@ The `QUEUE_WORKER_MAX_STALLED_COUNT` environment variable and the Bull retry mec
 
 **Migration path:** Delete this environment variable from your configuration. After upgrading, n8n will no longer automatically retry stalled jobs. If you need to handle stalled jobs, consider implementing your own retry logic or monitoring.
 
+### Remove N8N_CONFIG_FILES
+
+The `N8N_CONFIG_FILES` environment variable has been removed.
+
+**Migration path:** Delete this environment variable from your configuration. Move configuration into environment variables, an `.env` file or [`_FILE`](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) based configuration.
+
+
 ## CLI & Workflow
 
 ### Replace CLI command update:workflow

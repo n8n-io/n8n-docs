@@ -1,0 +1,73 @@
+{
+  "name": "TikTok Daily Publish",
+  "nodes": [
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": "9",
+              "minute": "0",
+              "second": "0"
+            },
+            {
+              "hour": "18",
+              "minute": "0",
+              "second": "0"
+            }
+          ]
+        },
+        "timezone": "America/Mexico_City"
+      },
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "={{ $env.ORCHESTRATOR_URL || 'http://localhost:5000/process-next' }}",
+        "jsonParameters": false,
+        "options": {}
+      },
+      "name": "Call Orchestrator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "name": "No-op",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "Call Orchestrator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Orchestrator": {
+      "main": [
+        [
+          {
+            "node": "No-op",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

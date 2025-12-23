@@ -1,0 +1,75 @@
+{
+  "name": "TikTok Daily Publish (ML -> Apigee)",
+  "nodes": [
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": "9",
+              "minute": "0",
+              "second": "0"
+            },
+            {
+              "hour": "18",
+              "minute": "0",
+              "second": "0"
+            }
+          ]
+        },
+        "timezone": "America/Mexico_City"
+      },
+      "name": "Cron",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [200, 250]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "={{ $env.ORCHESTRATOR_URL || 'http://localhost:5000/process-next' }}",
+        "jsonParameters": false,
+        "options": {
+          "headers": {}
+        }
+      },
+      "name": "Call Orchestrator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [420, 250]
+    },
+    {
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "name": "No-op",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [640, 250]
+    }
+  ],
+  "connections": {
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "Call Orchestrator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Orchestrator": {
+      "main": [
+        [
+          {
+            "node": "No-op",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

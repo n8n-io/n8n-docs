@@ -27,6 +27,7 @@ Refer to [Node options](#node-options) for more configuration options.
 ### All Item Data
 
 * **Put Output in Field**: Enter the name of the field to output the data in.
+* 
 * **Include**: Select which fields to include in the output. Choose from:
 	* **All fields**: The output includes data from all fields with no further parameters.
 	* **Specified Fields**: If you select this option, enter a comma-separated list of fields the output should include data from in the **Fields To Include** parameter. The output will include only the fields in this list.

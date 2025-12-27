@@ -1,4 +1,4 @@
----
+N8n
 title: Schedule Trigger node documentation
 description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
 contentType: [integration, reference]

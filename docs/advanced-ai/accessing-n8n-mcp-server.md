@@ -1,4 +1,4 @@
----
+,---
 title: Accessing n8n MCP server
 description: enable, authenticate, and connect MCP clients to n8n workflows securely
 status: beta

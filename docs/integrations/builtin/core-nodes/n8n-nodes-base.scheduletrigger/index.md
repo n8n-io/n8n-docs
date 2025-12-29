@@ -100,7 +100,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru).
 <!-- vale from-write-good.Weasel = YES -->
 
 /// warning | Using variables in the Cron expression
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. If you alter a variable's value in the settings after a workflow is published, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. If you alter a variable's value in the settings after a workflow is published, the changes won't alter the cron schedule. To re-evaluate the variable, unpublish the workflow and then re-publish it.
 /// 
 
 #### Why there are six asterisks in the Cron expression

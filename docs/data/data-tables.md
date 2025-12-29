@@ -6,7 +6,6 @@ tags:
   - data tables
 hide:
   - tags
-status: beta
 ---
 
 # Data tables 

@@ -40,7 +40,7 @@ Once enabled, you'll see:
 1. List of workflows exposed to MCP clients
 2. List of connected OAuth clients
 3. Main MCP toggle to enable/disable instance-level access
-4. *Connect* button that shows detailed instructions for connecting MCP clients
+4. *Connection details* button that shows detailed instructions for connecting MCP clients
 
    ![mcp_page_content.png](/_images/advanced-ai/mcp_page_content.png)
 
@@ -56,7 +56,7 @@ This action removes MCP endpoints and hides all related UI elements.
 
 ## Setting up MCP authentication
 
-The **Connect** popup menu provides two authentication options for MCP clients:
+The **Connection details** popup menu provides two authentication options for MCP clients:
 
 - **OAuth2**
 - **Access Token**
@@ -81,7 +81,7 @@ To revoke access for connected MCP clients:
 
 ### Using Access Token
 
-Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the *Connect* menu.
+Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the *Connection details* menu.
 
 When you first visit the **MCP Access page**, n8n automatically generates a personal MCP Access Token tied to your user account.
 
@@ -94,7 +94,7 @@ Copy your token right away. On future visits, you'll only see a redacted value a
 If you lose your token or need to rotate it:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. Open the *Connect* menu by clicking the **Connect** button in the top-right corner.
+2. Open the *Connection details* menu by clicking the button in the top-right corner.
 3. Switch to the **Access Token** tab.
 4. Generate a new token using the button next to the redacted token value.
     
@@ -128,13 +128,20 @@ Once you unpublish a workflow, n8n removes its MCP access. You will have to re-e
 
 ### Enabling access
 
-#### Option 1: From the workflow editor
+#### Option 1: From MCP settings page (available from n8n v2.2.0)
+
+1. Click the **Enable workflows** button (in the workflows table header or in the table's empty state)
+2. Search for the desired workflow (by name or description) and select it from the list
+3. Click **Enable** button to confirm
+
+#### Option 2: From the workflow editor
 
 1. Open the workflow.
-2. Go to **Settings**.
-3. Toggle **Available in MCP**.
+2. Click the main workflow menu (`...`) in the top-right corner.
+3. Select **Settings**.
+4. Toggle **Available in MCP**.
 
-#### Option 2: From the workflows list
+#### Option 3: From the workflows list
 
 1. Go to **Workflows**.
 2. Open the menu on a workflow card.
@@ -147,6 +154,7 @@ The **Instance-level MCP** settings page shows all workflows available to MCP cl
 - Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
 - Update workflow description using the action menu (or use the menu in the workflow editor)
+- Enable access for more workflows using the **Enable workflows** button (available from n8n v2.2.0)
 
 ### Workflow descriptions
 
@@ -156,6 +164,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 	1. Navigate to **Settings > Instance-level MCP**.
 	2. Make sure you are on the **Workflows** tab.
     3. Use the action menu in the desired workflow's row and select the **Edit description** action.
+    4. Alternatively, click the description text directly to open the edit dialog.
 	
 2. Option 2: From the workflow editor
 	1. Open the workflow.

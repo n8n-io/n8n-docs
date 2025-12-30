@@ -124,6 +124,47 @@ docker rm <container_id>
 docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 ```
 
+### Automated Updates
+
+For production environments requiring scheduled updates, you can use the community-maintained [n8n Docker Updater](https://github.com/AZANIR/n8n_docker_updater) tool.
+
+/// note | Community Tool
+This is a community-maintained tool, not officially supported by n8n. Always test in a non-production environment first and maintain independent backups.
+///
+
+### Key Features:
+
+- Automated Docker image updates with safe container restarts
+- Automatic backup creation before updates with rollback on failure
+- Disk usage monitoring with configurable cleanup thresholds
+- Telegram notifications for update status
+- Comprehensive logging of all operations
+
+### Quick Setup:
+```bash
+# Clone the repository
+git clone https://github.com/AZANIR/n8n_docker_updater.git
+cd n8n_docker_updater
+
+# Configure the script with your n8n path
+nano eng/update_app.sh
+
+# Make executable and test
+chmod +x eng/update_app.sh
+sudo ./eng/update_app.sh
+```
+
+### Schedule automatic updates:
+```bash
+# Add to crontab for weekly updates (Sunday at 3:00 AM)
+sudo crontab -e
+
+# Add this line:
+0 3 * * 0 /bin/bash /path/to/eng/update_app.sh >> /var/log/docker_update_cron.log 2>&1
+```
+
+For detailed configuration, Telegram notifications setup, monitoring, troubleshooting, and advanced features, see the [complete documentation](https://github.com/AZANIR/n8n_docker_updater/blob/master/README-ENG.md).
+
 ### Updating Docker Compose
 
 --8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"

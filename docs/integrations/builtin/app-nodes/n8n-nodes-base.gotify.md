@@ -27,7 +27,7 @@ Refer to [Gotify credentials](/integrations/builtin/credentials/gotify.md) for g
 
 When creating a message, you can configure the following:
 
-### Additional Fields
+### Additional fields
 
 - **Priority**: The priority of the message (default: 1)
 - **Title**: The title of the message
@@ -35,14 +35,14 @@ When creating a message, you can configure the following:
 ### Options
 
 - **Content Type**: The message content type. Choose between:
-    - **Plain**: The message will be rendered as plain text (default)
-    - **Markdown**: The message should be rendered as markdown
-- **Click URL**: Opens this URL when the notification is clicked
+    - **Plain**: The message renders as plain text (default)
+    - **Markdown**: The message renders as markdown
+- **Click URL**: Opens this URL when you click the notification
 - **Big Image URL**: Shows a big image in the notification
 - **Intent URL**: Opens an intent URL after the notification is delivered (Android only)
 
-/// note | Message Extras
-The Options fields (Click URL, Big Image URL, Intent URL) use Gotify's message extras feature. These allow you to customize how notifications are displayed and behave in Gotify clients. Refer to [Gotify's message extras documentation](https://gotify.net/docs/msgextras) for more details.
+/// note | Message extras
+The **Options** fields (**Click URL**, **Big Image URL**, **Intent URL**) use Gotify's message extras feature. These allow you to customize how notifications are displayed and behave in Gotify clients. Refer to [Gotify's message extras documentation](https://gotify.net/docs/msgextras){:target="_blank" .external-link} for more details.
 ///
 
 ## Templates and examples

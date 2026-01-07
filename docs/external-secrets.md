@@ -12,6 +12,10 @@ contentType: howto
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 
+/// warning | Infisical deprecation
+Infisical is deprecated and is no longer recommended. Use an alternative external secrets provider.
+///
+
 You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n) for n8n.
 
 n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/index.md) in one central place.

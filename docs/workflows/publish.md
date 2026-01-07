@@ -50,7 +50,7 @@ On the **Workflows** page, each workflow displays an indicator showing whether i
 
 ## Publishing a workflow
 
-The **Publish** button in the canvas header is enabled whenever there are changes that require publishing are not yet published.
+The **Publish** button in the canvas header is enabled whenever there are unpublished changes.
 
 Each time you make a change to a workflow, n8n autosaves those changes to a new version of the workflow. These saved versions go live in production only when you publish the workflow after the changes.
 

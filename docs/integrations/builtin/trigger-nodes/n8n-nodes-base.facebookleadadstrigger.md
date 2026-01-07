@@ -46,6 +46,6 @@ This workaround temporarily disables your production workflow for testing. Your 
 ///
 
 1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
+2. From the workflow settings dropdown, click **Unpublish** to disable the workflow temporarily.
 3. Test your workflow using the test webhook URL.
-4. When you finish testing, toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+4. When you finish testing, click **Publish**. The production webhook URL should resume working.

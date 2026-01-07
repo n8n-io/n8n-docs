@@ -78,7 +78,7 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 			{
 				"parameters": {
 					"channel": "channelname",
-					"text": "=This workflow {{$node[\"Error Trigger\"].json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$node[\"Error Trigger\"].json[\"execution\"][\"url\"]}}",
+					"text": "=This workflow {{$(\"Error Trigger\").item.json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$(\"Error Trigger\").item.json[\"execution\"][\"url\"]}}",
 					"attachments": [],
 					"otherOptions": {}
 				},

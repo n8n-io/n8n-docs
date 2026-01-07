@@ -34,6 +34,105 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.2.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.3...n8n@2.2.4) for this version.<br />
+**Release date:** 2026-01-06
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.3.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.0...n8n@2.3.0) for this version.<br />
+**Release date:** 2026-01-05
+
+This release contains bug fixes.
+
+### Contributors
+
+[Shashwat-06](https://github.com/Shashwat-06)  
+[ByteEVM](https://github.com/ByteEVM)  
+[mithredate](https://github.com/mithredate)  
+[belyas](https://github.com/belyas)  
+[saurabhssonkar](https://github.com/saurabhssonkar)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.2...n8n@2.2.3) for this version.<br />
+**Release date:** 2026-01-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.1...n8n@2.2.2) for this version.<br />
+**Release date:** 2025-12-30
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.4...n8n@2.1.5) for this version.<br />
+**Release date:** 2025-12-30
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.3...n8n@2.1.4) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.2...n8n@2.1.3) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.0...n8n@2.2.1) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.2.0) for this version.<br />
+
+**Release date:** 2025-12-22
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.1...n8n@2.1.2) for this version.<br />
+**Release date:** 2025-12-22
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@2.1.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.1.1) for this version.<br />
@@ -42,8 +141,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.1.1) 
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.0.3
 
@@ -60,6 +157,23 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0...n8n@2.1.0) 
 **Release date:** 2025-12-16
 
 This release contains bug fixes and features.
+
+### **Time Saved node**
+
+Previously, teams could only track a single fixed time saved value for each workflow regardless of which path an execution takes. The new Time Saved node enables more precise time savings calculations where different execution paths will save different amounts of time.
+
+With this release you can now:
+
+- **Choose fixed value or dynamic time tracking**: Use fixed time saved for simple workflows, or use one or many time saved nodes to calculate savings dynamically based on the actual execution path taken
+- **Configure per-item calculations**: When using the Time Saved node, choose whether to calculate time saved once for all items or multiply by the number of items processed
+
+The new Time Saved node provides increased accuracy for complex workflows where different execution paths save different amounts of time.
+
+![time saved node example](/_images/release-notes/time_saved_node_1.png)
+
+n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
+
+![insights dashboard](/_images/release-notes/time_saved_node_2.png)
 
 ### Contributors
 
@@ -178,3 +292,8 @@ This release contains bug fixes.
 [farzad528](https://github.com/farzad528)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+/// note | Older versions
+You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
+///

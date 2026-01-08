@@ -2,7 +2,7 @@
 contentType: explanation
 ---
 
-# Data structure
+# How n8n structures data
 
 In n8n, all data passed between nodes is an array of objects. It has the following structure:
 

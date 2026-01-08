@@ -106,8 +106,14 @@ nav:
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Working with data:
         - Overview: data/index.md
-        - Data structure: data/data-structure.md
+        - How n8n structures data: data/data-structure.md
+        - Expressions:
+          - Introduction to expressions: data/expressions.md
+          - Choose your approach: data/expressions-when-to-use.md
         - Data flow within nodes: data/data-flow-nodes.md
+        - Data mapping:
+          - data/data-mapping/index.md
+          - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
         - Transforming data: data/transforming-data.md
         - Process data using code: data/code.md
         - Data mapping:
@@ -1274,8 +1280,6 @@ nav:
       - AI coding: code/ai-code.md
       - Built in methods and variables:
           - Overview: code/builtin/overview.md
-          - Current node input: code/builtin/current-node-input.md
-          - Output of other nodes: code/builtin/output-other-nodes.md
           - Date and time: code/builtin/date-time.md
           - JMESPath: code/builtin/jmespath.md
           - HTTP node: code/builtin/http-node-variables.md

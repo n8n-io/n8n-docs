@@ -1220,6 +1220,7 @@ nav:
         - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
         - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
         - Workflows: hosting/configuration/environment-variables/workflows.md
+        - Workflow history: hosting/configuration/environment-variables/workflow-history.md
       - Configuration methods: hosting/configuration/configuration-methods.md
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md

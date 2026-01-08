@@ -953,6 +953,6 @@
 /integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
 /integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 /credentials/credential-sharing  /credentials/credential-sharing  200
-/credentials/add-edit-credentials /credentials/add-edit-credentials 301
+/credentials/add-edit-credentials /credentials/add-edit-credentials 200
 /credentials/* /integrations/builtin/credentials/:splat  301
 /getting-started/create-your-first-workflow/*    /try-it-out/  301

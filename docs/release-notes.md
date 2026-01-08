@@ -32,6 +32,99 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
+
+
+## n8n@2.3.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.0...n8n@2.3.1) for this version.<br />
+**Release date:** 2026-01-07
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.2.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.3...n8n@2.2.4) for this version.<br />
+**Release date:** 2026-01-06
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.3.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.0...n8n@2.3.0) for this version.<br />
+**Release date:** 2026-01-05
+
+This release contains bug fixes.
+
+### Contributors
+
+[Shashwat-06](https://github.com/Shashwat-06)  
+[ByteEVM](https://github.com/ByteEVM)  
+[mithredate](https://github.com/mithredate)  
+[belyas](https://github.com/belyas)  
+[saurabhssonkar](https://github.com/saurabhssonkar)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.2...n8n@2.2.3) for this version.<br />
+**Release date:** 2026-01-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.1...n8n@2.2.2) for this version.<br />
+**Release date:** 2025-12-30
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.4...n8n@2.1.5) for this version.<br />
+**Release date:** 2025-12-30
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.3...n8n@2.1.4) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.1.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.2...n8n@2.1.3) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.2.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.0...n8n@2.2.1) for this version.<br />
+**Release date:** 2025-12-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@2.2.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.2.0) for this version.<br />
@@ -42,7 +135,6 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.1.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.1...n8n@2.1.2) for this version.<br />
@@ -52,40 +144,6 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-## n8n@2.1.3
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.2...n8n@2.1.3) for this version.<br />
-**Release date:** 2025-12-23
-
-This release contains .
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
-## n8n@2.2.1
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.0...n8n@2.2.1) for this version.<br />
-**Release date:** 2025-12-23
-
-This release contains .
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
-## n8n@2.1.4
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.3...n8n@2.1.4) for this version.<br />
-**Release date:** 2025-12-23
-
-This release contains .
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
 ## n8n@2.1.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.1.1) for this version.<br />
@@ -94,8 +152,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.1.1) 
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.0.3
 
@@ -247,3 +303,8 @@ This release contains bug fixes.
 [farzad528](https://github.com/farzad528)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+/// note | Older versions
+You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
+///

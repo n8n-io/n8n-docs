@@ -181,7 +181,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Related resources
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/code/expressions.md). Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
+The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/data/expressions.md). Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
 
 ### Supported date formats
 

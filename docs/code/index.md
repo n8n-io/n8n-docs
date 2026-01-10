@@ -21,7 +21,7 @@ There are two places in your workflows where you can use code:
 
 	Use [expressions](/glossary.md#expression-n8n) to transform [data](/data/index.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/overview.md) and [Data transformation functions](/code/builtin/data-transformation-functions/index.md).
 
-	[:octicons-arrow-right-24: Expressions](/code/expressions.md)
+	[:octicons-arrow-right-24: Expressions](/data/expressions.md)
 
 - __Code node__
 

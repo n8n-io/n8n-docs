@@ -22,7 +22,7 @@ Expressions have the advantage of providing an immediate preview of the computed
 
 ## Code node
 
-Code node is a dedicated node where you write JavaScript or Python that runs as a workflow step. This node gives you access to n8n’s built‑in methods and variables, through `$` syntax.
+The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) is a dedicated node where you write JavaScript or Python that runs as a workflow step. It gives you access to incoming data from previous nodes, which you can manipulate by adding, removing, or updating items. You can create any custom function you need, and also use n8n's built‑in methods and variables through `$` syntax.
 
 ### When to use
 

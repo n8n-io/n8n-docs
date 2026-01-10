@@ -1,8 +1,6 @@
 ---
 description: Methods for working with the input of the current node and the output of previous nodes.
 contentType: reference
-hide:
-  - toc
 ---
 
 # Referencing previous nodes

@@ -104,20 +104,16 @@ nav:
         - Sub-workflows: flow-logic/subworkflows.md
         - Error handling: flow-logic/error-handling.md
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
-      - Working with data:
+      - Data:
         - Overview: data/index.md
         - How n8n structures data: data/data-structure.md
+        - Data flow within nodes: data/data-flow-nodes.md
         - Expressions:
           - Introduction to expressions: data/expressions.md
           - Choose your approach: data/expressions-when-to-use.md
-        - Data flow within nodes: data/data-flow-nodes.md
         - Data mapping:
           - data/data-mapping/index.md
           - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
-        - Transforming data: data/transforming-data.md
-        - Process data using code: data/code.md
-        - Data mapping:
-          - data/data-mapping/index.md
           - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
           - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
           - Data item linking:
@@ -126,6 +122,10 @@ nav:
             - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
             - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
             - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
+        - Data transformation:
+          - data/transforming-data.md
+          - Expressions for data transformation: data/expressions-for-transformation.md
+          - Expression reference: data/expression-reference.md
         - Data pinning: data/data-pinning.md
         - Data editing: data/data-editing.md
         - Data filtering: data/data-filtering.md
@@ -1275,7 +1275,6 @@ nav:
       - CLI commands: hosting/cli-commands.md
   - Code in n8n:
       - code/index.md
-      - Expressions: code/expressions.md
       - Using the Code node: code/code-node.md
       - AI coding: code/ai-code.md
       - Built in methods and variables:

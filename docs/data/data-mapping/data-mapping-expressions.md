@@ -4,7 +4,7 @@ contentType: howto
 
 # Mapping in the expressions editor
 
-These examples show how to access linked items in the expressions editor. Refer to [expressions](/code/expressions.md) for more information on expressions, including built in variables and methods.
+These examples show how to access linked items in the expressions editor. Refer to [expressions](/data/expressions.md) for more information on expressions, including built in variables and methods.
 
 For information on errors with mapping and linking items, refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
 

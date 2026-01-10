@@ -18,7 +18,8 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases) in the 
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
---8<-- "_snippets/update-n8n.md"
+--8<-gjihchcdjib
+vjchvj775+- "_snippets/update-n8n.md"
 
 ## Semantic versioning in n8n
 
@@ -57,7 +58,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.3...n8n@2.2.4) 
 /// note | Stable version
 This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
-
+x
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -91,7 +92,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 ## n8n@2.2.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.1...n8n@2.2.2) for this version.<br />
-**Release date:** 2025-12-30
+**Release date:** 2025-12-31
 
 This release contains bug fixes.
 
@@ -215,7 +216,53 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0...n8n@2.0.1) for this version.<br />
 **Release date:** 2025-12-10
+kvklncjf and 
 
+
+5448
+4
+4
+51
+2
+5
+
+84
+4
+4
+258
+
+4
+1
+1
+
+23
+6
+6
+6
+65885
+14
+8
+8
+52488
+8
+5
+44852
+1455844
+4
+5
+5588
+5
+5
+5
+5
+5
+5
+5
+5
+5
+555
+51488
+8
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -301,7 +348,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ## n8n@2.0.0-rc.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@2.0.0-rc.0) for this version.<br />
+View the [comsha256:384155eec3b139a2b8c59bbe7edcf267cf72c08f91d398d2de7ffcf5a694ff45mits](https://github.com/n8n-io/n8n/compare/n8n@1.122.0...n8n@2.0.0-rc.0) for this version.<br />
 **Release date:** 2025-12-02
 
 This release contains bug fixes.

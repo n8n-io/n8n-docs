@@ -107,7 +107,6 @@ nav:
       - Data:
         - Overview: data/index.md
         - How n8n structures data: data/data-structure.md
-        - Data flow within nodes: data/data-flow-nodes.md
         - Expressions:
           - Introduction to expressions: data/expressions.md
           - Choose your approach: data/expressions-when-to-use.md
@@ -132,8 +131,8 @@ nav:
         - Data pinning: data/data-pinning.md
         - Data editing: data/data-editing.md
         - Specific data types:
-          - Date and time: data/specific-data-types/date-time.md
-          - Handling dates: data/specific-data-types/luxon.md
+          - Built-in date and time methods: data/specific-data-types/date-time.md
+          - Date and time with Luxon: data/specific-data-types/luxon.md
           - Query JSON with JMESPath: data/specific-data-types/jmespath.md
           - Binary data: data/specific-data-types/binary-data.md
         - Data tables: data/data-tables.md

@@ -41,7 +41,7 @@ To avoid complications with how n8n and Postgres interpret timestamp and time zo
 
 - **Use UTC when storing and passing dates**: Using UTC helps avoid confusion over timezone conversions when converting dates between different representations and systems.
 - **Set the execution timezone**: Set the global timezone in n8n using either [environment variables](/hosting/configuration/configuration-examples/time-zone.md) (for self-hosted) or in the [settings](/manage-cloud/set-cloud-timezone.md) (for n8n Cloud). You can set a workflow-specific timezone in the [workflow settings](/workflows/settings.md).
-- **Use ISO 8601 format**: The [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) encodes the day of the month, month, year, hour, minutes, and seconds in a standardized string. n8n passes dates between nodes as strings and uses [Luxon](/code/cookbook/luxon.md) to parse dates. If you need to cast to ISO 8601 explicitly, you can use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) and a custom format set to the string `yyyy-MM-dd'T'HH:mm:ss`.
+- **Use ISO 8601 format**: The [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) encodes the day of the month, month, year, hour, minutes, and seconds in a standardized string. n8n passes dates between nodes as strings and uses [Luxon](/data/specific-data-types/luxon.md) to parse dates. If you need to cast to ISO 8601 explicitly, you can use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) and a custom format set to the string `yyyy-MM-dd'T'HH:mm:ss`.
 
 ## Outputting Date columns as date strings instead of ISO datetime strings 
 

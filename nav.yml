@@ -111,9 +111,11 @@ nav:
         - Expressions:
           - Introduction to expressions: data/expressions.md
           - Choose your approach: data/expressions-when-to-use.md
+          - Convenience methods: data/convenience.md
         - Data mapping:
           - data/data-mapping/index.md
           - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
+          - Retrieve linked items from earlier in the workflow: data/data-mapping/itemmatching.md
           - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
           - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
           - Data item linking:
@@ -126,12 +128,15 @@ nav:
           - data/transforming-data.md
           - Expressions for data transformation: data/expressions-for-transformation.md
           - Expression reference: data/expression-reference.md
+        - Data filtering: data/data-filtering.md
         - Data pinning: data/data-pinning.md
         - Data editing: data/data-editing.md
-        - Data filtering: data/data-filtering.md
-        - Data mocking: data/data-mocking.md
+        - Specific data types:
+          - Date and time: data/specific-data-types/date-time.md
+          - Handling dates: data/specific-data-types/luxon.md
+          - Query JSON with JMESPath: data/specific-data-types/jmespath.md
+          - Binary data: data/specific-data-types/binary-data.md
         - Data tables: data/data-tables.md
-        - Binary data: data/binary-data.md
         - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
     - n8n Cloud:
@@ -1279,12 +1284,10 @@ nav:
       - AI coding: code/ai-code.md
       - Built in methods and variables:
           - Overview: code/builtin/overview.md
-          - Date and time: code/builtin/date-time.md
           - JMESPath: code/builtin/jmespath.md
           - HTTP node: code/builtin/http-node-variables.md
           - LangChain Code node: code/builtin/langchain-methods.md
           - n8n metadata: code/builtin/n8n-metadata.md
-          - Convenience methods: code/builtin/convenience.md
           - Data transformation functions:
               - code/builtin/data-transformation-functions/index.md
               - Arrays: code/builtin/data-transformation-functions/arrays.md
@@ -1296,13 +1299,10 @@ nav:
       - Custom variables:
           - Create custom variables: code/variables.md
       - Cookbook:
-          - Handling dates: code/cookbook/luxon.md
-          - Query JSON with JMESPath: code/cookbook/jmespath.md
           - Built-in methods and variables examples:
               - code/cookbook/builtin/index.md
               - execution: code/cookbook/builtin/execution.md
               - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
               - (node-name).all: code/cookbook/builtin/all.md
               - vars: code/cookbook/builtin/vars.md
           - Expressions:

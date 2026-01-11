@@ -12,7 +12,7 @@ The Date & Time node manipulates date and time data and convert it to different 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
 /// note | Date and time in other nodes
-You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/data/specific-data-types/luxon.md) for more information.
 ///
 
 ## Operations
@@ -181,7 +181,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Related resources
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/data/expressions.md). Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
+The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/data/expressions.md). Refer to [Date and time with Luxon](/data/specific-data-types/luxon.md) for more information.
 
 ### Supported date formats
 

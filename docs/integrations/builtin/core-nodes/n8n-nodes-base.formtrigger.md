@@ -103,7 +103,7 @@ Every field has the following settings:
 	- Select **Custom HTML** to insert arbitrary HTML.
 		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements.
 		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
-    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
+    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/data/specific-data-types/luxon.md) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**.
 	- Select **Radio Buttons** to include radio button elements in the form.
 	- Select **Hidden Field** to include a form element without displaying it on the form. You can set a default value using the **Field Value** parameter or pass values for the field using [query parameters](#set-default-selections-with-query-parameters).

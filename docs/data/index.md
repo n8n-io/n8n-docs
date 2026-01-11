@@ -13,7 +13,6 @@ Data is the information that n8n nodes receive and process. For basic usage of n
 This section covers: 
 
 * [Data structure](/data/data-structure.md)
-* [Data flow within nodes](/data/data-flow-nodes.md)
 * [Transforming data](/data/transforming-data.md)
 * [Process data using code](/data/expressions-when-to-use.md#code-node)
 * [Pinning](/data/data-pinning.md) and [editing](/data/data-editing.md) data during workflow development.

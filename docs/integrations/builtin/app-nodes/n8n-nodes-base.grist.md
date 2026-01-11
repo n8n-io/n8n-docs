@@ -38,7 +38,7 @@ Create a new column in your Grist table with the formula `$id`.
 
 The **Get All** operation returns the Row ID of each record along with the fields.
  
-You can get it with the expression `{{$node["GristNodeName"].json["id"]}}`.
+You can get it with the expression `{{$("GristNodeName").item.json.id}}`.
 
 
 ## Filter records when using the Get All operation

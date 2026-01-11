@@ -287,7 +287,7 @@ contentType: reference
 | parseJson() | Returns the JavaScript Object or value represented by the string, or `undefined` if the string isn’t valid JSON. Single-quoted JSON is not supported. | any |  | n8n |
 | substring() | Extracts a fragment of the string at the given position. For more advanced extraction, see `match()`. | String | **start** (Number) - The position to start from. Positions start at 0.<br><br>**end** (String) _optional_ - The position to select up to. The character at the end position is not included. If omitted, will extract to the end of the string. | JS |
 | urlEncode() | Encodes the string so that it can be used in a URL. Spaces and special characters are replaced with codes of the form `%XX`. | String | **allChars** (Boolean) _optional_ - Whether to encode characters that are part of the URI syntax (e.g. <code>=</code>, <code>?</code>) Default: `false` | n8n |
-| base64Decode() | Converts plain text to a base64-encoded string | String |  | n8n |
+| base64Decode() | Converts a base64-encoded string to plain text | String |  | n8n |
 | isEmpty() | Returns `true` if the string has no characters or is `null` | Boolean |  | n8n |
 | concat() | Joins one or more strings onto the end of the base string. Alternatively, use the `+` operator (see examples). | String | **string1** (String) - The first string to append<br><br>**string2** (String) _optional_ - The second string to append<br><br>**stringN** (String) _optional_ - The Nth string to append | JS |
 | toNumber() | Converts a string representing a number to a number. Throws an error if the string doesn’t start with a valid number. | Number |  | n8n |

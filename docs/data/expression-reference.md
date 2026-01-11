@@ -268,7 +268,7 @@ contentType: reference
 | removeMarkdown() | Removes any Markdown formatting from the string. Also removes HTML tags. | String |  | n8n |
 | search() | Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. To use text instead, see `indexOf()`. | Number | **regexp** (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for | JS |
 | extractUrl() | Extracts the first URL found in the string. Returns `undefined` if none is found. Only recognizes full URLs, e.g. those starting with `http`. | String |  | n8n |
-| base64Encode() | Converts a base64-encoded string to plain text | String |  | n8n |
+| base64Encode() | Converts plain text to a base64-encoded string | String |  | n8n |
 | includes() | Returns `true` if the string contains the `searchString`. Case-sensitive. | Boolean | **searchString** (String) - The text to search for<br><br>**start** (Number) _optional_ - The position (index) to start searching from Default: `0` | JS |
 | quote() | Wraps a string in quotation marks, and escapes any quotation marks already in the string. Useful when constructing JSON, SQL, etc. | String | **mark** (String) _optional_ - The type of quotation mark to use Default: `"` | n8n |
 | toUpperCase() | Converts all letters in the string to upper case (capitals) |  |  | JS |

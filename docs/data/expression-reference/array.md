@@ -563,7 +563,7 @@ The opposite of `split()`.
   ```javascript
   // Keep numbers at odd indexes
   // nums = [1, 7, 3, 10, 5]
-  ages.filter((num, index) => {return index%2 != 0}) //=> [7, 10]
+  nums.filter((num, index) => {return index%2 != 0}) //=> [7, 10]
   ```
 
 ## concat()

@@ -9,7 +9,7 @@ contentType: howto
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 * n8n supports AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, Infisical and HashiCorp Vault. 
-* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
+* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets) ( SaaS Service ).
 ///
 
 /// warning | Infisical deprecation

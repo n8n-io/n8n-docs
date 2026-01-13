@@ -88,7 +88,7 @@
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.plus(7, 'days') //=> 2024-05-07T18:49
+  dt.plus(7, 'days') //=> 2024-04-06T18:49
   ```
 
   ```javascript

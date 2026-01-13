@@ -4,7 +4,7 @@ description: Ways to mock and pin data in your n8n workflow during development.
 contentType: howto
 ---
 
-# Data pinning and mocking
+# Pinning and mocking data
 
 When developing workflows, you often need to test your logic without repeatedly calling external systems or working with live data. n8n provides two related features to help with this:
 
@@ -37,6 +37,54 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 
 When data pinning is active, a banner appears at the top of the node's output panel indicating that n8n has pinned the data. To unpin data and fetch fresh data on the next execution, select the **Unpin** link in the banner.
 
+### Edit pinned data
+
+n8n allows you to edit pinned data. This means you can check different scenarios without setting up each scenario and sending the relevant data from your external system. It makes it easier to test edge cases.
+
+/// note | For development only
+Data editing isn't available for production workflow executions. It's a feature to help test workflows during development.
+///
+
+#### Edit output data
+
+To edit output data:
+
+1. Run the node to load data.
+2. In the **OUTPUT** view, select **JSON** to switch to JSON view.
+3. Select **Edit** <span class="n8n-inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span>.
+4. Edit your data.
+5. Select **Save**. n8n saves your data changes and pins your data.
+
+#### Use data from previous executions
+
+You can copy data from nodes in previous workflow executions:
+
+1. Open the left menu.
+2. Select **Executions**.
+3. Browse the workflow executions list to find the one with the data you want to copy.
+4. Select **Open Past Execution** <span class="n8n-inline-image">![Open past execution icon](/_images/data/data-pinning/open-execution.png){.off-glb}</span>.
+5. Double click the node whose data you want to copy.
+6. If it's table layout, select **JSON** to switch to JSON view.
+7. There are two ways to copy the JSON:
+  1. Select the JSON you want by highlighting it, like selecting text. Then use `ctrl` + `c` to copy it.
+  2. Select the JSON you want to copy by clicking on a parameter. Then:
+    1. Hover over the JSON. n8n displays the **Copy** <span class="n8n-inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span> button.
+    2. Select **Copy** <span class="n8n-inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span>.
+    3. You can choose what to copy:
+        * **Copy Item Path** and **Copy Parameter Path** gives you expressions that access parts of the JSON.
+        * **Copy Value**: copies the entire selected JSON.
+8. Return to the workflow you're working on:  
+    1. Open the left menu.
+    2. Select **Workflows**.
+    3. Select **Open**.
+    4. Select the workflow you want to open.
+9. Open the node where you want to use the copied data.
+10. If there is no data, run the node to load data.
+11. In the **OUTPUT** view, select **JSON** to switch to JSON view. 
+12. Select **Edit** <span class="n8n-inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span>.
+15. Paste in the data from the previous execution.
+16. Select **Save**. n8n saves your data changes and pins your data.
+
 ## Data mocking approaches
 
 Beyond pinning real data, you can create mock data in several ways:
@@ -62,7 +110,7 @@ The Customer Datastore node provides a fake dataset to work with. Add and execut
 For the most realistic testing experience, you can combine these approaches:
 
 1. Use data pinning to capture real data from your data source with a single call
-2. [Edit the pinned data](/data/data-editing.md) to create specific test scenarios or edge cases
+2. Edit the pinned data to create specific test scenarios or edge cases
 3. Continue developing with this edited, pinned dataset
 
 **Use this approach when**: You need to configure your workflow to handle the exact data structure from your data source, but want to test with modified or edge-case values.

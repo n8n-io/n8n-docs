@@ -104,39 +104,53 @@ nav:
         - Sub-workflows: flow-logic/subworkflows.md
         - Error handling: flow-logic/error-handling.md
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
-      - Data:
+      - Working with data:
         - Overview: data/index.md
         - How n8n structures data: data/data-structure.md
-        - Expressions:
-          - Introduction to expressions: data/expressions.md
-          - Choose your approach: data/expressions-when-to-use.md
-          - Convenience methods: data/convenience.md
-        - Data mapping:
+        - Expressions versus data nodes: data/expressions.md
+        - Referencing data:
           - data/data-mapping/index.md
+          - Referencing data in the UI: data/data-mapping/data-mapping-ui.md
+          - Referencing data in the expressions editor: data/data-mapping/data-mapping-expressions.md
           - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
-          - Retrieve linked items from earlier in the workflow: data/data-mapping/itemmatching.md
-          - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-          - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-          - Data item linking:
+          - Linking data items:
             - data/data-mapping/data-item-linking/index.md
-            - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+            - How items link through workflows: data/data-mapping/data-item-linking/item-linking-concepts.md
+            - Retrieve linked items from earlier in the workflow: data/data-mapping/itemmatching.md
             - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
             - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
             - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-        - Data transformation:
-          - data/transforming-data.md
+        - Transforming data:
+          - Approaches for transforming data: data/transforming-data.md
           - Expressions for data transformation: data/expressions-for-transformation.md
-          - Expression reference: data/expression-reference.md
-        - Data filtering: data/data-filtering.md
-        - Data pinning: data/data-pinning.md
-        - Data editing: data/data-editing.md
+          - Expression reference: 
+            - data/expression-reference/index.md
+            - data/expression-reference/array.md
+            - data/expression-reference/binaryfile.md
+            - data/expression-reference/boolean.md
+            - data/expression-reference/customdata.md
+            - data/expression-reference/date.md
+            - data/expression-reference/datetime.md
+            - data/expression-reference/execdata.md
+            - data/expression-reference/httpresponse.md
+            - data/expression-reference/item.md
+            - data/expression-reference/nodeinputdata.md
+            - data/expression-reference/nodeoutputdata.md
+            - data/expression-reference/number.md
+            - data/expression-reference/object.md
+            - data/expression-reference/prevnodedata.md
+            - data/expression-reference/root.md
+            - data/expression-reference/string.md
+            - data/expression-reference/workflowdata.md
+          - Expression helper methods: data/convenience.md
+        - Filtering data: data/data-filtering.md
+        - Pinning and mocking data: data/data-pinning.md
         - Specific data types:
           - Built-in date and time methods: data/specific-data-types/date-time.md
           - Date and time with Luxon: data/specific-data-types/luxon.md
           - Query JSON with JMESPath: data/specific-data-types/jmespath.md
           - Binary data: data/specific-data-types/binary-data.md
         - Data tables: data/data-tables.md
-        - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md

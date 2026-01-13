@@ -2,7 +2,7 @@
 contentType: howto
 ---
 
-# Mapping in the expressions editor
+# Referencing data in the expressions editor
 
 These examples show how to access linked items in the expressions editor. Refer to [expressions](/data/expressions.md) for more information on expressions, including built in variables and methods.
 

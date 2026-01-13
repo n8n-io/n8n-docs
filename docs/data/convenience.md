@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-# Convenience methods
+# Expression helper methods
 
 n8n provides these methods to make it easier to perform common tasks in [expressions](/glossary.md#expression-n8n).
 

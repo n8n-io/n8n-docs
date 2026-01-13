@@ -2,7 +2,7 @@
 contentType: explanation
 ---
 
-# Approaches for data transformation
+# Approaches for transforming data
 
 Data transformation in n8n involves modifying, restructuring, or enriching data as it moves through your workflow. This includes changing data formats, filtering or aggregating values, adding computed fields, and converting data structures to work with different nodes.
 
@@ -22,7 +22,7 @@ Best for: Quick transformations that can be done inline without complex logic.
 
 ## Code node
 
-The [Code node](/data/expressions-when-to-use.md#code-node) lets you write custom JavaScript or Python for complex transformations. Use it when you need:
+The [Code node](/data/expressions.md#code-node) lets you write custom JavaScript or Python for complex transformations. Use it when you need:
 
 * Custom algorithms or business logic
 * Iteration over multiple items
@@ -33,7 +33,7 @@ Best for: Complex transformations that require programming logic.
 
 ## AI Transform node
 
-The [AI Transform node](/data/expressions-when-to-use.md#ai-transform-node) generates transformation code from natural language prompts. Use it when:
+The [AI Transform node](/data/expressions.md#ai-transform-node) generates transformation code from natural language prompts. Use it when:
 
 * You know what transformation you need but prefer not to write code
 * You want AI-assisted code generation with workflow context

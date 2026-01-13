@@ -593,7 +593,7 @@
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.minus(4, 'years') //=> 2020-04-30T18:49
+  dt.minus(4, 'years') //=> 2020-03-30T18:49
   ```
 
 ## weekday

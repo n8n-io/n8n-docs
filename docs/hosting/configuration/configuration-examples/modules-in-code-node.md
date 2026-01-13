@@ -27,7 +27,7 @@ For these operations, use dedicated nodes instead:
 
 ## Enable built-in modules
 
-Safe built-in modules like `crypto`, `util`, `path`, and others can be enabled using the `NODE_FUNCTION_ALLOW_BUILTIN` environment variable:
+Safe built-in modules like `crypto`, `util`, `path`, and others can be enabled using the `NODE_FUNCTION_ALLOW_BUILTIN` environment variable. Modules blocked by vm2 (for example `fs`, `child_process`, and `net`) remain unavailable even when using `NODE_FUNCTION_ALLOW_BUILTIN=*`:
 
 ```bash
 # Allows usage of all builtin modules

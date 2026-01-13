@@ -93,7 +93,7 @@
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.plus(4, 'years') //=> 2028-04-30T18:49
+  dt.plus(4, 'years') //=> 2028-03-30T18:49
   ```
 
 ## isInDST

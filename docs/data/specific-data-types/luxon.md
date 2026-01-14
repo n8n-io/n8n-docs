@@ -80,7 +80,7 @@ n8n provides built-in convenience functions to support data transformation in ex
 
 To convert a native JavaScript date to a Luxon date:
 
-* In expressions, use the `.toDateTime()` method. For example, `{{ (new Date()).ToDateTime() }}`.
+* In expressions, use the `.toDateTime()` method. For example, `{{ (new Date()).toDateTime() }}`.
 * In the Code node, use `DateTime.fromJSDate()`. For example, `let luxondate = DateTime.fromJSDate(new Date())`.
 
 ### Convert date string to Luxon

@@ -77,7 +77,7 @@ n8n requires a PostgreSQL database to store workflow data and user information.
 
 1. Log in to your [Render Dashboard](https://dashboard.render.com/).
 2. Click **New +** and select **PostgreSQL**.
-3. Configure your database:
+3. Configure your database with the following settings:
    - **Name**: Choose a name for your database (e.g., `n8n-db`)
    - **Database**: Leave as default or specify a custom database name
    - **User**: Leave as default or specify a custom username
@@ -219,19 +219,19 @@ If you're using the `latest` tag in your Dockerfile, Render will pull the latest
 
 ### Troubleshooting
 
-### Service won't start
+#### Service won't start
 
 * Check the **Logs** tab in your Render dashboard for error messages.
 * Verify all required environment variables are set correctly.
 * Ensure your database credentials are correct and the database is accessible.
 
-### Database connection issues
+#### Database connection issues
 
 * Verify you're using the correct database URL (Internal vs External).
 * Check that your database and web service are in the same region for best performance.
 * Ensure your database is running and not paused (free tier databases pause after inactivity).
 
-### Webhooks not working
+#### Webhooks not working
 
 * Verify your `WEBHOOK_URL` environment variable is set correctly.
 * Ensure the URL uses `https://` protocol.

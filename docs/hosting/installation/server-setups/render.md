@@ -71,7 +71,7 @@ Before you begin, ensure you have:
 * A GitHub, GitLab, or Bitbucket account (for connecting your repository)
 * A Git repository with your n8n configuration (or create one during setup)
 
-## Create a PostgreSQL database
+### Create a PostgreSQL database
 
 n8n requires a PostgreSQL database to store workflow data and user information.
 
@@ -90,7 +90,7 @@ n8n requires a PostgreSQL database to store workflow data and user information.
 Render automatically generates database credentials. Save the **Internal Database URL** and **External Database URL** from the database dashboard. You'll need these when configuring your n8n service.
 ///
 
-## Create a Web Service
+### Create a Web Service
 
 1. In your Render Dashboard, click **New +** and select **Web Service**.
 2. Connect your repository:
@@ -105,7 +105,7 @@ Render automatically generates database credentials. Save the **Internal Databas
    - **Dockerfile Path**: Specify the path to your Dockerfile (default: `./Dockerfile`)
    - **Docker Context**: Leave as default unless your Dockerfile is in a subdirectory
 
-## Create a Dockerfile
+### Create a Dockerfile
 
 If you don't have a Dockerfile in your repository, create one. Here's a basic example:
 
@@ -123,7 +123,7 @@ CMD ["n8n", "start"]
 To use a specific version of n8n, replace `latest` with the version tag (e.g., `docker.n8n.io/n8nio/n8n:1.0.0`).
 ///
 
-## Configure environment variables
+### Configure environment variables
 
 In your Render service settings, navigate to **Environment** and add the following environment variables:
 
@@ -177,20 +177,20 @@ For best performance and security, use the **Internal Database URL** when your d
 Always enable basic authentication or set up proper user management in production. Never expose n8n without authentication.
 ///
 
-## Configure the service
+### Configure the service
 
 1. In your service settings, go to **Settings**.
 2. Set the **Health Check Path** to `/healthz` (n8n's health check endpoint).
 3. Configure **Auto-Deploy**: Enable if you want automatic deployments on git push.
 4. Set **Pull Request Previews**: Configure if you want to preview deployments from pull requests.
 
-## Deploy
+### Deploy
 
 1. After configuring all settings, Render will automatically start building and deploying your service.
 2. Monitor the build logs in the **Logs** tab to ensure the deployment succeeds.
 3. Once deployed, your service will be available at `https://<your-service-name>.onrender.com`.
 
-## Set up a custom domain (optional)
+### Set up a custom domain (optional)
 
 1. In your service settings, go to **Settings** > **Custom Domains**.
 2. Click **Add Custom Domain**.
@@ -204,7 +204,7 @@ After setting up a custom domain, update your environment variables:
 - **N8N_HOST**: Update to your custom domain
 - **WEBHOOK_URL**: Update to your custom domain URL
 
-## Updating n8n
+### Updating n8n
 
 To update n8n to a newer version:
 
@@ -217,7 +217,7 @@ To update n8n to a newer version:
 If you're using the `latest` tag in your Dockerfile, Render will pull the latest image on each deployment. To pin to a specific version, use a version tag instead.
 ///
 
-## Troubleshooting
+### Troubleshooting
 
 ### Service won't start
 

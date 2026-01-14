@@ -74,13 +74,13 @@ Note that these variables can return different time formats when cast as a strin
 	# For example "Today's date is 1646834498755"
 	```
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
+n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [n8n Expression Language Reference](/data/expression-reference/index.md) for more information.
 
 ### Convert JavaScript dates to Luxon
 
 To convert a native JavaScript date to a Luxon date:
 
-* In expressions, use the [`.toDateTime()` method](/code/builtin/data-transformation-functions/dates.md#date-toDateTime). For example, `{{ (new Date()).ToDateTime() }}`.
+* In expressions, use the `.toDateTime()` method. For example, `{{ (new Date()).ToDateTime() }}`.
 * In the Code node, use `DateTime.fromJSDate()`. For example, `let luxondate = DateTime.fromJSDate(new Date())`.
 
 ### Convert date string to Luxon

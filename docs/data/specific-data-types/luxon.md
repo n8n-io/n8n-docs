@@ -22,6 +22,7 @@ Luxon is a JavaScript library. The two convenience [variables](#get-the-current-
 Be aware of the following:
 
 * In a workflow, n8n converts dates and times to strings between nodes. Keep this in mind when doing arithmetic on dates and times from other nodes.
+* Using Luxon's `DateTime()` is the recommended approach in n8n. Using vanilla JavaScript's `Date()` doesn't work with some n8n features. For example, it doesn't respect the [Workflow-specific Time Zone](https://docs.n8n.io/workflows/settings/#timezone).
 * With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
 
 ## Setting the timezone in n8n

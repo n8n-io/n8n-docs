@@ -1,10 +1,10 @@
----
+-video play comedy wala cartoon--
 title: Send Email
 description: Documentation for the Send Email node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
 priority: high
 ---
-
+birajkumar833@gmail.com
 # Send Email
 
 The Send Email node sends emails using an SMTP email server.

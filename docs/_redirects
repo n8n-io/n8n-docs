@@ -1,17 +1,15 @@
 ### THESE REDIRECTS ARE HANDLED BY CLOUDFLARE PAGES, SEE DOC FOR DETAILS ###
 ### https://developers.cloudflare.com/pages/configuration/redirects/ ###
+### Place static redirects first and dynamic redirects after them
 
 ## Redirect from initial path used in product
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/  301
-
-## Follow up to https://github.com/n8n-io/n8n-docs/pull/3033
 /enterprise-key/ /license-key/  301
 
 ## Remove item lists (hidden for over a year)
 /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/  301
 
 ## tutorials refresh
-
 /try-it-out/longer-introduction/ /try-it-out/tutorial-first-workflow/  301
 
 ## DOC-994
@@ -43,7 +41,7 @@
 /getting-started/installation/advanced/server-setup.html#server-setups  /hosting/installation/server-setups/  301
 /getting-started/key-components.html    /workflows/  301
 /integrations/buil%20%20%20%20%20%20%20%20%20%20%205tin/core-nodes/n8n-nodes-base.start/    /integrations/builtin/core-nodes/n8n-nodes-base.start/  301
-/getting-started/create-your-first-workflow/*    /try-it-out/  301
+
 /reference/security/   https://n8n.io/legal/#security  301
 # /reference/reference.html   /  301
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/  301
@@ -87,7 +85,7 @@
 /manage-cloud/   /manage-cloud/overview/  301
 
 /hosting/environment-variables/   /hosting/  301
-/hosting/environment-variables/*   /hosting/configuration/:splat  301
+
 /hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
 /hosting/installation/   /hosting/  301
 /hosting/logging-monitoring/   /hosting/  301
@@ -118,7 +116,6 @@
 /cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/  301
 /hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/  301
 
-
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/  301
 /choose-n8n/desktop-app/   /choose-n8n/  301
 
@@ -130,10 +127,8 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
 /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
 
-
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/  301
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/  301
-
 
 /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/  301
 /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/  301
@@ -163,7 +158,7 @@
 
 /code-examples/ /code/  301
 /code-examples/methods-variables-reference/   /code/builtin/  301
-/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat  301
+
 /code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/  301
 /code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/  301
 /code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/  301
@@ -240,7 +235,7 @@
 /hosting/options/   /choose-n8n/  301
 /hosting/installation/cloud/   /manage-cloud/overview/  301
 /hosting/installation/desktop-app/   /choose-n8n/  301
-/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
+
 /hosting/configuration/   /hosting/configuration/environment-variables/  301
 /hosting/updating/   /reference/update/  301
 /hosting/updating/cloud/   /manage-cloud/update-cloud-version/  301
@@ -295,15 +290,6 @@
 /data/data-mapping/   /data/data-mapping/  301
 
 # Editor UI
-
-# /editor-ui/   /  301
-
-# Integrations menu refactor
-
-/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
-/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
-/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
-/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 
 # Creating nodes overhaul
 
@@ -361,7 +347,7 @@
 /credentials/smtp/  /integrations/builtin/credentials/sendemail/  301
 /credentials/facebookGraphApp   /integrations/builtin/credentials/facebookapp  301
 
-/credentials/* /integrations/builtin/credentials/:splat  301
+
 
 /nodes/creating-nodes/      /integrations/creating-nodes/  301
 /nodes/creating-nodes/general-guidelines.html        /integrations/creating-nodes/code/standards/  301
@@ -957,3 +943,16 @@
 /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/  301
 /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/ /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/  301
 /integrations/builtin/credentials/sendinblue/ /integrations/builtin/credentials/brevo/  301
+
+
+/hosting/environment-variables/*   /hosting/configuration/:splat  301
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat  301
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
+/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
+/credentials/credential-sharing  /credentials/credential-sharing  200
+/credentials/add-edit-credentials /credentials/add-edit-credentials 200
+/credentials/* /integrations/builtin/credentials/:splat  301
+/getting-started/create-your-first-workflow/*    /try-it-out/  301

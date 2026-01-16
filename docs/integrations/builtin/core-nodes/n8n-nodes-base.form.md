@@ -63,14 +63,16 @@ When serving the form, you can pass values for hidden fields using [query parame
 
 Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure.md). Each object defines a single field by using a combination of these keys:
 
-- `fieldLabel`: The label that appears above the input field. 
+- `fieldLabel`: The label that appears above the input field on the rendered form. 
+- `fieldName`: The field name that is used in the output of the Form node and to reference the field in expressions.
 - `fieldType`: Choose from `checkbox`, `date`, `dropdown`, `email`, `file`, `hiddenField`, `html`, `number`, `password`, `radio`, `text`, or `textarea`.
     - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
 	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`. As an alternative, you can use `checkbox` or `radio` together with `fieldOptions` too.
 	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
 	- Use `hiddenField` to add a hidden field to your form. Refer to [Including hidden fields](#including-hidden-fields) for more information.
 	- Use `html` to display custom HTML on your form. Refer to [Displaying custom HTML](#displaying-custom-html) for more information.
-- `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `date`, and `file`.
+- `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `checkbox`, `radio`, `date`, and `file`.
+- `defaultValue`: Specify a value that will be pre-filled or pre-selected in the form element. You can use this for every `fieldType` except `password`, `html`, `hiddenField` and `file`.
 - `requiredField`: Require users to complete this field on the form.
 
 An example JSON that shows the general format required and the keys available:
@@ -78,7 +80,9 @@ An example JSON that shows the general format required and the keys available:
 ```javascript
 // Use the "requiredField" key on any field to mark it as mandatory
 // Use the "placeholder" key to specify placeholder data for all fields
-// except 'dropdown', 'date' and 'file'
+// except 'dropdown', 'checkbox', 'radio', 'date' and 'file'
+// Use the "defaultValue" key to pre-fill a form field or pre-select a 
+// value in 'checkbox', 'radio' or 'dropdown' fields
 
 [
   {
@@ -100,6 +104,7 @@ An example JSON that shows the general format required and the keys available:
         }
       ]
     },
+    "defaultValue": "option 1",
     "requiredField": true
   },
   {
@@ -120,7 +125,7 @@ An example JSON that shows the general format required and the keys available:
   {
     "fieldLabel": "Email",
     "fieldType": "email",
-    "placeholder": "me@mail.con"
+    "placeholder": "me@mail.com"
   },
   {
     "fieldLabel": "File",
@@ -142,7 +147,8 @@ An example JSON that shows the general format required and the keys available:
   },
   {
     "fieldLabel": "Textarea",
-    "fieldType": "textarea"
+    "fieldType": "textarea",
+    "defaultValue": "Lorem ipsum."
   },
   {
     "fieldType": "html",
@@ -161,7 +167,8 @@ An example JSON that shows the general format required and the keys available:
           "option": "option 2"
         }
       ]
-    }
+    },
+    "defaultValue": ["option 1", "option 2"]
   },
   {
     "fieldLabel": "Radio",
@@ -193,7 +200,7 @@ Choose between these options when using **On n8n Form Submission**:
 
 - **Show Completion Screen**: Shows users a final screen to confirm that they submitted the form.
 	- Fill in **Completion Title** to set the `h1` title on the form.
-	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `<br>` to add a line break. 
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
 - **Redirect to URL**: Redirect the user to a specified URL when the form completes.
 	- Fill in the **URL** field with the page you want to redirect to when users complete the form.
@@ -201,7 +208,7 @@ Choose between these options when using **On n8n Form Submission**:
 	- Fill in the **Text** field with the HTML or plain text content you wish to show.
 - **Return Binary File**: Return a binary file upon completion.
 	- Fill in **Completion Title** to set the `h1` title on the form.
-	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `<br>` to add a line break. 
 	- Provide the **Input Data Field Name** containing the binary file to return to the user.
 
 ### Forms with branches
@@ -231,7 +238,7 @@ This workflow may execute more than one branch during an execution. Here, n8n ex
 Select **Add Option** to view more configuration options: 
 
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
-- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
+- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
 - **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 - **Completion Page Title**: The title for the final completion page of the form.
@@ -249,9 +256,9 @@ There are two ways to test:
 
 ### Production workflows
 
-When your workflow is ready, switch to using the n8n Form Trigger's **Production URL** by opening the trigger node and selecting the **Production URL** in the **From URLS** selector. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
+When your workflow is ready, switch to using the n8n Form Trigger's **Production URL** by opening the trigger node and selecting the **Production URL** in the **From URLS** selector. You can then publish your workflow, and n8n runs it automatically when a user submits the form.
 
-When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
+When working with a production URL, ensure that you have saved and published the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
 
 ## Templates and examples
 

@@ -39,7 +39,7 @@ To receive error messages for a failed workflow, set the **Error Workflow** in t
 The only difference between a regular workflow and an Error Workflow is that the latter contains an **Error Trigger node**. Make sure to create this node before you set this as another workflow's designated Error Workflow.
 
 /// note | Error workflows
-- If a workflow uses the Error Trigger node, you don't have to activate the workflow.
+- If a workflow uses the Error Trigger node, you don't have to publish the workflow.
 - If a workflow contains the Error Trigger node, by default, the workflow uses itself as the error workflow.
 - You can't test error workflows when running workflows manually. The Error trigger only runs when an automatic workflow errors.
 - You can set the same Error Workflow for multiple workflows.
@@ -78,7 +78,7 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 			{
 				"parameters": {
 					"channel": "channelname",
-					"text": "=This workflow {{$node[\"Error Trigger\"].json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$node[\"Error Trigger\"].json[\"execution\"][\"url\"]}}",
+					"text": "=This workflow {{$(\"Error Trigger\").item.json[\"workflow\"][\"name\"]}}failed.\nHave a look at it here: {{$(\"Error Trigger\").item.json[\"execution\"][\"url\"]}}",
 					"attachments": [],
 					"otherOptions": {}
 				},

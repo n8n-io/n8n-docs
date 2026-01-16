@@ -7,7 +7,7 @@ contentType: howto
 # Streaming responses
 
 /// info | Feature availability
-Available on all plans from [version 1.105.2](/release-notes.md#n8n11052).
+Available on all plans.
 ///
 
 Streaming responses let you send data back to users as an AI Agent node generates it. This is useful for chatbots, where you want to show the user the answer as it's generated to provide a better user experience.

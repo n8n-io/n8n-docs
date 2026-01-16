@@ -4,15 +4,15 @@ contentType: tutorial
 
 <!-- vale from-microsoft.We = NO -->
 <!-- vale from-microsoft.FirstPerson = NO -->
-# 8. Activating and Examining the Workflow
+# 8. Publishing and Examining the Workflow
 
-In this step of the workflow, you will learn how to activate your workflow and change the default workflow settings.
+In this step of the workflow, you will learn how to publish your workflow and change the default workflow settings.
 
-Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all newly created workflows start deactivated.
+Publishing a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, newly created workflows are not published.
 
-To activate your workflow, set the **Inactive** toggle in the top navigation of the Editor UI to be **Activated**. Nathan's workflow will now be executed automatically every Monday at 9 AM:
+To publish your workflow, click **Publish** in the top navigation of the Editor UI. Nathan's workflow will now be executed automatically every Monday at 9 AM:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-8-activated-workflow.png" alt="Activated workflow" style="width:100%"><figcaption align = "center"><i>Activated workflow</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-8-activated-workflow.png" alt="Published workflow" style="width:100%"><figcaption align = "center"><i>Published workflow</i></figcaption></figure>
 
 ## Workflow Executions
 

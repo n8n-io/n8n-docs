@@ -134,7 +134,7 @@ You can view running workers and their performance metrics in n8n by selecting *
 
 ## Running n8n with queues
 
-When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency.
+When running n8n with queues, all the production workflow executions get processed by worker processes. For webhooks, this means the HTTP request is received by the main/webhook process, but the actual workflow execution is passed to a worker, which can add some overhead and latency.
 
 Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 

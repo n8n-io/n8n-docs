@@ -110,7 +110,7 @@ If those aren't enough, use the table below to look up the resource and operatio
 | Message      | Get Permalink              | [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)               |
 | Message      | Search                     | [search.messages](https://api.slack.com/methods/search.messages)                   |
 | Message      | Send                       | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
-| Message      | Send and Wait for Approval | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
+| Message      | Send and Wait for Response | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
 | Message      | Update                     | [chat.update](https://api.slack.com/methods/chat.update)                           |
 | Reaction     | Add                        | [reactions.add](https://api.slack.com/methods/reactions.add)                       |
 | Reaction     | Get                        | [reactions.get](https://api.slack.com/methods/reactions.get)                       |

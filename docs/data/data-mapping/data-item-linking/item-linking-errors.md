@@ -22,7 +22,7 @@ When using `.item`, n8n displays an error when:
 
 To solve these errors, you can either avoid using `.item`, or fix the root cause.
 
-You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you’re targeting within the target node's output items. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
+You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you're targeting within the target node's output items. Refer to [Referencing previous nodes](/data/data-mapping/referencing-other-nodes.md) for more detail on these methods.
 
 The fix for the root cause depends on the exact error.
 
@@ -47,5 +47,5 @@ Sometimes n8n uses multiple items to create a single item. Examples include the 
 
 When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 
-- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
+- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Referencing previous nodes](/data/data-mapping/referencing-other-nodes.md) for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.

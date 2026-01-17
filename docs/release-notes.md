@@ -58,7 +58,6 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.3.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.1...n8n@2.3.2) for this version.<br />
@@ -74,8 +73,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.0...n8n@2.4.0) for this version.<br />
 **Release date:** 2026-01-12
 
-
-
 This release contains bug fixes.
 
 ### Contributors
@@ -89,18 +86,15 @@ This release contains bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
-
 ## n8n@2.3.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.2...n8n@2.3.3) for this version.<br />
 **Release date:** 2026-01-13
 
 
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 
 ## n8n@2.3.4

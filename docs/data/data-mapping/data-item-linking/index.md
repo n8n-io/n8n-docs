@@ -2,7 +2,7 @@
 contentType: overview
 ---
 
-# Data item linking
+# Linking data items
 
 An item is a single piece of data. Nodes receive one or more items, operate on them, and output new items. Each item links back to previous items. 
 

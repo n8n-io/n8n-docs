@@ -17,4 +17,4 @@ You can use Python in the Code node. It isn't available in expressions.
 ## Related resources
 
 * [Built-in methods and variables reference](/code/builtin/overview.md)
-* [Expressions](/code/expressions.md)
+* [Expressions](/data/expressions.md)

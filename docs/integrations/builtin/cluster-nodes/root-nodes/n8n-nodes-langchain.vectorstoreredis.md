@@ -19,9 +19,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Prerequisites
 Before using this node, you need a Redis database with the [Redis Query Engine](https://redis.io/docs/latest/develop/ai/search-and-query/?utm_source=n8n&utm_medium=docs) enabled. Use one of the following:
-   - Redis Open Source (v8.0 and later) - includes the Redis Query Engine by default 
-   - [Redis Cloud](https://cloud.redis.io/?utm_source=n8n&utm_medium=docs) - fully managed service 
-   - [Redis Software](https://redis.io/software/?utm_source=n8n&utm_medium=docs) - self-managed deployment
+- **Redis Open Source (v8.0 and later)** : includes the Redis Query Engine by default 
+- **[Redis Cloud](https://cloud.redis.io/?utm_source=n8n&utm_medium=docs)** : fully managed service 
+- **[Redis Software](https://redis.io/software/?utm_source=n8n&utm_medium=docs)** : self-managed deployment
 
 /// note | A new index will be created if you don't have one.
 Creating your own indices in advance is only necessary if you want to use a custom index schema or reuse an existing index.
@@ -36,7 +36,7 @@ You can use the Redis Vector Store node in the following patterns:
 
 You can use the Redis Vector Store as a regular node to insert or get documents. This pattern places the Redis Vector Store in the regular connection flow without using an agent.
 
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (the template uses the Supabase Vector Store, but the pattern is the same).
+You can see an example in [this template](https://n8n.io/workflows/10887-reduce-llm-costs-with-semantic-caching-using-redis-vector-store-and-huggingface/) where the semantic cache is stored in Redis and retrieved using the Redis Vector Store node in the start of the workflow.
 
 ### Connect directly to an AI agent as a tool
 
@@ -54,7 +54,7 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 
 Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Redis Vector Store node. Rather than connecting the Redis Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
-The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitch-deck-ai-vision-chatbot-and-qdrant-vector-store/) (the linked example uses Qdrant, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Redis Vector store.
+This [template](https://n8n.io/workflows/10837-chat-with-github-issues-using-openai-and-redis-vector-search/) shows how to use the Vector Store Question Answer Tool with the Redis Vector Store node. The connections flow in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Redis Vector store.
 
 ## Node parameters
 
@@ -64,9 +64,9 @@ The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitc
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
-<!-- vale off -->
+<!-- vale from-write-good.Weasel = NO  -->
 ### Get Many parameters
-<!-- vale on -->
+<!-- vale from-write-good.Weasel = YES -->
 
 - **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 - **Prompt**: Enter the search query.
@@ -80,9 +80,9 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](#metadat
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-- **Redis Index**: Enter the name of the Redis vector search index to use.
+- **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter). Optionally choose an existing one from the list.
+This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter). 
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 

@@ -44,7 +44,7 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for gui
     * **Get permalink**: Get a message's permalink.
     * **Search** for messages
     * **Send** a message
-    * **Send and Wait for Approval**: Send a message and wait for approval from the recipient before continuing.
+    * **Send and Wait for Response**: Send a message and wait for a response from the recipient before continuing.
     * **Update** a message
 * **Reaction**
     * **Add** a reaction to a message.

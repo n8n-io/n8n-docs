@@ -2,10 +2,10 @@
 
 ## getAll()
 
-* **Description:** Returns all the key-value pairs of custom data that have been set in the current execution. More info
-* **Definition:** getAll()
+* **Description:** Returns all the key-value pairs of custom data that have been set in the current execution. <a href="/workflows/executions/custom-executions-data/">More info</a>
+* **Syntax:** $execution.customData.getAll()
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -14,9 +14,9 @@
 
 ## setAll()
 
-* **Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. More info
-* **Definition:** setAll(obj)
-* **Source:** n8n
+* **Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
+* **Syntax:** $execution.customData.setAll(obj)
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `obj` (Object) - A JavaScript object containing key-value pairs of the data to set
 * **Examples:**
@@ -27,9 +27,9 @@
 
 ## set()
 
-* **Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. More info
-* **Definition:** set(key, value)
-* **Source:** n8n
+* **Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
+* **Syntax:** $execution.customData.set(key, value)
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `key` (String) - The key (identifier) under which the data is stored
   * `value` (String) - The data to store
@@ -42,10 +42,10 @@
 
 ## get()
 
-* **Description:** Returns the custom execution data stored under the given key. More info
-* **Definition:** get(key)
+* **Description:** Returns the custom execution data stored under the given key. <a href="/workflows/executions/custom-executions-data/">More info</a>
+* **Syntax:** $execution.customData.get(key)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `key` (String) - The key (identifier) under which the data is stored
 * **Examples:**

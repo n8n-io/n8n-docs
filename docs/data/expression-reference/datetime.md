@@ -2,10 +2,10 @@
 
 ## isBetween()
 
-* **Description:** Returns `true` if the DateTime lies between the two moments specified
-* **Definition:** isBetween(date1, date2)
+* **Description:** Returns <code>true</code> if the DateTime lies between the two moments specified
+* **Syntax:** dt.isBetween(date1, date2)
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `date1` (String|DateTime) - The moment that the base DateTime must be after. Can be an ISO date string or a Luxon DateTime.
   * `date2` (String|DateTime) - The moment that the base DateTime must be before. Can be an ISO date string or a Luxon DateTime.
@@ -24,9 +24,9 @@
 ## weekdayShort
 
 * **Description:** The textual abbreviated weekday name, e.g. 'Wed'. Defaults to the system's locale if no locale has been specified.
-* **Definition:** weekdayShort
+* **Syntax:** dt.weekdayShort
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -41,10 +41,10 @@
 
 ## format()
 
-* **Description:** Converts the DateTime to a string, using the format specified. Formatting guide. For common formats, `toLocaleString()` may be easier.
-* **Definition:** format(fmt)
+* **Description:** Converts the DateTime to a string, using the format specified. <a href="https://moment.github.io/luxon/#/formatting?id=table-of-tokens">Formatting guide</a>. For common formats, <code>toLocaleString()</code> may be easier.
+* **Syntax:** dt.format(fmt)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `fmt` (String) - The <a href="https://moment.github.io/luxon/#/formatting?id=table-of-tokens">format</a> of the string to return 
 * **Examples:**
@@ -64,9 +64,9 @@
 ## toISO()
 
 * **Description:** Returns an ISO 8601-compliant string representation of the DateTime
-* **Definition:** toISO(opts)
+* **Syntax:** dt.toISO(opts)
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `opts ` (Object) - optional - Configuration options. See <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimetoiso”>Luxon docs</a> for more info.
 * **Examples:**
@@ -78,9 +78,9 @@
 ## plus()
 
 * **Description:** Adds a given period of time to the DateTime
-* **Definition:** plus(n, unit?)
+* **Syntax:** dt.plus(n, unit?)
 * **Returns:** DateTime
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `n` (Number|Object) - The number of units to add. Or use a Luxon <a href=”https://moment.github.io/luxon/api-docs/index.html#duration”>Duration</a> object to add multiple units at once.
   * `unit` (String) - optional - The units of the number. One of: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>
@@ -88,27 +88,27 @@
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.plus(7, 'days') //=> 2024-04-06T18:49
+  dt.plus(7, 'days') //=> 2024-05-07T18:49
   ```
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.plus(4, 'years') //=> 2028-03-30T18:49
+  dt.plus(4, 'years') //=> 2028-04-30T18:49
   ```
 
 ## isInDST
 
 * **Description:** Whether the DateTime is in daylight saving time
-* **Definition:** isInDST
+* **Syntax:** dt.isInDST
 * **Returns:** Boolean
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 
 ## zone
 
 * **Description:** The time zone associated with the DateTime
-* **Definition:** zone
+* **Syntax:** dt.zone
 * **Returns:** Object
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -118,9 +118,9 @@
 ## toMillis()
 
 * **Description:** Returns a Unix timestamp in milliseconds (the number elapsed since 1st Jan 1970)
-* **Definition:** toMillis()
+* **Syntax:** dt.toMillis()
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -130,9 +130,9 @@
 ## weekNumber
 
 * **Description:** The week number of the year (1-52ish)
-* **Definition:** weekNumber
+* **Syntax:** dt.weekNumber
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -143,9 +143,9 @@
 ## month
 
 * **Description:** The month (1-12)
-* **Definition:** month
+* **Syntax:** dt.month
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -156,9 +156,9 @@
 ## toSeconds()
 
 * **Description:** Returns a Unix timestamp in seconds (the number elapsed since 1st Jan 1970)
-* **Definition:** toSeconds()
+* **Syntax:** dt.toSeconds()
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -167,10 +167,10 @@
 
 ## toString()
 
-* **Description:** Returns a string representation of the DateTime. Similar to `toISO()`. For more formatting options, see `format()` or `toLocaleString()`.
-* **Definition:** toString()
+* **Description:** Returns a string representation of the DateTime. Similar to <code>toISO()</code>. For more formatting options, see <code>format()</code> or <code>toLocaleString()</code>.
+* **Syntax:** dt.toString()
 * **Returns:** string
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -180,9 +180,9 @@
 ## toLocaleString()
 
 * **Description:** Returns a localised string representing the DateTime, i.e. in the language and format corresponding to its locale. Defaults to the system's locale if none specified.
-* **Definition:** toLocaleString(formatOpts)
+* **Syntax:** dt.toLocaleString(formatOpts)
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `formatOpts ` (Object) - optional - Configuration options for the rendering. See <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters”>Intl.DateTimeFormat</a> for a full list. Defaults to rendering a short date.
   * ` ` ()
@@ -231,9 +231,9 @@
 ## millisecond
 
 * **Description:** The millisecond of the second (0-999)
-* **Definition:** millisecond
+* **Syntax:** dt.millisecond
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -244,9 +244,9 @@
 ## weekdayLong
 
 * **Description:** The textual long weekday name, e.g. 'Wednesday'. Defaults to the system's locale if no locale has been specified.
-* **Definition:** weekdayLong
+* **Syntax:** dt.weekdayLong
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -262,9 +262,9 @@
 ## monthLong
 
 * **Description:** The textual long month name, e.g. 'October'. Defaults to the system's locale if no locale has been specified.
-* **Definition:** monthLong
+* **Syntax:** dt.monthLong
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -280,9 +280,9 @@
 ## second
 
 * **Description:** The second of the minute (0-59)
-* **Definition:** second
+* **Syntax:** dt.second
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -293,9 +293,9 @@
 ## year
 
 * **Description:** The year
-* **Definition:** year
+* **Syntax:** dt.year
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -305,10 +305,10 @@
 
 ## diffToNow()
 
-* **Description:** Returns the difference between the current moment and the DateTime, in the given unit(s). For a textual representation, use `toRelative()` instead.
-* **Definition:** diffToNow(unit)
+* **Description:** Returns the difference between the current moment and the DateTime, in the given unit(s). For a textual representation, use <code>toRelative()</code> instead.
+* **Syntax:** dt.diffToNow(unit)
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `unit ` (String|Array<String>) - optional - The unit, or array of units, to return the result in. Possible values: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>.
   * ` ` ()
@@ -331,10 +331,10 @@
 
 ## set()
 
-* **Description:** Assigns new values to specified units of the DateTime. To round a DateTime, see also `startOf()` and `endOf()`.
-* **Definition:** set(values)
+* **Description:** Assigns new values to specified units of the DateTime. To round a DateTime, see also <code>startOf()</code> and <code>endOf()</code>.
+* **Syntax:** dt.set(values)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `values ` (Object) - An object containing the units to set and corresponding values to assign. Possible keys are <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code> and <code>millsecond</code>.
 * **Examples:**
@@ -347,9 +347,9 @@
 ## hour
 
 * **Description:** The hour of the day (0-23)
-* **Definition:** hour
+* **Syntax:** dt.hour
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -359,10 +359,10 @@
 
 ## equals()
 
-* **Description:** Returns `true` if the two DateTimes represent exactly the same moment and are in the same time zone. For a less strict comparison, use `hasSame()`.
-* **Definition:** equals(other)
+* **Description:** Returns <code>true</code> if the two DateTimes represent exactly the same moment and are in the same time zone. For a less strict comparison, use <code>hasSame()</code>.
+* **Syntax:** dt.equals(other)
 * **Returns:** Boolean
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `other ` (DateTime) - The other DateTime to compare
 * **Examples:**
@@ -376,9 +376,9 @@
 ## monthShort
 
 * **Description:** The textual abbreviated month name, e.g. 'Oct'. Defaults to the system's locale if no locale has been specified.
-* **Definition:** monthShort
+* **Syntax:** dt.monthShort
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -393,10 +393,10 @@
 
 ## setLocale()
 
-* **Description:** Sets the locale, which determines the language and formatting for the DateTime. Useful when generating a textual representation of the DateTime, e.g. with `format()` or `toLocaleString()`.
-* **Definition:** setLocale(locale)
+* **Description:** Sets the locale, which determines the language and formatting for the DateTime. Useful when generating a textual representation of the DateTime, e.g. with <code>format()</code> or <code>toLocaleString()</code>.
+* **Syntax:** dt.setLocale(locale)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `locale ` (String) - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. <a href=”https://www.localeplanet.com/icu/”>List</a> (unofficial)
 * **Examples:**
@@ -412,9 +412,9 @@
 ## endOf()
 
 * **Description:** Rounds the DateTime up to the end of one of its units, e.g. the end of the month
-* **Definition:** endOf(unit, opts)
+* **Syntax:** dt.endOf(unit, opts)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `unit ` (String) - The unit to round to the end of. Can be <code>year</code>, <code>quarter</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, or <code>millisecond</code>.
   * `opts ` (Object) - optional - Object with options that affect the output. Possible properties:
@@ -429,9 +429,9 @@
 ## locale
 
 * **Description:** The locale of a DateTime, such 'en-GB'. The locale is used when formatting the DateTime.
-* **Definition:** locale
+* **Syntax:** dt.locale
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -441,9 +441,9 @@
 ## quarter
 
 * **Description:** The quarter of the year (1-4)
-* **Definition:** quarter
+* **Syntax:** dt.quarter
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -454,9 +454,9 @@
 ## startOf()
 
 * **Description:** Rounds the DateTime down to the beginning of one of its units, e.g. the start of the month
-* **Definition:** startOf(unit, opts)
+* **Syntax:** dt.startOf(unit, opts)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `unit ` (String) - The unit to round to the beginning of. One of <code>year</code>, <code>quarter</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, or <code>millisecond</code>.
   * `opts ` (Object) - optional - Object with options that affect the output. Possible properties:
@@ -470,10 +470,10 @@
 
 ## hasSame()
 
-* **Description:** Returns `true` if the two DateTimes are the same, down to the unit specified. Time zones are ignored (only local times are compared), so use `toUTC()` first if needed.
-* **Definition:** hasSame(otherDateTime, unit)
+* **Description:** Returns <code>true</code> if the two DateTimes are the same, down to the unit specified. Time zones are ignored (only local times are compared), so use <code>toUTC()</code> first if needed.
+* **Syntax:** dt.hasSame(otherDateTime, unit)
 * **Returns:** Boolean
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `otherDateTime ` (DateTime) - The other DateTime to compare
   * `unit ` (String) - The unit of time to check sameness down to. One of <code>year</code>, <code>quarter</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, or <code>millisecond</code>.
@@ -495,9 +495,9 @@
 ## day
 
 * **Description:** The day of the month (1-31)
-* **Definition:** day
+* **Syntax:** dt.day
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -508,9 +508,9 @@
 ## minute
 
 * **Description:** The minute of the hour (0-59)
-* **Definition:** minute
+* **Syntax:** dt.minute
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -521,9 +521,9 @@
 ## toLocal()
 
 * **Description:** Converts a DateTime to the workflow’s local time zone. The DateTime still represents the same moment unless specified in the parameters. The workflow’s time zone can be set in the workflow settings.
-* **Definition:** toLocal()
+* **Syntax:** dt.toLocal()
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -534,9 +534,9 @@
 ## toRelative()
 
 * **Description:** Returns a textual representation of the time relative to now, e.g. ‘in two days’. Rounds down by default.
-* **Definition:** toRelative(options)
+* **Syntax:** dt.toRelative(options)
 * **Returns:** String
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `options ` (Object) - optional - Options that affect the output. Possible properties:
 <code>unit</code> = the unit to default to (<code>years</code>, <code>months</code>, <code>days</code>, etc.).
@@ -557,10 +557,10 @@
 
 ## extract()
 
-* **Description:** Extracts a part of the date or time, e.g. the month, as a number. To extract textual names instead, see `format()`.
-* **Definition:** extract(unit?)
+* **Description:** Extracts a part of the date or time, e.g. the month, as a number. To extract textual names instead, see <code>format()</code>.
+* **Syntax:** dt.extract(unit?)
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `unit` (String) - optional - The part of the date or time to return. One of: <code>year</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>
 * **Examples:**
@@ -578,9 +578,9 @@
 ## minus()
 
 * **Description:** Subtracts a given period of time from the DateTime
-* **Definition:** minus(n, unit?)
+* **Syntax:** dt.minus(n, unit?)
 * **Returns:** DateTime
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `n` (Number|Object) - The number of units to subtract. Or use a Luxon <a href=”https://moment.github.io/luxon/api-docs/index.html#duration”>Duration</a> object to subtract multiple units at once.
   * `unit` (String) - optional - The units of the number. One of: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>
@@ -588,20 +588,20 @@
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.minus(7, 'days') //=> 2024-03-23T18:49
+  dt.minus(7, 'days') //=> 2024-04-23T18:49
   ```
 
   ```javascript
   // dt = "2024-03-30T18:49".toDateTime()
-  dt.minus(4, 'years') //=> 2020-03-30T18:49
+  dt.minus(4, 'years') //=> 2020-04-30T18:49
   ```
 
 ## weekday
 
 * **Description:** The day of the week. 1 is Monday and 7 is Sunday.
-* **Definition:** weekday
+* **Syntax:** dt.weekday
 * **Returns:** Number
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Examples:**
 
   ```javascript
@@ -611,10 +611,10 @@
 
 ## setZone()
 
-* **Description:** Converts the DateTime to the given time zone. The DateTime still represents the same moment unless specified in the options. See also `toLocal()` and `toUTC()`.
-* **Definition:** setZone(zone, opts)
+* **Description:** Converts the DateTime to the given time zone. The DateTime still represents the same moment unless specified in the options. See also <code>toLocal()</code> and <code>toUTC()</code>.
+* **Syntax:** dt.setZone(zone, opts)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `zone ` (String) - optional - A zone identifier, either in the format ‘America/New_York’, 'UTC+3', or the strings 'local' or 'utc'
   * `opts ` (Object) - optional - Options that affect the output. Possible properties:
@@ -633,10 +633,10 @@
 
 ## toUTC()
 
-* **Description:** Converts a DateTime to the UTC time zone. The DateTime still represents the same moment unless specified in the parameters. Use `setZone()` to convert to other zones.
-* **Definition:** toUTC(offset, opts)
+* **Description:** Converts a DateTime to the UTC time zone. The DateTime still represents the same moment unless specified in the parameters. Use <code>setZone()</code> to convert to other zones.
+* **Syntax:** dt.toUTC(offset, opts)
 * **Returns:** DateTime
-* **Source:** Luxon
+* **n8n or JavaScript method:** Luxon
 * **Parameters:**
   * `offset ` (Number) - optional - An offset from UTC in minutes
   * `opts ` (Object) - optional - Object with options that affect the output. Possible properties:
@@ -651,9 +651,9 @@
 ## diffTo()
 
 * **Description:** Returns the difference between two DateTimes, in the given unit(s)
-* **Definition:** diffTo(otherDateTime, unit)
+* **Syntax:** dt.diffTo(otherDateTime, unit)
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `otherDateTime ` (String|DateTime) - The moment to subtract the base DateTime from. Can be an ISO date string or a Luxon DateTime.
   * `unit ` (String|Array<String>) - optional - The unit, or array of units, to return the result in. Possible values: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>.

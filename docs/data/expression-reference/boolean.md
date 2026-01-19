@@ -2,10 +2,10 @@
 
 ## toNumber()
 
-* **Description:** Converts `true` to 1 and `false` to 0
-* **Definition:** toNumber()
+* **Description:** Converts <code>true</code> to 1 and <code>false</code> to 0
+* **Syntax:** bool.toNumber()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -18,10 +18,10 @@
 
 ## isEmpty()
 
-* **Description:** Returns `false` for all booleans. Returns `true` for `null`.
-* **Definition:** isEmpty()
+* **Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+* **Syntax:** bool.isEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -41,10 +41,10 @@
 
 ## toString()
 
-* **Description:** Converts `true` to the string ‘true’ and `false` to the string ‘false’ 
-* **Definition:** toString()
+* **Description:** Converts <code>true</code> to the string ‘true’ and <code>false</code> to the string ‘false’ 
+* **Syntax:** bool.toString()
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript

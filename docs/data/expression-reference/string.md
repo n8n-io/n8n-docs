@@ -2,12 +2,12 @@
 
 ## match()
 
-* **Description:** Matches the string against a regular expression. Returns an array containing the first match, or all matches if the `g` flag is set in the regular expression. Returns `null` if no matches are found. 
+* **Description:** Matches the string against a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
 
-For checking whether text is present, consider `includes()` instead.
-* **Definition:** match(regexp)
+For checking whether text is present, consider <code>includes()</code> instead.
+* **Syntax:** string.match(regexp)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
 * **Examples:**
@@ -29,10 +29,10 @@ For checking whether text is present, consider `includes()` instead.
 
 ## extractEmail()
 
-* **Description:** Extracts the first email found in the string. Returns `undefined` if none is found.
-* **Definition:** extractEmail()
+* **Description:** Extracts the first email found in the string. Returns <code>undefined</code> if none is found.
+* **Syntax:** string.extractEmail()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -41,12 +41,12 @@ For checking whether text is present, consider `includes()` instead.
 
 ## extractDomain()
 
-* **Description:** If the string is an email address or URL, returns its domain (or `undefined` if nothing found). 
+* **Description:** If the string is an email address or URL, returns its domain (or <code>undefined</code> if nothing found). 
 
-If the string also contains other content, try using `extractEmail()` or `extractUrl()` first.
-* **Definition:** extractDomain()
+If the string also contains other content, try using <code>extractEmail()</code> or <code>extractUrl()</code> first.
+* **Syntax:** string.extractDomain()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -63,10 +63,10 @@ If the string also contains other content, try using `extractEmail()` or `extrac
 
 ## indexOf()
 
-* **Description:** Returns the index (position) of the first occurrence of `searchString` within the base string, or -1 if not found. Case-sensitive.
-* **Definition:** indexOf(searchString, start?)
+* **Description:** Returns the index (position) of the first occurrence of <code>searchString</code> within the base string, or -1 if not found. Case-sensitive.
+* **Syntax:** string.indexOf(searchString, start?)
 * **Returns:** Number
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `searchString` (String) - The text to search for
   * `start` (Number) - optional - The position (index) to start searching from
@@ -85,10 +85,10 @@ If the string also contains other content, try using `extractEmail()` or `extrac
 
 ## isDomain()
 
-* **Description:** Returns `true` if the string is a domain
-* **Definition:** isDomain()
+* **Description:** Returns <code>true</code> if the string is a domain
+* **Syntax:** string.isDomain()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -105,10 +105,10 @@ If the string also contains other content, try using `extractEmail()` or `extrac
 
 ## toBoolean()
 
-* **Description:** Converts the string to a boolean value. `0`, `false` and `no` resolve to `false`, everything else to `true`. Case-insensitive.
-* **Definition:** toBoolean()
+* **Description:** Converts the string to a boolean value. <code>0</code>, <code>false</code> and <code>no</code> resolve to <code>false</code>, everything else to <code>true</code>. Case-insensitive.
+* **Syntax:** string.toBoolean()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -130,9 +130,9 @@ If the string also contains other content, try using `extractEmail()` or `extrac
 ## toLowerCase()
 
 * **Description:** Converts all letters in the string to lower case
-* **Definition:** toLowerCase()
+* **Syntax:** string.toLowerCase()
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -143,10 +143,10 @@ If the string also contains other content, try using `extractEmail()` or `extrac
 
 * **Description:** Prepares the string to be inserted into a JSON object. Escapes any quotes and special characters (e.g. new lines), and wraps the string in quotes.
 
-The same as JavaScript’s `JSON.stringify()`.
-* **Definition:** toJsonString()
+The same as JavaScript’s <code>JSON.stringify()</code>.
+* **Syntax:** string.toJsonString()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -157,9 +157,9 @@ The same as JavaScript’s `JSON.stringify()`.
 ## toSentenceCase()
 
 * **Description:** Changes the capitalization of the string to sentence case. The first letter of each sentence is capitalized and all others are lowercased.
-* **Definition:** toSentenceCase()
+* **Syntax:** string.toSentenceCase()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -168,10 +168,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 ## toSnakeCase()
 
-* **Description:** Changes the format of the string to snake case. Spaces and dashes are replaced by `_`, symbols are removed and all letters are lowercased.
-* **Definition:** toSnakeCase()
+* **Description:** Changes the format of the string to snake case. Spaces and dashes are replaced by <code>_</code>, symbols are removed and all letters are lowercased.
+* **Syntax:** string.toSnakeCase()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -181,9 +181,9 @@ The same as JavaScript’s `JSON.stringify()`.
 ## removeTags()
 
 * **Description:** Removes tags, such as HTML or XML, from the string
-* **Definition:** removeTags()
+* **Syntax:** string.removeTags()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -192,10 +192,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 ## isNumeric()
 
-* **Description:** Returns `true` if the string represents a number
-* **Definition:** isNumeric()
+* **Description:** Returns <code>true</code> if the string represents a number
+* **Syntax:** string.isNumeric()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -213,9 +213,9 @@ The same as JavaScript’s `JSON.stringify()`.
 ## removeMarkdown()
 
 * **Description:** Removes any Markdown formatting from the string. Also removes HTML tags.
-* **Definition:** removeMarkdown()
+* **Syntax:** string.removeMarkdown()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -224,10 +224,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 ## search()
 
-* **Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a regular expression. To use text instead, see `indexOf()`.
-* **Definition:** search(regexp)
+* **Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. To use text instead, see <code>indexOf()</code>.
+* **Syntax:** string.search(regexp)
 * **Returns:** Number
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for
 * **Examples:**
@@ -245,10 +245,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 ## extractUrl()
 
-* **Description:** Extracts the first URL found in the string. Returns `undefined` if none is found. Only recognizes full URLs, e.g. those starting with `http`.
-* **Definition:** extractUrl()
+* **Description:** Extracts the first URL found in the string. Returns <code>undefined</code> if none is found. Only recognizes full URLs, e.g. those starting with <code>http</code>.
+* **Syntax:** string.extractUrl()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -258,9 +258,9 @@ The same as JavaScript’s `JSON.stringify()`.
 ## base64Encode()
 
 * **Description:** Converts a base64-encoded string to plain text
-* **Definition:** base64Encode()
+* **Syntax:** string.base64Encode()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -269,10 +269,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 ## includes()
 
-* **Description:** Returns `true` if the string contains the `searchString`. Case-sensitive.
-* **Definition:** includes(searchString, start?)
+* **Description:** Returns <code>true</code> if the string contains the <code>searchString</code>. Case-sensitive.
+* **Syntax:** string.includes(searchString, start?)
 * **Returns:** Boolean
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `searchString` (String) - The text to search for
   * `start` (Number) - optional - The position (index) to start searching from
@@ -292,9 +292,9 @@ The same as JavaScript’s `JSON.stringify()`.
 ## quote()
 
 * **Description:** Wraps a string in quotation marks, and escapes any quotation marks already in the string. Useful when constructing JSON, SQL, etc.
-* **Definition:** quote(mark?)
+* **Syntax:** string.quote(mark?)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `mark` (String) - optional - The type of quotation mark to use
 * **Examples:**
@@ -306,8 +306,8 @@ The same as JavaScript’s `JSON.stringify()`.
 ## toUpperCase()
 
 * **Description:** Converts all letters in the string to upper case (capitals)
-* **Definition:** toUpperCase()
-* **Source:** JS
+* **Syntax:** string.toUpperCase()
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -318,10 +318,10 @@ The same as JavaScript’s `JSON.stringify()`.
 
 * **Description:** Converts the string to a DateTime. Useful for further transformation. Supported formats for the string are ISO 8601, HTTP, RFC2822, SQL and Unix timestamp in milliseconds. 
 
-To parse other formats, use  `DateTime.fromFormat()`.
-* **Definition:** toDateTime()
+To parse other formats, use <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimefromformat”> <code>DateTime.fromFormat()</code></a>.
+* **Syntax:** string.toDateTime()
 * **Returns:** DateTime
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -342,10 +342,10 @@ To parse other formats, use  `DateTime.fromFormat()`.
 
 ## isUrl()
 
-* **Description:** Returns `true` if the string is a valid URL
-* **Definition:** isUrl()
+* **Description:** Returns <code>true</code> if the string is a valid URL
+* **Syntax:** string.isUrl()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -363,9 +363,9 @@ To parse other formats, use  `DateTime.fromFormat()`.
 ## toTitleCase()
 
 * **Description:** Changes the capitalization of the string to title case. The first letter of each word is capitalized and the others left unchanged. Short prepositions and conjunctions aren’t capitalized (e.g. ‘a’, ‘the’).
-* **Definition:** toTitleCase()
+* **Syntax:** string.toTitleCase()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -374,12 +374,12 @@ To parse other formats, use  `DateTime.fromFormat()`.
 
 ## replace()
 
-* **Description:** Returns a string with the first occurrence of `pattern` replaced by `replacement`. 
+* **Description:** Returns a string with the first occurrence of <code>pattern</code> replaced by <code>replacement</code>. 
 
-To replace all occurrences, use `replaceAll()` instead.
-* **Definition:** replace(pattern, replacement)
+To replace all occurrences, use <code>replaceAll()</code> instead.
+* **Syntax:** string.replace(pattern, replacement)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
   * `replacement` (String) - The new text to replace with
@@ -406,9 +406,9 @@ To replace all occurrences, use `replaceAll()` instead.
 ## trim()
 
 * **Description:** Removes whitespace from both ends of the string. Whitespace includes new lines, tabs, spaces, etc.
-* **Definition:** trim()
+* **Syntax:** string.trim()
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -417,12 +417,12 @@ To replace all occurrences, use `replaceAll()` instead.
 
 ## extractUrlPath()
 
-* **Description:** Returns the part of a URL after the domain, or `undefined` if no URL found. 
+* **Description:** Returns the part of a URL after the domain, or <code>undefined</code> if no URL found. 
 
-If the string also contains other content, try using `extractUrl()` first.
-* **Definition:** extractUrlPath()
+If the string also contains other content, try using <code>extractUrl()</code> first.
+* **Syntax:** string.extractUrlPath()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -435,10 +435,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## isNotEmpty()
 
-* **Description:** Returns `true` if the string has at least one character
-* **Definition:** isNotEmpty()
+* **Description:** Returns <code>true</code> if the string has at least one character
+* **Syntax:** string.isNotEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -451,10 +451,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## startsWith()
 
-* **Description:** Returns `true` if the string starts with `searchString`. Case-sensitive.
-* **Definition:** startsWith(searchString, start?)
+* **Description:** Returns <code>true</code> if the string starts with <code>searchString</code>. Case-sensitive.
+* **Syntax:** string.startsWith(searchString, start?)
 * **Returns:** Boolean
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `searchString` (String) - The text to check against the start of the base string
   * `start` (Number) - optional - The position (index) to start searching from
@@ -472,10 +472,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## replaceAll()
 
-* **Description:** Returns a string with all occurrences of `pattern` replaced by `replacement`
-* **Definition:** replaceAll(pattern, replacement)
+* **Description:** Returns a string with all occurrences of <code>pattern</code> replaced by <code>replacement</code>
+* **Syntax:** string.replaceAll(pattern, replacement)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
   * `replacement` (String|function) - The new text to replace with. Can be a string or a function that returns a string (see examples).
@@ -499,9 +499,9 @@ If the string also contains other content, try using `extractUrl()` first.
 ## length
 
 * **Description:** The number of characters in the string
-* **Definition:** length
+* **Syntax:** string.length
 * **Returns:** Number
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -510,10 +510,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## urlDecode()
 
-* **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of `%XX` with their corresponding characters.
-* **Definition:** urlDecode(allChars?)
+* **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of <code>%XX</code> with their corresponding characters.
+* **Syntax:** string.urlDecode(allChars?)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `allChars` (Boolean) - optional - Whether to decode characters that are part of the URI syntax (e.g. <code>=</code>, <code>?</code>)
 * **Examples:**
@@ -529,9 +529,9 @@ If the string also contains other content, try using `extractUrl()` first.
 ## replaceSpecialChars()
 
 * **Description:** Replaces special characters in the string with the closest ASCII character
-* **Definition:** replaceSpecialChars()
+* **Syntax:** string.replaceSpecialChars()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -540,10 +540,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## parseJson()
 
-* **Description:** Returns the JavaScript Object or value represented by the string, or `undefined` if the string isn’t valid JSON. Single-quoted JSON is not supported.
-* **Definition:** parseJson()
+* **Description:** Returns the JavaScript Object or value represented by the string, or <code>undefined</code> if the string isn’t valid JSON. Single-quoted JSON is not supported.
+* **Syntax:** string.parseJson()
 * **Returns:** any
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -560,10 +560,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## substring()
 
-* **Description:** Extracts a fragment of the string at the given position. For more advanced extraction, see `match()`.
-* **Definition:** substring(start, end?)
+* **Description:** Extracts a fragment of the string at the given position. For more advanced extraction, see <code>match()</code>.
+* **Syntax:** string.substring(start, end?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `start` (Number) - The position to start from. Positions start at 0.
   * `end` (String) - optional - The position to select up to. The character at the end position is not included. If omitted, will extract to the end of the string.
@@ -579,10 +579,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## urlEncode()
 
-* **Description:** Encodes the string so that it can be used in a URL. Spaces and special characters are replaced with codes of the form `%XX`.
-* **Definition:** urlEncode(allChars?)
+* **Description:** Encodes the string so that it can be used in a URL. Spaces and special characters are replaced with codes of the form <code>%XX</code>.
+* **Syntax:** string.urlEncode(allChars?)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `allChars` (Boolean) - optional - Whether to encode characters that are part of the URI syntax (e.g. <code>=</code>, <code>?</code>)
 * **Examples:**
@@ -598,9 +598,9 @@ If the string also contains other content, try using `extractUrl()` first.
 ## base64Decode()
 
 * **Description:** Converts plain text to a base64-encoded string
-* **Definition:** base64Encode()
+* **Syntax:** string.base64Encode()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -609,10 +609,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## isEmpty()
 
-* **Description:** Returns `true` if the string has no characters or is `null`
-* **Definition:** isEmpty()
+* **Description:** Returns <code>true</code> if the string has no characters or is <code>null</code>
+* **Syntax:** string.isEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -625,10 +625,10 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## concat()
 
-* **Description:** Joins one or more strings onto the end of the base string. Alternatively, use the `+` operator (see examples).
-* **Definition:** concat(string1, string2?, ..., stringN?)
+* **Description:** Joins one or more strings onto the end of the base string. Alternatively, use the <code>+</code> operator (see examples).
+* **Syntax:** string.concat(string1, string2?, ..., stringN?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `string1` (String) - The first string to append
   * `string2` (String) - optional - The second string to append
@@ -647,9 +647,9 @@ If the string also contains other content, try using `extractUrl()` first.
 ## toNumber()
 
 * **Description:** Converts a string representing a number to a number. Throws an error if the string doesn’t start with a valid number.
-* **Definition:** toNumber()
+* **Syntax:** string.toNumber()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -662,12 +662,12 @@ If the string also contains other content, try using `extractUrl()` first.
 
 ## split()
 
-* **Description:** Splits the string into an array of substrings. Each split is made at the `separator`, and the separator isn’t included in the output. 
+* **Description:** Splits the string into an array of substrings. Each split is made at the <code>separator</code>, and the separator isn’t included in the output. 
 
-The opposite of using `join()` on an array.
-* **Definition:** split(separator?, limit?)
+The opposite of using <code>join()</code> on an array.
+* **Syntax:** string.split(separator?, limit?)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `separator` (String) - optional - The string (or regular expression) to use for splitting. If omitted, an array with the original string is returned.
   * `limit` (Number) - optional - The max number of array elements to return. Returns all elements if omitted.
@@ -688,10 +688,10 @@ The opposite of using `join()` on an array.
 
 ## isEmail()
 
-* **Description:** Returns `true` if the string is an email
-* **Definition:** isEmail()
+* **Description:** Returns <code>true</code> if the string is an email
+* **Syntax:** string.isEmail()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -708,10 +708,10 @@ The opposite of using `join()` on an array.
 
 ## slice()
 
-* **Description:** Extracts a fragment of the string at the given position. For more advanced extraction, see `match()`.
-* **Definition:** slice(start, end?)
+* **Description:** Extracts a fragment of the string at the given position. For more advanced extraction, see <code>match()</code>.
+* **Syntax:** string.slice(start, end?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `start` (Number) - The position to start from. Positions start at 0. Negative numbers count back from the end of the string.
   * `end` (String) - optional - The position to select up to. The character at the end position is not included. Negative numbers select from the end of the string. If omitted, will extract to the end of the string.
@@ -732,9 +732,9 @@ The opposite of using `join()` on an array.
 ## hash()
 
 * **Description:** Returns the string hashed with the given algorithm. Defaults to md5 if not specified.
-* **Definition:** hash(algo?)
+* **Syntax:** string.hash(algo?)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `algo` (String) - optional - The hashing algorithm to use. One of <code>md5</code>, <code>base64</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>, <code>sha3</code>, <code>ripemd160</code>
         

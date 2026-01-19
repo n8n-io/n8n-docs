@@ -2,10 +2,10 @@
 
 ## compact()
 
-* **Description:** Removes any empty values from the array. `null`, `""` and `undefined` count as empty.
-* **Definition:** compact()
+* **Description:** Removes any empty values from the array. <code>null</code>, <code>""</code> and <code>undefined</code> count as empty.
+* **Syntax:** arr.compact()
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -16,9 +16,9 @@
 ## removeDuplicates()
 
 * **Description:** Removes any re-occurring elements from the array
-* **Definition:** removeDuplicates(keys?)
+* **Syntax:** arr.removeDuplicates(keys?)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `keys` (String) - optional - For use on arrays of Objects. A key, or comma-separated list of keys to restrict the check to. If omitted, all keys are checked.
 * **Examples:**
@@ -31,9 +31,9 @@
 ## pluck()
 
 * **Description:** Returns an array containing the values of the given field(s) in each Object of the array. Ignores any array elements that aren’t Objects or don’t have a key matching the field name(s) provided.
-* **Definition:** pluck(fieldName1?, fieldName2?, …)
+* **Syntax:** arr.pluck(fieldName1?, fieldName2?, …)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `fieldName1` (String) - optional - The first key to retrieve the value of
   * `fieldName2` (String) - optional - The second key to retrieve the value of
@@ -52,9 +52,9 @@
 ## sort()
 
 * **Description:** Reorders the elements of the array. For sorting strings alphabetically, no parameter is required. For sorting numbers or Objects, see examples.
-* **Definition:** sort(compareFunction(a, b)?)
+* **Syntax:** arr.sort(compareFunction(a, b)?)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `compareFunction` (function) - optional - A function to compare two array elements and return a number indicating which one comes first:
 <b>Return < 0</b>: <code>a</code> comes before <code>b</code>
@@ -96,9 +96,9 @@ If no function is specified, converts all values to strings and compares their c
 ## first()
 
 * **Description:** Returns the first element of the array
-* **Definition:** first()
+* **Syntax:** arr.first()
 * **Returns:** any
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -109,9 +109,9 @@ If no function is specified, converts all values to strings and compares their c
 ## reverse()
 
 * **Description:** Reverses the order of the elements in the array
-* **Definition:** reverse()
+* **Syntax:** arr.reverse()
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -122,9 +122,9 @@ If no function is specified, converts all values to strings and compares their c
 ## min()
 
 * **Description:** Returns the smallest number in the array. Throws an error if there are any non-numbers.
-* **Definition:** min()
+* **Syntax:** arr.min()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -135,9 +135,9 @@ If no function is specified, converts all values to strings and compares their c
 ## max()
 
 * **Description:** Returns the largest number in the array. Throws an error if there are any non-numbers.
-* **Definition:** max()
+* **Syntax:** arr.max()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -149,9 +149,9 @@ If no function is specified, converts all values to strings and compares their c
 ## unique()
 
 * **Description:** Removes any duplicate elements from the array
-* **Definition:** unique()
+* **Syntax:** arr.unique()
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -162,9 +162,9 @@ If no function is specified, converts all values to strings and compares their c
 ## union()
 
 * **Description:** Concatenates two arrays and then removes any duplicates
-* **Definition:** union(otherArray)
+* **Syntax:** arr.union(otherArray)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `otherArray` (Array) - The array to union with the base array
 * **Examples:**
@@ -178,9 +178,9 @@ If no function is specified, converts all values to strings and compares their c
 ## sum()
 
 * **Description:** Returns the total of all the numbers in the array. Throws an error if there are any non-numbers.
-* **Definition:** sum()
+* **Syntax:** arr.sum()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -191,10 +191,10 @@ If no function is specified, converts all values to strings and compares their c
 ## difference()
 
 * **Description:** Compares two arrays. Returns all elements in the base array that aren't present
-in `otherArray`.
-* **Definition:** difference(otherArray)
+in <code>otherArray</code>.
+* **Syntax:** arr.difference(otherArray)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `otherArray` (Array) - The array to compare to the base array
 * **Examples:**
@@ -207,10 +207,10 @@ in `otherArray`.
 ## renameKeys()
 
 * **Description:** Changes all matching keys (field names) of any Objects in the array. Rename more than one key by
-adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
-* **Definition:** renameKeys(from, to)
+adding extra arguments, namely, <code>from1, to1, from2, to2, ...</code>.
+* **Syntax:** arr.renameKeys(from, to)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `from` (String) - The key to rename
   * `to` (String) - The new key name
@@ -224,8 +224,8 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 ## reduce()
 
 * **Description:** Reduces an array to a single value by applying a function to each element. The function combines the current element with the result of reducing the previous elements, producing a new result.
-* **Definition:** reduce(function(prevResult, currentElem, currentIndex?, array?), initResult)
-* **Source:** JS
+* **Syntax:** arr.reduce(function(prevResult, currentElem, currentIndex?, array?), initResult)
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `prevResult` (any) - The accumulated result from applying the function to previous elements. When processing the first element, it’s set to <code>initResult</code> (or the first array element if not specified).
@@ -253,9 +253,9 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 ## map()
 
 * **Description:** Creates a new array by applying a function to each element of the original array
-* **Definition:** map(function(element, index?, array?), thisValue?)
+* **Syntax:** arr.map(function(element, index?, array?), thisValue?)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
@@ -282,9 +282,9 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 ## length
 
 * **Description:** The number of elements in the array
-* **Definition:** length
+* **Syntax:** arr.length
 * **Returns:** Number
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -294,10 +294,10 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 
 ## toJsonString()
 
-* **Description:** Converts the array to a JSON string. The same as JavaScript’s `JSON.stringify()`.
-* **Definition:** toJsonString()
+* **Description:** Converts the array to a JSON string. The same as JavaScript’s <code>JSON.stringify()</code>.
+* **Syntax:** arr.toJsonString()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -307,10 +307,10 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 
 ## toString()
 
-* **Description:** Converts the array to a string, with values separated by commas. To use a different separator, use `join()` instead.
-* **Definition:** toString()
+* **Description:** Converts the array to a string, with values separated by commas. To use a different separator, use <code>join()</code> instead.
+* **Syntax:** arr.toString()
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Examples:**
 
   ```javascript
@@ -320,12 +320,12 @@ adding extra arguments, i.e. `from1, to1, from2, to2, ...`.
 
 ## find()
 
-* **Description:** Returns the first element from the array that satisfies the provided condition. The condition is a function that returns `true` or `false`. Returns `undefined` if no matches are found.
+* **Description:** Returns the first element from the array that satisfies the provided condition. The condition is a function that returns <code>true</code> or <code>false</code>. Returns <code>undefined</code> if no matches are found.
 
-If you need all matching elements, use `filter()`.
-* **Definition:** find(function(element, index?, array?), thisValue?)
+If you need all matching elements, use <code>filter()</code>.
+* **Syntax:** arr.find(function(element, index?, array?), thisValue?)
 * **Returns:** any
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
@@ -351,10 +351,10 @@ If you need all matching elements, use `filter()`.
 
 ## isNotEmpty()
 
-* **Description:** Returns `true` if the array has at least one element
-* **Definition:** isNotEmpty()
+* **Description:** Returns <code>true</code> if the array has at least one element
+* **Syntax:** arr.isNotEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -369,10 +369,10 @@ If you need all matching elements, use `filter()`.
 
 ## indexOf()
 
-* **Description:** Returns the position of the first matching element in the array, or -1 if the element isn’t found. Positions start at 0.
-* **Definition:** indexOf(element, start?)
+* **Description:** Returns the position of the first matching element in the array, or `-1` if the element isn’t found. Positions start at 0.
+* **Syntax:** arr.indexOf(element, start?)
 * **Returns:** Number
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `element` (any) - The value to look for
   * `start` (Number) - optional - The index to start looking from
@@ -390,10 +390,10 @@ If you need all matching elements, use `filter()`.
 
 ## isEmpty()
 
-* **Description:** Returns `true` if the array has no elements or is `null`
-* **Definition:** isEmpty()
+* **Description:** Returns <code>true</code> if the array has no elements or is <code>null</code>
+* **Syntax:** arr.isEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -410,12 +410,12 @@ If you need all matching elements, use `filter()`.
 
 * **Description:** Adds and/or removes array elements at a given position. 
 
-See also `slice()` and `append()`.
-* **Definition:** toSpliced(start, deleteCount, elem1, ....., elemN)
+See also <code>slice()</code> and <code>append()</code>.
+* **Syntax:** arr.toSpliced(start, deleteCount, elem1, ....., elemN)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
-  * `start` (Number) - The index (position) to add or remove elements at.  New elements are inserted before the element at this index. A negative index counts back from the end of the array. 
+  * `start` (Number) - The index (position) to add or remove elements at. New elements are inserted before the element at this index. A negative index counts back from the end of the array. 
   * `deleteCount` (Number) - optional - The number of elements to remove. If omitted, removes all elements from the <code>start</code> index onwards.
   * `elem1` (any) - optional - The first new element to be added
   * `elem2` (any) - optional - The second new element to be added
@@ -443,9 +443,9 @@ See also `slice()` and `append()`.
 ## last()
 
 * **Description:** Returns the last element of the array
-* **Definition:** last()
+* **Syntax:** arr.last()
 * **Returns:** any
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -458,10 +458,10 @@ See also `slice()` and `append()`.
 
 * **Description:** Merges all elements of the array into a single string, with an optional separator between each element.
 
-The opposite of `split()`.
-* **Definition:** join(separator?)
+The opposite of <code>split()</code>.
+* **Syntax:** arr.join(separator?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `separator` (String) - optional - The character(s) to insert between each element
 * **Examples:**
@@ -480,9 +480,9 @@ The opposite of `split()`.
 ## intersection()
 
 * **Description:** Compares two arrays. Returns all elements in the base array that are also present in the other array.
-* **Definition:** intersection(otherArray)
+* **Syntax:** arr.intersection(otherArray)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `otherArray` (Array) - The array to compare to the base array
 * **Examples:**
@@ -495,9 +495,9 @@ The opposite of `split()`.
 ## average()
 
 * **Description:** Returns the average of the numbers in the array. Throws an error if there are any non-numbers.
-* **Definition:** average()
+* **Syntax:** arr.average()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -507,13 +507,13 @@ The opposite of `split()`.
 
 ## slice()
 
-* **Description:** Returns a portion of the array, from the `start` index up to (but not including) the `end` index. Indexes start at 0.
-* **Definition:** slice(start, end)
+* **Description:** Returns a portion of the array, from the <code>start</code> index up to (but not including) the <code>end</code> index. Indexes start at 0.
+* **Syntax:** arr.slice(start, end)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `start` (Number) - optional - The position to start from. Positions start at 0. Negative numbers count back from the end of the array.
-  * `end` (Number) - optional - The position to select up to. The element at the end position is not included. Negative numbers select from the end of the array. If omitted, will extract to the end of the array.
+  * `end` (Number) - optional - The position to select up to. The element at the end position isn't included. Negative numbers select from the end of the array. If omitted, will extract to the end of the array.
 * **Examples:**
 
   ```javascript
@@ -533,10 +533,10 @@ The opposite of `split()`.
 
 ## filter()
 
-* **Description:** Returns an array with only the elements satisfying a condition. The condition is a function that returns `true` or `false`.
-* **Definition:** filter(function(element, index?, array?), thisValue?)
+* **Description:** Returns an array with only the elements satisfying a condition. The condition is a function that returns <code>true</code> or <code>false</code>.
+* **Syntax:** arr.filter(function(element, index?, array?), thisValue?)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
@@ -563,15 +563,15 @@ The opposite of `split()`.
   ```javascript
   // Keep numbers at odd indexes
   // nums = [1, 7, 3, 10, 5]
-  nums.filter((num, index) => {return index%2 != 0}) //=> [7, 10]
+  ages.filter((num, index) => {return index%2 != 0}) //=> [7, 10]
   ```
 
 ## concat()
 
 * **Description:** Joins one or more arrays onto the end of the base array
-* **Definition:** concat(array2, array3?, ... arrayN?)
+* **Syntax:** arr.concat(array2, array3?, ... arrayN?)
 * **Returns:** Array
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `array2` (Array) - The first array to be joined on the end of the base array
   * `array3` (Array) - optional - The second array to be joined on to the end of the base array
@@ -593,9 +593,9 @@ The opposite of `split()`.
 ## randomItem()
 
 * **Description:** Returns a randomly-chosen element from the array
-* **Definition:** randomItem()
+* **Syntax:** arr.randomItem()
 * **Returns:** any
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -607,9 +607,9 @@ The opposite of `split()`.
 ## chunk()
 
 * **Description:** Splits the array into an array of sub-arrays, each with the given length
-* **Definition:** chunk(length)
+* **Syntax:** arr.chunk(length)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `length` (Number) - The number of elements in each chunk
 * **Examples:**
@@ -621,10 +621,10 @@ The opposite of `split()`.
 
 ## includes()
 
-* **Description:** Returns `true` if the array contains the specified element
-* **Definition:** includes(element, start?)
+* **Description:** Returns <code>true</code> if the array contains the specified element
+* **Syntax:** arr.includes(element, start?)
 * **Returns:** Boolean
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `element` (any) - The value to search the array for
   * `start` (Number) - optional - The index to start looking from
@@ -638,10 +638,10 @@ The opposite of `split()`.
 
 ## append()
 
-* **Description:** Adds new elements to the end of the array. Similar to `push()`, but returns the modified array. Consider using spread syntax instead (see examples).
-* **Definition:** append(elem1, elem2?, ..., elemN?)
+* **Description:** Adds new elements to the end of the array. Similar to <code>push()</code>, but returns the modified array. Consider using spread syntax instead (see examples).
+* **Syntax:** arr.append(elem1, elem2?, ..., elemN?)
 * **Returns:** Array
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `elem1` (any) - The first element to append
   * `elem2` (any) - optional - The second element to append
@@ -664,9 +664,9 @@ The opposite of `split()`.
 ## smartJoin()
 
 * **Description:** Creates a single Object from an array of Objects. Each Object in the array provides one field for the returned Object. Each Object in the array must contain a field with the key name and a field with the value.
-* **Definition:** smartJoin(keyField, nameField)
+* **Syntax:** arr.smartJoin(keyField, nameField)
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `keyField` (String) - The field in each Object containing the key name
   * `nameField` (String) - The field in each Object containing the value

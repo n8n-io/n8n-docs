@@ -2,10 +2,10 @@
 
 ## isEmpty()
 
-* **Description:** Returns `false` for all numbers. Returns `true` for `null`.
-* **Definition:** isEmpty()
+* **Description:** Returns <code>false</code> for all numbers. Returns <code>true</code> for <code>null</code>.
+* **Syntax:** number.isEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -26,9 +26,9 @@
 ## round()
 
 * **Description:** Returns the number rounded to the nearest whole number (or specified number of decimal places)
-* **Definition:** round(decimalPlaces?)
+* **Syntax:** number.round(decimalPlaces?)
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `decimalPlaces` (Number) - optional - The number of decimal places to round to
 * **Examples:**
@@ -47,9 +47,9 @@
 ## floor()
 
 * **Description:** Rounds the number down to the nearest whole number
-* **Definition:** floor()
+* **Syntax:** number.floor()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -59,9 +59,9 @@
 
 ## toBoolean()
 
-* **Description:** Converts the number to a boolean value. `0` becomes `false`; everything else becomes `true`.
-* **Definition:** toBoolean()
-* **Source:** n8n
+* **Description:** Converts the number to a boolean value. <code>0</code> becomes <code>false</code>; everything else becomes <code>true</code>.
+* **Syntax:** number.toBoolean()
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -76,10 +76,10 @@
 
 ## isOdd()
 
-* **Description:** Returns `true` if the number is odd. Throws an error if the number isn’t a whole number.
-* **Definition:** isOdd()
+* **Description:** Returns <code>true</code> if the number is odd. Throws an error if the number isn’t a whole number.
+* **Syntax:** number.isOdd()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -89,10 +89,10 @@
 
 ## format()
 
-* **Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as `Intl.NumberFormat()`.
-* **Definition:** format(locale?, options?)
+* **Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat”><code>Intl.NumberFormat()</code></a>.
+* **Syntax:** number.format(locale?, options?)
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `locale` (String) - optional - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument”>locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
   * `options` (Object) - optional - Configuration options for number formatting. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat" target="_blank">More info</a>
@@ -111,9 +111,9 @@
 ## toLocaleString()
 
 * **Description:** Returns a localised string representing the number, i.e. in the language and format corresponding to its locale. Defaults to the system's locale if none specified.
-* **Definition:** toLocaleString(locales?, options?)
+* **Syntax:** number.toLocaleString(locales?, options?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href=”https://www.localeplanet.com/icu/”>full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
   * `options` (Object) - optional - An object with <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options</a>
@@ -136,10 +136,10 @@
 
 ## isEven()
 
-* **Description:** Returns `true` if the number is even. Throws an error if the number isn’t a whole number.
-* **Definition:** isEven()
+* **Description:** Returns <code>true</code> if the number is even. Throws an error if the number isn’t a whole number.
+* **Syntax:** number.isEven()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -150,9 +150,9 @@
 ## abs()
 
 * **Description:** Returns the number’s absolute value, i.e. removes any minus sign
-* **Definition:** abs()
+* **Syntax:** number.abs()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -162,10 +162,10 @@
 
 ## toString()
 
-* **Description:** Converts the number to a simple textual representation. For more formatting options, see `toLocaleString()`.
-* **Definition:** toString(radix?)
+* **Description:** Converts the number to a simple textual representation. For more formatting options, see <code>toLocaleString()</code>.
+* **Syntax:** number.toString(radix?)
 * **Returns:** String
-* **Source:** JS
+* **n8n or JavaScript method:** JS
 * **Parameters:**
   * `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. E.g. base <code>2</code> is binary and base <code>16</code> is hexadecimal.
 * **Examples:**
@@ -182,10 +182,10 @@
 
 ## isInteger()
 
-* **Description:** Returns `true` if the number is a whole number
-* **Definition:** isInteger()
+* **Description:** Returns <code>true</code> if the number is a whole number
+* **Syntax:** number.isInteger()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -201,9 +201,9 @@
 ## ceil()
 
 * **Description:** Rounds the number up to the next whole number
-* **Definition:** ceil()
+* **Syntax:** number.ceil()
 * **Returns:** Number
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -214,9 +214,9 @@
 ## toDateTime()
 
 * **Description:** Converts a numerical timestamp into a DateTime. The format of the timestamp must be specified if it’s not in milliseconds. Uses the time zone in n8n (or in the workflow’s settings).
-* **Definition:** toDateTime(format?)
+* **Syntax:** number.toDateTime(format?)
 * **Returns:** DateTime
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `format` (String) - optional - The type of timestamp to convert. Options are <code>ms</code> (for Unix timestamp in milliseconds), <code>s</code> (for Unix timestamp in seconds) or <code>excel</code> (for days since 1900).
 * **Examples:**

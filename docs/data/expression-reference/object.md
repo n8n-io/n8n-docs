@@ -2,10 +2,10 @@
 
 ## removeField()
 
-* **Description:** Removes a field from the Object. The same as JavaScript’s `delete`.
-* **Definition:** removeField(key)
+* **Description:** Removes a field from the Object. The same as JavaScript’s <code>delete</code>.
+* **Syntax:** obj.removeField(key)
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `key` (String) - The name of the field to remove
 * **Examples:**
@@ -17,10 +17,10 @@
 
 ## values()
 
-* **Description:** Returns an array with all the values of the fields the Object contains. The same as JavaScript’s `Object.values(obj)`.
-* **Definition:** values()
+* **Description:** Returns an array with all the values of the fields the Object contains. The same as JavaScript’s <code>Object.values(obj)</code>.
+* **Syntax:** obj.values()
 * **Returns:** Array<String>
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -31,9 +31,9 @@
 ## urlEncode()
 
 * **Description:** Generates a URL parameter string from the Object’s keys and values. Only top-level keys are supported.
-* **Definition:** urlEncode()
+* **Syntax:** obj.urlEncode()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -43,10 +43,10 @@
 
 ## keys()
 
-* **Description:** Returns an array with all the field names (keys) the object contains. The same as JavaScript’s `Object.keys(obj)`.
-* **Definition:** keys()
+* **Description:** Returns an array with all the field names (keys) the object contains. The same as JavaScript’s <code>Object.keys(obj)</code>.
+* **Syntax:** obj.keys()
 * **Returns:** Array<String>
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -56,10 +56,10 @@
 
 ## isEmpty()
 
-* **Description:** Returns `true` if the Object has no keys (fields) set or is `null`
-* **Definition:** isEmpty()
+* **Description:** Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code>
+* **Syntax:** obj.isEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -74,10 +74,10 @@
 
 ## keepFieldsContaining()
 
-* **Description:** Removes any fields whose values don’t at least partly match the given `value`. Comparison is case-sensitive. Fields that aren’t strings will always be removed.
-* **Definition:** keepFieldsContaining(value)
+* **Description:** Removes any fields whose values don’t at least partly match the given <code>value</code>. Comparison is case-sensitive. Fields that aren’t strings will always be removed.
+* **Syntax:** obj.keepFieldsContaining(value)
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `value` (String) - The text that a value must contain in order to be kept
 * **Examples:**
@@ -95,10 +95,10 @@
 
 ## removeFieldsContaining()
 
-* **Description:** Removes keys (fields) whose values at least partly match the given `value`. Comparison is case-sensitive. Fields that aren’t strings are always kept.
-* **Definition:** removeFieldsContaining(value)
+* **Description:** Removes keys (fields) whose values at least partly match the given <code>value</code>. Comparison is case-sensitive. Fields that aren’t strings are always kept.
+* **Syntax:** obj.removeFieldsContaining(value)
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `value` (String) - The text that a value must contain in order to be removed
 * **Examples:**
@@ -116,10 +116,10 @@
 
 ## isNotEmpty()
 
-* **Description:** Returns `true` if the Object has at least one key (field) set
-* **Definition:** isNotEmpty()
+* **Description:** Returns <code>true</code> if the Object has at least one key (field) set
+* **Syntax:** obj.isNotEmpty()
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -134,10 +134,10 @@
 
 ## compact()
 
-* **Description:** Removes all fields that have empty values, i.e. are `null` or `""`
-* **Definition:** compact()
+* **Description:** Removes all fields that have empty values, i.e. are <code>null</code> or <code>""</code>
+* **Syntax:** obj.compact()
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -148,9 +148,9 @@
 ## merge()
 
 * **Description:** Merges the two Objects into a single one. If a key (field name) exists in both Objects, the value from the first (base) Object is used.
-* **Definition:** merge(otherObject)
+* **Syntax:** obj.merge(otherObject)
 * **Returns:** Object
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `otherObject` (Object) - The Object to merge with the base Object.
 * **Examples:**
@@ -163,10 +163,10 @@
 
 ## toJsonString()
 
-* **Description:** Converts the Object to a JSON string. Similar to JavaScript’s `JSON.stringify()`.
-* **Definition:** toJsonString()
+* **Description:** Converts the Object to a JSON string. Similar to JavaScript’s <code>JSON.stringify()</code>.
+* **Syntax:** obj.toJsonString()
 * **Returns:** String
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Examples:**
 
   ```javascript
@@ -177,10 +177,10 @@
 
 ## hasField()
 
-* **Description:** Returns `true` if there is a field called `name`. Only checks top-level keys. Comparison is case-sensitive.
-* **Definition:** hasField(name)
+* **Description:** Returns <code>true</code> if there is a field called <code>name</code>. Only checks top-level keys. Comparison is case-sensitive.
+* **Syntax:** obj.hasField(name)
 * **Returns:** Boolean
-* **Source:** n8n
+* **n8n or JavaScript method:** n8n
 * **Parameters:**
   * `name` (String) - The name of the key to search for
 * **Examples:**

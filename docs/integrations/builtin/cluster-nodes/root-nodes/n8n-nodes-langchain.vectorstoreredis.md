@@ -19,6 +19,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Prerequisites
 Before using this node, you need a Redis database with the [Redis Query Engine](https://redis.io/docs/latest/develop/ai/search-and-query/?utm_source=n8n&utm_medium=docs) enabled. Use one of the following:
+
 - **Redis Open Source (v8.0 and later)** : includes the Redis Query Engine by default 
 - **[Redis Cloud](https://cloud.redis.io/?utm_source=n8n&utm_medium=docs)** : fully managed service 
 - **[Redis Software](https://redis.io/software/?utm_source=n8n&utm_medium=docs)** : self-managed deployment

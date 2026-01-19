@@ -22,9 +22,9 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 **Note:** This option is only available when sharing a workflow that is inside a **Personal** workspace. When trying to use the "Add users" option for a workflow that's **inside a project**, you'll get this pop-up instead:
 
-![Screenshot of the sharing option within projects](/docs/_images/workflows/sharing-within-projects.png)
+![Screenshot of the sharing option within projects](/_images/workflows/sharing-within-projects.png)
 
-This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. So instead of adding the user directly to the workflow, you need to add the user to the project where the workflow is. 
+This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. Instead of adding the user directly to the workflow, you need to add the user to the project in which the workflow is located.
 
 ## View shared workflows
 

@@ -80,6 +80,7 @@ nav:
           - user-management/rbac/index.md
           - Role types: user-management/rbac/role-types.md
           - Projects: user-management/rbac/projects.md
+          - Custom roles: user-management/rbac/custom-roles.md
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md

@@ -70,7 +70,7 @@ hide:
 /// warning | Compatibility with Puppeteer/Playwright
 If you encounter `TypeError: Cannot assign to read only property 'name' oobject 'Error'`:
 
-Set `N8N_RUNNERS_INSECURE_MODE=true` in the `env-overrides` section of `/etn8n-task-runners.json`
+Set `N8N_RUNNERS_INSECURE_MODE=true` in the `env-overrides` section of `/etc/n8n-task-runners.json`
 
 ```json
     {

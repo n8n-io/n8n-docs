@@ -229,7 +229,7 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
 
 ## $ifEmpty()
 
-* **Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>””</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
+* **Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>""</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
 * **Syntax:** $ifEmpty(value, valueIfEmpty)
 * **Returns:** any
 * **n8n or JavaScript method:** n8n

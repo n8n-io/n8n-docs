@@ -41,7 +41,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `$input.all()` | All input items in current node. | :white_check_mark: |
 	| `$input.first()` | First input item in current node. | :white_check_mark: |
 	| `$input.last()` | Last input item in current node. | :white_check_mark: |
-	| `$input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on.  | :white_check_mark: |
+	| `$input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
 	| `$json` | Shorthand for `$input.item.json`. Incoming JSON data from a node. Refer to [Data structure](/data/data-structure.md) for information on item structure. | :white_check_mark: (when running once for each item) |
 	| `$input.context.noItemsLeft` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
 === "Python"

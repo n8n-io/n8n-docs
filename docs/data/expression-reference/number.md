@@ -89,12 +89,12 @@
 
 ## format()
 
-* **Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat”><code>Intl.NumberFormat()</code></a>.
+* **Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code></a>.
 * **Syntax:** number.format(locale?, options?)
 * **Returns:** String
 * **n8n or JavaScript method:** n8n
 * **Parameters:**
-  * `locale` (String) - optional - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument”>locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
+  * `locale` (String) - optional - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument">locale tag</a> for formatting the number, for example, <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
   * `options` (Object) - optional - Configuration options for number formatting. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat" target="_blank">More info</a>
 * **Examples:**
 
@@ -110,13 +110,13 @@
 
 ## toLocaleString()
 
-* **Description:** Returns a localised string representing the number, i.e. in the language and format corresponding to its locale. Defaults to the system's locale if none specified.
+* **Description:** Returns a localised string representing the number, namely, in the language and format corresponding to its locale. Defaults to the system's locale if none specified.
 * **Syntax:** number.toLocaleString(locales?, options?)
 * **Returns:** String
 * **n8n or JavaScript method:** JS
 * **Parameters:**
-  * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href=”https://www.localeplanet.com/icu/”>full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
-  * `options` (Object) - optional - An object with <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options</a>
+  * `locales` (String|Array<String>) - optional - The locale to assign, for example, ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href="https://www.localeplanet.com/icu/">full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
+  * `options` (Object) - optional - An object with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters">formatting options</a>
 * **Examples:**
 
   ```javascript
@@ -149,7 +149,7 @@
 
 ## abs()
 
-* **Description:** Returns the number’s absolute value, i.e. removes any minus sign
+* **Description:** Returns the number’s absolute value, namely, removes any minus sign
 * **Syntax:** number.abs()
 * **Returns:** Number
 * **n8n or JavaScript method:** n8n
@@ -167,7 +167,7 @@
 * **Returns:** String
 * **n8n or JavaScript method:** JS
 * **Parameters:**
-  * `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. E.g. base <code>2</code> is binary and base <code>16</code> is hexadecimal.
+  * `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. for example, base <code>2</code> is binary and base <code>16</code> is hexadecimal.
 * **Examples:**
 
   ```javascript

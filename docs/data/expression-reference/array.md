@@ -273,10 +273,10 @@ adding extra arguments, namely, <code>from1, to1, from2, to2, ...</code>.
   ```javascript
   // Convert elements to uppercase (using arrow function notation):
   // words = ['hello', 'old', 'chap']
-  words.map(word => word.toUpperCase()) //=> ['HELLO', 'OLD', 'CHAP']]
+  words.map(word => word.toUpperCase()) //=> ['HELLO', 'OLD', 'CHAP']
   
   // Or using traditional function notation:
-  words.map(function(word){return word.toUpperCase()}) //=> ['HELLO', 'OLD', 'CHAP']]
+  words.map(function(word){return word.toUpperCase()}) //=> ['HELLO', 'OLD', 'CHAP']
   ```
 
 ## length

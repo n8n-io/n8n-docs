@@ -1,28 +1,25 @@
 # Expression Reference
 
-These are some of the most commonly used expressions. A more exhaustive list appears below.
+These are some commonly used expressions. A more exhaustive list appears below.
 
 | Category | Expression |
 |---|---|
-| Access current data | $json |
-| | `$json.fieldName`	|
-| | `$itemIndex` |
-| | `$binary`	|
+| Access current data | `$json` |
+| | `$json.fieldName` |
+| | `$binary` |
 | Node Access | `$("NodeName").first()` |
-| | `$("NodeName").all()`	|
+| | `$("NodeName").all()` |
 | | `$("NodeName").last()` |
 | | `$("NodeName").item` |
-| Date/Time	| `$now` |
+| Date/Time | `$now` |
 | | `$today` |
 | | `$now.toFormat("yyyy-MM-dd")` |
-| | `$now.plus({days: 7})` |
 | Conditionals | `condition ? "yes" : "no"` |
-| | `value ?? "default"` |
 | | `$if(condition, "true", "false")` |
 | String Methods | `text.toUpperCase()` |
 | | `text.toLowerCase()` |
 | | `text.includes("search")` |
-| | `text.extractEmail()`	|
+| | `text.extractEmail()` |
 | Array Methods | `array.length` |
 | | `array.filter(x => x > 5)` |
 | | `array.map(x => x.name)` |
@@ -259,8 +256,8 @@ Browse the tables below to find methods by the data type on which they act. Clic
 | [$if(condition, valueIfTrue, valueIfFalse)](root.md#if) | Returns one of two values depending on the `condition`. Similar to the `?` operator in JavaScript. |
 | [$execution](root.md#execution) | Retrieve or set metadata for the current execution |
 | [$now](root.md#now) | A DateTime representing the current moment. Uses the workflow’s time zone (which can be changed in the workflow settings). |
-| [$jmespath(obj, expression)](root.md#jmespath) | Extracts data from an object (or array of objects) using a <a href=”/code/cookbook/jmespath/”>JMESPath</a> expression. Useful for querying complex, nested objects. Returns `undefined` if the expression is invalid. |
-| [$ifEmpty(value, valueIfEmpty)](root.md#ifempty) | Returns the first parameter if it'sn’t empty, otherwise returns the second parameter. The following count as empty: `””`, `[]`, `{}`, `null`, `undefined` |
+| [$jmespath(obj, expression)](root.md#jmespath) | Extracts data from an object (or array of objects) using a <a href="/code/cookbook/jmespath/">JMESPath</a> expression. Useful for querying complex, nested objects. Returns `undefined` if the expression is invalid. |
+| [$ifEmpty(value, valueIfEmpty)](root.md#ifempty) | Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: `””`, `[]`, `{}`, `null`, `undefined` |
 | [$prevNode](root.md#prevnode) | Information about the node that the current input came from. When in a ‘Merge’ node, always uses the first input connector. |
 | [$nodeVersion](root.md#nodeversion) | The version of the current node (as displayed at the bottom of the nodes’s settings pane) |
 | [$max(num1, num2, …, numN)](root.md#max) | Returns the highest of the given numbers |

@@ -257,7 +257,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 ## base64Encode()
 
-* **Description:** Converts a base64-encoded string to plain text
+* **Description:** Converts plain text to base64-encoded string
 * **Syntax:** string.base64Encode()
 * **Returns:** String
 * **n8n or JavaScript method:** n8n

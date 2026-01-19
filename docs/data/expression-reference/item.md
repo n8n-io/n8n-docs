@@ -3,7 +3,7 @@
 ## binary
 
 * **Description:** Returns any binary data the item contains
-* **Syntax:** $item.binary, $input.item.binary, $(<nodeName>).item.binary
+* **Syntax:** `$item.binary`, `$input.item.binary`, `$(<nodeName>).item.binary`
 * **Returns:** Array<BinaryFile>
 * **n8n or JavaScript method:** n8n
 

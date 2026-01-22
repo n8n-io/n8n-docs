@@ -89,7 +89,7 @@ You can use this with the [Get Many](#get-many) and [Retrieve Documents (As Tool
 
 Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
 
-When searching for data, use this to match metadata associated with documents. You can learn more about the operators and query structure in [Weaviate's conditional filters documentation](https://docs.weaviate.io/weaviate/api/graphql/filters#filter-structure).
+When searching for data, use this to match metadata associated with documents. You can learn more about the operators and query structure in [Weaviate's conditional filters documentation](https://docs.weaviate.io/weaviate/api/graphql/filters).
 
 You can use both `AND` and `OR` with different operators. Operators are case insensitive:
 
@@ -141,7 +141,7 @@ Whether to show the score fused between hybrid and vector search explanation.
 
 ### Hybrid: Fusion Type
 
-Select the fusion type for combining vector and keyword search results. [Learn more about fusion algorithms](https://weaviate.io/learn/knowledgecards/fusion-algorithm){:target=_blank .external-link}.
+Select the fusion type for combining vector and keyword search results. [Learn more about fusion algorithms](https://weaviate.io/learn/knowledgecards/fusion-algorithm).
 
 Options:
 - **Relative Score**: Uses relative score fusion

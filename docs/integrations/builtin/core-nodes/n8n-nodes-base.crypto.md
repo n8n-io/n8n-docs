@@ -9,6 +9,10 @@ priority: medium
 
 Use the Crypto node to encrypt data in workflows.
 
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/crypto.md).
+///
+
 ## Actions
 
 * [**Generate** a random string](#generate-parameters)
@@ -63,7 +67,6 @@ Node parameters depend on the action you select.
 	* **SHA385**
 	* **SHA512**
 * **Property Name**: Enter the name of the property you want to write the hash to.
-* **Secret**: Enter the secret or secret key used for decoding.
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**
@@ -76,7 +79,6 @@ Node parameters depend on the action you select.
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**
-* **Private Key**: Enter a private key to use when signing the string.
 
 ## Templates and examples
 

@@ -1,0 +1,95 @@
+{
+  "queryParameters": [
+    {
+      "name": "numeroConta",
+      "value": "123456",
+      "description": "Número da conta habilitada",
+      "description_en": "Enabled account number",
+      "type": "string",
+      "required": true,
+      "example": "123456"
+    },
+    {
+      "name": "dataInicial",
+      "value": "2025-01-01",
+      "description": "Data inicial",
+      "description_en": "Start date",
+      "type": "string",
+      "format": "yyyy-MM-dd",
+      "required": true,
+      "example": "2025-01-01"
+    },
+    {
+      "name": "dataFinal",
+      "value": "2025-01-31",
+      "description": "Data final",
+      "description_en": "End date",
+      "type": "string",
+      "format": "yyyy-MM-dd",
+      "required": true,
+      "example": "2025-01-31"
+    },
+    {
+      "name": "situacao",
+      "value": "1",
+      "description": "Situação do registro",
+      "description_en": "Record status",
+      "type": "integer",
+      "required": true,
+      "example": "1",
+      "options": [
+        {
+          "value": 1,
+          "label": "Em aberto",
+          "label_en": "Open"
+        },
+        {
+          "value": 2,
+          "label": "Agendado",
+          "label_en": "Scheduled"
+        },
+        {
+          "value": 3,
+          "label": "Liquidado",
+          "label_en": "Settled"
+        },
+        {
+          "value": 4,
+          "label": "Baixado",
+          "label_en": "Written off"
+        }
+      ]
+    },
+    {
+      "name": "tipoData",
+      "value": "1",
+      "description": "Tipo de data para filtro",
+      "description_en": "Date type for filtering",
+      "type": "integer",
+      "required": true,
+      "example": "1",
+      "options": [
+        {
+          "value": 1,
+          "label": "Vencimento",
+          "label_en": "Due date"
+        },
+        {
+          "value": 2,
+          "label": "Emissão",
+          "label_en": "Issue date"
+        },
+        {
+          "value": 3,
+          "label": "Inclusão",
+          "label_en": "Inclusion date"
+        }
+      ]
+    }
+  ],
+  "example_request": {
+    "url": "https://api.example.com/endpoint",
+    "method": "GET",
+    "query_string": "?numeroConta=123456&dataInicial=2025-01-01&dataFinal=2025-01-31&situacao=1&tipoData=1"
+  }
+}

@@ -23,6 +23,8 @@ In previous versions, this node was called "Respond to Chat" and used a single "
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 Configure this node using the following parameters.
 
 ### Operation

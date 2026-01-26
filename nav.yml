@@ -650,7 +650,7 @@ nav:
         - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
         - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
         - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
-        - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
+        - Jotform Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
         - Kafka Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
         - Keap Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
         - KoboToolbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md

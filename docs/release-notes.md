@@ -68,10 +68,10 @@ When used as an agent tool, the agent can ask for clarification before proceedin
 
 Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat/#operation).
 
-<figure markdown="span">
-    ![Chat node: human-in-the-loop actions](/_images/release-notes/ChatHITL.webm)
-    <figcaption>Chat node: human-in-the-loop actions</figcaption>
-</figure>
+<br>
+ <video src="/_video/release-notes/ChatHITL.webm" controls 
+ width="100%"></video>
+<br>
 
 <br><br>
 </div>

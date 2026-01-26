@@ -1343,6 +1343,7 @@ nav:
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
           - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+          - Human-in-the-loop for tool calls: advanced-ai/human-in-the-loop-tools.md
           - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
           - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
           - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md

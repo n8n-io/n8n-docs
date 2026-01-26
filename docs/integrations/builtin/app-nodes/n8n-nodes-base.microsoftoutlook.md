@@ -17,6 +17,8 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Operations
 
 * Calendar

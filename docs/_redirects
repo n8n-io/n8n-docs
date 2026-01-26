@@ -6,6 +6,9 @@
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/  301
 /enterprise-key/ /license-key/  301
 
+## NODE-3902: Chat node rename
+/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat/ /integrations/builtin/core-nodes/n8n-nodes-langchain.chat/  301
+
 ## Remove item lists (hidden for over a year)
 /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/  301
 

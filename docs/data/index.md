@@ -12,7 +12,7 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 
 **View data at every stage**: You can inspect data at any point in your workflow:
 
-- **Node detail view**: Double-click any node to see its input and output data
+- **Node details view**: Double-click any node to see its input and output data
 - **Execution logs**: Review past workflow runs to see the data that passed through each node
 
 **Reference previous data**: Use [data mapping](/data/data-mapping/index.md) to reference data from earlier nodes in your workflow. You can:
@@ -38,15 +38,3 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 * [Pinning, mocking, and editing data](/data/data-pinning.md) during workflow development.
 * [Referencing data](/data/data-mapping/index.md) and [Item linking](/data/data-mapping/data-item-linking/index.md): how data items link to each other.
 
-## Related resources
-
-### Data transformation nodes
-
-n8n provides a collection of nodes to transform data:
-
-* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): take separate items, or portions of them, and group them together into individual items.
-* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.limit.md): remove items beyond a defined maximum number.
-* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): identify and delete items that are identical across all fields or a subset of fields.
-* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): organize lists in a desired ordering, or generate a random selection.
-* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): separate a single data item containing a list into multiple items.
-* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate items together, in a manner similar to Excel pivot tables. 

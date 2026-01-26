@@ -108,6 +108,7 @@ nav:
       - Working with data:
         - Overview: data/index.md
         - How n8n structures data: data/data-structure.md
+        - Expressions basics: data/expressions-basics.md
         - Expressions versus data nodes: data/expressions.md
         - Referencing data:
           - data/data-mapping/index.md

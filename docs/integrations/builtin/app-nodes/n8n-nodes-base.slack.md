@@ -12,8 +12,10 @@ Use the Slack node to automate work in Slack, and integrate Slack with other app
 On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication. 
+Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
 
 ## Operations
 
@@ -44,7 +46,7 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for gui
     * **Get permalink**: Get a message's permalink.
     * **Search** for messages
     * **Send** a message
-    * **Send and Wait for Approval**: Send a message and wait for approval from the recipient before continuing.
+    * **Send and Wait for Response**: Send a message and wait for a response from the recipient before continuing.
     * **Update** a message
 * **Reaction**
     * **Add** a reaction to a message.
@@ -110,7 +112,7 @@ If those aren't enough, use the table below to look up the resource and operatio
 | Message      | Get Permalink              | [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)               |
 | Message      | Search                     | [search.messages](https://api.slack.com/methods/search.messages)                   |
 | Message      | Send                       | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
-| Message      | Send and Wait for Approval | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
+| Message      | Send and Wait for Response | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
 | Message      | Update                     | [chat.update](https://api.slack.com/methods/chat.update)                           |
 | Reaction     | Add                        | [reactions.add](https://api.slack.com/methods/reactions.add)                       |
 | Reaction     | Get                        | [reactions.get](https://api.slack.com/methods/reactions.get)                       |

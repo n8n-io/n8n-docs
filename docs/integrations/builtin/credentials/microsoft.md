@@ -52,7 +52,7 @@ For self-hosted users, there are two main steps to configure OAuth2 from scratch
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
 2. [Generate a client secret](#generate-a-client-secret) for that application.
 
-Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts). 
+Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts).
 
 ### Register an application
 
@@ -86,6 +86,31 @@ With your application created, generate a client secret for it:
 1. Log in to your Microsoft account and allow the app to access your info.
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
+
+### Microsoft Graph API Base URL
+
+The Microsoft OAuth2 credential supports different Microsoft cloud environments. Select the appropriate endpoint based on your tenant's cloud environment:
+
+- **Global**: Use for standard Microsoft 365 tenants (default)
+- **US Government**: Use for Azure US Government (GCC) tenants
+- **US Government DOD**: Use for Azure US Government Department of Defense tenants
+- **China**: Use for Microsoft 365 operated by 21Vianet in China
+
+This setting applies to all Microsoft Graph API nodes that use Microsoft credentials, including:
+
+- Microsoft Teams
+- Microsoft Outlook
+- Microsoft Excel
+- Microsoft OneDrive
+- Microsoft Graph Security
+- Microsoft To Do
+
+/// warning | Government Cloud Authorization URLs
+If you're using a government cloud tenant, you may also need to update the **Authorization URL** and **Access Token URL** fields in your credential to use the government cloud endpoints. For example:
+
+- US Government: Use `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/authorize` and `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/token`
+- Replace `{tenant}` with your tenant ID or use `common` for multi-tenant apps
+///
 
 ### Service-specific settings
 

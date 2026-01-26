@@ -32,6 +32,123 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
+## n8n@2.5.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.1...n8n@2.5.2) for this version.<br />
+**Release date:** 2026-01-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.4.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.5...n8n@2.4.6) for this version.<br />
+**Release date:** 2026-01-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.4.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.4...n8n@2.4.5) for this version.<br />
+**Release date:** 2026-01-22
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.6.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.0...n8n@2.6.0) for this version.<br />
+**Release date:** 2026-01-26
+
+This release contains bug fixes.
+
+### Contributors
+
+[ibex088](https://github.com/ibex088)  
+[johnlinp](https://github.com/johnlinp)  
+[loganaden](https://github.com/loganaden)  
+[Jameswlepage](https://github.com/Jameswlepage)  
+[cesars-gh](https://github.com/cesars-gh)  
+[antman1p](https://github.com/antman1p)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.5.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) for this version.<br />
+**Release date:** 2026-01-20
+
+/// note | Beta version
+This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+### Contributors
+
+[AbdulTawabJuly](https://github.com/AbdulTawabJuly)  
+[ByteEVM](https://github.com/ByteEVM)  
+[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[sudarshan12s](https://github.com/sudarshan12s)  
+[KaanAydinli](https://github.com/KaanAydinli)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.4.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.2...n8n@2.4.3) for this version.<br />
+**Release date:** 2026-01-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.3.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.5...n8n@2.3.6) for this version.<br />
+**Release date:** 2026-01-16
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.4.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.3...n8n@2.4.4) for this version.<br />
+**Release date:** 2026-01-16
+
+/// note | Stable version
+This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.3.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.4...n8n@2.3.5) for this version.<br />
+**Release date:** 2026-01-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 
 ## n8n@2.4.1
@@ -39,9 +156,7 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.4.1) for this version.<br />
 **Release date:** 2026-01-13
 
-/// note | Beta version
-This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains a bug fix.
 
@@ -97,9 +212,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.3...n8n@2.3.4) for this version.<br />
 **Release date:** 2026-01-13
 
-/// note | Stable version
-This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

@@ -44,6 +44,10 @@ The Start node is no longer supported. This node was the original way to begin w
 - **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node and activate the workflow.
 - **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
 
+### Saving and publishing workflows
+
+The new workflow publishing system replaces the previous active/inactive toggle. This means that the old "Activate/Deactivate" toggles become the new "Publish/Unpublish" buttons. This change gives you better control over when your workflow changes go live, reducing the risk of accidentally deploying work-in-progress changes to production. More information can be found here: [Saving and publishing workflows.](/workflows/publish.md)
+
 ### Removed nodes for retired services
 
 The following nodes have been removed because the external services they connect to are no longer available:

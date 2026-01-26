@@ -650,7 +650,7 @@ nav:
         - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
         - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
         - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
-        - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
+        - Jotform Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
         - Kafka Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
         - Keap Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
         - KoboToolbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
@@ -1343,6 +1343,7 @@ nav:
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
           - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+          - Human-in-the-loop for tool calls: advanced-ai/human-in-the-loop-tools.md
           - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
           - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
           - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md

@@ -21,6 +21,8 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Operations
 
 * Channel

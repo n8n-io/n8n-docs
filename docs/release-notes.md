@@ -99,7 +99,37 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) 
 
 
 This release contains bug fixes.
+<div class="n8n-new-features" markdown>
+### **Chat node: human-in-the-loop actions**
 
+The **Chat** node now includes two new Actions for human-in-the-loop interactions in agentic workflows:
+
+- **Send a message**: send a message to the user and continue the workflow
+- **Send a message and wait for response**: send a message and pause execution until the user replies. Users can respond with free text in the Chat or by clicking inline approval buttons, as defined in the node’s configuration.
+
+These Actions can be used as deterministic workflow steps or as tools for an **AI Agent**, enabling multi-turn human interaction within a single execution when using the **Chat Trigger**.
+
+When used as an agent tool, the agent can ask for clarification before proceeding, helping it better interpret user intent and follow instructions. Agents can also send updates during long-running workflows using these Actions.
+
+### **How to**
+
+1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the *Response Mode* option and set it to *Using Response Nodes*.
+2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the following operations: *Send a message* or *Send a message and wait for response*.
+
+### **Keep in mind**
+
+- If you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action.
+- For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
+
+Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat/#operation).
+
+<br>
+ <video src="/_video/release-notes/ChatHITL.webm" controls 
+ width="100%"></video>
+<br>
+
+<br><br>
+</div>
 ### Contributors
 
 [AbdulTawabJuly](https://github.com/AbdulTawabJuly)  

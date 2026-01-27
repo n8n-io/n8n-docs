@@ -17,6 +17,8 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Operations
 
 * Member

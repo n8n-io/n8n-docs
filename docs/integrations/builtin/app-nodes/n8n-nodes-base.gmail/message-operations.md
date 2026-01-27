@@ -9,6 +9,8 @@ priority: high
 
 Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Add Label to a message
 
 Use this operation to add one or more labels to a message.

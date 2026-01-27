@@ -12,8 +12,10 @@ Use the Slack node to automate work in Slack, and integrate Slack with other app
 On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication. 
+Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
 
 ## Operations
 

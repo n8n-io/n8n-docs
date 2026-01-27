@@ -14,6 +14,10 @@ On this page, you'll find a list of events the Microsoft Teams Trigger node can 
 You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
 ///
 
+/// tip | Government Cloud Support
+If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
+///
+
 ## Events
 
 * **New Channel**

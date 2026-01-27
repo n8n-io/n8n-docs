@@ -88,6 +88,14 @@ The connections flow would look like this: AI agent (tools connector) -> Vector 
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
+### Distance Strategy
+
+Available in **Get Many** and **Retrieve Documents** modes. Selects the method to calculate the distance between two vectors. The default is `L2`.
+
+### Index Type
+
+Available in **Get Many** and **Retrieve Documents** modes. Selects the type of index used in the Milvus database. The default is `AUTOINDEX`.
+
 ### Clear Collection
 
 Available in **Insert Documents** mode. Deletes all data from the collection before inserting the new data.

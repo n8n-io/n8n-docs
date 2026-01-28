@@ -50,6 +50,7 @@ Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive.md)
     * Delete a lead
     * Get data of a lead
     * Get data of all leads
+    * Search a lead
     * Update a lead
 * Note
     * Create a note

@@ -42,26 +42,81 @@ To customize theme colors open [packages/frontend/@n8n/design-system](https://gi
 - [packages/frontend/@n8n/design-system/src/css/_tokens.scss](https://github.com/n8n-io/n8n/blob/master/packages/frontend/@n8n/design-system/src/css/_tokens.scss)
 - [packages/frontend/@n8n/design-system/src/css/_tokens.dark.scss](https://github.com/n8n-io/n8n/blob/master/packages/frontend/@n8n/design-system/src/css/_tokens.dark.scss)
 
+### Understanding n8n's token system
 
-At the top of `_tokens.scss` you will find `--color-primary` variables as HSL colors:
+n8n uses a two-tier token system following a hybrid CSS variable naming convention:
+
+**Global tokens** define your brand's core design decisions (colors, spacing, typography). These are shared system-wide:
 
 ```scss
-@mixin theme {
-	--color-primary-h: 6.9;
-	--color-primary-s: 100%;
-	--color-primary-l: 67.6%;
+--color--primary: #ff6d5a;
+--color--secondary: #7e7e7e;
+--color--success: #16a34a;
+--color--danger: #dc2626;
+--spacing--md: 1rem;
+--radius--md: 0.5rem;
 ```
 
-In the following example the primary color changes to <span style="color:#0099ff">#0099ff</span>. To convert to HSL you can use a [color converter tool](https://www.w3schools.com/colors/colors_converter.asp).
+**Component tokens** reference global tokens (or override them when necessary):
 
 ```scss
-@mixin theme {
-	--color-primary-h: 204;
-	--color-primary-s: 100%;
-	--color-primary-l: 50%;
+--button--background--primary: var(--color--primary);
+--button--text-color--on-primary: #ffffff;
+--card--background--surface: var(--color--surface);
+--input--border-color--focus: var(--color--primary);
+```
+
+/// note | Naming convention
+Variable names use double dashes (`--`) between semantic groups and single dashes (`-`) within groups. For example: `--button--background--primary--hover` breaks down as:
+- `button` = component
+- `background` = property
+- `primary` = value
+- `hover` = state
+///
+
+### Customizing your brand colors
+
+In `_tokens.scss`, you'll find global color tokens. To change the primary color to <span style="color:#0099ff">#0099ff</span>:
+
+```scss
+:root {
+	--color--primary: #0099ff;
+	--color--primary-hover: #0088ee; /* Darker shade for hover states */
+}
+```
+
+Component tokens that reference `--color--primary` will automatically inherit your changes:
+
+```scss
+/* These automatically use your new primary color */
+--button--background--primary: var(--color--primary);
+--link--text-color: var(--color--primary);
+--input--outline-color--focus-visible: var(--color--primary);
 ```
 
 ![Example Theme Color Customization](/_images/embed/white-label/color-transition.gif)
+
+### Theme modes (light and dark)
+
+To customize colors for dark mode, override global tokens in `_tokens.dark.scss` using the `[data-theme="dark"]` selector:
+
+```scss
+:root {
+	/* Light mode */
+	--color--primary: #0099ff;
+	--color--surface: #ffffff;
+	--text-color--primary: #1a1a1a;
+}
+
+:root[data-theme="dark"] {
+	/* Dark mode */
+	--color--primary: #66b3ff;
+	--color--surface: #0f1115;
+	--text-color--primary: #e5e5e5;
+}
+```
+
+Theme switches primarily rewrite global tokens. Component overrides exist only where necessary for specific visual adjustments.
 
 
 ## Theme logos
@@ -94,7 +149,7 @@ If your logo assets require different sizing or placement you can customize SCSS
 	line-height: $header-height;
 	margin: 0 !important;
 	border-radius: 0 !important;
-	border-bottom: var(--border-width-base) var(--border-style-base) var(--color-background-xlight);
+	border-bottom: var(--border-width--base) var(--border-style--base) var(--background--light);
 	cursor: default;
 
 	&:hover, &:global(.is-active):hover {
@@ -110,6 +165,10 @@ If your logo assets require different sizing or placement you can customize SCSS
 
 }
 ```
+
+/// warning | Variable names may change
+If you customize CSS variables directly in component files, be aware that n8n is migrating to a new naming convention. Use global tokens (like `--color--primary`) rather than component-specific tokens to minimize breaking changes. See [Backwards compatibility](#backwards-compatibility) below.
+///
 
 ## Text localization
 
@@ -129,6 +188,43 @@ In the following example add the `_brand.name` translation key to white label n8
 ```
 
 ![Example About Modal Localization](/_images/embed/white-label/about-modal.png)
+
+## Backwards compatibility
+
+n8n is actively migrating to a new CSS variable naming convention. To ensure your white-label customizations remain compatible:
+
+### Best practices for stable customizations
+
+1. **Prefer global tokens over component tokens**: Customize high-level design tokens like `--color--primary`, `--spacing--md`, and `--radius--sm` rather than component-specific variables.
+
+2. **Check for aliases during migration**: n8n may temporarily alias old variable names to new ones:
+   ```scss
+   /* Legacy variable aliased to new convention */
+   --btn-bg-primary: var(--button--background--primary);
+   ```
+
+3. **Follow the naming convention**: If you create custom variables, use the hybrid double-dash convention:
+   - Between groups: `--` (double dash)
+   - Within groups: `-` (single dash)
+   - Example: `--my-brand--button--background--accent--hover`
+
+4. **Validate variable names**: Use this pattern to check your variable names:
+   ```
+   ^--[a-z0-9]+(?:-[a-z0-9]+)*(?:--[a-z0-9]+(?:-[a-z0-9]+)*){1,7}$
+   ```
+
+### Migration timeline
+
+n8n maintains backwards compatibility during major version transitions. When upgrading:
+
+- Review release notes for CSS variable changes
+- Test your customizations in a staging environment
+- Look for deprecation warnings in browser console
+- Update to new variable names during planned maintenance windows
+
+/// warning | Breaking changes in CSS overrides
+If you override CSS variables in embedded n8n instances (Chat Trigger, Form nodes), you may need to update your variable names after n8n upgrades. Always test embedded instances after updating n8n.
+///
 
 ### Window title
 

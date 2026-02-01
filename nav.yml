@@ -113,7 +113,6 @@ nav:
         - Referencing data:
           - data/data-mapping/index.md
           - Referencing data in the UI: data/data-mapping/data-mapping-ui.md
-          - Referencing data in the expressions editor: data/data-mapping/data-mapping-expressions.md
           - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
           - Linking data items:
             - data/data-mapping/data-item-linking/index.md
@@ -144,14 +143,12 @@ nav:
             - data/expression-reference/root.md
             - data/expression-reference/string.md
             - data/expression-reference/workflowdata.md
-          - Expression helper methods: data/convenience.md
         - Filtering data: data/data-filtering.md
         - Pinning and mocking data: data/data-pinning.md
         - Specific data types:
-          - Built-in date and time methods: data/specific-data-types/date-time.md
+          - Binary data: data/specific-data-types/binary-data.md
           - Date and time with Luxon: data/specific-data-types/luxon.md
           - Query JSON with JMESPath: data/specific-data-types/jmespath.md
-          - Binary data: data/specific-data-types/binary-data.md
         - Data tables: data/data-tables.md
       - Glossary: glossary.md
     - n8n Cloud:

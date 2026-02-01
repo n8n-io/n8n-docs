@@ -39,7 +39,7 @@ This section provides examples for some common operations. More examples, and de
 
 ### Get the current datetime or date
 
-Use the [`$now` and `$today` Luxon objects](/data/specific-data-types/date-time.md) to get the current time or day:
+Use the `$now` and `$today` Luxon objects to get the current time or day:
 
 * `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
 * `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.

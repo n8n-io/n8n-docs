@@ -1,28 +1,16 @@
 # Boolean
 
-## toNumber()
+## _`Boolean`_.**`isEmpty()`**
 
-* **Description:** Converts <code>true</code> to 1 and <code>false</code> to 0
-* **Syntax:** bool.toNumber()
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
-* **Examples:**
+**Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
 
-  ```javascript
-  true.toNumber() //=> 1
-  ```
+**Syntax:** _`Boolean`_.isEmpty()
 
-  ```javascript
-  false.toNumber() //=> 0
-  ```
+**Returns:** Boolean
 
-## isEmpty()
+**Type:** n8n
 
-* **Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
-* **Syntax:** bool.isEmpty()
-* **Returns:** Boolean
-* **n8n or JavaScript method:** n8n
-* **Examples:**
+**Examples:**
 
   ```javascript
   // bool = true
@@ -39,13 +27,37 @@
   bool.isEmpty() // => true
   ```
 
-## toString()
+## _`Boolean`_.**`toNumber()`**
 
-* **Description:** Converts <code>true</code> to the string ‘true’ and <code>false</code> to the string ‘false’ 
-* **Syntax:** bool.toString()
-* **Returns:** String
-* **n8n or JavaScript method:** JS
-* **Examples:**
+**Description:** Converts <code>true</code> to 1 and <code>false</code> to 0
+
+**Syntax:** _`Boolean`_.toNumber()
+
+**Returns:** Number
+
+**Type:** n8n
+
+**Examples:**
+
+  ```javascript
+  true.toNumber() //=> 1
+  ```
+
+  ```javascript
+  false.toNumber() //=> 0
+  ```
+
+## _`Boolean`_.**`toString()`**
+
+**Description:** Converts <code>true</code> to the string ‘true’ and <code>false</code> to the string ‘false’ 
+
+**Syntax:** _`Boolean`_.toString()
+
+**Returns:** String
+
+**Type:** JS
+
+**Examples:**
 
   ```javascript
   // bool = true

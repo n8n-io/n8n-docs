@@ -19,13 +19,13 @@ For information on errors with mapping and linking items, refer to [Item linking
 2. Open the node where you need to map data.
 3. You can map in table, JSON, and schema view:
 	* In table view: click and hold a table heading to map top level data, or a field in the table to map nested data.
-	* In JSON view: click and hold a key. 
-	* In schema view: click and hold a key.
+	* In JSON view: click and hold a field. 
+	* In schema view: click and hold a field.
 4. Drag the item into the field where you want to use the data.
 
 ### Understand what you're mapping with drag and drop
 
-Data mapping maps the key path, and loads the key's value into the field. For example, given the following data:
+Data mapping maps the field path, and loads the field's value. For example, given the following data:
 
 ```js
 [

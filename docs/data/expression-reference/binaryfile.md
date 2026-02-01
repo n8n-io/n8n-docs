@@ -1,51 +1,72 @@
 # BinaryFile
 
-## fileType
+## `binaryFile`.**`directory`**
 
-* **Description:** A string representing the type of the file, for example,  <code>image</code>. Corresponds to the first part of the MIME type.
-* **Syntax:** binaryFile.fileType
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Description:** The path to the directory that the file is stored in. Useful for distinguishing between files with the same name in different directories. Not set if n8n is  configured to store files in its database. 
 
-## mimeType
+**Syntax:** `binaryFile`.`binaryFile`.**`directory`**
 
-* **Description:** A string representing the format of the file’s contents, for example,  <code>image/jpeg</code>
-* **Syntax:** binaryFile.mimeType
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Returns:** String
 
-## fileName
+**Type:** n8n
 
-* **Description:** The name of the file, including extension
-* **Syntax:** binaryFile.fileName
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+## `binaryFile`.**`fileExtension`**
 
-## fileSize
+**Description:** The suffix attached to the filename (e.g. <code>txt</code>)
 
-* **Description:** A string representing the size of the file
-* **Syntax:** binaryFile.fileSize
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Syntax:** `binaryFile`.`binaryFile`.**`fileExtension`**
 
-## id
+**Returns:** String
 
-* **Description:** The unique ID of the file. Used to identify the file when it's stored on disk or in a storage service such as S3.
-* **Syntax:** binaryFile.id
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Type:** n8n
 
-## fileExtension
+## `binaryFile`.**`fileName`**
 
-* **Description:** The suffix attached to the filename (for example,  <code>txt</code>)
-* **Syntax:** binaryFile.fileExtension
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Description:** The name of the file, including extension
 
-## directory
+**Syntax:** `binaryFile`.`binaryFile`.**`fileName`**
 
-* **Description:** The path to the directory that the file is stored in. Useful for distinguishing between files with the same name in different directories. Not set if n8n is  configured to store files in its database. 
-* **Syntax:** binaryFile.directory
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Returns:** String
+
+**Type:** n8n
+
+## `binaryFile`.**`fileSize`**
+
+**Description:** A string representing the size of the file
+
+**Syntax:** `binaryFile`.`binaryFile`.**`fileSize`**
+
+**Returns:** String
+
+**Type:** n8n
+
+## `binaryFile`.**`fileType`**
+
+**Description:** A string representing the type of the file, e.g. <code>image</code>. Corresponds to the first part of the MIME type.
+
+**Syntax:** `binaryFile`.`binaryFile`.**`fileType`**
+
+**Returns:** String
+
+**Type:** n8n
+
+## `binaryFile`.**`id`**
+
+**Description:** The unique ID of the file. Used to identify the file when it is stored on disk or in a storage service such as S3.
+
+**Syntax:** `binaryFile`.`binaryFile`.**`id`**
+
+**Returns:** String
+
+**Type:** n8n
+
+## `binaryFile`.**`mimeType`**
+
+**Description:** A string representing the format of the file’s contents, e.g. <code>image/jpeg</code>
+
+**Syntax:** `binaryFile`.`binaryFile`.**`mimeType`**
+
+**Returns:** String
+
+**Type:** n8n
 

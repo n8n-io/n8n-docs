@@ -9,7 +9,7 @@ Filtering in n8n can mean different things depending on what you want to accompl
 ## Filter data visually in the UI
 
 /// info | Feature availability
-Available on Cloud Pro and Enterprise plans.
+Available on Community, Cloud Pro, and Enterprise plans.
 ///
 
 Search and filter data in the node **INPUT** and **OUTPUT** panels. Use this to check your node's data and find specific items.

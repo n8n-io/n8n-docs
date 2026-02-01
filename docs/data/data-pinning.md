@@ -6,7 +6,7 @@ contentType: howto
 
 # Pinning and mocking data
 
-When developing workflows, you often need to test your logic without repeatedly calling external systems or working with live data. n8n provides two related features to help with this:
+When developing workflows, you might want to test your logic without repeatedly calling external systems or working with live data. n8n provides two related features to help with this:
 
 * **Data pinning**: Save the output data of a node and reuse it in future workflow executions instead of fetching fresh data
 * **Data mocking**: Create or simulate test data without connecting to real data sources

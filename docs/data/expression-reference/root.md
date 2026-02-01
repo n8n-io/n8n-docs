@@ -1,38 +1,55 @@
 # Root
 
-## $runIndex
+## **`$()`**
 
-* **Description:** The index of the current run of the current node execution. Starts at 0.
-* **Syntax:** $runIndex
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
+**Description:** Returns the data of the specified node
 
-## $binary
+**Syntax:** $(nodeName)
 
-* **Description:** Returns any binary input data to the current node, for the current item. Shorthand for <code>$input.item.binary</code>.
-* **Syntax:** $binary
-* **Returns:** Array<BinaryFile>
-* **n8n or JavaScript method:** n8n
+**Returns:** NodeData
 
-## $workflow
+**Type:** n8n
 
-* **Description:** Information about the current workflow
-* **Syntax:** $workflow
-* **Returns:** WorkflowData
-* **n8n or JavaScript method:** n8n
+**Parameters:**
+  * `nodeName` (String) - The name of the node to retrieve  data for
 
-## $fromAI()
+## **`$binary`**
 
-* **Description:** Use when a large language model should provide the value of a node parameter. Consider providing a description for better results.
-* **Syntax:** $fromAI(key, description?, type?, defaultValue?)
-* **Returns:** any
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
+**Description:** Returns any binary input data to the current node, for the current item. Shorthand for <code>$input.item.binary</code>.
+
+**Syntax:** **`$binary`**
+
+**Returns:** Array<BinaryFile>
+
+**Type:** n8n
+
+## **`$execution`**
+
+**Description:** Retrieve or set metadata for the current execution
+
+**Syntax:** **`$execution`**
+
+**Returns:** ExecData
+
+**Type:** n8n
+
+## **`$fromAI()`**
+
+**Description:** Use when a large language model should provide the value of a node parameter. Consider providing a description for better results.
+
+**Syntax:** $fromAI(key, description?, type?, defaultValue?)
+
+**Returns:** any
+
+**Type:** n8n
+
+**Parameters:**
   * `key` (String) - The name of the field to fetch. May only contain letters, numbers, underscores and hyphens.
   * `description` (String) - optional - Use to give the model more context on exactly what it should return
   * `type` (String) - optional - The type of the value to return. One of <code>string</code>, <code>number</code>,  <code>boolean</code>, <code>json</code>, <code>date</code>, <code>datetime</code>. Defaults to <code>string</code>.
   * `defaultValue` (any) - optional - A value to use if the model doesn’t return the key
-* **Examples:**
+
+**Examples:**
 
   ```javascript
   // Ask the model to provide a name, and use it here
@@ -49,75 +66,22 @@
   $fromAI('isStudent', 'Is the person a student', 'boolean', false)
   ```
 
-## $secrets
+## **`$if()`**
 
-* **Description:** The secrets from an <a href="/external-secrets/">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
-* **Syntax:** $secrets
-* **Returns:** Object
-* **n8n or JavaScript method:** n8n
+**Description:** Returns one of two values depending on the <code>condition</code>. Similar to the <code>?</code> operator in JavaScript.
 
-## $itemIndex
+**Syntax:** $if(condition, valueIfTrue, valueIfFalse)
 
-* **Description:** The position of the item currently being processed in the list of input items
-* **Syntax:** $itemIndex
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
+**Returns:** any
 
-## $()
+**Type:** n8n
 
-* **Description:** Returns the data of the specified node
-* **Syntax:** $(nodeName)
-* **Returns:** NodeData
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `nodeName` (String) - The name of the node to retrieve  data for
-
-## $vars
-
-* **Description:** The <a href="/code/variables/">variables</a> available to the workflow
-* **Syntax:** $vars
-* **Returns:** Object
-* **n8n or JavaScript method:** n8n
-
-## $pageCount
-
-* **Description:** The number of results pages the node has fetched. Only available in the ‘HTTP Request’ node.
-* **Syntax:** $pageCount
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
-
-## $response
-
-* **Description:** The response returned by the last HTTP call. Only available in the ‘HTTP Request’ node.
-* **Syntax:** $response
-* **Returns:** HTTPResponse
-* **n8n or JavaScript method:** n8n
-
-## $parameter
-
-* **Description:** The configuration settings of the current node. These are the parameters you fill out within the node’s UI (for example, its operation).
-* **Syntax:** $parameter
-* **Returns:** NodeParams
-* **n8n or JavaScript method:** n8n
-
-## $input
-
-* **Description:** The input data of the current node
-* **Syntax:** $input
-* **Returns:** NodeData
-* **n8n or JavaScript method:** n8n
-
-## $if()
-
-* **Description:** Returns one of two values depending on the <code>condition</code>. Similar to the <code>?</code> operator in JavaScript.
-* **Syntax:** $if(condition, valueIfTrue, valueIfFalse)
-* **Returns:** any
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
+**Parameters:**
   * `condition` (Boolean) - The check to make. Should evaluate to either <code>true</code> or <code>false</code>
   * `valueIfTrue` (any) - The value to return if the condition is true
   * `valueIfFalse` (any) - The value to return if the condition is false
-* **Examples:**
+
+**Examples:**
 
   ```javascript
   // Return "Good day" if time is before 5pm, otherwise "Good evening"
@@ -130,32 +94,61 @@
   $if($now.hour < 10, "Good morning", $if($now.hour < 17, "Good day", "Good evening"))
   ```
 
-## $execution
+## **`$ifEmpty()`**
 
-* **Description:** Retrieve or set metadata for the current execution
-* **Syntax:** $execution
-* **Returns:** ExecData
-* **n8n or JavaScript method:** n8n
+**Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>””</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
 
-## $now
+**Syntax:** $ifEmpty(value, valueIfEmpty)
 
-* **Description:** A DateTime representing the current moment. 
+**Returns:** any
 
-Uses the workflow’s time zone (which can be changed in the workflow settings).
-* **Syntax:** $now
-* **Returns:** DateTime
-* **n8n or JavaScript method:** n8n
+**Type:** n8n
 
-## $jmespath()
+**Parameters:**
+  * `value` (any) - The value to return, provided it isn’t empty
+  * `valueIfEmpty` (any) - What to return if <code>value</code> is empty
 
-* **Description:** Extracts data from an object (or array of objects) using a <a href=”/code/cookbook/jmespath/”>JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
-* **Syntax:** $jmespath(obj, expression)
-* **Returns:** any
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
+**Examples:**
+
+  ```javascript
+  "Hi " + $ifEmpty(name, "there") // e.g. "Hi Nathan" or "Hi there"
+  ```
+
+## **`$input`**
+
+**Description:** The input data of the current node
+
+**Syntax:** **`$input`**
+
+**Returns:** NodeData
+
+**Type:** n8n
+
+## **`$itemIndex`**
+
+**Description:** The position of the item currently being processed in the list of input items
+
+**Syntax:** **`$itemIndex`**
+
+**Returns:** Number
+
+**Type:** n8n
+
+## **`$jmespath()`**
+
+**Description:** Extracts data from an object (or array of objects) using a <a href=”/code/cookbook/jmespath/”>JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
+
+**Syntax:** $jmespath(obj, expression)
+
+**Returns:** any
+
+**Type:** n8n
+
+**Parameters:**
   * `obj` (Object|Array) - The Object or array of Objects to retrieve data from
   * `expression` (String) - A <a href=”https://jmespath.org/examples.html”>JMESPath expression</a> defining the data to retrieve from the object
-* **Examples:**
+
+**Examples:**
 
   ```javascript
   data = {
@@ -227,77 +220,167 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
   $jmespath(data, 'reservations[].guests[?requirements.room==`double`].name')
   ```
 
-## $ifEmpty()
+## **`$json`**
 
-* **Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>""</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
-* **Syntax:** $ifEmpty(value, valueIfEmpty)
-* **Returns:** any
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `value` (any) - The value to return, provided it isn’t empty
-  * `valueIfEmpty` (any) - What to return if <code>value</code> is empty
-* **Examples:**
+**Description:** Returns the JSON input data to the current node, for the current item. Shorthand for <code>$input.item.json</code>. <a href="/data/data-structure/">More info</a>
 
-  ```javascript
-  "Hi " + $ifEmpty(name, "there") // e.g. "Hi Nathan" or "Hi there"
-  ```
+**Syntax:** **`$json`**
 
-## $prevNode
+**Returns:** Object
 
-* **Description:** Information about the node that the current input came from. 
+**Type:** n8n
+
+## **`$max()`**
+
+**Description:** Returns the highest of the given numbers
+
+**Syntax:** $max(num1, num2, …, numN)
+
+**Returns:** Number
+
+**Type:** n8n
+
+**Parameters:**
+  * `num1` (Number) - The first number to compare
+  * `num2` (Number) - The second number to compare
+
+## **`$min()`**
+
+**Description:** Returns the lowest of the given numbers
+
+**Syntax:** $min(num1, num2, …, numN)
+
+**Returns:** Number
+
+**Type:** n8n
+
+**Parameters:**
+  * `num1` (Number) - The first number to compare
+  * `num2` (Number) - The second number to compare
+
+## **`$nodeVersion`**
+
+**Description:** The version of the current node (as displayed at the bottom of the nodes’s settings pane)
+
+**Syntax:** **`$nodeVersion`**
+
+**Returns:** String
+
+**Type:** n8n
+
+## **`$now`**
+
+**Description:** A DateTime representing the current moment. 
+
+Uses the workflow’s time zone (which can be changed in the workflow settings).
+
+**Syntax:** **`$now`**
+
+**Returns:** DateTime
+
+**Type:** n8n
+
+## **`$pageCount`**
+
+**Description:** The number of results pages the node has fetched. Only available in the ‘HTTP Request’ node.
+
+**Syntax:** **`$pageCount`**
+
+**Returns:** Number
+
+**Type:** n8n
+
+## **`$parameter`**
+
+**Description:** The configuration settings of the current node. These are the parameters you fill out within the node’s UI (e.g. its operation).
+
+**Syntax:** **`$parameter`**
+
+**Returns:** NodeParams
+
+**Type:** n8n
+
+## **`$prevNode`**
+
+**Description:** Information about the node that the current input came from. 
 
 When in a ‘Merge’ node, always uses the first input connector.
-* **Syntax:** $prevNode
-* **Returns:** PrevNodeData
-* **n8n or JavaScript method:** n8n
 
-## $nodeVersion
+**Syntax:** **`$prevNode`**
 
-* **Description:** The version of the current node (as displayed at the bottom of the nodes’s settings pane)
-* **Syntax:** $nodeVersion
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
+**Returns:** PrevNodeData
 
-## $max()
+**Type:** n8n
 
-* **Description:** Returns the highest of the given numbers
-* **Syntax:** $max(num1, num2, …, numN)
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `num1` (Number) - The first number to compare
-  * `num2` (Number) - The second number to compare
+## **`$request`**
 
-## $min()
+**Description:** The request object sent during the last run of the node. Only available in the ‘HTTP Request’ node.
 
-* **Description:** Returns the lowest of the given numbers
-* **Syntax:** $min(num1, num2, …, numN)
-* **Returns:** Number
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `num1` (Number) - The first number to compare
-  * `num2` (Number) - The second number to compare
+**Syntax:** **`$request`**
 
-## $request
+**Returns:** Object
 
-* **Description:** The request object sent during the last run of the node. Only available in the ‘HTTP Request’ node.
-* **Syntax:** $request
-* **Returns:** Object
-* **n8n or JavaScript method:** n8n
+**Type:** n8n
 
-## $json
+## **`$response`**
 
-* **Description:** Returns the JSON input data to the current node, for the current item. Shorthand for <code>$input.item.json</code>. <a href="/data/data-structure/">More info</a>
-* **Syntax:** $json
-* **Returns:** Object
-* **n8n or JavaScript method:** n8n
+**Description:** The response returned by the last HTTP call. Only available in the ‘HTTP Request’ node.
 
-## $today
+**Syntax:** **`$response`**
 
-* **Description:** A DateTime representing midnight at the start of the current day. 
+**Returns:** HTTPResponse
+
+**Type:** n8n
+
+## **`$runIndex`**
+
+**Description:** The index of the current run of the current node execution. Starts at 0.
+
+**Syntax:** **`$runIndex`**
+
+**Returns:** Number
+
+**Type:** n8n
+
+## **`$secrets`**
+
+**Description:** The secrets from an <a href="/external-secrets/">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
+
+**Syntax:** **`$secrets`**
+
+**Returns:** Object
+
+**Type:** n8n
+
+## **`$today`**
+
+**Description:** A DateTime representing midnight at the start of the current day. 
 
 Uses the instance’s time zone (unless overridden in the workflow’s settings).
-* **Syntax:** $today
-* **Returns:** DateTime
-* **n8n or JavaScript method:** n8n
+
+**Syntax:** **`$today`**
+
+**Returns:** DateTime
+
+**Type:** n8n
+
+## **`$vars`**
+
+**Description:** The <a href="/code/variables/">variables</a> available to the workflow
+
+**Syntax:** **`$vars`**
+
+**Returns:** Object
+
+**Type:** n8n
+
+## **`$workflow`**
+
+**Description:** Information about the current workflow
+
+**Syntax:** **`$workflow`**
+
+**Returns:** WorkflowData
+
+**Type:** n8n
 

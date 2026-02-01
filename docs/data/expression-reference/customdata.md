@@ -1,57 +1,74 @@
 # CustomData
 
-## getAll()
+## `$execution.customData`.**`get()`**
 
-* **Description:** Returns all the key-value pairs of custom data that have been set in the current execution. <a href="/workflows/executions/custom-executions-data/">More info</a>
-* **Syntax:** $execution.customData.getAll()
-* **Returns:** Object
-* **n8n or JavaScript method:** n8n
-* **Examples:**
+**Description:** Returns the custom execution data stored under the given key. <a href="/workflows/executions/custom-executions-data/">More info</a>
+
+**Syntax:** `$execution.customData`.get(key)
+
+**Returns:** String
+
+**Type:** n8n
+
+**Parameters:**
+  * `key` (String) - The key (identifier) under which the data is stored
+
+**Examples:**
+
+  ```javascript
+  // Get the user's email (which was previously stored)
+  $execution.customData.get("user_email") //=> "me@example.com"
+  ```
+
+## `$execution.customData`.**`getAll()`**
+
+**Description:** Returns all the key-value pairs of custom data that have been set in the current execution. <a href="/workflows/executions/custom-executions-data/">More info</a>
+
+**Syntax:** `$execution.customData`.getAll()
+
+**Returns:** Object
+
+**Type:** n8n
+
+**Examples:**
 
   ```javascript
   $execution.customData.getAll() //=> {"user_email": "me@example.com", "id": 1234}
   ```
 
-## setAll()
+## `$execution.customData`.**`set()`**
 
-* **Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
-* **Syntax:** $execution.customData.setAll(obj)
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `obj` (Object) - A JavaScript object containing key-value pairs of the data to set
-* **Examples:**
+**Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
 
-  ```javascript
-  $execution.customData.setAll({"user_email": "me@example.com", "id": 1234})
-  ```
+**Syntax:** `$execution.customData`.set(key, value)
 
-## set()
+**Type:** n8n
 
-* **Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
-* **Syntax:** $execution.customData.set(key, value)
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
+**Parameters:**
   * `key` (String) - The key (identifier) under which the data is stored
   * `value` (String) - The data to store
-* **Examples:**
+
+**Examples:**
 
   ```javascript
   // Store the user's email, to easily retrieve all execs related to that user later
   $execution.customData.set("user_email", "me@example.com")
   ```
 
-## get()
+## `$execution.customData`.**`setAll()`**
 
-* **Description:** Returns the custom execution data stored under the given key. <a href="/workflows/executions/custom-executions-data/">More info</a>
-* **Syntax:** $execution.customData.get(key)
-* **Returns:** String
-* **n8n or JavaScript method:** n8n
-* **Parameters:**
-  * `key` (String) - The key (identifier) under which the data is stored
-* **Examples:**
+**Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
+
+**Syntax:** `$execution.customData`.setAll(obj)
+
+**Type:** n8n
+
+**Parameters:**
+  * `obj` (Object) - A JavaScript object containing key-value pairs of the data to set
+
+**Examples:**
 
   ```javascript
-  // Get the user's email (which was previously stored)
-  $execution.customData.get("user_email") //=> "me@example.com"
+  $execution.customData.setAll({"user_email": "me@example.com", "id": 1234})
   ```
 

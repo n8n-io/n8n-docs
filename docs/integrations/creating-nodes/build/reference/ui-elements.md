@@ -183,6 +183,22 @@ Use the `collection` type when you need to display optional fields.
 
 ![Collection](/_images/integrations/creating-nodes/collection.png)
 
+You can also make collections collapsible to reduce visual clutter and progressively disclose node parameters to users. To enable collapsible collections, make this change to the `typeOptions` field.
+
+```typescript
+typeOptions: {
+	multipleValues: true,
+	fixedCollection: {
+		itemTitle: '={{ $collection.item.value.name }}', // Optionally, specify the title for the collapsible element
+	},
+},
+```
+
+By default, the title of the collapsible element is `displayName + index`. For example, if the `displayName` of the collection is `Query Parameter`, the title of the collapsible element will be `Query Parameter 1`.
+
+You can user your own title by specifying a value for the `itemTitle` field.
+
+![Collapsible collection](/_images/integrations/creating-nodes/collapsible-collection.png)
 
 ## DateTime
 
@@ -453,7 +469,22 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
 
+You can also make fixed collections collapsible to reduce visual clutter and progressively disclose node parameters to users. To enable collapsible fixed collections, make this change to the `typeOptions` field.
 
+```typescript
+typeOptions: {
+	multipleValues: true,
+	fixedCollection: {
+		itemTitle: '={{ $collection.item.value.name }}', // Optionally, specify the title for the collapsible element
+	}
+},
+```
+
+By default, the title of the collapsible element is `displayName + index`. For example, if the `displayName` of the collection is `Query Parameter`, the title of the collapsible element will be `Query Parameter 1`.
+
+You can user your own title by specifying a value for the `itemTitle` field.
+
+![Collapsible collection](/_images/integrations/creating-nodes/collapsible-collection.png)
 
 ## Resource locator
 

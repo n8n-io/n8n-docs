@@ -32,6 +32,34 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
+
+
+## n8n@2.6.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.1...n8n@2.6.2) for this version.<br />
+**Release date:** 2026-01-28
+
+/// note | Beta version
+This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.4.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.6...n8n@2.4.7) for this version.<br />
+**Release date:** 2026-01-28
+
+/// note | Stable version
+This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@2.5.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.1...n8n@2.5.2) for this version.<br />
@@ -47,9 +75,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.5...n8n@2.4.6) for this version.<br />
 **Release date:** 2026-01-23
 
-/// note | Stable version
-This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
 
 This release contains bug fixes.
 
@@ -72,9 +100,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.0...n8n@2.6.0) for this version.<br />
 **Release date:** 2026-01-26
 
-/// note | Beta version
-This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -99,7 +125,37 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) 
 
 
 This release contains bug fixes.
+<div class="n8n-new-features" markdown>
+### **Chat node: human-in-the-loop actions**
 
+The **Chat** node now includes two new Actions for human-in-the-loop interactions in agentic workflows:
+
+- **Send a message**: send a message to the user and continue the workflow
+- **Send a message and wait for response**: send a message and pause execution until the user replies. Users can respond with free text in the Chat or by clicking inline approval buttons, as defined in the node’s configuration.
+
+These Actions can be used as deterministic workflow steps or as tools for an **AI Agent**, enabling multi-turn human interaction within a single execution when using the **Chat Trigger**.
+
+When used as an agent tool, the agent can ask for clarification before proceeding, helping it better interpret user intent and follow instructions. Agents can also send updates during long-running workflows using these Actions.
+
+### **How to**
+
+1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the *Response Mode* option and set it to *Using Response Nodes*.
+2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the following operations: *Send a message* or *Send a message and wait for response*.
+
+### **Keep in mind**
+
+- If you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action.
+- For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
+
+Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat/#operation).
+
+<br>
+ <video src="/_video/release-notes/ChatHITL.webm" controls 
+ width="100%"></video>
+<br>
+
+<br><br>
+</div>
 ### Contributors
 
 [AbdulTawabJuly](https://github.com/AbdulTawabJuly)  

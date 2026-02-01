@@ -25,7 +25,7 @@ You can find authentication information for this node [here](/integrations/built
 * **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push).
 * **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags).
 * Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status).
-* **Switch Branch:** Performs a [git-switch](https://git-scm.com/docs/git-switch).
+* **Switch Branch:** Performs a [git switch](https://git-scm.com/docs/git-switch).
 * Create a new **Tag**: Performs a [git tag](https://git-scm.com/docs/git-tag).
 * **User Setup**: Set the user.
 

@@ -34,6 +34,24 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.7.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.0...n8n@2.7.0) for this version.<br />
+**Release date:** 2026-02-02
+
+This release contains bug fixes.
+
+### Contributors
+
+[LostInBrittany](https://github.com/LostInBrittany)  
+[adriencohen](https://github.com/adriencohen)  
+[ibex088](https://github.com/ibex088)  
+[rutgere-indeed](https://github.com/rutgere-indeed)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.6.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.1...n8n@2.6.2) for this version.<br />

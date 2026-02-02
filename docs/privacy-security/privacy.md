@@ -147,7 +147,7 @@ To assist and improve user experience, n8n may send specific context data to LLM
 #### AI Usage settings
 
 /// info
-Available in n8n v2.6.3 and above.
+Available in n8n v2.7.0 and above.
 ///
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance settings.

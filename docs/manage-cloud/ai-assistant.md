@@ -42,13 +42,13 @@ These settings are only available to the instance owners and administrators and 
 
 ![ai_usage_settings.png](/_images/ai-assistant/ai_usage_settings.png)
 
-Here, you can toggle wether to share actual workflow data (like node names, parameters, and structure) with the AI Assistant. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+Here, you can toggle whether to share actual workflow data (like node names, parameters, and structure) with the AI Assistant. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
 
 Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
 
 ### Disable sending data
 
-In order to disable sending any data to the AI Assistant, you can turn off the **Send actual data values** checkbox on the **AI Usage** settings page.
+To stop sending actual data values to the AI Assistant, turn off the **Send actual data values** checkbox on the **AI Usage** settings page.
 
 ## FAQs
 

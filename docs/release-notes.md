@@ -173,7 +173,7 @@ Start with a workflow where an AI Agent is connected to one or more tools.
 <br>
 <video src="/_video/release-notes/HITLToolCalls.webm" controls width="100%"></video>
 <br>
-Get precise control over where human judgment is required, without limiting what your agent can do. Learn more [here](/advanced-ai/human-in-the-loop-tools/).
+Get precise control over where human judgment is required, without limiting what your agent can do. Learn more [here](/advanced-ai/human-in-the-loop-tools.md).
 </div> 
 ### Contributors
 

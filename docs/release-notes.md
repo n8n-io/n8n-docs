@@ -147,6 +147,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.0...n8n@2.6.0) 
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown> 
+
 ### Human-in-the-loop for AI tool calls
 
 You can now require explicit human approval before an AI Agent executes specific tools.
@@ -196,6 +197,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) 
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
+
 ### Chat node: human-in-the-loop actions
 
 The **Chat** node now includes two new Actions for human-in-the-loop interactions in agentic workflows:
@@ -312,6 +314,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.0...n8n@2.4.0) 
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
+
 ### TLS support for Syslog log streaming
 
 The Syslog log streaming destination now supports TLS over TCP for encrypted connections. This enables secure log streaming to enterprise SIEM and observability platforms that require encrypted transport. With this release, log streaming is now compatible with a broader range of enterprise SIEM platforms.
@@ -472,6 +475,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.1.0...n8n@2.2.0) 
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
+
 ### More granular workflow permissions within Custom Project Roles (Enterprise)
 
 Custom Project Roles allow you to define fine-grained permissions at the project level. With this release, workflow permissions have been further refined by separating workflow editing from workflow publishing.
@@ -483,6 +487,7 @@ This change makes it easier to align access controls with internal processes whe
     <figcaption>Custom Project Roles</figcaption>
 </figure>
 <br>
+
 ### Log streaming: More audit events for improved observability
 
 Log streaming now includes additional audit events to improve visibility into operational and security-relevant changes.

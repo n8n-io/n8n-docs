@@ -196,7 +196,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) 
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
-### **Chat node: human-in-the-loop actions**
+### Chat node: human-in-the-loop actions
 
 The **Chat** node now includes two new Actions for human-in-the-loop interactions in agentic workflows:
 
@@ -207,12 +207,12 @@ These Actions can be used as deterministic workflow steps or as tools for an **A
 
 When used as an agent tool, the agent can ask for clarification before proceeding, helping it better interpret user intent and follow instructions. Agents can also send updates during long-running workflows using these Actions.
 
-### **How to**
+#### How to
 
 1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the *Response Mode* option and set it to *Using Response Nodes*.
 2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the following operations: *Send a message* or *Send a message and wait for response*.
 
-### **Keep in mind**
+#### Keep in mind
 
 - If you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action.
 - For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
@@ -313,6 +313,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.0...n8n@2.4.0) 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
 ### TLS support for Syslog log streaming
+
 The Syslog log streaming destination now supports TLS over TCP for encrypted connections. This enables secure log streaming to enterprise SIEM and observability platforms that require encrypted transport. With this release, log streaming is now compatible with a broader range of enterprise SIEM platforms.
 
 ### Update credentials via API

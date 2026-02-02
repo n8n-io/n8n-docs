@@ -144,7 +144,7 @@ To provide enhanced assistance, n8n integrates AI-powered features that leverage
 
 To assist and improve user experience, n8n may send specific context data to LLMs. This context data is strictly limited to information about the current workflow. n8n does not send any values from credential fields or actual output data to AI services. The data will not be incorporated, used, or retained to train the models of the AI services. Any data will be deleted after 30 days.
 
-### AI Usage settings
+#### AI Usage settings
 
 /// info
 Available in n8n v2.6.3 and above.

@@ -156,7 +156,7 @@ The n8n Form Trigger automatically sanitizes HTML content in the **Form Descript
 
 ### Allowed HTML Tags
 
-You can use the following tags for formatting: <a>, <b>, <br>, <code>, <div>, <em>, <h1>-<h6>, <i>, <iframe>, <img>, <li>, <ol>, <p>, <pre>, <span>, <strong>, <sub>, <sup>, <table>, <tbody>, <td>, <tfoot>, <th>, <thead>, <tr>, <u>, <ul>, <video>, and <source>.
+You can use the following tags for formatting: `<a>`, `<b>`, `<br>`, `<code>`, `<div>`, `<em>`, `<h1>` through `<h6>`, `<i>`, `<iframe>`, `<img>`, `<li>`, `<ol>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<sub>`, `<sup>`, `<table>`, `<tbody>`, `<td>`, `<tfoot>`, `<th>`, `<thead>`, `<tr>`, `<u>`, `<ul>`, `<video>`, and `<source>`.
 
 ### Restricted Tags
 

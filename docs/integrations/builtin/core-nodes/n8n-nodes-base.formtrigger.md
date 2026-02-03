@@ -103,7 +103,7 @@ Every field has the following settings:
 - **Element Type**: Choose from **Checkboxes**, **Custom HTML**, **Date**, **Dropdown**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Radio Buttons**, **Text**, or **Textarea**.
 	- Select **Checkboxes** to include checkbox elements in the form. By default, there is no limit on how many checkboxes a form user can select. You can set the limit by specifying a value for the **Limit Selection** option as **Exact Number**, **Range**, or **Unlimited**.
 	- Select **Custom HTML** to insert arbitrary HTML.
-		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements. For more information, see [HTML security and allowed tags].(#html-security-and-allowed-tags).
+		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements. For more information, see [HTML security and allowed tags](#html-security-and-allowed-tags).
 		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
     - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**.

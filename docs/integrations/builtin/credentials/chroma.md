@@ -26,7 +26,7 @@ View n8n's [Advanced AI](/advanced-ai/) documentation.
 
 ## Using API key
 
-To configure this credential, you'll need a  [Chroma]([https://www.trychroma.com/home](https://trychroma.com/signup?utm_source=docs-getting-started)) account and 
+To configure this credential, you'll need a  [Chroma](https://www.trychroma.com/) account. You'll also need the following:
 
 - An **API Key**
 - Your **Tenant ID**

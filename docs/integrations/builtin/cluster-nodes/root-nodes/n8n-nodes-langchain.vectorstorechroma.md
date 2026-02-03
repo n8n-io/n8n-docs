@@ -7,7 +7,7 @@ priority: medium
 
 # Chroma Vector Store node
 
-Use the Chroma node to interact with your Chroma database as [vector store](/glossary/#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary/#ai-chain), or connect directly to an [agent](/glossary/#ai-agent) as a [tool](/glossary/#ai-tool). 
+Use the Chroma node to interact with your Chroma database as [vector store](/glossary.md/#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md/#ai-chain), or connect directly to an [agent](/glossary.md/#ai-agent) as a [tool](/glossary.md/#ai-tool). 
 
 On this page, you'll find the node parameters for the Chroma node, and links to more resources.
 
@@ -27,7 +27,7 @@ Here, the connection would be: AI agent (tools connector) -> Chroma Vector Store
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore/) node with the Chroma Vector Store node to fetch documents from the Chroma Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Chroma Vector Store node to fetch documents from the Chroma Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md) node to fetch documents from the vector store that match the given chat input.
 
 An example of the connection flow would be as follows:
 
@@ -35,7 +35,7 @@ Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vecto
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Chroma Vector Store node. Rather than connecting the Chroma Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Chroma Vector Store node. Rather than connecting the Chroma Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The connections flow in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Chroma Vector store.
 
@@ -63,7 +63,7 @@ Use Retrieve Documents (As Tool for AI Agent) mode to use the vector store as a 
 
 ### Rerank Results
 
-Enables [reranking](/glossary/#ai-reranking). If you enable this option, you must connect a reranking node to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
+Enables [reranking](/glossary.md#ai-reranking). If you enable this option, you must connect a reranking node to the vector store. That node will then rerank the results for queries. You can use this option with the `Get Many`, `Retrieve Documents (As Vector Store for Chain/Tool)` and `Retrieve Documents (As Tool for AI Agent)` modes.
 
 ### Get Many parameters
 

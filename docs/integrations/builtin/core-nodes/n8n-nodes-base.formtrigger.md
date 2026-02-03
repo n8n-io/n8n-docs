@@ -160,7 +160,7 @@ You can use the following tags for formatting: `<a>`, `<b>`, `<br>`, `<code>`, `
 
 ### Restricted Tags
 
-The following tags are automatically removed for security: <script>, <style>, <input>, <form>, <button>, and other potentially dangerous elements that could enable XSS attacks or interfere with form functionality.
+The following tags are automatically removed for security: `<script>`, `<style>`, `<input>`, `<form>`, `<button>`, and other potentially dangerous elements that could enable XSS attacks or interfere with form functionality.
 
 ### Attribute Restrictions
 

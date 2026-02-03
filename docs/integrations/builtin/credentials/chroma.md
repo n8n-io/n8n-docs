@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 - Chroma Vector Store 
 
 ## Prerequisites 
-Create and run [Chroma](https://www.trychroma.com/home) instance. Refer to the [Running Chroma in Client-Server Mode](https://docs.trychroma.com/docs/run-chroma/client-server) for more information
+Create and run [Chroma](https://www.trychroma.com/home) instance. Refer to the [Running Chroma in Client-Server Mode](https://docs.trychroma.com/docs/run-chroma/client-server) for more information.
 
 ## Supported authentication methods
 - API key

@@ -1,3 +1,4 @@
+https://www.google.com/alerts/feeds/07092681943087269879/86408122138860387
 ---
 title: RSS Feed Trigger node documentation
 description: Learn how to use the RSS Feed Trigger node in n8n. Follow technical documentation to integrate RSS Feed Trigger node into your workflows.

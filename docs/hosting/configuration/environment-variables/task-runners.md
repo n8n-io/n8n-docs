@@ -11,7 +11,9 @@ hide:
 
 # Task runner environment variables
 
---8<-- "_snippets/self-hosting/file-based-configuration.md"
+/// note | File-based configuration
+Unlike the main n8n image, you CANNOT use file-based configuration for secrets in the task runner image. This means that variables with a `_FILE` prefix added will not be recognized.
+///
 
 [Task runners](/hosting/configuration/task-runners.md) execute code defined by the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 

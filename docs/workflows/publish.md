@@ -19,21 +19,25 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 - Schedules will run at the times you've defined
 - Events from connected apps will trigger this workflow
 
-**Initial state: You open the workflow**
+**Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 
-![Initial state when workflow is opened](/_images/publish/open-workflow.png)
+![](/_images/publish/publish-initial.png)
 
-**Changed state: Autosaved changes yet to be published**
+**Ready to publish** When the workflow is not yet published but has changes, the button becomes active.
 
-![Changes awaiting publish](/_images/publish/post-change.png)
+![](/_images/publish/publish-ready.png)
 
-**Published state: All changes published**
+**Published, up to date** The workflow is currently published and there are no new changes since the last publish.
 
-![All changes published](/_images/publish/all-published.png)
+![](/_images/publish/published.png)
 
-**Changed state: New changes yet to be published**
+**Published, has changes** The workflow is published, but you've made changes since the last publish that haven't gone live yet.
 
-![New changes awaiting publish](/_images/publish/new-unpublished.png)
+![](/_images/publish/published-changes.png)
+
+**Published, error** The workflow is published, but there are errors in your recent changes that need to be fixed before you can publish again.
+
+![](/_images/publish/published-error.png)
 
 
 ## How collaboration works
@@ -73,4 +77,5 @@ View and manage version history by clicking the history icon in the header. In t
 Unpublish a workflow from either:
 
 - The workflow settings menu
+- In the workflow list
 - The version history page (unpublish action on published versions)

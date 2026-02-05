@@ -112,6 +112,13 @@ If you're using a government cloud tenant, you may also need to update the **Aut
 - Replace `{tenant}` with your tenant ID or use `common` for multi-tenant apps
 ///
 
+### Custom Scopes
+
+Define granular permissions for interacting with the following Microsoft services:
+
+* Microsoft Teams
+* Microsoft Excel
+
 ### Service-specific settings
 
 The following services require extra information for OAuth2:

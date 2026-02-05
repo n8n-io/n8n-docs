@@ -81,7 +81,28 @@ paths:
         '500':
           description: Internal server error.
   /credentials:
+    get:
+      operationId: getCredentials
+      x-eov-operation-id: getCredentials
+      x-eov-operation-handler: v1/handlers/credentials/credentials.handler
+      tags:
+        - Credential
+      summary: List credentials
+      description: Retrieve all credentials from your instance. Only available for the instance owner and admin. Credential data (secrets) is not included.
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/credentialList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
     post:
+      operationId: createCredential
       x-eov-operation-id: createCredential
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
@@ -1830,6 +1851,47 @@ components:
                   - kind: community
                     nodeType: n8n-nodes-test.test
                     packageUrl: https://www.npmjs.com/package/n8n-nodes-test
+    create-credential-response:
+      required:
+        - id
+        - name
+        - type
+        - createdAt
+        - updatedAt
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+          example: vHxaz5UaCghVYl9C
+        name:
+          type: string
+          example: John's Github account
+        type:
+          type: string
+          example: githubApi
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+    credentialList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/create-credential-response'
+        nextCursor:
+          type: string
+          description: Paginate through credentials by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
     credential:
       required:
         - name
@@ -1856,35 +1918,6 @@ components:
           type: boolean
           example: false
           description: Whether this credential has resolvable fields
-        createdAt:
-          type: string
-          format: date-time
-          readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
-        updatedAt:
-          type: string
-          format: date-time
-          readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
-    create-credential-response:
-      required:
-        - id
-        - name
-        - type
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        id:
-          type: string
-          readOnly: true
-          example: vHxaz5UaCghVYl9C
-        name:
-          type: string
-          example: John's Github account
-        type:
-          type: string
-          example: githubApi
         createdAt:
           type: string
           format: date-time
@@ -3043,20 +3076,6 @@ components:
     Forbidden:
       $ref: '#/components/responses/forbidden'
   parameters:
-    credentialId:
-      name: id
-      in: path
-      description: The ID of the credential.
-      required: true
-      schema:
-        type: string
-    includeData:
-      name: includeData
-      in: query
-      description: Whether or not to include the execution's detailed data.
-      required: false
-      schema:
-        type: boolean
     limit:
       name: limit
       in: query
@@ -3075,6 +3094,20 @@ components:
       style: form
       schema:
         type: string
+    credentialId:
+      name: id
+      in: path
+      description: The ID of the credential.
+      required: true
+      schema:
+        type: string
+    includeData:
+      name: includeData
+      in: query
+      description: Whether or not to include the execution's detailed data.
+      required: false
+      schema:
+        type: boolean
     executionId:
       name: id
       in: path

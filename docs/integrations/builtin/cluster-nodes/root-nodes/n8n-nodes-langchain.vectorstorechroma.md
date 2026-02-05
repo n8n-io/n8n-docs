@@ -11,6 +11,10 @@ Use the Chroma node to interact with your Chroma database as [vector store](/gl
 
 On this page, you'll find the node parameters for the Chroma node, and links to more resources.
 
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/chroma.md).
+///
+
 ## Node usage patterns
 
 You can use the Chroma Vector Store node in the following patterns.
@@ -21,13 +25,13 @@ You can use the Chroma Vector Store as a regular node to insert or get documents
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Chroma Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
+You can connect the Chroma Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Chroma Vector Store node.
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Chroma Vector Store node to fetch documents from the Chroma Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Chroma Vector Store node to fetch documents from the Chroma Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
 
 An example of the connection flow would be as follows:
 
@@ -35,7 +39,7 @@ Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vecto
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Chroma Vector Store node. Rather than connecting the Chroma Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Chroma Vector Store node. Rather than connecting the Chroma Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
 
 The connections flow in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Chroma Vector store.
 
@@ -93,14 +97,10 @@ This Operation Mode includes one **Node option**, the Metadata Filter
 
 ### Metadata Filter
 
-Available in **Get Many** mode. When searching for data, use this to match with metadata associated with the document.
-
-This is an `AND` query. If you specify more than one metadata filter field, all of them must match.
-
-When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/) for more information on loading documents.
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
 ## Related resources
 
-Refer to [LangChain's Chroma documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/chroma) for more information about the service.
+Refer to [LangChain's Chroma documentation](https://js.langchain.com/oss/javascript/integrations/vectorstores/chroma) for more information about the service.
 
-View n8n's [Advanced AI](/advanced-ai/) documentation.
+View n8n's [Advanced AI](/advanced-ai/index.md) documentation.

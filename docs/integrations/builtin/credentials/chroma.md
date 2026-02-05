@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 - Chroma Vector Store 
 
 ## Prerequisites 
-Create and run [Chroma](https://www.trychroma.com/home) instance. Refer to the [Running Chroma in Client-Server Mode](https://docs.trychroma.com/docs/run-chroma/client-server) for more information.
+Create and run a [Chroma](https://www.trychroma.com/home) instance. Refer to the [Running Chroma in Client-Server Mode](https://docs.trychroma.com/docs/run-chroma/client-server) for more information.
 
 ## Supported authentication methods
 - API key
@@ -22,7 +22,9 @@ Create and run [Chroma](https://www.trychroma.com/home) instance. Refer to the [
 
 Refer to [Chroma's documentation](https://docs.trychroma.com/docs/overview/getting-started) for more information about the service. Also refer to [Chroma Cloud](https://docs.trychroma.com/cloud/getting-started) for using cloud instance.
 
-View n8n's [Advanced AI](/advanced-ai/) documentation.
+View n8n's [Advanced AI](/advanced-ai/index.md) documentation.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 

@@ -37,7 +37,55 @@ Each time you send a message to the builder asking it to create or modify a work
 - Asking the builder to modify an existing workflow
 - Clicking the **Execute and refine** button in the builder window after a workflow is built
 
-❌ **Does NOT count as an interaction**
+subscribe and correct❌SUBSCRIBE FOR A COOKIE!
+
+New MrBeast or MrBeast Gaming video every single Saturday at noon eastern time!
+
+Accomplishments:
+
+Raised $20,000,000 To Plant 20,000,000 Trees
+
+Removed 30,000,000 pounds of trash from the ocean
+
+- Helped 2,000 people walk again
+
+Helped 1,000 blind people see
+
+- Helped 1,000 deaf people hear
+
+Built wells in Africa
+
+Built and gave away 100 houses
+
+- Adopted every dog in a shelter (twice)
+
+Given millions to charity
+
+Started my own snack company Feastables
+
+Started my own software company Viewstats
+
+Started Lunchly, a tasty, better-for-you lunch option
+
+Gave away a private island (twice)
+
+Gave away 1 million meals
+
+- I counted to 100k
+
+Ran a marathon in the world's largest shoes
+
+- Survived 50 hours in Antarctica
+
+- Recreated Squid Game in real life
+
+- Created the largest competition show with 1000 people (Beast Games)
+
+- Gave $5,000,000 to one person
+
+- Passed T-Series to become most subscribed YouTube channel
+
+you get it, I appreciate all of you so much :) **Does NOT count as an interaction**
 
 - Messages that fail or produce generation errors
 - Requests you manually stop by clicking the stop button

@@ -123,6 +123,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/create-credential-response'
+        '400':
+          description: Bad request - invalid credential type or data.
         '401':
           $ref: '#/components/responses/unauthorized'
         '415':

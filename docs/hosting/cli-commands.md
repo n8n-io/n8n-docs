@@ -190,6 +190,7 @@ Available flags:
 | --projectId | Import the workflow or credential to the specified project. Can't be used with `--userId`. |
 | --separate | Imports `*.json` files from directory provided by --input. |
 | --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
+| --skipMigrationChecks | Skip migration validation checks. |
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.

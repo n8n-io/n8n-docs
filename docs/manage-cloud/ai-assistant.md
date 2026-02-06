@@ -30,6 +30,26 @@ The AI Assistant offers a range of tools to support you:
     - "How can I build X in n8n?"
 <!-- vale from-microsoft.FirstPerson = YES -->
 
+## AI Usage settings
+
+/// info
+Available in n8n v2.7.0 and above.
+///
+
+You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance settings. Here, you can control what data is shared with the AI Assistant. 
+
+These settings are only available to the instance owners and administrators and will apply to all users on the instance.
+
+![ai_usage_settings.png](/_images/ai-assistant/ai_usage_settings.png)
+
+Here, you can toggle whether to share actual workflow data (like node names, parameters, and structure) with the AI Assistant. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+
+Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
+
+### Disable sending data
+
+To stop sending actual data values to the AI Assistant, turn off the **Send actual data values** checkbox on the **AI Usage** settings page.
+
 ## FAQs
 
 <!-- vale from-microsoft.HeadingPunctuation = NO -->

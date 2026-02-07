@@ -1,4 +1,93 @@
----
+---{
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "get",
+        "videoId": "YOUR_VIDEO_ID_HERE"
+      },
+      "id": "youtube-node",
+      "name": "YouTube",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [400, 300],
+      "credentials": {
+        "youTubeApi": {
+          "id": "YOUR_YOUTUBE_CRED_ID",
+          "name": "YouTube Auth"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "messages": {
+          "messageValues": [
+            {
+              "role": "system",
+              "content": "You are an assistant for Digital Dar. Summarize the video details provided."
+            },
+            {
+              "content": "=Summarize this YouTube Video Title: {{ $node[\"YouTube\"].json[\"snippet\"][\"title\"] }} \n\nDescription: {{ $node[\"YouTube\"].json[\"snippet\"][\"description\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "chatgpt-node",
+      "name": "OpenAI",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.2,
+      "position": [620, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "YOUR_OPENAI_CRED_ID",
+          "name": "OpenAI API Key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "choices[0].message.content",
+        "destinationKey": "data",
+        "options": {
+          "fileName": "Digital_Dar_Summary.txt"
+        }
+      },
+      "id": "binary-node",
+      "name": "Convert to File",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [840, 300]
+    }
+  ],
+  "connections": {
+    "YouTube": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
 title: Google credentials
 description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: overview

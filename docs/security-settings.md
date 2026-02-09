@@ -18,7 +18,7 @@ To access security settings, navigate to **Settings** > **Security**.
 You can require all users on your instance to set up two-factor authentication (2FA) when they sign in with email and password.
 
 /// note | Applies to email and password logins only
-MFA enforcement applies to users authenticating with email and password. Users signing in through SSO (SAML or OIDC) aren't affected by this setting.
+2FA enforcement applies to users authenticating with email and password. Users signing in through SSO (SAML or OIDC) aren't affected by this setting.
 ///
 
 To enforce 2FA:
@@ -37,10 +37,6 @@ Refer to [Two-factor authentication](/user-management/two-factor-auth.md) for mo
 
 ## Personal space policies
 
-/// info | Feature availability
-Personal space policies require the **Personal Space Policy** license feature. If your plan doesn't include this feature, the toggles are disabled and display an upgrade prompt.
-///
-
 Personal space policies let instance admins control whether users can share and publish workflows and credentials from their personal spaces.
 
 ### Sharing workflows and credentials
@@ -55,7 +51,6 @@ To manage sharing:
 
 When you disable sharing:
 
-- A confirmation dialog appears warning that this prevents all future sharing from personal spaces.
 - Existing shares remain in place. The setting only affects new sharing actions.
 - The number of currently shared workflows and credentials is displayed below the toggle.
 
@@ -71,15 +66,5 @@ To manage publishing:
 
 When you disable publishing:
 
-- A confirmation dialog appears warning that this prevents all future publish actions in personal spaces.
 - Currently published workflows remain published. The setting only affects new publish actions.
 - The number of currently published personal workflows is displayed below the toggle.
-
-## API access
-
-Instance admins can also manage these settings through the REST API:
-
-- `GET /settings/security` - Retrieve current security settings and counts of existing shares and published workflows.
-- `POST /settings/security` - Update sharing or publishing settings. Send `personalSpacePublishing` or `personalSpaceSharing` as boolean values.
-
-Both endpoints require the `securitySettings:manage` global scope and an active **Personal Space Policy** license feature.

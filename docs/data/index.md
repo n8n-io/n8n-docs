@@ -30,11 +30,11 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 
 **Understand the data structure**: n8n uses a [consistent data structure](/data/data-structure.md) across all nodes, making it predictable how data flows and transforms throughout your workflows.
 
-## In this section 
+## In this section
 
 * [How n8n structures data](/data/data-structure.md)
 * [Transforming data](/data/transforming-data.md)
 * [Processing data using code](/data/expressions.md#code-node)
-* [Pinning, mocking, and editing data](/data/data-pinning.md) during workflow development.
-* [Referencing data](/data/data-mapping/index.md) and [Item linking](/data/data-mapping/data-item-linking/index.md): how data items link to each other.
+* [Pinning, mocking, and editing data](/data/data-pinning.md) during workflow development
+* [Referencing data](/data/data-mapping/index.md) and [item linking](/data/data-mapping/data-item-linking/index.md): how data items link to each other
 

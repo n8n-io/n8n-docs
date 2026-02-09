@@ -29,13 +29,13 @@ Expressions have the advantage of providing an immediate preview of the computed
 
 ### Code node
 
-The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) is a dedicated node where you write JavaScript or Python that runs as a workflow step. It gives you access to incoming data from previous nodes, which you can manipulate by adding, removing, or updating items. You can create any custom function you need, and also use n8n's built‑in methods and variables through `$` syntax.
+The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) is a dedicated node where you write JavaScript or Python that runs as a workflow step. It gives you access to incoming data from previous nodes, which you can manipulate by adding, removing, or updating items. You can create any custom function you need and use n8n's built‑in methods and variables through `$` syntax.
 
 **When to use the Code node:**
 
-* You need more complex logic or data transformation than an expression can enable, such as restructuring arrays and objects, aggregating or splitting items, and custom algorithms.
+* You need more complex logic or data transformation than an expression can provide, such as restructuring arrays and objects, aggregating or splitting items, and custom algorithms.
 * You want to transform many items at once.
-* You want to use promises, `console.log`, or in the case of self‑hosted setups, use external npm modules.
+* You want to use promises, `console.log`, or, in the case of self‑hosted setups, external npm modules.
 
 ### AI Transform node
 

@@ -13,7 +13,7 @@ n8n provides several approaches for data transformation:
 * [Expressions](/data/expressions-basics.md) allow you to transform data directly in node parameters using n8n's expression syntax (`{{ }}`)
 * The [Code node](/data/expressions.md#code-node) lets you write custom JavaScript or Python for complex transformations.
 * The [AI Transform node](/data/expressions.md#ai-transform-node) generates transformation code from natural language prompts.
-* Advanced transformation techniques:  For sophisticated data manipulation, n8n supports:
+* Advanced transformation techniques: For sophisticated data manipulation, n8n supports:
    * **Ternary operators**: Conditional logic directly in expressions (`condition ? valueIfTrue : valueIfFalse`)
    * **Chained functions**: Combine multiple transformation functions
    * **Complex expressions**: Use JavaScript methods and operators within expression syntax
@@ -23,6 +23,6 @@ n8n provides several approaches for data transformation:
    * [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): eliminate identical items
    * [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): order items or randomize
    * [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): separate lists into individual items
-   * [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate data like Excel pivot tables 
+   * [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate data like Excel pivot tables
 
-To see a comparison of these approaches, see [Expressions versus data nodes](/data/expressions.md).
+For a comparison of these approaches, see [Expressions versus data nodes](/data/expressions.md).

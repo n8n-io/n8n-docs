@@ -180,7 +180,7 @@
   {{ $jmespath(data, '[*].name') }} //=> ["Bob", "Fred", "George"]
   
   // Get the names and ages of everyone under 20
-  $jmespath(data, '[?age > `20`].[name, age]') //=> [["Fred",25],["George",30]]
+  $jmespath(data, '[?age > `20`].[name, age]') //=> [ ["Fred",25], ["George",30] ]
   
   // Get the name of the first person under 20
   $jmespath($json.people, '[?age > `20`].name | [0]') //=> Fred

@@ -19,7 +19,7 @@ Data pinning and mocking are features to help test workflows during development.
 
 ## Data pinning
 
-You can 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
+You can 'pin' data during workflow development. Data pinning means saving the output data of a node and using the saved data instead of fetching fresh data in future workflow executions. 
 
 You can use this when working with data from external sources to avoid having to repeat requests to the external system. This can save time and resources:
 
@@ -71,7 +71,7 @@ You can copy data from nodes in previous workflow executions:
     1. Hover over the JSON. n8n displays the **Copy** <span class="n8n-inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span> button.
     2. Select **Copy** <span class="n8n-inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span>.
     3. You can choose what to copy:
-        * **Copy Item Path** and **Copy Parameter Path** gives you expressions that access parts of the JSON.
+        * **Copy Item Path** and **Copy Parameter Path** give you expressions that access parts of the JSON.
         * **Copy Value**: copies the entire selected JSON.
 8. Return to the workflow you're working on:  
     1. Open the left menu.

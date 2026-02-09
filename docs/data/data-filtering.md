@@ -19,7 +19,7 @@ To search:
 1. In a node, select **Search** <span class="n8n-inline-image">![Search icon](/_images/common-icons/search.png){.off-glb}</span> in the **INPUT** or **OUTPUT** panel.
 1. Enter your search term.
 
-n8n filters as you type your search, displaying the objects or rows containing the term.
+n8n filters as you type, displaying the objects or rows containing the term.
 
 Filtering is purely visual: n8n doesn't change or delete data. The filter resets when you close and reopen the node.
 

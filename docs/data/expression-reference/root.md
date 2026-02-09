@@ -11,6 +11,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `nodeName` (String) - The name of the node to retrieve  data for
 
 ## **`$binary`**
@@ -44,6 +45,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `key` (String) - The name of the field to fetch. May only contain letters, numbers, underscores and hyphens.
   * `description` (String) - optional - Use to give the model more context on exactly what it should return
   * `type` (String) - optional - The type of the value to return. One of <code>string</code>, <code>number</code>,  <code>boolean</code>, <code>json</code>, <code>date</code>, <code>datetime</code>. Defaults to <code>string</code>.
@@ -77,6 +79,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `condition` (Boolean) - The check to make. Should evaluate to either <code>true</code> or <code>false</code>
   * `valueIfTrue` (any) - The value to return if the condition is true
   * `valueIfFalse` (any) - The value to return if the condition is false
@@ -105,6 +108,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `value` (any) - The value to return, provided it isn’t empty
   * `valueIfEmpty` (any) - What to return if <code>value</code> is empty
 
@@ -145,6 +149,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `obj` (Object|Array) - The Object or array of Objects to retrieve data from
   * `expression` (String) - A <a href=”https://jmespath.org/examples.html”>JMESPath expression</a> defining the data to retrieve from the object
 
@@ -175,7 +180,7 @@
   {{ $jmespath(data, '[*].name') }} //=> ["Bob", "Fred", "George"]
   
   // Get the names and ages of everyone under 20
-  $jmespath(data, '[?age > `20`].[name, age]') //=> [ ["Fred",25], ["George",30] ]
+  $jmespath(data, '[?age > `20`].[name, age]') //=> [["Fred",25],["George",30]]
   
   // Get the name of the first person under 20
   $jmespath($json.people, '[?age > `20`].name | [0]') //=> Fred
@@ -241,6 +246,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `num1` (Number) - The first number to compare
   * `num2` (Number) - The second number to compare
 
@@ -255,6 +261,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `num1` (Number) - The first number to compare
   * `num2` (Number) - The second number to compare
 

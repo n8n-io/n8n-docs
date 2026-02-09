@@ -11,6 +11,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `elem1` (any) - The first element to append
   * `elem2` (any) - optional - The second element to append
   * `elemN` (any) - optional - The Nth element to append
@@ -58,6 +59,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `length` (Number) - The number of elements in each chunk
 
 **Examples:**
@@ -95,6 +97,7 @@
 **Type:** JS
 
 **Parameters:**
+
   * `array2` (Array) - The first array to be joined on the end of the base array
   * `array3` (Array) - optional - The second array to be joined on to the end of the base array
   * `arrayN` (Array) - optional - The Nth array to be joined on to the end of the base array
@@ -125,6 +128,7 @@ in <code>otherArray</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `otherArray` (Array) - The array to compare to the base array
 
 **Examples:**
@@ -145,6 +149,7 @@ in <code>otherArray</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
@@ -187,6 +192,7 @@ If you need all matching elements, use <code>filter()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
@@ -238,6 +244,7 @@ If you need all matching elements, use <code>filter()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `element` (any) - The value to search the array for
   * `start` (Number) - optional - The index to start looking from
 
@@ -260,6 +267,7 @@ If you need all matching elements, use <code>filter()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `element` (any) - The value to look for
   * `start` (Number) - optional - The index to start looking from
 
@@ -286,6 +294,7 @@ If you need all matching elements, use <code>filter()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `otherArray` (Array) - The array to compare to the base array
 
 **Examples:**
@@ -352,6 +361,7 @@ The opposite of <code>split()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `separator` (String) - optional - The character(s) to insert between each element
 
 **Examples:**
@@ -413,6 +423,7 @@ The opposite of <code>split()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
@@ -482,6 +493,7 @@ The opposite of <code>split()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `fieldName1` (String) - optional - The first key to retrieve the value of
   * `fieldName2` (String) - optional - The second key to retrieve the value of
 
@@ -524,6 +536,7 @@ The opposite of <code>split()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
   * `prevResult` (any) - The accumulated result from applying the function to previous elements. When processing the first element, it’s set to <code>initResult</code> (or the first array element if not specified).
   * `currentElem` (any) - The value in the array currently being processed
@@ -559,6 +572,7 @@ The opposite of <code>split()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `keys` (String) - optional - For use on arrays of Objects. A key, or comma-separated list of keys to restrict the check to. If omitted, all keys are checked.
 
 **Examples:**
@@ -580,6 +594,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `from` (String) - The key to rename
   * `to` (String) - The new key name
 
@@ -618,6 +633,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `start` (Number) - optional - The position to start from. Positions start at 0. Negative numbers count back from the end of the array.
   * `end` (Number) - optional - The position to select up to. The element at the end position is not included. Negative numbers select from the end of the array. If omitted, will extract to the end of the array.
 
@@ -649,6 +665,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `keyField` (String) - The field in each Object containing the key name
   * `nameField` (String) - The field in each Object containing the value
 
@@ -670,6 +687,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `compareFunction` (function) - optional - A function to compare two array elements and return a number indicating which one comes first:
 <b>Return < 0</b>: <code>a</code> comes before <code>b</code>
 <b>Return 0</b>: <code>a</code> and <code>b</code> are equal (leave order unchanged)
@@ -755,6 +773,7 @@ See also <code>slice()</code> and <code>append()</code>.
 **Type:** JS
 
 **Parameters:**
+
   * `start` (Number) - The index (position) to add or remove elements at.  New elements are inserted before the element at this index. A negative index counts back from the end of the array. 
   * `deleteCount` (Number) - optional - The number of elements to remove. If omitted, removes all elements from the <code>start</code> index onwards.
   * `elem1` (any) - optional - The first new element to be added
@@ -809,6 +828,7 @@ See also <code>slice()</code> and <code>append()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `otherArray` (Array) - The array to union with the base array
 
 **Examples:**

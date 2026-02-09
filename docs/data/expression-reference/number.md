@@ -62,6 +62,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `locale` (String) - optional - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument”>locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
   * `options` (Object) - optional - Configuration options for number formatting. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat" target="_blank">More info</a>
 
@@ -171,6 +172,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `decimalPlaces` (Number) - optional - The number of decimal places to round to
 
 **Examples:**
@@ -217,6 +219,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `format` (String) - optional - The type of timestamp to convert. Options are <code>ms</code> (for Unix timestamp in milliseconds), <code>s</code> (for Unix timestamp in seconds) or <code>excel</code> (for days since 1900).
 
 **Examples:**
@@ -247,6 +250,7 @@
 **Type:** JS
 
 **Parameters:**
+
   * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href=”https://www.localeplanet.com/icu/”>full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
   * `options` (Object) - optional - An object with <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options</a>
 
@@ -278,6 +282,7 @@
 **Type:** JS
 
 **Parameters:**
+
   * `radix` (Number) - optional - The base to use. Must be an integer between 2 and 36. E.g. base <code>2</code> is binary and base <code>16</code> is hexadecimal.
 
 **Examples:**

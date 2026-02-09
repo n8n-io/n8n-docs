@@ -43,6 +43,7 @@
 **Type:** JS
 
 **Parameters:**
+
   * `string1` (String) - The first string to append
   * `string2` (String) - optional - The second string to append
   * `stringN` (String) - optional - The Nth string to append
@@ -149,6 +150,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 **Type:** n8n
 
 **Parameters:**
+
   * `algo` (String) - optional - The hashing algorithm to use. One of <code>md5</code>, <code>base64</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>, <code>sha3</code>, <code>ripemd160</code>
         
 
@@ -169,6 +171,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 **Type:** JS
 
 **Parameters:**
+
   * `searchString` (String) - The text to search for
   * `start` (Number) - optional - The position (index) to start searching from
 
@@ -196,6 +199,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 **Type:** JS
 
 **Parameters:**
+
   * `searchString` (String) - The text to search for
   * `start` (Number) - optional - The position (index) to start searching from
 
@@ -377,6 +381,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 **Type:** JS
 
 **Parameters:**
+
   * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
 
 **Examples:**
@@ -431,6 +436,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 **Type:** n8n
 
 **Parameters:**
+
   * `mark` (String) - optional - The type of quotation mark to use
 
 **Examples:**
@@ -484,6 +490,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 **Type:** JS
 
 **Parameters:**
+
   * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
   * `replacement` (String) - The new text to replace with
 
@@ -518,6 +525,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 **Type:** JS
 
 **Parameters:**
+
   * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
   * `replacement` (String|function) - The new text to replace with. Can be a string or a function that returns a string (see examples).
 
@@ -565,6 +573,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 **Type:** JS
 
 **Parameters:**
+
   * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for
 
 **Examples:**
@@ -591,6 +600,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 **Type:** JS
 
 **Parameters:**
+
   * `start` (Number) - The position to start from. Positions start at 0. Negative numbers count back from the end of the string.
   * `end` (String) - optional - The position to select up to. The character at the end position is not included. Negative numbers select from the end of the string. If omitted, will extract to the end of the string.
 
@@ -621,6 +631,7 @@ The opposite of using <code>join()</code> on an array.
 **Type:** JS
 
 **Parameters:**
+
   * `separator` (String) - optional - The string (or regular expression) to use for splitting. If omitted, an array with the original string is returned.
   * `limit` (Number) - optional - The max number of array elements to return. Returns all elements if omitted.
 
@@ -650,6 +661,7 @@ The opposite of using <code>join()</code> on an array.
 **Type:** JS
 
 **Parameters:**
+
   * `searchString` (String) - The text to check against the start of the base string
   * `start` (Number) - optional - The position (index) to start searching from
 
@@ -676,6 +688,7 @@ The opposite of using <code>join()</code> on an array.
 **Type:** JS
 
 **Parameters:**
+
   * `start` (Number) - The position to start from. Positions start at 0.
   * `end` (String) - optional - The position to select up to. The character at the end position is not included. If omitted, will extract to the end of the string.
 
@@ -891,6 +904,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `allChars` (Boolean) - optional - Whether to decode characters that are part of the URI syntax (e.g. <code>=</code>, <code>?</code>)
 
 **Examples:**
@@ -914,6 +928,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 **Type:** n8n
 
 **Parameters:**
+
   * `allChars` (Boolean) - optional - Whether to encode characters that are part of the URI syntax (e.g. <code>=</code>, <code>?</code>)
 
 **Examples:**

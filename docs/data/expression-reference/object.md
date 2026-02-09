@@ -28,6 +28,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `name` (String) - The name of the key to search for
 
 **Examples:**
@@ -98,6 +99,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `value` (String) - The text that a value must contain in order to be kept
 
 **Examples:**
@@ -141,6 +143,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `otherObject` (Object) - The Object to merge with the base Object.
 
 **Examples:**
@@ -162,6 +165,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `key` (String) - The name of the field to remove
 
 **Examples:**
@@ -182,6 +186,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `value` (String) - The text that a value must contain in order to be removed
 
 **Examples:**

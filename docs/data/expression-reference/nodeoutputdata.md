@@ -11,6 +11,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `branchIndex` (Number) - optional - The output branch of the node to use. Defaults to the first branch (index 0)
   * `runIndex` (Number) - optional - The run of the node to use. Defaults to the first run (index 0)
 
@@ -25,6 +26,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `branchIndex` (Number) - optional - The output branch of the node to use. Defaults to the first branch (index 0)
   * `runIndex` (Number) - optional - The run of the node to use. Defaults to the first run (index 0)
 
@@ -59,6 +61,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `currentItemIndex` (Number) - The index of the item in the current node to be matched with.
 
 ## `$()`.**`last()`**
@@ -72,6 +75,7 @@
 **Type:** n8n
 
 **Parameters:**
+
   * `branchIndex` (Number) - optional - The output branch of the node to use. Defaults to the first branch (index 0)
   * `runIndex` (Number) - optional - The run of the node to use. Defaults to the first run (index 0)
 

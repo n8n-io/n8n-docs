@@ -158,6 +158,7 @@ nav:
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md
       - Log streaming: log-streaming.md
+      - Security settings: security-settings.md
       - Insights: insights.md
       - License key: license-key.md
     - Releases:

@@ -729,6 +729,7 @@ nav:
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
+          - Chroma Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorechroma.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
@@ -1012,6 +1013,7 @@ nav:
         - integrations/builtin/credentials/perplexity.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
+        - integrations/builtin/credentials/chroma.md
         - integrations/builtin/credentials/pinecone.md
         - integrations/builtin/credentials/pipedrive.md
         - integrations/builtin/credentials/plivo.md

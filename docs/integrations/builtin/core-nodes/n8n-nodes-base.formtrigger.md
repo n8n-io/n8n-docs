@@ -88,7 +88,9 @@ Enter the title for your form. n8n displays the **Form Title** as the webpage ti
 
 ### Form Description
 
-Enter the description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+Enter the description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break.
+
+For information on allowed and restricted HTML tags, see [HTML security and allowed tags](#html-security-and-allowed-tags).
 
 ### Form Elements
 
@@ -101,7 +103,7 @@ Every field has the following settings:
 - **Element Type**: Choose from **Checkboxes**, **Custom HTML**, **Date**, **Dropdown**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Radio Buttons**, **Text**, or **Textarea**.
 	- Select **Checkboxes** to include checkbox elements in the form. By default, there is no limit on how many checkboxes a form user can select. You can set the limit by specifying a value for the **Limit Selection** option as **Exact Number**, **Range**, or **Unlimited**.
 	- Select **Custom HTML** to insert arbitrary HTML.
-		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements.
+		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements. For more information, see [HTML security and allowed tags](#html-security-and-allowed-tags).
 		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
     - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**.
@@ -147,6 +149,30 @@ You can use one of the following options to add authentication to your form:
 • Add a Wait node with form authentication as a secondary form page
 • Store hashed passwords in a database and compare against form submissions for validation
 • Use external authentication providers like Google Forms if you need advanced authentication
+
+## HTML security and allowed tags
+
+The n8n Form Trigger automatically sanitizes HTML content in the **Form Description** field and **Custom HTML** form elements to prevent security vulnerabilities. While HTML is supported for formatting, certain tags and attributes are restricted.
+
+### Allowed HTML Tags
+
+You can use the following tags for formatting: `<a>`, `<b>`, `<br>`, `<code>`, `<div>`, `<em>`, `<h1>` through `<h6>`, `<i>`, `<iframe>`, `<img>`, `<li>`, `<ol>`, `<p>`, `<pre>`, `<span>`, `<strong>`, `<sub>`, `<sup>`, `<table>`, `<tbody>`, `<td>`, `<tfoot>`, `<th>`, `<thead>`, `<tr>`, `<u>`, `<ul>`, `<video>`, and `<source>`.
+
+### Restricted Tags
+
+The following tags are automatically removed for security: `<script>`, `<style>`, `<input>`, `<form>`, `<button>`, and other potentially dangerous elements that could enable XSS attacks or interfere with form functionality.
+
+### Attribute Restrictions
+
+Only specific attributes are allowed on certain tags:
+
+* Links (<a>): `href`, `target`, `rel`
+* Images (<img>): `src`, `alt`, `width`, `height`
+* Videos (<video>): `controls`, `autoplay`, `loop`, `muted`, `poster`, `width`, `height`
+* Iframes (<iframe>): `src`, `width`, `height`, `frameborder`, `allow`, `allowfullscreen`, `referrerpolicy` (automatically sandboxed)
+* Table cells (<td>, <th>): `colspan`, `rowspan`, `scope`, `headers`
+
+All other attributes are removed during sanitization. Only `http://` and `https://` URL schemes are permitted.
 
 ## Templates and examples
 

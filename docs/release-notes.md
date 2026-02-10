@@ -60,6 +60,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.8.0) 
 
 This release contains bug fixes.
 
+### Deprecated nodes
+
+<br />
+
+#### Motorhead node
+
+The [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) memory node is now deprecated because the Motorhead project is no longer maintained. The node is hidden from the nodes panel for new selections, but existing workflows using this node will continue to work.
+
 ### Contributors
 
 [AmitAnveri](https://github.com/AmitAnveri)  

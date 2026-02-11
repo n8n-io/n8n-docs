@@ -46,7 +46,7 @@ For example, consider a workflow that does the following:
         ...
 	]
 	```
-3. The Code node restore the email address to the correct person:
+3. The Code node restores the email address to the correct person:
 	```json
 	[
 		{
@@ -78,4 +78,4 @@ The Code node does this using the following code:
 	return _input.all();
 	```
 
-You can view and download the example workflow from [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/).
+You can view and download the example workflow from [n8n website | itemMatching usage example](https://n8n.io/workflows/1966-itemmatching-usage-example/).

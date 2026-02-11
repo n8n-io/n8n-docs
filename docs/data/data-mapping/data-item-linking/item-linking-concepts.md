@@ -2,7 +2,7 @@
 contentType: explanation
 ---
 
-# Item linking concepts
+# How items link through workflows
 
 Each output item created by a node includes metadata that links them to the input item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. You need to understand item linking when building your own programmatic nodes, or in some scenarios using the Code node. 
 
@@ -34,7 +34,6 @@ In this example, it's possible for n8n to link an item in one node back several 
 The methods for accessing linked items are different depending on whether you're using the UI, expressions, or the code node. Explore the following resources:
 
 * [Mapping in the UI](/data/data-mapping/data-mapping-ui.md)
-* [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions.md)
 * [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
 * [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 

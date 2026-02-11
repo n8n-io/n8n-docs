@@ -100,7 +100,7 @@ services:
   n8n:
     build: .
     environment:
-      OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:5173/api/v1/private/otel"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://host.docker.internal:5173/api/v1/private/otel"
       OTEL_EXPORTER_OTLP_HEADERS: "projectName=my-n8n-project"
       N8N_OTEL_SERVICE_NAME: "my-n8n"
     volumes:
@@ -111,6 +111,8 @@ services:
 volumes:
   n8n_data:
 ```
+
+If Opik runs in Docker on the same network, use the Opik service name instead of `host.docker.internal`.
 
 ### Option 2: Bare metal / npm
 
@@ -205,7 +207,7 @@ Node-level spans include attributes such as:
 Validate that hook resolution works:
 
 ```bash
-node -e "console.log(require.resolve('n8n-observability/hooks'))"
+test -f "$(npm root -g)/n8n-observability/dist/hooks.cjs" && echo "n8n-observability hook found"
 ```
 
 When n8n starts, you should see logs similar to:

@@ -174,6 +174,10 @@ Refine the Tools Agent node's behavior using these options:
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
+### Tracing Metadata
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/tracing-metadata.md"
+
 <!-- vale off -->
 ### Automatically Passthrough Binary Images
 <!-- vale on -->

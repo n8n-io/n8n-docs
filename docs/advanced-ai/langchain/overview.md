@@ -12,4 +12,3 @@ n8n provides a collection of nodes that implement LangChain's functionality. The
 
 * [Learning resources](/advanced-ai/langchain/langchain-learning-resources.md): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.
 * [LangChain concepts and features in n8n](/advanced-ai/langchain/langchain-n8n.md): how n8n represents LangChain concepts and features.
-* [Use Opik with n8n](/advanced-ai/langchain/opik.md): configure OpenTelemetry tracing in self-hosted n8n with `n8n-observability`.

@@ -723,6 +723,7 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - Microsoft Agent 365 Trigger: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/index.md
           - Azure AI Search Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
@@ -972,6 +973,7 @@ nav:
         - integrations/builtin/credentials/microsoftazuremonitor.md
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/microsoftagent365.md
         - integrations/builtin/credentials/milvus.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/miro.md

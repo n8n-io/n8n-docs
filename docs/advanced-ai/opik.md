@@ -99,6 +99,8 @@ volumes:
 services:
   n8n:
     build: .
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://host.docker.internal:5173/api/v1/private/otel"
       OTEL_EXPORTER_OTLP_HEADERS: "projectName=my-n8n-project"
@@ -111,6 +113,8 @@ services:
 volumes:
   n8n_data:
 ```
+
+`host.docker.internal` works out of the box on Docker Desktop (macOS/Windows). On Linux Docker Engine, keep the `extra_hosts` entry shown above.
 
 If Opik runs in Docker on the same network, use the Opik service name instead of `host.docker.internal`.
 

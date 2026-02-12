@@ -35,7 +35,7 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 
 ![](/_images/publish/published-changes.png)
 
-**Published, invalid changes** The workflow is published, but there it's not in state to be republished (i.e. not trigger that requires publishing).
+**Published, invalid changes** The workflow is published, but it's not in a state to be republished (i.e. no trigger requires publishing).
 
 ![](/_images/publish/published-invalid.png)
 

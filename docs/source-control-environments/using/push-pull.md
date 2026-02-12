@@ -27,7 +27,7 @@ n8n may display a warning about overriding local changes. Select **Pull and over
 When the changes include new variable or credential stubs, n8n notifies you that you need to populate the values for the items before using them.
 
 /// info | How deleted resources are handled
-When workflows, credentials, variables, and tags are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+When workflows, credentials, variables, tags, and data tables are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
 ///
 
 ### Workflow and credential owner may change on pull
@@ -41,6 +41,20 @@ If the same owner is available on both instances (matching email), the owner rem
 If the original owner is a [project](/user-management/rbac/index.md):
 
 n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+
+### Auto-publish workflows on pull
+
+When pulling, you can choose to automatically publish workflows using the **Auto-publish** dropdown in the pull modal. This has three modes:
+
+* **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state.
+* **If workflow already published**: Only publish workflows that are already published on this instance. New workflows aren't published.
+* **On**: Attempt to publish all pulled workflows, including new ones.
+
+n8n never auto-publishes archived workflows, regardless of the auto-publish setting.
+
+After a pull with auto-publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
+
+Auto-publish is also available through the [API](/api/reference.md) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
 
 ### Pulling may cause brief service interruption
 
@@ -61,6 +75,7 @@ n8n commits the following to Git:
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
 * Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/code/expressions/). You can choose which credentials to push.
 * Variable stubs (ID and name)
+* Data table schemas (table name and column definitions, not row data). You can choose which data tables to push.
 * Projects
 * Folders
 
@@ -100,6 +115,24 @@ On push:
 
 * n8n overwrites the entire variables and tags files.
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
+
+### Data tables
+
+n8n syncs data table schemas (table structure and column definitions) across environments. Row data isn't synced.
+
+On push:
+
+* You can select which data tables to include.
+* n8n exports the table name, column names, column types, and column order.
+
+On pull:
+
+* n8n creates new data tables that don't exist locally.
+* For existing data tables, n8n updates the schema to match the version in Git. This includes adding new columns and removing columns that no longer exist in the remote version.
+
+/// warning | Column removal causes data loss
+If a pulled data table has columns removed compared to your local version, n8n deletes those columns and their data. This can't be undone. n8n displays a warning in the pull modal when this will happen.
+///
 
 /// note | Manage credentials with an external secrets vault
 If you need different credentials on different n8n environments, use [external secrets](/external-secrets.md).

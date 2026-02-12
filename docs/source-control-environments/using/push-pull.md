@@ -47,7 +47,7 @@ n8n tries to match the original project name to a project name on the new instan
 When pulling, you can choose to automatically publish workflows using the **Auto-publish** dropdown in the pull modal. This has three modes:
 
 * **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state.
-* **If workflow already published**: Only publish workflows that are already published on this instance. New workflows aren't published.
+* **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
 * **On**: Attempt to publish all pulled workflows, including new ones.
 
 n8n never auto-publishes archived workflows, regardless of the auto-publish setting.

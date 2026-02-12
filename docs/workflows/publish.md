@@ -54,7 +54,7 @@ Only one person can edit a workflow at a time. If someone else is currently edit
 
 ## Checking publishing status
 
-On the **Workflows** page, if a workflow is published an indicator will displayed on the card.
+On the **Workflows** page, if a workflow is published an indicator will be displayed on the card.
 
 ![](/_images/publish/published-indicator-wf-list.png)
 

@@ -5,11 +5,11 @@ contentType: howto
 
 # Saving and publishing workflows
 
-n8n automatically saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
+n8n auto-saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
 
 ## How saving works
 
-Changes save automatically while you edit (with a debounce of 5 seconds). No manual save button is required. All edits remain in draft until you publish.
+Changes save automatically as you edit, typically within 1-5 seconds. No manual save button is required. All edits remain in draft until you publish.
 
 ## How publishing works
 

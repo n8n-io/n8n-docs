@@ -42,19 +42,19 @@ If the original owner is a [project](/user-management/rbac/index.md):
 
 n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
 
-### Auto-publish workflows on pull
+### Auto publish workflows on pull
 
-When pulling, you can choose to automatically publish workflows using the **Auto-publish** dropdown in the pull modal. This has three modes:
+When pulling, you can choose to automatically publish workflows using the **Auto publish** dropdown in the pull modal. This has three modes:
 
 * **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state.
 * **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
 * **On**: Attempt to publish all pulled workflows, including new ones.
 
-n8n never auto-publishes archived workflows, regardless of the auto-publish setting.
+n8n never auto publishes archived workflows, regardless of the auto publish setting.
 
-After a pull with auto-publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
+After a pull with auto publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
 
-Auto-publish is also available through the [API](/api/reference.md) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
+Auto publish is also available through the [API](/api/reference.md) using the `autoPublish` parameter on the pull endpoint, with values `none`, `published`, or `all`.
 
 ### Pulling may cause brief service interruption
 

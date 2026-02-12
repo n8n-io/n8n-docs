@@ -5,11 +5,11 @@ contentType: howto
 
 # Saving and publishing workflows
 
-n8n auto-saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
+n8n auto saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
 
 ## How saving works
 
-Changes save automatically as you edit, typically within 1-5 seconds. No manual save button is required. All edits remain in draft until you publish.
+Changes save automatically as you edit, typically within 1 to 5 seconds. No manual save button is required. All edits remain in draft until you publish.
 
 ## How publishing works
 
@@ -35,7 +35,7 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 
 ![](/_images/publish/published-changes.png)
 
-**Published, invalid changes** The workflow is published, but it's not in a state to be republished (i.e. no trigger requires publishing).
+**Published, invalid changes** The workflow is published, but it's not in a state to be republished (no trigger requires publishing).
 
 ![](/_images/publish/published-invalid.png)
 
@@ -107,7 +107,7 @@ View and manage version history by clicking the history icon in the header. In t
 * Publish another version of the workflow
 * Name a version to protect it from pruning
 
-## Unpublishing a workflow
+## How to unpublish a workflow
 
 Unpublish a workflow from either:
 

@@ -41,6 +41,12 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview.md)
 
+-   __Observe workflows with Opik__
+
+    Add OpenTelemetry tracing to self-hosted n8n and send traces to Opik.
+
+    [:octicons-arrow-right-24: Use Opik with n8n](/advanced-ai/opik.md)
+
 -   __Browse AI templates__
 
     Explore a wide range of AI workflow templates on the n8n website.

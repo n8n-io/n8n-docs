@@ -32,11 +32,18 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
-
-
 ## n8n@2.8.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.8.1) for this version.<br />
+**Release date:** 2026-02-11
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.7.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.3...n8n@2.7.4) for this version.<br />
 **Release date:** 2026-02-11
 
 This release contains a bug fix.
@@ -78,6 +85,14 @@ This is the `beta` version. n8n recommends using the `stable` version. The `beta
 ///
 
 This release contains bug fixes.
+
+### Deprecated nodes
+
+<br />
+
+#### Motorhead node
+
+The [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) memory node is now deprecated because the Motorhead project is no longer maintained. The node is hidden from the nodes panel for new selections, but existing workflows using this node will continue to work.
 
 ### Contributors
 

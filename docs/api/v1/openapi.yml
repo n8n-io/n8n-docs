@@ -398,6 +398,56 @@ paths:
           $ref: '#/components/responses/notFound'
         '409':
           $ref: '#/components/responses/conflict'
+  /executions/{id}/tags:
+    get:
+      x-eov-operation-id: getExecutionTags
+      x-eov-operation-handler: v1/handlers/executions/executions.handler
+      tags:
+        - Execution
+      summary: Get execution tags
+      description: Get annotation tags for an execution.
+      parameters:
+        - $ref: '#/components/parameters/executionId'
+      responses:
+        '200':
+          description: List of annotation tags
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/executionTags'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateExecutionTags
+      x-eov-operation-handler: v1/handlers/executions/executions.handler
+      tags:
+        - Execution
+      summary: Update tags of an execution
+      description: Update annotation tags of an execution.
+      parameters:
+        - $ref: '#/components/parameters/executionId'
+      requestBody:
+        description: List of annotation tag IDs
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/tagIds'
+        required: true
+      responses:
+        '200':
+          description: List of tags after updating
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/executionTags'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /tags:
     post:
       x-eov-operation-id: createTag
@@ -1882,13 +1932,51 @@ components:
           format: date-time
           readOnly: true
           example: '2022-04-29T11:02:29.842Z'
+    credentialSharedItem:
+      type: object
+      required:
+        - id
+        - name
+        - role
+        - createdAt
+        - updatedAt
+      properties:
+        id:
+          type: string
+          description: Project ID
+        name:
+          type: string
+          description: Project name
+        role:
+          type: string
+          description: Role of the credential in this project (e.g. credential:owner)
+        createdAt:
+          type: string
+          format: date-time
+          description: When the credential was shared with this project
+        updatedAt:
+          type: string
+          format: date-time
+          description: When the sharing was last updated
+    credentialListItem:
+      allOf:
+        - $ref: '#/components/schemas/create-credential-response'
+        - type: object
+          required:
+            - shared
+          properties:
+            shared:
+              type: array
+              description: Shared entries (project id, name, role, createdAt, updatedAt) from the credential's shared relation
+              items:
+                $ref: '#/components/schemas/credentialSharedItem'
     credentialList:
       type: object
       properties:
         data:
           type: array
           items:
-            $ref: '#/components/schemas/create-credential-response'
+            $ref: '#/components/schemas/credentialListItem'
         nextCursor:
           type: string
           description: Paginate through credentials by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
@@ -2052,6 +2140,21 @@ components:
           type: string
           format: date-time
           readOnly: true
+    executionTags:
+      type: array
+      items:
+        $ref: '#/components/schemas/tag'
+    tagIds:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - id
+        properties:
+          id:
+            type: string
+            example: 2tUt1wbLX592XDdX
     tagList:
       type: object
       properties:
@@ -2425,17 +2528,6 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/tag'
-    tagIds:
-      type: array
-      items:
-        type: object
-        additionalProperties: false
-        required:
-          - id
-        properties:
-          id:
-            type: string
-            example: 2tUt1wbLX592XDdX
     user:
       required:
         - email

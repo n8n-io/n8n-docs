@@ -33,15 +33,112 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 ///
 
 
+## n8n@2.8.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.1...n8n@2.8.2) for this version.<br />
+**Release date:** 2026-02-12
+
+/// note | Beta version
+This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.8.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.8.1) for this version.<br />
+**Release date:** 2026-02-11
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.7.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.3...n8n@2.7.4) for this version.<br />
+**Release date:** 2026-02-11
+
+/// note | Stable version
+This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.7.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.2...n8n@2.7.3) for this version.<br />
+**Release date:** 2026-02-09
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@2.6.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.3...n8n@2.6.4) for this version.<br />
+**Release date:** 2026-02-06
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.8.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.8.0) for this version.<br />
+**Release date:** 2026-02-09
+
+
+
+This release contains bug fixes.
+
+### Deprecated nodes
+
+<br />
+
+#### Motorhead node
+
+The [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) memory node is now deprecated because the Motorhead project is no longer maintained. The node is hidden from the nodes panel for new selections, but existing workflows using this node will continue to work.
+
+### Contributors
+
+[AmitAnveri](https://github.com/AmitAnveri)  
+[derandreas-dt](https://github.com/derandreas-dt)  
+[ongdisheng](https://github.com/ongdisheng)  
+[vCaisim](https://github.com/vCaisim)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.7.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.1...n8n@2.7.2) for this version.<br />
+**Release date:** 2026-02-04
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 
 ## n8n@2.7.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.7.1) for this version.<br />
 **Release date:** 2026-02-03
 
-/// note | Beta version
-This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains a bug fix.
 
@@ -79,9 +176,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.2...n8n@2.6.3) for this version.<br />
 **Release date:** 2026-02-02
 
-/// note | Stable version
-This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
 
 
 

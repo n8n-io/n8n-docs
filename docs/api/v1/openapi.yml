@@ -81,7 +81,28 @@ paths:
         '500':
           description: Internal server error.
   /credentials:
+    get:
+      operationId: getCredentials
+      x-eov-operation-id: getCredentials
+      x-eov-operation-handler: v1/handlers/credentials/credentials.handler
+      tags:
+        - Credential
+      summary: List credentials
+      description: Retrieve all credentials from your instance. Only available for the instance owner and admin. Credential data (secrets) is not included.
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/credentialList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
     post:
+      operationId: createCredential
       x-eov-operation-id: createCredential
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
@@ -102,6 +123,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/create-credential-response'
+        '400':
+          description: Bad request - invalid credential type or data.
         '401':
           $ref: '#/components/responses/unauthorized'
         '415':
@@ -375,6 +398,56 @@ paths:
           $ref: '#/components/responses/notFound'
         '409':
           $ref: '#/components/responses/conflict'
+  /executions/{id}/tags:
+    get:
+      x-eov-operation-id: getExecutionTags
+      x-eov-operation-handler: v1/handlers/executions/executions.handler
+      tags:
+        - Execution
+      summary: Get execution tags
+      description: Get annotation tags for an execution.
+      parameters:
+        - $ref: '#/components/parameters/executionId'
+      responses:
+        '200':
+          description: List of annotation tags
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/executionTags'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateExecutionTags
+      x-eov-operation-handler: v1/handlers/executions/executions.handler
+      tags:
+        - Execution
+      summary: Update tags of an execution
+      description: Update annotation tags of an execution.
+      parameters:
+        - $ref: '#/components/parameters/executionId'
+      requestBody:
+        description: List of annotation tag IDs
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/tagIds'
+        required: true
+      responses:
+        '200':
+          description: List of tags after updating
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/executionTags'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /tags:
     post:
       x-eov-operation-id: createTag
@@ -1605,6 +1678,35 @@ paths:
         '404':
           $ref: '#/components/responses/notFound'
   /projects/{projectId}/users:
+    get:
+      x-eov-operation-id: getProjectUsers
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: List project members
+      description: Returns a list of all members of a project including their role. Requires user:list scope.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/projectMemberList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
     post:
       x-eov-operation-id: addUsersToProject
       x-eov-operation-handler: v1/handlers/projects/projects.handler
@@ -1801,6 +1903,85 @@ components:
                   - kind: community
                     nodeType: n8n-nodes-test.test
                     packageUrl: https://www.npmjs.com/package/n8n-nodes-test
+    create-credential-response:
+      required:
+        - id
+        - name
+        - type
+        - createdAt
+        - updatedAt
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+          example: vHxaz5UaCghVYl9C
+        name:
+          type: string
+          example: John's Github account
+        type:
+          type: string
+          example: githubApi
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+    credentialSharedItem:
+      type: object
+      required:
+        - id
+        - name
+        - role
+        - createdAt
+        - updatedAt
+      properties:
+        id:
+          type: string
+          description: Project ID
+        name:
+          type: string
+          description: Project name
+        role:
+          type: string
+          description: Role of the credential in this project (e.g. credential:owner)
+        createdAt:
+          type: string
+          format: date-time
+          description: When the credential was shared with this project
+        updatedAt:
+          type: string
+          format: date-time
+          description: When the sharing was last updated
+    credentialListItem:
+      allOf:
+        - $ref: '#/components/schemas/create-credential-response'
+        - type: object
+          required:
+            - shared
+          properties:
+            shared:
+              type: array
+              description: Shared entries (project id, name, role, createdAt, updatedAt) from the credential's shared relation
+              items:
+                $ref: '#/components/schemas/credentialSharedItem'
+    credentialList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/credentialListItem'
+        nextCursor:
+          type: string
+          description: Paginate through credentials by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
     credential:
       required:
         - name
@@ -1827,35 +2008,6 @@ components:
           type: boolean
           example: false
           description: Whether this credential has resolvable fields
-        createdAt:
-          type: string
-          format: date-time
-          readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
-        updatedAt:
-          type: string
-          format: date-time
-          readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
-    create-credential-response:
-      required:
-        - id
-        - name
-        - type
-        - createdAt
-        - updatedAt
-      type: object
-      properties:
-        id:
-          type: string
-          readOnly: true
-          example: vHxaz5UaCghVYl9C
-        name:
-          type: string
-          example: John's Github account
-        type:
-          type: string
-          example: githubApi
         createdAt:
           type: string
           format: date-time
@@ -1988,6 +2140,21 @@ components:
           type: string
           format: date-time
           readOnly: true
+    executionTags:
+      type: array
+      items:
+        $ref: '#/components/schemas/tag'
+    tagIds:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - id
+        properties:
+          id:
+            type: string
+            example: 2tUt1wbLX592XDdX
     tagList:
       type: object
       properties:
@@ -2361,17 +2528,6 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/tag'
-    tagIds:
-      type: array
-      items:
-        type: object
-        additionalProperties: false
-        required:
-          - id
-        properties:
-          id:
-            type: string
-            example: 2tUt1wbLX592XDdX
     user:
       required:
         - email
@@ -2850,6 +3006,60 @@ components:
           description: Paginate through projects by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
           nullable: true
           example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    projectMember:
+      type: object
+      description: A project member (user with their role in the project).
+      properties:
+        id:
+          type: string
+          description: The user's unique identifier.
+          readOnly: true
+          example: 123e4567-e89b-12d3-a456-426614174000
+        email:
+          type: string
+          format: email
+          description: The user's email address.
+          readOnly: true
+          example: john.doe@company.com
+        firstName:
+          type: string
+          maxLength: 32
+          description: The user's first name.
+          readOnly: true
+          example: john
+        lastName:
+          type: string
+          maxLength: 32
+          description: The user's last name.
+          readOnly: true
+          example: Doe
+        createdAt:
+          type: string
+          format: date-time
+          description: When the user was created.
+          readOnly: true
+        updatedAt:
+          type: string
+          format: date-time
+          description: When the user was last updated.
+          readOnly: true
+        role:
+          type: string
+          description: The user's role in the project (e.g. project:admin, project:viewer).
+          readOnly: true
+          example: project:viewer
+    projectMemberList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/projectMember'
+        nextCursor:
+          type: string
+          description: Paginate through project members by setting the cursor parameter to the nextCursor attribute returned by a previous request. Default value fetches the first page of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
     error:
       required:
         - message
@@ -2960,20 +3170,6 @@ components:
     Forbidden:
       $ref: '#/components/responses/forbidden'
   parameters:
-    credentialId:
-      name: id
-      in: path
-      description: The ID of the credential.
-      required: true
-      schema:
-        type: string
-    includeData:
-      name: includeData
-      in: query
-      description: Whether or not to include the execution's detailed data.
-      required: false
-      schema:
-        type: boolean
     limit:
       name: limit
       in: query
@@ -2992,6 +3188,20 @@ components:
       style: form
       schema:
         type: string
+    credentialId:
+      name: id
+      in: path
+      description: The ID of the credential.
+      required: true
+      schema:
+        type: string
+    includeData:
+      name: includeData
+      in: query
+      description: Whether or not to include the execution's detailed data.
+      required: false
+      schema:
+        type: boolean
     executionId:
       name: id
       in: path

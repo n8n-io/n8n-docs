@@ -7,15 +7,15 @@ priority: medium
 
 # n8n Trigger node
 
-The n8n Trigger node triggers when the current workflow updates or activates, or when the n8n instance starts or restarts. You can use the n8n Trigger node to notify when these events occur.
+The n8n Trigger node triggers when the workflow containing this node updates or gets published, or when the n8n instance starts or restarts. This node only responds to events in its own workflow; changes to other workflows won't trigger it. 
 
 ## Node parameters
 
 The node includes a single parameter to identify the **Events** that should trigger it. Choose from these events:
 
-- **Active Workflow Updated**: If you select this event, the node triggers when this workflow is updated.
+- **Published Workflow Updated**: If you select this event, the node triggers when the workflow containing this node is updated. Changes to other workflows won't trigger this node.
 - **Instance started**: If you select this event, the node triggers when the n8n instance starts or restarts.
-- **Workflow Activated**: If you select this event, the node triggers when this workflow is activated.
+- **Workflow Published**: If you select this event, the node triggers when the workflow containing this node is published. Publishing other workflows won't trigger this node.
 
 You can select one or more of these events.
 

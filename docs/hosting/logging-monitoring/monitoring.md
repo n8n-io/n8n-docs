@@ -48,7 +48,7 @@ You can customize the health check endpoint path using the `N8N_ENDPOINT_HEALTH`
 <!-- vale off -->
 ## Enable metrics and health checks for self-hosted n8n
 <!-- vale on -->
-The `/metrics` endpoint is disabled by default. For the main n8n server, the health endpoint is always enabled. However, for worker servers in [queue mode](/hosting/scaling/queue-mode.md), the `/healthz` endpoint is disabled by default.
+The `/metrics` endpoint is disabled by default. The health endpoint is always enabled on the main n8n server. For worker servers in [queue mode](/hosting/scaling/queue-mode.md), the health endpoint is disabled by default.
 
 To enable them, configure your n8n instance:
 

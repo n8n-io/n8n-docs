@@ -123,6 +123,10 @@ Each worker process runs a server that exposes optional endpoints:
 - [credentials overwrite endpoint](/embed/configuration.md#credential-overwrites)
 - [`/metrics`](/hosting/configuration/configuration-examples/prometheus.md)
 
+/// note | Customizing health check endpoints
+You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH`](/hosting/configuration/environment-variables/endpoints.md) environment variable.
+///
+
 #### View running workers 
 
 /// info | Feature availability

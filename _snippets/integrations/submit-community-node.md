@@ -19,6 +19,10 @@ Developing with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-nod
 
 ## Submit your node for verification by n8n
 
+/// note | Upcoming Changes
+From May 1st 2026 **ALL** community nodes will need to be published using a GitHub action and will need to include a [provenance statement](https://docs.npmjs.com/generating-provenance-statements)
+///
+
 n8n vets verified community nodes. Users can discover and install verified community nodes from the nodes panel in n8n. These nodes need to adhere to certain technical and UX standards and constraints.
 
 Before submitting your node for review by n8n, you must:

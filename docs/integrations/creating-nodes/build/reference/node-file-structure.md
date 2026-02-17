@@ -31,7 +31,7 @@ Your node must include:
 You can choose whether to place all your node's functionality in one file, or split it out into a base file and other modules, which the base file then imports. Unless your node is very simple, it's a best practice to split it out.
 <!-- vale on -->
 
-A basic pattern is to separate out operations. Refer to the [HttpBin starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/HttpBin) for an example of this.
+A basic pattern is to separate out operations. Refer to the [GithubIssues starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/GithubIssues) for an example of this.
 
 For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook) as examples. 
 

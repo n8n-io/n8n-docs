@@ -41,10 +41,10 @@ Clone the repository and navigate into the directory:
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
-* `nodes/ExampleNode`
-* `nodes/HTTPBin`
-* `credentials/ExampleCredentials.credentials.ts`
-* `credentials/HttpBinApi.credentials.ts`
+* `nodes/Example`
+* `nodes/GithubIssues`
+* `credentials/GithubIssuesApi.credentials.ts`
+* `credentials/GithubIssuesOAuth2Api.credentials.ts`
 
 Now create the following directories and files:
 
@@ -80,7 +80,8 @@ In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, yo
 Start by adding the import statements:
 
 ```typescript
-import { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
 #### Step 3.2: Create the main class
@@ -116,8 +117,9 @@ description: 'Get data from NASAs API',
 defaults: {
 	name: 'NASA Pics',
 },
-inputs: ['main'],
-outputs: ['main'],
+usableAsTool: true,
+inputs: [ NodeConnectionTypes.Main ],
+outputs: [ NodeConnectionTypes.Main ],
 credentials: [
 	{
 		name: 'NasaPicsApi',
@@ -328,15 +330,16 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 ```
 
 
-### Step 4: Set up authentication
+### Step 4: Set up authentication and a credential test
 
-The NASA API requires users to authenticate with an API key.
+The NASA API requires users to authenticate with an API key, We can also send a request to validate that the API key is working.
 
 Add the following to `nasaPicsApi.credentials.ts`:
 
 ```typescript
 import {
 	IAuthenticateGeneric,
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -355,14 +358,20 @@ export class NasaPicsApi implements ICredentialType {
 			default: '',
 		},
 	];
-	authenticate = {
+	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
 			qs: {
 				'api_key': '={{$credentials.apiKey}}'
 			}
 		},
-	} as IAuthenticateGeneric;
+	};
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://api.nasa.gov',
+			url: '/apod',
+		},
+	};
 }
 ```
 

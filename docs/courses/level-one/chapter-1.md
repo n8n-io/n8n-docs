@@ -88,8 +88,19 @@ You can move the workflow canvas around in three ways:
 - Place two fingers on your touchpad and slide.
 ///
 
-
 Don't worry about workflow execution and publishing for now; we'll explain these concepts later on in the course.
+
+### Execution logs panel
+
+After you click **Execute workflow**, an execution panel appears at the bottom of the editor.
+
+This panel helps you understand what happened during the workflow execution. It includes:
+
+- **Logs** – Shows step-by-step execution details for each node.
+- **Output** – Displays the data returned by the selected node.
+- **Errors** – Shows error messages if a node fails during execution.
+
+You can use this panel to debug issues and better understand how your workflow runs.
 
 ## Nodes
 

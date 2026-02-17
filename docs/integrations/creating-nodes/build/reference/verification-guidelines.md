@@ -10,7 +10,7 @@ Follow these guidelines while building your node if you want to submit it for ve
 
 
 /// note | Upcoming Changes
-From May 1st 2026 **ALL** community nodes will need to be published using a GitHub action and will need to include a [provenance statement](https://docs.npmjs.com/generating-provenance-statements)
+From May 1st 2026 you must publish **ALL** community nodes using a GitHub action and include a [provenance statement](https://docs.npmjs.com/generating-provenance-statements)
 ///
 
 ## Use the n8n-node tool
@@ -24,8 +24,8 @@ All verified community node authors should use the [`n8n-node` tool](/integratio
 
 ## Node Types
 
-* The node **MUST** not be an existing node, If your node is an iteration on an existing node a pull request should be created.
-* Logic or Flow control nodes are not being accepted at the moment.
+* The node **MUST** not be an existing node, If your node is an iteration on an existing node create a pull request instead.
+* n8n isn't accepting Logic or Flow control nodes at the moment.
 
 ## Package source verification
 

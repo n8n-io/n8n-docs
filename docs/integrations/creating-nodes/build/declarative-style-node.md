@@ -332,7 +332,7 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 
 ### Step 4: Set up authentication and a credential test
 
-The NASA API requires users to authenticate with an API key, We can also send a request to validate that the API key is working.
+The NASA API requires users to authenticate with an API key. You can also send a request to check that the API key works.
 
 Add the following to `nasaPicsApi.credentials.ts`:
 

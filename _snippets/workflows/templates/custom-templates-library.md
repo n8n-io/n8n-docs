@@ -6,14 +6,24 @@ Your API must provide the same endpoints and data structure as n8n's.
 
 The endpoints are:
 
-| Method | Path |
-| ------ | ---- |
-| GET | /templates/workflows/`<id>` |
-| GET | /templates/search |
-| GET | /templates/collections/`<id>` |
-| GET | /templates/collections | 
-| GET | /templates/categories |
-| GET | /health |
+| Method | Path | Purpose |
+| ------ | ---- | ------- |
+| GET | `/templates/workflows/<id>` | Fetch template metadata for preview/browsing |
+| GET | `/workflows/templates/<id>` | Fetch workflow data to import onto canvas |
+| GET | `/templates/search` | Search for workflow templates |
+| GET | `/templates/collections/<id>` | Get a specific template collection |
+| GET | `/templates/collections` | List all template collections |
+| GET | `/templates/categories` | List all template categories |
+| GET | `/health` | Health check endpoint |
+
+/// warning | Critical: Two different response formats required
+The two workflow endpoints require **different response formats**:
+
+- **`/templates/workflows/{id}`**: Returns template wrapped in a `workflow` key
+- **`/workflows/templates/{id}`**: Returns template as a flat object
+
+See response schemas below for details.
+///
 
 ### Query parameters
 
@@ -33,9 +43,66 @@ The `/templates/collections` endpoint accepts the following query parameters:
 | `category` | comma-separated list of strings (categories) | The categories to search within |
 | `search`   | string                                       | The search query                |
 
-### Data schema
+### Schemas
 
-You can explore the data structure of the items in the response object returned by endpoints here:
+You can explore the data structure of the response objects returned by endpoints here:
+
+??? note "Show `/templates/workflows/{id}` response schema"
+	**Purpose**: Called when browsing templates in the UI. Returns metadata for display.
+
+	**Response format**: Wrapped in a `"workflow"` key.
+
+	**Example**:
+	```json
+	{
+	  "workflow": {
+	    "id": 123,
+	    "name": "Template Name",
+	    "description": "Template description",
+	    "image": [
+	      {
+	        "id": 1,
+	        "url": "https://example.com/image.png"
+	      }
+	    ],
+	    "categories": [
+	      {
+	        "id": 1,
+	        "name": "Category Name"
+	      }
+	    ],
+	    "workflow": {
+	      "nodes": [...],
+	      "connections": {},
+	      "settings": {},
+	      "pinData": {}
+	    }
+	  }
+	}
+	```
+
+	The `workflow` object structure matches the `workflow` item data schema below.
+
+??? note "Show `/workflows/templates/{id}` response schema"
+	**Purpose**: Returns workflow data to import onto canvas.
+
+	**Response format**: Flat object (no wrapper).
+
+	**Example**:
+	```json
+	{
+	  "id": 123,
+	  "name": "Template Name",
+	  "workflow": {
+	    "nodes": [...],
+	    "connections": {},
+	    "settings": {},
+	    "pinData": {}
+	  }
+	}
+	```
+
+	The `workflow` object structure matches the `workflow` item data schema below.
 
 ??? note "Show `workflow` item data schema"
 	```json title="Workflow item data schema"

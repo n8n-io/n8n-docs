@@ -274,18 +274,79 @@ Detailed schemas for response objects:
 	          "typeVersion"
 	        ]
 	      }
+	    },
+	    "description": {
+	      "type": "string"
+	    },
+	    "image": {
+	      "type": "array",
+	      "items": {
+	        "type": "object",
+	        "properties": {
+	          "id": {
+	            "type": "number"
+	          },
+	          "url": {
+	            "type": "string"
+	          }
+	        }
+	      }
+	    },
+	    "categories": {
+	      "type": "array",
+	      "items": {
+	        "type": "object",
+	        "properties": {
+	          "id": {
+	            "type": "number"
+	          },
+	          "name": {
+	            "type": "string"
+	          }
+	        }
+	      }
+	    },
+	    "workflowInfo": {
+	      "type": "object",
+	      "properties": {
+	        "nodeCount": {
+	          "type": "number"
+	        },
+	        "nodeTypes": {
+	          "type": "object"
+	        }
+	      }
+	    },
+	    "workflow": {
+	      "type": "object",
+	      "properties": {
+	        "nodes": {
+	          "type": "array"
+	        },
+	        "connections": {
+	          "type": "object"
+	        },
+	        "settings": {
+	          "type": "object"
+	        },
+	        "pinData": {
+	          "type": "object"
+	        }
+	      },
+	      "required": [
+	        "nodes",
+	        "connections"
+	      ]
 	    }
 	  },
 	  "required": [
 	    "id",
 	    "name",
 	    "totalViews",
-	    "price",
-	    "purchaseUrl",
-	    "recentViews",
 	    "createdAt",
 	    "user",
-	    "nodes"
+	    "nodes",
+	    "workflow"
 	  ]
 	}
 	```

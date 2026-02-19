@@ -19,8 +19,8 @@ The endpoints are:
 /// warning | Critical: Two different response formats required
 The two workflow endpoints require **different response formats**:
 
-- **`/templates/workflows/{id}`**: Returns template wrapped in a `workflow` key
-- **`/workflows/templates/{id}`**: Returns template as a flat object
+- **`/templates/workflows/{id}`**: Returns the template itself, which includes the workflow in the `workflow` key
+- **`/workflows/templates/{id}`**: Returns the workflow the template contains
 
 See response schemas below for details.
 ///

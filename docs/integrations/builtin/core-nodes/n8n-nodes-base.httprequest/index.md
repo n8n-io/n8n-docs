@@ -280,6 +280,10 @@ You can use curl to call REST APIs. If the API documentation of the service you 
 
 Import a curl command:
 
+/// note | Import format
+This option always imports any parameter values as strings. If you wish to preserve the type of numbers and booleans in your request, switch **Using Fields Below** to **Using JSON** and paste your JSON object containing the parameters.
+///
+
 1. From the HTTP Request node's **Parameters** tab, select **Import cURL**. The **Import cURL command** modal opens.
 2. Paste your curl command into the text box.
 3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.

@@ -22,7 +22,7 @@ The two workflow endpoints require **different response formats**:
 - **`/templates/workflows/{id}`**: Returns the template itself, which includes the workflow in the `workflow` key
 - **`/workflows/templates/{id}`**: Returns the workflow the template contains
 
-See response schemas below for details.
+See Schemas below for details.
 ///
 
 ### Query parameters
@@ -45,66 +45,41 @@ The `/templates/collections` endpoint accepts the following query parameters:
 
 ### Schemas
 
-You can explore the data structure of the response objects returned by endpoints here:
+The key difference between the two workflow endpoints:
 
-??? note "Show `/templates/workflows/{id}` response schema"
-	**Purpose**: Called when browsing templates in the UI. Returns metadata for display.
+```json
+// GET /templates/workflows/{id} returns (wrapped):
+{
+  "workflow": {
+    "id": 123,
+    "name": "...",
+    "totalViews": 1000,
+    // ... see full workflow item schema below
+    "workflow": {    // actual workflow definition
+      "nodes": [...],
+      "connections": {}
+    }
+  }
+}
 
-	**Response format**: Wrapped in a `"workflow"` key.
+// GET /workflows/templates/{id} returns (flat):
+{
+  "id": 123,
+  "name": "...",
+  "workflow": {      // actual workflow definition
+    "nodes": [...],
+    "connections": {}
+  }
+}
+```
 
-	**Example**:
-	```json
-	{
-	  "workflow": {
-	    "id": 123,
-	    "name": "Template Name",
-	    "description": "Template description",
-	    "image": [
-	      {
-	        "id": 1,
-	        "url": "https://example.com/image.png"
-	      }
-	    ],
-	    "categories": [
-	      {
-	        "id": 1,
-	        "name": "Category Name"
-	      }
-	    ],
-	    "workflow": {
-	      "nodes": [...],
-	      "connections": {},
-	      "settings": {},
-	      "pinData": {}
-	    }
-	  }
-	}
-	```
-
-	The `workflow` object structure matches the `workflow` item data schema below.
-
-??? note "Show `/workflows/templates/{id}` response schema"
-	**Purpose**: Returns workflow data to import onto canvas.
-
-	**Response format**: Flat object (no wrapper).
-
-	**Example**:
-	```json
-	{
-	  "id": 123,
-	  "name": "Template Name",
-	  "workflow": {
-	    "nodes": [...],
-	    "connections": {},
-	    "settings": {},
-	    "pinData": {}
-	  }
-	}
-	```
-
-	The `workflow` object structure matches the `workflow` item data schema below.
+Detailed schemas for response objects:
 
 ??? note "Show `workflow` item data schema"
+	Used by `/templates/workflows/{id}` endpoint (wrapped in a `workflow` key).
+
+	This schema describes the template metadata used for displaying templates in search/browse UI. It includes a nested `workflow` property that contains the actual importable workflow definition.
+
 	```json title="Workflow item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
@@ -387,10 +362,10 @@ You can explore the data structure of the response objects returned by endpoints
 
 You can also interactively explore n8n's API endpoints:
 
-[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)  
-[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)  
-[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)  
-[https://api.n8n.io/health](https://api.n8n.io/health)  
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)
+[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)
+[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)
+[https://api.n8n.io/health](https://api.n8n.io/health)
 
 
 You can [contact us](mailto:help@n8n.io) for more support.

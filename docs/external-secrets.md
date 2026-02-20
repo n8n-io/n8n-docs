@@ -9,7 +9,7 @@ contentType: howto
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 * n8n supports the following secret providers: AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager and HashiCorp Vault.
-* from n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 

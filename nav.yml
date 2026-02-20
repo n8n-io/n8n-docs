@@ -833,6 +833,7 @@ nav:
         - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
+        - integrations/builtin/credentials/boondmanager.md
         - integrations/builtin/credentials/baserow.md
         - integrations/builtin/credentials/beeminder.md
         - integrations/builtin/credentials/bitbucket.md

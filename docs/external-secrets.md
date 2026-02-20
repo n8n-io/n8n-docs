@@ -23,7 +23,7 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 
 ## Connect n8n to your secrets store
 
-/// note | Secret names
+/// note | Secret values
 n8n currently only supports plaintext values for secrets, no JSON objects.
 ///
 

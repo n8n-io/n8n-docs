@@ -14,7 +14,7 @@ contentType: howto
 ///
 
 /// warning | Infisical deprecation
-Infisical is deprecated. From version 2.10.0, you cannot connect new Infisical vaults. Existing ones remain for now.
+Infisical is deprecated. From version 2.10.0, you can't connect new Infisical vaults. Existing ones remain for now.
 ///
 
 You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n) for n8n.
@@ -24,13 +24,13 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 ## Connect n8n to your secrets store
 
 /// note | Secret values
-n8n currently only supports plaintext values for secrets, no JSON objects.
+n8n only supports plaintext values for secrets, no JSON objects.
 ///
 
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Click **Add secrets vault**.
 1. Enter a unique name for your vault. This will be the first segment when referencing this vault in a `{{ $secrets.<vault-name>... }}` expression in a credential.
-1. Select one of our supported secret providers from the dropdown.
+1. Select one of the supported secret providers.
 1. Enter the credentials for your provider:
 	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.

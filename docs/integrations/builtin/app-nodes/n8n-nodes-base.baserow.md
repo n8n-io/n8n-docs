@@ -20,6 +20,9 @@ Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for
 ## Operations
 
 * Row
+    * Batch create rows
+    * Batch delete rows
+    * Batch update rows
     * Create a row
     * Delete a row
     * Retrieve a row

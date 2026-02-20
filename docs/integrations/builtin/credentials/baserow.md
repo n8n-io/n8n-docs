@@ -18,6 +18,7 @@ Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance o
 ## Supported authentication methods
 
 - Basic auth
+- Token
 
 ## Related resources
 
@@ -42,3 +43,24 @@ Follow these steps:
 
 Refer to [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication) for information on creating user accounts.
 
+## Using token
+
+To configure the database token, you'll need:
+
+- Your Baserow **Host**
+- A **Username** and **Password** to log in with
+
+Creating the token:
+
+1. In Baserow, you must login with your username and password.
+2. Can click on the workspace in the top left corner
+3. Then on "My settings"
+4. And in the opened modal on "Database token".
+5. Create a new token from there.
+
+Follow these steps:
+
+1. Enter the **Host** for the Baserow instance:
+	- For a Baserow-hosted instance: leave as `https://api.baserow.io`.
+	- For a self-hosted instance: set to your self-hosted instance API URL.
+2. Enter the **Token** for the token that n8n should use.

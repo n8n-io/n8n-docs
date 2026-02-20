@@ -70,6 +70,17 @@ This expression:
 1. Accesses the incoming JSON-formatted data using n8n's custom `$json` variable.
 2. Finds the value of `city` (in this example, "New York"). Note that this example uses JMESPath syntax to query the JSON data. You can also write this expression as `{{$json['body']['city']}}`.
 
+### Using expressions in credentials
+
+You can also use expressions in credential fields. When you reference data using expressions (for example, `{{$json.body.city}}` or `{{ $('Webhook').item.json.headers.authorization }}`), n8n evaluates the expression within the context of the current workflow execution.
+
+This means that:
+
+- Expressions in credentials can access data available in the current execution context, including data from previous nodes.
+- Each workflow execution has its own data context.
+- Expressions are evaluated per execution, so different executions do not share data.
+
+For example, if a webhook node receives an access token and you reference it in a credential field using an expression, the value is resolved using the execution data of that specific workflow run.
 
 ### Example: Writing longer JavaScript
 

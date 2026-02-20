@@ -16,4 +16,4 @@ Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequ
 
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
 * [Built-in methods and variables reference](/code/builtin/overview.md)
-* [Expressions](/code/expressions.md)
+* [Expressions](/data/expressions.md)

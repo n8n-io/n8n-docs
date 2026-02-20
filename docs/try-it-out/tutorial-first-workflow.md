@@ -75,7 +75,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     ![image showing the expression above generating a date](/_images/try-it-out/tutorial-date.png)
 
     ??? explanation "Date and time formats in n8n..."
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
+        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/data/specific-data-types/luxon.md).
 
 1. Close the **Edit Expression** modal to return to the NASA node.
 1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.

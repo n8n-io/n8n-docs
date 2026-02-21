@@ -122,7 +122,7 @@ Refer to Salesforce's [Create a Connected App in Your Org](https://developer.sal
 
 To configure this credential, you'll need a [Salesforce](https://www.salesforce.com/) account.
 
---8<-- \"_snippets/integrations/builtin/credentials/cloud-oauth-button.md\"
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
 Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
 

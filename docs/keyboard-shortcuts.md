@@ -68,7 +68,7 @@ n8n provides keyboard shortcuts for some actions.
 
 ## Node panel
 
- - **Tab**: open the Node Panel
+ - **N**: open the Node Panel
  - **Enter**: insert selected node into workflow
  - **Escape**: close Node panel
 

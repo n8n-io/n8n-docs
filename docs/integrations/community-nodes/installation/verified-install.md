@@ -14,7 +14,7 @@ Admin accounts can also uninstall any community node, verified or unverified. Th
 
 To install a [verified community node](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n):
 
-1. Go to the **Canvas** and open the **nodes panel** (either by selecting '+' or pressing ++tab++).
+1. Go to the **Canvas** and open the **nodes panel** (either by selecting '+' or pressing ++n++).
 2. **Search** for the node that you're looking for. If there is a matching verified community node, you will see a **More from the community** section at the bottom of the nodes panel.
 3. Select the node you want to install. This takes you to a detailed view of the node, showing all the supported actions.
 4. Select **install**. This will install the node for your instance and enable all members to use it in their workflows.

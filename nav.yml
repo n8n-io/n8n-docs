@@ -769,6 +769,7 @@ nav:
           - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
           - Vercel AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md
           - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
+          - ZenMux Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatzenmux.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
@@ -1004,6 +1005,7 @@ nav:
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
+        - integrations/builtin/credentials/zenmux.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/oracledb.md
         - integrations/builtin/credentials/oura.md

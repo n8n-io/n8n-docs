@@ -24,7 +24,7 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 ## Connect n8n to your secrets store
 
 /// note | Secret values
-n8n only supports plaintext values for secrets, no JSON objects.
+n8n only supports plaintext values for secrets, not JSON objects.
 ///
 
 1. In n8n, go to **Settings** > **External Secrets**.

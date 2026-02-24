@@ -1,6 +1,1 @@
-/// note | Stable and Beta versions
-n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-
-Current `stable`: 2.8.3
-Current `beta`: 2.9.1
-///
+/// note | Stable and Beta versions\nn8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).\n\nCurrent `stable`: \nCurrent `beta`: \n///\n

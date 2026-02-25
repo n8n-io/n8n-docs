@@ -4,7 +4,7 @@ Use the Code node to write custom JavaScript or Python and run it as a step in y
 This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/index.md) section. It includes:
 
 * Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
-* Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
+* Guidance on [Handling dates](/data/specific-data-types/luxon.md) and [Querying JSON](/data/specific-data-types/jmespath.md)
 * A growing collection of examples in the [Cookbook](/code/cookbook/code-node/index.md)
 ///
 

@@ -137,7 +137,7 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 ## Referencing node data with the Code node
 
-Just like you can use [expressions](/code/expressions.md) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/overview.md) in the **Code node**.
+Just like you can use [expressions](/data/expressions.md) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/overview.md) in the **Code node**.
 
 Please make sure you read these pages before continuing to the next exercise.
 
@@ -170,7 +170,7 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- Use n8n's [data transformation nodes](/data/index.md#data-transformation-nodes). Use these nodes to modify the structure of incoming data that contain lists (arrays) without needing to use JavaScript code in the **Code node**:
+- Use n8n's [data transformation nodes](/data/expressions.md#other-data-transformation-nodes). Use these nodes to modify the structure of incoming data that contain lists (arrays) without needing to use JavaScript code in the **Code node**:
 	- Use the [**Split Out node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) to separate a single data item containing a list into multiple items.
 	- Use the [**Aggregate node**](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) to take separate items, or portions of them, and group them together into individual items.
 - Use the **Code node** to write JavaScript functions to modify the data structure of incoming data using the **Run Once for All Items** mode:

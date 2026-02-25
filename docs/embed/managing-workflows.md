@@ -386,7 +386,7 @@ The details and scope of this workflow will vary greatly according to the indivi
 
 * This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](/code/expressions.md) so that the node’s credential field reads the credential provided in the webhook call.
+* Each node where the user’s credentials are needed should use an [expression](/data/expressions.md) so that the node’s credential field reads the credential provided in the webhook call.
 * Save and publish the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) for more information.
 
 ### Call the workflow

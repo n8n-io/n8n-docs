@@ -33,7 +33,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 ///
 
 
-
 ## n8n@2.10.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.10.1) for this version.<br />
@@ -54,6 +53,15 @@ This release contains bug fixes.
 
 [peteawood](https://github.com/peteawood)  
 [horiyee](https://github.com/horiyee)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@2.9.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.2...n8n@2.9.3) for this version.<br />
+**Release date:** 2026-02-25
+
+This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

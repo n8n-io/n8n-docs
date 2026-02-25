@@ -66,7 +66,7 @@ This means that:
 
 - Expressions in credentials can access data available in the current execution context, including data from previous nodes.
 - Each workflow execution has its own data context.
-- Expressions are evaluated per execution, so different executions do not share data.
+- Expressions are evaluated per execution, so different executions don't share data.
 
 For example, if a webhook node receives an access token and you reference it in a credential field using an expression, the value is resolved using the execution data of that specific workflow run.
 

@@ -44,3 +44,7 @@ To filter elements within an array inside an item, use the `.filter()` method in
 ```
 
 This removes array elements that don't match your condition while preserving the item structure.
+
+### Filter out duplicate items from previous executions
+
+To remove items that have been seen in previous executions of a workflow, use the [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) node. Use this when an event fires multiple times but you only want to process the first occurrence.

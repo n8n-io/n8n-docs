@@ -25,13 +25,12 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
   * `otherDateTime ` (String|DateTime) - The moment to subtract the base DateTime from. Can be an ISO date string or a Luxon DateTime.
   * `unit ` (String|Array<String>) - optional - The unit, or array of units, to return the result in. Possible values: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>.
-  * ` ` ()
 
 **Examples:**
 
@@ -58,13 +57,11 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
   * `unit ` (String|Array<String>) - optional - The unit, or array of units, to return the result in. Possible values: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>.
-  * ` ` ()
-  * ` ` ()
 
 **Examples:**
 
@@ -135,7 +132,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -161,7 +158,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -195,7 +192,6 @@
 
   * `otherDateTime ` (DateTime) - The other DateTime to compare
   * `unit ` (String) - The unit of time to check sameness down to. One of <code>year</code>, <code>quarter</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, or <code>millisecond</code>.
-  * ` ` ()
 
 **Examples:**
 
@@ -236,7 +232,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -306,7 +302,7 @@
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -411,7 +407,7 @@
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -610,7 +606,6 @@
 **Parameters:**
 
   * `formatOpts ` (Object) - optional - Configuration options for the rendering. See <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters”>Intl.DateTimeFormat</a> for a full list. Defaults to rendering a short date.
-  * ` ` ()
 
 **Examples:**
 

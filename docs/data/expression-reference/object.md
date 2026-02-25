@@ -8,7 +8,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -25,7 +25,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -52,7 +52,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -74,7 +74,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -96,7 +96,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -123,7 +123,7 @@
 
 **Returns:** Array<String>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -140,7 +140,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -162,7 +162,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -183,7 +183,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -210,7 +210,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -228,7 +228,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -245,7 +245,7 @@
 
 **Returns:** Array<String>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 

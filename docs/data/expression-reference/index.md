@@ -4,19 +4,19 @@ These are some commonly used expressions. A more exhaustive list appears below.
 
 | Category | Expression | Description |
 |---|---|---|
-| Access current data | `$json` | JSON data of the current item | 
+| Access current input item data | `$json` | JSON data of the current item | 
 | | `$json.fieldName` | Field of the current item |
 | | `$binary` | Binary data of current item |
-| Node Access | `$("NodeName").first()` | First item in a node |
+| Access previous node data | `$("NodeName").first()` | First item in a node |
+| | `$("NodeName").item` | Linked item of a node. See [Item linking](/data/data-mapping/data-item-linking/index.md) for more information. |
 | | `$("NodeName").all()` | All items of a node |
 | | `$("NodeName").last()` | Last item of a node |
-| | `$("NodeName").item` | Linked item of a node |
 | Date/Time | `$now` | Current date and time | 
 | | `$today` | Today's date | 
 | | `$now.toFormat("yyyy-MM-dd")` | Format current date as a string |
 | Conditionals | `$if(condition, "true", "false")` | Helper function that returns a value when a condition is true or false |
+| | `condition ? true : false` | Ternary operator: returns one value if a condition is true, another if false |
 | | `$ifEmpty(value, defaultValue)` | Helper function takes two parameters and tests the first to check if it's empty, then returns either the parameter (if not empty) or the second parameter (if the first is empty). The first parameter is empty if it's `undefined`, `null`, an empty string `''`, an array where `value.length` returns `false` , or an object where `Object.keys(value).length` returns `false`|
-| | `condition ? "yes" : "no"` | Ternary operator |
 | String Methods | `text.toUpperCase()` | Convert to uppercase |
 | | `text.toLowerCase()` | Convert to lowercase |
 | | `text.includes("foo")` | Check if text contains search term |

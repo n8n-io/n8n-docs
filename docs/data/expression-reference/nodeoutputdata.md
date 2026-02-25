@@ -8,7 +8,7 @@
 
 **Returns:** Array<Item>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -23,7 +23,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -38,7 +38,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$()`.**`item`**
 
@@ -48,7 +48,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$()`.**`itemMatching()`**
 
@@ -58,7 +58,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -72,7 +72,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -87,5 +87,5 @@
 
 **Returns:** NodeParams
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

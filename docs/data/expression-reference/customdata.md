@@ -8,7 +8,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -29,7 +29,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -43,7 +43,7 @@
 
 **Syntax:** `$execution.customData`.set(key, value)
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -63,7 +63,7 @@
 
 **Syntax:** `$execution.customData`.setAll(obj)
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 

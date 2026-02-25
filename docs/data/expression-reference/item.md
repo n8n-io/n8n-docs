@@ -8,7 +8,7 @@
 
 **Returns:** Array<BinaryFile>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$item`.**`json`**
 
@@ -18,5 +18,5 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

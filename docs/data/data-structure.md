@@ -61,3 +61,46 @@ For example, this input will create two cards. One named `test1` the other one n
 	}
 ]
 ```
+
+## Understand what you're mapping with drag and drop
+
+Data mapping maps the field path, and loads the field's value. For example, given the following data:
+
+```js
+[
+	{
+		"fruit": "apples",
+		"color": "green"
+	}
+]
+```
+
+You can map `fruit` by dragging and dropping **fruit** from the **INPUT** into the field where you want to use its value. This creates an expression, `{{ $json.fruit }}`. When the node iterates over input items, the value of the field becomes the value of `fruit` for each item.
+
+## Understand nested data
+
+Given the following data:
+
+```js
+[
+  {
+    "name": "First item",
+    "nested": {
+      "example-number-field": 1,
+      "example-string-field": "apples"
+    }
+  },
+  {
+    "name": "Second item",
+    "nested": {
+      "example-number-field": 2,
+      "example-string-field": "oranges"
+    }
+  }
+]
+```
+
+n8n displays it in table form like this:
+
+!["Screenshot of a table in the INPUT panel. It includes a top level field named "nested." This field contains nested data, which is indicated in bold."](/_images/data/data-mapping/nested-data.png)
+

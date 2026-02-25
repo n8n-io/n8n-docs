@@ -12,6 +12,31 @@
 ## Remove item lists (hidden for over a year)
 /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/  301
 
+## Data section reorganization
+/data/expressions-basics/ /data/expressions/ 301
+/data/binary-data/ /data/specific-data-types/binary-data/ 301
+/data/data-mocking/ /data/data-pinning/ 301
+/data/data-flow-nodes/ /data/data-structure/ 301
+/data/code/ /data/expressions/#code-node 301
+/data/schema-preview/ /data/data-tables/ 301
+
+## Cookbook reorganization
+/code/cookbook/luxon/ /data/specific-data-types/luxon/ 301
+/code/cookbook/jmespath/ /data/specific-data-types/jmespath/ 301
+/code/cookbook/builtin/itemmatching/ /data/data-mapping/itemmatching/ 301
+
+## Built-in methods and variables reorganization
+/code/builtin/current-node-input/ /data/expression-reference/nodeinputdata/ 301
+/code/builtin/output-other-nodes/ /data/expression-reference/nodeoutputdata/ 301
+/code/builtin/date-time/ /data/expression-reference/datetime/ 301
+/code/builtin/data-transformation-functions/arrays/ /data/expression-reference/array/ 301
+/code/builtin/data-transformation-functions/booleans/ /data/expression-reference/boolean/ 301
+/code/builtin/data-transformation-functions/dates/ /data/expression-reference/date/ 301
+/code/builtin/data-transformation-functions/numbers/ /data/expression-reference/number/ 301
+/code/builtin/data-transformation-functions/objects/ /data/expression-reference/object/ 301
+/code/builtin/data-transformation-functions/strings/ /data/expression-reference/string/ 301
+/code/builtin/data-transformation-functions/ /data/expression-reference/ 301
+
 ## tutorials refresh
 /try-it-out/longer-introduction/ /try-it-out/tutorial-first-workflow/  301
 
@@ -160,7 +185,7 @@
 # Code into own tab
 
 /code-examples/ /code/  301
-/code-examples/methods-variables-reference/   /code/builtin/  301
+/code-examples/methods-variables-reference/   /data/expression-reference/  301
 
 /code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/  301
 /code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/  301

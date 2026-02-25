@@ -8,7 +8,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$workflow`.**`id`**
 
@@ -18,7 +18,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$workflow`.**`name`**
 
@@ -28,5 +28,5 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

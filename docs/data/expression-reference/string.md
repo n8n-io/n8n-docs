@@ -8,7 +8,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -24,7 +24,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -40,7 +40,7 @@
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -69,7 +69,7 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -93,7 +93,7 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -109,7 +109,7 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -127,7 +127,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -147,7 +147,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -168,7 +168,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -196,7 +196,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Number
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -224,7 +224,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -248,7 +248,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -272,7 +272,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -292,7 +292,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -312,7 +312,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -336,7 +336,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -360,7 +360,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 **Returns:** Number
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -378,7 +378,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -409,7 +409,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -433,7 +433,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -453,7 +453,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -469,7 +469,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -487,7 +487,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -522,7 +522,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -554,7 +554,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -570,7 +570,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Returns:** Number
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -597,7 +597,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -628,7 +628,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -658,7 +658,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Returns:** Boolean
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -685,7 +685,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -710,7 +710,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -740,7 +740,7 @@ To parse other formats, use <a href=”https://moment.github.io/luxon/api-docs/i
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -770,7 +770,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -787,7 +787,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -803,7 +803,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -823,7 +823,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -839,7 +839,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -855,7 +855,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -869,7 +869,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Syntax:** _`String`_.toUpperCase()
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -885,7 +885,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -901,7 +901,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -925,7 +925,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 

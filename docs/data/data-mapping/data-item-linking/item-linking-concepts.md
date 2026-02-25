@@ -9,7 +9,7 @@ Each output item created by a node includes metadata that links them to the inpu
 This document provides a conceptual overview of this feature. For usage details, refer to:
 
 * [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md), for details on how to handle item linking when building a node.
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md), to learn how to handle item linking in the Code node.
+* [Preserving linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md), to learn how to handle item linking in the Code node.
 * [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md), to understand the errors you may encounter in the editor UI.
 
 ## n8n's automatic item linking
@@ -34,7 +34,7 @@ In this example, it's possible for n8n to link an item in one node back several 
 The methods for accessing linked items are different depending on whether you're using the UI, expressions, or the code node. Explore the following resources:
 
 * [Mapping in the UI](/data/data-mapping/data-mapping-ui.md)
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
+* [Preserving linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
 * [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 

@@ -8,7 +8,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$response`.**`headers`**
 
@@ -18,7 +18,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$response`.**`statusCode`**
 
@@ -28,7 +28,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$response`.**`statusMessage`**
 
@@ -38,5 +38,5 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

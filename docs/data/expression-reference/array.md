@@ -8,7 +8,7 @@
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -39,7 +39,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -56,7 +56,7 @@
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -77,7 +77,7 @@
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -94,7 +94,7 @@
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -125,7 +125,7 @@ in <code>otherArray</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -146,7 +146,7 @@ in <code>otherArray</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -189,7 +189,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** any
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -224,7 +224,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -241,7 +241,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** Boolean
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -264,7 +264,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** Number
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -291,7 +291,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -312,7 +312,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -334,7 +334,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -358,7 +358,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -385,7 +385,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -403,7 +403,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Number
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -420,7 +420,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -455,7 +455,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -473,7 +473,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -490,7 +490,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -517,7 +517,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -533,7 +533,7 @@ The opposite of <code>split()</code>.
 
 **Syntax:** _`Array`_.reduce(function(prevResult, currentElem, currentIndex?, array?), initResult)
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -569,7 +569,7 @@ The opposite of <code>split()</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -591,7 +591,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -613,7 +613,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -630,7 +630,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -662,7 +662,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -684,7 +684,7 @@ adding extra arguments, i.e. <code>from1, to1, from2, to2, ...</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -734,7 +734,7 @@ If no function is specified, converts all values to strings and compares their c
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -751,7 +751,7 @@ If no function is specified, converts all values to strings and compares their c
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -770,7 +770,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 **Returns:** Array
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Parameters:**
 
@@ -808,7 +808,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 
@@ -825,7 +825,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -847,7 +847,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 **Returns:** Array
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 

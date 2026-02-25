@@ -8,7 +8,7 @@
 
 **Returns:** NodeData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -22,7 +22,7 @@
 
 **Returns:** Array<BinaryFile>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$execution`**
 
@@ -32,7 +32,7 @@
 
 **Returns:** ExecData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$fromAI()`**
 
@@ -42,7 +42,7 @@
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -76,7 +76,7 @@
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -105,7 +105,7 @@
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -126,7 +126,7 @@
 
 **Returns:** NodeData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$itemIndex`**
 
@@ -136,7 +136,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$jmespath()`**
 
@@ -146,7 +146,7 @@
 
 **Returns:** any
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -233,7 +233,7 @@
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$max()`**
 
@@ -243,7 +243,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -258,7 +258,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -273,7 +273,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$now`**
 
@@ -285,7 +285,7 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$pageCount`**
 
@@ -295,7 +295,7 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$parameter`**
 
@@ -305,7 +305,7 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
 
 **Returns:** NodeParams
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$prevNode`**
 
@@ -317,7 +317,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 **Returns:** PrevNodeData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$request`**
 
@@ -327,7 +327,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$response`**
 
@@ -337,7 +337,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 **Returns:** HTTPResponse
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$runIndex`**
 
@@ -347,7 +347,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$secrets`**
 
@@ -357,7 +357,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$today`**
 
@@ -369,7 +369,7 @@ Uses the instance’s time zone (unless overridden in the workflow’s settings)
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$vars`**
 
@@ -379,7 +379,7 @@ Uses the instance’s time zone (unless overridden in the workflow’s settings)
 
 **Returns:** Object
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`$workflow`**
 
@@ -389,5 +389,5 @@ Uses the instance’s time zone (unless overridden in the workflow’s settings)
 
 **Returns:** WorkflowData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

@@ -8,7 +8,7 @@
 
 **Returns:** Boolean
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -35,7 +35,7 @@
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 
@@ -55,7 +55,7 @@
 
 **Returns:** String
 
-**Type:** JS
+**Source:** JavaScript function
 
 **Examples:**
 

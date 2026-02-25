@@ -8,7 +8,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`fileExtension`**
 
@@ -18,7 +18,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`fileName`**
 
@@ -28,7 +28,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`fileSize`**
 
@@ -38,7 +38,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`fileType`**
 
@@ -48,7 +48,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`id`**
 
@@ -58,7 +58,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `binaryFile`.**`mimeType`**
 
@@ -68,5 +68,5 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

@@ -8,7 +8,7 @@
 
 **Returns:** Array<Item>
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -23,7 +23,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -38,7 +38,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$input`.**`last()`**
 
@@ -48,7 +48,7 @@
 
 **Returns:** Item
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Parameters:**
 
@@ -63,5 +63,5 @@
 
 **Returns:** NodeParams
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

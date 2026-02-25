@@ -10,7 +10,7 @@ Always uses the current node’s first input connector if there is more than one
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`outputIndex`**
 
@@ -22,7 +22,7 @@ Always uses the current node’s first input connector if there is more than one
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## **`runIndex`**
 
@@ -34,5 +34,5 @@ Always uses the current node’s first input connector if there is more than one
 
 **Returns:** Number
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

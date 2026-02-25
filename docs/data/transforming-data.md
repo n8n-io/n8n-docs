@@ -10,7 +10,7 @@ n8n uses a predefined [data structure](/data/data-structure.md) that allows all 
 
 n8n provides several approaches for data transformation:
 
-* [Expressions](/data/expressions-basics.md) allow you to transform data directly in node parameters using n8n's expression syntax (`{{ }}`)
+* [Expressions](/data/expressions.md#expressions) allow you to transform data directly in node parameters using n8n's expression syntax (`{{ }}`)
 * The [Code node](/data/expressions.md#code-node) lets you write custom JavaScript or Python for complex transformations.
 * The [AI Transform node](/data/expressions.md#ai-transform-node) generates transformation code from natural language prompts.
 * Advanced transformation techniques: For sophisticated data manipulation, n8n supports:

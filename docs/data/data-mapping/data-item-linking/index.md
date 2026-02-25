@@ -6,7 +6,7 @@ contentType: overview
 
 An item is a single piece of data. Nodes receive one or more items, operate on them, and output new items. Each item links back to the items in the previous nodes that generated it.
 
-You need to understand this behavior if you're:
+Usually this just works. You need to understand this behavior in detail if you're:
 
 * Using the Code node for complex behaviors with input and output data.
 * Building a programmatic-style node.

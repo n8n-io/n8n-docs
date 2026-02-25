@@ -8,7 +8,7 @@
 
 **Returns:** CustomData
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$exec`.**`id`**
 
@@ -18,7 +18,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$exec`.**`mode`**
 
@@ -28,7 +28,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$exec`.**`resumeFormUrl`**
 
@@ -38,7 +38,7 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 ## `$exec`.**`resumeUrl`**
 
@@ -48,5 +48,5 @@
 
 **Returns:** String
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 

@@ -8,7 +8,7 @@
 
 **Returns:** DateTime
 
-**Type:** n8n
+**Source:**  Custom n8n functionality
 
 **Examples:**
 

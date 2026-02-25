@@ -75,7 +75,7 @@ Note that these variables can return different time formats when cast as a strin
 	# For example "Today's date is 1646834498755"
 	```
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [n8n Expression Language Reference](/data/expression-reference/index.md) for more information.
+n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Expression reference](/data/expression-reference/index.md) for more information.
 
 ### Convert JavaScript dates to Luxon
 

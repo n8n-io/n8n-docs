@@ -373,6 +373,7 @@ nav:
         - Freshworks CRM: integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm.md
         - GetResponse: integrations/builtin/app-nodes/n8n-nodes-base.getresponse.md
         - Ghost: integrations/builtin/app-nodes/n8n-nodes-base.ghost.md
+        - Gladia: integrations/builtin/app-nodes/n8n-nodes-base.gladia.md
         - GitHub: integrations/builtin/app-nodes/n8n-nodes-base.github.md
         - GitLab: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
         - Gmail:
@@ -923,6 +924,7 @@ nav:
         - integrations/builtin/credentials/ftp.md
         - integrations/builtin/credentials/getresponse.md
         - integrations/builtin/credentials/ghost.md
+        - integrations/builtin/credentials/gladia.md
         - integrations/builtin/credentials/git.md
         - integrations/builtin/credentials/github.md
         - integrations/builtin/credentials/gitlab.md

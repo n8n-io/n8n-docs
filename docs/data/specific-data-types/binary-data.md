@@ -22,9 +22,9 @@ You can process binary data in n8n workflows. n8n provides nodes to help you wor
 
 There are three key nodes dedicated to handling binary data files:
 
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
 - [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
 - [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
 
 There are separate nodes for working with XML and HTML data:
 
@@ -39,7 +39,7 @@ And nodes for performing common tasks:
 
 You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md).
 
-To split or concatenate binary data items, use the [data transformation nodes](/data/index.md#data-transformation-nodes).
+To split or concatenate binary data items, use the [data transformation nodes](/data/expressions.md#other-data-transformation-nodes).
 
 ### Code
 

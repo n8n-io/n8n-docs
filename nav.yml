@@ -105,29 +105,50 @@ nav:
         - Sub-workflows: flow-logic/subworkflows.md
         - Error handling: flow-logic/error-handling.md
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
-      - Data:
-        - data/index.md
-        - Data structure: data/data-structure.md
-        - Data flow within nodes: data/data-flow-nodes.md
-        - Transforming data: data/transforming-data.md
-        - Process data using code: data/code.md
-        - Data mapping:
+      - Working with data:
+        - Overview: data/index.md
+        - How n8n structures data: data/data-structure.md
+        - Expressions versus data nodes: data/expressions.md
+        - Referencing data:
           - data/data-mapping/index.md
-          - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-          - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-          - Data item linking:
+          - Referencing data in the UI: data/data-mapping/data-mapping-ui.md
+          - Referencing previous nodes: data/data-mapping/referencing-other-nodes.md
+          - Linking data items:
             - data/data-mapping/data-item-linking/index.md
-            - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-            - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
+            - How items link through workflows: data/data-mapping/data-item-linking/item-linking-concepts.md
+            - Accessing linked items in the Code node: data/data-mapping/itemmatching.md
+            - Preserving linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
             - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
             - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-        - Data pinning: data/data-pinning.md
-        - Data editing: data/data-editing.md
-        - Data filtering: data/data-filtering.md
-        - Data mocking: data/data-mocking.md
+        - Transforming data:
+          - Approaches for transforming data: data/transforming-data.md
+          - Expressions for data transformation: data/expressions-for-transformation.md
+          - Expression reference: 
+            - data/expression-reference/index.md
+            - data/expression-reference/array.md
+            - data/expression-reference/binaryfile.md
+            - data/expression-reference/boolean.md
+            - data/expression-reference/customdata.md
+            - data/expression-reference/date.md
+            - data/expression-reference/datetime.md
+            - data/expression-reference/execdata.md
+            - data/expression-reference/httpresponse.md
+            - data/expression-reference/item.md
+            - data/expression-reference/nodeinputdata.md
+            - data/expression-reference/nodeoutputdata.md
+            - data/expression-reference/number.md
+            - data/expression-reference/object.md
+            - data/expression-reference/prevnodedata.md
+            - data/expression-reference/root.md
+            - data/expression-reference/string.md
+            - data/expression-reference/workflowdata.md
+        - Filtering data: data/data-filtering.md
+        - Pinning and mocking data: data/data-pinning.md
+        - Specific data types:
+          - Binary data: data/specific-data-types/binary-data.md
+          - Date and time with Luxon: data/specific-data-types/luxon.md
+          - Query JSON with JMESPath: data/specific-data-types/jmespath.md
         - Data tables: data/data-tables.md
-        - Binary data: data/binary-data.md
-        - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md
@@ -1276,37 +1297,21 @@ nav:
       - CLI commands: hosting/cli-commands.md
   - Code in n8n:
       - code/index.md
-      - Expressions: code/expressions.md
       - Using the Code node: code/code-node.md
       - AI coding: code/ai-code.md
       - Built in methods and variables:
           - Overview: code/builtin/overview.md
-          - Current node input: code/builtin/current-node-input.md
-          - Output of other nodes: code/builtin/output-other-nodes.md
-          - Date and time: code/builtin/date-time.md
           - JMESPath: code/builtin/jmespath.md
           - HTTP node: code/builtin/http-node-variables.md
           - LangChain Code node: code/builtin/langchain-methods.md
           - n8n metadata: code/builtin/n8n-metadata.md
-          - Convenience methods: code/builtin/convenience.md
-          - Data transformation functions:
-              - code/builtin/data-transformation-functions/index.md
-              - Arrays: code/builtin/data-transformation-functions/arrays.md
-              - Booleans: code/builtin/data-transformation-functions/booleans.md
-              - Dates: code/builtin/data-transformation-functions/dates.md
-              - Numbers: code/builtin/data-transformation-functions/numbers.md
-              - Objects: code/builtin/data-transformation-functions/objects.md
-              - Strings: code/builtin/data-transformation-functions/strings.md
       - Custom variables:
           - Create custom variables: code/variables.md
       - Cookbook:
-          - Handling dates: code/cookbook/luxon.md
-          - Query JSON with JMESPath: code/cookbook/jmespath.md
           - Built-in methods and variables examples:
               - code/cookbook/builtin/index.md
               - execution: code/cookbook/builtin/execution.md
               - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
               - (node-name).all: code/cookbook/builtin/all.md
               - vars: code/cookbook/builtin/vars.md
           - Expressions:

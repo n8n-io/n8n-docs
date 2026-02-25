@@ -26,6 +26,9 @@ Access the endpoint:
 <your-instance-url>/healthz/readiness
 ```
 
+/// note | Customizing health check endpoints
+You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH`](/hosting/configuration/environment-variables/endpoints.md) environment variable.
+///
 
 ## metrics
 
@@ -40,10 +43,13 @@ Access the endpoint:
 /// info | Feature availability
 The `/metrics` endpoint isn't available on n8n Cloud.
 ///
+
 <!-- vale off -->
-## Enable metrics and healthz for self-hosted n8n
+## Enable metrics and health checks for self-hosted n8n
 <!-- vale on -->
-The `/metrics` and `/healthz` endpoints are disabled by default. To enable them, configure your n8n instance:
+The `/metrics` endpoint is disabled by default. The health endpoint is always enabled on the main n8n server. For worker servers in [queue mode](/hosting/scaling/queue-mode.md), the health endpoint is disabled by default.
+
+To enable them, configure your n8n instance:
 
 ```shell
 # metrics

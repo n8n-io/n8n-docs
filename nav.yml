@@ -179,6 +179,7 @@ nav:
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md
       - Log streaming: log-streaming.md
+      - Security settings: security-settings.md
       - Insights: insights.md
       - License key: license-key.md
     - Releases:
@@ -744,11 +745,13 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - Microsoft Agent 365 Trigger: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/index.md
           - Azure AI Search Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
+          - Chroma Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorechroma.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Redis Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md
@@ -992,6 +995,7 @@ nav:
         - integrations/builtin/credentials/microsoftazuremonitor.md
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/microsoftagent365.md
         - integrations/builtin/credentials/milvus.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/miro.md
@@ -1031,6 +1035,7 @@ nav:
         - integrations/builtin/credentials/perplexity.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
+        - integrations/builtin/credentials/chroma.md
         - integrations/builtin/credentials/pinecone.md
         - integrations/builtin/credentials/pipedrive.md
         - integrations/builtin/credentials/plivo.md

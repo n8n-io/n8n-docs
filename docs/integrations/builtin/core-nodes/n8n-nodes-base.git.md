@@ -25,6 +25,7 @@ You can find authentication information for this node [here](/integrations/built
 * **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push).
 * **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags).
 * Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status).
+* **Switch Branch:** Performs a [git switch](https://git-scm.com/docs/git-switch).
 * Create a new **Tag**: Performs a [git tag](https://git-scm.com/docs/git-tag).
 * **User Setup**: Set the user.
 
@@ -123,6 +124,13 @@ This operation only prompts you to enter the local path of the git repository in
 ## Status
 
 This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+
+## Switch Branch
+
+Configure this operation with these parameters:
+
+* **Repository Path**: Enter the local path of the git repository.
+* **Branch Name**: Enter the name of the branch to which you want to switch.
 
 ## Tag
 

@@ -143,7 +143,7 @@ When performing an operation on a specific record, such as "update a task commen
 * Wherever possible, provide two ways to specify a record:
     * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/index.md) for more information.
     * By entering an ID.
-* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code/expressions.md) documentation.
+* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/data/expressions.md) documentation.
 * Build your node so that it can handle users providing more information than required. For example:
     * If you need a relative path, handle the user pasting in the absolute path.
     * If the user needs to get an ID from a URL, handle the user pasting in the entire URL.

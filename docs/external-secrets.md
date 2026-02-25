@@ -8,12 +8,13 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, Infisical and HashiCorp Vault. 
+* n8n supports the following secret providers: AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager and HashiCorp Vault.
+* From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 
 /// warning | Infisical deprecation
-Infisical is deprecated and is no longer recommended. Use an alternative external secrets provider.
+Infisical is deprecated. From version 2.10.0, you can't connect new Infisical vaults. Existing ones remain for now.
 ///
 
 You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n) for n8n.
@@ -22,12 +23,14 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 
 ## Connect n8n to your secrets store
 
-/// note | Secret names
-Your secret names can't contain spaces, hyphens, or other special characters. n8n supports secret names containing alphanumeric characters (`a-z`, `A-Z`, and `0-9`), and underscores. n8n currently only supports plaintext values for secrets, not JSON objects or key-value pairs.
+/// note | Secret values
+n8n only supports plaintext values for secrets, not JSON objects.
 ///
 
 1. In n8n, go to **Settings** > **External Secrets**.
-1. Select **Set Up** for your store provider.
+1. Click **Add secrets vault**.
+1. Enter a unique name for your vault. This will be the first segment when referencing this vault in a `{{ $secrets.<vault-name>... }}` expression in a credential.
+1. Select one of the supported secret providers.
 1. Enter the credentials for your provider:
 	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
@@ -97,20 +100,10 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 				[Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass)  
 		- If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces) for more information on HashiCorp Vault namespaces.
 
-	* Infisical: provide a **Service Token**. Refer to Infisical's [Service token](https://infisical.com/docs/documentation/platform/token) documentation for information on getting your token. If you self-host Infisical, enter the **Site URL**.
-
-	    /// note | Infisical environment
-		Make sure you select the correct Infisical environment when creating your token. n8n will load secrets from this environment, and won't have access to secrets in other Infisical environments. n8n only support service tokens that have access to a single environment.
-		///
-
-	    /// note | Infisical folders
-	 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder).
-		///
-
 	* Google Cloud Platform: provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview) for more information.
 
 1. **Save** your configuration.
-1. Enable the provider using the **Disabled / Enabled** toggle.
+1. As long as this store is connected, you can reference its secrets in credentials.
 
 
 ## Use secrets in n8n credentials
@@ -125,23 +118,19 @@ To use a secret from your store in an n8n credential:
 	```js
 	{{ $secrets.<vault-name>.<secret-name> }}
 	```
-	`<vault-name>` is either `vault` (for HashiCorp) or `infisical` or `awsSecretsManager`. Replace `<secret-name>` with the name as it appears in your vault.
+	`<vault-name>` is the one you entered when you added the store. Replace `<secret-name>` with the name as it appears in your vault.
 
 ## Using external secrets with n8n environments
 
 n8n's [Source control and environments](/source-control-environments/index.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
-
-For example, you have two n8n instances, one for development and one for production. You use Infisical for your vault. In Infisical, create a project with two environments, development and production. Generate a token for each Infisical environment. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
+\
+For example, you have two n8n instances, one for development and one for production. In your secrets provider, create a project with two environments, development and production. Generate a token for each environment of your secrets provider. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
 
 ## Using external secrets in projects
 
 To use external secrets in an [RBAC project](/user-management/rbac/index.md), you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
 
 ## Troubleshooting
-
-### Infisical version changes
-
-Infisical version upgrades can introduce problems connecting to n8n. If your Infisical connection stops working, check if there was a recent version change. If so, report the issue to help@n8n.io.
 
 ### Only set external secrets on credentials owned by an instance owner or admin
 

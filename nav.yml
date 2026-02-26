@@ -1314,8 +1314,6 @@ nav:
               - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
               - (node-name).all: code/cookbook/builtin/all.md
               - vars: code/cookbook/builtin/vars.md
-          - Expressions:
-              - code/cookbook/expressions/index.md
           - Code node:
               - code/cookbook/code-node/index.md
               - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md

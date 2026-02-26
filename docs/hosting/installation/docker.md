@@ -130,21 +130,37 @@ docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+### Full stack
+
+This runs n8n and cloudflared together in containers. The tunnel URL prints on startup and everything is wired automatically:
 
 ```shell
-docker volume create n8n_data
+pnpm stack --tunnel
+```
 
-docker run -it --rm \
- --name n8n \
- -p 5678:5678 \
- -e GENERIC_TIMEZONE="<YOUR_TIMEZONE>" \
- -e TZ="<YOUR_TIMEZONE>" \
- -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
- -e N8N_RUNNERS_ENABLED=true \
- -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n \
- start --tunnel
+### Services only
+
+If you prefer to run n8n locally with `pnpm dev` or `pnpm start`, you can start cloudflared as a standalone service:
+
+```shell
+# Terminal 1: Start the cloudflared tunnel service
+pnpm --filter n8n-containers services --services cloudflared
+
+# Terminal 2: Start n8n locally
+pnpm dev
+```
+
+The `services` command:
+
+1. Starts cloudflared pointing at `host.docker.internal:5678` (your local n8n).
+2. Fetches the public tunnel URL from cloudflared's metrics endpoint.
+3. Writes a `.env` file to `packages/cli/bin/.env` with `WEBHOOK_URL` and `N8N_PROXY_HOPS=1`.
+4. `pnpm dev` and `pnpm start` pick up that `.env` automatically via dotenv.
+
+Clean up when done:
+
+```shell
+pnpm --filter n8n-containers services:clean
 ```
 
 ## Next steps

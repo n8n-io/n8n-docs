@@ -1316,8 +1316,6 @@ nav:
               - vars: code/cookbook/builtin/vars.md
           - Expressions:
               - code/cookbook/expressions/index.md
-              - Check incoming data: code/cookbook/expressions/check-incoming-data.md
-              - Common issues:  code/cookbook/expressions/common-issues.md
           - Code node:
               - code/cookbook/code-node/index.md
               - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md

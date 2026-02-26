@@ -91,7 +91,7 @@ Here are some common errors and issues related to [expressions](/data/expression
 
 ### The 'JSON Output' in item 0 contains invalid JSON
 
-This error occurs when you use JSON mode but don't provide a valid JSON object. Depending on the problem with the JSON object, the error sometimes display as `The 'JSON Output' in item 0 does not contain a valid JSON object`.
+This error occurs when you use JSON mode but don't provide a valid JSON object. Depending on the problem with the JSON object, the error sometimes displays as `The 'JSON Output' in item 0 does not contain a valid JSON object`.
 
 To resolve this, make sure that the code you provide is valid JSON:
 

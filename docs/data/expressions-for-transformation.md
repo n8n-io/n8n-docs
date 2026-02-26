@@ -135,4 +135,4 @@ For example, the expression in this JSON includes a trailing period, which resul
 }
 ```
 
-To resolve this error, check your [expression syntax](/data/expressions.md) to make sure they follow the expected format.
+To resolve this error, check your [expression syntax](/data/expressions.md) to make sure it follows the expected format.

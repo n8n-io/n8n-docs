@@ -184,7 +184,9 @@ You can also set this value in the configuration file.
 
 When using multiple webhook processes you will need a load balancer to route requests. If you are using the same domain name for your n8n instance and the webhooks, you can set up your load balancer to route requests as follows:
 
-- Redirect any request that matches `/webhook/*` to the webhook servers pool
+- Redirect webhook triggers to the webhook servers pool. Paths to consider:
+  - `/webhook/*`: Webhook trigger node
+  - `/webhook-waiting/*`: Human in the loop nodes that perform send and wait operations as per example the Slack one
 - All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
 
 **Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.

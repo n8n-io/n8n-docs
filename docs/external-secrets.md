@@ -105,6 +105,20 @@ n8n only supports plaintext values for secrets, not JSON objects.
 1. **Save** your configuration.
 1. As long as this store is connected, you can reference its secrets in credentials.
 
+## Share vault
+
+By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.
+
+Admins can restrict a vault to a specific [project](/user-management/rbac/projects.md). When a vault is shared with a project, only that project can use credentials referencing its secrets. You can assign a vault to one project, or leave it global.
+
+To assign the scope:
+
+1. In n8n, go to **Settings** > **External Secrets**.
+1. Find the vault you want to configure and select **Edit**.
+1. Under **Share**, choose one of the following:
+    - **Global**: The vault is available across the entire n8n instance. This is the default.
+    - **Project**: The vault is restricted to a single project. Select the project from the dropdown.
+1. **Save** your configuration.
 
 ## Use secrets in n8n credentials
 
@@ -129,6 +143,8 @@ For example, you have two n8n instances, one for development and one for product
 ## Using external secrets in projects
 
 To use external secrets in an [RBAC project](/user-management/rbac/index.md), you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+
+You can restrict usage of a vault to a specific project using [share vault](#share-vault). A vault assigned to a project is only usable within this project's credentials.
 
 ## Troubleshooting
 

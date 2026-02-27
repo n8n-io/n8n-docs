@@ -37,6 +37,10 @@ Available LangChain expressions:
 * `{current_step}`: Contains information about the current step.
 * `{agent_scratchpad}`: Information to remember for the next iteration.
 
+### Tracing Metadata
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/tracing-metadata.md"
+
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.

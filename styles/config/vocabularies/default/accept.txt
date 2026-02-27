@@ -47,6 +47,7 @@ Chargebee
 ChromeOS
 Citrix
 Clearbit
+cloudflared('s)?
 Clockify
 Codecademy
 Cognito('s)?
@@ -67,6 +68,7 @@ Datastore
 [Dd]edupe
 [Dd]eduplication
 DeepL
+dotenv
 Demio
 [Dd]equeued?
 disabled

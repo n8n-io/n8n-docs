@@ -71,7 +71,7 @@ npm install -g n8n@next
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
 /// note | Docker required
-The tunnel uses cloudflared, which runs as a Docker container. Make sure [Docker](https://docs.docker.com/get-docker/) is installed on your machine, even when running n8n via npm.
+The tunnel uses cloudflared, which runs as a Docker container. Make sure you have [Docker](https://docs.docker.com/get-docker/) on your machine, even when running n8n using npm.
 ///
 
 For npm installations, use the **services only** approach. Start cloudflared as a standalone service, then run n8n locally:

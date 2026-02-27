@@ -132,7 +132,7 @@ docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 
 ### Full stack
 
-This runs n8n and cloudflared together in containers. The tunnel URL prints on startup and everything is wired automatically:
+This runs n8n and cloudflared together in containers. The tunnel URL prints on startup and n8n picks it up automatically:
 
 ```shell
 pnpm stack --tunnel
@@ -155,7 +155,7 @@ The `services` command:
 1. Starts cloudflared pointing at `host.docker.internal:5678` (your local n8n).
 2. Fetches the public tunnel URL from cloudflared's metrics endpoint.
 3. Writes a `.env` file to `packages/cli/bin/.env` with `WEBHOOK_URL` and `N8N_PROXY_HOPS=1`.
-4. `pnpm dev` and `pnpm start` pick up that `.env` automatically via dotenv.
+4. `pnpm dev` and `pnpm start` pick up that `.env` automatically using dotenv.
 
 Clean up when done:
 

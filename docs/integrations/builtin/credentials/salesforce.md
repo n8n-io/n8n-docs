@@ -16,6 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 - JWT
 - OAuth2
+- Client credentials
 
 ## Related resources
 
@@ -189,6 +190,55 @@ These steps are what's required on the n8n side. Salesforce recommends setting r
 19. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
 
 Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.
+
+## Using Client credentials
+
+Use this authentication method for server-to-server integrations where no user interaction is required.
+
+To configure this credential, you'll need a [Salesforce](https://www.salesforce.com/) account and:
+
+- Your Salesforce **Instance URL** (for example, `https://mydomain.my.salesforce.com`)
+- A **Client ID** (Consumer Key)
+- A **Client Secret** (Consumer Secret)
+
+Unlike OAuth2, Client credentials authentication doesn't use Salesforce's default Production or Sandbox login URLs. You must provide your Salesforce instance URL directly.
+
+To set things up, first create a connected app in Salesforce and enable the Client Credentials flow:
+
+1. Log in to your org in Salesforce.
+2. From **Setup**, enter `App Manager` in the Quick Find box, then select **App Manager**.
+3. On the App Manager page, select **New Connected App**.
+4. Enter the required **Basic Info** for your connected app, including a **Name** and **Contact Email address**.
+5. Check the box to **Enable OAuth Settings**.
+6. For the **Callback URL**, enter any valid URL (for example, `http://localhost`). The Client Credentials flow doesn't use the callback URL, but Salesforce requires a value.
+7. Add the required **OAuth scopes**. At minimum, add:
+   - **Manage user data via APIs (api)**
+8. In the **OAuth Settings** section, check the box to **Enable Client Credentials Flow**.
+9. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
+
+Salesforce requires you to define which user the integration runs as:
+
+10. Select **Manage**.
+11. Select **Edit Policies**.
+12. In the **OAuth Policies** section, select the user that the Client Credentials flow should run as (the "Run As" user).
+13. Select **Save**.
+14. Ensure the selected user has the necessary permissions and access required by your workflow.
+
+After configuring the policies:
+
+15. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
+16. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
+17. Copy the **Consumer Secret** and add it to your n8n credential as the **Client Secret**.
+
+In n8n, configure the credential with:
+
+- **URL**: Your Salesforce instance URL (for example, `https://mydomain.my.salesforce.com`)
+- **Client ID**
+- **Client Secret**
+
+Once configured, n8n will use the OAuth 2.0 Client Credentials grant (`grant_type=client_credentials`) to authenticate API requests.
+
+Refer to Salesforce's [Connected App documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev_auth_connected_app.htm) for more information.
 
 ## Common issues
 

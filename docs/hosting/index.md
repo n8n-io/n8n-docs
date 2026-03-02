@@ -1,4 +1,4 @@
----
+creator Abhishek---
 title: n8n Hosting Documentation and Guides
 description: Access n8n hosting documentation and guides. Find comprehensive resources to help you set up and manage your self-hosted n8n instances.
 contentType: overview

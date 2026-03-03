@@ -120,9 +120,9 @@ To set, update, and retrieve data directly to a workflow, use the [static data](
 If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
 ///
 
-## Cannot access credentials in a code node
+## Can't access credentials in a code node
 
-By design, Code nodes cannot access credentials. They don't have access to n8n’s internal credential management system. This prevents exposure of sensitive authentication data.
+By design, Code nodes can't access credentials. They don't have access to n8n’s internal credential management system. This prevents exposure of sensitive authentication data.
 
 Attempts to reference credentials in a Code node using expressions or methods like `this.getCredentials()` or `$getCredentials()` will result in errors, such as `this.getCredentials is not a function` and `$getCredentials is not defined`. 
 

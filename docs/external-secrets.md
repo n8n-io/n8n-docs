@@ -109,7 +109,7 @@ n8n only supports plaintext values for secrets, not JSON objects.
 
 By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.
 
-Admins can restrict a vault to a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
+Instance admins can restrict a vault to a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
 
 To assign the scope:
 

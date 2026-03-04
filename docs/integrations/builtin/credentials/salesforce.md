@@ -122,9 +122,7 @@ Refer to Salesforce's [Create a Connected App in Your Org](https://developer.sal
 
 To configure this credential, you'll need a [Salesforce](https://www.salesforce.com/) account.
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
+You will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
 
 ### Create an External Client App (recommended)
 
@@ -137,12 +135,12 @@ If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2
 5. On the App Manager page, select **New External Client App**.
 6. Enter the required **Basic Info** for your external client app, including a **Name** and **Contact Email address**.
 7. Under **API (Enable OAuth Settings)**, select **Enable OAuth**.
-8. In the **Callback URL** box, add your n8n OAuth callback URL (for example, `https://your-n8n-instance.com/rest/oauth2-credential/callback`).
+8. In the **Callback URL** box, add your n8n OAuth callback URL (for example, `https://your-n8n-instance.com/rest/oauth2-credential/callback`, For n8n cloud this will be `https://oauth.n8n.cloud/oauth2/callback`).
 9. In the **OAuth Scopes** section, select these scopes:
     - **Full access (full)**
     - **Perform requests at any time (refresh_token, offline_access)**
-10. In the **Flow Enablement** section, select **Enable Client Credentials Flow**.
-11. Under **OAuth Policies**, make sure the following settings are **unchecked**:
+10. In the **Flow Enablement** section, select **Enable Authorization Code and Credentials Flow**.
+11. Under **OAuth Policies**, make sure the following settings are **checked**:
     - **Require Secret for Web Server Flow**
     - **Require Secret for Refresh Token Flow**
     - **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**

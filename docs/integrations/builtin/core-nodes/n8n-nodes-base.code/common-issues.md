@@ -126,7 +126,7 @@ By design, Code nodes can't access credentials. They don't have access to n8n’
 
 Attempts to reference credentials in a Code node using expressions or methods like `this.getCredentials()` or `$getCredentials()` will result in errors, such as `this.getCredentials is not a function` and `$getCredentials is not defined`. 
 
-If you need to make authenticated API calls, use the HTTP Request node [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) which provides credential support.
+If you need to make authenticated API calls, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) which provides credential support.
 
 To work with credentials dynamically, handle the credential selection logic outside of the Code node:
 

@@ -43,8 +43,8 @@ This release contains bug fixes.
 
 ### Contributors
 
-[ByteEVM](https://github.com/ByteEVM)
-[onyxraven](https://github.com/onyxraven)
+- [ByteEVM](https://github.com/ByteEVM)
+- [onyxraven](https://github.com/onyxraven)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

@@ -23,7 +23,7 @@ You can use the Data Table node to:
 - Query and retrieve rows using matching conditions
 
 /// note | Working with data tables
-In addition to using the Data Tables node in a workflow, you can view and manage data tables manually from the **Data Tables** tab in your project **Overview**.
+As well as using the Data Tables node in a workflow, you can view and manage data tables manually from the **Data Tables** tab in your project **Overview**.
 
 For information about working with data tables in this tab, and guidance on when to use data tables and their limitations, see [Data tables](/data/data-tables.md).
 ///

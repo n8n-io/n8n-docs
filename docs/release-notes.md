@@ -41,8 +41,8 @@ This release contains bug fixes.
 
 ### Contributors
 
-- [ByteEVM](https://github.com/ByteEVM)
-- [onyxraven](https://github.com/onyxraven)
+[ByteEVM](https://github.com/ByteEVM)  
+[onyxraven](https://github.com/onyxraven)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -89,8 +89,8 @@ Improved the reliability of the workflows and credentials listing pages for larg
 
 ### Contributors
 
-[peteawood](https://github.com/peteawood)
-[horiyee](https://github.com/horiyee)
+[peteawood](https://github.com/peteawood)  
+[horiyee](https://github.com/horiyee)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -211,8 +211,8 @@ The project role selector now separates built-in system roles and custom roles i
 
 ### Contributors
 
-[ByteEVM](https://github.com/ByteEVM)
-[LudwigGerdes](https://github.com/LudwigGerdes)
+[ByteEVM](https://github.com/ByteEVM)  
+[LudwigGerdes](https://github.com/LudwigGerdes)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -508,10 +508,10 @@ Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/bui
 </div>
 ### Contributors
 
-- [AbdulTawabJuly](https://github.com/AbdulTawabJuly)
-- [ByteEVM](https://github.com/ByteEVM)
-- [sudarshan12s](https://github.com/sudarshan12s)
-- [KaanAydinli](https://github.com/KaanAydinli)
+[AbdulTawabJuly](https://github.com/AbdulTawabJuly)  
+[ByteEVM](https://github.com/ByteEVM)  
+[sudarshan12s](https://github.com/sudarshan12s)  
+[KaanAydinli](https://github.com/KaanAydinli)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -800,7 +800,7 @@ n8n automatically totals the time from all Time Saved nodes executed during each
 
 [Akcthecoder200](https://github.com/Akcthecoder200)  
 [rishiraj-58](https://github.com/rishiraj-58)  
-[rlafferty](https://github.com/rlafferty)
+[rlafferty](https://github.com/rlafferty)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

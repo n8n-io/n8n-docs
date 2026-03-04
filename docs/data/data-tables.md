@@ -22,11 +22,19 @@ Data tables integrate data storage within your n8n environment. Using data table
 - Combining data from different sources to enrich your datasets
 - Creating lookup tables as quick reference points within workflows
 
-## How to use data tables
+## Working with data tables
 
-There are two parts to working with data tables: creating them and interacting with them in workflows.
+You can create, filter, and manage data tables and their data in two ways: using the **Data Table node**, and the **Data tables tab**.
 
-### Step 1: Creating a data table
+### Data Table node
+
+Use data tables inside workflows to store and manage data, enabling automated creation, retrieval, updates, and deletions as your workflow runs.
+
+See the [Data Table node](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md) for full documentation.
+
+### Data table tab
+
+View and work with data tables directly in the UI through a visual interface. This lets you browse and edit data, and manage tables without building a workflow.
 
 1. In your n8n project, select the **Data tables** tab.
 2. Click the split button located in the top right corner and select **Create Data table**.
@@ -34,18 +42,17 @@ There are two parts to working with data tables: creating them and interacting w
     ![Data table creation](/_images/data/data-tables/create-data-table.png)
 
 3. Enter a descriptive name for your table.
+
+4. Select how to create the table:
+    - **From scratch**: Create a new table by manually defining columns and adding rows using the visual interface.
+    - **Import CSV**: Upload a CSV file to automatically create the table structure and populate it with data from the file.
    
-   In the table view that appears, you can:
-   
-   * Add and reorder columns to organize your data
-   * Add, delete, and update rows
-   * Edit existing data
-
-### Step 2: Interacting with data tables in workflows
-
-Interact with data tables in your workflow using the **Data table** node, which allows you to retrieve, update, and manipulate the data stored in a data table.
-
-See [Data table node](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md).
+    In the table view that appears, you can:
+    
+    * Rename or delete the data table or its columns
+    * Add and reorder columns to organize your data
+    * Add, delete, and update rows
+    * Edit existing data
 
 ## Considerations and limitations of data tables
 
@@ -76,3 +83,5 @@ To transfer data between n8n and external tools, use workflows that:
 3. Import data into another system or data table accordingly.
 
     ![Data export workflow](/_images/data/data-tables/data-table-export.png)
+
+You can also download a CSV of your data table. From the **Data tables** tab, click the three dot menu in the top left and select **Download CSV**.

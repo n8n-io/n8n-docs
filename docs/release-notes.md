@@ -84,12 +84,20 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.0...n8n@2.10.0) for this version.<br />
 **Release date:** 2026-02-23
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+### Multiple connections per external secrets provider
+
+You can now set up more than one connection for a single [external secrets](/external-secrets.md) provider. The updated UI makes it easier to configure and manage multiple connections under the same provider type.
+
+### Performance improvements for large workflow and credential volumes
+
+Improved the reliability of the workflows and credentials listing pages for large-scale instances, reducing loading times by 30% to 80%.
 
 ### Contributors
 
-[peteawood](https://github.com/peteawood)  
-[horiyee](https://github.com/horiyee)  
+[peteawood](https://github.com/peteawood)
+[horiyee](https://github.com/horiyee)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -178,12 +186,43 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.9.0) for this version.<br />
 **Release date:** 2026-02-16
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Personal space policies (Enterprise)
+
+A new **Security & policies** settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
+
+Available policies include:
+
+- **Sharing**: control whether users can share workflows and credentials from their personal space.
+- **Workflow publishing**: control whether users can publish workflows from their personal space.
+
+This release builds on the recent updates to the permissions model, including [custom project roles](/user-management/rbac/custom-roles.md), to better support policy-driven governance.
+
+Personal space policies are available on n8n Enterprise.
+
+<figure markdown="span">
+    ![Security and policies settings](/_images/release-notes/personal_space_policies.png)
+    <figcaption>The new Security & policies settings section.</figcaption>
+</figure>
+
+### Custom roles: improved discoverability and permission visibility (Enterprise)
+
+The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
+
+<figure markdown="span">
+    ![Custom roles selector](/_images/release-notes/custom_roles_selector.png)
+    <figcaption>System roles and custom roles are now displayed in separate sections.</figcaption>
+</figure>
+
+</div>
 
 ### Contributors
 
-[ByteEVM](https://github.com/ByteEVM)  
-[LudwigGerdes](https://github.com/LudwigGerdes)  
+[ByteEVM](https://github.com/ByteEVM)
+[LudwigGerdes](https://github.com/LudwigGerdes)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -244,9 +283,38 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.8.0) for this version.<br />
 **Release date:** 2026-02-09
 
+This release contains bug fixes and features.
 
+<div class="n8n-new-features" markdown>
 
-This release contains bug fixes.
+### Stronger external secrets validation (Enterprise)
+
+n8n now verifies that the current user has access to the referenced vaults before allowing a credential that uses **$secrets...** expressions to be saved. If access is missing, the save operation fails. This prevents secret values from being exposed through guessed secret paths.
+
+### Improved API auditability (Enterprise)
+
+API endpoints have been expanded to provide clearer visibility into project membership and credentials:
+
+- `GET /projects/{projectId}/users` returns all members of a project including their assigned role.
+- `GET /credentials` returns a paginated list of all credentials across the instance, including the project they belong to.
+
+This makes it easier to audit who has access to which projects and credentials without manually reviewing each one in the UI.
+
+### More granular workflow permissions
+
+Workflow publishing permissions for [custom roles](/user-management/rbac/custom-roles.md) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
+
+### Performance and stability improvements
+
+- Improved performance for instances with very large user counts, reducing slowdowns caused by user-related operations.
+- Fixed a high-memory issue that could cause crashes during Source Control push flows in large deployments with many workflows and credentials.
+
+</div>
+
+### Minor fixes
+
+- Canvas: improved node repositioning on insertion to reduce overlaps and spacing issues.
+- Log streaming: fixed proxy configuration handling for webhook destinations so requests work reliably when a proxy is configured.
 
 ### Deprecated nodes
 

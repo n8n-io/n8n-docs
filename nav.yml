@@ -492,6 +492,7 @@ nav:
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
+        - Launchpad by Pegasystems: integrations/builtin/app-nodes/n8n-nodes-base.pegalaunchpad.md
         - PayPal: integrations/builtin/app-nodes/n8n-nodes-base.paypal.md
         - Peekalink: integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md
         - Perplexity: integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity.md
@@ -1008,6 +1009,7 @@ nav:
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
+        - integrations/builtin/credentials/launchpad.md
         - integrations/builtin/credentials/paypal.md
         - integrations/builtin/credentials/peekalink.md
         - integrations/builtin/credentials/perplexity.md

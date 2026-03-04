@@ -34,7 +34,7 @@ See the [Data Table node](/integrations/builtin/core-nodes/n8n-nodes-base.datata
 
 ### DataTable API endpoint
 
-Work with data tables programmatically using the `\datatables` endpoint in the n8n API.
+Work with data tables programmatically using the `/datatables` endpoint in the n8n API.
 
 See the [API reference](https://docs.n8n.io/api/api-reference/#tag/datatable) for full documentation.
 

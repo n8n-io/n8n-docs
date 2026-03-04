@@ -135,7 +135,7 @@ If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2
 5. On the App Manager page, select **New External Client App**.
 6. Enter the required **Basic Info** for your external client app, including a **Name** and **Contact Email address**.
 7. Under **API (Enable OAuth Settings)**, select **Enable OAuth**.
-8. In the **Callback URL** box, add your n8n OAuth callback URL (for example, `https://your-n8n-instance.com/rest/oauth2-credential/callback`, For n8n cloud this will be `https://oauth.n8n.cloud/oauth2/callback`).
+8. In the **Callback URL** box, add your n8n OAuth callback URL (for example, `https://your-n8n-instance.com/rest/oauth2-credential/callback`. For n8n Cloud, this will be `https://oauth.n8n.cloud/oauth2/callback`).
 9. In the **OAuth Scopes** section, select these scopes:
     - **Full access (full)**
     - **Perform requests at any time (refresh_token, offline_access)**

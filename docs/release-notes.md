@@ -560,10 +560,10 @@ Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/bui
 </div>
 ### Contributors
 
-[AbdulTawabJuly](https://github.com/AbdulTawabJuly)
-[ByteEVM](https://github.com/ByteEVM)
-[sudarshan12s](https://github.com/sudarshan12s)
-[KaanAydinli](https://github.com/KaanAydinli)
+- [AbdulTawabJuly](https://github.com/AbdulTawabJuly)
+- [ByteEVM](https://github.com/ByteEVM)
+- [sudarshan12s](https://github.com/sudarshan12s)
+- [KaanAydinli](https://github.com/KaanAydinli)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

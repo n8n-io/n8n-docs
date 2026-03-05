@@ -788,6 +788,7 @@ nav:
             - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
           - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
+          - TrueFoundry AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchattruefoundry.md
           - Vercel AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md
           - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
@@ -1110,6 +1111,7 @@ nav:
         - integrations/builtin/credentials/travisci.md
         - integrations/builtin/credentials/trellixepo.md
         - integrations/builtin/credentials/trello.md
+        - integrations/builtin/credentials/truefoundry.md
         - integrations/builtin/credentials/twake.md
         - integrations/builtin/credentials/twilio.md
         - integrations/builtin/credentials/twist.md

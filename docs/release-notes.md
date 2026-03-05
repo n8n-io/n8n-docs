@@ -32,8 +32,6 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
-
-
 ## n8n@2.11.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.11.0) for this version.<br />
@@ -44,12 +42,9 @@ This release contains bug fixes.
 ### Contributors
 
 [ByteEVM](https://github.com/ByteEVM)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
 [onyxraven](https://github.com/onyxraven)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.9.4-exp.0
 
@@ -57,8 +52,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.4...n8n@2.9.4-e
 **Release date:** 2026-02-27
 
 This release contains bug fixes.
-
-
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -84,7 +77,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.0...n8n@2.10.0) for this version.<br />
 **Release date:** 2026-02-23
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+### Multiple connections per external secrets provider
+
+You can now set up more than one connection for a single [external secrets](/external-secrets.md) provider. The updated UI makes it easier to configure and manage multiple connections under the same provider type.
+
+### Performance improvements for large workflow and credential volumes
+
+Improved the reliability of the workflows and credentials listing pages for large-scale instances, reducing loading times by 30% to 80%.
 
 ### Contributors
 
@@ -101,7 +102,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.3...n8n@2.9.4) 
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.9.3-exp.0
 
@@ -162,7 +162,6 @@ This is the `stable` version. n8n recommends using the `stable` version. The `be
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.7.5
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.4...n8n@2.7.5) for this version.<br />
@@ -172,13 +171,43 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.9.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.9.0) for this version.<br />
 **Release date:** 2026-02-16
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Personal space policies (Enterprise)
+
+A new **Security & policies** settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
+
+Available policies include:
+
+- **Sharing**: control whether users can share workflows and credentials from their personal space.
+- **Workflow publishing**: control whether users can publish workflows from their personal space.
+
+This release builds on the recent updates to the permissions model, including [custom project roles](/user-management/rbac/custom-roles.md), to better support policy-driven governance.
+
+Personal space policies are available on n8n Enterprise.
+
+<figure markdown="span">
+    ![Security and policies settings](/_images/release-notes/personal_space_policies.png)
+    <figcaption>The new Security & policies settings section.</figcaption>
+</figure>
+
+### Custom roles: improved discoverability and permission visibility (Enterprise)
+
+The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
+
+<figure markdown="span">
+    ![Custom roles selector](/_images/release-notes/custom_roles_selector.png)
+    <figcaption>System roles and custom roles are now displayed in separate sections.</figcaption>
+</figure>
+
+</div>
 
 ### Contributors
 
@@ -186,7 +215,6 @@ This release contains bug fixes.
 [LudwigGerdes](https://github.com/LudwigGerdes)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.8.2
 
@@ -196,7 +224,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.1...n8n@2.8.2) 
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.8.1
 
@@ -225,28 +252,52 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.6.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.3...n8n@2.6.4) for this version.<br />
 **Release date:** 2026-02-06
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.8.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.8.0) for this version.<br />
 **Release date:** 2026-02-09
 
+This release contains bug fixes and features.
 
+<div class="n8n-new-features" markdown>
 
-This release contains bug fixes.
+### Stronger external secrets validation (Enterprise)
+
+n8n now verifies that the current user has access to the referenced vaults before allowing a credential that uses **$secrets...** expressions to be saved. If access is missing, the save operation fails. This prevents secret values from being exposed through guessed secret paths.
+
+### Improved API auditability (Enterprise)
+
+API endpoints have been expanded to provide clearer visibility into project membership and credentials:
+
+- `GET /projects/{projectId}/users` returns all members of a project including their assigned role.
+- `GET /credentials` returns a paginated list of all credentials across the instance, including the project they belong to.
+
+This makes it easier to audit who has access to which projects and credentials without manually reviewing each one in the UI.
+
+### More granular workflow permissions
+
+Workflow publishing permissions for [custom roles](/user-management/rbac/custom-roles.md) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
+
+### Performance and stability improvements
+
+- Improved performance for instances with very large user counts, reducing slowdowns caused by user-related operations.
+- Fixed a high-memory issue that could cause crashes during Source Control push flows in large deployments with many workflows and credentials.
+
+</div>
+
+### Minor fixes
+
+- Canvas: improved node repositioning on insertion to reduce overlaps and spacing issues.
+- Log streaming: fixed proxy configuration handling for webhook destinations so requests work reliably when a proxy is configured.
 
 ### Deprecated nodes
 
@@ -265,27 +316,19 @@ The [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchai
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-
 ## n8n@2.7.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.1...n8n@2.7.2) for this version.<br />
 **Release date:** 2026-02-04
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.7.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.0...n8n@2.7.1) for this version.<br />
 **Release date:** 2026-02-03
-
-
 
 This release contains a bug fix.
 
@@ -295,8 +338,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.0...n8n@2.7.0) for this version.<br />
 **Release date:** 2026-02-02
-
-
 
 This release contains bug fixes.
 
@@ -323,16 +364,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.2...n8n@2.6.3) for this version.<br />
 **Release date:** 2026-02-02
 
-
-
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.4.8
 
@@ -343,13 +377,10 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.6.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.6.1...n8n@2.6.2) for this version.<br />
 **Release date:** 2026-01-28
-
-
 
 This release contains bug fixes.
 
@@ -359,8 +390,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.6...n8n@2.4.7) for this version.<br />
 **Release date:** 2026-01-28
-
-
 
 This release contains a bug fix.
 
@@ -375,20 +404,14 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.4.6
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.5...n8n@2.4.6) for this version.<br />
 **Release date:** 2026-01-23
 
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.4.5
 
@@ -399,14 +422,10 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-
 ## n8n@2.6.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.5.0...n8n@2.6.0) for this version.<br />
 **Release date:** 2026-01-26
-
-
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown> 
@@ -449,14 +468,10 @@ Get precise control over where human judgment is required, without limiting what
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-
 ## n8n@2.5.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.5.0) for this version.<br />
 **Release date:** 2026-01-20
-
-
 
 This release contains bug fixes.
 <div class="n8n-new-features" markdown>
@@ -495,12 +510,10 @@ Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/bui
 
 [AbdulTawabJuly](https://github.com/AbdulTawabJuly)  
 [ByteEVM](https://github.com/ByteEVM)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
 [sudarshan12s](https://github.com/sudarshan12s)  
 [KaanAydinli](https://github.com/KaanAydinli)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.4.3
 
@@ -520,20 +533,14 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-
 ## n8n@2.4.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.3...n8n@2.4.4) for this version.<br />
 **Release date:** 2026-01-16
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.3.5
 
@@ -544,14 +551,10 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
-
 ## n8n@2.4.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.4.0...n8n@2.4.1) for this version.<br />
 **Release date:** 2026-01-13
-
-
 
 This release contains a bug fix.
 
@@ -565,7 +568,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.1...n8n@2.3.2) 
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.4.0
 
@@ -595,39 +597,28 @@ When updating, you can either replace all credential data at once (useful for bu
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.3.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.2...n8n@2.3.3) for this version.<br />
 **Release date:** 2026-01-13
 
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 ## n8n@2.3.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.3...n8n@2.3.4) for this version.<br />
 **Release date:** 2026-01-13
 
-
-
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
 
 ## n8n@2.3.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.3.0...n8n@2.3.1) for this version.<br />
 **Release date:** 2026-01-07
-
-
 
 This release contains bug fixes.
 
@@ -646,8 +637,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.2.3...n8n@2.2.4) for this version.<br />
 **Release date:** 2026-01-06
-
-
 
 This release contains a bug fix.
 
@@ -811,7 +800,7 @@ n8n automatically totals the time from all Time Saved nodes executed during each
 
 [Akcthecoder200](https://github.com/Akcthecoder200)  
 [rishiraj-58](https://github.com/rishiraj-58)  
-[rlafferty](https://github.com/rlafferty)
+[rlafferty](https://github.com/rlafferty)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -875,7 +864,6 @@ Subtle refinements to the workflow editor canvas and reorganized sidebar navigat
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-
 ## n8n@2.0.0-rc.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.0.0-rc.3...n8n@2.0.0-rc.4) for this version.<br />
@@ -924,7 +912,6 @@ This release contains bug fixes.
 [farzad528](https://github.com/farzad528)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
 
 /// note | Older versions
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)

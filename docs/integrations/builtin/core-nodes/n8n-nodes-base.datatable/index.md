@@ -37,7 +37,7 @@ The Data Table node supports the following resources:
 
 ### Operations
 
-Available operations are summarized below. For detailed information on parameters for different operation types, refer to the [Table operations](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables.md) and [Row operations](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/rows.md) pages.
+See available operations below. For detailed information on parameters for different operation types, refer to the [Table operations](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables.md) and [Row operations](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/rows.md) pages.
 
 * **Rows**
     * [**Delete:**](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/rows.md#delete-row) Delete one or more rows.

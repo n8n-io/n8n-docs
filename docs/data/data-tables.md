@@ -60,6 +60,13 @@ View and work with data tables directly in the UI through a visual interface. Th
     * Add, delete, and update rows
     * Edit existing data
 
+## Exporting and importing data
+
+From the **Data tables** tab, you can: 
+
+- Import CSV data directly into a data table, as described in the [previous section](#data-table-tab)
+- Download a CSV of your data table. Click the three dot menu in the top left and select **Download CSV**.
+
 ## Considerations and limitations of data tables
 
 - Data tables are suitable for light to moderate data storage. By default, the total storage used by all data tables in an instance is limited to 50MB. In self-hosted environments, you can increase this default size limit using the environment variable `N8N_DATA_TABLES_MAX_SIZE_BYTES`.
@@ -79,15 +86,3 @@ View and work with data tables directly in the UI through a visual interface. Th
 | Structured data | ✓ | ✗ |
 | Scoped to projects | ✓ | ✗ |
 | Use values as expressions | ✗ | ✓ |
-
-## Exporting and importing data
-
-To transfer data between n8n and external tools, use workflows that:
-
-1. Retrieve data from a data table.
-2. Export it using an API or file export.
-3. Import data into another system or data table accordingly.
-
-    ![Data export workflow](/_images/data/data-tables/data-table-export.png)
-
-You can also download a CSV of your data table. From the **Data tables** tab, click the three dot menu in the top left and select **Download CSV**.

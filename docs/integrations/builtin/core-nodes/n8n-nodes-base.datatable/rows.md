@@ -20,10 +20,10 @@ Enter these parameters:
     - **By Name:** Enter the name of your data table.
     - **By ID:** Enter the ID of your data table
 - **Must Match:** Select whether to delete rows that match **Any Condition** or **All Conditions** defined in the next step.
-- **Conditions:** Click **Add Condition** to define which rows from the data table should be operated on. You can add multiple conditions. For each one:
+- **Conditions:** Click **Add Condition** to define which rows from the data table to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 
 ### Delete row options
 
@@ -44,12 +44,12 @@ Enter these parameters:
     - **By Name:** Enter the name of your data table.
     - **By ID:** Enter the ID of your data table
 - **Must Match:** Select whether to get rows that match **Any Condition** or **All Conditions** defined in the next step.
-- **Conditions:** Click **Add Condition** to define which rows from the data table should be operated on. You can add multiple conditions. For each one:
+- **Conditions:** Click **Add Condition** to define which rows from the data table to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 - **Return All:** Enable to return all matching rows. Or, disable and enter a **Limit** for the number of rows to return, for example `50`.
-- **Order By:** Enable to define which column results should be ordered on, and in which direction (ascending or descending). Or, disable for no ordering of results.
+- **Order By:** Enable to define the column to order results on, and the direction (ascending or descending). Or, disable for no ordering of results.
 
 ## If row exists
 
@@ -66,8 +66,8 @@ Enter these parameters:
 - **Must Match:** Select whether rows must match **Any Condition** or **All Conditions** defined in the next step.
 - **Conditions:** Click **Add Condition** to define the data table rows to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 
 ## If row does not exist
 
@@ -84,8 +84,8 @@ Enter these parameters:
 - **Must Match:** Select whether rows must match **Any Condition** or **All Conditions** defined in the next step.
 - **Conditions:** Click **Add Condition** to define the data table rows to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 
 ## Insert row
 
@@ -124,8 +124,8 @@ Enter these parameters:
 - **Must Match:** Select whether to update rows that match **Any Condition** or **All Conditions** defined in the next step.
 - **Conditions:** Click **Add Condition** to define the data table rows to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 - **Mapping Column Mode:** Select whether to: 
     - **Map Each Column Manually:** Explicitly select which incoming data fields to map to which column. This allows you to map even when the incoming data field names don't match the data table column names. You can choose to delete certain values from the mapping.
     - **Map Auomatically:** Allow the node to automatically match data fields to columns by name. For successful mapping, the field names in your incoming data must exactly match the column names in the data table. All fields will be mapped.
@@ -149,8 +149,8 @@ Use this operation to upsert into a data table. If a row matching the defined co
 - **Must Match:** Select whether to upsert rows that match **Any Condition** or **All Conditions** defined in the next step.
 - **Conditions:** Click **Add Condition** to define the data table rows to operate on. You can add multiple conditions. For each one:
     - **Column:** Select the column you want to compare.
-    - **Condition:** Choose how the column value should be compared: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
-    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field isn't required for **Is Empty** and **Is Not Empty** conditions.
+    - **Condition:** Choose how to compare the column value: **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Is Empty**, or **Is Not Empty**.
+    - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 - **Mapping Column Mode:** Select whether to: 
     - **Map Each Column Manually:** Explicitly select which incoming data fields to map to which column. This allows you to map even when the incoming data field names don't match the data table column names. You can choose to delete certain values from the mapping.
     - **Map Auomatically:** Allow the node to automatically match data fields to columns by name. For successful mapping, the field names in your incoming data must exactly match the column names in the data table. All fields will be mapped.
@@ -159,4 +159,4 @@ Use this operation to upsert into a data table. If a row matching the defined co
 
 Use these options to further refine the action's behavior:
 
-- **Dry Run:** Enable to simulate upsertion without modifying the table. The node returns rows that would be affected, including their state before and after the operation.
+- **Dry Run:** Enable to simulate the upsert operation without modifying the table. The node returns rows that would be affected, including their state before and after the operation.

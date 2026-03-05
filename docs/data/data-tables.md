@@ -53,6 +53,7 @@ See [Data table node](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/
 - When your data tables approach 80% of your storage limit, n8n displays a warning. A final warning appears when you reach the storage limit. Exceeding this limit will disable manual additions to tables and cause workflow execution errors during attempts to insert or update data.
 - By default, data tables created within a project are accessible to all team members in that project.
 - Tables created in a **Personal** space are only accessible by their creator.
+- When fetching rows with the filter on `datetime` columns, the provided value cannot include the timezone. For example, the good value would be `Date.toUTC()` or string as `2025-10-13T22:00:00.000Z`, and the incorrect value would be `2025-10-14T00:00:00.000+02:00` that is received using `Date.toDateTime()` or `Date.toLocal()`.
 
 ## Data tables versus variables
 

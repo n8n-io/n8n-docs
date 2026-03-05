@@ -32,10 +32,10 @@ Many people find it easier to take in new information in video format. This tuto
 
 If you're already familiar with AI, feel free to skip this section. This is a basic introduction to AI concepts and how they can be used in n8n workflows.
 
-An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm), which generate text based
-on input by predicting the next word. While LLMs only process input to produce
-output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
-their outputs, and make decisions to complete tasks and solve problems.
+An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm). LLMs generate text based
+on input by predicting the next word, but they can also be used to select the best tool to achieve a task, or even make complex decisions.
+While LLMs only process input to produce text or JSON output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
+their outputs, complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 
 

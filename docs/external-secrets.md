@@ -33,7 +33,8 @@ n8n only supports plaintext values for secrets, not JSON objects.
 1. Select one of the supported secret providers.
 1. Enter the credentials for your provider. Refer to the provider-specific sections below for details.
 1. **Save** your configuration.
-1. As long as this store is connected, you can reference its secrets in credentials.
+
+As long as this store is connected, you can reference its secrets in credentials.
 
 ### 1Password
 

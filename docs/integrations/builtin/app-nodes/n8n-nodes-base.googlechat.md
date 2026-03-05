@@ -34,6 +34,20 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
     * Get a space
     * Get all spaces the caller is a member of
 
+
+### Creating messages in threads
+When creating a message you can either create it in the space (default) or decide to reply to a thread. To do that you have to add the additional parameter `Message Reply Option`, enable the option `JSON Parameters` and specify either `thread.threadKey` or `thread.name` in the json payload. When setting it to `Reply and fallback to new thread` and having the thread key or name provided, the Google API will create a message in that thread if found, else it will create the message in the space. With the option `Reply or fail` the Google API will fail and return an error if the provided thread could not be found. 
+An example json payload can be found below. You have to provide either threadKey or name. 
+```
+{
+  "text": {{ $json.answer.toJsonString() }},
+  "thread": {
+    "name": "spaces/{{ $json.space_id}}/threads/{{ $json.thread_id }}",
+    "threadKey": "{{ $json.thread_id }}"
+  }
+}
+```
+
 --8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples

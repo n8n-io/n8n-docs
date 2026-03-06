@@ -15,6 +15,11 @@ There are two execution modes:
 * Production: a production workflow is one that runs automatically. To enable this, set the workflow to **Active**.
 
 
+## How executions are counted towards the quota:
+
+Paid plans (cloud or self-hosted) have an execution limit quota. Only production executions, with trigger/schedule/pooling that runs automatically, are counted towards the execution limit's quota. Manual executions are not. This is regardless of the instance's environment (dev or prod, for example). As long as it's a production execution, it counts towards the limits. 
+
+
 ## Execution lists
 
 n8n provides two execution lists:

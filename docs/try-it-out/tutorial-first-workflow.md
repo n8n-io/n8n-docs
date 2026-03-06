@@ -58,7 +58,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     1. Select the  **Credential for NASA API** dropdown.
     1. Select **Create new credential**. n8n opens the credentials view.
     1. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
-    1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
+    1. Check your email account for the API key. If you don’t see it, check your junk or spam folder. Copy the key, and paste it into **API Key** in n8n.
     1. Select **Save**.
     1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
 
@@ -75,7 +75,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     ![image showing the expression above generating a date](/_images/try-it-out/tutorial-date.png)
 
     ??? explanation "Date and time formats in n8n..."
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
+        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/data/specific-data-types/luxon.md).
 
 1. Close the **Edit Expression** modal to return to the NASA node.
 1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.

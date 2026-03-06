@@ -405,7 +405,7 @@ paths:
       tags:
         - Execution
       summary: Stop an execution
-      description: Stop a running execution from your instance.
+      description: Stop an execution by id.
       parameters:
         - $ref: '#/components/parameters/executionId'
       responses:

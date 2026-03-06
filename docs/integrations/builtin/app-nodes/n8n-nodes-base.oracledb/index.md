@@ -63,7 +63,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Oracle Database credential](/integrations/builtin/credentials/oracledb.md).
 - **Operation**: Execute SQL **Execute SQL**.
-- **Statement**: The SQL statement to execute. You can use n8n [expressions](/code/expressions.md) and positional parameters like `:1`, `:2`, or named parameters like `:name`, `:id` to use with [Use bind parameters](#use-bind-parameters).
+- **Statement**: The SQL statement to execute. You can use n8n [expressions](/data/expressions.md) and positional parameters like `:1`, `:2`, or named parameters like `:name`, `:id` to use with [Use bind parameters](#use-bind-parameters).
 To run a PL/SQL procedure, for example `demo`, you can use:
 ```sql
 BEGIN
@@ -96,7 +96,7 @@ Enter these parameters:
 #### Insert options
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.
@@ -119,7 +119,7 @@ Enter these parameters:
 #### Insert or Update options
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.
@@ -171,7 +171,7 @@ Enter these parameters:
 #### Update options
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Statement Batching**: The way to send statements to the database:
 	- **Single Statement**: A single statement for all incoming items.
 	- **Independently**: Execute one statement per incoming item of the execution.

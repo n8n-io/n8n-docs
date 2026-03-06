@@ -221,7 +221,10 @@ nav:
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md
+        - Data Table:
+          - Data Table: integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md
+          - Row operations: integrations/builtin/core-nodes/n8n-nodes-base.datatable/rows.md
+          - Table operations: integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
         - integrations/builtin/core-nodes/n8n-nodes-base.set.md

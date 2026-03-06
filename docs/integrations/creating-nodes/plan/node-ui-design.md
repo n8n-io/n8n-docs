@@ -87,12 +87,12 @@ Order fields by:
 There are five types of help built in to the GUI:
 
 * Info boxes: yellow boxes that appear between fields. Refer to [UI elements | Notice](/integrations/creating-nodes/build/reference/ui-elements.md#notice) for more information.
-  * Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
+    * Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
 * Parameter hints: lines of text displayed beneath a user input field. Use this when there's something the user needs to know, but an info box would be excessive.
 * Node hints: provide help in the input panel, output panel, or node details view. Refer to [UI elements | Hints](/integrations/creating-nodes/build/reference/ui-elements.md#hints) for more information.
 * Tooltips: callouts that appear when the user hovers over the tooltip icon !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png). Use tooltips for extra information that the user might need.
-  * You don't have to provide a tooltip for every field. Only add one if it contains useful information. 
-  * When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
+    * You don't have to provide a tooltip for every field. Only add one if it contains useful information. 
+    * When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
 * Placeholder text: n8n can display placeholder text in a field where the user hasn't entered a value. This can help the user know what's expected in that field.
 
 Info boxes, hints, and tooltips can contain links to more information.

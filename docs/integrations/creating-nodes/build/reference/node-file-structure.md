@@ -35,12 +35,12 @@ A basic pattern is to separate out operations. Refer to the [GithubIssues starte
 
 For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook) as examples. 
 
-  * `actions`: a directory containing sub-directories that represent resources.
+* `actions`: a directory containing sub-directories that represent resources.
     * Each sub-directory should contain two types of files: 
       * An index file with resource description (named either `<resourceName>.resource.ts` or `index.ts`) 
       * Files for operations `<operationName>.operation.ts`. These files should have two exports: `description` of the operation and an `execute` function.
-  * `methods`: an optional directory dynamic parameters' functions.  
-  * `transport`: a directory containing the communication implementation.
+* `methods`: an optional directory dynamic parameters' functions.  
+* `transport`: a directory containing the communication implementation.
 
 
 ## Versioning

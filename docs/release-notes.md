@@ -34,17 +34,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-## n8n@2.10.4
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.3...n8n@2.10.4) for this version.<br />
-**Release date:** 2026-03-06
-
-This release contains bug fixes.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
 ## n8n@2.11.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.11.0...n8n@2.11.1) for this version.<br />
@@ -70,10 +59,11 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-## n8n@2.9.4-exp.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.4...n8n@2.9.4-exp.0) for this version.<br />
-**Release date:** 2026-02-27
+## n8n@2.10.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.3...n8n@2.10.4) for this version.<br />
+**Release date:** 2026-03-06
 
 This release contains bug fixes.
 
@@ -99,6 +89,8 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
+
+
 ## n8n@2.10.1
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.10.1) for this version.<br />
 **Release date:** 2026-02-25
@@ -106,6 +98,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.10.1
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 
 ## n8n@2.10.0
 
@@ -138,14 +132,18 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-## n8n@2.9.3-exp.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.3...n8n@2.9.3-exp.0) for this version.<br />
-**Release date:** 2026-02-25
+
+## n8n@2.9.4-exp.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.4...n8n@2.9.4-exp.0) for this version.<br />
+**Release date:** 2026-02-27
 
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 
 ## n8n@2.9.3
 
@@ -155,6 +153,19 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.2...n8n@2.9.3) 
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.9.3-exp.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.3...n8n@2.9.3-exp.0) for this version.<br />
+**Release date:** 2026-02-25
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 
 ## n8n@2.9.2
 
@@ -175,6 +186,19 @@ This is the `beta` version. n8n recommends using the `stable` version. The `beta
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.9.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.9.0) for this version.<br />
+**Release date:** 2026-02-16
+
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+
 
 ## n8n@2.8.4
 
@@ -197,23 +221,6 @@ This is the `stable` version. n8n recommends using the `stable` version. The `be
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-## n8n@2.7.5
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.4...n8n@2.7.5) for this version.<br />
-**Release date:** 2026-02-13
-
-This release contains a bug fix.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-## n8n@2.9.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.9.0) for this version.<br />
-**Release date:** 2026-02-16
-
-This release contains bug fixes and features.
-
-<div class="n8n-new-features" markdown>
 
 ### Personal space policies (Enterprise)
 
@@ -268,6 +275,18 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.8.1) 
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.7.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.7.4...n8n@2.7.5) for this version.<br />
+**Release date:** 2026-02-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 ## n8n@2.7.4
 

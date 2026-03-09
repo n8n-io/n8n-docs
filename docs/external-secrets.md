@@ -8,7 +8,7 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports the following secret providers: 1Password, AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, and HashiCorp Vault.
+* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, and HashiCorp Vault.
 * From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
@@ -38,7 +38,11 @@ As long as this store is connected, you can reference its secrets in credentials
 
 ### 1Password
 
-Provide your **Connect Server URL** and **Access Token**. You need a running [1Password Connect Server](https://developer.1password.com/docs/connect/get-started/). The Connect Server URL is the address of your server (for example, `http://localhost:8080`). The Access Token is the token you created for the Connect Server integration.
+/// note | 1Password Connect Server required
+n8n integrates with [1Password Connect Server](https://developer.1password.com/docs/connect/get-started/), a self-hosted API for machine access to 1Password. This isn't the same as a personal or team 1Password account. You must deploy and run a Connect Server to use this provider.
+///
+
+Provide your **Connect Server URL** and **Access Token**. The Connect Server URL is the address where your server is accessible (for example, `http://localhost:8080`). The Access Token is the token you created for the Connect Server integration.
 
 n8n reads all vaults and items accessible to the token. Each 1Password item becomes a secret, with the item's fields accessible as properties. Use `{{ $secrets.<vault-name>.<item-title>.<field-label> }}` to access a specific field value.
 

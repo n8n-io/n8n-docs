@@ -8,7 +8,7 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports the following secret providers: AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager and HashiCorp Vault.
+* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, and HashiCorp Vault.
 * From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
@@ -31,79 +31,101 @@ n8n only supports plaintext values for secrets, not JSON objects.
 1. Click **Add secrets vault**.
 1. Enter a unique name for your vault. This will be the first segment when referencing this vault in a `{{ $secrets.<vault-name>... }}` expression in a credential.
 1. Select one of the supported secret providers.
-1. Enter the credentials for your provider:
-	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
-	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
-
-		To give n8n access to all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
-		```json
-		{
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Sid": "AccessAllSecrets",
-					"Effect": "Allow",
-					"Action": [
-						"secretsmanager:ListSecrets",
-						"secretsmanager:BatchGetSecretValue",
- 						"secretsmanager:GetResourcePolicy",
-						"secretsmanager:GetSecretValue",
-						"secretsmanager:DescribeSecret",
-						"secretsmanager:ListSecretVersionIds",
-					],
-					"Resource": "*"
-				}
-			]
-		}
-		```
-
-		You can also be more restrictive and give n8n access to select specific AWS Secret Manager secrets. You still need to allow the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions to access all resources. These permissions allow n8n to retrieve ARN-scoped secrets, but don't provide access to the secret values.
-
-		Next, you need set the scope for the `secretsmanager:GetSecretValue` permission to the specific Amazon Resource Names (ARNs) for the secrets you wish to share with n8n. Ensure you use the correct region and account ID in each resource ARNs. You can find the ARN details in the AWS dashboard for your secrets.
-		
-		For example, the following IAM policy only allows access to secrets with a name starting with `n8n` in your specified AWS account and region:
-
-		```json
-		{
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Sid": "ListingSecrets",
-					"Effect": "Allow",
-					"Action": [
-						"secretsmanager:ListSecrets",
-						"secretsmanager:BatchGetSecretValue"
-					],
-					"Resource": "*"
-				},
-				{
-					"Sid": "RetrievingSecrets",
-					"Effect": "Allow",
-					"Action": [
-						"secretsmanager:GetSecretValue",
-						"secretsmanager:DescribeSecret"
-					],
-					"Resource": [
-						"arn:aws:secretsmanager:us-west-2:123456789000:secret:n8n*"
-					]
-				}
-			]
-		}
-		```
-
-		For more IAM permission policy examples, consult the [AWS documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_iam-policies.html#auth-and-access_examples_batch).
-
-	* HashiCorp Vault: provide the **Vault URL** for your vault instance, and select your **Authentication Method**.  Enter your authentication details. Optionally provide a namespace.
-		- Refer to the HashiCorp documentation for your authentication method:
-				[Token auth method](https://developer.hashicorp.com/vault/docs/auth/token)  
-				[AppRole auth method](https://developer.hashicorp.com/vault/docs/auth/approle)  
-				[Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass)  
-		- If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces) for more information on HashiCorp Vault namespaces.
-
-	* Google Cloud Platform: provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview) for more information.
-
+1. Enter the credentials for your provider. Refer to the provider-specific sections below for details.
 1. **Save** your configuration.
-1. As long as this store is connected, you can reference its secrets in credentials.
+
+As long as this store is connected, you can reference its secrets in credentials.
+
+### 1Password
+
+/// note | 1Password Connect Server required
+n8n integrates with [1Password Connect Server](https://developer.1password.com/docs/connect/get-started/), a self-hosted API for machine access to 1Password. This isn't the same as a personal or team 1Password account. You must deploy and run a Connect Server to use this provider.
+///
+
+Provide your **Connect Server URL** and **Access Token**. The Connect Server URL is the address where your server is accessible (for example, `http://localhost:8080`). The Access Token is the token you created for the Connect Server integration.
+
+n8n reads all vaults and items accessible to the token. Each 1Password item becomes a secret, with the item's fields accessible as properties. Use `{{ $secrets.<vault-name>.<item-title>.<field-label> }}` to access a specific field value.
+
+### AWS Secrets Manager
+
+Provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
+
+To give n8n access to all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AccessAllSecrets",
+			"Effect": "Allow",
+			"Action": [
+				"secretsmanager:ListSecrets",
+				"secretsmanager:BatchGetSecretValue",
+				"secretsmanager:GetResourcePolicy",
+				"secretsmanager:GetSecretValue",
+				"secretsmanager:DescribeSecret",
+				"secretsmanager:ListSecretVersionIds"
+			],
+			"Resource": "*"
+		}
+	]
+}
+```
+
+You can also be more restrictive and give n8n access to select specific AWS Secret Manager secrets. You still need to allow the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions to access all resources. These permissions allow n8n to retrieve ARN-scoped secrets, but don't provide access to the secret values.
+
+Next, you need set the scope for the `secretsmanager:GetSecretValue` permission to the specific Amazon Resource Names (ARNs) for the secrets you wish to share with n8n. Ensure you use the correct region and account ID in each resource ARNs. You can find the ARN details in the AWS dashboard for your secrets.
+
+For example, the following IAM policy only allows access to secrets with a name starting with `n8n` in your specified AWS account and region:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "ListingSecrets",
+			"Effect": "Allow",
+			"Action": [
+				"secretsmanager:ListSecrets",
+				"secretsmanager:BatchGetSecretValue"
+			],
+			"Resource": "*"
+		},
+		{
+			"Sid": "RetrievingSecrets",
+			"Effect": "Allow",
+			"Action": [
+				"secretsmanager:GetSecretValue",
+				"secretsmanager:DescribeSecret"
+			],
+			"Resource": [
+				"arn:aws:secretsmanager:us-west-2:123456789000:secret:n8n*"
+			]
+		}
+	]
+}
+```
+
+For more IAM permission policy examples, consult the [AWS documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_iam-policies.html#auth-and-access_examples_batch).
+
+### Azure Key Vault
+
+Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
+
+### GCP Secrets Manager
+
+Provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview) for more information.
+
+### HashiCorp Vault
+
+Provide the **Vault URL** for your vault instance, and select your **Authentication Method**. Enter your authentication details. Optionally provide a namespace.
+
+- Refer to the HashiCorp documentation for your authentication method:
+	- [Token auth method](https://developer.hashicorp.com/vault/docs/auth/token)
+	- [AppRole auth method](https://developer.hashicorp.com/vault/docs/auth/approle)
+	- [Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass)
+- If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces) for more information on HashiCorp Vault namespaces.
 
 ## Share vault
 

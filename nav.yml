@@ -1242,6 +1242,7 @@ nav:
         - Nodes: hosting/configuration/environment-variables/nodes.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
+        - SSRF protection: hosting/configuration/environment-variables/ssrf-protection.md
         - Source control: hosting/configuration/environment-variables/source-control.md
         - Task runners: hosting/configuration/environment-variables/task-runners.md
         - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
@@ -1287,6 +1288,7 @@ nav:
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
+      - SSRF protection: hosting/securing/ssrf-protection.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md

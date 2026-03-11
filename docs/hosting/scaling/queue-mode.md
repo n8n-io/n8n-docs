@@ -186,7 +186,7 @@ When using multiple webhook processes you will need a load balancer to route req
 
 - Redirect webhook triggers to the webhook servers pool. Paths to consider:
   - `/webhook/*`: Webhook trigger node endpoints
-  - `/webhook-waiting/*`: Human in the loop nodes that perform send and wait operations as per example the Slack one
+  - `/webhook-waiting/*`: Human-in-the-loop webhook endpoints used by nodes that perform "send and wait" operations (for example, the Slack node).
 - All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
 
 **Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.

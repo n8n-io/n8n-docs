@@ -68,3 +68,11 @@ If you have one version of your node, this can be a number. If you want to suppo
 
 n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
 
+## `features`
+
+_Object_ | _Optional_
+
+Define named feature flags evaluated against the node version. Use features to control parameter visibility with `@feature` in `displayOptions`, or check them in code with `this.isNodeFeatureEnabled()`.
+
+Refer to [Feature-based versioning](/integrations/creating-nodes/build/reference/node-versioning.md#feature-based-versioning) for more information.
+

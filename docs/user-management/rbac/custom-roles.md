@@ -102,10 +102,10 @@ Custom roles use permission scopes to define what users can do within a project.
 * `workflow:create` - Create new workflows
 * `workflow:read` - View workflow details
 * `workflow:update` - Edit workflows
-* `workflow:publish` - Publish and unpublish workflows
+* `workflow:publish` - Publish workflows
+* `workflow:unpublish` - Unpublish workflows
 * `workflow:delete` - Delete workflows
 * `workflow:list` - View workflows in project
-* `workflow:execute` - Manually execute workflows
 * `workflow:execute-chat` - Execute workflows via chat interface
 * `workflow:move` - Move workflows between projects
 * `workflow:share` - Share workflows with other users
@@ -158,7 +158,7 @@ These are example custom project roles you can create for common use cases. Reme
 
 ### Workflow Developer
 A role for users who work only with workflows:
-* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:delete`, `workflow:list`, `workflow:execute`
+* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:delete`, `workflow:list`
 * `credential:read`, `credential:list` (view credentials but not modify)
 * `project:list`, `project:read`
 
@@ -170,13 +170,7 @@ A role for users who manage credentials:
 
 ### Workflow Publisher
 A role for users who can publish workflows without full edit access:
-* `workflow:read`, `workflow:list`, `workflow:publish`
-* `credential:read`, `credential:list`
-* `project:list`, `project:read`
-
-### Read-Only with Execute
-A role for users who can view and run workflows but not modify them:
-* `workflow:read`, `workflow:list`, `workflow:execute`
+* `workflow:read`, `workflow:list`, `workflow:publish`, `workflow:unpublish`
 * `credential:read`, `credential:list`
 * `project:list`, `project:read`
 

@@ -54,7 +54,7 @@ This release contains bug fixes.
 
 ### Contributors
 
-[github-actions[bot]](https://github.com/github-actions[bot])  
+`github-actions[bot]` 
 [amenk](https://github.com/amenk)  
 [bpk9](https://github.com/bpk9)  
 

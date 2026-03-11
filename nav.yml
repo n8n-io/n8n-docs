@@ -690,6 +690,7 @@ nav:
         - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
+        - OnceHub Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.oncehubtrigger.md
         - Onfleet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
         - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
         - Pipedrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md

@@ -1021,6 +1021,7 @@ nav:
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/okta.md
         - integrations/builtin/credentials/ollama.md
+        - integrations/builtin/credentials/oncehub.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md

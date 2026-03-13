@@ -129,10 +129,10 @@ Provide the **Vault URL** for your vault instance, and select your **Authenticat
 
 #### Manual KV mount configuration
 
-By default, n8n auto-discovers KV secret engines by reading `sys/mounts`. If your Vault token doesn't have access to `sys/mounts`, you can manually specify the KV engine mount path and version instead:
+By default, n8n autodiscovers KV secret engines by reading `sys/mounts`. If your Vault token doesn't have access to `sys/mounts`, you can manually specify the KV engine mount path and version instead:
 
-- **KV Mount Path**: The mount path of your KV secret engine (for example, `secret/`). When set, n8n skips `sys/mounts` auto-discovery and uses this path directly. Leave blank to use auto-discovery.
-- **KV Version**: The KV engine version (`v1` or `v2`). Defaults to `v2`. Only used when **KV Mount Path** is set.
+- **KV Mount Path**: The mount path of your KV secret engine (for example, `secret/`). When set, n8n skips `sys/mounts` autodiscovery and uses this path directly. Leave blank to use autodiscovery.
+- **KV Version**: The KV engine version (`v1` or `v2`). Defaults to `v2`. Only applies when you specify a **KV Mount Path**.
 
 Your Vault token still needs read and list access to the KV path itself. The following example shows a minimal Vault policy for a KV v2 mount at `secret/`:
 
@@ -146,7 +146,7 @@ path "secret/metadata/*" {
 }
 ```
 
-For KV v1, a single policy path is sufficient:
+For KV v1, you only need a single policy path:
 
 ```hcl
 # Read and list secrets at the "kv/" KV v1 mount

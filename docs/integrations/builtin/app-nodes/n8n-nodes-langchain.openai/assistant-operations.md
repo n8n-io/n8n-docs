@@ -9,6 +9,10 @@ priority: critical
 
 Use this operation to create, delete, list, message, or update an assistant in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
+/// note | Assistant operations deprecated in OpenAI node V2
+n8n version 1.117.0 introduces V2 of the OpenAI node that supports the OpenAI Responses API and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
+///
+
 ## Create an Assistant
 
 Use this operation to create a new assistant.
@@ -30,7 +34,7 @@ Enter these parameters:
   ```
 - **Code Interpreter**: Turn on to enable the code interpreter for the assistant, where it can write and execute code in a sandbox environment. Enable this tool for tasks that require computations, data analysis, or any logic-based processing.
 - **Knowledge Retrieval**: Turn on to enable knowledge retrieval for the assistant, allowing it to access external sources or a connected knowledge base. Refer to [File Search | OpenAI Platform](https://platform.openai.com/docs/assistants/tools/file-search) for more information. 
-  - **Files**: Select a file to upload for your external knowledge source. Use **Upload a File** operation to add more files. 
+    - **Files**: Select a file to upload for your external knowledge source. Use **Upload a File** operation to add more files. 
 
 ### Options
 

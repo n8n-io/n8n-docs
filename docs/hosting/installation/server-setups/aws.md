@@ -75,6 +75,8 @@ Postgres needs some environment variables set to pass to the application running
 
 The example `postgres-secret.yaml` file contains placeholders you need to replace with values of your own for user details and the database to use.
 
+PostgreSQL uses a root user (`POSTGRES_USER`) for setup and administration, but it’s best practice to create a separate non-root user (`POSTGRES_NON_ROOT_USER`) for n8n. The root user has full control, while n8n only needs the non-root user permissions to run. Configuring both improves security and helps prevent accidental changes to the database system.
+
 The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
 
 ## Configure n8n

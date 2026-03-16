@@ -78,6 +78,16 @@ In case `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set to `secure-token`, th
     curl -H "Content-Type: application/json" -H "Authorization: Bearer secure-token" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
+#### Persistence
+
+To store credential overwrites in the database and propagate them automatically to all workers in multi-instance/queue mode, enable:
+
+```sh
+export CREDENTIALS_OVERWRITE_PERSISTENCE=true
+```
+
+When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so that workers reload the latest values. When disabled, overwrites remain in memory on the process that loaded them and aren't propagated to workers or preserved across restarts.
+
 ## Environment variables
 
 n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
@@ -88,7 +98,7 @@ n8n has many [environment variables](/hosting/configuration/environment-variable
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
+| `NODES_EXCLUDE` | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]` | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"`. To enable all nodes, specify `NODES_EXCLUDE: "[]"`. |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |
 | `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
@@ -110,6 +120,7 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Use to overwrite an OAuth callback URL. |
 | `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Use to overwrite an OAuth callback URL. |
 | `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Use to restrict the number of active workflows. |
+| `workflow.afterCreate` | `[workflowId: string]` | Called after a workflow gets created. |
 | `workflow.afterDelete` | `[workflowId: string]` | Called after a workflow gets deleted. |
 | `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | Called after an existing workflow gets saved. |
 | `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
@@ -117,6 +128,8 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
 | `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
 | `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
+| `workflow.afterArchive` | `[workflowId: string]` | Called after you archive a workflow. |
+| `workflow.afterUnarchive` | `[workflowId: string]` | Called after you restore a workflow from the archive. |
 
 ### Registering hooks
 
@@ -127,9 +140,9 @@ You can set the variable to a single file:
 
 `EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon:
+Or to contain multiple files separated by a colon:
 
-`EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
+`EXTERNAL_HOOK_FILES=/data/hook1.js:/data/hook2.js`
 
 ### Backend hook files
 

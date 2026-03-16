@@ -1,7 +1,3 @@
-/// note | Subject to change
-The standards described in this document are for the first release of the community nodes repository. These may change in future releases.
-///
-
 Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
@@ -23,6 +19,10 @@ Developing with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-nod
 
 ## Submit your node for verification by n8n
 
+/// note | Upcoming Changes
+From May 1st 2026 you must publish **ALL** community nodes using a GitHub action and include a [provenance statement](https://docs.npmjs.com/generating-provenance-statements)
+///
+
 n8n vets verified community nodes. Users can discover and install verified community nodes from the nodes panel in n8n. These nodes need to adhere to certain technical and UX standards and constraints.
 
 Before submitting your node for review by n8n, you must:
@@ -33,4 +33,5 @@ Before submitting your node for review by n8n, you must:
 * Make sure that the node has appropriate documentation in the form of a README in the [npm package](https://docs.npmjs.com/about-package-readme-files) or a related public repository.
 * Submit your node to npm as n8n will fetch it from there for final vetting.
 
-If your node meets all the above requirements, [click here to submit your node for verification](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b). Note that n8n reserves the right to reject nodes that compete with any of n8n's paid features, especially enterprise functionality.
+## Ready to submit?
+If your node meets all the above requirements, sign up or log in to the [n8n Creator Portal](https://creators.n8n.io/nodes) and submit your node for verification. Note that n8n reserves the right to reject nodes that compete with any of n8n's paid features, especially enterprise functionality.

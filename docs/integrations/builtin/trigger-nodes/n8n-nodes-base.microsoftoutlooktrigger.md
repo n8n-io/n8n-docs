@@ -14,6 +14,11 @@ On this page, you'll find a list of events the Microsoft Outlook Trigger node ca
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
 ///
+
+/// tip | Government Cloud Support
+If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
+///
+
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Microsoft Outlook integrations](https://n8n.io/integrations/microsoft-outlook-trigger/) page.
 ///

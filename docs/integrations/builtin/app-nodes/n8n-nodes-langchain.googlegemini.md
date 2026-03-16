@@ -22,11 +22,17 @@ You can find authentication information for this node [here](/integrations/built
 	* Transcribe a Recording: Transcribes audio into text.
 * Document:
 	* Analyze Document: Take in documents and answer questions about them.
-* File:
-	* Upload File: Upload a file to the Google Gemini API for later user.
+* File Search:
+	* Create File Search Store: Create a new File Search store for RAG (Retrieval Augmented Generation)
+	* Delete File Search Store: Delete File Search Store
+	* List File Search Stores: List all File Search stores owned by the user
+	* Upload to File Search Store: Upload a file to a File Search store for RAG (Retrieval Augmented Generation)
 * Image:
 	* Analyze Image: Take in images and answer questions about them.
 	* Generate an Image: Creates an image from a text prompt.
+	* Edit Image: Upload one or more images and apply edits based on a prompt
+* Media File:
+	* Upload Media File: Upload a file to the Google Gemini API for later user.
 * Text:
 	* Message a Model: Create a completion with a Google Gemini model.
 * Video:

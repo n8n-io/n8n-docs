@@ -51,20 +51,9 @@ You can contribute to the n8n documentation, for example by documenting nodes or
 
 The repository for the docs is [here](https://github.com/n8n-io/n8n-docs) and the guidelines for contributing to the docs are [here](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md).
 
-## Contribute to the blog
+## Contribute to community tutorials
 
-You can write an article for the [n8n blog](https://blog.n8n.io/). Your article can be, for example, a [workflow tutorial](https://blog.n8n.io/tag/tutorial/), an opinion piece on automation, or some domain-specific [automation guides](https://blog.n8n.io/tag/guide/).
-
-### How to submit a post
-
-n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. If you want n8n to highlight your post on the blog, follow these steps: 
-
-1. Email your idea to [marketing@n8n.io](mailto:marketing@n8n.io) with the subject "Blog contribution: [Your Topic]."
-2. Submit your draft:
-      - Write your post in a Google Doc following the [style guide](https://www.notion.so/97dc73436a624933b75ddc941a361b70?pvs=21).
-      - If your blog post includes example workflows, include the workflow JSON in a separate section at the end.
-      - For author credit, provide a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
-3. Wait for feedback. We will respond if your draft fits with the blog's strategy and requirements. If you don't hear back within 30 days, it means we won't be moving forward with your blog post.
+Share your own video or written guides on our [community-driven, searchable library of n8n tutorials and training materials](https://community.n8n.io/t/how-to-share-your-tutorials/48398). Tag them for easy discovery, and post in your language’s subcategory. Follow the contribution guidelines to help keep our growing library high-quality and accessible to everyone.
 
 ## Refer a candidate
 

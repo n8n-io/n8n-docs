@@ -47,5 +47,5 @@ Most sub-workflow conversions work without issues, but there are some caveats an
 	///
 
 <!-- vale Vale.Spelling = NO -->
-* **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](/code/builtin/output-other-nodes.md). You must pass it a fixed number.
+* **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](/data/data-mapping/referencing-other-nodes.md). You must pass it a fixed number.
 <!-- vale Vale.Spelling = YES -->

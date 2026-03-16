@@ -35,7 +35,7 @@ Refer to [Styles](https://github.com/n8n-io/n8n-docs/wiki/Styles/) for a quickst
 
 ## n8n's license
 
-Be aware that n8n is fair code licensed. For more information, refer to the [License](https://docs.n8n.io/reference/license/) documentation.
+Be aware that n8n is fair code licensed. For more information, refer to the [License](https://docs.n8n.io/sustainable-use-license/) documentation.
 
 ## Writing docs
 

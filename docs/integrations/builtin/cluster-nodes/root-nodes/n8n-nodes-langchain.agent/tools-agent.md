@@ -174,6 +174,10 @@ Refine the Tools Agent node's behavior using these options:
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
+### Tracing Metadata
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/tracing-metadata.md"
+
 <!-- vale off -->
 ### Automatically Passthrough Binary Images
 <!-- vale on -->
@@ -195,6 +199,21 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 ## Dynamic parameters for tools with `$fromAI()`
 
 To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](/advanced-ai/examples/using-the-fromai-function.md).
+
+## Human review for tool calls
+
+You can require human approval before the AI Agent executes specific tools. This is useful for tools that perform sensitive actions like sending messages, modifying records, or deleting data.
+
+To add a human review step:
+
+1. Click the tool connector on the AI Agent node.
+2. In the Tools Panel, find the **Human review** section.
+3. Select your preferred approval channel (Chat, Slack, Telegram, and more) and configure it.
+4. Connect the tools that require approval to the human review step.
+
+When the AI wants to use a gated tool, the workflow pauses and sends an approval request through your chosen channel. The recipient can approve (tool executes) or deny (action canceled).
+
+For detailed setup instructions and best practices, refer to [Human-in-the-loop for AI tool calls](/advanced-ai/human-in-the-loop-tools.md).
 
 ## Common issues
 

@@ -24,7 +24,7 @@ Refer to [User management](/hosting/configuration/user-management-self-hosted.md
 | `N8N_SMTP_PASS` | String | - | _your_SMTP_password_ |
 | `N8N_SMTP_OAUTH_SERVICE_CLIENT` | String | - | If using 2LO with a service account this is your client ID |
 | `N8N_SMTP_OAUTH_PRIVATE_KEY` | String | - | If using 2LO with a service account this is your private key |
-| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _N8N `<contact@n8n.com>`_ |
+| `N8N_SMTP_SENDER` | String | - | Sender email address. You can optionally include the sender name. Example with name: _n8n `<contact@n8n.com>`_ |
 | `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
 | `N8N_SMTP_STARTTLS` | Boolean | `true` | Whether to use STARTTLS for SMTP (true) or not (false). |
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
@@ -36,4 +36,5 @@ Refer to [User management](/hosting/configuration/user-management-self-hosted.md
 | `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS` | Number | 168 | Set an expiration date for the JWTs in hours. |
 | `N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS` | Number | 0 | How many hours before the JWT expires to automatically refresh it. 0 means 25% of `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. -1 means it will never refresh, which forces users to log in again after the period defined in `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. |
 | `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
+| `N8N_INVITE_LINKS_EMAIL_ONLY` | Boolean | `false` | When set to true, n8n will only deliver invite links via email and will not expose them through the API. This option enhances security by preventing invite URLs from being accessible programmatically, or to high privileged users. |
 <!-- vale on -->

@@ -39,7 +39,7 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 </figure>
 
 * **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Execute workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
-* **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+* **Production**: n8n registers a production webhook when you publish the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 ### HTTP Method
 
@@ -135,7 +135,7 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## How n8n secures HTML responses
 
-Starting with [n8n version 1.103.0](/release-notes.md#n8n11030), n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
+Starting with n8n version 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 

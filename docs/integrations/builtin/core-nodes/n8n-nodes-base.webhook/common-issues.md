@@ -89,7 +89,7 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 | **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
 | :--- | --- | --- | :---: |
 | Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
-| Production URL | Activate the workflow | Until workflow deactivated | :x: |
+| Production URL | Publish the workflow | Until workflow is unpublished | :x: |
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
 
@@ -105,7 +105,7 @@ n8n only permits registering one webhook for each path and HTTP method combinati
 
 If you receive a message that the path and method you chose are already in use, you can either:
 
-* Deactivate the workflow with the conflicting webhook.
+* Unpublish the workflow with the conflicting webhook.
 * Change the webhook path and/or method for one of the conflicting webhooks.
 
 ## Timeouts on n8n Cloud

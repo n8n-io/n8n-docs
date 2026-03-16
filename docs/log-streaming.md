@@ -33,10 +33,13 @@ The following events are available. You can choose which events to stream in **S
 	* Started
 	* Success
 	* Failed
+	* Cancelled
 * Node executions
 	* Started
 	* Finished
 * Audit
+	* User login success
+	* User login failed
 	* User signed up
 	* User updated
 	* User deleted
@@ -52,16 +55,38 @@ The following events are available. You can choose which events to stream in **S
 	* User credentials deleted
 	* User API created
 	* User API deleted
+	* User MFA enabled
+	* User MFA disabled
+	* User execution deleted
+	* Workflow executed
 	* Package installed
 	* Package updated
 	* Package deleted
 	* Workflow created
 	* Workflow deleted
 	* Workflow updated
+	* Workflow archived
+	* Workflow unarchived
+	* Workflow activated
+	* Workflow deactivated
+	* Workflow version updated
+	* Variable created
+	* Variable updated
+	* Variable deleted
+	* External secrets provider settings saved
+	* External secrets provider reloaded
+	* Personal publishing restricted enabled
+	* Personal publishing restricted disabled
+	* Personal sharing restricted enabled
+	* Personal sharing restricted disabled
+	* 2FA enforcement enabled
+	* 2FA enforcement disabled
+* Worker
+	* Started
+	* Stopped
 * AI node logs
 	* Memory get messages
 	* Memory added message
-	* Output parser get instructions
 	* Output parser parsed
 	* Retriever get relevant documents
 	* Embeddings embedded document
@@ -71,7 +96,9 @@ The following events are available. You can choose which events to stream in **S
 	* Tool called
 	* Vector store searched
 	* LLM generated
+	* LLM error
 	* Vector store populated
+	* Vector store updated
 * Runner
 	* Task requested
 	* Response received

@@ -58,7 +58,7 @@ By incorporating the AI agent as a node, n8n can combine AI-driven steps with tr
 
 Every workflow needs somewhere to start. In n8n these are called ['trigger nodes'](/glossary.md#trigger-node-n8n). For this workflow, we want to start with a chat node.
 
- 1. Select **Add first step** or press ++tab++ to open the node menu.
+ 1. Select **Add first step** or press ++n++ to open the node menu.
 
  1. Search for **Chat Trigger**. n8n shows a list of nodes that match the search.
 

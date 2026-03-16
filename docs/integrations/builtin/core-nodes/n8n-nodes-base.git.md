@@ -14,19 +14,20 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Operations
 
-* [**Add**](#add) a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add).
-* [**Add Config**](#add-config): Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config) set or add.
-* [**Clone**](#clone) a repository: Performs a [git clone](https://git-scm.com/docs/git-clone).
-* [**Commit**](#commit) files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit).
-* [**Fetch**](#fetch) from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch).
-* [**List Config**](#list-config): Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config) query.
-* [**Log**](#log): Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log).
-* [**Pull**](#pull) from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull).
-* [**Push**](#push) to remote repository: Performs a [git push](https://git-scm.com/docs/git-push).
-* [**Push Tags**](#push-tags) to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags).
-* Return [**Status**](#status) of current repository: Performs a [git status](https://git-scm.com/docs/git-status).
-* Create a new [**Tag**](#tag): Performs a [git tag](https://git-scm.com/docs/git-tag).
-* [**User Setup**](#user-setup): Set the user.
+* **Add** a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add).
+* **Add Config**: Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config) set or add.
+* **Clone** a repository: Performs a [git clone](https://git-scm.com/docs/git-clone).
+* **Commit** files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit).
+* **Fetch** from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch).
+* **List Config**: Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config) query.
+* **Log**: Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log).
+* **Pull** from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull).
+* **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push).
+* **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags).
+* Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status).
+* **Switch Branch:** Performs a [git switch](https://git-scm.com/docs/git-switch).
+* Create a new **Tag**: Performs a [git tag](https://git-scm.com/docs/git-tag).
+* **User Setup**: Set the user.
 
 Refer to the sections below for more details on the parameters and options for each operation.
 
@@ -123,6 +124,13 @@ This operation only prompts you to enter the local path of the git repository in
 ## Status
 
 This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+
+## Switch Branch
+
+Configure this operation with these parameters:
+
+* **Repository Path**: Enter the local path of the git repository.
+* **Branch Name**: Enter the name of the branch to which you want to switch.
 
 ## Tag
 

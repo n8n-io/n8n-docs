@@ -70,4 +70,4 @@ To work around this, check for the existence of the field data before sending it
 
 To check for the data before executing the Notion node, use an [If](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node to check whether the field is unset. This allows you to use the [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to conditionally remove the field when it doesn't have a valid value.
 
-As an alternative, you can set a [default value](/code/cookbook/expressions/check-incoming-data.md) if the incoming data doesn't provide one.
+As an alternative, you can set a default value if the incoming data doesn't provide one.

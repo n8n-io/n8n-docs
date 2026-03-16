@@ -24,16 +24,16 @@ This node replaces the Manual Chat Trigger node from version 1.24.0.
 
 Set whether the chat should be publicly available (turned on) or only available through the manual chat interface (turned off).
 
-Leave this turned off while you're building the workflow. Turn it on when you're ready to activate the workflow and allow users to access the chat.
+Leave this turned off while you're building the workflow. Turn it on when you're ready to publish the workflow and allow users to access the chat.
 
-### Mode
+#### Mode
 
 Choose how users access the chat. Select from:
 
 * **Hosted Chat**: Use n8n's hosted chat interface. Recommended for most users because you can configure the interface using the [node options](#node-options) and don't have to do any other setup.
 * **Embedded Chat**: This option requires you to create your own chat interface. You can use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat) or build your own. Your chat interface must call the webhook URL shown in **Chat URL** in the node.
 
-### Authentication
+#### Authentication
 
 Choose whether and how to restrict access to the chat. Select from:
 
@@ -42,9 +42,21 @@ Choose whether and how to restrict access to the chat. Select from:
 	* Select or create a **Credential for Basic Auth** with a username and password. All users must use the same username and password.
 * **n8n User Auth**: Only users logged in to an n8n account can use the chat.
 
-### Initial Message(s)
+#### Initial Message(s)
 
 This parameter's only available if you're using **Hosted Chat**. Use it to configure the message the n8n chat interface displays when the user arrives on the page.
+
+### Make Available in n8n Chat
+
+Choose whether to make the agent available to Chat Hub.
+
+#### Agent Name
+
+The name of the agent on Chat Hub.
+
+#### Agent description
+
+The description of the agent on Chat Hub.
 
 ## Node options
 
@@ -79,7 +91,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using Response Nodes**: The Chat Trigger node responds as defined in a [Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node or [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow.
+* **Using Response Nodes**: The Chat Trigger node responds as defined in a [Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.chat.md) node or [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow.
 
 /// note | Using Response Nodes
 This mode replaces the 'Using Respond to Webhook Node' mode from version 1.2 of the Chat Trigger node.
@@ -116,7 +128,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using Response Nodes**: The Chat Trigger node responds as defined in a [Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node or [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow.
+* **Using Response Nodes**: The Chat Trigger node responds as defined in a [Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.chat.md) node or [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node. In this response mode, the Chat Trigger will solely show messages as defined in these nodes and not output the data from the last node executed in the workflow.
 
 /// note | Using Response Nodes
 This mode replaces the 'Using Respond to Webhook Node' mode from version 1.2 of the Chat Trigger node.
@@ -140,8 +152,8 @@ In a basic workflow, the Agent and Chain nodes output a parameter named either `
 
 If you need to manually create the response sent to the user, you must create a parameter named either `text` or `output`. If you use a different parameter name, the Chat trigger sends the entire object as its response, not just the value.
 
-/// note | Respond to Chat node
-When you are using a [Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node to manually create the response sent to the user, you must set the Chat Trigger response mode to 'Using Response Nodes'.
+/// note | Chat node
+When you are using a [Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.chat.md) node to manually create the response sent to the user, you must set the Chat Trigger response mode to 'Using Response Nodes'.
 ///
 
 ## Common issues

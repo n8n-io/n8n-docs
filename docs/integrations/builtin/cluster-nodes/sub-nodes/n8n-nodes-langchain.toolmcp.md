@@ -9,7 +9,7 @@ contentType: [integration, reference]
 The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
 
 ///  note  | Credentials
-The MCP Client Tool node supports both [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) and generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) authentication methods.
+The MCP Client Tool node supports [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth), generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth), and [OAuth2](/integrations/builtin/credentials/httprequest.md#using-oauth2) authentication methods.
 ///
 
 ## Node parameters
@@ -17,7 +17,7 @@ The MCP Client Tool node supports both [Bearer](/integrations/builtin/credential
 Configure the node with the following parameters.
 
 * **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
-* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) and generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) authentication. Select **None** to attempt to connect without authentication.
+* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth), generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth), and [OAuth2](/integrations/builtin/credentials/httprequest.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
 * **Tools to Include**: Choose which tools you want to expose to the AI Agent:
 	* **All**: Expose all the tools given by the MCP server.
 	* **Selected**: Activates a **Tools to Include** parameter where you can select the tools you want to expose to the AI Agent.

@@ -10,6 +10,7 @@ This section tells you how to enable SAML SSO (single sign-on) in n8n. It assume
 
 * [Set up SAML](/user-management/saml/setup.md): a general guide to setting up SAML in n8n, and links to resources for common IdPs.
 * [Okta Workforce Identity SAML setup](/user-management/saml/okta.md): step-by-step guidance to configuring Okta.
+* [Azure AD SAML setup](/user-management/saml/azuread.md): step-by-step guidance to configuring with Azure AD.
 * [Troubleshooting](/user-management/saml/troubleshooting.md): a list of things to check if you encounter issues.
 * [Managing users with SAML](/user-management/saml/managing.md): performing user management tasks with SAML enabled.
 

@@ -128,6 +128,34 @@ Provide the **Vault URL** for your vault instance, and select your **Authenticat
 	- [Userpass auth method](https://developer.hashicorp.com/vault/docs/auth/userpass)
 - If you use vault namespaces, you can enter the namespace n8n should connect to. Refer to [Vault Enterprise namespaces](https://developer.hashicorp.com/vault/docs/enterprise/namespaces) for more information on HashiCorp Vault namespaces.
 
+#### Manual KV mount configuration
+
+By default, n8n autodiscovers KV secret engines by reading `sys/mounts`. If your Vault token doesn't have access to `sys/mounts`, you can manually specify the KV engine mount path and version instead:
+
+- **KV Mount Path**: The mount path of your KV secret engine (for example, `secret/`). When set, n8n skips `sys/mounts` autodiscovery and uses this path directly. Leave blank to use autodiscovery.
+- **KV Version**: The KV engine version (`v1` or `v2`). Defaults to `v2`. Only applies when you specify a **KV Mount Path**.
+
+Your Vault token still needs read and list access to the KV path itself. The following example shows a minimal Vault policy for a KV v2 mount at `secret/`:
+
+```hcl
+# Read and list secrets at the "secret/" KV v2 mount
+path "secret/data/*" {
+  capabilities = ["read"]
+}
+path "secret/metadata/*" {
+  capabilities = ["read", "list"]
+}
+```
+
+For KV v1, you only need a single policy path:
+
+```hcl
+# Read and list secrets at the "kv/" KV v1 mount
+path "kv/*" {
+  capabilities = ["read", "list"]
+}
+```
+
 ## Share vault
 
 By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.

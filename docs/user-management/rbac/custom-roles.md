@@ -40,7 +40,7 @@ To create a custom role:
 	* **Folder permissions**: Create, read, update, delete, list, or move folders
 	* **Data table permissions**: Create, read, update, delete, list project tables, read/write rows
 	* **Project variable permissions**: Create, read, update, delete, or list project variables
-	* **Secret vault permissions**: Create, view, update and delete vaults of a project
+	* **Secret vault permissions**: Create, view, update, delete, and sync (reload) vaults of a project
 	* **Secrets permission**: Use secrets in credentials
 	* **Source control**: Push to source control
 5. Select **Create role**.

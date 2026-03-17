@@ -291,9 +291,12 @@ paths:
             type: string
             enum:
               - canceled
+              - crashed
               - error
+              - new
               - running
               - success
+              - unknown
               - waiting
         - name: workflowId
           in: query

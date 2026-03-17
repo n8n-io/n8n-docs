@@ -10,6 +10,7 @@ contentType: howto
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 * n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, and HashiCorp Vault.
 * From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 
@@ -159,9 +160,9 @@ path "kv/*" {
 
 By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.
 
-Instance admins can restrict a vault to a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
+Instance admins can share a vault with a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
 
-To assign the scope:
+To change the vault scope:
 
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Find the vault you want to configure and select **Edit**.
@@ -192,14 +193,52 @@ For example, you have two n8n instances, one for development and one for product
 
 ## Using external secrets in projects
 
-To use external secrets in an [RBAC project](/user-management/rbac/index.md), you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Share vault](#share-vault) for setup steps. Project-scoped vaults are available from version `2.11.0`.
 
-You can restrict usage of a vault to a specific project using [share vault](#share-vault). A vault assigned to a project is only usable within this project's credentials.
+### Access for project roles
+
+/// note | Version `2.13.0` and later
+Before version `2.13.0`, using external secrets in an [RBAC project](/user-management/rbac/index.md) required an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+///
+
+From version `2.13.0`, instance owners and admins can grant [project editors](/user-management/rbac/role-types.md#project-editor) and [project admins](/user-management/rbac/role-types.md#project-admin) access to external secrets.
+
+To enable this:
+
+1. Go to **Settings** > **External Secrets**.
+1. Turn on **Enable external secrets for project roles**.
+
+When enabled, **Project Editors** can:
+
+-   View available external secret vaults shared with the project (in **Project** > **Settings**).
+-   Use secrets from the project's vaults in credentials.
+
+**Project Admins** get the same access, plus they can:
+
+-   Create new vaults for the project (in **Project** > **Settings**).
+-   Update and delete vaults assigned to the project.
+
+/// note | Global vault access
+Global vaults created in **Settings** > **External Secrets** are visible in **Project** > **Settings** but are read-only for project roles. Only instance admins can modify or delete global vaults.
+///
+
+### Custom roles
+
+For more fine-grained access control, instance owners and admins can create a [custom project role](/user-management/rbac/custom-roles.md). Go to **Settings** > **Project roles** > **Create role**. In the list of permissions, configure:
+
+- **Secrets vaults**: Controls vault management (create, view, edit, delete, and sync vaults).
+- **Secrets**: Controls whether the role can use secrets in credential expressions.
+
+Both permissions are independent. For example, a role may need only the **Secrets** permission to use secrets in credentials without managing vaults. Refer to [Secret vault scopes](/user-management/rbac/custom-roles.md#secret-vault-scopes) for the full list of available scopes.
 
 ## Troubleshooting
 
-### Only set external secrets on credentials owned by an instance owner or admin
+### Secrets don't resolve in production
 
-Due to the permissions that instance owners and admins have, it's possible for owners and admins to update credentials owned by another user with a secrets expression. This will appear to work in preview for an instance owner or admin, but the secret won't resolve when the workflow runs in production. 
+/// note | Version `2.13.0` and later
+From version `2.13.0`, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
+///
 
-Only use external secrets for credentials that are owned by an instance admin or owner. This ensures they resolve correctly in production.
+In versions before `2.13.0` (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
+
+In this case, only use external secrets in credentials owned by an instance owner or admin.

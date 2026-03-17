@@ -60,7 +60,7 @@ curl --request GET <https://your-n8n.url/webhook/path> --header 'key=value'
 Make an HTTP request to send a file:
 
 ```sh
-curl --request GET <https://your-n8n.url/webhook/path> --form 'key=@/path/to/file'
+curl --request POST <https://your-n8n.url/webhook/path> --form 'key=@/path/to/file'
 ```
 Replace `/path/to/file` with the path of the file you want to send.
 

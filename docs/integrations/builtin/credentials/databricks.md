@@ -8,7 +8,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Databricks](/integrations/builtin/app-nodes/n8n-nodes-base.databricks/index.md)
+- [Databricks](/integrations/builtin/app-nodes/n8n-nodes-base.databricks.md)
 
 ## Prerequisites
 

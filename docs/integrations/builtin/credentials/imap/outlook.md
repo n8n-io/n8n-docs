@@ -11,7 +11,7 @@ Outlook.com. As a result, the IMAP node **cannot connect to Outlook.com or
 Microsoft 365 accounts**. App passwords are not a workaround for this
 restriction.
 
-**Use the [Microsoft Outlook node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/)
+**Use the [Microsoft Outlook node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md)
 instead.** It uses OAuth 2.0, which Microsoft now requires for mail access.
 
 Refer to [Microsoft's deprecation notice](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online#what-we-are-changing)

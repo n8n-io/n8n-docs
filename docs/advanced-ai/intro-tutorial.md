@@ -34,7 +34,7 @@ If you're already familiar with AI, feel free to skip this section. This is a ba
 
 An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm). LLMs generate text based
 on input by predicting the next word. They can be used to select the best tool to achieve a task, or even simulate complex decision-making, but they can't act on decisions or use tools themselves.
-While LLMs only process input to produce text or JSON output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
+AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), act on
 their outputs, complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 

@@ -9,13 +9,29 @@ priority: critical
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
---8<-- "_snippets/integrations/managed-google-oauth.md"
-
 ## Prerequisites
 
 * Create a [Google Cloud](https://cloud.google.com/) account.
 
-## Set up OAuth
+## Managed OAuth2
+
+n8n Cloud users can use **Managed OAuth2** for the following nodes:
+
+--8<-- "_snippets/integrations/managed-google-oauth.md"
+
+To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
+
+![Managed OAuth2 credentials screen](/_images/integrations/builtin/credentials/google/managed-oauth.png)
+
+If you prefer to use Custom OAuth2, use the dropdown to change the authentication type.
+
+## Custom OAuth2
+
+Managed OAuth2 isn't available for self-hosted n8n users, nor for Google nodes not listed [above](#managed-oauth2). You must create a custom OAuth2 single service credential. This means creating an app in the Google Cloud Console and connecting it to n8n with a Client ID and Client Secret.
+
+The rest of this document covers the full process.
+
+## Set up Custom OAuth2
 
 There are five steps to connecting your n8n credential to Google services:
 
@@ -67,14 +83,12 @@ Next, create the OAuth client credentials in Google:
 1. Select **+ Create credentials** > **OAuth client ID**.
 1. In the **Application type** dropdown, select **Web application**.
 1. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
-1. **If you're self-hosting:** From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console. 
-If you're using **n8n cloud**, you can leave this field empty as the OAuth setup is pre-configured, and the callback URL is fixed for that configuration.
+1. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
 1. Select **Create**.
 
 ### Finish your n8n credential
 
 With the Google project and credentials fully configured, finish the n8n credential:
-- If **self-hosted:**
 
 1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
 1. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.

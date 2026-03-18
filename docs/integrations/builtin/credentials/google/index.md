@@ -24,7 +24,7 @@ There are two authentication methods available for Google services nodes:
 
 ### Managed OAuth2 for n8n Cloud users
 
-[Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2) is available the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
+[Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2) is available for the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 

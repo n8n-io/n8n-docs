@@ -6,7 +6,7 @@ contentType: [integration, reference]
 
 # Google: OAuth2 generic
 
-This document contains instructions for creating a generic Google OAuth 2 API credential for use with [custom operations](/integrations/custom-operations.md).
+This document contains instructions for creating a generic Google OAuth2 API credential for use with [custom operations](/integrations/custom-operations.md).
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 

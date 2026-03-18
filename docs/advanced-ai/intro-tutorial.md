@@ -42,7 +42,7 @@ In n8n, the AI agent is represented as a node with some extra connections.
 | Feature             | LLM                        | AI Agent                           |
 |---------------------|----------------------------|------------------------------------|
 | Core Capability     | Text generation            | Goal-oriented task completion      |
-| Decision-Making     | None                       | Yes                                |
+| Decision-Making     | Simulates choices in text                       | Selects and executes actions                    |
 | Uses Tools/APIs     | No                         | Yes                                |
 | Workflow Complexity | Single-step                | Multi-step                         |
 | Scope               | Generates language         | Performs complex, real-world tasks |

@@ -85,16 +85,16 @@ When using the Approval response type, the message displays inline buttons that 
 When using the Approval response type, the following parameters are available:
 
 * **Type of Approval**: Whether to present only an approval button or both approval and disapproval buttons.
-  - **Approve Only**: Displays a single approval button
-  - **Approve and Disapprove**: Displays both buttons (default)
+    - **Approve Only**: Displays a single approval button
+    - **Approve and Disapprove**: Displays both buttons (default)
 
 * **Approve Button Label**: The text to display on the approval button. Default: `Approve`
 
 * **Disapprove Button Label**: The text to display on the disapproval button (only shown when Type of Approval is "Approve and Disapprove"). Default: `Disapprove`
 
 * **Block User Input**: Whether to prevent users from typing custom messages (enabled) or allow them to type responses (disabled, default).
-  - When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
-  - When **enabled**: Users can only interact using the buttons.
+    - When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
+    - When **enabled**: Users can only interact using the buttons.
 
 The Approval response type also offers the following option:
 

@@ -23,6 +23,8 @@ for more information.
 
 IMAP access for Outlook.com and Microsoft 365 accounts is no longer supported in n8n due to Microsoft's deprecation of Basic Authentication. You cannot use IMAP (with a regular password or app password) to connect to Outlook.com or Microsoft 365 accounts.
 
-**To connect your Outlook.com or Microsoft 365 email, use the [Microsoft Outlook node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/), which uses OAuth 2.0 as required by Microsoft.**
+To replace IMAP triggers for incoming email, use the [Microsoft Outlook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md), which supports the Message Received event.
+
+For general Microsoft Outlook automation, use the [Microsoft Outlook node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md), which uses OAuth 2.0 as required by Microsoft.
 
 For more information, refer to [Microsoft's deprecation notice](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online#what-we-are-changing).

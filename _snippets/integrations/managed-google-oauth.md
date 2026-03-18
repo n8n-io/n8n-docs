@@ -3,7 +3,7 @@
 * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md)
 * [Google Docs](/integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md)
 * [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md)
-* [Google Drive Trigger](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md)
+* [Google Drive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md)
 * [Google Mail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md)
 * [Google Mail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md)
 * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md)

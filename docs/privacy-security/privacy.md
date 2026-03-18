@@ -40,7 +40,7 @@ This is a list of sub-processors authorized to process customer data for n8n's s
 
 | Sub-processor name | Purpose | Contact details | Geographic location of processing |
 | ------------------ | --------------- | --------------- | --------------------------------- |
-| Microsoft Azure | Cloud service provider | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | Germany (West Central Region) |
+| Microsoft Azure | Cloud service provider | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | EU (for example, Germany, Sweden) |
 | Hetzner Online | Cloud service provider | Hetzner Online GmbH <br /> Industriestr. 25 <br /> 91710 Gunzenhausen <br /> Germany <br /> data-protection@hetzner.com | Germany |
 | OpenAI | AI provider	| 1455 3rd Street <br /> San Francisco, CA 94158 <br /> United States |	US |
 | Anthropic	| AI provider	| Anthropic Ireland, Limited <br /> 6th Floor South Bank House, Barrow Street, Dublin 4 <br /> Ireland	| US |

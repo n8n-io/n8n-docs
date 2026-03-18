@@ -19,8 +19,10 @@ For LDAP setup information, refer to [LDAP](/user-management/ldap.md).
 
 For SAML setup information, refer to [SAML](/user-management/saml/index.md).
 
-/// note | Basic auth and JWT removed
-n8n removed support for basic auth and JWT in version 1.0.
+/// note | Unsupported user management methods
+In version 1.0, n8n:
+- Removed support for **basic auth** and **JWT** 
+- Removed the `N8N_USER_MANAGEMENT_DISABLED` environment variable. No supported way to disable the login screen exists in recent versions of n8n, including for local or development use. If you need to simplify login for local development, consider using a password manager, setting a simple local password, or scripting the standard login flow.
 ///
 ## Setup
 

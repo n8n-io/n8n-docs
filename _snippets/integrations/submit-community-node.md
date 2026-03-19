@@ -20,20 +20,20 @@ Developing with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-nod
 ## Publishing to npm
 
 /// note | Required for Creator Portal verification
-From May 1st 2026, nodes submitted for verification must be published via GitHub Actions with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). Direct `npm publish` from a local machine will not be accepted for verified nodes.
+From May 1st 2026, nodes submitted for verification must be published using GitHub Actions with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). n8n won't accept verified nodes published directly from a local machine.
 ///
 
-If you want to submit your node for verification through the n8n Creator Portal, you must publish using a GitHub Actions workflow with a provenance statement. Provenance lets anyone cryptographically verify that a package was built by a specific workflow, from a specific repository and commit. GitHub Actions signs the provenance statement using its OIDC infrastructure.
+To submit your node for verification through the n8n Creator Portal, publish using a GitHub Actions workflow with a provenance statement. Provenance lets anyone cryptographically verify that a specific workflow built the package, from a specific repository and commit. GitHub Actions signs the provenance statement using its OIDC infrastructure.
 
 ### New nodes
 
-If you scaffold your node with `npm create @n8n/node`, a ready-to-use `publish.yml` workflow is included automatically. Run `npm run release` locally to bump the version, commit, tag, and push — this triggers the workflow to publish to npm.
+If you scaffold your node with `npm create @n8n/node`, the scaffolding includes a ready-to-use `publish.yml` workflow. Run `npm run release` locally to bump the version, commit, tag, and push. This triggers the workflow to publish to npm.
 
 ### Existing nodes
 
 Add the [publish workflow from the n8n-nodes-starter](https://github.com/n8n-io/n8n-nodes-starter/blob/master/.github/workflows/publish.yml) to your repository at `.github/workflows/publish.yml`.
 
-Also make sure your project has `@n8n/node-cli` version `0.23.0` or later installed as a dev dependency, as earlier versions don't support the provenance flag used by the workflow:
+Also make sure your project has `@n8n/node-cli` version `0.23.0` or later as a `devDependency`, as earlier versions don't support the provenance flag used by the workflow:
 
 ```sh
 npm list @n8n/node-cli
@@ -41,23 +41,23 @@ npm list @n8n/node-cli
 
 ### One-time setup
 
-Configure npm to trust your repository's GitHub Actions workflow so it can publish on your behalf — no long-lived token required:
+Configure npm to trust your repository's GitHub Actions workflow so it can publish on your behalf. No long-lived token required:
 
 1. Log in to [npmjs.com](https://www.npmjs.com/) and open your package's settings.
-2. Under **Publish access → Trusted Publishers**, click **Add a publisher**.
+2. Under **Publish access > Trusted Publishers**, click **Add a publisher**.
 3. Select **GitHub Actions** and fill in:
    - **Repository owner**: your GitHub username or organisation
    - **Repository name**: your repository name
    - **Workflow name**: `publish.yml` (the filename, not the workflow `name:` field)
 
-Alternatively, create a Granular Access Token on npmjs.com and store it as `NPM_TOKEN` in your repository's Actions secrets. See the comments in the workflow file for details.
+To use a token instead, create a Granular Access Token on npmjs.com and store it as `NPM_TOKEN` in your repository's Actions secrets. See the comments in the workflow file for details.
 
 ## Submit your node for verification by n8n
 
 n8n vets verified community nodes. Users can discover and install verified community nodes from the nodes panel in n8n. These nodes need to adhere to certain technical and UX standards and constraints.
 
 /// note | GitHub Actions publish required for verification
-From May 1st 2026, nodes submitted for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes) must be published via GitHub Actions with a provenance statement. See [Publishing to npm](#publishing-to-npm) for setup instructions.
+From May 1st 2026, nodes submitted for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes) must be published using GitHub Actions with a provenance statement. See [Publishing to npm](#publishing-to-npm) for setup instructions.
 ///
 
 Before submitting your node for review by n8n, you must:

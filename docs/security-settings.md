@@ -6,7 +6,7 @@ contentType: howto
 # Security settings
 
 /// info | Feature availability
-Security settings are available on Enterprise plans. Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
+Security settings are available on Business and Enterprise plans. Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
 ///
 
 Security settings let you manage instance-wide security policies. You can enforce two-factor authentication for all users and control what users can do in their personal spaces.

@@ -10,6 +10,8 @@ contentType: howto
 Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 
 **Available from:** n8n version 1.122.0 (released November 24, 2025)
+
+Secret vault scopes are available from n8n version `2.13.0`
 ///
 
 /// note | Instance roles vs project roles
@@ -38,6 +40,8 @@ To create a custom role:
 	* **Folder permissions**: Create, read, update, delete, list, or move folders
 	* **Data table permissions**: Create, read, update, delete, list project tables, read/write rows
 	* **Project variable permissions**: Create, read, update, delete, or list project variables
+	* **Secret vault permissions**: Create, view, update, delete, and sync (reload) vaults of a project
+	* **Secrets permission**: Use secrets in credentials
 	* **Source control**: Push to source control
 5. Select **Create role**.
 
@@ -149,6 +153,16 @@ Custom roles use permission scopes to define what users can do within a project.
 * `projectVariable:update` - Edit variable values
 * `projectVariable:delete` - Delete variables
 
+### Secret vault scopes
+* `secretsVaults:view` - View secret vaults in a project
+* `secretsVaults:create` - Create new secret vaults within project
+* `secretsVaults:edit` - Edit secret vault configuration
+* `secretsVaults:delete` - Delete secret vaults of a project
+* `secretsVaults:sync` - Reload a vault's secrets
+
+* `secrets:list` - Use secrets in credentials
+
+
 ### Source control scopes
 * `sourceControl:push` - Push changes to source control
 
@@ -166,6 +180,13 @@ A role for users who work only with workflows:
 A role for users who manage credentials:
 * `credential:create`, `credential:read`, `credential:update`, `credential:delete`, `credential:list`, `credential:share`
 * `workflow:read`, `workflow:list` (view workflows to understand credential usage)
+* `project:list`, `project:read`
+
+### Secrets User
+A role for users who need to use external secrets in credentials but not manage vaults:
+* `secrets:list` (use secrets in credentials expressions)
+* `credential:create`, `credential:read`, `credential:update`, `credential:list` (manage credentials with secrets)
+* `workflow:read`, `workflow:list`
 * `project:list`, `project:read`
 
 ### Workflow Publisher

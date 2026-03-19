@@ -8,7 +8,7 @@ Nathan's company stores its customer data in Airtable. This data contains inform
 
 To accomplish this task, you first need to make a copy of this table in your Airtable account. 
 
-<a href="https://airtable.com/embed/shrNX9tjPkVLABbNz?backgroundColor=orange&viewControls=on">Click here to access.</a>
+<a href="https://airtable.com/embed/shrNX9tjPkVLABbNz?backgroundColor=orange&viewControls=on" target="_blank">Click here to access.</a>
 
 When setting up your Airtable, ensure that the `customerSince` column is configured as a Date type field with the **Include time** option enabled. Without this setting, you may encounter errors in step 4 when updating the table.
 

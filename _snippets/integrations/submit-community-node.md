@@ -15,15 +15,15 @@ Developing with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-nod
 * Include `n8n-community-node-package` in your package keywords.
 * Make sure that you add your nodes and credentials to the `package.json` file inside the `n8n` attribute.
 * Check your node using the linter (`npm run lint`) and test it locally (`npm run dev`) to ensure it works.
-* Publish the package to npm using a GitHub Actions workflow with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). This is required from May 1st 2026. See [Publishing to npm](#publishing-to-npm) below.
+* Publish the package to npm. If you plan to submit your node for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes), you must publish using a GitHub Actions workflow with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). See [Publishing to npm](#publishing-to-npm) below.
 
 ## Publishing to npm
 
-/// warning | Requirement from May 1st 2026
-From May 1st 2026 you must publish **all** community nodes using a GitHub Actions workflow that includes a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). Direct `npm publish` from a local machine will no longer be accepted.
+/// note | Required for Creator Portal verification
+From May 1st 2026, nodes submitted for verification must be published via GitHub Actions with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). Direct `npm publish` from a local machine will not be accepted for verified nodes.
 ///
 
-Provenance lets anyone cryptographically verify that a package was built by a specific workflow, from a specific repository and commit. GitHub Actions signs the provenance statement using its OIDC infrastructure.
+If you want to submit your node for verification through the n8n Creator Portal, you must publish using a GitHub Actions workflow with a provenance statement. Provenance lets anyone cryptographically verify that a package was built by a specific workflow, from a specific repository and commit. GitHub Actions signs the provenance statement using its OIDC infrastructure.
 
 ### New nodes
 
@@ -55,6 +55,10 @@ Alternatively, create a Granular Access Token on npmjs.com and store it as `NPM_
 ## Submit your node for verification by n8n
 
 n8n vets verified community nodes. Users can discover and install verified community nodes from the nodes panel in n8n. These nodes need to adhere to certain technical and UX standards and constraints.
+
+/// note | GitHub Actions publish required for verification
+From May 1st 2026, nodes submitted for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes) must be published via GitHub Actions with a provenance statement. See [Publishing to npm](#publishing-to-npm) for setup instructions.
+///
 
 Before submitting your node for review by n8n, you must:
 

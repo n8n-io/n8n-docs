@@ -8,11 +8,12 @@ contentType: overview
 
 This section contains:
 
-* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node.
-* [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
+* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node. Two options exist:
+    * [Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2): Sign in with Google directly on n8n, with no setup required on the Google Cloud Console. Available for n8n Cloud users only, for certain Google nodes.
+    * [Custom OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#custom-oauth2): Configure an OAuth2 app in the Google Cloud Console and connect it to your n8n credential.    
+* [OAuth2 API (generic)](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
 * [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview) credential for some specific service nodes.
 * [Google PaLM and Gemini](/integrations/builtin/credentials/googleai.md): Get a Google Gemini/Google PaLM API key.
-
 
 ## OAuth2 and Service Account
 
@@ -20,6 +21,10 @@ There are two authentication methods available for Google services nodes:
 
 * [OAuth2](https://developers.google.com/identity/protocols/oauth2): Recommended because it's more widely available and easier to set up.
 * [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts): Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts) for guidance on when you need a service account.
+
+### Managed OAuth2 for n8n Cloud users
+
+[Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2) is available for the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 

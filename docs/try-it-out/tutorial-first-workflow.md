@@ -57,8 +57,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
 1. To access the NASA APIs, you need to set up credentials:
     1. Select the  **Credential for NASA API** dropdown.
     1. Select **Create new credential**. n8n opens the credentials view.
-    1. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
-    1. Check your email account for the API key. If you don’t see it, check your junk or spam folder. Copy the key, and paste it into **API Key** in n8n.
+    1. Enter `DEMO_KEY` in **API Key**. NASA provides this key for trying out their APIs without registration.
     1. Select **Save**.
     1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
 

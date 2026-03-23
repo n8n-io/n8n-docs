@@ -63,15 +63,11 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.12.0...n8n@2.13.0
 
 This release contains bug fixes and features.
 
-<div class="n8n-new-features" markdown>
-
 ### Visual diff comes to version history
 
 Open version history, click **Compare changes**, pick any two versions, and the canvas renders both side by side with changed nodes highlighted. A change count badge on each version helps you spot significant edits at a glance.
 
 Visual diff is available on Cloud Pro and above.
-
-</div>
 
 ### Project-scoped external secrets: full team access (Enterprise)
 
@@ -96,11 +92,11 @@ Folder-based filtering is available on n8n Enterprise (requires [Environments](/
 
 ### Contributors
 
-[tbigby-kristin](https://github.com/tbigby-kristin)
-[ajuijas](https://github.com/ajuijas)
-[ByteEVM](https://github.com/ByteEVM)
-[mjain](https://github.com/mjain)
-[bram2w](https://github.com/bram2w)
+[tbigby-kristin](https://github.com/tbigby-kristin)  
+[ajuijas](https://github.com/ajuijas)  
+[ByteEVM](https://github.com/ByteEVM)  
+[mjain](https://github.com/mjain)  
+[bram2w](https://github.com/bram2w)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -137,8 +133,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.11.0...n8n@2.12.0
 
 This release contains bug fixes and features.
 
-<div class="n8n-new-features" markdown>
-
 ### 1Password is now available as an external secrets provider (Enterprise)
 
 n8n now supports 1Password Connect Server as an [external secrets](/external-secrets.md) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
@@ -152,12 +146,10 @@ Secrets are fetched at runtime and never stored in n8n: 1Password stays the sing
 
 Requires self-hosted 1Password Connect Server with read-only access. 1Password as an external secrets provider is available on n8n Enterprise.
 
-</div>
-
 ### Contributors
 
-`github-actions[bot]`
-[amenk](https://github.com/amenk)
+`github-actions[bot]` 
+[amenk](https://github.com/amenk)  
 [bpk9](https://github.com/bpk9)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -215,8 +207,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.11.0
 
 This release contains bug fixes and features.
 
-<div class="n8n-new-features" markdown>
-
 ### Easier credential setup on Cloud
 
 Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
@@ -230,8 +220,6 @@ Setting up credentials on n8n Cloud is now much simpler. For supported services,
 
 * If you prefer to use your own OAuth configuration, you can still switch to manual setup from the auth mode dropdown at any time.
 * This feature is only available on n8n Cloud, where n8n manages the OAuth apps on your behalf.
-
-</div>
 
 ### Custom roles: Assignments tab (Enterprise)
 
@@ -253,8 +241,8 @@ This scope is available on n8n Enterprise.
 
 ### Contributors
 
-[ByteEVM](https://github.com/ByteEVM)
-[onyxraven](https://github.com/onyxraven)
+[ByteEVM](https://github.com/ByteEVM)  
+[onyxraven](https://github.com/onyxraven)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

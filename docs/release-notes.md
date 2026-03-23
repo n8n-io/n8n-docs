@@ -340,33 +340,36 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.0...n8n@2.9.0) for this version.<br />
 **Release date:** 2026-02-16
 
-This release contains bug fixes and features.
+This release contains bug fixes.
 
-<div class="n8n-new-features" markdown>
+### Contributors
 
+[ByteEVM](https://github.com/ByteEVM)
+[LudwigGerdes](https://github.com/LudwigGerdes)
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 ## n8n@2.8.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.3...n8n@2.8.4) for this version.<br />
-
 **Release date:** 2026-02-23
 
 This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 ## n8n@2.8.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.2...n8n@2.8.3) for this version.<br />
 **Release date:** 2026-02-13
 
-This release contains a bug fix.
+This release contains a bug fix and features.
 
 /// note | Stable version
 This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
 
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
+<div class="n8n-new-features" markdown>
 
 ### Personal space policies (Enterprise)
 
@@ -396,11 +399,6 @@ The project role selector now separates built-in system roles and custom roles i
 </figure>
 
 </div>
-
-### Contributors
-
-[ByteEVM](https://github.com/ByteEVM)  
-[LudwigGerdes](https://github.com/LudwigGerdes)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

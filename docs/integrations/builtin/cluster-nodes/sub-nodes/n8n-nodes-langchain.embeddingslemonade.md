@@ -1,6 +1,6 @@
 ---
-title: Embeddings Lemonade node documentation
-description: Learn how to use the Embeddings Lemonade node in n8n. Follow technical documentation to integrate Embeddings Lemonade node into your workflows.
+title: Embeddings Cohere node documentation
+description: Learn how to use the Embeddings Cohere node in n8n. Follow technical documentation to integrate Embeddings Cohere node into your workflows.
 contentType: [integration, reference]
 ---
 
@@ -30,7 +30,6 @@ The model which will generate the embeddings. Models are loaded and managed thro
 
 ## Related resources
 
-Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/cohere/) for more information about the service.
+Refer to [Lemonade Server's documentation](https://lemonade-server.ai/docs/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
-

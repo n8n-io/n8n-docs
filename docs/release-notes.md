@@ -165,12 +165,30 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.10.0...n8n@2.11.0) for this version.<br />
 **Release date:** 2026-03-02
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Easier credential setup on Cloud
+
+Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
+
+<figure markdown="span">
+    ![Managed OAuth credential setup for Slack on n8n Cloud](/_images/release-notes/quick_connect_slack.png)
+    <figcaption>Setting up Slack credentials with managed OAuth.</figcaption>
+</figure>
+
+#### Things to keep in mind
+
+* If you prefer to use your own OAuth configuration, you can still switch to manual setup from the auth mode dropdown at any time.
+* This feature is only available on n8n Cloud, where n8n manages the OAuth apps on your behalf.
+
+</div>
 
 ### Contributors
 
-[ByteEVM](https://github.com/ByteEVM)  
-[onyxraven](https://github.com/onyxraven)  
+[ByteEVM](https://github.com/ByteEVM)
+[onyxraven](https://github.com/onyxraven)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

@@ -61,15 +61,46 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.12.0...n8n@2.13.0) for this version.<br />
 **Release date:** 2026-03-16
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Visual diff comes to version history
+
+Open version history, click **Compare changes**, pick any two versions, and the canvas renders both side by side with changed nodes highlighted. A change count badge on each version helps you spot significant edits at a glance.
+
+Visual diff is available on Cloud Pro and above.
+
+</div>
+
+### Project-scoped external secrets: full team access (Enterprise)
+
+What's new:
+
+* Project admins manage their own vault connections from project settings.
+* Project editors can use project-scoped secrets in credentials once the instance admin enables access.
+* [Custom roles](/user-management/rbac/custom-roles.md) now include five secrets scopes: list, read, create, update, and delete.
+* Instance admins/owners no longer need to be project members for secrets to resolve.
+
+**For instance admins:** go to **Settings > External Secrets** and enable the **System Roles** toggle, or use custom roles for more granular control.
+
+**For project admins:** go to **Project Settings > External Secrets** to create and manage project-level connections. Instance-level connections shared with you appear as read-only.
+
+Refer to [External secrets](/external-secrets.md) for more information. Project-scoped external secrets are available on n8n Enterprise.
+
+### Folder-based filtering in the push and pull dialog (Enterprise)
+
+The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
+
+Folder-based filtering is available on n8n Enterprise (requires [Environments](/source-control-environments/setup.md) configured).
 
 ### Contributors
 
-[tbigby-kristin](https://github.com/tbigby-kristin)  
-[ajuijas](https://github.com/ajuijas)  
-[ByteEVM](https://github.com/ByteEVM)  
-[mjain](https://github.com/mjain)  
-[bram2w](https://github.com/bram2w)  
+[tbigby-kristin](https://github.com/tbigby-kristin)
+[ajuijas](https://github.com/ajuijas)
+[ByteEVM](https://github.com/ByteEVM)
+[mjain](https://github.com/mjain)
+[bram2w](https://github.com/bram2w)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -104,13 +135,30 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.11.0...n8n@2.12.0) for this version.<br />
 **Release date:** 2026-03-09
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### 1Password is now available as an external secrets provider (Enterprise)
+
+n8n now supports 1Password Connect Server as an [external secrets](/external-secrets.md) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
+
+Secrets are fetched at runtime and never stored in n8n: 1Password stays the single source of truth. Multi-field items are available as structured sub-paths: `$secrets.<vault>.<item>.<field>`.
+
+#### How to connect
+
+1. Deploy a 1Password Connect Server and create an access token scoped to the vaults n8n should read.
+2. In n8n, go to **Settings > External Secrets**, select **1Password**, and enter your Connect Server URL and token.
+
+Requires self-hosted 1Password Connect Server with read-only access. 1Password as an external secrets provider is available on n8n Enterprise.
+
+</div>
 
 ### Contributors
 
-`github-actions[bot]` 
-[amenk](https://github.com/amenk)  
-[bpk9](https://github.com/bpk9)  
+`github-actions[bot]`
+[amenk](https://github.com/amenk)
+[bpk9](https://github.com/bpk9)
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -184,6 +232,24 @@ Setting up credentials on n8n Cloud is now much simpler. For supported services,
 * This feature is only available on n8n Cloud, where n8n manages the OAuth apps on your behalf.
 
 </div>
+
+### Custom roles: Assignments tab (Enterprise)
+
+Instance admins now have a dedicated **Assignments** tab on each [custom role](/user-management/rbac/custom-roles.md) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
+
+Custom roles are available on n8n Enterprise.
+
+### Project-scoped external secrets: instance admin setup (Enterprise)
+
+Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected.
+
+Refer to [External secrets](/external-secrets.md) for more information. Project-scoped external secrets are available on n8n Enterprise.
+
+### Workflow execute as a separate permission scope (Enterprise)
+
+`workflow:execute` is now a distinct scope in [custom project roles](/user-management/rbac/custom-roles.md), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
+
+This scope is available on n8n Enterprise.
 
 ### Contributors
 

@@ -32,6 +32,22 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
+
+
+## n8n@2.14.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.0...n8n@2.14.0) for this version.<br />
+**Release date:** 2026-03-24
+
+This release contains bug fixes.
+
+### Contributors
+
+[pkaya89](https://github.com/pkaya89)  
+[kesku](https://github.com/kesku)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 ## n8n@2.13.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.1...n8n@2.13.2) for this version.<br />

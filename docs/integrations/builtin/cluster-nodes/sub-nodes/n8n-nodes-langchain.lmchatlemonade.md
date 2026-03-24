@@ -11,7 +11,7 @@ Use the Lemonade Chat Model node to run chat-capable language models managed by 
 On this page, you'll find a list of the node parameters, and available options to refine generation.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/Lemonade Chat Model.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/TODO.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

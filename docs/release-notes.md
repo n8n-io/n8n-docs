@@ -36,7 +36,7 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 ## n8n@2.14.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.0...n8n@2.14.0) for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.2...n8n@2.14.0) for this version.<br />
 **Release date:** 2026-03-24
 
 This release contains bug fixes.
@@ -343,10 +343,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.9.0...n8n@2.9.1) for this version.<br />
 **Release date:** 2026-02-18
 
-/// note | Beta version
-This is the `beta` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -380,10 +376,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.8.2...n8n@2.8.3) 
 **Release date:** 2026-02-13
 
 This release contains a bug fix and features.
-
-/// note | Stable version
-This is the `stable` version. n8n recommends using the `stable` version. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
 
 <div class="n8n-new-features" markdown>
 

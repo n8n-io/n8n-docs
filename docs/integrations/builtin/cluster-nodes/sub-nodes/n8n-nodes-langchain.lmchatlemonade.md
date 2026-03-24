@@ -11,7 +11,7 @@ Use the Lemonade Chat Model node to run chat-capable language models managed by 
 On this page, you'll find a list of the node parameters, and available options to refine generation.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/TODO.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lemonade.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -39,7 +39,7 @@ Controls the randomness of the generated text. Lower values make the output more
 
 ### Top P
 
-Chooses from the smallest possible set of tokens whose cumulative probability exceeds the probability top_p. Helps generate more human-like text by reducing repetitions.
+Controls which words the model can choose from when generating text. Lower values progressively remove the least likely options, so the model can only pick from a smaller, higher-confidence pool.
 
 | Property | Value |
 |----------|-------|
@@ -69,7 +69,7 @@ Adjusts the penalty for tokens based on their presence in the generated text so 
 
 ### Max Tokens to Generate
 
-The maximum number of tokens to generate. Set to -1 for no limit. Be cautious when setting this to a large value, as it can lead to very long outputs.
+The maximum number of tokens to generate. Set to -1 for no limit. Be cautious when setting this to a large value, as it can lead to long outputs.
 
 | Property | Value |
 |----------|-------|

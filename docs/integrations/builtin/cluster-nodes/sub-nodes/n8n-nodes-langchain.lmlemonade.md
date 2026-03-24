@@ -11,7 +11,7 @@ Use the Lemonade Model node to generate text completions using language models h
 On this page, you'll find a list of operations the Lemonade Model node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/TODO.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lemonade.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -40,7 +40,7 @@ Controls the randomness of the generated text. Lower values make the output more
 
 ### Top P
 
-Chooses from the smallest possible set of tokens whose cumulative probability exceeds the probability top_p. Helps generate more human-like text by reducing repetitions.
+Controls which words the model can choose from when generating text. Lower values progressively remove the least likely options, so the model can only pick from a smaller, higher-confidence pool.
 
 | Property | Value |
 |----------|-------|

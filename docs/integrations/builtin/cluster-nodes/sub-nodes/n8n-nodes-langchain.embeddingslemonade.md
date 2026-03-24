@@ -11,7 +11,7 @@ Use the Embeddings Lemonade node to generate vector embeddings using models host
 On this page, you'll find a list of operations the Embeddings Lemonade node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/Embeddings Lemonade.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lemonade.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

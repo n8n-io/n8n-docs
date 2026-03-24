@@ -30,6 +30,6 @@ Refer to [Lemonade's documentation](https://lemonade-server.ai/docs/) for more i
 To configure this credential, you'll need:
 
 - **Base URL**: The URL of your Lemonade server, including the API path. The default for a local installation is `http://localhost:8000/api/v1`. If you're running n8n in Docker, use `http://host.docker.internal:8000/api/v1` instead. If your Lemonade server is on a remote machine, replace `localhost` with the server's address.
-- **API key** (optional): Optional API key for Lemonade server authentication. This is not required for default Lemonade installation.
+- **API key** (optional): Optional API key for Lemonade server authentication. This isn't required for default Lemonade installation.
 
 

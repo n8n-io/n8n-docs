@@ -1,6 +1,6 @@
 ---
-title: Embeddings Cohere node documentation
-description: Learn how to use the Embeddings Cohere node in n8n. Follow technical documentation to integrate Embeddings Cohere node into your workflows.
+title: Embeddings Lemonade node documentation
+description: Learn how to use the Embeddings Lemonade node in n8n. Follow technical documentation to integrate Embeddings Lemonade node into your workflows.
 contentType: [integration, reference]
 ---
 

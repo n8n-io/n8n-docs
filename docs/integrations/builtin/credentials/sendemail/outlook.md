@@ -5,27 +5,12 @@ contentType: [integration, reference]
 priority: high
 ---
 
+
 # Outlook.com Send Email credentials
 
-Follow these steps to configure the Send Email credentials with an Outlook.com account.
+/// warning | Microsoft has removed Basic Auth and App Passwords for Outlook.com SMTP
+Microsoft deprecated Basic Authentication and app passwords for SMTP in Exchange Online and Outlook.com. As a result, the Send Email node **cannot connect to Outlook.com or Microsoft 365 accounts** using username/password or app password authentication.
 
-## Set up the credential
+**To send email from your Outlook.com or Microsoft 365 account, use the [Microsoft Outlook node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md), which uses OAuth 2.0 as required by Microsoft.**
 
-To configure the Send Email credential to use an Outlook.com account:
-
-1. Enter your Outlook.com email address as the **User**.
-2. Enter your Outlook.com password as the **Password**.
-
-	/// note | App password
-	Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password).
-	///
-
-4. Enter `smtp-mail.outlook.com` as the **Host**.
-5. Enter `587` for the **Port**.
-6. Turn on the **SSL/TLS** toggle.
-
-Refer to Microsoft's [POP, IMAP, and SMTP settings for Outlook.com](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040) documentation for more information. If the settings above don't work for you, check with your email administrator.
-
-## Use an app password
-
---8<-- "_snippets/integrations/builtin/credentials/email/outlook-app-password.md"
+Refer to [Microsoft's deprecation notice](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online#what-we-are-changing) for more information.

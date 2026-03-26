@@ -17,10 +17,10 @@ Refer to [AWS credentials](/integrations/builtin/credentials/aws.md) for guidanc
 ## Operations
 
 * Item
-  * Create a new record, or update the current one if it already exists (upsert/put)
-  * Delete an item
-  * Get an item
-  * Get all items
+    * Create a new record, or update the current one if it already exists (upsert/put)
+    * Delete an item
+    * Get an item
+    * Get all items
 
 ## Templates and examples
 

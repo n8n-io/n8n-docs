@@ -31,7 +31,7 @@ For basic API request failures, catch the error and wrap it in `NodeApiError`:
 
 ```typescript
 try {
-	const response = await this.helpers.requestWithAuthentication.call(
+	const response = await this.helpers.httpRequestWithAuthentication.call(
 		this,
 		credentialType,
 		options
@@ -46,7 +46,7 @@ Handle specific HTTP status codes with custom messages:
 
 ```typescript
 try {
-	const response = await this.helpers.requestWithAuthentication.call(
+	const response = await this.helpers.httpRequestWithAuthentication.call(
 		this,
 		credentialType,
 		options
@@ -54,7 +54,7 @@ try {
 	return response;
 } catch (error) {
 	if (error.httpCode === "404") {
-		const resource = this.getNodeParameter("resource", 0) as string;
+		const resource = this.getNodeParameter("resource", 0);
 		const errorOptions = {
 			message: `${
 				resource.charAt(0).toUpperCase() + resource.slice(1)
@@ -103,7 +103,7 @@ new NodeOperationError(node: INode, error: Error | string | JsonObject, options?
 Use `NodeOperationError` for validating user inputs:
 
 ```typescript
-const email = this.getNodeParameter("email", itemIndex) as string;
+const email = this.getNodeParameter("email", itemIndex);
 
 if (email.indexOf("@") === -1) {
 	const description = `The email address '${email}' in the 'email' field isn't valid`;

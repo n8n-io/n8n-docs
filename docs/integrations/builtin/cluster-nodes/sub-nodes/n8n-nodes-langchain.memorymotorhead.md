@@ -7,6 +7,10 @@ priority: medium
 
 # Motorhead node
 
+/// warning | Deprecated
+The Motorhead project is no longer maintained. This node is deprecated, and will be removed in a future version.
+///
+
 Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.

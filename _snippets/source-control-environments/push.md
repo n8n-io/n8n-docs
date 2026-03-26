@@ -4,7 +4,7 @@ To push work to Git:
 
 	--8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
-1. In the **Commit and push changes** modal, select which workflows you want to push. You can filter by status (new, modified, deleted) and search for workflows. n8n automatically pushes tags, and variable and credential stubs.
+1. In the **Commit and push changes** modal, select which workflows and data tables you want to push. You can filter by status (new, modified, deleted) and search for items. n8n automatically pushes tags, and variable and credential stubs.
 
    n8n pushes the current saved version, not the published version, of the workflow. You need to then separately publish versions on the remote server.
 

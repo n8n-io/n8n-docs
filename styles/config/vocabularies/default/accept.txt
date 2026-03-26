@@ -62,6 +62,7 @@ Cron
 [Cc]rypto
 [Dd]atacenters?
 Datadog
+Databricks
 Datastore
 [Dd]atetimes?
 [Dd]edupe

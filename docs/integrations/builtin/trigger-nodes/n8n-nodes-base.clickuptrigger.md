@@ -20,31 +20,31 @@ For usage examples and templates to help you get started, refer to n8n's [ClickU
 ## Events
 
 * Key result
-  * Created
-  * Deleted
-  * Updated
-* List
-  * Created
-  * Deleted
-  * Updated
-* Space
-  * Created
-  * Deleted
-  * Updated
-* Task
-  * Assignee updated
-  * Comment
-    * Posted
+    * Created
+    * Deleted
     * Updated
-  * Created
-  * Deleted
-  * Due date updated
-  * Moved
-  * Status updated
-  * Tag updated
-  * Time estimate updated
-  * Time tracked updated
-  * Updated
+* List
+    * Created
+    * Deleted
+    * Updated
+* Space
+    * Created
+    * Deleted
+    * Updated
+* Task
+    * Assignee updated
+    * Comment
+      * Posted
+      * Updated
+    * Created
+    * Deleted
+    * Due date updated
+    * Moved
+    * Status updated
+    * Tag updated
+    * Time estimate updated
+    * Time tracked updated
+    * Updated
 
 ## Related resources
 

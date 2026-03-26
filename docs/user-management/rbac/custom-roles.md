@@ -10,6 +10,8 @@ contentType: howto
 Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 
 **Available from:** n8n version 1.122.0 (released November 24, 2025)
+
+Secret vault scopes are available from n8n version `2.13.0`
 ///
 
 /// note | Instance roles vs project roles
@@ -38,6 +40,8 @@ To create a custom role:
 	* **Folder permissions**: Create, read, update, delete, list, or move folders
 	* **Data table permissions**: Create, read, update, delete, list project tables, read/write rows
 	* **Project variable permissions**: Create, read, update, delete, or list project variables
+	* **Secret vault permissions**: Create, view, update, delete, and sync (reload) vaults of a project
+	* **Secrets permission**: Use secrets in credentials
 	* **Source control**: Push to source control
 5. Select **Create role**.
 
@@ -102,10 +106,10 @@ Custom roles use permission scopes to define what users can do within a project.
 * `workflow:create` - Create new workflows
 * `workflow:read` - View workflow details
 * `workflow:update` - Edit workflows
-* `workflow:publish` - Publish and unpublish workflows
+* `workflow:publish` - Publish workflows
+* `workflow:unpublish` - Unpublish workflows
 * `workflow:delete` - Delete workflows
 * `workflow:list` - View workflows in project
-* `workflow:execute` - Manually execute workflows
 * `workflow:execute-chat` - Execute workflows via chat interface
 * `workflow:move` - Move workflows between projects
 * `workflow:share` - Share workflows with other users
@@ -149,6 +153,16 @@ Custom roles use permission scopes to define what users can do within a project.
 * `projectVariable:update` - Edit variable values
 * `projectVariable:delete` - Delete variables
 
+### Secret vault scopes
+* `secretsVaults:view` - View secret vaults in a project
+* `secretsVaults:create` - Create new secret vaults within project
+* `secretsVaults:edit` - Edit secret vault configuration
+* `secretsVaults:delete` - Delete secret vaults of a project
+* `secretsVaults:sync` - Reload a vault's secrets
+
+* `secrets:list` - Use secrets in credentials
+
+
 ### Source control scopes
 * `sourceControl:push` - Push changes to source control
 
@@ -158,7 +172,7 @@ These are example custom project roles you can create for common use cases. Reme
 
 ### Workflow Developer
 A role for users who work only with workflows:
-* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:delete`, `workflow:list`, `workflow:execute`
+* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:delete`, `workflow:list`
 * `credential:read`, `credential:list` (view credentials but not modify)
 * `project:list`, `project:read`
 
@@ -168,15 +182,16 @@ A role for users who manage credentials:
 * `workflow:read`, `workflow:list` (view workflows to understand credential usage)
 * `project:list`, `project:read`
 
-### Workflow Publisher
-A role for users who can publish workflows without full edit access:
-* `workflow:read`, `workflow:list`, `workflow:publish`
-* `credential:read`, `credential:list`
+### Secrets User
+A role for users who need to use external secrets in credentials but not manage vaults:
+* `secrets:list` (use secrets in credentials expressions)
+* `credential:create`, `credential:read`, `credential:update`, `credential:list` (manage credentials with secrets)
+* `workflow:read`, `workflow:list`
 * `project:list`, `project:read`
 
-### Read-Only with Execute
-A role for users who can view and run workflows but not modify them:
-* `workflow:read`, `workflow:list`, `workflow:execute`
+### Workflow Publisher
+A role for users who can publish workflows without full edit access:
+* `workflow:read`, `workflow:list`, `workflow:publish`, `workflow:unpublish`
 * `credential:read`, `credential:list`
 * `project:list`, `project:read`
 

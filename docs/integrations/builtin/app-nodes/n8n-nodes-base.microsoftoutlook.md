@@ -15,7 +15,13 @@ On this page, you'll find a list of operations the Microsoft Outlook node suppor
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
+/// tip | Government Cloud Support
+If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
+///
+
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
 
 ## Operations
 

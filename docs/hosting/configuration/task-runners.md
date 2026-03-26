@@ -10,6 +10,10 @@ Task runners are a generic mechanism to execute tasks in a secure and performant
 
 This document describes how task runners work and how you can configure them.
 
+/// warning | Internal mode not recommended for production
+Using internal mode in production environments can pose a security risk. For production deployments, use [external mode](#external-mode) to ensure proper isolation between n8n and task runner processes. Refer to [Hardening task runners](/hosting/securing/hardening-task-runners.md) for additional security measures.
+///
+
 ## How it works
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
@@ -36,9 +40,9 @@ In external mode, a [launcher application](https://github.com/n8n-io/task-runner
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
-When using [Queue mode](/hosting/scaling/queue-mode.md), each worker needs to have its own sidecar container for task runners. 
+When using [Queue mode](/hosting/scaling/queue-mode.md), each worker needs to have its own sidecar container for task runners.
 
-In addition, if you haven't enabled offloading manual executions to workers (if you aren't setting `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true` in your configuration), then your main instance will run manual executions and needs its own sidecar container for task runners as well. Please note that running n8n with offloading disabled isn't recommended for production.
+In addition, if [`OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=false`](/hosting/configuration/environment-variables/queue-mode.md#queue-mode-environment-variables), then your main instance will run manual executions and needs its own sidecar container for task runners as well. Please note that running n8n with offloading disabled isn't recommended for production.
 
 ## Setting up external mode
 
@@ -117,7 +121,7 @@ The default launcher configuration file is locked down, but you can edit this fi
 path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 ```
 
-## Adding extra dependencies 
+## Adding extra dependencies
 
 ### 1. Extend the `n8nio/runners` image
 

@@ -32,17 +32,17 @@ Many people find it easier to take in new information in video format. This tuto
 
 If you're already familiar with AI, feel free to skip this section. This is a basic introduction to AI concepts and how they can be used in n8n workflows.
 
-An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm), which generate text based
-on input by predicting the next word. While LLMs only process input to produce
-output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
-their outputs, and make decisions to complete tasks and solve problems.
+An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm). LLMs generate text based
+on input by predicting the next word. They can be used to select the best tool to achieve a task, or even simulate complex decision-making, but they can't act on decisions or use tools themselves.
+AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), act on
+their outputs, complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 
 
 | Feature             | LLM                        | AI Agent                           |
 |---------------------|----------------------------|------------------------------------|
 | Core Capability     | Text generation            | Goal-oriented task completion      |
-| Decision-Making     | None                       | Yes                                |
+| Decision-Making     | Simulates choices in text                       | Selects and executes actions                    |
 | Uses Tools/APIs     | No                         | Yes                                |
 | Workflow Complexity | Single-step                | Multi-step                         |
 | Scope               | Generates language         | Performs complex, real-world tasks |
@@ -58,7 +58,7 @@ By incorporating the AI agent as a node, n8n can combine AI-driven steps with tr
 
 Every workflow needs somewhere to start. In n8n these are called ['trigger nodes'](/glossary.md#trigger-node-n8n). For this workflow, we want to start with a chat node.
 
- 1. Select **Add first step** or press ++tab++ to open the node menu.
+ 1. Select **Add first step** or press ++n++ to open the node menu.
 
  1. Search for **Chat Trigger**. n8n shows a list of nodes that match the search.
 

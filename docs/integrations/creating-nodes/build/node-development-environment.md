@@ -10,7 +10,7 @@ This document lists the essential dependencies for developing a node, as well as
 
 To build and test a node, you need: 
 
-* Node.js and npm. Minimum version Node 18.17.0. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL (Windows Subsystem for Linux) [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
+* Node.js and npm. Minimum version Node 22.22.0. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL (Windows Subsystem for Linux) [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
 * A local instance of n8n. You can install n8n with `npm install n8n -g`, then follow the steps in [Run your node locally](/integrations/creating-nodes/test/run-node-locally.md) to test your node.
 * When [building verified community nodes](/integrations/community-nodes/build-community-nodes.md), you must use the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create and test your node.
 

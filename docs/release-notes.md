@@ -34,17 +34,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-## n8n@2.13.4
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.3...n8n@2.13.4) for this version.<br />
-**Release date:** 2026-03-26
-
-This release contains a bug fix.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
 ## n8n@2.14.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.14.0...n8n@2.14.1) for this version.<br />
@@ -69,6 +58,18 @@ This release contains bug fixes.
 [kesku](https://github.com/kesku)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.13.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.13.3...n8n@2.13.4) for this version.<br />
+**Release date:** 2026-03-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
 
 
 ## n8n@2.13.3

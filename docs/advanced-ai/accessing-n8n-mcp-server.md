@@ -22,7 +22,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### Key considerations when using instance-level MCP access
 
-- It isn't a way to build or edit workflows from an AI client; authoring remains in n8n.
+- MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
 - It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
 - It's not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
 
@@ -175,7 +175,12 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 ## Executing workflows through MCP clients
 
-MCP clients can execute eligible workflows on your request. When a client triggers a workflow, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
+MCP clients can execute workflows through two methods:
+
+1. **Triggering eligible workflows:** Execute pre-built workflows marked as available in MCP
+2. **Building and executing with the AI Workflow builder:** Generate, validate, create and update workflows through MCP tools
+
+When a workflow is triggered or created, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
 
 ### Providing input data
 
@@ -187,9 +192,51 @@ n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients
 
 ### Limitations
 
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow.
+- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows).
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
 - Binary input data isn't supported. MCP clients can only provide text-based inputs for your workflows.
+
+## Available tools (v2.13 onward)
+
+/// tip
+Consider using coding agents (such as Claude Code or Google ADK agents) instead of chat clients as your MCP clients. Coding agents are optimized for generating and validating TypeScript code, making them ideal for building workflows programmatically.
+///
+
+The n8n MCP Server exposes the following tools so that you can create and update workflows using an MCP Client.
+
+### SDK and node reference
+
+* `get_sdk_reference`: Retrieve n8n SDK documentation to understand the TypeScript syntax used for building workflows as code. Supports fetching either the full documentation or specific sections. Valid sections: `patterns`, `expressions`, `functions`, `rules`, `import`, `guidelines`, `design`, or `all`.
+* `search_nodes`: Search for n8n nodes by service name, trigger type, or utility function. Returns node IDs, discriminators (resource/operation/mode parameters), and related nodes needed for the `get_node_types` tool.
+* `get_node_types`: Retrieve TypeScript type definitions for n8n nodes. Returns exact parameter names and structures needed for proper node configuration.
+* `get_suggested_nodes`: Get curated node recommendations for workflow technique categories. Returns recommended nodes with pattern hints and configuration guidance.
+
+### Workflow creation and validation
+
+* `validate_workflow`: Validate TypeScript workflow code for syntax and structural errors. Returns either a success confirmation or a list of errors that need fixing.
+* `create_workflow_from_code`: Create a new workflow in n8n from validated TypeScript workflow code. The tool parses the code into workflow JSON and saves it to your n8n instance. Optionally accepts `projectId` and `folderId` parameters to create the workflow inside a project or folder. (v2.14 onward)
+* `update_workflow`: Update an existing workflow in n8n from validated TypeScript workflow code. Parses the code and saves changes to your n8n instance.
+* `delete_workflow`: Archive a workflow by ID.
+* `publish_workflow`: Publish a workflow by ID.
+* `unpublish_workflow`: Unpublish a workflow by ID.
+
+### Workflow introspection
+
+* `get_execution`: Retrieve workflow execution history and results. Supports filtering parameters to avoid context overflow. (v2.14 onward)
+  * `includeData` (boolean): Include full execution result data. Defaults to `false` (metadata only).
+  * `nodeNames` (array): When `includeData` is true, return data only for the specific node names.
+  * `truncateData` (boolean): When `includeData` is true, limit the number of data items returned per node.
+
+### Projects and folders
+
+* `search_projects`: Search for projects accessible to the current user. (v2.14 onward)
+* `search_folders`: Search for folders within a project. (v2.14 onward)
+
+### Resources
+
+For MCP clients that support resources:
+
+* `workflow-sdk-reference`: Access n8n SDK documentation as an MCP resource, providing comprehensive reference material for building workflows as code.
 
 ## Examples
 

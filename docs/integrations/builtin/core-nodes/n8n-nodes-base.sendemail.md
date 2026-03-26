@@ -141,11 +141,11 @@ The following options are also available:
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
 * **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
 
-### Limitation
+## Limitations
 
-The Send Email (SMTP) node does not support setting headers like In-Reply-To and References, which are required for email threading. As a result, each email is treated as a new conversation instead of appearing in the same thread.
+The Send Email (SMTP) node does not support setting headers like `In-Reply-To` and `References`, which are required for email threading. As a result, each email is treated as a new conversation instead of appearing in the same thread.
 
-* **Workaround**: Use the Gmail node’s Reply operation or a custom node (e.g., n8n-nodes-better-send-mail) that supports custom headers.
+* **Workaround**: Use the Gmail node’s **Reply to a message** operation, or a custom node that supports custom headers.
 
 ## Templates and examples
 

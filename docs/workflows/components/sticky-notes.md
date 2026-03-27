@@ -30,7 +30,24 @@ Sticky Notes are a core node. To add a new Sticky Note:
 To change the Sticky Note color:
 
 1. Hover over the Sticky Note
-1. Select **Change color** <span class="n8n-inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
+2. Select **Change color** <span class="n8n-inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
+3. Choose from 7 preset colors, or click the rainbow gradient button to select a custom color
+
+![Color selector showing preset colors and custom color button](/_images/workflows/components/stickies/color-picker-popover.png)
+
+### Custom colors
+
+In addition to the 7 preset colors, you can select any custom color for your sticky notes:
+
+1. Click the 8th button with the rainbow gradient and plus icon
+2. Use the color picker to select your desired color, or enter a hex color code (for example, `#FF5733`)
+3. Click **Apply** to set the color
+
+![Custom color picker modal with hex input and recent colors](/_images/workflows/components/stickies/custom-color-modal.png)
+
+Your recently used custom colors (up to 8) are automatically saved and displayed in the color picker for quick access.
+
+Custom colors feature theme-aware borders that automatically adjust for optimal visibility in both light and dark modes.
 
 ## Sticky Note positioning
 

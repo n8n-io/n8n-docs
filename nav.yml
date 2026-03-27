@@ -353,6 +353,7 @@ nav:
         - CrateDB: integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md
         - crowd.dev: integrations/builtin/app-nodes/n8n-nodes-base.crowddev.md
         - Customer.io: integrations/builtin/app-nodes/n8n-nodes-base.customerio.md
+        - Databricks: integrations/builtin/app-nodes/n8n-nodes-base.databricks.md
         - DeepL: integrations/builtin/app-nodes/n8n-nodes-base.deepl.md
         - Demio: integrations/builtin/app-nodes/n8n-nodes-base.demio.md
         - DHL: integrations/builtin/app-nodes/n8n-nodes-base.dhl.md
@@ -773,6 +774,7 @@ nav:
           - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - Embeddings Google Vertex: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
           - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - Embeddings Lemonade: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade.md
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
@@ -784,6 +786,7 @@ nav:
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
+          - Lemonade Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatlemonade.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Ollama Chat Model:
             - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md
@@ -795,6 +798,7 @@ nav:
           - Vercel AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md
           - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
+          - Lemonade Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmlemonade.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
@@ -891,6 +895,7 @@ nav:
         - integrations/builtin/credentials/crowddev.md
         - integrations/builtin/credentials/crowdstrike.md
         - integrations/builtin/credentials/customerio.md
+        - integrations/builtin/credentials/databricks.md
         - integrations/builtin/credentials/datadog.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/deepseek.md
@@ -975,6 +980,7 @@ nav:
         - integrations/builtin/credentials/kobotoolbox.md
         - integrations/builtin/credentials/ldap.md
         - integrations/builtin/credentials/lemlist.md
+        - integrations/builtin/credentials/lemonade.md
         - integrations/builtin/credentials/line.md
         - integrations/builtin/credentials/linear.md
         - integrations/builtin/credentials/lingvanex.md

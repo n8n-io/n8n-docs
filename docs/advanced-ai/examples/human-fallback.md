@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 title: Set a human fallback for AI workflows
 description: Have a workflow that triggers a human answer when the AI can't help.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google credentials
 description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: overview
@@ -9,18 +8,23 @@ contentType: overview
 
 This section contains:
 
-* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node.
-* [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
-* [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential for some specific service nodes.
+* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node. Two options exist:
+    * [Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2): Sign in with Google directly on n8n, with no setup required on the Google Cloud Console. Available for n8n Cloud users only, for certain Google nodes.
+    * [Custom OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#custom-oauth2): Configure an OAuth2 app in the Google Cloud Console and connect it to your n8n credential.    
+* [OAuth2 API (generic)](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
+* [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview) credential for some specific service nodes.
 * [Google PaLM and Gemini](/integrations/builtin/credentials/googleai.md): Get a Google Gemini/Google PaLM API key.
-
 
 ## OAuth2 and Service Account
 
 There are two authentication methods available for Google services nodes:
 
-* [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link}: Recommended because it's more widely available and easier to set up.
-* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}: Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} for guidance on when you need a service account.
+* [OAuth2](https://developers.google.com/identity/protocols/oauth2): Recommended because it's more widely available and easier to set up.
+* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts): Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts) for guidance on when you need a service account.
+
+### Managed OAuth2 for n8n Cloud users
+
+[Managed OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md/#managed-oauth2) is available for the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 
@@ -37,7 +41,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md) | :white_check_mark: | :white_check_mark: |
 | [Google Books](/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks.md) | :white_check_mark: | :white_check_mark: |
 | [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) | :white_check_mark: | :x: |
-| [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md) | :x: | :white_check_mark: |
+| [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md) | :white_check_mark: | :white_check_mark: |
 | [Google Cloud Storage](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage.md) | :white_check_mark: | :x: |
 | [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md) | :white_check_mark: | :x: |
 | [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore.md) | :white_check_mark: | :white_check_mark: |

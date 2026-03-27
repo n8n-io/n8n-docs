@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
@@ -121,21 +120,25 @@ Each worker process runs a server that exposes optional endpoints:
 
 - `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
 - `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- [credentials overwrite endpoint](https://docs.n8n.io/embed/configuration/#credential-overwrites)
-- [`/metrics`](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/)
+- [credentials overwrite endpoint](/embed/configuration.md#credential-overwrites)
+- [`/metrics`](/hosting/configuration/configuration-examples/prometheus.md)
+
+/// note | Customizing health check endpoints
+You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH`](/hosting/configuration/environment-variables/endpoints.md) environment variable.
+///
 
 #### View running workers 
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 ///
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
 
 ## Running n8n with queues
 
-When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency.
+When running n8n with queues, all the production workflow executions get processed by worker processes. For webhooks, this means the HTTP request is received by the main/webhook process, but the actual workflow execution is passed to a worker, which can add some overhead and latency.
 
 Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
@@ -181,7 +184,9 @@ You can also set this value in the configuration file.
 
 When using multiple webhook processes you will need a load balancer to route requests. If you are using the same domain name for your n8n instance and the webhooks, you can set up your load balancer to route requests as follows:
 
-- Redirect any request that matches `/webhook/*` to the webhook servers pool
+- Redirect webhook triggers to the webhook servers pool. Paths to consider:
+  - `/webhook/*`: Webhook trigger node endpoints
+  - `/webhook-waiting/*`: Human-in-the-loop webhook endpoints used by nodes that perform "send and wait" operations (for example, the Slack node).
 - All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
 
 **Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.

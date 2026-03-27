@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Strapi credentials
 description: Documentation for Strapi credentials. Use these credentials to authenticate Strapi in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,13 +12,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Strapi](https://strapi.io/){:target=_blank .external-link} admin account with:
+Create a [Strapi](https://strapi.io/) admin account with:
 
 - Access to an existing Strapi project.
 - At least one collection type within that project.
 - Published data within that collection type.
 
-Refer to the Strapi developer [Quick Start Guide](https://docs.strapi.io/dev-docs/quick-start){:target=_blank .external-link} for more information.
+Refer to the Strapi developer [Quick Start Guide](https://docs.strapi.io/dev-docs/quick-start) for more information.
 
 ## Supported authentication methods
 
@@ -28,7 +27,7 @@ Refer to the Strapi developer [Quick Start Guide](https://docs.strapi.io/dev-doc
 
 ## Related resources
 
-Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest) for more information about the service.
 
 ## Using API user account
 
@@ -53,12 +52,12 @@ Refer to the more detailed instructions below for each step.
 
 For API access, use the Users & Permissions Plugin in **Settings > Users & Permissions Plugin**.
 
-Refer to [Configuring Users & Permissions Plugin](https://docs.strapi.io/user-docs/settings/configuring-users-permissions-plugin-settings){:target=_blank .external-link} for more information on the plugin. Refer to [Configuring end-user roles](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles){:target=_blank .external-link} for more information on roles.
+Refer to [Configuring Users & Permissions Plugin](https://docs.strapi.io/user-docs/settings/configuring-users-permissions-plugin-settings) for more information on the plugin. Refer to [Configuring end-user roles](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles) for more information on roles.
 
 For the n8n credential, the user must have a role that grants them API permissions on the collection type. For the role, you can either:
 
-* Update the default **Authenticated** role to include the permissions and assign the user to that role. Refer to [Configuring role's permissions](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles#configuring-roles-permissions){:target=_blank .external-link} for more information.
-* Create a new role to include the permissions and assign the user to that role. Refer to [Creating a new role](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles#creating-a-new-role){:target=_blank .external-link} for more information.
+* Update the default **Authenticated** role to include the permissions and assign the user to that role. Refer to [Configuring role's permissions](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles#configuring-roles-permissions) for more information.
+* Create a new role to include the permissions and assign the user to that role. Refer to [Creating a new role](https://docs.strapi.io/user-docs/users-roles-permissions/configuring-end-users-roles#creating-a-new-role) for more information.
 
 For either option, once you open the role:
 
@@ -72,7 +71,7 @@ For either option, once you open the role:
 4. Repeat for all relevant collection types.
 5. Save the role.
 
-Refer to [Endpoints](https://docs.strapi.io/dev-docs/api/rest#endpoints){:target=_blank .external-link} for more information on the permission options.
+Refer to [Endpoints](https://docs.strapi.io/dev-docs/api/rest#endpoints) for more information on the permission options.
 
 ### Create a user account
 
@@ -86,14 +85,14 @@ Now that you have an appropriate role, create an end-user account and assign the
     - **Password**: Enter in Strapi and use as the **Password** in the n8n credential.
     - **Role**: Select the role you set up in the previous step.
 
-Refer to [Managing end-user accounts](https://docs.strapi.io/user-docs/users-roles-permissions/managing-end-users){:target=_blank .external-link} for more information.
+Refer to [Managing end-user accounts](https://docs.strapi.io/user-docs/users-roles-permissions/managing-end-users) for more information.
 
 
 ## Using API token
 
 To configure this credential, you'll need:
 
-- An **API Token**: Create an API token from **Settings > Global Settings > API Tokens**. Refer to Strapi's [Creating a new API token documentation](https://docs.strapi.io/user-docs/settings/API-tokens#creating-a-new-api-token){:target=_blank .external-link} for more details and information on regenerating API tokens.
+- An **API Token**: Create an API token from **Settings > Global Settings > API Tokens**. Refer to Strapi's [Creating a new API token documentation](https://docs.strapi.io/user-docs/settings/API-tokens#creating-a-new-api-token) for more details and information on regenerating API tokens.
     
     /// note | API tokens permission
     If you don't see the **API tokens** option in **Global settings**, your account doesn't have the **API tokens > Read** permission.

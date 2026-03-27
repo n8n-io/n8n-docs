@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Share workflows between users.
 contentType: howto
 ---
@@ -20,6 +19,12 @@ Users can share workflows they created. Instance owners, and users with the admi
 2. Select **Share**.
 3. In **Add users**, find and select the users you want to share with.
 4. Select **Save**.
+
+**Note:** This option is only available when sharing a workflow that is inside a **Personal** workspace. When trying to use the "Add users" option for a workflow that's **inside a project**, you'll get this pop-up instead:
+
+![Screenshot of the sharing option within projects](/_images/workflows/sharing-within-projects.png)
+
+This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. Instead of adding the user directly to the workflow, you need to add the user to the project in which the workflow is located.
 
 ## View shared workflows
 

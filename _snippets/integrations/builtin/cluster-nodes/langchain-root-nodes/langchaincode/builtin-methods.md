@@ -6,4 +6,4 @@
 | `this.getInputData(inputIndex?, inputName?)` | Get data from the main input. |
 | `this.getNode()` | Get the current node. |
 | `this.getNodeOutputs()` | Get the outputs of the current node. |
-| `this.getExecutionCancelSignal()` | Use this to stop the execution of a function when the workflow stops. In most cases n8n handles this, but you may need to use it if building your own chains or agents. It replaces the [Cancelling a running LLMChain](https://js.langchain.com/docs/modules/chains/foundational/llm_chain#cancelling-a-running-llmchain){:target=_blank .external-link} code that you'd use if building a LangChain application normally. |
+| `this.getExecutionCancelSignal()` | Use this to stop the execution of a function when the workflow stops. In most cases n8n handles this, but you may need to use it if building your own chains or agents. It replaces the [Cancelling a running LLMChain](https://js.langchain.com/docs/modules/chains/foundational/llm_chain#cancelling-a-running-llmchain) code that you'd use if building a LangChain application normally. |

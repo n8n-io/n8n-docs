@@ -1,16 +1,17 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: "Explore n8n Docs: Your Resource for Workflow Automation and Integrations"
 description: Access n8n Docs for comprehensive guides on workflow automation and integrations. Learn how to integrate apps and enhance your automation capabilities.
 contentType: overview
 hide:
   - path
+  - feedback
+  - kapaButton
 ---
 
 # Welcome to n8n Docs
 
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
+This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation tool that combines AI capabilities with business process automation.
 
 It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
 

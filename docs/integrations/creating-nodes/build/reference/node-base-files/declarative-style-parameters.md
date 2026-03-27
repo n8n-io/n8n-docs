@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Declarative-style parameters
 description: A reference document listing the declarative-style parameters of the node base file.
 contentType: reference
@@ -120,3 +119,11 @@ _Number_ or _Array_ | _Optional_
 If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
 n8n supports two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
+
+## `features`
+
+_Object_ | _Optional_
+
+Define named feature flags evaluated against the node version. Use features to control parameter visibility with `@feature` in `displayOptions`.
+
+Refer to [Feature-based versioning](/integrations/creating-nodes/build/reference/node-versioning.md#feature-based-versioning) for more information.

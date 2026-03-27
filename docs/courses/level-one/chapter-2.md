@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -21,7 +20,7 @@ The finished workflow will look like this:
 
 ## 1. Add a Manual Trigger node
 
-Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the [canvas](/glossary.md#canvas-n8n) or selecting ++tab++ on your keyboard).
+Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the [canvas](/glossary.md#canvas-n8n) or pressing ++n++ on your keyboard).
 
 Then:
 
@@ -105,7 +104,7 @@ You can rename the node with a name that's more descriptive for your use case. T
 
 - Select the node you want to rename and at the same time press the F2 key on your keyboard.
 - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click **Rename** to save the node under the new name.
-- Right-click on the node and select the **Rename** option, or select the node and press F2 on your keyboard.
+- Right-click on the node and select the **Rename** option.
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-renaming-a-node-from-the-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 

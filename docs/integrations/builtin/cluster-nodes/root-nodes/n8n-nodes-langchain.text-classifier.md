@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Text Classifier node documentation
 description: Learn how to use the Text Classifier node in n8n. Follow technical documentation to integrate Text Classifier node into your workflows.
 contentType: [integration, reference]
@@ -30,4 +29,4 @@ On this page, you'll find the node parameters for the Text Classifier node, and 
 ## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

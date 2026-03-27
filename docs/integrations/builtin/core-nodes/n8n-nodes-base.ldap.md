@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LDAP
 description: Documentation for the LDAP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -81,7 +80,7 @@ You can also configure this operation using these options:
     * **Single Level**: Often referred to as "one," selecting this option will search only the immediate children of the **Base DN** entry.
     * **Whole Subtree**: Often referred to as "sub," selecting this option will search the **Base DN** entry and all its subordinates to any depth.
 
-Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link} for more information on search scopes.
+Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/) for more information on search scopes.
 
 ## Update
 

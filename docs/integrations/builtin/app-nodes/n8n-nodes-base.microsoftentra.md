@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Entra ID node documentation
 description: Learn how to use the Microsoft Entra ID node in n8n. Follow technical documentation to integrate Microsoft Entra ID node into your workflows.
 contentType: [integration, reference]
@@ -13,6 +12,10 @@ On this page, you'll find a list of operations the Microsoft Entra ID node suppo
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/microsoftentra.md).
+///
+
+/// tip | Government Cloud Support
+If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft Entra ID credentials configuration.
 ///
 
 
@@ -41,7 +44,7 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- vale from-microsoft.We = NO -->
-Refer to [Microsoft Entra ID's documentation](https://learn.microsoft.com/en-us/graph/api/resources/identity-network-access-overview?view=graph-rest-1.0){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft Entra ID's documentation](https://learn.microsoft.com/en-us/graph/api/resources/identity-network-access-overview?view=graph-rest-1.0) for more information about the service.
 <!-- vale from-microsoft.We = YES -->
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

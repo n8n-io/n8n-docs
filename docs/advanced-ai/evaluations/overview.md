@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Evaluations
 description: Use n8n evaluations to build reliable AI workflows. Build confidence in your LLM-powered workflows by comparing the output from known test cases.
 contentType: overview
@@ -25,6 +24,7 @@ The following video explains what evaluations are, why they're useful, and how t
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/5LlF196PKaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 
 ## Why is evaluation needed?
 
@@ -59,4 +59,4 @@ Since there are too many test cases to check individually, evaluations measure t
 
 * [Light evaluations](/advanced-ai/evaluations/light-evaluations.md): Perfect for evaluating your AI workflows against hand-selected test cases during development.
 * [Metric-based evaluations](/advanced-ai/evaluations/metric-based-evaluations.md): Advanced evaluations to maintain performance and correctness in production by using scoring and metrics with large datasets.
-* [Tips and common issues](/advanced-ai/evaluations/metric-based-evaluations.md): Learn how to set up specific evaluation use cases and work around common issues.
+* [Tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md): Learn how to set up specific evaluation use cases and work around common issues.

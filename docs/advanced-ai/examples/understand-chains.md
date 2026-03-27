@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: What's a chain in AI?
 description: Understand chains in the context of AI. Learn about chains in n8n.
 contentType: explanation

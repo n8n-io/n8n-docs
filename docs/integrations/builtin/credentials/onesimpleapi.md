@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: One Simple API credentials
 description: Documentation for One Simple API credentials. Use these credentials to authenticate One Simple API in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .external-link} account.
+Create a [One Simple API](https://onesimpleapi.com/register) account.
 
 ## Supported authentication methods
 
@@ -22,7 +21,7 @@ Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .ext
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
 ## Using API token
 

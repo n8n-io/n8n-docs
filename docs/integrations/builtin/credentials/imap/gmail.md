@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail
 description: Documentation for Gmail IMAP credentials. Use these credentials to authenticate Gmail IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -36,4 +35,4 @@ To set up the IMAP credential with a Gmail account, use these settings:
 5. Turn on the **SSL/TLS** toggle.
 6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
 
-Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en){:target=_blank .external-link} for more information. You may need to **Enable IMAP** if you're using a personal Google account before June 2024.
+Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en) for more information. You may need to **Enable IMAP** if you're using a personal Google account before June 2024.

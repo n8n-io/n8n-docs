@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Venafi TLS Protect Cloud node documentation
 description: Learn how to use the Venafi TLS Protect Cloud node in n8n. Follow technical documentation to integrate Venafi TLS Protect Cloud node into your workflows.
 contentType: [integration, reference]
@@ -35,7 +34,7 @@ Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credential
 
 ## Related resources
 
-Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/){:target=_blank .external-link} for more information on this service.
+Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/) for more information on this service.
 
 n8n also provides:
 <!-- vale off -->

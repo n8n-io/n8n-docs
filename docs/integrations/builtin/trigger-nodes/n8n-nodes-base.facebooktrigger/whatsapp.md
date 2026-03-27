@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Trigger WhatsApp Business Account object documentation
 description: Learn how to use the WhatsApp Business Account object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's WhatsApp Business Account object into your workflows.
 contentType: [integration, reference]
@@ -19,7 +18,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/) page.
 ///
 
 ## Prerequisites
@@ -44,4 +43,4 @@ To configure the trigger with this Object:
     * **Account Update**
 1. In **Options**, turn on the toggle to **Include Values**. This Object type fails without the option enabled.
 
-Refer to [Webhooks for WhatsApp Business Accounts](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp){:target=_blank .external-link} and Meta's [WhatsApp Business Account](https://developers.facebook.com/docs/graph-api/webhooks/reference/whatsapp-business-account/){:target=_blank .external-link} Graph API reference for more information.
+Refer to [Webhooks for WhatsApp Business Accounts](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp) and Meta's [WhatsApp Business Account](https://developers.facebook.com/docs/graph-api/webhooks/reference/whatsapp-business-account/) Graph API reference for more information.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Simple Memory node common issues 
 description: Documentation for common issues and questions in the Simple Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
@@ -22,4 +21,4 @@ If you have this error, first check the output of your Chat trigger to ensure it
 
 If you're not using the **On Chat Message** trigger, you'll need to manage sessions manually.
 
-For testing purposes, you can use a static key like `my_test_session`. If you use this approach, be sure to set up proper session management before activating the workflow to avoid potential issues in a live environment.
+For testing purposes, you can use a static key like `my_test_session`. If you use this approach, be sure to set up proper session management before publishing the workflow to avoid potential issues in a live environment.

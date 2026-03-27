@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Disqus credentials
 description: Documentation for Disqus credentials. Use these credentials to authenticate Disqus in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,8 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [Disqus](https://www.disqus.com/){:target=_blank .external-link} account.
-- Register an [API application](https://help.disqus.com/en/articles/1717083-how-to-create-an-api-application){:target=_blank .external-link}.
+- Create a [Disqus](https://www.disqus.com/) account.
+- Register an [API application](https://help.disqus.com/en/articles/1717083-how-to-create-an-api-application).
 
 ## Supported authentication methods
 
@@ -22,7 +21,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Disqus's API documentation](https://disqus.com/api/docs/){:target=_blank .external-link} for more information about the service.
+Refer to [Disqus's API documentation](https://disqus.com/api/docs/) for more information about the service.
 
 ## Using API access token
 

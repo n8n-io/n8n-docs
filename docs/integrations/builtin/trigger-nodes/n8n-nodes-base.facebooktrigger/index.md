@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Trigger
 description: Learn how to use the Facebook Trigger node in n8n. Follow technical documentation to integrate Facebook Trigger node into your workflows.
 contentType: [integration, reference]
@@ -8,7 +7,7 @@ priority: medium
 
 # Facebook Trigger node
 
-[Facebook](https://www.facebook.com/){:target=_blank .external-link} is a social networking site to connect and share with family and friends online.
+[Facebook](https://www.facebook.com/) is a social networking site to connect and share with family and friends online.
 
 Use the Facebook Trigger node to trigger a workflow when events occur in Facebook.
 
@@ -17,7 +16,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/) page.
 ///
 
 ## Objects
@@ -43,6 +42,6 @@ For each **Object**, use the **Field Names or IDs** dropdown to select more deta
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/facebook-trigger/) on n8n's website.
 
-Refer to Meta's [Graph API documentation](https://developers.facebook.com/docs/graph-api/webhooks/reference){:target=_blank .external-link} for details about their API.
+Refer to Meta's [Graph API documentation](https://developers.facebook.com/docs/graph-api/webhooks/reference) for details about their API.

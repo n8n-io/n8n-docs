@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL node documentation
 description: Learn how to use the MySQL node in n8n. Follow technical documentation to integrate MySQL node into your workflows.
 contentType: [integration, reference]
@@ -34,9 +33,9 @@ Refer to [MySQL credentials](/integrations/builtin/credentials/mysql.md) for gui
 
 ## Related resources
 
-Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} for more information about the service.
+Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html) for more information about the service.
 
-Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} for more information on writing SQL queries.
+Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html) for more information on writing SQL queries.
 
 ## Use query parameters
 

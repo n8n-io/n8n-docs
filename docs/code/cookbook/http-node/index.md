@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
 ---
 
@@ -17,4 +16,4 @@ Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequ
 
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
 * [Built-in methods and variables reference](/code/builtin/overview.md)
-* [Expressions](/code/expressions.md)
+* [Expressions](/data/expressions.md)

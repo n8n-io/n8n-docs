@@ -4,23 +4,37 @@
 {% endblock %}
 {% block extrahead %}
 <script>
-    // Create an object containing all your redirects
+    // Create an object containing redirects to headings
     const redirects = {
-
-
-			// Use _redirects file to set redirects
 
     };
 
     (function redirect(){
-        
-            const currentPath = window.location.pathname + (window.location.hash ? window.location.hash : '');
-            const redirectUrl = redirects[currentPath];
-            if (redirectUrl) {
-                window.location.href = `${window.location.origin}${redirectUrl}`;
-                return;
-            }
-          
+        const incomingPath =  window.location.pathname;
+        const hasExtension = /\.[a-zA-Z0-9]+$/.test(incomingPath);
+
+        // handle uppercase URLs
+        if (incomingPath !== incomingPath.toLowerCase()) {
+            const lowercasePath = incomingPath.toLowerCase();
+            window.location.href = `${window.location.origin}${lowercasePath}`;
+            return;
+        }
+
+        // handle missing trailing `/`
+        if (!incomingPath.endsWith('/') && !hasExtension) {
+            window.location.href = `${window.location.origin}${incomingPath}/`;
+            return;
+        }
+
+
+
+        // handle redirects for headings
+        const currentPath = incomingPath + (window.location.hash ? window.location.hash : '');
+        const redirectUrl = redirects[currentPath];
+        if (redirectUrl) {
+            window.location.href = `${window.location.origin}${redirectUrl}`;
+            return;
+        }          
     })();	
   
 </script>

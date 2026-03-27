@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail
 description: Documentation for Gmail Send Email credentials. Use these credentials to authenticate Send Email with Gmail in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -37,4 +36,4 @@ To set up the Send Email credential to use Gmail:
     - Enter `587` for TLS.
 5. Turn on the **SSL/TLS** toggle.
 
-Refer to the Outgoing Mail (SMTP) Server settings in [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828?hl=en){:target=_blank .external-link} for more information. If the settings above don't work for you, check with your email administrator.
+Refer to the Outgoing Mail (SMTP) Server settings in [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828?hl=en) for more information. If the settings above don't work for you, check with your email administrator.

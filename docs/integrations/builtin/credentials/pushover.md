@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushover credentials
 description: Documentation for Pushover credentials. Use these credentials to authenticate Pushover in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Pushover](https://pushover.net){:target=_blank .external-link} account.
+Create a [Pushover](https://pushover.net) account.
 
 ## Supported authentication methods
 
@@ -21,11 +20,11 @@ Create a [Pushover](https://pushover.net){:target=_blank .external-link} account
 
 ## Related resources
 
-Refer to [Pushover's API documentation](https://pushover.net/api){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Pushover's API documentation](https://pushover.net/api) for more information about authenticating with the service.
 
 ## Using API Key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generated when you [register an application](https://pushover.net/apps/build){:target=_blank .external-link}. Refer to [Application Registration](https://pushover.net/api#registration){:target=_blank .external-link} for more information.
+- An **API Key**: Generated when you [register an application](https://pushover.net/apps/build). Refer to [Application Registration](https://pushover.net/api#registration) for more information.
 

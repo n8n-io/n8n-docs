@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webex by Cisco credentials
 description: Documentation for Webex by Cisco credentials. Use these credentials to authenticate Webex by Cisco in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Webex by Cisco](https://www.webex.com/) account (this should automatically get you [developer account access](https://developer.webex.com){:target=_blank .external-link}).
+Create a [Webex by Cisco](https://www.webex.com/) account (this should automatically get you [developer account access](https://developer.webex.com)).
 
 ## Supported authentication methods
 
@@ -22,7 +21,7 @@ Create a [Webex by Cisco](https://www.webex.com/) account (this should automatic
 
 ## Related resources
 
-Refer to [Webex's API documentation](https://developer.webex.com/docs/getting-started){:target=_blank .external-link} for more information about the service.
+Refer to [Webex's API documentation](https://developer.webex.com/docs/getting-started) for more information about the service.
 
 ## Using OAuth2
 
@@ -30,7 +29,7 @@ Refer to [Webex's API documentation](https://developer.webex.com/docs/getting-st
 You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Webex by Cisco account to n8n.
 ///
 
-Should you need to configure OAuth2 from scratch, you'll need to create an integration to use this credential. Refer to the instructions in the [Webex Registering your Integration documentation](https://developer.webex.com/docs/integrations#registering-your-integration){:target=_blank .external-link} to begin.
+Should you need to configure OAuth2 from scratch, you'll need to create an integration to use this credential. Refer to the instructions in the [Webex Registering your Integration documentation](https://developer.webex.com/docs/integrations#registering-your-integration) to begin.
 
 n8n recommends using the following **Scopes** for your integration:
 

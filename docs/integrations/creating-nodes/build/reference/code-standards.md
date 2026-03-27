@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: reference
 ---
 
@@ -11,9 +10,9 @@ Following defined code standards when building your node makes your code more re
 
 The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](/integrations/creating-nodes/test/node-linter.md) documentation for more information.
 
-## Use the starter
+## Use the n8n-node tool
 
-The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link}.
+n8n recommends using the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
 
 ## Write in TypeScript
 
@@ -109,6 +108,6 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 );
 ```
 
-This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
+This uses the npm package [Axios](https://www.npmjs.com/package/axios).
 
 Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information, and for migration instructions for the removed `this.helpers.request`.

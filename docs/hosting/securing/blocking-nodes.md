@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Block access to nodes
 description: "Prevent your n8n users from accessing specific nodes."
 contentType: howto
@@ -31,6 +30,14 @@ The nodes that can pose security risks vary based on your use case and user prof
 
 * [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md)
 * [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
+
+## Enable nodes that are blocked by default
+
+Some nodes, like Execute Command, are blocked by default. Remove them from the exclude list to enable them:
+
+```
+NODES_EXCLUDE: "[]"
+```
 
 ## Related resources
 

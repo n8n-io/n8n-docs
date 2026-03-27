@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Cloudflare node documentation
 description: Learn how to use the Cloudflare node in n8n. Follow technical documentation to integrate Cloudflare node into your workflows.
 contentType: [integration, reference]
@@ -30,7 +29,7 @@ Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties){:target=_blank .external-link} for more information on this service.
+Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties) for more information on this service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

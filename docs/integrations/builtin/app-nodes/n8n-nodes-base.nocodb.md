@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: NocoDB node documentation
 description: Learn how to use the NocoDB node in n8n. Follow technical documentation to integrate NocoDB node into your workflows.
 contentType: [integration, reference]
@@ -34,6 +33,6 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 
 ## Relates resources
 
-Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
+Refer to [NocoDB's documentation](https://docs.nocodb.com/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MailerLite credentials
 description: Documentation for MailerLite credentials. Use these credentials to authenticate MailerLite in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link} account.
+Create a [MailerLite](https://www.mailerlite.com/) account.
 
 ## Supported authentication methods
 
@@ -22,13 +21,13 @@ Create a [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [MailerLite's API documentation](https://developers.mailerlite.com/docs/){:target=_blank .external-link} for more information about the service.
+Refer to [MailerLite's API documentation](https://developers.mailerlite.com/docs/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generate an API key from the **Integrations** menu. Refer to the [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication){:target=_blank .external-link} for more detailed instructions.
+- An **API Key**: Generate an API key from the **Integrations** menu. Refer to the [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication) for more detailed instructions.
 
 Enable the **Classic API** toggle if the API key is for a MailerLite Classic account instead of the newer MailerLite experience.
 

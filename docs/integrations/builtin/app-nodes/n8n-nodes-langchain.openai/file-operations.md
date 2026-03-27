@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI File operations 
 description: Documentation for the File operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -21,7 +20,7 @@ Enter these parameters:
 - **Operation**: Select **Delete a File**.
 - **File**: Enter the ID of the file to use for this operation or select the file name from the dropdown.
 
-Refer to [Delete file | OpenAI](https://platform.openai.com/docs/api-reference/files/delete){:target=_blank .external-link} documentation for more information.
+Refer to [Delete file | OpenAI](https://platform.openai.com/docs/api-reference/files/delete) documentation for more information.
 
 ## List Files
 
@@ -35,7 +34,7 @@ Enter these parameters:
 
 ### Options
 
-- **Purpose**: Use this to only return files with the given purpose. Use **Assistants** to return only files related to Assistants and Message operations. Use **Fine-Tune** for files related to [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: Use this to only return files with the given purpose. Use **Assistants** to return only files related to Assistants and Message operations. Use **Fine-Tune** for files related to [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning).
 
 Refer to [List files | OpenAI](https://platform.openai.com/docs/api-reference/files/list) documentation for more information.
 
@@ -52,9 +51,9 @@ Enter these parameters:
 
 ### Options
 
-- **Purpose**: Enter the intended purpose of the uploaded file. Use **Assistants** for files associated with Assistants and Message operations. Use **Fine-Tune** for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: Enter the intended purpose of the uploaded file. Use **Assistants** for files associated with Assistants and Message operations. Use **Fine-Tune** for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning).
 
-Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link} documentation for more information.
+Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create) documentation for more information.
 
 ## Common issues
 

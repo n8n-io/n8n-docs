@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bitbucket credentials
 description: Documentation for Bitbucket credentials. Use these credentials to authenticate Bitbucket in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,26 +12,33 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} account.
+Create a [Bitbucket](https://www.bitbucket.com/) account.
 
 ## Supported authentication methods
 
-- API username and app password
+- Access token
 
 ## Related resources
 
-Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication){:target=_blank .external-link} for more information about the service.
+Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication) for more information about the service.
 
-## Using API username/app password
+## Configuring Bitbucket access token
 
-To configure this credential, you'll need:
+1. Log in to Bitbucket and open your account or personal settings.
+2. Find the section for API tokens or security settings.
+3. Create a new API token, giving it a name and expiry date that matches your use case.
+4. Select Bitbucket as the app, then choose the required scopes (permissions):
 
-- A **Username**: Visible in your Bitbucket profile settings **Personal settings > Account settings**.
-- An **App Password**: Refer to the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}.
+    ```bash
+    read:user:bitbucket
+    read:workspace:bitbucket
+    read:repository:bitbucket
+    read:webhook:bitbucket
+    write:webhook:bitbucket
+    delete:webhook:bitbucket
+    ```
 
-## App password permissions
+5. Review and create the token. Copy the generated token and add it to n8n. Bitbucket only shows the token once.
 
-Bitbucket API credentials will only work if the user account you generated the app password for has the appropriate privilege scopes for the selected app password permissions. The n8n credentials dialog will throw an error if the user account lacks the appropriate permissions for the selected scope, like `Your credentials lack one or more required privilege scopes`.
-
-See the [Bitbucket App password permissions documentation](https://support.atlassian.com/bitbucket-cloud/docs/app-password-permissions/){:target=_blank .external-link} for more information on working with these permissions.
+For detailed instructions, see [Create an API token](https://support.atlassian.com/bitbucket-cloud/docs/create-an-api-token/).
 

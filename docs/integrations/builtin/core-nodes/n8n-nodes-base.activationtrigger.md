@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Activation Trigger node documentation
 description: Learn how to use the Activation Trigger node in n8n. Follow technical documentation to integrate Activation Trigger node into your workflows.
 contentType: [integration, reference]
@@ -22,7 +21,7 @@ The Activation Trigger node gets triggered for the workflow that it gets added t
 ## Node parameters
 
 - Events
-    - **Activation**: Run when the workflow gets activated
+    - **Activation**: Run when the workflow gets published
     - **Start**: Run when n8n starts or restarts
     - **Update**: Run when the workflow gets saved while it's active
 

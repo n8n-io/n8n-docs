@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Calendar Event operations
 description: Documentation for the Event operations in Google Calendar node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -49,7 +48,7 @@ Enter these parameters:
 - **Show Me As**: Whether the event blocks time on the calendar.
 - **Summary**: The title of the event.
 
-Refer to the [Events: insert | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: insert | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/insert) API documentation for more information.
 
 ## Delete
 
@@ -67,7 +66,7 @@ Enter these parameters:
 
 - **Send Updates**: Whether to send notifications about the deletion of the event.
 
-Refer to the [Events: delete | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/delete){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: delete | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/delete) API documentation for more information.
 
 ## Get
 
@@ -87,7 +86,7 @@ Enter these parameters:
 - **Return Next Instance of Recurrent Event**: Whether to return the next instance of a recurring event instead of the event itself.
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 
-Refer to the [Events: get | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/get){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: get | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/get) API documentation for more information.
 
 <!-- vale from-write-good.Weasel = NO -->
 ## Get Many
@@ -124,7 +123,7 @@ Enter these parameters:
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 - **Updated Min**: The lower bounds for an event's last modification time (as an [RFC 3339 timestamp](https://datatracker.ietf.org/doc/html/rfc3339))
 
-Refer to the [Events: list | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/list){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: list | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/list) API documentation for more information.
 
 ## Update
 
@@ -173,4 +172,4 @@ Enter these parameters:
 		- **Public**: The event is public and the event details are visible to all readers of the calendar.
 		- **Private**: The event is private and only event attendees may view event details.
 
-Refer to the [Events: update | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/update){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: update | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/update) API documentation for more information.

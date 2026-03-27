@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Entra ID credentials
 description: Documentation for the Microsoft Entra ID credentials. Use these credentials to authenticate Microsoft Entra ID in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -69,6 +68,21 @@ With your application created, generate a client secret for it:
 1. Log in to your Microsoft account and allow the app to access your info.
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
+
+### Microsoft Graph API Base URL
+
+Microsoft Entra ID credentials extend the Microsoft OAuth2 API credentials and support different Microsoft cloud environments. Select the appropriate endpoint based on your tenant's cloud environment:
+
+- **Global**: Use for standard Microsoft 365 tenants (default)
+- **US Government**: Use for Azure US Government (GCC) tenants
+- **US Government DOD**: Use for Azure US Government Department of Defense tenants
+- **China**: Use for Microsoft 365 operated by 21Vianet in China
+
+/// warning | Government Cloud Authorization URLs
+If you're using a government cloud tenant, you may also need to update the **Authorization URL** and **Access Token URL** fields in your credential to use the government cloud endpoints. For example:
+- US Government: Use `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/authorize` and `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/token`
+- Replace `{tenant}` with your tenant ID or use `common` for multi-tenant apps
+///
 
 ## Setting custom scopes
 

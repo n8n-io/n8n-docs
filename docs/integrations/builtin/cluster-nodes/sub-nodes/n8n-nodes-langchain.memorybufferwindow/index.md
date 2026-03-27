@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Simple Memory node documentation
 description: Learn how to use the Simple Memory node in n8n. Follow technical documentation to integrate Simple Memory node into your workflows.
 contentType: [integration, reference]
@@ -32,7 +31,7 @@ Configure these parameters to configure the node:
 
 ## Related resources
 
-Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -40,4 +39,4 @@ Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.lan
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

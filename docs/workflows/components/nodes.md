@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
 contentType: howto
 ---
@@ -36,7 +35,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 ### Add a node to an existing workflow
 
-Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector. n8n opens the nodes panel, where you can search or browse all nodes.
+Select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector. n8n opens the nodes panel, where you can search or browse all nodes.
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
@@ -44,10 +43,10 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Execute step** <span class="inline-image">![Execute step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
-* **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
-* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
-* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
+* **Execute step** <span class="n8n-inline-image">![Execute step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
+* **Deactivate** <span class="n8n-inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
+* **Delete** <span class="n8n-inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
+* **Node context menu** <span class="n8n-inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
 	* Open node
 	* Execute step
 	* Rename node
@@ -55,9 +54,11 @@ To view node controls, hover over the node on the canvas:
 	* Pin node
 	* Copy node
 	* Duplicate node
+	* Tidy up workflow
+	* Convert node to sub-workflow
 	* Select all
 	* Clear selection
-	* Delete node
+    * Delete node
 
 ## Node settings
 
@@ -65,11 +66,6 @@ The node settings under the **Settings** tab allow you to control node behaviors
 
 When active or set, they do the following:
 
-* **Request Options**: Select **Add Option** to view and select these options. 
-	- **Batching**: Control how to batch large numbers of input items.
-	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
-	- **Proxy**: Use this if you need to specify an HTTP proxy.
-	- **Timeout**: Set a timeout for the request in ms. 
 * **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
 * **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
 * **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 

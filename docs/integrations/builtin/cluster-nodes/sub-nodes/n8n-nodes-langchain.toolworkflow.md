@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Call n8n Workflow Tool node documentation
 description: Learn how to use the Call n8n Workflow Tool node in n8n. Follow technical documentation to integrate Call n8n Workflow Tool node into your workflows.
 contentType: [integration, reference]
@@ -56,4 +55,4 @@ To get started with the `$fromAI()` function, select the "Let the model define t
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

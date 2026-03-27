@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Certificate Manager node documentation
 description: Learn how to use the AWS Certificate Manager node in n8n. Follow technical documentation to integrate AAWS Certificage Manager node into your workflows.
 contentType: [integration, reference]
@@ -31,7 +30,7 @@ Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} for more information on this service.
+Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) for more information on this service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

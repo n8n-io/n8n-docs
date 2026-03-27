@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Milvus Vector Store node documentation
 description: Learn how to use the Milvus Vector Store node in n8n. Follow technical documentation to integrate Milvus Vector Store node into your workflows.
 contentType: [integration, reference]
@@ -54,6 +53,10 @@ The connections flow would look like this: AI agent (tools connector) -> Vector 
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google OAuth2 single service
 description: Documentation for single service OAuth2 Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -10,13 +9,29 @@ priority: critical
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
---8<-- "_snippets/integrations/managed-google-oauth.md"
-
 ## Prerequisites
 
 * Create a [Google Cloud](https://cloud.google.com/) account.
 
-## Set up OAuth
+## Managed OAuth2
+
+n8n Cloud users can use **Managed OAuth2** for the following nodes:
+
+--8<-- "_snippets/integrations/managed-google-oauth.md"
+
+To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
+
+![Managed OAuth2 credentials screen](/_images/integrations/builtin/credentials/google/managed-oauth.png)
+
+If you prefer to use Custom OAuth2, use the dropdown to change the authentication type.
+
+## Custom OAuth2
+
+Managed OAuth2 isn't available for self-hosted n8n users, nor for Google nodes not listed [above](#managed-oauth2). You must create a custom OAuth2 single service credential. This means creating an app in the Google Cloud Console and connecting it to n8n with a Client ID and Client Secret.
+
+The rest of this document covers the full process.
+
+## Set up Custom OAuth2
 
 There are five steps to connecting your n8n credential to Google services:
 
@@ -47,12 +62,12 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
-1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
-1. Select **Get started** to begin configuring OAuth consent.
-1. Enter an **App name** and **User support email** to include on the Oauth screen.
-1. For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types.
-1. Select the **Email addresses** Google should use to contact you about changes to your project.
-1. Read and accept the Google's User Data Policy and select **Create**.
+1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**. Google will redirect you to the Google Auth Platform overview page.
+1. Select **Get started** on the **Overview** tab to begin configuring OAuth consent.
+1. Enter an **App name** and **User support email** to include on the Oauth screen. Select **Next** to continue.
+1. For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types. Select **Next** to continue.
+1. Select the **Email addresses** Google should use to contact you about changes to your project. Select **Next** to continue.
+1. Read and accept the Google's User Data Policy. Select **Continue** and then select **Create**.
 1. In the left-hand menu, select **Branding**.
 1. In the **Authorized domains** section, select **Add domain**:
 	* If you're using n8n's Cloud service, add `n8n.cloud`
@@ -63,26 +78,27 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 
 Next, create the OAuth client credentials in Google:
 
+1. Access your [Google Cloud Console](https://console.cloud.google.com/). Make sure you're in the correct project.
 1. In the **APIs & Services** section, select [**Credentials**](https://console.cloud.google.com/apis/credentials).
-2. Select **+ Create credentials** > **OAuth client ID**.
-3. In the **Application type** dropdown, select **Web application**.
-4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
-5. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
-6. Select **Create**.
+1. Select **+ Create credentials** > **OAuth client ID**.
+1. In the **Application type** dropdown, select **Web application**.
+1. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
+1. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
+1. Select **Create**.
 
 ### Finish your n8n credential
 
 With the Google project and credentials fully configured, finish the n8n credential:
 
 1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
-2. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
-2. In n8n, select **Sign in with Google** to complete your Google authentication.
-3. **Save** your new credentials.
+1. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
+1. In n8n, select **Sign in with Google** to complete your Google authentication.
+1. **Save** your new credentials.
 
 ## Video
 
 <div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/FBGtpWMTppw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Troubleshooting

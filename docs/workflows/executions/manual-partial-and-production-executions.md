@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Manual, partial, and production executions
 description: How manual, partial, and automatic workflow executions differ.
 contentType: explanation
@@ -7,7 +6,7 @@ contentType: explanation
 
 # Manual, partial, and production executions
 
-There are some important differences in how n8n executes workflows manually (by clicking the **Test Workflow** button) and automatically (when the workflow is **Active** and triggered by an event or schedule).
+There are some important differences in how n8n executes workflows manually (by clicking the **Execute Workflow** button) and automatically (when the workflow is **Active** and triggered by an event or schedule).
 
 ## Manual executions
 
@@ -16,7 +15,7 @@ Manual executions allow you to run workflows directly from the [canvas](/glossar
 Manual executions make building workflows easier by allowing you to iteratively test as you go, following the flow logic and seeing data transformations. You can test conditional branching, data formatting changes, and loop behavior by providing different input items and modifying node options.
 
 /// note | Pinning execution data
-When performing manual executions, you can use [data pinning](/data/data-pinning.md) to "pin" or "freeze" the output data of a node. You can optionally [edit the pinned data](https://docs.n8n.io/data/data-editing/) as well.
+When performing manual executions, you can use [data pinning](/data/data-pinning.md) to "pin" or "freeze" the output data of a node. You can optionally edit the pinned data as well.
 
 On future runs, instead of executing the pinned node, n8n will substitute the pinned data and continue following the flow logic. This allows you to iterate without operating on variable data or repeating queries to external services. Production executions ignore all pinned data.
 ///
@@ -51,6 +50,6 @@ To work around this, consider using the [limit node](/integrations/builtin/core-
 
 Production executions occur when a triggering event or schedule automatically runs a workflow.
 
-To configure production executions, you must attach a [trigger node](/glossary.md#trigger-node-n8n) (any trigger other than the [manual trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) works) and switch workflow's toggle to **Active**. Once activated, the workflow automatically executes whenever the trigger condition occurs.
+To configure production executions, you must attach a [trigger node](/glossary.md#trigger-node-n8n) (any trigger other than the [manual trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) works) and switch workflow's toggle to **Active**. Once published, the workflow automatically executes whenever the trigger condition occurs.
 
 The execution flow for production executions doesn't display in the Editor tab of the workflow as with manual executions. Instead, you can see executions in the workflow's **Executions** tab according to your [workflow settings](/workflows/settings.md). From there, you can explore and troubleshoot problems using the [debug in editor feature](/workflows/executions/debug.md).

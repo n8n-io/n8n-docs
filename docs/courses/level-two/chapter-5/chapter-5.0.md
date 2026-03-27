@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -32,8 +31,8 @@ n8n provides [core nodes](/integrations/builtin/node-types.md#core-nodes) for al
 
 To build the workflows, you will need the following:
 
-* An [Airtable](https://airtable.com/){:target="_blank" .external-link} account and [credentials](/integrations/builtin/credentials/airtable.md).
-* A [Google](https://www.google.com/account/about/){:target="_blank" .external-link} account and [credentials](/integrations/builtin/credentials/google/index.md) to access Gmail.
-* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this using email when you sign up for this course).
+* An [Airtable](https://airtable.com/) account and [credentials](/integrations/builtin/credentials/airtable.md).
+* A [Google](https://www.google.com/account/about/) account and [credentials](/integrations/builtin/credentials/google/index.md) to access Gmail.
+* A [Discord](https://discord.com/) account and webhook URL (you receive this using email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

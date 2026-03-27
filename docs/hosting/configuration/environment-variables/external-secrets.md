@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: External secrets environment variables
 description: Configure the interval for checking updates to external secrets in self-hosted n8n instance. 
 contentType: reference

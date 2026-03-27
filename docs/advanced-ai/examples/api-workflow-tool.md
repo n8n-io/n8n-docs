@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 title: Call an API to fetch data
 description: Use the n8n workflow tool to load data from an API using the HTTP Request node into your AI workflow.

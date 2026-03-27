@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Calendar Calendar operations
 description: Documentation for the Calendar operations in Google Calendar node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -35,4 +34,4 @@ Enter these parameters:
 	- **RAW**: Returns the RAW data from the API.
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 
-Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query){:target=_blank .external-link} API documentation for more information.
+Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query) API documentation for more information.

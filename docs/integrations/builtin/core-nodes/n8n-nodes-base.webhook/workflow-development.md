@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webhook node workflow development documentation
 description: Learn how to build, test, and use the Webhook node in your workflows in n8n.
 priority: critical
@@ -27,8 +26,8 @@ When using the Webhook node on localhost on a [self-hosted](/hosting/index.md) n
 
 ## Production workflows
 
-When your workflow is ready, switch to using the **Production** webhook URL. You can then activate your workflow, and n8n runs it automatically when an external service calls the webhook URL.
+When your workflow is ready, switch to using the **Production** webhook URL. You can then publish your workflow, and n8n runs it automatically when an external service calls the webhook URL.
 
-When working with a Production webhook, ensure that you have saved and activated the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
+When working with a Production webhook, ensure that you have saved and published the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
 
-Refer to [Create a workflow](/workflows/create.md) for more information on activating workflows.
+Refer to [Create a workflow](/workflows/create.md) for more information on publishing workflows.

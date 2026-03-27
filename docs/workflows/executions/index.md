@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: An execution is a single run of a workflow.
 contentType: overview
 ---
@@ -12,8 +11,13 @@ An execution is a single run of a workflow.
 
 There are two execution modes:
 
-* Manual: run workflows manually when testing. Select **Test Workflow** to start a manual execution. You can do manual executions of active workflows, but n8n recommends keeping your workflow set to **Inactive** while developing and testing.
+* Manual: run workflows manually when testing. Select **Execute Workflow** to start a manual execution. You can do manual executions of active workflows, but n8n recommends keeping your workflow set to **Inactive** while developing and testing.
 * Production: a production workflow is one that runs automatically. To enable this, set the workflow to **Active**.
+
+
+## How executions count towards quotas:
+
+[Paid plans](https://n8n.io/pricing/), whether cloud or self-hosted, have an execution limit quota. Only production executions count towards this quota. These are executions started automatically by triggers, schedules, or polling. Manual executions aren't counted. This distinction applies regardless of the instance environment, such as development or production.
 
 
 ## Execution lists

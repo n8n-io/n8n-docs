@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
 ---
 
@@ -42,7 +41,7 @@ You will build two workflows:
 ## What do I need to get started?
 
 1. **n8n set up**: You can use [n8n Cloud](/manage-cloud/overview.md) (or the [self-hosted version](/hosting/installation/docker.md) if you have experience hosting services).
-2. **A course user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI) to get your unique ID and other credentials you will need in the course.
+2. **A course user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI) to get your unique ID and other credentials you will need in this course (Level 1).
 3. Basic knowledge of JavaScript and [APIs](https://blog.n8n.io/what-are-apis-how-to-use-them-with-no-code/) would be helpful, but isn't necessary.
 4. An [account on the n8n community forum](https://community.n8n.io/) if you wish to receive a profile badge and avatar upon successful completion.
 

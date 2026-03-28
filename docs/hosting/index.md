@@ -36,7 +36,7 @@ See [Community edition features](/hosting/community-edition-features.md) for a l
 
 - __Scaling__
 
-	Manage data, modes, and processes to keep n8n running smoothly at scale.
+	Manage data, modes, and processes to keep n8n running smoothly at scale
 
 	[:octicons-arrow-right-24: Scaling](/hosting/scaling/queue-mode.md)
 

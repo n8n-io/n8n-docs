@@ -144,6 +144,16 @@ To provide enhanced assistance, n8n integrates AI-powered features that leverage
 
 To assist and improve user experience, n8n may send specific context data to LLMs. This context data is strictly limited to information about the current workflow. n8n does not send any values from credential fields or actual output data to AI services. The data will not be incorporated, used, or retained to train the models of the AI services. Any data will be deleted after 30 days.
 
+#### AI Usage settings
+
+/// info
+Available in n8n v2.7.0 and above.
+///
+
+You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance settings.
+
+More details can be found on the [AI Assistant documentation page](/manage-cloud/ai-assistant.md#ai-usage-settings).
+
 #### When n8n shares data
 
 Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the AI assistant, ensuring no unnecessary data sharing occurs.

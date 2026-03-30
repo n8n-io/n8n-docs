@@ -1365,6 +1365,7 @@ nav:
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
+      - n8n-cli: api/n8n-cli/index.md
   - Embed:
       - embed/index.md
       - Prerequisites: embed/prerequisites.md

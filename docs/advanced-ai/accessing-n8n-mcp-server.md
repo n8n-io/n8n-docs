@@ -208,7 +208,7 @@ The n8n MCP Server exposes the following tools so that you can create and update
     * `nodeNames` (array): When `includeData` is true, return data only for the specific node names.
     * `truncateData` (boolean): When `includeData` is true, limit the number of data items returned per node.
 
-### Workflow testing
+### Testing workflows
 
 * `prepare_test_pin_data`: Looks at a workflow and returns JSON schemas for any nodes that need simulated data (triggers, credentialed nodes, HTTP requests). Use these schemas to generate realistic test data before running `test_workflow`. (v2.15 onward)
 * `test_workflow`: Runs a workflow using generated pin data to fake out external services, while still executing logic nodes (Set, If, Code) for real. Returns the execution status. (v2.15 onward)

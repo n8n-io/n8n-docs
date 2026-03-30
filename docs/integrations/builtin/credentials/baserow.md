@@ -43,24 +43,25 @@ Follow these steps:
 
 Refer to [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication) for information on creating user accounts.
 
-## Using token
+## Using a token
 
-To configure the database token, you'll need:
+To configure the database token credential, you'll need:
 
 - Your Baserow **Host**
-- A **Username** and **Password** to log in with
+- A **Database token** created on Baserow.io, which requires a **Username** and **Password** for login.
 
-Creating the token:
+### Creating the database token
 
-1. In Baserow, you must login with your username and password.
-2. Can click on the workspace in the top left corner
-3. Then on "My settings"
-4. And in the opened modal on "Database token".
-5. Create a new token from there.
+1. In [Baserow](https://baserow.io/login), log in with your username and password.
+2. Click on your workspace in the top left corner and select **My Settings**.
+3. In the screen that opens,  click **Database tokens**.
+4. Click **Create token**.
+5. Enter a **Name** and **Workspace** for the token.
+6. Click **Create token** to finish.
 
-Follow these steps:
+To create the credential in n8n, follow these steps:
 
 1. Enter the **Host** for the Baserow instance:
 	- For a Baserow-hosted instance: leave as `https://api.baserow.io`.
 	- For a self-hosted instance: set to your self-hosted instance API URL.
-2. Enter the **Token** for the token that n8n should use.
+2. Enter the **Database Token** you created.

@@ -258,7 +258,7 @@ Add the following entry to your `claude_desktop_config.json` file:
     "type": "http",
     "url": "https://<your-n8n-domain>/mcp-server/http",
     "headers": {
-      "Authorization": "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
+      "Authorization": "Bearer <YOUR_N8N_MCP_TOKEN>"
     }
   }
 }

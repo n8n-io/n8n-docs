@@ -22,7 +22,7 @@ Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for
 * Row
     * Create multiple rows
     * Delete multiple rows
-    *Update multiple rows
+    * Update multiple rows
     * Create a row
     * Delete a row
     * Get a row

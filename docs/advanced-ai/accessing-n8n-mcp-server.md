@@ -210,8 +210,8 @@ The n8n MCP Server exposes the following tools so that you can create and update
 
 ### Workflow testing
 
-* `prepare_test_pin_data`: Analyze a workflow and return JSON schemas describing the expected output of nodes that require simulated data (triggers, credentialed nodes, HTTP requests). Use the returned schemas to generate realistic pin data before calling `test_workflow`. (v2.15 onward)
-* `test_workflow`: Execute a workflow using generated pin data to mock external services, while letting logic nodes (Set, If, Code) run with real execution. Returns the execution status. (v2.15 onward)
+* `prepare_test_pin_data`: Looks at a workflow and returns JSON schemas for any nodes that need simulated data (triggers, credentialed nodes, HTTP requests). Use these schemas to generate realistic test data before running `test_workflow`. (v2.15 onward)
+* `test_workflow`: Runs a workflow using generated pin data to fake out external services, while still executing logic nodes (Set, If, Code) for real. Returns the execution status. (v2.15 onward)
 
 ### Projects and folders
 

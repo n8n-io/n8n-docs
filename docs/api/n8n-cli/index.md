@@ -15,7 +15,7 @@ Use it only for experimenting, local development, and personal projects and not 
 Use the API CLI to:
 
 - List and inspect workflows  
-- create a workflow from JSON 
+- Create a workflow from JSON 
 - Check recent executions  
 - Create a credential  
 - Manage projects

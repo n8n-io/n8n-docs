@@ -47,7 +47,7 @@ n8n-cli config set-url https://your-instance.n8n.cloud
 n8n-cli config set-api-key YOUR_API_KEY
 ```
 
-Get your API key from **n8n > Settings > API** 
+Get your API key from **n8n > Settings > n8n API** 
 
 Or skip the config file and use environment variables:
 

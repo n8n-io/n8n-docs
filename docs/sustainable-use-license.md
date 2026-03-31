@@ -73,7 +73,7 @@ Bob sets up n8n to embed an AI chatbot within the ACME app. The AI chatbot's cre
 
 ### What if I want to use n8n for something that's not permitted by the license?
 
-You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n Embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
+You must sign a separate commercial agreement with us. We actively encourage software creators to build with n8n in their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. [Contact us](mailto:license@n8n.io) to learn more.
 
 If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
 

@@ -1,111 +1,21 @@
 ---
-title: n8n Embed Configuration
-description: Learn how to configure your n8n Embed.
+title: External hooks
+description: Use external hooks to execute custom code whenever n8n runs a specific operation.
 contentType: howto
 ---
 
-# Configuration
+# External hooks
 
---8<-- "_snippets/embed-license.md"
+External hooks let you run custom code whenever n8n performs a specific operation. Use them to log data, change data, or forbid an action by throwing an error.
 
-## Authentication
+There are two types:
 
-You can secure n8n by setting up [User management](/user-management/index.md), n8n's built-in authentication feature.
+- **Backend hooks**: run server-side, registered via the `EXTERNAL_HOOK_FILES` environment variable.
+- **Frontend hooks**: run in the browser, loaded via a script tag.
 
-n8n supports [LDAP](/user-management/ldap.md) and [SAML](/user-management/saml/index.md).
-
-### Credential overwrites
-
-To offer OAuth login to users, it's possible to overwrite [credentials](/glossary.md#credential-n8n) on a global basis. This credential data isn't visible to users but the backend uses it automatically.
-
-In the Editor UI, n8n hides all overwritten fields by default. This means that users are able to authenticate using  OAuth by pressing the "connect" button on the credentials.
-
-n8n offers two ways to apply credential overwrites: using Environment Variable and using the REST API.
-
-#### Using environment variables
-
-You can set credential overwrites using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
-
-/// warning
-Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
-///
-
-#### Using REST APIs
-
-The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available. You can set `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` to require a token for accessing the endpoint. When this token is configured, the endpoint is only accessible if the token is included in the `Authorization` header as a `Bearer` token.
-
-/// note
-The endpoint can be called just once for security reasons, unless `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set.
-///
-
-For example:
-
-1. Activate the endpoint by setting the environment variable in the environment n8n runs under:
-
-    ```sh
-    export CREDENTIALS_OVERWRITE_ENDPOINT=send-credentials
-    ```
-
-2. A JSON file with the credentials to overwrite is then needed. For example, a `oauth-credentials.json` file to overwrite credentials for Asana and GitHub could look like this:
-
-    ```json
-    {
-        "asanaOAuth2Api": {
-            "clientId": "<id>",
-            "clientSecret": "<secret>"
-        },
-        "githubOAuth2Api": {
-            "clientId": "<id>",
-            "clientSecret": "<secret>"
-        }
-    }
-    ```
-
-3. Then apply it to the instance by sending it using curl:
-
-    ```sh
-    curl -H "Content-Type: application/json" --data @oauth-credentials.json http://localhost:5678/send-credentials
-    ```
-
-/// note
-There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`.
-In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) for all child-credentials (`googleSheetsOAuth2Api`) to use.
-///
-
-In case `CREDENTIALS_OVERWRITE_ENDPOINT_AUTH_TOKEN` is set to `secure-token`, the curl command will be:
-
-    ```sh
-    curl -H "Content-Type: application/json" -H "Authorization: Bearer secure-token" --data @oauth-credentials.json http://localhost:5678/send-credentials
-    ```
-
-#### Persistence
-
-To store credential overwrites in the database and propagate them automatically to all workers in multi-instance/queue mode, enable:
-
-```sh
-export CREDENTIALS_OVERWRITE_PERSISTENCE=true
-```
-
-When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so that workers reload the latest values. When disabled, overwrites remain in memory on the process that loaded them and aren't propagated to workers or preserved across restarts.
-
-## Environment variables
-
-n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
-
-| Variable | Type | Default | Description |
-| :------- | :--- | :------ | :---------- |
-| `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
-| `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
-| `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
-| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
-| `NODES_EXCLUDE` | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]` | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"`. To enable all nodes, specify `NODES_EXCLUDE: "[]"`. |
-| `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |
-| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
+For the environment variables used to register hooks, refer to [External hooks environment variables](/hosting/configuration/environment-variables/external-hooks.md).
 
 ## Backend hooks
-
-It's possible to define external hooks that n8n executes whenever a specific operation runs. You can use these, for example, to log data, change data, or forbid an action by throwing an error.
 
 ### Available hooks
 
@@ -113,7 +23,7 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | :------- | :---------| :---------- |
 | `credentials.create` | `[credentialData: ICredentialsDb]` | Called before new credentials get created. Use to restrict the number of credentials. |
 | `credentials.delete` | `[id: credentialId]` | Called before credentials get deleted. |
-| `credentials.update` | `[credentialData: ICredentialsDb]` | Called before existing credentials are saved. |
+| `credentials.update` | `[credentialData: ICredentialsDb]` | Called before n8n saves existing credentials. |
 | `frontend.settings` | `[frontendSettings: IN8nUISettings]` | Gets called on n8n startup. Allows you to, for example, overwrite frontend data like the displayed OAuth URL. |
 | `n8n.ready` | `[app: App]` | Called once n8n is ready. Use to, for example, register custom API endpoints. |
 | `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
@@ -124,7 +34,7 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 | `workflow.afterDelete` | `[workflowId: string]` | Called after a workflow gets deleted. |
 | `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | Called after an existing workflow gets saved. |
 | `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
-| `workflow.delete` | `[workflowId: string]` | Called before a workflow gets delete. |
+| `workflow.delete` | `[workflowId: string]` | Called before a workflow gets deleted. |
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
 | `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
 | `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
@@ -133,8 +43,7 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 
 ### Registering hooks
 
-Set hooks by registering a hook file that contains the hook functions.
-To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`.
+Set hooks by registering a hook file that contains the hook functions. To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`.
 
 You can set the variable to a single file:
 
@@ -144,7 +53,7 @@ Or to contain multiple files separated by a colon:
 
 `EXTERNAL_HOOK_FILES=/data/hook1.js:/data/hook2.js`
 
-### Backend hook files
+### Hook files
 
 Hook files are regular JavaScript files that have the following format:
 
@@ -174,13 +83,13 @@ module.exports = {
 }
 ```
 
-### Backend hook functions
+### Hook functions
 
 A hook or a hook file can contain multiple hook functions, with all functions executed one after another.
 
 If the parameters of the hook function are objects, it's possible to change the data of that parameter to change the behavior of n8n.
 
-You can also access the database in any hook function using `this.dbCollections` (refer to the code sample in [Backend hook files](#backend-hook-files).
+You can also access the database in any hook function using `this.dbCollections` (refer to the code sample in [Hook files](#hook-files) above).
 
 ## Frontend external hooks
 
@@ -208,7 +117,6 @@ Like backend external hooks, it's possible to define external hooks in the front
 | `nodeSettings.valueChanged` |  |
 | `nodeView.createNodeActiveChanged` |  |
 | `nodeView.addNodeButton` |  |
-| `nodeView.createNodeActiveChanged` |  |
 | `nodeView.mount` |  |
 | `pushConnection.executionFinished` |  |
 | `showMessage.showError` |  |
@@ -222,7 +130,7 @@ Like backend external hooks, it's possible to define external hooks in the front
 | `workflowSettings.dialogVisibleChanged` |  |
 | `workflowSettings.saveSettings` | Called when someone saves the settings of a workflow. |
 
-### Registering hooks
+### Registering frontend hooks
 
 You can set hooks by loading the hooks script on the page. One way to do this is by creating a hooks file in the project and adding a script tag in your `editor-ui/public/index.html` file:
 
@@ -261,7 +169,7 @@ window.n8nExternalHooks = {
 
 ### Frontend hook functions
 
-You can define multiple hook functions per hook. Each hook function is invoked with the following arguments arguments:
+You can define multiple hook functions per hook. n8n calls each hook function with the following arguments:
 
 * `store`: The Vuex store object. You can use this to change or get data from the store.
 * `metadata`: The object that contains any data provided by the hook. To see what's passed, search for the hook in the `editor-ui` package.

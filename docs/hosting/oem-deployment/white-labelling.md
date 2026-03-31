@@ -1,10 +1,12 @@
 ---
+title: White labelling
+description: Customize n8n's frontend styling, logos, and text to match your brand identity.
 contentType: howto
 ---
 
 # White labelling
 
---8<-- "_snippets/embed-license.md"
+--8<-- "_snippets/self-hosting/oem-agreement.md"
 
 White labelling n8n means customizing the frontend styling and assets to match your brand identity. The process involves changing two packages in n8n's source code [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n):
 
@@ -61,12 +63,12 @@ In the following example the primary color changes to <span style="color:#0099ff
 	--color-primary-l: 50%;
 ```
 
-![Example Theme Color Customization](/_images/embed/white-label/color-transition.gif)
+![Example Theme Color Customization](/_images/hosting/oem-deployment/white-label/color-transition.gif)
 
 
 ## Theme logos
 
-To change the editor’s logo assets look into [packages/frontend/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/frontend/editor-ui/public) and replace:
+To change the editor's logo assets look into [packages/frontend/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/frontend/editor-ui/public) and replace:
 
 - favicon-16x16.png
 - favicon-32x32.png
@@ -82,7 +84,7 @@ Replace these logo assets. n8n uses them in Vue.js components, including:
 
 In the following example replace `n8n-logo-collapsed.svg` and `n8n-logo-expanded.svg` to update the main sidebar's logo assets.
 
-![Example Logo Main Sidebar](/_images/embed/white-label/logo-main-sidebar.png)
+![Example Logo Main Sidebar](/_images/hosting/oem-deployment/white-label/logo-main-sidebar.png)
 
 If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/MainSidebar.vue).
 
@@ -128,7 +130,7 @@ In the following example add the `_brand.name` translation key to white label n8
 }
 ```
 
-![Example About Modal Localization](/_images/embed/white-label/about-modal.png)
+![Example About Modal Localization](/_images/hosting/oem-deployment/white-label/about-modal.png)
 
 ### Window title
 
@@ -156,8 +158,4 @@ const DEFAULT_TITLE = 'My Brand';
 const DEFAULT_TAGLINE = 'Workflow Automation';
 ```
 
-![Example Window Title Localization](/_images/embed/white-label/window-title.png)
-
-
-
-
+![Example Window Title Localization](/_images/hosting/oem-deployment/white-label/window-title.png)

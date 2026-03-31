@@ -1275,7 +1275,10 @@ nav:
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
         - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
         - Pre-configure Microsoft OAuth credentials: hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md
+        - Configure a custom workflow templates library: hosting/configuration/configuration-examples/custom-templates.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - Credential overwrites: hosting/configuration/credential-overwrites.md
+      - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
     - Logging and monitoring:
@@ -1304,6 +1307,11 @@ nav:
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
+    - OEM deployment:
+      - Overview: hosting/oem-deployment/index.md
+      - Prerequisites: hosting/oem-deployment/prerequisites.md
+      - White-labelling: hosting/oem-deployment/white-labelling.md
+      - Managing workflows: hosting/oem-deployment/managing-workflows.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md
@@ -1373,14 +1381,6 @@ nav:
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
-  - Embed:
-      - embed/index.md
-      - Prerequisites: embed/prerequisites.md
-      - Deployment: embed/deployment.md
-      - Configuration: embed/configuration.md
-      - Workflow management: embed/managing-workflows.md
-      - Workflows templates: embed/workflow-templates.md
-      - White labelling: embed/white-labelling.md
   # - Feature tests:
   #    - Main features: docs-site-feature-tests/index.md
 

@@ -1,4 +1,4 @@
----
+https://www.virustotal.com/api/v3/ip_addresses/{{ $fromAI('IP', 'The IP Address to query', 'string') }}---
 contentType: overview
 title: Advanced AI examples and concepts
 description: Example workflows and use cases for building AI functionality using n8n.

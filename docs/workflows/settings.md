@@ -72,6 +72,16 @@ Whether n8n should cancel the current workflow execution after a certain amount 
 
 When enabled, the **Timeout After** option appears. Here, you can set the time (in hours, minutes, and seconds) after which the workflow should timeout. For n8n Cloud users, n8n enforces a maximum available timeout for each plan.
 
+### Redact production execution data
+
+Controls whether execution data from production (non-manually triggered) executions is redacted. When set to **Redact**, the input and output data of each node is hidden and replaced with a redacted indicator.
+
+### Redact manual execution data
+
+Controls whether execution data from manually triggered executions is redacted. When set to **Redact**, the input and output data of each node is hidden and replaced with a redacted indicator.
+
+Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details on redaction policies, revealing data, and permission requirements.
+
 ### Estimated time saved
 
 An estimate of the number of minutes each of execution of this workflow saves you.

@@ -18,7 +18,7 @@ This is distinct from [using n8n as a backend](/hosting/index.md), where workflo
 - [White-labelling](/hosting/oem-deployment/white-labelling.md): Customize the frontend styling, logos, and text to match your brand.
 - [Managing workflows](/hosting/oem-deployment/managing-workflows.md): Patterns for managing workflows across multiple users or organizations within an embedded deployment.
 - [Workflow templates](/hosting/configuration/configuration-examples/custom-templates.md): Configure a custom workflow template library for your users.
-- [Credential overwrites](/hosting/configuration/credential-overwrites.md/): Set OAuth credentials globally so your users can authenticate without seeing or entering client secrets.
+- [Credential overwrites](/hosting/configuration/credential-overwrites.md): Set OAuth credentials globally so your users can authenticate without seeing or entering client secrets.
 
 
 ## Support

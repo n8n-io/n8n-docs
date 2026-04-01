@@ -10,8 +10,8 @@ External hooks let you run custom code whenever n8n performs a specific operatio
 
 There are two types:
 
-- **Backend hooks**: run server-side, registered via the `EXTERNAL_HOOK_FILES` environment variable.
-- **Frontend hooks**: run in the browser, loaded via a script tag.
+- **Backend hooks**: run server-side, registered using the `EXTERNAL_HOOK_FILES` environment variable.
+- **Frontend hooks**: run in the browser, loaded with a script tag.
 
 For the environment variables used to register hooks, refer to [External hooks environment variables](/hosting/configuration/environment-variables/external-hooks.md).
 

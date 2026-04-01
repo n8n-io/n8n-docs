@@ -92,7 +92,7 @@ To reveal data:
 
 The execution data becomes visible for that execution in the current session.
 
-/// warning | Dynamic credential executions cannot be revealed
+/// warning | Dynamic credential executions can't be revealed
 Executions that used dynamic credentials can't be revealed, even by users with the `execution:reveal` scope. This is a security measure to protect end-user data that flows through workflows using dynamic credential resolution.
 ///
 

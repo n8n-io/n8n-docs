@@ -42,7 +42,6 @@ Whenever you make changes you need to rebuild and restart n8n. While developing 
 To customize theme colors open [packages/frontend/@n8n/design-system](https://github.com/n8n-io/n8n/tree/master/packages/frontend/@n8n/design-system) and start with:
 
 - [packages/frontend/@n8n/design-system/src/css/_tokens.scss](https://github.com/n8n-io/n8n/blob/master/packages/frontend/@n8n/design-system/src/css/_tokens.scss)
-- [packages/frontend/@n8n/design-system/src/css/_tokens.dark.scss](https://github.com/n8n-io/n8n/blob/master/packages/frontend/@n8n/design-system/src/css/_tokens.dark.scss)
 
 
 At the top of `_tokens.scss` you will find `--color-primary` variables as HSL colors:
@@ -79,14 +78,14 @@ To change the editor's logo assets look into [packages/frontend/editor-ui/public
 
 Replace these logo assets. n8n uses them in Vue.js components, including:
 
-* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/MainSidebar.vue): top/left logo in the main sidebar.
-* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/Logo/Logo.vue): reused in other components.
+* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/app/components/MainSidebar.vue): top/left logo in the main sidebar.
+* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/@n8n/design-system/src/components/N8nLogo/Logo.vue): reused in other components.
 
 In the following example replace `n8n-logo-collapsed.svg` and `n8n-logo-expanded.svg` to update the main sidebar's logo assets.
 
 ![Example Logo Main Sidebar](/_images/hosting/oem-deployment/white-label/logo-main-sidebar.png)
 
-If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/MainSidebar.vue).
+If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/app/components/MainSidebar.vue).
 
 ```scss
 .logoItem {
@@ -119,7 +118,7 @@ To change all text occurrences like `n8n` or `n8n.io` to your brand identity you
 
 n8n uses the [Vue I18n](https://kazupon.github.io/vue-i18n/) internationalization plugin for Vue.js to translate the majority of UI texts. To search and replace text occurrences inside `en.json` you can use [Linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages).
 
-In the following example add the `_brand.name` translation key to white label n8n's [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/AboutModal.vue).
+In the following example add the `_brand.name` translation key to white label n8n's [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/app/components/AboutModal.vue).
 
 ```js
 {
@@ -137,7 +136,7 @@ In the following example add the `_brand.name` translation key to white label n8
 To change n8n's window title to your brand name, edit the following:
 
 - [packages/frontend/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/index.html)
-- [packages/frontend/editor-ui/src/composables/useDocumentTitle.ts](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/composables/useDocumentTitle.ts)
+- [packages/frontend/editor-ui/src/composables/useDocumentTitle.ts](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/app/composables/useDocumentTitle.ts)
 
 The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand` in `index.html` and `useDocumentTitle.ts`.
 

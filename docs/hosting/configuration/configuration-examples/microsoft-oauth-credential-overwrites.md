@@ -8,17 +8,11 @@ contentType: howto
 
 After [setting up a Microsoft Entra ID app registration with delegated access](/integrations/builtin/credentials/microsoftentra.md#delegated-access-for-organisation-wide-microsoft-integrations), you can use [credential overwrites](/embed/configuration.md#credential-overwrites) to inject the Client ID and Client Secret into n8n at startup. This means users in your organisation can connect to Microsoft services without completing their own OAuth app registration.
 
-n8n supports three environment variables for credential overwrites:
-
-- `CREDENTIALS_OVERWRITE_DATA_FILE` — path to a JSON file on the filesystem (recommended for Docker and Kubernetes)
-- `CREDENTIALS_OVERWRITE_DATA` — inline JSON string
-- `CREDENTIALS_OVERWRITE_ENDPOINT` — URL of an API endpoint that returns the JSON
-
-This guide uses `CREDENTIALS_OVERWRITE_DATA_FILE`. Refer to [Credentials environment variables](/hosting/configuration/environment-variables/credentials.md) for the full variable reference.
+n8n supports three environment variables for credential overwrites. This guide uses `CREDENTIALS_OVERWRITE_DATA_FILE`. Refer to [Credentials environment variables](/hosting/configuration/environment-variables/credentials.md) for the full variable reference.
 
 ## Create the credentials file
 
-On the host running n8n, create a file named `credentials-overwrite.json` in the same directory as your `compose.yaml`.
+On the host running n8n, create a file named `credentials-overwrite.json` in the same directory as your `docker-compose.yaml`.
 
 The file contains a JSON object keyed by the n8n credential type name. For example, to pre-configure Microsoft Outlook:
 
@@ -64,16 +58,27 @@ Mount the credentials file as a read-only volume and set the environment variabl
 services:
   n8n:
     image: docker.n8n.io/n8nio/n8n:latest
+    container_name: n8n
     restart: always
+    ports:
+      - "5678:5678"
     environment:
+      - GENERIC_TIMEZONE=America/New_York
+      - TZ=America/New_York
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_LOG_LEVEL=debug
+      - N8N_LOG_OUTPUT=file,console
+      - N8N_LOG_FILE_COUNT_MAX=5
       - CREDENTIALS_OVERWRITE_DATA_FILE=/run/secrets/credentials-overwrite.json
-      # ...your other environment variables
     volumes:
       - n8n_data:/home/node/.n8n
       - ./credentials-overwrite.json:/run/secrets/credentials-overwrite.json:ro
-
+    networks:
+      - default
 volumes:
   n8n_data:
+    name: ${N8N_VOLUME:-n8n_data}
+    external: true
 ```
 
 Apply the changes by restarting the container:
@@ -84,7 +89,13 @@ docker compose up -d
 
 ## Verify the overwrite is applied
 
-After n8n starts, have a user create a new credential for one of the pre-configured services (for example, Microsoft Outlook). They should see a **Managed OAuth2 (recommended)** option in the credential selection. If this option doesn't appear, the environment variable wasn't applied correctly — check that the file path in the volume mount matches the value of `CREDENTIALS_OVERWRITE_DATA_FILE`.
+After n8n starts, have a user create a new credential for one of the pre-configured services (for example, Microsoft Outlook). They should see a **Managed OAuth2 (recommended)** option in the credential selection.
+
+![Microsoft Entra credentials screen](/_images/hosting/configuration/microsoft-entra-oauth.png)
+
+The user can click **Connect to Microsoft Outlook**, with no auth required. An **Account connected** message should appear
+
+If the **Managed OAuth 2** option doesn't appear, the environment variable wasn't applied correctly — check that the file path in the volume mount matches the value of `CREDENTIALS_OVERWRITE_DATA_FILE`.
 
 ## Kubernetes
 
@@ -117,6 +128,7 @@ spec:
       env:
         - name: CREDENTIALS_OVERWRITE_DATA_FILE
           value: /run/secrets/credentials-overwrite.json
+        # ...your other env vars
       volumeMounts:
         - name: credentials-overwrite
           mountPath: /run/secrets/credentials-overwrite.json
@@ -142,7 +154,17 @@ env:
         key: credentials-overwrite.json
 ```
 
-This is cleaner for single-service setups, but note that some Kubernetes environments restrict environment variable size. The file-based approach is safer if you have many credential overwrites.
+The Secret may look like:
+
+```yaml
+With a Secret like:
+
+```yaml
+stringData:
+  credentials-json: '{"microsoftOutlookOAuth2Api":{"clientId":"...","clientSecret":"..."}}'
+```
+
+This is cleaner for single-service setups, but note that some Kubernetes environments restrict environment variable size (for example, to 128KB per variable). The file-based approach is safer if you have many credential overwrites.
 ///
 
 ### AWS Secrets Manager (EKS)
@@ -219,29 +241,38 @@ spec:
 **5. Update your n8n Deployment:**
 
 ```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n
+  namespace: your-namespace
 spec:
-  serviceAccountName: n8n-sa
-  containers:
-    - name: n8n
-      image: docker.n8n.io/n8nio/n8n:latest
-      env:
-        - name: CREDENTIALS_OVERWRITE_DATA_FILE
-          value: /run/secrets/credentials-overwrite.json
-      volumeMounts:
+  template:
+    spec:
+      serviceAccountName: n8n-sa
+      containers:
+        - name: n8n
+          image: docker.n8n.io/n8nio/n8n:latest
+          env:
+            - name: CREDENTIALS_OVERWRITE_DATA_FILE
+              value: /run/secrets/credentials-overwrite.json
+          volumeMounts:
+            - name: credentials-overwrite
+              mountPath: /run/secrets/credentials-overwrite.json
+              subPath: credentials-overwrite.json
+              readOnly: true
+      volumes:
         - name: credentials-overwrite
-          mountPath: /run/secrets/credentials-overwrite.json
-          subPath: credentials-overwrite.json
-          readOnly: true
-  volumes:
-    - name: credentials-overwrite
-      csi:
-        driver: secrets-store.csi.k8s.io
-        readOnly: true
-        volumeAttributes:
-          secretProviderClass: n8n-credentials-overwrite
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: n8n-credentials-overwrite
 ```
 
 **Rotating the secret:**
+
+To update the credentials, update the value in Secrets Manager:
 
 ```bash
 aws secretsmanager update-secret \
@@ -259,9 +290,19 @@ This approach uses the [Azure Key Vault Provider for the Secrets Store CSI Drive
 
 - Secrets Store CSI Driver and Azure Key Vault Provider addon enabled on the AKS cluster
 - An Azure Key Vault instance
-- Workload Identity enabled on the cluster
+- A managed identity or service principal with access to the vault
+- Workload Identity enabled on the cluster (recommended over pod identity)
 
-**1. Create the secret in Key Vault:**
+**1. Create or use an existing Key Vault:**
+
+```bash
+az keyvault create \
+  --name n8n-credentials-vault \
+  --resource-group your-resource-group \
+  --location your-region
+```
+
+**2. Create the secret in Key Vault:**
 
 ```bash
 az keyvault secret set \
@@ -270,7 +311,9 @@ az keyvault secret set \
   --value '{"microsoftOutlookOAuth2Api":{"clientId":"YOUR_CLIENT_ID","clientSecret":"YOUR_CLIENT_SECRET"}}'
 ```
 
-**2. Set up Workload Identity:**
+**3. Set up Workload Identity:**
+
+Create a managed identity and establish the federated credential:
 
 ```bash
 # Create a managed identity
@@ -279,23 +322,25 @@ az identity create \
   --resource-group your-resource-group \
   --location your-region
 
-# Grant it access to the Key Vault secret
+# Get the identity client ID
 CLIENT_ID=$(az identity show \
   --name n8n-workload-identity \
   --resource-group your-resource-group \
   --query clientId -o tsv)
 
+# Grant the identity access to the Key Vault
 az keyvault set-policy \
   --name n8n-credentials-vault \
   --secret-permissions get \
   --spn "$CLIENT_ID"
 
-# Create the federated credential
+# Get the OIDC issuer URL for your cluster
 OIDC_ISSUER=$(az aks show \
   --name your-cluster \
   --resource-group your-resource-group \
   --query "oidcIssuerProfile.issuerUrl" -o tsv)
 
+# Create the federated credential
 az identity credential create \
   --name n8n-workload-identity \
   --resource-group your-resource-group \
@@ -304,7 +349,7 @@ az identity credential create \
   --audience api://AzureADTokenExchange
 ```
 
-**3. Create the Kubernetes ServiceAccount:**
+**4. Create the Kubernetes ServiceAccount:**
 
 ```yaml
 apiVersion: v1
@@ -318,7 +363,7 @@ metadata:
     azure.workload.identity/use: "true"
 ```
 
-**4. Create the SecretProviderClass:**
+**5. Create the SecretProviderClass:**
 
 ```yaml
 apiVersion: secrets-store.csi.x-k8s.io/v1
@@ -342,29 +387,36 @@ spec:
     tenantId: "YOUR_TENANT_ID"
 ```
 
-**5. Update your n8n Deployment:**
+**6. Update your n8n Deployment:**
 
 ```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n
+  namespace: your-namespace
 spec:
-  serviceAccountName: n8n-sa
-  containers:
-    - name: n8n
-      image: docker.n8n.io/n8nio/n8n:latest
-      env:
-        - name: CREDENTIALS_OVERWRITE_DATA_FILE
-          value: /run/secrets/credentials-overwrite.json
-      volumeMounts:
+  template:
+    spec:
+      serviceAccountName: n8n-sa
+      containers:
+        - name: n8n
+          image: docker.n8n.io/n8nio/n8n:latest
+          env:
+            - name: CREDENTIALS_OVERWRITE_DATA_FILE
+              value: /run/secrets/credentials-overwrite.json
+          volumeMounts:
+            - name: credentials-overwrite
+              mountPath: /run/secrets/credentials-overwrite.json
+              subPath: credentials-overwrite.json
+              readOnly: true
+      volumes:
         - name: credentials-overwrite
-          mountPath: /run/secrets/credentials-overwrite.json
-          subPath: credentials-overwrite.json
-          readOnly: true
-  volumes:
-    - name: credentials-overwrite
-      csi:
-        driver: secrets-store.csi.k8s.io
-        readOnly: true
-        volumeAttributes:
-          secretProviderClass: n8n-credentials-overwrite
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: n8n-credentials-overwrite
 ```
 
 **Rotating the secret:**
@@ -407,15 +459,18 @@ echo -n '{"microsoftOutlookOAuth2Api":{"clientId":"YOUR_CLIENT_ID","clientSecret
 **3. Set up Workload Identity Federation:**
 
 ```bash
+# Create a Google service account
 gcloud iam service-accounts create n8n-secret-reader \
   --display-name="n8n Secret Reader" \
   --project your-project-id
 
+# Grant it access to the secret
 gcloud secrets add-iam-policy-binding n8n-credentials-overwrite \
   --member="serviceAccount:n8n-secret-reader@your-project-id.iam.gserviceaccount.com" \
   --role="roles/secretmanager.secretAccessor" \
   --project your-project-id
 
+# Bind the Kubernetes service account to the Google service account
 gcloud iam service-accounts add-iam-policy-binding \
   n8n-secret-reader@your-project-id.iam.gserviceaccount.com \
   --role="roles/iam.workloadIdentityUser" \
@@ -437,10 +492,12 @@ metadata:
 **5. Install the CSI Driver and GCP provider:**
 
 ```bash
+# Install the CSI driver
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 helm install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver \
   --namespace kube-system
 
+# Install the GCP provider
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/main/deploy/provider-gcp-plugin.yaml
 ```
 
@@ -463,29 +520,38 @@ spec:
 **7. Update your n8n Deployment:**
 
 ```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n
+  namespace: your-namespace
 spec:
-  serviceAccountName: n8n-sa
-  containers:
-    - name: n8n
-      image: docker.n8n.io/n8nio/n8n:latest
-      env:
-        - name: CREDENTIALS_OVERWRITE_DATA_FILE
-          value: /run/secrets/credentials-overwrite.json
-      volumeMounts:
+  template:
+    spec:
+      serviceAccountName: n8n-sa
+      containers:
+        - name: n8n
+          image: docker.n8n.io/n8nio/n8n:latest
+          env:
+            - name: CREDENTIALS_OVERWRITE_DATA_FILE
+              value: /run/secrets/credentials-overwrite.json
+          volumeMounts:
+            - name: credentials-overwrite
+              mountPath: /run/secrets/credentials-overwrite.json
+              subPath: credentials-overwrite.json
+              readOnly: true
+      volumes:
         - name: credentials-overwrite
-          mountPath: /run/secrets/credentials-overwrite.json
-          subPath: credentials-overwrite.json
-          readOnly: true
-  volumes:
-    - name: credentials-overwrite
-      csi:
-        driver: secrets-store.csi.k8s.io
-        readOnly: true
-        volumeAttributes:
-          secretProviderClass: n8n-credentials-overwrite
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: n8n-credentials-overwrite
 ```
 
 **Rotating the secret:**
+
+Create a new version of the secret:
 
 ```bash
 echo -n '{"microsoftOutlookOAuth2Api":{"clientId":"NEW_CLIENT_ID","clientSecret":"NEW_CLIENT_SECRET"}}' | \

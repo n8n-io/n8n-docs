@@ -190,7 +190,7 @@ Here are the known common errors and issues with Microsoft Entra credentials.
 
 ### Admin approval required during delegated access setup
 
-If a user sees a screen stating that admin approval is required, it means organisation-wide consent has not yet been granted for the app registration.
+If a user sees a screen stating that admin approval is required, it means organisation-wide consent hasn't yet been granted for the app registration.
 
 To resolve this, complete the [Grant admin consent in n8n](#grant-admin-consent-in-n8n) steps above using an Entra ID admin account.
 

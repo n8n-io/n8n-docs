@@ -10,7 +10,7 @@ contentType: howto
 Execution data redaction is available on Enterprise plans.
 ///
 
-Execution data redaction lets you hide the input and output data of workflow executions. This helps protect sensitive information like personal data, authentication tokens, and financial records from being visible to users who can view the workflow but do not need to see the underlying data.
+Execution data redaction lets you hide the input and output data of workflow executions. This helps protect sensitive information like personal data, authentication tokens, and financial records from being visible to users who can view the workflow but don't need to see the underlying data.
 
 When redaction is enabled, execution metadata (status, timing, node names) remains visible, but the actual data payload processed by each node is replaced with a redacted indicator.
 

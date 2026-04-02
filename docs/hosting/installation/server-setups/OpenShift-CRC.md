@@ -1,14 +1,20 @@
-This guide mirrors the AWS/EKS deployment but runs entirely on your local machine using OpenShift Local (CRC). It is designed for testing against a an OpenShift environment without cloud costs. 
-
-You will need a machine with signifiant resources to provision to run this given how many resources OpenShift itself consumes.
-
+---
+contentType: tutorial
 ---
 
-## How This Differs from the AWS/EKS 
+# Hosting n8n on OpenShift Local (CRC)
 
-| AWS / EKS | OpenShift Local (CRC) |
+This guide walks you through deploying n8n on OpenShift Local (CRC), Red Hat's tool for running a local OpenShift cluster. It mirrors AWS/EKS deployment, but runs entirely on your local machine. It is designed for testing n8n in an OpenShift environment locally, without cloud costs.
+
+You will need a machine with significant resources available, given how many resources OpenShift itself consumes.
+
+## OpenShift concepts vs standard Kubernetes
+
+OpenShift is built on Kubernetes but uses different terminology and has stricter security defaults. If you are familiar with standard Kubernetes, or with a guide that targets a managed Kubernetes service such as EKS, the table below maps the equivalent concepts so you know what to expect.
+
+| Standard Kubernetes / EKS | OpenShift Local (CRC) |
 | --- | --- |
-| `kubectl` | `oc` (OpenShift CLI also understands `kubectl` commands) |
+| `kubectl` | `oc` (OpenShift CLI; also understands `kubectl` commands) |
 | Namespace | Project (same concept, different command) |
 | Ingress / LoadBalancer | Route (built into OpenShift, no controller needed) |
 | EBS StorageClass (gp3) | CRC built-in storage provisioner (no setup needed) |
@@ -20,9 +26,7 @@ You will need a machine with signifiant resources to provision to run this given
 | OIDC / IAM | Not needed |
 | ~$135–400/month | Free (runs on your machine) |
 
----
-
-## System Requirements
+## Prerequisites
 
 Before starting, confirm your machine has:
 
@@ -31,232 +35,210 @@ Before starting, confirm your machine has:
 - **Disk**: 100 GB free
 - **OS**: Ubuntu (22.04 LTS or newer)
 
----
+## Prepare Ubuntu
 
-## Phase 1: Prepare Ubuntu
-
-### Step 1: Open a Terminal
+### Open a terminal
 
 Press `Ctrl+Alt+T` or search for **Terminal** in the Applications menu.
 
 Every command in this guide is typed into the terminal and run by pressing **Enter**.
 
----
+### Update your system
 
-### Step 2: Update Your System
+Start with a system update to avoid dependency issues:
 
-Always start with a system update to avoid dependency issues:
-
-```bash
+```shell
 sudo apt update && sudo apt upgrade -y
 ```
 
-> `sudo` means “run as administrator”. You will be prompted for your password. Characters you type will not appear on screen - this is normal.
-> 
+/// note | sudo
+`sudo` means “run as administrator”. You will be prompted for your password. Characters you type won't appear on screen, this is normal.
+///
 
----
-
-### Step 3: Check CPU Virtualization Support
+### Check CPU virtualization support
 
 CRC runs a virtual machine. Your CPU must support hardware virtualization:
 
-```bash
+```shell
 egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 
 - **Output `0`**: Virtualization is disabled. Enter your BIOS/UEFI settings and enable VT-x (Intel) or AMD-V (AMD), then reboot and try again.
 - **Output `1` or higher**: You are good to continue.
 
----
-
-### Step 4: Install KVM and libvirt
+### Install KVM and libvirt
 
 KVM is Linux’s built-in hypervisor. CRC uses it to run the OpenShift cluster VM:
 
-```bash
+```shell
 sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 ```
 
 Install `virtiofsd`, which CRC requires to share the filesystem with the cluster VM:
 
-```bash
+```shell
 sudo apt install -y virtiofsd
 ```
 
 Start the libvirt service and configure it to start automatically on boot:
 
-```bash
+```shell
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 ```
 
-Verify it is running:
+Verify it's running:
 
-```bash
+```shell
 sudo systemctl status libvirtd
 ```
 
 Look for `Active: active (running)` in green. Press `q` to exit.
 
----
-
-### Step 5: Add Your User to the Required Groups
+### Add user to required groups
 
 This allows you to use KVM and libvirt without typing `sudo` for every command:
 
-```bash
+```shell
 sudo usermod -aG libvirt $USER
 sudo usermod -aG kvm $USER
 ```
 
-> **You must log out and log back in (or reboot) for this to take effect.** If you skip this step, CRC will fail with a “permission denied” error.
-> 
+/// note | Warning
+**You must log out and log back in (or reboot) for this to take effect.** If you skip this step, CRC will fail with a “permission denied” error.
+///
 
 Reboot now:
 
-```bash
+```shell
 sudo reboot
 ```
 
 After logging back in, open a terminal and verify group membership:
 
-```bash
+```shell
 groups
 ```
 
 You should see `libvirt` and `kvm` listed.
 
----
-
-### Step 6: Install NetworkManager
+### Install NetworkManager
 
 CRC requires NetworkManager to manage DNS entries for the cluster’s internal domains (`*.apps-crc.testing`, `api.crc.testing`):
 
-```bash
+```shell
 sudo apt install -y network-manager
 sudo systemctl start NetworkManager
 sudo systemctl enable NetworkManager
 ```
 
-Verify it is connected:
+Verify it's connected:
 
-```bash
+```shell
 nmcli general status
 ```
 
 The `STATE` column should show `connected`.
 
----
+## Install tools
 
-## Phase 2: Install Tools
-
-### Step 7: Get a Red Hat Account and Pull Secret
+### Get a Red Hat account and pull secret
 
 CRC requires a free Red Hat account to pull container images.
 
-1. Go to **console.redhat.com** → create a free account if you do not have one
-2. Go to **console.redhat.com/openshift/create/local**
-3. Click **Download OpenShift Local** → select **Linux** → download the `.tar.xz` file (saved to `~/Downloads`)
-4. On the same page, click **Copy pull secret** → paste it into a text file and save it (you will need it in Step 11)
+1. [Create a free Red Hat account](https://console.redhat.com/), if you don't already have one.
+2. In [console.redhat.com/openshift/create/local](https://console.redhat.com/openshift/create/local), click **Download OpenShift Local**.
+3. Select **Linux**, and download the `.tar.xz` file to `~/Downloads`.
+4. On the same page of the Red Hat console, click **Copy pull secret**. Paste it into a text file and save it for later.
 
----
+### Install CRC
 
-### Step 8: Install CRC
+Open a terminal in your Downloads folder.
 
-Open a terminal in your Downloads folder:
-
-```bash
+```shell
 cd ~/Downloads
 ```
 
-Extract the archive. 
+Extract the archive.
 
-```bash
+```shell
 tar xf crc-linux-amd64.tar.xz
 ```
 
-Move the `crc` binary to a system-wide location so it is available in any terminal:
+Move the `crc` binary to a system-wide location, so it's available in any terminal:
 
-```bash
+```shell
 sudo mv crc-*-linux-amd64/crc /usr/local/bin/
 ```
 
 Verify the installation:
 
-```bash
+```shell
 crc version
 ```
 
-You should see a version number printed.
+A version number should print to the terminal.
 
----
-
-### Step 9: Install Helm
+### Install Helm
 
 Helm installs n8n and supporting services into the cluster:
 
-```bash
+```shell
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
 
 Verify:
 
-```bash
+```shell
 helm version
 ```
 
----
+### Set environment variables
 
-### Step 10: Set Environment Variables
-
-```bash
+```shell
 export NAMESPACE=n8n-$(date +%Y%m%d)
 echo "Namespace:$NAMESPACE"
 ```
 
-> **Important:** These variables only last for the current terminal session. Re-run this line whenever you open a new terminal before continuing.
-> 
+/// note | Variable persistence
+These variables only last for the current terminal session. Re-run this line whenever you open a new terminal before continuing.
+///
 
----
+## Start OpenShift Local
 
-## Phase 3: Start OpenShift Local
+### Run CRC setup
 
-### Step 11: Run CRC Setup
+You only need to run this once. It configures KVM networking, checks system requirements, and downloads the CRC bundle (~2.5 GB):
 
-This only needs to be run once. It configures KVM networking, checks system requirements, and downloads the CRC bundle (~2.5 GB):
-
-```bash
+```shell
 crc setup
 ```
 
 This takes several minutes. If it reports any missing packages, install them with `sudo apt install -y <package-name>` and re-run.
 
----
-
-### Step 12: Configure CRC Memory and Start the Cluster
+### Configure CRC memory and start the cluster
 
 CRC defaults to 9 GB of RAM for its VM. n8n and its supporting services need more headroom. Set the memory to 14 GB before starting:
 
-```bash
+```shell
 crc config set memory 14336
 ```
 
-> This only needs to be run once. The setting persists across `crc stop` / `crc start` cycles.
-> 
+You only need to run this once. The setting persists across `crc stop` / `crc start` cycles.
 
 **Recommended:** Save your pull secret to a file first so you don’t have to paste it every time:
 
-```bash
-# Open the file, paste your pull secret (from Step 7), then Ctrl+O to save, Ctrl+X to exit
+```shell
+# Open the file, paste your pull secret (from earlier), then Ctrl+O to save, Ctrl+X to exit
 nano ~/pull-secret.txt
 
 # Restrict permissions so only you can read it
 chmod 600 ~/pull-secret.txt
 ```
 
-Then start CRC using the file:
+Start CRC using the file:
 
-```bash
+```shell
 crc start --pull-secret-file ~/pull-secret.txt
 ```
 
@@ -279,110 +261,91 @@ Log in as user:
   Password: developer
 ```
 
-**Save the `kubeadmin` password now.** You will need it in the next step.
+**Save the `kubeadmin` password now.** You will need it in the next step. You can retrieve it later using `crc console --credentials`.
 
-> To retrieve it later if you lose it: `crc console --credentials`
-> 
+### Verify DNS resolution
 
----
-
-### Step 13: Verify DNS Resolution
-
-On Ubuntu, CRC configures the system resolver automatically via NetworkManager and systemd-resolved. No manual `/etc/hosts` entries are needed.
+On Ubuntu, CRC configures the system resolver automatically with NetworkManager and systemd-resolved. No manual `/etc/hosts` entries are needed.
 
 Verify the API is reachable:
 
-```bash
+```shell
 sudo ss -tlnp | grep 6443
 ```
 
-You should see a process bound to `127.0.0.1:6443`. If nothing appears, re-run `crc start`. If DNS does not resolve `*.apps-crc.testing`, see the troubleshooting section.
+You should see a process bound to `127.0.0.1:6443`. If nothing appears, re-run `crc start`. If DNS doesn't resolve `*.apps-crc.testing`, see the troubleshooting section.
 
----
-
-### Step 14: Configure Your Shell
+### Configure your shell
 
 CRC bundles the `oc` CLI inside the VM. This command makes it available in your terminal:
 
-```bash
+```shell
 eval $(crc oc-env)
 ```
 
-To make this permanent so you do not have to run it every time you open a terminal:
+To make this permanent so you don't have to run it every time you open a terminal:
 
-```bash
+```shell
 echo 'eval $(crc oc-env)' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 Verify `oc` works:
 
-```bash
+```shell
 oc version
 ```
 
----
+### Log in to the cluster
 
-### Step 14: Log In to the Cluster
-
-```bash
+```shell
 oc login -u kubeadmin -p <your-kubeadmin-password> https://api.crc.testing:6443
 ```
 
-Replace `<your-kubeadmin-password>` with the password printed in Step 12.
+Replace `<your-kubeadmin-password>` with the password printed when you [configured CRC memory and started the cluster](#configure-crc-memory-and-start-the-cluster).
 
 Verify you are logged in:
 
-```bash
+```shell
 oc whoami
 ```
 
-Should print `kubeadmin`.
+`kubeadmin` should print to the screen.
 
----
+## Standalone deployment
 
----
+Standalone mode runs n8n as a single pod with SQLite. No external database or Redis is required. This is ideal for exploring n8n and testing workflows locally.
 
-## Part A: Getting Started - Standalone
+### Create the project
 
-Standalone mode runs n8n as a single pod with SQLite. No external database or Redis required. Ideal for exploring n8n and testing workflows locally.
+In OpenShift, a **project** is the same as a Kubernetes namespace: an isolated space for your resources:
 
----
-
-### Step A1: Create the Project
-
-In OpenShift, a **project** is the same as a Kubernetes namespace  it is an isolated space for your resources:
-
-```bash
+```shell
 oc new-project $NAMESPACE
 ```
 
----
+### Grant the required security permission
 
-### Step A2: Grant the Required Security Permission
+OpenShift enforces strict security policies called **Security Context Constraints (SCCs)**. By default, pods can't run with a specific user ID. The n8n chart runs as user ID `1000`, so you must explicitly allow this.
 
-OpenShift enforces strict security policies called **Security Context Constraints (SCCs)**. By default, pods cannot run with a specific user ID. The n8n chart runs as user ID `1000`, so you must explicitly allow this.
+Use the full explicit form. The shorthand `-z` flag can silently fail in some OpenShift versions:
 
-Use the full explicit form the shorthand `-z` flag can silently fail in some OpenShift versions:
-
-```bash
+```shell
 oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n
 ```
 
 Verify the binding was created:
 
-```bash
+```shell
 oc get rolebindings -n $NAMESPACE
 ```
 
 You should see a binding referencing `system:openshift:scc:anyuid`.
 
----
+### Create the required secret
 
-### Step A3: Create the Required Secret
-
-```bash
+```shell
 oc create secret generic n8n-secrets \
   --namespace $NAMESPACE \
   --from-literal=N8N_ENCRYPTION_KEY="$(openssl rand -hex 32)" \
@@ -393,20 +356,18 @@ oc create secret generic n8n-secrets \
 
 **Back up the encryption key immediately:**
 
-```bash
+```shell
 oc get secret n8n-secrets -n $NAMESPACE \
   -o jsonpath='{.data.N8N_ENCRYPTION_KEY}' | base64 --decode
 ```
 
 Copy that output and store it somewhere safe. Losing it means all stored credentials in your workflows become permanently unreadable.
 
----
-
-### Step A4: Create Your Values File
+### Create your values file
 
 Create a file called `n8n-standalone-values.yaml`. You can use `nano` (a simple text editor):
 
-```bash
+```shell
 nano n8n-standalone-values.yaml
 ```
 
@@ -430,7 +391,7 @@ redis:
 persistence:
   enabled: true
   size: 5Gi
-  # No storageClassName needed CRC provides a default storage provisioner.
+  # No storageClassName needed — CRC provides a default storage provisioner.
 
 secretRefs:
   existingSecret: "n8n-secrets"
@@ -440,9 +401,9 @@ service:
   port: 5678
 
 # OpenShift: securityContext must be enabled so the pod runs as UID 1000 (node user)
-# with fsGroup 1000 (so the PVC is writable). The anyuid SCC granted in Step A2
-# allows this. The seccompProfile line is removed from the chart template in Step A5
-# because OpenShift 4.14+ rejects it even with anyuid.
+# with fsGroup 1000 (so the PVC is writable). The anyuid SCC granted above
+# allows this. The seccompProfile line is removed from the chart template in
+# "Deploy n8n" because OpenShift 4.14+ rejects it even with anyuid.
 securityContext:
   enabled: true
 
@@ -459,15 +420,13 @@ config:
   timezone: UTC
 ```
 
----
+### Deploy n8n
 
-### Step A5: Deploy n8n
-
-The n8n Helm chart hardcodes `seccompProfile: RuntimeDefault` in the pod spec. OpenShift 4.14+ converts this to a deprecated alpha annotation that is rejected at admission even when `anyuid` SCC is granted. The fix is to pull the chart locally, remove those two lines, and install from the patched copy.
+The n8n Helm chart hard codes `seccompProfile: RuntimeDefault` in the pod spec. OpenShift 4.14+ converts this to a deprecated alpha annotation that's rejected at admission, even when `anyuid` SCC is granted. The fix is to pull the chart locally, remove those two lines, and install from the patched copy.
 
 **Pull and patch the chart:**
 
-```bash
+```shell
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 1.0.3 --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 
@@ -477,7 +436,7 @@ grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml
 
 **Install from the patched chart:**
 
-```bash
+```shell
 helm install n8n ~/n8n/ \
   --namespace $NAMESPACE \
   --values n8n-standalone-values.yaml \
@@ -485,13 +444,11 @@ helm install n8n ~/n8n/ \
   --timeout 10m
 ```
 
----
-
-### Step A6: Access n8n via Port Forward
+### Access n8n using port forward
 
 OpenShift Routes require a hostname, which adds complexity for standalone local access. Port-forward is simpler:
 
-```bash
+```shell
 oc port-forward service/n8n-main --namespace $NAMESPACE 5678:5678
 ```
 
@@ -503,14 +460,13 @@ http://localhost:5678
 
 n8n will prompt you to create an owner account.
 
-> Press `Ctrl+C` to stop the tunnel. Re-run the `port-forward` command to access n8n again later.
-> 
+/// note | Stop tunnel
+Press `Ctrl+C` to stop the tunnel. Re-run the `port-forward` command to access n8n again later.
+///
 
----
+### Check deployment status
 
-### Step A7: Verify Everything Is Running
-
-```bash
+```shell
 oc get pods -n $NAMESPACE
 ```
 
@@ -523,13 +479,9 @@ n8n-main-7d9f8b-xxxx       1/1     Running   0          3m
 
 **Standalone deployment complete.**
 
----
+## Multi-instance queue mode
 
----
-
-## Part B: Multi-Instance Queue Mode
-
-Multi-instance queue mode runs multiple n8n pods with a shared database, message queue, and object storage. It requires an **n8n Enterprise license**.
+Multi-instance queue mode runs multiple n8n pods with a shared database, message queue, and object storage. It requires an [n8n Enterprise license](https://n8n.io/pricing/).
 
 Instead of AWS managed services, this guide uses in-cluster equivalents that mirror what you would find in an on-premises or customer OpenShift environment:
 
@@ -539,31 +491,26 @@ Instead of AWS managed services, this guide uses in-cluster equivalents that mir
 | ElastiCache Redis | Redis (Bitnami Helm chart) |
 | S3 | MinIO (S3-compatible, Bitnami Helm chart) |
 
----
+### Install in-cluster services
 
-### Phase B1: Install In-Cluster Services
+#### Create the Project and add Bitnami Helm repo
 
-### Step B1: Create the Project and Add Bitnami Helm Repo
-
-```bash
+```shell
 oc new-project $NAMESPACE
 ```
 
 Add the Bitnami chart repository (only needed once):
 
-```bash
+```shell
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 ```
 
----
+#### Install PostgreSQL
 
-### Step B2: Install PostgreSQL
+In the command below, replace `YourStrongPassword123` with a suitable complex password.
 
-> Replace `YourStrongPassword123` with a suitable complex password
-> 
-
-```bash
+```shell
 helm install postgresql bitnami/postgresql \
   --namespace $NAMESPACE \
   --set auth.username=n8n \
@@ -573,10 +520,11 @@ helm install postgresql bitnami/postgresql \
   --wait
 ```
 
-> The `global.compatibility.openshift.adaptSecurityContext=auto` flag tells Bitnami to let OpenShift assign the correct user ID automatically (avoids SCC errors).
-> 
+/// note | Flag
+The `global.compatibility.openshift.adaptSecurityContext=auto` flag tells Bitnami to let OpenShift assign the correct user ID automatically (avoids SCC errors).
+///
 
-Save the endpoint  as it is fixed for in-cluster services:
+Save the endpoint, as it's fixed for in-cluster services:
 
 ```
 postgresql.YOUR_NAMESPACE.svc.cluster.local
@@ -584,11 +532,9 @@ postgresql.YOUR_NAMESPACE.svc.cluster.local
 
 Replace `YOUR_NAMESPACE` with your actual `$NAMESPACE` value (e.g. `n8n-20260306`).
 
----
+#### Install Redis
 
-### Step B3: Install Redis
-
-```bash
+```shell
 helm install redis bitnami/redis \
   --namespace $NAMESPACE \
   --set auth.enabled=false \
@@ -599,14 +545,11 @@ helm install redis bitnami/redis \
 
 Redis endpoint: `redis-master.$NAMESPACE.svc.cluster.local`
 
----
+#### Install MinIO (S3-compatible storage)
 
-### Step B4: Install MinIO (S3-Compatible Storage)
+In the command below, replace `MinioStrongPassword123` with a suitable complex password.
 
-> Replace `MinioStringPassword123` with a suitable complex password
-> 
-
-```bash
+```shell
 helm install minio bitnami/minio \
   --namespace $NAMESPACE \
   --set auth.rootUser=minioadmin \
@@ -617,15 +560,13 @@ helm install minio bitnami/minio \
 
 MinIO endpoint: `http://minio:9000` (within the same namespace, just the service name works)
 
----
-
-### Step B5: Create the n8n Storage Bucket in MinIO
+#### Create the n8n storage bucket in MinIO
 
 MinIO needs a bucket created before n8n can use it. Use the MinIO web console:
 
 **Open the MinIO console:**
 
-```bash
+```shell
 oc port-forward svc/minio 9001:9001 -n $NAMESPACE
 ```
 
@@ -642,24 +583,20 @@ In the console:
 
 Go back to the terminal and press `Ctrl+C` to stop the port-forward.
 
----
+### Deploy n8n
 
-### Phase B2: Deploy n8n
+#### Grant SCC for n8n
 
-### Step B6: Grant SCC for n8n
-
-```bash
+```shell
 oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n-enterprise
 ```
 
-Verify: `oc get rolebindings -n $NAMESPACE` should show a binding for `system:openshift:scc:anyuid`.
+Verify that `oc get rolebindings -n $NAMESPACE` shows a binding for `system:openshift:scc:anyuid`.
 
----
+#### Create required secrets
 
-### Step B7: Create Required Secrets
-
-```bash
+```shell
 # Core n8n secrets
 oc create secret generic n8n-enterprise-secrets \
   --namespace $NAMESPACE \
@@ -671,18 +608,17 @@ oc create secret generic n8n-enterprise-secrets \
 
 **Back up the encryption key immediately:**
 
-```bash
+```shell
 oc get secret n8n-enterprise-secrets -n $NAMESPACE \
   -o jsonpath='{.data.N8N_ENCRYPTION_KEY}' | base64 --decode
 ```
 
 Store that value somewhere safe.
 
-> Replace `YourStrongPassword123` & `MinioStrongPassword123` with the passwords from the earlier steps
-> 
+In the commands below, replace `YourStrongPassword123` and `MinioStrongPassword123` with the passwords from the earlier steps.
 
-```bash
-# Database password (must match what you set in Step B2)
+```shell
+# Database password (must match what you set when installing PostgreSQL)
 oc create secret generic n8n-enterprise-db-secret \
   --namespace $NAMESPACE \
   --from-literal=password='YourStrongPassword123'
@@ -693,13 +629,11 @@ oc create secret generic n8n-minio-secret \
   --from-literal=root-password='MinioStrongPassword123'
 ```
 
----
-
-### Step B8: Create Your Values File
+#### Create values file
 
 Create `n8n-multimain-ocp-values.yaml`. Replace the **3 placeholder values** marked `# <-- REPLACE`:
 
-```bash
+```shell
 nano n8n-multimain-ocp-values.yaml
 ```
 
@@ -780,7 +714,7 @@ Save and exit nano (`Ctrl+O`, `Ctrl+X`).
 
 **Before deploying**, replace the two `YOUR_NAMESPACE` placeholders with your actual namespace value:
 
-```bash
+```shell
 # Check your namespace value
 echo $NAMESPACE
 
@@ -790,19 +724,17 @@ sed -i "s/YOUR_NAMESPACE/$NAMESPACE/g" n8n-multimain-ocp-values.yaml
 
 Verify the replacements:
 
-```bash
+```shell
 grep "svc.cluster.local" n8n-multimain-ocp-values.yaml
 ```
 
 Both lines should show your actual namespace name, not `YOUR_NAMESPACE`.
 
----
+#### Deploy n8n
 
-### Step B9: Deploy n8n
+If you didn't patch the chart previously, pull and patch it now:
 
-If you have not already patched the chart in Part A, pull and patch it now:
-
-```bash
+```shell
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 1.0.3 --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml  # should return nothing
@@ -810,7 +742,7 @@ grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml  # should
 
 Install from the patched chart:
 
-```bash
+```shell
 helm install n8n ~/n8n/ \
   --namespace $NAMESPACE \
   --values n8n-multimain-ocp-values.yaml \
@@ -818,32 +750,28 @@ helm install n8n ~/n8n/ \
   --timeout 15m
 ```
 
----
+#### Create a route for external access
 
-### Step B10: Create a Route for External Access
+In OpenShift, a **Route** exposes a service to the outside world. It's the equivalent of a Kubernetes Ingress or LoadBalancer, and requires no extra controller:
 
-In OpenShift, a **Route** exposes a service to the outside world. It is the equivalent of a Kubernetes Ingress or LoadBalancer and  requires no extra controller:
-
-```bash
+```shell
 oc expose svc/n8n-main -n $NAMESPACE
 ```
 
 Get the URL:
 
-```bash
+```shell
 export ROUTE=$(oc get route n8n-main -n $NAMESPACE -o jsonpath='{.spec.host}')
 echo "n8n URL: http://$ROUTE"
 ```
 
 The URL will look like: `http://n8n-main-n8n-20260306.apps-crc.testing`
 
----
-
-### Step B11: Update the Host Secret
+#### Update the host secret
 
 n8n needs to know its public URL. Update the secret with the Route hostname, then restart the pods:
 
-```bash
+```shell
 ENCRYPTION_KEY=$(oc get secret n8n-enterprise-secrets -n $NAMESPACE \
   -o jsonpath='{.data.N8N_ENCRYPTION_KEY}' | base64 --decode)
 
@@ -860,15 +788,13 @@ oc rollout restart deployment -n $NAMESPACE
 
 Wait for the rollout to complete:
 
-```bash
+```shell
 oc rollout status deployment/n8n-main -n $NAMESPACE
 ```
 
----
+#### Verify all pods are running
 
-### Step B12: Verify All Pods Are Running
-
-```bash
+```shell
 oc get pods -n $NAMESPACE
 ```
 
@@ -886,17 +812,16 @@ redis-master-0                          1/1     Running   0          15m
 minio-xxxx-xxxx                         1/1     Running   0          15m
 ```
 
-Open your browser to the URL printed in Step B10.
+Open your browser to the URL printed above.
 
 **Multi-instance deployment complete.**
 
----
 
 ## Updating n8n
 
 To change configuration or upgrade the chart version, pull and re-patch the new chart version, then upgrade:
 
-```bash
+```shell
 # Remove the old local chart copy
 rm -rf ~/n8n/
 
@@ -915,13 +840,11 @@ helm upgrade n8n ~/n8n/ \
   --values n8n-multimain-ocp-values.yaml
 ```
 
----
+## Stopping and resuming CRC
 
-## Stopping and Resuming CRC
+CRC doesn't need to be deleted between sessions. You can stop and restart it:
 
-CRC does not need to be deleted between sessions. You can stop and restart it:
-
-```bash
+```shell
 # Stop the cluster (saves state)
 crc stop
 
@@ -931,46 +854,42 @@ crc start
 
 After restarting, re-run:
 
-```bash
+```shell
 eval $(crc oc-env)
 export NAMESPACE=n8n-YYYYMMDD   # use your original date
 oc login -u kubeadmin -p <password> https://api.crc.testing:6443
 ```
 
----
-
 ## Troubleshooting
 
 ### `crc setup` fails with “libvirt not found”
 
-```bash
+```shell
 sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients
 sudo systemctl start libvirtd
 ```
 
 Then re-run `crc setup`.
 
----
 
 ### `crc start` fails with “insufficient memory”
 
-CRC requires at least 9 GB of free RAM. Close other applications and try again. If you followed Step 12, CRC is configured to use 14 GB.
+CRC requires at least 9 GB of free RAM. Close other applications and try again. If you [followed instructions for configuring CRC memory](#configure-crc-memory-and-start-the-cluster), CRC is configured to use 14 GB.
 
----
 
 ### n8n pod stuck in `Pending` or never created SCC error
 
 Check events for the error:
 
-```bash
+```shell
 oc get events -n $NAMESPACE --sort-by='.lastTimestamp' | tail -20
 ```
 
-If you see `unable to validate against any security context constraint` or `seccomp may not be set`, the chart’s hardcoded `seccompProfile: RuntimeDefault` is being rejected. OpenShift 4.14+ converts this to a deprecated alpha annotation that admission rejects even when `anyuid` SCC is granted.
+If you see `unable to validate against any security context constraint` or `seccomp may not be set`, the chart’s hard coded `seccompProfile: RuntimeDefault` is being rejected. OpenShift 4.14+ converts this to a deprecated alpha annotation that admission rejects even when `anyuid` SCC is granted.
 
 **1. Grant anyuid using the explicit form** (the `-z` shorthand can silently fail):
 
-```bash
+```shell
 # For standalone
 oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n
@@ -980,11 +899,11 @@ oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n-enterprise
 ```
 
-Verify: `oc get rolebindings -n $NAMESPACE` you should see a binding for `system:openshift:scc:anyuid`.
+Verify: run `oc get rolebindings -n $NAMESPACE`. You should see a binding for `system:openshift:scc:anyuid`.
 
 **2. Pull the chart locally and remove the `seccompProfile` lines:**
 
-```bash
+```shell
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 1.0.3 --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 
@@ -994,7 +913,7 @@ grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml
 
 **3. Uninstall and reinstall from the patched chart:**
 
-```bash
+```shell
 helm uninstall n8n -n $NAMESPACE
 helm install n8n ~/n8n/ \
   --namespace $NAMESPACE \
@@ -1003,24 +922,20 @@ helm install n8n ~/n8n/ \
   --timeout 10m
 ```
 
----
-
 ### Route URL returns “Application not available”
 
 The pods may still be starting. Check:
 
-```bash
+```shell
 oc get pods -n $NAMESPACE
 oc rollout status deployment/n8n-main -n $NAMESPACE
 ```
 
 Also confirm the Route exists:
 
-```bash
+```shell
 oc get route -n $NAMESPACE
 ```
-
----
 
 ### n8n pod stuck in `Pending` with `Insufficient memory`
 
@@ -1028,7 +943,7 @@ The CRC node doesn’t have enough free memory to schedule the pod.
 
 **Fix:** Increase CRC’s VM memory and restart:
 
-```bash
+```shell
 crc stop
 crc config set memory 14336
 crc start
@@ -1036,7 +951,7 @@ crc start
 
 After CRC restarts, the pod should schedule automatically. If the pod is still pending after a few minutes, delete it to force a reschedule:
 
-```bash
+```shell
 oc delete pod -n $NAMESPACE -l app.kubernetes.io/component=main
 ```
 
@@ -1051,19 +966,18 @@ resources:
 
 Then upgrade: `helm upgrade n8n ~/n8n/ -n $NAMESPACE -f n8n-standalone-values.yaml`
 
----
 
 ### DNS not resolving `.apps-crc.testing` or `api.crc.testing`
 
 On Ubuntu, CRC configures DNS automatically. If it fails, restart NetworkManager:
 
-```bash
+```shell
 sudo systemctl restart NetworkManager
 ```
 
 If still broken, add entries manually (CRC routes traffic through `127.0.0.1`):
 
-```bash
+```shell
 sudo tee -a /etc/hosts <<EOF
 127.0.0.1 api.crc.testing
 127.0.0.1 console-openshift-console.apps-crc.testing
@@ -1072,10 +986,10 @@ sudo tee -a /etc/hosts <<EOF
 EOF
 ```
 
-> When you expose Routes in Part B, new `*.apps-crc.testing` subdomains are created. Add them to `/etc/hosts` pointing to `127.0.0.1` if your browser can’t reach them.
-> 
+/// note | Subdomains
+When you expose Routes in the multi-instance section, new `*.apps-crc.testing` subdomains are created. Add them to `/etc/hosts` pointing to `127.0.0.1` if your browser can’t reach them.
+///
 
----
 
 ### n8n pod crashes with `EACCES: permission denied` writing to `/home/node/.n8n/`
 
@@ -1083,11 +997,10 @@ This means the pod is running as a random OpenShift-assigned UID instead of UID 
 
 **Fix:** Ensure `securityContext.enabled: true` is set in your values file, and that the chart has been patched to remove `seccompProfile` (see the SCC error section above). Both are required together.
 
----
 
 ### View pod logs
 
-```bash
+```shell
 # Main process
 oc logs -n $NAMESPACE -l app.kubernetes.io/component=main --tail=50
 
@@ -1098,21 +1011,17 @@ oc logs -n $NAMESPACE -l app.kubernetes.io/component=worker --tail=50
 oc logs -n $NAMESPACE -l app.kubernetes.io/component=webhook-processor --tail=50
 ```
 
----
-
 ### All events in the namespace
 
-```bash
+```shell
 oc get events -n $NAMESPACE --sort-by='.lastTimestamp'
 ```
-
----
 
 ## Quick Reference
 
 ### Re-export variables after reopening terminal
 
-```bash
+```shell
 eval $(crc oc-env)
 export NAMESPACE=n8n-YYYYMMDD   # use the date from your original deployment
 oc login -u kubeadmin -p <password> https://api.crc.testing:6443
@@ -1120,13 +1029,13 @@ oc login -u kubeadmin -p <password> https://api.crc.testing:6443
 
 ### Check cluster status
 
-```bash
+```shell
 crc status
 ```
 
 ### Open the OpenShift web console
 
-```bash
+```shell
 crc console
 ```
 
@@ -1142,3 +1051,7 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 | `n8n-multimain-ocp-values.yaml` | Required for `helm upgrade` |
 | MinIO root password | Access the MinIO console |
 | PostgreSQL password | Database access |
+
+## Next steps
+
+--8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

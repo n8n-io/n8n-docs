@@ -1310,7 +1310,6 @@ nav:
     - OEM deployment:
       - Overview: hosting/oem-deployment/index.md
       - Prerequisites: hosting/oem-deployment/prerequisites.md
-      - White-labelling: hosting/oem-deployment/white-labelling.md
       - Managing workflows: hosting/oem-deployment/managing-workflows.md
     - Architecture:
       - Overview: hosting/architecture/overview.md

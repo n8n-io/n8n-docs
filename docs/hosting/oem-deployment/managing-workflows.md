@@ -1,6 +1,6 @@
 ---
 title: Managing workflows
-description: Patterns for managing workflows across multiple users or organizations in a white label n8n deployment.
+description: Patterns for managing workflows across multiple users or organizations in an n8n OEM deployment.
 contentType: howto
 ---
 
@@ -8,7 +8,7 @@ contentType: howto
 
 --8<-- "_snippets/self-hosting/oem-agreement.md"
 
-When managing a white labelled n8n OEM deployment spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
+When managing an n8n OEM deployment spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
 
 | Solution | Pros | Cons |
 | -------- | ---- | ---- |

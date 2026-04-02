@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-description: Infrastructure sizing guidance and deployment best practices for self-hosted n8n.
+description: Infrastructure sizing guidance and deployment best practices for an OEM deployment of n8n.
 contentType: explanation
 ---
 

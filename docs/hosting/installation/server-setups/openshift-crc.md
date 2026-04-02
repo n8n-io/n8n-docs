@@ -4,7 +4,7 @@ contentType: tutorial
 
 # Hosting n8n on OpenShift Local (CRC)
 
-This guide walks you through deploying n8n on OpenShift Local (CRC), Red Hat's tool for running a local OpenShift cluster. It mirrors AWS/EKS deployment, but runs entirely on your local machine. It is designed for testing n8n in an OpenShift environment locally, without cloud costs.
+This guide walks you through deploying n8n on OpenShift Local (CRC), Red Hat's tool for running a local OpenShift cluster. It mirrors AWS/EKS deployment, but runs entirely on your local machine. It's designed for testing n8n in an OpenShift environment locally, without cloud costs.
 
 You will need a machine with significant resources available, given how many resources OpenShift itself consumes.
 

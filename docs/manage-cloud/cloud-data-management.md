@@ -68,7 +68,7 @@ In your workflow settings:
 n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your Could plan:
 
 * Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
-* Pro and Power plans: max 25000 executions saved and 30 days execution log retention;
+* Pro plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
 
 ### Manual data pruning

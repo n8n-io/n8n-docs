@@ -9,13 +9,29 @@ priority: critical
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
---8<-- "_snippets/integrations/managed-google-oauth.md"
-
 ## Prerequisites
 
 * Create a [Google Cloud](https://cloud.google.com/) account.
 
-## Set up OAuth
+## Managed OAuth2
+
+n8n Cloud users can use **Managed OAuth2** for the following nodes:
+
+--8<-- "_snippets/integrations/managed-google-oauth.md"
+
+To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
+
+![Managed OAuth2 credentials screen](/_images/integrations/builtin/credentials/google/managed-oauth.png)
+
+If you prefer to use Custom OAuth2, use the dropdown to change the authentication type.
+
+## Custom OAuth2
+
+Managed OAuth2 isn't available for self-hosted n8n users, nor for Google nodes not listed [above](#managed-oauth2). You must create a custom OAuth2 single service credential. This means creating an app in the Google Cloud Console and connecting it to n8n with a Client ID and Client Secret.
+
+The rest of this document covers the full process.
+
+## Set up Custom OAuth2
 
 There are five steps to connecting your n8n credential to Google services:
 

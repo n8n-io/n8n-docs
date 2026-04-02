@@ -61,6 +61,22 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 
 {% block scripts %}
   <!-- Add scripts that need to run before here -->
+	<script>
+	//Initialize the Kapa object
+	(function () {
+	let k = window.Kapa;
+	if (!k) {
+		let i = function () {
+			i.c(arguments);
+		};
+		i.q = [];
+		i.c = function (args) {
+			i.q.push(args);
+		};
+		window.Kapa = i;
+	}
+	})();
+	</script>
 
   {{ super() }}
   <!-- Add scripts that need to run afterwards here -->

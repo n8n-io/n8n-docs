@@ -6,6 +6,10 @@ contentType: [integration, reference]
 
 # GitHub Document Loader node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version.
+///
+
 Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](/glossary.md#ai-vector-store) or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.

@@ -6,7 +6,7 @@ contentType: howto
 # Lightweight Directory Access Protocol (LDAP)
 
 /// info | Feature availability
-* Available on Self-hosted Enterprise and Cloud Enterprise plans.
+* Available on Self-hosted Business and Enterprise, and Cloud Enterprise plans.
 * You need access to the n8n instance owner account.
 ///
 

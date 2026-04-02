@@ -14,7 +14,9 @@ To use most of these operations, you must add your bot to a channel so that it c
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
-s
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Delete Chat Message
 
 Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage) method.

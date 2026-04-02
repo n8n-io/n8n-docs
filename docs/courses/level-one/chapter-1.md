@@ -60,7 +60,7 @@ The top bar of the **Editor UI** contains the following information:
 
 - **Workflow Name**: By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
 - **+ Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
-- **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
+- **Publish**: This button publishes the current workflow. By default, workflows are not published.
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
@@ -89,7 +89,7 @@ You can move the workflow canvas around in three ways:
 ///
 
 
-Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
+Don't worry about workflow execution and publishing for now; we'll explain these concepts later on in the course.
 
 ## Nodes
 
@@ -116,7 +116,7 @@ You can find all available nodes in the **nodes panel** on the right side of the
 
 - Click the **+** icon in the top right corner of the canvas.
 - Click the **+** icon on the right side of an existing node on the canvas (the node to which you want to add another one).
-- Click the ++tab++ key on your keyboard.
+- Press the ++n++ key on your keyboard.
 
 <figure style="text-align: center; width:50%; margin:auto;"><img src="/_images/courses/level-one/chapter-one/l1-c1-node-menu-drilldown.gif" alt="Nodes panel"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule Trigger node common issues 
 description: Documentation for common issues and questions in the Schedule Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
@@ -34,17 +33,17 @@ If you're [self hosting](/hosting/index.md), set your global timezone using the 
 To set the timezone for an individual workflow:
 
 1. Open the workflow on the canvas.
-1. Select the <span class="inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** in the upper-right corner.
+1. Select the <span class="n8n-inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** in the upper-right corner.
 1. Select **Settings**.
 1. Change the **Timezone** setting.
 1. Select **Save**.
 
 ### Variables not working as expected
 
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. After activating the worfklow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then re-activate the workflow to apply the updated variable value.
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. After publishing the workflow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then publish a new version of the workflow to apply the updated variable value.
 
 ### Changing the trigger interval
 
-You can update the scheduled trigger interval at any time but it only gets updated when the workflow is activated. If you change the trigger interval after the workflow is active, the changes won't take effect until you stop and then re-activate the workflow.
+You can update the scheduled trigger interval at any time but it only gets updated when the workflow is published. If you change the trigger interval after the workflow is active, the changes won't take effect until you stop and then publish a new version of the workflow.
 
-Also, the schedule begins from the time when you activate the workflow. For example, if you had originally set a schedule of every 1 hour and it should execute at 12:00, if you changed it to a 2 hour schedule and re-activated the workflow at 11:30, the next execution will be at 13:30, 2 hours from when you activated it.
+Also, the schedule begins from the time when you publish the workflow. For example, if you had originally set a schedule of every 1 hour and it should execute at 12:00, if you changed it to a 2 hour schedule and publish a new version of the workflow at 11:30, the next execution will be at 13:30, 2 hours from when you published it.

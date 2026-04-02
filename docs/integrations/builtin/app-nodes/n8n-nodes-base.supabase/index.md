@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Supabase node documentation
 description: Learn how to use the Supabase node in n8n. Follow technical documentation to integrate Supabase node into your workflows.
 contentType: [integration, reference]
@@ -26,6 +25,12 @@ Refer to [Supabase credentials](/integrations/builtin/credentials/supabase.md) f
     * Get a row
     * Get all rows
     * Update a row
+
+## Using custom schemas
+
+By default, the Supabase node only fetches the `public` schema. To fetch [custom schemas](https://supabase.com/docs/guides/api/using-custom-schemas), enable **Use Custom Schema**.
+
+In the new **Schema** field, provide the custom schema the Supabase node should use.
 
 ## Templates and examples
 

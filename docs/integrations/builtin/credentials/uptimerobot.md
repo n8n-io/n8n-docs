@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: UptimeRobot credentials
 description: Documentation for UptimeRobot credentials. Use these credentials to authenticate UptimeRobot in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [UptimeRobot](https://uptimerobot.com/){:target=_blank .external-link} account.
+Create an [UptimeRobot](https://uptimerobot.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +20,7 @@ Create an [UptimeRobot](https://uptimerobot.com/){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [UptimeRobot's API documentation](https://uptimerobot.com/api/){:target=_blank .external-link} for more information about the service.
+Refer to [UptimeRobot's API documentation](https://uptimerobot.com/api/) for more information about the service.
 
 ## Using API key
 
@@ -37,4 +36,4 @@ UptimeRobot supports three API key types:
 - **Monitor-specific**: Pulls data for a single monitor.
 - **Read-only**: Only runs `GET` API calls.
 
-To complete all of the operations in the UptimeRobot node, use the **Main** or **Account-specific** API key type. Refer to [API authentication](https://uptimerobot.com/api/#auth){:target=_blank .external-link} for more information.
+To complete all of the operations in the UptimeRobot node, use the **Main** or **Account-specific** API key type. Refer to [API authentication](https://uptimerobot.com/api/#auth) for more information.

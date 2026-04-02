@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: FTP
 description: Documentation for the FTP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -44,6 +43,10 @@ Configure this operation with these parameters:
 
 * **Path**: Enter the remote path that you would like to connect to.
 * **Put Output File in Field**: Enter the name of the output binary field to put the file in.
+
+/// Note | Concurrent Reads with SFTP
+When using SFTP, you can enable concurrent reads. This improves download speeds but may not be supported by all SFTP servers.
+///
 
 ## List
 

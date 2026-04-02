@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RBAC role types
 description: Understand the RBAC roles available in n8n, and the access they have.
 contentType: reference
@@ -46,5 +45,9 @@ Role types and [account types](/user-management/account-types.md) are different 
 | Execute workflows | :white_check_mark: | :white_check_mark: | :x: | 
 | Manage members | :white_check_mark: | :x: | :x: | 
 | Modify the project | :white_check_mark: | :x: | :x: | 
+| Use external secrets in credentials | :white_check_mark:* | :white_check_mark:* | :x: |
+| Manage project secret vaults | :white_check_mark:* | :x: | :x: |
+
+\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](/external-secrets.md#access-for-project-roles). This is available from n8n version `2.13.0`.
 
 [Variables](/code/variables.md) and [tags](/workflows/tags.md) aren't affected by RBAC: they're global across the n8n instance.

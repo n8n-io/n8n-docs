@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: TheHive node documentation
 description: Learn how to use the TheHive node in n8n. Follow technical documentation to integrate TheHive node into your workflows.
 contentType: [integration, reference]
@@ -41,5 +40,5 @@ n8n provides a trigger node for TheHive. You can find the trigger node docs [her
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
-* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
+* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
+* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Let AI specify tool parameters
 description: Understand how n8n's `$fromAI()` function works and how to use it to dynamically populate parameters for AI app tools, or use the built-in automation to complete them instead.
 contentType: explanation

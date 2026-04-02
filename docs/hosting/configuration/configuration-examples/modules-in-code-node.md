@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Enable modules in Code node
 description: Allow the use of both built-in and external modules within the Code node.
 contentType: howto
@@ -25,4 +24,8 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 # Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
+/// note | If using Task Runners
+If n8n instance is setup with [Task Runners](/hosting/configuration/task-runners.md), add the environment variables to the Task Runners instead to the main n8n node.
+///
+
 Refer to [Environment variables reference](/hosting/configuration/environment-variables/nodes.md) for more information on these variables.

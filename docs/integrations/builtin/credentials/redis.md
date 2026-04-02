@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Redis credentials
 description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -12,6 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md)
 - [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)
+- [Redis Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md)
 
 ## Supported authentication methods
 
@@ -19,11 +19,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Redis's developer documentation](https://redis.readthedocs.io/en/stable/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [Redis's developer documentation](https://redis.readthedocs.io/en/stable/index.html) for more information about the service.
 
 ## Using database connection
 
-You'll need a user account on a [Redis](https://redis.io/){:target=_blank .external-link} server and:
+You'll need a user account on a [Redis](https://redis.io/) server and:
 
 - A **Password**
 - The **Host** name
@@ -39,5 +39,6 @@ To configure this credential:
     - This number should match the `tcp_port` listed when you run the `INFO` command.
 4. Enter the **Database Number**. The default is `0`.
 5. If the connection should use SSL, turn on the **SSL** toggle. If this toggle is off, the connection uses TCP only.
+6. If you enable **SSL**, you have the option to **disable TLS verification**. Toggle to use self-signed certificates. WARNING: This makes the connection less secure.
 
-Refer to [Connecting to Redis | Generic client](https://redis.readthedocs.io/en/stable/connections.html){:target=_blank .external-link} for more information.
+Refer to [Connecting to Redis | Generic client](https://redis.readthedocs.io/en/stable/connections.html) for more information.

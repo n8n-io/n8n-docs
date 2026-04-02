@@ -1,0 +1,34 @@
+<!-- Determine whether to show kapa button -->
+{% set kapaButton = true %}
+{% if page.meta and page.meta.hide %}
+  {% if "kapaButton" in page.meta.hide and inContent == true %}
+    {% set kapaButton = None %}
+  {% endif %}
+{% endif %}
+
+<!-- n8n CUSTOM: Kapa -->
+{% if kapaButton %}
+{% if inContent %}
+<div class="n8n-wrap-kapa">
+  <button
+    class="n8n-kapa-button plausible-event-name=Kapa+Button+Page+Bottom"
+    onclick="window.Kapa.open({ 
+    mode: 'ai'
+    })" 
+    type="button"
+>
+    <span class="md-search__icon md-icon">{% set icon = "material/creation" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Chat with the docs</span>
+</button>
+</div>
+{% else %}
+<button
+    class="n8n-kapa-button plausible-event-name=Kapa+Button+Top"
+    onclick="window.Kapa.open({ 
+    mode: 'ai'
+    })" 
+    type="button"
+>
+    <span class="md-search__icon md-icon">{% set icon = "material/creation" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Chat with the docs</span>
+</button>
+{% endif %}
+{% endif %}

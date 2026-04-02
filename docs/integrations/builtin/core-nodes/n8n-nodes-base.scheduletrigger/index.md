@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule Trigger node documentation
 description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
 contentType: [integration, reference]
@@ -10,8 +9,8 @@ priority: critical
 
 Use the Schedule Trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
-/// note | You must activate the workflow
-If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 
+/// note | You must publish the workflow
+If a workflow uses the Schedule node as a trigger, make sure that you save and publish the workflow. 
 ///
 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
@@ -81,7 +80,7 @@ For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day
 
 Enter a custom cron **Expression** to set the schedule for the trigger.
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
 #### Examples
 
@@ -101,7 +100,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 <!-- vale from-write-good.Weasel = YES -->
 
 /// warning | Using variables in the Cron expression
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is published. If you alter a variable's value in the settings after a workflow is published, the changes won't alter the cron schedule. To re-evaluate the variable, unpublish the workflow and then re-publish it.
 /// 
 
 #### Why there are six asterisks in the Cron expression

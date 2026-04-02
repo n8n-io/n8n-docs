@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Postgres node documentation
 description: Learn how to use the Postgres node in n8n. Follow technical documentation to integrate Postgres node into your workflows.
 contentType: [integration, reference]
@@ -66,7 +65,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Execute Query**.
-- **Query**: The SQL query to execute. You can use n8n [expressions](/code/expressions.md) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
+- **Query**: The SQL query to execute. You can use n8n [expressions](/data/expressions.md) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
 
 #### Execute Query options
 
@@ -94,7 +93,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert options
 
@@ -104,7 +103,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -123,7 +122,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert or Update options
 
@@ -133,7 +132,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -163,7 +162,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -180,7 +179,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Update options
 
@@ -190,7 +189,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/data/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.

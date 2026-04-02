@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
 title: Advanced AI examples and concepts
 description: Example workflows and use cases for building AI functionality using n8n.
@@ -48,7 +47,7 @@ This section provides explanations of important AI concepts, and workflow templa
 
 	You can browse AI templates, included community contributions, on the n8n website. 
 
-    [:octicons-arrow-right-24: Browse all AI templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
+    [:octicons-arrow-right-24: Browse all AI templates](https://n8n.io/workflows/?categories=25)
 
 
    

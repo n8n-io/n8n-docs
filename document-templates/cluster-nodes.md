@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: _Name_ node documentation
 description: Learn how to use the _Name_ node in n8n. Follow technical documentation to integrate _Name_ node into your workflows.
 contentType: [integration, reference]
@@ -51,7 +50,7 @@ _Description of node option_
 Refer to [_Name_'s documentation]() for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+
 
 ## Common issues
 

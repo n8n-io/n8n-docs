@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -21,7 +20,7 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/). You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
 /// note | Existing node
 n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -42,10 +41,10 @@ Clone the repository and navigate into the directory:
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
-* `nodes/ExampleNode`
-* `nodes/HTTPBin`
-* `credentials/ExampleCredentials.credentials.ts`
-* `credentials/HttpBinApi.credentials.ts`
+* `nodes/Example`
+* `nodes/GithubIssues`
+* `credentials/GithubIssuesApi.credentials.ts`
+* `credentials/GithubIssuesOAuth2Api.credentials.ts`
 
 Now create the following directories and files:
 
@@ -64,7 +63,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} as `nasapics.svg` in `nodes/NasaPics/`.
+Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -81,7 +80,8 @@ In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, yo
 Start by adding the import statements:
 
 ```typescript
-import { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'n8n-workflow';
+import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
 ```
 
 #### Step 3.2: Create the main class
@@ -108,7 +108,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 
 ```typescript
 displayName: 'NASA Pics',
-name: 'NasaPics',
+name: 'nasaPics',
 icon: 'file:nasapics.svg',
 group: ['transform'],
 version: 1,
@@ -117,8 +117,9 @@ description: 'Get data from NASAs API',
 defaults: {
 	name: 'NASA Pics',
 },
-inputs: ['main'],
-outputs: ['main'],
+usableAsTool: true,
+inputs: [ NodeConnectionTypes.Main ],
+outputs: [ NodeConnectionTypes.Main ],
 credentials: [
 	{
 		name: 'NasaPicsApi',
@@ -329,15 +330,16 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 ```
 
 
-### Step 4: Set up authentication
+### Step 4: Set up authentication and a credential test
 
-The NASA API requires users to authenticate with an API key.
+The NASA API requires users to authenticate with an API key. You can also send a request to check that the API key works.
 
 Add the following to `nasaPicsApi.credentials.ts`:
 
 ```typescript
 import {
 	IAuthenticateGeneric,
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -356,14 +358,20 @@ export class NasaPicsApi implements ICredentialType {
 			default: '',
 		},
 	];
-	authenticate = {
+	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
 			qs: {
 				'api_key': '={{$credentials.apiKey}}'
 			}
 		},
-	} as IAuthenticateGeneric;
+	};
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://api.nasa.gov',
+			url: '/apod',
+		},
+	};
 }
 ```
 
@@ -453,7 +461,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 ## Test your node
 
@@ -462,6 +470,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/index.md).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 

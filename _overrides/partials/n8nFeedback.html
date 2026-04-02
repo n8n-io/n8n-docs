@@ -1,0 +1,50 @@
+<!-- n8n CUSTOM
+ This is a custom partial created by n8n (it isn't part of Material for MkDocs)
+
+ We add it to the site by including it in _overrides/main.html
+ It relies on docs/_extra/javascript/feedback.js to handle the behavior
+ And docs/_extra/css/feedback.css to handle the styling
+ -->
+
+<!-- Determine feedback configuration -->
+{% if config.extra.n8n_extra.feedback %}
+  {% set feedback = config.extra.n8n_extra.feedback %}
+{% endif %}
+
+<!-- Determine whether to show feedback -->
+{% if page.meta and page.meta.hide %}
+  {% if "feedback" in page.meta.hide %}
+    {% set feedback = None %}
+  {% endif %}
+{% endif %}
+
+<!-- Was this page helpful? -->
+{% if feedback %}
+  <div class="n8n-feedback-container">
+        <div id="n8n-ratings-feedback">
+            <span>{{ feedback.question }}</span>
+            <button type="submit" class="plausible-event-name=Positive+Rating plausible-event-page=/{{ page.url }} n8n-feedback-button-positive" onclick="handleRating('positive')" >
+                <img src="/_images/assets/thumb_up.png" alt="Thumbs up" style="width: 20px; height: 20px; border: none !important;">{{ feedback.positive_button_text }}
+            </button>
+            <button type="submit" class="plausible-event-name=Negative+Rating plausible-event-page=/{{ page.url }} n8n-feedback-button-negative" onclick="handleRating('negative')">
+                <img src="/_images/assets/thumb_down.png" alt="Thumbs down" style="width: 20px; height: 20px; border: none !important;">{{ feedback.negative_button_text }}
+            </button>
+        </div>
+        
+        <div id="n8n-feedback-thank-you-message" style="display: none;">
+            {{ feedback.thankyou_message }}
+        </div>
+        
+        <div id="n8n-feedback-comment" style="display: none;">
+            <div class="n8n-feedback-comment-inner">
+                <input type="text" name="n8n-feedback-input" id="n8n-feedback-input" placeholder="{{ feedback.comment_input_placeholder }}">
+                <button type="submit" class="n8n-feedback-submit-button" onclick="submitFeedback()">
+                    Submit
+                </button>
+            </div>
+            {% if feedback.comment_input_hint %}
+            <div class="n8n-feedback-comment-hint">{{ feedback.comment_input_hint }}</div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

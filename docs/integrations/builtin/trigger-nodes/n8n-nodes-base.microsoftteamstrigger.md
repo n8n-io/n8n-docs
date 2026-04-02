@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Teams Trigger node documentation
 description: Learn how to use the Microsoft Teams Trigger node in n8n. Follow technical documentation to integrate Microsoft Teams Trigger node into your workflows.
 contentType: [integration, reference]
@@ -13,6 +12,10 @@ On this page, you'll find a list of events the Microsoft Teams Trigger node can 
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
+///
+
+/// tip | Government Cloud Support
+If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
 ///
 
 ## Events

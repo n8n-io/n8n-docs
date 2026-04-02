@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Crypto
 description: Documentation for the Crypto node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -73,7 +72,7 @@ Node parameters depend on the action you select.
 
 * **Value**: Enter the value you want to sign.
 * **Property Name**: Enter the name of the property you want to write the signed value to.
-* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/code/expressions.md).
+* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/data/expressions.md).
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**

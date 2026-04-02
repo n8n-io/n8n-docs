@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -23,7 +22,7 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/){:target=_blank .external-link}. You'll create a node that implements one piece of SendGrid functionality: create a contact.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/). You'll create a node that implements one piece of SendGrid functionality: create a contact.
 
 /// note | Existing node
 n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -34,7 +33,7 @@ n8n provides a starter repository for node development. Using the starter ensure
 
 Clone the repository and navigate into the directory:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate){:target=_blank .external-link} from the template repository.
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
@@ -43,10 +42,10 @@ Clone the repository and navigate into the directory:
 
 The starter contains example nodes and credentials. Delete the following directories and files:
 
-* `nodes/ExampleNode`
-* `nodes/HTTPBin`
-* `credentials/ExampleCredentials.credentials.ts`
-* `credentials/HttpBinApi.credentials.ts`
+* `nodes/Example`
+* `nodes/GithubIssues`
+* `credentials/GithubIssuesApi.credentials.ts`
+* `credentials/GithubIssuesOAuth2Api.credentials.ts`
 
 Now create the following directories and files:
 
@@ -65,7 +64,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `friendGrid.svg` in `nodes/FriendGrid/`.
+Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -82,20 +81,15 @@ In this example, the file is `FriendGrid.node.ts`. To keep this tutorial short, 
 Start by adding the import statements:
 
 ```typescript
-import {
-	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
+import type {
 	IDataObject,
+	IExecuteFunctions,
+	IHttpRequestOptions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
 } from 'n8n-workflow';
-
-import {
-	OptionsWithUri,
-} from 'request';
+import { NodeConnectionTypes } from 'n8n-workflow';
 ```
 
 #### Step 3.2: Create the main class
@@ -133,8 +127,9 @@ description: 'Consume SendGrid API',
 defaults: {
 	name: 'FriendGrid',
 },
-inputs: ['main'],
-outputs: ['main'],
+inputs: [NodeConnectionTypes.Main],
+outputs: [NodeConnectionTypes.Main],
+usableAsTool: true,
 credentials: [
 	{
 		name: 'friendGridApi',
@@ -273,45 +268,61 @@ Add the following the `execute` method in the `FriendGrid.node.ts`:
 // Handle data coming from previous nodes
 const items = this.getInputData();
 let responseData;
-const returnData = [];
-const resource = this.getNodeParameter('resource', 0) as string;
-const operation = this.getNodeParameter('operation', 0) as string;
+const returnData: INodeExecutionData[] = [];
+const resource = this.getNodeParameter('resource', 0);
+const operation = this.getNodeParameter('operation', 0);
 
 // For each item, make an API call to create a contact
 for (let i = 0; i < items.length; i++) {
-	if (resource === 'contact') {
-		if (operation === 'create') {
-			// Get email input
-			const email = this.getNodeParameter('email', i) as string;
-			// Get additional fields input
-			const additionalFields = this.getNodeParameter('additionalFields', i) as IDataObject;
-			const data: IDataObject = {
-				email,
-			};
+	try {
+		if (resource === 'contact') {
+			if (operation === 'create') {
+				// Get email input
+				const email = this.getNodeParameter('email', i);
+				// Get additional fields input
+				const additionalFields = this.getNodeParameter('additionalFields', i);
+				const data: IDataObject = {
+					email,
+				};
 
-			Object.assign(data, additionalFields);
+				Object.assign(data, additionalFields);
 
-			// Make HTTP request according to https://sendgrid.com/docs/api-reference/
-			const options: OptionsWithUri = {
-				headers: {
-					'Accept': 'application/json',
-				},
-				method: 'PUT',
-				body: {
-					contacts: [
-						data,
-					],
-				},
-				uri: `https://api.sendgrid.com/v3/marketing/contacts`,
-				json: true,
-			};
-			responseData = await this.helpers.requestWithAuthentication.call(this, 'friendGridApi', options);
-			returnData.push(responseData);
+				// Make HTTP request according to https://sendgrid.com/docs/api-reference/
+				const options: IHttpRequestOptions = {
+					headers: {
+						'Accept': 'application/json',
+					},
+					method: 'PUT',
+					body: {
+						contacts: [
+							data,
+						],
+					},
+					url: 'https://api.sendgrid.com/v3/marketing/contacts',
+					json: true,
+				};
+				responseData = await this.helpers.httpRequestWithAuthentication.call(this, 'friendGridApi', options);
+				const executionData = this.helpers.constructExecutionMetaData(
+					this.helpers.returnJsonArray(responseData as IDataObject),
+					{ itemData: { item: i } },
+				);
+
+				returnData.push.apply(returnData, executionData);
+			}
 		}
+	} catch (error) {
+		if (this.continueOnFail()) {
+			const executionData = this.helpers.constructExecutionMetaData(
+				this.helpers.returnJsonArray({ error: error.message }),
+				{ itemData: { item: i } },
+			);
+			returnData.push.apply(returnData, executionData);
+			continue;
+		}
+		throw error;
 	}
 }
-// Map data to n8n data structure
-return [this.helpers.returnJsonArray(returnData)];
+return [returnData];
 ```
 
 Note the following lines of this code:
@@ -321,7 +332,7 @@ const items = this.getInputData();
 ... 
 for (let i = 0; i < items.length; i++) {
 	...
-	const email = this.getNodeParameter('email', i) as string;
+	const email = this.getNodeParameter('email', i);
 	...
 }
 ```
@@ -465,7 +476,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 
 
@@ -476,6 +487,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/index.md).
-* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. This is an example of a more complex programmatic node structure.
+* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 * Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts.md) and [data structures](/data/data-structure.md).

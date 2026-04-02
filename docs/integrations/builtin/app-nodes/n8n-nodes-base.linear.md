@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Linear node documentation
 description: Learn how to use the Linear node in n8n. Follow technical documentation to integrate Linear node into your workflows.
 contentType: [integration, reference]
@@ -17,11 +16,14 @@ Refer to [Linear credentials](/integrations/builtin/credentials/linear.md) for g
 
 ## Operations
 
+* Comment
+	* Add Comment
 * Issue
+	* Add Link
     * Create
     * Delete
     * Get
-    * Get All
+    * Get Many
     * Update
 
 ## Templates and examples

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Xero node documentation
 description: Learn how to use the Xero node in n8n. Follow technical documentation to integrate Xero node into your workflows.
 contentType: [integration, reference]
@@ -35,6 +34,6 @@ Refer to [Xero credentials](/integrations/builtin/credentials/xero.md) for guida
 
 ## Related resources
 
-Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} for more information about the service.
+Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

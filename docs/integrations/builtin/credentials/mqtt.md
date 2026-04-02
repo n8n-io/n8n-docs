@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MQTT credentials
 description: Documentation for MQTT credentials. Use these credentials to authenticate MQTT in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -15,9 +14,9 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Install an [MQTT broker](https://mqtt.org/){:target=_blank .external-link}.
+Install an [MQTT broker](https://mqtt.org/).
 
-MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/){:target=_blank .external-link}.
+MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/).
 
 ## Supported authentication methods
 
@@ -25,7 +24,7 @@ MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/soft
 
 ## Related resources
 
-Refer to [MQTT's documentation](https://mqtt.org/){:target=_blank .external-link} for more information about the MQTT protocol.
+Refer to [MQTT's documentation](https://mqtt.org/) for more information about the MQTT protocol.
 
 Refer to your broker provider's documentation for more detailed configuration and details.
 

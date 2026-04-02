@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: QuickChart node documentation
 description: Learn how to use the QuickChart node in n8n. Follow technical documentation to integrate QuickChart node into your workflows.
 contentType: [integration, reference]
@@ -32,4 +31,4 @@ Create a chart by selecting the chart type:
 
 ## Related resources
 
-Refer to [QuickChart's API documentation](https://quickchart.io/documentation/){:target=_blank .external-link} for more information about the service.
+Refer to [QuickChart's API documentation](https://quickchart.io/documentation/) for more information about the service.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Workflow Retriever node documentation
 description: Learn how to use the Workflow Retriever node in n8n. Follow technical documentation to integrate Workflow Retriever node into your workflows.
 contentType: [integration, reference]
@@ -34,7 +33,7 @@ Tell n8n which workflow to call. You can choose either:
 
 ## Related resources
 
-Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

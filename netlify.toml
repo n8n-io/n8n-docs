@@ -1,5 +1,5 @@
 [build]
-  command = "pip install _submodules/insiders && mkdocs build"
+  command = "pip install _submodules/insiders && mkdocs build --strict"
   publish = "site"
 [[headers]]
   for = "/*"

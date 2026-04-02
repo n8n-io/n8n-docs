@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Chat node documentation
 description: Learn how to use the Google Chat node in n8n. Follow technical documentation to integrate Google Chat node into your workflows.
 contentType: [integration, reference]
@@ -17,6 +16,8 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
 
 ## Operations
 

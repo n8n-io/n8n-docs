@@ -6,7 +6,7 @@ Adalo
 [Aa]ggregate
 Airtable
 Airtop
-[Aa]llowlist
+[Aa]llowlists?
 Anthropic
 APIs
 ARNs
@@ -43,12 +43,13 @@ Calendly
 Capterra
 cartesian
 Chargebee
-[Cc]hatbot
+[Cc]hatbots?
 ChromeOS
 Citrix
 Clearbit
 Clockify
 Codecademy
+Cognito('s)?
 commenters?
 Cohere
 Combinator
@@ -59,8 +60,11 @@ CPython
 CRM
 Cron
 [Cc]rypto
+[Dd]atacenters?
 Datadog
+Databricks
 Datastore
+[Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
 DeepL
@@ -107,7 +111,7 @@ Gumroad
 [Gg]zip
 Hetzner
 Homeserver
-[Hh]ostname
+[Hh]ostnames?
 howto
 HubSpot
 Humantic
@@ -115,6 +119,7 @@ Imperva
 indexable
 invalid
 Infisical
+[Ii]nitializers?
 Intuit
 IP
 [Ii]terable
@@ -154,6 +159,7 @@ Mindee
 Mocean
 Motorhead
 [Mm]ultiple
+[Mm]ultitenan(cy|t)
 n8n
 nanoids
 namespaces?
@@ -167,6 +173,7 @@ Nodelinter
 npm
 NPM
 npx
+nvm
 OAuth
 Odoo
 Okta
@@ -226,12 +233,15 @@ Strava
 strikethrough
 [Ss]ubfolder
 sublist
+subnode
+agentic
 [Ss]ubreddit
 [Ss]ubtask
 Supabase
 [Ss]ysdig
 [Ss]yslog
 Tapfiliate
+[Tt]emplatiz(e|ed|ing)
 Textract
 There are
 [Tt]imesheet
@@ -249,12 +259,14 @@ Twilio
 Typeform
 [Uu]narchive
 [Uu]ncomment
+[Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare
 Untrash
+[Uu]ntrusted
 UpLead
 uProc
 [Uu]psert
@@ -269,6 +281,7 @@ VM
 Vonage
 Vuex
 Wasabi's
+Weaviate('s)?
 Webex
 Webflow
 [Ww]ebsockets?

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sub-workflow conversion
 description: Select nodes in your workflow and convert them into a sub-workflow.
 contentType: howto
@@ -48,5 +47,5 @@ Most sub-workflow conversions work without issues, but there are some caveats an
 	///
 
 <!-- vale Vale.Spelling = NO -->
-* **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](/code/builtin/output-other-nodes.md). You must pass it a fixed number.
+* **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](/data/data-mapping/referencing-other-nodes.md). You must pass it a fixed number.
 <!-- vale Vale.Spelling = YES -->

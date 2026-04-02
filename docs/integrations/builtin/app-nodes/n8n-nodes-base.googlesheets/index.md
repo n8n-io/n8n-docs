@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Sheets
 description: Documentation for the Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -39,7 +38,7 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/in
 
 ## Related resources
 
-Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
+Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api) for more information about the service.
 
 <!-- ## Examples
 This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/index.md).	

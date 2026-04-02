@@ -1,14 +1,11 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
 # Install community nodes from npm in the n8n app
 
-/// note | Only for instance owners of self-hosted n8n instances
-Only the n8n instance owner of a self-hosted n8n instance can install and manage community nodes from npm. The instance owner is the person who sets up and manages user management.
-
-Admin accounts can also uninstall any community node, verified or unverified. This helps them remove problematic nodes that may affect the instance's health and functionality.
+/// note | Owner and Admin users only
+Only users with an Owner or Admin role can install and manage community nodes from npm on a self-hosted n8n instance. The instance owner is the person who sets up and manages user management.
 ///
 
 ## Install a community node
@@ -38,7 +35,7 @@ n8n maintains a blocklist of community nodes that it prevents you from installin
 To uninstall a community node:
 
 1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** <span class="inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
+2. On the node you want to install, select **Options** <span class="n8n-inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 3. Select **Uninstall package**.
 4. Select **Uninstall Package** in the confirmation modal.
 

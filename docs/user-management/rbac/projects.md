@@ -1,12 +1,11 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RBAC projects
 description: Understand how n8n uses project for RBAC. Learn how to create and manage projects.
 contentType: howto
 ---
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
+RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 ///
 
 n8n uses projects to group workflows and [credentials](/glossary.md#credential-n8n), and assigns [roles](/user-management/rbac/role-types.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
@@ -17,7 +16,7 @@ Instance owners and instance admins can create projects.
 
 To create a project:
 
-1. Select <span class="inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**.
+1. Select <span class="n8n-inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**.
 1. Fill out the project settings.
 1. Select **Save**.
 
@@ -38,7 +37,7 @@ To remove a user from a project:
 
 1. Select the project.
 1. Select **Project settings**.
-1. In the role type dropdown for the user you want to remove, select **Remove access**.
+1. In the **three-dot menu** for the user you want to remove, select **Remove user**.
 1. Select **Save**.
 
 ## Delete a project
@@ -60,7 +59,7 @@ Workflow and credential owners can move workflows or credentials (changing owner
 Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
 ///
 
-1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
+1. Select **Workflow menu** <span class="n8n-inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="n8n-inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
 
 	/// info | Moving workflows with credentials
 	When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).
@@ -73,4 +72,6 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 
 ## Using external secrets in projects
 
-To use [external secrets](/external-secrets.md) in a project, you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+From version `2.13.0`, instance owners and admins can enable [external secrets](/external-secrets.md) access for project editors and admins. Refer to [Access for project roles](/external-secrets.md#access-for-project-roles) for details on enabling this and the permissions each role gets.
+
+In older versions (or when the opt-in toggle is off), using external secrets in a project requires an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.

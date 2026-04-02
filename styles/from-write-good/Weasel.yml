@@ -110,7 +110,7 @@ tokens:
   - loudly
   - luckily
   - madly
-  - many
+  - (?<!([Tt]oo\s)|([Hh]ow\s))many
   - mentally
   - mildly
   - monthly

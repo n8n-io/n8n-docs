@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL credentials
 description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -19,7 +18,7 @@ The Agent node doesn't support SSH tunnels.
 
 ## Prerequisites
 
-Create a user account on a [MySQL](https://www.mysql.com/){:target=_blank .external-link} server database.
+Create a user account on a [MySQL](https://www.mysql.com/) server database.
 
 ## Supported authentication methods
 
@@ -27,7 +26,7 @@ Create a user account on a [MySQL](https://www.mysql.com/){:target=_blank .exter
 
 ## Related resources
 
-Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/){:target=_blank .external-link} for more information about the service.
+Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/) for more information about the service.
 
 ## Using database connection
 
@@ -86,4 +85,4 @@ To set up your database connection credential:
         1. Add the contents of the **Private Key** or identity file used for SSH. This is the same as using the `ssh-identity-file` option with the `shell-connect()` command in MySQL.
         2. If the **Private Key** was created with a passphrase, enter that **Passphrase**. This is the same as using the `ssh-identity-pass` option with the `shell-connect()` command in MySQL. If the **Private Key** has no passphrase, leave this field blank.
 
-Refer to [MySQL | Creating SSL and RSA Certificates and Keys](https://dev.mysql.com/doc/refman/8.0/en/creating-ssl-rsa-files.html){:target=_blank .external-link} for more information on working with SSL certificates in MySQL. Refer to [MySQL | Using an SSH Tunnel](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-connection-ssh.html){:target=_blank .external-link} for more information on working with SSH tunnels in MySQL.
+Refer to [MySQL | Creating SSL and RSA Certificates and Keys](https://dev.mysql.com/doc/refman/8.0/en/creating-ssl-rsa-files.html) for more information on working with SSL certificates in MySQL. Refer to [MySQL | Using an SSH Tunnel](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-connection-ssh.html) for more information on working with SSH tunnels in MySQL.

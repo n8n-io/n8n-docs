@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Flow logic
 description: How to represent logic in n8n workflows.
 contentType: overview
@@ -17,7 +16,7 @@ This section covers:
 
 ## Related sections
 
-You need some understanding of [Data](/data/index.md) in n8n, including [Data structure](/data/data-structure.md) and [Data flow within nodes](/data/data-flow-nodes.md).
+You need some understanding of [Data](/data/index.md) in n8n, including [Data structure](/data/data-structure.md) and [Data flow within nodes](/data/data-structure.md#how-data-flows-within-nodes).
 
 When building your logic, you'll use n8n's [Core nodes](/integrations/builtin/core-nodes/index.md), including:
 

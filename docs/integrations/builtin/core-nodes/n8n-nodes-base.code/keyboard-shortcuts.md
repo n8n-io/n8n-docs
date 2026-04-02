@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: reference
 title: Code editor keyboard shortcuts
 description: A list of the keyboard shortcuts, for multiple platforms, which are supported by the Code node editor.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL node common issues
 description: Documentation for common issues and questions in the MySQL node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
@@ -72,4 +71,4 @@ By default, the MySQL node returns [`DECIMAL` values](https://dev.mysql.com/doc/
 
 To output decimal values as numbers instead of strings and ignore the risks in loss of precision, enable the **Output Decimals as Numbers** option. This will output the values as numbers instead of strings.
 
-As an alternative, you can manually	convert from the string to a decimal using the [`toFloat()` function](/code/builtin/data-transformation-functions/strings.md#string-toFloat) with [`toFixed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) or with the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) after the MySQL node. Be aware that you may still need to account for a potential loss of precision.
+As an alternative, you can manually	convert from the string to a decimal using the `toFloat()` function with [`toFixed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) or with the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) after the MySQL node. Be aware that you may still need to account for a potential loss of precision.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
 ---
 
@@ -27,4 +26,4 @@ You can report bad community nodes to [security@n8n.io](mailto: security@n8n.io)
 
 ## Disable community nodes
 
-If you are self-hosting n8n, you can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`. On n8n cloud, visit the [Cloud Admin Panel](https://docs.n8n.io/manage-cloud/cloud-admin-dashboard/) and disable community nodes from there. See [troubleshooting](/integrations/community-nodes/troubleshooting.md) for more information.
+If you are self-hosting n8n, you can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`. On n8n cloud, visit the [Cloud Admin Panel](/manage-cloud/cloud-admin-dashboard.md) and disable community nodes from there. See [troubleshooting](/integrations/community-nodes/troubleshooting.md) for more information.

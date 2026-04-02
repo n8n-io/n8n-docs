@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MCP Server Trigger node documentation
 description: Learn how to use the MCP Server Trigger node in n8n. Follow technical documentation to integrate the MCP Server Trigger node into your workflows.
 contentType: [integration, reference]
@@ -36,7 +35,7 @@ The MCP Server Trigger node has two **MCP URLs**: test and production. n8n displ
 Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 * **Test**: n8n registers a test MCP URL when you select **Listen for Test Event** or **Execute workflow**, if the workflow isn't active. When you call the MCP URL, n8n displays the data in the workflow.
-* **Production**: n8n registers a production MCP URL when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+* **Production**: n8n registers a production MCP URL when you publish the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 ### Authentication
 
@@ -52,14 +51,6 @@ Refer to the [HTTP request credentials](/integrations/builtin/credentials/httpre
 By default, this field contains a randomly generated MCP URL path, to avoid conflicts with other MCP Server Trigger nodes. 
 
 You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
-
-The **Path** field can take the following formats:
-
-- `/:variable`
-- `/path/:variable`
-- `/:variable/path`
-- `/:variable1/path/:variable2`
-- `/:variable1/:variable2`
 
 ## Templates and examples
 

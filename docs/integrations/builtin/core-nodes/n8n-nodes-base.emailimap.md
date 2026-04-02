@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Email Trigger (IMAP) node documentation
 description: Learn how to use the Email Trigger (IMAP) Trigger node in n8n. Follow technical documentation to integrate Email Trigger (IMAP) Trigger node into your workflows.
 contentType: [integration, reference]
@@ -54,7 +53,7 @@ You can further configure the node using these **Options**.
 
 Enter custom email fetching rules to determine which emails the node fetches.
 
-Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap){:target=_blank .external-link} for more information.
+Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap) for more information.
 
 ### Force Reconnect Every Minutes
 

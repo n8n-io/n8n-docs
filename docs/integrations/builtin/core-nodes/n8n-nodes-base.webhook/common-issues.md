@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webhook node common issues 
 description: Documentation for common issues and questions in the Webhook node in n8n, a workflow automation platform. Includes details of the issues and suggested solutions.
 contentType: [integration, reference]
@@ -33,7 +32,7 @@ The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/i
 
 ## Use curl to trigger the Webhook node
 
-You can use [curl](https://curl.se/){:target=_blank .external-link} to make HTTP requests that trigger the Webhook node. 
+You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node. 
 
 /// note
 In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
@@ -49,7 +48,7 @@ curl --request GET <https://your-n8n.url/webhook/path>
 Make an HTTP request with a body parameter:
 
 ```sh
-curl --request GET <https://your-n8n.url/webhook/path> --data 'key=value'
+curl --request POST <https://your-n8n.url/webhook/path> --data 'key=value'
 ```
 
 Make an HTTP request with header parameter:
@@ -61,7 +60,7 @@ curl --request GET <https://your-n8n.url/webhook/path> --header 'key=value'
 Make an HTTP request to send a file:
 
 ```sh
-curl --request GET <https://your-n8n.url/webhook/path> --from 'key=@/path/to/file'
+curl --request POST <https://your-n8n.url/webhook/path> --form 'key=@/path/to/file'
 ```
 Replace `/path/to/file` with the path of the file you want to send.
 
@@ -90,7 +89,7 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 | **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
 | :--- | --- | --- | :---: |
 | Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
-| Production URL | Activate the workflow | Until workflow deactivated | :x: |
+| Production URL | Publish the workflow | Until workflow is unpublished | :x: |
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
 
@@ -106,5 +105,14 @@ n8n only permits registering one webhook for each path and HTTP method combinati
 
 If you receive a message that the path and method you chose are already in use, you can either:
 
-* Deactivate the workflow with the conflicting webhook.
+* Unpublish the workflow with the conflicting webhook.
 * Change the webhook path and/or method for one of the conflicting webhooks.
+
+## Timeouts on n8n Cloud
+
+n8n Cloud uses Cloudflare to protect against malicious traffic. If your webhook doesn't respond within 100 seconds, the incoming request will fail with a [524 status code](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/).
+
+Because of this, for long-running processes that might exceed this limit, you may need to introduce polling logic by configuring two separate webhooks:
+
+* One webhook to start the long-running process and send an immediate response.
+* A second webhook that you can call at intervals to query the status of the process and retrieve the result once it's complete.

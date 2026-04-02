@@ -1,11 +1,10 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
@@ -13,13 +12,14 @@ npm is a quick way to get started with n8n on your local machine. You must have 
 
 You can try n8n without installing it using npx.
 
+
 From the terminal, run:
 
 ```bash
 npx n8n
 ```
 
-This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
+This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
 
 ## Install globally with npm
 
@@ -70,11 +70,29 @@ npm install -g n8n@next
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+/// note | Docker required
+The tunnel uses cloudflared, which runs as a Docker container. Make sure [Docker](https://docs.docker.com/get-docker/) is installed on your machine, even when running n8n via npm.
+///
+
+For npm installations, use the **services only** approach. Start cloudflared as a standalone service, then run n8n locally:
 
 ```bash
-n8n start --tunnel
+# Terminal 1: Start the cloudflared tunnel service
+pnpm --filter n8n-containers services --services cloudflared
+
+# Terminal 2: Start n8n locally
+pnpm dev
 ```
+
+The `services` command starts cloudflared, fetches the public tunnel URL, and writes a `.env` file to `packages/cli/bin/.env` with `WEBHOOK_URL` and `N8N_PROXY_HOPS=1`. n8n picks up this `.env` automatically on startup.
+
+Clean up when done:
+
+```bash
+pnpm --filter n8n-containers services:clean
+```
+
+For the full stack approach (n8n and cloudflared both in containers), refer to the [Docker tunnel setup](/hosting/installation/docker.md#n8n-with-tunnel).
 
 ## Reverting an upgrade
 
@@ -87,4 +105,4 @@ If the upgrade involved a database migration:
 
 ## Windows troubleshooting
 
-If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}.
+If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zendesk node documentation
 description: Learn how to use the Zendesk node in n8n. Follow technical documentation to integrate Zendesk node into your workflows.
 contentType: [integration, reference]
@@ -46,6 +45,18 @@ Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for
     * Get all organizations
     * Get data related to the organization
     * Update a organization
+
+/// warning | Tag Replacement Behavior
+When using the Zendesk node's "Update Ticket" operation and specifying the `Tag Names or IDs` field, the entire list of tags on the ticket **will be replaced**. Any tags not included in the update will be removed from the ticket due to how the Zendesk API processes tag updates by default.
+
+**To avoid accidental tag removal:**
+
+- First retrieve the ticket's tags and merge them with your new tags before updating.
+- Alternatively, use the HTTP Request node with Zendesk's `additional_tags` property to add tags without removing existing ones.
+- You can also call the ticket's `/tags` endpoint to add tags without replacing existing ones ([Zendesk tags endpoint documentation](https://developer.zendesk.com/api-reference/ticketing/ticket-management/tags/)).
+
+See the official documentation for details: [Adding tags to tickets without overwriting existing tags](https://developer.zendesk.com/documentation/ticketing/managing-tickets/adding-tags-to-tickets-without-overwriting-existing-tags/).
+///
 
 ## Templates and examples
 

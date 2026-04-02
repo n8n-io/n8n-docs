@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Baserow node documentation
 description: Learn how to use the Baserow node in n8n. Follow technical documentation to integrate Baserow node into your workflows.
 contentType: [integration, reference]
@@ -21,10 +20,13 @@ Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for
 ## Operations
 
 * Row
+    * Create multiple rows
+    * Delete multiple rows
+    * Update multiple rows
     * Create a row
     * Delete a row
-    * Retrieve a row
-    * Retrieve all rows
+    * Get a row
+    * Get many rows
     * Update a row
 
 ## Templates and examples

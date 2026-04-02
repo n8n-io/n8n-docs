@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: xAI Grok Chat Model node documentation
 description: Learn how to use the xAI Grok Chat Model node in n8n. Follow technical documentation to integrate xAI Grok Chat Model node into your workflows.
 contentType: [integration, reference]
@@ -43,4 +42,4 @@ You can find authentication information for this node [here](/integrations/built
 Refer to [xAI Grok's API documentation](https://docs.x.ai/docs/api-reference) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

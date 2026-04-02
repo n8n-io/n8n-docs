@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Coda credentials
 description: Documentation for Coda credentials. Use these credentials to authenticate Coda in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
+Create a [Coda](https://www.coda.io/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +20,11 @@ Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Coda's API documentation](https://coda.io/developers/apis/v1){:target=_blank .external-link} for more information about the service.
+Refer to [Coda's API documentation](https://coda.io/developers/apis/v1) for more information about the service.
 
 ## Using API access token
 
 To configure this credential, you'll need:
 
-- An API **Access Token**: Generate an API access token in your Coda [**Account settings**](https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5#_luxC4){:target=_blank .external-link}.
+- An API **Access Token**: Generate an API access token in your Coda [**Account settings**](https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5#_luxC4).
 

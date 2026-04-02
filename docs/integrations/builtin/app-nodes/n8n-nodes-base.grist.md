@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grist node documentation
 description: Learn how to use the Grist node in n8n. Follow technical documentation to integrate Grist node into your workflows.
 contentType: [integration, reference]
@@ -39,7 +38,7 @@ Create a new column in your Grist table with the formula `$id`.
 
 The **Get All** operation returns the Row ID of each record along with the fields.
  
-You can get it with the expression `{{$node["GristNodeName"].json["id"]}}`.
+You can get it with the expression `{{$("GristNodeName").item.json.id}}`.
 
 
 ## Filter records when using the Get All operation

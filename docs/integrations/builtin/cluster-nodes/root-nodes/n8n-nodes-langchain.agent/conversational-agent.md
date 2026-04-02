@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Conversational AI Agent node documentation
 description: Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow technical documentation to integrate the Conversational Agent into your workflows.
 contentType: [integration, reference]
@@ -7,6 +6,10 @@ priority: critical
 ---
 
 # Conversational AI Agent node
+
+/// note | Feature removed
+n8n removed this functionality in February 2025.
+///
 
 The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
 
@@ -74,6 +77,10 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
+### Tracing Metadata
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/tracing-metadata.md"
+
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
@@ -82,4 +89,4 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

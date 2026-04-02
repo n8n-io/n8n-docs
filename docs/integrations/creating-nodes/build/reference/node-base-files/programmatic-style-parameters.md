@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Programmatic-style parameters
 description: A reference document listing the programmatic-style parameters of the node base file.
 contentType: reference
@@ -68,4 +67,12 @@ Use `version` when using the light versioning approach.
 If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 
 n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
+
+## `features`
+
+_Object_ | _Optional_
+
+Define named feature flags evaluated against the node version. Use features to control parameter visibility with `@feature` in `displayOptions`, or check them in code with `this.isNodeFeatureEnabled()`.
+
+Refer to [Feature-based versioning](/integrations/creating-nodes/build/reference/node-versioning.md#feature-based-versioning) for more information.
 

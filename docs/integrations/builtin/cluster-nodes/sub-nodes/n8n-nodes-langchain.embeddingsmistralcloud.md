@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Mistral Cloud node documentation
 description: Learn how to use the Embeddings Mistral Cloud node in n8n. Follow technical documentation to integrate Embeddings Mistral Cloud node into your workflows.
 contentType: [integration, reference]
@@ -21,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/){:target=_blank .external-link}.
+Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/).
 
 ## Node options
 
@@ -35,7 +34,7 @@ Learn more about available models in [Mistral's models documentation](https://do
 
 ## Related resources
 
-Refer to [Langchain's Mistral embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/mistralai){:target=_blank .external-link} for more information about the service.
+Refer to [Langchain's Mistral embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/mistralai) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

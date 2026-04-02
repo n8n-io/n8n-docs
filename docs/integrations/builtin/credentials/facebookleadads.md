@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Lead Ads credentials
 description: Documentation for the Facebook Lead Ads credentials. Use these credentials to authenticate Facebook Lead Ads in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -18,22 +17,22 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for more information about the service.
+Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/) for more information about the service.
 
-View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/) on n8n's website.
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/) account and:
 
 - A **Client ID**
 - A **Client Secret**
 
-To get both, [create a Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} with either the Facebook Login product or the Facebook Login for Business product.
+To get both, [create a Meta app](https://developers.facebook.com/docs/development/create-an-app) with either the Facebook Login product or the Facebook Login for Business product.
 
 To create your app and set up the credential with **Facebook Login for Business**:
 
-1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
+1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps) and select **Create App**.
 2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
 3. Select **Other**, then select **Next**.
 4. Select **Business** and **Next**.
@@ -57,9 +56,9 @@ Your credential should successfully connect now, but you'll need to go through t
 1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
 1. Facebook Login for Business requires Advanced Access for `public_profile`. To add it, go to **App Review > Permissions and Features**.
 1. Search for `public_profile` and select **Request advanced access**.
-1. Complete the steps for [business verification](https://www.facebook.com/business/tools/meta-verified-for-business/){:target=_blank .external-link}.
-1. Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.
+1. Complete the steps for [business verification](https://www.facebook.com/business/tools/meta-verified-for-business/).
+1. Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing) to trigger some demo form submissions and test your workflow.
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
 
-For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
+For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes) and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types).

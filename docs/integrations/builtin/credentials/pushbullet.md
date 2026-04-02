@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushbullet credentials
 description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Pushbullet](https://www.pushbullet.com/){:target=_blank .external-link} account.
+Create a [Pushbullet](https://www.pushbullet.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +20,7 @@ Create a [Pushbullet](https://www.pushbullet.com/){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Pushbullet's API documentation](https://docs.pushbullet.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Pushbullet's API documentation](https://docs.pushbullet.com/) for more information about the service.
 
 ## Using OAuth2
 

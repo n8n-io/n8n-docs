@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Cloudflare credentials
 description: Documentation for Cloudflare credentials. Use these credentials to authenticate Cloudflare in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,8 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/){:target=_blank .external-link}.
-- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/){:target=_blank .external-link}.
+- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/).
+- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/).
 
 ## Supported authentication methods
 
@@ -22,11 +21,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/) for more information about the service.
 
 ## Using API token
 
 To configure this credential, you'll need:
 
-- An **API token**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/){:target=_blank .external-link}.
+- An **API token**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
 

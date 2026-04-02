@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Respond to Webhook
 description: Documentation for the Respond to Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -37,7 +36,7 @@ Choose what data to send in the webhook response.
 - **JWT Token**: Respond with a JSON Web Token (JWT).
 - **No Data**: No response payload.
 - **Redirect**: Redirect to a URL set in **Redirect URL**.
-- **Text**: Respond with text set in **Response Body**.
+- **Text**: Respond with text set in **Response Body**. This sends HTML by default (`Content-Type: text/html`).
 
 ## Node options
 
@@ -46,6 +45,18 @@ Select **Add Option** to view and set the options.
 - **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to use.
 - **Response Headers**: Define the response headers to send.
 - **Put Response in Field**: Available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
+- **Enable Streaming**: When enabled, sends the data back to the user using streaming. Requires a trigger configured with the **Response mode** **Streaming**.
+
+## How n8n secures HTML responses
+
+Starting with n8n version 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
+
+This has the following implications:
+
+- HTML renders in a sandboxed iframe instead of directly in the parent document.
+- JavaScript code that attempts to access the top-level window or local storage will fail.
+- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
 
 ## Templates and examples
 
@@ -78,7 +89,7 @@ The node will now have two outputs:
 n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
 ///
 
-The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
+The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/data/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution.
 
 If you need to return more than one data item, choose one of these options:
 

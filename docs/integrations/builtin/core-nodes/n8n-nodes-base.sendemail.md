@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Send Email
 description: Documentation for the Send Email node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -141,6 +140,12 @@ The following options are also available:
 * **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
 * **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
+
+## Limitations
+
+The Send Email (SMTP) node does not support setting headers like `In-Reply-To` and `References`, which are required for email threading. As a result, each email is treated as a new conversation instead of appearing in the same thread.
+
+* **Workaround**: Use the Gmail node’s **Reply to a message** operation, or a custom node that supports custom headers.
 
 ## Templates and examples
 

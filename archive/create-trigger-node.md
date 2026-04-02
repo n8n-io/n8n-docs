@@ -318,7 +318,7 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 
 - `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, n8n persists the webhook ID. If the webhook isn't registered with the external system, the `create` method gets executed.
 - `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path doesn'texist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
-- `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
+- `delete`: This method gets called when the trigger is either stopped manually or when the workflow is unpublished. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
 ![Lifecycle flowchart](/_images/integrations/creating-nodes/lifecycle.png)
 
@@ -460,5 +460,5 @@ Since our server is running locally, we need a tool that lets us proxy all reque
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).

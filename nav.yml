@@ -58,6 +58,7 @@ nav:
           - All executions: workflows/executions/all-executions.md
           - Custom executions data: workflows/executions/custom-executions-data.md
           - Debug executions: workflows/executions/debug.md
+          - Redact execution data: workflows/executions/execution-data-redaction.md
         - Tags: workflows/tags.md
         - Export and import: workflows/export-import.md
         - Templates: workflows/templates.md
@@ -1299,6 +1300,7 @@ nav:
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
       - SSRF protection: hosting/securing/ssrf-protection.md
+      - Execution data redaction: workflows/executions/execution-data-redaction.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md

@@ -41,7 +41,7 @@ To pre-configure multiple Microsoft services at once, add each credential type a
 ```
 
 /// note | Minified JSON
-n8n requires the JSON to be minified (no spaces or newlines). The examples above are formatted for readability — make sure your actual file contains no extra whitespace:
+n8n requires the JSON to be minified (no spaces or newlines). The examples above are formatted for readability. Make sure your actual file contains no extra whitespace:
 
 ```json
 {"microsoftOutlookOAuth2Api":{"clientId":"YOUR_CLIENT_ID","clientSecret":"YOUR_CLIENT_SECRET"}}
@@ -95,11 +95,11 @@ After n8n starts, have a user create a new credential for one of the pre-configu
 
 The user can click **Connect to Microsoft Outlook**, with no auth required. An **Account connected** message should appear
 
-If the **Managed OAuth 2** option doesn't appear, the environment variable wasn't applied correctly — check that the file path in the volume mount matches the value of `CREDENTIALS_OVERWRITE_DATA_FILE`.
+If the **Managed OAuth 2** option doesn't appear, the environment variable wasn't applied correctly. Check that the file path in the volume mount matches the value of `CREDENTIALS_OVERWRITE_DATA_FILE`.
 
 ## Kubernetes
 
-For Kubernetes deployments, replace the Docker volume mount with Kubernetes-native primitives. The approach differs by cloud provider — choose the section that matches your environment.
+For Kubernetes deployments, replace the Docker volume mount with Kubernetes-native primitives. The approach differs by cloud provider. Choose the section that matches your environment.
 
 ### Plain Kubernetes Secret (EKS / AKS / GKE)
 
@@ -140,7 +140,7 @@ spec:
         secretName: n8n-credentials-overwrite
 ```
 
-The `subPath` field is important — without it, Kubernetes replaces the entire `/run/secrets/` directory rather than mounting just the single file.
+The `subPath` field is important. Without it, Kubernetes replaces the entire `/run/secrets/` directory rather than mounting just the single file.
 
 /// note | Alternative: inline env var
 To skip the volume mount entirely, reference the Secret directly as an environment variable:
@@ -154,10 +154,6 @@ env:
         key: credentials-overwrite.json
 ```
 
-The Secret may look like:
-
-```yaml
-With a Secret like:
 
 ```yaml
 stringData:

@@ -142,7 +142,7 @@ spec:
 
 The `subPath` field is important. Without it, Kubernetes replaces the entire `/run/secrets/` directory rather than mounting just the single file.
 
-/// note | Alternative: inline env var
+/// note | Alternative: inline environment variable
 To skip the volume mount entirely, reference the Secret directly as an environment variable:
 
 ```yaml

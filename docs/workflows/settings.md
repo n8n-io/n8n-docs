@@ -74,11 +74,11 @@ When enabled, the **Timeout After** option appears. Here, you can set the time (
 
 ### Redact production execution data
 
-Controls whether execution data from production (non-manually triggered) executions is redacted. When set to **Redact**, the input and output data of each node is hidden and replaced with a redacted indicator.
+Controls whether execution data from production (non-manually triggered) executions is redacted. When set to **Redact**, n8n hides the input and output data of each node and replaces it with a redacted indicator.
 
 ### Redact manual execution data
 
-Controls whether execution data from manually triggered executions is redacted. When set to **Redact**, the input and output data of each node is hidden and replaced with a redacted indicator.
+Controls whether execution data from manually triggered executions is redacted. When set to **Redact**, n8n hides the input and output data of each node and replaces it with a redacted indicator.
 
 Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details on redaction policies, revealing data, and permission requirements.
 

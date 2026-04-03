@@ -1,12 +1,4 @@
 ---
-contentType: overview
----
-
-# Triggers library
-
-This section provides information about [n8n's Triggers](/glossary.md#trigger-node-n8n).
-
----
 title: Trigger nodes
 description: Learn what trigger nodes are, how they work in n8n workflows, and how to choose the right trigger for your automation.
 contentType: overview

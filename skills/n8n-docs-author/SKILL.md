@@ -85,7 +85,12 @@ Use sparingly — overuse dilutes impact.
 - [ ] No Latin abbreviations
 - [ ] Admonitions used sparingly and correct type chosen
 - [ ] Brand names spelled correctly
-- [ ] Run Vale on every file you wrote or edited: `vale <file>`. Fix all errors and warnings before finishing.
+- [ ] No em dash
+- [ ] No e.g., etc., i.e., and via
+- [ ] Acronyms defined on first use
+- [ ] Contractions used 
+- [ ] Minimal wordiness, short, readable sentences
+
 
 ## More detail
 

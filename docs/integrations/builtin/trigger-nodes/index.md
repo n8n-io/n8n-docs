@@ -1,62 +1,111 @@
 ---
-contentType: overview
 title: Trigger nodes
-description: Learn about trigger nodes in n8n and browse the trigger nodes library.
+description: Learn what trigger nodes are, how they work in n8n workflows, and how to choose the right trigger for your automation.
+contentType: overview
 ---
+
 
 # Trigger nodes
 
-A [trigger node](/glossary.md#trigger-node-n8n) is the starting point of every production workflow. It listens for a specific event or condition and, when that condition is met, starts the workflow execution and passes data to the next node.
 
-All active workflows require at least one trigger node. Without a trigger, a workflow can only run manually.
+A [trigger node](/glossary.md#trigger-node-n8n) is the starting point of every workflow. It listens for a condition and, when that condition is met, starts a workflow execution and passes data to the next node.
 
-## How trigger nodes work
 
-Trigger nodes use one of two mechanisms to detect events:
+Every production workflow needs at least one trigger. You can combine multiple triggers in a single workflow — for example, to start the same automation from either a webhook or a schedule.
 
-**Webhook-based triggers** receive data pushed from an external service in real time. When an event occurs (for example, a new message in Slack or a payment in Stripe), the service sends an HTTP request directly to n8n, which immediately starts the workflow. These triggers react instantly, with no delay.
 
-**Polling-based triggers** check an external service for new data on a schedule. n8n queries the service's API at regular intervals (such as every minute or every hour) and starts the workflow if it finds new or changed data since the last check. Use these when the service doesn't support webhooks.
+## How triggers work
+
+
+When a trigger node fires, n8n:
+
+
+1. Receives or detects the triggering event.
+2. Creates a new workflow execution.
+3. Passes the trigger data as items to the rest of the workflow.
+
+
+Triggers only run when the workflow is active. To test a trigger without activating the workflow, most trigger nodes include a **Listen for test event** or **Fetch test event** button in the node editor.
+
 
 ## Types of trigger nodes
 
-### Service triggers
 
-Service trigger nodes connect to external applications and start workflows in response to events in those services. Examples include:
+n8n trigger nodes fall into three categories based on how they detect events.
 
-- **[Gmail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md)** — triggers when new emails arrive or match a filter
-- **[Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md)** — triggers on messages, reactions, and other Slack events
-- **[GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md)** — triggers on repository events such as pushes, pull requests, and issues
-- **[Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md)** — triggers on payment events
 
-Browse all available service triggers in the [Triggers library](#triggers-library) below.
+### Webhook triggers
 
-### Core triggers
 
-Core trigger nodes handle common scheduling and workflow control needs without connecting to a specific external service. You can find these in the [core nodes library](/integrations/builtin/core-nodes/index.md):
+Webhook triggers wait for an external service to send data to a unique URL that n8n generates. When the service sends a request, the trigger fires immediately.
 
-- **[Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md)** — runs a workflow on a time-based schedule (cron or interval)
-- **[Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md)** — starts a workflow when it receives an HTTP request
-- **[Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md)** — starts a workflow when you click **Test workflow** in the editor
-- **[Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/index.md)** — starts a workflow when a user submits an n8n-hosted form
-- **[Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md)** — starts an AI workflow from a chat interface
-- **[Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md)** — starts a workflow when another workflow fails
 
-## Using trigger nodes
+Use a webhook trigger when:
 
-To add a trigger node to a workflow:
 
-1. Open your workflow in the editor.
-2. Select **Add first step** (for a new workflow) or select the **+** button on the canvas.
-3. Choose a trigger from the panel, or search for a specific service.
-4. Configure the trigger's [credentials](/integrations/builtin/credentials/index.md) to authenticate with the external service.
-5. Select the events or conditions you want the trigger to respond to.
-6. Activate the workflow to enable it in production.
+* The external service supports webhooks or callbacks.
+* You need the workflow to run immediately when an event occurs.
 
-/// note | Testing triggers
-When testing in the editor, select **Test workflow** to run a manual execution. For webhook-based triggers, n8n provides a separate test webhook URL so you can send test events without affecting your live production workflow.
-///
 
-/// note | Credentials
-Each service trigger requires credentials for the relevant service. Refer to the individual trigger node's documentation for authentication instructions.
-///
+Examples: [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md), [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md), [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md).
+
+
+For a generic webhook trigger you can use with any service, refer to the [Webhook core node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md).
+
+
+### Polling triggers
+
+
+Polling triggers check an external service for new data at a regular interval. If new data exists since the last check, the trigger fires and passes that data into the workflow.
+
+
+Use a polling trigger when:
+
+
+* The external service doesn't support webhooks.
+* Near-real-time execution is acceptable.
+
+
+Examples: [Google Sheets Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md), [Gmail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md), [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md).
+
+
+### Schedule triggers
+
+
+Schedule triggers fire at a time or interval you define. They don't respond to external events.
+
+
+Use a schedule trigger when:
+
+
+* You want to run a workflow at a fixed time or on a recurring basis.
+* No external event should control when the workflow runs.
+
+
+Refer to the [Schedule Trigger core node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) for this functionality.
+
+
+## Core triggers vs. app triggers
+
+
+n8n provides two groups of trigger nodes:
+
+
+| Group | Where to find them | Description |
+|---|---|---|
+| **Core triggers** | [Core nodes](/integrations/builtin/core-nodes/index.md) | General-purpose triggers: Manual Trigger, Schedule Trigger, Webhook, Error Trigger, and others. |
+| **App triggers** | This section | Service-specific triggers that connect to third-party apps and listen for events from those services. |
+
+
+## Credentials
+
+
+App trigger nodes connect to external services, so they require credentials. Each trigger node's documentation includes a link to the relevant credentials setup page.
+
+
+## Related resources
+
+
+- [Workflow components: nodes](/workflows/components/nodes.md) — how nodes fit into a workflow.
+- [Core nodes](/integrations/builtin/core-nodes/index.md) — general-purpose trigger nodes.
+- [Workflow executions](/workflows/executions/index.md) — how to monitor and debug workflow runs.

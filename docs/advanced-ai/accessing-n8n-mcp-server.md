@@ -24,8 +24,9 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 ### Key considerations when using instance-level MCP access
 
 - MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
-- It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
-- It's not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
+- It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- Workflows don’t need to be published for MCP to use them. MCP can execute and make changes to unpublished workflows.
 
 ## Enabling MCP access
 

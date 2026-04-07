@@ -48,6 +48,11 @@ Determine what the user needs and work accordingly:
 - **Concise:** cut filler words. Short sentences. No Latin abbreviations
   (use "for example" not "e.g.", "that is" not "i.e.").
 - **Tabs, not spaces** in all code blocks (node linter requirement).
+- No em dashes. favour commas or new sentences
+- No "e.g.", "etc., i.e., or via
+- Acronyms defined on first use
+- Contractions used (always "don't", not "do not")
+- Minimal wordiness, short, readable sentences
 
 ## MkDocs formatting syntax
 
@@ -85,11 +90,6 @@ Use sparingly — overuse dilutes impact.
 - [ ] No Latin abbreviations
 - [ ] Admonitions used sparingly and correct type chosen
 - [ ] Brand names spelled correctly
-- [ ] No em dash
-- [ ] No e.g., etc., i.e., and via
-- [ ] Acronyms defined on first use
-- [ ] Contractions used 
-- [ ] Minimal wordiness, short, readable sentences
 
 
 ## More detail

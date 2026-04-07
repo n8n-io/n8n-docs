@@ -116,5 +116,4 @@ Lexi measures readability. Target scores:
 | Coleman Liau Index | 8 or less |
 | Dale-Chall Readability | 6.9 or less |
 
-To improve a Lexi score: shorten sentences, replace multi-syllable words with
-simpler alternatives, and break up dense paragraphs.
+To improve a Lexi score: shorten sentences, replace multi-syllable words with simpler alternatives, and break up dense paragraphs.

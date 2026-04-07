@@ -17,16 +17,16 @@ All content must follow the style guide at `STYLE_GUIDE.md` (repo root).
 
 Determine what the user needs and work accordingly:
 
-1. **Write** — draft a new page or section. Read nearby existing pages first
+1. **Write**: Draft a new page or section. Read nearby existing pages first
    to match structure and tone. Use the correct template from
    `document-templates/` for the page type (app node, core node, credentials,
    feature, tutorial, release notes).
 
-2. **Edit** — improve existing content. Read the file first. Fix style
+2. **Edit**: Improve existing content. Read the file first. Fix style
    violations without changing meaning. Preserve admonition syntax, link
    format, and code block indentation exactly.
 
-3. **Review** — check content against the style guide. Return a table:
+3. **Review**: Check content against the style guide. Return a table:
 
    | Location | Current text | Issue | Suggested fix |
    |----------|-------------|-------|---------------|
@@ -48,11 +48,9 @@ Determine what the user needs and work accordingly:
 - **Concise:** cut filler words. Short sentences. No Latin abbreviations
   (use "for example" not "e.g.", "that is" not "i.e.").
 - **Tabs, not spaces** in all code blocks (node linter requirement).
-- No em dashes. favour commas or new sentences
-- No "e.g.", "etc., i.e., or via
-- Acronyms defined on first use
-- Contractions used (always "don't", not "do not")
-- Minimal wordiness, short, readable sentences
+- **Contractions:** always use contractions. "Don't", not "do not".
+- **No em dashes**. use a comma for elaborations, or start a new sentence.
+- **Minimal wordiness:** favor short, readable sentences
 
 ## MkDocs formatting syntax
 
@@ -77,19 +75,6 @@ Use sparingly — overuse dilutes impact.
 | `info` | Feature restrictions (platform or pricing tier) |
 
 ---
-
-## Checklist before finishing
-
-- [ ] Headings in sentence case
-- [ ] UI elements bold, user input code-formatted
-- [ ] Placeholders use `<hyphenated-angle-bracket>` style
-- [ ] External links include `{:target="_blank" .external-link}`
-- [ ] Code blocks use tabs, not spaces
-- [ ] Numbers zero–nine spelled out
-- [ ] Active voice, present tense, "you"-form
-- [ ] No Latin abbreviations
-- [ ] Admonitions used sparingly and correct type chosen
-- [ ] Brand names spelled correctly
 
 
 ## More detail

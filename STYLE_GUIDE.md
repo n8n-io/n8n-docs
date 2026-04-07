@@ -125,13 +125,31 @@ https://github.com/n8n-io/n8n-docs/assets/10284570/c15d45bb-4c7c-4bca-878c-c8fab
 
 #### Create custom rules and configure Vale
 
-Vale supports complex rule setups.The [Vale docs](https://vale.sh/docs/) are a good starting point. There is a [playground to help you create rules](https://studio.vale.sh/). The #testthedocs channel in the [Write the Docs Slack](https://www.writethedocs.org/slack/) is a source of support.
+Vale supports complex rule setups. The [Vale docs](https://vale.sh/docs/) are a good starting point. There is a [playground to help you create rules](https://studio.vale.sh/). The #testthedocs channel in the [Write the Docs Slack](https://www.writethedocs.org/slack/) is a source of support.
 
 In the n8n docs:
 
 * `/styles` contains the dictionaries, style libraries, and most custom rules (some ignore patterns are defined in `.vale.ini`, which is in the root of the project)
 * `/styles/config/vocabularies/default` contains the two files to add vocabulary to if you want Vale to accept or reject it. For example, you will often need to add brand names to `accept.txt`.
 * `/styles/n8n-styles` is the directory for custom rules.
+
+## Using AI to write and review docs
+
+n8n-docs includes an AI agent skill at `skills/n8n-docs-author/SKILL.md`. It's a distillation of this style guide for use with AI. This style guide is the source of truth — the skill is a convenience, not a replacement for reading it.
+
+### How it works
+
+If you use an AI coding agent in this repo, the skill can load automatically. For example, the `CLAUDE.md` file at the repo root points Claude Code at the skill, so you don't need to do anything extra.
+
+### How to use it
+
+Ask Claude to write or review docs as you normally would. To be explicit about the mode:
+
+- **Write:** "Write a trigger node page for X."
+- **Edit:** "Edit this page to fix style guide violations."
+- **Review:** "Review this page against the style guide."
+
+For a review, Claude returns a table of issues grouped by severity, with suggested fixes.
 
 ### Lexi
 

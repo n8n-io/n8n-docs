@@ -4,7 +4,7 @@ contentType: reference
 
 # Supported databases
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB.
+By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB (only [actively maintained versions](https://www.postgresql.org/support/versioning/)).
 
 ## Database type by n8n installation
 
@@ -52,7 +52,7 @@ export DB_POSTGRESDB_PASSWORD=n8n
 export DB_POSTGRESDB_SCHEMA=n8n
 
 # optional:
-export DB_POSTGRESDB_SSL_CA=$(pwd)/ca.crt
+export DB_POSTGRESDB_SSL_CA_FILE=$(pwd)/ca.crt
 export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 
 n8n start

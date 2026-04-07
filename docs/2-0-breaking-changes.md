@@ -6,7 +6,7 @@ contentType: reference
 
 # n8n v2.0 breaking changes
 
-n8n v2.0 will be released soon. This document highlights important breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+n8n v2.0 has been released, and with it came some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
@@ -43,6 +43,10 @@ The Start node is no longer supported. This node was the original way to begin w
 - **Manual executions:** Replace the Start node with a [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node.
 - **Sub-workflows:** If another workflow calls this workflow as a sub-workflow, replace the Start node with an [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node and activate the workflow.
 - **Disabled Start nodes:** If the Start node is disabled, delete it from the workflow.
+
+### Saving and publishing workflows
+
+The new workflow publishing system replaces the previous active/inactive toggle. This means that the old "Activate/Deactivate" toggles become the new "Publish/Unpublish" buttons. This change gives you better control over when your workflow changes go live, reducing the risk of accidentally deploying work-in-progress changes to production. More information can be found here: [Saving and publishing workflows.](/workflows/publish.md)
 
 ### Removed nodes for retired services
 
@@ -179,7 +183,7 @@ The `N8N_CONFIG_FILES` environment variable has been removed.
 The `update:workflow` CLI command will be deprecated and replaced by two new commands to deliver similar functionality and more clarity:
 
 - `publish:workflow` with parameters `id` and `versionId` (optional)
-  - The `--all` parameter will be removed to prevent accidental publishing of workflows in production environments
+    - The `--all` parameter will be removed to prevent accidental publishing of workflows in production environments
 - `unpublish:workflow` with parameters `id` and `all`
 
 **Migration path:** Use the new `publish:workflow` command to publish workflows individually by ID, optionally specifying a version. For unpublishing, use the new `unpublish:workflow` command. This provides better clarity and control over workflow publishing states.

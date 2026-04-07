@@ -38,6 +38,10 @@ You can also explicitly enable the Cloud Run API (even if you don't do this, it 
 gcloud services enable run.googleapis.com
 ```
 
+/// warning | Required: Custom health check endpoint
+Google Cloud Run reserves `/healthz` for its own health checks. Since n8n uses this path by default, it can conflict and cause connection issues in the workflow canvas. To fix this, set the `N8N_ENDPOINT_HEALTH` environment variable to a custom path (included in the deployment commands below).
+///
+
 To deploy n8n:
 
 ```sh
@@ -47,7 +51,8 @@ gcloud run deploy n8n \
     --allow-unauthenticated \
     --port=5678 \
     --no-cpu-throttling \
-    --memory=2Gi
+    --memory=2Gi \
+    --set-env-vars="N8N_ENDPOINT_HEALTH=health"
 ```
 
 (you can specify whichever region you prefer, instead of "us-west1")
@@ -64,7 +69,8 @@ gcloud run deploy n8n \
     --port=5678 \
     --no-cpu-throttling \
     --memory=2Gi \
-    --scaling=1
+    --scaling=1 \
+    --set-env-vars="N8N_ENDPOINT_HEALTH=health"
 ```
 
 This does not prevent data loss completely, such as whenever the Cloud Run service is re-deployed/updated. If you want truly persistant data, you should refer to the instructions below for how to attach a database.
@@ -190,7 +196,7 @@ gcloud run deploy n8n \
     --port=5678 \
     --memory=2Gi \
     --no-cpu-throttling \
-    --set-env-vars="N8N_PORT=5678,N8N_PROTOCOL=https,DB_TYPE=postgresdb,DB_POSTGRESDB_DATABASE=n8n,DB_POSTGRESDB_USER=n8n-user,DB_POSTGRESDB_HOST=/cloudsql/$PROJECT_ID:$REGION:n8n-db,DB_POSTGRESDB_PORT=5432,DB_POSTGRESDB_SCHEMA=public,GENERIC_TIMEZONE=UTC,QUEUE_HEALTH_CHECK_ACTIVE=true" \
+    --set-env-vars="N8N_PORT=5678,N8N_PROTOCOL=https,N8N_ENDPOINT_HEALTH=health,DB_TYPE=postgresdb,DB_POSTGRESDB_DATABASE=n8n,DB_POSTGRESDB_USER=n8n-user,DB_POSTGRESDB_HOST=/cloudsql/$PROJECT_ID:$REGION:n8n-db,DB_POSTGRESDB_PORT=5432,DB_POSTGRESDB_SCHEMA=public,GENERIC_TIMEZONE=UTC,QUEUE_HEALTH_CHECK_ACTIVE=true" \
     --set-secrets="DB_POSTGRESDB_PASSWORD=n8n-db-password:latest,N8N_ENCRYPTION_KEY=n8n-encryption-key:latest" \
     --add-cloudsql-instances=$PROJECT_ID:$REGION:n8n-db \
     --service-account=n8n-service-account@$PROJECT_ID.iam.gserviceaccount.com

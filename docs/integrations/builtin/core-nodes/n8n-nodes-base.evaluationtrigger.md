@@ -36,7 +36,7 @@ The Evaluation Trigger node uses data tables or Google Sheets to store the test 
         * **Limit Rows**: Whether to limit the number of rows in the sheet to process.
             * **Max Rows to Process**: When **Limit Rows** is enabled, the maximum number of rows to read and process during the evaluation.
         * **Filters:** Filter the evaluation dataset based on column values.
-            * **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](/code/expressions.md).
+            * **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](/data/expressions.md).
             * **Value**: The column value you want to filter by. The evaluation will only process rows with the given value for the selected column.
 
 ## Templates and examples

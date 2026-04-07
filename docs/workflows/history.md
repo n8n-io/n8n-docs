@@ -22,6 +22,8 @@ n8n creates a new version when you:
  * Restore an old version. n8n saves the latest version before restoring.
  * Pull from a Git repository using [Source control](/source-control-environments/index.md). Note that n8n saves versions to the instance database, not to Git.
 
+ Changes to workflow settings do not create a new version.
+
 /// note | Workflow history and execution history
 Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions.md).
 
@@ -44,7 +46,8 @@ You can restore a previous workflow version, or make a copy of it:
 
 1. On the version you want to restore or copy, select **Options** <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 1. Choose what you want to do:
-	* **Restore this version**: replace your current workflow with the selected version.
+	* **Restore version**: replace your current workflow with the selected version.
 	* **Clone to new workflow**: create a new workflow based on the selected version.
 	* **Open version in new tab**: open a second tab displaying the selected version. Use this to compare versions.
 	* **Download**: download the version as JSON.
+	* **Name version**: give the version a name and description. Named versions are protected from automatic pruning. Refer to [Naming versions](/workflows/publish.md#naming-versions) for more details. Available on Pro and Enterprise plans.

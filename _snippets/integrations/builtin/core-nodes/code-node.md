@@ -4,7 +4,7 @@ Use the Code node to write custom JavaScript or Python and run it as a step in y
 This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/index.md) section. It includes:
 
 * Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
-* Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
+* Guidance on [Handling dates](/data/specific-data-types/luxon.md) and [Querying JSON](/data/specific-data-types/jmespath.md)
 * A growing collection of examples in the [Cookbook](/code/cookbook/code-node/index.md)
 ///
 
@@ -89,10 +89,10 @@ n8n added native Python support using task runners in version 1.111.0. This feat
 Main differences from Pyodide:
 
 - Native Python supports only `_items` in all-items mode and `_item` in per-item mode. It doesn't support other n8n built-in methods and variables.
-- Native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](/hosting/configuration/task-runners.md/#adding-extra-dependencies) for more details.
+- On self-hosted, native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](/hosting/configuration/task-runners.md/#adding-extra-dependencies) for more details.
 - Native Python denies insecure built-ins by default. See [task runners environment variables](/hosting/configuration/environment-variables/task-runners.md) for more details.
 - Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
-- On n8n cloud, the Python option for the Code node doesn't allow users to import any third-party Python libraries. Self-hosting users can find setup instructions to include external libraries [here](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies). In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
+- On n8n cloud, the Python option for the Code node doesn't allow users to import any Python libraries — whether from the standard library or third-party packages. Self-hosting users can find setup instructions to include external libraries [here](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies). In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
 
 Upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
 

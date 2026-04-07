@@ -114,11 +114,6 @@ Custom roles use permission scopes to define what users can do within a project.
 * `workflow:move` - Move workflows between projects
 * `workflow:share` - Share workflows with other users
 
-* `workflow:updateRedactionSetting` - Manage the data redaction policy for workflows
-
-### Execution scopes
-* `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
-
 ### Credential scopes
 * `credential:create` - Create new credentials
 * `credential:read` - View credential details

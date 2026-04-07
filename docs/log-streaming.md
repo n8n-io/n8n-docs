@@ -58,8 +58,6 @@ The following events are available. You can choose which events to stream in **S
 	* User MFA enabled
 	* User MFA disabled
 	* User execution deleted
-	* Execution data revealed
-	* Execution data reveal failed
 	* Workflow executed
 	* Package installed
 	* Package updated

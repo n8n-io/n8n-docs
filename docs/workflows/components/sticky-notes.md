@@ -31,7 +31,7 @@ To change the Sticky Note color:
 
 1. Hover over the Sticky Note
 2. Select **Change color** <span class="n8n-inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
-3. Choose from 7 preset colors, or click the rainbow gradient button to select a custom color
+3. Choose from seven preset colors, or click the rainbow gradient button to select a custom color
 
 ![Color selector showing preset colors and custom color button](/_images/workflows/components/stickies/color-picker-popover.png)
 

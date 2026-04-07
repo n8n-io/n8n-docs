@@ -139,7 +139,7 @@ n8n-docs includes an AI agent skill at `skills/n8n-docs-author/SKILL.md`. It's a
 
 ### How it works
 
-If you use an AI coding agent in this repo, the skill can load automatically. For example, the `CLAUDE.md` file at the repo root points Claude Code at the skill, so you don't need to do anything extra.
+If you use an AI coding agent from within this repo, the skill can load automatically. For example, the `CLAUDE.md` file at the repo root points Claude Code at the skill, so you don't need to do anything extra.
 
 ### How to use it
 

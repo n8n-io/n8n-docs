@@ -163,7 +163,7 @@ This section explains how an n8n administrator can register a single Entra ID ap
 
 ### Pre-configure credentials for users
 
-Once admin consent is granted, use [credential overwrites](https://docs.n8n.io/embed/configuration/#credential-overwrites) to pre-configure the Client ID and Client Secret so users in your organisation can connect without their own app registration. Refer to the [Microsoft OAuth credential overwrites configuration guide](/hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md) for Docker and Kubernetes setup instructions.
+Once admin consent is granted, use [credential overwrites](/hosting/configuration/credential-overwrites/) to pre-configure the Client ID and Client Secret so users in your organisation can connect without their own app registration. Refer to the [Microsoft OAuth credential overwrites configuration guide](/hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md) for Docker and Kubernetes setup instructions.
 
 ### Required scopes by integration
 

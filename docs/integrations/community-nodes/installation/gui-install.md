@@ -25,7 +25,7 @@ To install a community node from npm:
     * To install from a dist-tag such as `beta`: enter `n8n-node-storms@beta` in **Enter npm package name**. You can use any [npm dist-tag](https://docs.npmjs.com/cli/commands/npm-dist-tag) published by the package author, such as `beta`, `next`, or `latest`.
 
     /// note | Dist-tags resolve once at install time
-    When you install a package using a dist-tag, n8n resolves the tag to its current version at that moment. Future updates don't follow the dist-tag. For example, if you install `n8n-node-storms@beta` and `beta` points to version `2.0.0-beta.1`, n8n installs that specific version. Later updates check for newer versions normally, not through the `beta` tag.
+    When you install a package using a dist-tag, n8n resolves the tag to its current version at that moment. Future updates don't follow the dist-tag. For example, if you install `n8n-node-storms@beta` and `beta` points to version `2.0.0-beta.1`, n8n installs that specific version. Later updates compare against the installed semver version, not the `beta` tag.
     ///
     <!-- vale off -->
 5. Agree to the [risks](/integrations/community-nodes/risks.md) of using community nodes: select **I understand the risks of installing unverified code from a public source.**

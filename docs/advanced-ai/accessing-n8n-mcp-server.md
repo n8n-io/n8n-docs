@@ -228,6 +228,16 @@ The n8n MCP Server exposes the following tools so that you can create and update
 * `search_projects`: Search for projects accessible to the current user. (v2.14 onward)
 * `search_folders`: Search for folders within a project. (v2.14 onward)
 
+### Data tables
+
+* `create_data_table`: Create a new data table with the specified columns. Use `search_projects` to find a project ID first. (v2.16 onward)
+* `search_data_tables`: Search for data tables accessible to the current user. Use this to find a data table ID before modifying or adding data to it. (v2.16 onward)
+* `add_data_table_rows`: Insert rows into an existing data table. Each row is an object mapping column names to values. Use `search_data_tables` to find the data table ID first. (v2.16 onward)
+* `add_data_table_column`: Add a new column to an existing data table. (v2.16 onward)
+* `rename_data_table`: Rename an existing data table. (v2.16 onward)
+* `rename_data_table_column`: Rename a column in a data table. (v2.16 onward)
+* `delete_data_table_column`: Delete a column from a data table. This permanently removes the column and all its data. (v2.16 onward)
+
 ## Resources
 
 For MCP clients that support resources:

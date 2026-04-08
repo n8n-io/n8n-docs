@@ -58,9 +58,9 @@ These two toggles combine into a single `redactionPolicy` stored on the workflow
 
 ### Dynamic credentials
 
-Workflows that use dynamic credentials always have their production execution data redacted, regardless of the redaction setting. This is because dynamic credential executions process data on behalf of end users, and the workflow builder shouldn't be able to view that data.
+Executions that use dynamic credentials always have their data fully redacted, regardless of the workflow's redaction setting. This is because dynamic credential executions process data on behalf of end users, and the workflow builder shouldn't be able to view that data.
 
-When a workflow uses dynamic credentials, the **Redact production execution data** setting is locked to **Redact** and can't be changed.
+Dynamic credential usage is detected per execution at runtime. The same workflow may have some executions that used dynamic credentials and others that didn't. When dynamic credentials are detected, redaction is enforced and the data can't be revealed, even by users with the `execution:reveal` scope.
 
 ## What redacted data looks like
 
@@ -102,14 +102,10 @@ All reveal actions are tracked through [log streaming](/log-streaming.md). Two a
 
 | Event | Description |
 | ----- | ----------- |
-| `execution.data.revealed` | Emitted when a user successfully reveals redacted execution data. Includes the user, execution ID, workflow ID, timestamp, IP address, and the redaction policy in effect. |
-| `execution.data.revealed_failure` | Emitted when a reveal attempt is denied (for example, due to insufficient permissions). Includes the same fields plus the rejection reason. |
+| `n8n.audit.execution.data.revealed` | Emitted when a user successfully reveals redacted execution data. Includes the user, execution ID, workflow ID, timestamp, IP address, and the redaction policy in effect. |
+| `n8n.audit.execution.data.reveal_failure` | Emitted when a reveal attempt is denied (for example, due to insufficient permissions). Includes the same fields plus the rejection reason. |
 
 These events integrate with your existing log streaming destinations (syslog, webhooks, Sentry) and can be used for compliance reporting and access auditing.
-
-/// note | Fail-closed behavior
-If the audit system is unavailable when a reveal is attempted, the reveal is denied and a `503 Service Unavailable` error is returned. This fail-closed behavior ensures that all data access is tracked.
-///
 
 ## Permission scopes
 
@@ -134,7 +130,7 @@ Apply the principle of least privilege when assigning these scopes:
 | Workflows processing PII, financial data, or authentication tokens in production | Redact production execution data |
 | Workflows where even test data is sensitive (for example, using copies of production data) | Redact both production and manual execution data |
 | Workflows processing non-sensitive data, or during initial development | No redaction |
-| Workflows using dynamic credentials | Production data is always redacted automatically |
+| Workflows where dynamic credentials may be used | Executions using dynamic credentials are always fully redacted |
 
 ### General recommendations
 
@@ -148,5 +144,5 @@ Apply the principle of least privilege when assigning these scopes:
 
 - Redaction is applied at the API level. Redacted data isn't sent to the browser.
 - Nodes can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). These fields are always redacted and can't be revealed, even by users with the `execution:reveal` scope.
-- The fail-closed audit design ensures that if logging infrastructure is down, data can't be revealed without a record.
+- If the redaction service can't resolve a node's type definition (for example, a community node that has been uninstalled), all output data for that node is fully redacted. This fail-closed approach prevents unknown nodes from leaking potentially sensitive fields.
 - Redaction settings are stored as part of the workflow configuration and can be managed through [source control](/source-control-environments/index.md).

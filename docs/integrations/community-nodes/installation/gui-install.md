@@ -19,9 +19,14 @@ To install a community node from npm:
     2. Browse the list of results. You can filter the results or add more keywords.
     3. Once you find the package you want, make a note of the package name. If you want to install a specific version, make a note of the version number as well.
     4. Return to n8n.
-4. Enter the npm package name, and version number if required. For example, consider a community node designed to access a weather API called "Storms." The package name is n8n-node-storms, and it has three major versions.
+4. Enter the npm package name, and optionally a version number or dist-tag. For example, consider a community node designed to access a weather API called "Storms." The package name is n8n-node-storms, and it has three major versions.
     * To install the latest version of a package called n8n-node-weather: enter `n8n-nodes-storms` in **Enter npm package name**.
     * To install version 2.3: enter `n8n-node-storms@2.3` in **Enter npm package name**.
+    * To install from a dist-tag such as `beta`: enter `n8n-node-storms@beta` in **Enter npm package name**. You can use any [npm dist-tag](https://docs.npmjs.com/cli/commands/npm-dist-tag) published by the package author, such as `beta`, `next`, or `latest`.
+
+    /// note | Dist-tags resolve once at install time
+    When you install a package using a dist-tag, n8n resolves the tag to its current version at that moment. Future updates don't follow the dist-tag. For example, if you install `n8n-node-storms@beta` and `beta` points to version `2.0.0-beta.1`, n8n installs that specific version. Later updates check for newer versions normally, not through the `beta` tag.
+    ///
     <!-- vale off -->
 5. Agree to the [risks](/integrations/community-nodes/risks.md) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
     <!-- vale on -->

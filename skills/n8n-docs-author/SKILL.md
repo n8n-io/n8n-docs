@@ -38,7 +38,7 @@ Determine what the user needs and work accordingly:
 ## Writing rules (non-negotiable)
 
 - **Base guide:** Microsoft Writing Style Guide.
-- **Voice:** present tense, active voice, second-person ("you"). Be direct.
+- **Voice:** present tense, active voice (not passive), second-person ("you"). Be direct.
 - **Headings:** sentence case only. Never title case.
 - **Numbers:** spell out zero–nine; numerals for 10 and above.
 - **UI elements:** **bold**.
@@ -49,7 +49,7 @@ Determine what the user needs and work accordingly:
   (use "for example" not "e.g.", "that is" not "i.e.").
 - **Tabs, not spaces** in all code blocks (node linter requirement).
 - **Contractions:** always use contractions. "Don't", not "do not".
-- **No em dashes**. use a comma for elaborations, or start a new sentence.
+- **No em dashes:** use a comma for elaborations, or start a new sentence.
 - **Minimal wordiness:** favor short, readable sentences
 
 ## MkDocs formatting syntax

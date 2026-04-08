@@ -35,7 +35,7 @@ You will build this workflow in eight steps:
 5. [Calculating booked orders](/courses/level-one/chapter-5/chapter-5.5.md)
 6. [Notifying the team](/courses/level-one/chapter-5/chapter-5.6.md)
 7. [Scheduling the workflow](/courses/level-one/chapter-5/chapter-5.7.md)
-8. [Activating and examining the workflow](/courses/level-one/chapter-5/chapter-5.8.md)
+8. [Publishing and examining the workflow](/courses/level-one/chapter-5/chapter-5.8.md)
 
 To build this workflow, you will need the credentials found in the email you received from n8n when you signed up for this course. If you haven't signed up already, you can do it [here](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1). If you haven't received a confirmation email after signing up, [contact us](mailto:help@n8n.io).
 

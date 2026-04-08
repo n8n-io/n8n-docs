@@ -34,13 +34,13 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `$prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 	| `$prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 	| `$runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). | :white_check_mark: |
-	| `$secrets` | Contains information about your [External secrets](/external-secrets.md) setup. | :white_check_mark: |
+	| `$secrets` | Contains information about your [External secrets](/external-secrets.md) setup. | :x: |
 	| `$vars` | Contains the [Variables](/code/variables.md) available in the active environment. | :white_check_mark: |
 	| `$version` | The node version. | :x: |
 	| `$workflow.active` | Whether the workflow is active (true) or not (false). | :white_check_mark: |
 	| `$workflow.id` | The workflow ID. | :white_check_mark: |
 	| `$workflow.name` | The workflow name. | :white_check_mark: |
-=== "Python (native, beta)"
+=== "Python (native)"
 	| Method | Description |
 	| ------ | ----------- |
 	| `_items` | Contains incoming items in "Run once for all items" mode. |

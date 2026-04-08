@@ -58,5 +58,5 @@ Your full workflow should look like this:
 
 **Nathan 🙋**: This is just what I needed! My workflow will run automatically every Monday morning, correct?
 
-**You 👩‍🔧**: Not so fast. To do that, you need to activate your workflow. I'll do this in the next step and show you how to interpret the execution log.
+**You 👩‍🔧**: Not so fast. To do that, you need to publish your workflow. I'll do this in the next step and show you how to interpret the execution log.
 <!-- vale from-microsoft.We = YES -->

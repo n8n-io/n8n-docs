@@ -14,17 +14,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API key
+- Secret key
+
+You'll also need a Stripe **Signature Secret** or endpoint secret, which is a unique key for each webhook endpoint used to verify incoming requests, ensuring they truly came from Stripe.
 
 ## Related resources
 
-Refer to [Stripe's API documentation](https://docs.stripe.com/api) for more information about the service.
-
-## Using API key
-
-To configure this credential, you'll need a [Stripe](https://stripe.com/) admin or developer account and:
-
-- An API **Secret Key**
+To configure this credential, you'll need a Stripe admin or developer account. Refer to [Stripe's API documentation](https://docs.stripe.com/api) for more information about the service.
 
 Before you generate an API key, decide whether to generate it in live mode or test mode. Refer to [Test mode and live mode](#test-mode-and-live-mode) for more information about the two modes.
 

@@ -41,7 +41,7 @@ To configure this credential, you'll need:
   - Turn **OFF** for port `587` (uses STARTTLS explicit encryption)
   - Turn **OFF** for port `25` (no encryption)
 - **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS). Turning this on prevents that behaviour.
-- **Client Host Name**: If needed by your provider, add a client host name. This name identifies the client to the server.
+- **Client Host Name**: This name identifies the client to the server. May not be required for Gmail, Outlook.com, or Yahoo. Leave this field empty unless your email provider or administrator specifically requests it. If you do need to provide a value, use a fully qualified domain name (FQDN) such as `mail.yourdomain.com`. Avoid generic values like `localhost`.
 
 ### Provider instructions
 

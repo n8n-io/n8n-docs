@@ -69,6 +69,21 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
+### Microsoft Graph API Base URL
+
+Microsoft Entra ID credentials extend the Microsoft OAuth2 API credentials and support different Microsoft cloud environments. Select the appropriate endpoint based on your tenant's cloud environment:
+
+- **Global**: Use for standard Microsoft 365 tenants (default)
+- **US Government**: Use for Azure US Government (GCC) tenants
+- **US Government DOD**: Use for Azure US Government Department of Defense tenants
+- **China**: Use for Microsoft 365 operated by 21Vianet in China
+
+/// warning | Government Cloud Authorization URLs
+If you're using a government cloud tenant, you may also need to update the **Authorization URL** and **Access Token URL** fields in your credential to use the government cloud endpoints. For example:
+- US Government: Use `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/authorize` and `https://login.microsoftonline.us/{tenant}/oauth2/v2.0/token`
+- Replace `{tenant}` with your tenant ID or use `common` for multi-tenant apps
+///
+
 ## Setting custom scopes
 
 Microsoft Entra ID credentials use the following scopes by default:
@@ -88,8 +103,99 @@ Microsoft Entra ID credentials use the following scopes by default:
 To select different scopes for your credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Keep in mind that some features may not work as expected with more restrictive scopes.
 
 
+## Delegated access for organisation-wide Microsoft integrations
+
+This section explains how an n8n administrator can register a single Entra ID app with delegated permissions, grant admin consent once, and then pre-configure n8n so that other users in the organisation can connect Microsoft services (Outlook, Teams, OneDrive, and others) without completing their own OAuth app registration.
+
+### Register the app
+
+1. In the [Microsoft Entra admin centre](https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade/quickStartType~/null/sourceType/Microsoft_AAD_IAM), go to **App registrations** and select **+ New registration**.
+
+    /// note
+    Register under **App registrations**, not **Enterprise applications**.
+    ///
+
+2. Enter a meaningful **Name** for the app, for example `n8n Outlook`.
+3. Under **Supported account types**, select **Multiple Entra ID tenants**.
+4. Under **Allow only certain tenants (Preview)**, select **Manage allowed tenants** and add your tenant. The red banner disappears once your tenant is added.
+5. Leave the **Redirect URI** blank for now and select **Register**.
+6. On the app overview page, copy the **Application (client) ID**. You'll need this later.
+
+### Generate a client secret
+
+1. On the app overview page, select **Add a certificate or secret** under **Client credentials**.
+2. Select **+ New client secret**.
+3. Enter a **Description** (for example, `n8n token`) and choose an expiry period that matches your organisation's credentials policy.
+4. Select **Add**.
+5. Copy the **Value** immediately.
+
+    /// warning
+    The secret value is only shown once. Don't navigate away without copying it: you will be unable to retrieve it later.
+    ///
+
+### Configure API permissions
+
+1. In the left navigation, click **API permissions**.
+2. Click **+ Add a permission** > **Microsoft Graph** > **Delegated permissions**.
+3. In the **Select permissions** box, search for each required scope and check the box next to it. Repeat for all scopes needed by the integrations you want to enable. Refer to [Required scopes by integration](#required-scopes-by-integration) below for the full list.
+4. Select **Add permissions**.
+
+### Add the redirect URI
+
+1. In n8n, create a workflow containing a node for one of the Microsoft integrations you want to configure (for example, Microsoft Outlook).
+2. Open the node and select **Set up credential** > **Create new credential**.
+3. Give the credential a meaningful name (for example, `admin@yourorg.com`).
+4. Copy the **OAuth Redirect URL** shown in the n8n credential panel.
+5. Back in Entra, go to the app overview page and select **Add a redirect URI** under **Redirect URIs**.
+6. Select **+ Add redirect URI**, choose **Web**, paste in the URL copied from n8n, and select **Configure**.
+
+### Grant admin consent in n8n
+
+1. In n8n, paste the **Client ID** and **Client Secret** you copied earlier into the credential panel.
+2. Select **Connect to [service]** (for example, **Connect to Microsoft Outlook**).
+3. In the sign-in popup, check **Consent on behalf of your organization**, then select **Accept**.
+
+    /// warning
+    You must be signed in as an admin to grant organisation-wide consent. Non-admin accounts will see a message stating that admin approval is required.
+    ///
+
+4. A success banner in n8n confirms the connection is working and that consent has been granted correctly.
+
+### Pre-configure credentials for users
+
+Once admin consent is granted, use [credential overwrites](https://docs.n8n.io/embed/configuration/#credential-overwrites) to pre-configure the Client ID and Client Secret so users in your organisation can connect without their own app registration. Refer to the [Microsoft OAuth credential overwrites configuration guide](/hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md) for Docker and Kubernetes setup instructions.
+
+### Required scopes by integration
+
+The following scopes are required for each Microsoft integration as of March 2026. When configuring API permissions in Entra, add the scopes for every integration you plan to enable.
+
+| Integration | Required scopes |
+|---|---|
+| **Microsoft Dynamics** | `openid`, `offline_access` |
+| **Microsoft Entra ID** | `openid`, `offline_access`, `AccessReview.ReadWrite.All`, `Directory.ReadWrite.All`, `NetworkAccessPolicy.ReadWrite.All`, `DelegatedAdminRelationship.ReadWrite.All`, `EntitlementManagement.ReadWrite.All`, `User.ReadWrite.All`, `Directory.AccessAsUser.All`, `Sites.FullControl.All`, `GroupMember.ReadWrite.All` |
+| **Microsoft Excel** | `openid`, `offline_access`, `Files.ReadWrite` |
+| **Microsoft Graph Security** | `SecurityEvents.ReadWrite.All`, `offline_access` |
+| **Microsoft OneDrive** | `openid`, `offline_access`, `Files.ReadWrite.All` |
+| **Microsoft Outlook** | `openid`, `offline_access`, `Contacts.Read`, `Contacts.ReadWrite`, `Calendars.Read`, `Calendars.Read.Shared`, `Calendars.ReadWrite`, `Mail.ReadWrite`, `Mail.ReadWrite.Shared`, `Mail.Send`, `Mail.Send.Shared`, `MailboxSettings.Read` |
+| **Microsoft SharePoint** | `openid`, `offline_access` |
+| **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.ReadWrite.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All` |
+| **Microsoft To Do** | `openid`, `offline_access`, `Tasks.ReadWrite` |
+| **Additional permissions for triggers** | `Chat.Read.All`, `Team.ReadBasic.All`, `Subscription.Read.All` |
+
 ## Common issues
 
 Here are the known common errors and issues with Microsoft Entra credentials.
 
 --8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"
+
+### Admin approval required during delegated access setup
+
+If a user sees a screen stating that admin approval is required, it means organisation-wide consent hasn't yet been granted for the app registration.
+
+To resolve this, complete the [Grant admin consent in n8n](#grant-admin-consent-in-n8n) steps above using an Entra ID admin account.
+
+Alternatively, an administrator can grant consent directly in Entra without going through n8n by navigating to:
+
+**Enterprise applications** > [your app] > **Security** > **Permissions** > **Grant admin consent for [your organisation]**
+
+Once consent is granted, standard users can authenticate without encountering the admin approval prompt.

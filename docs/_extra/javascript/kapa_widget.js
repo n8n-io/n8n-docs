@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   script.setAttribute("data-modal-size", "900px");
   // Make sure we don't track users, so we don't have to put this behind the cookie widget https://docs.kapa.ai/integrations/website-widget/user-tracking
   script.setAttribute("data-user-analytics-cookie-enabled", false);
+  // Add Kapa MCP
+  script.setAttribute("data-mcp-enabled", true);
+  script.setAttribute("data-mcp-server-url", "https://n8n.mcp.kapa.ai/");
   script.async = true;
   document.head.appendChild(script);
 });

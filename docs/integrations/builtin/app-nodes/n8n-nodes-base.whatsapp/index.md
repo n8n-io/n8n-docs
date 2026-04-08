@@ -12,8 +12,10 @@ Use the WhatsApp Business Cloud node to automate work in WhatsApp Business, and 
 On this page, you'll find a list of operations the WhatsApp Business Cloud node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp.md) for guidance on setting up authentication. 
+Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
 
 ## Operations
 

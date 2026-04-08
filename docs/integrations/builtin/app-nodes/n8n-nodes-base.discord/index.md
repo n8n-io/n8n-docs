@@ -17,6 +17,8 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
+--8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+
 ## Operations
 <!-- vale off -->
 <!-- "Many" triggers warnings -->

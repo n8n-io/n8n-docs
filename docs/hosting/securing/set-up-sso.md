@@ -7,7 +7,7 @@ contentType: howto
 # Set up Single Sign-On (SSO)
 
 /// info | Feature availability
-* Available on Enterprise plans.
+* Available on Business and Enterprise plans.
 * You need to be an instance owner or admin to enable and configure SAML or OIDC.
 ///	
 

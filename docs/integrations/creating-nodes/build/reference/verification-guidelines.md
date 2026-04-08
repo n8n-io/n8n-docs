@@ -26,6 +26,7 @@ All verified community node authors should use the [`n8n-node` tool](/integratio
 
 * The node **MUST** not be an existing node, If your node is an iteration on an existing node create a pull request instead.
 * n8n isn't accepting Logic or Flow control nodes at the moment.
+* Each package should integrate exactly one third-party service. A trigger node for the same service may be included alongside the main node. Packages that wrap multiple unrelated APIs or act as a proxy layer for several services generally don't qualify for verification. Submit each service as its own separate package.
 
 ## Package source verification
 

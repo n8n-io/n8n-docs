@@ -209,7 +209,7 @@ The n8n MCP Server exposes the following tools so that you can create and update
 
 ### Workflow execution
 
-* `execute_workflow`: Execute a workflow by ID. Defaults to `production` mode, which runs the **published** version of the workflow — the workflow must be published for this mode. Supports a `manual` mode to run the current (unpublished) version instead. Returns an execution ID and status; use `get_execution` to retrieve full results.
+* `execute_workflow`: Execute a workflow by ID. Defaults to `production` mode, which runs the **published** version of the workflow - the workflow must be published for this mode. Supports a `manual` mode to run the current (unpublished) version instead. Returns an execution ID and status; use `get_execution` to retrieve full results.
 
 ### Workflow introspection
 

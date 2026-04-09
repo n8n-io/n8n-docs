@@ -7,6 +7,8 @@ contentType: howto
 # Execution data redaction
 
 /// info | Feature availability
+Data redaction is available on Enterprise Self-hosted and Enterprise Cloud plans.
+
 **Available from:** n8n version 2.16.0
 ///
 
@@ -18,7 +20,6 @@ When redaction is enabled, execution metadata (status, timing, node names) remai
 
 Workflows often process data that the workflow builder or viewers shouldn't have access to outside of n8n. Common scenarios include:
 
-- **Dynamic credentials**: End users authenticate through workflows, and their data flows through execution logs that the builder can freely view.
 - **PII and compliance**: Workflows handling customer personal data (emails, addresses, financial records) need to comply with GDPR, SOC 2, or internal security standards.
 - **Cross-department workflows**: A workflow built by one team processes sensitive data from another team that the builder would not normally have access to.
 - **Least privilege principle**: Limiting data visibility to only those who need it, rather than everyone with workflow view access.
@@ -46,21 +47,6 @@ There are two independent toggles that control redaction:
 | ------- | ---------------- |
 | **Redact production execution data** | Controls whether data from production (non-manually triggered) executions is redacted. Production executions are those triggered by webhooks, schedules, or other triggers when the workflow is active. |
 | **Redact manual execution data** | Controls whether data from manually triggered executions is redacted. Manual executions are those started by selecting **Execute Workflow** in the editor. |
-
-These two toggles combine into a single `redactionPolicy` stored on the workflow:
-
-| Production | Manual | Resulting policy |
-| ---------- | ------ | ---------------- |
-| Don't redact | Don't redact | `none` - No redaction applied to any executions |
-| Redact | Don't redact | `non-manual` - Only production executions are redacted |
-| Don't redact | Redact | `manual-only` - Only manual executions are redacted |
-| Redact | Redact | `all` - All executions are redacted |
-
-### Dynamic credentials
-
-Workflows that use dynamic credentials always have their production execution data redacted, regardless of the redaction setting. This is because dynamic credential executions process data on behalf of end users, and the workflow builder shouldn't be able to view that data.
-
-When a workflow uses dynamic credentials, the **Redact production execution data** setting is locked to **Redact** and can't be changed.
 
 ## What redacted data looks like
 
@@ -92,10 +78,6 @@ To reveal data:
 
 The execution data becomes visible for that execution in the current session.
 
-/// warning | Dynamic credential executions can't be revealed
-Executions that used dynamic credentials can't be revealed, even by users with the `execution:reveal` scope. This is a security measure to protect end-user data that flows through workflows using dynamic credential resolution.
-///
-
 ### Audit logging
 
 All reveal actions are tracked through [log streaming](/log-streaming.md). Two audit events are available:
@@ -113,17 +95,13 @@ If the audit system is unavailable when a reveal is attempted, the reveal is den
 
 ## Permission scopes
 
-Execution data redaction introduces two permission scopes that can be assigned through [custom project roles](/user-management/rbac/custom-roles.md):
+Execution data redaction introduces the following permission scope that can be assigned through [custom project roles](/user-management/rbac/custom-roles.md):
 
 | Scope | Purpose |
 | ----- | ------- |
 | `workflow:updateRedactionSetting` | Allows modifying the redaction policy in workflow settings. Displayed as **Manage data redaction** in the role configuration UI. |
-| `execution:reveal` | Allows revealing redacted execution data. Instance owners and admins have this scope by default. |
 
-Apply the principle of least privilege when assigning these scopes:
-
-- Grant `workflow:updateRedactionSetting` to project admins or security leads who define data access policies.
-- Grant `execution:reveal` sparingly, typically to a small set of trusted users who may need to troubleshoot production issues involving sensitive data.
+By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give additional users, such as workflow builders, the ability to update the data redaction setting.
 
 ## Best practices
 
@@ -134,19 +112,19 @@ Apply the principle of least privilege when assigning these scopes:
 | Workflows processing PII, financial data, or authentication tokens in production | Redact production execution data |
 | Workflows where even test data is sensitive (for example, using copies of production data) | Redact both production and manual execution data |
 | Workflows processing non-sensitive data, or during initial development | No redaction |
-| Workflows using dynamic credentials | Production data is always redacted automatically |
 
 ### General recommendations
 
 - **Start with production redaction**: For most workflows handling sensitive data, redacting production executions while keeping manual executions visible provides a good balance between security and ease of debugging.
 - **Redact manual data when needed**: If your test environment uses real or production-like data, enable manual execution redaction as well.
 - **Use log streaming**: Enable [log streaming](/log-streaming.md) to capture reveal audit events. This provides an audit trail for compliance and allows you to monitor who is accessing sensitive execution data.
-- **Limit reveal access**: Only grant the `execution:reveal` scope to users who have a legitimate need to view sensitive data in production executions.
 - **Review redaction settings during workflow reviews**: Include redaction policy as part of your workflow review or approval process, especially for workflows that handle cross-department or customer-facing data.
 
 ## Security considerations
 
 - Redaction is applied at the API level. Redacted data isn't sent to the browser.
-- Nodes can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). These fields are always redacted and can't be revealed, even by users with the `execution:reveal` scope.
+- When you [create custom nodes](/integrations/creating-nodes/overview/), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
 - The fail-closed audit design ensures that if logging infrastructure is down, data can't be revealed without a record.
 - Redaction settings are stored as part of the workflow configuration and can be managed through [source control](/source-control-environments/index.md).
+- Redaction doesn't change how execution data is stored in the database. The underlying data isn't encrypted or stored differently when redaction is enabled. Redaction controls visibility at the API layer.
+- When redaction is enabled, execution data is also automatically redacted from [log streaming](/log-streaming.md) and logging output.

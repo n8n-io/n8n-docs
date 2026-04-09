@@ -28,6 +28,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS` | String | `127.0.0.1` | Address the task broker listens on. |
 | `N8N_RUNNERS_MAX_PAYLOAD` | Number | `1 073 741 824` | Maximum payload size in bytes for communication between a task broker and a task runner. |
 | `N8N_RUNNERS_MAX_OLD_SPACE_SIZE` | String |  | The `--max-old-space-size` option to use for a task runner (in MB). By default, Node.js will set this based on available memory. |
+| `N8N_RUNNERS_MAX_OLD_SPACE_SIZE_PERCENTAGE` | Number |  | The `--max-old-space-size-percentage` option to use for a task runner (in %). Must be a number greater than 0 and up to 100, representing the percentage of available system memory to allocate to the V8 heap. This env var takes precedence over N8N_RUNNERS_MAX_OLD_SPACE_SIZE when both are specified. |
 | `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `5` | The number of concurrent tasks a task runner can execute at a time. |
 | `N8N_RUNNERS_TASK_TIMEOUT` | Number | `300` | The maximum time, in seconds, a task can run before the runner stops it and restarts. This value must be greater than 0. |
 | `N8N_RUNNERS_HEARTBEAT_INTERVAL` | Number | `30` | The interval, in seconds, at which the runner must send a heartbeat to the broker. If the runner doesn't send a heartbeat in time, the task stops and the runner restarts. This value must be greater than 0. |
@@ -67,6 +68,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `GENERIC_TIMEZONE` | * | `America/New_York` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md). |
 | `NODE_OPTIONS` | String | - | [Options](https://nodejs.org/api/cli.html#node_optionsoptions) for Node.js. |
 | `N8N_RUNNERS_MAX_OLD_SPACE_SIZE` | String |  | The `--max-old-space-size` option to use for a task runner (in MB). By default, Node.js will set this based on available memory. |
+| `N8N_RUNNERS_MAX_OLD_SPACE_SIZE_PERCENTAGE` | Number |  | The `--max-old-space-size-percentage` option to use for a task runner (in %). Must be a number greater than 0 and up to 100, representing the percentage of available system memory to allocate to the V8 heap. This env var takes precedence over N8N_RUNNERS_MAX_OLD_SPACE_SIZE when both are specified. |
 
 ## Task runner environment variables (Python)
 

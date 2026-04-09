@@ -119,7 +119,7 @@ By default, instance owners, admins, and project admins have the permissions to 
 ## Security considerations
 
 - n8n applies redaction at the API level and never sends redacted data to the browser.
-- When you [create custom nodes](/integrations/creating-nodes/overview/), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
+- When you [create custom nodes](/integrations/creating-nodes/overview.md), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
 - If the redaction service can't resolve a node's type definition (for example, after uninstalling a community node), n8n fully redacts all output data for that node. This fail-closed approach prevents unknown nodes from leaking sensitive fields.
 - n8n stores redaction settings as part of the workflow configuration. You can manage them through [source control](/source-control-environments/index.md).
 - Redaction doesn't change how execution data is stored in the database. The underlying data isn't encrypted or stored differently when redaction is enabled. Redaction controls visibility at the API layer.

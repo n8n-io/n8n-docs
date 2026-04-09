@@ -1,12 +1,14 @@
 ---
+title: Managing workflows
+description: Patterns for managing workflows across multiple users or organizations in an n8n OEM deployment.
 contentType: howto
 ---
 
-# Workflow management in Embed
+# Managing workflows
 
---8<-- "_snippets/embed-license.md"
+--8<-- "_snippets/self-hosting/oem-agreement.md"
 
-When managing an embedded n8n deployment, spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
+When managing an n8n OEM deployment spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
 
 | Solution | Pros | Cons |
 | -------- | ---- | ---- |
@@ -16,7 +18,7 @@ When managing an embedded n8n deployment, spanning across teams or organizations
 
 
 /// warning
-The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
+The APIs referenced in this document are subject to change at any time. Be sure to check for continued functionality with each version upgrade.
 ///
 
 ## Workflow per user
@@ -40,9 +42,9 @@ After all relevant credential details have been obtained, you can proceed to cre
 
 1. From the menu select **Credentials** > **New**.
 1. Use the drop-down to select the **Credential type** to create, for example *Airtable*.
-    ![Create New Credentials drop-down](/_images/embed/managing-workflows/create_new_credentials.png)
+    ![Create New Credentials drop-down](/_images/hosting/oem-deployment/managing-workflows/create_new_credentials.png)
 1. In the **Create New Credentials** modal, enter the corresponding credentials details for the user, and select the nodes that will have access to these credentials.
-    ![Create New Credentials modal](/_images/embed/managing-workflows/create_new_credentials2.png)
+    ![Create New Credentials modal](/_images/hosting/oem-deployment/managing-workflows/create_new_credentials2.png)
 1. Click **Create** to finish and save.
 
 #### Using the API
@@ -103,11 +105,11 @@ You can duplicate and customize your template workflow using either the Editor U
 1. From the menu select **Workflows** > **Open** to open the template workflow to be duplicated.
 
 1. Select **Workflows** > **Duplicate**, then enter a name for this new workflow and click **Save**.
-    ![Duplicate workflow](/_images/embed/managing-workflows/duplicate_workflow.png)
+    ![Duplicate workflow](/_images/hosting/oem-deployment/managing-workflows/duplicate_workflow.png)
 
 1. Update all relevant nodes to use the credentials for this user (created above).
 
-1. **Save** this workflow set it to **Active** using the toggle in the top-right corner.
+1. **Save** this workflow and set it to **Active** using the toggle in the top-right corner.
 
 #### Using the API
 

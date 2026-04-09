@@ -16,7 +16,7 @@ There are different ways to set up n8n depending on how you intend to use it:
 	* [npm](/hosting/installation/npm.md)
 	* [Docker](/hosting/installation/docker.md)
 	* [Server setup guides](/hosting/installation/server-setups/index.md) for popular platforms
-* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/) for pricing and support.
+* [OEM deployment](/hosting/oem-deployment/index.md): Surface n8n's interface inside your own product's UI. Requires an OEM agreement - [contact n8n](mailto:license@n8n.io) for details.
 
 --8<-- "_snippets/self-hosting/warning.md"
 

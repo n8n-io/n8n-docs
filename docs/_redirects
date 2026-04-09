@@ -982,3 +982,11 @@
 /credentials/add-edit-credentials /credentials/add-edit-credentials 200
 /credentials/* /integrations/builtin/credentials/:splat  301
 /getting-started/create-your-first-workflow/*    /try-it-out/  301
+/embed/  /hosting/oem-deployment/  301
+/embed/index/  /hosting/oem-deployment/  301
+/embed/prerequisites/  /hosting/oem-deployment/prerequisites/  301
+/embed/deployment/  /hosting/oem-deployment/prerequisites/  301
+/embed/configuration/  /hosting/configuration/credential-overwrites/  301
+/embed/managing-workflows/  /hosting/oem-deployment/managing-workflows/  301
+/embed/workflow-templates/  /hosting/configuration/configuration-examples/custom-templates/  301
+/embed/white-labelling/  /hosting/oem-deployment/  301

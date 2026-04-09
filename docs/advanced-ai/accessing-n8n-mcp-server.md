@@ -24,8 +24,9 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 ### Key considerations when using instance-level MCP access
 
 - MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
-- It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
-- It's not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
+- It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
 ## Enabling MCP access
 
@@ -201,6 +202,15 @@ The n8n MCP Server exposes the following tools so that you can create and update
 * `publish_workflow`: Publish a workflow by ID.
 * `unpublish_workflow`: Unpublish a workflow by ID.
 
+### Workflow discovery
+
+* `search_workflows`: Search for workflows enabled for MCP access. Returns workflow IDs, names, descriptions, and trigger information.
+* `get_workflow_details`: Get detailed information about a specific workflow including trigger details.
+
+### Workflow execution
+
+* `execute_workflow`: Execute a workflow by ID. Defaults to `production` mode, which runs the **published** version of the workflow - the workflow must be published for this mode. Supports a `manual` mode to run the current (unpublished) version instead. Returns an execution ID and status; use `get_execution` to retrieve full results.
+
 ### Workflow introspection
 
 * `get_execution`: Retrieve workflow execution history and results. Supports filtering parameters to avoid context overflow. (v2.14 onward)
@@ -217,6 +227,16 @@ The n8n MCP Server exposes the following tools so that you can create and update
 
 * `search_projects`: Search for projects accessible to the current user. (v2.14 onward)
 * `search_folders`: Search for folders within a project. (v2.14 onward)
+
+### Data tables
+
+* `create_data_table`: Create a new data table with the specified columns. Use `search_projects` to find a project ID first. (v2.16 onward)
+* `search_data_tables`: Search for data tables accessible to the current user. Use this to find a data table ID before modifying or adding data to it. (v2.16 onward)
+* `add_data_table_rows`: Insert rows into an existing data table. Each row is an object mapping column names to values. Use `search_data_tables` to find the data table ID first. (v2.16 onward)
+* `add_data_table_column`: Add a new column to an existing data table. (v2.16 onward)
+* `rename_data_table`: Rename an existing data table. (v2.16 onward)
+* `rename_data_table_column`: Rename a column in a data table. (v2.16 onward)
+* `delete_data_table_column`: Delete a column from a data table. This permanently removes the column and all its data. (v2.16 onward)
 
 ## Resources
 

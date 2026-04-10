@@ -77,7 +77,7 @@ n8n will require strict file permissions for configuration files to improve secu
 
 n8n will enable [task runners](/hosting/configuration/task-runners.md) by default to improve security and isolation. All Code node executions will run on task runners.
 
-**Migration path:** Before upgrading to v2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](/hosting/configuration/task-runners.md#external-mode).
+**Migration path:** Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](/hosting/configuration/task-runners.md#external-mode).
 
 ### Remove task runner from `n8nio/n8n` docker image
 

@@ -82,28 +82,26 @@ To configure this credential, you'll need:
 - A **Client Secret**: Generated when you create a WordPress.com developer application.
 - Your **WordPress.com Site**: Your `.wordpress.com` subdomain or custom domain (for example, `myblog.wordpress.com` or `myblog.com`).
 
-To set up the OAuth2 credential:
+Creating this credential involves two steps:
+
+1. [Create a developer application](#create-a-developer-application).
+2. [Set up the OAuth2 credential](#set-up-the-oauth2-credential).
+
+### Create a developer application
 
 1. Go to your WordPress.com [developer applications](https://developer.wordpress.com/apps/){:target="_blank" .external-link} page.
 2. Select **Create New Application**.
 3. Enter a **Name** for your application, for example `n8n integration`.
-4. Copy the **OAuth Redirect URL** from your n8n credential and add it to the **Redirect URLs** field.
-5. Select **Create** to save the application.
-6. Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
-7. Enter your WordPress.com site identifier in the **WordPress.com Site** field. Use either your `.wordpress.com` subdomain (for example, `myblog.wordpress.com`) or your custom domain (for example, `myblog.com`).
+4. Copy the **OAuth Redirect URL** from the **OAuth2 (WordPress.com)** credential screen in n8n. Paste it into the **Redirect URLs** field in WordPress.
+5. Fill out the **Description**, **Website URL**, and other fields as appropriate for your application.
+6. Select **Create** to save the application.
+7. Return to your WordPress.com [developer applications](https://developer.wordpress.com/apps/){:target="_blank" .external-link} page, and click the integration you just created.
+8. Copy the **Client ID** and **Client Secret**.
+
+### Set up the OAuth2 credential
+
+1. In the n8n **OAuth2 (WordPress.com)** credential screen, paste the **Client ID** and **Client Secret** from the previous step.
+2. Enter your WordPress.com site identifier in the **WordPress.com Site** field, for example, `myblog.wordpress.com`.
+3. Click **Connect to WordPress**.
 
 Refer to WordPress's [OAuth2 authentication documentation](https://developer.wordpress.com/docs/oauth2/){:target="_blank" .external-link} for more information.
-
-## Basic auth vs. OAuth2
-
-**Basic auth**:
-
-- Works with self-hosted WordPress installations and WordPress.com-hosted sites.
-- Uses your WordPress username and an application password.
-- Suitable when you manage your own server or prefer direct credential-based access.
-
-**OAuth2**:
-
-- Works with WordPress.com-hosted sites only.
-- Uses token-based authentication via `public-api.wordpress.com`.
-- Suitable for a more secure, delegated access flow without sharing passwords.

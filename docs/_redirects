@@ -78,6 +78,7 @@
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/  301
 /getting-started/key-concepts/#expression   /code/expressions/  301
+/code/expressions/   /data/expressions/  301
 /getting-started/key-concepts/#item   /data/data-structure/  301
 /getting-started/key-concepts/#function   /data/code/  301
 /getting-started/key-concepts/#data   /data/  301

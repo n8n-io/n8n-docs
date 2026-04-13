@@ -344,7 +344,7 @@ Search for folders within a project.
 #### Notes
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows and data tables in a specific folder
+- This tool enables MCP clients to create workflows in a specific folder
 
 ---
 

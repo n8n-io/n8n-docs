@@ -1,12 +1,12 @@
 ---
+title: Configure a custom workflow templates library
+description: Set up a custom workflow template library for your self-hosted n8n instance.
 contentType: howto
 ---
 
-# Workflow templates
+# Configure a custom workflow templates library
 
---8<-- "_snippets/embed-license.md"
-
-n8n provides a library of workflow [templates](/glossary.md#template-n8n). When embedding n8n, you can:
+n8n provides a library of workflow [templates](/glossary.md#template-n8n). When self-hosting n8n, you can:
 
 * Continue to use n8n's workflow templates library (this is the default behavior)
 * Disable workflow templates
@@ -23,4 +23,3 @@ n8n provides a library of workflow [templates](/glossary.md#template-n8n). When 
 ## Add your workflows to the n8n library
 
 --8<-- "_snippets/workflows/templates/submit-templates.md"
-

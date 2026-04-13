@@ -10,9 +10,9 @@ Connect supported MCP clients to your n8n workflows through n8n's built-in MCP s
 
 The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
-- Search within workflows marked as available in MCP
-- Retrieve metadata and trigger information for workflows
-- Trigger and run exposed workflows
+- Search for your workflows
+- Interact with workflows marked as available in MCP
+- Trigger and test exposed workflows
 - Create and edit workflows and data tables
 
 ## Difference between instance-level MCP access and MCP Server Trigger node

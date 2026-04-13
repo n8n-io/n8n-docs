@@ -755,7 +755,7 @@ Delete a column from a data table. This permanently removes the column and all i
 
 #### Notes
 
-- Deleting Data table trough MCP can't be undone.
+- Deleting a column through MCP can't be undone.
 
 ---
 

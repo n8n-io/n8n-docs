@@ -41,7 +41,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `count` | `integer` | Total number of workflows that match the filters |
 
 #### Notes
-
+- Column type is immutable (through MCP) after creation.
 - Maximum result limit is 200.
 - Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow.
 - **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting.

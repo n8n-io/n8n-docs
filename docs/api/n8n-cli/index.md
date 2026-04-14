@@ -37,7 +37,7 @@ If you need to manage your n8n instance (backups, license management, emergency 
 ## Install n8n-cli
 
 ```bash
-npm install -g n8n-cli
+npm install -g @n8n/cli
 ```
 
 ## Connect to your instance

@@ -4,7 +4,7 @@ description: Connect, authenticate, and integrate MCP clients to build and execu
 status: beta
 ---
 
-# Accessing n8n MCP server
+# Accessing and using n8n MCP server
 
 Connect supported MCP clients to your n8n workflows through n8n's built-in MCP server.
 

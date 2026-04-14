@@ -9,7 +9,7 @@ This page describes all tools exposed by the instance-level MCP server.
 
 ---
 
-## Workflow Management
+## Workflow management
 
 ### search_workflows
 
@@ -348,7 +348,7 @@ Search for folders within a project.
 
 ---
 
-## Workflow Builder
+## Workflow builder
 
 ### get_sdk_reference
 
@@ -591,7 +591,7 @@ Archive a workflow in n8n by its ID.
 
 ---
 
-## Data Tables
+## Data tables
 
 ### search_data_tables
 

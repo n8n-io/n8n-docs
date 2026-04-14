@@ -42,8 +42,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 #### Notes
 
-- Maximum result limit is 200.
-- Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow.
+- Maximum result limit is 200
+- Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow
 - **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting
 
 ---
@@ -86,8 +86,8 @@ Get detailed information about a specific workflow including trigger details.
 
 #### Notes
 
-- Sensitive credential data is stripped from nodes before returning.
-- Includes active version details if the workflow is published.
+- Sensitive credential data is stripped from nodes before returning
+- Includes active version details if the workflow is published
 
 ---
 
@@ -122,10 +122,10 @@ Execute a workflow by ID by mapping data from user prompt to trigger inputs. Ret
 
 #### Notes
 
-- Only supports workflows with specific trigger node types: Webhook, Chat Trigger, Form Trigger, Manual Trigger, Schedule Trigger.
-- When `executionMode` is `"production"`, the workflow must have a published (active) version.
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows).
-- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
+- Only supports workflows with specific trigger node types: Webhook, Chat Trigger, Form Trigger, Manual Trigger, Schedule Trigger
+- When `executionMode` is `"production"`, the workflow must have a published (active) version
+- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows)
+- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported
 
 ---
 
@@ -165,8 +165,8 @@ Get execution details by execution ID and workflow ID. By default returns metada
 
 #### Notes
 
-- Use lightweight metadata queries (default) when full execution data isn't needed.
-- Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets.
+- Use lightweight metadata queries (default) when full execution data isn't needed
+- Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets
 
 ---
 
@@ -197,7 +197,7 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 - Can be used to test workflow logic without setting up credentials or hitting external services
 - This tool executes workflows synchronously (waits for execution to finish)
-- Has an enforced MCP execution timeout (5 minutes).
+- Has an enforced MCP execution timeout (5 minutes)
 
 ---
 
@@ -230,7 +230,7 @@ Prepare test pin data for a workflow. Trigger nodes, nodes with credentials, and
 
 #### Notes
 
-- Schemas should be used to generate realistic sample data for `test_workflow`.
+- Schemas should be used to generate realistic sample data for `test_workflow`
 
 ---
 
@@ -311,7 +311,7 @@ Search for projects accessible to the current user.
 
 #### Notes
 
-- Maximum result limit is 100.
+- Maximum result limit is 100
 - This tool enables MCP clients to create workflows and data tables in a specific project
 
 ---
@@ -371,8 +371,8 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 
 #### Notes
 
-- Should be called first before building any workflows.
-- Sections cover patterns, expression syntax, built-in functions, coding rules, import syntax, naming guidelines, and design guidance.
+- Should be called first before building any workflows
+- Sections cover patterns, expression syntax, built-in functions, coding rules, import syntax, naming guidelines, and design guidance
 
 ---
 
@@ -429,8 +429,8 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 
 #### Notes
 
-- Critical for correct node configuration -- MCP clients should always call before writing workflow code.
-- Supports both simple string node IDs and objects with discriminators for multi-variant nodes.
+- Critical for correct node configuration - MCP clients should always call before writing workflow code
+- Supports both simple string node IDs and objects with discriminators for multi-variant nodes
 
 ---
 
@@ -483,8 +483,8 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 
 #### Notes
 
-- Must be called before `create_workflow_from_code` or `update_workflow`.
-- Warnings may be present even when the code is valid.
+- Must be called before `create_workflow_from_code` or `update_workflow`
+- Warnings may be present even when the code is valid
 
 ---
 
@@ -519,12 +519,13 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 
 #### Notes
 
-- Automatically assigns available credentials to nodes.
-- HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
-- Sets `availableInMCP` flag to true on the created workflow.
-- Marks the workflow with `aiBuilderAssisted` metadata.
-- Resolves webhook node IDs automatically.
-- `folderId` requires `projectId` to also be provided.
+- Automatically assigns available credentials to nodes
+- HTTP Request nodes are skipped during credential auto-assignment and must be configured manually
+- Sets `availableInMCP` flag to true on the created workflow
+- Marks the workflow with `aiBuilderAssisted` metadata
+- Resolves webhook node IDs automatically
+- `folderId` requires `projectId` to also be provided
+- MCP clients should generate short descriptions for all new workflows
 
 ---
 
@@ -559,8 +560,9 @@ Update an existing workflow in n8n from validated SDK code. Parses the code into
 
 #### Notes
 
-- Preserves user-configured credentials from the existing workflow by matching nodes by name and type.
-- Marks the workflow with `aiBuilderAssisted` metadata.
+- Preserves user-configured credentials from the existing workflow by matching nodes by name and type
+- Marks the workflow with `aiBuilderAssisted` metadata
+- MCP clients should (re)generate short descriptions for all modified workflows
 
 ---
 
@@ -587,7 +589,7 @@ Archive a workflow in n8n by its ID.
 
 #### Notes
 
-- Idempotent -- skips already-archived workflows.
+- Idempotent - skips already-archived workflows
 
 ---
 
@@ -627,7 +629,7 @@ Search for data tables accessible to the current user. Use this to find a data t
 
 #### Notes
 
-- Maximum result limit is 100.
+- Maximum result limit is 100
 
 ---
 
@@ -658,9 +660,9 @@ Create a new data table with the specified columns.
 
 #### Notes
 
-- At least one column is required.
-- Table name must be unique within the project.
-- Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars).
+- At least one column is required
+- Table name must be unique within the project
+- Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars)
 
 ---
 
@@ -693,8 +695,8 @@ Add a new column to an existing data table.
 
 #### Notes
 
-- Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars).
-- Column type is immutable (trough MCP) after creation.
+- Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars)
+- Column type is immutable (trough MCP) after creation
 
 ---
 
@@ -727,7 +729,7 @@ Rename a column in a data table.
 
 #### Notes
 
-- New name must follow column naming rules: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars).
+- New name must follow column naming rules: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars)
 
 ---
 
@@ -755,7 +757,7 @@ Delete a column from a data table. This permanently removes the column and all i
 
 #### Notes
 
-- Deleting a column through MCP can't be undone.
+- Deleting a column through MCP can't be undone
 
 ---
 
@@ -783,7 +785,7 @@ Rename an existing data table.
 
 #### Notes
 
-- Name must be unique within the project.
+- Name must be unique within the project
 
 ---
 
@@ -811,6 +813,6 @@ Insert rows into an existing data table. Each row is an object mapping column na
 
 #### Notes
 
-- Maximum 1000 rows per call.
-- Row values must be `string`, `number`, `boolean`, or `null`.
-- Column names in row objects must match existing column names in the data table.
+- Maximum 1000 rows per call
+- Row values must be `string`, `number`, `boolean`, or `null`
+- Column names in row objects must match existing column names in the data table

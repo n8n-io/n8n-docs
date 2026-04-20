@@ -65,7 +65,6 @@ This release contains bug fixes.
 
 
 
-
 ## n8n@2.16.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.15.0...n8n@2.16.0) for this version.<br />

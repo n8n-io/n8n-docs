@@ -15,6 +15,10 @@ On this page, you'll find the node parameters for the Redis Vector Store node, a
 You can find authentication information for this node [here](/integrations/builtin/credentials/redis.md).
 ///
 
+/// note | Node version 1.4
+Version 1.4 of this node introduces advanced metadata filtering and custom metadata schema support using the new `FluentRedisVectorStore`. If you're using an older version, refer to the [legacy metadata filter](#metadata-filter-legacy) section. To upgrade, delete the existing node and add a new Redis Vector Store node. Note that you may need to recreate your index and reimport your documents to use the new advanced filtering features.
+///
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Prerequisites
@@ -73,17 +77,19 @@ This [template](https://n8n.io/workflows/10837-chat-with-github-issues-using-ope
 - **Prompt**: Enter the search query.
 - **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
+This Operation Mode includes **Node options** for metadata filtering: [Advanced Metadata Filter](#advanced-metadata-filter-v14) (v1.4+) or [Metadata Filter (Legacy)](#metadata-filter-legacy) (v1.3 and earlier).
 
 ### Insert Documents parameters
 
 - **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 
+This Operation Mode includes a **Node option** for [Metadata Schema](#metadata-schema-v14) (v1.4+).
+
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
 - **Redis Index**: Enter the name of the Redis vector search index to use. Optionally choose an existing one from the list.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter). 
+This Operation Mode includes **Node options** for metadata filtering: [Advanced Metadata Filter](#advanced-metadata-filter-v14) (v1.4+) or [Metadata Filter (Legacy)](#metadata-filter-legacy) (v1.3 and earlier).
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
@@ -100,10 +106,66 @@ You can use this with the [Get Many](#get-many-parameters) and [Retrieve Documen
 
 ## Node options
 
-### Metadata Filter
+### Advanced Metadata Filter (v1.4+)
 
-Metadata filters are available for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
-This is an `OR` query. If you specify more than one metadata filter field, at least one of them must match.
+Available in node version 1.4 and later for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
+
+The advanced metadata filter uses Redis query syntax, supporting Tag, Numeric, Text, and Geo filters with AND/OR logic. This provides more powerful and precise filtering compared to the legacy simple filter.
+
+**Example filter expressions:**
+
+| Filter Type | Example | Description |
+|-------------|---------|-------------|
+| Tag filter | `@category:{electronics}` | Match documents where category equals "electronics" |
+| Multiple tags | `@category:{electronics\|books}` | Match documents where category is "electronics" OR "books" |
+| Numeric range | `@price:[0 100]` | Match documents where price is between 0 and 100 |
+| Combined filters | `@category:{electronics} @price:[0 100]` | Match documents matching both conditions |
+| Text search | `@description:laptop` | Full-text search in the description field |
+
+For detailed syntax information, refer to [LangChain's Redis Vector Store advanced features documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features) and [Redis Query Engine documentation](https://redis.io/docs/latest/develop/interact/search-and-query/query/).
+
+### Metadata Schema (v1.4+)
+
+Available in node version 1.4 and later for the [Insert Documents](#insert-documents-parameters), [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
+
+Define custom metadata field types for indexing. If not provided, the schema will be inferred automatically from your documents.
+
+**Schema format:**
+
+Enter a JSON array defining metadata fields:
+
+```json
+[
+  {"name": "category", "type": "tag"},
+  {"name": "price", "type": "numeric", "options": {"sortable": true}},
+  {"name": "description", "type": "text"},
+  {"name": "location", "type": "geo"}
+]
+```
+
+**Available field types:**
+
+| Type | Description | Use Case |
+|------|-------------|----------|
+| `tag` | Exact match filtering | Categories, labels, status values |
+| `text` | Full-text search | Descriptions, content |
+| `numeric` | Range queries | Prices, dates, scores |
+| `geo` | Geographic queries | Location-based filtering |
+
+**Field options:**
+
+You can add an `options` object to customize field behavior:
+
+- `sortable`: Enable sorting on this field (for `numeric` and `tag` types)
+
+For more details on schema configuration, refer to [LangChain's Redis Vector Store documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features).
+
+### Metadata Filter (Legacy)
+
+Available in node version 1.3 and earlier for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
+
+This is a simple comma-separated list filter. If you specify more than one metadata filter field, it performs an `OR` query—at least one of them must match.
+
 When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 ### Redis Configuration Options
@@ -132,8 +194,8 @@ Available for the [Insert Documents](#insert-documents-parameters) operation mod
 Refer to:
 
 - [Redis Vector Search documentation](https://redis.io/docs/latest/develop/ai/search-and-query/vectors/) for more information about Redis vector capabilities.
-- [RediSearch documentation](https://redis.io/docs/latest/develop/interact/search-and-query/) for more information about RediSearch.
-- [LangChain's Redis Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/redis) for more information about the service.
+- [RediSearch documentation](https://redis.io/docs/latest/develop/ai/search-and-query/query/) for detailed query syntax and filter expressions.
+- [LangChain's Redis Vector Store documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis) for more information about the service, including [advanced filtering and custom schema features](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features).
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

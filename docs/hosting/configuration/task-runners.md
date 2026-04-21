@@ -85,7 +85,7 @@ There are three layers of configuration: the n8n container, the runners containe
 These are the main environment variables that you can set on the n8n container running in external mode:
 
 | Environment variables                                  | Description                                                |
-|--------------------------------------------------------|------------------------------------------------------------||
+|--------------------------------------------------------|------------------------------------------------------------|
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                         |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |

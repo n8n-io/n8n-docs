@@ -4,16 +4,16 @@ description: Connect, authenticate, and integrate MCP clients to build and execu
 status: beta
 ---
 
-# Accessing n8n MCP server
+# Accessing and using n8n MCP server
 
 Connect supported MCP clients to your n8n workflows through n8n's built-in MCP server.
 
 The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
-- Search within workflows marked as available in MCP
-- Retrieve metadata and trigger information for workflows
-- Trigger and run exposed workflows
-- Create and edit workflows
+- Search for your workflows
+- Interact with workflows marked as available in MCP
+- Trigger and test exposed workflows
+- Create and edit workflows and data tables
 
 ## Difference between instance-level MCP access and MCP Server Trigger node
 
@@ -24,7 +24,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 ### Key considerations when using instance-level MCP access
 
 - MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
-- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
+- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
 - It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
 - Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
@@ -158,91 +158,13 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 	![mcp_workflow_description.png](/_images/advanced-ai/mcp_workflow_description.png)
 
-## Executing workflows through MCP clients
-
-MCP clients can execute workflows that you identify as available in MCP.
-
-When a workflow is triggered or created, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
-
-### Providing input data
-
-MCP clients are typically able to assess what inputs are expected by a workflow. If you have a webhook trigger and If you see a client struggling to determine the right inputs, we recommend you provide this information in the workflow description.
-
-### Workflow timeouts
-
-n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients. If a workflow doesn't finish in time, n8n stops the execution and sends an error to the MCP client, ignoring any timeout you set in the workflow settings for MCP-triggered executions.
-
-### Limitations
-
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows).
-- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
-- Binary input data isn't supported. MCP clients can only provide text-based inputs for your workflows.
-
-## Tools
+## Tools and resources
 
 /// tip
 Consider using coding agents (such as Claude Code or Google ADK agents) instead of chat clients as your MCP clients. Coding agents are optimized for generating and validating TypeScript code, making them ideal for building workflows programmatically.
 ///
 
-The n8n MCP Server exposes the following tools so that you can create and update workflows using an MCP Client.
-
-### SDK and node reference
-
-* `get_sdk_reference`: Retrieve n8n SDK documentation to understand the TypeScript syntax used for building workflows as code. Supports fetching either the full documentation or specific sections. Valid sections: `patterns`, `expressions`, `functions`, `rules`, `import`, `guidelines`, `design`, or `all` (v2.13 onward).
-* `search_nodes`: Search for n8n nodes by service name, trigger type, or utility function. Returns node IDs, discriminators (resource/operation/mode parameters), and related nodes needed for the `get_node_types` tool (v2.13 onward).
-* `get_node_types`: Retrieve TypeScript type definitions for n8n nodes. Returns exact parameter names and structures needed for proper node configuration (v2.13 onward).
-* `get_suggested_nodes`: Get curated node recommendations for workflow technique categories. Returns recommended nodes with pattern hints and configuration guidance (v2.13 onward).
-
-### Workflow creation and validation
-
-* `validate_workflow`: Validate TypeScript workflow code for syntax and structural errors. Returns either a success confirmation or a list of errors that need fixing (v2.13 onward).
-* `create_workflow_from_code`: Create a new workflow in n8n from validated TypeScript workflow code. The tool parses the code into workflow JSON and saves it to your n8n instance. Newly created workflows automatically have descriptions generated from the code and MCP access enabled. Optionally accepts `projectId` and `folderId` parameters to create the workflow inside a project or folder. (v2.14 onward)
-* `update_workflow`: Update an existing workflow in n8n from validated TypeScript workflow code. Parses the code and saves changes to your n8n instance (v2.13 onward).
-* `delete_workflow`: Archive a workflow by ID.
-* `publish_workflow`: Publish a workflow by ID.
-* `unpublish_workflow`: Unpublish a workflow by ID.
-
-### Workflow discovery
-
-* `search_workflows`: Search for workflows enabled for MCP access. Returns workflow IDs, names, descriptions, and trigger information.
-* `get_workflow_details`: Get detailed information about a specific workflow including trigger details.
-
-### Workflow execution
-
-* `execute_workflow`: Execute a workflow by ID. Defaults to `production` mode, which runs the **published** version of the workflow - the workflow must be published for this mode. Supports a `manual` mode to run the current (unpublished) version instead. Returns an execution ID and status; use `get_execution` to retrieve full results.
-
-### Workflow introspection
-
-* `get_execution`: Retrieve workflow execution history and results. Supports filtering parameters to avoid context overflow. (v2.14 onward)
-    * `includeData` (boolean): Include full execution result data. Defaults to `false` (metadata only).
-    * `nodeNames` (array): When `includeData` is true, return data only for the specific node names.
-    * `truncateData` (boolean): When `includeData` is true, limit the number of data items returned per node.
-
-### Testing workflows
-
-* `prepare_test_pin_data`: Look at a workflow and return JSON schemas for any nodes that need simulated data (triggers, credentialed nodes, HTTP requests). Use these schemas to generate realistic test data before running `test_workflow`. (v2.15 onward)
-* `test_workflow`: Run a workflow using generated pin data to simulate external services, while still actually executing logic nodes (Set, If, Code). Return the execution status. (v2.15 onward)
-
-### Projects and folders
-
-* `search_projects`: Search for projects accessible to the current user. (v2.14 onward)
-* `search_folders`: Search for folders within a project. (v2.14 onward)
-
-### Data tables
-
-* `create_data_table`: Create a new data table with the specified columns. Use `search_projects` to find a project ID first. (v2.16 onward)
-* `search_data_tables`: Search for data tables accessible to the current user. Use this to find a data table ID before modifying or adding data to it. (v2.16 onward)
-* `add_data_table_rows`: Insert rows into an existing data table. Each row is an object mapping column names to values. Use `search_data_tables` to find the data table ID first. (v2.16 onward)
-* `add_data_table_column`: Add a new column to an existing data table. (v2.16 onward)
-* `rename_data_table`: Rename an existing data table. (v2.16 onward)
-* `rename_data_table_column`: Rename a column in a data table. (v2.16 onward)
-* `delete_data_table_column`: Delete a column from a data table. This permanently removes the column and all its data. (v2.16 onward)
-
-## Resources
-
-For MCP clients that support resources:
-
-* `workflow-sdk-reference`: Access n8n SDK documentation as an MCP resource, providing comprehensive reference material for building workflows as code.
+The n8n MCP server exposes tools for workflow management, workflow building, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](mcp_tools_reference.md).
 
 ## Examples
 
@@ -270,10 +192,6 @@ For MCP clients that support resources:
 5. When prompted, authorize Claude Desktop to access your n8n instance.
 
 ##### Using Access Token
-
-/// info
-This requires the latest version of [Node.js](https://nodejs.org/en/download).
-///
 
 Add the following entry to your `claude_desktop_config.json` file:
 
@@ -380,4 +298,3 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Check that the workflows you want to access are marked as available in MCP.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
-- If you are using desktop MCP clients, make sure you have the latest [Node.js](https://nodejs.org/en/download) version installed.

@@ -1349,7 +1349,9 @@ nav:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
       - "Chat Hub": advanced-ai/chat-hub.md
-      - "Set up and use n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
+      - Instance-level MCP server:
+        - "Set up and use n8n MCP server": advanced-ai/mcp/accessing-n8n-mcp-server.md
+        - "MCP server tools reference": advanced-ai/mcp/mcp_tools_reference.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:

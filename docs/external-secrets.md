@@ -22,6 +22,25 @@ You can use an external secrets store to manage [credentials](/glossary.md#crede
 
 n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/index.md) in one central place.
 
+## Global vaults
+
+By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.
+
+In personal projects, only instance owners and admins can use secrets from global vaults in credentials.
+
+## Project vaults
+
+Instance admins can share a vault with a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
+
+To change the vault scope:
+
+1. In n8n, go to **Settings** > **External Secrets**.
+1. Find the vault you want to configure and select **Edit**.
+1. Under **Share**, choose one of the following:
+    - **Global**: Share this vault across your entire n8n instance. This allows credentials across the instance to reference these secrets.
+    - **Project**: Restrict this vault to a specific project. Choosing a project limits secret access to only that project's credentials.
+1. **Save** your configuration.
+
 ## Connect n8n to your secrets store
 
 /// note | Secret values
@@ -156,21 +175,6 @@ path "kv/*" {
 }
 ```
 
-## Share vault
-
-By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.
-
-Instance admins can share a vault with a specific [project](/user-management/rbac/projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
-
-To change the vault scope:
-
-1. In n8n, go to **Settings** > **External Secrets**.
-1. Find the vault you want to configure and select **Edit**.
-1. Under **Share**, choose one of the following:
-    - **Global**: Share this vault across your entire n8n instance. This allows credentials across the instance to reference these secrets.
-    - **Project**: Restrict this vault to a specific project. Choosing a project limits secret access to only that project's credentials.
-1. **Save** your configuration.
-
 ## Use secrets in n8n credentials
 
 To use a secret from your store in an n8n credential:
@@ -188,12 +192,12 @@ To use a secret from your store in an n8n credential:
 ## Using external secrets with n8n environments
 
 n8n's [Source control and environments](/source-control-environments/index.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
-\
+
 For example, you have two n8n instances, one for development and one for production. In your secrets provider, create a project with two environments, development and production. Generate a token for each environment of your secrets provider. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
 
 ## Using external secrets in projects
 
-You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Share vault](#share-vault) for setup steps. Project-scoped vaults are available from version `2.11.0`.
+You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from version `2.11.0`.
 
 ### Access for project roles
 

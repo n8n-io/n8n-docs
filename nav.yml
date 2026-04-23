@@ -1166,6 +1166,7 @@ nav:
         - integrations/builtin/credentials/zulip.md
       - Custom API actions for existing nodes: integrations/custom-operations.md
       - Handle rate limits: integrations/builtin/rate-limits.md
+      - Deprecated nodes: integrations/builtin/deprecated-and-versioned-nodes.md
     - Community nodes:
       - Installation and management:
         - integrations/community-nodes/installation/index.md

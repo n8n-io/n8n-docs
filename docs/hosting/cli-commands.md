@@ -7,13 +7,13 @@ contentType: reference
 
 The **Server CLI** is a built-in command-line interface that runs on the same machine as your n8n installation. It provides direct database access for administrative tasks and can execute most commands even when n8n isn't running.
 
-/// info | n8n-cli
-Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n-cli](/api/n8n-cli/index.md).
+/// info | n8n CLI
+Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n CLI](/api/n8n-cli/index.md).
 ///
 
-## When to use Server CLI vs n8n-cli
+## When to use Server CLI vs n8n CLI
 
-| Feature | Server CLI | n8n-cli |
+| Feature | Server CLI | n8n CLI |
 |---------|-----------|---------|
 | **Where it runs** | Same machine as n8n | Any machine with network access |
 | **Authentication** | Direct database access | API key |

@@ -32,8 +32,8 @@ Interact with n8n directly using HTTP requests. Ideal for:
 - Language-agnostic HTTP calls
 - Direct REST API usage in workflows
 
-### n8n-cli (Recommended for developers)
-Use [n8n-cli](/api/n8n-cli/index.md) for a command-line experience. It wraps the public API and is optimized for:
+### n8n CLI (Recommended for developers)
+Use [n8n CLI](/api/n8n-cli/index.md) for a command-line experience. It wraps the public API and is optimized for:
 - Command-line automation and scripting
 - CI/CD pipeline integration
 - AI agent integration (Claude Code, Cursor, etc.)

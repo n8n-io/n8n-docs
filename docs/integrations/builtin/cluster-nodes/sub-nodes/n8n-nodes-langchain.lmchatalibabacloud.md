@@ -13,6 +13,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Operations
 
 ### Generate chat response

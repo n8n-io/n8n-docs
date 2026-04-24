@@ -24,11 +24,11 @@ Create a completion with a Qwen model.
 
 **Parameters**
 
-- **Model** (type: options, field: `modelId`): The model to use for generation (for example, qwen3.5-flash, qwen3-max).
+- **Model** (type: options, field: `modelId`): The model to use for generation (for example, Qwen3.5 Flash, Qwen3 Max).
 - **Messages** (type: fixedCollection, field: `messages`): One or more messages forming the conversation.
-    - messageValues:
+    - Message values:
         - **Content** (type: string, field: `content`): The content of the message.
-        - **Role** (type: options, field: `role`): The role of the message sender (user or assistant).
+        - **Role** (type: options, field: `role`): The role of the message sender (User or Assistant).
 - **Simplify Output** (type: boolean, field: `simplify`): Return a simplified version of the response instead of the full raw API output.
 
 **Options**
@@ -50,8 +50,8 @@ Take images as input and ask vision-language questions about them.
 
 **Parameters**
 
-- **Model** (type: options, field: `modelId`): Vision-language model to use (for example, qwen3-vl-flash).
-- **Input Type** (type: options, field: `inputType`): How to provide the image (`url` or `binary`).
+- **Model** (type: options, field: `modelId`): Vision-language model to use (for example, Qwen-VL Flash).
+- **Input Type** (type: options, field: `inputType`): How to provide the image (URL or binary data).
 - **Image URL** (type: string, field: `imageUrl`): The URL of the image to analyze (required when using URL input).
 - **Input Data Field Name** (type: string, field: `binaryPropertyName`): Binary field name to read the image from when using binary input.
 - **Question** (type: string, field: `question`): The question or instruction about the image.
@@ -68,7 +68,7 @@ Create an image from a text prompt.
 
 **Parameters**
 
-- **Model** (type: options, field: `modelId`): Image-generation model to use (for example, z-image-turbo).
+- **Model** (type: options, field: `modelId`): Image-generation model to use (for example, Z-Image Turbo).
 - **Prompt** (type: string, field: `prompt`): The text prompt describing the image to generate.
 - **Download Image** (type: boolean, field: `downloadImage`): When true, download the generated image as binary data; otherwise only the URL is returned.
 
@@ -83,11 +83,11 @@ Generate a short video from a text prompt.
 
 **Parameters**
 
-- **Model** (type: options, field: `modelId`): Text-to-video model to use (for example, wan2.6-t2v).
+- **Model** (type: options, field: `modelId`): Text-to-video model to use (for example, Wan 2.6 Text-to-Video).
 - **Prompt** (type: string, field: `prompt`): The text prompt to generate the video from.
 - **Resolution** (type: options, field: `resolution`): Resolution tier (720P or 1080P).
-- **Duration (Seconds)** (type: number, field: `duration`): Duration of the generated video in seconds (two–15).
-- **Shot Type** (type: options, field: `shotType`): Single or multi-shot narrative.
+- **Duration (Seconds)** (type: number, field: `duration`): Duration of the generated video in seconds (2–15).
+- **Shot Type** (type: options, field: `shotType`): Single or Multi (multi-shot narrative).
 - **Download Video** (type: boolean, field: `downloadVideo`): When true, download the generated video as binary data; otherwise only the URL is returned.
 - **Simplify Output** (type: boolean, field: `simplify`): Return a simplified response.
 
@@ -95,9 +95,9 @@ Generate a short video from a text prompt.
 
 - **Prompt Extend** (type: boolean, field: `promptExtend`): Automatically extend and enhance the prompt.
 - **Audio** (type: boolean, field: `audio`): Whether to generate audio for the video.
-- **Audio Input Type** (type: options, field: `audioInputType`): How to provide audio, for example, `url`.
-- **Audio URL** (type: string, field: `audioUrl`): URL of the audio file to use.
-- **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Binary field name for audio input.
+- **Audio Input Type** (type: options, field: `audioInputType`): Must be specified when the **Audio** option is activated. It defines how to provide audio, via an audio URL, or a binary file.
+- **Audio URL** (type: string, field: `audioUrl`): Must be specified when **Audio Input Type** is set to URL. Defines the URL of the audio file to use.
+- **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Must be specified when **Audio Input Type** is set to **Binary File**. Defines the binary field name for audio input.
 
 ### Generate video from image
 
@@ -105,13 +105,13 @@ Generate a video from one or more images using Wan models.
 
 **Parameters**
 
-- **Model** (type: options, field: `modelId`): Image-to-video model to use (for example, wan2.6-i2v-flash).
-- **Input Type** (type: options, field: `inputType`): How to provide the image (`url` or `binary`).
+- **Model** (type: options, field: `modelId`): Image-to-video model to use (for example, Wan 2.6 Image-to-Video Flash).
+- **Input Type** (type: options, field: `inputType`):  Defines how to provide the image, via an image URL, or a binary file.
 - **Image URL** (type: string, field: `imgUrl`): URL of the first-frame image to generate video from.
 - **Input Data Field Name** (type: string, field: `binaryPropertyName`): Binary field name to read the image from when using binary input.
 - **Prompt** (type: string, field: `prompt`): Optional text describing desired content and visual characteristics.
 - **Resolution** (type: options, field: `resolution`): Resolution tier (720P or 1080P).
-- **Duration (Seconds)** (type: number, field: `duration`): Duration in seconds (two–15).
+- **Duration (Seconds)** (type: number, field: `duration`): Duration in seconds (2–15).
 - **Shot Type** (type: options, field: `shotType`): Single or multi-shot narrative.
 - **Download Video** (type: boolean, field: `downloadVideo`): When true, download the generated video as binary data; otherwise only the URL is returned.
 - **Simplify Output** (type: boolean, field: `simplify`): Return a simplified response.
@@ -120,9 +120,9 @@ Generate a video from one or more images using Wan models.
 
 - **Prompt Extend** (type: boolean, field: `promptExtend`): Automatically extend and enhance the prompt.
 - **Audio** (type: boolean, field: `audio`): Whether to generate audio for the video.
-- **Audio Input Type** (type: options, field: `audioInputType`): How to provide audio, for example, `url`.
-- **Audio URL** (type: string, field: `audioUrl`): URL of the audio file to use.
-- **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Binary field name for audio input.
+- **Audio Input Type** (type: options, field: `audioInputType`): Defines how to provide audio, via an audio URL, or a binary file.
+- **Audio URL** (type: string, field: `audioUrl`): URL of the audio file to use, when **Audio Input Type** is set to URL.
+- **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Binary field name for audio input, when **Audio Input Type** is set to binary data.
 
 ## Templates and examples
 

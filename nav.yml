@@ -1391,6 +1391,7 @@ nav:
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
+      - n8n CLI: api/n8n-cli/index.md
   # - Feature tests:
   #    - Main features: docs-site-feature-tests/index.md
 

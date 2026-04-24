@@ -29,13 +29,11 @@ To configure this credential, you'll need:
 - A **Client ID**
 - A **Client Secret**
 
-/// note | Developer program
-Reddit's developer program is in a closed beta. The instructions below are for regular Reddit users, not members of the developer platform.
+/// warning | API access requires pre-approval
+Reddit closed self-service access to their public data API in November 2025. Now, Reddit require manual approval before you can create new apps. Review Reddit's [Responsible Builder Policy](https://support.reddithelp.com/hc/en-us/articles/42728983564564-Responsible-Builder-Policy){:target="_blank" .external-link} and submit a request via [Reddit's Developer Support form](https://support.reddithelp.com/hc/en-us/requests/new?ticket_form_id=14868593862164){:target="_blank" .external-link}.
 ///
 
-Generate both by creating a [third-party app](https://www.reddit.com/prefs/apps). Visit the previous link or go to your **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**.
-
-Use these settings for your app:
+Once approved, create a [third-party app](https://www.reddit.com/prefs/apps){:target="_blank" .external-link}. Visit the previous link, or go to your **profile > Settings > Privacy > Third-party app authorizations > are you a developer? create an app**.  and use these settings:
 
 - Copy the **OAuth Callback URL** from n8n and use it as your app's **redirect uri**.
 - The app's client ID displays underneath your app name. Copy that and add it as your n8n **Client ID**.

@@ -35,7 +35,7 @@ Reddit closed self-service access to their public data API in November 2025. Now
 
 Once approved, create a [third-party app](https://www.reddit.com/prefs/apps){:target="_blank" .external-link} and use these settings:
 
-- Copy the **OAuth Callback URL** from n8n and use it as your app's **Redirect URI**.
+- Copy the **OAuth Callback URL** from n8n and use it as your app's **redirect uri**.
 - The app's client ID displays underneath your app name. Copy that and add it as your n8n **Client ID**.
 - Copy the app's **secret** and add it as your n8n **Client Secret**.
 

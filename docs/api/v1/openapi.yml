@@ -2460,6 +2460,105 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+    get:
+      x-eov-operation-id: getFolder
+      x-eov-operation-handler: v1/handlers/folders/folders.handler
+      tags:
+        - Folders
+      summary: Get folder details
+      description: Get folder details including sub-folder and workflow counts.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+        - name: folderId
+          in: path
+          description: The ID of the folder.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  id:
+                    type: string
+                    readOnly: true
+                  name:
+                    type: string
+                  parentFolderId:
+                    type: string
+                    nullable: true
+                  createdAt:
+                    type: string
+                    format: date-time
+                    readOnly: true
+                  updatedAt:
+                    type: string
+                    format: date-time
+                    readOnly: true
+                  totalSubFolders:
+                    type: integer
+                    description: Total number of sub-folders (recursive).
+                  totalWorkflows:
+                    type: integer
+                    description: Total number of workflows (recursive).
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+    patch:
+      x-eov-operation-id: updateFolder
+      x-eov-operation-handler: v1/handlers/folders/folders.handler
+      tags:
+        - Folders
+      summary: Update a folder
+      description: Update folder name or parent folder.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+        - name: folderId
+          in: path
+          description: The ID of the folder.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Payload for folder update.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/folder.update'
+        required: true
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/folder'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     audit:
@@ -4101,6 +4200,17 @@ components:
         name:
           type: string
           example: My Folder
+        parentFolderId:
+          type: string
+          example: abc123
+    folder.update:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        name:
+          type: string
+          example: Renamed Folder
         parentFolderId:
           type: string
           example: abc123

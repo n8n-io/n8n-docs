@@ -12,6 +12,7 @@ The Alibaba Cloud Chat Model node sends chat prompts to Alibaba Cloud's conversa
 You can find authentication information for this node [here](/integrations/builtin/credentials/alibaba.md).
 ///
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 ## Operations
 
 ### Generate chat response

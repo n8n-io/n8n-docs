@@ -27,6 +27,14 @@ You can configure how the node listens for events.
 	* Delete
 * Select **Listen to Channel**, then enter a channel name that the node should monitor.
 
+/// note | Postgres event listener and required database permissions
+* To listen for trigger events, n8n automatically creates a Postgres trigger on the target table. This trigger is added when you activate a workflow, and removed when you deactivate it.
+* If your workflow is inactive, the trigger is also added when you test the workflow and removed once test event listening stops.
+* The Postgress trigger calls an automatically-created procedure to tell n8n about the event.
+* The user in your Postgres credential must have permissions to create and execute triggers and procedures. In PostgreSQL, this requires superuser access, table ownership, or the TRIGGER privilege - plus CREATE privilege on the schema where the procedure will reside.
+///
+
+
 ## Related resources
 
 n8n provides an app node for Postgres. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md).

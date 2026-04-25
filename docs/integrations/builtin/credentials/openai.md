@@ -32,6 +32,8 @@ To configure this credential, you'll need:
 
 - An **API Key**
 - An **Organization ID**: Required if you belong to multiple organizations; otherwise, leave this blank.
+- A **Base URL**: Override the default OpenAI API URL. Defaults to `https://api.openai.com/v1`. Use this to connect to OpenAI-compatible providers.
+- **Add Custom Header**: Toggle to add a custom HTTP header to all API requests.
 
 To generate your API Key:
 
@@ -49,3 +51,17 @@ To find your Organization ID:
 
 Refer to [Setting up your organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization) for more information. Note that API requests made using an Organization ID will count toward the organization's subscription quota.
 
+## Using with OpenAI-compatible providers
+
+The **Base URL** field lets you connect to any provider that offers an OpenAI-compatible API. This includes AI gateways and inference providers such as [FuturMix](https://futurmix.ai){:target="_blank" .external-link}, [LiteLLM](https://www.litellm.ai){:target="_blank" .external-link}, and self-hosted solutions like [vLLM](https://docs.vllm.ai){:target="_blank" .external-link} or [Ollama](https://ollama.ai){:target="_blank" .external-link}.
+
+To use a third-party provider:
+
+1. Create a new **OpenAI** credential in n8n.
+2. Enter the **API Key** from your provider.
+3. Set the **Base URL** to your provider's OpenAI-compatible endpoint, for example `https://futurmix.ai/v1`.
+4. Leave the **Organization ID** blank unless your provider requires it.
+
+/// note | Model availability
+When using a custom Base URL, the model dropdown in the OpenAI Chat Model node dynamically loads models from the configured provider's `/models` endpoint. You'll only see models available through that provider.
+///

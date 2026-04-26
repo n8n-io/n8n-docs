@@ -111,3 +111,79 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 --8<-- "_snippets/integrations/builtin/credentials/google/app-becoming-unauthorized.md"
 
+## Local development and testing
+
+If you're running n8n on your local machine, you don't need a public domain,
+SSL certificate, or port forwarding to use Google OAuth. Google allows
+`localhost` as a valid redirect URI for development purposes.
+
+Your n8n OAuth redirect URL will look something like this: http://localhost:5678/rest/oauth2-credential/callback
+
+Add this URL to the **Authorized redirect URIs** field in your Google Cloud
+Console OAuth client settings. For more details on acceptable redirect URIs,
+refer to [Google's redirect URI documentation](https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications).
+
+### Testing mode and test users
+
+By default, new Google Cloud projects are in **Testing** mode. In this mode,
+only accounts you manually add as test users can complete the OAuth flow —
+everyone else will see an "app not verified" or access denied screen.
+
+To add test users:
+
+1. Open the [Google Cloud Console](https://console.cloud.google.com/).
+2. Go to **APIs & Services** > **OAuth consent screen**.
+3. Scroll down to the **Test users** section.
+4. Select **Add users** and enter the Gmail address(es) you want to allow.
+
+Refer to [Google's consent screen guide](https://developers.google.com/workspace/guides/configure-oauth-consent)
+for more detail on test users.
+
+/// note | When to publish your app
+If you want any Google account (not just test users) to authenticate, you'll
+need to publish your OAuth app. Apps requesting sensitive scopes go through
+Google's review process. For personal use or internal tooling, staying in
+Testing mode is usually fine.
+///
+
+## OAuth scopes
+
+When connecting Google services to workflows — especially AI agent workflows —
+it's good practice to request only the scopes your workflow actually needs.
+Overly broad scopes increase the risk of unintended data access or modification
+if a workflow behaves unexpectedly.
+
+For example, if your workflow only needs to read calendar events, use: https://www.googleapis.com/auth/calendar.readonly
+
+Instead of the broader: https://www.googleapis.com/auth/calendar
+
+You can find the full list of available scopes for each Google service in the
+[OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) reference.
+
+## Troubleshooting
+
+### redirect_uri_mismatch
+
+This error means the redirect URI n8n is sending doesn't match any of the
+URIs registered in your Google Cloud Console OAuth client.
+
+**Fix:** Copy the **OAuth Redirect URL** from your n8n credential panel and
+paste it exactly — including the protocol (`http` or `https`) and port number —
+into the **Authorized redirect URIs** field of your Google OAuth client.
+
+### Access denied / "app not verified"
+
+This usually happens when your app is still in Testing mode and the Google
+account you're trying to authenticate with hasn't been added as a test user.
+
+**Fix:** Go to **APIs & Services** > **OAuth consent screen** > **Test users**
+and add the account you're trying to use.
+
+### invalid_client
+
+This error typically means the Client ID or Client Secret in your n8n
+credential doesn't match what's in Google Cloud Console.
+
+**Fix:** Go back to your OAuth client in Google Cloud Console, copy both
+values fresh, and re-enter them in n8n. Watch out for accidental spaces when
+copying.

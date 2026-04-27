@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: errata-ai/vale-action@reviewdog
+      - uses: errata-ai/vale-action@v2.1.1
         with:
           files: '["docs", "_snippets"]'

@@ -19,11 +19,20 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
+### Authentication
+
+Choose how to authenticate with OpenAI.
+
+- **API Key**: Use an OpenAI API key.
+- **OpenAI Account**: Connect a ChatGPT or OpenAI account without entering an API key. n8n uses an OpenAI device code login flow for this option.
+
 ### Model
 
 Select the model to use to generate the completion.
 
 n8n dynamically loads models from OpenAI, and you'll only see the models available to your account.
+
+When you use **OpenAI Account**, n8n loads the models available through your ChatGPT or OpenAI account. The default model is `gpt-5.4-mini`.
 
 ### Use Responses API
 OpenAI provides two endpoints for generating output from a model:
@@ -121,5 +130,3 @@ Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/r
 ## Common issues
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
-
-

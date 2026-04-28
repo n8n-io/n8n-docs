@@ -12,7 +12,7 @@ Agent telemetry and otel formatted metrics will be coming soon
 n8n can emit [OpenTelemetry](https://opentelemetry.io/){:target="_blank" .external-link} traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
 
 /// info | Feature availability
-OpenTelemetry workflow tracing is available on self-hosted n8n only.
+OpenTelemetry workflow tracing requires environment variables to be set so is currently available on self-hosted n8n only.
 ///
 
 ## What you get
@@ -54,7 +54,8 @@ If your collector needs authentication, set `N8N_OTEL_EXPORTER_OTLP_HEADERS` to 
 ```bash
 export N8N_OTEL_EXPORTER_OTLP_HEADERS="authorization=Bearer <your-token>,x-tenant=acme"
 
-// It is recommendded to use the `_FILE` postfix if you are putting a token here: N8N_OTEL_EXPORTER_OTLP_ENDPOINT_FILE=/mnt/otel-headers
+// It is recommendded to use the `_FILE` postfix if you are putting a token here:
+N8N_OTEL_EXPORTER_OTLP_ENDPOINT_FILE=/mnt/otel-headers
 ```
 
 For the full list of supported variables, refer to [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).
@@ -116,7 +117,7 @@ You can send traces to a local [Jaeger](https://www.jaegertracing.io/){:target="
 
 1. Save the following as `docker-compose.yml`:
 
-	```yaml
+```yaml
 services:
   jaeger:
     image: jaegertracing/jaeger:latest
@@ -124,21 +125,21 @@ services:
       - "16686:16686" # UI
       - "4317:4317"   # OTLP gRPC
       - "4318:4318"   # OTLP HTTP
-	```
+```
 
 2. Start Jaeger:
 
-	```bash
-	docker compose up -d
-	```
+```bash
+docker compose up -d
+```
 
 3. Start n8n with tracing turned on and pointed at Jaeger:
 
-	```bash
-	export N8N_OTEL_ENABLED=true
-	export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318
-	n8n start
-	```
+```bash
+export N8N_OTEL_ENABLED=true
+export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318
+n8n start
+```
 
 5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) to see the trace.
 

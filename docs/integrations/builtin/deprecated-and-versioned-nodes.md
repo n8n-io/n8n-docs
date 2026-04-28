@@ -8,7 +8,7 @@ n8n improves its node library over time. This page lists removed nodes (fully re
 
 ## Deprecated nodes
 
-n8n won't release further updates or bug fixes for deprecated nodes. Existing workflows that use them continue to run, but you should migrate to a supported alternative.
+n8n won't release further updates or bug fixes for deprecated nodes. You can use them in existing workflows, but new workflows should use alternative nodes.
 
 /// note | Migrate deprecated nodes
 Replace deprecated nodes in your workflows before n8n removes them in a future release.
@@ -32,7 +32,7 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Interval | 1 |
 | JSON Input Loader | 1 |
 | Manual Chat Trigger | 1.1 |
-| Motorhead | 1.3 |
+| Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
 | OpenAI Model | 1 |
 | Options | 1 |
@@ -42,6 +42,7 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Read Binary File | 1 |
 | Read Binary Files | 1 |
 | Read PDF | 1 |
+| SerpApi (Google Search) | 1 |
 | Simulate | 1 |
 | Simulate Trigger | 1 |
 | Supabase: Insert | 1 |
@@ -49,13 +50,13 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Tool Executor | 1 |
 | Workflow Trigger | 1 |
 | Write Binary File | 1 |
-| Zep | 1.3 |
+| Zep | 1.4 |
 | Zep Vector Store: Insert | 1 |
 | Zep Vector Store: Load | 1 |
 
 ## Removed nodes
 
-n8n removes nodes when the external service they connect to is no longer available. Workflows that use a removed node will fail.
+n8n removes nodes when the external service they connect to is no longer available, or the node is no longer maintained.
 
 /// warning | Update or remove affected workflows
 If your workflows use any of these nodes, update them to use an alternative or remove them to avoid errors.
@@ -70,9 +71,7 @@ If your workflows use any of these nodes, update them to use an alternative or r
 
 ## Versioned nodes
 
-When n8n makes significant improvements to a node, n8n releases a new default version and keeps older versions available. Existing workflows using an older version continue to work unchanged.
-
-Always use the current version in new workflows to get the latest features and bug fixes.
+When n8n makes significant improvements to a node, they release a new version of it.
 
 | Node | Current node version | Previous node versions |
 |------|:--------------------:|:-----------------------|
@@ -80,7 +79,7 @@ Always use the current version in new workflows to get the latest features and b
 | AI Agent Tool | 3 | 2.2 |
 | Airtable | 2.2 | 1, 2, 2.1 |
 | Airtop | 1.1 | 1 |
-| Anthropic Chat Model | 1.3 | 1, 1.1, 1.2 |
+| Anthropic Chat Model | 1.4 | 1, 1.1, 1.2, 1.3 |
 | AWS Bedrock Chat Model | 1.1 | 1 |
 | AwsS3 | 2 | 1 |
 | Baserow | 1.1 | 1 |
@@ -112,7 +111,7 @@ Always use the current version in new workflows to get the latest features and b
 | Git | 1.1 | 1 |
 | GitHub | 1.1 | 1 |
 | Gmail | 2.2 | 1, 2, 2.1 |
-| Gmail Trigger | 1.3 | 1, 1.1, 1.2 |
+| Gmail Trigger | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Google Analytics | 2 | 1 |
 | Google BigQuery | 2.1 | 1, 2 |
 | Google Books | 2 | 1 |
@@ -120,6 +119,7 @@ Always use the current version in new workflows to get the latest features and b
 | Google Cloud Firestore | 1.1 | 1 |
 | Google Docs | 2 | 1 |
 | Google Drive | 3 | 1, 2 |
+| Google Gemini Chat Model | 1.1 | 1 |
 | Google Sheets | 4.7 | 1, 2, 3, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 |
 | Google Slides | 2 | 1 |
 | Google Translate | 2 | 1 |
@@ -151,22 +151,24 @@ Always use the current version in new workflows to get the latest features and b
 | Microsoft Teams | 2 | 1, 1.1 |
 | Mindee | 3 | 1, 2 |
 | MongoDB | 1.2 | 1, 1.1 |
+| MongoDB Chat Memory | 1.1 | 1 |
+| Moonshot Kimi Chat Model | 1.1 | 1 |
 | MySQL | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
 | n8n Form | 2.5 | 1, 2.3, 2.4 |
 | n8n Form Trigger | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
 | NocoDB | 3 | 1, 2 |
 | Notion | 2.2 | 1, 2, 2.1 |
-| OpenAI | 2.2 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2, 2.1 |
+| OpenAI | 2.3 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2, 2.1, 2.2 |
 | OpenAI Chat Model | 1.3 | 1, 1.1, 1.2 |
 | Perplexity | 2 | 1 |
 | Pipedrive | 2 | 1 |
 | Pipedrive Trigger | 1.1 | 1 |
 | Postgres | 2.6 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5 |
-| Postgres Chat Memory | 1.3 | 1, 1.1, 1.2 |
+| Postgres Chat Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Question and Answer Chain | 1.7 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 |
 | RabbitMQ | 1.1 | 1 |
 | Read/Write Files from Disk | 1.1 | 1 |
-| Redis Chat Memory | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
+| Redis Chat Memory | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
 | Remove Duplicates | 2 | 1, 1.1 |
 | Respond to Webhook | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | RSS Read | 1.2 | 1, 1.1 |
@@ -176,7 +178,7 @@ Always use the current version in new workflows to get the latest features and b
 | Send Email | 2.1 | 1, 2 |
 | Sentiment Analysis | 1.1 | 1 |
 | Set | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
-| Simple Memory | 1.3 | 1, 1.1, 1.2 |
+| Simple Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Slack | 2.4 | 1, 2, 2.1, 2.2, 2.3 |
 | Split In Batches | 3 | 2 |
 | Splunk | 2 | 1 |
@@ -201,4 +203,5 @@ Always use the current version in new workflows to get the latest features and b
 | WhatsApp Business Cloud | 1.1 | 1 |
 | Workflow Retriever | 1.1 | 1 |
 | X (Formerly Twitter) | 2 | 1 |
-| Xata | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Xata | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
+

@@ -1,6 +1,6 @@
 ---
 title: Alibaba Cloud Model Studio node documentation
-description: Interact with Alibaba Cloud Qwen models via Model Studio. This page explains how to use the node in n8n workflows to: generate text completions, analyze or generate images, and create videos from text or images.
+description: Interact with Alibaba Cloud Qwen models via Model Studio. This page explains how to use the node in n8n workflows to generate text completions, analyze or generate images, and create videos from text or images.
 contentType: [integration, reference]
 ---
 

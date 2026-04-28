@@ -1262,6 +1262,7 @@ nav:
         - Logs: hosting/configuration/environment-variables/logs.md
         - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md
+        - OpenTelemetry: hosting/configuration/environment-variables/opentelemetry.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
         - SSRF protection: hosting/configuration/environment-variables/ssrf-protection.md
@@ -1295,6 +1296,7 @@ nav:
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
+      - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
       - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md

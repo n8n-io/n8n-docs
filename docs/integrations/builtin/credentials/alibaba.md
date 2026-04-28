@@ -9,7 +9,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Alibaba Cloud Model Studio](/integrations/builtin/app-nodes/n8n-nodes-langchain.n8n-nodes-langchain.alibabacloud.md)
+- [Alibaba Cloud Model Studio](/integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md)
 - [Alibaba Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md)
 
 ## Prerequisites

@@ -103,10 +103,12 @@ Command flags:
 | --all | Exports all workflows/credentials. |
 | --backup | Sets --all --pretty --separate for backups. You can optionally set --output. |
 | --id | The ID of the workflow to export. |
-| --output | Outputs file name or directory if using separate files. |
+| --output, -o | Outputs file name or directory if using separate files. |
 | --pretty | Formats the output in an easier to read fashion. |
 | --separate | Exports one file per workflow (useful for versioning). Must set a directory using --output. |
-| --decrypted | Exports the credentials in a plain text format. |
+| --decrypted | Exports the credentials in a plain text format. (Credentials only.) |
+| --version | The version ID of a specific historical version to export. (Workflows only, can't be used with `--all` or `--published`.) |
+| --published | Exports the published/active version of the workflow instead of the current draft. When combined with `--all`, unpublished workflows are skipped. (Workflows only, can't be used with `--version`.) |
 
 ### Workflows
 
@@ -133,6 +135,31 @@ Export all the workflows to a specific directory using the `--backup` flag (deta
 ```bash
 n8n export:workflow --backup --output=backups/latest/
 ```
+#### Export a specific workflow version
+
+You can export a specific historical version of a workflow by passing its `versionId` with `--version`:
+
+```bash
+n8n export:workflow --id=<ID> --version=<VERSION_ID> --output=workflow-v1.json
+```
+
+#### Export the published version of a workflow
+
+Use `--published` to export the currently published/active version of a workflow rather than the current draft:
+
+```bash
+n8n export:workflow --id=<ID> --published --output=published.json
+```
+
+You can combine `--published` with `--all` to export every workflow's published version. Workflows that don't have a published version are skipped:
+
+```bash
+n8n export:workflow --all --published --output=workflows.json
+```
+
+/// note | Version metadata
+When exporting a workflow, n8n includes a `versionMetadata` property containing the workflow's historical name and description for that version. The import command preserves this data in the workflow history table on import. The current workflow's name and description are not overridden.
+///
 
 ### Credentials
 
@@ -233,7 +260,9 @@ Import all the workflow files as JSON from the specified directory:
 ```bash
 n8n import:workflow --separate --input=backups/latest/
 ```
-
+/// note | Version metadata on import
+If the imported file includes a `versionMetadata` property (added by exports that target a specific version or the published version), n8n preserves that historical name and description in the workflow history table. The current workflow entity's name and description are kept as-is.
+///
 ### Credentials
 
 Import credentials from a specific file:

@@ -43,12 +43,70 @@ Execute a saved workflow by its ID:
 n8n execute --id <ID>
 ```
 
-## Change the active status of a workflow
+## Publish or unpublish a workflow
 
-You can change the active status of a workflow using the CLI.
+You can publish or unpublish a workflow using the CLI. In n8n 2.0, the [previous active/inactive toggle](/2-0-breaking-changes.md) was replaced by a publish/unpublish model. Use `publish:workflow` and `unpublish:workflow` to change a workflow's published state from the CLI.
 
 /// note | Restart required
 These commands operate on your n8n database. If you execute them while n8n is running, the changes don't take effect until you restart n8n.
+///
+
+### Publish a workflow
+
+Use `publish:workflow` to publish a workflow by its ID. You can optionally publish a specific historical version by passing its `versionId`.
+
+Command flags:
+
+| Flag | Description |
+|------|-------------|
+| --help | Help prompt. |
+| --id | The ID of the workflow to publish. Required. |
+| --versionId | Optional version ID to publish. If omitted, the current draft is published. |
+
+/// note | No `--all` flag
+Unlike the deprecated `update:workflow` command, `publish:workflow` does not support `--all`. This is intentional: it prevents accidental bulk publishing of workflows in production environments. Publish workflows individually by ID.
+///
+
+Publish the current draft of a workflow by ID:
+
+```bash
+n8n publish:workflow --id=<ID>
+```
+
+Publish a specific historical version of a workflow:
+
+```bash
+n8n publish:workflow --id=<ID> --versionId=<VERSION_ID>
+```
+
+### Unpublish a workflow
+
+Use `unpublish:workflow` to unpublish a workflow by its ID, or all workflows at once.
+
+Command flags:
+
+| Flag | Description |
+|------|-------------|
+| --help | Help prompt. |
+| --id | The ID of the workflow to unpublish. Can't be used with `--all`. |
+| --all | Unpublish all workflows. Can't be used with `--id`. |
+
+Unpublish a workflow by its ID:
+
+```bash
+n8n unpublish:workflow --id=<ID>
+```
+
+Unpublish all workflows:
+
+```bash
+n8n unpublish:workflow --all
+```
+
+### update:workflow (deprecated)
+
+/// warning | Deprecated in n8n 2.0
+The `update:workflow` command is deprecated and will be removed. Use [`publish:workflow`](#publish-a-workflow) and [`unpublish:workflow`](#unpublish-a-workflow) instead. See the [n8n v2.0 breaking changes](/2-0-breaking-changes.md) for details.
 ///
 
 Set the active status of a workflow by its ID to false:

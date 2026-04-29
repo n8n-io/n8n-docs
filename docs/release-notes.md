@@ -34,6 +34,35 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.19.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.18.0...n8n@2.19.0) for this version.<br />
+**Release date:** 2026-04-28
+
+This release contains bug fixes.
+
+### Contributors
+
+[abhishekDeshmukh74](https://github.com/abhishekDeshmukh74)  
+[jeanibarz](https://github.com/jeanibarz)  
+[yetval](https://github.com/yetval)  
+[corazzione](https://github.com/corazzione)  
+[kuishou68](https://github.com/kuishou68)  
+[MDub3y](https://github.com/MDub3y)  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
+[Vitalini](https://github.com/Vitalini)  
+[sinehypernova-0718](https://github.com/sinehypernova-0718)  
+[nihaals](https://github.com/nihaals)  
+[yuniq-neko](https://github.com/yuniq-neko)  
+[patdt](https://github.com/patdt)  
+[pedrodicati](https://github.com/pedrodicati)  
+[GauthierPLM](https://github.com/GauthierPLM)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.18.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.18.3...n8n@2.18.4) for this version.<br />

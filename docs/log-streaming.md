@@ -23,7 +23,7 @@ To use log streaming, you have to add a streaming destination.
 6. Select **Save**.
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming).
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations via environment variables](#configure-via-environment-variables).
 ///
 ## Events
 
@@ -118,3 +118,46 @@ n8n supports three destination types:
 * A syslog server
 * A generic webhook
 * A Sentry client
+
+## Configure via environment variables
+
+If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for the full pattern.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"
+
+Each destination is an object with a `type` of `webhook`, `syslog`, or `sentry`, plus the configuration for that type.
+
+Webhook:
+
+```json
+[
+	{
+		"type": "webhook",
+		"url": "https://logs.example.com/n8n"
+	}
+]
+```
+
+Syslog:
+
+```json
+[
+	{
+		"type": "syslog",
+		"host": "syslog.example.com",
+		"port": 514,
+		"protocol": "udp"
+	}
+]
+```
+
+Sentry:
+
+```json
+[
+	{
+		"type": "sentry",
+		"dsn": "https://<key>@<organization>.ingest.sentry.io/<project>"
+	}
+]
+```

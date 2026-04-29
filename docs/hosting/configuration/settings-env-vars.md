@@ -50,7 +50,11 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 
 ## SSO
 
-Configure [single sign-on](/hosting/securing/set-up-sso.md) from environment variables. SSO is available on Business and Enterprise plans.
+/// info | Feature availability
+Single sign-on is available on Business and Enterprise plans.
+///
+
+Configure [single sign-on](/hosting/securing/set-up-sso.md) from environment variables.
 
 ### Activation and shared settings
 

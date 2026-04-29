@@ -125,39 +125,154 @@ If you self-host n8n, you can manage log streaming destinations from environment
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"
 
-Each destination is an object with a `type` of `webhook`, `syslog`, or `sentry`, plus the configuration for that type.
+### Common fields
 
-Webhook:
+Every destination accepts these fields, regardless of `type`.
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `type` | `"webhook"` \| `"syslog"` \| `"sentry"` | Yes | Destination type. Determines which type-specific fields apply. |
+| `label` | string | No | Display name shown in the UI. |
+| `enabled` | boolean | No | Whether the destination forwards events. Defaults to `true`. |
+| `subscribedEvents` | string[] | No | Event names or group names (e.g. `n8n.workflow`, `n8n.audit`) to forward. Empty or omitted means no events are forwarded. |
+| `anonymizeAuditMessages` | boolean | No | Strip potentially sensitive payload data from `n8n.audit.*` events. |
+| `circuitBreaker` | object | No | Failure-protection settings. See [Circuit breaker](#circuit-breaker). |
+
+### Webhook
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `url` | string (URL) | Yes | – | Endpoint that receives the event payload. |
+| `method` | `"GET"` \| `"POST"` \| `"PUT"` | No | `"POST"` | HTTP method used for delivery. |
+| `sendQuery` | boolean | No | `false` | Whether to send query parameters. |
+| `specifyQuery` | `"keypair"` \| `"json"` | No | `"keypair"` | How query parameters are provided when `sendQuery` is `true`. |
+| `queryParameters` | `{ parameters: [{ name, value }] }` | No | `{ parameters: [] }` | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
+| `jsonQuery` | string | No | `""` | Query parameters as a JSON string. Used when `specifyQuery` is `"json"`. |
+| `sendHeaders` | boolean | No | `false` | Whether to send headers. |
+| `specifyHeaders` | `"keypair"` \| `"json"` | No | `"keypair"` | How headers are provided when `sendHeaders` is `true`. |
+| `headerParameters` | `{ parameters: [{ name, value }] }` | No | `{ parameters: [] }` | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
+| `jsonHeaders` | string | No | `""` | Headers as a JSON string. Used when `specifyHeaders` is `"json"`. |
+| `options` | object | No | `{}` | Connection-level options. See [Webhook options](#webhook-options). |
+
+#### Webhook options
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `allowUnauthorizedCerts` | boolean | No | `false` | Ignore SSL certificate validation. |
+| `queryParameterArrays` | `"repeat"` \| `"brackets"` \| `"indices"` | No | `"brackets"` | Array format used in query parameters. |
+| `redirect` | `{ redirect: { followRedirects, maxRedirects } }` | No | `{ redirect: {} }` | Follow HTTP redirects. `maxRedirects` defaults to `21`. |
+| `proxy` | `{ proxy: { protocol, host, port } }` | No | – | HTTP/HTTPS proxy. `protocol` is `"https"` or `"http"`. |
+| `timeout` | number (ms) | No | `5000` | Time to wait for the server to start the response before aborting. |
+| `socket` | `{ keepAlive, maxSockets, maxFreeSockets }` | No | `{ keepAlive: true, … }` | Socket pool configuration. |
 
 ```json
 [
-	{
-		"type": "webhook",
-		"url": "https://logs.example.com/n8n"
-	}
+  {
+    "type": "webhook",
+    "label": "Audit",
+    "subscribedEvents": ["n8n.audit", "n8n.workflow"],
+    "anonymizeAuditMessages": true,
+    "url": "https://hooks.example.com/n8n",
+    "method": "POST",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+      "parameters": [
+        { "name": "Authorization", "value": "Bearer s3cret" }
+      ]
+    },
+    "options": {
+      "timeout": 5000,
+      "redirect": { "redirect": { "followRedirects": true, "maxRedirects": 5 } }
+    }
+  }
 ]
 ```
 
-Syslog:
+### Syslog
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `host` | string | Yes | – | Syslog server hostname or IP. |
+| `port` | number | No | `514` | Syslog server port. |
+| `protocol` | `"udp"` \| `"tcp"` \| `"tls"` | No | `"udp"` | Transport protocol. |
+| `tlsCa` | string | When `protocol` is `"tls"` | `""` | PEM-formatted CA certificate used for the TLS connection. |
+| `facility` | number (0–23) | No | `16` | Syslog facility code. Allowed values: Kernel `0`, User `1`, System `3`, Audit `13`, Alert `14`, Local0–Local7 `16`–`23`. |
+| `app_name` | string | No | `"n8n"` | Value used as the syslog `APP-NAME`. |
 
 ```json
 [
-	{
-		"type": "syslog",
-		"host": "syslog.example.com",
-		"port": 514,
-		"protocol": "udp"
-	}
+  {
+    "type": "syslog",
+    "label": "SIEM",
+    "subscribedEvents": ["n8n.audit", "n8n.workflow"],
+    "host": "syslog.example.com",
+    "port": 514,
+    "protocol": "tls",
+    "tlsCa": "-----BEGIN CERTIFICATE-----\n…\n-----END CERTIFICATE-----",
+    "facility": 16,
+    "app_name": "n8n"
+  }
 ]
 ```
 
-Sentry:
+### Sentry
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `dsn` | string (URL) | Yes | – | Sentry DSN client key. |
 
 ```json
 [
-	{
-		"type": "sentry",
-		"dsn": "https://<key>@<organization>.ingest.sentry.io/<project>"
-	}
+  {
+    "type": "sentry",
+    "label": "Sentry prod",
+    "subscribedEvents": ["n8n.workflow"],
+    "dsn": "https://public@sentry.example.com/1"
+  }
 ]
+```
+
+### Circuit breaker
+
+A circuit breaker temporarily stops delivery to a destination after repeated failures, preventing load on a struggling downstream service. Available on every destination type.
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `maxFailures` | integer ≥ 1 | No | `5` | After this many failures within `failureWindow`, n8n stops sending requests to the destination. |
+| `failureWindow` | integer ≥ 100 (ms) | No | `60000` | Sliding window for counting failures. Older failures expire naturally. |
+
+```json
+{ "circuitBreaker": { "maxFailures": 3, "failureWindow": 30000 } }
+```
+
+### Complete example
+
+```bash
+N8N_LOG_STREAMING_MANAGED_BY_ENV=true
+N8N_LOG_STREAMING_DESTINATIONS='[
+  {
+    "type": "webhook",
+    "label": "Ops webhook",
+    "enabled": true,
+    "subscribedEvents": ["n8n.workflow", "n8n.audit"],
+    "anonymizeAuditMessages": true,
+    "url": "https://hooks.example.com/n8n",
+    "method": "POST",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+      "parameters": [
+        { "name": "Authorization", "value": "Bearer s3cret" }
+      ]
+    },
+    "circuitBreaker": { "maxFailures": 5, "failureWindow": 60000 }
+  },
+  {
+    "type": "sentry",
+    "label": "Sentry prod",
+    "subscribedEvents": ["n8n.workflow"],
+    "dsn": "https://public@sentry.example.com/1"
+  }
+]'
 ```

@@ -1811,6 +1811,126 @@ paths:
           $ref: '#/components/responses/notFound'
       security:
         - ApiKeyAuth: []
+  /data-tables/{dataTableId}/columns:
+    get:
+      x-eov-operation-id: listDataTableColumns
+      x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
+      tags:
+        - DataTable
+      summary: List columns of a data table
+      description: Retrieve all columns for a specific data table.
+      operationId: list-data-table-columns
+      parameters:
+        - $ref: '#/components/parameters/dataTableId'
+      responses:
+        '200':
+          description: Successfully retrieved columns
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/dataTableColumn'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+      security:
+        - ApiKeyAuth: []
+    post:
+      x-eov-operation-id: createDataTableColumn
+      x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
+      tags:
+        - DataTable
+      summary: Add a column to a data table
+      description: Add a new column to an existing data table.
+      operationId: create-data-table-column
+      parameters:
+        - $ref: '#/components/parameters/dataTableId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createColumnRequest'
+            example:
+              name: email
+              type: string
+      responses:
+        '201':
+          description: Column created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dataTableColumn'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+      security:
+        - ApiKeyAuth: []
+  /data-tables/{dataTableId}/columns/{columnId}:
+    delete:
+      x-eov-operation-id: deleteDataTableColumn
+      x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
+      tags:
+        - DataTable
+      summary: Delete a column
+      description: Remove a column from a data table. This will also delete all data in the column.
+      operationId: delete-data-table-column
+      parameters:
+        - $ref: '#/components/parameters/dataTableId'
+        - $ref: '#/components/parameters/columnId'
+      responses:
+        '204':
+          description: Column deleted successfully
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+      security:
+        - ApiKeyAuth: []
+    patch:
+      x-eov-operation-id: updateDataTableColumn
+      x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
+      tags:
+        - DataTable
+      summary: Update a column
+      description: Rename and/or reorder a column in a data table.
+      operationId: update-data-table-column
+      parameters:
+        - $ref: '#/components/parameters/dataTableId'
+        - $ref: '#/components/parameters/columnId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/updateColumnRequest'
+            example:
+              name: email
+              index: 1
+      responses:
+        '200':
+          description: Column updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/dataTableColumn'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
+      security:
+        - ApiKeyAuth: []
   /projects:
     post:
       x-eov-operation-id: createProject
@@ -3957,6 +4077,76 @@ components:
       required:
         - filter
         - data
+    dataTableColumn:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Column ID
+        name:
+          type: string
+          description: Column name
+        dataTableId:
+          type: string
+          description: ID of the data table this column belongs to
+        type:
+          type: string
+          enum:
+            - string
+            - number
+            - boolean
+            - date
+          description: Column data type
+        index:
+          type: integer
+          description: Column position
+      required:
+        - id
+        - name
+        - dataTableId
+        - type
+        - index
+    dataTableColumnName:
+      type: string
+      description: Column name. Must start with a letter; only letters, digits, and underscores after that; maximum 63 characters.
+      minLength: 1
+      maxLength: 63
+      pattern: ^[a-zA-Z][a-zA-Z0-9_]*$
+    createColumnRequest:
+      type: object
+      properties:
+        name:
+          $ref: '#/components/schemas/dataTableColumnName'
+        type:
+          type: string
+          enum:
+            - string
+            - number
+            - boolean
+            - date
+          description: Column data type
+        index:
+          type: integer
+          minimum: 0
+          description: Column position (optional, appended to end if omitted)
+      required:
+        - name
+        - type
+    updateColumnRequest:
+      type: object
+      properties:
+        name:
+          $ref: '#/components/schemas/dataTableColumnName'
+        index:
+          type: integer
+          minimum: 0
+          description: New zero-based position for the column
+      additionalProperties: false
+      anyOf:
+        - required:
+            - name
+        - required:
+            - index
     projectList:
       type: object
       properties:
@@ -4423,6 +4613,14 @@ components:
       name: dataTableId
       in: path
       description: The ID of the data table
+      required: true
+      schema:
+        type: string
+        format: nanoid
+    columnId:
+      name: columnId
+      in: path
+      description: The ID of the column
       required: true
       schema:
         type: string

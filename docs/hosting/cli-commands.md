@@ -218,8 +218,11 @@ In this case, you can edit the names from the n8n interface and export again, or
 ### Workflows
 
 /// warning | Known issue: cron triggers keep running after import
-When importing a previously active workflow via `n8n import:workflow`, this then deactivated workflow's cron triggers will continue to run until you restart n8n.
-When running n8n in multi-main mode, all triggers will be deactivated as expected.
+The behaviour of importing a previously active workflow differs depending on the mode you are running. This is a known bug.
+
+On multi-main and queue-mode instances the previously active workflow's cron triggers are deactivated on import. 
+
+On non multi-main instances the previously active workflows cron triggers will remain running until you restart the n8n instance. 
 ///
 
 Import workflows from a specific file:

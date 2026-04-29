@@ -49,7 +49,7 @@ This release contains bug fixes.
 [corazzione](https://github.com/corazzione)  
 [kuishou68](https://github.com/kuishou68)  
 [MDub3y](https://github.com/MDub3y)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
 [Vitalini](https://github.com/Vitalini)  
 [sinehypernova-0718](https://github.com/sinehypernova-0718)  
 [nihaals](https://github.com/nihaals)  

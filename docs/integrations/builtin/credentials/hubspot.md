@@ -51,7 +51,7 @@ To generate a service key:
 5. Select **Update** to confirm your scope selections.
 6. Select **Create**, then confirm in the dialog.
 7. Click on the new service key name to navigate to its details page, and select **Show** to reveal your key.
-8. Copy button to copy the key value and paste it as the **App Token** in your n8n credential.
+8. Copy the key value using the copy button, and paste it as the **App Token** in your n8n credential.
 
 /// note | Service keys in public beta
 Service keys are currently in public beta and subject to change. Refer to [HubSpot's Service Keys documentation](https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys) for the latest information.

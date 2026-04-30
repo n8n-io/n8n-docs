@@ -5,14 +5,14 @@ contentType: howto
 ---
 
 # OpenTelemetry tracing
-/// warning | This feature is still under development
-Agent telemetry and otel formatted metrics will be coming soon 
+/// warning | This feature is still under development - Initially available from 2.19.0
+Agent telemetry and open telemetry formatted metrics will be coming soon 
 ///
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/){:target="_blank" .external-link} traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
 
 /// info | Feature availability
-OpenTelemetry workflow tracing requires environment variables to be set so is currently available on self-hosted n8n only.
+OpenTelemetry workflow tracing requires environment variables are set so is available on self-hosted n8n only.
 ///
 
 ## What you get
@@ -31,7 +31,7 @@ Each span includes resource attributes that identify the n8n instance:
 
 n8n also handles trace context propagation:
 
-- **Inbound**: If a webhook request includes a [W3C `traceparent` header](https://www.w3.org/TR/trace-context/){:target="_blank" .external-link}, n8n uses it as the parent for the workflow span. This links the trace to the upstream caller.
+- **Inbound**: If a webhook request includes a [W3C `traceparent` header](https://www.w3.org/TR/trace-context/){:target="_blank" .external-link}, n8n uses it as the parent for the workflow span. This links the n8n workflow trace to the upstream caller.
 - **Outbound**: HTTP Request nodes (and other nodes that use the n8n HTTP helpers) can inject a `traceparent` header into outbound requests. Downstream services that support W3C trace context can therefore continue the trace.
 - **Sub-workflows**: A sub-workflow's span uses the parent workflow's span as its parent.
 - **Resumed workflows**: When a workflow resumes after a wait, the new span links back to the previous span using a span link.
@@ -45,7 +45,7 @@ export N8N_OTEL_ENABLED=true
 export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://<your-collector-host>:4318
 ```
 
-Restart n8n. The instance starts exporting spans over OTLP HTTP using the protobuf encoding.
+Restart n8n. The instance starts exporting spans over OTLP HTTP using the Protobuf encoding.
 
 n8n appends `/v1/traces` to the endpoint by default. Point `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` at the base URL of your collector, not the traces path.
 
@@ -54,8 +54,8 @@ If your collector needs authentication, set `N8N_OTEL_EXPORTER_OTLP_HEADERS` to 
 ```bash
 export N8N_OTEL_EXPORTER_OTLP_HEADERS="authorization=Bearer <your-token>,x-tenant=acme"
 
-// It is recommendded to use the `_FILE` postfix if you are putting a token here:
-N8N_OTEL_EXPORTER_OTLP_ENDPOINT_FILE=/mnt/otel-headers
+// For added protection - It is recommended to use the `_FILE` postfix if you are putting a token in here:
+export N8N_OTEL_EXPORTER_OTLP_ENDPOINT_FILE=/mnt/otel-headers
 ```
 
 For the full list of supported variables, refer to [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).
@@ -75,9 +75,13 @@ export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
 
 n8n uses a trace ID ratio sampler, so the same trace ID is either fully sampled or fully dropped across all spans in the trace.
 
+/// note | 
+n8n will output a trace for every workflow execution - this includes published workflows, unpublished workflows and test executions - In a future release a toggle will be available to track only published workflows 
+///
+
 ## Reduce span volume
 
-Each node in a workflow produces its own span. For workflows with many nodes, this can produce more data than you need. To export only workflow-level spans, set:
+Each node in a workflow produces its own span. For workflows with lots of nodes, this can produce more data than you need. To export only workflow-level spans, set:
 
 ```bash
 export N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false
@@ -107,7 +111,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or booleans.
+n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or boolean.
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
 
@@ -133,15 +137,13 @@ services:
 docker compose up -d
 ```
 
-3. Start n8n with tracing turned on and pointed at Jaeger:
+3. Start n8n with tracing turned on and pointed at Jaeger. Information about [starting n8n](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) can be found elsewhere in this documentation:
 
 ```bash
-export N8N_OTEL_ENABLED=true
-export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318
-n8n start
+N8N_OTEL_ENABLED=true N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 n8n start
 ```
 
-5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) to see the trace.
+5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) - Select "n8n" as service" and click "Find traces" to see the OpenTelemetry traces emitted by n8n.
 
 ## Span attributes
 

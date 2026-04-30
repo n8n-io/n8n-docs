@@ -38,7 +38,7 @@ Available in n8n v2.7.0 and above.
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance. Here, you can control what data is shared with the AI Assistant. 
 
-These settings are only available to the instance owners and administrators and will apply to all users on the instance.
+These settings are only available to the instance owners and administrators, and will apply to all users on the instance.
 
 ![ai_usage_settings.png](/_images/ai-assistant/ai_usage_settings.png)
 

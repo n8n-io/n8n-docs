@@ -133,8 +133,8 @@ Every destination accepts these fields, regardless of `type`.
 | --- | --- | --- | --- |
 | `type` | `"webhook"` \| `"syslog"` \| `"sentry"` | Yes | Destination type. Determines which type-specific fields apply. |
 | `label` | string | No | Display name shown in the UI. |
-| `enabled` | boolean | No | Whether the destination forwards events. Defaults to `true`. |
-| `subscribedEvents` | string[] | No | Event names or group names such as `n8n.workflow` and `n8n.audit` to forward. Empty or omitted means no events are forwarded. |
+| `enabled` | boolean | No | Whether the destination forwards events. |
+| `subscribedEvents` | string[] | No | Event names or group prefixes to forward (for example `n8n.audit`, `n8n.workflow`). |
 | `anonymizeAuditMessages` | boolean | No | Strip potentially sensitive payload data from `n8n.audit.*` events. |
 | `circuitBreaker` | object | No | Failure-protection settings. See [Circuit breaker](#circuit-breaker). |
 
@@ -146,11 +146,11 @@ Every destination accepts these fields, regardless of `type`.
 | `method` | `"GET"` \| `"POST"` \| `"PUT"` | No | `"POST"` | HTTP method used for delivery. |
 | `sendQuery` | boolean | No | `false` | Whether to send query parameters. |
 | `specifyQuery` | `"keypair"` \| `"json"` | No | `"keypair"` | How query parameters are provided when `sendQuery` is `true`. |
-| `queryParameters` | `{ parameters: [{ name, value }] }` | No | `{ parameters: [] }` | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
+| `queryParameters` | `{ parameters: [{ name, value }] }` | No | – | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
 | `jsonQuery` | string | No | `""` | Query parameters as a JSON string. Used when `specifyQuery` is `"json"`. |
 | `sendHeaders` | boolean | No | `false` | Whether to send headers. |
 | `specifyHeaders` | `"keypair"` \| `"json"` | No | `"keypair"` | How headers are provided when `sendHeaders` is `true`. |
-| `headerParameters` | `{ parameters: [{ name, value }] }` | No | `{ parameters: [] }` | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
+| `headerParameters` | `{ parameters: [{ name, value }] }` | No | – | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
 | `jsonHeaders` | string | No | `""` | Headers as a JSON string. Used when `specifyHeaders` is `"json"`. |
 | `options` | object | No | `{}` | Connection-level options. See [Webhook options](#webhook-options). |
 
@@ -159,11 +159,11 @@ Every destination accepts these fields, regardless of `type`.
 | Field | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
 | `allowUnauthorizedCerts` | boolean | No | `false` | Ignore SSL certificate validation. |
-| `queryParameterArrays` | `"repeat"` \| `"brackets"` \| `"indices"` | No | `"brackets"` | Array format used in query parameters. |
-| `redirect` | `{ redirect: { followRedirects, maxRedirects } }` | No | `{ redirect: {} }` | Follow HTTP redirects. `maxRedirects` defaults to `21`. |
-| `proxy` | `{ proxy: { protocol, host, port } }` | No | – | HTTP/HTTPS proxy. `protocol` is `"https"` or `"http"`. |
-| `timeout` | number (ms) | No | `5000` | Time to wait for the server to start the response before aborting. |
-| `socket` | `{ keepAlive, maxSockets, maxFreeSockets }` | No | `{ keepAlive: true, … }` | Socket pool configuration. |
+| `queryParameterArrays` | `"repeat"` \| `"brackets"` \| `"indices"` | No | `"brackets"` | Array format used in query parameters. Used when `sendQuery` is `true`. |
+| `redirect` | `{ redirect: { followRedirects, maxRedirects } }` | No | `{ redirect: {} }` | Follow HTTP redirects. `followRedirects` defaults to `false`; `maxRedirects` defaults to `21`. |
+| `proxy` | `{ proxy: { protocol, host, port } }` | No | `{ proxy: {} }` | HTTP/HTTPS proxy. `protocol` is `"https"` or `"http"`; `host` defaults to `"127.0.0.1"`; `port` defaults to `9000`. |
+| `timeout` | integer ≥ 1 (ms) | No | `5000` | Time to wait for the server to start the response before aborting. |
+| `socket` | `{ keepAlive, maxSockets, maxFreeSockets }` | No | `{ keepAlive: true, maxSockets: 50, maxFreeSockets: 5 }` | Socket pool configuration. `maxSockets` and `maxFreeSockets` are integers ≥ 1. |
 
 ```json
 [
@@ -197,7 +197,7 @@ Every destination accepts these fields, regardless of `type`.
 | `port` | number | No | `514` | Syslog server port. |
 | `protocol` | `"udp"` \| `"tcp"` \| `"tls"` | No | `"udp"` | Transport protocol. |
 | `tlsCa` | string | When `protocol` is `"tls"` | `""` | PEM-formatted CA certificate used for the TLS connection. |
-| `facility` | number (0–23) | No | `16` | Syslog facility code. Allowed values: Kernel `0`, User `1`, System `3`, Audit `13`, Alert `14`, Local0–Local7 `16`–`23`. |
+| `facility` | number | No | `16` | Syslog facility code. Allowed values: `0` (Kernel), `1` (User), `3` (System), `13` (Audit), `14` (Alert), `16`–`23` (Local0–Local7). |
 | `app_name` | string | No | `"n8n"` | Value used as the syslog `APP-NAME`. |
 
 ```json

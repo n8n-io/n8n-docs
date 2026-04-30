@@ -1,6 +1,6 @@
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_SSO_OIDC_LOGIN_ENABLED` | Boolean | `false` | Whether OIDC login is enabled (`true`) or not (`false`). |
+| `N8N_SSO_OIDC_LOGIN_ENABLED` | Boolean | `false` | Whether to enable OIDC login. |
 | `N8N_SSO_OIDC_CLIENT_ID` | String | - | OIDC client ID issued by your identity provider. |
 | `N8N_SSO_OIDC_CLIENT_SECRET` | String | - | OIDC client secret issued by your identity provider. |
 | `N8N_SSO_OIDC_DISCOVERY_ENDPOINT` | String | - | OIDC discovery endpoint URL (the `.well-known/openid-configuration` URL for your identity provider). |

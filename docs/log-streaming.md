@@ -23,7 +23,7 @@ To use log streaming, you have to add a streaming destination.
 6. Select **Save**.
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
+If you self-host n8n, you can configure log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
 ///
 ## Events
 
@@ -135,22 +135,22 @@ Every destination accepts these fields, regardless of `type`.
 | `label` | string | No | Display name shown in the UI. |
 | `enabled` | boolean | No | Whether the destination forwards events. |
 | `subscribedEvents` | string[] | No | Event names or group prefixes to forward (for example `n8n.audit`, `n8n.workflow`). |
-| `anonymizeAuditMessages` | boolean | No | Strip potentially sensitive payload data from `n8n.audit.*` events. |
+| `anonymizeAuditMessages` | boolean | No | Strip sensitive payload data from `n8n.audit.*` events. |
 | `circuitBreaker` | object | No | Failure-protection settings. See [Circuit breaker](#circuit-breaker). |
 
 ### Webhook
 
 | Field | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `url` | string (URL) | Yes | – | Endpoint that receives the event payload. |
+| `url` | string (URL) | Yes | - | Endpoint that receives the event payload. |
 | `method` | `"GET"` \| `"POST"` \| `"PUT"` | No | `"POST"` | HTTP method used for delivery. |
 | `sendQuery` | boolean | No | `false` | Whether to send query parameters. |
-| `specifyQuery` | `"keypair"` \| `"json"` | No | `"keypair"` | How query parameters are provided when `sendQuery` is `true`. |
-| `queryParameters` | `{ parameters: [{ name, value }] }` | No | – | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
+| `specifyQuery` | `"keypair"` \| `"json"` | No | `"keypair"` | Format for query parameters when `sendQuery` is `true`. |
+| `queryParameters` | `{ parameters: [{ name, value }] }` | No | - | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
 | `jsonQuery` | string | No | `""` | Query parameters as a JSON string. Used when `specifyQuery` is `"json"`. |
 | `sendHeaders` | boolean | No | `false` | Whether to send headers. |
-| `specifyHeaders` | `"keypair"` \| `"json"` | No | `"keypair"` | How headers are provided when `sendHeaders` is `true`. |
-| `headerParameters` | `{ parameters: [{ name, value }] }` | No | – | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
+| `specifyHeaders` | `"keypair"` \| `"json"` | No | `"keypair"` | Format for headers when `sendHeaders` is `true`. |
+| `headerParameters` | `{ parameters: [{ name, value }] }` | No | - | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
 | `jsonHeaders` | string | No | `""` | Headers as a JSON string. Used when `specifyHeaders` is `"json"`. |
 | `options` | object | No | `{}` | Connection-level options. See [Webhook options](#webhook-options). |
 
@@ -193,11 +193,11 @@ Every destination accepts these fields, regardless of `type`.
 
 | Field | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `host` | string | Yes | – | Syslog server hostname or IP. |
+| `host` | string | Yes | - | Syslog server hostname or IP. |
 | `port` | number | No | `514` | Syslog server port. |
 | `protocol` | `"udp"` \| `"tcp"` \| `"tls"` | No | `"udp"` | Transport protocol. |
 | `tlsCa` | string | When `protocol` is `"tls"` | `""` | PEM-formatted CA certificate used for the TLS connection. |
-| `facility` | number | No | `16` | Syslog facility code. Allowed values: `0` (Kernel), `1` (User), `3` (System), `13` (Audit), `14` (Alert), `16`–`23` (Local0–Local7). |
+| `facility` | number | No | `16` | Syslog facility code. Allowed values: `0` (Kernel), `1` (User), `3` (System), `13` (Audit), `14` (Alert), `16` to `23` (Local0 to Local7). |
 | `app_name` | string | No | `"n8n"` | Value used as the syslog `APP-NAME`. |
 
 ```json
@@ -220,7 +220,7 @@ Every destination accepts these fields, regardless of `type`.
 
 | Field | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `dsn` | string (URL) | Yes | – | Sentry DSN client key. |
+| `dsn` | string (URL) | Yes | - | Sentry DSN client key. |
 
 ```json
 [
@@ -239,8 +239,8 @@ A circuit breaker temporarily stops delivery to a destination after repeated fai
 
 | Field | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `maxFailures` | integer ≥ 1 | No | `5` | After this many failures within `failureWindow`, n8n stops sending requests to the destination. |
-| `failureWindow` | integer ≥ 100 (ms) | No | `60000` | Sliding window for counting failures. Older failures expire naturally. |
+| `maxFailures` | integer ≥ 1 | No | `5` | n8n stops sending requests to the destination once failures within `failureWindow` reach this number. |
+| `failureWindow` | integer ≥ 100 (ms) | No | `60000` | Sliding window for counting failures. Older failures expire. |
 
 ```json
 { "circuitBreaker": { "maxFailures": 3, "failureWindow": 30000 } }

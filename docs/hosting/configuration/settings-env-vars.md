@@ -24,7 +24,7 @@ Setting `*_MANAGED_BY_ENV` back to `false` restores UI write access but keeps th
 ///
 
 /// note | Unexpected read-only UI controls
-If a setting is read-only and you didn't expect it, check whether the matching `*_MANAGED_BY_ENV` variable is `true` in your environment.
+If a setting appears as read-only and you didn't expect it, check whether the matching `*_MANAGED_BY_ENV` variable is `true` in your environment.
 ///
 
 The four supported areas and their activating variables:
@@ -34,7 +34,7 @@ The four supported areas and their activating variables:
 * Security policy: `N8N_SECURITY_POLICY_MANAGED_BY_ENV`
 * Log streaming: `N8N_LOG_STREAMING_MANAGED_BY_ENV`
 
-/// note | `<AREA>_MANAGED_BY_ENV` is required
+/// note | Set `<AREA>_MANAGED_BY_ENV` to activate the group
 The other environment variables for an area have no effect unless `<AREA>_MANAGED_BY_ENV` is `true`. Set it to `true` to activate the group.
 ///
 

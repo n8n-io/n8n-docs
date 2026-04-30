@@ -22,12 +22,12 @@ You can find authentication information for this node [here](/integrations/built
 The Microsoft Agent 365 Trigger node can connect to the following sub-nodes:
 
 - **Model**: Connect a language model (Chat model sub-node) to process incoming messages
-- **Memory**: Connect a memory sub-node to maintain conversation context
+- **Memory**: Connect a memory sub-node to maintain conversation context. A single n8n workflow powers multiple Agent instances on the Microsoft side, so multiple users will interact with the same workflow. Choose your session ID key carefully to scope conversations to individual Agent instances and prevent conversation history from bleeding between them.
 - **Tool**: Connect tool sub-nodes to give your agent additional capabilities
 
 ## Node options
 
-### Enable Microsoft MCP Tools
+### Enable Microsoft Work IQ Tools for A365
 
 Toggle this option to give your agent access to Microsoft 365 tools through the Model Context Protocol (MCP). Default: Off.
 
@@ -46,14 +46,8 @@ When enabled, select one of:
 
 We recommend following these resources to set up your Agent 365 integration:
 
-1. [n8n Sample Agent Documentation](https://github.com/microsoft/Agent365-Samples/tree/main/nodejs/n8n/sample-agent): Example n8n agent implementation with Microsoft Agent 365
-2. [Agent 365 CLI Documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/agent-365-cli): Cross-platform command-line tool for deploying and managing Agent 365 applications on Azure
-
-## Known limitations
-
-### No conversation context in metadata
-
-Currently, incoming messages don't include metadata to link memory to a specific user or conversation context. This functionality is coming soon.
+1. [Microsoft Agent 365 developer documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/){:target="_blank" .external-link}: Official documentation for building agents with Microsoft Agent 365
+2. [Agent 365 CLI Documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/agent-365-cli){:target="_blank" .external-link}: Cross-platform command-line tool for deploying and managing Agent 365 applications on Azure
 
 ## Related resources
 

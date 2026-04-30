@@ -134,7 +134,7 @@ Every destination accepts these fields, regardless of `type`.
 | `type` | `"webhook"` \| `"syslog"` \| `"sentry"` | Yes | Destination type. Determines which type-specific fields apply. |
 | `label` | string | No | Display name shown in the UI. |
 | `enabled` | boolean | No | Whether the destination forwards events. Defaults to `true`. |
-| `subscribedEvents` | string[] | No | Event names or group names (e.g. `n8n.workflow`, `n8n.audit`) to forward. Empty or omitted means no events are forwarded. |
+| `subscribedEvents` | string[] | No | Event names or group names such as `n8n.workflow` and `n8n.audit` to forward. Empty or omitted means no events are forwarded. |
 | `anonymizeAuditMessages` | boolean | No | Strip potentially sensitive payload data from `n8n.audit.*` events. |
 | `circuitBreaker` | object | No | Failure-protection settings. See [Circuit breaker](#circuit-breaker). |
 

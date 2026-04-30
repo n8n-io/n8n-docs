@@ -29,10 +29,10 @@ If a setting is read-only and you didn't expect it, check whether the matching `
 
 The four supported areas and their activating variables:
 
-* Instance owner — `N8N_INSTANCE_OWNER_MANAGED_BY_ENV`
-* SSO — `N8N_SSO_MANAGED_BY_ENV`
-* Security policy — `N8N_SECURITY_POLICY_MANAGED_BY_ENV`
-* Log streaming — `N8N_LOG_STREAMING_MANAGED_BY_ENV`
+* Instance owner: `N8N_INSTANCE_OWNER_MANAGED_BY_ENV`
+* SSO: `N8N_SSO_MANAGED_BY_ENV`
+* Security policy: `N8N_SECURITY_POLICY_MANAGED_BY_ENV`
+* Log streaming: `N8N_LOG_STREAMING_MANAGED_BY_ENV`
 
 /// note | `<AREA>_MANAGED_BY_ENV` is required
 The other environment variables for an area have no effect unless `<AREA>_MANAGED_BY_ENV` is `true`. Set it to `true` to activate the group.

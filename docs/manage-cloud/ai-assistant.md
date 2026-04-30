@@ -30,7 +30,7 @@ The AI Assistant offers a range of tools to support you:
     - "How can I build X in n8n?"
 <!-- vale from-microsoft.FirstPerson = YES -->
 
-## AI Usage settings
+## AI usage settings
 
 /// info
 Available in n8n v2.7.0 and above.

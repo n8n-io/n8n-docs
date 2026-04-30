@@ -55,7 +55,7 @@ If your collector needs authentication, set `N8N_OTEL_EXPORTER_OTLP_HEADERS` to 
 export N8N_OTEL_EXPORTER_OTLP_HEADERS="authorization=Bearer <your-token>,x-tenant=acme"
 
 // For added protection - It is recommended to use the `_FILE` postfix if you are putting a token in here:
-export N8N_OTEL_EXPORTER_OTLP_ENDPOINT_FILE=/mnt/otel-headers
+export N8N_OTEL_EXPORTER_OTLP_HEADERS_FILE=/mnt/otel-headers
 ```
 
 For the full list of supported variables, refer to [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).

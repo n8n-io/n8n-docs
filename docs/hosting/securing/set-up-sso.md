@@ -18,4 +18,4 @@ n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO)
 
 ## Configure SSO with environment variables
 
-You can also configure SSO from environment variables instead of through the UI. See [SSO environment variables](/hosting/configuration/environment-variables/sso.md) for the full list of variables, and [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+You can also configure SSO from environment variables instead of through the UI. See [SSO environment variables](/hosting/configuration/environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.

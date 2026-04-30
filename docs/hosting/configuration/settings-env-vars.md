@@ -1,10 +1,10 @@
 ---
-title: Manage instance settings via environment variables
+title: Manage instance settings using environment variables
 description: Configure a self-hosted n8n instance owner, SSO, security policy, and log streaming settings from environment variables.
 contentType: overview
 ---
 
-# Manage instance settings via environment variables
+# Manage instance settings using environment variables
 
 You can manage a subset of instance settings from environment variables, instead of configuring them through the UI. This is useful when you provision n8n instances automatically, such as through an internal deployment pipeline.
 
@@ -80,7 +80,7 @@ Manage the instance security policy from environment variables, including MFA en
 
 ## Log streaming
 
-Manage [log streaming](/log-streaming.md) destinations from environment variables. See [Configure via environment variables](/log-streaming.md#configure-via-environment-variables) for the per-destination JSON shape.
+Manage [log streaming](/log-streaming.md) destinations from environment variables. See [Configure using environment variables](/log-streaming.md#configure-using-environment-variables) for the per-destination JSON shape.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"
 
@@ -96,7 +96,7 @@ export N8N_INSTANCE_OWNER_FIRST_NAME=<first-name>
 export N8N_INSTANCE_OWNER_LAST_NAME=<last-name>
 export N8N_INSTANCE_OWNER_PASSWORD_HASH=<bcrypt-hash>
 
-# SSO via OIDC
+# SSO using OIDC
 export N8N_SSO_MANAGED_BY_ENV=true
 export N8N_SSO_USER_ROLE_PROVISIONING=instance_role
 export N8N_SSO_OIDC_LOGIN_ENABLED=true

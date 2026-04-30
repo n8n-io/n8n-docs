@@ -1292,7 +1292,7 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
-      - Manage settings via environment variables: hosting/configuration/settings-env-vars.md
+      - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md

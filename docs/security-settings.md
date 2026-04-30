@@ -71,7 +71,7 @@ When you disable publishing:
 
 ## Configure security policy with environment variables
 
-You can also manage security policy settings from environment variables instead of through the UI. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+You can also manage security policy settings from environment variables instead of through the UI. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
 
 When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
 

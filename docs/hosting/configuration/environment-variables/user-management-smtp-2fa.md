@@ -39,8 +39,8 @@ Refer to [User management](/hosting/configuration/user-management-self-hosted.md
 | `N8N_INVITE_LINKS_EMAIL_ONLY` | Boolean | `false` | When set to true, n8n will only deliver invite links via email and will not expose them through the API. This option enhances security by preventing invite URLs from being accessible programmatically, or to high privileged users. |
 <!-- vale on -->
 
-## Instance owner via environment variables
+## Instance owner using environment variables
 
-Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` to pre-provision the instance owner from environment variables. See [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` to pre-provision the instance owner from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/instance-owner.md"

@@ -23,7 +23,7 @@ To use log streaming, you have to add a streaming destination.
 6. Select **Save**.
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations via environment variables](#configure-via-environment-variables).
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
 ///
 ## Events
 
@@ -119,9 +119,9 @@ n8n supports three destination types:
 * A generic webhook
 * A Sentry client
 
-## Configure via environment variables
+## Configure using environment variables
 
-If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for the full pattern.
+If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for the full pattern.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"
 

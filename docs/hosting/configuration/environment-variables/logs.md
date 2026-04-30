@@ -48,6 +48,6 @@ Refer to [Log streaming](/log-streaming.md) for more information on this feature
 
 ### Manage log streaming destinations from environment variables
 
-Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings via environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works, and [Configure log streaming destinations via environment variables](/log-streaming.md#configure-via-environment-variables) for the per-destination JSON shape.
+Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](/log-streaming.md#configure-using-environment-variables) for the per-destination JSON shape.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"

@@ -42,7 +42,7 @@ These settings are only available to the instance owners and administrators, and
 
 ![ai_usage_settings.png](/_images/ai-assistant/ai_usage_settings.png)
 
-Here, you can toggle whether to share actual workflow data (like node names, parameters, and structure) with the AI Assistant. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+Toggle whether to share actual workflow data (like node names, parameters, and structure) with the AI Assistant. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
 
 Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
 

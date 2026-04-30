@@ -306,7 +306,7 @@ nav:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
-        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.n8n-nodes-langchain.alibabacloud.md
+        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -791,6 +791,7 @@ nav:
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - Lemonade Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatlemonade.md
+          - MiniMax Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Moonshot Kimi Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
           - Ollama Chat Model:
@@ -1017,6 +1018,7 @@ nav:
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md
+        - integrations/builtin/credentials/minimax.md
         - integrations/builtin/credentials/mistral.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
@@ -1391,6 +1393,7 @@ nav:
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
+      - n8n CLI: api/n8n-cli/index.md
   # - Feature tests:
   #    - Main features: docs-site-feature-tests/index.md
 

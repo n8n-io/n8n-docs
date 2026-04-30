@@ -40,6 +40,9 @@ The other environment variables for an area have no effect unless `<AREA>_MANAGE
 
 ## Instance owner
 
+/// info | Available from n8n v2.17.0
+///
+
 Pre-provision the [instance owner](/hosting/configuration/user-management-self-hosted.md) from environment variables instead of going through the in-app setup.
 
 /// warning | `N8N_INSTANCE_OWNER_PASSWORD_HASH` must be a bcrypt hash
@@ -49,6 +52,9 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/instance-owner.md"
 
 ## SSO
+
+/// info | Available from n8n v2.18.0
+///
 
 /// info | Feature availability
 Single sign-on is available on Business and Enterprise plans.
@@ -74,11 +80,17 @@ Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (
 
 ## Security policy
 
+/// info | Available from n8n v2.18.0
+///
+
 Manage the instance security policy from environment variables, including MFA enforcement and personal space restrictions.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/security-policy.md"
 
 ## Log streaming
+
+/// info | Available from n8n v2.19.0
+///
 
 Manage [log streaming](/log-streaming.md) destinations from environment variables. See [Configure using environment variables](/log-streaming.md#configure-using-environment-variables) for the per-destination JSON shape.
 

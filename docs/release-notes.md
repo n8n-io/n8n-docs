@@ -34,17 +34,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-## n8n@2.18.7
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.18.6...n8n@2.18.7) for this version.<br />
-**Release date:** 2026-05-04
-
-This release contains a bug fix.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
 ## n8n@2.19.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.1...n8n@2.19.2) for this version.<br />
@@ -91,6 +80,17 @@ This release contains bug fixes.
 [pedrodicati](https://github.com/pedrodicati)  
 [GauthierPLM](https://github.com/GauthierPLM)  
 [Gulianrdgd](https://github.com/Gulianrdgd)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.18.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.18.6...n8n@2.18.7) for this version.<br />
+**Release date:** 2026-05-04
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

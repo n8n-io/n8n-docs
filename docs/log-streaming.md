@@ -36,7 +36,7 @@ By default, n8n writes the event log to `<n8n-user-folder>/n8nEventLog.log`, wit
 If multiple n8n processes share one writable volume, for example [queue mode](/hosting/scaling/queue-mode.md) workers backed by a shared persistent volume on NFS or EFS, they must not write to the same event log file. Concurrent appends from multiple processes can interleave or corrupt the file, leading to recovery failures and lost events.
 ///
 
-To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](/hosting/configuration/environment-variables/logs.md#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes. On Kubernetes, one common pattern is to inject the pod name through the [Downward API](https://kubernetes.io/docs/concepts/workloads/pods/downward-api/){:target="_blank" .external-link} and combine it with `subPathExpr: $(POD_NAME)` on the volume mount, but any mechanism that produces a unique path per process works.
+To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](/hosting/configuration/environment-variables/logs.md#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes.
 
 The companion variable [`N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE`](/hosting/configuration/environment-variables/logs.md#log-streaming) bounds how many lines n8n parses from a single event log file during recovery, so a corrupted file can't exhaust process memory.
 

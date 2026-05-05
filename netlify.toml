@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt && mkdocs build --strict"
+  command = "pip install mkdocs-material && mkdocs build --strict"
   publish = "site"
 [[headers]]
   for = "/*"

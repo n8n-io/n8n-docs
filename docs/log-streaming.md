@@ -79,12 +79,29 @@ The following events are available. You can choose which events to stream in **S
 	* Variable deleted
 	* External secrets provider settings saved
 	* External secrets provider reloaded
+	* External secrets connection created
+	* External secrets connection updated
+	* External secrets connection deleted
+	* External secrets connection tested
+	* External secrets connection reloaded
 	* Personal publishing restricted enabled
 	* Personal publishing restricted disabled
 	* Personal sharing restricted enabled
 	* Personal sharing restricted disabled
 	* 2FA enforcement enabled
 	* 2FA enforcement disabled
+	* Token exchange succeeded
+	* Token exchange failed
+	* Token exchange embed login
+	* Token exchange embed login failed
+	* Token exchange identity linked
+	* Token exchange user provisioned
+	* Token exchange role updated
+	* Role mapping roles resolved
+	* Role mapping rule created
+	* Role mapping rule updated
+	* Role mapping rule deleted
+	* Role mapping rules bulk deleted
 * Worker
 	* Started
 	* Stopped

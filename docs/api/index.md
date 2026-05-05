@@ -24,6 +24,21 @@ Using n8n's public [API](/glossary.md#api), you can programmatically perform man
 
 n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.
 
+## Choose your interaction method
+
+### REST API (This section)
+Interact with n8n directly using HTTP requests. Ideal for:
+- Custom integrations and applications
+- Language-agnostic HTTP calls
+- Direct REST API usage in workflows
+
+### n8n CLI (Recommended for developers)
+Use [n8n CLI](/api/n8n-cli/index.md) for a command-line experience. It wraps the public API and is optimized for:
+- Command-line automation and scripting
+- CI/CD pipeline integration
+- AI agent integration (Claude Code, Cursor, etc.)
+- Developers who prefer CLI tools
+
 ## Learn about REST APIs
 
 The API documentation assumes you are familiar with REST APIs. If you're not, these resources may be helpful:

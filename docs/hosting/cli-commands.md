@@ -1,11 +1,26 @@
 ---
-description: CLI commands available in n8n.
+description: Commands available in the Server CLI, the built-in n8n command-line interface.
 contentType: reference
 ---
 
-# CLI commands for n8n
+# Server CLI commands
 
-n8n includes a CLI (command line interface), allowing you to perform actions using the CLI rather than the n8n editor. These include starting workflows, and exporting and importing workflows and credentials.
+The **Server CLI** is a built-in command-line interface that runs on the same machine as your n8n installation. It provides direct database access for administrative tasks and can execute most commands even when n8n isn't running.
+
+/// info | n8n CLI
+Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n CLI](/api/n8n-cli/index.md).
+///
+
+## When to use Server CLI vs n8n CLI
+
+| Feature | Server CLI | n8n CLI |
+|---------|-----------|---------|
+| **Where it runs** | Same machine as n8n | Any machine with network access |
+| **Authentication** | Direct database access | API key |
+| **Requires running n8n** | No (most commands) | Yes |
+| **Best for** | Instance operators, backups, migrations | Programmers, AI agents, remote management |
+| **Security model** | Bypasses access controls | Respects user permissions and API key scope |
+| **Use case examples** | Backup/restore, license management, emergency password resets | Workflow automation, credentials management through code |
 
 ## Running CLI commands
 
@@ -201,6 +216,14 @@ In this case, you can edit the names from the n8n interface and export again, or
 ///
 
 ### Workflows
+
+/// warning | Known issue: cron triggers keep running after import
+The behaviour of importing a previously active workflow differs depending on the mode you are running. This is a known bug.
+
+On multi-main and queue-mode instances the previously active workflow's cron triggers are deactivated on import. 
+
+On non multi-main instances the previously active workflows cron triggers will remain running until you restart the n8n instance. 
+///
 
 Import workflows from a specific file:
 

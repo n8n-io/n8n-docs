@@ -58,7 +58,8 @@ The following events are available. You can choose which events to stream in **S
 	* User MFA enabled
 	* User MFA disabled
 	* User execution deleted
-	* Workflow executed
+	* Execution data revealed
+	* Execution data reveal failed
 	* Package installed
 	* Package updated
 	* Package deleted
@@ -70,6 +71,9 @@ The following events are available. You can choose which events to stream in **S
 	* Workflow activated
 	* Workflow deactivated
 	* Workflow version updated
+    * Workflow executed
+	* Workflow waiting
+	* Workflow resumed
 	* Variable created
 	* Variable updated
 	* Variable deleted

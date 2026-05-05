@@ -120,7 +120,7 @@ Each worker process runs a server that exposes optional endpoints:
 
 - `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
 - `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- [credentials overwrite endpoint](/embed/configuration.md#credential-overwrites)
+- [credentials overwrite endpoint](/hosting/configuration/credential-overwrites.md)
 - [`/metrics`](/hosting/configuration/configuration-examples/prometheus.md)
 
 /// note | Customizing health check endpoints

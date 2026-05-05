@@ -21,6 +21,7 @@ For usage examples and templates to help you get started, refer to n8n's [Slack 
 ## Events
 
 * **Any Event**: The node triggers on any event in Slack.
+* **App Home Opened**: The node triggers when a user opens the [App Home](https://api.slack.com/surfaces/app-home){:target="_blank" .external-link} tab of your Slack app.
 * **Bot / App Mention**: The node triggers when your bot or app is [mentioned](https://slack.com/help/articles/205240127-Use-mentions-in-Slack) in a channel the app is in.
 * **File Made Public**: The node triggers when a file is [made public](https://slack.com/help/articles/4412651915539-Manage-public-file-sharing).
 * **File Shared**: The node triggers when a file is [shared](https://slack.com/help/articles/201330736-Add-files-to-Slack) in a channel the app is in.

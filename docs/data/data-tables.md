@@ -73,6 +73,7 @@ From the **Data tables** tab, you can:
 - When your data tables approach 80% of your storage limit, n8n displays a warning. A final warning appears when you reach the storage limit. Exceeding this limit will disable manual additions to tables and cause workflow execution errors during attempts to insert or update data.
 - By default, data tables created within a project are accessible to all team members in that project.
 - Tables created in a **Personal** space are only accessible by their creator.
+- Direct programmatic access to data tables from a Code node isn't supported. You can't access data table values via built-in methods or variables.
 
 ## Data tables versus variables
 

@@ -1,18 +1,19 @@
 ---
-title: Accessing n8n MCP server
-description: enable, authenticate, and connect MCP clients to n8n workflows securely
+title: Set up and use n8n MCP server
+description: Connect, authenticate, and integrate MCP clients to build and execute n8n workflows programmatically
 status: beta
 ---
 
-# Accessing n8n MCP server
+# Accessing and using n8n MCP server
 
 Connect supported MCP clients to your n8n workflows through n8n's built-in MCP server.
 
 The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
-- Search within workflows marked as available in MCP
-- Retrieve metadata and trigger information for workflows
-- Trigger and run exposed workflows
+- Search for your workflows
+- Interact with workflows marked as available in MCP
+- Trigger and test exposed workflows
+- Create and edit workflows and data tables
 
 ## Difference between instance-level MCP access and MCP Server Trigger node
 
@@ -22,9 +23,10 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### Key considerations when using instance-level MCP access
 
-- It isn't a way to build or edit workflows from an AI client; authoring remains in n8n.
-- It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually.
-- It's not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
+- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
+- It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
 ## Enabling MCP access
 
@@ -107,24 +109,7 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients
 
-### Workflow eligibility
-
-In order for a workflow to be available to MCP clients, it must meet the following criteria:
-
-1. Be published
-2. Contain one of the following trigger nodes:
-    - Webhook
-    - Schedule
-    - Chat
-    - Form
-
-By default, no workflows are visible to MCP clients. You must explicitly enable access for each eligible workflow you want to expose.
-
-When evaluating workflow eligibility, n8n will take into account only the published version of the workflow. Workflows that have a supported trigger added to a draft version won't be considered eligible until the version is published.
-
-/// info
-Once you unpublish a workflow, n8n removes its MCP access. You will have to re-enable access when you publish the workflow again.
-///
+By default, no workflows are visible to MCP clients. You must explicitly enable MCP access for each workflow you want to expose.
 
 ### Enabling access
 
@@ -173,23 +158,13 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 
 	![mcp_workflow_description.png](/_images/advanced-ai/mcp_workflow_description.png)
 
-## Executing workflows through MCP clients
+## Tools and resources
 
-MCP clients can execute eligible workflows on your request. When a client triggers a workflow, it runs as usual in n8n, and you can monitor its execution in the **Executions** list. Once the execution is complete, the MCP client will retrieve the results.
+/// tip
+Consider using coding agents (such as Claude Code or Google ADK agents) instead of chat clients as your MCP clients. Coding agents are optimized for generating and validating TypeScript code, making them ideal for building workflows programmatically.
+///
 
-### Providing input data
-
-MCP clients are typically able to assess what inputs are expected by a workflow. If you have a webhook trigger and If you see a client struggling to determine the right inputs, we recommend you provide this information in the workflow description.
-
-### Workflow timeouts
-
-n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients. If a workflow doesn't finish in time, n8n stops the execution and sends an error to the MCP client, ignoring any timeout you set in the workflow settings for MCP-triggered executions.
-
-### Limitations
-
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow.
-- Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
-- Binary input data isn't supported. MCP clients can only provide text-based inputs for your workflows.
+The n8n MCP server exposes tools for workflow management, workflow building, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](mcp_tools_reference.md).
 
 ## Examples
 
@@ -218,25 +193,15 @@ n8n enforces a 5-minute timeout for workflow executions triggered by MCP clients
 
 ##### Using Access Token
 
-/// info
-This requires the latest version of [Node.js](https://nodejs.org/en/download).
-///
-
 Add the following entry to your `claude_desktop_config.json` file:
 
 ```json
-{
-  "mcpServers": {
-    "n8n-mcp": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "supergateway",
-        "--streamableHttp",
-        "https://<your-n8n-domain>/mcp-server/http",
-        "--header",
-        "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
-      ]
+"mcpServers": {
+  "n8n-local": {
+    "type": "http",
+    "url": "https://<your-n8n-domain>/mcp-server/http",
+    "headers": {
+      "Authorization": "Bearer <YOUR_N8N_MCP_TOKEN>"
     }
   }
 }
@@ -283,15 +248,8 @@ Add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
 [mcp_servers.n8n_mcp]
-command = "npx"
-args = [
-    "-y",
-    "supergateway",
-    "--streamableHttp",
-    "https://<your-n8n-domain>/mcp-server/http",
-    "--header",
-    "authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
-]
+url = "https://<your-n8n-domain>/mcp-server/http"
+http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 ```
 
 Here, replace:
@@ -340,4 +298,3 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 - Check that the workflows you want to access are marked as available in MCP.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.
-- If you are using desktop MCP clients, make sure you have the latest [Node.js](https://nodejs.org/en/download) version installed.

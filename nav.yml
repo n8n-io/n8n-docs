@@ -58,6 +58,7 @@ nav:
           - All executions: workflows/executions/all-executions.md
           - Custom executions data: workflows/executions/custom-executions-data.md
           - Debug executions: workflows/executions/debug.md
+          - Redact execution data: workflows/executions/execution-data-redaction.md
         - Tags: workflows/tags.md
         - Export and import: workflows/export-import.md
         - Templates: workflows/templates.md
@@ -305,6 +306,7 @@ nav:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
+        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -482,6 +484,7 @@ nav:
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
         - Monica CRM: integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md
+        - Moonshot Kimi: integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md
         - MQTT: integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md
         - MSG91: integrations/builtin/app-nodes/n8n-nodes-base.msg91.md
         - MySQL:
@@ -774,9 +777,11 @@ nav:
           - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - Embeddings Google Vertex: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
           - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - Embeddings Lemonade: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade.md
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Alibaba Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
@@ -785,7 +790,10 @@ nav:
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
+          - Lemonade Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatlemonade.md
+          - MiniMax Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
+          - Moonshot Kimi Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
           - Ollama Chat Model:
             - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md
@@ -796,6 +804,7 @@ nav:
           - Vercel AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md
           - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
+          - Lemonade Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmlemonade.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
@@ -845,6 +854,7 @@ nav:
         - integrations/builtin/credentials/agilecrm.md
         - integrations/builtin/credentials/airtable.md
         - integrations/builtin/credentials/airtop.md
+        - integrations/builtin/credentials/alibaba.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
         - integrations/builtin/credentials/anthropic.md
@@ -977,6 +987,7 @@ nav:
         - integrations/builtin/credentials/kobotoolbox.md
         - integrations/builtin/credentials/ldap.md
         - integrations/builtin/credentials/lemlist.md
+        - integrations/builtin/credentials/lemonade.md
         - integrations/builtin/credentials/line.md
         - integrations/builtin/credentials/linear.md
         - integrations/builtin/credentials/lingvanex.md
@@ -1007,11 +1018,13 @@ nav:
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md
+        - integrations/builtin/credentials/minimax.md
         - integrations/builtin/credentials/mistral.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
         - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/moonshot.md
         - integrations/builtin/credentials/motorhead.md
         - integrations/builtin/credentials/mqtt.md
         - integrations/builtin/credentials/msg91.md
@@ -1158,6 +1171,7 @@ nav:
         - integrations/builtin/credentials/zulip.md
       - Custom API actions for existing nodes: integrations/custom-operations.md
       - Handle rate limits: integrations/builtin/rate-limits.md
+      - Deprecated nodes: integrations/builtin/deprecated-and-versioned-nodes.md
     - Community nodes:
       - Installation and management:
         - integrations/community-nodes/installation/index.md
@@ -1227,6 +1241,7 @@ nav:
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud Run: hosting/installation/server-setups/google-cloud-run.md
         - Google Kubernetes Engine: hosting/installation/server-setups/google-kubernetes-engine.md
+        - OpenShift CRC: hosting/installation/server-setups/openshift-crc.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration:
@@ -1269,7 +1284,11 @@ nav:
         - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
         - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+        - Pre-configure Microsoft OAuth credentials: hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md
+        - Configure a custom workflow templates library: hosting/configuration/configuration-examples/custom-templates.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - Credential overwrites: hosting/configuration/credential-overwrites.md
+      - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
     - Logging and monitoring:
@@ -1295,9 +1314,14 @@ nav:
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
       - SSRF protection: hosting/securing/ssrf-protection.md
+      - Execution data redaction: workflows/executions/execution-data-redaction.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
+    - OEM deployment:
+      - Overview: hosting/oem-deployment/index.md
+      - Prerequisites: hosting/oem-deployment/prerequisites.md
+      - Managing workflows: hosting/oem-deployment/managing-workflows.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md
@@ -1334,7 +1358,9 @@ nav:
       - advanced-ai/index.md
       - "AI Workflow Builder": advanced-ai/ai-workflow-builder.md
       - "Chat Hub": advanced-ai/chat-hub.md
-      - "Accessing n8n MCP server": advanced-ai/accessing-n8n-mcp-server.md
+      - Instance-level MCP server:
+        - "Set up and use n8n MCP server": advanced-ai/mcp/accessing-n8n-mcp-server.md
+        - "MCP server tools reference": advanced-ai/mcp/mcp_tools_reference.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:
@@ -1367,14 +1393,7 @@ nav:
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
-  - Embed:
-      - embed/index.md
-      - Prerequisites: embed/prerequisites.md
-      - Deployment: embed/deployment.md
-      - Configuration: embed/configuration.md
-      - Workflow management: embed/managing-workflows.md
-      - Workflows templates: embed/workflow-templates.md
-      - White labelling: embed/white-labelling.md
+      - n8n CLI: api/n8n-cli/index.md
   # - Feature tests:
   #    - Main features: docs-site-feature-tests/index.md
 

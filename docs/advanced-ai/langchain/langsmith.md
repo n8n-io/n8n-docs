@@ -40,4 +40,32 @@ Self-hosted n8n only.
 
 1. Restart n8n.
 
+## Per-workflow LangSmith configuration
+
+In addition to instance-wide environment variables, you can configure LangSmith tracing on a per-workflow basis. This lets you send traces from different workflows to different LangSmith projects or accounts without changing global settings.
+
+### Set up a LangSmith credential
+
+1. Go to **Settings** > **Credentials** and select **Add Credential**.
+2. Search for **LangSmith API** and select it.
+3. Enter your **API Key** from [LangSmith settings](https://smith.langchain.com/settings).
+4. Optionally change the **API URL** if you use a self-hosted LangSmith instance.
+5. Select **Save** to store the credential.
+
+### Configure a workflow to use LangSmith
+
+1. Open your workflow.
+2. Select the **three dots icon** <span class="n8n-inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> in the upper-right corner.
+3. Select **Settings**.
+4. In the **LangSmith** section:
+   - **LangSmith Credential**: Select the LangSmith API credential to use for this workflow.
+   - **LangSmith Project**: Enter the project name where traces should appear. Defaults to `"default"` if left empty.
+5. Select **Save**.
+
+Once configured, all AI node executions in that workflow send traces to the specified LangSmith project. This overrides any instance-level `LANGCHAIN_PROJECT` environment variable for this workflow.
+
+/// note
+The per-workflow setting requires creating a LangSmith API credential. The credential stores the API key securely using n8n's credential encryption.
+///
+
 For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/).

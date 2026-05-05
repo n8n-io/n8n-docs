@@ -82,6 +82,15 @@ Controls whether n8n redacts execution data from manually triggered executions. 
 
 Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details on redaction policies, revealing data, and permission requirements.
 
+### LangSmith tracing
+
+Configure [LangSmith](/advanced-ai/langchain/langsmith.md) tracing on a per-workflow basis to monitor AI node executions.
+
+- **LangSmith Credential**: Select a LangSmith API credential to enable tracing for this workflow.
+- **LangSmith Project**: The LangSmith project name where traces appear. Defaults to `"default"`.
+
+This overrides any instance-level LangSmith environment variables for the workflow. See [Use LangSmith with n8n](/advanced-ai/langchain/langsmith.md#per-workflow-langsmith-configuration) for setup instructions.
+
 ### Estimated time saved
 
 An estimate of the number of minutes each of execution of this workflow saves you.

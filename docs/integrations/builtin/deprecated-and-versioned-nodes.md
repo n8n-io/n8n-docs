@@ -81,7 +81,7 @@ Always use the current version in new workflows to get the latest features and b
 | AI Agent Tool | 3 | 2.2 |
 | Airtable | 2.2 | 1, 2, 2.1 |
 | Airtop | 1.1 | 1 |
-| Anthropic Chat Model | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Anthropic Chat Model | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | AWS Bedrock Chat Model | 1.1 | 1 |
 | AwsS3 | 2 | 1 |
 | Baserow | 1.1 | 1 |
@@ -191,7 +191,7 @@ Always use the current version in new workflows to get the latest features and b
 | Summarize | 1.1 | 1 |
 | Switch | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
 | Telegram | 1.2 | 1, 1.1 |
-| Telegram Trigger | 1.2 | 1, 1.1 |
+| Telegram Trigger | 1.3 | 1, 1.1, 1.2 |
 | Text Classifier | 1.1 | 1 |
 | TheHive Trigger | 2 | 1 |
 | Think Tool | 1.1 | 1 |

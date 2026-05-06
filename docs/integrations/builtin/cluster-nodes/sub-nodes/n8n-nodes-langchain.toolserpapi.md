@@ -7,6 +7,10 @@ priority: high
 
 # SerpApi (Google Search) node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. Use the verified **SerpApi Official** community node instead.
+///
+
 The SerpAPI node allows an [agent](/glossary.md#ai-agent) in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.

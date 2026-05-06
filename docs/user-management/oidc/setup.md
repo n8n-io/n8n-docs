@@ -102,9 +102,7 @@ For new projects, get the project ID from the URL when viewing the project in yo
 
 #### Map rules inside n8n
 
-/// info | Feature availability
-**Map rules inside n8n** is available from version `2.19.0` and is currently behind a feature flag. Set the environment variable `N8N_ENV_FEAT_EXPRESSION_ROLE_MAPPING=true` on your n8n instance to enable it.
-///
+**Map rules inside n8n** is available from version `2.19.0` upwards.
 
 Use this option to define group-to-role mappings inside n8n rather than in your IdP. Each rule is an expression that n8n evaluates against the OIDC claims in the IdP response.
 
@@ -120,16 +118,18 @@ Use this option to define group-to-role mappings inside n8n rather than in your 
 Most group-based rules need a `groups` claim in the OIDC response. This claim isn't included by default, you need to configure your IdP to send it. For example, add a `groups` scope in Okta, or configure the `groups` claim in the Azure AD token configuration. Inspect your IdP's response before writing rules so you know the exact claim name and structure.
 ///
 
-**Example OIDC ID token payload**
+**Example userinfo response**
 
-After the ID token is decoded, a typical payload looks like this:
+After authenticating, n8n calls the IdP's userinfo endpoint to fetch the user's claims. A typical response looks like this:
 
 ```json
 {
   "sub": "00uwyqw9raWrKRJ0Q697",
+  "name": "Jane Doe",
   "email": "jane.doe@example.com",
-  "iss": "https://example.okta.com/oauth2/default",
-  "aud": "0oaxc5jnb24VcsaHz697",
+  "email_verified": true,
+  "given_name": "Jane",
+  "family_name": "Doe",
   "groups": [
     "Everyone",
     "n8n admins",
@@ -141,7 +141,11 @@ After the ID token is decoded, a typical payload looks like this:
 
 `$claims` reflects this payload. So `$claims.email` is a string, `$claims.groups` is an array of strings, and you can use standard JavaScript methods on either. The exact group names depend on your IdP. Some providers (for example Azure AD) send group UUIDs rather than display names, in which case your expressions need to reference the UUID.
 
-To inspect your own response in Okta, go to **Security** > **API** > **Authorization Servers**, open your server, and use the **Token Preview** tab with the `openid` scope included.
+To inspect your own userinfo response in Okta, call the userinfo endpoint directly with a valid access token. You can get a test access token from **Security** > **API** > **Authorization Servers** > your server > **Token Preview** tab, then run:
+
+```
+curl -H "Authorization: Bearer <access-token>" https://<your-okta-domain>/oauth2/<auth-server-id>/v1/userinfo
+```
 
 **Instance role rules**
 

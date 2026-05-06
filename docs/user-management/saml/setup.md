@@ -106,9 +106,7 @@ For new projects, get the project ID from the URL when viewing the project in yo
 
 #### Map rules inside n8n
 
-/// info | Feature availability
-**Map rules inside n8n** is available from version `2.19.0` and is currently behind a feature flag. Set the environment variable `N8N_ENV_FEAT_EXPRESSION_ROLE_MAPPING=true` on your n8n instance to enable it.
-///
+**Map rules inside n8n** is available from version `2.19.0` upwards.
 
 Use this option to define group-to-role mappings inside n8n rather than in your IdP. Each rule is an expression that n8n evaluates against the SAML attributes in the IdP response.
 

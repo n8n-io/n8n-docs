@@ -35,7 +35,7 @@ Convert text to speech using a MiniMax speech synthesis model.
 - **Audio Format** (type: options, field: `audioFormat`): Output audio format. Options: MP3, PCM, FLAC, WAV. The node supports WAV in non-streaming mode only. Default: `mp3`
 - **Emotion** (type: options, field: `emotion`): Emotion to apply to the synthesized speech. The model automatically selects the most natural emotion. Default: `calm`
 - **Language Boost** (type: options, field: `languageBoost`): Enhance recognition accuracy for a specific language. Default: `auto`
-- **Pitch** (type: number, field: `pitch`): Pitch adjustment for the speech, from -12 to 12. `0` keeps the original pitch. Default: `0`
+- **Pitch** (type: number, field: `pitch`): Pitch adjustment for the speech, from –12 to 12. `0` keeps the original pitch. Default: `0`
 - **Speed** (type: number, field: `speed`): Speech speed from 0.5 to 2. Higher values produce faster speech. Default: `1`
 - **Volume** (type: number, field: `volume`): Speech volume from 0.1 to 10. Higher values produce louder speech. Default: `1`
 

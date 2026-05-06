@@ -9,6 +9,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
+* [MiniMax](/integrations/builtin/app-nodes/n8n-nodes-langchain.minimax.md)
 * [MiniMax Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md)
 
 ## Prerequisites

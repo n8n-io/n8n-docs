@@ -215,7 +215,7 @@
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
 /integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
-/integrations/core-nodes/*   /integrations/builtin/core-nodes/  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
 /integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 
 /credentials/* /integrations/builtin/credentials/:splat  301

@@ -306,7 +306,7 @@ nav:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
-        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.n8n-nodes-langchain.alibabacloud.md
+        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -480,6 +480,7 @@ nav:
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
         - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
+        - MiniMax: integrations/builtin/app-nodes/n8n-nodes-langchain.minimax.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
@@ -791,6 +792,7 @@ nav:
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - Lemonade Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatlemonade.md
+          - MiniMax Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Moonshot Kimi Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
           - Ollama Chat Model:
@@ -1017,6 +1019,7 @@ nav:
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md
+        - integrations/builtin/credentials/minimax.md
         - integrations/builtin/credentials/mistral.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
@@ -1259,6 +1262,7 @@ nav:
         - Logs: hosting/configuration/environment-variables/logs.md
         - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md
+        - OpenTelemetry: hosting/configuration/environment-variables/opentelemetry.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
         - SSRF protection: hosting/configuration/environment-variables/ssrf-protection.md
@@ -1292,6 +1296,7 @@ nav:
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
+      - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
       - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md

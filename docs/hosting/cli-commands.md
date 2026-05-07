@@ -291,6 +291,7 @@ Available flags:
 | --separate | Imports `*.json` files from directory provided by --input. |
 | --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
 | --skipMigrationChecks | Skip migration validation checks. |
+| --activeState | Controls the active state of imported workflows. Accepts `false` (default, deactivates all imported workflows) or `fromJson` (uses the `active` field from each workflow's JSON; multi-main mode only). |
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
@@ -303,8 +304,11 @@ In this case, you can edit the names from the n8n interface and export again, or
 ### Workflows
 
 /// warning | Known issue: cron triggers keep running after import
-When importing a previously active workflow via `n8n import:workflow`, this then deactivated workflow's cron triggers will continue to run until you restart n8n.
-When running n8n in multi-main mode, all triggers will be deactivated as expected.
+The behaviour of importing a previously active workflow differs depending on the mode you are running. This is a known bug.
+
+On multi-main and queue-mode instances the previously active workflow's cron triggers are deactivated on import. 
+
+On non multi-main instances the previously active workflows cron triggers will remain running until you restart the n8n instance. 
 ///
 
 Import workflows from a specific file:
@@ -318,9 +322,17 @@ Import all the workflow files as JSON from the specified directory:
 ```bash
 n8n import:workflow --separate --input=backups/latest/
 ```
+
 /// note | Version metadata on import
 If the imported file includes a `versionMetadata` property (added by exports that target a specific version or the published version), n8n preserves that historical name and description in the workflow history table. The current workflow entity's name and description are kept as-is.
 ///
+
+By default, `import:workflow` deactivates every imported workflow. To preserve the `active` field from each JSON file instead, pass `--activeState=fromJson` (only supported in multi-main & queue mode):
+
+```bash
+n8n import:workflow --separate --input=backups/latest/ --activeState=fromJson
+```
+
 ### Credentials
 
 Import credentials from a specific file:

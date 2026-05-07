@@ -29,6 +29,7 @@ Configure the node with these parameters:
 * **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md) to configure the parameters for each mode type.
 * **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
     * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+* **Max Emails per Poll**: Enter the maximum number of emails the node fetches per poll cycle. The default is 10, with a maximum of 50. If there are more unread emails than the limit, the node queues the remaining emails and fetches them in the next poll cycle.
 
 ## Node filters
 

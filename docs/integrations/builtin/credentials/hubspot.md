@@ -14,39 +14,48 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- App token: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
+- Service key (recommended): Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
 - Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node.
 - OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
 
 /// warning | API key deprecated
-HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://web.archive.org/web/20240106022147/https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up an app token.
+HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://web.archive.org/web/20240106022147/https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up a service key.
+///
+
+/// warning | UI based private apps are now legacy
+HubSpot has moved private apps created in the UI to legacy status. If you're using a private app access token from this type of app, HubSpot recommends using a service key instead. Refer to [HubSpot's Private Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview) for more information.
 ///
 
 ## Related resources
 
 Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api-reference/webhooks-webhooks-v3/guide) for more information about that service.
 
-## Using App token
+## Using Service Key
 
-To configure this credential, you'll need a [HubSpot](https://www.hubspot.com/) account or [HubSpot developer](https://developers.hubspot.com/) account and:
+To configure this credential, you'll need a [HubSpot](https://www.hubspot.com/) account with super admin access or Developer tools access permission, and:
 
-- An **App Token**
+- A **Service Key**
 
-To generate an app token, create a private app in HubSpot:
+To generate a service key:
 
-1. In your HubSpot account, select the **settings icon** in the main navigation bar.
-2. In the left sidebar menu, go to **Integrations > Private Apps**.
-3. Select **Create private app**.
-4. On the **Basic Info** tab, enter your app's **Name**.
-5. Hover over the **placeholder logo** and select the upload icon to upload a square image that will serve as the logo for your app.
-6. Enter a **Description** for your app.
-7. Open the **Scopes** tab and add the appropriate scopes. Refer to [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for a complete list of scopes you should add.
-8. Select **Create app** to finish the process.
-9. In the modal, review the info about your app's access token, then select **Continue creating**.
-10. Once your app's created, open the **Access token card** and select **Show token** to reveal the token.
-11. Copy this token and enter it in your n8n credential.
+1. In your HubSpot account, go to **Development** > **Keys** > **Service Keys**. (You can also find **Service Keys** under **Settings** > **Account Management** > **Integrations** > **Service Keys**.)
 
-Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview) for more information.
+	![The Service Keys page in HubSpot's Development menu](/_images/integrations/builtin/credentials/hubspot/service_keys_main.png)
+
+2. Select **Create service key**.
+
+	![The Create Service Key form with name and scopes fields](/_images/integrations/builtin/credentials/hubspot/service_keys_create.png)
+
+3. Enter a descriptive **Name** for your key.
+4. Select **Add new scope** and choose the permissions your integration needs. Refer to [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for a list of recommended scopes.
+5. Select **Update** to confirm your scope selections.
+6. Select **Create**, then confirm in the dialog.
+7. Click on the new service key name to navigate to its details page, and select **Show** to reveal your key.
+8. Copy the key value using the copy button, and paste it as the **App Token** in your n8n credential.
+
+/// note | Service keys in public beta
+Service keys are currently in public beta and subject to change. Refer to [HubSpot's Service Keys documentation](https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys) for the latest information.
+///
 
 ## Using Developer API key
 
@@ -91,9 +100,6 @@ If you're creating an app for use with the [HubSpot Trigger](/integrations/built
 | CRM | Deals | Read | `crm.objects.deals.read` |
 | CRM | Deals schemas| Read | `crm.schemas.deals.read` |
 
-/// warning | HubSpot old accounts
-Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
-///
 
 ## Using OAuth2
 
@@ -135,6 +141,3 @@ If you're creating an app for use with the [HubSpot](/integrations/builtin/app-n
 | CRM | Owners | Read | `crm.objects.owners.read` |
 | CRM | Lists | Write | `crm.lists.write` |
 
-/// warning | HubSpot old accounts
-Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
-///

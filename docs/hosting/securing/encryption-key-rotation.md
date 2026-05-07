@@ -66,12 +66,12 @@ Read this section carefully before enabling encryption key rotation.
 
 Once you enable encryption key rotation, n8n begins writing credentials and other sensitive data in a new format that includes a key identifier. Older versions of n8n, and instances running without the feature flag, can't read this format.
 
-* **Don't disable the feature flag** after any data has been written in the new format. Removing `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION` or setting it to `false` makes all data encrypted after enablement permanently inaccessible.
-* **Don't downgrade your n8n version** after enabling. Older versions can't decrypt the new ciphertext format.
+* **Don't disable the feature flag** after any data has been written in the new format. Removing `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION` or setting it to `false` makes all data encrypted after you enabled the feature permanently inaccessible.
+* **Don't downgrade your n8n version** after enabling. Older versions can't decrypt the new format.
 
 There's no automated tool to convert data encrypted in the new format back to the legacy format. The only recovery path is restoring from a database backup taken before you enabled the feature.
 
-## Recommended rollout steps
+## Recommended steps
 
 1. **Back up your database**. Take a full snapshot before any changes.
 2. **Enable on staging first**. Set `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION=true` on a non-production environment, restart, and verify that credentials still decrypt correctly.

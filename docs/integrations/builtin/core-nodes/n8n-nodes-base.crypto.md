@@ -72,7 +72,7 @@ Node parameters depend on the action you select.
 
 * **Value**: Enter the value you want to sign.
 * **Property Name**: Enter the name of the property you want to write the signed value to.
-* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/code/expressions.md).
+* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/data/expressions.md).
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**

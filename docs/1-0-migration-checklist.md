@@ -101,7 +101,7 @@ n8n provides various transformation functions that operate on dates. These funct
 
 To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/).
 
-For more information about date transformation functions, please refer to the [official documentation](/code/builtin/data-transformation-functions/dates.md).
+For more information about date transformation functions, please refer to the [official documentation](/data/expression-reference/index.md).
 
 [PR #6435](https://github.com/n8n-io/n8n/pull/6435)
 

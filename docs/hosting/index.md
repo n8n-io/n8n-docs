@@ -10,7 +10,7 @@ hide:
 
 # Self-hosting n8n
 
-This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions. The Community edition is free, the Enterprise edition isn't. 
+This section provides guidance on setting up self-hosted n8n. All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions.
 
 See [Community edition features](/hosting/community-edition-features.md) for a list of available features. 
 

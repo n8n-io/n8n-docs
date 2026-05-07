@@ -19,41 +19,41 @@ For usage examples and templates to help you get started, refer to n8n's [Custom
 ## Events
 
 * Customer
-  * Subscribed
-  * Unsubscribe
+    * Subscribed
+    * Unsubscribe
 * Email
-  * Bounced
-  * Clicked
-  * Converted
-  * Delivered
-  * Drafted
-  * Failed
-  * Opened
-  * Sent
-  * Spammed
+    * Bounced
+    * Clicked
+    * Converted
+    * Delivered
+    * Drafted
+    * Failed
+    * Opened
+    * Sent
+    * Spammed
 * Push
-  * Attempted
-  * Bounced
-  * Clicked
-  * Delivered
-  * Drafted
-  * Failed
-  * Opened
-  * Sent
+    * Attempted
+    * Bounced
+    * Clicked
+    * Delivered
+    * Drafted
+    * Failed
+    * Opened
+    * Sent
 * Slack
-  * Attempted
-  * Clicked
-  * Drafted
-  * Failed
-  * Sent
+    * Attempted
+    * Clicked
+    * Drafted
+    * Failed
+    * Sent
 * Sms
-  * Attempted
-  * Bounced
-  * Clicked
-  * Delivered
-  * Drafted
-  * Failed
-  * Sent
+    * Attempted
+    * Bounced
+    * Clicked
+    * Delivered
+    * Drafted
+    * Failed
+    * Sent
 
 ## Related resources
 

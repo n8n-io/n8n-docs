@@ -19,39 +19,39 @@ For usage examples and templates to help you get started, refer to n8n's [Affini
 ## Events
 
 * Field value
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * Field
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * File
-  * Created
-  * Deleted
+    * Created
+    * Deleted
 * List entry
-  * Created
-  * Deleted
+    * Created
+    * Deleted
 * List
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * Note
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * Opportunity
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * Organization
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 * Person
-  * Created
-  * Deleted
-  * Updated
+    * Created
+    * Deleted
+    * Updated
 
 ## Related resources
 

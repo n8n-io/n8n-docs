@@ -9,10 +9,12 @@ priority: critical
 
 Use the Chat node with the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to send messages into the chat and optionally wait for responses from users. This enables human-in-the-loop (HITL) use cases in chat workflows, allowing you to have multiple chat interactions within a single execution. The Chat node also works as a tool for AI Agents.
 
-All features work with both embedded and hosted chat interfaces.
-
 /// note | Chat Trigger node
 The Chat node requires a [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to be present in the workflow, with the [Response Mode](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#response-mode) set to 'Using Response Nodes'.
+///
+
+/// warning | Embedded mode not supported
+The Chat node isn't supported when the Chat Trigger node is set to **Embedded** mode. In Embedded mode, use the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node instead.
 ///
 
 /// note | Previous version
@@ -85,16 +87,16 @@ When using the Approval response type, the message displays inline buttons that 
 When using the Approval response type, the following parameters are available:
 
 * **Type of Approval**: Whether to present only an approval button or both approval and disapproval buttons.
-  - **Approve Only**: Displays a single approval button
-  - **Approve and Disapprove**: Displays both buttons (default)
+    - **Approve Only**: Displays a single approval button
+    - **Approve and Disapprove**: Displays both buttons (default)
 
 * **Approve Button Label**: The text to display on the approval button. Default: `Approve`
 
 * **Disapprove Button Label**: The text to display on the disapproval button (only shown when Type of Approval is "Approve and Disapprove"). Default: `Disapprove`
 
 * **Block User Input**: Whether to prevent users from typing custom messages (enabled) or allow them to type responses (disabled, default).
-  - When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
-  - When **enabled**: Users can only interact using the buttons.
+    - When **disabled** (default): Users can click buttons or type a custom message. Typed messages are treated as disapproval with a custom message.
+    - When **enabled**: Users can only interact using the buttons.
 
 The Approval response type also offers the following option:
 
@@ -112,6 +114,7 @@ Refer to the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain
 
 ## Common issues
 
+- The Chat node isn't supported when the Chat Trigger node's **Mode** is set to **Embedded**. In Embedded mode, the Chat Trigger node only offers **Respond to Webhook** as a response mode. Use the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node instead.
 - The Chat node doesn't work when used as a tool of a subagent.
 - The Chat node doesn't work when used in a subworkflow. This includes usage in a subworkflow that's being used as a tool for an AI Agent.
 - Make sure the Chat Trigger node's Response Mode is set to "Using Response Nodes" for the Chat node to function properly.

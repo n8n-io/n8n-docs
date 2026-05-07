@@ -33,5 +33,9 @@ Then:
 3. Give your key a **Name**, like `n8n-integration`.
 4. Select **Copy Key** to copy the key.
 5. Enter this as the **API Key** in your n8n credential.
+6. (Optional) To add custom headers to your API requests:
+    1. Enable the **Add Custom Header** toggle.
+    2. Enter the **Header Name** for your custom header.
+    3. Enter the **Header Value** for your custom header.
 
 Refer to Anthropic's [Intro to Claude](https://docs.anthropic.com/en/docs/intro-to-claude) and [Quickstart](https://docs.anthropic.com/en/docs/quickstart) for more information.

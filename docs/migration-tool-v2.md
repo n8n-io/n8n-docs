@@ -37,9 +37,9 @@ What you'll see for each issue:
 
 * **Issue title:** A clear name for the problem
 * **Severity badge (Critical/Medium/Low):** How urgent this is to fix
-   * **Critical:** Fix before upgrading or workflows will fail
-   * **Medium:** May cause unexpected behavior or require attention soon
-   * **Low:** Minor changes or deprecations that won't break functionality
+    * **Critical:** Fix before upgrading or workflows will fail
+    * **Medium:** May cause unexpected behavior or require attention soon
+    * **Low:** Minor changes or deprecations that won't break functionality
 * **Description:** Explanation of what's changing and why it matters
 * **Documentation link:** Click to read detailed migration explanations
 * **Affected workflow count:** How many of your workflows have this issue

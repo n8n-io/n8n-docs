@@ -7,6 +7,10 @@ priority: medium
 
 # Motorhead credentials
 
+/// warning | Deprecated
+The Motorhead project is no longer maintained. The [Motorhead node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
+///
+
 You can use these credentials to authenticate the following nodes:
 
 * [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md)

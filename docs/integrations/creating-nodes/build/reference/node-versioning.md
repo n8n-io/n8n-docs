@@ -48,6 +48,78 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
 }
 ```
 
+## Feature-based versioning
+
+Feature flags let you control parameter visibility and execution logic based on named features tied to node versions.
+
+### Defining features
+
+Add a `features` object to your node type description. Each feature uses `@version` conditions to specify which versions enable it:
+
+```js
+{
+    version: [2, 2.1, 2.2, 2.3, 2.4],
+    features: {
+        useNewApi: { '@version': [{ _cnd: { gte: 2.2 } }] },
+        useLegacyAuth: { '@version': [{ _cnd: { lte: 2.1 } }] },
+        useSpecialMode: { '@version': [2] },
+    },
+    // More basic parameters here
+}
+```
+
+Available conditions: `gte`, `lte`, `gt`, `lt`. Pass a plain version number to match a specific version.
+
+### Using `@feature` in `displayOptions`
+
+Use `@feature` in `displayOptions` to control parameter visibility based on feature flags:
+
+```js
+{
+    displayName: 'New API Field',
+    name: 'newApiField',
+    type: 'string',
+    displayOptions: {
+        show: {
+            '@feature': ['useNewApi'],
+        },
+    },
+}
+```
+
+To show a parameter when a feature is **not** enabled, use the condition syntax:
+
+```js
+displayOptions: {
+    show: {
+        '@feature': [{ _cnd: { not: 'useNewApi' } }],
+    },
+}
+```
+
+You can combine `@feature` with other display conditions:
+
+```js
+displayOptions: {
+    show: {
+        resource: ['myResource'],
+        '@feature': [{ _cnd: { eq: 'useNewApi' } }],
+    },
+}
+```
+
+### Checking features in code
+
+Use `this.isNodeFeatureEnabled()` in execution contexts (such as `IExecuteFunctions` or `IWebhookFunctions`):
+
+```js
+if (this.isNodeFeatureEnabled('useNewApi')) {
+    // Process with new API
+} else {
+    // Process with legacy API
+}
+```
+
 ## Full versioning
 
 This isn't available for declarative-style nodes.

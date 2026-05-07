@@ -2,11 +2,14 @@
 contentType: overview
 ---
 
-# Data mapping
+# Referencing data
 
-Data mapping means referencing data from previous nodes. 
+Referencing data, or data mapping, means accessing information from previous nodes in your workflow. This allows you to use output from earlier steps as input for later nodes, creating dynamic workflows that pass data through multiple operations.
 
-This section contains guidance on:
+When you reference data, you're not changing it. You're pointing to values that already exist so you can use them in node parameters, expressions, or custom code.
 
-* Mapping data in most scenarios: [Data mapping in the UI](/data/data-mapping/data-mapping-ui.md) and [Data mapping in expression](/data/data-mapping/data-mapping-expressions.md)
-* How to handle [item linking](/data/data-mapping/data-item-linking/index.md) when using the Code node or building your own nodes. 
+If you want to change the data you're referencing, see [Transforming data](/data/transforming-data.md).
+
+## How to reference data
+
+The main way to reference data is using [expressions](/data/expressions.md#expressions). You can create expressions by typing them in a parameter's field or dragging and dropping fields from the Input panel in the UI. Expressions will automatically figure out the correct item to use using [item linking](/data/data-mapping/data-item-linking/index.md).

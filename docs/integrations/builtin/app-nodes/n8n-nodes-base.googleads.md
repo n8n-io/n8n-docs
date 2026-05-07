@@ -18,8 +18,8 @@ Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index
 ## Operations
 
 * Campaign
-  * Get all campaigns
-  * Get a campaign
+    * Get all campaigns
+    * Get a campaign
 
 ## Templates and examples
 

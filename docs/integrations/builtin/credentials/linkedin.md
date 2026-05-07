@@ -45,7 +45,7 @@ To create a new developer app and set up the credential:
 4. Add an **App logo**.
 5. Check the box to agree to the **Legal agreement**.
 6. Select **Create app**.
-7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work properly, you must include and configure:
+7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work, you must include and configure:
 	- **Share on LinkedIn**
 	- **Sign In with LinkedIn using OpenID Connect**
  	- **Advertising API** (if using it as an organization account rather than an individual)
@@ -58,6 +58,95 @@ To post as an organization, you need to put your app through LinkedIn's [Communi
 ///
 
 Refer to [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access) for more information on scopes and permissions.
+
+## Using Lead Sync API
+
+LinkedIn's Lead Sync API allows you to sync lead form responses from LinkedIn ads and organic forms (company pages, events, products) to your n8n workflows using webhooks. This requires more setup and LinkedIn approval.
+
+### Prerequisites
+
+- A LinkedIn developer app (created using steps above)
+- Your company LinkedIn account linked to your developer app
+- Access to the Lead Sync API product (requires separate application)
+- A publicly accessible HTTPS webhook URL (your n8n workflow webhook URL)
+
+### Setup process
+
+1. **Create a LinkedIn developer app** following the steps in the Community Management OAuth2 or OAuth2 sections above.
+2. **Link your company account**: Submit a request to LinkedIn to link your company LinkedIn account to your developer app. This is done through the LinkedIn Developer Portal.
+3. **Request Lead Sync API access**: 
+   - In your [LinkedIn developer app](https://www.linkedin.com/developers/apps/), navigate to the **Products** tab.
+   - Request access to the **Lead Sync API** product.
+4. **Configure permissions**: Ensure your app has the `r_marketing_leadgen_automation` permission, which allows you to:
+   - Access authenticated member's ad forms and organic forms
+   - Access form responses (leads)
+   - Manage lead notifications (webhooks)
+5. **Set up webhook in n8n**:
+   - Create a workflow with a Webhook trigger node in n8n.
+   - Copy the webhook URL from n8n (must be HTTPS).
+   - The webhook URL must be publicly accessible and accept POST requests without additional authorization requirements.
+6. **Handle the challenge request**:
+   - When you register your webhook with LinkedIn, LinkedIn will send a GET request with a `challengeCode` query parameter.
+   - Your n8n workflow must respond within 3 seconds with a JSON payload containing:
+     - `challengeCode`: The code LinkedIn sent
+     - `challengeResponse`: HMAC-SHA256 hash of the challenge code using your app's Client Secret as the key
+   - Example response format:
+     ```json
+     {
+       "challengeCode": "890e4665-4dfe-4ab1-b689-ed553bceeed0",
+       "challengeResponse": "27b1d19678542072a7f1d0ce845d0c78cec22567f413697e25648f44fa3d1514"
+     }
+     ```
+7. **Create lead notification subscription**:
+   - Use the `leadNotifications` API to create a webhook subscription.
+   - You can create subscriptions at different levels:
+     - **Owner level**: Receive notifications for all forms under an organization or sponsored account
+     - **Form level**: Receive notifications only for specific forms
+     - **Associated entity level**: Receive notifications for forms attached to specific entities (ads, events, etc.)
+   - Example API call:
+     ```bash
+     POST https://api.linkedin.com/rest/leadNotifications
+     {
+       "webhook": "https://your-n8n-instance.com/webhook/linkedin-leads",
+       "owner": {"organization": "urn:li:organization:123456"},
+       "leadType": "SPONSORED"
+     }
+     ```
+8. **Fetch lead form responses**:
+   - Once webhook notifications are set up, you'll receive notifications when new leads are submitted.
+   - Use the `leadFormResponses` API to fetch the actual lead data:
+     ```bash
+     GET https://api.linkedin.com/rest/leadFormResponses?owner=(organization:urn%3Ali%3Aorganization%3A123456)&leadType=(leadType:SPONSORED)&q=owner
+     ```
+
+### Lead types
+
+LinkedIn supports different types of leads that can be synced:
+
+- **SPONSORED**: Leads collected from sponsored ads
+- **COMPANY**: Leads collected from company pages  
+- **EVENT**: Leads collected from event pages
+- **ORGANIZATION_PRODUCT**: Leads collected from organization product pages
+
+### Webhook validation
+
+LinkedIn periodically re-validates webhook endpoints every 2 hours. If validation fails 3 times in a row, the endpoint will be blocked and events will no longer be sent. Ensure your webhook:
+
+- Responds to challenge requests within 3 seconds
+- Returns a 2xx HTTP status code for all notifications
+- Uses HTTPS (HTTP URLs aren't supported)
+- Is publicly accessible without authentication requirements
+
+### Security
+
+To verify that notifications are from LinkedIn:
+
+1. Check the `X-LI-Signature` header in the POST request
+2. This header contains the HMAC-SHA256 hash of the JSON-encoded POST body, computed using your app's Client Secret
+3. Compute the same hash on your side and verify it matches
+4. Discard any events where the signatures don't match
+
+Refer to LinkedIn's [Lead Sync API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/lead-sync/leadsync) and [Webhook Validation guide](https://learn.microsoft.com/en-us/linkedin/shared/api-guide/webhook-validation) for more information.
 
 ## Using OAuth2
 

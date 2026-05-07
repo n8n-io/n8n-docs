@@ -116,7 +116,7 @@ You can find all available nodes in the **nodes panel** on the right side of the
 
 - Click the **+** icon in the top right corner of the canvas.
 - Click the **+** icon on the right side of an existing node on the canvas (the node to which you want to add another one).
-- Click the ++tab++ key on your keyboard.
+- Press the ++n++ key on your keyboard.
 
 <figure style="text-align: center; width:50%; margin:auto;"><img src="/_images/courses/level-one/chapter-one/l1-c1-node-menu-drilldown.gif" alt="Nodes panel"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 

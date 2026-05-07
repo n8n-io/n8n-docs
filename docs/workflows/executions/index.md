@@ -15,6 +15,11 @@ There are two execution modes:
 * Production: a production workflow is one that runs automatically. To enable this, set the workflow to **Active**.
 
 
+## How executions count towards quotas:
+
+[Paid plans](https://n8n.io/pricing/), whether cloud or self-hosted, have an execution limit quota. Only production executions count towards this quota. These are executions started automatically by triggers, schedules, or polling. Manual executions aren't counted. This distinction applies regardless of the instance environment, such as development or production.
+
+
 ## Execution lists
 
 n8n provides two execution lists:
@@ -23,3 +28,7 @@ n8n provides two execution lists:
 * [All executions](/workflows/executions/all-executions.md): this list shows all executions for all your workflows.
 
 n8n supports [adding custom data to executions](/workflows/executions/custom-executions-data.md).
+
+## Execution data redaction
+
+You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details.

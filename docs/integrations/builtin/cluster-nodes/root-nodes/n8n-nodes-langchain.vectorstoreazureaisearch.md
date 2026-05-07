@@ -177,10 +177,10 @@ The built-in semantic reranker uses machine learning models to improve relevance
 
 - **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by document fields or metadata. See filter examples below.
 - **Query Mode**: Search strategy to use:
-  - **Vector**: Similarity search using embeddings only
-  - **Keyword**: Full-text search using BM25 ranking
-  - **Hybrid** (default): Combines vector and keyword search with Reciprocal Rank Fusion (RRF)
-  - **Semantic Hybrid**: Hybrid search with [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) for improved relevance
+    - **Vector**: Similarity search using embeddings only
+    - **Keyword**: Full-text search using BM25 ranking
+    - **Hybrid** (default): Combines vector and keyword search with Reciprocal Rank Fusion (RRF)
+    - **Semantic Hybrid**: Hybrid search with [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) for improved relevance
 - **Semantic Configuration**: Name of the semantic configuration to use for [semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview). Defaults to `semantic-search-config` if not specified. Only required if you pre-created an index with a custom semantic configuration name.
 
 /// note | Query mode selection

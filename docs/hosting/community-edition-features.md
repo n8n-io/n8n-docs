@@ -26,7 +26,7 @@ The community edition doesn't include these features:
 - Sharing ([workflows](/workflows/sharing.md), [credentials](/credentials/credential-sharing.md)) (Only the instance owner and the user who creates them can access workflows and credentials)
 - [Version control using Git](/source-control-environments/index.md)
 
-These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
+These features are available on: the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plans, and the Business self-hosted plan.
 
 See [pricing](https://n8n.io/pricing/) for reference.
 

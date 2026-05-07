@@ -166,11 +166,11 @@ The following tags are automatically removed for security: `<script>`, `<style>`
 
 Only specific attributes are allowed on certain tags:
 
-* Links (<a>): `href`, `target`, `rel`
-* Images (<img>): `src`, `alt`, `width`, `height`
-* Videos (<video>): `controls`, `autoplay`, `loop`, `muted`, `poster`, `width`, `height`
-* Iframes (<iframe>): `src`, `width`, `height`, `frameborder`, `allow`, `allowfullscreen`, `referrerpolicy` (automatically sandboxed)
-* Table cells (<td>, <th>): `colspan`, `rowspan`, `scope`, `headers`
+* Links (`<a>`): `href`, `target`, `rel`
+* Images (`<img>`): `src`, `alt`, `width`, `height`
+* Videos (`<video>`): `controls`, `autoplay`, `loop`, `muted`, `poster`, `width`, `height`
+* Iframes (`<iframe>`): `src`, `width`, `height`, `frameborder`, `allow`, `allowfullscreen`, `referrerpolicy` (automatically sandboxed)
+* Table cells (`<td>`, `<th>`): `colspan`, `rowspan`, `scope`, `headers`
 
 All other attributes are removed during sanitization. Only `http://` and `https://` URL schemes are permitted.
 

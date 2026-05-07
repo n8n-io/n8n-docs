@@ -123,6 +123,7 @@ Infisical
 Intuit
 IP
 [Ii]terable
+Jaeger
 Jira
 Jina
 JMESPath
@@ -180,6 +181,8 @@ Okta
 Ollama
 onboarding
 Onfleet
+[Oo]pen[Tt]elemetry
+OTLP
 Ortto
 Oura
 PDFs?

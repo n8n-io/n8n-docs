@@ -64,7 +64,7 @@ Command flags:
 | --versionId | Optional version ID to publish. If omitted, the current draft is published. |
 
 /// note | No `--all` flag
-Unlike the deprecated `update:workflow` command, `publish:workflow` does not support `--all`. This is intentional: it prevents accidental bulk publishing of workflows in production environments. Publish workflows individually by ID.
+Unlike the deprecated `update:workflow` command, `publish:workflow` doesn't support `--all`. This is intentional: it prevents accidental bulk publishing of workflows in production environments. Publish workflows individually by ID.
 ///
 
 Publish the current draft of a workflow by ID:

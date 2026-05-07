@@ -216,7 +216,7 @@ n8n export:workflow --all --published --output=workflows.json
 ```
 
 /// note | Version metadata
-When exporting a workflow, n8n includes a `versionMetadata` property containing the workflow's historical name and description for that version. The import command preserves this data in the workflow history table on import. The current workflow's name and description are not overridden.
+When exporting a workflow, n8n includes a `versionMetadata` property containing the workflow's historical name and description for that version. The import command preserves this data in the workflow history table on import. The current workflow's name and description aren't overridden.
 ///
 
 ### Credentials

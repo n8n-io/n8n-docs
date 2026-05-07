@@ -206,6 +206,7 @@ Available flags:
 | --separate | Imports `*.json` files from directory provided by --input. |
 | --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
 | --skipMigrationChecks | Skip migration validation checks. |
+| --activeState | Controls the active state of imported workflows. Accepts `false` (default, deactivates all imported workflows) or `fromJson` (uses the `active` field from each workflow's JSON; multi-main mode only). |
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
@@ -235,6 +236,12 @@ Import all the workflow files as JSON from the specified directory:
 
 ```bash
 n8n import:workflow --separate --input=backups/latest/
+```
+
+By default, `import:workflow` deactivates every imported workflow. To preserve the `active` field from each JSON file instead, pass `--activeState=fromJson` (only supported in multi-main & queue mode):
+
+```bash
+n8n import:workflow --separate --input=backups/latest/ --activeState=fromJson
 ```
 
 ### Credentials

@@ -1,7 +1,7 @@
 ---
 title: Agents
 description: Build AI-powered assistants that understand natural language, make decisions, and take actions with your connected tools.
-status: preview
+status: beta
 hide:
   - navigation
 ---

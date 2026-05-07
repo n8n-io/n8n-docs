@@ -1404,3 +1404,4 @@ nav:
 
 not_in_nav: |
   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
+  /advanced-ai/agents.md

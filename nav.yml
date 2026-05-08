@@ -1179,6 +1179,7 @@ nav:
         - Install verified community nodes: integrations/community-nodes/installation/verified-install.md
         - GUI installation: integrations/community-nodes/installation/gui-install.md
         - Manual installation: integrations/community-nodes/installation/manual-install.md
+        - Environment variable installation: integrations/community-nodes/installation/env-install.md
       - Risks: integrations/community-nodes/risks.md
       - Blocklist: integrations/community-nodes/blocklist.md
       - Using community nodes: integrations/community-nodes/usage.md

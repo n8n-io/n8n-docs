@@ -114,13 +114,13 @@ Manage [instance-level MCP access](/advanced-ai/mcp/accessing-n8n-mcp-server.md)
 <!-- TODO: fill version -->
 ///
 
-Pre-install a managed set of [community packages](/integrations/community-nodes/installation/index.md) from environment variables. n8n reconciles the installed packages against the list on every startup. Pre-installed packages can't be uninstalled or updated through the UI.
+Manage the set of installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/community-packages.md"
 
 ## Combined example
 
-The following example configures an instance with all six areas managed by environment variables. It creates the instance owner, configures OIDC SSO, enforces MFA, registers a webhook log streaming destination, enables MCP access, and pre-installs a community package.
+The following example configures an instance with all six areas managed by environment variables. It creates the instance owner, configures OIDC SSO, enforces MFA, registers a webhook log streaming destination, enables MCP access, and manages a community package.
 
 ```bash
 # Instance owner

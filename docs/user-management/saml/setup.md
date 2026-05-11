@@ -8,6 +8,10 @@ contentType: howto
 
 --8<-- "_snippets/user-management/sso-saml-availability.md"
 
+/// note | Configure using environment variables
+You can also configure SAML from environment variables instead of the UI. Available from n8n v2.18.0. See [SSO environment variables](/hosting/configuration/environment-variables/sso.md).
+///
+
 ## Enable SAML
 
 1. In n8n, go to **Settings** > **SSO**.

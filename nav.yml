@@ -1265,6 +1265,7 @@ nav:
         - OpenTelemetry: hosting/configuration/environment-variables/opentelemetry.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
+        - SSO: hosting/configuration/environment-variables/sso.md
         - SSRF protection: hosting/configuration/environment-variables/ssrf-protection.md
         - Source control: hosting/configuration/environment-variables/source-control.md
         - Task runners: hosting/configuration/environment-variables/task-runners.md
@@ -1293,6 +1294,7 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
+      - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md

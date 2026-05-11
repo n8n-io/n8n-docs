@@ -8,6 +8,10 @@ contentType: howto
 
 --8<-- "_snippets/user-management/sso-oidc-availability.md"
 
+/// note | Configure using environment variables
+You can also configure OIDC from environment variables instead of the UI. Available from n8n v2.18.0. See [SSO environment variables](/hosting/configuration/environment-variables/sso.md).
+///
+
 ## Setting up and enabling OIDC
 
 

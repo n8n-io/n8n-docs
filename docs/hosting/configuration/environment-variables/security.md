@@ -25,3 +25,9 @@ hide:
 | `N8N_SAMESITE_COOKIE` | Enum string: `strict`, `lax`, `none` | `lax` | Controls cross-site cookie behavior ([learn more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)):<ul><li>`strict`: Sent only for first-party requests.</li><li>`lax` (default): Sent with top-level navigation requests.</li><li>`none`: Sent in all contexts (requires HTTPS).</li></ul> |
 | `N8N_GIT_NODE_DISABLE_BARE_REPOS` | Boolean | `false` | Set to `true` to prevent the [Git node](/integrations/builtin/core-nodes/n8n-nodes-base.git.md) from working with bare repositories, enhancing security. |
 | `N8N_GIT_NODE_ENABLE_HOOKS` | Boolean | `false` | Set to `true` to allow the [Git node](/integrations/builtin/core-nodes/n8n-nodes-base.git.md) to execute Git hooks. |
+
+## Security policy using environment variables
+
+Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` to manage the security policy from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/security-policy.md"

@@ -45,3 +45,9 @@ Refer to [Log streaming](/log-streaming.md) for more information on this feature
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | Number of event log files to keep. |
 | `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one starts. |
 | `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
+
+### Manage log streaming destinations from environment variables
+
+Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](/log-streaming.md#configure-using-environment-variables) for the per-destination JSON shape.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"

@@ -43,12 +43,70 @@ Execute a saved workflow by its ID:
 n8n execute --id <ID>
 ```
 
-## Change the active status of a workflow
+## Publish or unpublish a workflow
 
-You can change the active status of a workflow using the CLI.
+You can publish or unpublish a workflow using the CLI. In n8n 2.0, the [previous active/inactive toggle](/2-0-breaking-changes.md) was replaced by a publish/unpublish model. Use `publish:workflow` and `unpublish:workflow` to change a workflow's published state from the CLI.
 
 /// note | Restart required
 These commands operate on your n8n database. If you execute them while n8n is running, the changes don't take effect until you restart n8n.
+///
+
+### Publish a workflow
+
+Use `publish:workflow` to publish a workflow by its ID. You can optionally publish a specific historical version by passing its `versionId`.
+
+Command flags:
+
+| Flag | Description |
+|------|-------------|
+| --help | Help prompt. |
+| --id | The ID of the workflow to publish. Required. |
+| --versionId | Optional version ID to publish. If omitted, the current draft is published. |
+
+/// note | No `--all` flag
+Unlike the deprecated `update:workflow` command, `publish:workflow` doesn't support `--all`. This is intentional: it prevents accidental bulk publishing of workflows in production environments. Publish workflows individually by ID.
+///
+
+Publish the current draft of a workflow by ID:
+
+```bash
+n8n publish:workflow --id=<ID>
+```
+
+Publish a specific historical version of a workflow:
+
+```bash
+n8n publish:workflow --id=<ID> --versionId=<VERSION_ID>
+```
+
+### Unpublish a workflow
+
+Use `unpublish:workflow` to unpublish a workflow by its ID, or all workflows at once.
+
+Command flags:
+
+| Flag | Description |
+|------|-------------|
+| --help | Help prompt. |
+| --id | The ID of the workflow to unpublish. Can't be used with `--all`. |
+| --all | Unpublish all workflows. Can't be used with `--id`. |
+
+Unpublish a workflow by its ID:
+
+```bash
+n8n unpublish:workflow --id=<ID>
+```
+
+Unpublish all workflows:
+
+```bash
+n8n unpublish:workflow --all
+```
+
+### update:workflow (deprecated)
+
+/// warning | Deprecated in n8n 2.0
+The `update:workflow` command is deprecated and will be removed. Use [`publish:workflow`](#publish-a-workflow) and [`unpublish:workflow`](#unpublish-a-workflow) instead. See the [n8n v2.0 breaking changes](/2-0-breaking-changes.md) for details.
 ///
 
 Set the active status of a workflow by its ID to false:
@@ -103,10 +161,12 @@ Command flags:
 | --all | Exports all workflows/credentials. |
 | --backup | Sets --all --pretty --separate for backups. You can optionally set --output. |
 | --id | The ID of the workflow to export. |
-| --output | Outputs file name or directory if using separate files. |
+| --output, -o | Outputs file name or directory if using separate files. |
 | --pretty | Formats the output in an easier to read fashion. |
 | --separate | Exports one file per workflow (useful for versioning). Must set a directory using --output. |
-| --decrypted | Exports the credentials in a plain text format. |
+| --decrypted | Exports the credentials in a plain text format. (Credentials only.) |
+| --version | The version ID of a specific historical version to export. (Workflows only, can't be used with `--all` or `--published`.) |
+| --published | Exports the published/active version of the workflow instead of the current draft. When combined with `--all`, unpublished workflows are skipped. (Workflows only, can't be used with `--version`.) |
 
 ### Workflows
 
@@ -133,6 +193,31 @@ Export all the workflows to a specific directory using the `--backup` flag (deta
 ```bash
 n8n export:workflow --backup --output=backups/latest/
 ```
+#### Export a specific workflow version
+
+You can export a specific historical version of a workflow by passing its `versionId` with `--version`:
+
+```bash
+n8n export:workflow --id=<ID> --version=<VERSION_ID> --output=workflow-v1.json
+```
+
+#### Export the published version of a workflow
+
+Use `--published` to export the currently published/active version of a workflow rather than the current draft:
+
+```bash
+n8n export:workflow --id=<ID> --published --output=published.json
+```
+
+You can combine `--published` with `--all` to export every workflow's published version. Workflows that don't have a published version are skipped:
+
+```bash
+n8n export:workflow --all --published --output=workflows.json
+```
+
+/// note | Version metadata
+When exporting a workflow, n8n includes a `versionMetadata` property containing the workflow's historical name and description for that version. The import command preserves this data in the workflow history table on import. The current workflow's name and description aren't overridden.
+///
 
 ### Credentials
 
@@ -237,6 +322,10 @@ Import all the workflow files as JSON from the specified directory:
 ```bash
 n8n import:workflow --separate --input=backups/latest/
 ```
+
+/// note | Version metadata on import
+If the imported file includes a `versionMetadata` property (added by exports that target a specific version or the published version), n8n preserves that historical name and description in the workflow history table. The current workflow entity's name and description are kept as-is.
+///
 
 By default, `import:workflow` deactivates every imported workflow. To preserve the `active` field from each JSON file instead, pass `--activeState=fromJson` (only supported in multi-main & queue mode):
 

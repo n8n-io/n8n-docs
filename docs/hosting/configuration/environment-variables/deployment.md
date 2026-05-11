@@ -29,6 +29,8 @@ To learn more about proxy environment variables, check the [environment variable
 | `HTTPS_PROXY` | String | - | A URL to proxy TLS/SSL encrypted HTTP requests through. When set, n8n proxies all TLS/SSL encrypted HTTP traffic from nodes through the proxy URL. |
 | `ALL_PROXY` | String | - | A URL to proxy both unencrypted and encrypted HTTP requests through. When set, n8n uses this value when more specific variables (`HTTP_PROXY` or `HTTPS_PROXY`) aren't present. |
 | `NO_PROXY` | String | - | A comma-separated list of hostnames or URLs that should bypass the proxy. When using `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY`, n8n will connect directly to the URLs or hostnames defined here instead of using the proxy. |
+| `N8N_ENFORCE_GLOBAL_USER_AGENT` | Boolean | `false` | When set to `true`, n8n replaces the default bare `n8n` User-Agent string with an RFC-compliant value (`Mozilla/5.0 (compatible; n8n/<version>; +https://n8n.io/)`) on all outbound HTTP requests. Enable this to prevent web application firewalls from blocking n8n requests. |
+| `N8N_GLOBAL_USER_AGENT_VALUE` | String | - | A custom User-Agent string to use for all outbound HTTP requests. Overrides the RFC-compliant default set by `N8N_ENFORCE_GLOBAL_USER_AGENT`. Useful when you don't want to disclose the n8n version to upstream servers. |
 | `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n and the redirect URL for SAML based authentication. |
 | `N8N_DISABLE_UI` | Boolean | `false` | Set to `true` to disable the UI. |
 | `N8N_PREVIEW_MODE` | Boolean | `false` | Set to `true` to run in preview mode. |

@@ -49,8 +49,7 @@ In addition to instance-wide environment variables, you can configure LangSmith 
 1. Go to **Settings** > **Credentials** and select **Add Credential**.
 2. Search for **LangSmith API** and select it.
 3. Enter your **API Key** from [LangSmith settings](https://smith.langchain.com/settings).
-4. Optionally change the **API URL** if you use a self-hosted LangSmith instance.
-5. Select **Save** to store the credential.
+4. Select **Save** to store the credential.
 
 ### Configure a workflow to use LangSmith
 

@@ -480,6 +480,7 @@ nav:
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
         - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
+        - MiniMax: integrations/builtin/app-nodes/n8n-nodes-langchain.minimax.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
@@ -1261,8 +1262,10 @@ nav:
         - Logs: hosting/configuration/environment-variables/logs.md
         - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md
+        - OpenTelemetry: hosting/configuration/environment-variables/opentelemetry.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
+        - SSO: hosting/configuration/environment-variables/sso.md
         - SSRF protection: hosting/configuration/environment-variables/ssrf-protection.md
         - Source control: hosting/configuration/environment-variables/source-control.md
         - Task runners: hosting/configuration/environment-variables/task-runners.md
@@ -1291,9 +1294,11 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
+      - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
+      - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
       - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md
@@ -1314,6 +1319,7 @@ nav:
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
       - SSRF protection: hosting/securing/ssrf-protection.md
+      - Encryption key rotation: hosting/securing/encryption-key-rotation.md
       - Execution data redaction: workflows/executions/execution-data-redaction.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:

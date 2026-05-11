@@ -5,14 +5,15 @@ contentType: howto
 ---
 
 # OpenTelemetry tracing
-/// warning | This feature is still under development - Initially available from 2.19.0
-Agent telemetry and open telemetry formatted metrics will be coming soon 
+/// warning | This feature is still under development 
+- Initially available from 2.19.0
+- Open telemetry formatted metrics will be coming soon
 ///
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/){:target="_blank" .external-link} traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
 
 /// info | Feature availability
-OpenTelemetry workflow tracing requires environment variables to be set, so it's available on self-hosted n8n only.
+OpenTelemetry workflow tracing is only available on self-hosted n8n.
 ///
 
 ## What you get
@@ -61,7 +62,7 @@ export N8N_OTEL_EXPORTER_OTLP_HEADERS_FILE=/mnt/otel-headers
 For the full list of supported variables, refer to [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).
 
 /// note | Queue mode
-In [queue mode](/hosting/scaling/queue-mode.md), set the OpenTelemetry variables on the main, worker, and webhook instances. Trace context is propagated between main, worker and webhook instances.
+In [queue mode](/hosting/scaling/queue-mode.md), the OpenTelemetry variables must be set on all instances. Trace context is propagated between instances.
 ///
 
 ## Sampling

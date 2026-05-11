@@ -32,9 +32,9 @@ While `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` is `true`, the community nodes UI 
 
 | Field | Type | Required | Description |
 | :---- | :--- | :------- | :---------- |
-| `name` | string | Yes | npm package name. You can include the version inline as `<package-name>@<version>`. If you do, don't also set the `version` field to a different value — n8n rejects conflicting versions. |
-| `version` | string | No | Version specifier. Optional. If omitted, n8n looks the package up in the vetted-packages registry and uses that version; if the package isn't vetted, n8n installs whatever npm resolves and won't reconcile the version across restarts. |
-| `checksum` | string | No | SHA-512 checksum (`sha512-...`) for the resolved tarball. Requires `version` to be set. n8n auto-resolves the checksum from the vetted registry when possible. |
+| `name` | string | Yes | npm package name. You can include the version inline as `<package-name>@<version>`. If you do, don't also set the `version` field to a different value, n8n rejects conflicting versions. |
+| `version` | string | No | Version specifier. If omitted, n8n looks the package up in the vetted-packages registry and uses that version; if the package isn't vetted, n8n installs whatever npm resolves and won't reconcile the version across restarts. |
+| `checksum` | string | No | SHA-512 checksum (`sha512-...`) for the resolved tarball. Requires `version` to be set. n8n resolves the checksum automatically from the vetted registry when possible. |
 
 Example with all three fields:
 

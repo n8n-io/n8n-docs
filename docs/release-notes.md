@@ -108,7 +108,7 @@ The [Microsoft Agent 365 Trigger node](/integrations/builtin/cluster-nodes/root-
 
 <figure markdown="span">
     ![A Microsoft Agent 365 workflow connected to a chat model, memory, and tools](/_images/release-notes/microsoft_agent_365.png)
-    <figcaption>An Agent 365 workflow with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</figcaption>
+    <figcaption>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</figcaption>
 </figure>
 
 #### How it works

@@ -25,6 +25,27 @@ To use log streaming, you have to add a streaming destination.
 /// note | Self-hosted users
 If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
 ///
+
+## Per-process event log files
+
+n8n persists each emitted event to a local log file before forwarding it to streaming destinations. The file survives restarts and lets n8n re-emit events that weren't yet delivered.
+
+By default, n8n writes the event log to `<n8n-user-folder>/n8nEventLog.log`, with a `-worker` or `-webhook-processor` suffix on those processes. When a single n8n process owns the file, this default works as expected.
+
+/// warning | Shared writable filesystems
+If multiple n8n processes share one writable volume, for example [queue mode](/hosting/scaling/queue-mode.md) workers backed by a shared persistent volume on NFS or EFS, they must not write to the same event log file. Concurrent appends from multiple processes can interleave or corrupt the file, leading to recovery failures and lost events.
+///
+
+To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](/hosting/configuration/environment-variables/logs.md#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes.
+
+The companion variable [`N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE`](/hosting/configuration/environment-variables/logs.md#log-streaming) bounds how many lines n8n parses from a single event log file during recovery, so a corrupted file can't exhaust process memory.
+
+Notes:
+
+* Default behavior is unchanged when `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` isn't set.
+* When the variable is set, n8n doesn't auto-suffix the path. Each process must receive its own value.
+* If a shared `n8nEventLog-worker.log` file already exists from a previous deployment, quarantine it manually before opting in. n8n doesn't auto-delete legacy files.
+
 ## Events
 
 The following events are available. You can choose which events to stream in **Settings** > **Log Streaming** > **Events**.

@@ -26,7 +26,7 @@ export N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true
 export N8N_COMMUNITY_PACKAGES='[{"name":"n8n-nodes-foo","version":"1.2.3"}]'
 ```
 
-While `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` is `true`, the community nodes UI controls are read-only.
+While `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` is `true`, the **Community nodes** settings page is read-only: you can't install, update, or uninstall packages from the UI.
 
 ### Per-package fields
 

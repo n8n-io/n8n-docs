@@ -28,6 +28,10 @@ export N8N_COMMUNITY_PACKAGES='[{"name":"n8n-nodes-foo","version":"1.2.3"}]'
 
 While `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` is `true`, the **Community nodes** settings page is read-only: you can't install, update, or uninstall packages from the UI.
 
+/// warning | Enabling this uninstalls packages that aren't in the list
+The first time you start n8n with `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true`, n8n uninstalls any currently-installed community packages that aren't included in `N8N_COMMUNITY_PACKAGES`. If you already manage packages through the UI, review the **Community nodes** settings page and add the packages you want to keep to `N8N_COMMUNITY_PACKAGES` before enabling this variable.
+///
+
 ### Per-package fields
 
 | Field | Type | Required | Description |

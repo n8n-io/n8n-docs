@@ -62,7 +62,7 @@ export N8N_OTEL_EXPORTER_OTLP_HEADERS_FILE=/mnt/otel-headers
 For the full list of supported variables, refer to [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).
 
 /// note | Queue mode
-In [queue mode](/hosting/scaling/queue-mode.md), set the OpenTelemetry variables must be set on all instances. Trace context is propagated between instances
+In [queue mode](/hosting/scaling/queue-mode.md), the OpenTelemetry variables must be set on all instances. Trace context is propagated between instances.
 ///
 
 ## Sampling

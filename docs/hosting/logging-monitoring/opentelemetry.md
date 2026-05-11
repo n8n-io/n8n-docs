@@ -12,7 +12,7 @@ Agent telemetry and open telemetry formatted metrics will be coming soon
 n8n can emit [OpenTelemetry](https://opentelemetry.io/){:target="_blank" .external-link} traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
 
 /// info | Feature availability
-OpenTelemetry workflow tracing requires environment variables are set so is available on self-hosted n8n only.
+OpenTelemetry workflow tracing requires environment variables to be set, so it's available on self-hosted n8n only.
 ///
 
 ## What you get

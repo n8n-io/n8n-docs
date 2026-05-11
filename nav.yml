@@ -1320,6 +1320,7 @@ nav:
       - Blocking nodes: hosting/securing/blocking-nodes.md
       - Hardening task runners: hosting/securing/hardening-task-runners.md
       - SSRF protection: hosting/securing/ssrf-protection.md
+      - Encryption key rotation: hosting/securing/encryption-key-rotation.md
       - Execution data redaction: workflows/executions/execution-data-redaction.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:

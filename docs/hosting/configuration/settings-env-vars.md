@@ -100,8 +100,7 @@ Manage [log streaming](/log-streaming.md) destinations from environment variable
 
 ## MCP
 
-/// info | Available from n8n vX.Y.Z
-<!-- TODO: fill version -->
+/// info | Available from n8n v2.20.0
 ///
 
 Manage [instance-level MCP access](/advanced-ai/mcp/accessing-n8n-mcp-server.md) from environment variables.
@@ -110,11 +109,12 @@ Manage [instance-level MCP access](/advanced-ai/mcp/accessing-n8n-mcp-server.md)
 
 ## Community packages
 
-/// info | Available from n8n vX.Y.Z
-<!-- TODO: fill version -->
+/// info | Available from n8n v2.21.0
 ///
 
 Manage the set of installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.
+
+`N8N_COMMUNITY_PACKAGES_ENABLED` must also be set to `true` (the default). When community packages are disabled, n8n ignores `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` and logs a warning.
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/community-packages.md"
 

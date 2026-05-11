@@ -34,8 +34,7 @@ This page lists the environment variables configuration options for managing [no
 
 ## Manage installed community packages
 
-/// info | Available from n8n vX.Y.Z
-<!-- TODO: fill version -->
+/// info | Available from n8n v2.21.0
 ///
 
 Pre-provision installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for the `*_MANAGED_BY_ENV` pattern.

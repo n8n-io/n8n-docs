@@ -13,6 +13,7 @@ At a high level, you can:
 * [Set up SSL](/hosting/securing/set-up-ssl.md) to enforce secure connections.
 * [Set up Single Sign-On](/hosting/securing/set-up-sso.md) for user account management.
 * Use [two-factor authentication (2FA)](/user-management/two-factor-auth.md) for your users.
+* Enable [encryption key rotation](/hosting/securing/encryption-key-rotation.md) to periodically replace the key that encrypts credentials and other sensitive data.
 
 You can also protect sensitive data processed by your workflows:
 

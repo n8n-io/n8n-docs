@@ -73,7 +73,7 @@ gcloud run deploy n8n \
     --set-env-vars="N8N_ENDPOINT_HEALTH=health"
 ```
 
-This does not prevent data loss completely, such as whenever the Cloud Run service is re-deployed/updated. If you want truly persistant data, you should refer to the instructions below for how to attach a database.
+This does not prevent data loss completely, such as whenever the Cloud Run service is re-deployed/updated. If you want truly persistent data, you should refer to the instructions below for how to attach a database.
 
 ## Durable mode
 

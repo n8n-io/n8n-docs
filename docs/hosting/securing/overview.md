@@ -14,6 +14,7 @@ At a high level, you can:
 * [Set up Single Sign-On](/hosting/securing/set-up-sso.md) for user account management.
 * Use [two-factor authentication (2FA)](/user-management/two-factor-auth.md) for your users.
 * Enable [encryption key rotation](/hosting/securing/encryption-key-rotation.md) to periodically replace the key that encrypts credentials and other sensitive data.
+* Enable [JWE token decryption for OAuth 2.0 credentials](/hosting/securing/oauth2-jwe-token-decryption.md) so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
 
 You can also protect sensitive data processed by your workflows:
 

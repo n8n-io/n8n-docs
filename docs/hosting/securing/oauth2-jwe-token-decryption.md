@@ -53,7 +53,7 @@ You need:
 
 ## Configure your identity provider
 
-In your IdP's OAuth 2.0 client or application configuration:
+In the OAuth 2.0 client or application configuration on your IdP:
 
 1. Enable encrypted tokens for the client that n8n connects to.
 2. Set the client's JWKS URI to your instance's JWKS endpoint. n8n displays this URL on the credential, so you can copy it directly from there once you create the credential (see the next section).
@@ -70,7 +70,7 @@ In your IdP's OAuth 2.0 client or application configuration:
 
 1. Create or edit an [OAuth 2.0 API credential](/integrations/builtin/credentials/httprequest.md#using-oauth2).
 2. Toggle **Encrypted Tokens (JWE)** on.
-3. Copy the value from the **JWKS URI** field and paste it into your IdP's JWKS URI setting, if you haven't done so already.
+3. Copy the value from the **JWKS URI** field and paste it into the JWKS URI setting on your IdP, if you haven't done so already.
 4. Save the credential and connect. n8n decrypts the token returned by your IdP and stores the decrypted form for use in workflows.
 
 The response from your IdP must contain at least one JWE-encrypted token (access token, ID token, or both). If the response is fully plaintext, n8n rejects it with the error `Expected at least one JWE-encrypted token but received only plaintext`.
@@ -83,7 +83,7 @@ When **Bearer Claim** is set, n8n:
 
 1. Receives the JWE from the IdP.
 2. Decrypts the JWE to recover the inner JWT.
-3. Reads the value of the named claim from the JWT's payload.
+3. Reads the value of the named claim from the inner JWT payload.
 4. Sends that value as the `Authorization: Bearer <claim-value>` header in API calls made with the credential.
 
 ### Worked example

@@ -13,7 +13,7 @@ contentType: howto
 ///
 
 /// warning | Preview feature
-JWE token decryption is currently in preview and gated by an environment flag. Field names, the environment variable, the JWKS endpoint path, and the supported algorithms can change before the feature reaches general availability. Pin your n8n version and retest your OAuth 2.0 credentials after each upgrade.
+JWE token decryption is in preview and gated by an environment flag. Field names, the environment variable, the JWKS endpoint path, and the supported algorithms can change before the feature reaches general availability. Pin your n8n version and retest your OAuth 2.0 credentials after each upgrade.
 ///
 
 JWE token decryption lets your identity provider return OAuth 2.0 access and ID tokens encrypted as [JWE](https://datatracker.ietf.org/doc/html/rfc7516){:target="_blank" .external-link}. Your n8n instance decrypts the tokens on the OAuth callback using a private key that never leaves the instance. This protects token contents from anything that sits between your IdP and n8n, including reverse proxies, browsers, and logs.
@@ -33,7 +33,7 @@ The IdP encrypts each token to the public key it fetched from your JWKS endpoint
 You need:
 
 * A self-hosted n8n instance, with direct control over its environment variables.
-* All n8n instances, main and workers, sharing the same `N8N_ENCRYPTION_KEY` value. The private key for JWE is encrypted with this instance key.
+* All n8n instances, main and workers, sharing the same `N8N_ENCRYPTION_KEY` value. n8n uses this instance key to encrypt the JWE private key at rest.
 * An IdP that supports JWE-encrypted tokens with the `RSA-OAEP-256` key encryption algorithm.
 
 ## Enable JWE token decryption
@@ -77,9 +77,9 @@ The response from your IdP must contain at least one JWE-encrypted token (access
 
 ## The Bearer Claim field
 
-Some app-specific OAuth 2.0 credentials in n8n add a **Bearer Claim** field on top of the generic JWE toggle. The generic **OAuth2 API** credential doesn't include this field. It appears when the downstream API expects a value carried *inside* the decrypted token, not the decrypted token itself, to be sent as the bearer in subsequent HTTP requests.
+Some app-specific OAuth 2.0 credentials in n8n add a **Bearer Claim** field on top of the generic JWE toggle. The generic **OAuth2 API** credential doesn't include this field. It appears when the downstream API needs n8n to send a value carried *inside* the decrypted token, not the decrypted token itself, as the bearer in follow-up HTTP requests.
 
-When **Bearer Claim** is set, n8n:
+When you set **Bearer Claim**, n8n:
 
 1. Receives the JWE from the IdP.
 2. Decrypts the JWE to recover the inner JWT.
@@ -88,14 +88,14 @@ When **Bearer Claim** is set, n8n:
 
 ### Worked example
 
-Suppose your downstream API expects a token that the IdP issues separately and embeds inside the ID token as a custom claim named `app_access_token`.
+Suppose your downstream API expects a token that the IdP issues and embeds inside the ID token as a custom claim named `app_access_token`.
 
 1. In your IdP, configure the authorization server to add `app_access_token` to the ID token, populated from the source that holds the downstream token (for example, a user profile attribute).
 2. In the credential in n8n, set **Bearer Claim** to `app_access_token`.
 
 After authorizing the credential, n8n decrypts the ID token, reads `app_access_token` from its payload, and uses that value as the bearer in downstream requests.
 
-The claim name is case-sensitive and must match the claim emitted by the IdP exactly. If the claim is missing from the decrypted JWT, credential authentication fails.
+The claim name is case-sensitive and must match the name the IdP emits. If the claim is missing from the decrypted JWT, credential authentication fails.
 
 ## JWKS endpoint reference
 
@@ -117,14 +117,14 @@ If you customized `N8N_ENDPOINT_REST`, substitute your value for `rest` in the p
 
 ## Supported algorithms
 
-n8n currently supports `RSA-OAEP-256` for key encryption. Configure your IdP to use this `alg` value when encrypting tokens. Content encryption algorithms (`enc`) aren't restricted by n8n; use any value your IdP supports.
+n8n supports `RSA-OAEP-256` for key encryption. Configure your IdP to use this `alg` value when encrypting tokens. n8n doesn't restrict content encryption algorithms (`enc`); use any value your IdP supports.
 
-Support for elliptic-curve algorithms (`ECDH-ES` and variants) is reserved in the JWKS schema but not yet active.
+The JWKS schema reserves elliptic-curve algorithms (`ECDH-ES` and variants), but n8n doesn't yet generate EC keys.
 
 ## Troubleshooting
 
-* **The Encrypted Tokens (JWE) toggle doesn't appear on the credential.** Check that `N8N_ENV_FEAT_OAUTH2_JWE=true` is set on every n8n instance and that all instances have been restarted.
-* **Error `Expected at least one JWE-encrypted token but received only plaintext`.** The IdP returned a plaintext token. Confirm that token encryption is enabled for the client in the IdP and that the IdP fetched a key from your JWKS endpoint.
+* **The Encrypted Tokens (JWE) toggle doesn't appear on the credential.** Confirm that you've set `N8N_ENV_FEAT_OAUTH2_JWE=true` on every n8n instance and that you've restarted all instances.
+* **Error `Expected at least one JWE-encrypted token but received only plaintext`.** The IdP returned a plaintext token. Confirm that you've enabled token encryption for the client in the IdP and that the IdP fetched a key from your JWKS endpoint.
 * **The IdP can't fetch the JWKS URI.** Check that the JWKS endpoint is reachable from your IdP. Reverse proxies and authentication middleware sometimes block `/rest/.well-known/jwks.json`. The endpoint must be publicly reachable without authentication.
 * **The IdP fetches the JWKS too often and gets rate-limited.** Increase `N8N_OAUTH_JWE_JWKS_PER_MINUTE` on your n8n instances, or configure your IdP to cache the JWKS response for the full `max-age` window.
 

@@ -90,16 +90,23 @@ To create the public app and set up the credential:
 
 If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node, n8n recommends starting with these scopes:
 
-| **Element** | **Object** | **Permission** | **Scope name** |
-| --- | --- | --- | --- |
-| n/a | n/a | n/a | `oauth` |
-| CRM | Companies | Read | `crm.objects.companies.read` |
-| CRM | Companies schemas | Read | `crm.schemas.companies.read` |
-| CRM | Contacts | Read | `crm.objects.contacts.read` |
-| CRM | Contacts schemas | Read | `crm.schemas.contacts.read` |
-| CRM | Deals | Read | `crm.objects.deals.read` |
-| CRM | Deals schemas| Read | `crm.schemas.deals.read` |
-
+| **Element**   | **Object**        | **Permission** | **Scope name**                |
+| ------------- | ----------------- | -------------- | ----------------------------- |
+| n/a           | n/a               | n/a            | `oauth`                       |
+| Conversations | Conversations     | Read           | `conversations.read`          |
+| CRM           | Companies         | Read           | `crm.objects.companies.read`  |
+| CRM           | Companies         | Write          | `crm.objects.companies.write` |
+| CRM           | Companies schemas | Read           | `crm.schemas.companies.read`  |
+| CRM           | Contacts          | Read           | `crm.objects.contacts.read`   |
+| CRM           | Contacts          | Write          | `crm.objects.contacts.write`  |
+| CRM           | Contacts schemas  | Read           | `crm.schemas.contacts.read`   |
+| CRM           | Deals             | Read           | `crm.objects.deals.read`      |
+| CRM           | Deals             | Write          | `crm.objects.deals.write`     |
+| CRM           | Deals schemas     | Read           | `crm.schemas.deals.read`      |
+| CRM           | Lists             | Write          | `crm.lists.write`             |
+| CRM           | Owners            | Read           | `crm.objects.owners.read`     |
+| Forms         | Forms             | Access         | `forms`                       |
+| Service Hub   | Tickets           | Access         | `tickets`                     |
 
 ## Using OAuth2
 

@@ -364,7 +364,7 @@
 /hosting/environment-variables/*   /hosting/configuration/environment-variables/:splat  301
 /code-examples/expressions/data-transformation-functions/*   /data/expressions-for-data-transformation/  301
 /hosting/server-setups/*   /hosting/installation/server-setups/  301
-/integrations/nodes/*  /integrations/  301
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
 /integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/  301
 /integrations/core-nodes/*   /integrations/builtin/core-nodes/  301
 /integrations/credentials/*   /integrations/builtin/credentials/  301

@@ -6,6 +6,36 @@
 
 /nodes/*    /integrations/  301
 
+## Source code redirects
+## URLs referenced in n8n-io/n8n source code (found via source.json analysis)
+## Kept only entries with different source and target paths
+
+/advanced-ai/mcp/mcp_tools_reference  /advanced-ai/mcp/mcp-tools-reference/  301
+/code-examples/ai-code  /advanced-ai/intro-tutorial/  301
+/code/builtin/data-transformation-functions/arrays/#array-append  /data/expression-reference/array/#array-append  301
+/code/builtin/data-transformation-functions/arrays/#array-average  /data/expression-reference/array/#array-average  301
+/code/builtin/data-transformation-functions/arrays/#array-chunk  /data/expression-reference/array/#array-chunk  301
+/code/builtin/data-transformation-functions/arrays/#array-compact  /data/expression-reference/array/#array-compact  301
+/code/builtin/data-transformation-functions/arrays/#array-difference  /data/expression-reference/array/#array-difference  301
+/code/builtin/data-transformation-functions/arrays/#array-first  /data/expression-reference/array/#array-first  301
+/code/builtin/data-transformation-functions/arrays/#array-intersection  /data/expression-reference/array/#array-intersection  301
+/code/builtin/data-transformation-functions/arrays/#array-isEmpty  /data/expression-reference/array/#array-isEmpty  301
+/code/builtin/data-transformation-functions/arrays/#array-isNotEmpty  /data/expression-reference/array/#array-isNotEmpty  301
+/code/builtin/data-transformation-functions/arrays/#array-last  /data/expression-reference/array/#array-last  301
+/code/builtin/data-transformation-functions/arrays/#array-max  /data/expression-reference/array/#array-max  301
+/code/builtin/data-transformation-functions/arrays/#array-merge  /data/expression-reference/array/#array-merge  301
+/code/builtin/data-transformation-functions/arrays/#array-min  /data/expression-reference/array/#array-min  301
+/code/builtin/data-transformation-functions/arrays/#array-pluck  /data/expression-reference/array/#array-pluck  301
+/code/builtin/data-transformation-functions/arrays/#array-randomItem  /data/expression-reference/array/#array-randomItem  301
+/code/builtin/data-transformation-functions/arrays/#array-renameKeys  /data/expression-reference/array/#array-renameKeys  301
+/code/builtin/data-transformation-functions/arrays/#array-smartJoin  /data/expression-reference/array/#array-smartJoin  301
+/code/builtin/data-transformation-functions/arrays/#array-sum  /data/expression-reference/array/#array-sum  301
+/code/builtin/data-transformation-functions/arrays/#array-toJsonString  /data/expression-reference/array/#array-toJsonString  301
+/code/builtin/data-transformation-functions/arrays/#array-union  /data/expression-reference/array/#array-union  301
+/code/builtin/data-transformation-functions/arrays/#array-unique  /data/expression-reference/array/#array-unique  301
+/hosting/configuration/supported-databases-settings  /hosting/configuration/supported-databases-settings/  301
+/migration/v2/...  /2-0-breaking-changes/  301
+
 ## Redirect from initial path used in product
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/  301
 /enterprise-key/ /license-key/  301
@@ -228,4 +258,3 @@
 /embed/managing-workflows/  /hosting/oem-deployment/managing-workflows/  301
 /embed/workflow-templates/  /hosting/configuration/configuration-examples/custom-templates/  301
 /embed/white-labelling/  /hosting/oem-deployment/  301
-

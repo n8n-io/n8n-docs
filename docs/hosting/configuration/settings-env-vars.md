@@ -1,6 +1,6 @@
 ---
 title: Manage instance settings using environment variables
-description: Configure a self-hosted n8n instance owner, SSO, security policy, and log streaming settings from environment variables.
+description: Configure a self-hosted n8n instance owner, SSO, security policy, log streaming, MCP, and community packages from environment variables.
 contentType: overview
 ---
 
@@ -27,12 +27,14 @@ Setting `*_MANAGED_BY_ENV` back to `false` restores UI write access but keeps th
 If a setting appears as read-only and you didn't expect it, check whether the matching `*_MANAGED_BY_ENV` variable is `true` in your environment.
 ///
 
-The four supported areas and their activating variables:
+The supported areas and their activating variables:
 
 * Instance owner: `N8N_INSTANCE_OWNER_MANAGED_BY_ENV`
 * SSO: `N8N_SSO_MANAGED_BY_ENV`
 * Security policy: `N8N_SECURITY_POLICY_MANAGED_BY_ENV`
 * Log streaming: `N8N_LOG_STREAMING_MANAGED_BY_ENV`
+* MCP: `N8N_MCP_MANAGED_BY_ENV`
+* Community packages: `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV`
 
 /// note | Set `<AREA>_MANAGED_BY_ENV` to activate the group
 The other environment variables for an area have no effect unless `<AREA>_MANAGED_BY_ENV` is `true`. Set it to `true` to activate the group.
@@ -96,9 +98,29 @@ Manage [log streaming](/log-streaming.md) destinations from environment variable
 
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"
 
+## MCP
+
+/// info | Available from n8n v2.20.0
+///
+
+Manage [instance-level MCP access](/advanced-ai/mcp/accessing-n8n-mcp-server.md) from environment variables.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/mcp.md"
+
+## Community packages
+
+/// info | Available from n8n v2.21.0
+///
+
+Manage the set of installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.
+
+`N8N_COMMUNITY_PACKAGES_ENABLED` must also be set to `true` (the default). When community packages are disabled, n8n ignores `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` and logs a warning.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/community-packages.md"
+
 ## Combined example
 
-The following example configures an instance with all four areas managed by environment variables. It creates the instance owner, configures OIDC SSO, enforces MFA, and registers a webhook log streaming destination.
+The following example configures an instance with all six areas managed by environment variables. It creates the instance owner, configures OIDC SSO, enforces MFA, registers a webhook log streaming destination, enables MCP access, and manages a community package.
 
 ```bash
 # Instance owner
@@ -125,6 +147,14 @@ export N8N_PERSONAL_SPACE_SHARING_ENABLED=false
 # Log streaming
 export N8N_LOG_STREAMING_MANAGED_BY_ENV=true
 export N8N_LOG_STREAMING_DESTINATIONS='[{"type":"webhook","url":"https://logs.example.com/n8n"}]'
+
+# MCP
+export N8N_MCP_MANAGED_BY_ENV=true
+export N8N_MCP_ACCESS_ENABLED=true
+
+# Community packages
+export N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true
+export N8N_COMMUNITY_PACKAGES='[{"name":"n8n-nodes-foo","version":"1.2.3"}]'
 ```
 
 ## Set environment variables

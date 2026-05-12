@@ -1,14 +1,13 @@
 ---
 title: JWE token decryption for OAuth 2.0 credentials
-description: Enable JWE-encrypted OAuth 2.0 tokens on your self-hosted n8n instance so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
+description: Enable JWE-encrypted OAuth 2.0 tokens on your n8n instance so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
 contentType: howto
 ---
 
 # JWE token decryption for OAuth 2.0 credentials
 
 /// info | Feature availability
-* Available on self-hosted n8n instances only.
-* You need to be the instance owner to enable the feature.
+* Available on any n8n instance with the `N8N_ENV_FEAT_OAUTH2_JWE` environment variable set to `true`. Self-hosted instances can set it directly. On Cloud, contact n8n support to request it.
 * Requires an identity provider (IdP) that can encrypt tokens as JWE.
 ///
 
@@ -26,13 +25,13 @@ When you enable the feature, n8n:
 2. Publishes the matching public key at an instance-wide JWKS endpoint, so your IdP can fetch it.
 3. Decrypts incoming JWE tokens on the OAuth callback using the private key that matches the `kid` in the JWE header.
 
-The IdP encrypts each token to the public key it fetched from your JWKS endpoint. Only your instance can decrypt the result.
+The IdP encrypts each token with the public key it fetched from your JWKS endpoint. Only your instance can decrypt the result.
 
 ## Before you begin
 
 You need:
 
-* A self-hosted n8n instance, with direct control over its environment variables.
+* `N8N_ENV_FEAT_OAUTH2_JWE=true` on your n8n instance. Self-hosted instances can enable this directly. On Cloud, contact n8n support to request it.
 * All n8n instances, main and workers, sharing the same `N8N_ENCRYPTION_KEY` value. n8n uses this instance key to encrypt the JWE private key at rest.
 * An IdP that supports JWE-encrypted tokens with the `RSA-OAEP-256` key encryption algorithm.
 
@@ -64,7 +63,6 @@ In the OAuth 2.0 client or application configuration on your IdP:
     2. Under the application's OpenID Connect settings, enable token encryption.
     3. Set the **Key management algorithm** to `RSA-OAEP-256` and choose a content encryption algorithm (for example `A256GCM`).
     4. Set the **JWKS URI** to the value n8n shows in the credential's **JWKS URI** field.
-    5. If your downstream API expects a specific claim from inside the decrypted token, define a custom claim on the authorization server (for example, map a user profile attribute onto a claim on the ID token), then enter that claim's name in n8n's **Bearer Claim** field. See [The Bearer Claim field](#the-bearer-claim-field).
 
 ## Configure the credential in n8n
 
@@ -74,28 +72,6 @@ In the OAuth 2.0 client or application configuration on your IdP:
 4. Save the credential and connect. n8n decrypts the token returned by your IdP and stores the decrypted form for use in workflows.
 
 The response from your IdP must contain at least one JWE-encrypted token (access token, ID token, or both). If the response is fully plaintext, n8n rejects it with the error `Expected at least one JWE-encrypted token but received only plaintext`.
-
-## The Bearer Claim field
-
-Some app-specific OAuth 2.0 credentials in n8n add a **Bearer Claim** field on top of the generic JWE toggle. The generic **OAuth2 API** credential doesn't include this field. It appears when the downstream API needs n8n to send a value carried *inside* the decrypted token, not the decrypted token itself, as the bearer in follow-up HTTP requests.
-
-When you set **Bearer Claim**, n8n:
-
-1. Receives the JWE from the IdP.
-2. Decrypts the JWE to recover the inner JWT.
-3. Reads the value of the named claim from the inner JWT payload.
-4. Sends that value as the `Authorization: Bearer <claim-value>` header in API calls made with the credential.
-
-### Worked example
-
-Suppose your downstream API expects a token that the IdP issues and embeds inside the ID token as a custom claim named `app_access_token`.
-
-1. In your IdP, configure the authorization server to add `app_access_token` to the ID token, populated from the source that holds the downstream token (for example, a user profile attribute).
-2. In the credential in n8n, set **Bearer Claim** to `app_access_token`.
-
-After authorizing the credential, n8n decrypts the ID token, reads `app_access_token` from its payload, and uses that value as the bearer in downstream requests.
-
-The claim name is case-sensitive and must match the name the IdP emits. If the claim is missing from the decrypted JWT, credential authentication fails.
 
 ## JWKS endpoint reference
 

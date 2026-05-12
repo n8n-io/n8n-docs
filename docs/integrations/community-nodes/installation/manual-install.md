@@ -31,6 +31,7 @@ Install the node:
 ```sh
 npm i n8n-nodes-nodeName
 ```
+
 Then restart n8n.
 
 ## Uninstall a community node
@@ -52,6 +53,7 @@ npm uninstall n8n-nodes-nodeName
 /// warning | Breaking changes in versions
 Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#upgrade-or-downgrade-to-a-specific-version).
 ///
+
 ### Upgrade to the latest version
 
 Access your Docker shell:

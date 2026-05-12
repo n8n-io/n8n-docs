@@ -25,7 +25,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 - MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
 - It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
-- It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
 - Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
 ## Enabling MCP access
@@ -47,6 +47,10 @@ Once enabled, you'll see:
    ![mcp_page_content.png](/_images/advanced-ai/mcp_page_content.png)
 
 **To disable:** Toggle the main MCP toggle off.
+
+/// note | Environment variables (self-hosted only)
+On self-hosted instances, you can also manage MCP settings using environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md#mcp).
+///
 
 ### For self-hosted: Complete disablement
 

@@ -68,3 +68,11 @@ When you disable publishing:
 
 - Currently published workflows remain published. The setting only affects new publish actions.
 - The number of currently published personal workflows is displayed below the toggle.
+
+## Configure security policy with environment variables
+
+You can also manage security policy settings from environment variables instead of through the UI. Available from n8n v2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+
+When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/security-policy.md"

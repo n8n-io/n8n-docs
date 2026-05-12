@@ -80,6 +80,19 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 
 --8<-- "_snippets/user-management/in-app-setup.md"
 
+#### Pre-provision the instance owner from environment variables
+
+/// info | Available from n8n v2.17.0
+///
+
+You can pre-provision the instance owner from environment variables instead of going through the in-app setup. Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` and provide the owner details. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+
+/// warning | `N8N_INSTANCE_OWNER_PASSWORD_HASH` must be a bcrypt hash
+This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
+///
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/instance-owner.md"
+
 ### Step three: Invite users
 
 --8<-- "_snippets/user-management/invite-users.md"

@@ -75,7 +75,8 @@ Conditions are evaluated in order. Place the most privileged group (owners) at t
 ### Testing the configuration
 
 1. In n8n, go to **Settings** > **SSO**.
-1. Set **User role provisioning** to `Instance role`.
+1. Set **Role assignment** to **Instance roles via SSO**.
+1. Set **Role mapping method** to **Map rules on your IdP**.
 1. Click **Test settings**.
 1. Verify the SAML response shows the correct `n8n_instance_role` value.
 

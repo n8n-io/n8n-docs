@@ -57,7 +57,14 @@ In addition to the following instructions, [this PDF](n8n-saml-with-okta.pdf) pr
 
 ### Instance and project access provisioning
 
-See the [Set up SAML page](/user-management/saml/setup.md#instance-and-project-access-provisioning) for additional information of this feature.
+n8n supports two ways to provision instance and project roles via SSO. Choose one based on where you want the mapping logic to live:
+
+- **Map rules on your IdP**: configure n8n-specific attributes (`n8n_instance_role` and `n8n_projects`) in Okta, and n8n reads them directly from the SAML response. Steps below.
+- **Map rules inside n8n**: send group membership from Okta as a SAML attribute, and define mapping expressions inside n8n. No n8n-specific configuration is needed in Okta beyond the group attribute. See [Map rules inside n8n](/user-management/saml/setup.md#map-rules-inside-n8n) on the main SAML setup page.
+
+In n8n, set **Role assignment** to **Instance roles via SSO** or **Instance and project roles via SSO**, then choose your preferred **Role mapping method**.
+
+#### Map rules on your IdP
 
 **Adding the required attributes**
 

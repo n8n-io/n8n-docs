@@ -7,8 +7,7 @@
 /nodes/*    /integrations/  301
 
 ## Source code redirects
-## URLs referenced in n8n-io/n8n source code (found via source.json analysis)
-## Kept only entries with different source and target paths
+## URLs referenced in n8n-io/n8n source code
 
 /advanced-ai/mcp/mcp_tools_reference  /advanced-ai/mcp/mcp-tools-reference/  301
 /code-examples/ai-code  /advanced-ai/intro-tutorial/  301

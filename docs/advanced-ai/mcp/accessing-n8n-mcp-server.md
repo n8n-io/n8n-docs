@@ -48,6 +48,10 @@ Once enabled, you'll see:
 
 **To disable:** Toggle the main MCP toggle off.
 
+/// note | Environment variables (self-hosted only)
+On self-hosted instances, you can also manage MCP settings using environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md#mcp).
+///
+
 ### For self-hosted: Complete disablement
 
 To remove the feature entirely, set the environment variable:

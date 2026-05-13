@@ -48,11 +48,6 @@ n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook
 | `N8N_METRICS_INCLUDE_WEBHOOK_METRICS` | `false` | Exposes the `n8n_webhook_request_duration_seconds` histogram. |
 | `N8N_METRICS_INCLUDE_WORKFLOW_INFO` | `false` | Exposes the `n8n_workflow_info` gauge for human-readable workflow names. See [Workflow name lookup](#workflow-name-lookup). |
 
-```bash
-N8N_METRICS_INCLUDE_WEBHOOK_METRICS=true
-N8N_METRICS_INCLUDE_WORKFLOW_INFO=true
-```
-
 ### What the metric tracks
 
 `n8n_webhook_request_duration_seconds` is a Prometheus histogram. For each webhook call, n8n records how long the request took and increments the matching latency buckets. The metric exposes three series per label combination:
@@ -90,11 +85,6 @@ n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form su
 |----------|---------|-------------|
 | `N8N_METRICS_INCLUDE_FORM_METRICS` | `false` | Exposes the `n8n_form_submission_duration_seconds` histogram. |
 | `N8N_METRICS_INCLUDE_WORKFLOW_INFO` | `false` | Exposes the `n8n_workflow_info` gauge for human-readable workflow names. See [Workflow name lookup](#workflow-name-lookup). |
-
-```bash
-N8N_METRICS_INCLUDE_FORM_METRICS=true
-N8N_METRICS_INCLUDE_WORKFLOW_INFO=true
-```
 
 ### What the metric tracks
 

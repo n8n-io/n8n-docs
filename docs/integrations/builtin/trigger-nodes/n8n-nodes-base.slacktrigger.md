@@ -52,7 +52,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 * **Resolve IDs**: Whether to resolve the IDs to their respective names and return them (turned on) or not (turned off, default).
 * **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/data/expressions.md).
-* **Emoji Names to Filter**: Enter a comma-separated, **not** colon-separated, list of emoji names (for example `thumbsup, eyes, white_check_mark`) to limit **Reaction Added** events to only those specific reactions. n8n applies this filter at the trigger level before workflow execution starts. Leave empty to trigger on any reaction.
+* **Emoji Names to Filter**: Enter a comma-separated, **not** colon-separated, list of emoji names (for example `thumbsup, eyes, white_check_mark`) to limit **Reaction Added** events to only those specific reactions. Leave empty to trigger on any reaction.
 
 ## Related resources
 

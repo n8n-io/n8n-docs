@@ -56,7 +56,7 @@ This release contains bug fixes.
 
 [etairl](https://github.com/etairl)  
 [devareddy05](https://github.com/devareddy05)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
 [sudarshan12s](https://github.com/sudarshan12s)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.

@@ -32,29 +32,63 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 You can find the release notes for older versions of n8n: [1.x](/release-notes/1-x.md) and [0.x](/release-notes/0-x.md)
 ///
 
-## n8n@2.19.5
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.4...n8n@2.19.5) for this version.<br />
-**Release date:** 2026-05-07
+
+## n8n@2.21.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.0...n8n@2.21.1) for this version.<br />
+**Release date:** 2026-05-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.21.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.0...n8n@2.21.0) for this version.<br />
+**Release date:** 2026-05-12
+
+This release contains bug fixes.
+
+### Contributors
+
+[etairl](https://github.com/etairl)  
+[devareddy05](https://github.com/devareddy05)  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
+[sudarshan12s](https://github.com/sudarshan12s)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.20.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.6...n8n@2.20.7) for this version.<br />
+**Release date:** 2026-05-13
 
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
-## n8n@2.20.5
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.4...n8n@2.20.5) for this version.<br />
-**Release date:** 2026-05-07
-
-This release contains a bug fix.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 
 ## n8n@2.20.6
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.5...n8n@2.20.6) for this version.<br />
 **Release date:** 2026-05-08
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.20.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.4...n8n@2.20.5) for this version.<br />
+**Release date:** 2026-05-07
 
 This release contains a bug fix.
 
@@ -100,7 +134,35 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.0...n8n@2.20.0) for this version.<br />
 **Release date:** 2026-05-05
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Microsoft Agent 365 Trigger node
+
+The [Microsoft Agent 365 Trigger node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/index.md) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
+
+<figure markdown="span">
+    ![A Microsoft Agent 365 workflow connected to a chat model, memory, and tools](/_images/release-notes/microsoft_agent_365.png)
+    <figcaption>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</figcaption>
+</figure>
+
+#### How it works
+
+You build the agent in n8n using the Microsoft Agent 365 Trigger node:
+
+- Add a system prompt and give the agent access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](/flow-logic/subworkflows.md).
+- Set up the agent on the Microsoft side (see the [Microsoft Agent 365 documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/) for the configuration steps). This gives the agent an Entra ID identity with an email address that you can @mention, email, or grant SharePoint permissions to.
+- Microsoft handles identity, lifecycle, security, and compliance for the agent on their side (via Entra ID, Purview, and Defender). n8n handles workflow-level governance like RBAC, credential management, and execution logs.
+
+#### Things to keep in mind
+
+- If you already use n8n with Microsoft services through individual nodes (Outlook, Teams, SharePoint, and so on), those workflows continue to work as before. Agent 365 is a new path for teams that want their agents to show up *inside* Microsoft apps and interact like a member of the team.
+- The node requires a Microsoft 365 tenant.
+
+For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8n-agents-that-show-up-as-members-of-the-team-inside-microsoft-apps/).
+
+</div>
 
 ### Contributors
 
@@ -112,6 +174,17 @@ This release contains bug fixes.
 [Gulianrdgd](https://github.com/Gulianrdgd)  
 [jeanibarz](https://github.com/jeanibarz)  
 [uppinote20](https://github.com/uppinote20)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.19.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.4...n8n@2.19.5) for this version.<br />
+**Release date:** 2026-05-07
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

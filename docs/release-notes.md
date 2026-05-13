@@ -34,6 +34,17 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.21.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.0...n8n@2.21.1) for this version.<br />
+**Release date:** 2026-05-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.21.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.20.0...n8n@2.21.0) for this version.<br />
@@ -45,7 +56,7 @@ This release contains bug fixes.
 
 [etairl](https://github.com/etairl)  
 [devareddy05](https://github.com/devareddy05)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
 [sudarshan12s](https://github.com/sudarshan12s)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.

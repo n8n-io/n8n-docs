@@ -39,12 +39,19 @@ Then:
 5. In n8n, copy the **OAuth Redirect URL**.
 6. Paste the URL into the **Callback URL** field in the Atlassian Developer Console.
 7. Select **Save changes**.
-8. Select **Permissions** in the left sidebar and add the scopes your workflow needs.
-9. Select **Settings** in the left sidebar.
-10. Copy the **Client ID** and paste it into n8n.
-11. Copy the **Secret** and paste it as the **Client Secret** in n8n.
-12. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
-13. Select **Connect to Jira SW Cloud** and follow the prompts to complete the OAuth2 flow.
+8. Select **Permissions** in the left sidebar, then select **Add** next to **Jira API**.
+9. Select **Configure** next to **Jira API** > **Edit Scopes**. Enable at minimum these scopes, then save your edits:
+	- `read:jira-user`
+	- `read:jira-work`
+	- `write:jira-work`
+	- `manage:jira-webhook`
+	- `manage:jira-user`
+	- `offline_access`
+10. Select **Settings** in the left sidebar.
+11. Copy the **Client ID** and paste it into n8n.
+12. Copy the **Secret** and paste it as the **Client Secret** in n8n.
+13. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+14. Select **Connect to Jira SW Cloud** and follow the prompts to complete the OAuth2 flow.
 
 Refer to [OAuth 2.0 (3LO) apps](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/){:target="_blank" .external-link} in Atlassian's documentation for more information.
 
@@ -56,12 +63,13 @@ Then:
 
 1. Log in to your Atlassian profile > **Security > API tokens** page, or jump straight there using this [link](https://id.atlassian.com/manage-profile/security/api-tokens).
 2. Select **Create API Token**.
-3. Enter a good **Label** for your token, like `n8n integration`.
-4. Select **Create**.
-5. Copy the API token.
-6. In n8n, enter the **Email** address associated with your Jira account.
-7. Paste the API token you copied as your **API Token**.
-8. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+3. Enter a **Name** for your token, like `n8n integration`.
+4. Set an **Expires on** date, or leave the default date.
+5. Select **Create**.
+6. Copy the API token.
+7. In n8n, enter the **Email** address associated with your Jira account.
+8. Paste the API token you copied as your **API Token**.
+9. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
 
 Refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) for more information.
 

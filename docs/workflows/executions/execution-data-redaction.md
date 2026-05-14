@@ -28,7 +28,7 @@ Before execution data redaction, the only option was to disable execution histor
 
 ## Configure redaction settings
 
-You configure redaction per workflow in the workflow settings. You need the **Manage data redaction** (`workflow:updateRedactionSetting`) scope to change these settings.
+You configure redaction per workflow in the workflow settings. You need the `workflow:enableRedaction` or `workflow:disableRedaction` scope (or both) to change these settings.
 
 To configure redaction:
 
@@ -95,9 +95,10 @@ Execution data redaction introduces the following permission scope that you can 
 
 | Scope | Purpose |
 | ----- | ------- |
-| `workflow:updateRedactionSetting` | Allows modifying the redaction policy in workflow settings. Displayed as **Manage data redaction** in the role configuration UI. |
+| `workflow:enableRedaction` | Allows turning redaction on in workflow settings. Displayed as **Enable data redaction** in the role configuration UI. |
+| `workflow:disableRedaction` | Allows turning redaction off in workflow settings. Displayed as **Disable data redaction** in the role configuration UI. |
 
-By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give additional users, such as workflow builders, the ability to update the data redaction setting.
+By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give additional users, such as workflow builders, one or both scopes independently.
 
 ## Best practices
 

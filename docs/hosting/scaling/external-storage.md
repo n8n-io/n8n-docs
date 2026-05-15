@@ -63,6 +63,16 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 /// note | No region
 If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
 ///
+
+## Important update: S3 bucket region validation and upgrade guidelines
+
+Starting from **n8n version 2.6.4**, the AWS SDK used for S3 storage enforces stricter validation of the value provided in `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION`. The region value:
+
+- Must only contain alphanumeric characters (`a-z`, `A-Z`, `0-9`) and hyphens (`-`).
+- Underscores (`_`) or other special characters are **not allowed**, and will cause n8n to fail startup with connection errors, even if the storage endpoint is reachable and was previously working in older versions.
+
+If you experience connection failures to S3 immediately after upgrading to 2.6.4 or later, verify and update your region value to comply with this format and redeploy n8n.
+
 Tell n8n to store binary data in S3:
 
 ```sh
@@ -90,3 +100,13 @@ n8n continues to read older binary data stored in the filesystem from the filesy
 If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
 
 --8<-- "_snippets/self-hosting/scaling/binary-data-pruning.md"
+
+### Upgrade best practices for S3 binary data storage
+
+To ensure smooth upgrades when using S3 or S3-compatible storage:
+
+1. Upgrade **all** n8n components (main, worker, runner) to the exact same version simultaneously to avoid protocol incompatibilities.
+2. When using on-premise or S3-compatible storage over HTTP, set `N8N_EXTERNAL_STORAGE_S3_PROTOCOL=http` and include the protocol explicitly in the host configuration.
+3. Use only supported environment variable names as documented; for access key, use `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY`.
+
+These requirements arise from stricter validation and improved protocol handling in newer n8n releases, and older configurations might require adjustments following upgrades.

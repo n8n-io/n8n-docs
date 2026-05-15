@@ -93,6 +93,21 @@ Conditions are evaluated in order. Place the most privileged group (owners) at t
 
 * Check condition order (most privileged group should be last).
 
+## Assigning Multiple Project Roles Using App Roles Instead of Group-based Claims
+
+Using Azure AD group-based claim conditions for assigning multiple project roles to users often results in only the first matching group claim being sent in the SAML assertion. This means users may see access to only one project despite belonging to several groups.
+
+To reliably assign multiple projects with their respective roles, use **App Roles** defined in the App Registration instead of group-based claims:
+
+1. In the **App Registration** for your n8n SAML app, define App Roles representing each project and permission combination (e.g., `<projectId>:<role>`).
+2. Save the updated App Manifest.
+3. In the **Enterprise Application**, assign users or groups to these App Roles under **Users and groups**.
+4. Update the `n8n_projects` SAML claim in **Single sign-on > Attributes & Claims** to source from `user.assignedroles`. This emits all assigned roles as an array in the SAML response.
+
+This setup ensures n8n receives all project assignments correctly, enabling appropriate access across multiple projects. While defining App Roles adds initial administrative overhead, it simplifies ongoing user-role management and guarantees complete project role sync.
+
+When migrating from group-based claims to App Roles, adjust your role definitions and claims mapping accordingly to prevent incomplete project access.
+
 ## References
 
 * [n8n SAML Setup](https://docs.n8n.io/user-management/saml/setup/)

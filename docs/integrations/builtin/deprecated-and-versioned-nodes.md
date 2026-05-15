@@ -32,6 +32,8 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Interval | 1 |
 | JSON Input Loader | 1 |
 | Manual Chat Trigger | 1.1 |
+| MCP Registry Client (internal) | 1 |
+| Message an Agent | 1 |
 | Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
 | OpenAI Model | 1 |
@@ -152,13 +154,13 @@ Always use the current version in new workflows to get the latest features and b
 | Microsoft SQL | 1.1 | 1 |
 | Microsoft Teams | 2 | 1, 1.1 |
 | Mindee | 3 | 1, 2 |
-| MongoDB | 1.2 | 1, 1.1 |
+| MongoDB | 1.3 | 1, 1.1, 1.2 |
 | MongoDB Chat Memory | 1.1 | 1 |
 | Moonshot Kimi Chat Model | 1.1 | 1 |
 | MySQL | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
 | n8n Form | 2.5 | 1, 2.3, 2.4 |
 | n8n Form Trigger | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
-| NocoDB | 3 | 1, 2 |
+| NocoDB | 4 | 1, 2, 3 |
 | Notion | 2.2 | 1, 2, 2.1 |
 | OpenAI | 2.3 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2, 2.1, 2.2 |
 | OpenAI Chat Model | 1.3 | 1, 1.1, 1.2 |

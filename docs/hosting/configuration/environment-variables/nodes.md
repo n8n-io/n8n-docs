@@ -15,6 +15,8 @@ hide:
 
 This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes.
 
+## Nodes and community node settings
+
 | Variable                                 | Type             | Default                       | Description                                                                                                                                                                                                                           |
 |:-----------------------------------------|:-----------------|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `N8N_COMMUNITY_PACKAGES_AUTH_TOKEN`      | String           | -                             | Authentication token for a private npm registry. Use with `N8N_COMMUNITY_PACKAGES_REGISTRY` to authenticate requests when installing community nodes from a private registry. |
@@ -30,3 +32,12 @@ This page lists the environment variables configuration options for managing [no
 | `NODES_ERROR_TRIGGER_TYPE`               | String           | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger.                                                                                                                                                                                      |
 | `NODES_EXCLUDE`                          | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]`                             | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"@n8n/n8n-nodes-langchain.lmChatDeepSeek\"]"`.  To enable all nodes, specify `NODES_EXCLUDE: "[]"`.                       |
 | `NODES_INCLUDE`                          | Array of strings | -                             | Specify which nodes to load.                                                                                                                                                                                                          |
+
+## Manage installed community packages
+
+/// info | Available from n8n v2.21.0
+///
+
+Pre-provision installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for the `*_MANAGED_BY_ENV` pattern.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/community-packages.md"

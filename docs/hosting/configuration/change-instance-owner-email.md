@@ -6,7 +6,7 @@ contentType: howto
 
 # Change the instance owner email for self-hosted n8n
 
-You can change the instance owner email from the UI, or from environment variables if you manage the instance owner declaratively.
+You can change the instance owner email from the UI, or from environment variables if you manage the instance owner that way.
 
 /// note | Owner email must be unique
 The owner email must not already belong to another user on the instance. If the email you want is already used by another user, change or delete that user first so the email becomes available.

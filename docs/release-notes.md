@@ -34,7 +34,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-
 ## n8n@2.21.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.2...n8n@2.21.3) for this version.<br />

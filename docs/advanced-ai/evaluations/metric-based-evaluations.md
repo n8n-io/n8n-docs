@@ -67,6 +67,31 @@ Calculating metrics can add latency and cost, so you may only want to do it when
 
 ### 3. Run evaluation and view results
 
-Switch to the **Evaluations** tab on your workflow and click the **Run evaluation** button. An evaluation will start. Once the evaluation has finished, it will display a summary score for each metric.
+Switch to the **Evaluations** tab on your workflow and click the **Run Test** button. An evaluation will start. Once the evaluation has finished, it will display a summary score for each metric.
 
 You can see the results for each test case by clicking on the test run row. Clicking on an individual test case will open the execution that produced it (in a new tab).
+
+#### Run test cases in parallel
+
+On plans that support concurrency, **Run Test** is a split-button. The caret to the right opens a popover with a slider that controls how many test cases run at the same time.
+
+<figure markdown="span">
+![Run Test split-button with the concurrency popover open at 3 of 5](/_images/advanced-ai/evaluations/run-test-concurrency.png)
+<figcaption>The concurrency popover, with the slider at 3 of a maximum of 5 parallel test cases.</figcaption>
+</figure>
+
+The default maximum depends on your plan:
+
+| Plan | Maximum parallel test cases |
+| :--- | :-------------------------- |
+| Community / Pro | 1 (sequential) |
+| Business | 3 |
+| Enterprise | 5 |
+
+When the maximum is `1`, the caret and popover are hidden and **Run Test** is a plain button — runs are sequential, identical to earlier versions.
+
+Self-hosted instances can override the maximum with the [`N8N_CONCURRENCY_EVALUATION_LIMIT`](/hosting/configuration/environment-variables/executions.md) environment variable, regardless of plan tier.
+
+/// note | LLM rate limits
+Higher concurrency speeds up evaluation runs but increases the chance of hitting upstream LLM rate limits. If you see rate-limit errors, lower the slider.
+///

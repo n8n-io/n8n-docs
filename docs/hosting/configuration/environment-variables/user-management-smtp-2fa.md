@@ -43,4 +43,6 @@ Refer to [User management](/hosting/configuration/user-management-self-hosted.md
 
 Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` to pre-provision the instance owner from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
 
+For steps to update the owner email, see [Change the instance owner email for self-hosted n8n](/hosting/configuration/change-instance-owner-email.md).
+
 --8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/instance-owner.md"

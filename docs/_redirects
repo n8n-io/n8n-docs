@@ -109,8 +109,8 @@
 /integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/googleai/  301
 
 
-/n8n-nodes-langchain.openaiassistant.md/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai  301
-/n8n-nodes-base.openai/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai  301
+/n8n-nodes-langchain.openaiassistant.md/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/  301
+/n8n-nodes-base.openai/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/  301
 /contributing/   /help-community/contributing/  301
 /manage-cloud/   /manage-cloud/overview/  301
 
@@ -362,12 +362,12 @@
 
 
 /hosting/environment-variables/*   /hosting/configuration/environment-variables/:splat  301
-/code-examples/expressions/data-transformation-functions/*   /data/expressions-for-data-transformation/  301
-/hosting/server-setups/*   /hosting/installation/server-setups/  301
+/code-examples/expressions/data-transformation-functions/*   /data/expressions-for-transformation/  301
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
 /integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
-/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/  301
-/integrations/core-nodes/*   /integrations/builtin/core-nodes/  301
-/integrations/credentials/*   /integrations/builtin/credentials/  301
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
+/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 /credentials/* /integrations/builtin/credentials/:splat  301
 /getting-started/create-your-first-workflow/*    /try-it-out/  301
 /embed/  /hosting/oem-deployment/  301

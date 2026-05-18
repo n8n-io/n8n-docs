@@ -121,6 +121,7 @@ Always use the current version in new workflows to get the latest features and b
 | Google Books | 2 | 1 |
 | Google Calendar | 1.3 | 1, 1.1, 1.2 |
 | Google Cloud Firestore | 1.1 | 1 |
+| Google Cloud Storage | 1.1 | 1 |
 | Google Docs | 2 | 1 |
 | Google Drive | 3 | 1, 2 |
 | Google Gemini Chat Model | 1.1 | 1 |

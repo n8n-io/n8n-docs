@@ -46,6 +46,17 @@ curl -X 'GET' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 ```
 
+## Node configuration
+
+To call the n8n API from within a workflow, use the [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md). When you create the credential, fill these fields:
+
+- **API Key**: paste the key you created in [Create an API key](#create-an-api-key).
+- **Base URL**: enter your instance's API root in one of these formats:
+	- Cloud: `https://<name>.app.n8n.cloud/api/v1`, where `<name>` is your Cloud subdomain.
+	- Self-hosted: `https://<your-instance-url>/api/v1`.
+
+For the available operations and parameters, refer to the [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) documentation.
+
 ## Delete an API key
 
 1. Log in to n8n.

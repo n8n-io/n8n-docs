@@ -1,6 +1,6 @@
 ---
 title: Change the instance owner email for self-hosted n8n
-description: Change the owner email for a self-hosted n8n instance using the UI or environment variables.
+description: Change the owner email address for a self-hosted n8n instance using the UI or environment variables.
 contentType: howto
 ---
 
@@ -30,7 +30,7 @@ If you manage the instance owner using environment variables:
 3. Keep `N8N_INSTANCE_OWNER_FIRST_NAME`, `N8N_INSTANCE_OWNER_LAST_NAME`, and `N8N_INSTANCE_OWNER_PASSWORD_HASH` set.
 4. Restart n8n.
 
-When `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` is `true`, n8n reapplies the owner details on every startup. The matching UI controls become read-only, and n8n rejects API writes to that user.
+When `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` is `true`, n8n reapplies the owner details on every startup. The matching UI controls become read-only.
 
 /// warning | `N8N_INSTANCE_OWNER_PASSWORD_HASH` must be a bcrypt hash
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.

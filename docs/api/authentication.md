@@ -117,7 +117,7 @@ The following tables list the scopes available when you create a scoped API key,
 | `dataTableRow:read` | Read rows from a data table. |
 | `dataTableRow:update` | Update existing rows in a data table. |
 | `dataTableRow:delete` | Delete rows from a data table. |
-| `dataTableRow:upsert` | Create or update rows in a data table in a single operation. |
+| `dataTableRow:upsert` | Update an existing row in a data table, or insert a new one if no row matches the filter conditions. |
 
 ### Execution scopes
 

@@ -6,6 +6,7 @@ contentType: howto
 
 # Credential sharing
 
+TEST
 
 /// info | Feature availability
 Available on all Cloud plans, and Business and Enterprise self-hosted plans.

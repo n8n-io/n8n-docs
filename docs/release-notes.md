@@ -50,7 +50,7 @@ This release contains bug fixes.
 [mvanhorn](https://github.com/mvanhorn)  
 [ABDULALMAS](https://github.com/ABDULALMAS)  
 [ChrisJr404](https://github.com/ChrisJr404)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix)  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
 [KhadyotTakale](https://github.com/KhadyotTakale)  
 [rajats-dev](https://github.com/rajats-dev)  
 [TheMazeIsAmazing](https://github.com/TheMazeIsAmazing)  

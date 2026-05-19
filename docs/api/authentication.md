@@ -191,7 +191,7 @@ The following tables list the scopes available when you create a scoped API key,
 | `user:read` | Retrieve a user. |
 | `user:list` | List users. |
 | `user:changeRole` | Change a user's global (instance-level) role. |
-| `user:enforceMfa` | Reserved scope. No `/api/v1/` endpoint currently consumes it, so selecting this scope on a Public API key has no public-facing effect. |
+| `user:enforceMfa` | Reserved scope. No `/api/v1/` endpoint consumes it, so selecting this scope on a Public API key has no public-facing effect. |
 | `user:delete` | Delete a user from the instance. |
 
 ### Variable scopes

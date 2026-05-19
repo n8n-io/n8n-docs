@@ -191,7 +191,7 @@ The following tables list the scopes available when you create a scoped API key,
 | `user:read` | Retrieve a user. |
 | `user:list` | List users. |
 | `user:changeRole` | Change a user's global (instance-level) role. |
-| `user:enforceMfa` | Enforce two-factor authentication enrolment on a user. |
+| `user:enforceMfa` | Reserved scope. No `/api/v1/` endpoint currently consumes it, so selecting this scope on a Public API key has no public-facing effect. |
 | `user:delete` | Delete a user from the instance. |
 
 ### Variable scopes
@@ -211,9 +211,9 @@ The following tables list the scopes available when you create a scoped API key,
 | `workflow:read` | Retrieve a workflow and its details. |
 | `workflow:list` | List workflows. |
 | `workflow:update` | Update a workflow. |
-| `workflow:delete` | Delete a workflow. |
+| `workflow:delete` | Delete, archive, or unarchive a workflow. |
 | `workflow:move` | Transfer a workflow to another project. |
-| `workflow:activate` | Activate or deactivate a workflow. |
+| `workflow:activate` | Activate or deactivate a workflow. Also referred to as "publish/unpublish" in the public API (`/workflows/{id}/activate` and `/workflows/{id}/deactivate`). |
 
 ### Workflow tags scopes
 

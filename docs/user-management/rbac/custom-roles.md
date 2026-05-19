@@ -11,7 +11,7 @@ Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans.
 
 **Available from:** n8n version 1.122.0 (released November 24, 2025)
 
-Secret vault scopes are available from n8n version `2.13.0`
+Secret vault scopes are available from n8n version `2.13.0`.
 ///
 
 /// note | Instance roles vs project roles
@@ -34,14 +34,15 @@ To create a custom role:
 2. Select **Create role**.
 3. Enter a role name and optional description.
 4. Select the permissions (scopes) for this role:
-	* **Workflow permissions**: Create, read, update, publish, delete, list, execute, move, or share workflows
-	* **Credential permissions**: Create, read, update, delete, list, move, or share credentials
-	* **Project permissions**: List, read, update, or delete projects
-	* **Folder permissions**: Create, read, update, delete, list, or move folders
-	* **Data table permissions**: Create, read, update, delete, list project tables, read/write rows
-	* **Project variable permissions**: Create, read, update, delete, or list project variables
-	* **Secret vault permissions**: Create, view, update, delete, and sync (reload) vaults of a project
+	* **Workflow permissions**: View, execute, edit, create, publish, transfer, delete, or manage data redaction for workflows
+	* **Credential permissions**: View, edit, create, share, unshare, transfer, or delete credentials
+	* **Project permissions**: View, edit, or delete projects
+	* **Folder permissions**: View, edit, create, transfer, or delete folders
+	* **Execution permission**: Reveal redacted execution data
+	* **Secret vault permissions**: View, create, edit, delete, or sync secret vaults of a project
 	* **Secrets permission**: Use secrets in credentials
+	* **Data table permissions**: View tables, view rows, edit tables, edit rows, create, or delete tables
+	* **Project variable permissions**: View, edit, create, or delete project variables
 	* **Source control**: Push to source control
 5. Select **Create role**.
 
@@ -100,73 +101,76 @@ If users are assigned to this role, you must first reassign them to a different 
 
 ## Permission scopes reference
 
-Custom roles use permission scopes to define what users can do within a project. Here are the available scopes by resource:
+Custom roles use permission scopes to define what users can do within a project. Each scope below matches a checkbox in the **Project roles** editor. The section headings match the editor's section names; the scope codes are what you'll see in API responses and audit logs.
+
+/// note | Automatically granted scopes
+n8n pairs some scopes together, so they don't appear as separate checkboxes:
+
+* Granting `<resource>:read` also grants the matching list scope for that resource (for example, `workflow:read` grants `workflow:list`).
+* Granting `workflow:publish` also grants `workflow:unpublish`.
+///
 
 ### Workflow scopes
 * `workflow:create` - Create new workflows
 * `workflow:read` - View workflow details
 * `workflow:update` - Edit workflows
-* `workflow:publish` - Publish workflows
-* `workflow:unpublish` - Unpublish workflows
+* `workflow:execute` - Execute workflows
+* `workflow:publish` - Publish workflows (also grants `workflow:unpublish`)
 * `workflow:delete` - Delete workflows
-* `workflow:list` - View workflows in project
-* `workflow:execute-chat` - Execute workflows via chat interface
-* `workflow:move` - Move workflows between projects
-* `workflow:share` - Share workflows with other users
-
-* `workflow:updateRedactionSetting` - Manage the data redaction policy for workflows
-
-### Execution scopes
-* `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
+* `workflow:move` - Transfer workflows between projects
+* `workflow:updateRedactionSetting` - Manage data redaction for workflows (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
 
 ### Credential scopes
 * `credential:create` - Create new credentials
 * `credential:read` - View credential details
 * `credential:update` - Edit credentials
 * `credential:delete` - Delete credentials
-* `credential:list` - View credentials in project
-* `credential:move` - Move credentials between projects
+* `credential:move` - Transfer credentials between projects
 * `credential:share` - Share credentials with other users
+* `credential:unshare` - Remove credential sharing
 
 ### Project scopes
-* `project:list` - View available projects
 * `project:read` - View project details
-* `project:update` - Edit project settings (Admin only)
-* `project:delete` - Delete projects (Admin only)
+* `project:update` - Edit project settings
+* `project:delete` - Delete projects
 
 ### Folder scopes
 * `folder:create` - Create new folders
 * `folder:read` - View folder contents
 * `folder:update` - Rename folders
 * `folder:delete` - Delete folders
-* `folder:list` - View folders in project
-* `folder:move` - Move folders
+* `folder:move` - Transfer folders
+
+### Execution scopes
+* `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
+
+### Secret vault scopes
+The scope codes use the `externalSecretsProvider` prefix. The role editor lists this section as **Secrets vaults**.
+
+* `externalSecretsProvider:create` - Create new secret vaults in a project
+* `externalSecretsProvider:read` - View secret vaults in a project
+* `externalSecretsProvider:update` - Edit secret vault configuration
+* `externalSecretsProvider:delete` - Delete secret vaults from a project
+* `externalSecretsProvider:sync` - Reload a vault's secrets
+
+### Secrets scope
+The scope code uses the `externalSecret` prefix. The role editor lists this section as **Secrets**.
+
+* `externalSecret:list` - Use secrets in credentials
 
 ### Data table scopes
 * `dataTable:create` - Create new data tables
 * `dataTable:read` - View data table schema
-* `dataTable:update` - Modify data table schema
+* `dataTable:update` - Edit data table schema
 * `dataTable:delete` - Delete data tables
-* `dataTable:listProject` - View data tables in project
 * `dataTable:readRow` - Read rows from data tables
 * `dataTable:writeRow` - Insert or update rows in data tables
 
 ### Project variable scopes
-* `projectVariable:list` - View project variables
-* `projectVariable:read` - View variable values
 * `projectVariable:create` - Create new variables
+* `projectVariable:read` - View variable values
 * `projectVariable:update` - Edit variable values
 * `projectVariable:delete` - Delete variables
-
-### Secret vault scopes
-* `secretsVaults:view` - View secret vaults in a project
-* `secretsVaults:create` - Create new secret vaults within project
-* `secretsVaults:edit` - Edit secret vault configuration
-* `secretsVaults:delete` - Delete secret vaults of a project
-* `secretsVaults:sync` - Reload a vault's secrets
-
-* `secrets:list` - Use secrets in credentials
-
 
 ### Source control scopes
 * `sourceControl:push` - Push changes to source control
@@ -175,30 +179,30 @@ Custom roles use permission scopes to define what users can do within a project.
 
 These are example custom project roles you can create for common use cases. Remember that these roles apply within individual projects, not across your entire n8n instance.
 
-### Workflow Developer
+### Workflow developer
 A role for users who work only with workflows:
-* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:delete`, `workflow:list`
-* `credential:read`, `credential:list` (view credentials but not modify)
-* `project:list`, `project:read`
+* `workflow:create`, `workflow:read`, `workflow:update`, `workflow:execute`, `workflow:delete`
+* `credential:read` (view credentials but not edit them)
+* `project:read`
 
-### Credential Manager
+### Credential manager
 A role for users who manage credentials:
-* `credential:create`, `credential:read`, `credential:update`, `credential:delete`, `credential:list`, `credential:share`
-* `workflow:read`, `workflow:list` (view workflows to understand credential usage)
-* `project:list`, `project:read`
+* `credential:create`, `credential:read`, `credential:update`, `credential:delete`, `credential:share`
+* `workflow:read` (view workflows to understand credential usage)
+* `project:read`
 
-### Secrets User
-A role for users who need to use external secrets in credentials but not manage vaults:
-* `secrets:list` (use secrets in credentials expressions)
-* `credential:create`, `credential:read`, `credential:update`, `credential:list` (manage credentials with secrets)
-* `workflow:read`, `workflow:list`
-* `project:list`, `project:read`
+### Secrets user
+A role for users who use external secrets in credentials but don't manage vaults:
+* `externalSecret:list` (use secrets in credential expressions)
+* `credential:create`, `credential:read`, `credential:update` (manage credentials with secrets)
+* `workflow:read`
+* `project:read`
 
-### Workflow Publisher
+### Workflow publisher
 A role for users who can publish workflows without full edit access:
-* `workflow:read`, `workflow:list`, `workflow:publish`, `workflow:unpublish`
-* `credential:read`, `credential:list`
-* `project:list`, `project:read`
+* `workflow:read`, `workflow:publish`
+* `credential:read`
+* `project:read`
 
 /// note | Combining scopes
 You can combine any scopes to create roles that match your specific needs. Consider the principle of least privilege: grant only the permissions users need to perform their tasks.

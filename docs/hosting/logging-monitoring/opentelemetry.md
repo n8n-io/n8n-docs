@@ -96,7 +96,7 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 
 ## Add custom attributes to node spans
 
-You can add custom attributes to node spans from the node settings or from custom node code. n8n exports them as `n8n.node.custom.<key>` attributes. They only appear on node spans and aren't exported when `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
+You can add custom attributes to node spans from the node settings or (if building a custom node) from within the `execute` method. n8n exports them as `n8n.node.custom.<key>` attributes. They only appear on node spans and aren't exported when `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
 
 ### Add tags in the node settings
 

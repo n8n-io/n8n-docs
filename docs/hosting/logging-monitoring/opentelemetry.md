@@ -104,7 +104,7 @@ You can add custom attributes to node spans from the node settings or from custo
 Requires OpenTelemetry to be enabled.
 ///
 
-You can add custom telemetry tags to any node without writing code:
+You can add custom telemetry tags to any node as follow:
 
 1. Open the node and select the **Settings** tab.
 2. Under **Custom Telemetry Tags**, select **Add Tag**.

@@ -100,8 +100,7 @@ You can add custom attributes to node spans from the node settings or from custo
 
 ### Add tags in the node settings
 
-/// info | Available from n8n@2.22.0
-Requires OpenTelemetry to be enabled.
+/// info | Available from n8n v2.22.0
 ///
 
 You can add custom telemetry tags to any node as follow:

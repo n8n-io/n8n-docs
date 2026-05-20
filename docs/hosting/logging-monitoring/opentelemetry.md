@@ -103,7 +103,7 @@ You can add custom attributes to node spans from the node settings or (if buildi
 /// info | Available from n8n v2.22.0
 ///
 
-You can add custom telemetry tags to any node as follow:
+You can add custom telemetry tags to any node as follows:
 
 1. Open the node and select the **Settings** tab.
 2. Under **Custom Telemetry Tags**, select **Add Tag**.

@@ -103,7 +103,7 @@ These attributes only appear on node spans. They aren't exported when node spans
 ### Add tags in the node settings
 
 /// info | Available from n8n@2.22.0
-This setting requires OpenTelemetry to be enabled. Set `N8N_OTEL_ENABLED=true` to use it. Refer to [Enable tracing](#enable-tracing) for setup instructions.
+Enable OpenTelemetry before using this setting. Set `N8N_OTEL_ENABLED=true` to use it. Refer to [Enable tracing](#enable-tracing) for setup instructions.
 ///
 
 You can add custom telemetry tags to any node without writing code:
@@ -122,7 +122,7 @@ For example, if you add two tags:
 
 n8n exports the span attributes `n8n.node.custom.environment` and `n8n.node.custom.item_id`.
 
-Values must resolve to a string, number, or boolean. n8n skips tags with empty keys, and silently skips values that resolve to `null`, `undefined`, objects, or arrays. If an expression fails to evaluate, n8n skips the tag without blocking the node execution.
+Values must resolve to a string, number, or boolean. n8n skips tags with empty keys. It also skips values that resolve to `null`, `undefined`, objects, or arrays. If n8n can't resolve an expression, it skips the tag without blocking node execution.
 
 ### Add attributes programmatically in a custom node
 
@@ -142,7 +142,7 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or booleans.
+n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or boolean.
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
 

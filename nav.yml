@@ -1297,6 +1297,7 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
+      - Change instance owner email: hosting/configuration/change-instance-owner-email.md
       - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md

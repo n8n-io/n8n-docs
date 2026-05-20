@@ -45,7 +45,7 @@ The other environment variables for an area have no effect unless `<AREA>_MANAGE
 /// info | Available from n8n v2.17.0
 ///
 
-Pre-provision the [instance owner](/hosting/configuration/user-management-self-hosted.md) from environment variables instead of going through the in-app setup.
+Pre-provision the [instance owner](/hosting/configuration/user-management-self-hosted.md) from environment variables instead of going through the in-app setup. To change the owner email after setup, see [Change the instance owner email for self-hosted n8n](/hosting/configuration/change-instance-owner-email.md).
 
 /// warning | `N8N_INSTANCE_OWNER_PASSWORD_HASH` must be a bcrypt hash
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.

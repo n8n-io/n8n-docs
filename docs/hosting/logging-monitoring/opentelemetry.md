@@ -96,33 +96,22 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 
 ## Add custom attributes to node spans
 
-You can attach custom key-value pairs to any node's OpenTelemetry span. n8n exports these as `n8n.node.custom.<key>` attributes, letting you filter and group traces by dimensions like environment, tenant, or model name.
-
-These attributes only appear on node spans. They aren't exported when node spans are disabled with `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
+You can add custom attributes to node spans from the node settings or from custom node code. n8n exports them as `n8n.node.custom.<key>` attributes. They only appear on node spans and aren't exported when `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
 
 ### Add tags in the node settings
 
 /// info | Available from n8n@2.22.0
-Enable OpenTelemetry before using this setting. Set `N8N_OTEL_ENABLED=true` to use it. Refer to [Enable tracing](#enable-tracing) for setup instructions.
+Requires OpenTelemetry to be enabled.
 ///
 
 You can add custom telemetry tags to any node without writing code:
 
 1. Open the node and select the **Settings** tab.
 2. Under **Custom Telemetry Tags**, select **Add Tag**.
-3. Enter a **Key** (plain text, expressions aren't supported in keys).
-4. Enter a **Value**. You can use plain text or an [expression](/data/expressions.md) like `={{ $json.id }}`. n8n evaluates the expression at execution time.
+3. Enter a **Key**. Keys must be plain text.
+4. Enter a **Value**. Values can be plain text or expressions, such as `={{ $json.id }}`.
 
-For example, if you add two tags:
-
-| Key | Value |
-| :-- | :---- |
-| `environment` | `production` |
-| `item_id` | `={{ $json.id }}` |
-
-n8n exports the span attributes `n8n.node.custom.environment` and `n8n.node.custom.item_id`.
-
-Values must resolve to a string, number, or boolean. n8n skips tags with empty keys. It also skips values that resolve to `null`, `undefined`, objects, or arrays. If n8n can't resolve an expression, it skips the tag without blocking node execution.
+Values must resolve to a string, number, or boolean. n8n skips tags with empty keys, unsupported values (`null`, `undefined`, objects, or arrays), or expressions that can't be resolved.
 
 ### Add attributes programmatically in a custom node
 

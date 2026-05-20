@@ -96,7 +96,37 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 
 ## Add custom attributes to node spans
 
-If you're [building a custom node](/integrations/creating-nodes/overview.md), you can attach custom key-value pairs to the node's span. Call `setMetadata` from the node's `execute` method:
+You can attach custom key-value pairs to any node's OpenTelemetry span. n8n exports these as `n8n.node.custom.<key>` attributes, letting you filter and group traces by dimensions like environment, tenant, or model name.
+
+These attributes only appear on node spans. They aren't exported when node spans are disabled with `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
+
+### Add tags in the node settings
+
+/// info | Available from n8n@2.22.0
+This setting requires OpenTelemetry to be enabled. Set `N8N_OTEL_ENABLED=true` to use it. Refer to [Enable tracing](#enable-tracing) for setup instructions.
+///
+
+You can add custom telemetry tags to any node without writing code:
+
+1. Open the node and select the **Settings** tab.
+2. Under **Custom Telemetry Tags**, select **Add Tag**.
+3. Enter a **Key** (plain text, expressions aren't supported in keys).
+4. Enter a **Value**. You can use plain text or an [expression](/data/expressions.md) like `={{ $json.id }}`. n8n evaluates the expression at execution time.
+
+For example, if you add two tags:
+
+| Key | Value |
+| :-- | :---- |
+| `environment` | `production` |
+| `item_id` | `={{ $json.id }}` |
+
+n8n exports the span attributes `n8n.node.custom.environment` and `n8n.node.custom.item_id`.
+
+Values must resolve to a string, number, or boolean. n8n skips tags with empty keys, and silently skips values that resolve to `null`, `undefined`, objects, or arrays. If an expression fails to evaluate, n8n skips the tag without blocking the node execution.
+
+### Add attributes programmatically in a custom node
+
+If you're [building a custom node](/integrations/creating-nodes/overview.md), you can attach custom key-value pairs from code. Call `setMetadata` from the node's `execute` method:
 
 ```typescript
 async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -112,9 +142,11 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or boolean.
+n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or booleans.
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
+
+If a node sets an attribute key here that's also configured as a [custom telemetry tag](#add-tags-in-the-node-settings), the programmatic value takes precedence.
 
 ## Try it out with Jaeger
 
@@ -177,7 +209,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.items.input` | Number of input items the node received. |
 | `n8n.node.items.output` | Number of output items the node produced. |
 | `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled`). |
-| `n8n.node.custom.<key>` | Custom attributes set through `metadata.tracing` in the node output. |
+| `n8n.node.custom.<key>` | Custom attributes set through [custom telemetry tags](#add-tags-in-the-node-settings) in the node settings or `metadata.tracing` in custom node code. |
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
 

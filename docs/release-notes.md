@@ -72,9 +72,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
-
-
-
 ## n8n@2.21.7
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.6...n8n@2.21.7) for this version.<br />

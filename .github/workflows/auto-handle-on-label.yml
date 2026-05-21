@@ -33,7 +33,7 @@ jobs:
               "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
               ;;
             "quality:unusable")
-              echo "comment=@${{ env.AUTHOR }} This contribution doesn't meet our quality standards. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=@${{ env.AUTHOR }} This contribution doesn't improve the doc, or meet our quality standards. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               curl -L \
               -X PUT \

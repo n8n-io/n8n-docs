@@ -14,7 +14,7 @@ jobs:
       - uses: dessant/support-requests@47d5ea12f6c9e4a081637de9626b7319b415a3bf
         with:
           github-token: ${{ github.token }}
-          support-label: 'support'
+          support-label: 'issue:support'
           issue-comment: >
             :wave: @{issue-author}. Sorry you are having a problem!
             This repository is for the n8n documentation though. Having

@@ -12,7 +12,7 @@ on:
       - labeled
 jobs:
   handle-labels:
-    if: contains(fromJSON('["block", "spam", "ai-slop", "low-effort-unusable", "low-effort-usable", "duplicate", "dev-cancelled", "old-course", "pending-dev", "in-next-release" ]'), github.event.label.name)
+    if: contains(fromJSON('["block", "scope:old-course", "quality:unusable", "quality:low-effort-usable", "status:duplicate", "status:dev-cancelled", "status:pending-dev", "status:in-next-release" ]'), github.event.label.name)
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -32,8 +32,8 @@ jobs:
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
               ;;
-            "spam")
-              echo "comment=@${{ env.AUTHOR }} This appears to be spam. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+            "quality:unusable")
+              echo "comment=@${{ env.AUTHOR }} This contribution doesn't meet our quality standards. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               curl -L \
               -X PUT \
@@ -42,67 +42,37 @@ jobs:
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
               ;;
-            "ai-slop")
-              echo "comment=@${{ env.AUTHOR }} This appears to be AI generated, and has quality or accuracy problems. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
-              echo "should_close=true" >> $GITHUB_OUTPUT
-              curl -L \
-              -X PUT \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer ${{ secrets.GH_ORG_BLOCK_USER_PAT }}" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
-              ;;
-            "low-effort-unusable")
-              response=$(curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
-              -H "Content-Type: application/json" \
-              -d "$(printf '{"user": %s, "label": "low-effort-unusable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL }}")
-              if [ "$response" = "true" ]; then
-                echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution with quality or accuracy problems. Due to multiple low-effort-unusable contributions, you are now blocked. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines to understand more." >> $GITHUB_OUTPUT
-                echo "should_close=true" >> $GITHUB_OUTPUT
-                curl -L \
-                -X PUT \
-                -H "Accept: application/vnd.github+json" \
-                -H "Authorization: Bearer ${{ secrets.GH_ORG_BLOCK_USER_PAT }}" \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
-                "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
-              elif [ "$response" = "false" ]; then
-                echo "comment=@${{ env.AUTHOR }} This is a minor contribution with quality or accuracy problems. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
-                echo "should_close=true" >> $GITHUB_OUTPUT              
-              fi
-              ;;
-            "low-effort-usable")
+            "quality:low-effort-usable")
               curl -s -X POST \
               -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
-              -d "$(printf '{"user": %s, "label": "low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
+              -d "$(printf '{"user": %s, "label": "quality:low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
               "${{ secrets.WEBHOOK_URL }}"
               echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution, but good quality. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines, and keep low-effort contributions to a minimum." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
-            "duplicate")
+            "status:duplicate")
               echo "comment=@${{ env.AUTHOR }} This duplicates another issue or PR, or the work was already done elsewhere. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
-            "old-course")
+            "scope:old-course")
               curl -s -X POST \
               -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
-              -d "$(printf '{"user": %s, "label": "old-course"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
+              -d "$(printf '{"user": %s, "label": "scope:old-course"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
               "${{ secrets.WEBHOOK_URL }}"
               echo "comment=Hi @${{ env.AUTHOR }}! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
-            "dev-cancelled")
+            "status:dev-cancelled")
               echo "comment=Hi @${{ env.AUTHOR }}, thanks for the pull request! It looks like the PR in the main repo was closed. I'm going to go ahead and close this one too since this depends on the main repo submission being accepted. Please let me know if the status changes, however, and we can re-open as needed." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
-            "pending-dev")
+            "status:pending-dev")
               echo "comment=Thanks @${{ env.AUTHOR }}! We'll hold off on reviewing this until the PR is ready to go in the main repo." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
-            "in-next-release")
+            "status:in-next-release")
               echo "comment=Holding off on merging until this is released." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;

@@ -201,7 +201,7 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 ```json
 "mcpServers": {
-  "n8n-local": {
+  "n8n-mcp": {
     "type": "http",
     "url": "https://<your-n8n-domain>/mcp-server/http",
     "headers": {
@@ -214,9 +214,10 @@ Add the following entry to your `claude_desktop_config.json` file:
 Here, replace:
 
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Claude Code to n8n MCP server
+
+#### OPTION 1: Authenticate using OAuth2 (Recommended)
 
 Use the following CLI command:
 
@@ -229,7 +230,33 @@ Alternatively, add the following entry to your `claude.json` file:
 ```json
 {
     "mcpServers": {
-        "n8n-local": {
+        "n8n-mcp": {
+            "type": "http",
+            "url": "https://<your-n8n-domain>/mcp-server/http"
+        }
+    }
+}
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+#### OPTION 2: Authenticate using Access Token
+
+Use the following CLI command:
+
+```bash
+claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http \
+  --header "Authorization: Bearer <YOUR_N8N_MCP_TOKEN>"
+```
+
+Alternatively, add the following entry to your `claude.json` file:
+
+```json
+{
+    "mcpServers": {
+        "n8n-mcp": {
             "type": "http",
             "url": "https://<your-n8n-domain>/mcp-server/http",
             "headers": {

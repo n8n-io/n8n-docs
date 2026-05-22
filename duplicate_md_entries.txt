@@ -1,0 +1,29 @@
+Duplicate .md Entries in latestNav.yml
+================================================================================
+
+Found 6 duplicate entries:
+
+Path: README.md
+Occurrences: 16
+Line numbers: 4, 72, 80, 145, 153, 155, 164, 181, 186, 196, 211, 215, 303, 340, 1373, 1391
+--------------------------------------------------------------------------------
+Path: 1-0-migration-checklist.md
+Occurrences: 2
+Line numbers: 212, 1380
+--------------------------------------------------------------------------------
+Path: 2-0-breaking-changes.md
+Occurrences: 2
+Line numbers: 213, 1378
+--------------------------------------------------------------------------------
+Path: hosting/index.md
+Occurrences: 2
+Line numbers: 8, 194
+--------------------------------------------------------------------------------
+Path: integrations/creating-nodes/build/reference/node-file-structure.md
+Occurrences: 2
+Line numbers: 1336, 1349
+--------------------------------------------------------------------------------
+Path: workflows/templates.md
+Occurrences: 2
+Line numbers: 14, 76
+--------------------------------------------------------------------------------

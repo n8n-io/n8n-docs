@@ -572,7 +572,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned. |
 | `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned. |
 | `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned. |
-| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings do not block saving. |
+| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving. |
 | `validationWarnings[].code` | `string` | Warning code. |
 | `validationWarnings[].message` | `string` | Warning message. |
 | `validationWarnings[].nodeName` | `string` | Optional node associated with the warning. |

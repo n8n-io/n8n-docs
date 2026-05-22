@@ -376,7 +376,7 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `data[].id` | `string` | The unique identifier of the execution |
 | `data[].workflowId` | `string` | The workflow this execution belongs to |
 | `data[].status` | `string` | The execution status |
-| `data[].mode` | `string` | How the execution was triggered. One of: `"cli"`, `"error"`, `"integrated"`, `"internal"`, `"manual"`, `"retry"`, `"trigger"`, `"webhook"`, `"evaluation"`, `"chat"`, `"agent"` |
+| `data[].mode` | `string` | How the execution was triggered. One of: `"cli"`, `"error"`, `"integrated"`, `"internal"`, `"manual"`, `"retry"`, `"trigger"`, `"webhook"`, `"evaluation"`, `"chat"` |
 | `data[].startedAt` | `string | null` | ISO timestamp when the execution started |
 | `data[].stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
 | `data[].waitTill` | `string | null` | ISO timestamp until when the execution is waiting |

@@ -221,8 +221,7 @@ Here, replace:
 Use the following CLI command:
 
 ```bash
-claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http \
-  --header "Authorization: Bearer <YOUR_N8N_MCP_TOKEN>"
+claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http
 ```
 
 Alternatively, add the following entry to your `claude.json` file:

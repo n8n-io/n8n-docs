@@ -531,7 +531,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 
 ### update_workflow
 
-/// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing full workflow on every update
+/// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 ///
 
 Update an existing workflow in n8n by applying an ordered batch of targeted partial-updates to the workflow. The batch is atomic: if any operation fails, no changes are saved.

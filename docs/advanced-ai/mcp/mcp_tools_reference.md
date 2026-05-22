@@ -531,38 +531,61 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 
 ### update_workflow
 
-/// info | Available from n8n v2.12.0
+/// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 ///
 
-Update an existing workflow in n8n from validated SDK code. Parses the code into a workflow and saves the changes.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial-updates to the workflow. The batch is atomic: if any operation fails, no changes are saved.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to update |
-| `code` | `string` | Yes | Full TypeScript/JavaScript workflow code using the n8n Workflow SDK. Must be validated first with `validate_workflow`. |
-| `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
-| `description` | `string` | No | Short workflow description (max 255 chars, 1-2 sentences). |
+| `workflowId` | `string` | Yes | The ID of the workflow to update. |
+| `operations` | `array` | Yes | Ordered list of operations to apply. Must contain 1-100 operations. |
+
+#### Supported operations
+
+| Operation | Required fields | Optional fields | Description |
+|-----------|-----------------|-----------------|-------------|
+| `updateNodeParameters` | `nodeName`, `parameters` | `replace` | Deep-merges `parameters` into an existing node's parameters. If `replace` is `true`, replaces the full parameters object. |
+| `setNodeParameter` | `nodeName`, `path`, `value` |  | Sets one parameter using an RFC 6901 JSON Pointer path, for example `/jsonSchema` or `/options/systemMessage`. Creates intermediate objects as needed. Array indices aren't supported; set the whole array instead. |
+| `addNode` | `node.name`, `node.type`, `node.typeVersion` | `node.id`, `node.parameters`, `node.position`, `node.credentials`, `node.disabled`, `node.notes` | Adds a node. `position` is `[x, y]`. `id` is generated if omitted. Node names must be unique. |
+| `removeNode` | `nodeName` |  | Removes a node and all inbound and outbound connections. Connected sub-nodes remain in the workflow but become disconnected. |
+| `renameNode` | `oldName`, `newName` |  | Renames a node and rewrites connection references. The new name must be unique. |
+| `addConnection` | `source`, `target` | `sourceIndex`, `targetIndex`, `connectionType` | Adds a connection. `sourceIndex` and `targetIndex` default to `0`; `connectionType` defaults to `main`. Existing identical connections aren't duplicated. |
+| `removeConnection` | `source`, `target` | `sourceIndex`, `targetIndex`, `connectionType` | Removes a matching connection. `sourceIndex` and `targetIndex` default to `0`; `connectionType` defaults to `main`. |
+| `setNodeCredential` | `nodeName`, `credentialKey`, `credentialId`, `credentialName` |  | Sets or replaces a node credential reference. The credential must be accessible and match the node type's accepted credential key. |
+| `setNodePosition` | `nodeName`, `position` |  | Updates a node's canvas position as `[x, y]`. |
+| `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
+| `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `workflowId` | `string` | The ID of the updated workflow |
-| `name` | `string` | The name of the updated workflow |
-| `nodeCount` | `number` | The number of nodes in the workflow |
-| `url` | `string` | The URL to open the workflow in n8n |
-| `autoAssignedCredentials` | `array` | List of credentials that were automatically assigned to nodes |
-| `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
-| `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
-| `note` | `string` | Additional notes about the workflow update (for example nodes skipped during credential auto-assignment) |
+| `workflowId` | `string` | The ID of the updated workflow. |
+| `name` | `string` | The name of the updated workflow. |
+| `nodeCount` | `number` | The number of nodes in the workflow. |
+| `url` | `string` | The URL to open the workflow in n8n. |
+| `appliedOperations` | `number` | The number of operations applied. |
+| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update. |
+| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned. |
+| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned. |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned. |
+| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving. |
+| `validationWarnings[].code` | `string` | Warning code. |
+| `validationWarnings[].message` | `string` | Warning message. |
+| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning. |
+| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment. |
 
 #### Notes
 
-- Preserves user-configured credentials from the existing workflow by matching nodes by name and type.
-- Marks the workflow with `aiBuilderAssisted` metadata.
-- MCP clients should (re)generate short descriptions for all modified workflows.
+- Operations are applied in order and saved atomically.
+- Existing credentials are preserved unless explicitly changed.
+- Credential auto-assignment runs only for nodes added in the current call.
+- HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
+- The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
+- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 
 ---
 

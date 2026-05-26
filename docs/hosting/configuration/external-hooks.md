@@ -36,7 +36,7 @@ For the environment variables used to register hooks, refer to [External hooks e
 | `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
 | `workflow.delete` | `[workflowId: string]` | Called before a workflow gets deleted. |
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
-| `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Hook examples](#hook-examples) for an example using the `workflowContext` argument. |
+| `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Hook examples](#hook-examples) for an example using the `workflowContext` argument (only available from version 2.23.0). |
 | `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
 | `workflow.afterArchive` | `[workflowId: string]` | Called after you archive a workflow. |
 | `workflow.afterUnarchive` | `[workflowId: string]` | Called after you restore a workflow from the archive. |
@@ -86,6 +86,8 @@ module.exports = {
 ### Hook examples
 
 #### Block workflow execution if a required tag is missing
+
+Please note: the `worfklowContext` argument is only supplied to `workflow.preExecute` hooks from n8n version `2.23.0`.
 
 Use `workflow.preExecute` to abort execution when a workflow doesn't have a required tag:
 

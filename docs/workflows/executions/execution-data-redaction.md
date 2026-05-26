@@ -91,14 +91,14 @@ These events integrate with your existing log streaming destinations (syslog, we
 
 ## Permission scopes
 
-Execution data redaction introduces the following permission scope that you can assign through [custom project roles](/user-management/rbac/custom-roles.md):
+Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](/user-management/rbac/custom-roles.md):
 
 | Scope | Purpose |
 | ----- | ------- |
 | `workflow:enableRedaction` | Allows turning redaction on in workflow settings. Displayed as **Enable data redaction** in the role configuration UI. |
 | `workflow:disableRedaction` | Allows turning redaction off in workflow settings. Displayed as **Disable data redaction** in the role configuration UI. |
 
-By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give additional users, such as workflow builders, one or both scopes independently.
+By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give more users, such as workflow builders, one or both scopes independently.
 
 ## Best practices
 

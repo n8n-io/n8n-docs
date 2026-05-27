@@ -26,6 +26,7 @@ You can find authentication information for this node [here](/integrations/built
 * **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Response Format**: Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
+* **Reasoning Effort**: Choose **Low**, **Medium**, or **High** to control how much reasoning the model does before responding. Higher effort can improve results on complex tasks but uses more tokens and increases response time. Only applies to reasoning-capable model deployments, such as the o-series or GPT-5.
 * **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Timeout**: Enter the maximum request time in milliseconds.

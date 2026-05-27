@@ -34,17 +34,6 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-## n8n@2.21.8
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.7...n8n@2.21.8) for this version.<br />
-**Release date:** 2026-05-27
-
-This release contains bug fixes.
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
 ## n8n@2.22.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.22.2...n8n@2.22.3) for this version.<br />
@@ -100,6 +89,17 @@ This release contains bug fixes.
 [TheMazeIsAmazing](https://github.com/TheMazeIsAmazing)  
 [onyxraven](https://github.com/onyxraven)  
 [fendy3002](https://github.com/fendy3002)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.21.8
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.7...n8n@2.21.8) for this version.<br />
+**Release date:** 2026-05-27
+
+This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

@@ -44,9 +44,9 @@ This release contains bug fixes.
 ### Contributors
 
 [strzeluk](https://github.com/strzeluk)  
-[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot)  
 [lucamattiazzi](https://github.com/lucamattiazzi)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix)  
 [sinehypernova-0718](https://github.com/sinehypernova-0718)  
 [thisisvaishnav](https://github.com/thisisvaishnav)  
 

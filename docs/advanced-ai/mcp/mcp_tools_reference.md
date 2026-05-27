@@ -1,4 +1,4 @@
----
+n8n ---
 title: n8n MCP server tools reference
 description: Complete reference for all tools exposed by the n8n MCP server, including workflow management, workflow builder, and data table tools.
 ---

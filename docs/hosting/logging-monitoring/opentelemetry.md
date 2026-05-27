@@ -161,7 +161,9 @@ docker compose up -d
 3. Start n8n with tracing turned on and pointed at Jaeger. Information about [starting n8n](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) can be found elsewhere in this documentation:
 
 ```bash
-N8N_OTEL_ENABLED=true N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 n8n start
+N8N_OTEL_ENABLED=true
+N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318
+n8n start
 ```
 
 5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) - Select "n8n" as service" and click "Find traces" to see the OpenTelemetry traces emitted by n8n.

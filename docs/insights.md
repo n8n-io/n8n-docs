@@ -90,7 +90,7 @@ By default, n8n keeps compacted insights data for 365 days (`N8N_INSIGHTS_MAX_AG
 In older versions, pruning could follow license-driven defaults (commonly 180 days). `N8N_INSIGHTS_MAX_AGE_DAYS` now controls pruning (default 365). Set `N8N_INSIGHTS_MAX_AGE_DAYS=180` if you want a retention window like that previous default.
 ///
 
-n8n stores recent insights at one-hour granularity, then compacts older data into day-level and week-level summaries. Use [Insights environment variables](/hosting/configuration/environment-variables/insights.md) to control how long n8n waits before each compaction step.
+n8n stores recent insights at one-hour granularity, then compacts older data into day-level and week-level summaries. Use [Insights environment variables](/hosting/configuration/environment-variables/insights.md) to control compaction timing, batch limits, runtime, and delays.
 
 Raising those thresholds above the defaults keeps finer detail longer. That adds more rows to `insights_by_period` and uses more database space than extending `N8N_INSIGHTS_MAX_AGE_DAYS` alone. Increase `N8N_INSIGHTS_MAX_AGE_DAYS` first if you only need a longer retention window.
 

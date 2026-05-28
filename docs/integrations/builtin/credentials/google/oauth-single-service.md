@@ -67,12 +67,12 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 1. Enter an **App name** and **User support email** to include on the Oauth screen. Select **Next** to continue.
 1. For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types. Select **Next** to continue.
 
-/// note | Testing mode and test users
-If you select **External**, your app will default to Testing mode. In this mode,
-only Google accounts you manually add as test users can complete the OAuth
-flow — everyone else will see an "access denied" screen. See
-[Google hasn't verified this app](#google-hasnt-verified-this-app) to learn how to add them.
-///
+    /// note | Testing mode and test users
+    If you select **External**, your app will default to Testing mode. In this mode,
+    only Google accounts you manually add as test users can complete the OAuth
+    flow — everyone else will see an "access denied" screen. See
+    [Google hasn't verified this app](#google-hasnt-verified-this-app) to learn how to add them.
+    ///
 
 1. Select the **Email addresses** Google should use to contact you about changes to your project. Select **Next** to continue.
 1. Read and accept the Google's User Data Policy. Select **Continue** and then select **Create**.

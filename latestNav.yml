@@ -67,13 +67,13 @@ nav:
       - Create and run workflows: workflows/create.md
       - Save and publish workflows: workflows/publish.md
       - Create and edit credentials: credentials/add-edit-credentials.md
-      - Share credentials: credentials/credential-sharing.md TODO CHECK IF IT SHOULD BE HERE, NOT ON NOTION HERE
     - Ways of building workflows:
       - README.md
       - Connect to the n8n MCP server:
         - advanced-ai/mcp/accessing-n8n-mcp-server.md
         - MCP server tools reference: advanced-ai/mcp/mcp_tools_reference.md
       - Use templates: workflows/templates.md
+      - Use the AI assistant: manage-cloud/ai-assistant.md
       - AI Workflow Builder: advanced-ai/ai-workflow-builder.md
       - Chat Hub: advanced-ai/chat-hub.md
     - Manage workflows:
@@ -149,6 +149,21 @@ nav:
         - LangChain Code node: code/builtin/langchain-methods.md
         - n8n metadata: code/builtin/n8n-metadata.md
       - Define custom variables: code/variables.md
+      - Cookbook:
+          - Built-in methods and variables examples:
+              - code/cookbook/builtin/index.md
+              - execution: code/cookbook/builtin/execution.md
+              - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+              - (node-name).all: code/cookbook/builtin/all.md
+              - vars: code/cookbook/builtin/vars.md
+          - Code node:
+              - code/cookbook/code-node/index.md
+              - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
+              - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
+              - Output to the browser console: code/cookbook/code-node/console-log.md
+          - HTTP Request node:
+              - code/cookbook/http-node/index.md
+              - Pagination: code/cookbook/http-node/pagination.md
     - Integrate AI:
       - README.md
       - Understand AI components: 
@@ -184,15 +199,15 @@ nav:
       - Update your version: manage-cloud/update-cloud-version.md
       - Configure Cloud: 
         - README.md
-        - Change instance ownership or username: manage-cloud/change-ownership-or-username.md
-        - Set Cloud instance timezone: manage-cloud/set-cloud-timezone.md
+        - Set your timezone: manage-cloud/set-cloud-timezone.md
         - Find your IP addresses: manage-cloud/cloud-ip.md
         - Manage your data: manage-cloud/cloud-data-management.md
+        - Change instance ownership or username: manage-cloud/change-ownership-or-username.md        
       - Understand concurrency: manage-cloud/concurrency.md
       - Download workflows: manage-cloud/download-workflows.md
     - Host n8n:
       - hosting/index.md
-      - Install n8n:
+      - Install options:
         - README.md
         - Install with npm: hosting/installation/npm.md
         - Install with Docker: hosting/installation/docker.md
@@ -207,10 +222,6 @@ nav:
           - Deploy to Google Kubernetes: hosting/installation/server-setups/google-kubernetes-engine.md
           - Deploy to OpenShift Local (CRC): hosting/installation/server-setups/openshift-crc.md
           - Use Docker Compose: hosting/installation/server-setups/docker-compose.md
-        - Migrate between versions:
-          - README.md
-          - Migrating to v1.0: 1-0-migration-checklist.md
-          - Migrating to v2.0: 2-0-breaking-changes.md
       - Configure n8n:
         - README.md
         - Basic configuration:
@@ -225,6 +236,7 @@ nav:
             - Endpoints: hosting/configuration/environment-variables/endpoints.md
             - Executions: hosting/configuration/environment-variables/executions.md
             - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+            - External hooks: hosting/configuration/environment-variables/external-hooks.md
             - External secrets: hosting/configuration/environment-variables/external-secrets.md
             - Insights: hosting/configuration/environment-variables/insights.md
             - Logs: hosting/configuration/environment-variables/logs.md
@@ -257,94 +269,102 @@ nav:
             - Pre-configure Microsoft OAuth credentials: hosting/configuration/configuration-examples/microsoft-oauth-credential-overwrites.md
             - Configure a custom workflow templates library: hosting/configuration/configuration-examples/custom-templates.md
         - Choose n8n's database: hosting/configuration/supported-databases-settings.md
-        - Credential overwrites: hosting/configuration/credential-overwrites.md
         - External hooks: hosting/configuration/external-hooks.md
         - Use the command line: hosting/cli-commands.md
         - User management: hosting/configuration/user-management-self-hosted.md
-        - Change instance owner email: hosting/configuration/change-instance-owner-email.md
+        - Change instance owner email: hosting/configuration/change-instance-owner-email.md       
         - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
         - Set up task runners: hosting/configuration/task-runners.md
         - Manage your license: license-key.md
         - Security:
           - hosting/securing/overview.md
+          - Manage security policies: security-settings.md
           - Set up SSL: hosting/securing/set-up-ssl.md
-          - Set up SSO: hosting/securing/set-up-sso.md
+          - Configure SSO: hosting/securing/set-up-sso.md
           - Run security audits: hosting/securing/security-audit.md
-          - Disable the API: hosting/securing/disable-public-api.md
-          - Opt out of data collection: hosting/securing/telemetry-opt-out.md
+          - Disable the public API: hosting/securing/disable-public-api.md
+          - Control telemetry: hosting/securing/telemetry-opt-out.md
           - Block specific nodes: hosting/securing/blocking-nodes.md
-          - Hardening task runners: hosting/securing/hardening-task-runners.md
-          - SSRF protection: hosting/securing/ssrf-protection.md
-          - Encryption key rotation: hosting/securing/encryption-key-rotation.md
-          - JWE token decryption for OAuth 2.0: hosting/securing/oauth2-jwe-token-decryption.md
-          - Execution data redaction: workflows/executions/execution-data-redaction.md
-          - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
-        - Scaling and performance:
+          - Harden task runners: hosting/securing/hardening-task-runners.md
+          - Verify user emails: hosting/securing/restrict-by-email-verification.md
+          - Enable SSRF protection: hosting/securing/ssrf-protection.md
+          - Rotate encryption keys: hosting/securing/encryption-key-rotation.md
+          - Decrypt OAuth 2.0 tokens with JWE: hosting/securing/oauth2-jwe-token-decryption.md
+          - Redact execution data: workflows/executions/execution-data-redaction.md
+        - Scaling:
           - hosting/scaling/overview.md
-          - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-          - Configure queue mode: hosting/scaling/queue-mode.md
-          - Concurrency control: hosting/scaling/concurrency-control.md
-          - Execution data: hosting/scaling/execution-data.md
-          - Binary data: hosting/scaling/binary-data.md
-          - External storage for binary data: hosting/scaling/external-storage.md
-          - Memory-related errors: hosting/scaling/memory-errors.md
-        - Logging and monitoring:
-          - Logging: hosting/logging-monitoring/logging.md
-          - Monitoring: hosting/logging-monitoring/monitoring.md
-          - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
-        - OEM deployment:
-          - Overview: hosting/oem-deployment/index.md
-          - Prerequisites: hosting/oem-deployment/prerequisites.md
-          - Manage workflows: hosting/oem-deployment/managing-workflows.md
-      - Architecture:
-        - hosting/architecture/overview.md
-        - Database structure: hosting/architecture/database-structure.md
+          - Measure performance: hosting/scaling/performance-benchmarking.md
+          - Enable queue mode: hosting/scaling/queue-mode.md
+          - Control concurrency: hosting/scaling/concurrency-control.md
+          - Manage execution data: hosting/scaling/execution-data.md
+          - Handle binary data: hosting/scaling/binary-data.md
+          - Use external storage: hosting/scaling/external-storage.md
+          - Fix memory issues: hosting/scaling/memory-errors.md
+      - Keep n8n running:
+        - README.md
+        - Set up logging: hosting/logging-monitoring/logging.md
+        - Monitor n8n: hosting/logging-monitoring/monitoring.md
+        - Update n8n: hosting/installation/updating.md
+        - Trace executions with OpenTelemetry: hosting/logging-monitoring/opentelemetry.md
+      - Understand the architecture:
+        - README.md
+        - How n8n works: hosting/architecture/overview.md
+        - Understand the database: hosting/architecture/database-structure.md
+      - Deploy as an OEM integration:
+        - hosting/oem-deployment/index.md
+        - Prerequisites: hosting/oem-deployment/prerequisites.md
+        - Manage workflows: hosting/oem-deployment/managing-workflows.md
+      - Deploy with the AI starter kit: hosting/starter-kits/ai-starter-kit.md
   - Administer:
     - README.md
     - Manage users and access:
       - user-management/index.md
-      - Cloud setup: user-management/cloud-setup.md
-      - Manage users: user-management/manage-users.md
-      - Account types: user-management/account-types.md
-      - Role-based access control:
+      - Set up for Cloud: user-management/cloud-setup.md
+      - Add and remove users: user-management/manage-users.md
+      - Understand account types: user-management/account-types.md
+      - Set permissions and roles (RBAC):
         - user-management/rbac/index.md
-        - Role types: user-management/rbac/role-types.md
-        - Projects: user-management/rbac/projects.md
-        - Custom roles: user-management/rbac/custom-roles.md
-      - Best practices: user-management/best-practices.md
-      - 2FA: user-management/two-factor-auth.md
-      - LDAP: user-management/ldap.md
-      - OIDC:
-        - user-management/oidc/index.md
-        - Set up OIDC: user-management/oidc/setup.md
-        - Troubleshooting: user-management/oidc/troubleshooting.md
-      - SAML:
-        - user-management/saml/index.md
-        - Set up SAML: user-management/saml/setup.md
-        - Okta Workforce Identity SAML setup: user-management/saml/okta.md
-        - Azure AD SAML setup: user-management/saml/azuread.md
-        - Manage users with SAML: user-management/saml/managing.md
-        - Troubleshooting: user-management/saml/troubleshooting.md
-    - Source control and environments:
+        - See available roles: user-management/rbac/role-types.md
+        - Organize work in projects: user-management/rbac/projects.md
+        - Create custom roles: user-management/rbac/custom-roles.md
+      - Verify user identity:
+        - README.me
+        - Require two-factor auth: user-management/two-factor-auth.md
+        - Connect LDAP: user-management/ldap.md
+        - Use SAML: 
+          - user-management/saml/index.md
+          - Set up SAML: user-management/saml/setup.md
+          - Manage users with SAML: user-management/saml/managing.md
+          - Set up Okta Workforce Identity SAML: user-management/saml/okta.md
+          - Set up Azure AD SAML: user-management/saml/azuread.md
+          - Troubleshoot SAML: user-management/saml/troubleshooting.md
+        - Use OIDC: 
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshoot OIDC: user-management/oidc/troubleshooting.md
+      - Follow best practices: user-management/best-practices.md
+    - Use source control and environments:
       - source-control-environments/index.md
       - Understand source control: source-control-environments/understand/index.md
-      - Environments: source-control-environments/understand/environments.md
-      - Git in n8n: source-control-environments/understand/git.md
-      - Branch patterns: source-control-environments/understand/patterns.md
+      - Work with environments: source-control-environments/understand/environments.md
+      - Use Git in n8n: source-control-environments/understand/git.md
+      - Choose branching patterns: source-control-environments/understand/patterns.md
       - Set up source control: source-control-environments/setup.md
       - Push and pull changes: source-control-environments/using/push-pull.md
-      - Compare workflow changes: source-control-environments/using/compare-changes.md
-      - Copy work between environments: source-control-environments/using/copy-work.md
+      - Compare versions: source-control-environments/using/compare-changes.md
+      - Move work between environments: source-control-environments/using/copy-work.md
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
-    - Advanced security:
+    - Manage credentials:
       - README.md
-      - External secrets: external-secrets.md
-      - Log streaming: log-streaming.md
-      - Security settings: security-settings.md
-      - Insights: insights.md
+      - Share credentials securely: credentials/credential-sharing.md
+      - Credential overwrites: hosting/configuration/credential-overwrites.md
+      - Use external secret stores: external-secrets.md
+    - Observe and log:
+      - Track usage with Insights: insights.md
+      - Stream logs to external systems: log-streaming.md
   - Integrations:
     - integrations/index.md
-    - Built-in nodes:
+    - Built-in:
       - Node types: integrations/builtin/node-types.md
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
@@ -1326,7 +1346,32 @@ nav:
       - Using community nodes: integrations/community-nodes/usage.md
       - Troubleshooting: integrations/community-nodes/troubleshooting.md
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
-    - Creating nodes:
+  - Release notes:
+    - release-notes.md
+    - 1.x: release-notes/1-x.md
+    - 0.x: release-notes/0-x.md
+    - v2.0 breaking changes: 2-0-breaking-changes.md
+    - v2.0 Migration tool: migration-tool-v2.md
+    - v1.0 migration guide: 1-0-migration-checklist.md
+  - Legal, privacy, and community:
+    - README.md
+    - Where to get help: help-community/help.md
+    - Contributing: help-community/contributing.md
+    - Privacy and security overview: privacy-security/index.md
+    - Privacy: privacy-security/privacy.md
+    - Security: https://n8n.io/legal/#security
+    - Incident response: privacy-security/incident-response.md
+    - What you can do: privacy-security/what-you-can-do.md
+    - Sustainable use license: sustainable-use-license.md
+  - Connect:
+    - README.md
+    - Use the n8n API: api/index.md
+    - Authentication: api/authentication.md
+    - Pagination: api/pagination.md
+    - Use an API playground: api/using-api-playground.md
+    - API reference: api/api-reference.md
+    - n8n CLI: api/n8n-cli/index.md
+    - Create nodes:
       - Overview: integrations/creating-nodes/overview.md
       - Plan your node:
         - integrations/creating-nodes/plan/index.md
@@ -1346,7 +1391,6 @@ nav:
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
           - Error handling: integrations/creating-nodes/build/reference/error-handling.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
-          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
           - Base files:
             - integrations/creating-nodes/build/reference/node-base-files/index.md
             - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
@@ -1369,28 +1413,4 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
-  - Release notes:
-    - 2.x: release-notes.md
-    - 1.x: release-notes/1-x.md
-    - 0.x: release-notes/0-x.md
-    - v2.0 breaking changes: 2-0-breaking-changes.md
-    - v2.0 Migration tool: migration-tool-v2.md
-    - v1.0 migration guide: 1-0-migration-checklist.md
-  - Help and community:
-    - Where to get help: help-community/help.md
-    - Contributing: help-community/contributing.md
-  - Legal and privacy:
-    - privacy-security/index.md
-    - Privacy: privacy-security/privacy.md
-    - Security: https://n8n.io/legal/#security
-    - Incident response: privacy-security/incident-response.md
-    - What you can do: privacy-security/what-you-can-do.md
-    - Sustainable use license: sustainable-use-license.md
-  - Connect:
-    - README.md
-    - Use the n8n API: api/index.md
-    - Authentication: api/authentication.md
-    - Pagination: api/pagination.md
-    - Using an API playground: api/using-api-playground.md
-    - n8n CLI: api/n8n-cli/index.md
   

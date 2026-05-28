@@ -1,29 +1,123 @@
-Duplicate .md Entries in latestNav.yml
-================================================================================
+Get started
+* Label changes
+    * "Getting started" → "Get started"
 
-Found 6 duplicate entries:
+Build
+* Label changes
+    * "Build workflows" → "Build"
+    * "Splitting with conditionals" → "Split with conditionals"
+    * "Working with data" → "Work with data"
+    * "How n8n structures data" → "Understand n8n's data structure"
+    * "Referencing data" → "Reference data"
+    * "Referencing data in the UI" → "Use the UI mapper"
+    * "Referencing previous nodes" → "Reference previous nodes"
+    * "Linking data items" → "Link data items"
+    * "Transforming data" → "Transform data"
+    * "Filtering data" → "Filter out unwanted data"
+    * "Pinning and mocking data" → "Pin and mock data"
+    * "Specific data types" → "Handle special data types"
+    * "Binary data" → "Work with files and images"
+    * "Date and time with Luxon" → "Work with dates and times"
+    * "Query JSON with JMESPath" → "Query JSON data"
+    * "Built in methods and variables" → "Use built-in shortcuts"
+* Structural/moved content
+    * "Share credentials" removed from "Understand workflows" (moved to Administer > Manage credentials)
+    * "Use the AI assistant" added to "Ways of building workflows"
+    * "Transform data" promoted from nested under "Reference data" to its own top-level sub-section within "Work with data"
+    * New "Cookbook" section added under "Code in n8n" with examples for built-in methods, the Code node, and HTTP Request node
 
-Path: README.md
-Occurrences: 16
-Line numbers: 4, 72, 80, 145, 153, 155, 164, 181, 186, 196, 211, 215, 303, 340, 1373, 1391
---------------------------------------------------------------------------------
-Path: 1-0-migration-checklist.md
-Occurrences: 2
-Line numbers: 212, 1380
---------------------------------------------------------------------------------
-Path: 2-0-breaking-changes.md
-Occurrences: 2
-Line numbers: 213, 1378
---------------------------------------------------------------------------------
-Path: hosting/index.md
-Occurrences: 2
-Line numbers: 8, 194
---------------------------------------------------------------------------------
-Path: integrations/creating-nodes/build/reference/node-file-structure.md
-Occurrences: 2
-Line numbers: 1336, 1349
---------------------------------------------------------------------------------
-Path: workflows/templates.md
-Occurrences: 2
-Line numbers: 14, 76
---------------------------------------------------------------------------------
+Deploy n8n
+* Label changes
+    * "n8n Cloud" → "Use n8n Cloud"
+    * "Set Cloud instance timezone" → "Set your timezone"
+    * "Install n8n" → "Install options"
+    * "Scaling and performance" → "Scaling"
+    * "Performance and benchmarking" → "Measure performance"
+    * "Configure queue mode" → "Enable queue mode"
+    * "Concurrency control" → "Control concurrency"
+    * "Execution data" → "Manage execution data"
+    * "Binary data" → "Handle binary data"
+    * "External storage for binary data" → "Use external storage"
+    * "Memory-related errors" → "Fix memory issues"
+    * "Set up SSO" → "Configure SSO"
+    * "Disable the API" → "Disable the public API"
+    * "Opt out of data collection" → "Control telemetry"
+    * "Hardening task runners" → "Harden task runners"
+    * "Restrict account registration to email-verified users" → "Verify user emails"
+    * "SSRF protection" → "Enable SSRF protection"
+    * "Encryption key rotation" → "Rotate encryption keys"
+    * "JWE token decryption for OAuth 2.0" → "Decrypt OAuth 2.0 tokens with JWE"
+    * "Execution data redaction" → "Redact execution data"
+    * "Logging" → "Set up logging"
+    * "Monitoring" → "Monitor n8n"
+    * "OpenTelemetry tracing" → "Trace executions with OpenTelemetry"
+    * "Architecture overview" → "How n8n works"
+    * "Database structure" → "Understand the database"
+    * "OEM deployment" → "Deploy as an OEM integration"
+* Structural/moved content
+    * "Change instance ownership or username" moved to bottom of Configure Cloud list
+    * "Migrate between versions" sub-section and its pages removed entirely
+    * New "External hooks" entry added to environment variables list
+    * "Credential overwrites" removed from Configure n8n top level (moved to Administer > Manage credentials)
+    * New "Manage security policies" entry added under Security
+    * Security sub-section items reordered
+    * "Logging and monitoring" replaced by new "Keep n8n running" section, which also adds a new "Update n8n" page
+    * New "Understand the architecture" section added, grouping existing architecture pages
+    * New "Deploy with the AI starter kit" entry added
+
+Administer
+* Label changes
+    * "Source control and environments" → "Use source control and environments"
+    * "Cloud setup" → "Set up for Cloud"
+    * "Manage users" → "Add and remove users"
+    * "Account types" → "Understand account types"
+    * "Role-based access control" → "Set permissions and roles (RBAC)"
+    * "Role types" → "See available roles"
+    * "Projects" → "Organize work in projects"
+    * "Custom roles" → "Create custom roles"
+    * "Best practices" → "Follow best practices"
+    * "2FA" → "Require two-factor auth"
+    * "LDAP" → "Connect LDAP"
+    * "SAML" → "Use SAML"
+    * "Okta Workforce Identity SAML setup" → "Set up Okta Workforce Identity SAML"
+    * "Azure AD SAML setup" → "Set up Azure AD SAML"
+    * "Troubleshooting" (SAML) → "Troubleshoot SAML"
+    * "OIDC" → "Use OIDC"
+    * "Troubleshooting" (OIDC) → "Troubleshoot OIDC"
+    * "Environments" → "Work with environments"
+    * "Git in n8n" → "Use Git in n8n"
+    * "Branch patterns" → "Choose branching patterns"
+    * "Compare workflow changes" → "Compare versions"
+    * "Copy work between environments" → "Move work between environments"
+    * "External secrets" → "Use external secret stores"
+    * "Insights" → "Track usage with Insights"
+    * "Log streaming" → "Stream logs to external systems"
+* Structural/moved content
+    * 2FA, LDAP, SAML, and OIDC grouped under new parent section "Verify user identity"
+    * "Best practices" moved to bottom of the Manage users and access section
+    * "Advanced security" section removed; replaced by two new sections:
+        * New "Manage credentials" section (contains: "Share credentials securely" moved from Build, "Credential overwrites" moved from Deploy, "Use external secret stores" formerly "External secrets")
+        * New "Observe and log" section (contains: "Track usage with Insights", "Stream logs to external systems")
+
+Integrations
+* Label changes
+    * "Built-in nodes" → "Built-in"
+* Structural/moved content
+    * "Creating nodes" section removed (moved to Connect)
+
+Help and community
+* Label changes
+    * "Licenses and privacy" → "Privacy and security overview"
+* Structural/moved content
+    * "Help and community" replaced by two new top-level sections: "Release notes" and "Legal, privacy, and community"
+    * The "2.x" label on the main release notes page dropped; it is now the section index
+    * "Where to get help" and "Contributing" moved into "Legal, privacy, and community"
+    * "Privacy and security overview" added as an explicit labelled entry
+
+Connect
+* Label changes
+    * "Using an API playground" → "Use an API playground"
+* Structural/moved content
+    * New "API reference" page added
+    * "Creating nodes" section moved here in full from Integrations
+    * "File structure" page removed from the Reference sub-section within "Create nodes"

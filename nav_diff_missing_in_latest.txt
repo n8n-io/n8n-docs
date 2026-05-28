@@ -1,0 +1,57 @@
+Entries in nav.yml that are NOT in latestNav.yml
+================================================================================
+
+Summary:
+  Total entries in nav.yml: 1288
+  Total entries in latestNav.yml: 1275
+  Missing in latestNav.yml: 15
+
+================================================================================
+
+Found 15 entries in nav.yml that are missing in latestNav.yml:
+
+✅ 1. index.md
+   Line number in nav.yml: 3
+--------------------------------------------------------------------------------
+✅ 2. video-courses.md
+   Line number in nav.yml: 11
+--------------------------------------------------------------------------------
+✅ 3. credentials/index.md
+   Line number in nav.yml: 72
+--------------------------------------------------------------------------------
+✅ 4. manage-cloud/ai-assistant.md
+   Line number in nav.yml: 166
+--------------------------------------------------------------------------------
+✅ 5. source-control-environments/using/index.md
+   Line number in nav.yml: 177
+--------------------------------------------------------------------------------
+✅. hosting/configuration/environment-variables/external-hooks.md
+   Line number in nav.yml: 1262
+--------------------------------------------------------------------------------
+✅. advanced-ai/index.md
+   Line number in nav.yml: 1369
+--------------------------------------------------------------------------------
+✅. Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+   Line number in nav.yml: 1375
+--------------------------------------------------------------------------------
+9. advanced-ai/langchain/overview.md
+   Line number in nav.yml: 1378
+--------------------------------------------------------------------------------
+10. advanced-ai/langchain/langchain-n8n.md
+   Line number in nav.yml: 1379
+--------------------------------------------------------------------------------
+11. advanced-ai/langchain/langchain-learning-resources.md
+   Line number in nav.yml: 1380
+--------------------------------------------------------------------------------
+12. advanced-ai/langchain/langsmith.md
+   Line number in nav.yml: 1381
+--------------------------------------------------------------------------------
+✅13. api/api-reference.md
+   Line number in nav.yml: 1406
+--------------------------------------------------------------------------------
+✅14. docs-site-feature-tests/index.md
+   Line number in nav.yml: 1409
+--------------------------------------------------------------------------------
+✅ 15. /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
+   Line number in nav.yml: 1412
+--------------------------------------------------------------------------------

@@ -93,15 +93,15 @@ Next, create the OAuth client credentials in Google:
 1. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
 1. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
 
-/// note | OAuth redirect URL for self-hosting
-If you're running n8n on your local machine, you don't need a public domain,
-SSL certificate, or port forwarding to use Google OAuth. Google allows
-localhost as a valid redirect URI for development purposes. Your n8n OAuth
-redirect URL will look something like this:
-`http://localhost:5678/rest/oauth2-credential/callback`
-For more details on acceptable redirect URIs, refer to
-[Google's redirect URI documentation](https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications).
-///
+    /// note | OAuth redirect URL for self-hosting
+    If you're running n8n on your local machine, you don't need a public domain,
+    SSL certificate, or port forwarding to use Google OAuth. Google allows
+    localhost as a valid redirect URI for development purposes. Your n8n OAuth
+    redirect URL will look something like this:
+    `http://localhost:5678/rest/oauth2-credential/callback`
+    For more details on acceptable redirect URIs, refer to
+    [Google's redirect URI documentation](https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications).
+    ///
 
 1. Select **Create**.
 

@@ -113,7 +113,7 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients
 
-By default, no workflows are visible to MCP clients. You must explicitly enable MCP access for each workflow you want to expose.
+MCP clients can discover all workflows the current user has access to using `search_workflows`. However, clients can't execute or modify a workflow until you explicitly enable MCP access for it.
 
 ### Enabling access
 
@@ -138,7 +138,7 @@ By default, no workflows are visible to MCP clients. You must explicitly enable 
 
 ### Managing access
 
-The **Instance-level MCP** settings page shows all workflows available to MCP clients. From this list you can:
+The **Instance-level MCP** settings page shows all workflows with MCP actions enabled. From this list you can:
 
 - Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
@@ -325,6 +325,6 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 
 - Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 - Verify that the MCP access is enabled in n8n settings.
-- Check that the workflows you want to access are marked as available in MCP.
+- Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.

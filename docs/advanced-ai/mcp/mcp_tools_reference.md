@@ -129,47 +129,6 @@ Execute a workflow by ID by mapping data from user prompt to trigger inputs. Ret
 
 ---
 
-### get_execution
-
-/// info | Available from n8n v2.12.0
-///
-
-Get execution details by execution ID and workflow ID. By default returns metadata only.
-
-#### Parameters
-
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow the execution belongs to |
-| `executionId` | `string` | Yes | The ID of the execution to retrieve |
-| `includeData` | `boolean` | No | Whether to include full execution result data. Defaults to false (metadata only). |
-| `nodeNames` | `string[]` | No | When `includeData` is true, return data only for these nodes. If omitted, data for all nodes is included. |
-| `truncateData` | `integer` | No | When `includeData` is true, limit the number of data items returned per node output. |
-
-#### Output
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `execution` | `object | null` | Execution metadata, or null if an error occurred |
-| `execution.id` | `string` | Execution ID |
-| `execution.workflowId` | `string` | Workflow ID |
-| `execution.mode` | `string` | Execution mode |
-| `execution.status` | `string` | Execution status |
-| `execution.startedAt` | `string | null` | ISO timestamp when the execution started |
-| `execution.stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
-| `execution.retryOf` | `string | null` | ID of the execution this is a retry of |
-| `execution.retrySuccessId` | `string | null` | ID of the successful retry execution |
-| `execution.waitTill` | `string | null` | ISO timestamp the execution is waiting until |
-| `data` | `unknown` | Execution result data (only present when `includeData` is true) |
-| `error` | `string` | Error message if the request failed |
-
-#### Notes
-
-- Use lightweight metadata queries (default) when full execution data isn't needed.
-- Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets.
-
----
-
 ### test_workflow
 
 /// info | Available from n8n v2.15.0
@@ -345,6 +304,130 @@ Search for folders within a project.
 
 - Maximum result limit is 100.
 - This tool enables MCP clients to create workflows in a specific folder.
+
+---
+
+## Execution management
+
+### get_execution
+
+/// info | Available from n8n v2.12.0
+///
+
+Get execution details by execution ID and workflow ID. By default returns metadata only.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the execution belongs to |
+| `executionId` | `string` | Yes | The ID of the execution to retrieve |
+| `includeData` | `boolean` | No | Whether to include full execution result data. Defaults to false (metadata only). |
+| `nodeNames` | `string[]` | No | When `includeData` is true, return data only for these nodes. If omitted, data for all nodes is included. |
+| `truncateData` | `integer` | No | When `includeData` is true, limit the number of data items returned per node output. |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `execution` | `object | null` | Execution metadata, or null if an error occurred |
+| `execution.id` | `string` | Execution ID |
+| `execution.workflowId` | `string` | Workflow ID |
+| `execution.mode` | `string` | Execution mode |
+| `execution.status` | `string` | Execution status |
+| `execution.startedAt` | `string | null` | ISO timestamp when the execution started |
+| `execution.stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
+| `execution.retryOf` | `string | null` | ID of the execution this is a retry of |
+| `execution.retrySuccessId` | `string | null` | ID of the successful retry execution |
+| `execution.waitTill` | `string | null` | ISO timestamp the execution is waiting until |
+| `data` | `unknown` | Execution result data (only present when `includeData` is true) |
+| `error` | `string` | Error message if the request failed |
+
+#### Notes
+
+- Use lightweight metadata queries (default) when full execution data isn't needed.
+- Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets.
+
+---
+
+### search_executions
+
+/// info | Available from n8n v2.20.0
+///
+
+Search for workflow executions with optional filters. Returns execution metadata including status, timing, and workflow ID.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | No | Filter executions by workflow ID |
+| `status` | `string[]` | No | Filter by execution statuses. Values: `"canceled"`, `"crashed"`, `"error"`, `"new"`, `"running"`, `"success"`, `"unknown"`, `"waiting"` |
+| `startedAfter` | `string` | No | ISO 8601 timestamp. Only return executions that started after this time. |
+| `startedBefore` | `string` | No | ISO 8601 timestamp. Only return executions that started before this time. |
+| `limit` | `integer` | No | Limit the number of results (max 200) |
+| `lastId` | `string` | No | Cursor for pagination. Pass the last execution ID from the previous page. |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `array` | List of executions matching the query |
+| `data[].id` | `string` | The unique identifier of the execution |
+| `data[].workflowId` | `string` | The workflow this execution belongs to |
+| `data[].status` | `string` | The execution status |
+| `data[].mode` | `string` | How the execution was triggered. One of: `"cli"`, `"error"`, `"integrated"`, `"internal"`, `"manual"`, `"retry"`, `"trigger"`, `"webhook"`, `"evaluation"`, `"chat"` |
+| `data[].startedAt` | `string | null` | ISO timestamp when the execution started |
+| `data[].stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
+| `data[].waitTill` | `string | null` | ISO timestamp until when the execution is waiting |
+| `count` | `integer` | Total matching executions, or `-1` if the count is unavailable |
+| `estimated` | `boolean` | Whether the count is an estimate for large datasets |
+| `error` | `string` | Error message if the query failed |
+
+---
+
+## Credential management
+
+### list_credentials
+
+/// info | Available from n8n v2.21.0
+///
+
+List credentials the current user can access. Use this to find a credential ID before referencing it from a workflow node. Never returns credential secret data.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `limit` | `integer` | No | Limit the number of results (max 200) |
+| `query` | `string` | No | Filter credentials by name (partial match) |
+| `type` | `string` | No | Filter by credential type, for example `"slackApi"` or `"httpHeaderAuth"` (partial match) |
+| `projectId` | `string` | No | Restrict results to credentials belonging to this project |
+| `onlySharedWithMe` | `boolean` | No | Only return credentials shared directly with the current user. Defaults to false. |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `array` | List of credentials accessible to the current user |
+| `data[].id` | `string` | The unique identifier of the credential |
+| `data[].name` | `string` | The name of the credential |
+| `data[].type` | `string` | The credential type, for example `"slackApi"` |
+| `data[].scopes` | `string[]` | User permissions for this credential, for example `"credential:read"` |
+| `data[].isManaged` | `boolean` | Whether the credential is managed by n8n and can't be edited by the user |
+| `data[].isGlobal` | `boolean` | Whether the credential is available to all users |
+| `data[].homeProject` | `object | null` | The project that owns the credential, if available |
+| `data[].homeProject.id` | `string` | The unique identifier of the project |
+| `data[].homeProject.name` | `string` | The name of the project |
+| `data[].homeProject.type` | `string` | The project type. `"personal"` is a user's private project; `"team"` is a shared project accessible to multiple users. |
+| `count` | `integer` | Number of credentials returned |
+| `error` | `string` | Error message if the request failed |
+
+#### Notes
+
+- Maximum result limit is 200.
+- Credential secret data is never returned.
+- By default, global credentials are included. Set `onlySharedWithMe` to true to exclude global credentials and only return credentials shared directly with the current user.
 
 ---
 
@@ -531,38 +614,61 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 
 ### update_workflow
 
-/// info | Available from n8n v2.12.0
+/// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 ///
 
-Update an existing workflow in n8n from validated SDK code. Parses the code into a workflow and saves the changes.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial-updates to the workflow. The batch is atomic: if any operation fails, no changes are saved.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to update |
-| `code` | `string` | Yes | Full TypeScript/JavaScript workflow code using the n8n Workflow SDK. Must be validated first with `validate_workflow`. |
-| `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
-| `description` | `string` | No | Short workflow description (max 255 chars, 1-2 sentences). |
+| `workflowId` | `string` | Yes | The ID of the workflow to update. |
+| `operations` | `array` | Yes | Ordered list of operations to apply. Must contain 1-100 operations. |
+
+#### Supported operations
+
+| Operation | Required fields | Optional fields | Description |
+|-----------|-----------------|-----------------|-------------|
+| `updateNodeParameters` | `nodeName`, `parameters` | `replace` | Deep-merges `parameters` into an existing node's parameters. If `replace` is `true`, replaces the full parameters object. |
+| `setNodeParameter` | `nodeName`, `path`, `value` |  | Sets one parameter using an RFC 6901 JSON Pointer path, for example `/jsonSchema` or `/options/systemMessage`. Creates intermediate objects as needed. Array indices aren't supported; set the whole array instead. |
+| `addNode` | `node.name`, `node.type`, `node.typeVersion` | `node.id`, `node.parameters`, `node.position`, `node.credentials`, `node.disabled`, `node.notes` | Adds a node. `position` is `[x, y]`. `id` is generated if omitted. Node names must be unique. |
+| `removeNode` | `nodeName` |  | Removes a node and all inbound and outbound connections. Connected sub-nodes remain in the workflow but become disconnected. |
+| `renameNode` | `oldName`, `newName` |  | Renames a node and rewrites connection references. The new name must be unique. |
+| `addConnection` | `source`, `target` | `sourceIndex`, `targetIndex`, `connectionType` | Adds a connection. `sourceIndex` and `targetIndex` default to `0`; `connectionType` defaults to `main`. Existing identical connections aren't duplicated. |
+| `removeConnection` | `source`, `target` | `sourceIndex`, `targetIndex`, `connectionType` | Removes a matching connection. `sourceIndex` and `targetIndex` default to `0`; `connectionType` defaults to `main`. |
+| `setNodeCredential` | `nodeName`, `credentialKey`, `credentialId`, `credentialName` |  | Sets or replaces a node credential reference. The credential must be accessible and match the node type's accepted credential key. |
+| `setNodePosition` | `nodeName`, `position` |  | Updates a node's canvas position as `[x, y]`. |
+| `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
+| `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `workflowId` | `string` | The ID of the updated workflow |
-| `name` | `string` | The name of the updated workflow |
-| `nodeCount` | `number` | The number of nodes in the workflow |
-| `url` | `string` | The URL to open the workflow in n8n |
-| `autoAssignedCredentials` | `array` | List of credentials that were automatically assigned to nodes |
-| `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
-| `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
-| `note` | `string` | Additional notes about the workflow update (for example nodes skipped during credential auto-assignment) |
+| `workflowId` | `string` | The ID of the updated workflow. |
+| `name` | `string` | The name of the updated workflow. |
+| `nodeCount` | `number` | The number of nodes in the workflow. |
+| `url` | `string` | The URL to open the workflow in n8n. |
+| `appliedOperations` | `number` | The number of operations applied. |
+| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update. |
+| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned. |
+| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned. |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned. |
+| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving. |
+| `validationWarnings[].code` | `string` | Warning code. |
+| `validationWarnings[].message` | `string` | Warning message. |
+| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning. |
+| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment. |
 
 #### Notes
 
-- Preserves user-configured credentials from the existing workflow by matching nodes by name and type.
-- Marks the workflow with `aiBuilderAssisted` metadata.
-- MCP clients should (re)generate short descriptions for all modified workflows.
+- Operations are applied in order and saved atomically.
+- Existing credentials are preserved unless explicitly changed.
+- Credential auto-assignment runs only for nodes added in the current call.
+- HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
+- The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
+- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 
 ---
 

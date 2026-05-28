@@ -118,7 +118,8 @@ n8n pairs some scopes together, so they don't appear as separate checkboxes:
 * `workflow:publish` - Publish workflows (also grants `workflow:unpublish`)
 * `workflow:delete` - Delete workflows
 * `workflow:move` - Transfer workflows between projects
-* `workflow:updateRedactionSetting` - Manage data redaction for workflows (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
+* `workflow:enableRedaction` - Turn on data redaction for a workflow (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
+* `workflow:disableRedaction` - Turn off data redaction for a workflow (refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md))
 
 ### Credential scopes
 * `credential:create` - Create new credentials

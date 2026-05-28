@@ -795,6 +795,7 @@ nav:
           - MiniMax Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Moonshot Kimi Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
+          - NVIDIA Nemotron Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatnvidia.md
           - Ollama Chat Model:
             - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md
@@ -1037,6 +1038,7 @@ nav:
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
         - integrations/builtin/credentials/npm.md
+        - integrations/builtin/credentials/nvidia.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/okta.md
         - integrations/builtin/credentials/ollama.md
@@ -1295,6 +1297,7 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
+      - Change instance owner email: hosting/configuration/change-instance-owner-email.md
       - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md

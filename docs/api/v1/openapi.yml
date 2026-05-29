@@ -43,6 +43,8 @@ tags:
     description: Operations about insights
   - name: Folders
     description: Operations about folders
+  - name: N8nPackage
+    description: Beta — operations about n8n packages. Disabled by default; enable with `N8N_PUBLIC_API_PACKAGES_ENABLED=true`.
 externalDocs:
   description: n8n API documentation
   url: https://docs.n8n.io/api/
@@ -1282,15 +1284,20 @@ paths:
               $ref: '#/components/schemas/pull'
       responses:
         '200':
-          description: Import result
+          description: Pull result containing the list of files that were pulled from the remote repository.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/importResult'
+                $ref: '#/components/schemas/pullResult'
         '400':
           $ref: '#/components/responses/badRequest'
         '409':
-          $ref: '#/components/responses/conflict'
+          description: |
+            Conflict due to uncommitted local changes or merge conflicts. The response body lists every file in the pull diff; files causing the conflict have `conflict: true` or `status: modified`. Retry with `force=true` to discard local changes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/pullResult'
   /variables:
     post:
       x-eov-operation-id: createVariable
@@ -2679,6 +2686,146 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /n8n-packages/export:
+    post:
+      x-eov-operation-id: exportWorkflows
+      x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
+      tags:
+        - N8nPackage
+      summary: 'Beta: Export workflows as an n8n package'
+      description: |
+        **Beta — disabled by default.** Set `N8N_PUBLIC_API_PACKAGES_ENABLED=true` on the
+        instance to enable this endpoint. While disabled, requests return `404`.
+
+        Export one or more workflows as a gzipped tar archive (.n8np). The response is
+        streamed as `application/gzip` with a `Content-Disposition` attachment header.
+        Requires the n8n Packages feature to be licensed.
+      requestBody:
+        description: Workflows to include in the exported package.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/exportWorkflowsRequest'
+      responses:
+        '200':
+          description: A gzipped tar archive containing the exported workflows.
+          content:
+            application/gzip:
+              schema:
+                type: string
+                format: binary
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /n8n-packages/import:
+    post:
+      x-eov-operation-id: importPackage
+      x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
+      tags:
+        - N8nPackage
+      summary: 'Beta: Import an n8n package into a project'
+      description: |
+        **Beta — disabled by default.** Set `N8N_PUBLIC_API_PACKAGES_ENABLED=true` on the
+        instance to enable this endpoint. While disabled, requests return `404`.
+
+        Imports a gzip-compressed tar package (`.n8np`) into the target project. Send the
+        archive as the multipart field `package`. Optional routing uses form fields
+        `projectId` and `folderId` (omit or leave empty for defaults). Maximum upload size
+        is `N8N_ENDPOINTS_PAYLOAD_SIZE_MAX` MB (default 16).
+
+        The package must declare its manifest at `manifest.json` and include every file
+        referenced by the manifest. The caller is authorised through the `workflow:import`
+        scope. Each imported workflow is created with a fresh local id and arrives inactive.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - package
+              properties:
+                package:
+                  type: string
+                  format: binary
+                  description: Gzip-compressed tar package (`.n8np`).
+                projectId:
+                  type: string
+                  description: |
+                    Target project id. Omit or send empty to import into the caller's personal project.
+                folderId:
+                  type: string
+                  description: |
+                    Optional folder within the target project. Omit or send empty for project root.
+      responses:
+        '200':
+          description: Import succeeded.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - package
+                  - workflows
+                properties:
+                  package:
+                    type: object
+                    required:
+                      - sourceN8nVersion
+                      - sourceId
+                      - exportedAt
+                    properties:
+                      sourceN8nVersion:
+                        type: string
+                      sourceId:
+                        type: string
+                      exportedAt:
+                        type: string
+                        format: date-time
+                  workflows:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - sourceId
+                        - localId
+                        - name
+                        - projectId
+                        - parentFolderId
+                        - activeVersionId
+                      properties:
+                        sourceId:
+                          type: string
+                          description: Workflow id as it appeared in the package.
+                        localId:
+                          type: string
+                          description: Newly minted workflow id on the target instance.
+                        name:
+                          type: string
+                        projectId:
+                          type: string
+                        parentFolderId:
+                          type: string
+                          nullable: true
+                        activeVersionId:
+                          type: string
+                          nullable: true
+                          description: |
+                            Published version on the target instance. Always null immediately after import.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     audit:
@@ -3681,66 +3828,91 @@ components:
             - `all`: Publish all imported workflows
             - `published`: Publish only workflows that were published locally before import
           example: published
-        variables:
-          type: object
-          example:
-            foo: bar
-    importResult:
+    sourceControlledFile:
       type: object
-      additionalProperties: true
+      required:
+        - file
+        - id
+        - name
+        - type
+        - status
+        - location
+        - conflict
+        - updatedAt
       properties:
-        variables:
-          type: object
-          properties:
-            added:
-              type: array
-              items:
-                type: string
-            changed:
-              type: array
-              items:
-                type: string
-        credentials:
+        file:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+            - credential
+            - workflow
+            - tags
+            - variables
+            - file
+            - folders
+            - project
+            - datatable
+        status:
+          type: string
+          enum:
+            - new
+            - modified
+            - deleted
+            - created
+            - renamed
+            - conflicted
+            - ignored
+            - staged
+            - unknown
+        location:
+          type: string
+          enum:
+            - local
+            - remote
+        conflict:
+          type: boolean
+        updatedAt:
+          type: string
+        pushed:
+          type: boolean
+        isLocalPublished:
+          type: boolean
+        isRemoteArchived:
+          type: boolean
+        parentFolderId:
+          type: string
+          nullable: true
+        folderPath:
           type: array
           items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-              type:
-                type: string
-        workflows:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-        tags:
+            type: string
+        owner:
           type: object
+          required:
+            - type
+            - projectId
+            - projectName
           properties:
-            tags:
-              type: array
-              items:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  name:
-                    type: string
-            mappings:
-              type: array
-              items:
-                type: object
-                properties:
-                  workflowId:
-                    type: string
-                  tagId:
-                    type: string
+            type:
+              type: string
+              enum:
+                - personal
+                - team
+            projectId:
+              type: string
+            projectName:
+              type: string
+        publishingError:
+          type: string
+    pullResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/sourceControlledFile'
     project:
       type: object
       additionalProperties: false
@@ -4404,6 +4576,22 @@ components:
         parentFolderId:
           type: string
           example: abc123
+    exportWorkflowsRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - workflowIds
+      properties:
+        workflowIds:
+          type: array
+          minItems: 1
+          maxItems: 300
+          description: IDs of the workflows to include in the exported package.
+          items:
+            type: string
+            minLength: 1
+          example:
+            - 2tUt1wbLX592XDdX
     error:
       required:
         - message
@@ -4486,8 +4674,10 @@ components:
       $ref: '#/components/schemas/audit'
     Pull:
       $ref: '#/components/schemas/pull'
-    ImportResult:
-      $ref: '#/components/schemas/importResult'
+    PullResult:
+      $ref: '#/components/schemas/pullResult'
+    SourceControlledFile:
+      $ref: '#/components/schemas/sourceControlledFile'
     UserList:
       $ref: '#/components/schemas/userList'
     User:

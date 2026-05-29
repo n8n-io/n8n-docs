@@ -44,10 +44,10 @@ jobs:
               ;;
             "quality:low-effort-usable")
               curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
+              -u "${{ secrets.WEBHOOK_USERV2 }}:${{ secrets.WEBHOOK_PASSWORD_V2 }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "quality:low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL }}"
+              "${{ secrets.WEBHOOK_URLV2 }}"
               echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution, but good quality. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines, and keep low-effort contributions to a minimum." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
@@ -57,10 +57,10 @@ jobs:
               ;;
             "scope:old-course")
               curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
+              -u "${{ secrets.WEBHOOK_USERV2 }}:${{ secrets.WEBHOOK_PASSWORD_V2 }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "scope:old-course"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL }}"
+              "${{ secrets.WEBHOOK_URLV2 }}"
               echo "comment=Hi @${{ env.AUTHOR }}! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;

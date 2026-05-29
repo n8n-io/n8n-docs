@@ -138,7 +138,7 @@ MCP clients can discover all workflows the current user has access to using `sea
 
 ### Managing access
 
-The **Instance-level MCP** settings page shows all workflows with MCP actions enabled. From this list you can:
+The **Instance-level MCP** settings page shows all workflows enabled for MCP clients to access and operate on. From this list you can:
 
 - Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)

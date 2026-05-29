@@ -113,7 +113,7 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients
 
-MCP clients can discover all workflows the current user has access to using `search_workflows`. However, clients can't execute or modify a workflow until you explicitly enable MCP access for it.
+MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. However, clients can't access full workflow data, nor execute or modify a workflow unless you explicitly enable MCP access for that workflow.
 
 ### Enabling access
 

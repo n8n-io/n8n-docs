@@ -41,7 +41,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.24.0...n8n@2.25.0
 
 This release contains bug fixes.
 
+### Contributors
 
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot)  
+[kayjix](https://github.com/kayjix)  
+[hammadxcm](https://github.com/hammadxcm)  
+[maxabaumgarten](https://github.com/maxabaumgarten)  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

@@ -21,6 +21,7 @@ For usage examples and templates to help you get started, refer to n8n's [Slack 
 ## Events
 
 * **Any Event**: The node triggers on any event in Slack.
+* **App Home Opened**: The node triggers when a user opens the [App Home](https://api.slack.com/surfaces/app-home){:target="_blank" .external-link} tab of your Slack app.
 * **Bot / App Mention**: The node triggers when your bot or app is [mentioned](https://slack.com/help/articles/205240127-Use-mentions-in-Slack) in a channel the app is in.
 * **File Made Public**: The node triggers when a file is [made public](https://slack.com/help/articles/4412651915539-Manage-public-file-sharing).
 * **File Shared**: The node triggers when a file is [shared](https://slack.com/help/articles/201330736-Add-files-to-Slack) in a channel the app is in.
@@ -51,6 +52,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 * **Resolve IDs**: Whether to resolve the IDs to their respective names and return them (turned on) or not (turned off, default).
 * **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/data/expressions.md).
+* **Emoji Names to Filter**: Enter a comma-separated, **not** colon-separated, list of emoji names (for example `thumbsup, eyes, white_check_mark`) to limit **Reaction Added** events to only those specific reactions. Leave empty to trigger on any reaction.
 
 ## Related resources
 

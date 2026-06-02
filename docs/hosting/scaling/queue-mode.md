@@ -36,6 +36,10 @@ This is the process flow:
 
 Workers are n8n instances that do the actual work. They receive information from the main n8n process about the workflows that have to get executed, execute the workflows, and update the status after each execution is complete.
 
+/// note | Per-process event log files
+If your workers share a writable filesystem, give each worker process a unique event log path. Refer to [Per-process event log files](/log-streaming.md#per-process-event-log-files) for details.
+///
+
 ### Set encryption key
 
 n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/index.md) if desired.

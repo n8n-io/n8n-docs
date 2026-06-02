@@ -73,6 +73,7 @@ When active or set, they do the following:
     - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
     - **Continue**: Proceeds to the next node despite the error, using the last valid data.
     - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
+* **Custom Telemetry Tags**: Add custom key-value pairs to a node's OpenTelemetry span. Keys are plain text, values support expressions, and this setting only appears when you enable OpenTelemetry tracing. Refer to [Add custom attributes to node spans](/hosting/logging-monitoring/opentelemetry.md#add-custom-attributes-to-node-spans) for details.
 
 You can document your workflow using node notes:
 

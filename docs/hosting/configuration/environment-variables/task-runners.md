@@ -32,7 +32,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `N8N_RUNNERS_TASK_TIMEOUT` | Number | `300` | The maximum time, in seconds, a task can run before the runner stops it and restarts. This value must be greater than 0. |
 | `N8N_RUNNERS_HEARTBEAT_INTERVAL` | Number | `30` | The interval, in seconds, at which the runner must send a heartbeat to the broker. If the runner doesn't send a heartbeat in time, the task stops and the runner restarts. This value must be greater than 0. |
 | `N8N_RUNNERS_INSECURE_MODE` | Boolean | `false` | Whether to disable all security measures in the task runner, for compatibility with modules that rely on insecure JS features. **Discouraged for production use.** |
-| `N8N_RUNNERS_TASK_REQUEST_TIMEOUT` | Number | `20` | How long (in seconds) a task request can wait for a runner to become available before timing out. This prevents workflows from hanging indefinitely when no runners are available. Must be greater than 0. |
+| `N8N_RUNNERS_TASK_REQUEST_TIMEOUT` | Number | `60` | How long (in seconds) a task request can wait for a runner to become available before timing out. This prevents workflows from hanging indefinitely when no runners are available. Must be greater than 0. |
 
 ## Task runner launcher environment variables
 
@@ -61,8 +61,8 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
-| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
+| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. In external mode, set this in the [runners config file](/hosting/configuration/task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`) as an `env-override`, not as a container environment variable. |
+| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. In external mode, set this in the [runners config file](/hosting/configuration/task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`) as an `env-override`, not as a container environment variable. |
 | `N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION` | Boolean | `false` | Whether to allow prototype mutation for external libraries. Set to `true` to allow modules that rely on runtime prototype mutation (for example, [`puppeteer`](https://pptr.dev/)) at the cost of relaxing security. | 
 | `GENERIC_TIMEZONE` | * | `America/New_York` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md). |
 | `NODE_OPTIONS` | String | - | [Options](https://nodejs.org/api/cli.html#node_optionsoptions) for Node.js. |
@@ -72,7 +72,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_RUNNERS_STDLIB_ALLOW` | String | - | Python standard library modules that you can use in the Code node, including their submodules. Use `*` to allow all stdlib modules. n8n disables all Python standard library imports by default. |
-| `N8N_RUNNERS_EXTERNAL_ALLOW` | String | - | Third-party Python modules that are allowed to be used in the Code node, including their submodules. Use `*` to allow all external modules. n8n disables all third-party Python modules by default. Third-party Python modules must be [included](/hosting/configuration/task-runners.md#adding-extra-dependencies) in the `n8nio/runners` image. |
+| `N8N_RUNNERS_STDLIB_ALLOW` | String | - | Python standard library modules that you can use in the Code node, including their submodules. Use `*` to allow all stdlib modules. n8n disables all Python standard library imports by default. In external mode, set this in the [runners config file](/hosting/configuration/task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`) as an `env-override`, not as a container environment variable. |
+| `N8N_RUNNERS_EXTERNAL_ALLOW` | String | - | Third-party Python modules that are allowed to be used in the Code node, including their submodules. Use `*` to allow all external modules. n8n disables all third-party Python modules by default. Third-party Python modules must be [included](/hosting/configuration/task-runners.md#adding-extra-dependencies) in the `n8nio/runners` image. In external mode, set this in the [runners config file](/hosting/configuration/task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`) as an `env-override`, not as a container environment variable. |
 | `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__,globals,locals` | Python built-ins that you can't use in the Code node. Set to an empty string to allow all built-ins. | 
 | `N8N_BLOCK_RUNNER_ENV_ACCESS` | Boolean | `true` | Whether to block access to the runner's environment from within Python code tasks. Set to `false` to enable all Python code node users access to the runner's environment via `os.environ`. For security reasons, environment variable access is blocked by default. | 

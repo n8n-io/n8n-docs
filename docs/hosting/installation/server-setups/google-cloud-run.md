@@ -6,7 +6,7 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on Google Cloud Run, a serverless container runtime. If you're just getting started with n8n and don't need a production-grade deployment, you can go with the "easy mode" option below for deployment. Otherwise, if you intend to use this n8n deployment at-scale, refer to the "durable mode" instructions further down.
 
-You can also enable access via OAuth to Google Workspace, such as Gmail and Drive, to use these services as n8n workflow tools. Instructions for granting n8n access to these services are at the end of of this documentation.
+You can also enable access via OAuth to Google Workspace, such as Gmail and Drive, to use these services as n8n workflow tools. Instructions for granting n8n access to these services are at the end of this documentation.
 
 If you want to deploy to Google Kubernetes Engine (GKE) instead, you can refer to [these instructions](/hosting/installation/server-setups/google-kubernetes-engine.md).
 
@@ -73,7 +73,7 @@ gcloud run deploy n8n \
     --set-env-vars="N8N_ENDPOINT_HEALTH=health"
 ```
 
-This does not prevent data loss completely, such as whenever the Cloud Run service is re-deployed/updated. If you want truly persistant data, you should refer to the instructions below for how to attach a database.
+This does not prevent data loss completely, such as whenever the Cloud Run service is re-deployed/updated. If you want truly persistent data, you should refer to the instructions below for how to attach a database.
 
 ## Durable mode
 

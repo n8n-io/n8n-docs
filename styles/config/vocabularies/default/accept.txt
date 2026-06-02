@@ -123,6 +123,7 @@ Infisical
 Intuit
 IP
 [Ii]terable
+Jaeger
 Jira
 Jina
 JMESPath
@@ -164,15 +165,18 @@ n8n
 nanoids
 namespaces?
 NASA
+Nemotron
 Netlify
 Netscaler
 Nextcloud
 [Nn]ginx
 ngrok
+NIM
 Nodelinter
 npm
 NPM
 npx
+NVIDIA
 nvm
 OAuth
 Odoo
@@ -180,6 +184,8 @@ Okta
 Ollama
 onboarding
 Onfleet
+[Oo]pen[Tt]elemetry
+OTLP
 Ortto
 Oura
 PDFs?
@@ -299,3 +305,4 @@ Zendesk
 Zep
 Zoho
 Zscaler
+iCalendar

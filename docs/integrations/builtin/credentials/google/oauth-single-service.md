@@ -66,6 +66,14 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 1. Select **Get started** on the **Overview** tab to begin configuring OAuth consent.
 1. Enter an **App name** and **User support email** to include on the Oauth screen. Select **Next** to continue.
 1. For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types. Select **Next** to continue.
+
+    /// note | Testing mode and test users
+    If you select **External**, your app will default to Testing mode. In this mode,
+    only Google accounts you manually add as test users can complete the OAuth
+    flow — everyone else will see an "access denied" screen. See
+    [Google hasn't verified this app](#google-hasnt-verified-this-app) to learn how to add them.
+    ///
+
 1. Select the **Email addresses** Google should use to contact you about changes to your project. Select **Next** to continue.
 1. Read and accept the Google's User Data Policy. Select **Continue** and then select **Create**.
 1. In the left-hand menu, select **Branding**.
@@ -84,6 +92,17 @@ Next, create the OAuth client credentials in Google:
 1. In the **Application type** dropdown, select **Web application**.
 1. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
 1. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
+
+    /// note | OAuth redirect URL for self-hosting
+    If you're running n8n on your local machine, you don't need a public domain,
+    SSL certificate, or port forwarding to use Google OAuth. Google allows
+    localhost as a valid redirect URI for development purposes. Your n8n OAuth
+    redirect URL will look something like this:
+    `http://localhost:5678/rest/oauth2-credential/callback`
+    For more details on acceptable redirect URIs, refer to
+    [Google's redirect URI documentation](https://support.google.com/cloud/answer/15549257?hl=en#zippy=%2Cweb-applications).
+    ///
+
 1. Select **Create**.
 
 ### Finish your n8n credential
@@ -111,3 +130,28 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 --8<-- "_snippets/integrations/builtin/credentials/google/app-becoming-unauthorized.md"
 
+### redirect_uri_mismatch
+
+This error means the redirect URI n8n is sending doesn't match any of the
+URIs registered in your Google Cloud Console OAuth client.
+
+**Fix:** Copy the **OAuth Redirect URL** from your n8n credential panel and
+paste it exactly — including the protocol (`http` or `https`) and port number —
+into the **Authorized redirect URIs** field of your Google OAuth client.
+
+### Access denied / "app not verified"
+
+This usually happens when your app is still in Testing mode and the Google
+account you're trying to authenticate with hasn't been added as a test user.
+
+**Fix:** Go to **APIs & Services** > **OAuth consent screen** > **Test users**
+and add the account you're trying to use.
+
+### invalid_client
+
+This error typically means the Client ID or Client Secret in your n8n
+credential doesn't match what's in Google Cloud Console.
+
+**Fix:** Go back to your OAuth client in Google Cloud Console, copy both
+values fresh, and re-enter them in n8n. Watch out for accidental spaces when
+copying.

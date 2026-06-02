@@ -6,7 +6,7 @@ contentType: howto
 
 # Pre-configure Microsoft OAuth credentials
 
-After [setting up a Microsoft Entra ID app registration with delegated access](/integrations/builtin/credentials/microsoftentra.md#delegated-access-for-organisation-wide-microsoft-integrations), you can use [credential overwrites](/embed/configuration.md#credential-overwrites) to inject the Client ID and Client Secret into n8n at startup. This means users in your organisation can connect to Microsoft services without completing their own OAuth app registration.
+After [setting up a Microsoft Entra ID app registration with delegated access](/integrations/builtin/credentials/microsoftentra.md#delegated-access-for-organisation-wide-microsoft-integrations), you can use [credential overwrites](/hosting/configuration/credential-overwrites.md) to inject the Client ID and Client Secret into n8n at startup. This means users in your organisation can connect to Microsoft services without completing their own OAuth app registration.
 
 n8n supports three environment variables for credential overwrites. This guide uses `CREDENTIALS_OVERWRITE_DATA_FILE`. Refer to [Credentials environment variables](/hosting/configuration/environment-variables/credentials.md) for the full variable reference.
 

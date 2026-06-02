@@ -28,3 +28,7 @@ n8n provides two execution lists:
 * [All executions](/workflows/executions/all-executions.md): this list shows all executions for all your workflows.
 
 n8n supports [adding custom data to executions](/workflows/executions/custom-executions-data.md).
+
+## Execution data redaction
+
+You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details.

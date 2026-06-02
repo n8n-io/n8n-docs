@@ -215,9 +215,9 @@ Here, replace:
 
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 
-### Connecting Claude Code to n8n MCP server
+#### Connecting Claude Code to n8n MCP server
 
-#### OPTION 1: Authenticate using OAuth2 (Recommended)
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
 
 Use the following CLI command:
 
@@ -242,7 +242,7 @@ Here, replace:
 
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 
-#### OPTION 2: Authenticate using Access Token
+##### OPTION 2: Authenticate using Access Token
 
 Use the following CLI command:
 
@@ -274,10 +274,31 @@ Here, replace:
 
 ### Connecting Codex CLI to n8n MCP server
 
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
+
+Use the following CLI command:
+
+```bash
+codex mcp add n8n-mcp --url https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `~/.codex/config.toml` file:
+
+```toml
+[mcp_servers.n8n-mcp]
+url = "http://localhost:5678/mcp-server/http"
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+##### OPTION 2: Authenticate using Access Token
+
 Add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
-[mcp_servers.n8n_mcp]
+[mcp_servers.n8n-mcp]
 url = "https://<your-n8n-domain>/mcp-server/http"
 http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 ```

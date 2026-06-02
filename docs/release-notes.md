@@ -43,7 +43,7 @@ This release contains bug fixes.
 
 ### Contributors
 
-[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot)  
 [kayjix](https://github.com/kayjix)  
 [hammadxcm](https://github.com/hammadxcm)  
 [maxabaumgarten](https://github.com/maxabaumgarten)  

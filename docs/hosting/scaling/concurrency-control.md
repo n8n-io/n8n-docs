@@ -35,3 +35,7 @@ In queue mode, you can control how many jobs a worker may run concurrently using
 
 Concurrency control in queue mode is a separate mechanism from concurrency control in regular mode, but the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` controls both of them. In queue mode, n8n takes the limit from this variable if set to a value other than `-1`, falling back to the `--concurrency` flag or its default.
 
+## Evaluation concurrency
+
+Evaluation test runs use a separate concurrency limit from production executions. By default, the limit follows the instance's license tier (Community/Pro 1, Business 3, Enterprise 5). Override it with [`N8N_CONCURRENCY_EVALUATION_LIMIT`](/hosting/configuration/environment-variables/executions.md). Refer to [Metric-based evaluations](/advanced-ai/evaluations/metric-based-evaluations.md#run-test-cases-in-parallel) for how the slider behaves in the UI.
+

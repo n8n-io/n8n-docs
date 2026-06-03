@@ -3810,6 +3810,11 @@ components:
           type: string
           example: global:owner
           readOnly: true
+        mfaEnabled:
+          type: boolean
+          description: Whether the user has multi-factor authentication (MFA/2FA) enabled.
+          readOnly: true
+          example: false
     userList:
       type: object
       properties:

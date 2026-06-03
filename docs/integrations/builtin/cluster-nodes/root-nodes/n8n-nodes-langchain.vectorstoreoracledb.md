@@ -16,7 +16,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Oracle Database vector support
-Your Oracle Database instance must support Oracle AI Vector Search for vector store operations.
+Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. please see [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

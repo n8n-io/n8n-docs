@@ -1,6 +1,6 @@
 ---
 title: Nodes environment variables
-description: Environment variable to configure nodes management in self-hosted n8n instance.
+description: Environment variables to configure nodes management and node-specific limits in self-hosted n8n.
 contentType: reference
 tags:
   - environment variables
@@ -13,7 +13,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes.
+This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, enabling community nodes, and configuring node-specific limits.
 
 ## Nodes and community node settings
 
@@ -32,6 +32,13 @@ This page lists the environment variables configuration options for managing [no
 | `NODES_ERROR_TRIGGER_TYPE`               | String           | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger.                                                                                                                                                                                      |
 | `NODES_EXCLUDE`                          | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]`                             | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"@n8n/n8n-nodes-langchain.lmChatDeepSeek\"]"`.  To enable all nodes, specify `NODES_EXCLUDE: "[]"`.                       |
 | `NODES_INCLUDE`                          | Array of strings | -                             | Specify which nodes to load.                                                                                                                                                                                                          |
+
+## Compression node settings
+
+| Variable                                             | Type   | Default        | Description                                                                          |
+|:-----------------------------------------------------|:-------|:---------------|:-------------------------------------------------------------------------------------|
+| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `2147483648`   | Maximum total decompressed output size in bytes. Default is 2 GiB.                   |
+| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `5000`         | Maximum number of entries allowed in a ZIP archive.                                   |
 
 ## Manage installed community packages
 

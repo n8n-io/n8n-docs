@@ -77,7 +77,7 @@ export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
 n8n uses a trace ID ratio sampler, so the same trace ID is either fully sampled or fully dropped across all spans in the trace.
 
 /// note
-By default, n8n only exports traces for [production executions](/workflows/executions/manual-partial-and-production-executions.md). To also export traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
+By default, n8n only outputs traces for [production executions](/workflows/executions/manual-partial-and-production-executions.md). To output traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
 ///
 
 ## Reduce span volume

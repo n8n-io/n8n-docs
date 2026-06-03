@@ -41,19 +41,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.24.0...n8n@2.25.0
 
 This release contains bug fixes.
 
-
-
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
-
-
-
-## n8n@2.24.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.23.0...n8n@2.24.0) for this version.<br />
-**Release date:** 2026-06-02
-
-This release contains bug fixes.
-
 ### Contributors
 
 [n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot)  

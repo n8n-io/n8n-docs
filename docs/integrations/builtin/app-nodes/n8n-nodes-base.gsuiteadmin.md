@@ -29,6 +29,7 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
     * Get a group
     * Get many groups
     * Update a group
+    * Get many members of a group
 * User
 	* Add an existing user to a group
     * Create a user

@@ -16,7 +16,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Oracle Database vector support
-Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. please see [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
+Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. For more details, refer to the [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -95,7 +95,13 @@ Available in **Get Many** and **Retrieve Documents** modes. This is the method t
 
 ### Metadata Filter
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
+Available in **Get Many**, **Retrieve Documents (As Vector Store for Chain/Tool)**, and **Retrieve Documents (As Tool for AI Agent)** modes. When searching for data, use this to match with metadata associated with the document.
+
+If you specify more than one metadata filter field using the UI, all fields must match. This works like an `AND` query.
+
+For advanced filtering, Oracle Database Vector Store passes metadata filters through to Oracle AI Vector Search. This supports richer filter objects, including arrays, nested filters, comparison operators such as `$gte`, exclusion operators such as `$nin`, and logical operators such as `$and`.
+
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 ## Templates and examples
 

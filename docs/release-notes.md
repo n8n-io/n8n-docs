@@ -777,6 +777,26 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
+## n8n@2.17.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.16.0...n8n@2.17.0) for this version.<br />
+**Release date:** 2026-04-13
+
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Public API improvements
+
+* **Project scoping on workflow creation.** `POST /api/v1/workflows` now accepts an optional `projectId` to place new workflows in a specific project. Omitting it preserves prior behaviour (workflow lands in the caller's personal project).
+* **Insights summary endpoint.** `GET /api/v1/insights/summary` with optional `startDate`, `endDate`, and `projectId` query params. Returns successes, failures, runtime, and time saved. Requires an API key with the `insights:read` scope and is gated by the Enterprise insights license feature.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.16.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.16.0...n8n@2.16.1) for this version.<br />
@@ -813,17 +833,8 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 
 ### Public API improvements
 
-A batch of public API additions across v2.16 and v2.17.
-
-v2.16:
-
 * **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
 * **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
-
-v2.17:
-
-* **Project scoping on workflow creation.** `POST /api/v1/workflows` now accepts an optional `projectId` to place new workflows in a specific project. Omitting it preserves prior behaviour (workflow lands in the caller's personal project).
-* **Insights summary endpoint.** `GET /api/v1/insights/summary` with optional `startDate`, `endDate`, and `projectId` query params. Returns successes, failures, runtime, and time saved. Requires an API key with the `insights:read` scope and is gated by the Enterprise insights license feature.
 
 </div>
 

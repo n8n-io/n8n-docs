@@ -16,16 +16,18 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | ONNX models
-Import the ONNX model into Oracle Database before using it with this node.
+Your Oracle Database instance must support Oracle AI Vector Search and ONNX model execution capabilities.
+
+Import one or more ONNX embedding models into Oracle Database before using this node. Only imported models are available for selection.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the ONNX model to use to generate embeddings. Choose a model from the list of models available in your Oracle Database instance, or specify a model ID.
+* **Model**: Select the ONNX model used to generate embeddings. Choose a model from the list of models available in your Oracle Database instance or specify a model ID manually. The selected model determines the embedding dimensions and supported input types.
 
-The node loads available models from the `USER_MINING_MODELS` view in the configured Oracle Database connection.
+The node loads available models from the `USER_MINING_MODELS` view in the configured Oracle Database connection. Only models accessible to the current database user are displayed.
 
 ## Templates and examples
 

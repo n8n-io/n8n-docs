@@ -77,7 +77,7 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Table Name**: Enter the Oracle Database table to use.
+* **Table Name**: Enter the Oracle Database vector table to query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Node options

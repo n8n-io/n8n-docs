@@ -76,8 +76,8 @@ export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
 
 n8n uses a trace ID ratio sampler, so the same trace ID is either fully sampled or fully dropped across all spans in the trace.
 
-/// note | 
-n8n will output a trace for every workflow execution - this includes published workflows, unpublished workflows and test executions - In a future release a toggle will be available to track only published workflows 
+/// note
+By default, n8n only outputs traces for [production executions](/workflows/executions/manual-partial-and-production-executions.md). To output traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
 ///
 
 ## Reduce span volume

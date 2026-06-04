@@ -16,6 +16,12 @@ n8n can emit [OpenTelemetry](https://opentelemetry.io/){:target="_blank" .extern
 OpenTelemetry workflow tracing is only available on self-hosted n8n.
 ///
 
+Watch an overview of OpenTelemetry tracing in n8n:
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/xOi8K_-GLRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## What you get
 
 When you turn on tracing, n8n exports two kinds of spans for each execution:

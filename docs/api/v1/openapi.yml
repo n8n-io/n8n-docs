@@ -2736,12 +2736,17 @@ paths:
 
         Imports a gzip-compressed tar package (`.n8np`) into the target project. Send the
         archive as the multipart field `package`. Optional routing uses form fields
-        `projectId` and `folderId` (omit or leave empty for defaults). Maximum upload size
-        is `N8N_ENDPOINTS_PAYLOAD_SIZE_MAX` MB (default 16).
+        `projectId`, `folderId`, `credentialMatchingMode`, and `credentialMissingMode`
+        (omit or leave empty for defaults). Maximum upload size is
+        `N8N_ENDPOINTS_PAYLOAD_SIZE_MAX` MB (default 16).
 
         The package must declare its manifest at `manifest.json` and include every file
         referenced by the manifest. The caller is authorised through the `workflow:import`
         scope. Each imported workflow is created with a fresh local id and arrives inactive.
+
+        Credential references are resolved before any workflow is written. Only credentials owned by the
+        target project (with `credential:read`) or global credentials (with `credential:read`)
+        match. Credentials shared into the project as `credential:user` are not matched.
       requestBody:
         required: true
         content:
@@ -2763,6 +2768,20 @@ paths:
                   type: string
                   description: |
                     Optional folder within the target project. Omit or send empty for project root.
+                credentialMatchingMode:
+                  type: string
+                  enum:
+                    - id-only
+                  default: id-only
+                  description: |
+                    How credential references in `requirements.credentials` are matched on the target instance. Only `id-only` is supported today.
+                credentialMissingMode:
+                  type: string
+                  enum:
+                    - must-preexist
+                  default: must-preexist
+                  description: |
+                    What to do when a credential reference cannot be resolved. `must-preexist` requires every referenced credential to already exist and be accessible on the target instance.
       responses:
         '200':
           description: Import succeeded.
@@ -2773,6 +2792,7 @@ paths:
                 required:
                   - package
                   - workflows
+                  - credentials
                 properties:
                   package:
                     type: object
@@ -2818,6 +2838,25 @@ paths:
                           nullable: true
                           description: |
                             Published version on the target instance. Always null immediately after import.
+                  credentials:
+                    type: object
+                    required:
+                      - matched
+                    properties:
+                      matched:
+                        type: array
+                        items:
+                          type: object
+                          required:
+                            - sourceId
+                            - targetId
+                          properties:
+                            sourceId:
+                              type: string
+                              description: Credential id from `requirements.credentials` in the package manifest.
+                            targetId:
+                              type: string
+                              description: Matched credential id on the target instance.
         '400':
           $ref: '#/components/responses/badRequest'
         '401':
@@ -2826,6 +2865,38 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+        '422':
+          description: One or more credential references could not be resolved.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                  - failures
+                properties:
+                  message:
+                    type: string
+                  failures:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - kind
+                        - sourceId
+                        - usedByWorkflows
+                      properties:
+                        kind:
+                          type: string
+                          enum:
+                            - not_found
+                            - unknown_type
+                        sourceId:
+                          type: string
+                        usedByWorkflows:
+                          type: array
+                          items:
+                            type: string
 components:
   schemas:
     audit:
@@ -3329,6 +3400,23 @@ components:
             jiraSoftwareCloudApi:
               id: '35'
               name: jiraApi
+        customTelemetryTags:
+          type: object
+          additionalProperties: false
+          properties:
+            tag:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                required:
+                  - key
+                  - value
+                properties:
+                  key:
+                    type: string
+                  value:
+                    type: string
         createdAt:
           type: string
           format: date-time
@@ -3397,6 +3485,26 @@ components:
         timeSavedPerExecution:
           type: number
           description: Estimated time saved per execution in minutes
+        redactionPolicy:
+          type: string
+          enum:
+            - none
+            - non-manual
+            - manual-only
+            - all
+          description: |
+            Controls whether execution data is redacted for this workflow.
+
+            Available options:
+            - `none` (default): No redaction — all execution data is stored.
+            - `non-manual`: Redact production (non-manually triggered) executions only.
+            - `manual-only`: Redact manually triggered executions only.
+            - `all`: Redact all executions (manual and production).
+
+            When the instance has a redaction floor configured, the policy must be equal to
+            or stricter than the floor. Requests that would weaken the policy below the
+            instance floor are rejected with 422.
+          example: non-manual
         availableInMCP:
           type: boolean
           description: |

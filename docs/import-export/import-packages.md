@@ -89,7 +89,7 @@ workflowUpdatePolicy:
 
 ## Control workflow activation
 
-Use `workflowActivationPolicy` to control whether imported workflows are active. This setting isn't affected by the import [mode](#import-modes).
+Use `workflowActivationPolicy` to control whether imported workflows are active.
 
 ```json
 workflowActivationPolicy:
@@ -124,21 +124,6 @@ missingNodeTypeMode:
 |-------|-----------|
 | `fail` | Reverts the import and errors if a node type isn't found. |
 | `import-anyway` | Imports the workflow and shows the unknown node as unrecognized in the editor. n8n deactivates this workflow whatever you set in `workflowActivationPolicy`. |
-
-## Import modes
-
-Use `mode` to set sensible defaults for the options above in one place. A mode sets the defaults; you can still override individual options.
-
-```json
-mode:
-	| "auto"   // default - best-effort: create stubs for missing dependencies, update existing workflows in place
-	| "strict" // every reference must resolve, or the import aborts
-	| "force"  // import as much as possible with what's available
-```
-
-/// note | Draft: modes and per-option defaults
-How each mode maps to the individual option defaults isn't final. Set the options you care about explicitly until the mapping settles.
-///
 
 ## Next steps
 

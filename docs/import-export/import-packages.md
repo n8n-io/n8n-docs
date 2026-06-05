@@ -1,6 +1,6 @@
 ---
 title: Import a workflow package
-description: Import a package and control where its workflows land and how conflicts are handled.
+description: Import a package and control where its workflows land and how n8n handles conflicts.
 contentType: howto
 ---
 
@@ -9,14 +9,14 @@ contentType: howto
 Import a package to add its workflows and dependencies to an instance. Import options control where the content lands, what happens when something already exists, and how strict n8n is about missing dependencies.
 
 /// note | Proposed feature
-The endpoint, options, and defaults on this page come from an early design and aren't final. Option names and defaults are especially likely to change.
+The endpoint, options, and defaults on this page come from a draft design and aren't final. Names and defaults may still change.
 ///
 
 ## Authenticate your request
 
 Import and export run on the [public API](/api/index.md). Authenticate with an API key in the `X-N8N-API-KEY` header, as described in [API authentication](/api/authentication.md). The import runs as the user that owns the key, and respects that user's roles and permissions.
 
-For a complete export-to-import walkthrough, see [Move a workflow between instances](/import-export/move-a-workflow.md).
+For a complete export-to-import example, see [Move a workflow between instances](/import-export/move-a-workflow.md).
 
 ## Import a package
 
@@ -30,7 +30,7 @@ POST /import-export/import/package
 The examples on this page show the options as JSON for clarity.
 
 /// warning | Draft: request and response shapes aren't final
-The exact mechanism for sending the import options with the file, and the shape of the response (including what a dry run returns), aren't finalized. This page will be updated once the API is pinned down.
+The mechanism for sending the import options with the file, and the shape of the response (including what a dry run returns), aren't final. We'll update this page once the API is final.
 ///
 
 ### Preview an import with a dry run
@@ -68,7 +68,7 @@ n8n rejects the import if:
 - You specify a `folderId` that doesn't exist in the target project.
 - You specify a `folderId` only, and it doesn't exist in your personal project.
 
-## How workflow IDs are handled
+## How n8n handles workflow IDs
 
 n8n always records where an imported workflow came from. It adds a `sourceWorkflowId` field set to the workflow's ID in the package.
 
@@ -113,7 +113,7 @@ workflowActivationPolicy:
 |-------|-----------|
 | `preserve-active-state` | Leaves the target's `active` flag untouched. An updated workflow keeps the state it had on the target. New workflows default to inactive. |
 | `match-source` | Adopts the source workflow's active state, read from the `active` flag in `workflow.json`. |
-| `all-inactive` | Imports every workflow inactive. If an active workflow is updated, n8n deactivates it. |
+| `all-inactive` | Imports every workflow inactive. When you update an active workflow, n8n deactivates it. |
 | `all-active` | Imports and activates every workflow in the package. |
 
 /// note | Draft: a workflow with a missing node type stays inactive
@@ -133,7 +133,7 @@ missingNodeTypeMode:
 | Value | Behaviour |
 |-------|-----------|
 | `fail` | Reverts the import and errors if a node type isn't found. |
-| `import-anyway` | Imports the workflow and shows the unknown node as unrecognized in the editor. n8n deactivates this workflow whatever `workflowActivationPolicy` is set to. |
+| `import-anyway` | Imports the workflow and shows the unknown node as unrecognized in the editor. n8n deactivates this workflow whatever you set in `workflowActivationPolicy`. |
 
 ## Import modes
 
@@ -147,9 +147,9 @@ mode:
 ```
 
 /// note | Draft: modes and per-option defaults
-How each mode maps to the individual option defaults isn't finalized. Set the options you care about explicitly until the mapping is settled.
+How each mode maps to the individual option defaults isn't final. Set the options you care about explicitly until we settle the mapping.
 ///
 
 ## Next steps
 
-A package's workflows usually depend on credentials, variables, sub-workflows, or data tables. For the options that control how n8n resolves each of those, see [Resolve dependencies on import](/import-export/resolve-dependencies.md).
+A package's workflows often depend on credentials, variables, sub-workflows, or data tables. For the options that control how n8n resolves each of those, see [Resolve dependencies on import](/import-export/resolve-dependencies.md).

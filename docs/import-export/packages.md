@@ -9,7 +9,7 @@ contentType: explanation
 A package is a `tar` file that bundles n8n entities together with a manifest. This page describes what's inside a package and how n8n checks that it can import one.
 
 /// note | Proposed feature
-The format on this page comes from an early design and isn't final.
+The format on this page comes from a draft design and isn't final.
 ///
 
 ## Package contents
@@ -59,13 +59,13 @@ The `manifest.json` file lists everything in the package and everything the pack
 }
 ```
 
-The manifest is always rebuildable from the files in the package. It exists to speed up the import, not to hold anything the entities don't already describe.
+n8n can always rebuild the manifest from the files in the package. It exists to speed up the import, not to hold anything the entities don't already describe.
 
 ## The requirements list
 
 The `requirements` section of the manifest declares what the package needs from the target instance. It lists the node types, credentials, variables, sub-workflows, and data tables that the workflows reference, and which workflows use each one.
 
-n8n validates these requirements before any entity imports. If a requirement can't be satisfied, the import fails fast rather than importing part of the package.
+n8n validates these requirements before any entity imports. If the target can't meet every requirement, n8n stops before importing anything rather than importing part of the package.
 
 For example, the manifest lists each node type a workflow needs, along with the version:
 
@@ -92,4 +92,4 @@ n8n runs three checks to decide whether a package is compatible with the target 
 
 ## Version handling
 
-The manifest records the n8n version that created the package in a `sourceN8nVersion` field, but n8n doesn't require the source and target instances to run the same version. As long as the package format version is recognized, the entities match their schemas, and the requirements are satisfied, n8n imports the package.
+The manifest records the n8n version that created the package in a `sourceN8nVersion` field, but n8n doesn't require the source and target instances to run the same version. n8n imports the package as long as it recognizes the format version, the entities match their schemas, and the target meets the requirements.

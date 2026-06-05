@@ -9,7 +9,7 @@ contentType: howto
 This example walks through the most common task: promoting a single workflow from one instance to another, for example from staging to production. The workflow uses a Slack credential that already exists on the target.
 
 /// note | Proposed feature
-The endpoints, request shapes, and responses here come from an early design and aren't final. See [Request format](#request-format) for what's still open.
+The endpoints, request shapes, and responses here come from a draft design and aren't final. See [Request format](#request-format) for what's still open.
 ///
 
 ## Before you start
@@ -40,7 +40,7 @@ n8n walks the workflow, bundles its dependencies, and returns a `tar` file. For 
 		|- credential.json
 ```
 
-The credential is included as a stub: the package records its name and type so the target can match it, but never its secret values. For the full list of export options, see [Export a workflow package](/import-export/export-packages.md).
+n8n includes the credential as a stub: the package records its name and type so the target can match it, but never its secret values. For the full list of export options, see [Export a workflow package](/import-export/export-packages.md).
 
 ## Step 2: Preview the import with a dry run
 
@@ -66,7 +66,7 @@ curl -X POST https://prod.example.com/api/v1/import-export/import/package \
 	-F 'options={ "dryRun": false, "credentialMatchingMode": "name-and-type", "credentialMissingMode": "must-preexist" }'
 ```
 
-n8n imports the workflow into your personal project on production, links the Slack credential by name and type, and gives the workflow a new ID while recording the original in `sourceWorkflowId`. To control where the workflow lands or how its ID is handled, see [Import a workflow package](/import-export/import-packages.md).
+n8n imports the workflow into your personal project on production, links the Slack credential by name and type, and gives the workflow a new ID while recording the original in `sourceWorkflowId`. To control where the workflow lands or how n8n assigns its ID, see [Import a workflow package](/import-export/import-packages.md).
 
 ## Common scenarios
 
@@ -76,12 +76,12 @@ Different tasks call for different option combinations. These are the starting p
 |----------|------|-------------|
 | Promote to an instance that already has the dependencies | Reuse the target's existing credentials and variables | `credentialMatchingMode: "name-and-type"`, `credentialMissingMode: "must-preexist"`, `variableMissingMode: "must-preexist"` |
 | Share a self-contained copy | The recipient has none of the dependencies | Export with `includeVariableValues: true`; import with `credentialMissingMode: "create-stub"` so the recipient fills in secrets |
-| Restore to a clean instance | Recreate the workflow exactly | Export with `includeVariableValues: true` and `includeDataTableData: true`; import with `workflowIdPolicy: "source"` |
+| Restore to a clean instance | Recreate the workflow as it was | Export with `includeVariableValues: true` and `includeDataTableData: true`; import with `workflowIdPolicy: "source"` |
 
 For what each option does, see [Import a workflow package](/import-export/import-packages.md) and [Resolve dependencies on import](/import-export/resolve-dependencies.md).
 
 ## Request format
 
 /// warning | Draft: request and response shapes aren't final
-The import endpoint takes the package as a file upload alongside the import options. The exact mechanism for sending the options with the file, and the shape of the response (including what a dry run returns), aren't finalized. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. This page will be updated once the API is pinned down.
+The import endpoint takes the package as a file upload alongside the import options. The mechanism for sending the options with the file, and the shape of the response (including what a dry run returns), aren't final. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. We'll update this page once the API is final.
 ///

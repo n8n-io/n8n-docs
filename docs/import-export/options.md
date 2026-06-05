@@ -9,7 +9,7 @@ contentType: reference
 This page is a quick index of every option you can pass when you export or import a workflow package. Each row links to the section that describes the full behaviour. For what an option does, follow the link.
 
 /// note | Proposed feature
-The option names and defaults here come from an early design and aren't final. Once the API contract is stable, the [API reference](/api/api-reference.md) becomes the authoritative, generated list of these parameters.
+The option names and defaults here come from a draft design and aren't final. Once the API contract is stable, the [API reference](/api/api-reference.md) becomes the authoritative, generated list of these parameters.
 ///
 
 ## Export options
@@ -34,7 +34,7 @@ Set these alongside the package in a [`POST /import-export/import/package`](/imp
 | [`dryRun`](/import-export/import-packages.md#preview-an-import-with-a-dry-run) | `true`, `false` | `false` | Preview the changes without applying them. |
 | [`projectId`](/import-export/import-packages.md#choose-where-workflows-land) | project ID | personal project | Where workflows land. |
 | [`folderId`](/import-export/import-packages.md#choose-where-workflows-land) | folder ID | project root | Folder within the target project. |
-| [`workflowIdPolicy`](/import-export/import-packages.md#how-workflow-ids-are-handled) | `new`, `source` | `new` | Assign a new ID, or keep the source ID. |
+| [`workflowIdPolicy`](/import-export/import-packages.md#how-n8n-handles-workflow-ids) | `new`, `source` | `new` | Assign a new ID, or keep the source ID. |
 | [`workflowUpdatePolicy`](/import-export/import-packages.md#handle-workflows-that-already-exist) | `new-version`, `fail`, `skip` | `new-version` | What to do when a workflow already exists. |
 | [`workflowActivationPolicy`](/import-export/import-packages.md#control-workflow-activation) | `preserve-active-state`, `match-source`, `all-inactive`, `all-active` | `preserve-active-state` | Whether imported workflows are active. |
 | [`missingNodeTypeMode`](/import-export/import-packages.md#handle-missing-node-types) | `fail`, `import-anyway` | `fail` | What to do when a node type is missing. |
@@ -45,7 +45,7 @@ Set these alongside the package in a [`POST /import-export/import/package`](/imp
 |--------|--------|---------|---------|
 | [`credentialMatchingMode`](/import-export/resolve-dependencies.md#match-credentials) | `name-and-type`, `id-only`, `type-only` | `id-only` | How n8n searches for a matching credential. |
 | [`credentialMissingMode`](/import-export/resolve-dependencies.md#handle-missing-credentials) | `create-stub`, `must-preexist` | `create-stub` | What to do when no credential matches. |
-| [`bindings.credentials`](/import-export/resolve-dependencies.md#map-credentials-exactly) | source-to-target ID map | none | Map specific source credentials to target credentials. |
+| [`bindings.credentials`](/import-export/resolve-dependencies.md#map-credentials-directly) | source-to-target ID map | none | Map specific source credentials to target credentials. |
 
 ### Variables
 
@@ -53,7 +53,7 @@ Set these alongside the package in a [`POST /import-export/import/package`](/imp
 |--------|--------|---------|---------|
 | [`variableMissingMode`](/import-export/resolve-dependencies.md#handle-missing-variables) | `create-with-value`, `create-stub`, `must-preexist`, `do-nothing` | `create-with-value` | What to do when a referenced variable is missing. |
 | [`variableConflictPolicy`](/import-export/resolve-dependencies.md#handle-variable-conflicts) | `keep-existing`, `overwrite`, `fail` | `keep-existing` | What to do when a variable name already exists. |
-| [`variableParentPolicy`](/import-export/resolve-dependencies.md#choose-where-variables-are-created) | `project`, `global` | `project` | The scope where n8n creates variables. |
+| [`variableParentPolicy`](/import-export/resolve-dependencies.md#choose-where-n8n-creates-variables) | `project`, `global` | `project` | The scope where n8n creates variables. |
 
 ### Sub-workflows
 

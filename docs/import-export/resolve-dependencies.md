@@ -6,10 +6,10 @@ contentType: reference
 
 # Resolve dependencies on import
 
-A workflow usually depends on credentials, variables, sub-workflows, or data tables. When you [import a package](/import-export/import-packages.md), these options control how n8n matches each dependency against the target instance, and what happens when it can't find a match.
+A workflow often depends on credentials, variables, sub-workflows, or data tables. When you [import a package](/import-export/import-packages.md), these options control how n8n matches each dependency against the target instance, and what happens when it can't find a match.
 
 /// note | Proposed feature
-The options and defaults on this page come from an early design and aren't final. Option names and defaults are especially likely to change.
+The options and defaults on this page come from a draft design and aren't final. Names and defaults may still change.
 ///
 
 ## Credentials
@@ -52,7 +52,7 @@ credentialMissingMode:
 The default for `credentialMissingMode` isn't settled. It's documented here as `create-stub`, but it may end up as `must-preexist`.
 ///
 
-### Map credentials exactly
+### Map credentials directly
 
 Use `bindings.credentials` to map specific source credentials to specific target credentials. The `bindings` object groups exact mapping overrides by entity type, so it can support other entity types later. n8n doesn't apply `credentialMatchingMode` to a credential listed here. If the target credential doesn't exist, the import fails.
 
@@ -110,7 +110,7 @@ variableConflictPolicy:
 `overwrite` replaces values that other workflows might depend on. Use it only when you're sure the package values should win.
 ///
 
-### Choose where variables are created
+### Choose where n8n creates variables
 
 Use `variableParentPolicy` to control the scope where n8n creates variables:
 
@@ -126,7 +126,7 @@ variableParentPolicy:
 | `global` | Creates variables in the global scope. This requires admin permission. n8n rejects the import if the user doesn't have it. |
 
 /// note | Draft: same-as-source
-An early design also lists a `same-as-source` value that mirrors the variable's original scope. It isn't documented here because its behaviour isn't settled.
+A draft design also lists a `same-as-source` value that mirrors the variable's original scope. This page leaves it out because its behaviour isn't settled.
 ///
 
 ## Sub-workflows
@@ -171,7 +171,7 @@ subWorkflowCallerPolicy:
 
 A data table is always scoped to a project, and is unique by its name within that project. There are no global data tables. n8n creates data tables in the project set by `projectId`, or in the personal project of the importing user.
 
-A data table has two parts: its schema (the table name and typed columns) and its rows. Each column has a type of `string`, `number`, `boolean`, or `date`.
+A data table has two parts: its schema (the table name and typed columns) and its rows. Each column has one of these types: `string`, `number`, `boolean`, or `date`.
 
 ### Handle missing data tables
 
@@ -204,7 +204,7 @@ dataTableSchemaConflictPolicy:
 
 | Value | Behaviour |
 |-------|-----------|
-| `keep-existing-strict` | Keeps the target schema. Checks the workflow's requirements against it and aborts the import if any are unsatisfied. |
+| `keep-existing-strict` | Keeps the target schema. Checks the workflow's requirements against it and aborts the import if it can't meet them all. |
 | `keep-existing-lenient` | Keeps the target schema. Checks the workflow's requirements against it, then warns and continues. The workflow might fail at runtime. |
 | `fail` | Aborts the import on a schema mismatch. |
 | `extend` | Adds columns the package has but the target doesn't. Fails if a column exists in both with a different type. Never drops columns or changes types. |
@@ -242,11 +242,11 @@ dataTableDataConflictPolicy:
 | `fail` | Aborts if the target table has any rows. Useful for fresh-deploy workflows. |
 
 /// warning | replace-all drops data
-`replace-all` deletes every existing row in the table, including rows added since the package was exported. Use it only on a table you're sure should be replaced.
+`replace-all` deletes every existing row in the table, including rows added since you exported the package. Use it only on a table you're sure you want to replace.
 ///
 
 /// note | Draft: upsert by column is a later addition
-An `upsert-by-column` value is planned for a later version. It would match rows on a column you nominate, then insert or update. It needs a column with unique values and isn't available yet.
+A later version will add an `upsert-by-column` value. It would match rows on a column you nominate, then insert or update. It needs a column with unique values and isn't available yet.
 ///
 
 ### Handle schema incompatibility

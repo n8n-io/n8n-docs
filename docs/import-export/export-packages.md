@@ -9,7 +9,7 @@ contentType: howto
 Export a package to bundle one or more workflows, along with the credentials, variables, sub-workflows, and data tables they depend on, into a single `tar` file.
 
 /// note | Proposed feature
-The endpoint, options, and defaults on this page come from an early design and aren't final.
+The endpoint, options, and defaults on this page come from a draft design and aren't final.
 ///
 
 ## Export a package

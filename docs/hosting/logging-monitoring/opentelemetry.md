@@ -120,7 +120,7 @@ To add project-level span attributes:
 
 1. Open a project.
 1. Select **Project settings**.
-1. Under **Custom Telemetry Tags**, add one or more span attributes.
+1. Under **Custom Span Attributes**, add one or more span attributes.
 1. Select **Save**.
 
 Use plain text for project attribute values.
@@ -131,7 +131,7 @@ To add workflow-level span attributes:
 
 1. Open the workflow.
 1. Open **Workflow settings**.
-1. Under **Custom Telemetry Tags**, select **Configure**.
+1. Under **Custom Span Attributes**, select **Configure**.
 1. Add one or more span attributes.
 1. Select **Save**.
 
@@ -142,7 +142,7 @@ Use plain text for workflow attribute values.
 To add node-level span attributes:
 
 1. Open the node and select the **Settings** tab.
-1. Under **Custom Telemetry Tags**, select **Add Tag**.
+1. Under **Custom Span Attributes**, select **Add Attribute**.
 1. Enter a **Key**. Keys must be plain text.
 1. Enter a **Value**. Values can be plain text or expressions, such as `={{ $json.environment }}`.
 

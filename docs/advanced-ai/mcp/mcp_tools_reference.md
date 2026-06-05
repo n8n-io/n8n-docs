@@ -646,15 +646,17 @@ Validate one or more node configurations independently against their generated n
 ///
 
 Create a workflow in n8n from validated SDK code. Parses the code into a workflow and saves it.
+
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `code` | `string` | Yes | Full TypeScript/JavaScript workflow code using the n8n Workflow SDK. Must be validated first with `validate_workflow`. |
+| `skillsUsed` | `string[]` | No | Names of n8n skills used by the MCP client to produce this workflow. Values are normalized server-side. |
 | `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
 | `description` | `string` | No | Short workflow description (max 255 chars, 1-2 sentences). |
-| `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. |
-| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. |
+| `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. Use `search_projects` first if the user names a project. |
+| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. Use `search_folders` to find a folder by name within a project. |
 
 #### Output
 
@@ -667,17 +669,24 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `autoAssignedCredentials` | `array` | List of credentials that were automatically assigned to nodes |
 | `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
-| `note` | `string` | Additional notes about the workflow creation (for example nodes skipped during credential auto-assignment) |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `targetProject` | `object` | The project the workflow was created in |
+| `targetProject.id` | `string` | The ID of the project |
+| `targetProject.name` | `string` | The display name of the project |
+| `targetProject.type` | `"personal" | "team"` | Whether the workflow was created in a personal or team project |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment |
+| `hint` | `string` | Actionable recovery hint, if available after an error |
 
 #### Notes
 
 - Automatically assigns available credentials to nodes.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - Sets `availableInMCP` flag to true on the created workflow.
-- Marks the workflow with `aiBuilderAssisted` metadata.
+- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 - Resolves webhook node IDs automatically.
 - `folderId` requires `projectId` to also be provided.
-- MCP clients should generate short descriptions for all new workflows.
+- If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
+- After creation, tell the user which project the workflow was created in using the `targetProject` field.
 
 ---
 

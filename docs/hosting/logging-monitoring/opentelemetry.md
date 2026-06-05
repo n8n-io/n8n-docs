@@ -94,23 +94,59 @@ To stop n8n from injecting `traceparent` headers into outbound HTTP requests, se
 export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ```
 
-## Add custom attributes to node spans
+## Custom telemetry tags
 
-You can add custom attributes to node spans from the node settings or (if building a custom node) from within the `execute` method. n8n exports them as `n8n.node.custom.<key>` attributes. They only appear on node spans and aren't exported when `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false`.
+You can add custom telemetry tags to project, workflow, and node spans. n8n exports each tag as an OpenTelemetry span attribute to your configured observability backend.
 
-### Add tags in the node settings
-
-/// info | Available from n8n v2.22.0
+/// info | Feature availability
+Custom telemetry tags are available on Enterprise plans.
 ///
 
-You can add custom telemetry tags to any node as follows:
+Don't include secrets, personal data, or other sensitive values in tag values.
+
+n8n supports the following tag levels:
+
+| Level | Configure in | Exported span | Attribute prefix |
+| :---- | :----------- | :------------ | :--------------- |
+| Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
+| Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
+| Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
+
+Project and workflow tags are available from n8n `2.24.0`. Node tags are available from n8n `2.22.0`.
+
+### Add project tags
+
+To add project-level tags:
+
+1. Open a project.
+1. Select **Project settings**.
+1. Under **Custom telemetry tags**, add one or more tags.
+1. Select **Save**.
+
+Use plain text for project tag values.
+
+### Add workflow tags
+
+To add workflow-level tags:
+
+1. Open the workflow.
+1. Open **Workflow settings**.
+1. Under **Custom telemetry tags**, select **Configure**.
+1. Add one or more tags.
+1. Select **Save**.
+
+Use plain text for workflow tag values.
+
+### Add node tags
+
+To add node-level tags:
 
 1. Open the node and select the **Settings** tab.
-2. Under **Custom Telemetry Tags**, select **Add Tag**.
-3. Enter a **Key**. Keys must be plain text.
-4. Enter a **Value**. Values can be plain text or expressions, such as `={{ $json.id }}`.
+1. Under **Custom Telemetry Tags**, select **Add Tag**.
+1. Enter a **Key**. Keys must be plain text.
+1. Enter a **Value**. Values can be plain text or expressions, such as `={{ $json.environment }}`.
 
-Values must resolve to a string, number, or boolean. n8n skips tags with empty keys, unsupported values (`null`, `undefined`, objects, or arrays), or expressions that can't be resolved.
+Node tag values must resolve to a string, number, or boolean.
 
 ### Add attributes programmatically in a custom node
 
@@ -134,7 +170,7 @@ n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must 
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
 
-If a node sets an attribute key here that's also configured as a [custom telemetry tag](#add-tags-in-the-node-settings), the programmatic value takes precedence.
+If a node sets an attribute key here that's also configured as a [custom telemetry tag](#add-node-tags), the programmatic value takes precedence.
 
 ## Try it out with Jaeger
 
@@ -158,7 +194,7 @@ services:
 docker compose up -d
 ```
 
-3. Start n8n with tracing turned on and pointed at Jaeger. Information about [starting n8n](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) can be found elsewhere in this documentation:
+3. Start n8n with tracing turned on and pointed at Jaeger. Refer to [starting n8n](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) for setup details:
 
 ```bash
 N8N_OTEL_ENABLED=true N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 n8n start
@@ -178,6 +214,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.name` | Workflow name. |
 | `n8n.workflow.version_id` | Workflow version ID. |
 | `n8n.workflow.node_count` | Number of nodes in the workflow. |
+| `n8n.project.id` | Project ID. Available from n8n `2.23.0`. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
 | `n8n.execution.status` | Final execution status. |
@@ -185,6 +222,8 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.execution.retry_of` | The original execution ID, when the execution is a retry. |
 | `n8n.execution.error_type` | Error class name, set when the execution fails. |
 | `n8n.continuation.reason` | Set on a span link when the workflow resumes after a wait. |
+| `n8n.project.custom.<key>` | Custom attributes set through [project-level custom telemetry tags](#custom-telemetry-tags). |
+| `n8n.workflow.custom.<key>` | Custom attributes set through [workflow-level custom telemetry tags](#custom-telemetry-tags). |
 
 ### Node span (`node.execute`)
 
@@ -197,7 +236,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.items.input` | Number of input items the node received. |
 | `n8n.node.items.output` | Number of output items the node produced. |
 | `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled`). |
-| `n8n.node.custom.<key>` | Custom attributes set through [custom telemetry tags](#add-tags-in-the-node-settings) in the node settings or `metadata.tracing` in custom node code. |
+| `n8n.node.custom.<key>` | Custom attributes set through [node-level custom telemetry tags](#custom-telemetry-tags) in the node settings or `metadata.tracing` in custom node code. |
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
 
@@ -219,6 +258,14 @@ Check that:
 - Any required `N8N_OTEL_EXPORTER_OTLP_HEADERS` (such as authentication tokens) are set.
 
 n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVEL=debug` to see more detail.
+
+### Custom telemetry tags are missing
+
+Check that:
+
+- Your license includes custom telemetry tags.
+- You set `N8N_OTEL_ENABLED` to `true`.
+- For node-level tags, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
 
 ### Worker traces are missing parent context
 

@@ -17,11 +17,12 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `query` | `string` | No | Filter by name or description |
-| `projectId` | `string` | No | Filter by project ID |
-| `limit` | `integer` | No | Limit the number of results (max 200) |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `query` | `string` | No | | Filter by name or description |
+| `projectId` | `string` | No | | Filter by project ID |
+| `limit` | `integer` | No | `200` | Limit the number of results (max 200) |
+| `sortBy` | `string` | No | `"updatedAt:desc"` | Sort order for results. One of: `"updatedAt:desc"`, `"updatedAt:asc"`, `"createdAt:desc"`, `"createdAt:asc"`, `"name:asc"`, `"name:desc"` |
 
 #### Output
 
@@ -33,7 +34,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].description` | `string | null` | The description of the workflow |
 | `data[].active` | `boolean | null` | Whether the workflow is active |
 | `data[].createdAt` | `string | null` | ISO timestamp when the workflow was created |
-| `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last updated |
+| `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `data[].triggerCount` | `number | null` | The number of triggers associated with the workflow |
 | `data[].scopes` | `string[]` | User permissions for this workflow |
 | `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
@@ -41,10 +42,11 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `count` | `integer` | Total number of workflows that match the filters |
 
 #### Notes
-- Column type is immutable (through MCP) after creation.
+
 - Maximum result limit is 200.
-- Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow.
-- **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting.
+- Results are sorted by most recently updated workflows first by default.
+- Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
+- **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ---
 

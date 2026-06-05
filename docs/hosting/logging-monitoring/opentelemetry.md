@@ -263,7 +263,7 @@ n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVE
 
 Check that:
 
-- Your license includes custom telemetry tags.
+- You have an Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level tags, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
 

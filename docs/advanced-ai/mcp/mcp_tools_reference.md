@@ -568,7 +568,7 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 /// info | Available from n8n v2.12.0
 ///
 
-Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Returns the workflow JSON if valid, or detailed error messages to fix. Always validate before creating a workflow.
+Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Always validate before creating or updating a workflow.
 
 #### Parameters
 
@@ -581,18 +581,20 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 | Field | Type | Description |
 |-------|------|-------------|
 | `valid` | `boolean` | Whether the workflow code is valid |
-| `nodeCount` | `number` | The number of nodes in the workflow (if valid) |
-| `warnings` | `array` | Validation warnings (if any) |
+| `nodeCount` | `number` | The number of nodes in the workflow. Only present when valid |
+| `warnings` | `array` | Validation warnings, if any |
 | `warnings[].code` | `string` | The warning code identifying the type of warning |
 | `warnings[].message` | `string` | The warning message |
-| `warnings[].nodeName` | `string` | The node that triggered the warning |
-| `warnings[].parameterPath` | `string` | The parameter path that triggered the warning |
-| `errors` | `string[]` | Validation errors (if invalid) |
+| `warnings[].nodeName` | `string` | The node that triggered the warning, if applicable |
+| `warnings[].parameterPath` | `string` | The parameter path that triggered the warning, if applicable |
+| `errors` | `string[]` | Validation errors. Only present when invalid |
+| `hint` | `string` | Actionable recovery hint, if available |
 
 #### Notes
 
 - Must be called before `create_workflow_from_code` or `update_workflow`.
 - Warnings may be present even when the code is valid.
+- If `valid` is `false` and `hint` is present, follow the hint before retrying.
 
 ---
 

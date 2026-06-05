@@ -93,7 +93,7 @@ Get detailed information about a specific workflow including trigger details.
 
 ### execute_workflow
 
-Execute a workflow by ID by mapping data from user prompt to trigger inputs. Returns execution ID and status. This will perform 'full' workflow execution, without mocking or skipping any nodes.
+Execute a workflow by ID. Returns the execution ID immediately without waiting for completion.
 
 #### Parameters
 
@@ -111,20 +111,30 @@ Execute a workflow by ID by mapping data from user prompt to trigger inputs. Ret
 | `form` | `formData: Record<string, unknown>` | Input data for form-based workflows |
 | `webhook` | `webhookData: { method?, query?, body?, headers? }` | Input data for webhook-based workflows |
 
+**`webhookData` fields:**
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `method` | `"GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "OPTIONS"` | No | `"GET"` | HTTP method |
+| `query` | `Record<string, string>` | No | | Query string parameters |
+| `body` | `Record<string, unknown>` | No | | Request body data |
+| `headers` | `Record<string, string>` | No | | HTTP headers |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `executionId` | `string | null` | The execution ID |
-| `status` | `string` | The status of the execution. One of: `"success"`, `"error"`, `"running"`, `"waiting"`, `"canceled"`, `"crashed"`, `"new"`, `"unknown"` |
-| `error` | `string` | Error message if the execution failed |
+| `executionId` | `string | null` | The execution ID, or `null` if execution couldn't be started |
+| `status` | `"started" | "error"` | Whether the workflow execution was started successfully |
+| `error` | `string` | Error message if the execution couldn't be started |
 
 #### Notes
 
-- Only supports workflows with specific trigger node types: Webhook, Chat Trigger, Form Trigger, Manual Trigger, Schedule Trigger.
+- This tool starts the workflow and returns immediately. Use `get_execution` with the returned `executionId` to check the final execution status or fetch execution data.
+- Production mode supports workflows with Webhook, Chat Trigger, Form Trigger, and Schedule Trigger nodes.
+- Manual mode also supports Manual Trigger nodes.
 - When `executionMode` is `"production"`, the workflow must have a published (active) version.
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows).
+- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
 
 ---

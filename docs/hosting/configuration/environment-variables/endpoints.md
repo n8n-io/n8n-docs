@@ -17,7 +17,7 @@ This page lists environment variables for customizing endpoints in n8n.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_PAYLOAD_SIZE_MAX` | Number | `16` | The maximum payload size in MiB. |
+| `N8N_PAYLOAD_SIZE_MAX` | Number | `16` | The maximum payload size in MiB. The default is 15 MB, but this can be increased by adjusting the variable to a higher value. The n8n instance needs to be restarted to apply the new setting. Note: Increasing the payload size requires more memory and CPU resources and may impact performance. Ensure your infrastructure can handle larger payloads. |
 | `N8N_FORMDATA_FILE_SIZE_MAX` | Number | `200` | Max payload size for files in form-data webhook payloads in MiB. |
 | `N8N_METRICS` | Boolean | `false` | Whether to enable the `/metrics` endpoint. |
 | `N8N_METRICS_PREFIX` | String | `n8n_` | Optional prefix for n8n specific metrics names. |

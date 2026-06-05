@@ -52,7 +52,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 ### get_workflow_details
 
-Get detailed information about a specific workflow including trigger details.
+Get detailed information about a specific workflow, including trigger details.
 
 #### Parameters
 
@@ -67,29 +67,33 @@ Get detailed information about a specific workflow including trigger details.
 | `workflow` | `object` | Sanitized workflow data safe for MCP consumption |
 | `workflow.id` | `string` | Workflow ID |
 | `workflow.name` | `string | null` | Workflow name |
-| `workflow.active` | `boolean` | Whether the workflow is active |
+| `workflow.active` | `boolean` | Whether the workflow has a published active version |
 | `workflow.isArchived` | `boolean` | Whether the workflow is archived |
 | `workflow.versionId` | `string` | The current workflow version ID |
 | `workflow.activeVersionId` | `string | null` | The active workflow version ID, if available |
 | `workflow.triggerCount` | `number` | Number of triggers |
-| `workflow.createdAt` | `string | null` | ISO creation timestamp |
-| `workflow.updatedAt` | `string | null` | ISO last-updated timestamp |
+| `workflow.createdAt` | `string | null` | ISO timestamp when the workflow was created |
+| `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last updated |
 | `workflow.settings` | `object | null` | Workflow settings |
 | `workflow.connections` | `object` | Workflow connections graph |
-| `workflow.nodes` | `array` | List of nodes (credentials stripped) |
-| `workflow.activeVersion` | `object | null` | Active workflow graph (nodes + connections), if available |
+| `workflow.nodes` | `array` | List of workflow nodes. Credential references are stripped |
+| `workflow.activeVersion` | `object | null` | Active workflow graph, if available |
+| `workflow.activeVersion.nodes` | `array` | Nodes from the active workflow version. Credential references are stripped |
+| `workflow.activeVersion.connections` | `object` | Connections from the active workflow version |
 | `workflow.tags` | `array` | Tags with `id` and `name` |
 | `workflow.meta` | `object | null` | Workflow metadata |
 | `workflow.parentFolderId` | `string | null` | Parent folder ID |
-| `workflow.description` | `string` | The description of the workflow |
+| `workflow.description` | `string` | Workflow description, if set |
 | `workflow.scopes` | `string[]` | User permissions for this workflow |
 | `workflow.canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `triggerInfo` | `string` | Human-readable instructions describing how to trigger the workflow |
 
 #### Notes
 
-- Sensitive credential data is stripped from nodes before returning.
+- Sensitive credential data is stripped from returned nodes.
 - Includes active version details if the workflow is published.
+- Includes user permission scopes and whether the workflow can be executed by the current user.
+- Use `triggerInfo` to understand how supported trigger nodes can be invoked.
 
 ---
 

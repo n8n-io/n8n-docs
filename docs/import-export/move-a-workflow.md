@@ -42,29 +42,18 @@ n8n walks the workflow, bundles its dependencies, and returns a `tar` file. For 
 
 n8n includes the credential as a stub: the package records its name and type so the target can match it, but never its secret values. For the full list of export options, see [Export a workflow package](/import-export/export-packages.md).
 
-## Step 2: Preview the import with a dry run
+## Step 2: Import the workflow
 
-Send the package to the target instance with `dryRun: true` to see what the import would do without changing anything:
-
-```bash
-curl -X POST https://prod.example.com/api/v1/import-export/import/package \
-	-H "X-N8N-API-KEY: <prod-api-key>" \
-	-F "package=@workflow-package.tar" \
-	-F 'options={ "dryRun": true, "credentialMatchingMode": "name-and-type", "credentialMissingMode": "must-preexist" }'
-```
-
-Because the credential has a different ID on production, `credentialMatchingMode: "name-and-type"` tells n8n to match it by name and type instead of by ID. `credentialMissingMode: "must-preexist"` tells n8n to fail rather than create a stub if it still can't find a match. The dry run reports the workflow it would create and the credential it would link, so you can confirm the match before committing.
-
-## Step 3: Import the workflow
-
-Run the same call with `dryRun: false` to apply it:
+Send the package to the target instance:
 
 ```bash
 curl -X POST https://prod.example.com/api/v1/import-export/import/package \
 	-H "X-N8N-API-KEY: <prod-api-key>" \
 	-F "package=@workflow-package.tar" \
-	-F 'options={ "dryRun": false, "credentialMatchingMode": "name-and-type", "credentialMissingMode": "must-preexist" }'
+	-F 'options={ "credentialMatchingMode": "name-and-type", "credentialMissingMode": "must-preexist" }'
 ```
+
+Because the credential has a different ID on production, `credentialMatchingMode: "name-and-type"` tells n8n to match it by name and type instead of by ID. `credentialMissingMode: "must-preexist"` tells n8n to fail rather than create a stub if it still can't find a match.
 
 n8n imports the workflow into your personal project on production, links the Slack credential by name and type, and gives the workflow a new ID while recording the original in `sourceWorkflowId`. To control where the workflow lands or how n8n assigns its ID, see [Import a workflow package](/import-export/import-packages.md).
 
@@ -83,5 +72,5 @@ For what each option does, see [Import a workflow package](/import-export/import
 ## Request format
 
 /// warning | Draft: request and response shapes aren't final
-The import endpoint takes the package as a file upload alongside the import options. The mechanism for sending the options with the file, and the shape of the response (including what a dry run returns), aren't final. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. This page will change once the API is final.
+The import endpoint takes the package as a file upload alongside the import options. The mechanism for sending the options with the file, and the shape of the response, aren't final. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. This page will change once the API is final.
 ///

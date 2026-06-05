@@ -1401,12 +1401,12 @@ nav:
           - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
   - Import and export:
       - import-export/index.md
-      - Move a workflow between instances: import-export/move-a-workflow.md
       - The package format: import-export/packages.md
       - Export a workflow package: import-export/export-packages.md
       - Import a workflow package: import-export/import-packages.md
       - Resolve dependencies on import: import-export/resolve-dependencies.md
       - Options at a glance: import-export/options.md
+      - Move a workflow between instances: import-export/move-a-workflow.md
   - API:
       - api/index.md
       - Authentication: api/authentication.md

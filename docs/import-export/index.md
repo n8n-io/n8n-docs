@@ -46,12 +46,12 @@ Import and export are public API operations. You call the API directly, or throu
 
 In this section:
 
-- [Move a workflow between instances](/import-export/move-a-workflow.md): A worked example, from export to import.
 - [The package format](/import-export/packages.md): What's inside a package, and how n8n decides whether it can import a package.
 - [Export a workflow package](/import-export/export-packages.md): Create a package from one or more workflows.
 - [Import a workflow package](/import-export/import-packages.md): Import a package and control where its contents land.
 - [Resolve dependencies on import](/import-export/resolve-dependencies.md): Control how n8n matches credentials, variables, sub-workflows, and data tables.
 - [Options at a glance](/import-export/options.md): A scannable index of every export and import option.
+- [Move a workflow between instances](/import-export/move-a-workflow.md): A worked example, from export to import.
 
 Related sections:
 

@@ -30,18 +30,8 @@ POST /import-export/import/package
 The examples on this page show the options as JSON for clarity.
 
 /// warning | Draft: request and response shapes aren't final
-The mechanism for sending the import options with the file, and the shape of the response (including what a dry run returns), aren't final. This page will change once the API is final.
+The mechanism for sending the import options with the file, and the shape of the response, aren't final. This page will change once the API is final.
 ///
-
-### Preview an import with a dry run
-
-Set `dryRun` to `true` to see the changes an import would make without applying them:
-
-```json
-{ "dryRun": true }
-```
-
-A dry run reports what n8n would create, update, skip, or stub, so you can check the result before you commit to it.
 
 ## Import order
 

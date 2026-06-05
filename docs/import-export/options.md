@@ -31,7 +31,6 @@ Set these alongside the package in a [`POST /import-export/import/package`](/imp
 
 | Option | Values | Default | Summary |
 |--------|--------|---------|---------|
-| [`dryRun`](/import-export/import-packages.md#preview-an-import-with-a-dry-run) | `true`, `false` | `false` | Preview the changes without applying them. |
 | [`projectId`](/import-export/import-packages.md#choose-where-workflows-land) | project ID | personal project | Where workflows land. |
 | [`folderId`](/import-export/import-packages.md#choose-where-workflows-land) | folder ID | project root | Folder within the target project. |
 | [`workflowIdPolicy`](/import-export/import-packages.md#how-n8n-handles-workflow-ids) | `new`, `source` | `new` | Assign a new ID, or keep the source ID. |

@@ -30,7 +30,7 @@ POST /import-export/import/package
 The examples on this page show the options as JSON for clarity.
 
 /// warning | Draft: request and response shapes aren't final
-The mechanism for sending the import options with the file, and the shape of the response (including what a dry run returns), aren't final. We'll update this page once the API is final.
+The mechanism for sending the import options with the file, and the shape of the response (including what a dry run returns), aren't final. This page will change once the API is final.
 ///
 
 ### Preview an import with a dry run
@@ -147,7 +147,7 @@ mode:
 ```
 
 /// note | Draft: modes and per-option defaults
-How each mode maps to the individual option defaults isn't final. Set the options you care about explicitly until we settle the mapping.
+How each mode maps to the individual option defaults isn't final. Set the options you care about explicitly until the mapping settles.
 ///
 
 ## Next steps

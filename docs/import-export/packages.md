@@ -65,7 +65,7 @@ n8n can always rebuild the manifest from the files in the package. It exists to 
 
 The `requirements` section of the manifest declares what the package needs from the target instance. It lists the node types, credentials, variables, sub-workflows, and data tables that the workflows reference, and which workflows use each one.
 
-n8n validates these requirements before any entity imports. If the target can't meet every requirement, n8n stops before importing anything rather than importing part of the package.
+n8n validates these requirements before any entity imports. If the target can't provide everything the package needs, n8n stops rather than importing only part of it.
 
 For example, the manifest lists each node type a workflow needs, along with the version:
 

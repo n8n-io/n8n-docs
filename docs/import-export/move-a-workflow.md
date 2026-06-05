@@ -83,5 +83,5 @@ For what each option does, see [Import a workflow package](/import-export/import
 ## Request format
 
 /// warning | Draft: request and response shapes aren't final
-The import endpoint takes the package as a file upload alongside the import options. The mechanism for sending the options with the file, and the shape of the response (including what a dry run returns), aren't final. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. We'll update this page once the API is final.
+The import endpoint takes the package as a file upload alongside the import options. The mechanism for sending the options with the file, and the shape of the response (including what a dry run returns), aren't final. The `-F "package=..."` and `-F 'options=...'` form fields above show the intent, not a confirmed contract. This page will change once the API is final.
 ///

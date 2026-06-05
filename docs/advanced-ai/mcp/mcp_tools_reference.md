@@ -695,13 +695,14 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 /// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 ///
 
-Update an existing workflow in n8n by applying an ordered batch of targeted partial-updates to the workflow. The batch is atomic: if any operation fails, no changes are saved.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to update. |
+| `workflowId` | `string` | Yes | The ID of the workflow to update |
+| `skillsUsed` | `string[]` | No | Names of n8n skills used by the MCP client to produce this workflow update. Values are normalized server-side. |
 | `operations` | `array` | Yes | Ordered list of operations to apply. Must contain 1-100 operations. |
 
 #### Supported operations
@@ -718,26 +719,39 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `setNodeCredential` | `nodeName`, `credentialKey`, `credentialId`, `credentialName` |  | Sets or replaces a node credential reference. The credential must be accessible and match the node type's accepted credential key. |
 | `setNodePosition` | `nodeName`, `position` |  | Updates a node's canvas position as `[x, y]`. |
 | `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
+| `setNodeSettings` | `nodeName`, `settings` |  | Updates node-level execution settings. `settings` must include at least one supported setting. |
 | `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
+
+#### `setNodeSettings` fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `onError` | `"stopWorkflow" | "continueRegularOutput" | "continueErrorOutput"` | No | How the node behaves on error |
+| `retryOnFail` | `boolean` | No | Whether to retry the node when it fails |
+| `maxTries` | `integer` | No | Number of attempts when `retryOnFail` is true. Must be 2-5 |
+| `waitBetweenTries` | `integer` | No | Milliseconds to wait between retry attempts. Must be 0-5000 |
+| `alwaysOutputData` | `boolean` | No | Whether the node should always output data |
+| `executeOnce` | `boolean` | No | Whether the node should execute only once |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `workflowId` | `string` | The ID of the updated workflow. |
-| `name` | `string` | The name of the updated workflow. |
-| `nodeCount` | `number` | The number of nodes in the workflow. |
-| `url` | `string` | The URL to open the workflow in n8n. |
-| `appliedOperations` | `number` | The number of operations applied. |
-| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update. |
-| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned. |
-| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned. |
-| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned. |
-| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving. |
-| `validationWarnings[].code` | `string` | Warning code. |
-| `validationWarnings[].message` | `string` | Warning message. |
-| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning. |
-| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment. |
+| `workflowId` | `string` | The ID of the updated workflow |
+| `name` | `string` | The name of the updated workflow |
+| `nodeCount` | `number` | The number of nodes in the workflow |
+| `url` | `string` | The URL to open the workflow in n8n |
+| `appliedOperations` | `number` | The number of operations applied |
+| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update |
+| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned |
+| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving |
+| `validationWarnings[].code` | `string` | Warning code |
+| `validationWarnings[].message` | `string` | Warning message |
+| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
+| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
+| `error` | `string` | Error message if the update failed |
 
 #### Notes
 

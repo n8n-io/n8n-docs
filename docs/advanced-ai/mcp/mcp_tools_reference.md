@@ -517,26 +517,39 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 
 ---
 
-### get_suggested_nodes
+### get_workflow_best_practices
 
-/// info | Available from n8n v2.12.0
+/// info | Available from n8n v2.26.0
 ///
 
-Get curated node recommendations for workflow technique categories. Returns recommended nodes with pattern hints and configuration guidance. Use after analyzing what kind of workflow to build.
+Get best-practices guidance for a workflow technique. Useful this before searching for nodes or writing workflow code.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `categories` | `string[]` | Yes (min 1) | Workflow technique categories. Available values: `chatbot`, `notification`, `scheduling`, `data_transformation`, `data_persistence`, `data_extraction`, `document_processing`, `form_input`, `content_generation`, `triage`, `find_research` |
+| `technique` | `string` | Yes | Workflow technique key to fetch guidance for. Pass `"list"` to discover all available techniques. Values include: `"scheduling"`, `"chatbot"`, `"form_input"`, `"scraping_and_research"`, `"monitoring"`, `"enrichment"`, `"triage"`, `"content_generation"`, `"document_processing"`, `"data_extraction"`, `"data_analysis"`, `"data_transformation"`, `"data_persistence"`, `"notification"`, `"knowledge_base"`, `"human_in_the_loop"`, `"web_app"` |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `suggestions` | `string` | Curated node recommendations with pattern hints and configuration guidance |
+| `technique` | `string` | The requested technique key, or `"list"` when listing all available techniques |
+| `message` | `string` | Human-readable summary of the response |
+| `documentation` | `string` | Best-practices documentation for the requested technique, when available |
+| `availableTechniques` | `array` | List of available techniques, returned when `technique` is `"list"` |
+| `availableTechniques[].technique` | `string` | Technique key |
+| `availableTechniques[].description` | `string` | Description of the technique |
+| `availableTechniques[].hasDocumentation` | `boolean` | Whether detailed best-practices documentation is available for this technique |
+
+#### Notes
+
+- When called with `technique: "list"` will list all available techniques
+- Some known techniques may not have detailed documentation yet. In that case, the tool returns a message without `documentation`.
+- This replaces the previous `get_suggested_nodes` workflow-planning guidance.
 
 ---
+
 
 ### validate_workflow
 
@@ -568,6 +581,48 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 
 - Must be called before `create_workflow_from_code` or `update_workflow`.
 - Warnings may be present even when the code is valid.
+
+---
+
+### validate_node_config
+
+/// info | Available from n8n v2.25.1
+///
+
+Validate one or more node configurations independently against their generated node schemas. Useful while composing nodes, before assembling workflow code or calling `update_workflow`.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodes` | `array` | Yes (min 1, max 50) | One or more node configurations to validate independently |
+| `nodes[].name` | `string` | No | Optional node name. Returned in the result to help correlate responses |
+| `nodes[].type` | `string` | Yes | Full node type, for example `"n8n-nodes-base.set"` or `"@n8n/n8n-nodes-langchain.agent"` |
+| `nodes[].typeVersion` | `number` | No | Node type version. Defaults to `1` |
+| `nodes[].parameters` | `object` | No | Node parameters object, using the same shape as workflow JSON. Defaults to `{}` |
+| `nodes[].subnodes` | `unknown` | No | Optional subnode configuration for AI parent nodes, for example LangChain agent model, memory, or tool references |
+| `nodes[].isToolNode` | `boolean` | No | Set to `true` when validating a node wired as an AI tool subnode through an `ai_tool` connection |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `valid` | `boolean` | Whether every node configuration is valid |
+| `results` | `array` | Per-node validation results, in input order |
+| `results[].index` | `number` | Position of this node in the input array |
+| `results[].name` | `string` | Echo of the input node name, if provided |
+| `results[].type` | `string` | Echo of the input node type |
+| `results[].valid` | `boolean` | Whether this node configuration is valid |
+| `results[].errors` | `array` | Validation errors for this node. Omitted when the node is valid |
+| `results[].errors[].path` | `string` | Parameter path of the error |
+| `results[].errors[].message` | `string` | Human-readable error message |
+| `error` | `string` | Top-level error message if validation couldn't run |
+
+#### Notes
+
+- This validates node parameter schemas only.
+- It doesn't check workflow-level concerns such as connections, required inputs, triggers, disconnected nodes, or credential existence.
+- For LangChain or AI tool subnodes, set `isToolNode` to `true` so the schema evaluates the correct display options branch.
 
 ---
 

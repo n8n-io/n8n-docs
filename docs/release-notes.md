@@ -460,7 +460,7 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 ### Insights data duration
 
-Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://docs.n8n.io/user-management/enterprise-features/insights/).
+Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://docs.n8n.io/insights/).
 
 **Availability.** Self-hosted.
 

@@ -87,3 +87,7 @@ Refer to [Execution data redaction](/workflows/executions/execution-data-redacti
 An estimate of the number of minutes each of execution of this workflow saves you.
 
 Setting this lets n8n calculate the amount of time saved for [insights](/insights.md).
+
+### Custom telemetry tags
+
+Add custom key-value tags to the workflow's OpenTelemetry span. Refer to [Custom telemetry tags](/hosting/logging-monitoring/opentelemetry.md#custom-telemetry-tags) for details.

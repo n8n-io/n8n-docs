@@ -75,3 +75,7 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 From version `2.13.0`, instance owners and admins can enable [external secrets](/external-secrets.md) access for project editors and admins. Refer to [Access for project roles](/external-secrets.md#access-for-project-roles) for details on enabling this and the permissions each role gets.
 
 In older versions (or when the opt-in toggle is off), using external secrets in a project requires an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+
+## Configure project telemetry tags
+
+If you enable OpenTelemetry tracing, you can add custom telemetry tags in **Project settings**. n8n exports these tags as attributes on workflow spans for workflows in that project. Refer to [Custom telemetry tags](/hosting/logging-monitoring/opentelemetry.md#custom-telemetry-tags) for details.

@@ -50,10 +50,16 @@ Send the package to the target instance:
 curl -X POST https://prod.example.com/api/v1/import-export/import/package \
 	-H "X-N8N-API-KEY: <prod-api-key>" \
 	-F "package=@workflow-package.tar" \
-	-F 'options={ "credentialMatchingMode": "name-and-type", "credentialMissingMode": "must-preexist" }'
+	-F 'options={
+		"credentialMatchingMode": "name-and-type",
+		"credentialMissingMode": "must-preexist",
+		"workflowPublishingPolicy": "all-unpublished"
+	}'
 ```
 
 Because the credential has a different ID on production, `credentialMatchingMode: "name-and-type"` tells n8n to match it by name and type instead of by ID. `credentialMissingMode: "must-preexist"` tells n8n to fail rather than create a stub if it still can't find a match.
+
+`workflowPublishingPolicy: "all-unpublished"` is important for the editing-instance / production-instance pattern: it imports the workflow without publishing it, so you can review and test it before choosing when to publish. To publish automatically on import, use `"all-published"` instead.
 
 n8n imports the workflow into your personal project on production, links the Slack credential by name and type, and gives the workflow a new ID while recording the original in `sourceWorkflowId`. To control where the workflow lands or how n8n assigns its ID, see [Import a workflow package](/import-export/import-packages.md).
 
@@ -63,7 +69,7 @@ Different tasks call for different option combinations. These are the starting p
 
 | Scenario | Goal | Key options |
 |----------|------|-------------|
-| Promote to an instance that already has the dependencies | Reuse the target's existing credentials and variables | `credentialMatchingMode: "name-and-type"`, `credentialMissingMode: "must-preexist"`, `variableMissingMode: "must-preexist"` |
+| Promote to an instance that already has the dependencies | Reuse the target's existing credentials and variables | `credentialMatchingMode: "name-and-type"`, `credentialMissingMode: "must-preexist"`, `variableMissingMode: "must-preexist"`, `workflowPublishingPolicy: "all-unpublished"` |
 | Share a self-contained copy | The recipient has none of the dependencies | Export with `includeVariableValues: true`; import with `credentialMissingMode: "create-stub"` so the recipient fills in secrets |
 | Restore to a clean instance | Recreate the workflow as it was | Export with `includeVariableValues: true` and `includeDataTableData: true`; import with `workflowIdPolicy: "source"` |
 

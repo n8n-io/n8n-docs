@@ -14,7 +14,12 @@ The endpoint, options, and defaults on this page come from a draft design and ar
 
 ## Authenticate your request
 
-Import and export run on the [public API](/api/index.md). Authenticate with an API key in the `X-N8N-API-KEY` header, as described in [API authentication](/api/authentication.md). The import runs as the user that owns the key, and respects that user's roles and permissions.
+Import and export run on the [public API](/api/index.md). You can authenticate in two ways:
+
+- **API key**: pass the key in the `X-N8N-API-KEY` header, as described in [API authentication](/api/authentication.md).
+- **Bearer token**: pass the token in the `Authorization: Bearer <token>` header. Use this when authenticating via token exchange, for example in an OEM integration.
+
+The import runs as the user the credential belongs to, and respects that user's roles and permissions. The actor recorded on every created or updated entity is the user doing the import.
 
 For a complete export-to-import example, see [Move a workflow between instances](/import-export/move-a-workflow.md).
 
@@ -87,27 +92,27 @@ workflowUpdatePolicy:
 | `fail` | Reverts all parts of the import and returns an error. |
 | `skip` | Skips the conflicting workflow and continues importing the rest of the package. |
 
-## Control workflow activation
+## Control workflow publishing
 
-Use `workflowActivationPolicy` to control whether imported workflows are active.
+Use `workflowPublishingPolicy` to control whether imported workflows are published.
 
 ```json
-workflowActivationPolicy:
-	| "preserve-active-state" // default - leave the target's active flag untouched
-	| "match-source"          // adopt the active state from the package
-	| "all-inactive"          // force every imported workflow inactive
-	| "all-active"            // force every imported workflow active
+workflowPublishingPolicy:
+	| "preserve-published-version" // default - leave the target's published version untouched
+	| "match-source"               // adopt the published state from the package
+	| "all-published"              // publish every imported workflow
+	| "all-unpublished"            // import every workflow unpublished
 ```
 
 | Value | Behaviour |
 |-------|-----------|
-| `preserve-active-state` | Leaves the target's `active` flag untouched. An updated workflow keeps the state it had on the target. New workflows default to inactive. |
-| `match-source` | Adopts the source workflow's active state, read from the `active` flag in `workflow.json`. |
-| `all-inactive` | Imports every workflow inactive. When you update an active workflow, n8n deactivates it. |
-| `all-active` | Imports and activates every workflow in the package. |
+| `preserve-published-version` | Leaves the target's published version untouched. An updated workflow keeps the published version it had on the target. New workflows import as unpublished. |
+| `match-source` | Adopts the source workflow's published state, read from the package. |
+| `all-published` | Imports and publishes every workflow in the package. |
+| `all-unpublished` | Imports every workflow unpublished. When you update a published workflow, n8n unpublishes it. |
 
-/// note | Draft: a workflow with a missing node type stays inactive
-A workflow imported with a missing node type is always deactivated, whatever you set here. See [Handle missing node types](#handle-missing-node-types).
+/// note | Draft: a workflow with a missing node type stays unpublished
+A workflow imported with a missing node type is always left unpublished, whatever you set here. See [Handle missing node types](#handle-missing-node-types).
 ///
 
 ## Handle missing node types
@@ -123,7 +128,7 @@ missingNodeTypeMode:
 | Value | Behaviour |
 |-------|-----------|
 | `fail` | Reverts the import and errors if a node type isn't found. |
-| `import-anyway` | Imports the workflow and shows the unknown node as unrecognized in the editor. n8n deactivates this workflow whatever you set in `workflowActivationPolicy`. |
+| `import-anyway` | Imports the workflow and shows the unknown node as unrecognized in the editor. n8n leaves this workflow unpublished whatever you set in `workflowPublishingPolicy`. |
 
 ## Next steps
 

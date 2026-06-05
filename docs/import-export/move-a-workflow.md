@@ -65,13 +65,30 @@ n8n imports the workflow into your personal project on production, links the Sla
 
 ## Common scenarios
 
-Different tasks call for different option combinations. These are the starting points for the most common ones:
+Different tasks call for different option combinations. These are the starting points for the most common ones.
 
-| Scenario | Goal | Key options |
-|----------|------|-------------|
-| Promote to an instance that already has the dependencies | Reuse the target's existing credentials and variables | `credentialMatchingMode: "name-and-type"`, `credentialMissingMode: "must-preexist"`, `variableMissingMode: "must-preexist"`, `workflowPublishingPolicy: "all-unpublished"` |
-| Share a self-contained copy | The recipient has none of the dependencies | Export with `includeVariableValues: true`; import with `credentialMissingMode: "create-stub"` so the recipient fills in secrets |
-| Restore to a clean instance | Recreate the workflow as it was | Export with `includeVariableValues: true` and `includeDataTableData: true`; import with `workflowIdPolicy: "source"` |
+**Promote to an instance that already has the dependencies**
+
+Reuse the target's existing credentials and variables.
+
+- Import: `credentialMatchingMode: "name-and-type"`
+- Import: `credentialMissingMode: "must-preexist"`
+- Import: `variableMissingMode: "must-preexist"`
+- Import: `workflowPublishingPolicy: "all-unpublished"`
+
+**Share a self-contained copy**
+
+The recipient has none of the dependencies.
+
+- Export: `includeVariableValues: true`
+- Import: `credentialMissingMode: "create-stub"` — the recipient fills in secrets
+
+**Restore to a clean instance**
+
+Recreate the workflow exactly as it was.
+
+- Export: `includeVariableValues: true`, `includeDataTableData: true`
+- Import: `workflowIdPolicy: "source"`
 
 For what each option does, see [Import a workflow package](/import-export/import-packages.md) and [Resolve dependencies on import](/import-export/resolve-dependencies.md).
 

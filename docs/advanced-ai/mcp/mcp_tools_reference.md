@@ -260,13 +260,13 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 /// info | Available from n8n v2.14.0
 ///
 
-Search for projects accessible to the current user.
+Search for projects accessible to the current user. Use this to resolve a project ID before creating workflows or data tables in a specific project.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `query` | `string` | No | Filter projects by name (case-insensitive partial match) |
+| `query` | `string` | No | Filter projects by name. Results are ranked with exact case-insensitive matches first, then partial matches. |
 | `type` | `"personal" | "team"` | No | Filter by project type |
 | `limit` | `integer` | No | Limit the number of results (max 100) |
 
@@ -274,16 +274,19 @@ Search for projects accessible to the current user.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `data` | `array` | List of matching projects |
+| `data` | `array` | List of matching projects, sorted with exact case-insensitive matches first |
 | `data[].id` | `string` | The unique identifier of the project |
 | `data[].name` | `string` | The name of the project |
 | `data[].type` | `"personal" | "team"` | The project type |
+| `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
+| `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous, for example when no exact match was found but multiple partial matches exist |
 
 #### Notes
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows and data tables in a specific project.
+- If a user names a project, call this tool first and pass the resolved project ID to `create_workflow_from_code`, `update_workflow`, or data table tools.
+- If `hint` is present, follow it before acting. For example, ask the user to clarify instead of guessing between multiple partial matches.
 
 ---
 

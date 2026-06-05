@@ -450,13 +450,13 @@ List credentials the current user can access. Use this to find a credential ID b
 /// info | Available from n8n v2.12.0
 ///
 
-Get the n8n Workflow SDK reference documentation including patterns, expression syntax, and functions.
+Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance.
 
 #### Parameters
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
+| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
 
 #### Output
 
@@ -467,7 +467,8 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 #### Notes
 
 - Should be called first before building any workflows.
-- Sections cover patterns, expression syntax, built-in functions, coding rules, import syntax, naming guidelines, and design guidance.
+- Omit `section`, or set it to `"all"`, to retrieve the full reference.
+- Use `"patterns_detailed"` for expanded workflow pattern examples.
 
 ---
 

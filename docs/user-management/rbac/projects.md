@@ -76,6 +76,6 @@ From version `2.13.0`, instance owners and admins can enable [external secrets](
 
 In older versions (or when the opt-in toggle is off), using external secrets in a project requires an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
 
-## Configure project telemetry tags
+## Configure project span attributes
 
-If you enable OpenTelemetry tracing, you can add custom telemetry tags in **Project settings**. n8n exports these tags as attributes on workflow spans for workflows in that project. Refer to [Custom telemetry tags](/hosting/logging-monitoring/opentelemetry.md#custom-telemetry-tags) for details.
+If you enable OpenTelemetry tracing, you can add custom span attributes in **Project settings**. n8n exports these attributes on workflow spans for workflows in that project. Refer to [Custom span attributes](/hosting/logging-monitoring/opentelemetry.md#custom-span-attributes) for details.

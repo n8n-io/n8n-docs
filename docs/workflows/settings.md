@@ -88,6 +88,6 @@ An estimate of the number of minutes each of execution of this workflow saves yo
 
 Setting this lets n8n calculate the amount of time saved for [insights](/insights.md).
 
-### Custom telemetry tags
+### Custom span attributes
 
-Add custom key-value tags to the workflow's OpenTelemetry span. Refer to [Custom telemetry tags](/hosting/logging-monitoring/opentelemetry.md#custom-telemetry-tags) for details.
+Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](/hosting/logging-monitoring/opentelemetry.md#custom-span-attributes) for details.

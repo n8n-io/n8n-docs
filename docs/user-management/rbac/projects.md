@@ -69,13 +69,3 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 1. Select **Next**.
 1. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
 1. Select **Confirm move to new project**.
-
-## Using external secrets in projects
-
-From version `2.13.0`, instance owners and admins can enable [external secrets](/external-secrets.md) access for project editors and admins. Refer to [Access for project roles](/external-secrets.md#access-for-project-roles) for details on enabling this and the permissions each role gets.
-
-In older versions (or when the opt-in toggle is off), using external secrets in a project requires an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
-
-## Configure project span attributes
-
-If you enable OpenTelemetry tracing, you can add custom span attributes in **Project settings**. n8n exports these attributes on workflow spans for workflows in that project. Refer to [Custom span attributes](/hosting/logging-monitoring/opentelemetry.md#custom-span-attributes) for details.

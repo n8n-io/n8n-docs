@@ -462,8 +462,6 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://docs.n8n.io/insights/).
 
-**Availability.** Self-hosted.
-
 </div>
 
 ### Contributors
@@ -568,7 +566,7 @@ n8n can now be fully configured at startup through environment variables. Owner 
 
 This makes deployment configuration the single source of truth, so you can stand up a fully configured instance from a single Helm chart or Docker Compose file, including SSO and security policy, before any user logs in.
 
-**Availability.** Enterprise. Requires env var access at deployment time.
+**Availability.** Enterprise. 
 
 </div>
 

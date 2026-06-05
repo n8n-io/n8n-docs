@@ -894,7 +894,7 @@ Add a new column to an existing data table.
 #### Notes
 
 - Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars).
-- Column type is immutable (trough MCP) after creation.
+- Column type is immutable (through MCP) after creation.
 
 ---
 

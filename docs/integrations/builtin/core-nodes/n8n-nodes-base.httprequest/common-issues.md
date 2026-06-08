@@ -48,10 +48,9 @@ To resolve, address the target by a name the container can route to:
     The same fix is documented for the [MySQL node](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md#cant-connect-to-a-local-mysql-server-when-using-docker).
 * **Target in another container on the same Compose stack**: use the service name as the hostname, for example `http://my-api:5000`. Reference the container's internal port, not the published `ports:` mapping.
 
-A separate cause appears on Node.js 18 and above, even outside Docker: `localhost` resolves to the IPv6 address `::1` before `127.0.0.1`. If the target binds only to `127.0.0.1`, the IPv6 attempt is refused and the fallback to IPv4 doesn't always succeed inside the HTTP Request node. Two fixes:
+A separate cause appears on Node.js 17 and above, even outside Docker: `localhost` resolves to the IPv6 address `::1` before `127.0.0.1`. If the target binds only to `127.0.0.1`, the IPv6 attempt is refused and the fallback to IPv4 doesn't always succeed inside the HTTP Request node.
 
-* Use `http://127.0.0.1:<port>` in the **URL** field instead of `localhost`.
-* Bind the target service to `0.0.0.0` so it accepts both IPv4 and IPv6 connections.
+Use `http://127.0.0.1:<port>` in the **URL** field instead of `localhost`.
 
 To verify the fix before re-running the workflow, exec into the n8n container and try the URL with `wget`:
 

@@ -73,7 +73,7 @@ Get detailed information about a specific workflow, including trigger details.
 | `workflow.activeVersionId` | `string | null` | The active workflow version ID, if available |
 | `workflow.triggerCount` | `number` | Number of triggers |
 | `workflow.createdAt` | `string | null` | ISO timestamp when the workflow was created |
-| `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last updated |
+| `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `workflow.settings` | `object | null` | Workflow settings |
 | `workflow.connections` | `object` | Workflow connections graph |
 | `workflow.nodes` | `array` | List of workflow nodes. Credential references are stripped |
@@ -564,7 +564,7 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 
 #### Notes
 
-- When called with `technique: "list"` will list all available techniques
+- When called with `technique: "list"`, will list all available techniques
 - Some known techniques may not have detailed documentation yet. In that case, the tool returns a message without `documentation`.
 - This replaces the previous `get_suggested_nodes` workflow-planning guidance.
 

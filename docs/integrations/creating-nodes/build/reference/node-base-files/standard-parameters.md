@@ -80,14 +80,14 @@ When building a multi-input node, you can choose to force all preceding nodes on
 
 _Array of strings_ | _Required_
 
-Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, use `input: ['main']`.
+Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, use `inputs: [NodeConnectionType.Main]`.
 
 
 ## `outputs`
 
-_Array of strings_ | _Required_  
+_Array of strings_ | _Required_ 
 
-Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, use `output: ['main']`.
+Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, use `outputs: [NodeConnectionType.Main]`.
 
 ## `requiredInputs`
 

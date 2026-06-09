@@ -174,6 +174,11 @@ path "kv/*" {
 
 ### Infisical
 
+/// note | Version `2.26.0` and later
+Infisical secrets management support is only available from version `2.26.0`.
+///
+
+
 To connect Infisical, provide the following:
 
 - **Site URL**: the base URL of your Infisical instance. Defaults to `https://app.infisical.com`. Change it only if you're self-hosting Infisical.

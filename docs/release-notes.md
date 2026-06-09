@@ -43,7 +43,7 @@ This release contains bug fixes.
 
 ### Contributors
 
-[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot/)  
 [sinehypernova-0718](https://github.com/sinehypernova-0718)  
 [ColinHebert](https://github.com/ColinHebert)  
 [Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  

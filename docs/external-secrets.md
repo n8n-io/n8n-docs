@@ -195,6 +195,14 @@ In Infisical, grant the Machine Identity a role with permission to read secrets 
 
     In Infisical, create a machine identity, attach it to the project with the role described above, then copy the Client ID and Client Secret. See Infisical's [Universal Auth docs](https://infisical.com/docs/documentation/platform/identities/universal-auth){:target="_blank" .external-link}.
 
+=== "Access Token"
+
+    Provide:
+
+    - **Access Token**: the token issued inside the machine identity.
+
+    In Infisical, create a machine identity, attach it to the project with the role described above, then click on `Add Auth Method` and select `Token Auth`. See Infisical's [Token auth docs](https://infisical.com/docs/documentation/platform/identities/token-auth){:target="_blank" .external-link}.
+
 ## Use secrets in n8n credentials
 
 To use a secret from your store in an n8n credential:

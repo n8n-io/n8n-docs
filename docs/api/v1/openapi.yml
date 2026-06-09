@@ -43,6 +43,8 @@ tags:
     description: Operations about insights
   - name: Folders
     description: Operations about folders
+  - name: N8nPackage
+    description: Beta — operations about n8n packages. Disabled by default; enable with `N8N_PUBLIC_API_PACKAGES_ENABLED=true`.
 externalDocs:
   description: n8n API documentation
   url: https://docs.n8n.io/api/
@@ -1282,15 +1284,20 @@ paths:
               $ref: '#/components/schemas/pull'
       responses:
         '200':
-          description: Import result
+          description: Pull result containing the list of files that were pulled from the remote repository.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/importResult'
+                $ref: '#/components/schemas/pullResult'
         '400':
           $ref: '#/components/responses/badRequest'
         '409':
-          $ref: '#/components/responses/conflict'
+          description: |
+            Conflict due to uncommitted local changes or merge conflicts. The response body lists every file in the pull diff; files causing the conflict have `conflict: true` or `status: modified`. Retry with `force=true` to discard local changes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/pullResult'
   /variables:
     post:
       x-eov-operation-id: createVariable
@@ -2679,6 +2686,264 @@ paths:
           $ref: '#/components/responses/forbidden'
         '404':
           $ref: '#/components/responses/notFound'
+  /n8n-packages/export:
+    post:
+      x-eov-operation-id: exportWorkflows
+      x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
+      tags:
+        - N8nPackage
+      summary: 'Beta: Export workflows as an n8n package'
+      description: |
+        **Beta — disabled by default.** Set `N8N_PUBLIC_API_PACKAGES_ENABLED=true` on the
+        instance to enable this endpoint. While disabled, requests return `404`.
+
+        Export one or more workflows as a gzipped tar archive (.n8np). The response is
+        streamed as `application/gzip` with a `Content-Disposition` attachment header.
+        Requires the n8n Packages feature to be licensed.
+      requestBody:
+        description: Workflows to include in the exported package.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/exportWorkflowsRequest'
+      responses:
+        '200':
+          description: A gzipped tar archive containing the exported workflows.
+          content:
+            application/gzip:
+              schema:
+                type: string
+                format: binary
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /n8n-packages/import:
+    post:
+      x-eov-operation-id: importPackage
+      x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
+      tags:
+        - N8nPackage
+      summary: 'Beta: Import an n8n package into a project'
+      description: |
+        **Beta — disabled by default.** Set `N8N_PUBLIC_API_PACKAGES_ENABLED=true` on the
+        instance to enable this endpoint. While disabled, requests return `404`.
+
+        Imports a gzip-compressed tar package (`.n8np`) into the target project. Send the
+        archive as the multipart field `package`. Optional routing uses form fields
+        `projectId`, `folderId`, `credentialMatchingMode`, and `credentialMissingMode`
+        (omit or leave empty for defaults). The required `workflowConflictPolicy` field
+        controls what happens when a package workflow matches an existing workflow by
+        source id in the target project. Maximum upload size is
+        `N8N_ENDPOINTS_PAYLOAD_SIZE_MAX` MB (default 16).
+
+        The package must declare its manifest at `manifest.json` and include every file
+        referenced by the manifest. The caller is authorised through the `workflow:import`
+        scope. Newly created workflows receive a fresh local id and arrive inactive.
+
+        Credential references are resolved before any workflow is written. Only credentials owned by the
+        target project (with `credential:read`) or global credentials (with `credential:read`)
+        match. Credentials shared into the project as `credential:user` are not matched.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - package
+                - workflowConflictPolicy
+              properties:
+                package:
+                  type: string
+                  format: binary
+                  description: Gzip-compressed tar package (`.n8np`).
+                projectId:
+                  type: string
+                  description: |
+                    Target project id. Omit or send empty to import into the caller's personal project.
+                folderId:
+                  type: string
+                  description: |
+                    Optional folder within the target project. Omit or send empty for project root.
+                credentialMatchingMode:
+                  type: string
+                  enum:
+                    - id-only
+                  default: id-only
+                  description: |
+                    How credential references in `requirements.credentials` are matched on the target instance. Only `id-only` is supported today.
+                credentialMissingMode:
+                  type: string
+                  enum:
+                    - must-preexist
+                  default: must-preexist
+                  description: |
+                    What to do when a credential reference cannot be resolved. `must-preexist` requires every referenced credential to already exist and be accessible on the target instance.
+                workflowConflictPolicy:
+                  type: string
+                  enum:
+                    - new-version
+                    - fail
+                    - skip
+                  description: |
+                    `new-version` updates matching workflows and creates a new version, `fail` rejects the import when any matching workflow exists, and `skip` leaves matching workflows untouched while importing the rest.
+      responses:
+        '200':
+          description: Import succeeded.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - package
+                  - workflows
+                  - bindings
+                properties:
+                  package:
+                    type: object
+                    required:
+                      - sourceN8nVersion
+                      - sourceId
+                      - exportedAt
+                    properties:
+                      sourceN8nVersion:
+                        type: string
+                      sourceId:
+                        type: string
+                      exportedAt:
+                        type: string
+                        format: date-time
+                  workflows:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - sourceWorkflowId
+                        - localId
+                        - name
+                        - projectId
+                        - parentFolderId
+                        - activeVersionId
+                        - status
+                      properties:
+                        sourceWorkflowId:
+                          type: string
+                          description: Workflow id as it appeared in the package.
+                        localId:
+                          type: string
+                          description: Newly minted workflow id on the target instance.
+                        name:
+                          type: string
+                        projectId:
+                          type: string
+                        parentFolderId:
+                          type: string
+                          nullable: true
+                        activeVersionId:
+                          type: string
+                          nullable: true
+                          description: |
+                            Published version on the target instance, if any.
+                        status:
+                          type: string
+                          enum:
+                            - created
+                            - updated
+                            - skipped
+                          description: Import outcome for this package workflow.
+                  bindings:
+                    type: object
+                    description: |
+                      Source id → target id mappings produced during import, one map per entity type. Each value maps an id as it appeared in the package to the id on the target instance.
+                    required:
+                      - workflows
+                      - credentials
+                    properties:
+                      workflows:
+                        type: object
+                        additionalProperties:
+                          type: string
+                      credentials:
+                        type: object
+                        description: |
+                          Credential id from `requirements.credentials` in the package manifest → matched credential id on the target instance.
+                        additionalProperties:
+                          type: string
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          description: Workflow source id conflict.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                  message:
+                    type: string
+                  meta:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        enum:
+                          - WORKFLOW_CONFLICT
+                      conflicts:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            sourceWorkflowId:
+                              type: string
+                            existingWorkflowId:
+                              type: string
+                            name:
+                              type: string
+        '422':
+          description: One or more credential references could not be resolved.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                  - failures
+                properties:
+                  message:
+                    type: string
+                  failures:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - kind
+                        - sourceId
+                        - usedByWorkflows
+                      properties:
+                        kind:
+                          type: string
+                          enum:
+                            - not_found
+                            - unknown_type
+                        sourceId:
+                          type: string
+                        usedByWorkflows:
+                          type: array
+                          items:
+                            type: string
 components:
   schemas:
     audit:
@@ -3182,6 +3447,23 @@ components:
             jiraSoftwareCloudApi:
               id: '35'
               name: jiraApi
+        customTelemetryTags:
+          type: object
+          additionalProperties: false
+          properties:
+            tag:
+              type: array
+              items:
+                type: object
+                additionalProperties: false
+                required:
+                  - key
+                  - value
+                properties:
+                  key:
+                    type: string
+                  value:
+                    type: string
         createdAt:
           type: string
           format: date-time
@@ -3250,6 +3532,29 @@ components:
         timeSavedPerExecution:
           type: number
           description: Estimated time saved per execution in minutes
+        redactionPolicy:
+          type: string
+          enum:
+            - none
+            - non-manual
+            - manual-only
+            - all
+          description: |
+            Controls whether execution data is redacted for this workflow.
+
+            Available options:
+            - `none` (default): No redaction — all execution data is stored.
+            - `non-manual`: Redact production (non-manually triggered) executions only.
+            - `manual-only`: Redact manually triggered executions only.
+            - `all`: Redact all executions (manual and production).
+
+            When the instance has a redaction floor configured, the policy must be equal to
+            or stricter than the floor. A policy weaker than the floor is rejected with 422
+            on create, and on update when it changes the stored policy; an unchanged
+            pre-existing below-floor policy is preserved (the floor is not applied
+            retroactively). Omitting this field when creating a workflow seeds it to the
+            instance floor instead.
+          example: non-manual
         availableInMCP:
           type: boolean
           description: |
@@ -3268,6 +3573,19 @@ components:
             Security note: When a workflow is available in MCP, it can be discovered and executed
             by any MCP client that has the appropriate API credentials for your n8n instance.
           example: false
+        customTelemetryTags:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            required:
+              - key
+              - value
+            properties:
+              key:
+                type: string
+              value:
+                type: string
     sharedWorkflow:
       type: object
       additionalProperties: false
@@ -3650,6 +3968,11 @@ components:
           type: string
           example: global:owner
           readOnly: true
+        mfaEnabled:
+          type: boolean
+          description: Whether the user has multi-factor authentication (MFA/2FA) enabled.
+          readOnly: true
+          example: false
     userList:
       type: object
       properties:
@@ -3681,66 +4004,91 @@ components:
             - `all`: Publish all imported workflows
             - `published`: Publish only workflows that were published locally before import
           example: published
-        variables:
-          type: object
-          example:
-            foo: bar
-    importResult:
+    sourceControlledFile:
       type: object
-      additionalProperties: true
+      required:
+        - file
+        - id
+        - name
+        - type
+        - status
+        - location
+        - conflict
+        - updatedAt
       properties:
-        variables:
-          type: object
-          properties:
-            added:
-              type: array
-              items:
-                type: string
-            changed:
-              type: array
-              items:
-                type: string
-        credentials:
+        file:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+            - credential
+            - workflow
+            - tags
+            - variables
+            - file
+            - folders
+            - project
+            - datatable
+        status:
+          type: string
+          enum:
+            - new
+            - modified
+            - deleted
+            - created
+            - renamed
+            - conflicted
+            - ignored
+            - staged
+            - unknown
+        location:
+          type: string
+          enum:
+            - local
+            - remote
+        conflict:
+          type: boolean
+        updatedAt:
+          type: string
+        pushed:
+          type: boolean
+        isLocalPublished:
+          type: boolean
+        isRemoteArchived:
+          type: boolean
+        parentFolderId:
+          type: string
+          nullable: true
+        folderPath:
           type: array
           items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-              type:
-                type: string
-        workflows:
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                type: string
-              name:
-                type: string
-        tags:
+            type: string
+        owner:
           type: object
+          required:
+            - type
+            - projectId
+            - projectName
           properties:
-            tags:
-              type: array
-              items:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  name:
-                    type: string
-            mappings:
-              type: array
-              items:
-                type: object
-                properties:
-                  workflowId:
-                    type: string
-                  tagId:
-                    type: string
+            type:
+              type: string
+              enum:
+                - personal
+                - team
+            projectId:
+              type: string
+            projectName:
+              type: string
+        publishingError:
+          type: string
+    pullResult:
+      type: array
+      items:
+        $ref: '#/components/schemas/sourceControlledFile'
     project:
       type: object
       additionalProperties: false
@@ -4404,6 +4752,22 @@ components:
         parentFolderId:
           type: string
           example: abc123
+    exportWorkflowsRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - workflowIds
+      properties:
+        workflowIds:
+          type: array
+          minItems: 1
+          maxItems: 300
+          description: IDs of the workflows to include in the exported package.
+          items:
+            type: string
+            minLength: 1
+          example:
+            - 2tUt1wbLX592XDdX
     error:
       required:
         - message
@@ -4486,8 +4850,10 @@ components:
       $ref: '#/components/schemas/audit'
     Pull:
       $ref: '#/components/schemas/pull'
-    ImportResult:
-      $ref: '#/components/schemas/importResult'
+    PullResult:
+      $ref: '#/components/schemas/pullResult'
+    SourceControlledFile:
+      $ref: '#/components/schemas/sourceControlledFile'
     UserList:
       $ref: '#/components/schemas/userList'
     User:

@@ -1,0 +1,22 @@
+docs/user-management/rbac/custom-roles.md
+  s_799dc3f349c8d8::t_803ec2ff644a80 117-118
+docs/workflows/executions/execution-data-redaction.md
+  s_799dc3f349c8d8::t_195e94e98aa942 31
+  s_799dc3f349c8d8::t_fd2ebf48036e3e 98-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.8",
+  "base_commit_sha": "05693def365d115946af39a30e4e2876803a4786",
+  "prompts": {},
+  "sessions": {
+    "s_799dc3f349c8d8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "59f2c9d9-1582-44dc-a546-e13ec4121010",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

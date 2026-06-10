@@ -10,44 +10,7 @@ n8n offers two primary deployment options:
 - **n8n Cloud**: A fully-managed hosted solution with no installation required
 - **Self-hosted**: Deploy n8n on your own infrastructure using npm, Docker, or server setups
 
-## Feature Comparison
-
-### Self-hosted Community Edition
-
-n8n's Community Edition is the free, self-hosted version of n8n that you can run on your own infrastructure. The Community Edition includes almost the complete feature set of n8n, **except** for these features:
-
-| Feature Category | Not Available in Community Edition | Available In |
-|-----------------|-----------------------------------|--------------|
-| **Variables & Configuration** | Custom Variables | Enterprise editions, some Cloud paid plans |
-| **Environments** | Environments | Enterprise editions, some Cloud paid plans |
-| **Secrets Management** | External secrets | Enterprise editions, some Cloud paid plans |
-| **Storage** | External storage for binary data | Enterprise editions |
-| **Logging** | Log streaming (standard logging IS included) | Enterprise editions |
-| **Scaling** | Multi-main mode (queue mode IS included) | Enterprise editions |
-| **Organization** | Projects | Enterprise editions, some Cloud paid plans |
-| **Authentication** | SSO (SAML, LDAP) | Enterprise editions |
-| **Collaboration** | Workflow and credential sharing** | Enterprise editions, some Cloud paid plans |
-| **Version Control** | Version control using Git | Enterprise editions, some Cloud paid plans |
-
-\*\* In Community Edition, only the instance owner and the user who creates workflows/credentials can access them.
-
-### Self-hosted Registered Community Edition (Free)
-
-By registering your Community Edition with your email, you unlock these additional features:
-
-| Feature | Description |
-|---------|-------------|
-| Folders | Organize your workflows into folders |
-| Debug in editor | Copy and pin execution data when working on a workflow |
-| Custom execution data | Save, find, and annotate execution metadata |
-
-### n8n Cloud vs Self-hosted Enterprise
-
-Both n8n Cloud (Enterprise plan) and Self-hosted Enterprise editions include all the features listed above that are missing from the Community Edition.
-
-For specific details on which features are available on Cloud Starter, Pro, and Business self-hosted plans, see the [pricing page](https://n8n.io/pricing/).
-
-## Pros and Cons Comparison
+## Pros and cons comparison
 
 | Aspect | n8n Cloud | Self-hosted |
 |--------|-----------|-------------|
@@ -75,9 +38,46 @@ For specific details on which features are available on Cloud Starter, Pro, and 
 
 For detailed pricing and plan comparisons, see the [pricing page](https://n8n.io/pricing/).
 
-## Decision Guide
+## Feature comparison
 
-| Your Situation | Recommended Option | Reason |
+### Self-hosted Community Edition
+
+n8n's Community Edition is the free, self-hosted version of n8n that you can run on your own infrastructure. 
+
+| Feature | Not available in Community Edition | Available in |
+|-----------------|-----------------------------------|--------------|
+| **Variables & Configuration** | Custom variables | Enterprise editions, some Cloud paid plans |
+| **Environments** | Environments | Enterprise editions, some Cloud paid plans |
+| **Secrets Management** | External secrets | Enterprise editions, some Cloud paid plans |
+| **Storage** | External storage for binary data | Enterprise editions |
+| **Logging** | Log streaming (standard logging IS included) | Enterprise editions |
+| **Scaling** | Multi-main mode (queue mode IS included) | Enterprise editions |
+| **Organization** | Projects | Enterprise editions, some Cloud paid plans |
+| **Authentication** | SSO (SAML, LDAP) | Enterprise editions |
+| **Collaboration** | Workflow and credential sharing** | Enterprise editions, some Cloud paid plans |
+| **Version Control** | Version control using Git | Enterprise editions, some Cloud paid plans |
+
+In Community Edition, only the instance owner and the user who creates workflows or credentials can access them.
+
+### Self-hosted registered Community Edition (Free)
+
+By registering your Community Edition with your email, you unlock these additional features:
+
+| Feature | Description |
+|---------|-------------|
+| Folders | Organize your workflows into folders |
+| Debug in editor | Copy and pin execution data when working on a workflow |
+| Custom execution data | Save, find, and annotate execution metadata |
+
+### n8n Cloud vs Self-hosted Enterprise
+
+Both n8n Cloud (Enterprise plan) and Self-hosted Enterprise editions include all the features listed above that are missing from the Community Edition.
+
+For specific details on which features are available on Cloud Starter, Pro, and Business self-hosted plans, see the [pricing page](https://n8n.io/pricing/).
+
+## Decision guide
+
+| Your situation | Recommended option | Reason |
 |----------------|-------------------|---------|
 | Want to start quickly | **n8n Cloud** | No installation needed |
 | Don't have technical expertise | **n8n Cloud** | Hosted solution, no setup required |

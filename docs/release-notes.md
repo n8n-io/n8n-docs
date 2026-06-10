@@ -34,6 +34,17 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.26.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.1...n8n@2.26.2) for this version.<br />
+**Release date:** 2026-06-10
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.26.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.1...n8n@2.26.0) for this version.<br />
@@ -54,6 +65,17 @@ This release contains bug fixes.
 [kisst](https://github.com/kisst)  
 [adilsitos](https://github.com/adilsitos)  
 [IchordeDionysos](https://github.com/IchordeDionysos)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.6...n8n@2.25.7) for this version.<br />
+**Release date:** 2026-06-10
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -289,7 +311,25 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.0...n8n@2.22.0) for this version.<br />
 **Release date:** 2026-05-19
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Connect to MCP servers with less setup
+
+Connect your agent to select MCP servers without setting up an [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+
+<br>
+
+Initial coverage includes some of the most used services in the official MCP registry, including Apify, Linear, monday.com, Notion, and PostHog. We'll expand the list to cover more services soon.
+
+<br>
+
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) with manual configuration.
+
+<video src="/_video/release-notes/MCP_registry.webm" controls width="100%"></video>
+
+</div>
 
 ### Contributors
 

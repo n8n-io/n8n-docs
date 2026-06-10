@@ -14,7 +14,7 @@ n8n offers two primary deployment options:
 
 ### Self-hosted Community Edition
 
-The Community Edition includes almost the complete feature set of n8n, **except** for these features:
+n8n's Community Edition is the free, self-hosted version of n8n that you can run on your own infrastructure. The Community Edition includes almost the complete feature set of n8n, **except** for these features:
 
 | Feature Category | Not Available in Community Edition | Available In |
 |-----------------|-----------------------------------|--------------|

@@ -1334,7 +1334,7 @@ nav:
       - Overview: hosting/oem-deployment/index.md
       - Prerequisites: hosting/oem-deployment/prerequisites.md
       - Managing workflows: hosting/oem-deployment/managing-workflows.md
-      - Token exchange for SSO: hosting/oem-deployment/token-exchange.md
+      - Token exchange: hosting/oem-deployment/token-exchange.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

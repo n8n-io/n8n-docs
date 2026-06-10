@@ -319,7 +319,11 @@ This release contains bug fixes and features.
 
 Connect your agent to select MCP servers without setting up an [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
+<br>
+
 Initial coverage includes some of the most used services in the official MCP registry, including Apify, Linear, monday.com, Notion, and PostHog. We'll expand the list to cover more services soon.
+
+<br>
 
 If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) with manual configuration.
 

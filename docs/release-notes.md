@@ -311,7 +311,21 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.0...n8n@2.22.0) for this version.<br />
 **Release date:** 2026-05-19
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Connect to MCP servers with less setup
+
+Connect your agent to select MCP servers without setting up an [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+
+Initial coverage includes some of the most used services in the official MCP registry, including Apify, Linear, monday.com, Notion, and PostHog. We'll expand the list to cover more services soon.
+
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) with manual configuration.
+
+<video src="/_video/release-notes/MCP_registry.webm" controls width="100%"></video>
+
+</div>
 
 ### Contributors
 

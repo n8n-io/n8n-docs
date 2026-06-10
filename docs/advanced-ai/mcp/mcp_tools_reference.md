@@ -17,11 +17,12 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `query` | `string` | No | Filter by name or description |
-| `projectId` | `string` | No | Filter by project ID |
-| `limit` | `integer` | No | Limit the number of results (max 200) |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `query` | `string` | No | | Filter by name or description |
+| `projectId` | `string` | No | | Filter by project ID |
+| `limit` | `integer` | No | `200` | Limit the number of results (max 200) |
+| `sortBy` | `string` | No | `"updatedAt:desc"` | Sort order for results. One of: `"updatedAt:desc"`, `"updatedAt:asc"`, `"createdAt:desc"`, `"createdAt:asc"`, `"name:asc"`, `"name:desc"` |
 
 #### Output
 
@@ -33,7 +34,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].description` | `string | null` | The description of the workflow |
 | `data[].active` | `boolean | null` | Whether the workflow is active |
 | `data[].createdAt` | `string | null` | ISO timestamp when the workflow was created |
-| `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last updated |
+| `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `data[].triggerCount` | `number | null` | The number of triggers associated with the workflow |
 | `data[].scopes` | `string[]` | User permissions for this workflow |
 | `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
@@ -41,16 +42,17 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `count` | `integer` | Total number of workflows that match the filters |
 
 #### Notes
-- Column type is immutable (through MCP) after creation.
+
 - Maximum result limit is 200.
-- Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow.
-- **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting.
+- Results are sorted by most recently updated workflows first by default.
+- Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
+- **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ---
 
 ### get_workflow_details
 
-Get detailed information about a specific workflow including trigger details.
+Get detailed information about a specific workflow, including trigger details.
 
 #### Parameters
 
@@ -65,35 +67,39 @@ Get detailed information about a specific workflow including trigger details.
 | `workflow` | `object` | Sanitized workflow data safe for MCP consumption |
 | `workflow.id` | `string` | Workflow ID |
 | `workflow.name` | `string | null` | Workflow name |
-| `workflow.active` | `boolean` | Whether the workflow is active |
+| `workflow.active` | `boolean` | Whether the workflow has a published active version |
 | `workflow.isArchived` | `boolean` | Whether the workflow is archived |
 | `workflow.versionId` | `string` | The current workflow version ID |
 | `workflow.activeVersionId` | `string | null` | The active workflow version ID, if available |
 | `workflow.triggerCount` | `number` | Number of triggers |
-| `workflow.createdAt` | `string | null` | ISO creation timestamp |
-| `workflow.updatedAt` | `string | null` | ISO last-updated timestamp |
+| `workflow.createdAt` | `string | null` | ISO timestamp when the workflow was created |
+| `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `workflow.settings` | `object | null` | Workflow settings |
 | `workflow.connections` | `object` | Workflow connections graph |
-| `workflow.nodes` | `array` | List of nodes (credentials stripped) |
-| `workflow.activeVersion` | `object | null` | Active workflow graph (nodes + connections), if available |
+| `workflow.nodes` | `array` | List of workflow nodes. Credential references are stripped |
+| `workflow.activeVersion` | `object | null` | Active workflow graph, if available |
+| `workflow.activeVersion.nodes` | `array` | Nodes from the active workflow version. Credential references are stripped |
+| `workflow.activeVersion.connections` | `object` | Connections from the active workflow version |
 | `workflow.tags` | `array` | Tags with `id` and `name` |
 | `workflow.meta` | `object | null` | Workflow metadata |
 | `workflow.parentFolderId` | `string | null` | Parent folder ID |
-| `workflow.description` | `string` | The description of the workflow |
+| `workflow.description` | `string` | Workflow description, if set |
 | `workflow.scopes` | `string[]` | User permissions for this workflow |
 | `workflow.canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `triggerInfo` | `string` | Human-readable instructions describing how to trigger the workflow |
 
 #### Notes
 
-- Sensitive credential data is stripped from nodes before returning.
+- Sensitive credential data is stripped from returned nodes.
 - Includes active version details if the workflow is published.
+- Includes user permission scopes and whether the workflow can be executed by the current user.
+- Use `triggerInfo` to understand how supported trigger nodes can be invoked.
 
 ---
 
 ### execute_workflow
 
-Execute a workflow by ID by mapping data from user prompt to trigger inputs. Returns execution ID and status. This will perform 'full' workflow execution, without mocking or skipping any nodes.
+Execute a workflow by ID. Returns the execution ID immediately without waiting for completion.
 
 #### Parameters
 
@@ -111,20 +117,30 @@ Execute a workflow by ID by mapping data from user prompt to trigger inputs. Ret
 | `form` | `formData: Record<string, unknown>` | Input data for form-based workflows |
 | `webhook` | `webhookData: { method?, query?, body?, headers? }` | Input data for webhook-based workflows |
 
+**`webhookData` fields:**
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `method` | `"GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "OPTIONS"` | No | `"GET"` | HTTP method |
+| `query` | `Record<string, string>` | No | | Query string parameters |
+| `body` | `Record<string, unknown>` | No | | Request body data |
+| `headers` | `Record<string, string>` | No | | HTTP headers |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `executionId` | `string | null` | The execution ID |
-| `status` | `string` | The status of the execution. One of: `"success"`, `"error"`, `"running"`, `"waiting"`, `"canceled"`, `"crashed"`, `"new"`, `"unknown"` |
-| `error` | `string` | Error message if the execution failed |
+| `executionId` | `string | null` | The execution ID, or `null` if execution couldn't be started |
+| `status` | `"started" | "error"` | Whether the workflow execution was started successfully |
+| `error` | `string` | Error message if the execution couldn't be started |
 
 #### Notes
 
-- Only supports workflows with specific trigger node types: Webhook, Chat Trigger, Form Trigger, Manual Trigger, Schedule Trigger.
+- This tool starts the workflow and returns immediately. Use `get_execution` with the returned `executionId` to check the final execution status or fetch execution data.
+- Production mode supports workflows with Webhook, Chat Trigger, Form Trigger, and Schedule Trigger nodes.
+- Manual mode also supports Manual Trigger nodes.
 - When `executionMode` is `"production"`, the workflow must have a published (active) version.
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools (not applicable to AI Workflow builder workflows).
+- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
 
 ---
@@ -248,13 +264,13 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 /// info | Available from n8n v2.14.0
 ///
 
-Search for projects accessible to the current user.
+Search for projects accessible to the current user. Use this to resolve a project ID before creating workflows or data tables in a specific project.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `query` | `string` | No | Filter projects by name (case-insensitive partial match) |
+| `query` | `string` | No | Filter projects by name. Results are ranked with exact case-insensitive matches first, then partial matches. |
 | `type` | `"personal" | "team"` | No | Filter by project type |
 | `limit` | `integer` | No | Limit the number of results (max 100) |
 
@@ -262,16 +278,19 @@ Search for projects accessible to the current user.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `data` | `array` | List of matching projects |
+| `data` | `array` | List of matching projects, sorted with exact case-insensitive matches first |
 | `data[].id` | `string` | The unique identifier of the project |
 | `data[].name` | `string` | The name of the project |
 | `data[].type` | `"personal" | "team"` | The project type |
+| `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
+| `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous, for example when no exact match was found but multiple partial matches exist |
 
 #### Notes
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows and data tables in a specific project.
+- If a user names a project, call this tool first and pass the resolved project ID to `create_workflow_from_code`, `update_workflow`, or data table tools.
+- If `hint` is present, follow it before acting. For example, ask the user to clarify instead of guessing between multiple partial matches.
 
 ---
 
@@ -438,13 +457,13 @@ List credentials the current user can access. Use this to find a credential ID b
 /// info | Available from n8n v2.12.0
 ///
 
-Get the n8n Workflow SDK reference documentation including patterns, expression syntax, and functions.
+Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance.
 
 #### Parameters
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
+| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
 
 #### Output
 
@@ -455,7 +474,8 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 #### Notes
 
 - Should be called first before building any workflows.
-- Sections cover patterns, expression syntax, built-in functions, coding rules, import syntax, naming guidelines, and design guidance.
+- Omit `section`, or set it to `"all"`, to retrieve the full reference.
+- Use `"patterns_detailed"` for expanded workflow pattern examples.
 
 ---
 
@@ -517,33 +537,46 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 
 ---
 
-### get_suggested_nodes
+### get_workflow_best_practices
 
-/// info | Available from n8n v2.12.0
+/// info | Available from n8n v2.26.0
 ///
 
-Get curated node recommendations for workflow technique categories. Returns recommended nodes with pattern hints and configuration guidance. Use after analyzing what kind of workflow to build.
+Get best-practices guidance for a workflow technique. Useful this before searching for nodes or writing workflow code.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `categories` | `string[]` | Yes (min 1) | Workflow technique categories. Available values: `chatbot`, `notification`, `scheduling`, `data_transformation`, `data_persistence`, `data_extraction`, `document_processing`, `form_input`, `content_generation`, `triage`, `find_research` |
+| `technique` | `string` | Yes | Workflow technique key to fetch guidance for. Pass `"list"` to discover all available techniques. Values include: `"scheduling"`, `"chatbot"`, `"form_input"`, `"scraping_and_research"`, `"monitoring"`, `"enrichment"`, `"triage"`, `"content_generation"`, `"document_processing"`, `"data_extraction"`, `"data_analysis"`, `"data_transformation"`, `"data_persistence"`, `"notification"`, `"knowledge_base"`, `"human_in_the_loop"`, `"web_app"` |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `suggestions` | `string` | Curated node recommendations with pattern hints and configuration guidance |
+| `technique` | `string` | The requested technique key, or `"list"` when listing all available techniques |
+| `message` | `string` | Human-readable summary of the response |
+| `documentation` | `string` | Best-practices documentation for the requested technique, when available |
+| `availableTechniques` | `array` | List of available techniques, returned when `technique` is `"list"` |
+| `availableTechniques[].technique` | `string` | Technique key |
+| `availableTechniques[].description` | `string` | Description of the technique |
+| `availableTechniques[].hasDocumentation` | `boolean` | Whether detailed best-practices documentation is available for this technique |
+
+#### Notes
+
+- When called with `technique: "list"`, will list all available techniques
+- Some known techniques may not have detailed documentation yet. In that case, the tool returns a message without `documentation`.
+- This replaces the previous `get_suggested_nodes` workflow-planning guidance.
 
 ---
+
 
 ### validate_workflow
 
 /// info | Available from n8n v2.12.0
 ///
 
-Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Returns the workflow JSON if valid, or detailed error messages to fix. Always validate before creating a workflow.
+Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Always validate before creating or updating a workflow.
 
 #### Parameters
 
@@ -556,18 +589,62 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 | Field | Type | Description |
 |-------|------|-------------|
 | `valid` | `boolean` | Whether the workflow code is valid |
-| `nodeCount` | `number` | The number of nodes in the workflow (if valid) |
-| `warnings` | `array` | Validation warnings (if any) |
+| `nodeCount` | `number` | The number of nodes in the workflow. Only present when valid |
+| `warnings` | `array` | Validation warnings, if any |
 | `warnings[].code` | `string` | The warning code identifying the type of warning |
 | `warnings[].message` | `string` | The warning message |
-| `warnings[].nodeName` | `string` | The node that triggered the warning |
-| `warnings[].parameterPath` | `string` | The parameter path that triggered the warning |
-| `errors` | `string[]` | Validation errors (if invalid) |
+| `warnings[].nodeName` | `string` | The node that triggered the warning, if applicable |
+| `warnings[].parameterPath` | `string` | The parameter path that triggered the warning, if applicable |
+| `errors` | `string[]` | Validation errors. Only present when invalid |
+| `hint` | `string` | Actionable recovery hint, if available |
 
 #### Notes
 
 - Must be called before `create_workflow_from_code` or `update_workflow`.
 - Warnings may be present even when the code is valid.
+- If `valid` is `false` and `hint` is present, follow the hint before retrying.
+
+---
+
+### validate_node_config
+
+/// info | Available from n8n v2.25.1
+///
+
+Validate one or more node configurations independently against their generated node schemas. Useful while composing nodes, before assembling workflow code or calling `update_workflow`.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodes` | `array` | Yes (min 1, max 50) | One or more node configurations to validate independently |
+| `nodes[].name` | `string` | No | Optional node name. Returned in the result to help correlate responses |
+| `nodes[].type` | `string` | Yes | Full node type, for example `"n8n-nodes-base.set"` or `"@n8n/n8n-nodes-langchain.agent"` |
+| `nodes[].typeVersion` | `number` | No | Node type version. Defaults to `1` |
+| `nodes[].parameters` | `object` | No | Node parameters object, using the same shape as workflow JSON. Defaults to `{}` |
+| `nodes[].subnodes` | `unknown` | No | Optional subnode configuration for AI parent nodes, for example LangChain agent model, memory, or tool references |
+| `nodes[].isToolNode` | `boolean` | No | Set to `true` when validating a node wired as an AI tool subnode through an `ai_tool` connection |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `valid` | `boolean` | Whether every node configuration is valid |
+| `results` | `array` | Per-node validation results, in input order |
+| `results[].index` | `number` | Position of this node in the input array |
+| `results[].name` | `string` | Echo of the input node name, if provided |
+| `results[].type` | `string` | Echo of the input node type |
+| `results[].valid` | `boolean` | Whether this node configuration is valid |
+| `results[].errors` | `array` | Validation errors for this node. Omitted when the node is valid |
+| `results[].errors[].path` | `string` | Parameter path of the error |
+| `results[].errors[].message` | `string` | Human-readable error message |
+| `error` | `string` | Top-level error message if validation couldn't run |
+
+#### Notes
+
+- This validates node parameter schemas only.
+- It doesn't check workflow-level concerns such as connections, required inputs, triggers, disconnected nodes, or credential existence.
+- For LangChain or AI tool subnodes, set `isToolNode` to `true` so the schema evaluates the correct display options branch.
 
 ---
 
@@ -577,15 +654,17 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 ///
 
 Create a workflow in n8n from validated SDK code. Parses the code into a workflow and saves it.
+
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `code` | `string` | Yes | Full TypeScript/JavaScript workflow code using the n8n Workflow SDK. Must be validated first with `validate_workflow`. |
+| `skillsUsed` | `string[]` | No | Names of n8n skills used by the MCP client to produce this workflow. Values are normalized server-side. |
 | `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
 | `description` | `string` | No | Short workflow description (max 255 chars, 1-2 sentences). |
-| `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. |
-| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. |
+| `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. Use `search_projects` first if the user names a project. |
+| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. Use `search_folders` to find a folder by name within a project. |
 
 #### Output
 
@@ -598,17 +677,24 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `autoAssignedCredentials` | `array` | List of credentials that were automatically assigned to nodes |
 | `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
-| `note` | `string` | Additional notes about the workflow creation (for example nodes skipped during credential auto-assignment) |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `targetProject` | `object` | The project the workflow was created in |
+| `targetProject.id` | `string` | The ID of the project |
+| `targetProject.name` | `string` | The display name of the project |
+| `targetProject.type` | `"personal" | "team"` | Whether the workflow was created in a personal or team project |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment |
+| `hint` | `string` | Actionable recovery hint, if available after an error |
 
 #### Notes
 
 - Automatically assigns available credentials to nodes.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - Sets `availableInMCP` flag to true on the created workflow.
-- Marks the workflow with `aiBuilderAssisted` metadata.
+- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 - Resolves webhook node IDs automatically.
 - `folderId` requires `projectId` to also be provided.
-- MCP clients should generate short descriptions for all new workflows.
+- If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
+- After creation, tell the user which project the workflow was created in using the `targetProject` field.
 
 ---
 
@@ -617,13 +703,14 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 /// info | Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 ///
 
-Update an existing workflow in n8n by applying an ordered batch of targeted partial-updates to the workflow. The batch is atomic: if any operation fails, no changes are saved.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to update. |
+| `workflowId` | `string` | Yes | The ID of the workflow to update |
+| `skillsUsed` | `string[]` | No | Names of n8n skills used by the MCP client to produce this workflow update. Values are normalized server-side. |
 | `operations` | `array` | Yes | Ordered list of operations to apply. Must contain 1-100 operations. |
 
 #### Supported operations
@@ -640,26 +727,39 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `setNodeCredential` | `nodeName`, `credentialKey`, `credentialId`, `credentialName` |  | Sets or replaces a node credential reference. The credential must be accessible and match the node type's accepted credential key. |
 | `setNodePosition` | `nodeName`, `position` |  | Updates a node's canvas position as `[x, y]`. |
 | `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
+| `setNodeSettings` | `nodeName`, `settings` |  | Updates node-level execution settings. `settings` must include at least one supported setting. |
 | `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
+
+#### `setNodeSettings` fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `onError` | `"stopWorkflow" | "continueRegularOutput" | "continueErrorOutput"` | No | How the node behaves on error |
+| `retryOnFail` | `boolean` | No | Whether to retry the node when it fails |
+| `maxTries` | `integer` | No | Number of attempts when `retryOnFail` is true. Must be 2-5 |
+| `waitBetweenTries` | `integer` | No | Milliseconds to wait between retry attempts. Must be 0-5000 |
+| `alwaysOutputData` | `boolean` | No | Whether the node should always output data |
+| `executeOnce` | `boolean` | No | Whether the node should execute only once |
 
 #### Output
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `workflowId` | `string` | The ID of the updated workflow. |
-| `name` | `string` | The name of the updated workflow. |
-| `nodeCount` | `number` | The number of nodes in the workflow. |
-| `url` | `string` | The URL to open the workflow in n8n. |
-| `appliedOperations` | `number` | The number of operations applied. |
-| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update. |
-| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned. |
-| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned. |
-| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned. |
-| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving. |
-| `validationWarnings[].code` | `string` | Warning code. |
-| `validationWarnings[].message` | `string` | Warning message. |
-| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning. |
-| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment. |
+| `workflowId` | `string` | The ID of the updated workflow |
+| `name` | `string` | The name of the updated workflow |
+| `nodeCount` | `number` | The number of nodes in the workflow |
+| `url` | `string` | The URL to open the workflow in n8n |
+| `appliedOperations` | `number` | The number of operations applied |
+| `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update |
+| `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned |
+| `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned |
+| `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `validationWarnings` | `array` | Graph and JSON validation warnings for the resulting workflow. These warnings don't block saving |
+| `validationWarnings[].code` | `string` | Warning code |
+| `validationWarnings[].message` | `string` | Warning message |
+| `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
+| `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
+| `error` | `string` | Error message if the update failed |
 
 #### Notes
 
@@ -802,7 +902,7 @@ Add a new column to an existing data table.
 #### Notes
 
 - Column names must match the pattern: `^[a-zA-Z][a-zA-Z0-9_]*$` (max 63 chars).
-- Column type is immutable (trough MCP) after creation.
+- Column type is immutable (through MCP) after creation.
 
 ---
 

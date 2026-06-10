@@ -2792,10 +2792,11 @@ paths:
                     - fail
                     - skip
                   description: |
-                    `new-version` updates matching workflows and creates a new version, `fail` rejects the import when any matching workflow exists, and `skip` leaves matching workflows untouched while importing the rest.
+                    `new-version` updates matching workflows and creates a new version, `fail` rejects the import when any matching workflow exists, and
+                          description: Workflow id on the target instance (newly created for `created`, existing for `updated`/`skipped`).
       responses:
         '200':
-          description: Import succeeded.
+          description: Import succeeded; the listed workflows were written to the target project.
           content:
             application/json:
               schema:
@@ -2884,66 +2885,39 @@ paths:
         '404':
           $ref: '#/components/responses/notFound'
         '409':
-          description: Workflow source id conflict.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: number
-                  message:
-                    type: string
-                  meta:
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                        enum:
-                          - WORKFLOW_CONFLICT
-                      conflicts:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            sourceWorkflowId:
-                              type: string
-                            existingWorkflowId:
-                              type: string
-                            name:
-                              type: string
-        '422':
-          description: One or more credential references could not be resolved.
+          description: |
+            Import blocked, with at least one workflow source-id conflict among the issues.
           content:
             application/json:
               schema:
                 type: object
                 required:
                   - message
-                  - failures
+                  - issues
                 properties:
                   message:
                     type: string
-                  failures:
+                  issues:
                     type: array
                     items:
-                      type: object
-                      required:
-                        - kind
-                        - sourceId
-                        - usedByWorkflows
-                      properties:
-                        kind:
-                          type: string
-                          enum:
-                            - not_found
-                            - unknown_type
-                        sourceId:
-                          type: string
-                        usedByWorkflows:
-                          type: array
-                          items:
-                            type: string
+                      $ref: '#/components/schemas/importBlockingIssue'
+        '422':
+          description: |
+            Import blocked by non-conflict issues only (e.g. unresolved credentials).
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                  - issues
+                properties:
+                  message:
+                    type: string
+                  issues:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/importBlockingIssue'
 components:
   schemas:
     audit:
@@ -4768,6 +4742,50 @@ components:
             minLength: 1
           example:
             - 2tUt1wbLX592XDdX
+    importBlockingIssue:
+      oneOf:
+        - type: object
+          description: |
+            A workflow whose source id already matches one in the target project, under the `fail` conflict policy.
+          required:
+            - type
+            - sourceWorkflowId
+            - existingWorkflowId
+            - name
+          properties:
+            type:
+              type: string
+              enum:
+                - workflow-conflict
+            sourceWorkflowId:
+              type: string
+            existingWorkflowId:
+              type: string
+            name:
+              type: string
+        - type: object
+          description: A credential reference that could not be resolved in the target project.
+          required:
+            - type
+            - kind
+            - sourceId
+            - usedByWorkflows
+          properties:
+            type:
+              type: string
+              enum:
+                - credential-unresolved
+            kind:
+              type: string
+              enum:
+                - not_found
+                - unknown_type
+            sourceId:
+              type: string
+            usedByWorkflows:
+              type: array
+              items:
+                type: string
     error:
       required:
         - message

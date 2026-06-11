@@ -232,6 +232,7 @@ Spotify
 spreadsheetId
 Stackby
 Stackshare
+stdout
 Storyblok
 Strapi
 Strava

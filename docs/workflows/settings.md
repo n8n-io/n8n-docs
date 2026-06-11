@@ -80,6 +80,8 @@ Controls whether n8n redacts execution data from production (non-manually trigge
 
 Controls whether n8n redacts execution data from manually triggered executions. When set to **Redact**, n8n hides the input and output data of each node and replaces it with a redacted indicator.
 
+If your instance admin [enforces data redaction instance-wide](/workflows/executions/execution-data-redaction.md#instance-level-enforcement), the settings covered by the enforced scope are locked to **Redact** and can't be turned off here.
+
 Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details on redaction policies, revealing data, and permission requirements.
 
 ### Estimated time saved

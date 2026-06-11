@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: dessant/support-requests@47d5ea12f6c9e4a081637de9626b7319b415a3bf
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }} en
           support-label: 'issue:support'
           issue-comment: >
             :wave: @{issue-author}. Sorry you are having a problem!

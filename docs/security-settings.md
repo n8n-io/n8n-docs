@@ -91,7 +91,7 @@ To enforce data redaction:
 When you enable enforcement:
 
 - n8n redacts execution data for all workflows within the selected scope, including workflows that don't have redaction enabled in their own settings.
-- Workflow-level redaction settings can't be set weaker than the enforced scope. Workflows can still opt into stricter redaction, for example redacting manual executions when only production enforcement is active.
+- Users can't set workflow-level redaction settings weaker than the enforced scope. Workflows can still opt into stricter redaction, for example redacting manual executions when only production enforcement is active.
 - New workflows start with the enforced scope as their redaction policy.
 
 Redaction enforcement requires an Enterprise license with the data redaction feature. For details on what redaction covers, revealing data, and permissions, refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md).

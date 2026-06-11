@@ -42,7 +42,7 @@ To configure redaction:
 6. Select **Save**.
 
 /// note | Settings locked by instance enforcement
-When [instance-level enforcement](#instance-level-enforcement) is active, the settings covered by the enforced scope are locked to **Redact** and can't be turned off at the workflow level.
+When [instance-level enforcement](#instance-level-enforcement) is active, n8n locks the settings covered by the enforced scope to **Redact**. You can't turn them off at the workflow level.
 ///
 
 ### Redaction settings explained
@@ -74,7 +74,7 @@ The enforcement scope controls which executions n8n redacts across the instance:
 - **Enforcement applies when execution data is read.** n8n redacts data covered by the enforcement scope whenever anyone views an execution, including executions from workflows that don't have redaction enabled in their own settings.
 - **Workflow settings can't be weaker than the enforced scope.** The workflow settings UI locks the affected redaction toggles, and the [public API](/api/index.md) rejects attempts to create or update a workflow with a redaction policy below the floor. Workflows can still opt into stricter redaction than the floor.
 - **New workflows start at the floor.** When you create a workflow while enforcement is active, its redaction policy defaults to the enforced scope. If you create a workflow through the public API without specifying a redaction policy, n8n sets it to the floor.
-- **Existing workflow settings aren't rewritten.** Enabling enforcement doesn't modify the stored settings of existing workflows. Their execution data is still redacted at the enforced scope, and if you later disable enforcement, each workflow returns to its own settings.
+- **Existing workflow settings stay as they are.** Enabling enforcement doesn't change the stored settings of existing workflows. Their execution data is still redacted at the enforced scope, and if you later disable enforcement, each workflow returns to its own settings.
 
 ## What gets redacted
 
@@ -82,7 +82,7 @@ When n8n redacts an execution, it redacts:
 
 - **Item JSON data**: n8n replaces all input and output data (`item.json`) for each node with an empty object.
 - **Binary data**: n8n removes binary data (`item.binary`) such as files and images.
-- **Declared sensitive fields**: fields that node authors mark as sensitive (using `sensitiveOutputFields`) are always redacted and can't be revealed, even by users with reveal access.
+- **Declared sensitive fields**: n8n always redacts fields that node authors mark as sensitive (using `sensitiveOutputFields`) and prevents revealing them, even for users with reveal access.
 - **Error metadata**: n8n redacts error messages, preserving only the error type and HTTP status code (for API errors) to aid in troubleshooting.
 
 In the redacted execution:
@@ -111,7 +111,7 @@ To reveal data:
 The execution data becomes visible for that execution in the current session.
 
 /// note | Executions using dynamic credentials
-n8n denies reveal requests for executions that used dynamic credentials, regardless of the user's permissions or the redaction policy in effect. This prevents exposing credential material that was resolved at runtime.
+n8n denies reveal requests for executions that used dynamic credentials, regardless of the user's permissions or the redaction policy in effect. This prevents exposing credentials that the execution resolved at runtime.
 ///
 
 ## Audit logging
@@ -142,11 +142,11 @@ By default, instance owners, admins, and project admins have the permissions to 
 Redaction controls the visibility of execution data when users view executions. It's not a backend access control, and some data paths fall outside its scope. Keep these limitations in mind when evaluating redaction for compliance:
 
 - **Code node `console.log` output**: data that a Code node logs with `console.log` isn't redacted. In manual executions, the output appears in the editor's Logs panel. In production executions, the output goes to the server's standard output (stdout) and any logging infrastructure attached to it.
-- **Data flowing between nodes**: redaction doesn't restrict what downstream nodes receive. During an execution, data flows freely between nodes, so any node in the workflow can send execution data to external systems. Redaction controls what users see in the execution viewer, not what the workflow itself does with the data.
+- **Data flowing between nodes**: redaction doesn't restrict what downstream nodes receive. During an execution, data flows between nodes without restriction, so any node in the workflow can send execution data to external systems. Redaction controls what users see in the execution viewer, not what the workflow itself does with the data.
 - **Webhook responses**: the response body that a workflow returns to a caller (for example, through the Respond to Webhook node or a node's respond option) is the raw data, not a redacted version.
 - **Authentication headers in outbound requests**: redaction doesn't alter the requests workflows make to external services, including any authentication headers they contain.
 - **No field-level redaction**: redaction applies to a node's entire data payload. You can't configure redaction for individual fields within the data. The exception is fields that node authors declare as sensitive, which n8n always redacts.
-- **Stored data is unchanged**: redaction doesn't encrypt or modify execution data in the database. n8n applies redaction when the data is read through the API. Anyone with direct database access can read the underlying data.
+- **Stored data stays as it is**: redaction doesn't encrypt or change execution data in the database. n8n applies redaction when serving the data through the API. Anyone with direct database access can read the underlying data.
 - **Enforcement doesn't propagate through source control**: instance-level enforcement is an instance policy and isn't included when you push workflows with [source control](/source-control-environments/index.md). A workflow pushed from an enforced instance to a non-enforced instance isn't redacted on the target instance. This matches the behavior of other instance-level policies, such as two-factor authentication enforcement.
 
 ## Best practices

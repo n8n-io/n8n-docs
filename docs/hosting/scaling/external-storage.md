@@ -1,5 +1,5 @@
 ---
-description: External storage of binary data for your n8n instance.
+description: External storage of binary data and execution data for your n8n instance.
 contentType: howto
 tags:
   - external storage
@@ -18,9 +18,7 @@ search:
 * If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 ///
 
-n8n can store binary data produced by workflow executions externally. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data.
-
-n8n will introduce external storage for other data types in the future.
+n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
 
 ## Storing n8n's binary data in S3
 
@@ -112,3 +110,21 @@ When using S3 or S3-compatible storage:
 3. Use only supported environment variable names: for access key, use `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY`.
 
 Newer n8n versions have stricter validation and protocol handling. Older configurations may need updates after upgrading.
+
+## Storing n8n's execution data in S3
+
+n8n can also store execution data in S3.
+
+Configure the S3 bucket and credentials as described in the binary data [setup](#setup) section, then tell n8n to store execution data in S3:
+
+```sh
+export N8N_EXECUTION_DATA_STORAGE_MODE=s3
+```
+
+After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:
+
+```
+workflows/{workflowId}/executions/{executionId}/execution_data/bundle.json
+```
+
+n8n records where each execution's data is stored, so switching modes is non-destructive, i.e. older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.

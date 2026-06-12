@@ -15,7 +15,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data.
+Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data and execution data.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

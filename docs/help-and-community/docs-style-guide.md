@@ -107,6 +107,30 @@ You can run Vale locally on your machine as follows:
     1. Running `vale --glob="*.md" docs` will lint all Markdown files in the `docs` directory
     2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/chrischinchilla/vale-vscode) by ChrisChinchilla.
 
+## Frontmatter
+
+Frontmatter sits at the top of a page and must be valid YAML. n8n Docs uses the following frontmatter fields:
+
+- `description`: A short summary of the page content. n8n may display it in search results and link previews.
+- `hidden`: When set to `true`, removes the page from the site's side menu. Omit this field if the page should appear in the menu (most pages do).
+- `layout.description.visible`: When set to `false`, hides the frontmatter description on the rendered page. Always include this field and set it to `false`.
+- `generated`: When set to `true`, marks the page as fully managed by an automation. Don't update these pages manually.
+
+Frontmatter example:
+
+```
+---
+description: Learn how to merge data streams in your n8n workflows.
+layout:
+  description:
+    visible: false
+---
+```
+
+{% hint style="info" %}
+You may see other frontmatter fields on existing n8n Docs pages, such as `contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, and `url`. These support migration management on pre-existing pages. Don't add them to new pages.
+{% endhint %}
+
 ## Markdown and GitBook blocks
 
 The site is generated with [GitBook](https://www.gitbook.com/). Pages are written in [Markdown](https://commonmark.org/), plus GitBook-specific components like callouts, tabs, and structured page elements. GitBook calls these components **blocks**, and the sections below cover the ones you'll use most often.
@@ -319,3 +343,44 @@ The content is rendered following the normal Markdown syntax. To add a list:
 2. No indentation is required.
 {% endtab %}
 {% endtabs %}
+
+### Reusable content
+
+Reusable content lets you store a block of content once and reference it across multiple pages and spaces. When you edit the source, the change propagates to every page that references it, so you don't have to find and update duplicate copies.
+
+Create reusable content in the `.gitbook/includes` space at the [root](TODOLINK) of the repository. Add a file containing the content you want to reuse, and give it a title:
+
+{% code title="reusable-content-descriptor.md" %}
+```
+---
+title: reusable-content-descriptor
+---
+Content that will be reused.
+
+You can display it on multiple pages.
+
+When you edit this source file, the changes propagate to every page that references it.
+```
+{% endcode %}
+
+Reference the content with the `include` syntax to display it on any page or space. Point to the path of your reusable content file. Make the path relative to the file containing the reference.
+
+```
+{% include "../gitbook/includes/reusable-content-descriptor.md" %}
+```
+
+### Embedded workflows
+
+You can embed an n8n workflow in a page so readers can view and interact with it directly in the docs. There are two ways to reference the workflow.
+
+Reference a published template by its template API URL:
+
+```
+{% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
+```
+
+Reference a workflow JSON file stored in the docs repository, using a path relative to <TODO: confirm whether the path is relative to the repository root or the current page, also where should the JSON files be stored>:
+
+```
+{% @n8n-blocks/n8n-workflow-demo content="" url="what/should/filepath/be/let_your_ai_call_an_api.json" %}
+```

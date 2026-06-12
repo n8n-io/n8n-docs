@@ -1088,6 +1088,7 @@ nav:
         - integrations/builtin/credentials/s3.md
         - integrations/builtin/credentials/salesforce.md
         - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/schemaregistry.md
         - integrations/builtin/credentials/searxng.md
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md

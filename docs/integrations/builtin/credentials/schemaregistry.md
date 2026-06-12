@@ -12,12 +12,12 @@ You can use these credentials to authenticate the following nodes when you enabl
 - [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md)
 - [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md)
 
-The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro messages. This credential is separate from your [Kafka credentials](/integrations/builtin/credentials/kafka.md): the registry usually has its own endpoint and authentication, distinct from the Kafka brokers.
+The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro messages. This credential is separate from your [Kafka credentials](/integrations/builtin/credentials/kafka.md): the registry has its own endpoint and authentication, distinct from the Kafka brokers.
 
 ## Supported authentication methods
 
 - None
-- Basic Auth (username and password) — for example, a Confluent Cloud Schema Registry API key and secret
+- Basic Auth (username and password), such as a Confluent Cloud Schema Registry API key and secret
 
 ## Related resources
 

@@ -73,7 +73,7 @@ You must be an instance owner, instance admin, or project admin to push changes 
 n8n commits the following to Git:
 
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
-* Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/code/expressions/). You can choose which credentials to push.
+* Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/data/expressions/). You can choose which credentials to push.
 * Variable stubs (ID and name)
 * Data table schemas (table name and column definitions, not row data). You can choose which data tables to push.
 * Projects

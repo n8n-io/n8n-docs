@@ -34,6 +34,8 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 * Channel Message
     * Create
     * Get Many
+* Chat
+	* Create
 * Chat Message
 	* Create
 	* Get

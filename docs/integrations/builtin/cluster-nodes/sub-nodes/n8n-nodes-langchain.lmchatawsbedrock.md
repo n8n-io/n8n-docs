@@ -18,6 +18,9 @@ You can find authentication information for this node [here](/integrations/built
 	
 ## Node parameters
 
+* **Authentication**: Select the authentication method:
+    * **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
+    * **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
 * **Model**: Select the model that generates the completion.
 
 Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).

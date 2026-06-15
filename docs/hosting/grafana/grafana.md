@@ -14,7 +14,7 @@ The `/metrics` endpoint isn't available on n8n Cloud.
 
 Prometheus scrapes n8n's `/metrics` endpoint on a schedule and stores the data. Grafana then queries Prometheus to display it.
 
-Add a scrape job for n8n in your `prometheus.yml`:
+Add a scrape job targeting your n8n instance in your `prometheus.yml`:
 
 ```yaml
 scrape_configs:
@@ -50,7 +50,7 @@ n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook
 
 ### What the metric tracks
 
-`n8n_webhook_request_duration_seconds` is a Prometheus histogram. For each webhook call, n8n records how long the request took and increments the matching latency buckets. The metric exposes three series per label combination:
+`n8n_webhook_request_duration_seconds` is a Prometheus histogram. For each webhook call, n8n records how long the request took (time of "request received" -> "response sent"). The metric exposes three series per label combination:
 
 | Series | Description |
 |--------|-------------|
@@ -74,7 +74,7 @@ Each series carries these labels:
 | Request rate per workflow | `sum by (workflow_id) (rate(n8n_webhook_request_duration_seconds_count[5m]))` |
 | p95 latency across all webhooks | `histogram_quantile(0.95, sum by (le) (rate(n8n_webhook_request_duration_seconds_bucket[5m])))` |
 | p95 latency per workflow | `histogram_quantile(0.95, sum by (le, workflow_id) (rate(n8n_webhook_request_duration_seconds_bucket[5m])))` |
-| Error rate (non-2xx) | `sum by (workflow_id) (rate(n8n_webhook_request_duration_seconds_count{status_code!="200"}[5m]))` |
+| Error rate (non-2xx) | `sum by (workflow_id) (rate(n8n_webhook_request_duration_seconds_count{status_code!="2.."}[5m]))` |
 | Average request duration | `rate(n8n_webhook_request_duration_seconds_sum[5m]) / rate(n8n_webhook_request_duration_seconds_count[5m])` |
 
 ## Form submission observability
@@ -88,7 +88,7 @@ n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form su
 
 ### What the metric tracks
 
-`n8n_form_submission_duration_seconds` is a Prometheus histogram. For each form submission, n8n records how long processing took and increments the matching latency buckets. The metric exposes three series per label combination:
+`n8n_form_submission_duration_seconds` is a Prometheus histogram. For each form submission, n8n records how long it took from the "user pressing submit" to "user getting feedback on form submission". The metric exposes three series per label combination:
 
 | Series | Description |
 |--------|-------------|
@@ -115,7 +115,7 @@ Form submissions don't include a `method` label because n8n only accepts form da
 | Submission rate per workflow | `sum by (workflow_id) (rate(n8n_form_submission_duration_seconds_count[5m]))` |
 | p95 processing time across all forms | `histogram_quantile(0.95, sum by (le) (rate(n8n_form_submission_duration_seconds_bucket[5m])))` |
 | p95 processing time per workflow | `histogram_quantile(0.95, sum by (le, workflow_id) (rate(n8n_form_submission_duration_seconds_bucket[5m])))` |
-| Error rate (non-2xx) | `sum by (workflow_id) (rate(n8n_form_submission_duration_seconds_count{status_code!="200"}[5m]))` |
+| Error rate (non-2xx) | `sum by (workflow_id) (rate(n8n_form_submission_duration_seconds_count{status_code!="2.."}[5m]))` |
 | Average processing duration | `rate(n8n_form_submission_duration_seconds_sum[5m]) / rate(n8n_form_submission_duration_seconds_count[5m])` |
 
 ## Workflow name lookup

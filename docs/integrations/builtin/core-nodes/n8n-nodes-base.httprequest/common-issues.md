@@ -26,6 +26,42 @@ This error displays when the endpoint **URL** you entered is invalid.
 
 This may be due to a typo in the URL or a deprecated API. Refer to your service's API documentation to verify you have a valid endpoint.
 
+<!-- vale off -->
+## Connection refused (ECONNREFUSED)
+<!-- vale on -->
+
+This error displays when the node reaches a host on the network but the target port has no listener. The TCP connection is actively refused. It isn't a DNS failure, a timeout, or a firewall drop.
+
+On self-hosted n8n, the most common cause is Docker networking. Inside the n8n container, `localhost` and `127.0.0.1` point at the container itself, not at the host machine. A request to `http://localhost:5000` from the node lands on the n8n container's port 5000, where nothing listens.
+
+To resolve, address the target by a name the container can route to:
+
+* **Target on the host machine, Docker Desktop (Mac or Windows)**: use `http://host.docker.internal:<port>` in the **URL** field. Docker Desktop adds this hostname automatically.
+* **Target on the host machine, Linux**: pass `--add-host=host.docker.internal:host-gateway` to the container, or set `extra_hosts` in `docker-compose.yml`:
+    ```yaml
+    services:
+      n8n:
+        image: docker.n8n.io/n8nio/n8n
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
+    ```
+    The same fix is documented for the [MySQL node](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md#cant-connect-to-a-local-mysql-server-when-using-docker).
+* **Target in another container on the same Compose stack**: use the service name as the hostname, for example `http://my-api:5000`. Reference the container's internal port, not the published `ports:` mapping.
+
+A separate cause appears on Node.js 17 and above, even outside Docker: `localhost` resolves to the IPv6 address `::1` before `127.0.0.1`. If the target binds only to `127.0.0.1`, the IPv6 attempt is refused and the fallback to IPv4 doesn't always succeed inside the HTTP Request node.
+
+Use `http://127.0.0.1:<port>` in the **URL** field instead of `localhost`.
+
+To verify the fix before re-running the workflow, exec into the n8n container and try the URL with `wget`:
+
+```sh
+docker exec -it n8n wget -qO- http://host.docker.internal:5000/health
+```
+
+If `wget` from inside the container succeeds, the HTTP Request node succeeds too. If `wget` also returns "connection refused," the cause is the network or the target service, not n8n.
+
+On n8n Cloud, workflows run on n8n's infrastructure. There's no `localhost` and no path to a service on your machine. Expose local-only targets through a tunnel and use the public URL in the HTTP Request node.
+
 ## JSON parameter need to be an valid JSON
 
 This error displays when you've passed a parameter as JSON and it's not formatted as valid JSON.

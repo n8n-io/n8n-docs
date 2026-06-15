@@ -15,6 +15,10 @@ On this page, you'll find a list of operations the Kafka node supports and links
 Refer to [Kafka credentials](/integrations/builtin/credentials/kafka.md) for guidance on setting up authentication. 
 ///
 
+/// note | Schema Registry
+To encode messages with an authenticated Confluent Schema Registry (for example, Confluent Cloud), enable **Use Schema Registry** in the node and add a [Schema Registry credential](/integrations/builtin/credentials/schemaregistry.md).
+///
+
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations

@@ -17,6 +17,7 @@ Authentik
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
+Avro
 Axios
 Backblaze
 [Bb]ackend
@@ -165,15 +166,18 @@ n8n
 nanoids
 namespaces?
 NASA
+Nemotron
 Netlify
 Netscaler
 Nextcloud
 [Nn]ginx
 ngrok
+NIM
 Nodelinter
 npm
 NPM
 npx
+NVIDIA
 nvm
 OAuth
 Odoo
@@ -229,6 +233,7 @@ Spotify
 spreadsheetId
 Stackby
 Stackshare
+stdout
 Storyblok
 Strapi
 Strava

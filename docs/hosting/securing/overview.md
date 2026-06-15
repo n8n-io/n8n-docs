@@ -12,8 +12,10 @@ At a high level, you can:
 * Conduct a [security audit](/hosting/securing/security-audit.md) to identify security risks.
 * [Set up SSL](/hosting/securing/set-up-ssl.md) to enforce secure connections.
 * [Set up Single Sign-On](/hosting/securing/set-up-sso.md) for user account management.
+* Use [token exchange](/hosting/oem-deployment/token-exchange.md) to log users in from your own identity provider when embedding n8n, or to call n8n APIs on their behalf.
 * Use [two-factor authentication (2FA)](/user-management/two-factor-auth.md) for your users.
 * Enable [encryption key rotation](/hosting/securing/encryption-key-rotation.md) to periodically replace the key that encrypts credentials and other sensitive data.
+* Enable [JWE token decryption for OAuth 2.0 credentials](/hosting/securing/oauth2-jwe-token-decryption.md) so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
 
 You can also protect sensitive data processed by your workflows:
 

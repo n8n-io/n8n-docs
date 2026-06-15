@@ -12,6 +12,10 @@ You can use these credentials to authenticate the following nodes:
 - [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md)
 - [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md)
 
+/// note | Schema Registry
+These credentials authenticate the Kafka brokers. To connect to an authenticated Confluent Schema Registry for Avro encoding and decoding, use the separate [Schema Registry credentials](/integrations/builtin/credentials/schemaregistry.md).
+///
+
 ## Supported authentication methods
 
 - Client ID

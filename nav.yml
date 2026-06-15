@@ -759,6 +759,7 @@ nav:
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
+          - Oracle Database Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Chroma Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorechroma.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
@@ -782,6 +783,7 @@ nav:
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Embeddings Oracle Database: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md
           - Alibaba Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
@@ -795,6 +797,7 @@ nav:
           - MiniMax Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Moonshot Kimi Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
+          - NVIDIA Nemotron Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatnvidia.md
           - Ollama Chat Model:
             - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md
@@ -902,6 +905,7 @@ nav:
         - integrations/builtin/credentials/cratedb.md
         - integrations/builtin/credentials/crowddev.md
         - integrations/builtin/credentials/crowdstrike.md
+        - integrations/builtin/credentials/crypto.md
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/databricks.md
         - integrations/builtin/credentials/datadog.md
@@ -1037,6 +1041,7 @@ nav:
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md
         - integrations/builtin/credentials/npm.md
+        - integrations/builtin/credentials/nvidia.md
         - integrations/builtin/credentials/odoo.md
         - integrations/builtin/credentials/okta.md
         - integrations/builtin/credentials/ollama.md
@@ -1083,6 +1088,7 @@ nav:
         - integrations/builtin/credentials/s3.md
         - integrations/builtin/credentials/salesforce.md
         - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/schemaregistry.md
         - integrations/builtin/credentials/searxng.md
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
@@ -1295,6 +1301,7 @@ nav:
       - External hooks: hosting/configuration/external-hooks.md
       - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
+      - Change instance owner email: hosting/configuration/change-instance-owner-email.md
       - Manage settings using environment variables: hosting/configuration/settings-env-vars.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
@@ -1322,6 +1329,7 @@ nav:
       - Hardening task runners: hosting/securing/hardening-task-runners.md
       - SSRF protection: hosting/securing/ssrf-protection.md
       - Encryption key rotation: hosting/securing/encryption-key-rotation.md
+      - JWE token decryption for OAuth 2.0: hosting/securing/oauth2-jwe-token-decryption.md
       - Execution data redaction: workflows/executions/execution-data-redaction.md
       - Restrict account registration to email-verified users: hosting/securing/restrict-by-email-verification.md
     - Starter Kits:
@@ -1330,6 +1338,7 @@ nav:
       - Overview: hosting/oem-deployment/index.md
       - Prerequisites: hosting/oem-deployment/prerequisites.md
       - Managing workflows: hosting/oem-deployment/managing-workflows.md
+      - Token exchange: hosting/oem-deployment/token-exchange.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

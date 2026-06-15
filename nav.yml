@@ -759,6 +759,7 @@ nav:
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
+          - Oracle Database Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Chroma Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorechroma.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
@@ -782,6 +783,7 @@ nav:
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Embeddings Oracle Database: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md
           - Alibaba Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
@@ -1086,6 +1088,7 @@ nav:
         - integrations/builtin/credentials/s3.md
         - integrations/builtin/credentials/salesforce.md
         - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/schemaregistry.md
         - integrations/builtin/credentials/searxng.md
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
@@ -1334,6 +1337,7 @@ nav:
       - Overview: hosting/oem-deployment/index.md
       - Prerequisites: hosting/oem-deployment/prerequisites.md
       - Managing workflows: hosting/oem-deployment/managing-workflows.md
+      - Token exchange: hosting/oem-deployment/token-exchange.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

@@ -17,6 +17,7 @@ Authentik
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
+Avro
 Axios
 Backblaze
 [Bb]ackend

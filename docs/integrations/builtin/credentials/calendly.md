@@ -17,18 +17,18 @@ The Calendly Trigger node relies on Calendly webhooks. Calendly only offers acce
 
 ## Supported authentication methods
 
-- API access token
+- Personal Access Token
 - OAuth2
 
 ## Related resources
 
 Refer to [Calendly's API documentation](https://developer.calendly.com/getting-started) for more information about the service.
 
-## Using API access token
+## Using Personal Access Token
 
 To configure this credential, you'll need a [Calendly](https://www.calendly.com/) account and:
 
-- An API Key or **Personal Access Token**
+- A **Personal Access Token**
 
 To get your access token:
 
@@ -63,3 +63,7 @@ To get both, create a new OAuth app in Calendly:
 1. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.
 
 Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account) for more information.
+
+/// note | Local OAuth2 testing
+When testing OAuth2 with a tunnel (such as ngrok or Cloudflare Tunnel), open n8n through the same public URL you used as the **OAuth Redirect URL**. Otherwise, the OAuth callback may fail because the n8n session cookie belongs to a different host.
+///

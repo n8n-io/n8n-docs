@@ -29,6 +29,18 @@ When you save a credential, n8n tests it to confirm it works.
 n8n names new credentials "*node name* account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app or service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
 ///
 
+## Allowed HTTP request domains
+
+The **Allowed HTTP Request Domains** field appears on many n8n credentials for web-based APIs and services. It controls which domains the credential is permitted to be used against when the credential is selected in an **HTTP Request** node. It has no effect when the credential is used in its own dedicated node.
+
+The field has three options: 
+
+- **All**: The credential can be used against any URL.
+- **Specific Domains**: Restrict to specific domains (provide a comma-separated list like `httpbin.org, api.github.com`)
+- **None**: The credential is blocked entirely from use in the **HTTP Request** node.
+
+This field prevents credential misuse, for example sending the credential to URLs outside the intended domain.
+
 ## Expressions in credentials
 
 You can use [expressions](/glossary.md#expression-n8n) to set credentials dynamically as your workflow runs:

@@ -80,6 +80,8 @@ Controls whether n8n redacts execution data from production (non-manually trigge
 
 Controls whether n8n redacts execution data from manually triggered executions. When set to **Redact**, n8n hides the input and output data of each node and replaces it with a redacted indicator.
 
+If your instance admin [enforces data redaction instance-wide](/workflows/executions/execution-data-redaction.md#instance-level-enforcement), n8n locks the settings covered by the enforced scope to **Redact**. You can't turn them off here.
+
 Refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md) for details on redaction policies, revealing data, and permission requirements.
 
 ### Estimated time saved
@@ -87,3 +89,7 @@ Refer to [Execution data redaction](/workflows/executions/execution-data-redacti
 An estimate of the number of minutes each of execution of this workflow saves you.
 
 Setting this lets n8n calculate the amount of time saved for [insights](/insights.md).
+
+### Custom span attributes
+
+Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](/hosting/logging-monitoring/opentelemetry.md#custom-span-attributes) for details.

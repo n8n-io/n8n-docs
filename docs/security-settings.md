@@ -68,3 +68,38 @@ When you disable publishing:
 
 - Currently published workflows remain published. The setting only affects new publish actions.
 - The number of currently published personal workflows is displayed below the toggle.
+
+## Enforce execution data redaction
+
+You can enforce [execution data redaction](/workflows/executions/execution-data-redaction.md) for all workflows on the instance. Enforcement sets an instance-wide minimum redaction policy that individual workflow settings can't weaken.
+
+/// info | Feature availability
+Data redaction enforcement is available on Enterprise Self-hosted and Enterprise Cloud plans.
+
+**Available from:** n8n version 2.26.0
+///
+
+To enforce data redaction:
+
+1. Navigate to **Settings** > **Security**.
+2. In the **Data redaction** section, toggle **Enforce data redaction** on.
+3. Under **Redact executions**, select the enforcement scope:
+	- **Production executions (Recommended)**: n8n redacts data from production executions in all workflows.
+	- **Manual and production executions**: n8n redacts data from both manual and production executions in all workflows.
+4. Confirm your choice in the dialog.
+
+When you enable enforcement:
+
+- n8n redacts execution data for all workflows within the selected scope, including workflows that don't have redaction enabled in their own settings.
+- Users can't set workflow-level redaction settings weaker than the enforced scope. Workflows can still opt into stricter redaction, for example redacting manual executions when only production enforcement is active.
+- New workflows start with the enforced scope as their redaction policy.
+
+Redaction enforcement requires an Enterprise license with the data redaction feature. For details on what redaction covers, revealing data, and permissions, refer to [Execution data redaction](/workflows/executions/execution-data-redaction.md).
+
+## Configure security policy with environment variables
+
+You can also manage security policy settings from environment variables instead of through the UI. Available from n8n v2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+
+When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/security-policy.md"

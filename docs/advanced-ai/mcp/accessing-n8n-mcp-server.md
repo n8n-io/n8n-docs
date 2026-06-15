@@ -25,7 +25,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 - MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
 - It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
-- It’s not scoped to each MCP client. Any connected client sees all workflows you’ve enabled for MCP access.
+- It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
 - Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
 ## Enabling MCP access
@@ -47,6 +47,10 @@ Once enabled, you'll see:
    ![mcp_page_content.png](/_images/advanced-ai/mcp_page_content.png)
 
 **To disable:** Toggle the main MCP toggle off.
+
+/// note | Environment variables (self-hosted only)
+On self-hosted instances, you can also manage MCP settings using environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md#mcp).
+///
 
 ### For self-hosted: Complete disablement
 
@@ -109,7 +113,7 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients
 
-By default, no workflows are visible to MCP clients. You must explicitly enable MCP access for each workflow you want to expose.
+MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. However, clients can't access full workflow data, nor execute or modify a workflow unless you explicitly enable MCP access for that workflow.
 
 ### Enabling access
 
@@ -134,7 +138,7 @@ By default, no workflows are visible to MCP clients. You must explicitly enable 
 
 ### Managing access
 
-The **Instance-level MCP** settings page shows all workflows available to MCP clients. From this list you can:
+The **Instance-level MCP** settings page shows all workflows enabled for MCP clients to access and operate on. From this list you can:
 
 - Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
@@ -197,7 +201,7 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 ```json
 "mcpServers": {
-  "n8n-local": {
+  "n8n-mcp": {
     "type": "http",
     "url": "https://<your-n8n-domain>/mcp-server/http",
     "headers": {
@@ -210,9 +214,35 @@ Add the following entry to your `claude_desktop_config.json` file:
 Here, replace:
 
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
-### Connecting Claude Code to n8n MCP server
+#### Connecting Claude Code to n8n MCP server
+
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
+
+Use the following CLI command:
+
+```bash
+claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `claude.json` file:
+
+```json
+{
+    "mcpServers": {
+        "n8n-mcp": {
+            "type": "http",
+            "url": "https://<your-n8n-domain>/mcp-server/http"
+        }
+    }
+}
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+##### OPTION 2: Authenticate using Access Token
 
 Use the following CLI command:
 
@@ -226,7 +256,7 @@ Alternatively, add the following entry to your `claude.json` file:
 ```json
 {
     "mcpServers": {
-        "n8n-local": {
+        "n8n-mcp": {
             "type": "http",
             "url": "https://<your-n8n-domain>/mcp-server/http",
             "headers": {
@@ -244,10 +274,31 @@ Here, replace:
 
 ### Connecting Codex CLI to n8n MCP server
 
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
+
+Use the following CLI command:
+
+```bash
+codex mcp add n8n-mcp --url https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `~/.codex/config.toml` file:
+
+```toml
+[mcp_servers.n8n-mcp]
+url = "http://localhost:5678/mcp-server/http"
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+##### OPTION 2: Authenticate using Access Token
+
 Add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
-[mcp_servers.n8n_mcp]
+[mcp_servers.n8n-mcp]
 url = "https://<your-n8n-domain>/mcp-server/http"
 http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 ```
@@ -295,6 +346,6 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 
 - Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 - Verify that the MCP access is enabled in n8n settings.
-- Check that the workflows you want to access are marked as available in MCP.
+- Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.

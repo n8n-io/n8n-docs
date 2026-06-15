@@ -23,7 +23,7 @@ You can view the number of active executions and your plan's concurrency limit a
 Some other details about concurrency to keep in mind:
 
 - Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, or error executions.
-- [Test evaluations](/glossary.md#evaluation-n8n) don't count towards concurrency limits. Your test evaluation concurrency limit is equal to, but separate from, your plan's regular concurrency limit.
+- [Test evaluations](/glossary.md#evaluation-n8n) don't count towards production concurrency limits. They use a separate per-plan limit for how many test cases can run in parallel within a single test run: Community and Pro 1 (sequential), Business 3, Enterprise 5. You can adjust the value for a given run from the **Run Test** popover. Refer to [Metric-based evaluations](/advanced-ai/evaluations/metric-based-evaluations.md#run-test-cases-in-parallel) for details.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 

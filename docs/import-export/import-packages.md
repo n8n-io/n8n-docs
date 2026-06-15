@@ -98,18 +98,18 @@ Use `workflowPublishingPolicy` to control whether imported workflows are publish
 
 ```json
 workflowPublishingPolicy:
-	| "preserve-published-version" // default - leave the target's published version untouched
+	| "preserve-published-state"   // default - leave the target's published version untouched
 	| "match-source"               // adopt the published state from the package
-	| "all-published"              // publish every imported workflow
-	| "all-unpublished"            // import every workflow unpublished
+	| "publish-all"                // publish every imported workflow
+	| "unpublish-all"              // import every workflow unpublished
 ```
 
 | Value | Behaviour |
 |-------|-----------|
-| `preserve-published-version` | Leaves the target's published version untouched. An updated workflow keeps the published version it had on the target. New workflows import as unpublished. |
+| `preserve-published-state` | Leaves the target's published version untouched. An updated workflow keeps the published version it had on the target. New workflows import as unpublished. |
 | `match-source` | Adopts the source workflow's published state, read from the package. |
-| `all-published` | Imports and publishes every workflow in the package. |
-| `all-unpublished` | Imports every workflow unpublished. When you update a published workflow, n8n unpublishes it. |
+| `publish-all` | Imports and publishes every workflow in the package. |
+| `unpublish-all` | Imports every workflow unpublished. When you update a published workflow, n8n unpublishes it. |
 
 /// note | Draft: a workflow with a missing node type stays unpublished
 A workflow imported with a missing node type is always left unpublished, whatever you set here. See [Handle missing node types](#handle-missing-node-types).

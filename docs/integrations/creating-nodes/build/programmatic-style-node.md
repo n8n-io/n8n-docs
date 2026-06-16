@@ -400,7 +400,7 @@ Add the following code to the JSON file:
 
 ```json
 {
-	"node": "n8n-nodes-base.FriendGrid",
+	"node": "n8n-nodes-friendgrid",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [

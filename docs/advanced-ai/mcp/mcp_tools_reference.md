@@ -285,7 +285,7 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | `data[].type` | `"personal" | "team"` | The project type |
 | `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
-| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, default to omitting `projectId` on `create_workflow_from_code` so the workflow lands in the caller's personal project, unless the user explicitly picked one of the returned accessible projects. Omitted on error responses. Available from n8n v2.26.0. |
+| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n v2.26.0. |
 | `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous (for example, no exact match but multiple partial matches), or when team projects aren't licensed on this instance |
 
 #### Notes

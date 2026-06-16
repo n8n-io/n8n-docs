@@ -22,6 +22,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
 | `DB_PING_INTERVAL_SECONDS` | Number | `2` | The interval, in seconds, between pings to the database to check if the connection is still alive. |
+| `DB_PING_TIMEOUT_MS` | Number | `5000` | Timeout, in milliseconds, for an individual database health-check ping. Falls back to the deprecated `N8N_DB_PING_TIMEOUT` if set. |
 
 ## PostgreSQL
 
@@ -41,6 +42,9 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_POSTGRESDB_SSL_CERT`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate. |
 | `DB_POSTGRESDB_SSL_KEY`<br>/`_FILE` | String | - | The PostgreSQL SSL key. |
 | `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED`<br>/`_FILE` | Boolean | `true` | If n8n should reject unauthorized SSL connections (true) or not (false). |
+| `DB_POSTGRESDB_MAX_CONNECTION_LIFETIME_MS`<br>/`_FILE` | Number | `3600000` | Maximum lifetime, in milliseconds, of a pooled connection before it's recycled. Set to `0` to disable. |
+| `DB_POSTGRESDB_KEEP_ALIVE`<br>/`_FILE` | Boolean | `true` | Whether to enable TCP keep-alive on connections so dead peers are detected without waiting for a query. |
+| `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`<br>/`_FILE` | Number | `10000` | Initial delay, in milliseconds, before the first TCP keep-alive probe is sent. |
 
 ## SQLite
 

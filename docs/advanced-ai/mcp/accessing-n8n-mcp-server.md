@@ -143,7 +143,7 @@ MCP clients can discover previews of all workflows the current user has access t
 
 You can use the <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> in the workflow list to toggle MCP access for all workflows in the current project or folder:
 
-1. Navigate to the desired project/folder workflow list
+1. Navigate to the desired project and select **Workflows** from the top menu, then open a subfolder if required.
 2. Click the `...` menu next to the project/folder name
 3. Select an option from `Manage MCP access` menu
 

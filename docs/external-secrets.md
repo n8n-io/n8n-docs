@@ -8,15 +8,12 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, and HashiCorp Vault.
+* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
 * From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 
-/// warning | Infisical deprecation
-Infisical is deprecated. From version 2.10.0, you can't connect new Infisical vaults. Existing ones remain for now.
-///
 
 You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n) for n8n.
 
@@ -174,6 +171,42 @@ path "kv/*" {
   capabilities = ["read", "list"]
 }
 ```
+
+### Infisical
+
+/// note | Version `2.26.0` and later
+Infisical secrets management support is only available from version `2.26.0`.
+///
+
+
+To connect Infisical, provide the following:
+
+- **Site URL**: the base URL of your Infisical instance. Defaults to `https://app.infisical.com`. Change it only if you're self-hosting Infisical.
+- **Project ID**: the ID of the Infisical project to read secrets from.
+- **Environment**: the environment slug, for example `dev`, `staging`, or `prod`.
+- **Secret Path**: the path within the project to read secrets from. Defaults to `/`.
+- **Authentication Method**: choose **Universal Auth** (recommended) or **Access Token**.
+
+n8n recommends Universal Auth, which uses an Infisical [Machine Identity](https://infisical.com/docs/documentation/platform/identities/machine-identities){:target="_blank" .external-link}. Tokens refresh automatically before they expire.
+
+In Infisical, grant the Machine Identity a role with permission to read secrets in the target project. The built-in **Viewer** role works, or you can create a custom role that grants the `secrets` permissions **Read Value** and **Describe Secret** on the target environment and secret path. See Infisical's [project role docs](https://infisical.com/docs/documentation/platform/access-controls/role-based-access-controls){:target="_blank" .external-link}.
+
+=== "Universal Auth"
+
+    Provide:
+
+    - **Client ID**: the machine identity's Client ID.
+    - **Client Secret**: the machine identity's Client Secret.
+
+    In Infisical, create a machine identity, attach it to the project with the role described above, then copy the Client ID and Client Secret. See Infisical's [Universal Auth docs](https://infisical.com/docs/documentation/platform/identities/universal-auth){:target="_blank" .external-link}.
+
+=== "Access Token"
+
+    Provide:
+
+    - **Access Token**: the token issued inside the machine identity.
+
+    In Infisical, create a machine identity, attach it to the project with the role described above, then click on `Add Auth Method` and select `Token Auth`. See Infisical's [Token auth docs](https://infisical.com/docs/documentation/platform/identities/token-auth){:target="_blank" .external-link}.
 
 ## Use secrets in n8n credentials
 

@@ -79,6 +79,18 @@ n8n will enable [task runners](/hosting/configuration/task-runners.md) by defaul
 
 **Migration path:** Before upgrading to v2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](/hosting/configuration/task-runners.md#external-mode).
 
+### `$evaluateExpression` no longer works in the Code node
+
+Because Code node executions now run on task runners in secure mode by default, the `$evaluateExpression()` convenience method no longer works inside the Code node. Secure mode disables evaluating strings as code, which is the mechanism expressions rely on, so `$evaluateExpression()` calls in a Code node return `null` or error. Expressions in regular node fields, such as the Edit Fields (Set) node, aren't affected.
+
+**Migration path:** Move the expression evaluation out of the Code node, in order of preference:
+
+- Write the logic directly in JavaScript instead of calling `$evaluateExpression()`.
+- Evaluate the expression in an Edit Fields (Set) node before the Code node, then read the result from the incoming item.
+- If you have no other option, set `N8N_RUNNERS_INSECURE_MODE=true` to re-enable the disabled JavaScript features. This turns off the task runner's security measures and is discouraged for production use.
+
+`$evaluateExpression()` in the Code node may be removed entirely in a future version, so treat `N8N_RUNNERS_INSECURE_MODE=true` as a temporary workaround rather than a permanent solution.
+
 ### Remove task runner from `n8nio/n8n` docker image
 
 Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the task runner for external mode. You must use the separate `n8nio/runners` Docker image to run task runners in external mode.

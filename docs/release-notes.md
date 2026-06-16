@@ -34,6 +34,35 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.27.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.0...n8n@2.27.0) for this version.<br />
+**Release date:** 2026-06-16
+
+This release contains bug fixes.
+
+### Contributors
+
+[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[sinehypernova-0718](https://github.com/sinehypernova-0718)  
+[parveshsaini](https://github.com/parveshsaini)  
+[luyua9](https://github.com/luyua9)  
+[niclox44](https://github.com/niclox44)  
+[Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
+[hammadxcm](https://github.com/hammadxcm)  
+[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[corazzione](https://github.com/corazzione)  
+[Wujerry](https://github.com/Wujerry)  
+[davidangularme](https://github.com/davidangularme)  
+[SAY-5](https://github.com/SAY-5)  
+[legendik](https://github.com/legendik)  
+[petrusdemelo](https://github.com/petrusdemelo)  
+[envy](https://github.com/envy)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.26.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.3...n8n@2.26.4) for this version.<br />

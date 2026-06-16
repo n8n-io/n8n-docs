@@ -48,7 +48,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
 - Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
-- Filtering by `tags` and the `tags` field in results are available from n8n v2.27.0. Use `list_tags` to discover the available tag names.
+- Filtering by `tags`, and the `tags` field in results, are available from n8n v2.27.0. Use `list_tags` to discover the available tag names.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details

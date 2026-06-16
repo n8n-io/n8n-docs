@@ -21,6 +21,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 |------|------|----------|---------|-------------|
 | `query` | `string` | No | | Filter by name or description |
 | `projectId` | `string` | No | | Filter by project ID |
+| `tags` | `string[]` | No | | Filter by tag names. Uses AND semantics — a workflow must have all the listed tags to match. |
 | `limit` | `integer` | No | `200` | Limit the number of results (max 200) |
 | `sortBy` | `string` | No | `"updatedAt:desc"` | Sort order for results. One of: `"updatedAt:desc"`, `"updatedAt:asc"`, `"createdAt:desc"`, `"createdAt:asc"`, `"name:asc"`, `"name:desc"` |
 
@@ -39,6 +40,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].scopes` | `string[]` | User permissions for this workflow |
 | `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `data[].availableInMCP` | `boolean` | Whether the workflow is visible to MCP tools |
+| `data[].tags` | `array` | Tags assigned to the workflow, each with `id` and `name` |
 | `count` | `integer` | Total number of workflows that match the filters |
 
 #### Notes
@@ -46,9 +48,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
 - Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
+- Filtering by `tags` and the `tags` field in results are available from n8n v2.27.0. Use `list_tags` to discover the available tag names.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
-
----
 
 ### get_workflow_details
 
@@ -284,7 +285,8 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | `data[].type` | `"personal" | "team"` | The project type |
 | `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
-| `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous, for example when no exact match was found but multiple partial matches exist |
+| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, default to omitting `projectId` on `create_workflow_from_code` so the workflow lands in the caller's personal project, unless the user explicitly picked one of the returned accessible projects. Omitted on error responses. Available from n8n v2.26.0. |
+| `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous (for example, no exact match but multiple partial matches), or when team projects aren't licensed on this instance |
 
 #### Notes
 
@@ -323,6 +325,42 @@ Search for folders within a project.
 
 - Maximum result limit is 100.
 - This tool enables MCP clients to create workflows in a specific folder.
+
+---
+
+### list_tags
+
+/// info | Available from n8n v2.27.0
+///
+
+List all workflow tags in the instance. Tags are global (not project-scoped) and can be used with `search_workflows` to filter results.
+
+#### Parameters
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `limit` | `integer` | No | `500` | Limit the number of results (max 500) |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `array` | Workflow tags available in the instance |
+| `data[].id` | `string` | The unique identifier of the tag |
+| `data[].name` | `string` | The display name of the tag |
+| `data[].usageCount` | `integer` | Number of non-archived workflows using this tag |
+| `data[].createdAt` | `string` | ISO timestamp when the tag was created |
+| `data[].updatedAt` | `string` | ISO timestamp when the tag was last updated |
+| `count` | `integer` | Number of tags returned |
+| `totalCount` | `integer` | Total number of tags before applying the limit |
+
+#### Notes
+
+- Maximum result limit is 500.
+- Tags are global and aren't scoped to a project.
+- `usageCount` only counts non-archived workflows.
+- Requires the `tag:list` global permission.
+- Only available when workflow tags are enabled on the instance. If tags are disabled in the instance settings, this tool isn't exposed.
 
 ---
 
@@ -570,6 +608,46 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 
 ---
 
+### explore_node_resources
+
+/// info | Available from n8n v2.27.0
+///
+
+Resolve the real values behind a node's resource locator or load-options dropdown (for example Slack channels, Google Sheets tabs, or available AI models). Requires a credential to be set for the desired service.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodeType` | `string` | Yes | Fully-qualified node type ID from `search_nodes` / `get_node_types`, for example `"n8n-nodes-base.slack"` |
+| `version` | `number` | Yes | Node version, for example `4.7`. Must match a version returned by `search_nodes`. |
+| `methodName` | `string` | Yes | The exact method name from the node's `@searchListMethod` or `@loadOptionsMethod` annotation in the type definition. Call `get_node_types` first to read the real method name — don't guess. |
+| `methodType` | `"listSearch" | "loadOptions"` | Yes | `"listSearch"` for `@searchListMethod` annotations (supports filter and pagination); `"loadOptions"` for `@loadOptionsMethod` annotations. |
+| `credentialType` | `string` | Yes | Credential type key for the node, for example `"slackApi"` or `"googleSheetsOAuth2Api"` |
+| `credentialId` | `string` | Yes | ID of a credential the user can access, obtained from `list_credentials` |
+| `filter` | `string` | No | Optional search/filter text to narrow results |
+| `paginationToken` | `string` | No | Pagination token from a previous call to fetch the next page (`listSearch` only) |
+| `currentNodeParameters` | `object` | No | Current node parameters for dependent lookups. Some methods require prior selections — for example, listing sheets within a spreadsheet needs `{ documentId: { __rl: true, mode: "id", value: "<spreadsheetId>" } }`. Check the type definition's `displayOptions` to know which parameters a method depends on. |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `results` | `array` | Resources returned by the node method |
+| `results[].name` | `string` | The display label of the resource |
+| `results[].value` | `string | number | boolean` | The ID to use in workflow code |
+| `results[].url` | `string` | URL for the resource, when available |
+| `results[].description` | `string` | Description of the resource, when available |
+| `paginationToken` | `string` | Pass back as `paginationToken` to fetch the next page. Absent when there are no more results. |
+| `builderHint` | `string` | Selection guidance from the node's `@builderHint` annotation, when present |
+
+#### Notes
+
+- Requires a `credentialId` from `list_credentials`; the lookup runs as the current user using that credential.
+- `listSearch` methods support `filter` and pagination via `paginationToken`; `loadOptions` methods don't.
+- This tool reaches out to external services, unlike most other read-only tools.
+
+---
 
 ### validate_workflow
 

@@ -44,4 +44,12 @@ Refer to [Log streaming](/log-streaming.md) for more information on this feature
 | `N8N_EVENTBUS_LOGWRITER_SYNCFILEACCESS` | Boolean | `false` | Whether all file access happens synchronously within the thread (true) or not (false). |
 | `N8N_EVENTBUS_LOGWRITER_KEEPLOGCOUNT` | Number | `3` | Number of event log files to keep. |
 | `N8N_EVENTBUS_LOGWRITER_MAXFILESIZEINKB` | Number | `10240` | Maximum size (in kilo-bytes) of an event log file before a new one starts. |
-| `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. |
+| `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` | String | `n8nEventLog` | Basename of the event log file. Ignored when `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` is set. |
+| `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` | String | `''` | Absolute path to the event log file. Must end in `.log`. When set, this path is used verbatim and overrides `N8N_EVENTBUS_LOGWRITER_LOGBASENAME` and the default per-process suffix. Use this to give each n8n process a unique event log path when multiple processes share a writable filesystem. Refer to [Per-process event log files](/log-streaming.md#per-process-event-log-files) for details. |
+| `N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE` | Number | `500000` | Maximum number of lines parsed from a single event log file during recovery. Bounds memory use when an event log file contains many invalid lines. |
+
+### Manage log streaming destinations from environment variables
+
+Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` to manage log streaming destinations from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works, and [Configure log streaming destinations using environment variables](/log-streaming.md#configure-using-environment-variables) for the per-destination JSON shape.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/log-streaming.md"

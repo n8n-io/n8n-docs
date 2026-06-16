@@ -19,8 +19,10 @@ For LDAP setup information, refer to [LDAP](/user-management/ldap.md).
 
 For SAML setup information, refer to [SAML](/user-management/saml/index.md).
 
-/// note | Basic auth and JWT removed
-n8n removed support for basic auth and JWT in version 1.0.
+/// note | Unsupported user management methods
+In version 1.0, n8n:
+- Removed support for **basic auth** and **JWT** 
+- Removed the `N8N_USER_MANAGEMENT_DISABLED` environment variable. No supported way to disable the login screen exists in recent versions of n8n, including for local or development use. If you need to simplify login for local development, consider using a password manager, setting a simple local password, or scripting the standard login flow.
 ///
 ## Setup
 
@@ -77,6 +79,21 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 ### Step two: In-app setup
 
 --8<-- "_snippets/user-management/in-app-setup.md"
+
+#### Pre-provision the instance owner from environment variables
+
+/// info | Available from n8n v2.17.0
+///
+
+You can pre-provision the instance owner from environment variables instead of going through the in-app setup. Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` and provide the owner details. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for how the activation pattern works.
+
+To change the owner email after setup, see [Change the instance owner email for self-hosted n8n](/hosting/configuration/change-instance-owner-email.md).
+
+/// warning | `N8N_INSTANCE_OWNER_PASSWORD_HASH` must be a bcrypt hash
+This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
+///
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/instance-owner.md"
 
 ### Step three: Invite users
 

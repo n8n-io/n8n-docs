@@ -69,7 +69,3 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 1. Select **Next**.
 1. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
 1. Select **Confirm move to new project**.
-
-## Using external secrets in projects
-
-To use [external secrets](/external-secrets.md) in a project, you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.

@@ -1,6 +1,6 @@
 ---
 title: Nodes environment variables
-description: Environment variable to configure nodes management in self-hosted n8n instance.
+description: Environment variables to configure nodes management and node-specific limits in self-hosted n8n.
 contentType: reference
 tags:
   - environment variables
@@ -13,10 +13,13 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes.
+This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, enabling community nodes, and configuring node-specific limits.
+
+## Nodes and community node settings
 
 | Variable                                 | Type             | Default                       | Description                                                                                                                                                                                                                           |
 |:-----------------------------------------|:-----------------|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `N8N_COMMUNITY_PACKAGES_AUTH_TOKEN`      | String           | -                             | Authentication token for a private npm registry. Use with `N8N_COMMUNITY_PACKAGES_REGISTRY` to authenticate requests when installing community nodes from a private registry. |
 | `N8N_COMMUNITY_PACKAGES_ENABLED`         | Boolean          | `true`                        | Enables (true) or disables (false) the functionality to install and load community nodes. If set to false, neither verified nor unverified community packages will be available, regardless of their individual settings. |
 | `N8N_COMMUNITY_PACKAGES_PREVENT_LOADING` | Boolean          | `false`                       | Prevents (true) or allows (false) loading installed community nodes on instance startup. Use this if a faulty node prevents the instance from starting.                                                                               |
 | `N8N_COMMUNITY_PACKAGES_REGISTRY`        | String           | `https://registry.npmjs.org`  | NPM registry URL to pull community packages from (license required).                                                                                                                                                                  |
@@ -29,3 +32,19 @@ This page lists the environment variables configuration options for managing [no
 | `NODES_ERROR_TRIGGER_TYPE`               | String           | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger.                                                                                                                                                                                      |
 | `NODES_EXCLUDE`                          | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]`                             | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"@n8n/n8n-nodes-langchain.lmChatDeepSeek\"]"`.  To enable all nodes, specify `NODES_EXCLUDE: "[]"`.                       |
 | `NODES_INCLUDE`                          | Array of strings | -                             | Specify which nodes to load.                                                                                                                                                                                                          |
+
+## Compression node settings
+
+| Variable                                             | Type   | Default        | Description                                                                          |
+|:-----------------------------------------------------|:-------|:---------------|:-------------------------------------------------------------------------------------|
+| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `2147483648`   | Maximum total decompressed output size in bytes. Default is 2 GiB.                   |
+| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `5000`         | Maximum number of entries allowed in a ZIP archive.                                   |
+
+## Manage installed community packages
+
+/// info | Available from n8n v2.21.0
+///
+
+Pre-provision installed [community packages](/integrations/community-nodes/installation/index.md) from environment variables. See [Manage instance settings using environment variables](/hosting/configuration/settings-env-vars.md) for the `*_MANAGED_BY_ENV` pattern.
+
+--8<-- "_snippets/self-hosting/configuration/environment-variables/settings-env-vars/community-packages.md"

@@ -18,12 +18,42 @@ Create a [Jira](https://www.atlassian.com/software/jira) Software Cloud or Serve
 
 ## Supported authentication methods
 
+- [SW Cloud OAuth2](#using-sw-cloud-oauth2): Use this method with [Jira Software Cloud](https://www.atlassian.com/software/jira) for OAuth2 authentication.
 - [SW Cloud API token](#using-sw-cloud-api-token): Use this method with [Jira Software Cloud](https://www.atlassian.com/software/jira).
 - [SW Server account](#using-sw-server-account): Use this method with [Jira Software Server](https://www.atlassian.com/software/jira/download.).
 
 ## Related resources
 
 Refer to [Jira's API documentation](https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about) for more information about the service.
+
+## Using SW Cloud OAuth2
+
+To configure this credential, you'll need an account on [Jira Software Cloud](https://www.atlassian.com/software/jira){:target="_blank" .external-link} and access to the [Atlassian Developer Console](https://developer.atlassian.com/console/myapps/){:target="_blank" .external-link}.
+
+Then:
+
+1. Open the [Atlassian Developer Console](https://developer.atlassian.com/console/myapps/){:target="_blank" .external-link} and select **Create** > **OAuth 2.0 integration**.
+2. Enter a **Name** for your app and agree to the terms, then select **Create**.
+3. Select **Authorization** in the left sidebar.
+4. Next to **OAuth 2.0 (3LO)**, select **Add**.
+5. In n8n, copy the **OAuth Redirect URL**.
+6. Paste the URL into the **Callback URL** field in the Atlassian Developer Console.
+7. Select **Save changes**.
+8. Select **Permissions** in the left sidebar, then select **Add** next to **Jira API**.
+9. Select **Configure** next to **Jira API** > **Edit Scopes**. Enable at minimum these scopes, then save your edits:
+	- `read:jira-user`
+	- `read:jira-work`
+	- `write:jira-work`
+	- `manage:jira-webhook`
+	- `manage:jira-user`
+	- `offline_access`
+10. Select **Settings** in the left sidebar.
+11. Copy the **Client ID** and paste it into n8n.
+12. Copy the **Secret** and paste it as the **Client Secret** in n8n.
+13. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+14. Select **Connect to Jira SW Cloud** and follow the prompts to complete the OAuth2 flow.
+
+Refer to [OAuth 2.0 (3LO) apps](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/){:target="_blank" .external-link} in Atlassian's documentation for more information.
 
 ## Using SW Cloud API token
 
@@ -33,12 +63,13 @@ Then:
 
 1. Log in to your Atlassian profile > **Security > API tokens** page, or jump straight there using this [link](https://id.atlassian.com/manage-profile/security/api-tokens).
 2. Select **Create API Token**.
-3. Enter a good **Label** for your token, like `n8n integration`.
-4. Select **Create**.
-5. Copy the API token.
-6. In n8n, enter the **Email** address associated with your Jira account.
-7. Paste the API token you copied as your **API Token**.
-8. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+3. Enter a **Name** for your token, like `n8n integration`.
+4. Set an **Expires on** date, or leave the default date.
+5. Select **Create**.
+6. Copy the API token.
+7. In n8n, enter the **Email** address associated with your Jira account.
+8. Paste the API token you copied as your **API Token**.
+9. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
 
 Refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) for more information.
 

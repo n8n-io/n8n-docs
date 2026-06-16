@@ -37,8 +37,7 @@ Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node
 This code snippet gives an outline of the node structure. 
 
 ```js
-import { IExecuteFunctions } from 'n8n-core';
-import { INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { IExecuteFunctions, INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 export class ExampleNode implements INodeType {
 	description: INodeTypeDescription = {

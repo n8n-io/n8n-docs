@@ -7,12 +7,12 @@ contentType: explanation
 
 Insights gives instance owners and admins visibility into how workflows perform over time. This feature consists of three parts:
 
-- [**Insights summary banner**](#insights-summary-banner): Shows key metrics about your instance from the last 7 days at the top of the overview space.
+- [**Insights summary banner**](#insights-summary-banner): Shows key metrics about your instance from the last 7 days at the top of the **Overview** space.
 - [**Insights dashboard**](#insights-dashboard): A more detailed visual breakdown with per-workflow metrics and historical comparisons.
 - [**Time saved (Workflow ROI)**](#setting-the-time-saved-by-a-workflow): For each workflow, you can choose to set a fixed amount of time saved per workflow, or dynamically calculate time saved based on the execution path taken on a specific workflow.
 
 /// info | Feature availability
-The insights summary banner displays activity from the last 7 days for all plans. The insights dashboard is only available on Pro (with limited date ranges) and Enterprise plans. 
+The insights summary banner displays activity from the last 7 days for all plans. The insights dashboard is only available on Pro, Business, and Enterprise plans. 
 ///
 
 ## Insights summary banner
@@ -27,7 +27,7 @@ n8n collects several metrics for both the insights summary banner and dashboard.
 
 ## Insights dashboard
 
-Those on the Pro and Enterprise plans can access the **Insights** section from the side navigation. Each metric from the summary banner is also clickable, taking you to the corresponding chart.
+Access the **Insights** section from the side navigation. Each metric from the summary banner is also clickable, taking you to the corresponding chart.
 
 The insights dashboard also has a table showing individual insights from each workflow including total production executions, failed production executions, failure rate, time saved, and run time average. 
 
@@ -36,6 +36,7 @@ The insights dashboard also has a table showing individual insights from each wo
 By default, the insights summary banner and dashboard show a rolling 7 day window with a comparison to the previous period to identify increases or decreases for each metric. On the dashboard, paid plans also display data for other date ranges:
 
 - Pro: 7 and 14 days
+- Business: 24 hours, 7 days, 14 days, 30 days.
 - Enterprise: 24 hours, 7 days, 14 days, 30 days, 90 days, 6 months, 1 year
 
 ## Setting the time saved by a workflow
@@ -82,6 +83,16 @@ Time saved tracking currently only works on parent workflows. Time saved from su
 ## Disable or configure insights metrics collection
 
 If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](/hosting/configuration/environment-variables/insights.md).
+
+By default, n8n keeps compacted insights data for 365 days (`N8N_INSIGHTS_MAX_AGE_DAYS`). n8n caps retention at 730 days (two years); use a lower number for a shorter window. To turn off insights collection entirely, set `N8N_DISABLED_MODULES=insights` (refer to the [environment variables page](/hosting/configuration/environment-variables/insights.md)).
+
+/// note | Self-host upgrade
+In older versions, pruning could follow license-driven defaults (commonly 180 days). `N8N_INSIGHTS_MAX_AGE_DAYS` now controls pruning (default 365). Set `N8N_INSIGHTS_MAX_AGE_DAYS=180` if you want a retention window like that previous default.
+///
+
+n8n stores recent insights at one-hour granularity, then compacts older data into day-level and week-level summaries. Use [Insights environment variables](/hosting/configuration/environment-variables/insights.md) to control compaction timing, batch limits, runtime, and delays.
+
+Raising those thresholds above the defaults keeps finer detail longer. That adds more rows to `insights_by_period` and uses more database space than extending `N8N_INSIGHTS_MAX_AGE_DAYS` alone. Increase `N8N_INSIGHTS_MAX_AGE_DAYS` first if you only need a longer retention window.
 
 ## Insights FAQs
 <!-- vale from-microsoft.HeadingPunctuation = NO -->

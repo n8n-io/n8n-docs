@@ -12,8 +12,8 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 
 **View data at every stage**: You can inspect data at any point in your workflow:
 
-- **Node details view**: Double-click any node to see its input and output data
-- **Execution logs**: Review past workflow runs to see the data that passed through each node
+- **Node details view**: Double-click any node to see its input and output data. Choose between **Schema**, **Table** and **JSON** views. Schema view shows a simplified structure from the first item only, Table and JSON display the full dataset.
+- **Execution logs**: Review past workflow runs to see the data that passed through each node.
 
 **Reference previous data**: Use [data mapping](/data/data-mapping/index.md) to reference data from earlier nodes in your workflow. You can:
 

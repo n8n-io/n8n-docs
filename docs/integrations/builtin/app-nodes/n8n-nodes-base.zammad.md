@@ -33,6 +33,7 @@ Refer to [Zammad credentials](/integrations/builtin/credentials/zammad.md) for g
     * Delete
     * Get
     * Get many
+    * Update
 * User
     * Create
     * Delete

@@ -22,7 +22,7 @@ We recommend starting with [n8n Cloud](https://app.n8n.cloud/register), a hosted
 If n8n Cloud isn't a good option for you, you can [self-host with Docker](/hosting/installation/docker.md). This is an advanced option recommended only for technical users familiar with hosting services, Docker, and the command line.
 ///
 
-For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n.md#platforms).
+For more details on the different ways to set up n8n, see [Choose your n8n](/choose-n8n.md).
 
 Once you have n8n running, open the Editor UI in a browser window. Log in to your n8n instance. Select **Overview** and then **Create Workflow** to view the main canvas.
 

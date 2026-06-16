@@ -52,7 +52,9 @@ Refer to Airtable's [Find/create PATs documentation](https://support.airtable.co
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you're [self-hosting n8n](/hosting/index.md), you'll need:
 
 - An **OAuth Redirect URL**
 - A **Client ID**

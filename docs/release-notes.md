@@ -34,9 +34,162 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
-## n8n@2.24.0
+## n8n@2.27.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.23.0...n8n@2.24.0) for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.0...n8n@2.27.0) for this version.<br />
+**Release date:** 2026-06-16
+
+This release contains bug fixes.
+
+### Contributors
+
+[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[sinehypernova-0718](https://github.com/sinehypernova-0718)  
+[parveshsaini](https://github.com/parveshsaini)  
+[luyua9](https://github.com/luyua9)  
+[niclox44](https://github.com/niclox44)  
+[Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
+[hammadxcm](https://github.com/hammadxcm)  
+[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[corazzione](https://github.com/corazzione)  
+[Wujerry](https://github.com/Wujerry)  
+[davidangularme](https://github.com/davidangularme)  
+[SAY-5](https://github.com/SAY-5)  
+[legendik](https://github.com/legendik)  
+[petrusdemelo](https://github.com/petrusdemelo)  
+[envy](https://github.com/envy)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.3...n8n@2.26.4) for this version.<br />
+**Release date:** 2026-06-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.2...n8n@2.26.3) for this version.<br />
+**Release date:** 2026-06-11
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.1...n8n@2.26.2) for this version.<br />
+**Release date:** 2026-06-10
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.1...n8n@2.26.0) for this version.<br />
+**Release date:** 2026-06-09
+
+This release contains bug fixes.
+
+### Contributors
+
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot/)  
+[sinehypernova-0718](https://github.com/sinehypernova-0718)  
+[ColinHebert](https://github.com/ColinHebert)  
+[Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
+[bao0541](https://github.com/bao0541)  
+[ABDULALMAS](https://github.com/ABDULALMAS)  
+[hammadxcm](https://github.com/hammadxcm)  
+[ericyangliu](https://github.com/ericyangliu)  
+[kisst](https://github.com/kisst)  
+[adilsitos](https://github.com/adilsitos)  
+[IchordeDionysos](https://github.com/IchordeDionysos)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.6...n8n@2.25.7) for this version.<br />
+**Release date:** 2026-06-10
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.5...n8n@2.25.6) for this version.<br />
+**Release date:** 2026-06-08
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.4...n8n@2.25.5) for this version.<br />
+**Release date:** 2026-06-05
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.3...n8n@2.25.4) for this version.<br />
+**Release date:** 2026-06-05
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.2...n8n@2.25.3) for this version.<br />
+**Release date:** 2026-06-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.25.1...n8n@2.25.2) for this version.<br />
+**Release date:** 2026-06-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.25.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.24.0...n8n@2.25.0) for this version.<br />
 **Release date:** 2026-06-02
 
 This release contains bug fixes.
@@ -47,6 +200,28 @@ This release contains bug fixes.
 [kayjix](https://github.com/kayjix)  
 [hammadxcm](https://github.com/hammadxcm)  
 [maxabaumgarten](https://github.com/maxabaumgarten)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.23.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.23.3...n8n@2.23.4) for this version.<br />
+**Release date:** 2026-06-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.23.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.23.2...n8n@2.23.3) for this version.<br />
+**Release date:** 2026-06-04
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -187,7 +362,25 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.21.0...n8n@2.22.0) for this version.<br />
 **Release date:** 2026-05-19
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Connect to MCP servers with less setup
+
+Connect your agent to select MCP servers without setting up an [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+
+<br>
+
+Initial coverage includes some of the most used services in the official MCP registry, including Apify, Linear, monday.com, Notion, and PostHog. We'll expand the list to cover more services soon.
+
+<br>
+
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient.md) with manual configuration.
+
+<video src="/_video/release-notes/MCP_registry.webm" controls width="100%"></video>
+
+</div>
 
 ### Contributors
 
@@ -436,6 +629,10 @@ You build the agent in n8n using the Microsoft Agent 365 Trigger node:
 
 For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8n-agents-that-show-up-as-members-of-the-team-inside-microsoft-apps/).
 
+### Insights data duration
+
+Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://docs.n8n.io/insights/).
+
 </div>
 
 ### Contributors
@@ -522,7 +719,27 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.18.0...n8n@2.19.0) for this version.<br />
 **Release date:** 2026-04-28
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### IdP role mapping inside n8n (Enterprise)
+
+Instance admins can now define group-to-role mappings inside n8n instead of encoding n8n-specific role logic in the IdP. With JIT provisioning enabled, admins write expressions against SAML attributes or OIDC claims to assign instance and project roles automatically at login. The IdP only needs to send standard group membership data: n8n handles the mapping, and role assignments are re-evaluated on every login, so access stays in sync without IdP changes.
+
+Open **Settings → SSO**, pick **Instance roles via SSO** or **Instance and project roles via SSO** under User role provisioning, switch the mapping card from "Map rules on your IdP" to "Map rules inside n8n", and add expressions using the `$claims` object to match users for each role. Expression-based matching handles non-standard group structures that plain string matching can't reach.
+
+**Availability.** Enterprise and Business.
+
+### Instance bootstrapping (Enterprise)
+
+n8n can now be fully configured at startup through environment variables. Owner accounts, SSO (OIDC and SAML), security policies, and log streaming destinations are all applied on first boot, with no manual UI interaction required. Fields managed this way are locked in the UI and re-applied on every restart.
+
+This makes deployment configuration the single source of truth, so you can stand up a fully configured instance from a single Helm chart or Docker Compose file, including SSO and security policy, before any user logs in.
+
+**Availability.** Enterprise. 
+
+</div>
 
 ### Contributors
 
@@ -729,6 +946,26 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
+## n8n@2.17.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.16.0...n8n@2.17.0) for this version.<br />
+**Release date:** 2026-04-13
+
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Public API improvements
+
+* **Project scoping on workflow creation.** `POST /api/v1/workflows` now accepts an optional `projectId` to place new workflows in a specific project. Omitting it preserves prior behaviour (workflow lands in the caller's personal project).
+* **Insights summary endpoint.** `GET /api/v1/insights/summary` with optional `startDate`, `endDate`, and `projectId` query params. Returns successes, failures, runtime, and time saved. Requires an API key with the `insights:read` scope and is gated by the Enterprise insights license feature.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.16.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.16.0...n8n@2.16.1) for this version.<br />
@@ -743,7 +980,32 @@ This release contains bug fixes.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.15.0...n8n@2.16.0) for this version.<br />
 **Release date:** 2026-04-07
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### Token exchange authentication for embedded access (Enterprise)
+
+n8n now supports OAuth 2.0 Token Exchange (RFC 8693) as a second authentication mechanism alongside API keys. Two scenarios are covered: seamless iframe embedding, where users see n8n inside another product without a separate login screen, and delegated API access, where a system acts on behalf of a user with full audit attribution.
+
+The embedding system holds an asymmetric private key and signs short-lived JWTs with user identity claims. n8n verifies the signature using the configured public key, just-in-time provisions the user on first encounter, and issues a session cookie or scoped API token depending on the flow. Both subject and actor are preserved in the audit trail, so every action shows both who requested it and who performed it.
+
+**Availability.** Enterprise. Requires an asymmetric key pair configured via `N8N_TOKEN_EXCHANGE_TRUSTED_KEYS`. Uses role-based scoping.
+
+### Execution data redaction (Enterprise)
+
+Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
+
+Redaction is configured per workflow under **Workflow settings**, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://docs.n8n.io/workflows/executions/execution-data-redaction/).
+
+**Availability.** Enterprise.
+
+### Public API improvements
+
+* **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
+* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
+
+</div>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -754,7 +1016,30 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.14.0...n8n@2.15.0) for this version.<br />
 **Release date:** 2026-03-30
 
-This release contains bug fixes.
+This release contains bug fixes and features.
+
+<div class="n8n-new-features" markdown>
+
+### OpenTelemetry support for workflows
+
+n8n now emits OpenTelemetry traces for workflow executions. Runs become traces in your existing OpenTelemetry backend, with no sidecars, custom exporters, or timing hacks. Teams already using Jaeger, Datadog, Grafana Tempo, Honeycomb, New Relic, or Splunk see n8n alongside everything else they observe.
+
+Each execution appears as a root trace span with workflow ID, name, execution ID, status, duration, node count, and project info as span attributes. Failed runs surface error details on the span, so you can search and alert on workflow failures from the same tools that watch the rest of your stack.
+
+Enable by pointing n8n at any OTLP-compatible collector. Minimum config is two environment variables:
+
+```
+N8N_OTEL_ENABLED=true
+N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://your-collector:4318
+```
+
+Standard OTel variables (`OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_SERVICE_NAME`) are also respected.
+
+This is the foundational T1 feature. It was extended across later releases: node-level spans (v2.16), workflow version IDs in spans and distributed trace context propagation (v2.18 to v2.19), and AI Agent telemetry (v2.20).
+
+**Availability.** Free, Pro, and Enterprise.
+
+</div>
 
 ### Contributors
 

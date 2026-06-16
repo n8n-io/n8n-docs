@@ -141,10 +141,10 @@ MCP clients can discover previews of all workflows the current user has access t
 /// info | Available from n8n v2.24.0
 ///
 
-You can use the <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> in the workflow list to toggle MCP access for all workflows in the current project or folder:
+You can use the **Options** menu <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> in the workflow list to toggle MCP access for all workflows in the current project or folder:
 
 1. Navigate to the desired project and select **Workflows** from the top menu, then open a subfolder if required.
-2. Click the <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> next to the name of the project or folder.
+2. Select the **Options** menu <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
 ![mcp_bulk_toggle.png](/_images/advanced-ai/mcp_bulk_toggle.png)

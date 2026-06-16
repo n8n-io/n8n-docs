@@ -741,7 +741,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `code` | `string` | Yes | Full TypeScript/JavaScript workflow code using the n8n Workflow SDK. Must be validated first with `validate_workflow`. |
 | `skillsUsed` | `string[]` | No | Names of n8n skills used by the MCP client to produce this workflow. Values are normalized server-side. |
 | `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
-| `description` | `string` | No | Short workflow description (max 255 chars, 1-2 sentences). |
+| `description` | `string` | No | Workflow description. Text longer than 255 characters is shortened to 255 before saving. |
 | `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. Use `search_projects` first if the user names a project. |
 | `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. Use `search_folders` to find a folder by name within a project. |
 
@@ -761,7 +761,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
 | `targetProject.type` | `"personal" | "team"` | Whether the workflow was created in a personal or team project |
-| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
 
 #### Notes
@@ -774,6 +774,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
+- From n8n v2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
 
 ---
 

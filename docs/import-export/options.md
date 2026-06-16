@@ -35,7 +35,7 @@ Set these alongside the package in a [`POST /import-export/import/package`](/imp
 | [`folderId`](/import-export/import-packages.md#choose-where-workflows-land) | folder ID | project root | Folder within the target project. |
 | [`workflowIdPolicy`](/import-export/import-packages.md#how-n8n-handles-workflow-ids) | `new`, `source` | `new` | Assign a new ID, or keep the source ID. |
 | [`workflowUpdatePolicy`](/import-export/import-packages.md#handle-workflows-that-already-exist) | `new-version`, `fail`, `skip` | `new-version` | What to do when a workflow already exists. |
-| [`workflowPublishingPolicy`](/import-export/import-packages.md#control-workflow-publishing) | `preserve-published-version`, `match-source`, `all-published`, `all-unpublished` | `preserve-published-version` | Whether imported workflows are published. |
+| [`workflowPublishingPolicy`](/import-export/import-packages.md#control-workflow-publishing) | `preserve-published-state`, `match-source`, `publish-all`, `unpublish-all` | `preserve-published-state` | Whether imported workflows are published. |
 | [`missingNodeTypeMode`](/import-export/import-packages.md#handle-missing-node-types) | `fail`, `import-anyway` | `fail` | What to do when a node type is missing. |
 
 ### Credentials

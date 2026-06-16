@@ -77,7 +77,7 @@ Reuse the target's existing credentials and variables.
 - Import: `credentialMatchingMode: "name-and-type"`
 - Import: `credentialMissingMode: "must-preexist"`
 - Import: `variableMissingMode: "must-preexist"`
-- Import: `workflowPublishingPolicy: "all-unpublished"`
+- Import: `workflowPublishingPolicy: "unpublish-all"`
 
 **Share a self-contained copy**
 

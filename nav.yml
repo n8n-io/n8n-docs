@@ -880,6 +880,7 @@ nav:
         - integrations/builtin/credentials/bitwarden.md
         - integrations/builtin/credentials/box.md
         - integrations/builtin/credentials/brandfetch.md
+        - integrations/builtin/credentials/bravesearch.md
         - integrations/builtin/credentials/brevo.md
         - integrations/builtin/credentials/bubble.md
         - integrations/builtin/credentials/cal.md
@@ -909,6 +910,7 @@ nav:
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/databricks.md
         - integrations/builtin/credentials/datadog.md
+        - integrations/builtin/credentials/daytona.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/deepseek.md
         - integrations/builtin/credentials/demio.md

@@ -550,7 +550,7 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
-| `nodeIds` | `array` | Yes (min 1) | Array of node IDs. Each element can be a plain string (for example `"n8n-nodes-base.gmail"`) or an object with discriminators (see below). |
+| `nodeIds` | `array` | Yes (min 1) | Array of node type request objects. Always pass objects (even for a single node), for example `{ "nodeId": "n8n-nodes-base.gmail" }`. Include discriminators from `search_nodes` results when available. |
 
 **Node ID object format:**
 
@@ -571,7 +571,8 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 #### Notes
 
 - Critical for correct node configuration - MCP clients should always call before writing workflow code.
-- Supports both simple string node IDs and objects with discriminators for multi-variant nodes.
+- From n8n v2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
+- Use the `resource`, `operation`, and `mode` discriminators for multi-variant nodes.
 
 ---
 

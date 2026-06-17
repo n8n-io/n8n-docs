@@ -5,7 +5,7 @@ contentType: howto
 
 # Output to the browser console with `console.log()` or `print()` in the Code node
 
-You can use `console.log()` or `print()` in the Code node to help when writing and debugging your code.
+TEST You can use `console.log()` or `print()` in the Code node to help when writing and debugging your code.
 
 For help opening your browser console, refer to [this guide by Balsamiq](https://balsamiq.com/support/faqs/browserconsole/).
 

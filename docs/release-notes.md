@@ -54,14 +54,14 @@ This release contains bug fixes.
 
 ### Contributors
 
-[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot/) 
 [sinehypernova-0718](https://github.com/sinehypernova-0718)  
 [parveshsaini](https://github.com/parveshsaini)  
 [luyua9](https://github.com/luyua9)  
 [niclox44](https://github.com/niclox44)  
 [Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
 [hammadxcm](https://github.com/hammadxcm)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix-bot)  
 [corazzione](https://github.com/corazzione)  
 [Wujerry](https://github.com/Wujerry)  
 [davidangularme](https://github.com/davidangularme)  

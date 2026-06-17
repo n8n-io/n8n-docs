@@ -12,6 +12,13 @@ Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and inte
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
 /// note | Credentials
+This node supports two authentication options:
+
+- **OneDrive OAuth2**: the Microsoft OneDrive-specific OAuth2 credential (default).
+- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Files.ReadWrite.All`).
+
+Existing workflows are unaffected: the node defaults to **OneDrive OAuth2**.
+
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 

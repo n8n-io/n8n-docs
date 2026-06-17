@@ -13,7 +13,7 @@ For help opening your browser console, refer to [this guide by Balsamiq](https:/
 
 For technical information on `console.log()`, refer to the [MDN developer docs](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
 
-For example, copy the following code into a Code node, then open your console and run the node:
+For example, copy the followingTEST code into a Code node, then open your console and run the node:
 
 ```js
 let a = "apple";

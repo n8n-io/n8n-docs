@@ -8,9 +8,7 @@ The HTTP Request node is one of the most versatile nodes in n8n. Use this node t
 
 Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) for information on node settings.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]
 
 ## Related resources
 

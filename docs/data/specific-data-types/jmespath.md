@@ -286,12 +286,10 @@ Use multiselect list to get the first and last names and create new lists contai
 <!-- vale on -->
 === "Expressions (JavaScript)"
 
-	[[% raw %]]
 	```js
 	{{$jmespath($json.body.people, "[].[first, last]")}}
 	// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
 	```
-	[[% endraw %]]
 
 === "Code node (JavaScript)"
 

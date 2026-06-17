@@ -121,10 +121,18 @@ Configure the S3 bucket and credentials as described in the binary data [setup](
 export N8N_EXECUTION_DATA_STORAGE_MODE=s3
 ```
 
+In [queue mode](/hosting/scaling/queue-mode.md), set `N8N_EXECUTION_DATA_STORAGE_MODE` and the `N8N_EXTERNAL_STORAGE_S3_*` variables on all instances, including workers.
+
+/// warning | License required to start
+S3 execution data storage requires a valid [Enterprise license key](/license-key.md). If you set `N8N_EXECUTION_DATA_STORAGE_MODE=s3` without a valid license, n8n won't start. To start n8n again, switch the mode back to `database` or `filesystem`, or restore a valid license.
+///
+
 After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:
 
 ```
 workflows/{workflowId}/executions/{executionId}/execution_data/bundle.json
 ```
 
-n8n records where each execution's data is stored, so switching modes is non-destructive, i.e. older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.
+n8n records where each execution's data is stored, so switching modes is non-destructive. Older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.
+
+n8n prunes execution data in S3 itself, using the standard [executions pruning](/hosting/scaling/execution-data.md#enable-executions-pruning) settings (the `EXECUTIONS_DATA_*` variables). Unlike binary data, execution data doesn't rely on an S3 lifecycle rule. Don't add a lifecycle rule for execution data, as it could delete data that n8n still references.

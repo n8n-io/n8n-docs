@@ -71,6 +71,7 @@ You can also generate access keys through the AWS CLI and AWS API. Refer to the 
 
 You can use these credentials to authenticate the following nodes with enhanced security through IAM role assumption:
 
+* [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
 * [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md)
 * [AWS Cognito](/integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md)
 * [AWS Comprehend](/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md)
@@ -82,6 +83,7 @@ You can use these credentials to authenticate the following nodes with enhanced 
 * [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md)
 * [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md)
 * [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md)
+* [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md)
 
 ### Supported authentication methods
 

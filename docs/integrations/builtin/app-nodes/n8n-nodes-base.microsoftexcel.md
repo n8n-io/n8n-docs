@@ -17,8 +17,6 @@ This node supports two authentication options:
 - **Excel OAuth2**: the Microsoft Excel-specific OAuth2 credential (default).
 - **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Files.ReadWrite`, or `Files.ReadWrite.All` if that's the permission your administrator has consented).
 
-Existing workflows are unaffected: the node defaults to **Excel OAuth2**.
-
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 

@@ -24,9 +24,11 @@ If you want to create credentials for the [Facebook Trigger](/integrations/built
 
 Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview) for more information about the service.
 
-## Create a Meta app
+## Prerequisites
 
-Both authentication methods (OAuth2 and App access token) require a Meta app.
+Regardless of the authentication method you choose, you'll need a [Meta for Developers](https://developers.facebook.com/) account and a Meta app
+
+## Create a Meta app
 
 To create a Meta app:
 
@@ -70,7 +72,6 @@ There are two steps in setting up your credential:
 
 1. [Create a Meta app](#create-a-meta-app) with the products you need to access.
 2. [Generate a Client ID and Client Secret](#generate-a-client-id-and-client-secret) for that app.
-
 
 ### Generate a Client ID and Client Secret
 

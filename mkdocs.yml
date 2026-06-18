@@ -51,9 +51,12 @@ theme:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
 extra:
-  analytics:
-    provider: google
-    property: G-0SC4FF2FH9
+  # GA4 (G-0SC4FF2FH9) is loaded via GTM-K86VCV3 (see _overrides/main.html), which
+  # is the canonical tag manager across all n8n properties. Material's native
+  # `analytics` integration is intentionally NOT configured here: enabling it loads
+  # gtag.js a second time and fires its own `config`, which double-counts page_view
+  # on the consent-acceptance pageview (the duplicate-instance dedup misses the
+  # consent-grant re-fire). Keep GTM as the single GA4 loader.
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
     beta: This feature is in beta

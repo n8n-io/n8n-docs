@@ -12,6 +12,11 @@ Use the Microsoft Excel node to automate work in Microsoft Excel, and integrate 
 On this page, you'll find a list of operations the Microsoft Excel node supports and links to more resources.
 
 /// note | Credentials
+This node supports two authentication options:
+
+- **Microsoft Excel OAuth2 API**: the Microsoft Excel-specific OAuth2 credential (default).
+- **Microsoft OAuth2 API**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Files.ReadWrite`, or `Files.ReadWrite.All` if that's the permission your administrator has consented).
+
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 

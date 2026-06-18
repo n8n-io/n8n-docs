@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 - Secret key
 
-You'll also need a Stripe **Signature Secret** or endpoint secret, which is a unique key for each webhook endpoint used to verify incoming requests, ensuring they truly came from Stripe.
+n8n strongly recommends also setting a **Signature Secret** (sometimes called an endpoint secret), a unique key for each webhook endpoint, so the [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md) node can verify that incoming requests genuinely come from Stripe. For setup steps, refer to [Verify incoming requests](#verify-incoming-requests).
 
 ## Related resources
 
@@ -45,6 +45,20 @@ To use a Secret key in test mode, you must copy the existing one:
 3. Copy the key and enter it in your n8n credential as the **Secret Key**.
 
 Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key) for more information.
+
+## Verify incoming requests
+
+From n8n version 2.25.7 and 2.26.2, the [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md) node can verify that incoming webhook requests genuinely come from Stripe. n8n strongly recommends setting a **Signature Secret** so others can't send forged events to your workflow, even if they know your webhook URL.
+
+n8n creates and manages the Stripe webhook endpoint for you when you activate a workflow, so you set the **Signature Secret** after the endpoint exists:
+
+1. Build your workflow with the **Stripe Trigger** node and activate it. n8n creates a webhook endpoint in your Stripe account.
+2. In the Stripe Dashboard, go to **Workbench** > **Webhooks**. In older dashboards, go to **Developers** > **Webhooks**.
+3. Select the endpoint n8n created. You can identify it by the description `Created by n8n for workflow ID: <workflow-id>` and by the webhook URL, which matches your n8n production webhook URL.
+4. Under **Signing secret**, select **Click to reveal** and copy the value. It starts with `whsec_`.
+5. In n8n, open your Stripe credential, paste the value into the **Signature Secret** field, and save.
+
+Stripe generates a unique signing secret for each endpoint, and a separate one for test mode and live mode. Copy the secret from the endpoint that matches the credential you're using. Refer to Stripe's [Webhooks documentation](https://docs.stripe.com/webhooks) for more information.
 
 ## Test mode and live mode
 

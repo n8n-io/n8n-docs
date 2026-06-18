@@ -12,6 +12,11 @@ Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integr
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 /// note | Credentials
+This node supports two authentication options:
+
+- **Microsoft Outlook OAuth2 API**: the Microsoft Outlook-specific OAuth2 credential (default).
+- **Microsoft OAuth2 API**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Mail.ReadWrite`, `Mail.Send`, `Calendars.ReadWrite`, and `Contacts.ReadWrite`).
+
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 

@@ -16,9 +16,7 @@ Role types and [account types](/user-management/account-types.md) are different 
 
 RBAC is a way of managing access to workflows and [credentials](/glossary.md#credential-n8n) based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]
 
 
 

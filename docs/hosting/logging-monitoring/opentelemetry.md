@@ -43,7 +43,7 @@ n8n also handles trace context propagation:
 - **Sub-workflows**: A sub-workflow's span uses the parent workflow's span as its parent.
 - **Resumed workflows**: When a workflow resumes after a wait, the new span links back to the previous span using a span link.
 
-## Configure tracing in the UI
+## Enable tracing in the UI
 
 /// info | Available from n8n v2.27.0
 You need to be an instance owner or admin to configure OpenTelemetry in the UI.
@@ -67,7 +67,7 @@ Each field maps to an environment variable, shown in the field's tooltip. For th
 If you set an option with an environment variable, n8n uses that value and disables the matching field in the UI. To manage a setting from the UI, leave its environment variable unset. When n8n restarts, environment variables override the values saved in the UI.
 ///
 
-## Enable tracing
+## Enable tracing with environment variables
 
 Set the following environment variables on each n8n instance you want workflow tracing enabled (main, workers, and webhook processors):
 

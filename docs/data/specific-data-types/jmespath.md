@@ -285,14 +285,14 @@ Given this JSON from a webhook node:
 Use multiselect list to get the first and last names and create new lists containing both names:
 <!-- vale on -->
 === "Expressions (JavaScript)"
-
+	[[% raw %]]
 	```js
 	{{$jmespath($json.body.people, "[].[first, last]")}}
 	// Returns [["James","Green"],["Jacob","Jones"],["Jayden","Smith"]]
 	```
-
+	[[% endraw %]]
 === "Code node (JavaScript)"
-
+	
 	```js
 	let newList = $jmespath($json.body.people, "[].[first, last]");
 	return {newList};

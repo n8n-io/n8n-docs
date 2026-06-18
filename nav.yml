@@ -1264,6 +1264,7 @@ nav:
         - Deployment: hosting/configuration/environment-variables/deployment.md
         - Endpoints: hosting/configuration/environment-variables/endpoints.md
         - Executions: hosting/configuration/environment-variables/executions.md
+        - Expression engine: hosting/configuration/environment-variables/expression-engine.md
         - External data storage: hosting/configuration/environment-variables/external-data-storage.md
         - External hooks: hosting/configuration/environment-variables/external-hooks.md
         - External secrets: hosting/configuration/environment-variables/external-secrets.md

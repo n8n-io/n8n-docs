@@ -12,6 +12,11 @@ Use the Microsoft Outlook Trigger node to respond to events in [Microsoft Outloo
 On this page, you'll find a list of events the Microsoft Outlook Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
+This node supports two authentication options:
+
+- **Microsoft Outlook OAuth2 API**: the Microsoft Outlook-specific OAuth2 credential (default).
+- **Microsoft OAuth2 API**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Mail.ReadWrite`).
+
 You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
 ///
 

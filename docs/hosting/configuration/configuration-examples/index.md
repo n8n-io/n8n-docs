@@ -8,6 +8,4 @@ contentType: overview
 
 This section contains examples for how to configure n8n to solve particular use cases.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]

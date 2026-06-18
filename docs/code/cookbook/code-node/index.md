@@ -7,9 +7,7 @@ contentType: overview
 
 This section contains examples and recipes for tasks you can do with the Code node.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]
 
 ## Related resources
 

@@ -368,6 +368,12 @@
 /integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
 /integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
 /integrations/credentials/*   /integrations/builtin/credentials/:splat  301
+# Keep credential-management pages reachable (the wildcard below is for legacy per-service library URLs)
+/credentials/                       /credentials/                       200
+/credentials/add-edit-credentials/  /credentials/add-edit-credentials/  200
+/credentials/credential-sharing/    /credentials/credential-sharing/    200
+/credentials/add-edit-credentials   /credentials/add-edit-credentials/  301
+/credentials/credential-sharing     /credentials/credential-sharing/    301
 /credentials/* /integrations/builtin/credentials/:splat  301
 /getting-started/create-your-first-workflow/*    /try-it-out/  301
 /embed/  /hosting/oem-deployment/  301

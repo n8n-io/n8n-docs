@@ -11,6 +11,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [OracleDB](/integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md)
 - [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
+- [Oracle Database Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md)
+- [Embeddings Oracle Database](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md)
 
 /// note
 These nodes do not support SSH tunnels.

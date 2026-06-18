@@ -17,6 +17,7 @@ Authentik
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
+Avro
 Axios
 Backblaze
 [Bb]ackend
@@ -232,6 +233,7 @@ Spotify
 spreadsheetId
 Stackby
 Stackshare
+stdout
 Storyblok
 Strapi
 Strava

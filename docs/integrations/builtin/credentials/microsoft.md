@@ -20,6 +20,10 @@ You can use these credentials to authenticate the following nodes:
 - [Microsoft Teams Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 - [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md)
 
+/// note | Choosing a credential type
+Some nodes (such as Microsoft Excel and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential.
+///
+
 ## Prerequisites
 
 - Create a [Microsoft Azure](https://azure.microsoft.com/) account.

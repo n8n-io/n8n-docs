@@ -98,6 +98,73 @@ Get detailed information about a specific workflow, including trigger details.
 
 ---
 
+### get_workflow_history
+
+List the saved version history of a workflow (newest first), so you can inspect how it changed over time and pick a version to retrieve or restore.
+
+#### Parameters
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `workflowId` | `string` | Yes | | The ID of the workflow to read version history for |
+| `limit` | `integer` | No | `50` | Limit the number of results (max 50) |
+| `offset` | `integer` | No | `0` | Number of versions to skip for pagination |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `workflowId` | `string` | The workflow ID |
+| `versions` | `array` | Versions ordered newest first. Older versions may be pruned by retention settings |
+| `versions[].versionId` | `string` | The version ID, usable with `get_workflow_version` |
+| `versions[].authors` | `string` | Who authored this version |
+| `versions[].name` | `string | null` | Optional named-version label |
+| `versions[].description` | `string | null` | Optional named-version description |
+| `versions[].autosaved` | `boolean` | Whether this version was autosaved |
+| `versions[].createdAt` | `string` | ISO timestamp when the version was created |
+| `versions[].updatedAt` | `string` | ISO timestamp when the version metadata was last updated |
+| `count` | `number` | Number of versions returned in this page |
+
+#### Notes
+
+- Maximum result limit is 50.
+- Returns version metadata only (no nodes or connections). Use `get_workflow_version` to fetch a single version's full content.
+- Older versions may be pruned by the instance's workflow history retention settings.
+
+---
+
+### get_workflow_version
+
+Retrieve the full content (nodes, connections) of a specific workflow version from its history. Use the `versionId` from `get_workflow_history`.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the version belongs to |
+| `versionId` | `string` | Yes | The version ID to retrieve, as returned by `get_workflow_history` |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `versionId` | `string` | The version ID |
+| `workflowId` | `string` | The workflow ID |
+| `authors` | `string` | Who authored this version |
+| `name` | `string | null` | Optional named-version label |
+| `description` | `string | null` | Optional named-version description |
+| `createdAt` | `string` | ISO timestamp when the version was created |
+| `updatedAt` | `string` | ISO timestamp when the version metadata was last updated |
+| `nodes` | `array` | The workflow nodes captured in this version. Credential references are stripped |
+| `connections` | `object` | The node connections captured in this version |
+
+#### Notes
+
+- Credential references are stripped from returned nodes, mirroring `get_workflow_details`.
+- Use `get_workflow_history` to discover available `versionId` values.
+
+---
+
 ### execute_workflow
 
 Execute a workflow by ID. Returns the execution ID immediately without waiting for completion.
@@ -555,7 +622,7 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 **Node ID object format:**
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|------|------|----------|-------------|
 | `nodeId` | `string` | Yes | The node type ID (for example `"n8n-nodes-base.gmail"`) |
 | `version` | `string` | No | Specific version (for example `"2.1"`) |
 | `resource` | `string` | No | Resource discriminator (for example `"message"`) |
@@ -876,6 +943,36 @@ Archive a workflow in n8n by its ID.
 #### Notes
 
 - Idempotent - skips already-archived workflows.
+
+---
+
+### restore_workflow_version
+
+Restore a workflow to a previous version from its history. Re-applies that version as the current draft and records a new history entry. Use `get_workflow_history` to find the `versionId`.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow to restore |
+| `versionId` | `string` | Yes | The version ID to restore, as returned by `get_workflow_history` |
+
+#### Output
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the restore succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `restoredFromVersionId` | `string` | The version ID that was restored from |
+| `newVersionId` | `string | null` | The new current version ID created by the restore, if successful |
+| `error` | `string` | Error message if the restore failed |
+
+#### Notes
+
+- Requires the `workflow:update` permission and the workflow must be editable.
+- Re-applies the version's nodes and connections as the current draft, exactly like the editor's restore.
+- The restore creates a fresh history entry; the version restored from is left unchanged.
+- Use `get_workflow_history` to find the `versionId` to restore.
 
 ---
 

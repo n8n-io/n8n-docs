@@ -163,5 +163,5 @@ There are plenty of things you could add to this (perhaps add some more credenti
 ## Next steps
 
 - Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
-- Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
+- Take [courses at n8n Academy](https://learn.n8n.io).
 - Explore more examples in [workflow templates](https://n8n.io/workflows/).

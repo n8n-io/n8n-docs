@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 - Secret key
 
-n8n strongly recommends also setting a **Signature Secret** (sometimes called an endpoint secret), a unique key for each webhook endpoint, so the [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md) node can verify that incoming requests genuinely come from Stripe. For setup steps, refer to [Verify incoming requests](#verify-incoming-requests).
+n8n strongly recommends also setting a **Signature Secret** (sometimes called an endpoint secret), a unique key for each webhook endpoint. This allows the [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md) node to verify that incoming requests genuinely come from Stripe. For setup steps, refer to [Verify incoming requests](#verify-incoming-requests).
 
 ## Related resources
 

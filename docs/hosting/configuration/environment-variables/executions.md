@@ -26,6 +26,7 @@ This page lists environment variables to configure workflow execution settings.
 | `EXECUTIONS_DATA_SAVE_ON_PROGRESS` | Boolean | `false` | Whether to save progress for each node executed (true) or not (false). |
 | `EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS` | Boolean | `true` | Whether to save data of executions when started manually. |
 | `N8N_EXECUTION_DATA_STORAGE_MODE` | Enum string: `database`, `filesystem`, `s3`, `azure` | `database` | Where n8n stores execution data. The `s3` and `azure` modes require an Enterprise license. Refer to [External data storage](/hosting/configuration/environment-variables/external-data-storage.md) for the related storage variables. |
+| `N8N_STORAGE_PATH` | String | `N8N_USER_FOLDER/storage` | Base path for filesystem storage. When `N8N_EXECUTION_DATA_STORAGE_MODE` is `filesystem`, n8n stores execution data here. n8n also uses this path for filesystem binary data. |
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |

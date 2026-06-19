@@ -16,6 +16,4 @@ All data transformation functions are only available in the expressions editor.
 
 The [Cookbook](/code/index.md) contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]

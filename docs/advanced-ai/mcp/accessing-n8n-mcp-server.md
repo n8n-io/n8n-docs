@@ -115,7 +115,7 @@ If you lose your token or need to rotate it:
 
 MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. However, clients can't access full workflow data, nor execute or modify a workflow unless you explicitly enable MCP access for that workflow.
 
-### Enabling access
+### Enabling access for individual workflows
 
 #### Option 1: From MCP settings page (available from n8n v2.2.0)
 
@@ -135,6 +135,23 @@ MCP clients can discover previews of all workflows the current user has access t
 1. Go to **Workflows**.
 2. Open the menu on a workflow card.
 3. Select **Enable MCP access**.
+
+### Enabling access for projects/folders
+
+/// info | Available from n8n v2.24.0
+///
+
+You can use the **Options** menu <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> in the workflow list to toggle MCP access for all workflows in the current project or folder:
+
+1. Navigate to the desired project and select **Workflows** from the top menu, then open a subfolder if required.
+2. Select the **Options** menu <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> next to the name of the project or folder.
+3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
+
+![mcp_bulk_toggle.png](/_images/advanced-ai/mcp_bulk_toggle.png)
+
+/// note | Note
+This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). You will still need to toggle access for any workflows added in the future. 
+///
 
 ### Managing access
 

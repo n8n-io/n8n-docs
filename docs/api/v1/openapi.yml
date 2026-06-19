@@ -52,6 +52,7 @@ paths:
   /audit:
     post:
       x-eov-operation-id: generateAudit
+      x-required-scope: securityAudit:generate
       x-eov-operation-handler: v1/handlers/audit/audit.handler
       tags:
         - Audit
@@ -95,6 +96,7 @@ paths:
     get:
       operationId: getCredentials
       x-eov-operation-id: getCredentials
+      x-required-scope: credential:list
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -115,6 +117,7 @@ paths:
     post:
       operationId: createCredential
       x-eov-operation-id: createCredential
+      x-required-scope: credential:create
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -147,6 +150,7 @@ paths:
   /credentials/{id}:
     get:
       x-eov-operation-id: getCredential
+      x-required-scope: credential:read
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -175,6 +179,7 @@ paths:
           $ref: '#/components/responses/notFound'
     patch:
       x-eov-operation-id: updateCredential
+      x-required-scope: credential:update
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -210,6 +215,7 @@ paths:
           $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteCredential
+      x-required-scope: credential:delete
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -237,6 +243,7 @@ paths:
   /credentials/{id}/test:
     post:
       x-eov-operation-id: testCredential
+      x-required-scope: credential:read
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -264,6 +271,7 @@ paths:
   /credentials/schema/{credentialTypeName}:
     get:
       x-eov-operation-id: getCredentialType
+      x-required-scope: none
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -314,6 +322,7 @@ paths:
   /credentials/{id}/transfer:
     put:
       x-eov-operation-id: transferCredential
+      x-required-scope: credential:move
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
       tags:
         - Credential
@@ -346,6 +355,7 @@ paths:
   /executions:
     get:
       x-eov-operation-id: getExecutions
+      x-required-scope: execution:list
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -402,6 +412,7 @@ paths:
   /executions/{id}:
     get:
       x-eov-operation-id: getExecution
+      x-required-scope: execution:read
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -426,6 +437,7 @@ paths:
           $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteExecution
+      x-required-scope: execution:delete
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -447,6 +459,7 @@ paths:
   /executions/{id}/retry:
     post:
       x-eov-operation-id: retryExecution
+      x-required-scope: execution:retry
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -480,6 +493,7 @@ paths:
   /executions/{id}/stop:
     post:
       x-eov-operation-id: stopExecution
+      x-required-scope: execution:stop
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -501,6 +515,7 @@ paths:
   /executions/stop:
     post:
       x-eov-operation-id: stopManyExecutions
+      x-required-scope: execution:stop
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -561,6 +576,7 @@ paths:
   /executions/{id}/tags:
     get:
       x-eov-operation-id: getExecutionTags
+      x-required-scope: executionTags:list
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -581,6 +597,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateExecutionTags
+      x-required-scope: executionTags:update
       x-eov-operation-handler: v1/handlers/executions/executions.handler
       tags:
         - Execution
@@ -611,6 +628,7 @@ paths:
   /tags:
     post:
       x-eov-operation-id: createTag
+      x-required-scope: tag:create
       x-eov-operation-handler: v1/handlers/tags/tags.handler
       tags:
         - Tags
@@ -638,6 +656,7 @@ paths:
           $ref: '#/components/responses/conflict'
     get:
       x-eov-operation-id: getTags
+      x-required-scope: tag:list
       x-eov-operation-handler: v1/handlers/tags/tags.handler
       tags:
         - Tags
@@ -658,6 +677,7 @@ paths:
   /tags/{id}:
     get:
       x-eov-operation-id: getTag
+      x-required-scope: tag:read
       x-eov-operation-handler: v1/handlers/tags/tags.handler
       tags:
         - Tags
@@ -678,6 +698,7 @@ paths:
           $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteTag
+      x-required-scope: tag:delete
       x-eov-operation-handler: v1/handlers/tags/tags.handler
       tags:
         - Tags
@@ -700,6 +721,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateTag
+      x-required-scope: tag:update
       x-eov-operation-handler: v1/handlers/tags/tags.handler
       tags:
         - Tags
@@ -732,6 +754,7 @@ paths:
   /workflows:
     post:
       x-eov-operation-id: createWorkflow
+      x-required-scope: workflow:create
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -761,6 +784,7 @@ paths:
           $ref: '#/components/responses/notFound'
     get:
       x-eov-operation-id: getWorkflows
+      x-required-scope: workflow:list
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -817,6 +841,7 @@ paths:
   /workflows/{id}:
     get:
       x-eov-operation-id: getWorkflow
+      x-required-scope: workflow:read
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -844,6 +869,7 @@ paths:
           $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteWorkflow
+      x-required-scope: workflow:delete
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -864,6 +890,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateWorkflow
+      x-required-scope: workflow:update
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -894,6 +921,7 @@ paths:
   /workflows/{id}/{versionId}:
     get:
       x-eov-operation-id: getWorkflowVersion
+      x-required-scope: workflow:read
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -922,6 +950,7 @@ paths:
   /workflows/{id}/activate:
     post:
       x-eov-operation-id: activateWorkflow
+      x-required-scope: workflow:activate
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -962,6 +991,7 @@ paths:
   /workflows/{id}/deactivate:
     post:
       x-eov-operation-id: deactivateWorkflow
+      x-required-scope: workflow:deactivate
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -983,6 +1013,7 @@ paths:
   /workflows/{id}/archive:
     post:
       x-eov-operation-id: archiveWorkflow
+      x-required-scope: workflow:delete
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -1010,6 +1041,7 @@ paths:
   /workflows/{id}/unarchive:
     post:
       x-eov-operation-id: unarchiveWorkflow
+      x-required-scope: workflow:delete
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -1036,6 +1068,7 @@ paths:
   /workflows/{id}/transfer:
     put:
       x-eov-operation-id: transferWorkflow
+      x-required-scope: workflow:move
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -1068,6 +1101,7 @@ paths:
   /workflows/{id}/tags:
     get:
       x-eov-operation-id: getWorkflowTags
+      x-required-scope: workflowTags:list
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -1090,6 +1124,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateWorkflowTags
+      x-required-scope: workflowTags:update
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
       tags:
         - Workflow
@@ -1120,6 +1155,7 @@ paths:
   /users:
     get:
       x-eov-operation-id: getUsers
+      x-required-scope: user:list
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
       tags:
         - User
@@ -1149,6 +1185,7 @@ paths:
           $ref: '#/components/responses/unauthorized'
     post:
       x-eov-operation-id: createUser
+      x-required-scope: user:create
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
       tags:
         - User
@@ -1200,6 +1237,7 @@ paths:
   /users/{id}:
     get:
       x-eov-operation-id: getUser
+      x-required-scope: user:read
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
       tags:
         - User
@@ -1219,6 +1257,7 @@ paths:
           $ref: '#/components/responses/unauthorized'
     delete:
       x-eov-operation-id: deleteUser
+      x-required-scope: user:delete
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
       tags:
         - User
@@ -1238,6 +1277,7 @@ paths:
   /users/{id}/role:
     patch:
       x-eov-operation-id: changeRole
+      x-required-scope: user:changeRole
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
       tags:
         - User
@@ -1270,6 +1310,7 @@ paths:
   /source-control/pull:
     post:
       x-eov-operation-id: pull
+      x-required-scope: sourceControl:pull
       x-eov-operation-handler: v1/handlers/source-control/source-control.handler
       tags:
         - SourceControl
@@ -1301,6 +1342,7 @@ paths:
   /variables:
     post:
       x-eov-operation-id: createVariable
+      x-required-scope: variable:create
       x-eov-operation-handler: v1/handlers/variables/variables.handler
       tags:
         - Variables
@@ -1322,6 +1364,7 @@ paths:
           $ref: '#/components/responses/unauthorized'
     get:
       x-eov-operation-id: getVariables
+      x-required-scope: variable:list
       x-eov-operation-handler: v1/handlers/variables/variables.handler
       tags:
         - Variables
@@ -1357,6 +1400,7 @@ paths:
   /variables/{id}:
     delete:
       x-eov-operation-id: deleteVariable
+      x-required-scope: variable:delete
       x-eov-operation-handler: v1/handlers/variables/variables.handler
       tags:
         - Variables
@@ -1373,6 +1417,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateVariable
+      x-required-scope: variable:update
       x-eov-operation-handler: v1/handlers/variables/variables.handler
       tags:
         - Variables
@@ -1401,6 +1446,7 @@ paths:
   /data-tables:
     get:
       x-eov-operation-id: listDataTables
+      x-required-scope: dataTable:list
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.handler
       tags:
         - DataTable
@@ -1438,6 +1484,7 @@ paths:
         - ApiKeyAuth: []
     post:
       x-eov-operation-id: createDataTable
+      x-required-scope: dataTable:create
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.handler
       tags:
         - DataTable
@@ -1492,6 +1539,7 @@ paths:
   /data-tables/{dataTableId}:
     get:
       x-eov-operation-id: getDataTable
+      x-required-scope: dataTable:read
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.handler
       tags:
         - DataTable
@@ -1515,6 +1563,7 @@ paths:
         - ApiKeyAuth: []
     patch:
       x-eov-operation-id: updateDataTable
+      x-required-scope: dataTable:update
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.handler
       tags:
         - DataTable
@@ -1550,6 +1599,7 @@ paths:
         - ApiKeyAuth: []
     delete:
       x-eov-operation-id: deleteDataTable
+      x-required-scope: dataTable:delete
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.handler
       tags:
         - DataTable
@@ -1570,6 +1620,7 @@ paths:
   /data-tables/{dataTableId}/rows:
     get:
       x-eov-operation-id: getDataTableRows
+      x-required-scope: dataTableRow:read
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.rows.handler
       tags:
         - DataTable
@@ -1615,6 +1666,7 @@ paths:
         - ApiKeyAuth: []
     post:
       x-eov-operation-id: insertDataTableRows
+      x-required-scope: dataTableRow:create
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.rows.handler
       tags:
         - DataTable
@@ -1669,6 +1721,7 @@ paths:
   /data-tables/{dataTableId}/rows/update:
     patch:
       x-eov-operation-id: updateDataTableRows
+      x-required-scope: dataTableRow:update
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.rows.handler
       tags:
         - DataTable
@@ -1719,6 +1772,7 @@ paths:
   /data-tables/{dataTableId}/rows/upsert:
     post:
       x-eov-operation-id: upsertDataTableRow
+      x-required-scope: dataTableRow:upsert
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.rows.handler
       tags:
         - DataTable
@@ -1769,6 +1823,7 @@ paths:
   /data-tables/{dataTableId}/rows/delete:
     delete:
       x-eov-operation-id: deleteDataTableRows
+      x-required-scope: dataTableRow:delete
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.rows.handler
       tags:
         - DataTable
@@ -1821,6 +1876,7 @@ paths:
   /data-tables/{dataTableId}/columns:
     get:
       x-eov-operation-id: listDataTableColumns
+      x-required-scope: dataTableColumn:read
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
       tags:
         - DataTable
@@ -1846,6 +1902,7 @@ paths:
         - ApiKeyAuth: []
     post:
       x-eov-operation-id: createDataTableColumn
+      x-required-scope: dataTableColumn:create
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
       tags:
         - DataTable
@@ -1883,6 +1940,7 @@ paths:
   /data-tables/{dataTableId}/columns/{columnId}:
     delete:
       x-eov-operation-id: deleteDataTableColumn
+      x-required-scope: dataTableColumn:delete
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
       tags:
         - DataTable
@@ -1903,6 +1961,7 @@ paths:
         - ApiKeyAuth: []
     patch:
       x-eov-operation-id: updateDataTableColumn
+      x-required-scope: dataTableColumn:update
       x-eov-operation-handler: v1/handlers/data-tables/data-tables.columns.handler
       tags:
         - DataTable
@@ -1941,6 +2000,7 @@ paths:
   /projects:
     post:
       x-eov-operation-id: createProject
+      x-required-scope: project:create
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -1962,6 +2022,7 @@ paths:
           $ref: '#/components/responses/unauthorized'
     get:
       x-eov-operation-id: getProjects
+      x-required-scope: project:list
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -1982,6 +2043,7 @@ paths:
   /projects/{projectId}:
     delete:
       x-eov-operation-id: deleteProject
+      x-required-scope: project:delete
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2005,6 +2067,7 @@ paths:
           $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateProject
+      x-required-scope: project:update
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2038,6 +2101,7 @@ paths:
   /projects/{projectId}/users:
     get:
       x-eov-operation-id: getProjectUsers
+      x-required-scope: user:list
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2067,6 +2131,7 @@ paths:
           $ref: '#/components/responses/notFound'
     post:
       x-eov-operation-id: addUsersToProject
+      x-required-scope: project:update
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2117,6 +2182,7 @@ paths:
   /projects/{projectId}/users/{userId}:
     delete:
       x-eov-operation-id: deleteUserFromProject
+      x-required-scope: project:update
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2146,6 +2212,7 @@ paths:
           $ref: '#/components/responses/notFound'
     patch:
       x-eov-operation-id: changeUserRoleInProject
+      x-required-scope: project:update
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
         - Projects
@@ -2189,6 +2256,7 @@ paths:
   /community-packages:
     post:
       x-eov-operation-id: installPackage
+      x-required-scope: communityPackage:install
       x-eov-operation-handler: v1/handlers/community-packages/community-packages.handler
       tags:
         - CommunityPackage
@@ -2216,6 +2284,7 @@ paths:
         - ApiKeyAuth: []
     get:
       x-eov-operation-id: getInstalledPackages
+      x-required-scope: communityPackage:list
       x-eov-operation-handler: v1/handlers/community-packages/community-packages.handler
       tags:
         - CommunityPackage
@@ -2235,6 +2304,7 @@ paths:
   /community-packages/{name}:
     patch:
       x-eov-operation-id: updatePackage
+      x-required-scope: communityPackage:update
       x-eov-operation-handler: v1/handlers/community-packages/community-packages.handler
       tags:
         - CommunityPackage
@@ -2279,6 +2349,7 @@ paths:
         - ApiKeyAuth: []
     delete:
       x-eov-operation-id: uninstallPackage
+      x-required-scope: communityPackage:uninstall
       x-eov-operation-handler: v1/handlers/community-packages/community-packages.handler
       tags:
         - CommunityPackage
@@ -2305,6 +2376,7 @@ paths:
   /discover:
     get:
       x-eov-operation-id: getDiscover
+      x-required-scope: none
       x-eov-operation-handler: v1/handlers/discover/discover.handler
       tags:
         - Discover
@@ -2396,6 +2468,7 @@ paths:
   /insights/summary:
     get:
       x-eov-operation-id: getInsightsSummary
+      x-required-scope: insights:read
       x-eov-operation-handler: v1/handlers/insights/insights.handler
       tags:
         - Insights
@@ -2439,6 +2512,7 @@ paths:
   /projects/{projectId}/folders:
     post:
       x-eov-operation-id: createFolder
+      x-required-scope: folder:create
       x-eov-operation-handler: v1/handlers/folders/folders.handler
       tags:
         - Folders
@@ -2475,6 +2549,7 @@ paths:
           $ref: '#/components/responses/notFound'
     get:
       x-eov-operation-id: getFolders
+      x-required-scope: folder:list
       x-eov-operation-handler: v1/handlers/folders/folders.handler
       tags:
         - Folders
@@ -2552,6 +2627,7 @@ paths:
   /projects/{projectId}/folders/{folderId}:
     delete:
       x-eov-operation-id: deleteFolder
+      x-required-scope: folder:delete
       x-eov-operation-handler: v1/handlers/folders/folders.handler
       tags:
         - Folders
@@ -2589,6 +2665,7 @@ paths:
           $ref: '#/components/responses/notFound'
     get:
       x-eov-operation-id: getFolder
+      x-required-scope: folder:read
       x-eov-operation-handler: v1/handlers/folders/folders.handler
       tags:
         - Folders
@@ -2646,6 +2723,7 @@ paths:
           $ref: '#/components/responses/notFound'
     patch:
       x-eov-operation-id: updateFolder
+      x-required-scope: folder:update
       x-eov-operation-handler: v1/handlers/folders/folders.handler
       tags:
         - Folders
@@ -2689,6 +2767,7 @@ paths:
   /n8n-packages/export:
     post:
       x-eov-operation-id: exportWorkflows
+      x-required-scope: workflow:export
       x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
       tags:
         - N8nPackage
@@ -2726,6 +2805,7 @@ paths:
   /n8n-packages/import:
     post:
       x-eov-operation-id: importPackage
+      x-required-scope: workflow:import
       x-eov-operation-handler: v1/handlers/n8n-packages/n8n-packages.handler
       tags:
         - N8nPackage
@@ -2737,8 +2817,8 @@ paths:
         Imports a gzip-compressed tar package (`.n8np`) into the target project. Send the
         archive as the multipart field `package`. Optional routing uses form fields
         `projectId` and `folderId` (omit or send empty for defaults). The optional
-        `credentialMatchingMode`, `credentialMissingMode`, `workflowIdPolicy`, and
-        `workflowPublishingPolicy` fields take their defaults when omitted. The required
+        `credentialMatchingMode`, `credentialMissingMode`, `credentialBindings`,
+        `workflowIdPolicy`, and `workflowPublishingPolicy` fields take their defaults when omitted. The required
         `workflowConflictPolicy` field controls what happens when a package workflow
         matches an existing workflow by source id in the target project. Maximum upload
         size is `N8N_ENDPOINTS_PAYLOAD_SIZE_MAX` MB (default 16).
@@ -2788,6 +2868,11 @@ paths:
                   default: must-preexist
                   description: |
                     What to do when a credential reference cannot be resolved. `must-preexist` requires every referenced credential to already exist and be accessible on the target instance.
+                credentialBindings:
+                  type: string
+                  default: '{}'
+                  description: |
+                    Optional JSON object mapping credential ids from the package manifest to credential ids on the target instance. These explicit bindings are validated and applied before `credentialMatchingMode` resolution runs.
                 workflowConflictPolicy:
                   type: string
                   enum:
@@ -4814,6 +4899,35 @@ components:
             name:
               type: string
         - type: object
+          description: |
+            A workflow whose source id already matches one in the target project but lives outside the requested import folder. Folder-targeted imports cannot update workflows in place at a different location.
+          required:
+            - type
+            - sourceWorkflowId
+            - existingWorkflowId
+            - existingParentFolderId
+            - targetFolderId
+            - name
+          properties:
+            type:
+              type: string
+              enum:
+                - workflow-folder-conflict
+            sourceWorkflowId:
+              type: string
+            existingWorkflowId:
+              type: string
+            existingParentFolderId:
+              type: string
+              nullable: true
+              description: |
+                Folder that currently contains the matched workflow, or null when it lives at the project root.
+            targetFolderId:
+              type: string
+              description: Folder the import was requested to land in.
+            name:
+              type: string
+        - type: object
           description: A credential reference that could not be resolved in the target project.
           required:
             - type
@@ -4830,8 +4944,21 @@ components:
               enum:
                 - not_found
                 - unknown_type
+                - source_not_found
+                - type_mismatch
             sourceId:
               type: string
+            targetId:
+              type: string
+              description: Target credential id for an explicit credential binding.
+            expectedType:
+              type: string
+              description: |
+                For `type_mismatch`: the credential type the package's workflow node requires.
+            actualType:
+              type: string
+              description: |
+                For `type_mismatch`: the actual type of the resolved target credential.
             usedByWorkflows:
               type: array
               items:

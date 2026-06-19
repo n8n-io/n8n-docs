@@ -61,6 +61,6 @@ The complete workflow should look like this:
 ## Next steps
 
 * Read n8n's [longer try it out tutorial](/try-it-out/tutorial-first-workflow.md) for a more complex workflow, and an introduction to more features and n8n concepts.
-* Take the [text courses](/courses/index.md) or [video courses](/video-courses.md).
+* Take [courses at n8n Academy](https://learn.n8n.io).
 
 

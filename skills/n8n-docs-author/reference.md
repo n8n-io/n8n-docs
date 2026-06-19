@@ -190,8 +190,6 @@ supported domain) and embed the URL:
 {% embed url="https://www.youtube.com/embed/your-video-id" %}
 ```
 
-Videos can't be embedded inside hints.
-
 ## Reusable content
 
 Store a block of content once and reference it on multiple pages and spaces.

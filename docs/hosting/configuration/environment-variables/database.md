@@ -69,5 +69,6 @@ Here's the cycle the variables on this page control:
 1. On PostgreSQL, while recovery is in progress, any new query waits up to `DB_CONNECTION_ACQUISITION_TIMEOUT_MS` for the connection to come back, then fails with an error rather than hanging.
 
 /// note | Applies to all databases
-The health checks and the recovery cycle (the `DB_PING_*` and `DB_RECOVERY_BACKOFF_*` variables) apply to every database type. The `DB_CONNECTION_ACQUISITION_TIMEOUT_MS` wait, which holds queries while n8n rebuilds the connection, applies to PostgreSQL only. The remaining pool settings (`DB_POSTGRESDB_MAX_CONNECTION_LIFETIME_MS`, `DB_POSTGRESDB_KEEP_ALIVE`, and `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`) are PostgreSQL-specific. The default values suit most deployments, so you can leave them unchanged unless you run into connection problems.
+The health checks and the recovery cycle (the `DB_PING_*` and `DB_RECOVERY_BACKOFF_*` variables) apply to every database type.
+The remaining settings ()`DB_CONNECTION_ACQUISITION_TIMEOUT_MS`, `DB_POSTGRESDB_MAX_CONNECTION_LIFETIME_MS`, `DB_POSTGRESDB_KEEP_ALIVE`, and `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`) apply to PostgreSQL only. The default values suit most deployments, so you can leave them unchanged unless you run into connection problems.
 ///

@@ -22,6 +22,8 @@ Refer to the respective [Environment Variables](/hosting/configuration/environme
 
 Both `main` and `worker` instances are able to expose metrics.
 
+For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](/hosting/grafana/grafana.md).
+
 ## Queue metrics
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.

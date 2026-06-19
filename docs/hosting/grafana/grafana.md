@@ -99,7 +99,7 @@ n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form su
 | `N8N_METRICS_INCLUDE_FORM_METRICS` | `false` | Exposes the `n8n_form_submission_duration_seconds` histogram. |
 | `N8N_METRICS_INCLUDE_WORKFLOW_INFO` | `false` | Exposes the `n8n_workflow_info` gauge for human-readable workflow names. See [Workflow name lookup](#workflow-name-lookup). |
 
-You can find a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-form-executions) for this histogram in our n8n-observability project.
+You can find a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-form-executions){:target="_blank" .external-link} for this histogram in our n8n-observability project.
 
 ### What the metric tracks
 

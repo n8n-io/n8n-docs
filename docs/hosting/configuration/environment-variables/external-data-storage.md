@@ -25,3 +25,20 @@ Refer to [External storage](/hosting/scaling/external-storage.md) for more infor
 | `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY` | String | - | Access key in S3-compatible external storage |
 | `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET` | String | - | Access secret in S3-compatible external storage. |
 | `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` | Boolean | - | Use automatic credential detection to authenticate S3 calls for external storage. This will ignore the access key and access secret and use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain). |
+
+## Azure Blob Storage
+
+/// info | Enterprise-tier feature
+You need an [Enterprise license key](/license-key.md) to store execution data in Azure Blob Storage.
+///
+
+To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure` and configure the variables below. `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is required. For authentication, set a connection string, or an account name and key, or enable `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT`.
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_EXTERNAL_STORAGE_AZURE_CONNECTION_STRING` | String | - | Connection string for Azure Blob Storage. Takes precedence over the account name and key when set. |
+| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME` | String | - | Storage account name. Use with an account key or managed identity. |
+| `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_KEY` | String | - | Storage account key. Use with the account name. |
+| `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` | String | - | Name of the blob container to store execution data in. Required for Azure Blob Storage. |
+| `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` | String | - | Custom blob endpoint, for example for Azurite or sovereign clouds. |
+| `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT` | Boolean | `false` | Authenticate via `DefaultAzureCredential` (managed identity, environment, or Azure CLI) instead of an account key. Ignores the account key when enabled. |

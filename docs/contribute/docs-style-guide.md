@@ -269,8 +269,6 @@ To embed a video, paste the URL inside embed tags as follows:
 {% embed url="https://www.youtube.com/embed/your-video-id" %}
 ````
 
-Videos can't be embedded inside [hints](#hints).
-
 ### Code examples
 
 Use tabs not spaces. This is important because the n8n node linter enforces this convention. Any code samples in the 'Creating nodes' section could be copied into a user's node, then cause a linter fail if they use spaces.

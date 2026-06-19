@@ -6,9 +6,7 @@ contentType: overview
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides usage examples.
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]
 
 ## Related resources
 

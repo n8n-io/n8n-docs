@@ -34,6 +34,28 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.27.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.1...n8n@2.27.2) for this version.<br />
+**Release date:** 2026-06-18
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.27.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.0...n8n@2.27.1) for this version.<br />
+**Release date:** 2026-06-17
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.27.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.0...n8n@2.27.0) for this version.<br />
@@ -43,14 +65,14 @@ This release contains bug fixes.
 
 ### Contributors
 
-[n8n-cat-bot[bot]](https://github.com/n8n-cat-bot[bot])  
+[n8n-cat-bot[bot]](https://github.com/apps/n8n-cat-bot/) 
 [sinehypernova-0718](https://github.com/sinehypernova-0718)  
 [parveshsaini](https://github.com/parveshsaini)  
 [luyua9](https://github.com/luyua9)  
 [niclox44](https://github.com/niclox44)  
 [Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
 [hammadxcm](https://github.com/hammadxcm)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+[aikido-autofix[bot]](https://github.com/apps/aikido-autofix-bot)  
 [corazzione](https://github.com/corazzione)  
 [Wujerry](https://github.com/Wujerry)  
 [davidangularme](https://github.com/davidangularme)  
@@ -58,6 +80,28 @@ This release contains bug fixes.
 [legendik](https://github.com/legendik)  
 [petrusdemelo](https://github.com/petrusdemelo)  
 [envy](https://github.com/envy)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.7
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.6...n8n@2.26.7) for this version.<br />
+**Release date:** 2026-06-18
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.4...n8n@2.26.5) for this version.<br />
+**Release date:** 2026-06-17
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

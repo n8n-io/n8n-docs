@@ -32,7 +32,15 @@ Refer to [External storage](/hosting/scaling/external-storage.md) for more infor
 You need an [Enterprise license key](/license-key.md) to store execution data in Azure Blob Storage.
 ///
 
-To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure` and configure the variables below. `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is required. For authentication, set a connection string, or an account name and key, or enable `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT`.
+To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure` and configure the variables below. `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is always required.
+
+For authentication, choose one of these three options. n8n checks them in this order:
+
+1. **Connection string**: set `N8N_EXTERNAL_STORAGE_AZURE_CONNECTION_STRING`. This takes precedence over the other options, so n8n ignores the account name, key, and auto-detect when you set it. It's the simplest option and works well for local testing with Azurite.
+2. **Auto-detect**: set `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME` and set `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT` to `true`. n8n authenticates through Azure's `DefaultAzureCredential` chain (managed identity, environment, or Azure CLI), so no key lives in your n8n configuration. Best for production on Azure.
+3. **Account name and key**: set `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME` and `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_KEY`.
+
+Set `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` only if you use a custom endpoint, such as Azurite or a sovereign cloud.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

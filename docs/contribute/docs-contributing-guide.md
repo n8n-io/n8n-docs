@@ -40,10 +40,6 @@ Maybe you've identified a problem in the docs, but you're not able to fix it you
 
 We don't accept the following types of contributions:
 
-* Modifications to or reports about [**courses**](../courses/index.md). n8n is
-  working on replacing these courses with new versions, and the existing ones are frozen
-  in the meantime.
-
 * Modifications to **fully-generated pages**. These pages are automatically generated
   and kept up to date via n8n workflows. If you spot a problem, [open an issue](#open-an-issue) instead of editing the page directly. You can identify fully-generated pages by the `generated: true` field in their frontmatter.
 
@@ -217,7 +213,6 @@ The team uses labels to communicate the status of your PR:
 | `status:dev-cancelled` | The code change your PR was linked to has been cancelled — the docs PR will be closed |
 | `status:duplicate` | Your PR covers the same ground as an existing PR or issue - the PR will be closed|
 | `status:outdated` | Your PR has been overtaken by subsequent changes to the docs - the PR will be closed|
-| `scope:old-course` | Your PR relates to the old courses, which are frozen and not accepting contributions - the PR will be closed |
 | `quality:low-effort-usable` | Your PR is acceptable but only just — consider improving it before it's reviewed |
 | `quality:unusable` | Your PR doesn't meet the contribution guidelines and will be closed. If you make multiple contributions that are given this label, you will be blocked. |
 | `quality:disruptive` | Your PR introduces changes that would actively damage the docs. You will be immediately blocked from making further contributions. |

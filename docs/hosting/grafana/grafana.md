@@ -25,12 +25,11 @@ Add a scrape job targeting your n8n instance in your `prometheus.yml`:
 
 ```yaml
 scrape_configs:
-	- job_name: n8n
-		static_configs:
-			- targets:
-					- <n8n-host>:<n8n-port>
-		metrics_path: /metrics
-```
+  - job_name: n8n
+    static_configs:
+      - targets:
+          - <n8n-host>:<n8n-port>
+    metrics_path: /metrics
 
 Replace `<n8n-host>` and `<n8n-port>` with your n8n instance address. The default n8n port is `5678`.
 

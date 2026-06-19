@@ -16,7 +16,7 @@ hide:
 [Expressions](/data/expressions.md) are the JavaScript snippets n8n evaluates at runtime to set node parameters dynamically. The expression engine is the component that runs that evaluation. This page lists environment variables for configuring it.
 
 /// info | Experimental
-The `vm` engine is experimental. n8n runs the `legacy` engine by default. The variables below other than `N8N_EXPRESSION_ENGINE` only take effect when `N8N_EXPRESSION_ENGINE` is set to `vm`.
+The `vm` engine is experimental. n8n runs the `legacy` engine by default. The variables below other than `N8N_EXPRESSION_ENGINE` only take effect when you set `N8N_EXPRESSION_ENGINE` to `vm`.
 ///
 
 | Variable | Type | Default | Description |

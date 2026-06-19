@@ -12,6 +12,6 @@ All courses include:
 - Badges and certificates upon completion (70% passing grade)
 - Practice APIs (no external accounts needed for most courses)
 
-For a complete list of courses, see (https://learn.n8n.io/courses).
+For a complete list of courses, see [n8n Academy courses](https://learn.n8n.io/courses).
 
 

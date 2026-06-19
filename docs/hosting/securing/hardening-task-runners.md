@@ -27,3 +27,15 @@ For improved security, configure task runners to run as the unprivileged `nobody
 Configure a [read-only root filesystem](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) to prevent any modifications to the container's filesystem at runtime. This helps protect against malicious code that might attempt to modify system files.
 
 Task runners still require some temporary storage for operation. To accommodate this, mount a minimal `emptyDir` volume to `/tmp`. If your workflows require more temporary space, increase the size of the volume accordingly.
+
+## Configure an AppArmor profile
+
+As a defence-in-depth measure, apply an [AppArmor](https://apparmor.net/){:target="_blank" .external-link} profile to prevent the task runner container from reading sensitive `/proc` files such as `environ` and `mounts`. These files can expose environment variables, including secrets and credentials, to code running inside the container. Refer to the [Kubernetes AppArmor documentation](https://kubernetes.io/docs/tutorials/security/apparmor/){:target="_blank" .external-link} for how to apply a profile to a pod.
+
+Add the following rule to your AppArmor profile:
+
+```
+audit deny @{PROC}/[0-9]*/{environ,mounts} rwl,
+```
+
+This denies and logs any attempt to read, write, or link to per-process `environ` and `mounts` files.

@@ -386,7 +386,7 @@ Add the following code to the JSON file:
 
 ```json
 {
-	"node": "n8n-nodes-base.NasaPics",
+	"node": "n8n-nodes-nasapics",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [

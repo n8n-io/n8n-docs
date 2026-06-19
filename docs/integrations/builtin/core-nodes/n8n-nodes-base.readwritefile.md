@@ -9,9 +9,7 @@ priority: critical
 
 Use the Read/Write Files from Disk node to read and write files from/to the machine where n8n is running.
 
-/// note | Self-hosted n8n only
-This node isn't available on n8n Cloud.
-///
+The paths this node can access depend on your n8n deployment. Refer to [File locations](#file-locations) for details.
 
 ## Operations
 
@@ -62,6 +60,32 @@ This operation includes a single option, whether to **Append** data to an existi
 
 ## File locations
 
-If you run n8n in Docker, your command runs in the n8n container and not the Docker host.
+The paths this node can read from and write to depend on your n8n deployment.
 
-This node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+### n8n Cloud
+
+On n8n Cloud, the node can only access paths under `/home/node/`. Paths outside this directory (for example, `/tmp/` or `/data/`) fail with an access error.
+
+/// note | Field placeholders on Cloud
+The default placeholders in the node's **File(s) Selector** and **File Path and Name** fields (such as `/home/user/Pictures/**/*.png` and `/data/example.jpg`) are examples. On Cloud, replace them with a path under `/home/node/`.
+///
+
+/// warning | Cloud filesystem is ephemeral
+Files this node writes on Cloud aren't guaranteed to persist across workflow executions, worker restarts, or instance redeploys. Don't use this node to store files you need to keep.
+
+n8n reserves the `/home/node/.n8n/` directory for its internal state. Don't write your own files there.
+
+For persistent file handling on Cloud, use a cloud storage node such as [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3.md), [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md), or [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md).
+///
+
+### Self-hosted n8n
+
+On self-hosted n8n, by default the node can access any path the n8n process can reach. To restrict access, set the [`N8N_RESTRICT_FILE_ACCESS_TO`](/hosting/configuration/environment-variables/security.md) environment variable to one or more allowed directories (semicolon-separated).
+
+/// note | Default changes in n8n 2.0
+Starting in n8n 2.0, `N8N_RESTRICT_FILE_ACCESS_TO` defaults to `~/.n8n-files`. To allow file operations elsewhere, set the variable explicitly. Refer to [n8n 2.0 breaking changes](/2-0-breaking-changes.md#set-default-value-for-n8n_restrict_file_access_to) for details.
+///
+
+If you run n8n in Docker, paths refer to the n8n container's filesystem, not the Docker host. To make host directories available to this node, mount them as volumes into the container.
+
+n8n recommends using absolute file paths to prevent errors.

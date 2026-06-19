@@ -18,7 +18,10 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding.
+* **Authentication**: Select the authentication method:
+    * **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
+    * **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
+* **Model**: Select the model to use to generate the embedding. If the dropdown is empty, your IAM role may not have the `bedrock:ListFoundationModels` permission. Switch the field to **Expression** mode and enter the model ID directly.
 
 Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html). 
 

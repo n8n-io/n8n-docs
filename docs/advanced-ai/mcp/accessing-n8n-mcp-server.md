@@ -113,9 +113,9 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients
 
-By default, no workflows are visible to MCP clients. You must explicitly enable MCP access for each workflow you want to expose.
+MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. However, clients can't access full workflow data, nor execute or modify a workflow unless you explicitly enable MCP access for that workflow.
 
-### Enabling access
+### Enabling access for individual workflows
 
 #### Option 1: From MCP settings page (available from n8n v2.2.0)
 
@@ -136,9 +136,26 @@ By default, no workflows are visible to MCP clients. You must explicitly enable 
 2. Open the menu on a workflow card.
 3. Select **Enable MCP access**.
 
+### Enabling access for projects/folders
+
+/// info | Available from n8n v2.24.0
+///
+
+You can use the **Options** menu <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> in the workflow list to toggle MCP access for all workflows in the current project or folder:
+
+1. Navigate to the desired project and select **Workflows** from the top menu, then open a subfolder if required.
+2. Select the **Options** menu <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> next to the name of the project or folder.
+3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
+
+![mcp_bulk_toggle.png](/_images/advanced-ai/mcp_bulk_toggle.png)
+
+/// note | Note
+This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). You will still need to toggle access for any workflows added in the future. 
+///
+
 ### Managing access
 
-The **Instance-level MCP** settings page shows all workflows available to MCP clients. From this list you can:
+The **Instance-level MCP** settings page shows all workflows enabled for MCP clients to access and operate on. From this list you can:
 
 - Open a workflow, its home project or parent folder directly
 - Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
@@ -201,7 +218,7 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 ```json
 "mcpServers": {
-  "n8n-local": {
+  "n8n-mcp": {
     "type": "http",
     "url": "https://<your-n8n-domain>/mcp-server/http",
     "headers": {
@@ -214,9 +231,35 @@ Add the following entry to your `claude_desktop_config.json` file:
 Here, replace:
 
 - `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
-### Connecting Claude Code to n8n MCP server
+#### Connecting Claude Code to n8n MCP server
+
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
+
+Use the following CLI command:
+
+```bash
+claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `claude.json` file:
+
+```json
+{
+    "mcpServers": {
+        "n8n-mcp": {
+            "type": "http",
+            "url": "https://<your-n8n-domain>/mcp-server/http"
+        }
+    }
+}
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+##### OPTION 2: Authenticate using Access Token
 
 Use the following CLI command:
 
@@ -230,7 +273,7 @@ Alternatively, add the following entry to your `claude.json` file:
 ```json
 {
     "mcpServers": {
-        "n8n-local": {
+        "n8n-mcp": {
             "type": "http",
             "url": "https://<your-n8n-domain>/mcp-server/http",
             "headers": {
@@ -248,10 +291,31 @@ Here, replace:
 
 ### Connecting Codex CLI to n8n MCP server
 
+##### OPTION 1: Authenticate using OAuth2 (Recommended)
+
+Use the following CLI command:
+
+```bash
+codex mcp add n8n-mcp --url https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `~/.codex/config.toml` file:
+
+```toml
+[mcp_servers.n8n-mcp]
+url = "http://localhost:5678/mcp-server/http"
+```
+
+Here, replace:
+
+- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+
+##### OPTION 2: Authenticate using Access Token
+
 Add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
-[mcp_servers.n8n_mcp]
+[mcp_servers.n8n-mcp]
 url = "https://<your-n8n-domain>/mcp-server/http"
 http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 ```
@@ -299,6 +363,6 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 
 - Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 - Verify that the MCP access is enabled in n8n settings.
-- Check that the workflows you want to access are marked as available in MCP.
+- Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 - Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
 - Review n8n server logs for any error messages related to MCP connections.

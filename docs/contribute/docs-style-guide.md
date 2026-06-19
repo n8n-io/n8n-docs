@@ -208,6 +208,69 @@ Spaces share the same `docs/` root, so step up to the root with `../`, then down
 [link to a page](../../deploy-n8n/hosting/environment-variables.md)
 ```
 
+### Images
+
+Each space has a single folder for all its images, at `.gitbook/assets/` in the root of that space:
+
+​```
+docs/
+├── build-workflows/                      # space root
+│   ├── .gitbook/
+│   │   └── assets/                       # all images for this space live here
+│   │       └── workflow-overview.png
+│   ├── understand-workflows/
+│   │   └── current-page.md
+│   └── manage-workflows/
+│       └── export-import.md
+├── deploy-n8n/
+│   ├── .gitbook/
+│   │   └── assets/                       # all images for this space live here
+│   │       └── hosting-diagram.png
+​```
+
+Images must be stored in the `.gitbook/assets/` folder of the space where they're used. You can't reference an image from another space's assets folder.
+
+Reference images using a path relative to the page you're editing. From any page within the space, step up to the space root first, then into `.gitbook/assets/`:
+
+**From a page one level deep** (e.g. `build-workflows/manage-workflows/export-import.md`):
+
+​```
+![Alt text](../.gitbook/assets/workflow-overview.png)
+​```
+
+**From a page two levels deep** (e.g. `build-workflows/understand-workflows/current-page.md`):
+
+​```
+![Alt text](../../.gitbook/assets/workflow-overview.png)
+​```
+
+**Alt text**
+
+Always write descriptive alt text. It supports accessibility and is displayed if the image fails to load.
+
+- Describe what the image shows, not what it is. "Workflow canvas with a Schedule Trigger connected to an HTTP Request node", not "screenshot".
+- Keep it under 125 characters.
+- Don't start with "Image of" or "Screenshot of".
+
+**Image files**
+
+- Use PNG for screenshots and diagrams.
+- Use SVG for icons and simple illustrations where available.
+- Keep file sizes reasonable — compress PNGs before committing. [Squoosh](https://squoosh.app/) is a free browser tool.
+- Use lowercase, hyphenated file names: `workflow-overview.png`, not `WorkflowOverview.PNG`.
+
+### Videos
+
+Don't store video files in the n8n-docs repository. Host videos externally — for example on YouTube, Loom or another [supported domain](https://iframely.com/domains) — and embed them in the page.
+
+To embed a video, paste the URL inside embed tags as follows:
+
+```
+{% embed url="https://www.youtube.com/embed/your-video-id" %}
+````
+
+Videos can't be embedded inside [hints](#hints).
+
 ### Code examples
 
 Use tabs not spaces. This is important because the n8n node linter enforces this convention. Any code samples in the 'Creating nodes' section could be copied into a user's node, then cause a linter fail if they use spaces.
@@ -348,7 +411,7 @@ The content is rendered following the normal Markdown syntax. To add a list:
 
 Reusable content lets you store a block of content once and reference it across multiple pages and spaces. When you edit the source, the change propagates to every page that references it, so you don't have to find and update duplicate copies.
 
-Create reusable content in the `.gitbook/includes` space at the [root](TODOLINK) of the repository. Add a file containing the content you want to reuse, and give it a title:
+Create reusable content in the `.gitbook/includes` space at the root of the repository. Add a file containing the content you want to reuse, and give it a title:
 
 {% code title="reusable-content-descriptor.md" %}
 ```
@@ -379,8 +442,8 @@ Reference a published template by its template API URL:
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
 ```
 
-Reference a workflow JSON file stored in the docs repository, using a path relative to <TODO: confirm whether the path is relative to the repository root or the current page, also where should the JSON files be stored>:
+Reference a workflow JSON file stored in the docs repository, using a relative path:
 
 ```
-{% @n8n-blocks/n8n-workflow-demo content="" url="what/should/filepath/be/let_your_ai_call_an_api.json" %}
+{% @n8n-blocks/n8n-workflow-demo content="" url="../let_your_ai_call_an_api.json" %}
 ```

@@ -16,8 +16,8 @@ You write and review documentation for the n8n-docs repo.
 The definitive guides live in the repo and are the source of truth. This skill
 distills them so you can act quickly, but defer to the guides when in doubt:
 
-- **Style guide:** `docs/help-and-community/docs-style-guide.md` — writing style and GitBook formatting.
-- **Contribution guide:** `docs/help-and-community/docs-contributing-guide.md` — content types, templates, PR process, and what not to submit.
+- **Style guide:** `docs/contribute/docs-style-guide.md` — writing style, frontmatter, and GitBook formatting.
+- **Contribution guide:** `docs/contribute/docs-contributing-guide.md` — content types, templates, PR process, and what not to submit.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -101,6 +101,28 @@ marketing words. Prefer the plainer version:
 - Lead with the action: "To schedule a workflow, add a Schedule Trigger" beats
   "There is a node available that can be used to schedule workflows."
 
+## Frontmatter
+
+Every page opens with valid YAML frontmatter. Fields n8n Docs uses:
+
+- `description`: short summary of the page. May appear in search results and link previews.
+- `layout.description.visible`: always include and set to `false` (hides the description on the rendered page).
+- `hidden`: set to `true` to remove the page from the side menu. Omit for normal pages (most pages appear in the menu).
+- `generated`: `true` marks the page as fully automation-managed. Don't edit these by hand.
+
+Minimal frontmatter for a new page:
+
+```yaml
+---
+description: Learn how to merge data streams in your n8n workflows.
+layout:
+  description:
+    visible: false
+---
+```
+
+Don't add migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`) to new pages, even though existing pages may carry them.
+
 ## GitBook formatting syntax
 
 See [reference.md](reference.md) for full examples. Quick reference:
@@ -108,11 +130,15 @@ See [reference.md](reference.md) for full examples. Quick reference:
 | Element | Syntax |
 |---------|--------|
 | External link | standard Markdown `[text](url)` (opens in a new tab automatically) |
-| Internal link | relative path including `.md`: `[text](../folder/page.md)` |
+| Internal link | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
+| Image | `![Alt text](../.gitbook/assets/file.png)` — stored in the space's `.gitbook/assets/` folder |
+| Video | `{% embed url="..." %}` — host externally; can't go inside a hint |
 | Hint / callout | `{% hint style="info" %}` … `{% endhint %}` |
 | Collapsible block | `<details>` … `<summary>Title</summary>` … `</details>` |
 | Tabbed content | `{% tabs %}{% tab title="Name" %}` … `{% endtab %}{% endtabs %}` |
 | Code block (with options) | `{% code title="File.ts" %}` ```` ``` ```` … `{% endcode %}` |
+| Reusable content | `{% include "../.gitbook/includes/file.md" %}` |
+| Embedded workflow | `{% @n8n-blocks/n8n-workflow-demo content="" url="..." %}` |
 
 ### Hint types
 

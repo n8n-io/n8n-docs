@@ -5,6 +5,28 @@ site is built with [GitBook](https://www.gitbook.com/): pages are Markdown plus
 GitBook-specific blocks. For the Markdown representation of every block type,
 see the [GitBook blocks documentation](https://gitbook.com/docs/creating-content/blocks).
 
+## Frontmatter
+
+Every page opens with valid YAML frontmatter. Fields n8n Docs uses:
+
+| Field | Use |
+|-------|-----|
+| `description` | Short summary of the page. May appear in search results and link previews. |
+| `layout.description.visible` | Always include and set to `false`. Hides the description on the rendered page. |
+| `hidden` | Set to `true` to remove the page from the side menu. Omit for normal pages (most pages appear in the menu). |
+| `generated` | `true` marks the page as fully automation-managed. Don't edit these by hand. |
+
+```yaml
+---
+description: Learn how to merge data streams in your n8n workflows.
+layout:
+  description:
+    visible: false
+---
+```
+
+Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`). Don't add these to new pages.
+
 ## Links
 
 ### External links
@@ -136,6 +158,70 @@ Placeholders inside code spans or blocks use hyphenated words in angle brackets:
 
 ```markdown
 Run `n8n start --tunnel` from `<your-project-directory>`.
+```
+
+## Images
+
+Each space keeps all its images in one folder, `.gitbook/assets/` at the space
+root. You can't reference an image from another space's assets folder.
+
+Reference images with a path relative to the page: step up to the space root,
+then into `.gitbook/assets/`:
+
+```markdown
+![Alt text](../.gitbook/assets/workflow-overview.png)
+![Alt text](../../.gitbook/assets/workflow-overview.png)
+```
+
+**Alt text:** always descriptive. Describe what the image shows, not that it's a
+screenshot. Keep it under 125 characters. Don't start with "Image of" or
+"Screenshot of".
+
+**Files:** PNG for screenshots and diagrams, SVG for icons and simple
+illustrations. Compress before committing. Use lowercase, hyphenated names
+(`workflow-overview.png`, not `WorkflowOverview.PNG`).
+
+## Videos
+
+Don't commit video files to the repo. Host externally (YouTube, Loom, or another
+supported domain) and embed the URL:
+
+```markdown
+{% embed url="https://www.youtube.com/embed/your-video-id" %}
+```
+
+Videos can't be embedded inside hints.
+
+## Reusable content
+
+Store a block of content once and reference it on multiple pages and spaces.
+Editing the source updates every page that references it.
+
+Create the source file in the `.gitbook/includes` space at the repo root, with a
+`title`:
+
+```markdown
+---
+title: reusable-content-descriptor
+---
+Content that will be reused across pages.
+```
+
+Reference it with a path relative to the file containing the reference:
+
+```markdown
+{% include "../.gitbook/includes/reusable-content-descriptor.md" %}
+```
+
+## Embedded workflows
+
+Embed an n8n workflow so readers can view and interact with it in the page.
+Reference either a published template by its template API URL, or a workflow JSON
+file stored in the docs repo:
+
+```markdown
+{% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
+{% @n8n-blocks/n8n-workflow-demo content="" url="path/to/workflow.json" %}
 ```
 
 ---

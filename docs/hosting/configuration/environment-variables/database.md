@@ -70,5 +70,5 @@ Here's the cycle the variables on this page control:
 
 /// note | Applies to all databases
 The health checks and the recovery cycle (the `DB_PING_*` and `DB_RECOVERY_BACKOFF_*` variables) apply to every database type.
-The remaining settings ()`DB_CONNECTION_ACQUISITION_TIMEOUT_MS`, `DB_POSTGRESDB_MAX_CONNECTION_LIFETIME_MS`, `DB_POSTGRESDB_KEEP_ALIVE`, and `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`) apply to PostgreSQL only. The default values suit most deployments, so you can leave them unchanged unless you run into connection problems.
+The remaining settings (`DB_CONNECTION_ACQUISITION_TIMEOUT_MS`, `DB_POSTGRESDB_MAX_CONNECTION_LIFETIME_MS`, `DB_POSTGRESDB_KEEP_ALIVE`, and `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`) apply to PostgreSQL only. The default values suit most deployments, so you can leave them unchanged unless you run into connection problems.
 ///

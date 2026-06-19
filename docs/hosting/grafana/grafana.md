@@ -4,7 +4,7 @@ contentType: howto
 
 # Grafana
 
-Enable the Prometheus metrics endpoint in n8n, then connect Grafana through a Prometheus instance to visualize your n8n data. Refer to [Enable Prometheus metrics](../configuration/configuration-examples/prometheus.md) before following this guide.
+Enable the Prometheus metrics endpoint in n8n, then connect Grafana through a Prometheus instance to visualize your n8n data. Refer to [Enable Prometheus metrics](/hosting/configuration/configuration-examples/prometheus.md) before following this guide.
 
 /// info | Feature availability
 The `/metrics` endpoint isn't available on n8n Cloud.

@@ -16,19 +16,19 @@ n8n provides keyboard shortcuts for some actions.
 
 ## Workflow controls
  
- - **Ctrl** + **Alt** + **n**: create new workflow
- - **Ctrl** + **o**: open workflow
- - **Ctrl** + **s**: save the current workflow 
- - **Ctrl** + **z**: undo
- - **Ctrl** + **shift** + **z**: redo
- - **Ctrl** + **Enter**: execute workflow
+ - **Ctrl/Cmd** + **Alt** + **n**: create new workflow
+ - **Ctrl/Cmd** + **o**: open workflow
+ - **Ctrl/Cmd** + **s**: save the current workflow 
+ - **Ctrl/Cmd** + **z**: undo
+ - **Ctrl/Cmd** + **shift** + **z**: redo
+ - **Ctrl/Cmd** + **Enter**: execute workflow
 
 ## Canvas
 
 ### Move the canvas
 
- - **Ctrl** + **Left Mouse Button** + drag: move node view
- - **Ctrl** + **Middle mouse button** + drag: move node view
+ - **Ctrl/Cmd** + **Left Mouse Button** + drag: move node view
+ - **Ctrl/Cmd** + **Middle mouse button** + drag: move node view
  - **Space** + drag: move node view
  - **Middle mouse button** + drag: move node view
  - Two fingers on a touch screen: move node view
@@ -39,14 +39,14 @@ n8n provides keyboard shortcuts for some actions.
 - **-** or **_**: zoom out
 - **0**: reset zoom level
 - **1**: zoom to fit workflow
-- **Ctrl** + **Mouse wheel**: zoom in/out
+- **Ctrl/Cmd** + **Mouse wheel**: zoom in/out
 
 ### Nodes on the canvas
 
 - **Double click** on a node: open the node details
 - **Ctrl/Cmd** + **Double click** on a sub-workflow node: open the sub-workflow in a new tab
-- **Ctrl** + **a**: select all nodes
-- **Ctrl** + **v**: paste nodes
+- **Ctrl/Cmd** + **a**: select all nodes
+- **Ctrl/Cmd** + **v**: paste nodes
 - **Shift** + **s**: add sticky note
 
 ### With one or more nodes selected in canvas
@@ -55,8 +55,10 @@ n8n provides keyboard shortcuts for some actions.
  - **ArrowLeft**: select node left of the current one
  - **ArrowRight**: select node right of the current one
  - **ArrowUp**: select sibling node above the current one
- - **Ctrl** + **c**: copy
- - **Ctrl** + **x**: cut
+ - **Ctrl/Cmd** + **c**: copy
+ - **Ctrl/Cmd** + **g**: group selected nodes
+ - **Ctrl/Cmd** + **shift** + **g**: ungroup selected nodes
+ - **Ctrl/Cmd** + **x**: cut
  - **D**: deactivate
  - **Delete**: delete
  - **Enter**: open

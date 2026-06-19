@@ -43,7 +43,31 @@ n8n also handles trace context propagation:
 - **Sub-workflows**: A sub-workflow's span uses the parent workflow's span as its parent.
 - **Resumed workflows**: When a workflow resumes after a wait, the new span links back to the previous span using a span link.
 
-## Enable tracing
+## Enable tracing in the UI
+
+/// info | Available from n8n v2.27.0
+You need to be an instance owner or admin to configure OpenTelemetry in the UI.
+///
+
+Instead of setting environment variables, you can configure tracing from **Settings > OpenTelemetry**. n8n applies your changes without a restart, and reloads them across workers and webhook processors in [queue mode](/hosting/scaling/queue-mode.md).
+
+To configure tracing:
+
+1. Select **Settings > OpenTelemetry**.
+1. Turn on **Enable OpenTelemetry**.
+1. Under **Collector connection**, enter your **OTLP endpoint** and any other connection details.
+1. Under **Tracing**, set your sampling and span options.
+1. Select **Save settings**.
+
+To check that n8n can reach your collector, select **Send test trace** under **Verify configuration**. n8n sends a single test span and reports whether the collector accepted it. You can run this before or after you save.
+
+Each field maps to an environment variable, shown in the field's tooltip. For the full list, see [OpenTelemetry environment variables](/hosting/configuration/environment-variables/opentelemetry.md).
+
+/// note | Environment variables take precedence
+If you set an option with an environment variable, n8n uses that value and disables the matching field in the UI. To manage a setting from the UI, leave its environment variable unset. When n8n restarts, environment variables override the values saved in the UI.
+///
+
+## Enable tracing with environment variables
 
 Set the following environment variables on each n8n instance you want workflow tracing enabled (main, workers, and webhook processors):
 

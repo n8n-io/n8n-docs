@@ -15,7 +15,7 @@ The `/metrics` endpoint isn't available on n8n Cloud.
 Once you enabled prometheus metrics for your n8n instance, you'll want to build dashboards to observe them.
 
 n8n publishes reusable grafana dashboards for several of the supported prometheus metrics in this GitHub project:
-[n8n-observability](https://github.com/n8n-io/n8n-observability)
+[n8n-observability](https://github.com/n8n-io/n8n-observability){:target="_blank" .external-link}
 
 ## Configure Prometheus to scrape n8n
 

@@ -10,6 +10,13 @@ Enable the Prometheus metrics endpoint in n8n, then connect Grafana through a Pr
 The `/metrics` endpoint isn't available on n8n Cloud.
 ///
 
+## Reusable dashboard templates
+
+Once you enabled prometheus metrics for your n8n instance, you'll want to build dashboards to observe them.
+
+n8n publishes reusable grafana dashboards for several of the supported prometheus metrics in this GitHub project:
+[n8n-observability](https://github.com/n8n-io/n8n-observability)
+
 ## Configure Prometheus to scrape n8n
 
 Prometheus scrapes n8n's `/metrics` endpoint on a schedule and stores the data. Grafana then queries Prometheus to display it.
@@ -48,6 +55,8 @@ n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook
 | `N8N_METRICS_INCLUDE_WEBHOOK_METRICS` | `false` | Exposes the `n8n_webhook_request_duration_seconds` histogram. |
 | `N8N_METRICS_INCLUDE_WORKFLOW_INFO` | `false` | Exposes the `n8n_workflow_info` gauge for human-readable workflow names. See [Workflow name lookup](#workflow-name-lookup). |
 
+You can find a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-webhook-executions) for this histogram in our n8n-observability project.
+
 ### What the metric tracks
 
 `n8n_webhook_request_duration_seconds` is a Prometheus histogram. For each webhook call, n8n records how long the request took (time of "request received" -> "response sent"). The metric exposes three series per label combination:
@@ -85,6 +94,8 @@ n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form su
 |----------|---------|-------------|
 | `N8N_METRICS_INCLUDE_FORM_METRICS` | `false` | Exposes the `n8n_form_submission_duration_seconds` histogram. |
 | `N8N_METRICS_INCLUDE_WORKFLOW_INFO` | `false` | Exposes the `n8n_workflow_info` gauge for human-readable workflow names. See [Workflow name lookup](#workflow-name-lookup). |
+
+You can find a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-form-executions) for this histogram in our n8n-observability project.
 
 ### What the metric tracks
 

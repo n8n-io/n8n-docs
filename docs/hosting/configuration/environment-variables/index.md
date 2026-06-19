@@ -19,6 +19,4 @@ For the complete and most up-to-date list of all environment variables, see the 
 You can provide a [configuration file](/hosting/configuration/configuration-methods.md) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. 
 ///
 
-[[% import "_macros/section-toc.html" as sectionToc %]]
 
-[[ sectionToc.sectionToc(page) ]]

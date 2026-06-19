@@ -10,7 +10,7 @@ The codex filename must match the node base filename. For example, given a node 
 
 | Parameter | Description |
 | -------- | ----------- |
-| `node`    | Includes the node name. Must start with `n8n-nodes-base.`. For example, `n8n-nodes-base.openweatherapi`. | 
+| `node`    | Identifies the node. Community nodes use the package name, in the format `n8n-nodes-<your-node-name>`. For example, `n8n-nodes-github-issues`. n8n's built-in nodes use the `n8n-nodes-base.` prefix, for example `n8n-nodes-base.openweatherapi`. | 
 | `nodeVersion` | The node version. This should have the same value as the `version` parameter in your main node file. For example, `"1.0"`. |
 | `codexVersion` | The codex file version. The current version is `"1.0"`. |
 | `categories` | The settings in the `categories` array determine which category n8n adds your node to in the GUI. See [Node categories](#node-categories) for more information. |

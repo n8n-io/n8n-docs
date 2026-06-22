@@ -16,7 +16,7 @@ There are two execution modes:
 
 ## How executions count towards quotas:
 
-[Paid plans](https://n8n.io/pricing/), whether cloud or self-hosted, have an execution limit quota. Only production executions count towards this quota. These are executions started automatically by triggers, schedules, or polling. Manual executions, sub-workflows, and error workflows aren't counted. This distinction applies regardless of the instance environment, such as development or production.
+[Paid plans](https://n8n.io/pricing/), whether cloud or self-hosted, have an execution limit quota. Only production executions count towards this quota. These are executions started automatically by triggers, schedules, or polling. This distinction applies regardless of the instance environment, such as development or production.
 
 ### Execution count by trigger type
 

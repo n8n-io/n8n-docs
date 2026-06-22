@@ -48,7 +48,7 @@ To work around this, consider using the [limit node](/integrations/builtin/core-
 
 ## Production executions
 
-Production executions occur when a triggering event or schedule automatically runs a workflow.
+Production executions occur when a triggering event or schedule automatically runs a workflow. On [paid plans](https://n8n.io/pricing/), production executions count towards your execution quota. For details on what does and doesn't count, refer to [How executions count towards quotas](/workflows/executions/index.md#how-executions-count-towards-quotas).
 
 To configure production executions, you must attach a [trigger node](/glossary.md#trigger-node-n8n) (any trigger other than the [manual trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) works) and switch workflow's toggle to **Active**. Once published, the workflow automatically executes whenever the trigger condition occurs.
 

@@ -1279,6 +1279,7 @@ nav:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
       - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
+      - Grafana: hosting/grafana/grafana.md
       - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md

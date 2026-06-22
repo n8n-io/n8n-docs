@@ -271,6 +271,7 @@ Typeform
 [Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
+[Uu]ngroup(s|ed|ing)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare

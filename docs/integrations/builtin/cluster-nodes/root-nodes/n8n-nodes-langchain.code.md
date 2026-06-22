@@ -11,6 +11,10 @@ Use the LangChain Code node to import LangChain. This means if there is function
 
 On this page, you'll find the node parameters, guidance on configuring the node, and links to more resources.
 
+/// warning | Deprecated due to security issues
+This node has critical security issues and isn't safe to use. It's deprecated and hidden from the nodes panel. Avoid using it in your workflows.
+///
+
 /// note | Not available on Cloud
 This node is only available on self-hosted n8n.
 ///

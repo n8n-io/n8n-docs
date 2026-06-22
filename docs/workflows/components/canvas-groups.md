@@ -19,7 +19,7 @@ You can only group a selection when it forms a valid Canvas Group. See [What you
 
 ## Name a Canvas Group
 
-n8n highlights the name field when you create a Canvas Group, so you can name it right away. To rename it later, double-click its name, edit the text, then click away. Canvas Group names are required and you will not be able to leave it blank, it will default to "Group N" (where N is a number).
+When you create a Canvas Group, n8n automatically assigns a default name (for example, "Group 1") and highlights it so you can immediately replace it with something more descriptive or keep the suggested name. To rename a group later, double-click its name, edit the text, then click anywhere outside the group to save. Group names cannot be left blank.
 
 ## Collapse and expand a Canvas Group
 

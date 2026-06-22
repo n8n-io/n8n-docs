@@ -26,6 +26,16 @@ The way executions are counted depends on the type of trigger node used:
 * **Polling nodes (like Google Drive Trigger):** Count one execution only when new data is found. Polls that return no results don't count as an execution.
 * **Webhook Trigger nodes:** Count one execution for every inbound request that activates the trigger. This includes requests with an empty body (such as `{}`). Malformed requests that fail before the workflow starts don't count as an execution.
 
+### Triggers and runs that don't count
+
+The following don't count towards your execution quota:
+
+* **Manual executions:** Running a workflow from the editor while building or testing.
+* **Sub-workflow executions:** When a workflow calls another workflow with the Execute Sub-workflow node, only the parent (top-level) execution counts.
+* **Error workflow executions:** Runs of a workflow set as an [error workflow](/flow-logic/error-handling.md).
+* **Polls that return no data:** A polling trigger only counts when it finds new data.
+* **Malformed or rejected requests:** Webhook requests that fail before the workflow starts.
+
 ## Execution lists
 
 n8n provides two execution lists:

@@ -10,6 +10,10 @@ To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.
 
+/// warning | Don't expose the metrics endpoint publicly
+Only expose the `/metrics` endpoint to internal services that consume the Prometheus data. Don't make it accessible on the public internet, as it can reveal sensitive operational data about your n8n instance.
+///
+
 ```bash
 export N8N_METRICS=true
 ```
@@ -17,6 +21,8 @@ export N8N_METRICS=true
 Refer to the respective [Environment Variables](/hosting/configuration/environment-variables/endpoints.md) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
 
 Both `main` and `worker` instances are able to expose metrics.
+
+For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](/hosting/logging-monitoring/grafana.md).
 
 ## Queue metrics
 

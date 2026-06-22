@@ -34,6 +34,17 @@ You can find the release notes for older versions of n8n: [1.x](/release-notes/1
 
 
 
+## n8n@2.27.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.2...n8n@2.27.3) for this version.<br />
+**Release date:** 2026-06-19
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.27.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.1...n8n@2.27.2) for this version.<br />
@@ -80,6 +91,28 @@ This release contains bug fixes.
 [legendik](https://github.com/legendik)  
 [petrusdemelo](https://github.com/petrusdemelo)  
 [envy](https://github.com/envy)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.9
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.8...n8n@2.26.9) for this version.<br />
+**Release date:** 2026-06-22
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@2.26.8
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.26.7...n8n@2.26.8) for this version.<br />
+**Release date:** 2026-06-19
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 

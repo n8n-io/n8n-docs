@@ -18,6 +18,7 @@ nav:
           - Nodes: workflows/components/nodes.md
           - Connections: workflows/components/connections.md
           - Sticky Notes: workflows/components/sticky-notes.md
+          - Canvas Groups: workflows/components/canvas-groups.md
         - Executions:
           - workflows/executions/index.md
           - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
@@ -1278,6 +1279,7 @@ nav:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
       - OpenTelemetry tracing: hosting/logging-monitoring/opentelemetry.md
+      - Grafana: hosting/logging-monitoring/grafana.md
       - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md

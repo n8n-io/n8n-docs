@@ -10,3 +10,4 @@ This section contains:
 * [Nodes](/workflows/components/nodes.md): integrations and operations.
 * [Connections](/workflows/components/connections.md): node connectors.
 * [Sticky notes](/workflows/components/sticky-notes.md): document your workflows.
+* [Canvas Groups](/workflows/components/canvas-groups.md): organize related nodes.

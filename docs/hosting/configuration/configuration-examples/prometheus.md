@@ -22,7 +22,7 @@ Refer to the respective [Environment Variables](/hosting/configuration/environme
 
 Both `main` and `worker` instances are able to expose metrics.
 
-For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](/hosting/grafana/grafana.md).
+For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](/hosting/logging-monitoring/grafana.md).
 
 ## Queue metrics
 

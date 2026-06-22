@@ -10,48 +10,76 @@ hide:
 
 # Self-hosting n8n
 
-This section provides guidance on setting up self-hosted n8n. All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions.
+All self-hosted installations use the same core product. Without a license key, n8n runs as the free [Community edition](/hosting/community-edition-features.md). Adding a Business or Enterprise license key enables those editions.
 
-See [Community edition features](/hosting/community-edition-features.md) for a list of available features. 
+## Choose your installation method
 
-<div class="grid-cards-vertical cards" markdown>
+Select the installation method that best fits your technical requirements and infrastructure:
 
-- __Installation and server setups__
+- __npm__
 
-	Install n8n on any platform using npm or Docker. Or follow our guides to popular hosting platforms.
+	**Best for:** Local development, testing, or simple single-server deployments.
+	
+	**Requirements:** Node.js installed on your system.
+	
+	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 
-	[:octicons-arrow-right-24: Docker installation guide](/hosting/installation/docker.md)
+	[npm installation guide](/hosting/installation/npm.md)
 
-- __Configuration__
+- __Docker__
 
-	Learn how to configure n8n with environment variables.
+	**Best for:** Isolated environments, easy updates, and consistent deployments.
+	
+	**Requirements:** Docker installed on your system.
+	
+	Runs n8n in a container with all dependencies included. Simplifies installation and updates.
 
-	[:octicons-arrow-right-24: Environment Variables](/hosting/configuration/environment-variables/index.md)
+	[Docker installation guide](/hosting/installation/docker.md)
 
-- __Users and authentication__
+- __AWS__
 
-	Choose and set up user authentication for your n8n instance.
+	Deploy on Amazon Web Services using EC2, ECS, or other AWS services.
 
-	[:octicons-arrow-right-24: Authentication](/hosting/configuration/user-management-self-hosted.md)
+	[AWS setup guide](/hosting/installation/server-setups/aws.md)
 
-- __Scaling__
+- __Azure__
 
-	Manage data, modes, and processes to keep n8n running smoothly at scale.
+	Host n8n on Microsoft Azure with container instances or virtual machines.
 
-	[:octicons-arrow-right-24: Scaling](/hosting/scaling/queue-mode.md)
+	[Azure setup guide](/hosting/installation/server-setups/azure.md)
 
-- __Securing n8n__
+- __Google Cloud__
 
-	Secure your n8n instance by setting up SSL, SSO, or 2FA or blocking or opting out of some data collection or features.
+	Run n8n on Google Cloud using Cloud Run or Kubernetes Engine.
 
-	[:octicons-arrow-right-24: Securing n8n guide](/hosting/securing/overview.md)
+	[Google Cloud Run](/hosting/installation/server-setups/google-cloud-run.md) | [Kubernetes Engine](/hosting/installation/server-setups/google-kubernetes-engine.md)
 
-- __Starter kits__
+- __DigitalOcean__
 
-	New to n8n or AI? Try our Self-hosted AI Starter Kit. Curated by n8n, it combines the self-hosted n8n platform with compatible AI products and components to get you started building self-hosted AI workflows.
+	Simple droplet-based hosting ideal for small to medium deployments.
 
-	[:octicons-arrow-right-24: Starter kits](/hosting/starter-kits/ai-starter-kit.md)
+	[DigitalOcean setup guide](/hosting/installation/server-setups/digital-ocean.md)
 
-</div>
+- __Hetzner__
 
---8<-- "_snippets/self-hosting/warning.md"
+	Cost-effective European hosting option with excellent performance.
+
+	[Hetzner setup guide](/hosting/installation/server-setups/hetzner.md)
+
+- __Heroku__
+
+	Platform-as-a-service option for quick deployment with minimal configuration.
+
+	[Heroku setup guide](/hosting/installation/server-setups/heroku.md)
+
+- __OpenShift__
+
+	Enterprise Kubernetes platform for containerized applications.
+
+	[OpenShift setup guide](/hosting/installation/server-setups/openshift-crc.md)
+
+- __Docker Compose__
+
+	Multi-container setup ideal for production deployments with databases and additional services.
+
+	[Docker Compose guide](/hosting/installation/server-setups/docker-compose.md)

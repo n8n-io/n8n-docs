@@ -63,7 +63,7 @@ For specific feature availability across different plans, see the [pricing page]
 Ready to begin? Choose your deployment option:
 
 - **[Get started with n8n Cloud](https://n8n.io/cloud/)** - Sign up for instant access
-- **[Get started with self-hosted](/hosting/)** - Installation and deployment guides
+- **[Get started with self-hosted](/hosting/index.md)** - Installation and deployment guides
 
 To register a Community Edition instance for additional features, go to **Settings > Usage and plan** and select **Unlock**.
 

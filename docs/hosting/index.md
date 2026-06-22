@@ -16,8 +16,6 @@ All self-hosted installations use the same core product. Without a license key, 
 
 Select the installation method that best fits your technical requirements and infrastructure:
 
-### Quick start options
-
 - __npm__
 
 	**Best for:** Local development, testing, or simple single-server deployments.
@@ -37,10 +35,6 @@ Select the installation method that best fits your technical requirements and in
 	Runs n8n in a container with all dependencies included. Simplifies installation and updates.
 
 	[Docker installation guide](/hosting/installation/docker.md)
-
-### Cloud platform setups
-
-Deploy n8n on managed cloud infrastructure for production environments:
 
 - __AWS__
 

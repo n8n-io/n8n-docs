@@ -1,0 +1,21 @@
+docs/hosting/configuration/configuration-examples/prometheus.md
+  s_f39bcf6c409a67::t_abcf76723b9164 25
+nav.yml
+  s_f39bcf6c409a67::t_6db6a87339e1f0 1282
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "a926c201d465a53e84970d22350bb0ee23f65eb4",
+  "prompts": {},
+  "sessions": {
+    "s_f39bcf6c409a67": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "18dcf6bc-c0b8-4a1f-bc3b-c502f1400148",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

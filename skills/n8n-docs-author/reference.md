@@ -31,7 +31,7 @@ Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `
 
 ### External links
 
-Use standard Markdown link syntax. External links automatically open in a new tab, so you don't need extra attributes or classes:
+Use standard Markdown link syntax. External links open in the current tab by default. If the site is configured to open them in a new tab, no extra attributes are needed:
 
 ```markdown
 [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)

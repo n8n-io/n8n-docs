@@ -16,8 +16,8 @@ You write and review documentation for the n8n-docs repo.
 The definitive guides live in the repo and are the source of truth. This skill
 distills them so you can act quickly, but defer to the guides when in doubt:
 
-- **Style guide:** `docs/contribute/docs-style-guide.md` — writing style, frontmatter, and GitBook formatting.
-- **Contribution guide:** `docs/contribute/docs-contributing-guide.md` — content types, templates, PR process, and what not to submit.
+- **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
+- **Contribution guide:** `docs/contribute/style-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,

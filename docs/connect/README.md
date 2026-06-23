@@ -48,7 +48,7 @@ Best for:
 * Triggering and monitoring executions from external systems
 * Automating workflow and credential management
 
-Start with [n8n API](readme/n8n-api/).
+Start with [n8n API](n8n-api/).
 {% endtab %}
 
 {% tab title="n8n CLI" %}
@@ -60,7 +60,7 @@ Best for:
 * Running executions in scripts and CI pipelines
 * Local development and debugging
 
-Start with [n8n CLI](readme/n8n-cli.md).
+Start with [n8n CLI](n8n-cli.md).
 {% endtab %}
 
 {% tab title="MCP server" %}
@@ -72,6 +72,6 @@ Best for:
 * Discovering and executing workflows from an AI agent
 * Managing workflows through an MCP client
 
-Start with [Connect to n8n MCP server](readme/connect-to-n8n-mcp-server/).
+Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server/).
 {% endtab %}
 {% endtabs %}

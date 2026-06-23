@@ -10,7 +10,7 @@ priority: critical
 nodeTitle: App nodes
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md
 originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.oracledb'
-url: 'https://docs.n8n.io/integrations/builtin/app-nodes/app-nodes'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.oracledb'
 layout:
   description:
     visible: false

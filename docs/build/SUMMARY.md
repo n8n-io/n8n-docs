@@ -1,5 +1,6 @@
 # Summary
 
+* [Build](README.md)
 * [Understand workflows](understand-workflows/README.md)
   * [Workflow components](understand-workflows/workflow-components/README.md)
     * [Work with nodes](understand-workflows/workflow-components/work-with-nodes.md)

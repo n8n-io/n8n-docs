@@ -180,7 +180,7 @@ The relative path depends on where the target sits in relation to the page you'r
 
 ```
 docs/                                     # docs root
-├── build-workflows/                      # current space
+├── build/                                # current space
 │   ├── README.md                         # space landing page
 │   ├── understand-workflows/             # subfolder (section) in the space
 │   │   ├── README.md                     # section landing page (parent of current-page.md)
@@ -189,7 +189,7 @@ docs/                                     # docs root
 │   └── manage-workflows/                 # another subfolder in the same space
 │       ├── README.md                     # section landing page
 │       └── export-import.md              # page in a different subfolder
-├── deploy-n8n/                           # another space
+├── deploy/                               # another space
 │   ├── README.md                         # space landing page
 │   └── hosting/                          # subfolder in another space
 │       ├── environment-variables.md      # page in a different space
@@ -226,14 +226,28 @@ Step up out of the current folder with `../` for each level, then down into the 
 Spaces share the same `docs/` root, so step up to the root with `../`, then down through the target space and its subfolders:
 
 ```
-[link to a page](../../deploy-n8n/hosting/environment-variables.md)
+[link to a page](../../deploy/hosting/environment-variables.md)
 ```
 
 ### Images
 
 Each space has a single folder for all its images, at `.gitbook/assets/` in the root of that space:
 
-​ `docs/ ├── build-workflows/ # space root │ ├── .gitbook/ │ │ └── assets/ # all images for this space live here │ │ └── workflow-overview.png │ ├── understand-workflows/ │ │ └── current-page.md │ └── manage-workflows/ │ └── export-import.md ├── deploy-n8n/ │ ├── .gitbook/ │ │ └── assets/ # all images for this space live here │ │ └── hosting-diagram.png ​`
+```
+docs/                                     # docs root
+├── build/                                # space root
+│   ├── .gitbook/
+│   │   └── assets/                       # all images for this space live here
+│   │       └── workflow-overview.png
+│   ├── understand-workflows/
+│   │   └── current-page.md
+│   └── manage-workflows/
+│       └── export-import.md
+└── deploy/                               # another space
+    ├── .gitbook/
+    │   └── assets/                       # all images for this space live here
+    │       └── hosting-diagram.png
+```
 
 Images must be stored in the `.gitbook/assets/` folder of the space where they're used. You can't reference an image from another space's assets folder.
 
@@ -405,31 +419,6 @@ The content is rendered following the normal Markdown syntax. To add a list:
 2. No indentation is required.
 {% endtab %}
 {% endtabs %}
-
-### Reusable content
-
-Reusable content lets you store a block of content once and reference it across multiple pages and spaces. When you edit the source, the change propagates to every page that references it, so you don't have to find and update duplicate copies.
-
-Create reusable content in the `.gitbook/includes` space at the root of the repository. Add a file containing the content you want to reuse, and give it a title:
-
-{% code title="reusable-content-descriptor.md" %}
-```
----
-title: reusable-content-descriptor
----
-Content that will be reused.
-
-You can display it on multiple pages.
-
-When you edit this source file, the changes propagate to every page that references it.
-```
-{% endcode %}
-
-Reference the content with the `include` syntax to display it on any page or space. Point to the path of your reusable content file. Make the path relative to the file containing the reference.
-
-```
-{% include "../gitbook/includes/reusable-content-descriptor.md" %}
-```
 
 ### Embedded workflows
 

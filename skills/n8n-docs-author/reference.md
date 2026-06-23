@@ -190,27 +190,6 @@ supported domain) and embed the URL:
 {% embed url="https://www.youtube.com/embed/your-video-id" %}
 ```
 
-## Reusable content
-
-Store a block of content once and reference it on multiple pages and spaces.
-Editing the source updates every page that references it.
-
-Create the source file in the `.gitbook/includes` space at the repo root, with a
-`title`:
-
-```markdown
----
-title: reusable-content-descriptor
----
-Content that will be reused across pages.
-```
-
-Reference it with a path relative to the file containing the reference:
-
-```markdown
-{% include "../.gitbook/includes/reusable-content-descriptor.md" %}
-```
-
 ## Embedded workflows
 
 Embed an n8n workflow so readers can view and interact with it in the page.

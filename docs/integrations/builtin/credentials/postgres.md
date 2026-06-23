@@ -1,36 +1,49 @@
 ---
 title: Postgres credentials
-description: Documentation for Postgres credentials. Use these credentials to authenticate Postgres in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Postgres credentials. Use these credentials to authenticate
+  Postgres in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Postgres credentials
+originalFilePath: integrations/builtin/credentials/postgres.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/postgres'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/postgres'
+layout:
+  description:
+    visible: false
 ---
 
-# Postgres credentials
+# Postgres credentials <a href="#postgres-credentials" id="postgres-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
-- [Postgres Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md) 
-- [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md) 
+- [Postgres](../app-nodes/n8n-nodes-base.postgres/README.md)
+- [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
+- [Postgres Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md) 
+- [PGVector Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md) 
 
-/// note | Agent node users
+{% hint style="info" %}
+**Agent node users**
+
 The Agent node doesn't support SSH tunnels.
-///
+{% endhint %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 [Create a user account](https://www.postgresql.org/docs/current/sql-createuser.html) on a Postgres server. 
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Postgres's documentation](https://www.postgresql.org/docs/16/index.html) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential, you'll need:
 
@@ -80,10 +93,10 @@ To set up the database connection:
 
 Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html) for more information.
 
-### SSH tunnel limitations
+### SSH tunnel limitations <a href="#ssh-tunnel-limitations" id="ssh-tunnel-limitations"></a>
 
 Only use the **SSH Tunnel** setting if:
 
-- You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) node (Agent node doesn't support SSH tunnels).
+- You're using the credential with the [Postgres](../app-nodes/n8n-nodes-base.postgres/README.md) node (Agent node doesn't support SSH tunnels).
 - You have an SSH server running on the same machine as the Postgres server.
 - You have a user account that can log in using `ssh`.

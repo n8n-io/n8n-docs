@@ -1,22 +1,35 @@
 ---
 title: AWS SES node documentation
-description: Learn how to use the AWS SES node in n8n. Follow technical documentation to integrate AWS SES node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the AWS SES node in n8n. Follow technical documentation to
+  integrate AWS SES node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: AWS SES node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.awsses.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awsses'
+layout:
+  description:
+    visible: false
 ---
 
-# AWS SES node
+# AWS SES node <a href="#aws-ses-node" id="aws-ses-node"></a>
 
 Use the AWS SES node to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
 
 On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
 
-/// note | Credentials
-Refer to [AWS SES credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [AWS SES credentials](../credentials/aws.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Custom Verification Email
     * Create a new custom verification email template
@@ -35,10 +48,10 @@ Refer to [AWS SES credentials](/integrations/builtin/credentials/aws.md) for gui
     * Get all templates
     * Update a template
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'aws-ses') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse AWS SES node documentation integration templates](https://n8n.io/integrations/aws-ses) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

@@ -1,35 +1,48 @@
 ---
 title: Airtable credentials
-description: Documentation for Airtable credentials. Use these credentials to authenticate Airtable in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Airtable credentials. Use these credentials to authenticate
+  Airtable in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Airtable credentials
+originalFilePath: integrations/builtin/credentials/airtable.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/airtable'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/airtable'
+layout:
+  description:
+    visible: false
 ---
 
-# Airtable credentials
+# Airtable credentials <a href="#airtable-credentials" id="airtable-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md)
-- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md)
+- [Airtable](../app-nodes/n8n-nodes-base.airtable/README.md)
+- [Airtable Trigger](../trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Airtable](https://airtable.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Personal Access Token (PAT)
 - OAuth2
 
-/// note | API Key deprecation
-n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines) as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
-///
+{% hint style="info" %}
+**API Key deprecation**
 
-## Related resources
+n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines) as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Airtable's API documentation](https://airtable.com/developers/web/api/authentication) for more information about the service.
 
-## Using personal access token
+## Using personal access token <a href="#using-personal-access-token" id="using-personal-access-token"></a>
 
 To configure this credential, you'll need:
 
@@ -50,11 +63,11 @@ To create your PAT:
 
 Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/v1/docs/creating-personal-access-tokens) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
-If you're [self-hosting n8n](/hosting/index.md), you'll need:
+If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), you'll need:
 
 - An **OAuth Redirect URL**
 - A **Client ID**

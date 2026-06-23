@@ -1,21 +1,35 @@
 ---
 title: Text Classifier node documentation
-description: Learn how to use the Text Classifier node in n8n. Follow technical documentation to integrate Text Classifier node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Text Classifier node in n8n. Follow technical
+  documentation to integrate Text Classifier node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Text Classifier node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier
+layout:
+  description:
+    visible: false
 ---
 
-# Text Classifier node
+# Text Classifier node <a href="#text-classifier-node" id="text-classifier-node"></a>
 
 Use the Text Classifier node to classify (categorize) incoming data. Using the categories provided in the parameters (see below), each item is passed to the model to determine its category.
 
 On this page, you'll find the node parameters for the Text Classifier node, and links to more resources.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Input Prompt** defines the input to classify. This is usually an expression that references a field from the input items. For example, this could be `{{ $json.chatInput }}` if the input is a chat trigger. By default it references the `text` field.
 * **Categories**: Add the categories that you want to classify your input as. Categories have a name and a description. Use the description to tell the model what the category means. This is important if the meaning isn't obvious. You can add as many categories as you like.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Allow Multiple Classes To Be True**: You can configure the classifier to always output a single class per item (turned off), or allow the model to select multiple classes (turned on).
 * **When No Clear Match**: Define what happens if the model can't find a good match for an item. There are two options:
@@ -26,7 +40,7 @@ On this page, you'll find the node parameters for the Text Classifier node, and 
 * **Enable Auto-Fixing**: When enabled, the node automatically fixes model outputs to ensure they match the expected format. Do this by sending the schema parsing error to the LLM and asking it to fix it.
 
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

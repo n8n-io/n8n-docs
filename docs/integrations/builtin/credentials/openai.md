@@ -1,32 +1,43 @@
 ---
 title: OpenAI credentials
-description: Documentation for OpenAI credentials. Use these credentials to authenticate OpenAI in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for OpenAI credentials. Use these credentials to authenticate
+  OpenAI in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenAI credentials
+originalFilePath: integrations/builtin/credentials/openai.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/openai'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/openai'
+layout:
+  description:
+    visible: false
 ---
 
-# OpenAI credentials
+# OpenAI credentials <a href="#openai-credentials" id="openai-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md)
-- [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md)
-- [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
-- [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md)
+- [OpenAI](../app-nodes/n8n-nodes-langchain.openai/README.md)
+- [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
+- [Embeddings OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
+- [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [OpenAI](https://platform.openai.com/signup/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [OpenAI's API documentation](https://platform.openai.com/docs/introduction) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

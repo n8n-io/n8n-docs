@@ -1,22 +1,37 @@
 ---
 title: Google Contacts node documentation
-description: Learn how to use the Google Contacts node in n8n. Follow technical documentation to integrate Google Contacts node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Google Contacts node in n8n. Follow technical
+  documentation to integrate Google Contacts node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Google Contacts node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts
+layout:
+  description:
+    visible: false
 ---
 
-# Google Contacts node
+# Google Contacts node <a href="#google-contacts-node" id="google-contacts-node"></a>
 
 Use the Google Contacts node to automate work in Google Contacts, and integrate Google Contacts with other applications. n8n has built-in support for a wide range of Google Contacts features, including creating, updating, retrieving, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the Google Contacts node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Google Contacts credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Google Contacts credentials](../credentials/google/README.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Contact
     * Create a contact
@@ -25,9 +40,9 @@ Refer to [Google Contacts credentials](/integrations/builtin/credentials/google/
     * Retrieve all contacts
     * Update a contact
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'google-contacts') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Google Contacts node documentation integration templates](https://n8n.io/integrations/google-contacts) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

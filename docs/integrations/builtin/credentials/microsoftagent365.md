@@ -1,35 +1,48 @@
 ---
 title: Microsoft Agent 365 credentials
-description: Documentation for Microsoft Agent 365 credentials. Use these credentials to authenticate Microsoft Agent 365 in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Microsoft Agent 365 credentials. Use these credentials to
+  authenticate Microsoft Agent 365 in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Microsoft Agent 365 credentials
+originalFilePath: integrations/builtin/credentials/microsoftagent365.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftagent365'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftagent365'
+layout:
+  description:
+    visible: false
 ---
 
-# Microsoft Agent 365 credentials
+# Microsoft Agent 365 credentials <a href="#microsoft-agent-365-credentials" id="microsoft-agent-365-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Microsoft Agent 365 Trigger](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/index.md)
+- [Microsoft Agent 365 Trigger](../cluster-nodes/root-nodes/root-nodes.md)
 
-/// warning | Early preview
+{% hint style="warning" %}
+**Early preview**
+
 Microsoft Agent 365 is an early preview feature. You need to be part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access.
-///
+{% endhint %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Enrollment in the [Microsoft Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/)
 - A [Microsoft Azure](https://azure.microsoft.com/) account
 - An Agent 365 blueprint created using the Agent 365 CLI
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2 (App Registration)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Microsoft Agent 365 developer documentation](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -43,4 +56,4 @@ To set up the credential:
 2. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations) and follow the [custom client app registration guide](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/custom-client-app-registration) for Microsoft Agent 365. Once your custom client app is created, copy the Application (client) ID into n8n as the **Client ID**.
 3. Follow the [credentials guide](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?tabs=client-secret) to generate a client secret and copy the **Secret** in the **Value** column and paste it into n8n as the **Client Secret**.
 
-We recommend using [Agent 365 CLI](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/agent-365-cli){:target="_blank" .external-link} to create your agent blueprint and manifest.
+We recommend using [Agent 365 CLI](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/agent-365-cli) to create your agent blueprint and manifest.

@@ -1,28 +1,46 @@
 ---
 title: Moonshot Kimi Chat Model node
-description: Integrate the Moonshot Kimi Chat Model into n8n workflows to generate chat responses for AI chains. Common uses include generating conversational replies, integrating with LangChain-style workflows, and tuning response behavior via temperature/top-p and token limits.
-contentType: [integration, reference]
+description: >-
+  Integrate the Moonshot Kimi Chat Model into n8n workflows to generate chat
+  responses for AI chains. Common uses include generating conversational
+  replies, integrating with LangChain-style workflows, and tuning response
+  behavior via temperature/top-p and token limits.
+contentType:
+  - integration
+  - reference
+nodeTitle: Moonshot Kimi Chat Model node
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot
+layout:
+  description:
+    visible: false
 ---
 
-# Moonshot Kimi Chat Model node
+# Moonshot Kimi Chat Model node <a href="#moonshot-kimi-chat-model-node" id="moonshot-kimi-chat-model-node"></a>
 
 Use the Moonshot Kimi Chat Model node to send chat requests to the Kimi chat API and generate conversational responses. Use it when you need an AI chat model in a workflow. For example, you can power assistants, build multi-step AI chains, or produce model-driven content with tunable sampling and token settings.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/moonshot.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/moonshot.md).
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-### Generate chat response
+## Operations <a href="#operations" id="operations"></a>
+
+### Generate chat response <a href="#generate-chat-response" id="generate-chat-response"></a>
 
 Sends a chat request to the selected Kimi model and returns the model's response.
 
 **Parameters**
 
-- **Model** (type: options, field: `model`): The model that generates the completion. Default: `kimi-k2.5`. Learn more at [Moonshot Kimi Chat API docs](https://platform.kimi.ai/docs/api/chat){:target="_blank" .external-link}.
+- **Model** (type: options, field: `model`): The model that generates the completion. Default: `kimi-k2.5`. Learn more at [Moonshot Kimi Chat API docs](https://platform.kimi.ai/docs/api/chat).
 
 **Options**
 
@@ -35,10 +53,10 @@ Sends a chat request to the selected Kimi model and returns the model's response
 - **Max retries** (type: number, field: `maxRetries`): Maximum number of retries to attempt for failed requests. Default: two.
 - **Top P** (type: number, field: `topP`): Nucleus sampling parameter controlling diversity. A value of zero point five means the model considers half of the likelihood-weighted options. We recommend changing either **Top P** or **Sampling Temperature**, don't change both. Default: `1`.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'moonshot-kimi-chat-model') ]]
+[Browse Moonshot Kimi Chat Model node integration templates](https://n8n.io/integrations/moonshot-kimi-chat-model) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Moonshot Kimi Chat Model's documentation](https://platform.kimi.ai/docs/api/chat){:target="_blank" .external-link} for more information about the service and available model options.
+Refer to [Moonshot Kimi Chat Model's documentation](https://platform.kimi.ai/docs/api/chat) for more information about the service and available model options.

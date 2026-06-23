@@ -1,23 +1,39 @@
 ---
 title: Moonshot Kimi node documentation
-description: The Moonshot Kimi node lets you interact with Moonshot Kimi AI models from n8n. This documentation explains how to send messages to models, attach images, and analyze images using the node's operations.
-contentType: [integration, reference]
+description: >-
+  The Moonshot Kimi node lets you interact with Moonshot Kimi AI models from
+  n8n. This documentation explains how to send messages to models, attach
+  images, and analyze images using the node's operations.
+contentType:
+  - integration
+  - reference
+nodeTitle: Moonshot Kimi node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.moonshot
+layout:
+  description:
+    visible: false
 ---
 
-# Moonshot Kimi node
+# Moonshot Kimi node <a href="#moonshot-kimi-node" id="moonshot-kimi-node"></a>
 
 The Moonshot Kimi node connects n8n workflows to Moonshot Kimi AI models. Use it to send prompts and receive model responses, attach images to messages, or analyze images with an image-analysis model.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/moonshot.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-## Resources and operations
+You can find authentication information for this node [here](../credentials/moonshot.md).
+{% endhint %}
+
+## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>
 
 - **Analyze image**: Analyze images and answer questions about them.
 - **Message a model**: Send text-based messages to a Moonshot Kimi model and receive responses (supports attachments, system messages, and advanced options like thinking mode and web search).
 
-### Analyze image
+### Analyze image <a href="#analyze-image" id="analyze-image"></a>
 
 Analyze an image and answer questions about it.
 
@@ -32,7 +48,7 @@ Analyze an image and answer questions about it.
 
 - **Maximum Number of Tokens** (type: number, field: `maxTokens`): Fewer tokens produce shorter, less detailed image descriptions. Default: `1024`
 
-### Message a model
+### Message a model <a href="#message-a-model" id="message-a-model"></a>
 
 Send one or more messages to a Moonshot Kimi model and receive its response. Support role-based messages (user/assistant), attachments, system messages, and advanced generation options.
 
@@ -60,10 +76,10 @@ Send one or more messages to a Moonshot Kimi model and receive its response. Sup
 - **Thinking Mode** (type: boolean, field: `thinkingMode`): When you enable it, the model includes reasoning steps in a chain-of-thought style. You can't use it together with **Web Search**. Default: `false`
 - **Web Search** (type: boolean, field: `webSearch`): When you enable it, the model performs built-in web searches for up-to-date information. You can't use it together with **Thinking Mode**. Default: `false`
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'moonshot-kimi') ]]
+[Browse Moonshot Kimi node documentation integration templates](https://n8n.io/integrations/moonshot-kimi) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to the [Moonshot Kimi documentation](https://platform.kimi.ai/docs/overview){:target="_blank" .external-link} for more information about the service.
+Refer to the [Moonshot Kimi documentation](https://platform.kimi.ai/docs/overview) for more information about the service.

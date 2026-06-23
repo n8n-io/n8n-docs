@@ -1,32 +1,43 @@
 ---
 title: Telegram credentials
-description: Documentation for Telegram credentials. Use these credentials to authenticate Telegram in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Telegram credentials. Use these credentials to authenticate
+  Telegram in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Telegram credentials
+originalFilePath: integrations/builtin/credentials/telegram.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/telegram'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/telegram'
+layout:
+  description:
+    visible: false
 ---
 
-# Telegram credentials
+# Telegram credentials <a href="#telegram-credentials" id="telegram-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
-- [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md)
+- [Telegram](../app-nodes/n8n-nodes-base.telegram/README.md)
+- [Telegram Trigger](../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Telegram](https://telegram.org/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API bot access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Telegram's Bot API documentation](https://core.telegram.org/bots/api) for more information about the service.
 
 Refer to the [Telegram Bot Features](https://core.telegram.org/bots/features) documentation for more information on creating and working with bots.
 
-## Using API bot access token
+## Using API bot access token <a href="#using-api-bot-access-token" id="using-api-bot-access-token"></a>
 
 To configure this credential, you'll need:
 

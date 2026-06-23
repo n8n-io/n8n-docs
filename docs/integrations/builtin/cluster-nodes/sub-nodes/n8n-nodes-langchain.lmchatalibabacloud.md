@@ -1,28 +1,47 @@
 ---
 title: Alibaba Cloud Chat Model node documentation
-description: The Alibaba Cloud Chat Model node sends prompts to Alibaba Cloud's conversational models (for advanced AI chains). This page explains how to configure the node in n8n workflows and covers common uses such as generating chat responses, tweaking sampling parameters (temperature, top_p), and limiting output length.
-contentType: [integration, reference]
+description: >-
+  The Alibaba Cloud Chat Model node sends prompts to Alibaba Cloud's
+  conversational models (for advanced AI chains). This page explains how to
+  configure the node in n8n workflows and covers common uses such as generating
+  chat responses, tweaking sampling parameters (temperature, top_p), and
+  limiting output length.
+contentType:
+  - integration
+  - reference
+nodeTitle: Alibaba Cloud Chat Model node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud
+layout:
+  description:
+    visible: false
 ---
 
-# Alibaba Cloud chat model node
+# Alibaba Cloud chat model node <a href="#alibaba-cloud-chat-model-node" id="alibaba-cloud-chat-model-node"></a>
 
 The Alibaba Cloud Chat Model node sends chat prompts to Alibaba Cloud's conversational models, for advanced AI chains and LangChain integrations. Use it to generate conversational responses, integrate model outputs into workflows, or run prompts with custom sampling, retry, and timeout settings.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/alibaba.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/alibaba.md).
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-### Generate chat response
+## Operations <a href="#operations" id="operations"></a>
+
+### Generate chat response <a href="#generate-chat-response" id="generate-chat-response"></a>
 
 Generate a chat-style response from the selected Alibaba Cloud model.
 
 **Parameters**
 
-- **Model** (type: _options_, field: `model`): The model that generates the completion. Learn more about available models on Alibaba Cloud: [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models){:target="_blank" .external-link}.
+- **Model** (type: _options_, field: `model`): The model that generates the completion. Learn more about available models on Alibaba Cloud: [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models).
 
 **Options**
 
@@ -35,10 +54,10 @@ Generate a chat-style response from the selected Alibaba Cloud model.
 - **Max Retries** (type: _number_, field: `maxRetries`): Maximum number of retry attempts for failed requests. Default: `2`.
 - **Top P** (type: _number_, field: `topP`): Nucleus sampling parameter that controls diversity. 0.5 means half of the probability mass is considered. Adjust **Top P** or **Sampling Temperature**, but not both. Default: `1`.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'alibaba-cloud-chat-model') ]]
+[Browse Alibaba Cloud Chat Model node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-chat-model) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models){:target="_blank" .external-link} for more information about available models and their capabilities.
+Refer to [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models) for more information about available models and their capabilities.

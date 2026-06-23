@@ -1,21 +1,34 @@
 ---
 title: Date & Time
-description: Documentation for the Date & Time node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Date & Time node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Date & Time
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.datetime'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.datetime'
+layout:
+  description:
+    visible: false
 ---
 
-# Date & Time
+# Date & Time <a href="#date-and-time" id="date-and-time"></a>
 
 The Date & Time node manipulates date and time data and convert it to different formats.
 
---8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Do5H5uKhTbZIILPo3AaT/" %}
 
-/// note | Date and time in other nodes
-You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/data/specific-data-types/luxon.md) for more information.
-///
+{% hint style="info" %}
+**Date and time in other nodes**
 
-## Operations
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * **Add to a Date**: Add a specified amount of time to a date.
 * **Extract Part of a Date**: Extract part of a date, such as the year, month, or day.
@@ -27,7 +40,7 @@ You can work with data and time in the Code node, and in expressions in any node
 
 Refer to the sections below for parameters and options specific to each operation.
 
-## Add to a Date
+## Add to a Date <a href="#add-to-a-date" id="add-to-a-date"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -36,11 +49,11 @@ Configure the node for this operation using these parameters:
 * **Duration**: Enter the number of time units to add to the date.
 * **Output Field Name**: Enter the name of the field to output the new date to.
 
-### Add to a Date options
+### Add to a Date options <a href="#add-to-a-date-options" id="add-to-a-date-options"></a>
 
 This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 
-## Extract Part of a Date
+## Extract Part of a Date <a href="#extract-part-of-a-date" id="extract-part-of-a-date"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -55,11 +68,11 @@ Configure the node for this operation using these parameters:
     * **Second**
 * **Output Field Name**: Enter the name of the field to output the extracted date part to.
 
-### Extract Part of a Date options
+### Extract Part of a Date options <a href="#extract-part-of-a-date-options" id="extract-part-of-a-date-options"></a>
 
 This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 
-## Format a Date
+## Format a Date <a href="#format-a-date" id="format-a-date"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -73,7 +86,7 @@ Configure the node for this operation using these parameters:
     * **YYYY-MM-DD**: For `4 September 1986`, this formats the date as `1986-09-04`.
 * **Output Field Name**: Enter the name of the field to output the formatted date to.
 
-### Format a Date options
+### Format a Date options <a href="#format-a-date-options" id="format-a-date-options"></a>
 
 This operation includes these options:
 
@@ -81,25 +94,27 @@ This operation includes these options:
 * **From Date Format**: If the node isn't recognizing the **Date** format correctly, enter the format for that **Date** here so the node can process it properly. Use Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) to enter the format. Tokens are case-sensitive
 * **Use Workflow Timezone**: Whether to use the input's time zone (turned off) or the workflow's timezone (turned on).
 
-## Get Current Date
+## Get Current Date <a href="#get-current-date" id="get-current-date"></a>
 
 Configure the node for this operation using these parameters:
 
 * **Include Current Time**: Choose whether to include the current time (turned on) or to set the time to midnight (turned off).
 * **Output Field Name**: Enter the name of the field to output the current date to.
 
-### Get Current Date options
+### Get Current Date options <a href="#get-current-date-options" id="get-current-date-options"></a>
 
 This operation includes these options:
 
 * **Include Input Fields**: If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 * **Timezone**: Set the timezone to use. If left blank, the node uses the n8n instance's timezone.
 
-/// note | +00:00 timezone
-Use `GMT` for +00:00 timezone.
-///
+{% hint style="info" %}
+**+00:00 timezone**
 
-## Get Time Between Dates
+Use `GMT` for +00:00 timezone.
+{% endhint %}
+
+## Get Time Between Dates <a href="#get-time-between-dates" id="get-time-between-dates"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -116,7 +131,7 @@ Configure the node for this operation using these parameters:
     * **Millisecond**
 * **Output Field Name**: Enter the name of the field to output the calculated time between to.
 
-### Get Time Between Dates options
+### Get Time Between Dates options <a href="#get-time-between-dates-options" id="get-time-between-dates-options"></a>
 
 The Get Time Between Dates operation includes the **Include Input Fields** option as well as an **Output as ISO String** option. If you leave this option off, each unit you selected will return its own time difference calculation, for example:
 
@@ -141,7 +156,7 @@ ISO duration format displays a format as `P<n>Y<n>M<n>DT<n>H<n>M<n>S`. `<n>` is 
 
 Milliseconds don't get their own unit, but instead are decimal seconds. For example, 2.1 milliseconds is `0.0021S`.
 
-## Round a Date
+## Round a Date <a href="#round-a-date" id="round-a-date"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -157,11 +172,11 @@ Configure the node for this operation using these parameters:
     * **Second**
 * **Output Field Name**: Enter the name of the field to output the rounded date to.
 
-### Round a Date options
+### Round a Date options <a href="#round-a-date-options" id="round-a-date-options"></a>
 
 This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 
-## Subtract From a Date
+## Subtract From a Date <a href="#subtract-from-a-date" id="subtract-from-a-date"></a>
 
 Configure the node for this operation using these parameters:
 
@@ -170,19 +185,19 @@ Configure the node for this operation using these parameters:
 * **Duration**: Enter the amount of the time units you want to subtract from the **Date to Subtract From**.
 * **Output Field Name**: Enter the name of the field to output the rounded date to.
 
-### Subtract From a Date options
+### Subtract From a Date options <a href="#subtract-from-a-date-options" id="subtract-from-a-date-options"></a>
 
 This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'date-and-time') ]]
 
-## Related resources
+[Browse Date & Time integration templates](https://n8n.io/integrations/date-and-time) or [search all templates](https://n8n.io/workflows/)
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/data/expressions.md). Refer to [Date and time with Luxon](/data/specific-data-types/luxon.md) for more information.
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-### Supported date formats
+The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) node and [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
+
+### Supported date formats <a href="#supported-date-formats" id="supported-date-formats"></a>
 
 n8n supports all date formats [supported by Luxon](https://moment.github.io/luxon/#/formatting?id=table-of-tokens). Tokens are case-sensitive.

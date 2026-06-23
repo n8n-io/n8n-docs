@@ -1,25 +1,36 @@
 ---
 title: OpenWeatherMap credentials
-description: Documentation for OpenWeatherMap credentials. Use these credentials to authenticate OpenWeatherMap in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for OpenWeatherMap credentials. Use these credentials to
+  authenticate OpenWeatherMap in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: OpenWeatherMap credentials
+originalFilePath: integrations/builtin/credentials/openweathermap.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/openweathermap'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/openweathermap'
+layout:
+  description:
+    visible: false
 ---
 
-# OpenWeatherMap credentials
+# OpenWeatherMap credentials <a href="#openweathermap-credentials" id="openweathermap-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md)
+- [OpenWeatherMap](../app-nodes/n8n-nodes-base.openweathermap.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [OpenWeatherMap's API documentation](https://openweathermap.org/api) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need an [OpenWeatherMap](https://openweathermap.org/) account and:
 

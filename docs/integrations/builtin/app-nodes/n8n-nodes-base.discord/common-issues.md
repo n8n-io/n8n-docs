@@ -1,15 +1,29 @@
 ---
-title: Discord node common issues 
-description: Documentation for common issues and questions in the Discord node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: [integration, reference]
+title: Discord node common issues
+description: >-
+  Documentation for common issues and questions in the Discord node in n8n, a
+  workflow automation platform. Includes details of the issue and suggested
+  solutions.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Discord node common issues
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues
+layout:
+  description:
+    visible: false
 ---
 
-# Discord node common issues
+# Discord node common issues <a href="#discord-node-common-issues" id="discord-node-common-issues"></a>
 
-Here are some common errors and issues with the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Discord node](README.md) and steps to resolve or troubleshoot them.
 
-## Add extra fields to embeds
+## Add extra fields to embeds <a href="#add-extra-fields-to-embeds" id="add-extra-fields-to-embeds"></a>
 
 Discord messages can optionally include embeds, a rich preview component that can include a title, description, image, link, and more.
 
@@ -38,7 +52,7 @@ For example, to include `footer` and `fields`, neither of which are available us
 
 You can learn more about embeds in [Using Webhooks and Embeds | Discord](https://discord.com/safety/using-webhooks-and-embeds).
 
-If you experience issues when working with embeds with the Discord node, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) with your existing Discord credentials to `POST` to the following URL:
+If you experience issues when working with embeds with the Discord node, you can use the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/README.md) with your existing Discord credentials to `POST` to the following URL:
 
 ```
 https://discord.com/api/v10/channels/<CHANNEL_ID>/messages
@@ -68,7 +82,7 @@ In the body, include your embed information in the message content like this:
 }
 ```
 
-## Mention users and channels
+## Mention users and channels <a href="#mention-users-and-channels" id="mention-users-and-channels"></a>
 
 To mention users and channels in Discord messages, you need to format your message according to [Discord's message formatting guidelines](https://discord.com/developers/docs/reference#message-formatting).
 

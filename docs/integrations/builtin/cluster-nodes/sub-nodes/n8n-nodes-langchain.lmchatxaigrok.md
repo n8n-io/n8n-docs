@@ -1,27 +1,43 @@
 ---
 title: xAI Grok Chat Model node documentation
-description: Learn how to use the xAI Grok Chat Model node in n8n. Follow technical documentation to integrate xAI Grok Chat Model node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the xAI Grok Chat Model node in n8n. Follow technical
+  documentation to integrate xAI Grok Chat Model node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: xAI Grok Chat Model node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok
+layout:
+  description:
+    visible: false
 ---
 
-# xAI Grok Chat Model node
+# xAI Grok Chat Model node <a href="#xai-grok-chat-model-node" id="xai-grok-chat-model-node"></a>
 
 Use the xAI Grok Chat Model node to access xAI Grok's large language models for conversational AI and text generation tasks.
 
 On this page, you'll find the node parameters for the xAI Grok Chat Model node, and links to more resources.
 
-/// note | Credentials 
-You can find authentication information for this node [here](/integrations/builtin/credentials/xai.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/xai.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Model**: Select the model which will generate the completion. n8n dynamically loads available models from the xAI Grok API. Learn more in the [xAI Grok model documentation](https://docs.x.ai/docs/models).
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length. Most models have a context length of 2048 tokens with the newest models supporting up to 32,768 tokens. 
@@ -32,14 +48,14 @@ You can find authentication information for this node [here](/integrations/built
 * **Max Retries**: Enter the maximum number of times to retry a request.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'xai-grok-chat-model') ]]
 
-## Related resources
+[Browse xAI Grok Chat Model node documentation integration templates](https://n8n.io/integrations/xai-grok-chat-model) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [xAI Grok's API documentation](https://docs.x.ai/docs/api-reference) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

@@ -1,15 +1,28 @@
 ---
 title: Compare Datasets
-description: Documentation for the Compare Datasets node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Compare Datasets node in n8n, a workflow automation
+  platform. Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Compare Datasets
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets
+url: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets
+layout:
+  description:
+    visible: false
 ---
 
-# Compare Datasets
+# Compare Datasets <a href="#compare-datasets" id="compare-datasets"></a>
 
 The Compare Datasets node helps you compare data from two input streams.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 1. Decide which fields to compare. In **Input A Field**, enter the name of the field you want to use from input stream A. In **Input B Field**, enter the name of the field you want to use from input stream B. 
 2. **Optional**: You can compare by multiple fields. Select **Add Fields to Match** to set up more comparisons.
@@ -22,18 +35,18 @@ The Compare Datasets node helps you compare data from two input streams.
 	* **Include Both Versions** to include both input streams in the output, which may make the structure more complex.
 4. Decide whether to use **Fuzzy Compare**. When turned on, the comparison will tolerate small type differences when comparing fields. For example, the number 3 and the string `3` are treated as the same with **Fuzzy Compare** turned on, but wouldn't be treated the same with it turned off.
 
-## Understand item comparison
+## Understand item comparison <a href="#understand-item-comparison" id="understand-item-comparison"></a>
 
 Item comparison is a two stage process:
 
 1. n8n checks if the values of the fields you selected to compare match across both inputs.
 2. If the fields to compare match, n8n then compares all fields within the items, to determine if the items are the same or different.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 Use the node **Options** to refine your comparison or tweak comparison behavior.
 
-### Fields to Skip Comparing
+### Fields to Skip Comparing <a href="#fields-to-skip-comparing" id="fields-to-skip-comparing"></a>
 
 Enter field names that you want to ignore in the comparison.
 
@@ -90,11 +103,11 @@ For example, if you compare the two datasets below using `person.language` as th
 	]
 ```
 
-### Disable Dot Notation
+### Disable Dot Notation <a href="#disable-dot-notation" id="disable-dot-notation"></a>
 
 Whether to disallow referencing child fields using `parent.child` in the field name (turned on) or allow it (turned off, default).
 
-### Multiple Matches
+### Multiple Matches <a href="#multiple-matches" id="multiple-matches"></a>
 
 Choose how to handle duplicate data. The default is **Include All Matches**. You can choose **Include First Match Only**.
 
@@ -149,7 +162,7 @@ n8n returns three items in the **Same Branch** tab. The data is the same in both
 If you select **Include First Match Only**, n8n returns two items, in the **Same Branch** tab. The data is the same in both branches, but n8n only returns the first occurrence of the matching "apple" items.
 
 
-## Understand the output
+## Understand the output <a href="#understand-the-output" id="understand-the-output"></a>
 
 There are four output options:
 
@@ -158,8 +171,8 @@ There are four output options:
 * **Different Branch**: Contains data that's different between inputs.
 * **In B only Branch**: Contains data that occurs only in the second output.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'compare-datasets') ]]
+
+[Browse Compare Datasets integration templates](https://n8n.io/integrations/compare-datasets) or [search all templates](https://n8n.io/workflows/)
 

@@ -1,30 +1,41 @@
 ---
 title: FTP credentials
-description: Documentation for FTP credentials. Use these credentials to authenticate FTP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for FTP credentials. Use these credentials to authenticate FTP
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: FTP credentials
+originalFilePath: integrations/builtin/credentials/ftp.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ftp'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/ftp'
+layout:
+  description:
+    visible: false
 ---
 
-# FTP credentials
+# FTP credentials <a href="#ftp-credentials" id="ftp-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
+- [FTP](../core-nodes/n8n-nodes-base.ftp.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server), [OpenSSH](https://www.openssh.com/), or [FileZilla Server](https://filezilla-project.org/).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - **FTP account**: Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
 - **SFTP account**: Use this method if your FTP server supports SSH tunneling and encrypted connections.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 File Transfer Protocol (FTP) and Secure Shell File Transfer Protocol (SFTP) are protocols for transferring files directly between an FTP/SFTP client and server.
 
-## Using FTP account
+## Using FTP account <a href="#using-ftp-account" id="using-ftp-account"></a>
 
 Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
 
@@ -37,7 +48,7 @@ To configure this credential, you'll need to:
 
 Review your FTP server provider's documentation for instructions on getting the information you need.
 
-## Using SFTP account
+## Using SFTP account <a href="#using-sftp-account" id="using-sftp-account"></a>
 
 Use this method if your FTP server supports SSH tunneling and encrypted connections.
 

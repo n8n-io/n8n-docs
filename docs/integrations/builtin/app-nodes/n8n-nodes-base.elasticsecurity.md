@@ -1,20 +1,35 @@
 ---
 title: Elastic Security node documentation
-description: Learn how to use the Elastic Security node in n8n. Follow technical documentation to integrate Elastic Security node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Elastic Security node in n8n. Follow technical
+  documentation to integrate Elastic Security node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Elastic Security node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity
+layout:
+  description:
+    visible: false
 ---
 
-# Elastic Security node
+# Elastic Security node <a href="#elastic-security-node" id="elastic-security-node"></a>
 
 Use the Elastic Security node to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
 
 On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Elastic Security credentials](/integrations/builtin/credentials/elasticsecurity.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Elastic Security credentials](../credentials/elasticsecurity.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Case
     * Create a case
@@ -35,7 +50,7 @@ Refer to [Elastic Security credentials](/integrations/builtin/credentials/elasti
 * Connector
     * Create a connector
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'elastic-security') ]]
+
+[Browse Elastic Security node documentation integration templates](https://n8n.io/integrations/elastic-security) or [search all templates](https://n8n.io/workflows/)

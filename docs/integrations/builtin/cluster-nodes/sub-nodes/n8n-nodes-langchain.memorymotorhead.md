@@ -1,44 +1,62 @@
 ---
 title: Motorhead node documentation
-description: Learn how to use the Motorhead node in n8n. Follow technical documentation to integrate Motorhead node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Motorhead node in n8n. Follow technical documentation to
+  integrate Motorhead node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Motorhead node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead
+layout:
+  description:
+    visible: false
 ---
 
-# Motorhead node
+# Motorhead node <a href="#motorhead-node" id="motorhead-node"></a>
 
-/// warning | Deprecated
+{% hint style="warning" %}
+**Deprecated**
+
 The Motorhead project is no longer maintained. This node is deprecated, and will be removed in a future version.
-///
+{% endhint %}
 
-Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.
+Use the Motorhead node to use Motorhead as a [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-## Node parameters
+You can find authentication information for this node [here](../../credentials/motorhead.md).
+{% endhint %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Session ID**: Enter the ID to use to store the memory in the workflow data.
 
-## Node reference
+## Node reference <a href="#node-reference" id="node-reference"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'motorhead') ]]
 
-## Related resources
+[Browse Motorhead node documentation integration templates](https://n8n.io/integrations/motorhead) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/integrations/memory/motorhead_memory) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Single memory instance
+## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 

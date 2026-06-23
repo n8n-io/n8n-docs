@@ -1,22 +1,36 @@
 ---
 title: Google Drive Folder operations
-description: Documentation for the Folder operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Folder operations in Google Drive node in n8n, a
+  workflow automation platform. Includes details of operations and
+  configuration, and links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Google Drive Folder operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Google Drive Folder operations
+# Google Drive Folder operations <a href="#google-drive-folder-operations" id="google-drive-folder-operations"></a>
 
-Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](README.md) for more information on the Google Drive node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
-## Create a folder
+## Create a folder <a href="#create-a-folder" id="create-a-folder"></a>
 
 Use this operation to create a new folder in a drive.
 
 Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Create**.
 - **Folder Name**: The name to use for the new folder.
@@ -25,39 +39,39 @@ Enter these parameters:
 
 You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
 - **Folder Color**: The color of the folder as an RGB hex string.
 
 Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert) API documentation for more information.
 
-## Delete a folder
+## Delete a folder <a href="#delete-a-folder" id="delete-a-folder"></a>
 
 Use this operation to delete a folder from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Delete**.
 - **Folder**: Choose a folder you want to delete. 
     - Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
     - You can find the `folderId` in a Google Drive folder URL: `https://drive.google.com/drive/u/0/folders/folderID`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Delete Permanently**: Choose whether to delete the folder now instead of moving it to the trash.
 
 Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete) API documentation for more information.
 
-## Share a folder
+## Share a folder <a href="#share-a-folder" id="share-a-folder"></a>
 
 Use this operation to add sharing permissions to a folder.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Share**.
 - **Folder**: Choose a file you want to move. 
@@ -71,12 +85,12 @@ Enter these parameters:
 		- **Domain**: Grant permission to a complete domain, defined by the **Domain**.
 		- **Anyone**: Grant permission to anyone. Can optionally **Allow File Discovery** to make the file discoverable through search.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Email Message**: A plain text custom message to include in the notification email.
-<!-- vale from-microsoft.FirstPerson = NO -->
+
 - **Move to New Owners Root**: Available when trying to transfer ownership while sharing an item not in a shared drive. When enabled, moves the folder to the new owner's My Drive root folder.
-<!-- vale from-microsoft.FirstPerson = YES -->
+
 - **Send Notification Email**: Whether to send a notification email when sharing to users or groups.
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.

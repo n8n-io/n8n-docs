@@ -1,27 +1,38 @@
 ---
 title: Wolfram|Alpha credentials
-description: Documentation for the Wolfram|Alpha credentials. Use these credentials to authenticate Wolfram|Alpha in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Wolfram|Alpha credentials. Use these credentials to
+  authenticate Wolfram|Alpha in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Wolfram|Alpha credentials
+originalFilePath: integrations/builtin/credentials/wolframalpha.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/wolframalpha'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/wolframalpha'
+layout:
+  description:
+    visible: false
 ---
 
-# Wolfram|Alpha credentials
+# Wolfram|Alpha credentials <a href="#wolframoralpha-credentials" id="wolframoralpha-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md)
+* [Wolfram|Alpha](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Wolfram|Alpha's Simple API documentation](https://products.wolframalpha.com/simple-api/documentation) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a registered [Wolfram ID](https://account.wolfram.com) and:
 
@@ -39,7 +50,7 @@ To get an App ID:
 
 Refer to **Getting Started** in the [Wolfram|Alpha Simple API documentation](https://products.wolframalpha.com/simple-api/documentation) for more information.
 
-## Resolve Forbidden connection error
+## Resolve Forbidden connection error <a href="#resolve-forbidden-connection-error" id="resolve-forbidden-connection-error"></a>
 
 If you enter your App ID and get an error that the credential is **Forbidden**, make sure that you have verified your email address for your Wolfram ID:
 

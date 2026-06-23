@@ -1,30 +1,45 @@
 ---
 title: Google Sheets Document operations
-description: Documentation for the Document operations in Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Document operations in Google Sheets node in n8n, a
+  workflow automation platform. Includes details of operations and
+  configuration, and links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Google Sheets Document operations
+originalFilePath: >-
+  integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Google Sheets Document operations
+# Google Sheets Document operations <a href="#google-sheets-document-operations" id="google-sheets-document-operations"></a>
 
-Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
+Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](README.md) for more information on the Google Sheets node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
-## Create a spreadsheet
+## Create a spreadsheet <a href="#create-a-spreadsheet" id="create-a-spreadsheet"></a>
 
 Use this operation to create a new spreadsheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 - **Resource**: Select **Document**.
 - **Operation**: Select **Create**.
 - **Title**: Enter the title of the new spreadsheet you want to create.
 - **Sheets**: Add the **Title(s)** of the sheet(s) you want to create within the spreadsheet. 
-<!-- vale off -->
 
-### Options
+
+### Options <a href="#options" id="options"></a>
 
 - **Locale**: Enter the locale of the spreadsheet. This affects formatting details such as functions, dates, and currency. Use one of the following formats:
     - `en` (639-1)
@@ -35,13 +50,13 @@ Enter these parameters:
 
 Refer to the [Method: spreadsheets.create | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create) API documentation for more information.
 
-## Delete a spreadsheet
+## Delete a spreadsheet <a href="#delete-a-spreadsheet" id="delete-a-spreadsheet"></a>
 
 Use this operation to delete an existing spreadsheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 - **Resource**: Select **Document**.
 - **Operation**: Select **Delete**.
 - **Document**: Choose a spreadsheet you want to delete. 

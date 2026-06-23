@@ -1,29 +1,40 @@
 ---
 title: Hybrid Analysis credentials
-description: Documentation for the Hybrid Analysis credentials. Use these credentials to authenticate Hybrid Analysis in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Hybrid Analysis credentials. Use these credentials to
+  authenticate Hybrid Analysis in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Hybrid Analysis credentials
+originalFilePath: integrations/builtin/credentials/hybridanalysis.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/hybridanalysis'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/hybridanalysis'
+layout:
+  description:
+    visible: false
 ---
 
-# Hybrid Analysis credentials
+# Hybrid Analysis credentials <a href="#hybrid-analysis-credentials" id="hybrid-analysis-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Hybrid Analysis](https://www.hybrid-analysis.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Hybrid Analysis' API documentation](https://www.hybrid-analysis.com/docs/api/v2) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/hybrid-analysis/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/hybrid-analysis/) on n8n's website.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

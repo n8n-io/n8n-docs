@@ -1,31 +1,42 @@
 ---
 title: ERPNext credentials
-description: Documentation for ERPNext credentials. Use these credentials to authenticate ERPNext in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for ERPNext credentials. Use these credentials to authenticate
+  ERPNext in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: ERPNext credentials
+originalFilePath: integrations/builtin/credentials/erpnext.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/erpnext'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/erpnext'
+layout:
+  description:
+    visible: false
 ---
 
-# ERPNext credentials
+# ERPNext credentials <a href="#erpnext-credentials" id="erpnext-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md)
+- [ERPNext](../app-nodes/n8n-nodes-base.erpnext.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [ERPNext](https://erpnext.com) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [ERPNext's documentation](https://docs.erpnext.com/docs/user/manual/en/introduction) for more information about the service.
 
 Refer to [ERPNext's developer documentation](https://frappeframework.com/docs/user/en/introduction) for more information about working with the framework.
 
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -41,7 +52,7 @@ To configure this credential, you'll need:
 
 If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users) for more information.
 
-## How to find the subdomain of an ERPNext cloud-hosted account
+## How to find the subdomain of an ERPNext cloud-hosted account <a href="#how-to-find-the-subdomain-of-an-erpnext-cloud-hosted-account" id="how-to-find-the-subdomain-of-an-erpnext-cloud-hosted-account"></a>
 
 You can find your ERPNext subdomain by reviewing the address bar of your browser. The string between `https://` and either `.erpnext.com` or `frappe.cloud` is your subdomain.
 

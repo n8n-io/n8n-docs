@@ -1,26 +1,41 @@
 ---
 title: n8n
-description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the n8n node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: n8n
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n'
+layout:
+  description:
+    visible: false
 ---
 
-# n8n
+# n8n <a href="#n8n" id="n8n"></a>
 
-A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/index.md) in your workflows.
+A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) in your workflows.
 
-Refer to the [n8n REST API documentation](/api/index.md) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference.md) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for working with the API endpoints directly.
 
-/// note | Credentials
-You can find authentication information for this node in the [API authentication](/api/authentication.md) documentation.
-///
+{% hint style="info" %}
+**Credentials**
 
-/// warning | SSL
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to call the [n8n API](/api/index.md).
-The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest.md#provide-an-ssl-certificate).
-///
+You can find authentication information for this node in the [API authentication](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication) documentation.
+{% endhint %}
 
-## Operations
+{% hint style="warning" %}
+**SSL**
+
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
+The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Audit
 	* [**Generate** a security audit](#generate-audit)
@@ -41,7 +56,7 @@ The HTTP Request node has options to [provide the SSL certificate](/integrations
 	* [**Get Many** workflows](#get-many-workflows)
 	* [**Update** a workflow](#update-workflow)
 
-## Generate audit
+## Generate audit <a href="#generate-audit" id="generate-audit"></a>
 
 This operation has no parameters. Configure it with these options:
 
@@ -53,7 +68,7 @@ This operation has no parameters. Configure it with these options:
 	* **Nodes**
 * **Days Abandoned Workflow**: Use this option to set the number of days without execution after which a workflow should be considered abandoned. Enter a number of days. The default is `90`.
 
-## Create credential
+## Create credential <a href="#create-credential" id="create-credential"></a>
 
 Configure this operation with these parameters:
 
@@ -61,38 +76,38 @@ Configure this operation with these parameters:
 * **Credential Type**: Enter the credential's type. The available types depend on nodes installed on the n8n instance. Some built-in types include `githubApi`, `notionApi`, and `slackApi`.
 * **Data**: Enter a valid JSON object with the required properties for this **Credential Type**. To see the expected format, use the **Get Schema** operation.
 
-## Delete credential
+## Delete credential <a href="#delete-credential" id="delete-credential"></a>
 
 Configure this operation with this parameter:
 
 * **Credential ID**: Enter the ID of the credential you want to delete.
 
-## Get credential schema
+## Get credential schema <a href="#get-credential-schema" id="get-credential-schema"></a>
 
 Configure this operation with this parameter:
 
 * **Credential Type**: Enter the credential's type. The available types depend on nodes installed on the n8n instance. Some built-in types include `githubApi`, `notionApi`, and `slackApi`.
 
-## Get execution
+## Get execution <a href="#get-execution" id="get-execution"></a>
 
 Configure this operation with this parameter:
 
 * **Execution ID**: Enter the ID of the execution you want to retrieve.
 
-### Get execution option
+### Get execution option <a href="#get-execution-option" id="get-execution-option"></a>
 
 You can further configure this operation with this **Option**:
 
 * **Include Execution Details**: Use this control to set whether to include the detailed execution data (turned on) or not (turned off).
 
-## Get many executions
+## Get many executions <a href="#get-many-executions" id="get-many-executions"></a>
 
 Configure this operation with these parameters:
 
 * **Return All**: Set whether to return all results (turned on) or whether to limit the results to the entered **Limit** (turned on).
 * **Limit**: Set the number of results to return if the **Return All** control is turned off.
 
-### Get many executions filters
+### Get many executions filters <a href="#get-many-executions-filters" id="get-many-executions-filters"></a>
 
 You can further configure this operation with these **Filters**:
 
@@ -105,19 +120,19 @@ You can further configure this operation with these **Filters**:
 	* **Success**
 	* **Waiting**
 
-### Get many execution options
+### Get many execution options <a href="#get-many-execution-options" id="get-many-execution-options"></a>
 
 You can further configure this operation with this **Option**:
 
 * **Include Execution Details**: Use this control to set whether to include the detailed execution data (turned on) or not (turned off).
 
-## Delete execution
+## Delete execution <a href="#delete-execution" id="delete-execution"></a>
 
 Configure this operation with this parameter:
 
 * **Execution ID**: Enter the ID of the execution you want to delete.
 
-## Activate, deactivate, delete, and get workflow
+## Activate, deactivate, delete, and get workflow <a href="#activate-deactivate-delete-and-get-workflow" id="activate-deactivate-delete-and-get-workflow"></a>
 
 The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations all include the same parameter for you to select the **Workflow** you want to perform the operation on. Options include:
 
@@ -125,7 +140,7 @@ The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations al
 * **By URL**: Enter the URL of the workflow.
 * **By ID**: Enter the ID of the workflow.
 
-## Create workflow
+## Create workflow <a href="#create-workflow" id="create-workflow"></a>
 
 Configure this operation with this parameter:
 
@@ -135,23 +150,23 @@ Configure this operation with this parameter:
 	* `connections`
 	* `settings`
 
-Refer to [n8n API reference](/api/api-reference.md) for more information.
+Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for more information.
 
-## Get many workflows
+## Get many workflows <a href="#get-many-workflows" id="get-many-workflows"></a>
 
 Configure this operation with these parameters:
 
 * **Return All**: Set whether to return all results (turned on) or whether to limit the results to the entered **Limit** (turned on).
 * **Limit**: Set the number of results to return if the **Return All** control is turned off.
 
-### Get many workflows filters
+### Get many workflows filters <a href="#get-many-workflows-filters" id="get-many-workflows-filters"></a>
 
 You can further configure this operation with these **Filters**:
 
 * **Return Only Active Workflows**: Select whether to return only active workflows (turned on) or active and inactive workflows (turned off).
 * **Tags**: Enter a comma-separated list of tags the returned workflows must have.
 
-## Update workflow
+## Update workflow <a href="#update-workflow" id="update-workflow"></a>
 
 Configure this operation with these parameters:
 
@@ -165,10 +180,10 @@ Configure this operation with these parameters:
 	* `connections`
 	* `settings`
 
-<!-- Using absolute link here to avoid link checking false positives over the generated anchor link -->
+
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'n8n') ]]
+
+[Browse n8n integration templates](https://n8n.io/integrations/n8n) or [search all templates](https://n8n.io/workflows/)

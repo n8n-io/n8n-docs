@@ -1,15 +1,26 @@
 ---
 title: Wait
-description: Documentation for the Wait node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Wait node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Wait
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.wait.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait'
+layout:
+  description:
+    visible: false
 ---
 
-# Wait
+# Wait <a href="#wait" id="wait"></a>
 
 Use the Wait node pause your workflow's execution. When the workflow pauses it offloads the execution data to the database. When the resume condition is met, the workflow reloads the data and the execution continues.
 
-## Operations
+## Operations <a href="#operations" id="operations"></a>
 
 The Wait node can **Resume** on the following conditions:
 
@@ -20,7 +31,7 @@ The Wait node can **Resume** on the following conditions:
 
 Refer to the more detailed sections below for more detailed instructions.
 
-### After Time Interval
+### After Time Interval <a href="#after-time-interval" id="after-time-interval"></a>
 
 Wait for a certain amount of time.
 
@@ -35,13 +46,13 @@ This parameter includes two more fields:
 
 Refer to [Time-based operations](#time-based-operations) for more detail on how these intervals work and the timezone used.
 
-### At Specified Time
+### At Specified Time <a href="#at-specified-time" id="at-specified-time"></a>
 
 Wait until a specific date and time to continue. Use the date and time picker to set the **Date and Time**.
 
 Refer to [Time-based operations](#time-based-operations) for more detail on the timezone used.
 
-### On Webhook Call
+### On Webhook Call <a href="#on-webhook-call" id="on-webhook-call"></a>
 
 This parameter enables your workflows to resume when the Wait node receives an HTTP call.
 
@@ -51,7 +62,7 @@ When the workflow executes, the Wait node generates the resume URL and the webho
 
 For this **Resume** style, set more parameters listed below.
 
-#### Authentication
+#### Authentication <a href="#authentication" id="authentication"></a>
 
 Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` should be authenticated. Options include:
 
@@ -60,19 +71,21 @@ Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` sho
 * **JWT Auth**: Use JWT authentication. Select or enter a new **Credential for JWT Auth** to use.
 * **None**: Don't use authentication.
 
-/// note | Auth reference
-Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods) for more information on each auth type.
-///
+{% hint style="info" %}
+**Auth reference**
 
-#### HTTP Method
+Refer to the [Webhook node | Authentication documentation](n8n-nodes-base.webhook/README.md#supported-authentication-methods) for more information on each auth type.
+{% endhint %}
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method) for more information.
+#### HTTP Method <a href="#http-method" id="http-method"></a>
 
-#### Response Code
+Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](n8n-nodes-base.webhook/README.md#http-method) for more information.
+
+#### Response Code <a href="#response-code" id="response-code"></a>
 
 Enter the Response Code the webhook should return. You can use common codes or enter a custom code.
 
-#### Respond
+#### Respond <a href="#respond" id="respond"></a>
 
 Set when and how to respond to the webhook from these options:
 
@@ -83,9 +96,9 @@ Set when and how to respond to the webhook from these options:
 		* **First Entry JSON**: Return the JSON data of the first entry of the last node in a JSON object.
 		* **First Entry Binary**: Return the binary data of the first entry of the last node in a binary file.
 		* **No Response Body**: Return with no body.
-* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](n8n-nodes-base.respondtowebhook.md) node.
 
-#### Limit Wait Time
+#### Limit Wait Time <a href="#limit-wait-time" id="limit-wait-time"></a>
 
 Set whether the workflow will automatically resume execution after a specific limit type (turned on) or not (turned off). If turned on, also set:
 
@@ -96,7 +109,7 @@ Set whether the workflow will automatically resume execution after a specific li
 	* **At Specified Time**: Wait until a specific date and time to resume.
 		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
 
-#### On Webhook Call options
+#### On Webhook Call options <a href="#on-webhook-call-options" id="on-webhook-call-options"></a>
 
 * **Binary Property**: Enter the name of the binary property to write the data of the received file to. This option's only relevant if binary data is received.
 * **Ignore Bots**: Set whether to ignore requests from bots like link previewers and web crawlers (turned on) or not (turned off).
@@ -107,25 +120,25 @@ Set whether the workflow will automatically resume execution after a specific li
 * **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) to learn more about response headers.
 * **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
 
-#### On Webhook Call limitations
+#### On Webhook Call limitations <a href="#on-webhook-call-limitations" id="on-webhook-call-limitations"></a>
 
 There are some limitations to keep in mind when using On Webhook Call:
 
 * Partial executions of your workflow changes the `$resumeWebhookUrl`, so be sure that the node sending this URL to your desired third-party runs in the same execution as the Wait node.
 
-### On Form Submitted
+### On Form Submitted <a href="#on-form-submitted" id="on-form-submitted"></a>
 
 Wait for a form submission before continuing. Set up these parameters:
 
-#### Form Title
+#### Form Title <a href="#form-title" id="form-title"></a>
 
 Enter the title to display at the top of the form.
 
-#### Form Description
+#### Form Description <a href="#form-description" id="form-description"></a>
 
 Enter a form description to display beneath the title. This description can help prompt the user on how to complete the form.
 
-#### Form Fields
+#### Form Fields <a href="#form-fields" id="form-fields"></a>
 
 Set up each field you want to appear on your form using these parameters:
 
@@ -140,15 +153,15 @@ Set up each field you want to appear on your form using these parameters:
 	* **Textarea**
 * **Required Field**: Set whether the user must complete this field in order to submit the form (turned on) or if the user can submit the form without completing it (turned off).
 
-#### Respond When
+#### Respond When <a href="#respond-when" id="respond-when"></a>
 
 Set when to respond to the form submission. Choose from:
 
 * **Form Is Submitted**: Respond as soon as this node receives the form submission.
 * **Workflow Finishes**: Respond when the last node of this workflow finishes.
-* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node executes.
+* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](n8n-nodes-base.respondtowebhook.md) node executes.
 
-#### Limit Wait Time
+#### Limit Wait Time <a href="#limit-wait-time" id="limit-wait-time"></a>
 
 Set whether the workflow will automatically resume execution after a specific limit type (turned on) or not (turned off).
 
@@ -160,19 +173,19 @@ If turned on, also set:
 	* **At Specified Time**: Wait until a specific date and time to resume.
 		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
 
-#### On Form Response options
+#### On Form Response options <a href="#on-form-response-options" id="on-form-response-options"></a>
 
 * **Form Response**: Choose how and what you want the form to **Respond With** from these options:
 	* **Form Submitted Text**: The form displays whatever text is entered in **Text to Show** after a user fills out the form. Use this option if you want to display a confirmation message.
 	* **Redirect URL**: The form will redirect the user to the **URL to Redirect to** after they fill out the form. This must be a valid URL.
 * **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'wait') ]]
 
-## Time-based operations
+[Browse Wait integration templates](https://n8n.io/integrations/wait) or [search all templates](https://n8n.io/workflows/)
+
+## Time-based operations <a href="#time-based-operations" id="time-based-operations"></a>
 
 For the time-based resume operations, note that:
 

@@ -1,17 +1,28 @@
 ---
 title: Discord credentials
-description: Documentation for Discord credentials. Use these credentials to authenticate Discord in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Discord credentials. Use these credentials to authenticate
+  Discord in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Discord credentials
+originalFilePath: integrations/builtin/credentials/discord.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/discord'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/discord'
+layout:
+  description:
+    visible: false
 ---
 
-# Discord credentials
+# Discord credentials <a href="#discord-credentials" id="discord-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md)
+- [Discord](../app-nodes/n8n-nodes-base.discord/README.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Discord](https://www.discord.com/) account.
 - For Bot and OAuth2 credentials:
@@ -19,7 +30,7 @@ You can use these credentials to authenticate the following nodes:
     - [Create an application and a bot user](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app).
 - For webhook credentials, [create a webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Bot
 - OAuth2
@@ -27,11 +38,11 @@ You can use these credentials to authenticate the following nodes:
 
 Not sure which method to use? Refer to [Choose an authentication method](#choose-an-authentication-method) for more guidance.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Discord's Developer documentation](https://discord.com/developers/docs/intro) for more information about the service.
 
-## Using bot
+## Using bot <a href="#using-bot" id="using-bot"></a>
 
 Use this method if you want to add the bot to your Discord server using a bot token rather than OAuth2.
 
@@ -55,7 +66,7 @@ To create an application with a bot and generate the **Bot Token**:
     - Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts) documentation for more information about these installation contexts.
 9. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
 10. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes) documentation for more information about these and other scopes.
-11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions) documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) node:
+11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions) documentation for more information. n8n recommends selecting these permissions for the [Discord](../app-nodes/n8n-nodes-base.discord/README.md) node:
     - Manage Roles
     - Manage Channels
     - Read Messages/View Channels
@@ -81,7 +92,7 @@ These steps outline the basic functionality needed to set up your n8n credential
 - [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials) for getting your app's credentials into your local developer environment.
 - [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity) for information on setting up public endpoints for interactive `/slash` commands.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 Use this method if you want to add the bot to Discord servers using the OAuth2 flow, which simplifies the process for those installing your app.
 
@@ -100,7 +111,7 @@ Then:
 2. Open the **OAuth2** page in your Discord application to access your **Client ID** and generate a **Client Secret**. Add these to your n8n credential.
 3. From n8n, copy the **OAuth Redirect URL** and add it into the Discord application in **OAuth2 > Redirects**. Be sure you save these changes.
 
-## Using webhook
+## Using webhook <a href="#using-webhook" id="using-webhook"></a>
 
 To configure this credential, you'll need:
 
@@ -117,7 +128,7 @@ To get a Webhook URL, you create a webhook and copy the URL that gets generated:
 
 Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for more information.
 
-## Choose an authentication method
+## Choose an authentication method <a href="#choose-an-authentication-method" id="choose-an-authentication-method"></a>
 
 The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messages to a channel without the need for interaction or feedback, use a webhook.
 

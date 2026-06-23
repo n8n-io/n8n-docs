@@ -1,37 +1,48 @@
 ---
 title: PagerDuty credentials
-description: Documentation for PagerDuty credentials. Use these credentials to authenticate PagerDuty in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for PagerDuty credentials. Use these credentials to authenticate
+  PagerDuty in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: PagerDuty credentials
+originalFilePath: integrations/builtin/credentials/pagerduty.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/pagerduty'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/pagerduty'
+layout:
+  description:
+    visible: false
 ---
 
-# PagerDuty credentials
+# PagerDuty credentials <a href="#pagerduty-credentials" id="pagerduty-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md)
+- [PagerDuty](../app-nodes/n8n-nodes-base.pagerduty.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [PagerDuty](https://pagerduty.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [PagerDuty's API documentation](https://developer.pagerduty.com/docs/531092d4c6658-rest-api-v2-overview) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need:
 
 - A general access **API Token**: To generate an API token, go to **Integrations > Developer Tools > API Access Keys > Create New API Key**. Refer to [Generate a General Access REST API key](https://support.pagerduty.com/docs/api-access-keys#generate-a-general-access-rest-api-key) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
 If you need to configure OAuth2 from scratch, [register a new Pagerduty app](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app).
 

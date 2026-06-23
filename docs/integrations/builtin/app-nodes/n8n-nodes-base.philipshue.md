@@ -1,20 +1,33 @@
 ---
 title: Philips Hue node documentation
-description: Learn how to use the Philips Hue node in n8n. Follow technical documentation to integrate Philips Hue node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Philips Hue node in n8n. Follow technical documentation
+  to integrate Philips Hue node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Philips Hue node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.philipshue'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.philipshue'
+layout:
+  description:
+    visible: false
 ---
 
-# Philips Hue node
+# Philips Hue node <a href="#philips-hue-node" id="philips-hue-node"></a>
 
 Use the Philips Hue node to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
 
 On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Philips Hue credentials](../credentials/philipshue.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Light
     * Delete a light
@@ -22,10 +35,10 @@ Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue.
     * Retrieve all lights
     * Update a light
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'philips-hue') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Philips Hue node documentation integration templates](https://n8n.io/integrations/philips-hue) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

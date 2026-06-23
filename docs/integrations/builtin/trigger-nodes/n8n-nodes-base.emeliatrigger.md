@@ -1,22 +1,39 @@
 ---
 title: Emelia Trigger node documentation
-description: Learn how to use the Emelia Trigger node in n8n. Follow technical documentation to integrate Emelia Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Emelia Trigger node in n8n. Follow technical
+  documentation to integrate Emelia Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Emelia Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger
+layout:
+  description:
+    visible: false
 ---
 
-# Emelia Trigger node
+# Emelia Trigger node <a href="#emelia-trigger-node" id="emelia-trigger-node"></a>
 
 [Emelia](https://emelia.io) is a cold-mailing tool.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/emelia.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-///  note  | Examples and templates
+You can find authentication information for this node [here](../credentials/emelia.md).
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [Emelia Trigger integrations](https://n8n.io/integrations/emelia-trigger/) page.
-///
+{% endhint %}
 
-## Events
+## Events <a href="#events" id="events"></a>
 
 - Email Bounced
 - Email Opened

@@ -1,29 +1,42 @@
 ---
 title: Facebook Graph API credentials
-description: Documentation for Facebook Graph API credentials. Use these credentials to authenticate Facebook Graph API in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Facebook Graph API credentials. Use these credentials to
+  authenticate Facebook Graph API in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Facebook Graph API credentials
+originalFilePath: integrations/builtin/credentials/facebookgraph.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/facebookgraph'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/facebookgraph'
+layout:
+  description:
+    visible: false
 ---
 
-# Facebook Graph API credentials
+# Facebook Graph API credentials <a href="#facebook-graph-api-credentials" id="facebook-graph-api-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md)
+- [Facebook Graph API](../app-nodes/n8n-nodes-base.facebookgraphapi.md)
 
-/// note | Facebook Trigger credentials
-If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp.md) documentation.
-///
+{% hint style="info" %}
+**Facebook Trigger credentials**
 
-## Supported authentication methods
+If you want to create credentials for the [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md) node, follow the instructions mentioned in the [Facebook App credentials](facebookapp.md) documentation.
+{% endhint %}
+
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - App access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview) for more information about the service.
 
-## Using app access token
+## Using app access token <a href="#using-app-access-token" id="using-app-access-token"></a>
 
 To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/) account and:
 
@@ -36,7 +49,7 @@ There are two steps in setting up your credential:
 
 Refer to the detailed instructions below for each step.
 
-### Create a Meta app
+### Create a Meta app <a href="#create-a-meta-app" id="create-a-meta-app"></a>
 
 To create a Meta app:
 
@@ -61,7 +74,7 @@ Refer to Meta's [Create an app](https://developers.facebook.com/docs/development
 
 For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes) and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types).
 
-### Generate an App Access Token
+### Generate an App Access Token <a href="#generate-an-app-access-token" id="generate-an-app-access-token"></a>
 
 Next, create an app access token to use with your n8n credential and the products you selected:
 
@@ -69,11 +82,9 @@ Next, create an app access token to use with your n8n credential and the product
 2. Select the **Meta App** you just created in the **Access Token** section.
 3. In **User or Page**, select **Get App Token**.
 4. Select **Generate Access Token**.
-5. The page prompts you to log in and grant access. Follow the on-screen prompts.
+5. The page prompts you to log in and grant access. Follow the on-screen prompts.<br>
 
-    /// warning | App unavailable
-    You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>App unavailable</strong></p><p>You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.</p></div>
 
 5. Copy the token and enter it in your n8n credential as the **Access Token**.
 

@@ -1,29 +1,46 @@
 ---
 title: Hugging Face Inference Model node documentation
-description: Learn how to use the Hugging Face Inference Model node in n8n. Follow technical documentation to integrate Hugging Face Inference Model node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Hugging Face Inference Model node in n8n. Follow
+  technical documentation to integrate Hugging Face Inference Model node into
+  your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Hugging Face Inference Model node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference
+layout:
+  description:
+    visible: false
 ---
 
-# Hugging Face Inference Model node
+# Hugging Face Inference Model node <a href="#hugging-face-inference-model-node" id="hugging-face-inference-model-node"></a>
 
 Use the Hugging Face Inference Model node to use Hugging Face's models.
 
 On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
 
-This node lacks tools support, so it won't work with the [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) node. Instead, connect it with the [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) node.
+This node lacks tools support, so it won't work with the [AI Agent](../root-nodes/n8n-nodes-langchain.agent/README.md) node. Instead, connect it with the [Basic LLM Chain](../root-nodes/n8n-nodes-langchain.chainllm.md) node.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/huggingface.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Model**: Select the model to use to generate the completion.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Custom Inference Endpoint**: Enter a custom inference endpoint URL.
 * **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
@@ -33,14 +50,14 @@ You can find authentication information for this node [here](/integrations/built
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'hugging-face-inference-model') ]]
 
-## Related resources
+[Browse Hugging Face Inference Model node documentation integration templates](https://n8n.io/integrations/hugging-face-inference-model) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

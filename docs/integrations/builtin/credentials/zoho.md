@@ -1,28 +1,39 @@
 ---
 title: Zoho credentials
-description: Documentation for Zoho credentials. Use these credentials to authenticate Zoho in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Zoho credentials. Use these credentials to authenticate Zoho
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zoho credentials
+originalFilePath: integrations/builtin/credentials/zoho.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zoho'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/zoho'
+layout:
+  description:
+    visible: false
 ---
 
-# Zoho credentials
+# Zoho credentials <a href="#zoho-credentials" id="zoho-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md)
+- [Zoho CRM](../app-nodes/n8n-nodes-base.zohocrm.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Zoho](https://www.zoho.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -35,7 +46,7 @@ To configure this credential, you'll need:
 
 Refer to [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html) for more information about selecting a data center.
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
 If you need to configure OAuth2 from scratch, [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html) with Zoho.
 

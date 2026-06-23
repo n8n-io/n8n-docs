@@ -1,23 +1,38 @@
 ---
 title: Google Drive File and Folder operations
-description: Documentation for the File and Folder operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+description: >-
+  Documentation for the File and Folder operations in Google Drive node in n8n,
+  a workflow automation platform. Includes details of operations and
+  configuration, and links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Google Drive File and Folder operations
+originalFilePath: >-
+  integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Google Drive File and Folder operations
+# Google Drive File and Folder operations <a href="#google-drive-file-and-folder-operations" id="google-drive-file-and-folder-operations"></a>
 
-Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](README.md) for more information on the Google Drive node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
-## Search files and folders
+## Search files and folders <a href="#search-files-and-folders" id="search-files-and-folders"></a>
 
 Use this operation to search for files and folders in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File/Folder**.
 - **Operation**: Select **Search**.
 - **Search Method**: Choose how you want to search:
@@ -34,7 +49,7 @@ Enter these parameters:
 	- **Include Trashed Items**: Whether to also return items in the Drive's trash.
 
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Fields**: Select the fields to return. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
 

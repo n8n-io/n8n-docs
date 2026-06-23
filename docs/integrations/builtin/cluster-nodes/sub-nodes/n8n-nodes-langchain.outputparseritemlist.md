@@ -1,29 +1,43 @@
 ---
 title: Item List Output Parser node documentation
-description: Learn how to use the Item List Output Parser node in n8n. Follow technical documentation to integrate Item List Output Parser node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Item List Output Parser node in n8n. Follow technical
+  documentation to integrate Item List Output Parser node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Item List Output Parser node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist
+layout:
+  description:
+    visible: false
 ---
 
-# Item List Output Parser node
+# Item List Output Parser node <a href="#item-list-output-parser-node" id="item-list-output-parser-node"></a>
 
 Use the Item List Output Parser node to return a list of items with a specific length and separator.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Number of Items**: Enter the maximum items to return. Set to `-1` for unlimited items.
 * **Separator**: Select the separator used to split the results into separate items. Defaults to a new line.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'item-list-output-parser') ]]
 
-## Related resources
+[Browse Item List Output Parser node documentation integration templates](https://n8n.io/integrations/item-list-output-parser) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

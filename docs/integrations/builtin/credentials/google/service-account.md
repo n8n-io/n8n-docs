@@ -1,22 +1,33 @@
 ---
 title: Google Service Account
-description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for service account Google credentials. Use these credentials to
+  authenticate Google in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Google Service Account
+originalFilePath: integrations/builtin/credentials/google/service-account.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/google/service-account'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/google/service-account'
+layout:
+  description:
+    visible: false
 ---
 
-# Google: Service Account
+# Google: Service Account <a href="#google-service-account" id="google-service-account"></a>
 
 Using service accounts is more complex than OAuth2. Before you begin:
 
-* Check if your node is [compatible](/integrations/builtin/credentials/google/index.md#compatible-nodes) with Service Account.
-* Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) is a better option.
+* Check if your node is [compatible](README.md#compatible-nodes) with Service Account.
+* Make sure you need to use Service Account. For most use cases, [OAuth2](oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * Create a [Google Cloud](https://cloud.google.com/) account.
 
-## Set up Service Account
+## Set up Service Account <a href="#set-up-service-account" id="set-up-service-account"></a>
 
 There are four steps to connecting your n8n credential to a Google Service Account:
 
@@ -25,24 +36,24 @@ There are four steps to connecting your n8n credential to a Google Service Accou
 1. [Set up Google Cloud Service Account](#set-up-google-cloud-service-account).
 1. [Finish your n8n credential](#finish-your-n8n-credential).
 
-### Create a Google Cloud Console project
+### Create a Google Cloud Console project <a href="#create-a-google-cloud-console-project" id="create-a-google-cloud-console-project"></a>
 
 First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
---8<-- "_snippets/integrations/builtin/credentials/google/create-google-cloud-project.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/paEFxT9cGqxGvuYxg0Ej/" %}
 
-### Enable APIs
+### Enable APIs <a href="#enable-apis" id="enable-apis"></a>
 
 With your project created, enable the APIs you'll need access to:
 
---8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WnNE7wjfHbu7rBfeO97t/" %}
 
-### Set up Google Cloud Service Account
+### Set up Google Cloud Service Account <a href="#set-up-google-cloud-service-account" id="set-up-google-cloud-service-account"></a>
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
 
-	<figure markdown="span">
-	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figure>
+	<img src="../../../.gitbook/assets/google-cloud-project-dropdown.png" alt="">
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 
@@ -56,42 +67,40 @@ With your project created, enable the APIs you'll need access to:
 8. Select **Add key > Create new key**.
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
 
-### Finish your n8n credential
+### Finish your n8n credential <a href="#finish-your-n8n-credential" id="finish-your-n8n-credential"></a>
 
 With the Google project and credentials fully configured, finish the n8n credential:
 
 1. Open the downloaded JSON file.
 2. Copy the `client_email` and enter it in your n8n credential as the **Service Account Email**.
-3. Copy the `private_key`. Don't include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
+3. Copy the `private_key`. Don't include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.<br>
 
-	///warning | Older versions of n8n
-	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.
-	///
+	<div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Older versions of n8n</strong></p><p>If you're running an n8n version older than 0.156.0, replace all instances of <code>\n</code> in the JSON file with new lines.</p></div>
 
 4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) (turned on).
     1. To use this option, you must [Enable domain-wide delegation](#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
 	1. Enter the **Email** of the user you want to impersonate.
-5. If you plan to use this credential with the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, turn on **Set up for use in HTTP Request node**.
+5. If you plan to use this credential with the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/README.md) node, turn on **Set up for use in HTTP Request node**.
 	1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) for more information.
 6. **Save** your credentials.
 
-## Video
+## Video <a href="#video" id="video"></a>
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/FzQzGODb5Gk?si=YR9vDaTet8vsj-y2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% embed url="https://www.youtube.com/embed/FzQzGODb5Gk?si=YR9vDaTet8vsj-y2" %}
 
-## Troubleshooting
+## Troubleshooting <a href="#troubleshooting" id="troubleshooting"></a>
 
-### Service Account can't access Google Drive files
+### Service Account can't access Google Drive files <a href="#service-account-cant-access-google-drive-files" id="service-account-cant-access-google-drive-files"></a>
 
-<!-- vale from-microsoft.FirstPerson = NO -->
-/// danger | No access to my drive
+
+{% hint style="danger" %}
+**No access to my drive**
+
 Google no longer allows Service Accounts created after April 15, 2025 to access `my drive`. Service Accounts now only have access to shared drives.
 
 While not recommended, if you need to use a Service Account to access `my drive`, you can do so by [enabling domain-wide delegation](#enable-domain-wide-delegation). You can learn more in [this post in the community](https://community.n8n.io/t/please-please-help-upload-file-google-drive-node-with-service-account-not-working/147750/15).
-///
-<!-- vale from-microsoft.FirstPerson = YES -->
+{% endhint %}
+
 
 A Service Account can't access Google Drive files and folders that weren't shared with its associated user email.
 
@@ -101,13 +110,15 @@ A Service Account can't access Google Drive files and folders that weren't share
 4. Paste your Service Account email into **Add People and groups**.
 5. Select **Editor** for read-write access or **Viewer** for read-only access.
 
-### Enable domain-wide delegation
+### Enable domain-wide delegation <a href="#enable-domain-wide-delegation" id="enable-domain-wide-delegation"></a>
 
 To impersonate a user with a service account, you must enable domain-wide delegation for the service account.
 
-/// warning | Not recommended
+{% hint style="warning" %}
+**Not recommended**
+
 Google recommends you [avoid using domain-wide delegation](https://cloud.google.com/iam/docs/best-practices-service-accounts#domain-wide-delegation), as it allows impersonation of any user (including super admins) and can pose a security risk.
-///
+{% endhint %}
 
 To delegate domain-wide authority to a service account, you must be a super administrator for the Google Workspace domain. Then:
 

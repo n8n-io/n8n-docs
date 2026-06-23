@@ -1,23 +1,36 @@
 ---
 title: GitHub node documentation
-description: Learn how to use the GitHub node in n8n. Follow technical documentation to integrate GitHub node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the GitHub node in n8n. Follow technical documentation to
+  integrate GitHub node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: GitHub node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.github.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.github'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.github'
+layout:
+  description:
+    visible: false
 ---
 
-# GitHub node
+# GitHub node <a href="#github-node" id="github-node"></a>
 
 Use the GitHub node to automate work in GitHub, and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, releases, and users. 
 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
-/// note | Credentials
-Refer to [GitHub credentials](/integrations/builtin/credentials/github.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [GitHub credentials](../credentials/github.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * File
 	* Create
@@ -63,10 +76,10 @@ Refer to [GitHub credentials](/integrations/builtin/credentials/github.md) for g
 	* Get Usage
 	* List
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'github') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse GitHub node documentation integration templates](https://n8n.io/integrations/github) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

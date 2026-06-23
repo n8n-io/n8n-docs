@@ -1,25 +1,40 @@
 ---
 title: MiniMax node documentation
-description: The MiniMax node lets you interact with MiniMax AI models from n8n. This documentation explains how to integrate MiniMax into your n8n workflows to generate images, produce speech from text, generate videos, and send messages to language models.
-contentType: [integration, reference]
+description: >-
+  The MiniMax node lets you interact with MiniMax AI models from n8n. This
+  documentation explains how to integrate MiniMax into your n8n workflows to
+  generate images, produce speech from text, generate videos, and send messages
+  to language models.
+contentType:
+  - integration
+  - reference
+nodeTitle: MiniMax node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.minimax.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.minimax'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.minimax'
+layout:
+  description:
+    visible: false
 ---
 
-# MiniMax node
+# MiniMax node <a href="#minimax-node" id="minimax-node"></a>
 
 The MiniMax node connects n8n workflows to MiniMax AI models. Use it to generate images from text prompts, synthesize speech, create videos from text or images, and send messages to MiniMax language models.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/minimax.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-## Resources and operations
+You can find authentication information for this node [here](../credentials/minimax.md).
+{% endhint %}
+
+## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>
 
 - **Audio**: Convert text to speech using MiniMax speech synthesis models.
 - **Image**: Generate images from a text prompt.
 - **Text**: Send messages to a MiniMax language model and receive responses.
 - **Video**: Generate videos from a text prompt or a first-frame image.
 
-### Text to speech
+### Text to speech <a href="#text-to-speech" id="text-to-speech"></a>
 
 Convert text to speech using a MiniMax speech synthesis model.
 
@@ -27,7 +42,7 @@ Convert text to speech using a MiniMax speech synthesis model.
 
 - **Model** (type: options, field: `modelId`): The speech synthesis model to use. Default: `speech-2.8-hd`
 - **Text** (type: string, field: `text`): The text to convert to speech. Maximum 10,000 characters. Required.
-- **Voice ID** (type: string, field: `voiceId`): The voice to use for synthesis. Browse available voices in the [MiniMax documentation](https://platform.minimax.io/docs/faq/system-voice-id){:target="_blank" .external-link}. Default: `English_Graceful_Lady`. Required.
+- **Voice ID** (type: string, field: `voiceId`): The voice to use for synthesis. Browse available voices in the [MiniMax documentation](https://platform.minimax.io/docs/faq/system-voice-id). Default: `English_Graceful_Lady`. Required.
 - **Download Audio** (type: boolean, field: `downloadAudio`): Whether to download the generated audio as binary data. When disabled, the node returns only the audio URL. Default: `true`
 
 **Options**
@@ -39,7 +54,7 @@ Convert text to speech using a MiniMax speech synthesis model.
 - **Speed** (type: number, field: `speed`): Speech speed from 0.5 to 2. Higher values produce faster speech. Default: `1`
 - **Volume** (type: number, field: `volume`): Speech volume from 0.1 to 10. Higher values produce louder speech. Default: `1`
 
-### Generate an image
+### Generate an image <a href="#generate-an-image" id="generate-an-image"></a>
 
 Create an image from a text prompt using a MiniMax image generation model.
 
@@ -56,7 +71,7 @@ Create an image from a text prompt using a MiniMax image generation model.
 - **Prompt Optimizer** (type: boolean, field: `promptOptimizer`): Whether to automatically optimize the prompt for better results. Default: `false`
 - **Seed** (type: number, field: `seed`): Random seed for reproducible outputs. Using the same seed with the same parameters produces the same image. Default: `0`
 
-### Message a model
+### Message a model <a href="#message-a-model" id="message-a-model"></a>
 
 Send one or more messages to a MiniMax language model and receive its response.
 
@@ -77,7 +92,7 @@ Send one or more messages to a MiniMax language model and receive its response.
 - **Output Randomness (Top P)** (type: number, field: `topP`): Maximum cumulative probability of tokens to consider when sampling. Range: 0–1. Default: `0.95`
 - **System Message** (type: string, field: `system`): A system-level instruction that guides the model's behavior and tone.
 
-### Generate video from text
+### Generate video from text <a href="#generate-video-from-text" id="generate-video-from-text"></a>
 
 Generate a video from a text prompt using a MiniMax video generation model.
 
@@ -93,7 +108,7 @@ Generate a video from a text prompt using a MiniMax video generation model.
 
 - **Prompt Optimizer** (type: boolean, field: `promptOptimizer`): Whether to automatically optimize the prompt for better results. Default: `true`
 
-### Generate video from image
+### Generate video from image <a href="#generate-video-from-image" id="generate-video-from-image"></a>
 
 Generate a video using an image as the first frame.
 
@@ -118,10 +133,10 @@ Generate a video using an image as the first frame.
     - **Subject Reference Image URL** (type: string, field: `subjectReferenceImageUrl`): Public URL of the reference face image. Displayed when **Subject Reference Input Type** is `URL`.
     - **Subject Reference Data Field Name** (type: string, field: `subjectReferenceBinaryPropertyName`): The binary field name containing the reference face image. Displayed when **Subject Reference Input Type** is `Binary File`. Default: `subjectReference`
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'minimax') ]]
+[Browse MiniMax node documentation integration templates](https://n8n.io/integrations/minimax) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to the [MiniMax documentation](https://platform.minimax.io/docs){:target="_blank" .external-link} for more information about the service.
+Refer to the [MiniMax documentation](https://platform.minimax.io/docs) for more information about the service.

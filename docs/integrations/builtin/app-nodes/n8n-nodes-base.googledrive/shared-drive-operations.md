@@ -1,28 +1,43 @@
 ---
 title: Google Drive Shared Drive operations
-description: Documentation for the Shared Drive operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Shared Drive operations in Google Drive node in n8n, a
+  workflow automation platform. Includes details of operations and
+  configuration, and links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Google Drive Shared Drive operations
+originalFilePath: >-
+  integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Google Drive Shared Drive operations
+# Google Drive Shared Drive operations <a href="#google-drive-shared-drive-operations" id="google-drive-shared-drive-operations"></a>
 
-Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](README.md) for more information on the Google Drive node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
-## Create a shared drive
+## Create a shared drive <a href="#create-a-shared-drive" id="create-a-shared-drive"></a>
 
 Use this operation to create a new shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Create**.
 - **Name**: The name to use for the new shared drive.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Capabilities**: The capabilities to set for the new shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
 	- **Can Add Children**: Whether the current user can add children to folders in this shared drive.
@@ -52,13 +67,13 @@ Enter these parameters:
 
 Refer to the [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert) API documentation for more information.
 
-## Delete a shared drive
+## Delete a shared drive <a href="#delete-a-shared-drive" id="delete-a-shared-drive"></a>
 
 Use this operation to delete a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Delete**.
 - **Shared Drive**: Choose the shared drive want to delete. 
@@ -67,34 +82,34 @@ Enter these parameters:
 
 Refer to the [Method: drives.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/delete) API documentation for more information.
 
-## Get a shared drive
+## Get a shared drive <a href="#get-a-shared-drive" id="get-a-shared-drive"></a>
 
 Use this operation to get a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Get**.
 - **Shared Drive**: Choose the shared drive want to get. 
     - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
     - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
 Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get) API documentation for more information.
 
-<!-- vale from-write-good.Weasel = NO -->
-## Get many shared drives
+
+## Get many shared drives <a href="#get-many-shared-drives" id="get-many-shared-drives"></a>
 
 Use this operation to get many shared drives.
-<!-- vale from-write-good.Weasel = YES -->
+
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Get Many**.
 - **Return All**: Choose whether to return all results or only up to a given limit.
@@ -103,27 +118,27 @@ Enter these parameters:
     - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
     - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Query**: The query string to use to search for shared drives. See [Search for shared drives | Google Drive](https://developers.google.com/drive/api/guides/search-shareddrives) for more information.
 - **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
 Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get) API documentation for more information.
 
-## Update a shared drive
+## Update a shared drive <a href="#update-a-shared-drive" id="update-a-shared-drive"></a>
 
 Use this operation to update a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Update**.
 - **Shared Drive**: Choose the shared drive you want to update. 
     - Select **From list** to choose the drive from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
     - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
 
-### Update Fields
+### Update Fields <a href="#update-fields" id="update-fields"></a>
 
 - **Color RGB**: The color of this shared drive as an RGB hex string.
 - **Name**: The updated name for the shared drive.

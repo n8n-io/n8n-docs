@@ -1,35 +1,48 @@
 ---
 title: Notion credentials
-description: Documentation for Notion credentials. Use these credentials to authenticate Notion in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Notion credentials. Use these credentials to authenticate
+  Notion in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Notion credentials
+originalFilePath: integrations/builtin/credentials/notion.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/notion'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/notion'
+layout:
+  description:
+    visible: false
 ---
 
-# Notion credentials
+# Notion credentials <a href="#notion-credentials" id="notion-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md)
-- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md)
+- [Notion](../app-nodes/n8n-nodes-base.notion/README.md)
+- [Notion Trigger](../trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Notion](https://notion.so) account with admin level access.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API integration token: Used for internal integrations.
 - OAuth2: Used for public integrations.
 
-/// note | Integration type
-Not sure which integration type to use? Refer to [Internal vs. public integrations](#internal-vs-public-integrations) below for more information.
-///
+{% hint style="info" %}
+**Integration type**
 
-## Related resources
+Not sure which integration type to use? Refer to [Internal vs. public integrations](#internal-vs-public-integrations) below for more information.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Notion's API documentation](https://developers.notion.com/reference/intro) for more information about the service.
 
-## Using API integration token
+## Using API integration token <a href="#using-api-integration-token" id="using-api-integration-token"></a>
 
 To configure this credential, you'll need:
 
@@ -52,7 +65,7 @@ To generate an integration secret, [create a Notion integration](https://develop
 
 Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up) for more information about authenticating to the service.
 
-### Share Notion page(s) with the integration
+### Share Notion page(s) with the integration <a href="#share-notion-pages-with-the-integration" id="share-notion-pages-with-the-integration"></a>
 
 For your integration to interact with Notion, you must [give your integration page permission](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions) to interact with page(s) in your Notion workspace:
 
@@ -65,7 +78,7 @@ Once you share at least one page with the integration, you can start making API 
 
 Refer to [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -93,7 +106,7 @@ You must [create a Notion integration](https://developers.notion.com/docs/create
 
 Refer to Notion's [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up) for more information about authenticating to the service.
 
-## Internal vs. public integrations
+## Internal vs. public integrations <a href="#internal-vs-public-integrations" id="internal-vs-public-integrations"></a>
 
 **Internal** integrations are:
 

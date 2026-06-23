@@ -1,38 +1,49 @@
 ---
 title: Oracle Database credentials
-description: Documentation for Oracle Database credentials. Use these credentials to authenticate Oracle Database in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Oracle Database credentials. Use these credentials to
+  authenticate Oracle Database in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Oracle Database credentials
+originalFilePath: integrations/builtin/credentials/oracledb.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/oracledb'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/oracledb'
+layout:
+  description:
+    visible: false
 ---
 
-# Oracle Database credentials
+# Oracle Database credentials <a href="#oracle-database-credentials" id="oracle-database-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [OracleDB](/integrations/builtin/app-nodes/n8n-nodes-base.oracledb/index.md)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
+- [OracleDB](../app-nodes/app-nodes.md)
+- [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
 - [Oracle Database Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md)
 - [Embeddings Oracle Database](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md)
 
-/// note
+{% hint style="info" %}
 These nodes do not support SSH tunnels.
 They require Oracle Database **19c or later**.
 For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, they also require Oracle Client Libraries **19c or later**.
-///
+{% endhint %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on an [Oracle Database](https://www.oracle.com/pls/topic/lookup?ctx=dblatest&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Oracle Database documentation](https://docs.oracle.com/en/database/oracle/oracle-database) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential, you'll need:
 

@@ -1,34 +1,47 @@
 ---
 title: MySQL credentials
-description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for MySQL credentials. Use these credentials to authenticate
+  MySQL in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: MySQL credentials
+originalFilePath: integrations/builtin/credentials/mysql.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mysql'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mysql'
+layout:
+  description:
+    visible: false
 ---
 
-# MySQL credentials
+# MySQL credentials <a href="#mysql-credentials" id="mysql-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
+- [MySQL](../app-nodes/n8n-nodes-base.mysql/README.md)
+- [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
 
-/// note | Agent node users
+{% hint style="info" %}
+**Agent node users**
+
 The Agent node doesn't support SSH tunnels.
-///
+{% endhint %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on a [MySQL](https://www.mysql.com/) server database.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential, you'll need:
 

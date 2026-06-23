@@ -1,28 +1,39 @@
 ---
 title: Anthropic credentials
-description: Documentation for the Anthropic credentials. Use these credentials to authenticate Anthropic in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Anthropic credentials. Use these credentials to
+  authenticate Anthropic in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Anthropic credentials
+originalFilePath: integrations/builtin/credentials/anthropic.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/anthropic'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/anthropic'
+layout:
+  description:
+    visible: false
 ---
 
-# Anthropic credentials
+# Anthropic credentials <a href="#anthropic-credentials" id="anthropic-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Anthropic](/integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md)
-- [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
+- [Anthropic](../app-nodes/n8n-nodes-langchain.anthropic.md)
+- [Anthropic Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need an [Anthropic Console account](https://console.anthropic.com) with access to Claude.
 

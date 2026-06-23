@@ -1,23 +1,36 @@
 ---
 title: Trello node documentation
-description: Learn how to use the Trello node in n8n. Follow technical documentation to integrate Trello node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Trello node in n8n. Follow technical documentation to
+  integrate Trello node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Trello node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.trello.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.trello'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.trello'
+layout:
+  description:
+    visible: false
 ---
 
-# Trello node
+# Trello node <a href="#trello-node" id="trello-node"></a>
 
 Use the Trello node to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
 
 On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Trello credentials](../credentials/trello.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Attachment
     * Create a new attachment for a card
@@ -69,14 +82,14 @@ Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for g
     * Get all the cards in a list
     * Update a list
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'trello') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Trello node documentation integration templates](https://n8n.io/integrations/trello) or [search all templates](https://n8n.io/workflows/)
 
-## Find the List ID
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+
+## Find the List ID <a href="#find-the-list-id" id="find-the-list-id"></a>
 
 1. Open the Trello board that contains the list.
 2. If the list doesn't have any cards, add a card to the list.

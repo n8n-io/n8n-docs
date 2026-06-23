@@ -1,20 +1,33 @@
 ---
 title: Edit Image
-description: Documentation for the Edit Image node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Edit Image node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Edit Image
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.editimage'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.editimage'
+layout:
+  description:
+    visible: false
 ---
 
-# Edit Image
+# Edit Image <a href="#edit-image" id="edit-image"></a>
 
 Use the Edit Image node to manipulate and edit images.
 
-/// note | Dependencies
-1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html).
-2. You need to use a node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the image file as a data property to the Edit Image node.
-///
+{% hint style="info" %}
+**Dependencies**
 
-## Operations
+1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html).
+2. You need to use a node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the image file as a data property to the Edit Image node.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 - Add a **Blur** to the image to reduce sharpness
 - Add a **Border** to the image
@@ -30,11 +43,11 @@ Use the Edit Image node to manipulate and edit images.
 - Add **Text** to the image
 - Make a color in image **Transparent**
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 The parameters for this node depend on the operation you select.
 
-### Blur parameters
+### Blur parameters <a href="#blur-parameters" id="blur-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Blur**: Enter a number to set how strong the blur should be, between 0 and 1000. Higher numbers create blurrier images.
@@ -42,7 +55,7 @@ The parameters for this node depend on the operation you select.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Border parameters
+### Border parameters <a href="#border-parameters" id="border-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Border Width**: Enter the width of the border.
@@ -51,7 +64,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Composite parameters
+### Composite parameters <a href="#composite-parameters" id="composite-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data. This image is your base image.
 * **Composite Image Property**: Enter the name of the binary property that stores image to composite on top of the **Property Name** image.
@@ -83,7 +96,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Create parameters
+### Create parameters <a href="#create-parameters" id="create-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Background Color**: Set the background color for the image. You can either enter a hex or select the color swatch to open a color picker.
@@ -92,7 +105,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Crop parameters
+### Crop parameters <a href="#crop-parameters" id="crop-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Width**: Enter the width you'd like to crop to.
@@ -102,7 +115,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Draw parameters
+### Draw parameters <a href="#draw-parameters" id="draw-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Primitive**: Select the primitive shape to draw. Choose from:
@@ -118,20 +131,20 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Get Information parameters
+### Get Information parameters <a href="#get-information-parameters" id="get-information-parameters"></a>
 
 For this operation, you only need to add the **Property Name** of the binary property that stores the image data.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Multi Step parameters
+### Multi Step parameters <a href="#multi-step-parameters" id="multi-step-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Operations**: Add the operations you want the multi step operation to perform. You can use any of the other operations.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Resize parameters
+### Resize parameters <a href="#resize-parameters" id="resize-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Width**: Enter the new width you'd like for the image.
@@ -146,7 +159,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Rotate parameters
+### Rotate parameters <a href="#rotate-parameters" id="rotate-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Rotate**: Enter the number of degrees to rotate the image, from --360 to 360.
@@ -154,7 +167,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Shear parameters
+### Shear parameters <a href="#shear-parameters" id="shear-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Degrees X**: Enter the number of degrees to shear from the x axis.
@@ -162,7 +175,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Text parameters
+### Text parameters <a href="#text-parameters" id="text-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Text**: Enter the text you'd like to write on the image.
@@ -174,14 +187,14 @@ Refer to [Node options](#node-options) for optional configuration options.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-### Transparent parameters
+### Transparent parameters <a href="#transparent-parameters" id="transparent-parameters"></a>
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Color**: Set the color to make transparent. You can either enter a hex or select the color swatch to open a color picker.
 
 Refer to [Node options](#node-options) for optional configuration options.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 - **File Name**: Enter the filename of the output file.
 - **Format**: Enter the image format of the output file. Choose from:
@@ -192,9 +205,9 @@ Refer to [Node options](#node-options) for optional configuration options.
 	- **tiff**
 	- **WebP**
 
-The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](/data/expressions.md).
+The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'edit-image') ]]
+
+[Browse Edit Image integration templates](https://n8n.io/integrations/edit-image) or [search all templates](https://n8n.io/workflows/)

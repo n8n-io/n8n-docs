@@ -1,31 +1,41 @@
 ---
 title: Zabbix credentials
-description: Documentation for the Zabbix credentials. Use these credentials to authenticate Zabbix in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Zabbix credentials. Use these credentials to
+  authenticate Zabbix in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zabbix credentials
+originalFilePath: integrations/builtin/credentials/zabbix.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zabbix'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/zabbix'
+layout:
+  description:
+    visible: false
 ---
 
-# Zabbix credentials
+# Zabbix credentials <a href="#zabbix-credentials" id="zabbix-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
 
-<!-- If this credential has numerous prerequisites, include the Prerequisites section below and remove the account reference in the in the Using_Auth method_ section.
-If a single prereq. like having an account, delete the Prerequisites section here and just update the intro statement in the Using _Auth method_ section -->
-## Prerequisites
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Zabbix Cloud](https://www.zabbix.com/) account or self-host your own Zabbix server.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/) on n8n's website.
 
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

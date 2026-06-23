@@ -1,24 +1,40 @@
 ---
 title: Alibaba Cloud Model Studio node documentation
-description: Interact with Alibaba Cloud Qwen models via Model Studio. This page explains how to use the node in n8n workflows to generate text completions, analyze or generate images, and create videos from text or images.
-contentType: [integration, reference]
+description: >-
+  Interact with Alibaba Cloud Qwen models via Model Studio. This page explains
+  how to use the node in n8n workflows to generate text completions, analyze or
+  generate images, and create videos from text or images.
+contentType:
+  - integration
+  - reference
+nodeTitle: Alibaba Cloud Model Studio node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud
+layout:
+  description:
+    visible: false
 ---
 
-# Alibaba Cloud Model Studio node
+# Alibaba Cloud Model Studio node <a href="#alibaba-cloud-model-studio-node" id="alibaba-cloud-model-studio-node"></a>
 
 The Alibaba Cloud Model Studio node lets you call Alibaba Cloud Qwen models (text, vision, and media models) from n8n. Use it to generate completions, analyze or create images, and produce short videos from text or images.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/alibaba.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-## Resources and operations
+You can find authentication information for this node [here](../credentials/alibaba.md).
+{% endhint %}
+
+## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>
 
 - **Text**: Message a model to create text completions and agent-like responses.
 - **Image**: Analyze images with vision-language models or generate images from prompts.
 - **Video**: Generate short videos from text or from one or more images.
 
-### Message a model
+### Message a model <a href="#message-a-model" id="message-a-model"></a>
 
 Create a completion with a Qwen model.
 
@@ -44,7 +60,7 @@ Create a completion with a Qwen model.
 - **Top K** (type: number, field: `topK`): Limits sampling pool to top K tokens.
 - **Top P** (type: number, field: `topP`): Nucleus sampling parameter.
 
-### Analyze image
+### Analyze image <a href="#analyze-image" id="analyze-image"></a>
 
 Take images as input and ask vision-language questions about them.
 
@@ -62,7 +78,7 @@ Take images as input and ask vision-language questions about them.
 - **Temperature** (type: number, field: `temperature`): Controls randomness for the vision model.
 - **Max Tokens** (type: number, field: `maxTokens`): Maximum number of tokens for the vision model output.
 
-### Generate an image
+### Generate an image <a href="#generate-an-image" id="generate-an-image"></a>
 
 Create an image from a text prompt.
 
@@ -77,7 +93,7 @@ Create an image from a text prompt.
 - **Size** (type: options, field: `size`): The size of the generated image (for example, 1024*1024, 1664*928).
 - **Prompt Extend** (type: boolean, field: `promptExtend`): Automatically extend and enhance the prompt.
 
-### Generate video from text
+### Generate video from text <a href="#generate-video-from-text" id="generate-video-from-text"></a>
 
 Generate a short video from a text prompt.
 
@@ -99,7 +115,7 @@ Generate a short video from a text prompt.
 - **Audio URL** (type: string, field: `audioUrl`): Must be specified when **Audio Input Type** is set to URL. Defines the URL of the audio file to use.
 - **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Must be specified when **Audio Input Type** is set to **Binary File**. Defines the binary field name for audio input.
 
-### Generate video from image
+### Generate video from image <a href="#generate-video-from-image" id="generate-video-from-image"></a>
 
 Generate a video from one or more images using Wan models.
 
@@ -124,10 +140,10 @@ Generate a video from one or more images using Wan models.
 - **Audio URL** (type: string, field: `audioUrl`): URL of the audio file to use, when **Audio Input Type** is set to URL.
 - **Audio Data Field Name** (type: string, field: `audioBinaryPropertyName`): Binary field name for audio input, when **Audio Input Type** is set to binary data.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'alibaba-cloud-model-studio') ]]
+[Browse Alibaba Cloud Model Studio node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-model-studio) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Alibaba Cloud Model Studio documentation](https://www.alibabacloud.com/product/qwen){:target=\"_blank\" .external-link} for more information about available models and API behavior.
+Refer to [Alibaba Cloud Model Studio documentation](https://www.alibabacloud.com/product/qwen) for more information about available models and API behavior.

@@ -1,20 +1,33 @@
 ---
 title: Twist node documentation
-description: Learn how to use the Twist node in n8n. Follow technical documentation to integrate Twist node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Twist node in n8n. Follow technical documentation to
+  integrate Twist node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Twist node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.twist.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twist'
+layout:
+  description:
+    visible: false
 ---
 
-# Twist node
+# Twist node <a href="#twist-node" id="twist-node"></a>
 
 Use the Twist node to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including creating conversations in a channel, as well as creating and deleting comments on a thread. 
 
 On this page, you'll find a list of operations the Twist node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Twist credentials](../credentials/twist.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Channel
     * Archive a channel
@@ -43,14 +56,14 @@ Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for gui
     * Get all threads
     * Update a thread
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'twist') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Twist node documentation integration templates](https://n8n.io/integrations/twist) or [search all templates](https://n8n.io/workflows/)
 
-## Get the User ID
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+
+## Get the User ID <a href="#get-the-user-id" id="get-the-user-id"></a>
 
 To get the User ID for a user:
 

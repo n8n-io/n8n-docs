@@ -21,7 +21,7 @@ layout:
 
 # Deploy
 
-n8n offers two different deployment methods. [n8n Cloud](use-n8n-cloud/) offers fast, managed setup on an instance run by n8n. [Self-hosted n8n](host-n8n/) lets you run n8n on your own machine or infrastructure.\
+n8n offers two different deployment methods. [n8n Cloud](use-n8n-cloud/) gives fast, managed setup on an instance run by n8n. [Self-hosted n8n](host-n8n/) lets you run n8n on your own machine or infrastructure.\
 \
 **Deploy** documentation helps you deploy, configure, secure, and maintain n8n in either model.
 

@@ -57,10 +57,3 @@ Use Git-backed workflows to promote changes between environments. See [Use sourc
 Track usage and send signals to your logging tools. Use [Observe and log](observe-and-log/) to improve visibility.
 {% endstep %}
 {% endstepper %}
-
-In this section:
-
-* [Manage users and access](manage-users-and-access/): Invite users, assign roles, and configure authentication methods such as SAML, OIDC, and LDAP.
-* [Use source control and environments](use-source-control-and-environments/): Move changes safely between development, staging, and production with Git-backed workflows.
-* [Manage credentials](manage-credentials/): Share credentials securely, apply overwrites, and connect external secret stores.
-* [Observe and log](observe-and-log/): Track usage, investigate activity, and send logs to your monitoring tools.

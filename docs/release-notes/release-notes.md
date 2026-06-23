@@ -25,6 +25,8 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases) in the 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CcSOA8s7oK44B90i5WIm/" %}
 
+## How to update n8n
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0acglFev0v4B75W0rZrK/" %}
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>

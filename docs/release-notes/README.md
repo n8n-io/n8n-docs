@@ -16,7 +16,7 @@ Initial coverage includes some of the most-used services in the official MCP reg
 
 If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient/) with manual configuration.
 
-<!-- TODO: video embed — /_video/release-notes/MCP_registry.webm (local .webm, won't embed in GitBook; needs hosting or a YouTube/Loom URL) -->
+{% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 
 ## n8n 2.20 — Microsoft Agent 365 Trigger node
 
@@ -284,7 +284,7 @@ Because the review step is implemented using standard n8n integrations, approval
 
 Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://docs.n8n.io/advanced-ai/human-in-the-loop-tools/).
 
-<!-- TODO: video embed — /_video/release-notes/HITLToolCalls.webm (local .webm, won't embed in GitBook; needs hosting or a YouTube/Loom URL) -->
+{% embed url="https://youtu.be/B-_nIFI27VY" %}
 
 ## n8n 2.5 — Chat node: human-in-the-loop actions
 
@@ -308,7 +308,7 @@ Keep in mind: if you want an AI Agent to choose between sending a message or wai
 
 Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat/#operation).
 
-<!-- TODO: video embed — /_video/release-notes/ChatHITL.webm (local .webm, won't embed in GitBook; needs hosting or a YouTube/Loom URL) -->
+{% embed url="https://youtu.be/CpFqawY0RCc" %}
 
 ## n8n 2.4 — TLS for Syslog log streaming and credential updates via API
 

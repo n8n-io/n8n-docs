@@ -185,7 +185,7 @@ nav:
       - Insights: insights.md
       - License key: license-key.md
     - Releases:
-      - Changelog: release-notes/changelog.md
+      - Changelog: release-notes/README.md
       - Release notes:
         - 2.x: release-notes.md
         - 1.x: release-notes/1-x.md

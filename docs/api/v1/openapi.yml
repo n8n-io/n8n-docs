@@ -363,6 +363,12 @@ paths:
       description: Retrieve all executions from your instance.
       parameters:
         - $ref: '#/components/parameters/includeData'
+        - name: ignoreDataSizeLimit
+          in: query
+          description: Whether to return the full execution data even if it exceeds the configured size limit (EXECUTIONS_DATA_MAX_DISPLAY_SIZE). Oversized executions are otherwise returned without their data.
+          required: false
+          schema:
+            type: boolean
         - $ref: '#/components/parameters/redactExecutionData'
         - name: status
           in: query
@@ -421,6 +427,12 @@ paths:
       parameters:
         - $ref: '#/components/parameters/executionId'
         - $ref: '#/components/parameters/includeData'
+        - name: ignoreDataSizeLimit
+          in: query
+          description: Whether to return the full execution data even if it exceeds the configured size limit (EXECUTIONS_DATA_MAX_DISPLAY_SIZE). Oversized executions are otherwise returned without their data.
+          required: false
+          schema:
+            type: boolean
         - $ref: '#/components/parameters/redactExecutionData'
       responses:
         '200':
@@ -3608,6 +3620,27 @@ components:
           type: string
           format: date-time
           readOnly: true
+    workflowNodeGroup:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - name
+        - nodeIds
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the node group
+          example: 9b1c8e2a-4d3f-4a6b-8c7d-1e2f3a4b5c6d
+        name:
+          type: string
+          description: Display name of the node group
+          example: Data processing
+        nodeIds:
+          type: array
+          description: IDs of the nodes that belong to this group
+          items:
+            type: string
     workflowSettings:
       type: object
       additionalProperties: false
@@ -3784,6 +3817,12 @@ components:
                 - - node: Jira
                     type: main
                     index: 0
+        nodeGroups:
+          type: array
+          readOnly: true
+          description: Visual groupings of nodes shown as frames on the canvas
+          items:
+            $ref: '#/components/schemas/workflowNodeGroup'
         authors:
           type: string
           readOnly: true
@@ -3851,6 +3890,11 @@ components:
                 - - node: Jira
                     type: main
                     index: 0
+        nodeGroups:
+          type: array
+          description: Visual groupings of nodes shown as frames on the canvas
+          items:
+            $ref: '#/components/schemas/workflowNodeGroup'
         settings:
           $ref: '#/components/schemas/workflowSettings'
         staticData:
@@ -3953,6 +3997,11 @@ components:
                 - - node: Jira
                     type: main
                     index: 0
+        nodeGroups:
+          type: array
+          description: Visual groupings of nodes shown as frames on the canvas
+          items:
+            $ref: '#/components/schemas/workflowNodeGroup'
         settings:
           $ref: '#/components/schemas/workflowSettings'
         staticData:
@@ -4033,6 +4082,12 @@ components:
                     index: 0
           description: Connections as they were in this version
           readOnly: true
+        nodeGroups:
+          type: array
+          readOnly: true
+          description: Node groups as they were in this version
+          items:
+            $ref: '#/components/schemas/workflowNodeGroup'
         authors:
           type: string
           readOnly: true
@@ -5083,6 +5138,8 @@ components:
       $ref: '#/components/schemas/execution'
     Node:
       $ref: '#/components/schemas/node'
+    WorkflowNodeGroup:
+      $ref: '#/components/schemas/workflowNodeGroup'
     Tag:
       $ref: '#/components/schemas/tag'
     Workflow:

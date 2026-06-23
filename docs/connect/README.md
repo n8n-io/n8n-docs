@@ -1,180 +1,77 @@
 ---
-description: >-
-  n8n CLI is a lightweight client for interacting with n8n programmatically
-  through the Public API.
 contentType: guide
 status: beta
 nodeTitle: n8n CLI
 originalFilePath: api/n8n-cli/index.md
-originalUrl: 'https://docs.n8n.io/api/n8n-cli'
-url: 'https://docs.n8n.io/connect/'
+originalUrl: https://docs.n8n.io/api/n8n-cli
+url: https://docs.n8n.io/connect/
+description: Use the API, CLI, and MCP server to connect to n8n programmatically.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Getting started with n8n CLI <a href="#getting-started-with-n8n-cli" id="getting-started-with-n8n-cli"></a>
+# Connect
 
-**n8n CLI** is a lightweight command-line client that communicates with a running n8n instance through the [n8n API](n8n-api/README.md). It can run from any machine with network access and authenticates using an API key.
+Connect to n8n from code, scripts, and AI tools.
+
+Use this documentation when you want to work with n8n outside the editor. You can call the public API, script against it with the CLI, or connect MCP-compatible clients.
+
+This section includes the n8n API guides and reference material, the n8n CLI reference, and the docs for the built-in n8n MCP server. It also covers authentication, connection setup, and client-specific instructions for connecting tools and agents to n8n.
 
 {% hint style="info" %}
-**n8n CLI is in beta**
-
-Use it only for experimenting, local development, and personal projects and not for production workflows.
+Choose the interface that matches your workflow. Each option uses a different access model and fits a different job.
 {% endhint %}
 
-Use the API CLI to:
+{% tabs %}
+{% tab title="n8n API" %}
+Manage n8n programmatically over HTTP.
 
-- List and inspect workflows  
-- Create a workflow from JSON 
-- Check recent executions  
-- Create a credential  
-- Manage projects
+Best for:
 
-All operations respect the permissions of the user and the scope of the API key.
+* Building platforms and tooling on top of n8n
+* Triggering and monitoring executions from external systems
+* Automating workflow and credential management
 
-## n8n CLI versus server CLI <a href="#n8n-cli-versus-server-cli" id="n8n-cli-versus-server-cli"></a>
+Start with [n8n API](readme/n8n-api/).
+{% endtab %}
 
-If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.
+{% tab title="n8n CLI" %}
+Control n8n directly from your terminal.
 
-| Aspect | n8n CLI | Server CLI |
-|--------|---------|-----------|
-| **Runs from** | Any machine with network access | Same machine as n8n |
-| **Authentication** | API key | Direct database access |
-| **Requires n8n running** | Yes | No (not required for most operations) |
-| **Best for** | Developers, integrations, AI agents | Instance operators, backups, emergencies |
-| **Permissions** | Respects user roles and API key scopes | Bypasses access control |
+Best for:
 
-## Install n8n-cli <a href="#install-n8n-cli" id="install-n8n-cli"></a>
+* Importing and exporting workflows
+* Running executions in scripts and CI pipelines
+* Local development and debugging
 
-```bash
-# Use directly with npx (zero install) <a href="#use-directly-with-npx-zero-install" id="use-directly-with-npx-zero-install"></a>
-npx @n8n/cli workflow list
+Start with [n8n CLI](readme/n8n-cli.md).
+{% endtab %}
 
-# Or install globally <a href="#or-install-globally" id="or-install-globally"></a>
-npm install -g @n8n/cli
-```
+{% tab title="MCP server" %}
+Connect AI agents and MCP clients directly to your n8n instance.
 
-## Connect to your instance <a href="#connect-to-your-instance" id="connect-to-your-instance"></a>
+Best for:
 
-```bash
-n8n-cli config set-url https://your-instance.n8n.cloud
-n8n-cli config set-api-key YOUR_API_KEY
-n8n-cli config show
-```
+* Claude Code, Claude Desktop, Lovable, and similar tools
+* Discovering and executing workflows from an AI agent
+* Managing workflows through an MCP client
 
-* The configuration is saved to `~/.n8n-cli/config.json` with restricted file permissions (`0600`).
-* Get your API key from **n8n > Settings > n8n API** 
-
-Alternatively, skip the configuration file and use environment variables:
-
-```bash
-export N8N_URL=https://your-instance.n8n.cloud
-export N8N_API_KEY=your_api_key
-```
-
-## Inline flags <a href="#inline-flags" id="inline-flags"></a>
-
-``` bash
-n8n-cli --url=https://my-n8n.app.n8n.cloud --api-key=n8n_api_xxxxx workflow list
-```
-
-### Resolution order <a href="#resolution-order" id="resolution-order"></a>
-
-1. Command-line flags (`--url`, `--api-key`)
-2. Environment variables (`N8N_URL`, `N8N_API_KEY`)
-3. Config file (`~/.n8n-cli/config.json`)
-
-## Commands <a href="#commands" id="commands"></a>
-
-Every command supports `--help` for detailed usage.
-
-| Topic	| Commands |
-|---|---|
-| `workflow` | `list`, `get`, `create`, `update`, `delete`, `activate`, `deactivate`, `tags`, `transfer` |
-| `execution` | `list`, `get`, `retry`, `stop`, `delete` |
-| `credential` | `list`, `get`, `schema`, `create`, `delete`, `transfer` |
-| `project` | `list`, `get`, `create`, `update`, `delete`, `members`, `add-member`, `remove-member` |
-| `tag` | `list`, `create`, `update`, `delete` |
-| `variable` | `list`, `create`, `update`, `delete` |
-| `data-table` | `list`, `get`, `create`, `delete`, `rows`, `add-rows`, `update-rows`, `upsert-rows`, `delete-rows` |
-| `user` | `list`, `get` |
-| `config` | `set-url`, `set-api-key`, `show` |
-| `source-control` | `pull` |
-| `skill` | `install` |
-| `audit` | (top-level) |
-| `login` / `logout` | (top-level) |
-
-
-## Output formats <a href="#output-formats" id="output-formats"></a>
-All commands support three output formats via `--format`:
-
-| Format | Flag | Use when |
-|---|---|---|
-| Table | -`-format=table` (default) | You want human-readable terminal output |
-| JSON | `--format=json` | Piping to jq, programmatic use |
-| ID-only | `--format=id-only` | Piping to xargs, scripting |
-
-### Examples <a href="#examples" id="examples"></a>
-* Human-readable table
-
-   ``` bash
-   n8n-cli workflow list
-   ```
-
-* JSON for scripts
-
-   ``` bash
-   n8n-cli workflow list --format=json | jq '.[] | select(.active) | .id'
-   ```
-
-* Pipe IDs into another command
-
-   ``` bash
-   n8n-cli workflow list --format=id-only | xargs -I{} n8n-cli workflow deactivate {}
-   ```
-
-## Use as skill with Claude Code <a href="#use-as-skill-with-claude-code" id="use-as-skill-with-claude-code"></a>
-
-Install the skill so Claude always knows how to use n8n-cli:
-
-```bash
-n8n-cli skill install --global
-```
-
-Then in Claude Code, type `/n8n-cli` to load it. Claude can now create, update, and manage workflows on your behalf without requiring an MCP.
-
-## Examples <a href="#examples" id="examples"></a>
-
-### List and inspect workflows <a href="#list-and-inspect-workflows" id="list-and-inspect-workflows"></a>
-
-```bash
-n8n-cli workflow list
-n8n-cli workflow get <id>
-```
-    
-### Create a workflow from JSON <a href="#create-a-workflow-from-json" id="create-a-workflow-from-json"></a>
-    
-```bash
-cat workflow.json | n8n-cli workflow create --stdin
-```
-    
-### Check recent executions <a href="#check-recent-executions" id="check-recent-executions"></a>
-
-```bash
-n8n-cli execution list --status=error --limit=10
-```
-    
-### Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
-    
-```bash
-n8n-cli credential schema gmailOAuth2  # see required fields first
-n8n-cli credential create --type=gmailOAuth2 --name='My Gmail' --file=cred.json
-```
-    
-### Manage projects <a href="#manage-projects" id="manage-projects"></a>
-    
-```bash
-n8n-cli project create --name="My Project"
-n8n-cli workflow transfer <id> --project=<projectId>
-```
+Start with [Connect to n8n MCP server](readme/connect-to-n8n-mcp-server/).
+{% endtab %}
+{% endtabs %}

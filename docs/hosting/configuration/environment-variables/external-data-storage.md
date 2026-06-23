@@ -29,10 +29,10 @@ Refer to [External storage](/hosting/scaling/external-storage.md) for more infor
 ## Azure Blob Storage
 
 /// info | Enterprise-tier feature
-You need an [Enterprise license key](/license-key.md) to store execution data in Azure Blob Storage.
+You need an [Enterprise license key](/license-key.md) to store execution data or binary data in Azure Blob Storage.
 ///
 
-To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure` and configure the variables below. `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is always required.
+To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure`. To store binary data in Azure Blob Storage, set `N8N_DEFAULT_BINARY_DATA_MODE` to `azure` (refer to [External storage](/hosting/scaling/external-storage.md#storing-n8ns-binary-data-in-azure-blob-storage)). A single container can hold both. Configure the variables below; `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is always required.
 
 For authentication, choose one of these three options. n8n checks them in this order:
 
@@ -47,6 +47,6 @@ Set `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` only if you use a custom endpoint, suc
 | `N8N_EXTERNAL_STORAGE_AZURE_CONNECTION_STRING` | String | - | Connection string for Azure Blob Storage. Takes precedence over the account name and key when set. |
 | `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_NAME` | String | - | Storage account name. Use with an account key or managed identity. |
 | `N8N_EXTERNAL_STORAGE_AZURE_ACCOUNT_KEY` | String | - | Storage account key. Use with the account name. |
-| `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` | String | - | Name of the blob container to store execution data in. Required for Azure Blob Storage. |
+| `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` | String | - | Name of the blob container to store execution data and/or binary data in. Required for Azure Blob Storage. |
 | `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` | String | - | Custom blob endpoint, for example for Azurite or sovereign clouds. |
 | `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT` | Boolean | `false` | Authenticate via `DefaultAzureCredential` (managed identity, environment, or Azure CLI) instead of an account key. Ignores the account key when enabled. |

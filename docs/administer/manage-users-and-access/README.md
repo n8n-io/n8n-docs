@@ -23,6 +23,7 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 The user management feature doesn't send personal information, such as email or username, to n8n.
 {% endhint %}
+
 ## Setup guides <a href="#setup-guides" id="setup-guides"></a>
 
 This section contains most usage information for user management, and the [Cloud setup guide](set-up-for-cloud.md). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management).

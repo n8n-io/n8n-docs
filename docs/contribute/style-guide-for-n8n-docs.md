@@ -243,7 +243,7 @@ docs/                                     # docs root
 │   │   └── current-page.md
 │   └── manage-workflows/
 │       └── export-import.md
-└── deploy-n8n/                           # another space
+└── deploy/                               # another space
     ├── .gitbook/
     │   └── assets/                       # all images for this space live here
     │       └── hosting-diagram.png

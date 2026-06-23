@@ -5,7 +5,18 @@
   * [Authentication](n8n-api/authentication.md)
   * [Pagination](n8n-api/pagination.md)
   * [Use an API playground](n8n-api/use-an-api-playground.md)
-  * [API reference](n8n-api/api-reference.md)
+  * ```yaml
+      type: builtin:openapi
+      props:
+        models: true
+        downloadLink: true
+        grouping: by-tag
+      dependencies:
+        spec:
+          ref:
+            kind: openapi
+            spec: n8n
+      ```
 * [n8n CLI](README.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)

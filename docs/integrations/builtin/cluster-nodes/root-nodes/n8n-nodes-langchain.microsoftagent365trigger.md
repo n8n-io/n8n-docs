@@ -13,7 +13,7 @@ originalFilePath: >-
   integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/index.md
 originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger
-url: 'https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/root-nodes'
+url: 'https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger'
 layout:
   description:
     visible: false

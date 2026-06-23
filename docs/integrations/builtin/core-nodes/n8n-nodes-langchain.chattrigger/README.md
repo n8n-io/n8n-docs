@@ -9,7 +9,7 @@ originalFilePath: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigge
 originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger
 url: >-
-  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger
 layout:
   description:
     visible: false

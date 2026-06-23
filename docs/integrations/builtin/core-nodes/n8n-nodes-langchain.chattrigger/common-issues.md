@@ -14,7 +14,7 @@ originalFilePath: >-
 originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues
 url: >-
-  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.compression/common-issues
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues
 layout:
   description:
     visible: false

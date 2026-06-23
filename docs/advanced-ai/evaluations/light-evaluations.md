@@ -1,6 +1,5 @@
 ---
 title: Light evaluations
-description: Use light evaluations during development to build reliable LLM-based workflows by measuring the performance of known test cases.
 description: Use light evaluations during development to build reliable LLM-based workflows by checking the results of executing against known test cases.
 contentType: howto
 ---

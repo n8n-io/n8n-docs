@@ -17,7 +17,7 @@
             kind: openapi
             spec: n8n
       ```
-* [n8n CLI](n8n-cli..md)
+* [n8n CLI](n8n-cli.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
 * [Create nodes](create-nodes/README.md)

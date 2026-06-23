@@ -1351,6 +1351,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/pullResult'
+  /source-control/push:
+    post:
+      x-eov-operation-id: push
+      x-required-scope: sourceControl:push
+      x-eov-operation-handler: v1/handlers/source-control/source-control.handler
+      tags:
+        - SourceControl
+      summary: Push local changes to the remote repository
+      description: |
+        Exports all eligible workflows, credentials stubs, variables stubs, and
+        tags to the configured Git repository and pushes the resulting commit.
+        Requires the Source Control feature to be licensed and connected to a
+        repository. When `fileNames` is omitted the push includes every local
+        change the caller is authorised to push.
+      requestBody:
+        description: Push options
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/push'
+      responses:
+        '200':
+          description: Push succeeded. Returns the pushed files and commit information.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/pushResult'
+        '409':
+          description: |
+            Conflict detected. One or more files have local modifications that
+            conflict with the remote. Retry with `force=true` to overwrite.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/pushResult'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          description: Source Control feature is not licensed.
   /variables:
     post:
       x-eov-operation-id: createVariable
@@ -4280,6 +4320,52 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/sourceControlledFile'
+    push:
+      type: object
+      properties:
+        force:
+          type: boolean
+          description: Force push even when conflicts are detected.
+          example: false
+        commitMessage:
+          type: string
+          description: Commit message for the push. Defaults to "Updated Workfolder".
+          example: 'Daily automated n8n workflow backup – 2026-06-23'
+        fileNames:
+          type: array
+          description: |
+            List of specific files to push. When omitted or empty, all eligible
+            local changes are pushed.
+          items:
+            $ref: '#/components/schemas/sourceControlledFile'
+    pushResult:
+      type: object
+      required:
+        - files
+      properties:
+        files:
+          type: array
+          description: Files that were included in the push operation.
+          items:
+            $ref: '#/components/schemas/sourceControlledFile'
+        commit:
+          nullable: true
+          description: Git commit information, or null when nothing was committed (for example, conflicts detected).
+          type: object
+          required:
+            - hash
+            - message
+            - branch
+          properties:
+            hash:
+              type: string
+              description: Full SHA of the resulting commit.
+            message:
+              type: string
+              description: Commit message used.
+            branch:
+              type: string
+              description: Branch the commit was pushed to.
     project:
       type: object
       additionalProperties: false

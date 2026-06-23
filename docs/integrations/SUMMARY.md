@@ -49,7 +49,7 @@
     * [Loop Over Items (Split in Batches)](builtin/core-nodes/n8n-nodes-base.splitinbatches.md)
     * [Manual Trigger](builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md)
     * [Markdown](builtin/core-nodes/n8n-nodes-base.markdown.md)
-    * [MCP Clientn](builtin/core-nodes/n8n-nodes-langchain.mcpClient.md)
+    * [MCP Client](builtin/core-nodes/n8n-nodes-langchain.mcpClient.md)
     * [MCP Server Trigger](builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
     * [Merge](builtin/core-nodes/n8n-nodes-base.merge.md)
     * [n8n](builtin/core-nodes/n8n-nodes-base.n8n.md)

@@ -21,10 +21,24 @@ Create an [OpenAI](https://platform.openai.com/signup/) account.
 ## Supported authentication methods
 
 - API key
+- OpenAI Account (ChatGPT)
 
 ## Related resources
 
 Refer to [OpenAI's API documentation](https://platform.openai.com/docs/introduction) for more information about the service.
+
+## Using OpenAI Account (ChatGPT)
+
+Use this method to connect the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) node with your ChatGPT or OpenAI account, without entering an API key.
+
+To configure this credential:
+
+1. In the OpenAI Chat Model node, set **Authentication** to **OpenAI Account**.
+2. Create or select an **OpenAI Account (ChatGPT)** credential.
+3. Select **Connect**.
+4. Open the OpenAI login page shown by n8n.
+5. Enter the code shown in n8n on the OpenAI login page.
+6. Return to n8n to finish connecting the credential.
 
 ## Using API key
 
@@ -48,4 +62,3 @@ To find your Organization ID:
 2. Copy your Organization ID and add it as the **Organization ID** in n8n.
 
 Refer to [Setting up your organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization) for more information. Note that API requests made using an Organization ID will count toward the organization's subscription quota.
-

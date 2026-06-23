@@ -58,6 +58,5 @@ Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/int
 
 ## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 
-[[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
-
+If you add more than one Motorhead node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](./n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 

@@ -13,7 +13,6 @@
   * [Understand concurrency](use-n8n-cloud/understand-concurrency.md)
   * [Download workflows](use-n8n-cloud/download-workflows.md)
 * [Host n8n](host-n8n/README.md)
-  * [Community edition features](host-n8n/community-edition-features.md)
   * [Install options](host-n8n/install-options/README.md)
     * [Install with npm](host-n8n/install-options/install-with-npm.md)
     * [Install with Docker](host-n8n/install-options/install-with-docker.md)
@@ -113,3 +112,4 @@
     * [Prerequisites](host-n8n/deploy-as-an-oem-integration/prerequisites.md)
     * [Manage workflows](host-n8n/deploy-as-an-oem-integration/manage-workflows.md)
   * [Deploy with the AI starter kit](host-n8n/deploy-with-the-ai-starter-kit.md)
+  * [Community edition features](host-n8n/community-edition-features.md)

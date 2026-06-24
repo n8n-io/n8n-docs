@@ -1,8 +1,5 @@
 ---
 title: Tools AI Agent node documentation
-description: >-
-  Learn how to use the Tools Agent of the AI Agent node in n8n. Follow technical
-  documentation to integrate the Tools Agent into your workflows.
 contentType:
   - integration
   - reference
@@ -14,12 +11,30 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent
+description: >-
+  Learn how to use the Tools Agent of the AI Agent node in n8n. Follow technical
+  documentation to integrate the Tools Agent into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Tools AI Agent node <a href="#tools-ai-agent-node" id="tools-ai-agent-node"></a>
+# Tools Agent
 
 The Tools Agent uses external [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
 
@@ -27,13 +42,13 @@ This agent has an enhanced ability to work with tools and can ensure a standard 
 
 The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/concepts/tool_calling/) interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
 
-Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
+Refer to [AI Agent](./) for more information on the AI Agent node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ATANgfFVHG8eIRH2Xynm/" %}
 
 This agent supports the following chat models:
 
-* [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
+* [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 * [Groq Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatgroq.md)
 * [Mistral Cloud Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
 * [Anthropic Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
@@ -45,12 +60,12 @@ This agent supports the following chat models:
 
 * [Call n8n Workflow](../../sub-nodes/n8n-nodes-langchain.toolworkflow.md)
 * [Code](../../sub-nodes/n8n-nodes-langchain.toolcode.md)
-* [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
+* [HTTP Request](../../../../../../integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 * [Action Network](../../../app-nodes/n8n-nodes-base.actionnetwork.md)
 * [ActiveCampaign](../../../app-nodes/n8n-nodes-base.activecampaign.md)
 * [Affinity](../../../app-nodes/n8n-nodes-base.affinity.md)
 * [Agile CRM](../../../app-nodes/n8n-nodes-base.agilecrm.md)
-* [Airtable](../../../app-nodes/n8n-nodes-base.airtable/README.md)
+* [Airtable](../../../app-nodes/n8n-nodes-base.airtable/)
 * [APITemplate.io](../../../app-nodes/n8n-nodes-base.apitemplateio.md)
 * [Asana](../../../app-nodes/n8n-nodes-base.asana.md)
 * [AWS Lambda](../../../app-nodes/n8n-nodes-base.awslambda.md)
@@ -67,7 +82,7 @@ This agent supports the following chat models:
 * [Crypto](../../../core-nodes/n8n-nodes-base.crypto.md)
 * [DeepL](../../../app-nodes/n8n-nodes-base.deepl.md)
 * [DHL](../../../app-nodes/n8n-nodes-base.dhl.md)
-* [Discord](../../../app-nodes/n8n-nodes-base.discord/README.md)
+* [Discord](../../../app-nodes/n8n-nodes-base.discord/)
 * [Dropbox](../../../app-nodes/n8n-nodes-base.dropbox.md)
 * [Elasticsearch](../../../app-nodes/n8n-nodes-base.elasticsearch.md)
 * [ERPNext](../../../app-nodes/n8n-nodes-base.erpnext.md)
@@ -77,17 +92,17 @@ This agent supports the following chat models:
 * [Git](../../../core-nodes/n8n-nodes-base.git.md)
 * [GitHub](../../../app-nodes/n8n-nodes-base.github.md)
 * [GitLab](../../../app-nodes/n8n-nodes-base.gitlab.md)
-* [Gmail](../../../app-nodes/n8n-nodes-base.gmail/README.md)
+* [Gmail](../../../app-nodes/n8n-nodes-base.gmail/)
 * [Google Analytics](../../../app-nodes/n8n-nodes-base.googleanalytics.md)
 * [Google BigQuery](../../../app-nodes/n8n-nodes-base.googlebigquery.md)
-* [Google Calendar](../../../app-nodes/n8n-nodes-base.googlecalendar/README.md)
+* [Google Calendar](../../../app-nodes/n8n-nodes-base.googlecalendar/)
 * [Google Chat](../../../app-nodes/n8n-nodes-base.googlechat.md)
 * [Google Cloud Firestore](../../../app-nodes/n8n-nodes-base.googlecloudfirestore.md)
 * [Google Cloud Realtime Database](../../../app-nodes/n8n-nodes-base.googlecloudrealtimedatabase.md)
 * [Google Contacts](../../../app-nodes/n8n-nodes-base.googlecontacts.md)
 * [Google Docs](../../../app-nodes/n8n-nodes-base.googledocs.md)
-* [Google Drive](../../../app-nodes/n8n-nodes-base.googledrive/README.md)
-* [Google Sheets](../../../app-nodes/n8n-nodes-base.googlesheets/README.md)
+* [Google Drive](../../../app-nodes/n8n-nodes-base.googledrive/)
+* [Google Sheets](../../../app-nodes/n8n-nodes-base.googlesheets/)
 * [Google Slides](../../../app-nodes/n8n-nodes-base.googleslides.md)
 * [Google Tasks](../../../app-nodes/n8n-nodes-base.googletasks.md)
 * [Google Translate](../../../app-nodes/n8n-nodes-base.googletranslate.md)
@@ -119,15 +134,15 @@ This agent supports the following chat models:
 * [Monday.com](../../../app-nodes/n8n-nodes-base.mondaycom.md)
 * [MongoDB](../../../app-nodes/n8n-nodes-base.mongodb.md)
 * [MQTT](../../../app-nodes/n8n-nodes-base.mqtt.md)
-* [MySQL](../../../app-nodes/n8n-nodes-base.mysql/README.md)
+* [MySQL](../../../app-nodes/n8n-nodes-base.mysql/)
 * [NASA](../../../app-nodes/n8n-nodes-base.nasa.md)
 * [Nextcloud](../../../app-nodes/n8n-nodes-base.nextcloud.md)
 * [NocoDB](../../../app-nodes/n8n-nodes-base.nocodb.md)
-* [Notion](../../../app-nodes/n8n-nodes-base.notion/README.md)
+* [Notion](../../../app-nodes/n8n-nodes-base.notion/)
 * [Odoo](../../../app-nodes/n8n-nodes-base.odoo.md)
 * [OpenWeatherMap](../../../app-nodes/n8n-nodes-base.openweathermap.md)
 * [Pipedrive](../../../app-nodes/n8n-nodes-base.pipedrive.md)
-* [Postgres](../../../app-nodes/n8n-nodes-base.postgres/README.md)
+* [Postgres](../../../app-nodes/n8n-nodes-base.postgres/)
 * [Pushover](../../../app-nodes/n8n-nodes-base.pushover.md)
 * [QuickBooks Online](../../../app-nodes/n8n-nodes-base.quickbooks.md)
 * [QuickChart](../../../app-nodes/n8n-nodes-base.quickchart.md)
@@ -144,8 +159,8 @@ This agent supports the following chat models:
 * [Slack](../../../app-nodes/n8n-nodes-base.slack.md)
 * [Spotify](../../../app-nodes/n8n-nodes-base.spotify.md)
 * [Stripe](../../../app-nodes/n8n-nodes-base.stripe.md)
-* [Supabase](../../../app-nodes/n8n-nodes-base.supabase/README.md)
-* [Telegram](../../../app-nodes/n8n-nodes-base.telegram/README.md)
+* [Supabase](../../../app-nodes/n8n-nodes-base.supabase/)
+* [Telegram](../../../app-nodes/n8n-nodes-base.telegram/)
 * [Todoist](../../../app-nodes/n8n-nodes-base.todoist.md)
 * [TOTP](../../../core-nodes/n8n-nodes-base.totp.md)
 * [Trello](../../../app-nodes/n8n-nodes-base.trello.md)
@@ -197,9 +212,7 @@ Refine the Tools Agent node's behavior using these options:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8YMxu7WAgGuRiK8YvCjS/" %}
 
-
 ### Automatically Passthrough Binary Images <a href="#automatically-passthrough-binary-images" id="automatically-passthrough-binary-images"></a>
-
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hGtcy9hhFTRrDtmE9uhH/" %}
 
@@ -210,12 +223,12 @@ When enabled, the AI Agent sends data back to the user in real-time as it genera
 {% hint style="info" %}
 **Streaming requirements**
 
-For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](../../../core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression.md) or [Webhook](../../../core-nodes/n8n-nodes-base.webhook/README.md) node with **Response Mode** set to **Streaming**.
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](../../../core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression.md) or [Webhook](../../../core-nodes/n8n-nodes-base.webhook/) node with **Response Mode** set to **Streaming**.
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](README.md#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
 
 ## Dynamic parameters for tools with `$fromAI()` <a href="#dynamic-parameters-for-tools-with-dollarfromai" id="dynamic-parameters-for-tools-with-dollarfromai"></a>
 
@@ -239,5 +252,3 @@ For detailed setup instructions and best practices, refer to [Human-in-the-loop 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
-
-

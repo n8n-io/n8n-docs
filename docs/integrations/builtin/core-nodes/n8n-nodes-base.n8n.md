@@ -1,26 +1,41 @@
 ---
 title: n8n
-description: >-
-  Documentation for the n8n node in n8n, a workflow automation platform.
-  Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: n8n
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.n8n
+description: >-
+  Documentation for the n8n node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# n8n <a href="#n8n" id="n8n"></a>
+# n8n
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) in your workflows.
 
-Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](/broken/spaces/r7wKI4I1BgdBCuq5Cvcx/pages/NjbdMwHH3QGuRDWQrwJY) for working with the API endpoints directly.
 
 {% hint style="info" %}
 **Credentials**
@@ -31,41 +46,40 @@ You can find authentication information for this node in the [API authentication
 {% hint style="warning" %}
 **SSL**
 
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
-The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
 * Audit
-	* [**Generate** a security audit](#generate-audit)
+  * [**Generate** a security audit](n8n-nodes-base.n8n.md#generate-audit)
 * Credential
-	* [**Create** a credential](#create-credential)
-	* [**Delete** a credential](#delete-credential)
-	* [**Get Schema**](#get-credential-schema): Use this operation to get credential data schema for type
+  * [**Create** a credential](n8n-nodes-base.n8n.md#create-credential)
+  * [**Delete** a credential](n8n-nodes-base.n8n.md#delete-credential)
+  * [**Get Schema**](n8n-nodes-base.n8n.md#get-credential-schema): Use this operation to get credential data schema for type
 * Execution
-	* [**Get** an execution](#get-execution)
-	* [**Get Many** executions](#get-many-executions)
-	* [**Delete** an execution](#delete-execution)
+  * [**Get** an execution](n8n-nodes-base.n8n.md#get-execution)
+  * [**Get Many** executions](n8n-nodes-base.n8n.md#get-many-executions)
+  * [**Delete** an execution](n8n-nodes-base.n8n.md#delete-execution)
 * Workflow
-	* [**Publish** a workflow](#activate-deactivate-delete-and-get-workflow)
-	* [**Create** a workflow](#create-workflow)
-	* [**Deactivate** a workflow](#activate-deactivate-delete-and-get-workflow)
-	* [**Delete** a workflow](#activate-deactivate-delete-and-get-workflow)
-	* [**Get** a workflow](#activate-deactivate-delete-and-get-workflow)
-	* [**Get Many** workflows](#get-many-workflows)
-	* [**Update** a workflow](#update-workflow)
+  * [**Publish** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
+  * [**Create** a workflow](n8n-nodes-base.n8n.md#create-workflow)
+  * [**Deactivate** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
+  * [**Delete** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
+  * [**Get** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
+  * [**Get Many** workflows](n8n-nodes-base.n8n.md#get-many-workflows)
+  * [**Update** a workflow](n8n-nodes-base.n8n.md#update-workflow)
 
 ## Generate audit <a href="#generate-audit" id="generate-audit"></a>
 
 This operation has no parameters. Configure it with these options:
 
 * **Categories**: Select the risk categories you want the audit to include. Options include:
-	* **Credentials**
-	* **Database**
-	* **Filesystem**
-	* **Instance**
-	* **Nodes**
+  * **Credentials**
+  * **Database**
+  * **Filesystem**
+  * **Instance**
+  * **Nodes**
 * **Days Abandoned Workflow**: Use this option to set the number of days without execution after which a workflow should be considered abandoned. Enter a number of days. The default is `90`.
 
 ## Create credential <a href="#create-credential" id="create-credential"></a>
@@ -112,13 +126,13 @@ Configure this operation with these parameters:
 You can further configure this operation with these **Filters**:
 
 * **Workflow**: Filter the executions by workflow. Options include:
-	* **From list**: Select a workflow to use as a filter.
-	* **By URL**: Enter a workflow URL to use as a filter.
-	* **By ID**: Enter a workflow ID to use as a filter.
+  * **From list**: Select a workflow to use as a filter.
+  * **By URL**: Enter a workflow URL to use as a filter.
+  * **By ID**: Enter a workflow ID to use as a filter.
 * **Status**: Filter the executions by status. Options include:
-	* **Error**
-	* **Success**
-	* **Waiting**
+  * **Error**
+  * **Success**
+  * **Waiting**
 
 ### Get many execution options <a href="#get-many-execution-options" id="get-many-execution-options"></a>
 
@@ -145,12 +159,12 @@ The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations al
 Configure this operation with this parameter:
 
 * **Workflow Object**: Enter a valid JSON object with the new workflow's details. The object requires these fields:
-	* `name`
-	* `nodes`
-	* `connections`
-	* `settings`
+  * `name`
+  * `nodes`
+  * `connections`
+  * `settings`
 
-Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for more information.
+Refer to [n8n API reference](/broken/spaces/r7wKI4I1BgdBCuq5Cvcx/pages/NjbdMwHH3QGuRDWQrwJY) for more information.
 
 ## Get many workflows <a href="#get-many-workflows" id="get-many-workflows"></a>
 
@@ -171,19 +185,17 @@ You can further configure this operation with these **Filters**:
 Configure this operation with these parameters:
 
 * **Workflow**: Select the workflow you want to update. Options include:
-	* **From list**: Select the workflow from the list.
-	* **By URL**: Enter the URL of the workflow.
-	* **By ID**: Enter the ID of the workflow.
+  * **From list**: Select the workflow from the list.
+  * **By URL**: Enter the URL of the workflow.
+  * **By ID**: Enter the ID of the workflow.
 * **Workflow Object**: Enter a valid JSON object to update the workflow with. The object requires these fields:
-	* `name`
-	* `nodes`
-	* `connections`
-	* `settings`
-
+  * `name`
+  * `nodes`
+  * `connections`
+  * `settings`
 
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse n8n integration templates](https://n8n.io/integrations/n8n) or [search all templates](https://n8n.io/workflows/)

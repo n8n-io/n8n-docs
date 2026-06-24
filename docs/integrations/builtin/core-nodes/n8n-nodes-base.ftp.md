@@ -1,22 +1,37 @@
 ---
 title: FTP
-description: >-
-  Documentation for the FTP node in n8n, a workflow automation platform.
-  Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
 priority: medium
 nodeTitle: FTP
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.ftp'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.ftp'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.ftp
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.ftp
+description: >-
+  Documentation for the FTP node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# FTP <a href="#ftp" id="ftp"></a>
+# FTP
 
 The FTP node is useful to access and upload files to an FTP or SFTP server.
 
@@ -30,16 +45,16 @@ To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials]
 
 ## Operations <a href="#operations" id="operations"></a>
 
-- [**Delete**](#delete) a file or folder
-- [**Download**](#download) a file
-- [**List**](#list) folder content
-- [**Rename**](#rename) or move a file or folder
-- [**Upload**](#upload) a file
+* [**Delete**](n8n-nodes-base.ftp.md#delete) a file or folder
+* [**Download**](n8n-nodes-base.ftp.md#download) a file
+* [**List**](n8n-nodes-base.ftp.md#list) folder content
+* [**Rename**](n8n-nodes-base.ftp.md#rename) or move a file or folder
+* [**Upload**](n8n-nodes-base.ftp.md#upload) a file
 
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
 {% endhint %}
 
 ## Delete <a href="#delete" id="delete"></a>
@@ -50,7 +65,7 @@ This operation includes one parameter: **Path**. Enter the remote path that you 
 
 The delete operation adds one new option: **Folder**. If you turn this option on, the node can delete both folders and files. This configuration also displays one more option:
 
-- **Recursive**: If you turn this option on and you delete a folder or directory, the node will delete all files and directories within the target directory.
+* **Recursive**: If you turn this option on and you delete a folder or directory, the node will delete all files and directories within the target directory.
 
 ## Download <a href="#download" id="download"></a>
 
@@ -76,8 +91,8 @@ Configure this operation with these parameters:
 
 Configure this operation with these parameters:
 
-- **Old Path**: Enter the existing path of the file you'd like to rename in this field.
-- **New Path**: Enter the new path for the renamed file in this field.
+* **Old Path**: Enter the existing path of the file you'd like to rename in this field.
+* **New Path**: Enter the new path for the renamed file in this field.
 
 ### Rename options <a href="#rename-options" id="rename-options"></a>
 
@@ -89,16 +104,15 @@ Configure this operation with these parameters:
 
 * **Path**: Enter the remote path that you would like to connect to.
 * **Binary File**: Select whether you'll upload a binary file (turned on) or enter text content to be uploaded (turned off). Other parameters depend on your selection in this field.
-    * **Input Binary Field**: Displayed if you turn on **Binary File**. Enter the name of the input binary field that contains the file you'll upload in this field.
-    * **File Content**: Displayed if you turn off **Binary File** Enter the text content of the file you'll upload in this field.
+  * **Input Binary Field**: Displayed if you turn on **Binary File**. Enter the name of the input binary field that contains the file you'll upload in this field.
+  * **File Content**: Displayed if you turn off **Binary File** Enter the text content of the file you'll upload in this field.
 
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse FTP integration templates](https://n8n.io/integrations/ftp) or [search all templates](https://n8n.io/workflows/)

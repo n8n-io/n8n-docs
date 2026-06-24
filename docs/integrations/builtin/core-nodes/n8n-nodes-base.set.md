@@ -1,22 +1,37 @@
 ---
 title: Edit Fields (Set)
-description: >-
-  Documentation for the Edit Fields node in n8n, a workflow automation platform.
-  Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
 priority: critical
 nodeTitle: Edit Fields (Set)
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.set.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set
+description: >-
+  Documentation for the Edit Fields node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Edit Fields (Set) <a href="#edit-fields-set" id="edit-fields-set"></a>
+# Edit Fields (Set)
 
 Use the Edit Fields node to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
@@ -39,12 +54,12 @@ The default behavior when you drag a value is:
 
 If you don't want to use expressions:
 
-1. Hover over a field. n8n displays the **Fixed | Expressions** toggle. 
-1. Select **Fixed**.
+1. Hover over a field. n8n displays the **Fixed | Expressions** toggle.
+2. Select **Fixed**.
 
 You can do this for both the name and value of the field.
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](../../.gitbook/assets/drag-drop-fixed-toggle.gif)
+![A gif showing the drag and drop action, as well as changing a field to fixed](<../../.gitbook/assets/drag-drop-fixed-toggle (1).gif>)
 
 ### Keep Only Set Fields <a href="#keep-only-set-fields" id="keep-only-set-fields"></a>
 
@@ -83,8 +98,8 @@ You can prevent this behavior by selecting **Add Option** > **Support Dot Notati
 ```json
 { "number.one": 20 }
 ```
-## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 [Browse Edit Fields (Set) integration templates](https://n8n.io/integrations/set) or [search all templates](https://n8n.io/workflows/)
 
@@ -249,7 +264,3 @@ You get this output:
   }
 ]
 ```
-
-
-
-

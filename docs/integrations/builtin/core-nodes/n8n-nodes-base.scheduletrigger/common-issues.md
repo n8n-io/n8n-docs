@@ -1,9 +1,5 @@
 ---
 title: Schedule Trigger node common issues
-description: >-
-  Documentation for common issues and questions in the Schedule Trigger node in
-  n8n, a workflow automation platform. Includes details of the issue and
-  suggested solutions.
 contentType:
   - integration
   - reference
@@ -15,14 +11,33 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues
 url: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues
+description: >-
+  Documentation for common issues and questions in the Schedule Trigger node in
+  n8n, a workflow automation platform. Includes details of the issue and
+  suggested solutions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Schedule Trigger node common issues <a href="#schedule-trigger-node-common-issues" id="schedule-trigger-node-common-issues"></a>
+# Common issues
 
-Here are some common errors and issues with the [Schedule Trigger node](README.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Schedule Trigger node](./) and steps to resolve or troubleshoot them.
 
 ## Invalid cron expression <a href="#invalid-cron-expression" id="invalid-cron-expression"></a>
 
@@ -30,8 +45,8 @@ This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n
 
 To debug, check that the following:
 
-* That your cron expression follows the syntax used in the [cron examples](README.md#custom-cron-interval)
-* That your cron expression (after removing the [seconds column](README.md#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
+* That your cron expression follows the syntax used in the [cron examples](./#custom-cron-interval)
+* That your cron expression (after removing the [seconds column](./#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
 
 ## Scheduled workflows run at the wrong time <a href="#scheduled-workflows-run-at-the-wrong-time" id="scheduled-workflows-run-at-the-wrong-time"></a>
 
@@ -39,7 +54,7 @@ If the Schedule Trigger node runs at the wrong time, it may mean that you need t
 
 ### Adjust the timezone globally <a href="#adjust-the-timezone-globally" id="adjust-the-timezone-globally"></a>
 
-If you're using [n8n Cloud](/manage-cloud/overview.md), follow the instructions on the [set the Cloud instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone) page to ensure that n8n executes in sync with your local time.
+If you're using [n8n Cloud](../../../../../manage-cloud/overview.md), follow the instructions on the [set the Cloud instance timezone](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/set-your-timezone) page to ensure that n8n executes in sync with your local time.
 
 If you're [self hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization).
 
@@ -48,10 +63,10 @@ If you're [self hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n
 To set the timezone for an individual workflow:
 
 1. Open the workflow on the canvas.
-1. Select the <img src="../../../.gitbook/assets/three-dots-horizontal.png" alt="three dots menu" data-size="line"> **Three dots icon** in the upper-right corner.
-1. Select **Settings**.
-1. Change the **Timezone** setting.
-1. Select **Save**.
+2. Select the <img src="../../../.gitbook/assets/three-dots-horizontal (2).png" alt="three dots menu" data-size="line"> **Three dots icon** in the upper-right corner.
+3. Select **Settings**.
+4. Change the **Timezone** setting.
+5. Select **Save**.
 
 ### Variables not working as expected <a href="#variables-not-working-as-expected" id="variables-not-working-as-expected"></a>
 

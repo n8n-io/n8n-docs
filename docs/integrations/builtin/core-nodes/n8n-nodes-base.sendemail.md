@@ -1,29 +1,44 @@
 ---
 title: Send Email
-description: >-
-  Documentation for the Send Email node in n8n, a workflow automation platform.
-  Includes guidance on usage, and links to examples.
 contentType:
   - integration
   - reference
 priority: high
 nodeTitle: Send Email
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sendemail'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sendemail'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sendemail
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sendemail
+description: >-
+  Documentation for the Send Email node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Send Email <a href="#send-email" id="send-email"></a>
+# Send Email
 
 The Send Email node sends emails using an SMTP email server.
 
 {% hint style="info" %}
 **Credential**
 
-You can find authentication information for this node [here](../credentials/send-email/README.md).
+You can find authentication information for this node [here](../credentials/send-email/).
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -34,7 +49,7 @@ Configure this node using the following parameters.
 
 ### Credential to connect with <a href="#credential-to-connect-with" id="credential-to-connect-with"></a>
 
-Select or create an [SMTP account credential](../credentials/send-email/README.md) for the node to use.
+Select or create an [SMTP account credential](../credentials/send-email/) for the node to use.
 
 ### Operation <a href="#operation" id="operation"></a>
 
@@ -43,7 +58,7 @@ The Send Email node supports the following operations:
 * **Send**: Send an email.
 * **Send and Wait for Response**: Send an email and wait for a response from the receiver. This operation pauses the workflow execution until the user submits a response.
 
-Choosing **Send and Wait for Response** will activate parameters and options as discussed in [waiting for a response](#waiting-for-a-response).
+Choosing **Send and Wait for Response** will activate parameters and options as discussed in [waiting for a response](n8n-nodes-base.sendemail.md#waiting-for-a-response).
 
 ### From Email <a href="#from-email" id="from-email"></a>
 
@@ -83,7 +98,7 @@ Set whether to include the phrase `This email was sent automatically with n8n` a
 
 Enter the name of the binary properties that contain data to add as an attachment. Some tips on using this option:
 
-* Use the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to upload the file to your workflow.
+* Use the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to upload the file to your workflow.
 * Add multiple attachments by entering a comma-separated list of binary properties.
 * Reference embedded images or other content within the body of an email message, for example `<img src="cid:image_1">`.
 
@@ -163,6 +178,5 @@ The Send Email (SMTP) node does not support setting headers like `In-Reply-To` a
 * **Workaround**: Use the Gmail node’s **Reply to a message** operation, or a custom node that supports custom headers.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse Send Email integration templates](https://n8n.io/integrations/send-email) or [search all templates](https://n8n.io/workflows/)

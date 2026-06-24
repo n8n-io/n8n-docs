@@ -1,8 +1,5 @@
 ---
 title: Notion Trigger node documentation
-description: >-
-  Learn how to use the Notion Trigger node in n8n. Follow technical
-  documentation to integrate Notion Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,30 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger
+description: >-
+  Learn how to use the Notion Trigger node in n8n. Follow technical
+  documentation to integrate Notion Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Notion Trigger node <a href="#notion-trigger-node" id="notion-trigger-node"></a>
+# Notion Trigger
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
@@ -41,9 +56,8 @@ For usage examples and templates to help you get started, refer to n8n's [Notion
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Notion. You can find the node docs [here](../app-nodes/n8n-nodes-base.notion/README.md).
+n8n provides an app node for Notion. You can find the node docs [here](../app-nodes/n8n-nodes-base.notion/).
 
 View [example workflows and related content](https://n8n.io/integrations/notion-trigger-beta/) on n8n's website.
 
 Refer to [Notion's documentation](https://developers.notion.com/) for details about their API.
-

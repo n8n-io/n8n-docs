@@ -1,34 +1,50 @@
 ---
 title: WhatsApp Business Cloud credentials
-description: >-
-  Documentation for WhatsApp Business Cloud credentials. Use these credentials
-  to authenticate WhatsApp Business Cloud in n8n, a workflow automation
-  platform.
 contentType:
   - integration
   - reference
 priority: high
 nodeTitle: WhatsApp Business Cloud credentials
 originalFilePath: integrations/builtin/credentials/whatsapp.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/whatsapp'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/whatsapp'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/whatsapp
+url: https://docs.n8n.io/integrations/builtin/credentials/whatsapp
+description: >-
+  Documentation for WhatsApp Business Cloud credentials. Use these credentials
+  to authenticate WhatsApp Business Cloud in n8n, a workflow automation
+  platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# WhatsApp Business Cloud credentials <a href="#whatsapp-business-cloud-credentials" id="whatsapp-business-cloud-credentials"></a>
+# WhatsApp Business Cloud credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md)
-- [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md)
+* [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/)
+* [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md)
 
 ## Requirements <a href="#requirements" id="requirements"></a>
 
 To create credentials for WhatsApp, you need the following Meta assets:
 
-- A [Meta developer](https://developers.facebook.com/docs/development/register) account: A developer account allows you to create and manage Meta apps, including WhatsApp integrations.
+* A [Meta developer](https://developers.facebook.com/docs/development/register) account: A developer account allows you to create and manage Meta apps, including WhatsApp integrations.
+
 <details>
 
 <summary>Set up a Meta developer account</summary>
@@ -40,21 +56,25 @@ To create credentials for WhatsApp, you need the following Meta assets:
 5. Select your occupation or role.
 
 </details>
-- A Meta [business portfolio](https://www.facebook.com/business/help/1710077379203657?id=180505742745347): WhatsApp messaging services require a Meta business portfolio, formerly called a Business Manager account. The UI may still show either option.
+
+\- A Meta \[business portfolio]\(https://www.facebook.com/business/help/1710077379203657?id=180505742745347): WhatsApp messaging services require a Meta business portfolio, formerly called a Business Manager account. The UI may still show either option.
+
 <details>
 
 <summary>Set up a Meta business portfolio</summary>
 
 1. Visit the [Facebook Business site](https://business.facebook.com).
 2. Select **Create an account**.
-	* If you already have a Facebook Business account and portfolio, but want a new portfolio, open the business portfolio selector in the left-side menu and select **Create a business portfolio**.
+   * If you already have a Facebook Business account and portfolio, but want a new portfolio, open the business portfolio selector in the left-side menu and select **Create a business portfolio**.
 3. Enter a **Business portfolio name**.
 4. Enter your **name**.
 5. Enter a **business email**.
 6. Select **Submit** or **Create**.
 
 </details>
-- A Meta [business app](https://developers.facebook.com/docs/development/create-an-app/) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
+
+\- A Meta \[business app]\(https://developers.facebook.com/docs/development/create-an-app/) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
+
 <details>
 
 <summary>Set up a Meta business app with WhatsApp</summary>
@@ -70,11 +90,10 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 </details>
 
-
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- API key: Use for the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md) node.
-- OAuth2: Use for the [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node.
+* API key: Use for the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/) node.
+* OAuth2: Use for the [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -84,12 +103,12 @@ Meta classifies users who create WhatsApp business apps as Tech Providers; refer
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
-You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md) node.
+You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/) node.
 
 To configure this credential, you'll need:
 
-- An API **Access Token**
-- A **Business Account ID**
+* An API **Access Token**
+* A **Business Account ID**
 
 To generate an access token, follow these steps:
 
@@ -110,8 +129,8 @@ You need WhatsApp OAuth2 credentials to use the [WhatsApp Trigger](../trigger-no
 
 To configure this credential, you'll need:
 
-- A **Client ID**
-- A **Client Secret**
+* A **Client ID**
+* A **Client Secret**
 
 To retrieve these items, follow these steps:
 

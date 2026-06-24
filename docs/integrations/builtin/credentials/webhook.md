@@ -1,26 +1,41 @@
 ---
 title: Webhook credentials
-description: >-
-  Documentation for Webhook credentials. Use these credentials to authenticate
-  Webhook in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: critical
 nodeTitle: Webhook credentials
 originalFilePath: integrations/builtin/credentials/webhook.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/webhook'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/webhook'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/webhook
+url: https://docs.n8n.io/integrations/builtin/credentials/webhook
+description: >-
+  Documentation for Webhook credentials. Use these credentials to authenticate
+  Webhook in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Webhook credentials <a href="#webhook-credentials" id="webhook-credentials"></a>
+# Webhook credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md)
+* [Webhook](../core-nodes/n8n-nodes-base.webhook/)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -28,10 +43,10 @@ You must use the authentication method required by the app or service you want t
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Basic auth
-- Header auth
-- JWT auth
-- None
+* Basic auth
+* Header auth
+* JWT auth
+* None
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/19GkzHr83lKOpnZRz4y7/" %}
 

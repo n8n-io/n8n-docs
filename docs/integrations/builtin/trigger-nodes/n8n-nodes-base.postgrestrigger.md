@@ -1,8 +1,5 @@
 ---
 title: Postgres Trigger node documentation
-description: >-
-  Learn how to use the Postgres Trigger node in n8n. Follow technical
-  documentation to integrate Postgres Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,30 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger
+description: >-
+  Learn how to use the Postgres Trigger node in n8n. Follow technical
+  documentation to integrate Postgres Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Postgres Trigger node <a href="#postgres-trigger-node" id="postgres-trigger-node"></a>
+# Postgres Trigger
 
 Use the Postgres Trigger node to respond to events in [Postgres](https://www.postgresql.org/) and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events.
 
@@ -39,9 +54,9 @@ For usage examples and templates to help you get started, refer to n8n's [Postgr
 You can configure how the node listens for events.
 
 * Select **Listen and Create Trigger Rule**, then choose the events to listen for:
-	* Insert
-	* Update
-	* Delete
+  * Insert
+  * Update
+  * Delete
 * Select **Listen to Channel**, then enter a channel name that the node should monitor.
 
 {% hint style="info" %}
@@ -53,9 +68,8 @@ You can configure how the node listens for events.
 * The user in your Postgres credential must have permissions to create and execute triggers and procedures. In PostgreSQL, this requires superuser access, table ownership, or the TRIGGER privilege - plus CREATE privilege on the schema where the procedure will reside.
 {% endhint %}
 
-
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Postgres. You can find the node docs [here](../app-nodes/n8n-nodes-base.postgres/README.md).
+n8n provides an app node for Postgres. You can find the node docs [here](../app-nodes/n8n-nodes-base.postgres/).
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/) on n8n's website.

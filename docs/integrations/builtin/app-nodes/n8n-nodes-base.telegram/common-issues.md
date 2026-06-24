@@ -1,9 +1,5 @@
 ---
 title: Telegram node common issues
-description: >-
-  Documentation for common issues and questions in the Telegram node in n8n, a
-  workflow automation platform. Includes details of the issue and suggested
-  solutions.
 contentType:
   - integration
   - reference
@@ -14,19 +10,37 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues
+description: >-
+  Documentation for common issues and questions in the Telegram node in n8n, a
+  workflow automation platform. Includes details of the issue and suggested
+  solutions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Telegram node common issues <a href="#telegram-node-common-issues" id="telegram-node-common-issues"></a>
+# Cmmon issues
 
-Here are some common errors and issues with the [Telegram node](README.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Telegram node](./) and steps to resolve or troubleshoot them.
 
 ## Add a bot to a Telegram channel <a href="#add-a-bot-to-a-telegram-channel" id="add-a-bot-to-a-telegram-channel"></a>
 
-For a bot to send a message to a channel, you must add the bot to the channel. If you haven't added the bot to the channel, you'll see an error with a description like:
-`Error: Forbidden: bot is not a participant of the channel`.
+For a bot to send a message to a channel, you must add the bot to the channel. If you haven't added the bot to the channel, you'll see an error with a description like: `Error: Forbidden: bot is not a participant of the channel`.
 
 To add a bot to a channel:
 
@@ -42,7 +56,7 @@ You can only use `@channelusername` on public channels. To interact with a Teleg
 
 There are three ways to get that ID:
 
-1. From the Telegram Trigger: Use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node in your workflow to get a Chat ID. This node can trigger on different events and returns a Chat ID on successful execution.
+1. From the Telegram Trigger: Use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node in your workflow to get a Chat ID. This node can trigger on different events and returns a Chat ID on successful execution.
 2. From your web browser: Open Telegram in a web browser and open the group chat. The group's Chat ID is the series of digits behind the letter "g." Prefix your group Chat ID with a `-` when you enter it in n8n.
 3. Invite Telegram's [@RawDataBot](https://t.me/RawDataBot) to the group: Once you add it, the bot outputs a JSON file that includes a `chat` object. The `id` for that object is the group Chat ID. Then remove the RawDataBot from your group.
 
@@ -52,7 +66,7 @@ The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcast
 
 1. **Loop Over Items node**: Use the [Loop Over Items](../../core-nodes/n8n-nodes-base.splitinbatches.md) node to get at most 30 chat IDs from your database.
 2. **Telegram node**: Connect the Telegram node with the Loop Over Items node. Use the **Expression Editor** to select the Chat IDs from the Loop Over Items node.
-3. **Code node**: Connect the [Code](../../core-nodes/n8n-nodes-base.code/README.md) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
+3. **Code node**: Connect the [Code](../../core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
 
 You can also use this [workflow](https://n8n.io/workflows/772).
 

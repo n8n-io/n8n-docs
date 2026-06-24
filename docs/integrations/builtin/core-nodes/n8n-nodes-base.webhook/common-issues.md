@@ -1,9 +1,5 @@
 ---
 title: Webhook node common issues
-description: >-
-  Documentation for common issues and questions in the Webhook node in n8n, a
-  workflow automation platform. Includes details of the issues and suggested
-  solutions.
 contentType:
   - integration
   - reference
@@ -14,28 +10,47 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues
 url: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues
+description: >-
+  Documentation for common issues and questions in the Webhook node in n8n, a
+  workflow automation platform. Includes details of the issues and suggested
+  solutions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Common issues and questions <a href="#common-issues-and-questions" id="common-issues-and-questions"></a>
+# Common issues
 
-Here are some common issues and questions for the [Webhook node](README.md) and suggested solutions.
+Here are some common issues and questions for the [Webhook node](./) and suggested solutions.
 
 ## Listen for multiple HTTP methods <a href="#listen-for-multiple-http-methods" id="listen-for-multiple-http-methods"></a>
 
 By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:
 
 1. Open the node **Settings**.
-1. Turn on **Allow Multiple HTTP Methods**.
-1. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
+2. Turn on **Allow Multiple HTTP Methods**.
+3. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
 
 The Webhook node has an output for each method, so you can perform different actions depending on the method.
 
 ## Use the HTTP Request node to trigger the Webhook node <a href="#use-the-http-request-node-to-trigger-the-webhook-node" id="use-the-http-request-node-to-trigger-the-webhook-node"></a>
 
-The [HTTP Request](../n8n-nodes-base.httprequest/README.md) node makes HTTP requests to the URL you specify.
+The [HTTP Request](../n8n-nodes-base.httprequest/) node makes HTTP requests to the URL you specify.
 
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
@@ -46,10 +61,10 @@ The [HTTP Request](../n8n-nodes-base.httprequest/README.md) node makes HTTP requ
 
 ## Use curl to trigger the Webhook node <a href="#use-curl-to-trigger-the-webhook-node" id="use-curl-to-trigger-the-webhook-node"></a>
 
-You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node. 
+You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node.
 
 {% hint style="info" %}
-In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
+In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.\
 The examples make GET requests. You can use whichever HTTP method you set in **HTTP Method**.
 {% endhint %}
 
@@ -76,6 +91,7 @@ Make an HTTP request to send a file:
 ```sh
 curl --request POST <https://your-n8n.url/webhook/path> --form 'key=@/path/to/file'
 ```
+
 Replace `/path/to/file` with the path of the file you want to send.
 
 ## Send a response of type string <a href="#send-a-response-of-type-string" id="send-a-response-of-type-string"></a>
@@ -100,10 +116,10 @@ n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a *
 
 While building or testing a workflow, use the **Test URL**. Once you're ready to use your Webhook URL in production, use the **Production URL**.
 
-| **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
-| :--- | --- | --- | :---: |
-| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | ✅ |
-| Production URL | Publish the workflow | Until workflow is unpublished | ❌ |
+| **URL type**   | **How to trigger**                                                         | **Listening duration**        | **Data shown in editor UI?** |
+| -------------- | -------------------------------------------------------------------------- | ----------------------------- | :--------------------------: |
+| Test URL       | Select **Listen for test event** and trigger a test event from the source. | 120 seconds                   |               ✅              |
+| Production URL | Publish the workflow                                                       | Until workflow is unpublished |               ❌              |
 
 Refer to [Workflow development](workflow-development.md) for more information.
 

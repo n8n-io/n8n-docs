@@ -1,9 +1,5 @@
 ---
 title: Google Sheets node common issues
-description: >-
-  Documentation for common questions and solutions in the Google Sheets node in
-  n8n, a workflow automation platform. Includes details of the issue and
-  suggested resolutions.
 contentType:
   - integration
   - reference
@@ -14,14 +10,33 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues
+description: >-
+  Documentation for common questions and solutions in the Google Sheets node in
+  n8n, a workflow automation platform. Includes details of the issue and
+  suggested resolutions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Google Sheets node common issues <a href="#google-sheets-node-common-issues" id="google-sheets-node-common-issues"></a>
+# Common issues
 
-Here are some common errors and issues with the [Google Sheets node](README.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets node](./) and steps to resolve or troubleshoot them.
 
 ## Append an array <a href="#append-an-array" id="append-an-array"></a>
 
@@ -30,15 +45,14 @@ To insert an array of data into Google Sheets, you must convert the array into a
 To do so, consider using:
 
 1. The [Split Out](../../core-nodes/n8n-nodes-base.splitout.md) node.
-1. The [AI Transform](../../core-nodes/n8n-nodes-base.aitransform.md) node. For example, try entering something like:
+2.  The [AI Transform](../../core-nodes/n8n-nodes-base.aitransform.md) node. For example, try entering something like:
+
     ```
     Convert 'languages' array to JSON (key, value) pairs.
     ```
-1. The [Code node](../../core-nodes/n8n-nodes-base.code/README.md).
-
+3. The [Code node](../../core-nodes/n8n-nodes-base.code/).
 
 ## Column names were updated after the node's setup <a href="#column-names-were-updated-after-the-nodes-setup" id="column-names-were-updated-after-the-nodes-setup"></a>
-
 
 You'll receive this error if the Google Sheet's column names have changed since you set up the node.
 

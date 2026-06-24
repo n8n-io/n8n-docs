@@ -1,28 +1,43 @@
 ---
 title: Webhook node documentation
-description: >-
-  Learn how to use the Webhook node in n8n. Follow technical documentation to
-  integrate Webhook node into your workflows.
 priority: critical
 contentType:
   - integration
   - reference
-tags:
-  - webhook set route parameters
-  - get webhook URL
-  - call workflow externally
 hide:
   - tags
 nodeTitle: n8n-nodes-base.webhook
 originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook'
-url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook'
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook
+description: >-
+  Learn how to use the Webhook node in n8n. Follow technical documentation to
+  integrate Webhook node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+tags:
+  - webhook set route parameters
+  - get webhook URL
+  - call workflow externally
 ---
 
-# Webhook node <a href="#webhook-node" id="webhook-node"></a>
+# Webhook
 
 Use the Webhook node to create [webhooks](https://en.wikipedia.org/wiki/Webhook), which can receive data from apps and services when an event occurs. It's a trigger node, which means it can start an n8n workflow. This allows services to connect to n8n and run a workflow.
 
@@ -44,10 +59,7 @@ The Webhook node has two **Webhook URLs**: test and production. n8n displays the
 
 Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
-<figure>
-<img src="../../../.gitbook/assets/webhook-urls.png" alt="">
-<figcaption>Sample Webhook URLs in the Webhook node's Parameters tab</figcaption>
-</figure>
+<figure><img src="../../../.gitbook/assets/webhook-urls.png" alt=""><figcaption><p>Sample Webhook URLs in the Webhook node's Parameters tab</p></figcaption></figure>
 
 * **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Execute workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you publish the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
@@ -61,32 +73,32 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 * HEAD
 * PATCH
 * POST
-* PUT<br>
+*   PUT<br>
 
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Webhook max payload</strong></p><p>The webhook maximum payload size is 16MB. If you're self-hosting n8n, you can change this using the <a href="https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints">endpoint environment variable</a> <code>N8N_PAYLOAD_SIZE_MAX</code>.</p></div>
 
 ### Path <a href="#path" id="path"></a>
 
-By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. 
+By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes.
 
 You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
 
 The **Path** field can take the following formats:
 
-- `/:variable`
-- `/path/:variable`
-- `/:variable/path`
-- `/:variable1/path/:variable2`
-- `/:variable1/:variable2`
+* `/:variable`
+* `/path/:variable`
+* `/:variable/path`
+* `/:variable1/path/:variable2`
+* `/:variable1/:variable2`
 
 ### Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 You can require authentication for any service calling your webhook URL. Choose from these authentication methods:
 
-- Basic auth
-- Header auth
-- JWT auth
-- None
+* Basic auth
+* Header auth
+* JWT auth
+* None
 
 Refer to [Webhook credentials](../../credentials/webhook.md) for more information on setting up each credential type.
 
@@ -95,7 +107,7 @@ Refer to [Webhook credentials](../../credentials/webhook.md) for more informatio
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node.
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
 
 ### Response Code <a href="#response-code" id="response-code"></a>
 
@@ -127,19 +139,19 @@ Select **Add Option** to view more configuration options. The available options 
 * **Response Headers**: Send extra headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
 
-| Option | Required node configuration |
-| ------ | --------------------------- | 
-| Allowed Origins (CORS) | Any |
-| Binary Property | Either: <br />HTTP Method > POST <br /> HTTP Method > PATCH <br /> HTTP Method > PUT |
-| Ignore Bots | Any |
-| IP(s) Whitelist | Any |
-| Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
-| No Response Body | Respond > Immediately |
-| Raw Body | Any |
-| Response Code | Any except Respond > Using 'Respond to Webhook' Node |
-| Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
-| Response Data | Respond > Immediately |
-| Response Headers | Any |
+| Option                 | Required node configuration                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------- |
+| Allowed Origins (CORS) | Any                                                                                   |
+| Binary Property        | <p>Either:<br>HTTP Method > POST<br>HTTP Method > PATCH<br>HTTP Method > PUT</p>      |
+| Ignore Bots            | Any                                                                                   |
+| IP(s) Whitelist        | Any                                                                                   |
+| Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
+| No Response Body       | Respond > Immediately                                                                 |
+| Raw Body               | Any                                                                                   |
+| Response Code          | Any except Respond > Using 'Respond to Webhook' Node                                  |
+| Response Content-Type  | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
+| Response Data          | Respond > Immediately                                                                 |
+| Response Headers       | Any                                                                                   |
 
 ## How n8n secures HTML responses <a href="#how-n8n-secures-html-responses" id="how-n8n-secures-html-responses"></a>
 
@@ -147,13 +159,12 @@ Starting with n8n version 1.103.0, n8n automatically wraps HTML responses to web
 
 This has the following implications:
 
-- HTML renders in a sandboxed iframe instead of directly in the parent document.
-- JavaScript code that attempts to access the top-level window or local storage will fail.
-- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
-- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
+* HTML renders in a sandboxed iframe instead of directly in the parent document.
+* JavaScript code that attempts to access the top-level window or local storage will fail.
+* Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+* Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse n8n-nodes-base.webhook integration templates](https://n8n.io/integrations/webhook) or [search all templates](https://n8n.io/workflows/)
 

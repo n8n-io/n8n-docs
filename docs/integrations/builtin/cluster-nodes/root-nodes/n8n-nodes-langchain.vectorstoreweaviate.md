@@ -1,8 +1,5 @@
 ---
 title: Weaviate Vector Store node documentation
-description: >-
-  Learn how to use the Weaviate Vector Store node in n8n. Follow technical
-  documentation to integrate Weaviate Vector Store node into your workflows.
 contentType:
   - integration
   - reference
@@ -14,15 +11,32 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate
+description: >-
+  Learn how to use the Weaviate Vector Store node in n8n. Follow technical
+  documentation to integrate Weaviate Vector Store node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Weaviate Vector Store node <a href="#weaviate-vector-store-node" id="weaviate-vector-store-node"></a>
+# Weaviate Vector Store
 
-Use the Weaviate node to interact with your Weaviate collection as a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store). You can insert documents into or retrieve documents from a vector database. You can also retrieve documents to provide them to a retriever connected to a [chain](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-chain) or connect this node directly to an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) to use as a [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool).
-On this page, you'll find the node parameters for the Weaviate node, and links to more resources.
+Use the Weaviate node to interact with your Weaviate collection as a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store). You can insert documents into or retrieve documents from a vector database. You can also retrieve documents to provide them to a retriever connected to a [chain](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-chain) or connect this node directly to an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) to use as a [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool). On this page, you'll find the node parameters for the Weaviate node, and links to more resources.
 
 {% hint style="info" %}
 **Credentials**
@@ -40,36 +54,31 @@ You can use the Weaviate Vector Store node in the following patterns.
 
 You can use the Weaviate Vector Store as a regular node to insert or get documents. This pattern places the Weaviate Vector Store in the regular connection flow without using an agent.
 
-
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Weaviate Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
+You can connect the Weaviate Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Weaviate Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Weaviate Vector Store node to fetch documents from the Weaviate Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
-
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Weaviate Vector Store node to fetch documents from the Weaviate Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 ### Use the Vector Store Question Answer Tool to answer questions <a href="#use-the-vector-store-question-answer-tool-to-answer-questions" id="use-the-vector-store-question-answer-tool-to-answer-questions"></a>
 
 Another pattern uses the [Vector Store Question Answer Tool](../sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Weaviate Vector Store node. Rather than connecting the Weaviate Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
-	
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 {% hint style="info" %}
 **Multitenancy**
 
-You can separate your data into isolated tenants for the same collection (for example, for different customers). For that, you must always provide a [Tenant Name](#tenant-name) both when inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy).
+You can separate your data into isolated tenants for the same collection (for example, for different customers). For that, you must always provide a [Tenant Name](n8n-nodes-langchain.vectorstoreweaviate.md#tenant-name) both when inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy).
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wxaa18Qg530lwp4KjOwq/" %}
 
-
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
-
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 * **Prompt**: Enter the search query.
@@ -95,7 +104,7 @@ You can separate your data into isolated tenants for the same collection (for ex
 
 Whether to include document metadata.
 
-You can use this with the [Get Many](#get-many) and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
+You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many) and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
@@ -105,7 +114,7 @@ You can use this with the [Get Many](#get-many) and [Retrieve Documents (As Tool
 
 ### Search Filters <a href="#search-filters" id="search-filters"></a>
 
-Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
+Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent) operation modes.
 
 When searching for data, use this to match metadata associated with documents. You can learn more about the operators and query structure in [Weaviate's conditional filters documentation](https://docs.weaviate.io/weaviate/api/graphql/filters).
 
@@ -131,7 +140,7 @@ You can use both `AND` and `OR` with different operators. Operators are case ins
 Supported operators:
 
 | Operator           | Required Field(s)                                    | Description                                                                                                                                                                       |
-|--------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `'equal'`          | `valueString` or `valueNumber`                       | Checks if the property is equal to the given string or number.                                                                                                                    |
 | `'like'`           | `valueString`                                        | Checks if the string property matches a pattern (for example, sub-string match).                                                                                                  |
 | `'containsAny'`    | `valueTextArray` (string\[])                         | Checks if the property contains **any** of the given values.                                                                                                                      |
@@ -147,7 +156,7 @@ When inserting data, the document loader sets the metadata. Refer to [Default Da
 
 You can define which metadata keys you want Weaviate to return on your queries. This can reduce network load, as you will only get properties you have defined. Returns all properties from the server by default.
 
-Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
+Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent) operation modes.
 
 ### Hybrid: Query Text <a href="#hybrid-query-text" id="hybrid-query-text"></a>
 
@@ -162,8 +171,9 @@ Whether to show the score fused between hybrid and vector search explanation.
 Select the fusion type for combining vector and keyword search results. [Learn more about fusion algorithms](https://weaviate.io/learn/knowledgecards/fusion-algorithm).
 
 Options:
-- **Relative Score**: Uses relative score fusion
-- **Ranked**: Uses ranked fusion
+
+* **Relative Score**: Uses relative score fusion
+* **Ranked**: Uses ranked fusion
 
 ### Hybrid: Auto Cut Limit <a href="#hybrid-auto-cut-limit" id="hybrid-auto-cut-limit"></a>
 
@@ -217,7 +227,7 @@ A proxy to use for gRPC requests.
 
 ### Clear Data <a href="#clear-data" id="clear-data"></a>
 
-Available for the [Insert Documents](#insert-documents) operation mode.
+Available for the [Insert Documents](n8n-nodes-langchain.vectorstoreweaviate.md#insert-documents) operation mode.
 
 Whether to clear the collection or tenant before inserting new data.
 

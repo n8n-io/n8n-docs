@@ -1,8 +1,5 @@
 ---
 title: LangChain Code node documentation
-description: >-
-  Learn how to use the LangChain Code node in n8n. Follow technical
-  documentation to integrate LangChain Code node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,12 +10,30 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code
+description: >-
+  Learn how to use the LangChain Code node in n8n. Follow technical
+  documentation to integrate LangChain Code node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# LangChain Code node <a href="#langchain-code-node" id="langchain-code-node"></a>
+# LangChain Code
 
 Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it. By configuring the LangChain Code node connectors you can use it as a normal node, root node or sub-node.
 
@@ -42,7 +57,7 @@ This node is only available on self-hosted n8n.
 
 Add your custom code. Choose either **Execute** or **Supply Data** mode. You can only use one mode.
 
-Unlike the [Code node](../../core-nodes/n8n-nodes-base.code/README.md), the LangChain Code node doesn't support Python.
+Unlike the [Code node](../../core-nodes/n8n-nodes-base.code/), the LangChain Code node doesn't support Python.
 
 * **Execute**: use the LangChain Code node like n8n's own Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
 * **Supply Data**: use the LangChain Code node as a sub-node, sending data to a root node. This uses an output other than main.
@@ -51,13 +66,13 @@ By default, you can't load built-in or external modules in this node. Self-hoste
 
 ### Inputs <a href="#inputs" id="inputs"></a>
 
-Choose the input types. 
+Choose the input types.
 
 The main input is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** code is required.
 
 ### Outputs <a href="#outputs" id="outputs"></a>
 
-Choose the output types. 
+Choose the output types.
 
 The main output is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** code is required.
 
@@ -67,12 +82,12 @@ By configuring the LangChain Code node connectors (inputs and outputs) you can u
 
 ![Screenshot of a workflow with four LangChain nodes, configured as different node types](../../../.gitbook/assets/create-node-types.png)
 
-| Node type | Inputs | Outputs | Code mode |
-| --------- | ------ | ------- | --------- |
-| App node. Similar to the [Code node](../../core-nodes/n8n-nodes-base.code/README.md). | Main | Main | Execute |
-| Root node | Main; at least one other type | Main | Execute |
-| Sub-node | - | A type other than main. Must match the input type you want to connect to. | Supply Data |
-| Sub-node with sub-nodes | A type other than main |A type other than main. Must match the input type you want to connect to. | Supply Data |
+| Node type                                                                    | Inputs                        | Outputs                                                                   | Code mode   |
+| ---------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------- | ----------- |
+| App node. Similar to the [Code node](../../core-nodes/n8n-nodes-base.code/). | Main                          | Main                                                                      | Execute     |
+| Root node                                                                    | Main; at least one other type | Main                                                                      | Execute     |
+| Sub-node                                                                     | -                             | A type other than main. Must match the input type you want to connect to. | Supply Data |
+| Sub-node with sub-nodes                                                      | A type other than main        | A type other than main. Must match the input type you want to connect to. | Supply Data |
 
 ## Built-in methods <a href="#built-in-methods" id="built-in-methods"></a>
 
@@ -82,10 +97,8 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse LangChain Code node documentation integration templates](https://n8n.io/integrations/langchain-code) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
-

@@ -1,23 +1,38 @@
 ---
 title: n8n Integrations Documentation and Guides
-description: >-
-  Access n8n integrations documentation and guides. Find comprehensive resources
-  to help you master app integrations using different types of nodes to improve
-  your automation workflows.
 contentType: overview
 hide:
   - feedback
   - kapaButton
 nodeTitle: Integrations
 originalFilePath: integrations/index.md
-originalUrl: 'https://docs.n8n.io/integrations'
-url: 'https://docs.n8n.io/integrations/'
+originalUrl: https://docs.n8n.io/integrations
+url: https://docs.n8n.io/integrations/
+description: >-
+  Access n8n integrations documentation and guides. Find comprehensive resources
+  to help you master app integrations using different types of nodes to improve
+  your automation workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Integrations <a href="#integrations" id="integrations"></a>
+# Nodes
 
 n8n calls integrations nodes.
 
@@ -29,7 +44,7 @@ n8n includes a collection of built-in integrations. Refer to [Built-in nodes](bu
 
 ## Community nodes <a href="#community-nodes" id="community-nodes"></a>
 
-As well as using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](community-nodes/installation-and-management/README.md) for more information.
+As well as using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](community-nodes/installation-and-management/) for more information.
 
 ## Credential-only nodes and custom operations <a href="#credential-only-nodes-and-custom-operations" id="credential-only-nodes-and-custom-operations"></a>
 
@@ -39,11 +54,11 @@ Refer to [Custom operations](builtin/custom-api-actions-for-existing-nodes.md) f
 
 ## Generic integrations <a href="#generic-integrations" id="generic-integrations"></a>
 
-If you need to connect to a service where n8n doesn't have a node, or a credential-only node, you can still use the [HTTP Request](builtin/core-nodes/n8n-nodes-base.httprequest/README.md) node. Refer to the node page for details on how to set up authentication and create your API call.
+If you need to connect to a service where n8n doesn't have a node, or a credential-only node, you can still use the [HTTP Request](builtin/core-nodes/n8n-nodes-base.httprequest/) node. Refer to the node page for details on how to set up authentication and create your API call.
 
 ## Where to go next <a href="#where-to-go-next" id="where-to-go-next"></a>
 
 * If you want to create your own node, head over to the [Creating Nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) section.
 * Check out [Community nodes](community-nodes/using-community-nodes.md) to learn about installing and managing community-built nodes.
-* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](builtin/core-nodes/README.md), [Actions](builtin/app-nodes/README.md), and [Triggers](builtin/trigger-nodes/README.md).
-* If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](builtin/credentials/README.md) section.
+* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](builtin/core-nodes/), [Actions](builtin/app-nodes/), and [Triggers](builtin/trigger-nodes/).
+* If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](builtin/credentials/) section.

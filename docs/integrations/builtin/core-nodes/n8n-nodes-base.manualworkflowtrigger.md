@@ -1,8 +1,5 @@
 ---
 title: Manual Trigger node documentation
-description: >-
-  Learn how to use the Manual Trigger node in n8n. Follow technical
-  documentation to integrate Manual Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,16 +10,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger
+description: >-
+  Learn how to use the Manual Trigger node in n8n. Follow technical
+  documentation to integrate Manual Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Manual Trigger node <a href="#manual-trigger-node" id="manual-trigger-node"></a>
+# Manual Trigger
 
 Use this node if you want to start a workflow by selecting **Execute Workflow** and don't want any option for the workflow to run automatically.
 
-Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](n8n-nodes-base.scheduletrigger/README.md) firing on a set schedule.
+Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](n8n-nodes-base.scheduletrigger/) firing on a set schedule.
 
 The Manual Trigger node serves as the workflow trigger for workflows that don't have an automatic trigger.
 
@@ -35,9 +50,7 @@ Use this trigger:
 
 Here are some common errors and issues with the Manual Trigger node and steps to resolve or troubleshoot them.
 
-
 ### Only one 'Manual Trigger' node is allowed in a workflow <a href="#only-one-manual-trigger-node-is-allowed-in-a-workflow" id="only-one-manual-trigger-node-is-allowed-in-a-workflow"></a>
-
 
 This error displays if you try to add a Manual Trigger node to a workflow which already includes a Manual Trigger node.
 

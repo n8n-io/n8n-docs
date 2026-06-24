@@ -1,8 +1,5 @@
 ---
 title: Ollama Model node documentation
-description: >-
-  Learn how to use the Ollama Model node in n8n. Follow technical documentation
-  to integrate Ollama Model node into your workflows.
 contentType:
   - integration
   - reference
@@ -14,18 +11,36 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama
+description: >-
+  Learn how to use the Ollama Model node in n8n. Follow technical documentation
+  to integrate Ollama Model node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Ollama Model node <a href="#ollama-model-node" id="ollama-model-node"></a>
+# Ollama Model
 
 The Ollama Model node allows you use local Llama 2 models.
 
 On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
 
-This node lacks tools support, so it won't work with the [AI Agent](../../root-nodes/n8n-nodes-langchain.agent/README.md) node. Instead, connect it with the [Basic LLM Chain](../../root-nodes/n8n-nodes-langchain.chainllm.md) node.
+This node lacks tools support, so it won't work with the [AI Agent](../../root-nodes/n8n-nodes-langchain.agent/) node. Instead, connect it with the [Basic LLM Chain](../../root-nodes/n8n-nodes-langchain.chainllm.md) node.
 
 {% hint style="info" %}
 **Credentials**
@@ -38,10 +53,10 @@ You can find authentication information for this node [here](../../../credential
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Model**: Select the model that generates the completion. Choose from:
-	* **Llama2**
-	* **Llama2 13B**
-	* **Llama2 70B**
-	* **Llama2 Uncensored**
+  * **Llama2**
+  * **Llama2 13B**
+  * **Llama2 70B**
+  * **Llama2 Uncensored**
 
 Refer to the Ollama [Models Library documentation](https://ollama.com/library) for more information about available models.
 
@@ -52,7 +67,6 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library) f
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
 
 [Browse n8n-nodes-langchain.lmollama integration templates](https://n8n.io/integrations/ollama-model) or [search all templates](https://n8n.io/workflows/)
 
@@ -65,7 +79,5 @@ Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integ
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
-
-
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ou1SzleSsYddnaSSV2H2/" %}

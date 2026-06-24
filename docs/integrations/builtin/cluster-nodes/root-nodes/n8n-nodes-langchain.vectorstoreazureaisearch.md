@@ -1,9 +1,5 @@
 ---
 title: Azure AI Search Vector Store node documentation
-description: >-
-  Learn how to use the Azure AI Search Vector Store node in n8n. Follow
-  technical documentation to integrate Azure AI Search Vector Store node into
-  your workflows.
 contentType:
   - integration
   - reference
@@ -15,12 +11,31 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreazureaisearch
+description: >-
+  Learn how to use the Azure AI Search Vector Store node in n8n. Follow
+  technical documentation to integrate Azure AI Search Vector Store node into
+  your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Azure AI Search Vector Store node <a href="#azure-ai-search-vector-store-node" id="azure-ai-search-vector-store-node"></a>
+# Azure AI Search Vector Store
 
 Azure AI Search (formerly Azure Cognitive Search) is a cloud search service with vector search capabilities for RAG and semantic search applications. Use this node to store, retrieve, and query vector embeddings alongside their content and metadata.
 
@@ -40,17 +55,17 @@ Before using this node, you need:
 
 1. An [Azure subscription](https://azure.microsoft.com)
 2. An [Azure AI Search service](https://learn.microsoft.com/azure/search/search-create-service-portal)
-3. API key authentication configured (admin key for write operations, query key for read-only)
+3.  API key authentication configured (admin key for write operations, query key for read-only)
 
-   See [credentials documentation](../../credentials/azureaisearch.md) for setup instructions.
+    See [credentials documentation](../../credentials/azureaisearch.md) for setup instructions.
 
 ### Index configuration <a href="#index-configuration" id="index-configuration"></a>
 
 The node automatically creates indexes if they don't exist. When auto-creating, the node configures:
 
-- Vector fields with appropriate dimensions based on your embeddings model
-- HNSW algorithm for efficient similarity search with cosine metric
-- Content and metadata fields for filtering and retrieval
+* Vector fields with appropriate dimensions based on your embeddings model
+* HNSW algorithm for efficient similarity search with cosine metric
+* Content and metadata fields for filtering and retrieval
 
 You can also pre-create indexes in Azure Portal for custom configurations. Example schema:
 
@@ -119,13 +134,13 @@ Use the node directly in workflows to insert or retrieve documents without an ag
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-Connect to an [AI agent's](n8n-nodes-langchain.agent/README.md) tool connector to use the vector store as a searchable knowledge base:
+Connect to an [AI agent's](n8n-nodes-langchain.agent/) tool connector to use the vector store as a searchable knowledge base:
 
 AI agent (tools connector) → Azure AI Search Vector Store node
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) for retrieval-augmented generation:
+Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) for retrieval-augmented generation:
 
 Question and Answer Chain (Retriever) → Vector Store Retriever (Vector Store) → Azure AI Search Vector Store
 
@@ -160,49 +175,47 @@ The built-in semantic reranker uses machine learning models to improve relevance
 [Semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) is only available if your index has a semantic configuration defined.
 {% endhint %}
 
-
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
-
-- **Endpoint**: Your Azure AI Search endpoint (format: `https://your-service.search.windows.net`)
-- **Index Name**: The index to query
-- **Limit**: Maximum documents to return (default: 4)
+* **Endpoint**: Your Azure AI Search endpoint (format: `https://your-service.search.windows.net`)
+* **Index Name**: The index to query
+* **Limit**: Maximum documents to return (default: 4)
 
 ### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
-- **Endpoint**: Your Azure AI Search endpoint
-- **Index Name**: The index to use (created automatically if it doesn't exist)
-- **Batch Size**: Number of documents uploaded per batch to Azure AI Search. Adjust based on document size and your service tier limits. This controls upload batching only—embedding generation batching is configured in embedding nodes.
+* **Endpoint**: Your Azure AI Search endpoint
+* **Index Name**: The index to use (created automatically if it doesn't exist)
+* **Batch Size**: Number of documents uploaded per batch to Azure AI Search. Adjust based on document size and your service tier limits. This controls upload batching only—embedding generation batching is configured in embedding nodes.
 
 ### Update Documents parameters <a href="#update-documents-parameters" id="update-documents-parameters"></a>
 
-- **Endpoint**: Your Azure AI Search endpoint
-- **Index Name**: The index to update
+* **Endpoint**: Your Azure AI Search endpoint
+* **Index Name**: The index to update
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool) <a href="#retrieve-documents-parameters-as-vector-store-for-chaintool" id="retrieve-documents-parameters-as-vector-store-for-chaintool"></a>
 
-- **Endpoint**: Your Azure AI Search endpoint
-- **Index Name**: The index to query
+* **Endpoint**: Your Azure AI Search endpoint
+* **Index Name**: The index to query
 
 ### Retrieve Documents (As Tool for AI Agent) parameters <a href="#retrieve-documents-as-tool-for-ai-agent-parameters" id="retrieve-documents-as-tool-for-ai-agent-parameters"></a>
 
-- **Name**: Tool name shown to the LLM
-- **Description**: Explain to the LLM what this tool does. Be specific to help the LLM choose when to use this tool.
-- **Endpoint**: Your Azure AI Search endpoint
-- **Index Name**: The index to query
-- **Limit**: Maximum results to retrieve (e.g., `10` for ten best matches)
+* **Name**: Tool name shown to the LLM
+* **Description**: Explain to the LLM what this tool does. Be specific to help the LLM choose when to use this tool.
+* **Endpoint**: Your Azure AI Search endpoint
+* **Index Name**: The index to query
+* **Limit**: Maximum results to retrieve (e.g., `10` for ten best matches)
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
 ### Options <a href="#options" id="options"></a>
 
-- **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by document fields or metadata. See filter examples below.
-- **Query Mode**: Search strategy to use:
-    - **Vector**: Similarity search using embeddings only
-    - **Keyword**: Full-text search using BM25 ranking
-    - **Hybrid** (default): Combines vector and keyword search with Reciprocal Rank Fusion (RRF)
-    - **Semantic Hybrid**: Hybrid search with [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) for improved relevance
-- **Semantic Configuration**: Name of the semantic configuration to use for [semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview). Defaults to `semantic-search-config` if not specified. Only required if you pre-created an index with a custom semantic configuration name.
+* **Filter**: [OData filter expression](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results by document fields or metadata. See filter examples below.
+* **Query Mode**: Search strategy to use:
+  * **Vector**: Similarity search using embeddings only
+  * **Keyword**: Full-text search using BM25 ranking
+  * **Hybrid** (default): Combines vector and keyword search with Reciprocal Rank Fusion (RRF)
+  * **Semantic Hybrid**: Hybrid search with [semantic reranking](https://learn.microsoft.com/azure/search/semantic-search-overview) for improved relevance
+* **Semantic Configuration**: Name of the semantic configuration to use for [semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview). Defaults to `semantic-search-config` if not specified. Only required if you pre-created an index with a custom semantic configuration name.
 
 {% hint style="info" %}
 **Query mode selection**
@@ -215,40 +228,47 @@ Use **Vector** for semantic similarity, **Keyword** for exact term matching, **H
 Azure AI Search uses [OData syntax](https://learn.microsoft.com/azure/search/search-query-odata-filter) for filtering. Metadata fields are accessed using `metadata/fieldName` format.
 
 **Filter by document ID:**
+
 ```
 id eq '3da6491a-f930-4a4e-9471-c05dcd450ba0'
 ```
 
 **Filter by metadata field:**
+
 ```
 metadata/source eq 'user-guide'
 ```
 
 **Complex AND filter:**
+
 ```
 metadata/category eq 'technology' and metadata/author eq 'John'
 ```
 
 **Complex OR filter:**
+
 ```
 metadata/source eq 'user-guide' or metadata/rating ge 4
 ```
 
 **Numeric comparison:**
+
 ```
 metadata/rating ge 4 and metadata/rating lt 10
 ```
 
 **String matching with NOT:**
+
 ```
 metadata/category eq 'technology' and metadata/title ne 'Deprecated'
 ```
 
 **Supported OData operators:**
-- Comparison: `eq`, `ne`, `gt`, `ge`, `lt`, `le`
-- Logical: `and`, `or`, `not`
-- String functions: `startswith()`, `endswith()`, `contains()`
-- Collection functions: `any()`, `all()`
+
+* Comparison: `eq`, `ne`, `gt`, `ge`, `lt`, `le`
+* Logical: `and`, `or`, `not`
+* String functions: `startswith()`, `endswith()`, `contains()`
+* Collection functions: `any()`, `all()`
 
 {% hint style="info" %}
 **Filter format**
@@ -283,31 +303,35 @@ Azure AI Search uses Hierarchical Navigable Small World (HNSW) graphs for approx
 **Vector dimension mismatch**: Ensure your embedding model dimensions match the index vector field dimensions. Check the index schema to confirm the `vectorSearchDimensions` setting.
 
 **Document insert failures**:
-- Verify write permissions (admin API key required)
-- Check document fields match your index schema
-- Ensure required fields are provided in documents
-- Review batch size settings if experiencing timeouts with large document sets
+
+* Verify write permissions (admin API key required)
+* Check document fields match your index schema
+* Ensure required fields are provided in documents
+* Review batch size settings if experiencing timeouts with large document sets
 
 ### Filter issues <a href="#filter-issues" id="filter-issues"></a>
 
 **Filter not working**:
-- Verify OData syntax is correct
-- Ensure metadata fields use `metadata/` prefix: `metadata/source eq 'value'`
-- Check that filtered fields are marked as `filterable` in your index schema
-- Test with simple filters first (`id eq 'value'`) before complex expressions
+
+* Verify OData syntax is correct
+* Ensure metadata fields use `metadata/` prefix: `metadata/source eq 'value'`
+* Check that filtered fields are marked as `filterable` in your index schema
+* Test with simple filters first (`id eq 'value'`) before complex expressions
 
 **Invalid OData syntax**:
-- Use single quotes for string values: `metadata/source eq 'value'`
-- Use proper operators: `eq`, `ne`, `gt`, `ge`, `lt`, `le`, `and`, `or`, `not`
-- Refer to [OData filter documentation](https://learn.microsoft.com/azure/search/search-query-odata-filter) for syntax details
+
+* Use single quotes for string values: `metadata/source eq 'value'`
+* Use proper operators: `eq`, `ne`, `gt`, `ge`, `lt`, `le`, `and`, `or`, `not`
+* Refer to [OData filter documentation](https://learn.microsoft.com/azure/search/search-query-odata-filter) for syntax details
 
 ### Connection issues <a href="#connection-issues" id="connection-issues"></a>
 
 **Unable to connect**:
-- Verify endpoint URL format: `https://your-service.search.windows.net`
-- Confirm your Azure AI Search service is running and accessible
-- Check network security groups, firewall rules, and private endpoint configurations
-- For Azure-hosted n8n, verify virtual network peering or service endpoint configuration if using private endpoints
+
+* Verify endpoint URL format: `https://your-service.search.windows.net`
+* Confirm your Azure AI Search service is running and accessible
+* Check network security groups, firewall rules, and private endpoint configurations
+* For Azure-hosted n8n, verify virtual network peering or service endpoint configuration if using private endpoints
 
 ### Authentication issues <a href="#authentication-issues" id="authentication-issues"></a>
 
@@ -315,15 +339,14 @@ For authentication troubleshooting including API key errors, refer to the [crede
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Azure AI Search Vector Store node documentation integration templates](https://n8n.io/integrations/azure-ai-search-vector-store) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-- [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
-- [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
-- [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
-- [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
+* [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
+* [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
+* [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
+* [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

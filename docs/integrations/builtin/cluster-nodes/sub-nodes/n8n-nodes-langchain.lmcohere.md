@@ -1,8 +1,5 @@
 ---
 title: Cohere Model node documentation
-description: >-
-  Learn how to use the Cohere Model node in n8n. Follow technical documentation
-  to integrate Cohere Model node into your workflows.
 contentType:
   - integration
   - reference
@@ -12,18 +9,36 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere
+description: >-
+  Learn how to use the Cohere Model node in n8n. Follow technical documentation
+  to integrate Cohere Model node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Cohere Model node <a href="#cohere-model-node" id="cohere-model-node"></a>
+# Cohere Model
 
 Use the Cohere Model node to use Cohere's models.
 
 On this page, you'll find the node parameters for the Cohere Model node, and links to more resources.
 
-This node lacks tools support, so it won't work with the [AI Agent](../root-nodes/n8n-nodes-langchain.agent/README.md) node. Instead, connect it with the [Basic LLM Chain](../root-nodes/n8n-nodes-langchain.chainllm.md) node.
+This node lacks tools support, so it won't work with the [AI Agent](../root-nodes/n8n-nodes-langchain.agent/) node. Instead, connect it with the [Basic LLM Chain](../root-nodes/n8n-nodes-langchain.chainllm.md) node.
 
 {% hint style="info" %}
 **Credentials**
@@ -40,7 +55,6 @@ You can find authentication information for this node [here](../../credentials/c
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Cohere Model node documentation integration templates](https://n8n.io/integrations/cohere-model) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -48,4 +62,3 @@ You can find authentication information for this node [here](../../credentials/c
 Refer to [LangChains's Cohere documentation](https://js.langchain.com/docs/integrations/llms/cohere/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
-

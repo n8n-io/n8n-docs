@@ -2,15 +2,30 @@
 contentType: howto
 nodeTitle: Install verified community nodes
 originalFilePath: integrations/community-nodes/installation/verified-install.md
-originalUrl: 'https://docs.n8n.io/integrations/community-nodes/installation/verified-install'
+originalUrl: https://docs.n8n.io/integrations/community-nodes/installation/verified-install
 url: >-
   https://docs.n8n.io/integrations/community-nodes/installation-and-management/install-verified-community-nodes
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Install verified community nodes in the n8n app <a href="#install-verified-community-nodes-in-the-n8n-app" id="install-verified-community-nodes-in-the-n8n-app"></a>
+# Install verified community nodes
 
 {% hint style="info" %}
 **Limited to n8n instance owners and admins**
@@ -39,6 +54,6 @@ Some users may not want to show verified community nodes in the nodes panel of t
 To uninstall a community node:
 
 1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Three dots options menu" data-size="line">.
+2. On the node you want to install, select **Options** <img src="../../.gitbook/assets/three-dot-options-menu (2).png" alt="Three dots options menu" data-size="line">.
 3. Select **Uninstall package**.
 4. Select **Uninstall Package** in the confirmation modal.

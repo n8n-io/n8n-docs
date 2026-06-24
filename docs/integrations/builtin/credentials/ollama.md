@@ -1,27 +1,42 @@
 ---
 title: Ollama credentials
-description: >-
-  Documentation for the Ollama credentials. Use these credentials to
-  authenticate Ollama in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: high
 nodeTitle: Ollama credentials
 originalFilePath: integrations/builtin/credentials/ollama.md
-originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ollama'
-url: 'https://docs.n8n.io/integrations/builtin/credentials/ollama'
+originalUrl: https://docs.n8n.io/integrations/builtin/credentials/ollama
+url: https://docs.n8n.io/integrations/builtin/credentials/ollama
+description: >-
+  Documentation for the Ollama credentials. Use these credentials to
+  authenticate Ollama in n8n, a workflow automation platform.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Ollama credentials <a href="#ollama-credentials" id="ollama-credentials"></a>
+# Ollama credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/README.md)
-* [Chat Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/README.md)
+* [Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
+* [Chat Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/)
 * [Embeddings Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -30,7 +45,7 @@ Create and run an [Ollama](https://ollama.com/) instance with one user. Refer to
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Instance URL
+* Instance URL
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -42,8 +57,8 @@ Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main
 
 To configure this credential, you'll need:
 
-- The **Base URL** of your Ollama instance or remote authenticated Ollama instances.
-- (Optional) The **API Key** for Bearer token authentication if connecting to a remote, authenticated proxy.
+* The **Base URL** of your Ollama instance or remote authenticated Ollama instances.
+* (Optional) The **API Key** for Bearer token authentication if connecting to a remote, authenticated proxy.
 
 The default **Base URL** is `http://localhost:11434`, but if you've set the `OLLAMA_HOST` environment variable, enter that value. If you have issues connecting to a local n8n server, try `127.0.0.1` instead of `localhost`.
 

@@ -1,8 +1,5 @@
 ---
 title: Supabase Vector Store node documentation
-description: >-
-  Learn how to use the Supabase Vector Store node in n8n. Follow technical
-  documentation to integrate Supabase Vector Store node into your workflows.
 contentType:
   - integration
   - reference
@@ -14,18 +11,34 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase
+description: >-
+  Learn how to use the Supabase Vector Store node in n8n. Follow technical
+  documentation to integrate Supabase Vector Store node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Supabase Vector Store node <a href="#supabase-vector-store-node" id="supabase-vector-store-node"></a>
+# Supabase Vector Store
 
-
-Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain. 
+Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 
 Use the Supabase Vector Store to interact with your Supabase database as [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-chain), or connect it directly to an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) to use as a [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool). You can also update an item in a vector store by its ID.
-
 
 On this page, you'll find the node parameters for the Supabase node, and links to more resources.
 
@@ -36,7 +49,7 @@ You can find authentication information for this node [here](../../credentials/s
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
-	
+
 Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql). If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
@@ -51,13 +64,13 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Supabase Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
+You can connect the Supabase Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Supabase Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Supabase Vector Store node to fetch documents from the Supabase Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Supabase Vector Store node to fetch documents from the Supabase Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the example uses Pinecone, but the pattern in the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Supabase Vector Store.
 
@@ -69,7 +82,6 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-
 ### Operation Mode <a href="#operation-mode" id="operation-mode"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NhmxpkeoTzl1WU1jhcbT/" %}
@@ -78,9 +90,7 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzkuyHx0puco05IkndRC/" %}
 
-
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
-
 
 * **Table Name**: Enter the Supabase table to use.
 * **Prompt**: Enter the search query.
@@ -89,7 +99,6 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 ### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
 * **Table Name**: Enter the Supabase table to use.
-
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters <a href="#retrieve-documents-as-vector-store-for-chaintool-parameters" id="retrieve-documents-as-vector-store-for-chaintool-parameters"></a>
 
@@ -123,7 +132,6 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-
 [Browse Supabase Vector Store node documentation integration templates](https://n8n.io/integrations/supabase-vector-store) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -131,4 +139,3 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 Refer to [LangChain's Supabase documentation](https://js.langchain.com/docs/integrations/vectorstores/supabase/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
-

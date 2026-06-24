@@ -1,8 +1,5 @@
 ---
 title: Gmail Trigger node documentation
-description: >-
-  Learn how to use the Gmail Trigger node in n8n. Follow technical documentation
-  to integrate Gmail Trigger node into your workflows.
 contentType:
   - integration
   - reference
@@ -13,19 +10,37 @@ originalUrl: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger
 url: >-
   https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger
+description: >-
+  Learn how to use the Gmail Trigger node in n8n. Follow technical documentation
+  to integrate Gmail Trigger node into your workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Gmail Trigger node <a href="#gmail-trigger-node" id="gmail-trigger-node"></a>
+# Gmail Trigger
 
 [Gmail](https://www.gmail.com) is an email service developed by Google. The Gmail Trigger node can start a workflow based on events in Gmail.
 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/google/README.md).
+You can find authentication information for this node [here](../../credentials/google/).
 {% endhint %}
 
 {% hint style="info" %}
@@ -42,10 +57,10 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 
 Configure the node with these parameters:
 
-* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](../../credentials/google/README.md) for more information on setting up a new credential.
+* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](../../credentials/google/) for more information on setting up a new credential.
 * **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](poll-mode-options.md) to configure the parameters for each mode type.
 * **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
-    * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+  * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 * **Max Emails per Poll**: Enter the maximum number of emails the node fetches per poll cycle. The default is 10, with a maximum of 50. If there are more unread emails than the limit, the node queues the remaining emails and fetches them in the next poll cycle.
 
 ## Node filters <a href="#node-filters" id="node-filters"></a>
@@ -60,7 +75,7 @@ Use these filters to further refine the node's behavior:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Gmail. You can find the node docs [here](../../app-nodes/n8n-nodes-base.gmail/README.md).
+n8n provides an app node for Gmail. You can find the node docs [here](../../app-nodes/n8n-nodes-base.gmail/).
 
 View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/) on n8n's website.
 

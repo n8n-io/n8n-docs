@@ -3,7 +3,7 @@
 Thanks for your interest in contributing to n8n Docs!
 
 All contribution guidance — how to submit changes, our writing standards, content
-types, and the review process — lives in the **[Contribution Guide](https://docs.n8n.io/contributing/docs-contributing-guide.md)**.
+types, and the review process — lives in the **[Contribution Guide](https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs)**.
 
 A few quick pointers before you start:
 

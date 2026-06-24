@@ -70,4 +70,4 @@ Refer to [Sentry.io credentials](../credentials/sentryio.md) for guidance on set
 
 Refer to [Sentry.io's documentation](https://docs.sentry.io/api/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

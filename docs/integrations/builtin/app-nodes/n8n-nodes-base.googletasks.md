@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the Google Tasks node supports an
 Refer to [Google Tasks credentials](../credentials/google/README.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -43,4 +43,4 @@ Refer to [Google Tasks credentials](../credentials/google/README.md) for guidanc
 
 [Browse Google Tasks node documentation integration templates](https://n8n.io/integrations/google-tasks) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

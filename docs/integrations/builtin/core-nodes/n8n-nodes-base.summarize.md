@@ -76,4 +76,4 @@ Set whether to ignore input items that don't contain the **Fields to Split By** 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cwTNoDWbZP8wpyeUSTd9/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0nvcx1EqJQgGVzUXOOMN/" %}

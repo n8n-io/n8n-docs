@@ -47,7 +47,7 @@ The available operations depend on your API version. To see the operations list,
 
 [Browse TheHive node documentation integration templates](https://n8n.io/integrations/thehive) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

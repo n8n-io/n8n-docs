@@ -35,7 +35,7 @@ Refer to [Philips Hue's CLIP API documentation](https://developers.meethue.com/d
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 If you're using the built-in OAuth connection, you don't need to enter an **APP ID**.
 

@@ -170,7 +170,7 @@ You should support two ways of specifying the content of a text input that expec
 
 #### Node icons <a href="#node-icons" id="node-icons"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iV21vfNb9w8eJrJxc055/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dGOXJYk0OQgOLlRpyJnn/" %}
 
 
 ### Common patterns and exceptions <a href="#common-patterns-and-exceptions" id="common-patterns-and-exceptions"></a>

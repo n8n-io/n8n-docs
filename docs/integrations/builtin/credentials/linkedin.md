@@ -165,7 +165,7 @@ Refer to LinkedIn's [Lead Sync API documentation](https://learn.microsoft.com/en
 
 Only use this method for older LinkedIn apps and user accounts.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 All users must select:
 

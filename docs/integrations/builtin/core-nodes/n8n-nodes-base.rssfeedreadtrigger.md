@@ -29,7 +29,7 @@ On this page, you'll find a list of operations the RSS Feed Trigger node support
 * **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to the sections below to configure the parameters for each mode type.
 * **Feed URL**: Enter the URL of the RSS feed to poll.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KvDkq7TZWDQ5wuoiHXVv/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DnRpcOvtlMPcHD6I3kyx/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

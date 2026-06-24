@@ -18,9 +18,9 @@ This hosting guide shows you how to self-host n8n on Azure. It uses n8n with Pos
 
 You need [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/4aeKXmptxbjmVpQ2Tfgn/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CcSOA8s7oK44B90i5WIm/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Hosting options <a href="#hosting-options" id="hosting-options"></a>
 
@@ -117,7 +117,7 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ayueH50ylKcskQmzIsMy/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I9ftZ1V1rwx3OrFOh0bT/" %}
 
 ### Optional: Environment variables <a href="#optional-environment-variables" id="optional-environment-variables"></a>
 
@@ -179,4 +179,4 @@ kubectl delete -f .
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yiPh3sntkE3OYC67RAnX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}

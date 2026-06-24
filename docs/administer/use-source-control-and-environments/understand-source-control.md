@@ -16,7 +16,7 @@ layout:
 
 # Understand source control and environments <a href="#understand-source-control-and-environments" id="understand-source-control-and-environments"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Tf19KXxolDkcfArIYg5K/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
 
 * [Environments in n8n](work-with-environments.md): The purpose of environments, and how they work in n8n.
 * [Git in n8n](use-git-in-n8n.md): How n8n uses Git. 

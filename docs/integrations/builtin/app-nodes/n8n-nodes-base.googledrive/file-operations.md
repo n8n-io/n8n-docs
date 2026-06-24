@@ -23,7 +23,7 @@ layout:
 
 Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](README.md) for more information on the Google Drive node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Copy a file <a href="#copy-a-file" id="copy-a-file"></a>
 

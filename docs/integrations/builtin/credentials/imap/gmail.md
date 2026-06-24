@@ -29,11 +29,11 @@ To follow these instructions, you must first:
 
 ### Enable 2-step Verification <a href="#enable-2-step-verification" id="enable-2-step-verification"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bAchsCEbARjioUMmRQBn/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ysY7mHC9pN3kCUPncSi8/" %}
 
 ### Generate an app password <a href="#generate-an-app-password" id="generate-an-app-password"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KKq1ahPmcFa6J67IyuN4/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rJn9WooD0IwP7abKawNZ/" %}
 
 ## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 

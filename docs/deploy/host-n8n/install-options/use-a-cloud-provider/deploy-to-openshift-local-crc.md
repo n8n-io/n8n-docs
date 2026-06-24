@@ -1074,4 +1074,4 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yiPh3sntkE3OYC67RAnX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}

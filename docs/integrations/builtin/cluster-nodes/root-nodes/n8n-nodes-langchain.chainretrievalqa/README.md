@@ -40,7 +40,7 @@ The question you want to ask.
 
 Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/) for examples of how LangChain can use a vector store as a retriever.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

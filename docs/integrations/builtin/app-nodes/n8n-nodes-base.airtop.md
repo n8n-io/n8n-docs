@@ -59,7 +59,7 @@ Refer to [Airtop credentials](../credentials/airtop.md) for guidance on setting 
 
 Refer to [Airtop's documentation](https://docs.airtop.ai/api-reference/airtop-api) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
 

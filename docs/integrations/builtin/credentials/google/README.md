@@ -50,7 +50,7 @@ There are two authentication methods available for Google services nodes:
 
 [Managed OAuth2](oauth-single-service.md#managed-oauth2) is available for the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3hg9lh4E1cKGSLdAAfcv/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
 
 ## Compatible nodes <a href="#compatible-nodes" id="compatible-nodes"></a>
 

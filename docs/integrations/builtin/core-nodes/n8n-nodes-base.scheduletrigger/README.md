@@ -28,7 +28,7 @@ Use the Schedule Trigger node to run workflows at fixed intervals and times. Thi
 If a workflow uses the Schedule node as a trigger, make sure that you save and publish the workflow.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Do5H5uKhTbZIILPo3AaT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ttmJg4aaEfjB4LyKpCzt/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 

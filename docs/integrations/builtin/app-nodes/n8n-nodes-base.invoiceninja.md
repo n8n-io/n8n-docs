@@ -67,4 +67,4 @@ Refer to [Invoice Ninja credentials](../credentials/invoiceninja.md) for guidanc
 
 [Browse Invoice Ninja node documentation integration templates](https://n8n.io/integrations/invoice-ninja) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

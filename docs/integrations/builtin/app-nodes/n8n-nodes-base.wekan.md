@@ -65,7 +65,7 @@ Refer to [Wekan credentials](../credentials/wekan.md) for guidance on setting up
 
 [Browse Wekan node documentation integration templates](https://n8n.io/integrations/wekan) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Load all the parameters for the node <a href="#load-all-the-parameters-for-the-node" id="load-all-the-parameters-for-the-node"></a>
 

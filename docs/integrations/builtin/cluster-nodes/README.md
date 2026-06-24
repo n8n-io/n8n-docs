@@ -13,7 +13,7 @@ layout:
 
 # Cluster nodes <a href="#cluster-nodes" id="cluster-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zJOwS1oaLPBcpMdYXIs3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
 
 
 ## Root nodes <a href="#root-nodes" id="root-nodes"></a>

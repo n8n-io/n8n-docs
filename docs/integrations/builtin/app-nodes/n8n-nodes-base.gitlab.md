@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the GitLab node supports and link
 Refer to [GitLab credentials](../credentials/gitlab.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -67,5 +67,5 @@ Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/) for more
 
 n8n provides a trigger node for GitLab. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

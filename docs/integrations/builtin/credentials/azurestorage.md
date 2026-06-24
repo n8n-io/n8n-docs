@@ -37,7 +37,7 @@ Refer to [Azure Storage's API documentation](https://learn.microsoft.com/en-us/r
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
@@ -91,4 +91,4 @@ Refer to [Manage storage account access keys | Microsoft](https://learn.microsof
 
 Here are the known common errors and issues with Azure Storage credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jqvB0gfEfubAawaXt51F/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}

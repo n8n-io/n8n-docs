@@ -46,7 +46,7 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 You can find authentication information for this node [here](../../credentials/pinecone.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
@@ -80,11 +80,11 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 
 ### Operation Mode <a href="#operation-mode" id="operation-mode"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NhmxpkeoTzl1WU1jhcbT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5aeZAt5P1m2YndTmiFTG/" %}
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzkuyHx0puco05IkndRC/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -119,7 +119,7 @@ Another segregation option for how to store your data within the index.
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bpc4wzHPded8F4exMlrt/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
 
 ### Clear Namespace <a href="#clear-namespace" id="clear-namespace"></a>
 
@@ -133,7 +133,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ### Find your Pinecone index and namespace <a href="#find-your-pinecone-index-and-namespace" id="find-your-pinecone-index-and-namespace"></a>
 

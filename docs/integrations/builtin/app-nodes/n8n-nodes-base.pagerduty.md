@@ -48,6 +48,6 @@ Refer to [PagerDuty credentials](../credentials/pagerduty.md) for guidance on se
 
 [Browse PagerDuty node documentation integration templates](https://n8n.io/integrations/pagerduty) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 

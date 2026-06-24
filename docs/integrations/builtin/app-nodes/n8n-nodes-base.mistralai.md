@@ -58,4 +58,4 @@ You can find authentication information for this node [here](../credentials/mist
 
 Refer to [Mistral AI's documentation](https://docs.mistral.ai/api/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -18,7 +18,7 @@ layout:
 
 # Hybrid Analysis credentials <a href="#hybrid-analysis-credentials" id="hybrid-analysis-credentials"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

@@ -18,7 +18,7 @@ layout:
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/BC2zarvWdZMxGtKRfeJg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
 ## Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>
 
@@ -26,7 +26,7 @@ This pattern involves having multiple n8n instances, each one linked to its own 
 
 You can use this pattern for environments. For example, create two n8n instances, development and production. Link them to their own branches. Push work from your development instance to its branch, do a pull request to move work to the production branch, then pull to the production instance.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xEgCoQp64sxGjkWFgpOd/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
 
 ![Diagram](../.gitbook/assets/vc-multi-multi.png)
 
@@ -38,7 +38,7 @@ You can use this pattern for environments. For example, create two n8n instances
 
 This pattern is also useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yYkDWyYtTymrpYPI3oxH/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
 
 ![Diagram](../.gitbook/assets/vc-multi-one.png)
 

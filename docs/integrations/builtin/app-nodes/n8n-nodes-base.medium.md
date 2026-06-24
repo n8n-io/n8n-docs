@@ -29,7 +29,7 @@ Medium has stopped supporting the Medium API. The Medium node still appears with
 Refer to [Medium credentials](../credentials/medium.md) for guidance on setting up existing API keys.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -44,4 +44,4 @@ Refer to [Medium credentials](../credentials/medium.md) for guidance on setting 
 
 [Browse Medium node documentation integration templates](https://n8n.io/integrations/medium) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

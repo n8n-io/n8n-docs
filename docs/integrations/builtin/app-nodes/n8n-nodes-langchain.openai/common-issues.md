@@ -23,5 +23,5 @@ layout:
 
 Here are some common errors and issues with the [OpenAI node](README.md) and steps to resolve or troubleshoot them.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/qijyCMUSCv3UA7behoZw/" %}
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/amGgk1luMPf0Yu1uCSji/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wqdQXLzKrIsqxA7CuhxT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nAnAPqDqAcOOqFiJJrTl/" %}

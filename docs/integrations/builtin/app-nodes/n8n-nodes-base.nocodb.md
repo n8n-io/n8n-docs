@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the NocoDB node supports and link
 Refer to [NocoDB credentials](../credentials/nocodb.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -48,4 +48,4 @@ Refer to [NocoDB credentials](../credentials/nocodb.md) for guidance on setting 
 
 Refer to [NocoDB's documentation](https://docs.nocodb.com/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

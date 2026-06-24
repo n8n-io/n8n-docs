@@ -34,7 +34,7 @@ The Conversational Agent describes tools[^1] in the system prompt and parses JSO
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ATANgfFVHG8eIRH2Xynm/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cHtfs3gewkhPbGP31rjc/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -42,11 +42,11 @@ Configure the Conversational Agent using the following parameters.
 
 ### Prompt <a href="#prompt" id="prompt"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tALAgzlpmog5eZk893Ez/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ss9Y6clfLTwlXMx69w6E/" %}
 
 ### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/FWz2tiBEchkNj9yOVoti/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IsHMhvgDA3Ok5qdqnHnJ/" %}
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -84,19 +84,19 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 
 ### System Message <a href="#system-message" id="system-message"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iItrx0Sif4nFlvnhRC32/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ci5NMdJiVoyT9dtdTE9w/" %}
 
 ### Max Iterations <a href="#max-iterations" id="max-iterations"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5peNPbMzizpnVi5yyawQ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8UflrA3Nx8LD5bKQn8Xc/" %}
 
 ### Return Intermediate Steps <a href="#return-intermediate-steps" id="return-intermediate-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iCkxSCJ5heC6EkrCHxvn/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/skA96E8hAnMMKG7c4Lta/" %}
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8YMxu7WAgGuRiK8YvCjS/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GAsqtB1RVGEDrT5PMMLl/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

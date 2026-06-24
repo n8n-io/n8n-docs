@@ -43,4 +43,4 @@ Refer to [Google Ads credentials](../credentials/google/README.md) for guidance 
 
 Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

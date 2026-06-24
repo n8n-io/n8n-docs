@@ -50,4 +50,4 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 [Browse Microsoft Graph Security node documentation integration templates](https://n8n.io/integrations/microsoft-graph-security) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -34,7 +34,7 @@ Create a [Groq](https://groq.com/) account.
 
 Refer to [Groq's documentation](https://console.groq.com/docs/quickstart) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

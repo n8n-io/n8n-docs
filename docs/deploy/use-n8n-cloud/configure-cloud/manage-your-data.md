@@ -55,7 +55,7 @@ n8n gives each instance up to 100GB of data storage.
 
 The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/x69Nl9jqgwUIMnP1x6Hz/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzVIOV8i2lmQ5HW3xFoo/" %}
 
 Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
 

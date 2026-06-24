@@ -77,7 +77,7 @@ Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/as
 
 For help dealing with rate limits, refer to [Handling rate limits](../../handle-rate-limits.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Using tools with OpenAI assistants <a href="#using-tools-with-openai-assistants" id="using-tools-with-openai-assistants"></a>
 

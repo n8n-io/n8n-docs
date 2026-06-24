@@ -34,7 +34,7 @@ Lemonade runs AI inference locally. These nodes connect directly to a Lemonade s
 
 Refer to [Lemonade's documentation](https://lemonade-server.ai/docs/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Configuring Lemonade server connection <a href="#configuring-lemonade-server-connection" id="configuring-lemonade-server-connection"></a>
 

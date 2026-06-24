@@ -36,7 +36,7 @@ Create a [Kimi API Platform account](https://platform.kimi.ai/).
 
 Refer to [Moonshot's documentation](https://platform.kimi.ai/docs/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

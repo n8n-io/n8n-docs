@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the AWS Textract node supports an
 Refer to [AWS Textract credentials](../credentials/aws.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -38,5 +38,5 @@ Refer to [AWS Textract credentials](../credentials/aws.md) for guidance on setti
 
 [Browse AWS Textract node documentation integration templates](https://n8n.io/integrations/aws-textract) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

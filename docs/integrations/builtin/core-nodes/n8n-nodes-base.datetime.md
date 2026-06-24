@@ -20,7 +20,7 @@ layout:
 
 The Date & Time node manipulates date and time data and convert it to different formats.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Do5H5uKhTbZIILPo3AaT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ttmJg4aaEfjB4LyKpCzt/" %}
 
 {% hint style="info" %}
 **Date and time in other nodes**

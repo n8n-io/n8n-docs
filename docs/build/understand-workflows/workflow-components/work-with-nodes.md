@@ -55,7 +55,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 Select the **Add node** <img src="../../.gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> connector. n8n opens the nodes panel, where you can search or browse all nodes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7uoMagkHAZU3qCt3aYqE/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nqwVeyXZtOyDsX8afllD/" %}
 
 ## Node controls <a href="#node-controls" id="node-controls"></a>
 

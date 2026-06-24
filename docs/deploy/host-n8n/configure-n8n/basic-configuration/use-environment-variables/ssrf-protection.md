@@ -20,7 +20,7 @@ layout:
 
 # SSRF protection environment variables <a href="#ssrf-protection-environment-variables" id="ssrf-protection-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 These variables control [SSRF protection](../../security/enable-ssrf-protection.md) for nodes that make HTTP requests to user-controllable targets.
 

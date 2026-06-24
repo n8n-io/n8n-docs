@@ -52,4 +52,4 @@ Refer to [Help Scout credentials](../credentials/helpscout.md) for guidance on s
 
 [Browse Help Scout node documentation integration templates](https://n8n.io/integrations/helpscout) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

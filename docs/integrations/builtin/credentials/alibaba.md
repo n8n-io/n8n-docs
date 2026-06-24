@@ -35,7 +35,7 @@ Create an [Alibaba Cloud](https://www.alibabacloud.com/) account and activate [M
 
 Refer to [Alibaba Cloud Model Studio's documentation](https://www.alibabacloud.com/help/en/model-studio/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

@@ -42,5 +42,5 @@ Refer to [Cortex credentials](../credentials/cortex.md) for guidance on setting 
 
 [Browse Cortex node documentation integration templates](https://n8n.io/integrations/cortex) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

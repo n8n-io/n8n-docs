@@ -39,7 +39,7 @@ layout:
 
 Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](./) for more information on the Google Drive node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Search files and folders <a href="#search-files-and-folders" id="search-files-and-folders"></a>
 

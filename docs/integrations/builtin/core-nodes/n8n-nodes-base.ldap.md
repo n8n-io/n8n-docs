@@ -36,7 +36,7 @@ You can find authentication information for this node [here](../credentials/ldap
 
 Refer to the sections below for details on configuring the node for each operation.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Compare <a href="#compare" id="compare"></a>
 

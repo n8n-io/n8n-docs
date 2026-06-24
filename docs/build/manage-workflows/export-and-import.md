@@ -30,7 +30,7 @@ layout:
 
 n8n saves workflows in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. You can export and import workflows in several ways.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/PiGws7Y0XvvpFSVLtRNX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OlpV1rtc5ZIqBmvX4lBQ/" %}
 
 ## Copy-Paste <a href="#copy-paste" id="copy-paste"></a>
 

@@ -11,4 +11,4 @@ layout:
 
 # Run your node locally <a href="#run-your-node-locally" id="run-your-node-locally"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7XjXX06uVcZBYZwANeP3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WlCAEDxY4EZLDV85eB8C/" %}

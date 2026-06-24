@@ -22,7 +22,7 @@ Use the QuickChart node to automate work in QuickChart, and integrate QuickChart
 
 On this page, you'll find a list of operations the QuickChart node supports and links to more resources.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 

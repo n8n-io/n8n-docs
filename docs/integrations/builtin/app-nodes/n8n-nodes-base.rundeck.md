@@ -38,7 +38,7 @@ Refer to [Rundeck credentials](../credentials/rundeck.md) for guidance on settin
 
 [Browse Rundeck node documentation integration templates](https://n8n.io/integrations/rundeck) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Find the job ID <a href="#find-the-job-id" id="find-the-job-id"></a>
 

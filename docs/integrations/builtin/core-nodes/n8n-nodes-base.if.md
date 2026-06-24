@@ -50,7 +50,7 @@ You can choose to keep data:
 
 ## Branch execution with If and Merge nodes <a href="#branch-execution-with-if-and-merge-nodes" id="branch-execution-with-if-and-merge-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9pbMrEP4mnRvYTv9rv4H/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/o5sVhTw0cyO5aAAkAVDj/" %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -58,5 +58,5 @@ Refer to [Splitting with conditionals](https://app.gitbook.com/s/rPN1zU5jaYNvwH7
 
 If you need more than two conditional outputs, use the [Switch node](n8n-nodes-base.switch.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3PjVgh2AU4J6dwJ4Mhay/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bMMOCQFbQ4YpKDnWQQOg/" %}
 

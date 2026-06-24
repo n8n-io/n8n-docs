@@ -17,7 +17,7 @@ The definitive guides live in the repo and are the source of truth. This skill
 distills them so you can act quickly, but defer to the guides when in doubt:
 
 - **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
-- **Contribution guide:** `docs/contribute/style-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
+- **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -29,11 +29,13 @@ Determine what the user needs and work accordingly:
 
 1. **Write**: Draft a new page or section. Read nearby existing pages first
    to match structure and tone. Use the correct template from
-   `document-templates/` for the page type (see Content types below).
+   `document-templates/` for the page type (see Content types below). Add any
+   new page to its space's `SUMMARY.md` so it appears in the navigation (see
+   [reference.md](reference.md) for the format).
 
 2. **Edit**: Improve existing content. Read the file first. Fix style
    violations without changing meaning. Preserve GitBook block syntax, link
-   format, and code block indentation exactly.
+   format, code block indentation, and existing heading anchor tags exactly.
 
 3. **Review**: Check content against the style guide. Return a table:
 
@@ -65,7 +67,7 @@ frontmatter) or **course** content (frozen). See the contribution guide's
 - **Base guide:** Microsoft Writing Style Guide.
 - **Voice:** present tense, active voice (not passive), second-person ("you"). Be direct.
 - **Avoid first person:** name n8n instead of "we" or "our". "n8n recommends", not "we recommend".
-- **Headings:** sentence case only. Never title case.
+- **Headings:** sentence case only. Never title case. Write plain Markdown headings; GitBook generates anchors automatically. Don't add `<a href ...></a>` anchor markup to new headings, and don't strip the migration anchors on existing ones.
 - **Numbers:** spell out zero–nine; numerals for 10 and above. Exceptions
   (always numerals): decimals, percentages, versions and technical strings, units.
 - **Dates and times:** spell out the month, no ordinals ("July 31, 2016"). "AM"/"PM" with a space ("9 AM").
@@ -138,7 +140,6 @@ See [reference.md](reference.md) for full examples. Quick reference:
 | Collapsible block | `<details>` … `<summary>Title</summary>` … `</details>` |
 | Tabbed content | `{% tabs %}{% tab title="Name" %}` … `{% endtab %}{% endtabs %}` |
 | Code block (with options) | `{% code title="File.ts" %}` ```` ``` ```` … `{% endcode %}` |
-| Reusable content | `{% include "../.gitbook/includes/file.md" %}` |
 | Embedded workflow | `{% @n8n-blocks/n8n-workflow-demo content="" url="..." %}` |
 
 ### Hint types

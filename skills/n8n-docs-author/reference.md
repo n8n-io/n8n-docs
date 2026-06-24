@@ -27,11 +27,50 @@ layout:
 
 Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`). Don't add these to new pages.
 
+## Page navigation (SUMMARY.md)
+
+Each space has a `SUMMARY.md` at its root. GitBook builds the sidebar from it, so
+a new page won't appear in the navigation until you add it. Creating the `.md`
+file isn't enough.
+
+`SUMMARY.md` is a nested Markdown list. Each entry links to a page by its path
+relative to the space root (where `SUMMARY.md` lives), including `.md`. A
+`README.md` is the landing page for the space or a section, and indentation nests
+pages under it. Entry order sets sidebar order.
+
+```markdown
+# Summary
+
+* [Administer](README.md)
+* [Manage credentials](manage-credentials/README.md)
+  * [Share credentials securely](manage-credentials/share-credentials-securely.md)
+  * [Credential overwrites](manage-credentials/credential-overwrites.md)
+```
+
+When you add a page, add a matching entry in the correct `SUMMARY.md`. When you
+move, rename, or delete a page, update its entry.
+
+## Headings
+
+Write headings as plain Markdown (`## Heading text`) in sentence case. GitBook
+generates a clickable anchor from the heading text automatically, so don't add
+anchor markup yourself.
+
+Existing pages carry explicit anchor tags the migration added to pin a stable
+anchor:
+
+```markdown
+## Heading text <a href="#heading-text" id="heading-text"></a>
+```
+
+Don't add these to new headings. Leave existing ones in place, and keep a
+heading's anchor tag if you reword it, so existing links don't break.
+
 ## Links
 
 ### External links
 
-Use standard Markdown link syntax. External links open in the current tab by default. If the site is configured to open them in a new tab, no extra attributes are needed:
+Use standard Markdown link syntax. External links open in a new tab automatically, with no extra attributes needed:
 
 ```markdown
 [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
@@ -91,8 +130,7 @@ Alternatively, copy the page's link in GitBook, or use its published
 <!-- Keep this table in sync with the one in
 docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
 space is added, removed, or recreated. IDs are stable while a space exists; a
-recreated space gets a new ID. The reusable-content space
-(GixZThfitWP21x2gQFpD) holds shared includes, not linkable pages. -->
+recreated space gets a new ID. -->
 
 ## Hints (callouts)
 
@@ -234,12 +272,11 @@ supported domain) and embed the URL:
 ## Embedded workflows
 
 Embed an n8n workflow so readers can view and interact with it in the page.
-Reference either a published template by its template API URL, or a workflow JSON
-file stored in the docs repo:
+Reference a published template by its template API URL (the template ID appended
+to `https://api.n8n.io/workflows/templates/`):
 
 ```markdown
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
-{% @n8n-blocks/n8n-workflow-demo content="" url="path/to/workflow.json" %}
 ```
 
 ---

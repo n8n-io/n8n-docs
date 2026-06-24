@@ -127,7 +127,7 @@ This method is suitable for larger changes, new pages, or work that spans multip
 
 1. [Fork the n8n Docs repository](https://github.com/n8n-io/n8n-docs/fork) on GitHub and [clone it locally](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 2. Create a new branch for your changes.
-3. Make your changes in the relevant page(s).
+3. Make your changes in the relevant page(s). If you add a new page, add it to the space's `SUMMARY.md` file so it appears in the navigation. See the style guide's Page navigation section.
 4.  Lint your prose with [Vale](https://vale.sh). Install it (`brew install vale` on macOS — see the [Vale install guide](https://vale.sh/docs/install) for other systems), then run it from the root of the repository:
 
     ```bash
@@ -162,6 +162,7 @@ The n8n Docs team will triage your issue and follow up if they need more informa
 Before submitting a pull request to modify n8n Docs, make sure your contribution ticks all these boxes:
 
 * All necessary files and images are included.
+* Any new pages are added to the space's `SUMMARY.md` so they appear in the navigation.
 * All formatting follows the style guide.
 * Your changes pass [Vale](https://vale.sh) prose linting with no errors (if you contributed locally — see Fork the repository locally).
 * All links are working and direct to the right location.

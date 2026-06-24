@@ -17,7 +17,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
   metadata:
     visible: true
   tags:
@@ -72,6 +72,6 @@ Best for:
 * Discovering and executing workflows from an AI agent
 * Managing workflows through an MCP client
 
-Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server/).
+Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server.md).
 {% endtab %}
 {% endtabs %}

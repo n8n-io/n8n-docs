@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Connect](README.md)
 * [n8n API](n8n-api/README.md)
@@ -6,17 +6,17 @@
   * [Pagination](n8n-api/pagination.md)
   * [Use an API playground](n8n-api/use-an-api-playground.md)
   * ```yaml
-      type: builtin:openapi
-      props:
-        models: true
-        downloadLink: true
-        grouping: by-tag
-      dependencies:
-        spec:
-          ref:
-            kind: openapi
-            spec: n8n
-      ```
+    props:
+      models: true
+      downloadLink: true
+      grouping: by-tag
+    type: builtin:openapi
+    dependencies:
+      spec:
+        ref:
+          kind: openapi
+          spec: n8n
+    ```
 * [n8n CLI](n8n-cli.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)

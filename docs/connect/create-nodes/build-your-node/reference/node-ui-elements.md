@@ -2,15 +2,30 @@
 contentType: reference
 nodeTitle: Node UI elements
 originalFilePath: integrations/creating-nodes/build/reference/ui-elements.md
-originalUrl: 'https://docs.n8n.io/integrations/creating-nodes/build/reference/ui-elements'
+originalUrl: https://docs.n8n.io/integrations/creating-nodes/build/reference/ui-elements
 url: >-
   https://docs.n8n.io/connect/create-nodes/build-your-node/reference/node-ui-elements
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Node user interface elements <a href="#node-user-interface-elements" id="node-user-interface-elements"></a>
+# Node UI elements
 
 n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.
 
@@ -39,9 +54,7 @@ Basic configuration:
 }
 ```
 
-
 ![String](../../../.gitbook/assets/string.png)
-
 
 String field for inputting passwords:
 
@@ -70,7 +83,6 @@ String field for inputting passwords:
 ```
 
 ![Password](../../../.gitbook/assets/password.png)
-
 
 String field with more than one row:
 
@@ -191,7 +203,6 @@ Use the `collection` type when you need to display optional fields.
 
 ![Collection](../../../.gitbook/assets/collection.png)
 
-
 ## DateTime <a href="#datetime" id="datetime"></a>
 
 The `dateTime` type provides a date picker.
@@ -217,8 +228,6 @@ The `dateTime` type provides a date picker.
 ```
 
 ![DateTime](../../../.gitbook/assets/datetime.png)
-
-
 
 ## Boolean <a href="#boolean" id="boolean"></a>
 
@@ -343,12 +352,11 @@ The `multiOptions` type adds an options list. Users can select more than one val
 
 ![Multi-options](../../../.gitbook/assets/multioptions.png)
 
-
 ## Filter <a href="#filter" id="filter"></a>
 
 Use this component to evaluate, match, or filter incoming data.
 
-This is the code from n8n's own If node. It shows a filter component working with a [collection](#collection) component where users can configure the filter's behavior.
+This is the code from n8n's own If node. It shows a filter component working with a [collection](node-ui-elements.md#collection) component where users can configure the filter's behavior.
 
 ```typescript
 {
@@ -392,7 +400,6 @@ options: [
 
 ![Filter](../../../.gitbook/assets/filter.png)
 
-
 ## Assignment collection (drag and drop) <a href="#assignment-collection-drag-and-drop" id="assignment-collection-drag-and-drop"></a>
 
 Use the drag and drop component when you want users to pre-fill name and value parameters with a single drag interaction.
@@ -408,7 +415,7 @@ Use the drag and drop component when you want users to pre-fill name and value p
 
 You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2):
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](../../../.gitbook/assets/drag-drop-fixed-toggle.gif)
+![A gif showing the drag and drop action, as well as changing a field to fixed](<../../../.gitbook/assets/drag-drop-fixed-toggle (1).gif>)
 
 ## Fixed collection <a href="#fixed-collection" id="fixed-collection"></a>
 
@@ -461,13 +468,11 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](../../../.gitbook/assets/fixed-collection.png)
 
-
-
 ## Resource locator <a href="#resource-locator" id="resource-locator"></a>
 
 ![Resource locator](../../../.gitbook/assets/resource-locator.png)
 
-The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
+The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello.
 
 The following options are available:
 
@@ -560,7 +565,7 @@ Example:
 
 Refer to the following for live examples:
 
-* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts) and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts)  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
+* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts) and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts) in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
 * Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts) for an example where users can browse the list or search.
 
 ## Resource mapper <a href="#resource-mapper" id="resource-mapper"></a>
@@ -708,7 +713,6 @@ Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/bl
 
 ![JSON](../../../.gitbook/assets/json.png)
 
-
 ## HTML <a href="#html" id="html"></a>
 
 The HTML editor allows users to create HTML templates in their workflows. The editor supports standard HTML, CSS in `<style>` tags, and expressions wrapped in `{{}}`. Users can add `<script>` tags to pull in additional JavaScript. n8n doesn't run this JavaScript during workflow execution.
@@ -729,7 +733,6 @@ The HTML editor allows users to create HTML templates in their workflows. The ed
 
 Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts) for a live example.
 
-
 ## Notice <a href="#notice" id="notice"></a>
 
 Display a yellow box with a hint or extra info. Refer to [Node UI design](../../plan-your-node/node-ui-design.md) for guidance on writing good hints and info text.
@@ -742,6 +745,7 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](../../
   default: '',
 },
 ```
+
 ![Notice](../../../.gitbook/assets/notice.png)
 
 ## Hints <a href="#hints" id="hints"></a>
@@ -749,7 +753,7 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](../../
 There are two types of hints: parameter hints and node hints:
 
 * Parameter hints are small lines of text below a user input field.
-* Node hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
+* Node hints are a more powerful and flexible option than [Notice](node-ui-elements.md#notice). Use them to display longer hints, in the input panel, output panel, or node details view.
 
 ### Add a parameter hint <a href="#add-a-parameter-hint" id="add-a-parameter-hint"></a>
 

@@ -1,20 +1,33 @@
 ---
 title: Drift node documentation
-description: Learn how to use the Drift node in n8n. Follow technical documentation to integrate Drift node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Drift node in n8n. Follow technical documentation to
+  integrate Drift node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Drift node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.drift.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.drift'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.drift'
+layout:
+  description:
+    visible: false
 ---
 
-# Drift node
+# Drift node <a href="#drift-node" id="drift-node"></a>
 
 Use the Drift node to automate work in Drift, and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, including creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Drift credentials](/integrations/builtin/credentials/drift.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Drift credentials](../credentials/drift.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Contact
     * Create a contact
@@ -23,10 +36,10 @@ Refer to [Drift credentials](/integrations/builtin/credentials/drift.md) for gui
     * Get a contact
     * Update a contact
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'drift') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Drift node documentation integration templates](https://n8n.io/integrations/drift) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

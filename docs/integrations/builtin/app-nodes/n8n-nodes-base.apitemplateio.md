@@ -1,22 +1,37 @@
 ---
 title: APITemplate.io node documentation
-description: Learn how to use the APITemplate.io node in n8n. Follow technical documentation to integrate APITemplate.io node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the APITemplate.io node in n8n. Follow technical
+  documentation to integrate APITemplate.io node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: APITemplate.io node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio
+layout:
+  description:
+    visible: false
 ---
 
-# APITemplate.io node
+# APITemplate.io node <a href="#apitemplateio-node" id="apitemplateio-node"></a>
 
 Use the APITemplate.io node to automate work in APITemplate.io, and integrate APITemplate.io with other applications. n8n has built-in support for a wide range of APITemplate.io features, including getting and creating accounts and PDF.
 
 On this page, you'll find a list of operations the APITemplate.io node supports and links to more resources.
 
-/// note | Credentials
-Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [APITemplate.io credentials](../credentials/apitemplateio.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Account
     * Get
@@ -25,10 +40,10 @@ Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitempl
 * PDF
     * Create
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'apitemplateio') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse APITemplate.io node documentation integration templates](https://n8n.io/integrations/apitemplateio) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

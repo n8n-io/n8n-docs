@@ -1,38 +1,53 @@
 ---
 title: Xata node documentation
-description: Learn how to use the Xata node in n8n. Follow technical documentation to integrate Xata node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Xata node in n8n. Follow technical documentation to
+  integrate Xata node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Xata node documentation
+originalFilePath: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata
+layout:
+  description:
+    visible: false
 ---
 
-# Xata node
+# Xata node <a href="#xata-node" id="xata-node"></a>
 
-Use the Xata node to use Xata as a [memory](/glossary.md#ai-memory) server.
+Use the Xata node to use Xata as a [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) server.
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/xata.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/xata.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 -   **Session ID**: Enter the ID to use to store the memory in the workflow data.
 -   **Context Window Length**: Enter the number of previous interactions to consider for context.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'xata') ]]
 
-## Related resources
+[Browse Xata node documentation integration templates](https://n8n.io/integrations/xata) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's Xata documentation](https://js.langchain.com/docs/integrations/memory/xata) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Single memory instance
+## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 
-[[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
+If you add more than one Xata node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](./n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 
 

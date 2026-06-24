@@ -1,29 +1,40 @@
 ---
 title: Wise credentials
-description: Documentation for Wise credentials. Use these credentials to authenticate Wise in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Wise credentials. Use these credentials to authenticate Wise
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Wise credentials
+originalFilePath: integrations/builtin/credentials/wise.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/wise'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/wise'
+layout:
+  description:
+    visible: false
 ---
 
-# Wise credentials
+# Wise credentials <a href="#wise-credentials" id="wise-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Wise](/integrations/builtin/app-nodes/n8n-nodes-base.wise.md)
-- [Wise Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md)
+- [Wise](../app-nodes/n8n-nodes-base.wise.md)
+- [Wise Trigger](../trigger-nodes/n8n-nodes-base.wisetrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Wise](https://wise.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Wise's API documentation](https://docs.wise.com/api-docs/api-reference) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need:
 
@@ -34,7 +45,7 @@ To configure this credential, you'll need:
 - **Private Key (Optional)**: For live endpoints requiring Strong Customer Authentication (SCA), generate a public and private key. Enter the private key here. Refer to [Add a private key](#add-a-private-key) for more information.
     - If you're using a **Test** environment, you'll only need to enter a Private Key if you've enabled Strong Customer Authentication on the [public keys management page](https://sandbox.transferwise.tech/public-keys).
 
-## Add a private key
+## Add a private key <a href="#add-a-private-key" id="add-a-private-key"></a>
 
 Wise protects some live endpoints and operations with Strong Customer Authentication (SCA). Refer to [Strong Customer Authentication & 2FA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa) for details.
 

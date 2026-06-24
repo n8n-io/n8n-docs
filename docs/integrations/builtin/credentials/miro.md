@@ -1,28 +1,39 @@
 ---
 title: Miro credentials
-description: Documentation for the Miro credentials. Use these credentials to authenticate Miro in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Miro credentials. Use these credentials to authenticate
+  Miro in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Miro credentials
+originalFilePath: integrations/builtin/credentials/miro.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/miro'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/miro'
+layout:
+  description:
+    visible: false
 ---
 
-# Miro credentials
+# Miro credentials <a href="#miro-credentials" id="miro-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Miro](https://miro.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Miro's API documentation](https://developers.miro.com/reference/overview) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/miro/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/miro/) on n8n's website.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [Miro](https://miro.com/login/) account and app, as well as:
 
@@ -31,6 +42,6 @@ To configure this credential, you'll need a [Miro](https://miro.com/login/) acco
 
 Refer to [Miro's API documentation](https://developers.miro.com/reference/overview) for more information about authenticating to the service.
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to [create an app](https://developers.miro.com/docs/rest-api-build-your-first-hello-world-app) to configure OAuth2. Refer to [Miro's OAuth documentation](https://developers.miro.com/docs/getting-started-with-oauth) for more information about setting up OAuth2.
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to [create an app](https://developers.miro.com/docs/rest-api-build-your-first-hello-world-app) to configure OAuth2. Refer to [Miro's OAuth documentation](https://developers.miro.com/docs/getting-started-with-oauth) for more information about setting up OAuth2.

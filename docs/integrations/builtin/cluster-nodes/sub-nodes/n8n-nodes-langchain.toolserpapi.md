@@ -1,27 +1,45 @@
 ---
 title: SerpApi (Google Search) node documentation
-description: Learn how to use the SerpApi (Google Search) node in n8n. Follow technical documentation to integrate SerpApi (Google Search) node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the SerpApi (Google Search) node in n8n. Follow technical
+  documentation to integrate SerpApi (Google Search) node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: SerpApi (Google Search) node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi
+layout:
+  description:
+    visible: false
 ---
 
-# SerpApi (Google Search) node
+# SerpApi (Google Search) node <a href="#serpapi-google-search-node" id="serpapi-google-search-node"></a>
 
-/// warning | Deprecated
+{% hint style="warning" %}
+**Deprecated**
+
 This node is deprecated, and will be removed in a future version. Use the verified **SerpApi Official** community node instead.
-///
+{% endhint %}
 
-The SerpAPI node allows an [agent](/glossary.md#ai-agent) in your workflow to call Google's Search API.
+The SerpAPI node allows an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/serp.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/serp.md).
+{% endhint %}
 
-## Node options
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Country**: Enter the country code you'd like to use. Refer to [Google GL Parameter: Supported Google Countries](https://serpapi.com/google-countries) for supported countries and country codes.
 * **Device**: Select the device to use to get the search results.
@@ -29,14 +47,14 @@ You can find authentication information for this node [here](/integrations/built
 * **Google Domain**: Enter the Google Domain to use. Refer to [Supported Google Domains](https://serpapi.com/google-domains) for supported domains.
 * **Language**: Enter the language code you'd like to use. Refer to [Google HL Parameter: Supported Google Languages](https://serpapi.com/google-languages) for supported languages and language codes.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'serpapi') ]]
 
-## Related resources
+[Browse SerpApi (Google Search) node documentation integration templates](https://n8n.io/integrations/serpapi) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Serp's documentation](https://serpapi.com/search-api) for more information about the service. You can also view [LangChain's documentation on their Serp integration](https://js.langchain.com/docs/integrations/tools/serpapi/).
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

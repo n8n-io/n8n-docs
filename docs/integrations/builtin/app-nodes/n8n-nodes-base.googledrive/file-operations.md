@@ -1,23 +1,37 @@
 ---
 title: Google Drive File operations
-description: Documentation for the File operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+description: >-
+  Documentation for the File operations in Google Drive node in n8n, a workflow
+  automation platform. Includes details of operations and configuration, and
+  links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Google Drive File operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Google Drive File operations
+# Google Drive File operations <a href="#google-drive-file-operations" id="google-drive-file-operations"></a>
 
-Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](README.md) for more information on the Google Drive node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
-## Copy a file
+## Copy a file <a href="#copy-a-file" id="copy-a-file"></a>
 
 Use this operation to copy a file to a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Copy**.
 - **File**: Choose a file you want to copy. 
@@ -29,19 +43,19 @@ Enter these parameters:
 	- **Parent Folder**: Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
 	- You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Copy Requires Writer Permissions**: Select whether to enable readers and commenters to copy, print, or download the new file.
 - **Description**: A short description of the file.
 
 Refer to the [Method: files.copy | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/copy) API documentation for more information.
 
-## Create from text
+## Create from text <a href="#create-from-text" id="create-from-text"></a>
 
 Use this operation to create a new file in a drive from provided text.
 
 Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Create From Text**.
 - **File Content**: Enter the file content to use to create the new file.
@@ -51,54 +65,54 @@ Enter these parameters:
 
 You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
 - **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
-<!-- vale from-microsoft.RangeFormat = NO -->
-<!-- vale from-microsoft.Ranges = NO -->
+
+
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
-<!-- vale from-microsoft.Ranges = YES -->
-<!-- vale from-microsoft.RangeFormat = YES -->
+
+
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Convert to Google Document**: Choose whether to create a Google Document instead of the default `.txt` format. You must enable the Google Docs API in the [Google API Console](https://console.cloud.google.com/apis/library/docs.googleapis.com) for this to work.
 
 Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert) API documentation for more information.
 
-## Delete a file
+## Delete a file <a href="#delete-a-file" id="delete-a-file"></a>
 
 Use this operation to delete a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Delete**.
 - **File**: Choose a file you want to delete. 
     - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the file, or **By ID** to enter the `fileId`. 
     - You can find the `fileId` in a shareable Google Drive file URL: `https://docs.google.com/document/d/fileId/edit#gid=0`. In your Google Drive, select **Share > Copy link** to get the shareable file URL.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Delete Permanently**: Choose whether to delete the file now instead of moving it to the trash.
 
 Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete) API documentation for more information.
 
-## Download a file
+## Download a file <a href="#download-a-file" id="download-a-file"></a>
 
 Use this operation to download a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Download**.
 - **File**: Choose a file you want to download. 
     - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the file, or **By ID** to enter the `fileId`. 
     - You can find the `fileId` in a shareable Google Drive file URL: `https://docs.google.com/document/d/fileId/edit#gid=0`. In your Google Drive, select **Share > Copy link** to get the shareable file URL.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Put Output File in Field**: Choose the field name to place the binary file contents to make it available to following nodes.
 - **Google File Conversion**: Choose the formats to export as when downloading Google Files:
@@ -110,13 +124,13 @@ Enter these parameters:
 
 Refer to the [Method: files.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/get) API documentation for more information.
 
-## Move a file
+## Move a file <a href="#move-a-file" id="move-a-file"></a>
 
 Use this operation to move a file to a different location in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Move**.
 - **File**: Choose a file you want to move. 
@@ -129,13 +143,13 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 
 Refer to the [Method: parents.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/parents/insert) API documentation for more information.
 
-## Share a file
+## Share a file <a href="#share-a-file" id="share-a-file"></a>
 
 Use this operation to add sharing permissions to a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Share**.
 - **File**: Choose a file you want to share. 
@@ -149,25 +163,25 @@ Enter these parameters:
 		- **Domain**: Grant permission to a complete domain, defined by the **Domain**.
 		- **Anyone**: Grant permission to anyone. Can optionally **Allow File Discovery** to make the file discoverable through search.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Email Message**: A plain text custom message to include in the notification email.
-<!-- vale from-microsoft.FirstPerson = NO -->
+
 - **Move to New Owners Root**: Available when trying to transfer ownership while sharing an item not in a shared drive. When enabled, moves the file to the new owner's My Drive root folder.
-<!-- vale from-microsoft.FirstPerson = YES -->
+
 - **Send Notification Email**: Whether to send a notification email when sharing to users or groups.
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.
 
 Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files) API documentation for more information.
 
-## Update a file
+## Update a file <a href="#update-a-file" id="update-a-file"></a>
 
 Use this operation to update a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Update**.
 - **File to Update**: Choose a file you want to update. 
@@ -177,29 +191,29 @@ Enter these parameters:
 	- **Input Data Field Name**: The name of the input field that contains the binary file data you wish to use.
 - **New Updated File Name**: A new name for the file if you want to update the filename.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
 - **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
-<!-- vale from-microsoft.RangeFormat = NO -->
-<!-- vale from-microsoft.Ranges = NO -->
+
+
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
-<!-- vale from-microsoft.Ranges = YES -->
-<!-- vale from-microsoft.RangeFormat = YES -->
+
+
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Move to Trash**: Whether to move the file to the trash. Only possible for the file owner.
 - **Return Fields**: Return metadata fields about the file. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
 
 Refer to the [Method: files.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/update) API documentation for more information.
 
-## Upload a file
+## Upload a file <a href="#upload-a-file" id="upload-a-file"></a>
 
 Use this operation to upload a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Upload**.
 - **Input Data Field Name**: The name of the input field that contains the binary file data you wish to use.
@@ -209,16 +223,16 @@ Enter these parameters:
 
 You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
 - **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
-<!-- vale from-microsoft.RangeFormat = NO -->
-<!-- vale from-microsoft.Ranges = NO -->
+
+
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
-<!-- vale from-microsoft.Ranges = YES -->
-<!-- vale from-microsoft.RangeFormat = YES -->
+
+
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
 

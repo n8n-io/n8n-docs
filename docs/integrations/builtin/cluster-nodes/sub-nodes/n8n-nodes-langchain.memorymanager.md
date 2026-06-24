@@ -1,21 +1,35 @@
 ---
 title: Chat Memory Manager node documentation
-description: Learn how to use the Chat Memory Manager node in n8n. Follow technical documentation to integrate Chat Memory Manager node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Chat Memory Manager node in n8n. Follow technical
+  documentation to integrate Chat Memory Manager node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Chat Memory Manager node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager
+layout:
+  description:
+    visible: false
 ---
 
-# Chat Memory Manager node
+# Chat Memory Manager node <a href="#chat-memory-manager-node" id="chat-memory-manager-node"></a>
 
-The Chat Memory Manager node manages chat message [memories](/glossary.md#ai-memory) within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](/glossary.md#ai-vector-store).
+The Chat Memory Manager node manages chat message [memories](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store).
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/chat-memory-manager-purpose.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/AX0w52P6UHDs42hQvuqR/" %}
 
 On this page, you'll find a list of operations that the Chat Memory Manager node supports, along with links to more resources.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Operation Mode**: Choose between **Get Many Messages**, **Insert Messages**, and **Delete Messages** operations.
 * **Insert Mode**: Available in **Insert Messages** mode. Choose from:
@@ -34,15 +48,15 @@ On this page, you'll find a list of operations that the Chat Memory Manager node
 * **Messages Count**: Available in **Delete Messages** mode when you select **Last N**. Enter the number of latest messages to delete.
 * **Simplify Output**: Available in **Get Many Messages** mode. Turn on to simplify the output to include only the sender (AI, user, or system) and the text.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'chat-memory-manager') ]]
 
-## Related resources
+[Browse Chat Memory Manager node documentation integration templates](https://n8n.io/integrations/chat-memory-manager) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's Memory documentation](https://langchain-ai.github.io/langgraphjs/concepts/memory/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
 

@@ -1,22 +1,37 @@
 ---
 title: HTML
-description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the HTML node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: HTML
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.html.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.html'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.html'
+layout:
+  description:
+    visible: false
 ---
 
-# HTML
+# HTML <a href="#html" id="html"></a>
 
 The HTML node provides operations to help you work with HTML in n8n.
 
-/// note | HTML Extract node
-The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md).
-///
-/// warning | Cross-site scripting
-When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
-///
+{% hint style="info" %}
+**HTML Extract node**
 
-## Operations
+The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md).
+{% endhint %}
+{% hint style="warning" %}
+**Cross-site scripting**
+
+When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * [**Generate HTML template**](#generate-html-template): Use this operation to create an HTML template. This allows you to take data from your workflow and output it as HTML.
 * [**Extract HTML content**](#extract-html-content): Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
@@ -24,7 +39,7 @@ When using the HTML node to generate an HTML template you can introduce [XSS (cr
 
 The node parameters and options depend on the operation you select. Refer to the sections below for more details on configuring each operation.
 
-## Generate HTML template
+## Generate HTML template <a href="#generate-html-template" id="generate-html-template"></a>
 
 Create an HTML template. This allows you to take data from your workflow and output it as HTML. 
 
@@ -35,22 +50,22 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-You can use [Expressions](/data/expressions.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview.md). 
+You can use [Expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) in the template, including n8n's [Built-in methods and variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/use-built-in-shortcuts). 
 
-## Extract HTML Content
+## Extract HTML Content <a href="#extract-html-content" id="extract-html-content"></a>
 
 Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
 
 Use these parameters:
 
-### Source Data
+### Source Data <a href="#source-data" id="source-data"></a>
 
 Select the source type for your HTML content. Choose between:
 
 * **JSON**: If you select this source data, enter the **JSON Property**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
 * **Binary**: If you select this source data, enter the **Input Binary Field**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
 
-### Extraction Values
+### Extraction Values <a href="#extraction-values" id="extraction-values"></a>
 
 - **Key**: Enter the key to save the extracted value under.
 - **CSS Selector**: Enter the CSS selector to search for.
@@ -63,14 +78,14 @@ Select the source type for your HTML content. Choose between:
 	- **Value**: Return the value of an input, select, or text area.
 - **Return Array**: Choose whether to return multiple extraction values as an array (turned on) or as a single string (turned off).
 
-### Extract HTML Content options
+### Extract HTML Content options <a href="#extract-html-content-options" id="extract-html-content-options"></a>
 
 You can also configure this operation with these options:
 
 * **Trim Values**: Controls whether to remove all spaces and newlines from the beginning and end of the values (turned on) or leaves them (turned off).
 * **Clean Up Text**: Controls whether to remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).
 
-## Convert to HTML Table
+## Convert to HTML Table <a href="#convert-to-html-table" id="convert-to-html-table"></a>
 
 This operation expects data from another node. It has no parameters. It includes these options:
 
@@ -82,7 +97,7 @@ This operation expects data from another node. It has no parameters. It includes
 * **Row Attributes**: Enter any attributes to apply to the table's rows `<tr>`.
 * **Cell Attributes**: Enter any attributes to apply to the table's cells `<td>`.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'html') ]]
+
+[Browse HTML integration templates](https://n8n.io/integrations/html) or [search all templates](https://n8n.io/workflows/)

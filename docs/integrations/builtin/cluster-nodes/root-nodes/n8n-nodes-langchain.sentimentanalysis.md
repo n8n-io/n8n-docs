@@ -1,21 +1,35 @@
 ---
 title: Sentiment Analysis node documentation
-description: Learn how to use the Sentiment Analysis node in n8n. Follow technical documentation to integrate Sentiment Analysis node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Sentiment Analysis node in n8n. Follow technical
+  documentation to integrate Sentiment Analysis node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Sentiment Analysis node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis
+layout:
+  description:
+    visible: false
 ---
 
-# Sentiment Analysis node
+# Sentiment Analysis node <a href="#sentiment-analysis-node" id="sentiment-analysis-node"></a>
 
 Use the Sentiment Analysis node to analyze the sentiment of incoming text data.
 
 The language model uses the [**Sentiment Categories**](#node-options) in the node options to determine each item's sentiment.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Text to Analyze** defines the input text for sentiment analysis. This is an expression that references a field from the input items. For example, this could be 
 `{{ $json.chatInput }}` if the input is from a chat or message source. By default, it expects a `text` field.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Sentiment Categories**: Define the categories that you want to classify your input as.
     * By default, these are `Positive, Neutral, Negative`. You can customize these categories to fit your specific use case, such as `Very Positive, Positive, Neutral, Negative, Very Negative` for more granular analysis.
@@ -23,42 +37,42 @@ The language model uses the [**Sentiment Categories**](#node-options) in the nod
 * **System Prompt Template**: Use this option to change the system prompt that's used for the sentiment analysis. It uses the `{categories}` placeholder for the categories.
 * **Enable Auto-Fixing**: When enabled, the node automatically fixes model outputs to ensure they match the expected format. Do this by sending the schema parsing error to the LLM and asking it to fix it.
 
-## Usage Notes
+## Usage Notes <a href="#usage-notes" id="usage-notes"></a>
 
-### Model Temperature Setting
+### Model Temperature Setting <a href="#model-temperature-setting" id="model-temperature-setting"></a>
 
 It's strongly advised to set the temperature of the connected language model to 0 or a value close to 0. This helps ensure that the results are as deterministic as possible, providing more consistent and reliable sentiment analysis across multiple runs.
 
-### Language Considerations
+### Language Considerations <a href="#language-considerations" id="language-considerations"></a>
 
 The node's performance may vary depending on the language of the input text.
 
 For best results, ensure your chosen language model supports the input language.
 
-### Processing Large Volumes
+### Processing Large Volumes <a href="#processing-large-volumes" id="processing-large-volumes"></a>
 
 When analyzing large amounts of text, consider splitting the input into smaller chunks to optimize processing time and resource usage.
 
-### Iterative Refinement
+### Iterative Refinement <a href="#iterative-refinement" id="iterative-refinement"></a>
 
 For complex sentiment analysis tasks, you may need to iteratively refine the system prompt and categories to achieve the desired results.
 
-## Example Usage
+## Example Usage <a href="#example-usage" id="example-usage"></a>
 
-### Basic Sentiment Analysis
+### Basic Sentiment Analysis <a href="#basic-sentiment-analysis" id="basic-sentiment-analysis"></a>
 
 1. Connect a data source (for example, RSS Feed, HTTP Request) to the Sentiment Analysis node.
 2. Set the "Text to Analyze" field to the relevant item property (for example, `{{ $json.content }}` for blog post content).
 3. Keep the default sentiment categories.
 4. Connect the node's outputs to separate paths for processing positive, neutral, and negative sentiments differently.
 
-### Custom Category Analysis
+### Custom Category Analysis <a href="#custom-category-analysis" id="custom-category-analysis"></a>
 
 1. Change the **Sentiment Categories** to `Excited, Happy, Neutral, Disappointed, Angry`.
 2. Adjust your workflow to handle these five output categories.
 3. Use this setup to analyze customer feedback with more nuanced emotional categories.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

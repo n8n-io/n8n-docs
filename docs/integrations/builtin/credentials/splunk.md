@@ -1,33 +1,46 @@
 ---
 title: Splunk credentials
-description: Documentation for Splunk credentials. Use these credentials to authenticate Splunk in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Splunk credentials. Use these credentials to authenticate
+  Splunk in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Splunk credentials
+originalFilePath: integrations/builtin/credentials/splunk.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/splunk'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/splunk'
+layout:
+  description:
+    visible: false
 ---
 
-# Splunk credentials
+# Splunk credentials <a href="#splunk-credentials" id="splunk-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Splunk](/integrations/builtin/app-nodes/n8n-nodes-base.splunk.md)
+- [Splunk](../app-nodes/n8n-nodes-base.splunk.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - [Download and install](https://www.splunk.com/en_us/download/splunk-enterprise.html) Splunk Enterprise.
 - [Enable token authentication](https://docs.splunk.com/Documentation/Splunk/9.2.1/Security/EnableTokenAuth) in **Settings > Tokens**.
 
-/// note | Free trial Splunk Cloud Platform accounts can't access the REST API
-Free trial Splunk Cloud Platform accounts don't have access to the REST API. Ensure you have the necessary permissions. Refer to [Access requirements and limitations for the Splunk Cloud Platform REST API](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2203/RESTTUT/RESTandCloud) for more details.
-///
+{% hint style="info" %}
+**Free trial Splunk Cloud Platform accounts can't access the REST API**
 
-## Supported authentication methods
+Free trial Splunk Cloud Platform accounts don't have access to the REST API. Ensure you have the necessary permissions. Refer to [Access requirements and limitations for the Splunk Cloud Platform REST API](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2203/RESTTUT/RESTandCloud) for more details.
+{% endhint %}
+
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API auth token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Splunk's Enterprise API documentation](https://docs.splunk.com/Documentation/Splunk/latest/RESTREF/RESTprolog) for more information about the service.
 
-## Using API auth token
+## Using API auth token <a href="#using-api-auth-token" id="using-api-auth-token"></a>
 
 To configure this credential, you'll need:
 
@@ -35,7 +48,7 @@ To configure this credential, you'll need:
 - A **Base URL**: For your Splunk instance. This should include the protocol, domain, and port, for example: `https://localhost:8089`.
 - **Allow Self-Signed Certificates**: If turned on, n8n will connect even if SSL validation fails.
 
-## Required capabilities
+## Required capabilities <a href="#required-capabilities" id="required-capabilities"></a>
 
 Your Splunk platform account and role must have certain capabilities to create authentication tokens:
 

@@ -1,41 +1,58 @@
 ---
 title: Conversational AI Agent node documentation
-description: Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow technical documentation to integrate the Conversational Agent into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow
+  technical documentation to integrate the Conversational Agent into your
+  workflows.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Conversational AI Agent node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent
+layout:
+  description:
+    visible: false
 ---
 
-# Conversational AI Agent node
+# Conversational AI Agent node <a href="#conversational-ai-agent-node" id="conversational-ai-agent-node"></a>
 
-/// note | Feature removed
+{% hint style="info" %}
+**Feature removed**
+
 n8n removed this functionality in February 2025.
-///
+{% endhint %}
 
 The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
 
-The Conversational Agent describes [tools](/glossary.md#ai-tool) in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).
+The Conversational Agent describes [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](tools-agent.md).
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ATANgfFVHG8eIRH2Xynm/" %}
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the Conversational Agent using the following parameters.
 
-### Prompt
+### Prompt <a href="#prompt" id="prompt"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/prompt.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tALAgzlpmog5eZk893Ez/" %}
 
-### Require Specific Output Format
+### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/FWz2tiBEchkNj9yOVoti/" %}
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 Refine the Conversational Agent node's behavior using these options:
 
-### Human Message
+### Human Message <a href="#human-message" id="human-message"></a>
 
 Tell the agent about the tools it can use and add context to the user's input.
 
@@ -65,28 +82,28 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 {{input}}
 ```
 
-### System Message 
+### System Message <a href="#system-message" id="system-message"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iItrx0Sif4nFlvnhRC32/" %}
 
-### Max Iterations
+### Max Iterations <a href="#max-iterations" id="max-iterations"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5peNPbMzizpnVi5yyawQ/" %}
 
-### Return Intermediate Steps
+### Return Intermediate Steps <a href="#return-intermediate-steps" id="return-intermediate-steps"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iCkxSCJ5heC6EkrCHxvn/" %}
 
-### Tracing Metadata
+### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/tracing-metadata.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8YMxu7WAgGuRiK8YvCjS/" %}
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](README.md#templates-and-examples) section.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
 
 

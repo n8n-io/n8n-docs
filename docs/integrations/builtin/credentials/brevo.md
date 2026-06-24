@@ -1,29 +1,40 @@
 ---
 title: Brevo credentials
-description: Documentation for Brevo credentials. Use these credentials to authenticate Brevo in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Brevo credentials. Use these credentials to authenticate
+  Brevo in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Brevo credentials
+originalFilePath: integrations/builtin/credentials/brevo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/brevo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/brevo'
+layout:
+  description:
+    visible: false
 ---
 
-# Brevo credentials
+# Brevo credentials <a href="#brevo-credentials" id="brevo-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo.md)
-* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md)
+* [Brevo node](../app-nodes/n8n-nodes-base.brevo.md)
+* [Brevo Trigger node](../trigger-nodes/n8n-nodes-base.brevotrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Brevo](https://www.brevo.com/) developer account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
 
-## API key
+## API key <a href="#api-key" id="api-key"></a>
 
 To configure this credential, you'll need:
 

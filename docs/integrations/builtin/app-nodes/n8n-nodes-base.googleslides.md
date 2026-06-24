@@ -1,22 +1,35 @@
 ---
 title: Google Slides node documentation
-description: Learn how to use the Google Slides node in n8n. Follow technical documentation to integrate Google Slides node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Google Slides node in n8n. Follow technical documentation
+  to integrate Google Slides node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Google Slides node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googleslides'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googleslides'
+layout:
+  description:
+    visible: false
 ---
 
-# Google Slides node
+# Google Slides node <a href="#google-slides-node" id="google-slides-node"></a>
 
 Use the Google Slides node to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating presentations, and getting pages. 
 
 On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Google credentials](../credentials/google/README.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Page
     * Get a page
@@ -27,9 +40,9 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
     * Get presentation slides
     * Replace text in a presentation
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'google-slides') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Google Slides node documentation integration templates](https://n8n.io/integrations/google-slides) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

@@ -1,30 +1,41 @@
 ---
 title: Gmail
-description: Documentation for Gmail IMAP credentials. Use these credentials to authenticate Gmail IMAP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Gmail IMAP credentials. Use these credentials to
+  authenticate Gmail IMAP in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Gmail
+originalFilePath: integrations/builtin/credentials/imap/gmail.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/imap/gmail'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/imap/gmail'
+layout:
+  description:
+    visible: false
 ---
 
-# Gmail IMAP credentials
+# Gmail IMAP credentials <a href="#gmail-imap-credentials" id="gmail-imap-credentials"></a>
 
 Follow these steps to configure the IMAP credentials with a Gmail account.
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To follow these instructions, you must first:
 
 1. [Enable 2-step Verification](#enable-2-step-verification) on your Gmail account.
 2. [Generate an app password](#generate-an-app-password).
 
-### Enable 2-step Verification
+### Enable 2-step Verification <a href="#enable-2-step-verification" id="enable-2-step-verification"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/email/gmail-two-step-verification.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bAchsCEbARjioUMmRQBn/" %}
 
-### Generate an app password
+### Generate an app password <a href="#generate-an-app-password" id="generate-an-app-password"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/email/gmail-app-password.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KKq1ahPmcFa6J67IyuN4/" %}
 
-## Set up the credential
+## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 
 To set up the IMAP credential with a Gmail account, use these settings:
 

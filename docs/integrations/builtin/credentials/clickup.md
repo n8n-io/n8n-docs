@@ -1,27 +1,38 @@
 ---
 title: ClickUp credentials
-description: Documentation for ClickUp credentials. Use these credentials to authenticate ClickUp in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for ClickUp credentials. Use these credentials to authenticate
+  ClickUp in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: ClickUp credentials
+originalFilePath: integrations/builtin/credentials/clickup.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/clickup'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/clickup'
+layout:
+  description:
+    visible: false
 ---
 
-# ClickUp credentials
+# ClickUp credentials <a href="#clickup-credentials" id="clickup-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup.md)
-- [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md)
+- [ClickUp](../app-nodes/n8n-nodes-base.clickup.md)
+- [ClickUp Trigger](../trigger-nodes/n8n-nodes-base.clickuptrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [ClickUp's documentation](https://clickup.com/api/) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need a [ClickUp](https://www.clickup.com/) account and:
 
@@ -35,11 +46,11 @@ To get your personal API token:
 
 Refer to [ClickUp's Personal Token documentation](https://clickup.com/api/developer-portal/authentication#personal-token) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to create an OAuth app:
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to create an OAuth app:
 
 1. In ClickUp, select your avatar and select **Integrations**.
 2. Select **ClickUp API**.

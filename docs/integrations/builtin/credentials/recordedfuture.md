@@ -1,28 +1,39 @@
 ---
 title: Recorded Future credentials
-description: Documentation for the Recorded Future credentials. Use these credentials to authenticate Recorded Future in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Recorded Future credentials. Use these credentials to
+  authenticate Recorded Future in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Recorded Future credentials
+originalFilePath: integrations/builtin/credentials/recordedfuture.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/recordedfuture'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/recordedfuture'
+layout:
+  description:
+    visible: false
 ---
 
-# Recorded Future credentials
+# Recorded Future credentials <a href="#recorded-future-credentials" id="recorded-future-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Recorded Future](https://www.recordedfuture.com) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Recorded Future's documentation](https://api.recordedfuture.com/index.html) for more information about the service. The rest of Recorded Future's help center requires a paid account.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/recorded-future/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/recorded-future/) on n8n's website.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 

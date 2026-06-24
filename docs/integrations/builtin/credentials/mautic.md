@@ -1,31 +1,44 @@
 ---
 title: Mautic credentials
-description: Documentation for Mautic credentials. Use these credentials to authenticate Mautic in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Mautic credentials. Use these credentials to authenticate
+  Mautic in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Mautic credentials
+originalFilePath: integrations/builtin/credentials/mautic.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mautic'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mautic'
+layout:
+  description:
+    visible: false
 ---
 
-# Mautic credentials
+# Mautic credentials <a href="#mautic-credentials" id="mautic-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mautic](/integrations/builtin/app-nodes/n8n-nodes-base.mautic.md)
-- [Mautic Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md)
+- [Mautic](../app-nodes/n8n-nodes-base.mautic.md)
+- [Mautic Trigger](../trigger-nodes/n8n-nodes-base.mautictrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Mautic's API documentation](https://developer.mautic.org/#rest-api) for more information about the service.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
-/// note | API enabled
+{% hint style="info" %}
+**API enabled**
+
 To set up this credential, your Mautic instance must have the API enabled. Refer to [Enable the API](#enable-the-api) for instructions.
-///
+{% endhint %}
 
 To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/) instance and:
 
@@ -41,11 +54,13 @@ To set it up:
 2. Enter your Mautic **Username**.
 3. Enter your Mautic **Password**.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-/// note | API enabled
+{% hint style="info" %}
+**API enabled**
+
 To set up this credential, your Mautic instance must have the API enabled. Refer to [Enable the API](#enable-the-api) for instructions.
-///
+{% endhint %}
 
 To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/) instance and:
 
@@ -56,11 +71,9 @@ To configure this credential, you'll need an account on a [Mautic](https://www.m
 To set it up:
 
 1. In Mautic, go to **Configuration > Settings**.
-2. Select **API Credentials**.
+2. Select **API Credentials**.<br>
 
-    /// note | No API Credentials menu
-    If you don't see the **API Credentials** option under **Configuration > Settings**, be sure to [Enable the API](#enable-the-api). If you've enabled the API and you still don't see the option, try [manually clearing the cache](https://forum.mautic.org/t/cant-find-api-credentials-menu/10689).
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>No API Credentials menu</strong></p><p>If you don't see the <strong>API Credentials</strong> option under <strong>Configuration &gt; Settings</strong>, be sure to <a href="#enable-the-api">Enable the API</a>. If you've enabled the API and you still don't see the option, try <a href="https://forum.mautic.org/t/cant-find-api-credentials-menu/10689">manually clearing the cache</a>.</p></div>
 
 2. Select the option to **Create new client**.
 3. Select **OAuth 2** as the **Authorization Protocol**.
@@ -73,7 +86,7 @@ To set it up:
 
 Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html#mcetoc_1g7n1bgoo0) for more information.
 
-## Enable the API
+## Enable the API <a href="#enable-the-api" id="enable-the-api"></a>
 
 To enable the API in your Mautic instance:
 

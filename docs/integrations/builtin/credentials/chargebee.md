@@ -1,29 +1,40 @@
 ---
 title: Chargebee credentials
-description: Documentation for Chargebee credentials. Use these credentials to authenticate Chargebee in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Chargebee credentials. Use these credentials to authenticate
+  Chargebee in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Chargebee credentials
+originalFilePath: integrations/builtin/credentials/chargebee.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/chargebee'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/chargebee'
+layout:
+  description:
+    visible: false
 ---
 
-# Chargebee credentials
+# Chargebee credentials <a href="#chargebee-credentials" id="chargebee-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee.md)
-- [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md)
+- [Chargebee](../app-nodes/n8n-nodes-base.chargebee.md)
+- [Chargebee Trigger](../trigger-nodes/n8n-nodes-base.chargebeetrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Chargebee](https://www.chargebee.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Chargebee's API documentation](https://apidocs.chargebee.com/docs/api/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

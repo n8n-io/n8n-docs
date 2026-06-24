@@ -1,22 +1,35 @@
 ---
 title: Databricks node documentation
-description: Learn how to use the Databricks node in n8n. Follow technical documentation to integrate Databricks node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Databricks node in n8n. Follow technical documentation to
+  integrate Databricks node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Databricks node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.databricks.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.databricks'
+layout:
+  description:
+    visible: false
 ---
 
-# Databricks node
+# Databricks node <a href="#databricks-node" id="databricks-node"></a>
 
 Use the Databricks node to automate work in Databricks, and integrate Databricks with other applications. n8n has built-in support for a wide range of Databricks features, including executing SQL queries, managing Unity Catalog objects, querying ML model serving endpoints, and working with vector search indexes.
 
 On this page, you'll find a list of operations the Databricks node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Databricks credentials](/integrations/builtin/credentials/databricks.md) for guidance on setting up authentication.
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Databricks credentials](../credentials/databricks.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Databricks SQL
 	* Execute Query
@@ -59,13 +72,13 @@ Refer to [Databricks credentials](/integrations/builtin/credentials/databricks.m
 	* List Indexes
 	* Query Index
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'databricks') ]]
 
-## Related resources
+[Browse Databricks node documentation integration templates](https://n8n.io/integrations/databricks) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Databricks' REST API documentation](https://docs.databricks.com/api/) for details about their API.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

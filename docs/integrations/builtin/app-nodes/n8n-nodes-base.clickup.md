@@ -1,23 +1,36 @@
 ---
 title: ClickUp node documentation
-description: Learn how to use the ClickUp node in n8n. Follow technical documentation to integrate ClickUp node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the ClickUp node in n8n. Follow technical documentation to
+  integrate ClickUp node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: ClickUp node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.clickup.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.clickup'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.clickup'
+layout:
+  description:
+    visible: false
 ---
 
-# ClickUp node
+# ClickUp node <a href="#clickup-node" id="clickup-node"></a>
 
 Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
 
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
-/// note | Credentials
-Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [ClickUp credentials](../credentials/clickup.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Checklist
     * Create a checklist
@@ -91,19 +104,19 @@ Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for
     * Get all time entry tags
     * Remove tag from time entry
 
-## Operation details
+## Operation details <a href="#operation-details" id="operation-details"></a>
 
-### Get a task
+### Get a task <a href="#get-a-task" id="get-a-task"></a>
 
 When using the **Get a task** operation, you can optionally enable the following:
 
 - **Include Subtasks**: When enabled, also fetches and includes subtasks for the specified task.
 - **Include Markdown Description**: When enabled, includes the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'clickup') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse ClickUp node documentation integration templates](https://n8n.io/integrations/clickup) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

@@ -1,23 +1,38 @@
 ---
 title: ActiveCampaign node documentation
-description: Learn how to use the ActiveCampaign node in n8n. Follow technical documentation to integrate ActiveCampaign node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the ActiveCampaign node in n8n. Follow technical
+  documentation to integrate ActiveCampaign node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: ActiveCampaign node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.activecampaign.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign
+layout:
+  description:
+    visible: false
 ---
 
-# ActiveCampaign node
+# ActiveCampaign node <a href="#activecampaign-node" id="activecampaign-node"></a>
 
 Use the ActiveCampaign node to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
 
 On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 
-/// note | Credentials
-Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [ActiveCampaign credentials](../credentials/activecampaign.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Account
     * Create an account
@@ -80,10 +95,10 @@ Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activeca
     * Get data of all tags
     * Update a tag
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'activecampaign') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse ActiveCampaign node documentation integration templates](https://n8n.io/integrations/activecampaign) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

@@ -1,19 +1,32 @@
 ---
 title: Crypto
-description: Documentation for the Crypto node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Crypto node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Crypto
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.crypto'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.crypto'
+layout:
+  description:
+    visible: false
 ---
 
-# Crypto
+# Crypto <a href="#crypto" id="crypto"></a>
 
 Use the Crypto node to perform cryptographic operations in workflows.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/crypto.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-## Actions
+You can find authentication information for this node [here](/integrations/builtin/credentials/crypto.md).
+{% endhint %}
+
+## Actions <a href="#actions" id="actions"></a>
 
 * [**Decrypt** a string](#decrypt-parameters) with a passphrase or private key
 * [**Encrypt** a string](#encrypt-parameters) with a passphrase or public key
@@ -22,9 +35,9 @@ You can find authentication information for this node [here](/integrations/built
 * [**Hmac** a text or file](#hmac-parameters) in a specified format
 * [**Sign** a string](#sign-parameters) using a private key
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
 
 Node parameters depend on the action you select.
 
@@ -34,7 +47,7 @@ The **Hmac**, **Sign**, **Encrypt**, and **Decrypt** actions need [Crypto creden
 * **Sign** uses the **Private Key**.
 * **Encrypt** and **Decrypt** use the **Encryption Passphrase** for symmetric mode, or the **Encryption Public Key** and **Encryption Private Key** for asymmetric mode.
 
-### Decrypt parameters
+### Decrypt parameters <a href="#decrypt-parameters" id="decrypt-parameters"></a>
 
 * **Mode**: Select the mode to use. This must match the mode used to encrypt the value. Choose from:
 	* **Symmetric (Passphrase)**: Decrypt with a passphrase using an authenticated cipher.
@@ -47,7 +60,7 @@ The **Hmac**, **Sign**, **Encrypt**, and **Decrypt** actions need [Crypto creden
 * **Value**: Enter the base64 string produced by the **Encrypt** action.
 * **Property Name**: Enter the name of the property you want to write the decrypted value to.
 
-### Encrypt parameters
+### Encrypt parameters <a href="#encrypt-parameters" id="encrypt-parameters"></a>
 
 * **Mode**: Select the mode to use. Choose from:
 	* **Symmetric (Passphrase)**: Encrypt with a passphrase using an authenticated cipher.
@@ -60,11 +73,13 @@ The **Hmac**, **Sign**, **Encrypt**, and **Decrypt** actions need [Crypto creden
 * **Value**: Enter the value you want to encrypt.
 * **Property Name**: Enter the name of the property you want to write the encrypted value to. The node writes the result as a base64 string.
 
-/// note | RSA payload size
-Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2048-bit key. Use symmetric mode for larger data.
-///
+{% hint style="info" %}
+**RSA payload size**
 
-### Generate parameters
+Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2048-bit key. Use symmetric mode for larger data.
+{% endhint %}
+
+### Generate parameters <a href="#generate-parameters" id="generate-parameters"></a>
 
 * **Property Name**: Enter the name of the property to write the random string to.
 * **Type**: Select the encoding type to use to generate the string. Choose from:
@@ -74,7 +89,7 @@ Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2
 	* **UUID**
 * **Length**: When you select **ASCII**, **BASE64**, or **HEX**, enter the length of the generated string. The default is `32`.
 
-### Hash parameters
+### Hash parameters <a href="#hash-parameters" id="hash-parameters"></a>
 
 * **Type**: Select the hash type to use. Choose from:
 	* **MD5**
@@ -92,7 +107,7 @@ Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2
 	* **BASE64**
 	* **HEX**
 
-### Hmac parameters
+### Hmac parameters <a href="#hmac-parameters" id="hmac-parameters"></a>
 
 * **Binary File**: Turn this parameter on if the data you want to create an Hmac for is from a binary file.
 	* **Value**: If you turn off **Binary File**, enter the value you want to create an Hmac for.
@@ -112,18 +127,18 @@ Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2
 
 This action uses the **Hmac Secret** from your [Crypto credentials](/integrations/builtin/credentials/crypto.md).
 
-### Sign parameters
+### Sign parameters <a href="#sign-parameters" id="sign-parameters"></a>
 
 * **Value**: Enter the value you want to sign.
 * **Property Name**: Enter the name of the property you want to write the signed value to.
-* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/data/expressions.md).
+* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 * **Encoding**: Select the encoding type to use. Choose from:
 	* **BASE64**
 	* **HEX**
 
 This action uses the **Private Key** from your [Crypto credentials](/integrations/builtin/credentials/crypto.md).
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'crypto') ]]
+
+[Browse Crypto integration templates](https://n8n.io/integrations/crypto) or [search all templates](https://n8n.io/workflows/)

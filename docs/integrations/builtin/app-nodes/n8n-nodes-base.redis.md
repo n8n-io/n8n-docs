@@ -1,23 +1,36 @@
 ---
 title: Redis node documentation
-description: Learn how to use the Redis node in n8n. Follow technical documentation to integrate Redis node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Redis node in n8n. Follow technical documentation to
+  integrate Redis node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Redis node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.redis.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.redis'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.redis'
+layout:
+  description:
+    visible: false
 ---
 
-# Redis node
+# Redis node <a href="#redis-node" id="redis-node"></a>
 
 Use the Redis node to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the Redis channel.  
 
 On this page, you'll find a list of operations the Redis node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Redis credentials](/integrations/builtin/credentials/redis.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Redis credentials](../credentials/redis.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Delete a key from Redis.
 * Get the value of a key from Redis.
@@ -27,7 +40,7 @@ Refer to [Redis credentials](/integrations/builtin/credentials/redis.md) for gui
 * Set the value of a key in Redis.
 * Publish message to Redis channel.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'redis') ]]
+
+[Browse Redis node documentation integration templates](https://n8n.io/integrations/redis) or [search all templates](https://n8n.io/workflows/)

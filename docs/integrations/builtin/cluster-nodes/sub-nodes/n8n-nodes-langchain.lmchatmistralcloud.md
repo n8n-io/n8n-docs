@@ -1,27 +1,43 @@
 ---
 title: Mistral Cloud Chat Model node documentation
-description: Learn how to use the Mistral Cloud Chat Model node in n8n. Follow technical documentation to integrate Mistral Cloud Chat Model node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Mistral Cloud Chat Model node in n8n. Follow technical
+  documentation to integrate Mistral Cloud Chat Model node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Mistral Cloud Chat Model node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud
+layout:
+  description:
+    visible: false
 ---
 
-# Mistral Cloud Chat Model node
+# Mistral Cloud Chat Model node <a href="#mistral-cloud-chat-model-node" id="mistral-cloud-chat-model-node"></a>
 
-Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational [agents](/glossary.md#ai-agent).
+Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational [agents](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent).
 
 On this page, you'll find the node parameters for the Mistral Cloud Chat Model node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mistral.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/mistral.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Model**: Select the model to use to generate the completion. n8n dynamically loads models from Mistral Cloud and you'll only see the models available to your account.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
@@ -31,14 +47,14 @@ You can find authentication information for this node [here](/integrations/built
 * **Enable Safe Mode**: Enable safe mode by injecting a safety prompt at the beginning of the completion. This helps prevent the model from generating offensive content.
 * **Random Seed**: Enter a seed to use for random sampling. If set, different calls will generate deterministic results.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mistral-cloud-chat-model') ]]
 
-## Related resources
+[Browse Mistral Cloud Chat Model node documentation integration templates](https://n8n.io/integrations/mistral-cloud-chat-model) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 

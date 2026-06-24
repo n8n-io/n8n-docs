@@ -1,22 +1,35 @@
 ---
 title: Zoho CRM node documentation
-description: Learn how to use the Zoho CRM node in n8n. Follow technical documentation to integrate Zoho CRM node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Zoho CRM node in n8n. Follow technical documentation to
+  integrate Zoho CRM node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zoho CRM node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm'
+layout:
+  description:
+    visible: false
 ---
 
-# Zoho CRM node
+# Zoho CRM node <a href="#zoho-crm-node" id="zoho-crm-node"></a>
 
 Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Zoho CRM credentials](../credentials/zoho.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Account
     * Create an account
@@ -90,9 +103,9 @@ Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for g
     * Get all vendors
     * Update a vendor
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'zoho-crm') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Zoho CRM node documentation integration templates](https://n8n.io/integrations/zoho-crm) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

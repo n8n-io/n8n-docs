@@ -1,29 +1,40 @@
 ---
 title: Auth0 Management credentials
-description: Documentation for the Auth0 Management credentials. Use these credentials to authenticate Auth0 Management in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Auth0 Management credentials. Use these credentials to
+  authenticate Auth0 Management in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Auth0 Management credentials
+originalFilePath: integrations/builtin/credentials/auth0management.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/auth0management'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/auth0management'
+layout:
+  description:
+    visible: false
 ---
 
-# Auth0 Management credentials
+# Auth0 Management credentials <a href="#auth0-management-credentials" id="auth0-management-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Auth0](https://auth0.com) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API client secret
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Auth0 Management's documentation](https://auth0.com/docs/api/management/v2) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/auth0-management-api/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/auth0-management-api/) on n8n's website.
 
-## Using API client secret
+## Using API client secret <a href="#using-api-client-secret" id="using-api-client-secret"></a>
 
 To configure this credential, you'll need:
 

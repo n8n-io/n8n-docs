@@ -1,36 +1,51 @@
 ---
 title: HubSpot credentials
-description: Documentation for HubSpot credentials. Use these credentials to authenticate HubSpot in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for HubSpot credentials. Use these credentials to authenticate
+  HubSpot in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: HubSpot credentials
+originalFilePath: integrations/builtin/credentials/hubspot.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/hubspot'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/hubspot'
+layout:
+  description:
+    visible: false
 ---
 
-# HubSpot credentials
+# HubSpot credentials <a href="#hubspot-credentials" id="hubspot-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md)
-- [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md)
+- [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md)
+- [HubSpot Trigger](../trigger-nodes/n8n-nodes-base.hubspottrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Service key (recommended): Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
-- Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node.
-- OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
+- Service key (recommended): Use with the [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md) node.
+- Developer API key: Use with the [HubSpot Trigger](../trigger-nodes/n8n-nodes-base.hubspottrigger.md) node.
+- OAuth2: Use with the [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md) node.
 
-/// warning | API key deprecated
+{% hint style="warning" %}
+**API key deprecated**
+
 HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://web.archive.org/web/20240106022147/https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up a service key.
-///
+{% endhint %}
 
-/// warning | UI based private apps are now legacy
+{% hint style="warning" %}
+**UI based private apps are now legacy**
+
 HubSpot has moved private apps created in the UI to legacy status. If you're using a private app access token from this type of app, HubSpot recommends using a service key instead. Refer to [HubSpot's Private Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview) for more information.
-///
+{% endhint %}
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api-reference/webhooks-webhooks-v3/guide) for more information about that service.
+Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](../trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api-reference/webhooks-webhooks-v3/guide) for more information about that service.
 
-## Using Service Key
+## Using Service Key <a href="#using-service-key" id="using-service-key"></a>
 
 To configure this credential, you'll need a [HubSpot](https://www.hubspot.com/) account with super admin access or Developer tools access permission, and:
 
@@ -40,11 +55,11 @@ To generate a service key:
 
 1. In your HubSpot account, go to **Development** > **Keys** > **Service Keys**. (You can also find **Service Keys** under **Settings** > **Account Management** > **Integrations** > **Service Keys**.)
 
-	![The Service Keys page in HubSpot's Development menu](/_images/integrations/builtin/credentials/hubspot/service_keys_main.png)
+	![The Service Keys page in HubSpot's Development menu](../../.gitbook/assets/service_keys_main.png)
 
 2. Select **Create service key**.
 
-	![The Create Service Key form with name and scopes fields](/_images/integrations/builtin/credentials/hubspot/service_keys_create.png)
+	![The Create Service Key form with name and scopes fields](../../.gitbook/assets/service_keys_create.png)
 
 3. Enter a descriptive **Name** for your key.
 4. Select **Add new scope** and choose the permissions your integration needs. Refer to [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for a list of recommended scopes.
@@ -53,11 +68,13 @@ To generate a service key:
 7. Click on the new service key name to navigate to its details page, and select **Show** to reveal your key.
 8. Copy the key value using the copy button, and paste it as the **App Token** in your n8n credential.
 
-/// note | Service keys in public beta
-Service keys are currently in public beta and subject to change. Refer to [HubSpot's Service Keys documentation](https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys) for the latest information.
-///
+{% hint style="info" %}
+**Service keys in public beta**
 
-## Using Developer API key
+Service keys are currently in public beta and subject to change. Refer to [HubSpot's Service Keys documentation](https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys) for the latest information.
+{% endhint %}
+
+## Using Developer API key <a href="#using-developer-api-key" id="using-developer-api-key"></a>
 
 To configure this credential, you'll need a [HubSpot developer](https://developers.hubspot.com/) account and:
 
@@ -86,9 +103,9 @@ To create the public app and set up the credential:
 
  Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview) for more detailed instructions.
 
-### Required scopes for HubSpot Trigger node
+### Required scopes for HubSpot Trigger node <a href="#required-scopes-for-hubspot-trigger-node" id="required-scopes-for-hubspot-trigger-node"></a>
 
-If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node, n8n recommends starting with these scopes:
+If you're creating an app for use with the [HubSpot Trigger](../trigger-nodes/n8n-nodes-base.hubspottrigger.md) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name** |
 | --- | --- | --- | --- |
@@ -101,11 +118,11 @@ If you're creating an app for use with the [HubSpot Trigger](/integrations/built
 | CRM | Deals schemas| Read | `crm.schemas.deals.read` |
 
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
 1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.
@@ -123,9 +140,9 @@ If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2
 
 Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview) for more detailed instructions. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth).
 
-## Required scopes for HubSpot node
+## Required scopes for HubSpot node <a href="#required-scopes-for-hubspot-node" id="required-scopes-for-hubspot-node"></a>
 
-If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node, n8n recommends starting with these scopes:
+If you're creating an app for use with the [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name(s)** |
 | --- | --- | --- | --- |

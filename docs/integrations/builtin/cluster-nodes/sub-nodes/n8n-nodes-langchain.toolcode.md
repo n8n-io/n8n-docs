@@ -1,31 +1,44 @@
 ---
 title: Custom Code Tool node documentation
-description: Learn how to use the Custom Code Tool node in n8n. Follow technical documentation to integrate Custom Code Tool node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Custom Code Tool node in n8n. Follow technical
+  documentation to integrate Custom Code Tool node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Custom Code Tool node documentation
+originalFilePath: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode
+layout:
+  description:
+    visible: false
 ---
 
-# Custom Code Tool node
+# Custom Code Tool node <a href="#custom-code-tool-node" id="custom-code-tool-node"></a>
 
-Use the Custom Code Tool node to write code that an [agent](/glossary.md#ai-agent) can run.
+Use the Custom Code Tool node to write code that an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) can run.
 
 On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-### Description
+### Description <a href="#description" id="description"></a>
 
 Give your custom code a description. This tells the agent when to use this tool. For example:
 
 > Call this tool to get a random color. The input should be a string with comma separated names of colors to exclude.
 
-### Language
+### Language <a href="#language" id="language"></a>
 
 You can use JavaScript or Python.
 
-### JavaScript / Python box
+### JavaScript / Python box <a href="#javascript-python-box" id="javascript-python-box"></a>
 
 Write the code here.
 
@@ -36,15 +49,15 @@ let myString = query;
 return myString.toLowerCase();
 ```
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'code-tool') ]]
 
-## Related resources
+[Browse Custom Code Tool node documentation integration templates](https://n8n.io/integrations/code-tool) or [search all templates](https://n8n.io/workflows/)
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tzB5H7fSmYiRvvv52e4P/" %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
 

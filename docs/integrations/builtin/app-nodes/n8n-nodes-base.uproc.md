@@ -1,27 +1,40 @@
 ---
 title: uProc node documentation
-description: Learn how to use the uProc node in n8n. Follow technical documentation to integrate uProc node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the uProc node in n8n. Follow technical documentation to
+  integrate uProc node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: uProc node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.uproc.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.uproc'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.uproc'
+layout:
+  description:
+    visible: false
 ---
 
-# uProc node
+# uProc node <a href="#uproc-node" id="uproc-node"></a>
 
 Use the uProc node to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
 
 On this page, you'll find a list of operations the uProc node supports and links to more resources.
 
-/// note | Credentials
-Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [uProc credentials](../credentials/uproc.md) for guidance on setting up authentication.
+{% endhint %}
 
-### Audio
+## Operations <a href="#operations" id="operations"></a>
+
+### Audio <a href="#audio" id="audio"></a>
 
 - Get advanced human audio file by provided text and language
 - Get an audio file by provided text and language
 
-### Communication
+### Communication <a href="#communication" id="communication"></a>
 
 - Discover if a domain has a social network presence
 - Discover if an email is valid, hard bounce, soft bounce, spam-trap, free, temporary, and recipient exists
@@ -100,7 +113,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get email by first name, last name, and company
 - Get parsed and validated phone
 
-### Company
+### Company <a href="#company" id="company"></a>
 
 - Discover if a CIF card number is valid
 - Check if a company is a debtor by TaxID
@@ -144,7 +157,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get Twitter URI by company's domain
 - Get YouTube URI by company's domain
 
-### Finance
+### Finance <a href="#finance" id="finance"></a>
 
 - Check if crypto wallet is valid
 - Discover if a BIC number has a valid format
@@ -174,7 +187,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get VAT by zip code
 
 
-### Geographical
+### Geographical <a href="#geographical" id="geographical"></a>
 
 - Check if a country's ISO code exists
 - Discover if the distance between two coordinates is equal to another
@@ -257,7 +270,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get time data by postal address
 
 
-### Image
+### Image <a href="#image" id="image"></a>
 
 - Get QR code decoded content by an image URL
 - It allows discovering all geographical and technical EXIF metadata present in a photographic JPEG image
@@ -269,7 +282,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get OCR text from image
 
 
-### Internet
+### Internet <a href="#internet" id="internet"></a>
 
 - Check if a domain exists
 - Check if a domain has a DNS record
@@ -318,7 +331,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get WHOIS data fields by IP address provided
 
 
-### Personal
+### Personal <a href="#personal" id="personal"></a>
 
 - Check if age is between two numbers
 - Check if date returns an age between 20 and 29
@@ -376,7 +389,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get XING profile by first name, last name, and company
 - Add a contact email to a person list
 
-### Product
+### Product <a href="#product" id="product"></a>
 
 - Check if an ASIN code exists on the Amazon Marketplace
 - Check if an ASIN code has a valid format
@@ -413,7 +426,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get ISBN13 code by ISBN10 code
 - Get data By VIN number
 
-### Security
+### Security <a href="#security" id="security"></a>
 
 - Check if a Luhn number is valid
 - Check if a password is strong
@@ -421,7 +434,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Get blacklists for a domain
 - Get blacklists for an IP address
 
-### Text
+### Text <a href="#text" id="text"></a>
 
 - Check if a string only contains alphabets
 - Check if a string is alphanumeric
@@ -493,10 +506,10 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for gui
 - Convert all letters to uppercase
 - Count total words in a text
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'uproc') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse uProc node documentation integration templates](https://n8n.io/integrations/uproc) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
 

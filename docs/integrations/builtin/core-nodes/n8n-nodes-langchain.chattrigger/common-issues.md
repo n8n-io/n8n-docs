@@ -1,15 +1,30 @@
 ---
-title: Chat Trigger node common issues 
-description: Documentation for common issues and questions in the Chat Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: [integration, reference]
+title: Chat Trigger node common issues
+description: >-
+  Documentation for common issues and questions in the Chat Trigger node in n8n,
+  a workflow automation platform. Includes details of the issue and suggested
+  solutions.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Chat Trigger node common issues
+originalFilePath: >-
+  integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues
+url: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues
+layout:
+  description:
+    visible: false
 ---
 
-# Chat Trigger node common issues
+# Chat Trigger node common issues <a href="#chat-trigger-node-common-issues" id="chat-trigger-node-common-issues"></a>
 
-Here are some common errors and issues with the [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Chat Trigger node](n8n-nodes-base.compression.md) and steps to resolve or troubleshoot them.
 
-## Pass data from a website to an embedded Chat Trigger node
+## Pass data from a website to an embedded Chat Trigger node <a href="#pass-data-from-a-website-to-an-embedded-chat-trigger-node" id="pass-data-from-a-website-to-an-embedded-chat-trigger-node"></a>
 
 When [embedding](https://www.npmjs.com/package/@n8n/chat) the Chat Trigger node in a website, you might want to pass extra information to the Chat Trigger. For example, passing a user ID stored in a site cookie.
 
@@ -24,13 +39,13 @@ createChat({
 });
 ```
 
-The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](/data/index.md).
+The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/overview).
 
-## Chat Trigger node doesn't fetch previous messages
+## Chat Trigger node doesn't fetch previous messages <a href="#chat-trigger-node-doesnt-fetch-previous-messages" id="chat-trigger-node-doesnt-fetch-previous-messages"></a>
 
 When you configure a Chat Trigger node, you might experience problems fetching previous messages if you aren't careful about how you configure session loading. This often manifests as a `workflow could not be started!` error.
 
-In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to **From memory**, it's almost always best to [connect the same memory node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
+In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to **From memory**, it's almost always best to [connect the same memory node](n8n-nodes-base.compression.md#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
 
 1. In your **Chat Trigger** node, set the **Load Previous Session** option to **From Memory**. This is only visible if you've made the chat publicly available.
 2. Attach a **Simple Memory** node to the **Memory** connector.

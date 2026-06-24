@@ -1,30 +1,41 @@
 ---
 title: Xata credentials
-description: Documentation for the Xata credentials. Use these credentials to authenticate Xata in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Xata credentials. Use these credentials to authenticate
+  Xata in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Xata credentials
+originalFilePath: integrations/builtin/credentials/xata.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/xata'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/xata'
+layout:
+  description:
+    visible: false
 ---
 
-# Xata credentials
+# Xata credentials <a href="#xata-credentials" id="xata-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md)
+* [Xata](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Xata](https://xata.io/) database or an account on an existing database.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Xata's documentation](https://xata.io/docs/rest-api/authentication) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

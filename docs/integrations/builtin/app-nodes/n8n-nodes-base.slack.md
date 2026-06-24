@@ -1,23 +1,36 @@
 ---
 title: Slack node documentation
-description: Learn how to use the Slack node in n8n. Follow technical documentation to integrate Slack node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Slack node in n8n. Follow technical documentation to
+  integrate Slack node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Slack node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.slack.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack'
+layout:
+  description:
+    visible: false
 ---
 
-# Slack node
+# Slack node <a href="#slack-node" id="slack-node"></a>
 
 Use the Slack node to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archiving, and closing channels, getting users and files, as well as deleting messages.
 
 On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication.
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+Refer to [Slack credentials](../credentials/slack.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * **Channel**
     * **Archive** a channel.
@@ -69,22 +82,22 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for gui
     * **Get Many**: Get a list of user groups.
     * **Update** a user group.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'slack') ]]
 
-## Related resources
+[Browse Slack node documentation integration templates](https://n8n.io/integrations/slack) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Slack's documentation](https://api.slack.com/) for more information about the service.
 
-## Required scopes
+## Required scopes <a href="#required-scopes" id="required-scopes"></a>
 
-Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) page.
+Once you create a Slack app for your [Slack credentials](../credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](../credentials/slack.md#scopes) page.
 
 If those aren't enough, use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
 
-<!-- vale off -->
+
 
 | **Resource** | **Operation**              | **Slack API method**                                                               |
 |--------------|----------------------------|------------------------------------------------------------------------------------|
@@ -131,6 +144,6 @@ If those aren't enough, use the table below to look up the resource and operatio
 | User Group   | Get Many                   | [usergroups.list](https://api.slack.com/methods/usergroups.list)                   |
 | User Group   | Update                     | [usergroups.update](https://api.slack.com/methods/usergroups.update)               |
 
-<!-- vale on -->
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

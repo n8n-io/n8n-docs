@@ -1,28 +1,39 @@
 ---
 title: Wufoo credentials
-description: Documentation for Wufoo credentials. Use these credentials to authenticate Wufoo in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Wufoo credentials. Use these credentials to authenticate
+  Wufoo in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Wufoo credentials
+originalFilePath: integrations/builtin/credentials/wufoo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/wufoo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/wufoo'
+layout:
+  description:
+    visible: false
 ---
 
-# Wufoo credentials
+# Wufoo credentials <a href="#wufoo-credentials" id="wufoo-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Wufoo Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md)
+- [Wufoo Trigger](../trigger-nodes/n8n-nodes-base.wufootrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Wufoo](https://wufoo.com) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Wufoo's API documentation](https://wufoo.github.io/docs/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

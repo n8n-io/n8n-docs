@@ -1,35 +1,51 @@
 ---
 title: Embeddings Lemonade node documentation
-description: Learn how to use the Embeddings Lemonade node in n8n. Follow technical documentation to integrate Embeddings Lemonade node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Embeddings Lemonade node in n8n. Follow technical
+  documentation to integrate Embeddings Lemonade node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Embeddings Lemonade node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade
+layout:
+  description:
+    visible: false
 ---
 
-# Embeddings Lemonade node
+# Embeddings Lemonade node <a href="#embeddings-lemonade-node" id="embeddings-lemonade-node"></a>
 
 Use the Embeddings Lemonade node to generate vector embeddings using models hosted and managed by a Lemonade server. This node is useful for workflows that perform semantic search, clustering, similarity matching, or any task that requires numerical vector representations of text.
 
 On this page, you'll find a list of operations the Embeddings Lemonade node supports, and links to more resources.
 
-///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lemonade.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/lemonade.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the node with the following parameters.
 
-### Model
+### Model <a href="#model" id="model"></a>
 
 The model which will generate the embeddings. Models are loaded and managed through the Lemonade server configured for this node. Select the desired model from the list of available options served by your Lemonade instance.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[[ templatesWidget(page.title, 'embeddings-lemonade') ]]
+[Browse Embeddings Lemonade node documentation integration templates](https://n8n.io/integrations/embeddings-lemonade) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Lemonade Server's documentation](https://lemonade-server.ai/docs/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}

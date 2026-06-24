@@ -1,20 +1,33 @@
 ---
 title: Metabase node documentation
-description: Learn how to use the Metabase node in n8n. Follow technical documentation to integrate Metabase node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Metabase node in n8n. Follow technical documentation to
+  integrate Metabase node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Metabase node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.metabase.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.metabase'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.metabase'
+layout:
+  description:
+    visible: false
 ---
 
-# Metabase node
+# Metabase node <a href="#metabase-node" id="metabase-node"></a>
 
 Use the Metabase node to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
 
 On this page, you'll find a list of operations the Metabase node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Metabase credentials](/integrations/builtin/credentials/metabase.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Metabase credentials](../credentials/metabase.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Alert
     * Get
@@ -31,9 +44,9 @@ Refer to [Metabase credentials](/integrations/builtin/credentials/metabase.md) f
     * Get All
     * Result Data
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'metabase') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Metabase node documentation integration templates](https://n8n.io/integrations/metabase) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}

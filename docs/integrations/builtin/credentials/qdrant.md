@@ -1,27 +1,38 @@
 ---
 title: Qdrant credentials
-description: Documentation for the Qdrant credentials. Use these credentials to authenticate Qdrant in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Qdrant credentials. Use these credentials to
+  authenticate Qdrant in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Qdrant credentials
+originalFilePath: integrations/builtin/credentials/qdrant.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/qdrant'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/qdrant'
+layout:
+  description:
+    visible: false
 ---
 
-# Qdrant credentials
+# Qdrant credentials <a href="#qdrant-credentials" id="qdrant-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Qdrant Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md)
+* [Qdrant Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Qdrant's documentation](https://qdrant.tech/documentation/) for more information.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [Qdrant cluster](https://qdrant.tech/documentation/cloud/create-cluster/) and:
 

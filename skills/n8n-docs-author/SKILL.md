@@ -130,7 +130,8 @@ See [reference.md](reference.md) for full examples. Quick reference:
 | Element | Syntax |
 |---------|--------|
 | External link | standard Markdown `[text](url)` (opens in a new tab automatically) |
-| Internal link | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
+| Internal link (same space) | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
+| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. See [reference.md](reference.md) for the space ID table |
 | Image | `![Alt text](../.gitbook/assets/file.png)` — stored in the space's `.gitbook/assets/` folder |
 | Video | `{% embed url="..." %}` — host externally; can't go inside a hint |
 | Hint / callout | `{% hint style="info" %}` … `{% endhint %}` |

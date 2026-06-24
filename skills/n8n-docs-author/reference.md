@@ -39,19 +39,60 @@ Use standard Markdown link syntax. External links open in the current tab by def
 
 ### Internal links
 
-Use standard Markdown link syntax and link to the relative path of the target
-file, including its `.md` extension. Link to the file rather than typing a raw
-URL path, so the reference stays valid when pages move or are renamed.
+Each top-level folder under `docs/` (such as `build/`, `deploy/`, `administer/`)
+is a separate GitBook space. How you link depends on whether the target is in the
+same space or a different one.
 
-The relative path depends on where the target sits in relation to the page
-you're editing:
+**Same space:** use standard Markdown link syntax and link to the relative path of
+the target file, including its `.md` extension. Link to the file rather than
+typing a raw URL path, so the reference stays valid when pages move or are
+renamed. The relative path depends on where the target sits in relation to the
+page you're editing:
 
 ```markdown
 [same folder](another-page.md)
 [parent (the folder's README.md)](./)
 [different subfolder, same space](../manage-workflows/export-import.md)
-[different space](../../deploy-n8n/hosting/environment-variables.md)
 ```
+
+**Different space:** relative file paths don't resolve across spaces. GitBook
+resolves cross-space links as page references, not file paths. Link to the target
+page's GitBook URL, built from the target space's ID and the page's path within
+its space folder (drop the `.md` extension; a `README.md` becomes its folder path):
+
+```markdown
+[different space](https://app.gitbook.com/s/<spaceId>/<page-path>)
+```
+
+For example, linking from an `administer` page to
+`docs/deploy/host-n8n/configure-n8n/user-management.md`:
+
+```markdown
+[different space](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
+```
+
+Each top-level folder under `docs/` is a separate space:
+
+| Space folder | Space ID |
+|------------------------|------------------------|
+| `get-started`          | `CxSeOtVxqqhfxMSac0AV` |
+| `build`                | `rPN1zU5jaYNvwH7RzxqA` |
+| `connect`              | `r7wKI4I1BgdBCuq5Cvcx` |
+| `integrations`         | `BKcbOzIWja8NfqKDcqHc` |
+| `deploy`               | `jm0ZYRpZIPWge2ZSiDYO` |
+| `administer`           | `wMJrGrimpx3PxCJpUswm` |
+| `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
+| `release-notes`        | `hhM8Cox90Piiv0u0EgHM` |
+| `contribute`           | `6OmLnmci5kZDzdkzKREn` |
+
+Alternatively, copy the page's link in GitBook, or use its published
+`https://docs.n8n.io/...` address if you don't have GitBook access.
+
+<!-- Keep this table in sync with the one in
+docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
+space is added, removed, or recreated. IDs are stable while a space exists; a
+recreated space gets a new ID. The reusable-content space
+(GixZThfitWP21x2gQFpD) holds shared includes, not linkable pages. -->
 
 ## Hints (callouts)
 

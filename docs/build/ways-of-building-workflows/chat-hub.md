@@ -1,17 +1,31 @@
 ---
 title: Chat Hub
-description: null
 status: beta
 nodeTitle: Chat Hub
 originalFilePath: advanced-ai/chat-hub.md
-originalUrl: 'https://docs.n8n.io/advanced-ai/chat-hub'
-url: 'https://docs.n8n.io/build/ways-of-building-workflows/chat-hub'
+originalUrl: https://docs.n8n.io/advanced-ai/chat-hub
+url: https://docs.n8n.io/build/ways-of-building-workflows/chat-hub
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Chat Hub <a href="#chat-hub" id="chat-hub"></a>
+# Chat Hub
 
 ## Overview <a href="#overview" id="overview"></a>
 
@@ -36,10 +50,9 @@ Once created, you can select the personal agent from the model selector.
 For more complex scenarios, use n8n workflow agents (built by you or your colleagues) to make your workflows available in Chat Hub. Right now, you can only use workflows that have a **Chat Trigger** with streaming enabled in the **Agent** node. To make your workflow available:
 
 1. Open your selected workflow.
-2. Open the **Chat Trigger**.<br>
-    
+2.  Open the **Chat Trigger**.<br>
+
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>Only chat triggers of the newest version will work. To get the newest chat trigger version, delete your existing chat trigger and insert a new one.</p></div>
-    
 3. Enable the **Make Available in n8n Chat** option and set the name and description of the personal agent.
 4. Make sure that your AI Agent node has the **Enable Streaming** option enabled.
 5. Activate your workflow.
@@ -60,10 +73,10 @@ Chat users are only available on Starter, Pro, Business and Enterprise plans.
 
 Admins can control which models and providers users can access in Chat Hub. This includes:
 
-- Enabling or disabling specific models and providers
-- Preventing users from adding their own models
-- Setting default credentials for each provider
-- Restricting users from adding their own credentials (through n8n's permission system)
+* Enabling or disabling specific models and providers
+* Preventing users from adding their own models
+* Setting default credentials for each provider
+* Restricting users from adding their own credentials (through n8n's permission system)
 
 To manage these settings, go to **Settings > Chat** and edit the providers.
 
@@ -71,4 +84,4 @@ To manage these settings, go to **Settings > Chat** and edit the providers.
 
 1. You can't add file knowledge when creating simple personal agents.
 2. Tool selection is limited to a few options.
-2. Only workflows with [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression) and streaming-enabled [AI Agent node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) work as workflow agents. Your workflows must meet specific requirements.
+3. Only workflows with [Chat Trigger node](/broken/spaces/BKcbOzIWja8NfqKDcqHc/pages/ufgV9cVbZYhO7UuKUvU1) and streaming-enabled [AI Agent node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) work as workflow agents. Your workflows must meet specific requirements.

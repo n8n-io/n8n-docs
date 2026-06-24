@@ -1,16 +1,31 @@
 ---
-description: 'Save, publish, unpublish, and name workflow versions.'
 contentType: howto
 nodeTitle: Save and publish workflows
 originalFilePath: workflows/publish.md
-originalUrl: 'https://docs.n8n.io/workflows/publish'
-url: 'https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows'
+originalUrl: https://docs.n8n.io/workflows/publish
+url: https://docs.n8n.io/build/understand-workflows/save-and-publish-workflows
+description: Save, publish, unpublish, and name workflow versions.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Saving and publishing workflows <a href="#saving-and-publishing-workflows" id="saving-and-publishing-workflows"></a>
+# Save and publish workflows
 
 n8n auto saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
 
@@ -22,9 +37,9 @@ Changes save automatically as you edit, typically within 1 to 5 seconds. No manu
 
 Publishing makes your workflow live and locks it to a specific version. Production executions will use this published version, not your latest edits. When you publish, your workflow will enable the following:
 
-- Webhook and form triggers will use their production URLs
-- Schedules will run at the times you've defined
-- Events from connected apps will trigger this workflow
+* Webhook and form triggers will use their production URLs
+* Schedules will run at the times you've defined
+* Events from connected apps will trigger this workflow
 
 **Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 
@@ -50,14 +65,13 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 
 ![](../.gitbook/assets/published-error.png)
 
-
 ## How collaboration works <a href="#how-collaboration-works" id="how-collaboration-works"></a>
 
 Only one person can edit a workflow at a time. If someone else is currently editing:
 
-- You see the workflow in read-only mode
-- The edit lock releases when they stop editing or become inactive
-- You can then take over editing with the latest changes
+* You see the workflow in read-only mode
+* The edit lock releases when they stop editing or become inactive
+* You can then take over editing with the latest changes
 
 ## Checking publishing status <a href="#checking-publishing-status" id="checking-publishing-status"></a>
 
@@ -73,12 +87,11 @@ Each time you make a change to a workflow, n8n autosaves those changes to a new 
 
 1. Click the **Publish** button (or use hotkey `Shift` + `p`) to open the publishing modal
 2. The version name defaults to a UUID. Customize the name if you'd like and add a description of the version.
-3. Click **Publish** to make your changes live in production. Production executions always point to the currently published version.
+3.  Click **Publish** to make your changes live in production. Production executions always point to the currently published version.
 
-   If you only update workflow settings, n8n will re-publish the version without requiring you to take any action.
+    If you only update workflow settings, n8n will re-publish the version without requiring you to take any action.
 
 ![](../.gitbook/assets/publish-modal.png)
-
 
 ## Naming versions <a href="#naming-versions" id="naming-versions"></a>
 
@@ -102,7 +115,7 @@ To name a version from the canvas header:
 To name a version from the version history page:
 
 1. Open the version history by selecting the history icon in the header.
-2. On the version you want to name, select **Options** <img src="../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line">.
+2. On the version you want to name, select **Options** <img src="../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line">.
 3. Select **Name version**.
 4. Enter a name and optional description.
 5. Select **Save**.
@@ -120,6 +133,6 @@ View and manage version history by clicking the history icon in the header. In t
 
 Unpublish a workflow from either:
 
-- The dropdown arrow next to the **Publish** button in the canvas header (or use hotkey `Cmd/Ctrl` + `u`).
-- In the workflow list
-- The version history page (unpublish action on published versions)
+* The dropdown arrow next to the **Publish** button in the canvas header (or use hotkey `Cmd/Ctrl` + `u`).
+* In the workflow list
+* The version history page (unpublish action on published versions)

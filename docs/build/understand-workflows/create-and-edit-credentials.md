@@ -1,29 +1,44 @@
 ---
-description: Creating and editing credentials.
 contentType: howto
 nodeTitle: Create and edit credentials
 originalFilePath: credentials/add-edit-credentials.md
-originalUrl: 'https://docs.n8n.io/credentials/add-edit-credentials'
-url: 'https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials'
+originalUrl: https://docs.n8n.io/credentials/add-edit-credentials
+url: https://docs.n8n.io/build/understand-workflows/create-and-edit-credentials
+description: Creating and editing credentials.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Create and edit credentials <a href="#create-and-edit-credentials" id="create-and-edit-credentials"></a>
+# Create and edit credentials
 
 Credentials are securely stored authentication information used to connect n8n workflows to external services such as APIs, or databases.
 
 ## Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
 
-1. Select the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential. 
+1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.
 2. If your n8n instance supports [projects](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#project-n8n), you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
 3. Select the app or service you wish to connect to.
 
 Or:
 
-1. Using the <img src="../.gitbook/assets/universal-resource-button.png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
-2.  If you're doing this from the **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
+1. Using the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
+2. If you're doing this from the **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
 3. Select the app or service you wish to connect to.
 
 You can also create new credential in the credential drop down when editing a node on the workflow editor.
@@ -35,18 +50,18 @@ When you save a credential, n8n tests it to confirm it works.
 {% hint style="info" %}
 **Credentials naming**
 
-n8n names new credentials "*node name* account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app or service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
+n8n names new credentials "_node name_ account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app or service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
 {% endhint %}
 
 ## Allowed HTTP request domains <a href="#allowed-http-request-domains" id="allowed-http-request-domains"></a>
 
 The **Allowed HTTP Request Domains** field appears on many n8n credentials for web-based APIs and services. It controls which domains the credential is permitted to be used against when the credential is selected in an **HTTP Request** node. It has no effect when the credential is used in its own dedicated node.
 
-The field has three options: 
+The field has three options:
 
-- **All**: The credential can be used against any URL.
-- **Specific Domains**: Restrict to specific domains (provide a comma-separated list like `httpbin.org, api.github.com`)
-- **None**: The credential is blocked entirely from use in the **HTTP Request** node.
+* **All**: The credential can be used against any URL.
+* **Specific Domains**: Restrict to specific domains (provide a comma-separated list like `httpbin.org, api.github.com`)
+* **None**: The credential is blocked entirely from use in the **HTTP Request** node.
 
 This field prevents credential misuse, for example sending the credential to URLs outside the intended domain.
 
@@ -55,9 +70,9 @@ This field prevents credential misuse, for example sending the credential to URL
 You can use [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) to set credentials dynamically as your workflow runs:
 
 1. In your workflow, find the data path containing the credential. This varies depending on the exact parameter names in your data. Make sure that the data containing the credential is available in the workflow when you get to the node that needs it.
-1. When creating your credential, hover over the field where you want to use an expression.
-1. Toggle **Expression** on.
-1. Enter your expression.
+2. When creating your credential, hover over the field where you want to use an expression.
+3. Toggle **Expression** on.
+4. Enter your expression.
 
 ### Example workflow <a href="#example-workflow" id="example-workflow"></a>
 

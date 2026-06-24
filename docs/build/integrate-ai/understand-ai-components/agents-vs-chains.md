@@ -1,20 +1,35 @@
 ---
 contentType: explanation
 title: Agents vs chains
+nodeTitle: Agents vs chains
+originalFilePath: advanced-ai/examples/agent-chain-comparison.md
+originalUrl: https://docs.n8n.io/advanced-ai/examples/agent-chain-comparison
+url: >-
+  https://docs.n8n.io/build/integrate-ai/understand-ai-components/agents-vs-chains
 description: >-
   A workflow example that demonstrates key differences between agents and
   chains.
-nodeTitle: Agents vs chains
-originalFilePath: advanced-ai/examples/agent-chain-comparison.md
-originalUrl: 'https://docs.n8n.io/advanced-ai/examples/agent-chain-comparison'
-url: >-
-  https://docs.n8n.io/build/integrate-ai/understand-ai-components/agents-vs-chains
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Demonstration of key differences between agents and chains <a href="#demonstration-of-key-differences-between-agents-and-chains" id="demonstration-of-key-differences-between-agents-and-chains"></a>
+# Agents vs chains
 
 In this workflow you can choose whether your chat query goes to an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) or [chain](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-chain). It shows some of the ways that agents are more powerful than chains.
 
@@ -24,11 +39,10 @@ In this workflow you can choose whether your chat query goes to an [agent](https
 
 This workflow uses:
 
-* [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression): start your workflow and respond to user chat interactions. The node provides a customizable chat interface.
+* [Chat Trigger](/broken/spaces/BKcbOzIWja8NfqKDcqHc/pages/ufgV9cVbZYhO7UuKUvU1): start your workflow and respond to user chat interactions. The node provides a customizable chat interface.
 * [Switch node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch): directs your query to either the agent or chain, depending on which you specify in your query. If you say "agent" it sends it to the agent. If you say "chain" it sends it to the chain.
 * [Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): the Agent node interacts with other components of the workflow and makes decisions about what [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) to use.
 * [Basic LLM Chain](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm): the Basic LLM Chain node supports chatting with a connected LLM, but doesn't support [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) or tools.
-
 
 ## Using the example <a href="#using-the-example" id="using-the-example"></a>
 

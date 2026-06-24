@@ -1,28 +1,43 @@
 ---
 title: Set up and use n8n MCP server
-description: >-
-  Connect, authenticate, and integrate MCP clients to build and execute n8n
-  workflows programmatically
 status: beta
 nodeTitle: Connect to n8n MCP server
 originalFilePath: advanced-ai/mcp/accessing-n8n-mcp-server.md
-originalUrl: 'https://docs.n8n.io/advanced-ai/mcp/accessing-n8n-mcp-server'
-url: 'https://docs.n8n.io/build/ways-of-building-workflows/connect-to-n8n-mcp-server'
+originalUrl: https://docs.n8n.io/advanced-ai/mcp/accessing-n8n-mcp-server
+url: https://docs.n8n.io/build/ways-of-building-workflows/connect-to-n8n-mcp-server
+description: >-
+  Connect, authenticate, and integrate MCP clients to build and execute n8n
+  workflows programmatically
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Accessing and using n8n MCP server <a href="#accessing-and-using-n8n-mcp-server" id="accessing-and-using-n8n-mcp-server"></a>
+# Connect to n8n MCP server
 
 Connect supported MCP clients to your n8n workflows through n8n's built-in MCP server.
 
 The server allows clients such as Lovable or Claude Desktop to connect securely to an n8n instance. Once connected, these clients can:
 
-- Search for your workflows
-- Interact with workflows marked as available in MCP
-- Trigger and test exposed workflows
-- Create and edit workflows and data tables
+* Search for your workflows
+* Interact with workflows marked as available in MCP
+* Trigger and test exposed workflows
+* Create and edit workflows and data tables
 
 ## Difference between instance-level MCP access and MCP Server Trigger node <a href="#difference-between-instance-level-mcp-access-and-mcp-server-trigger-node" id="difference-between-instance-level-mcp-access-and-mcp-server-trigger-node"></a>
 
@@ -32,28 +47,28 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### Key considerations when using instance-level MCP access <a href="#key-considerations-when-using-instance-level-mcp-access" id="key-considerations-when-using-instance-level-mcp-access"></a>
 
-- MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
-- It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
-- It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
-- Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
+* MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
+* It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
+* It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
+* Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
 
 ## Enabling MCP access <a href="#enabling-mcp-access" id="enabling-mcp-access"></a>
 
 ### For Cloud and self-hosted instances <a href="#for-cloud-and-self-hosted-instances" id="for-cloud-and-self-hosted-instances"></a>
 
 1. Navigate to **Settings > Instance-level MCP**
-2. Toggle **Enable MCP access** (requires instance owner or admin permissions).
+2.  Toggle **Enable MCP access** (requires instance owner or admin permissions).
 
-   ![enable-mcp-access.png](../.gitbook/assets/enable-mcp-access.png)
+    ![enable-mcp-access.png](<../.gitbook/assets/enable-mcp-access (1).png>)
 
 Once enabled, you'll see:
 
 1. List of workflows exposed to MCP clients
 2. List of connected OAuth clients
 3. Main MCP toggle to enable/disable instance-level access
-4. *Connection details* button that shows detailed instructions for connecting MCP clients
+4.  _Connection details_ button that shows detailed instructions for connecting MCP clients
 
-   ![mcp_page_content.png](../.gitbook/assets/mcp_page_content.png)
+    ![mcp\_page\_content.png](<../.gitbook/assets/mcp_page_content (1).png>)
 
 **To disable:** Toggle the main MCP toggle off.
 
@@ -75,30 +90,28 @@ This action removes MCP endpoints and hides all related UI elements.
 
 The **Connection details** popup menu provides two authentication options for MCP clients:
 
-- **OAuth2**
-- **Access Token**
+* **OAuth2**
+*   **Access Token**
 
-   ![mcp_connect_menu.png](../.gitbook/assets/mcp_connect_menu.png)
+    ![mcp\_connect\_menu.png](<../.gitbook/assets/mcp_connect_menu (1).png>)
 
 ### Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-Copy your instance server URL from the **OAuth** tab and use it to configure your MCP client.
-After connecting, the client will redirect you to n8n to authorize access.
+Copy your instance server URL from the **OAuth** tab and use it to configure your MCP client. After connecting, the client will redirect you to n8n to authorize access.
 
 #### Revoking client access <a href="#revoking-client-access" id="revoking-client-access"></a>
 
 To revoke access for connected MCP clients:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. Switch to the **Connected clients** tab.
-   You should see a table of connected OAuth clients.
-3. Use the action menu in each client's row to revoke access for specific clients.
+2. Switch to the **Connected clients** tab. You should see a table of connected OAuth clients.
+3.  Use the action menu in each client's row to revoke access for specific clients.
 
-   ![mcp_revoke_client_access.png](../.gitbook/assets/mcp_revoke_client_access.png)
+    ![mcp\_revoke\_client\_access.png](<../.gitbook/assets/mcp_revoke_client_access (1).png>)
 
 ### Using Access Token <a href="#using-access-token" id="using-access-token"></a>
 
-Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the *Connection details* menu.
+Use your instance server URL and your personal MCP Access Token from the **Access Token** tab on the _Connection details_ menu.
 
 When you first visit the **MCP Access page**, n8n automatically generates a personal MCP Access Token tied to your user account.
 
@@ -111,16 +124,14 @@ Copy your token right away. On future visits, you'll only see a redacted value a
 If you lose your token or need to rotate it:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. Open the *Connection details* menu by clicking the button in the top-right corner.
+2. Open the _Connection details_ menu by clicking the button in the top-right corner.
 3. Switch to the **Access Token** tab.
-4. Generate a new token using the button next to the redacted token value.
-    
+4.  Generate a new token using the button next to the redacted token value.
+
     n8n revokes the previous token when you generate a new one.
-    
-3. Update all connected MCP clients with the new value.
+5.  Update all connected MCP clients with the new value.
 
-
-   ![mcp_rotate_token.png](../.gitbook/assets/mcp_rotate_token.png)
+    ![mcp\_rotate\_token.png](<../.gitbook/assets/mcp_rotate_token (1).png>)
 
 ## Exposing workflows to MCP clients <a href="#exposing-workflows-to-mcp-clients" id="exposing-workflows-to-mcp-clients"></a>
 
@@ -151,17 +162,15 @@ MCP clients can discover previews of all workflows the current user has access t
 
 {% hint style="info" %}
 **Available from n8n v2.24.0**
-
-
 {% endhint %}
 
-You can use the **Options** menu <img src="../.gitbook/assets/three-dot-options-menu.png" alt="Options menu" data-size="line"> in the workflow list to toggle MCP access for all workflows in the current project or folder:
+You can use the **Options** menu <img src="../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu" data-size="line"> in the workflow list to toggle MCP access for all workflows in the current project or folder:
 
 1. Navigate to the desired project and select **Workflows** from the top menu, then open a subfolder if required.
-2. Select the **Options** menu <img src="../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line"> next to the name of the project or folder.
+2. Select the **Options** menu <img src="../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![mcp_bulk_toggle.png](../.gitbook/assets/mcp_bulk_toggle.png)
+![mcp\_bulk\_toggle.png](<../.gitbook/assets/mcp_bulk_toggle (1).png>)
 
 {% hint style="info" %}
 **Note**
@@ -173,27 +182,27 @@ This will toggle MCP access for all workflows that are **currently** in the sele
 
 The **Instance-level MCP** settings page shows all workflows enabled for MCP clients to access and operate on. From this list you can:
 
-- Open a workflow, its home project or parent folder directly
-- Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
-- Update workflow description using the action menu (or use the menu in the workflow editor)
-- Enable access for more workflows using the **Enable workflows** button (available from n8n v2.2.0)
+* Open a workflow, its home project or parent folder directly
+* Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
+* Update workflow description using the action menu (or use the menu in the workflow editor)
+* Enable access for more workflows using the **Enable workflows** button (available from n8n v2.2.0)
 
 ### Workflow descriptions <a href="#workflow-descriptions" id="workflow-descriptions"></a>
 
 To help MCP clients identify workflows, you can add free-text descriptions as follows:
 
 1. Option 1: From the **Instance-level MCP** page
-	1. Navigate to **Settings > Instance-level MCP**.
-	2. Make sure you are on the **Workflows** tab.
-    3. Use the action menu in the desired workflow's row and select the **Edit description** action.
-    4. Alternatively, click the description text directly to open the edit dialog.
-	
-2. Option 2: From the workflow editor
-	1. Open the workflow.
-	2. Click the main workflow menu (`...`) in the top-right corner.
-	3. Select **Edit description**.
+   1. Navigate to **Settings > Instance-level MCP**.
+   2. Make sure you are on the **Workflows** tab.
+   3. Use the action menu in the desired workflow's row and select the **Edit description** action.
+   4. Alternatively, click the description text directly to open the edit dialog.
+2.  Option 2: From the workflow editor
 
-	![mcp_workflow_description.png](../.gitbook/assets/mcp_workflow_description.png)
+    1. Open the workflow.
+    2. Click the main workflow menu (`...`) in the top-right corner.
+    3. Select **Edit description**.
+
+    ![mcp\_workflow\_description.png](<../.gitbook/assets/mcp_workflow_description (1).png>)
 
 ## Tools and resources <a href="#tools-and-resources" id="tools-and-resources"></a>
 
@@ -208,27 +217,27 @@ The n8n MCP server exposes tools for workflow management, workflow building, and
 #### Connecting Lovable to n8n MCP server <a href="#connecting-lovable-to-n8n-mcp-server" id="connecting-lovable-to-n8n-mcp-server"></a>
 
 1. Configure MCP Server in Lovable (OAuth).
-    - Navigate to your workspace  **Settings > Integrations**.
-    - In the **MCP Servers** section, find **n8n** and click **Connect**.
-    - Enter your n8n server URL (shown on the **MCP Access** page).
-    - Save the connection. If successful, n8n redirects you to authorize Lovable.
+   * Navigate to your workspace  **Settings > Integrations**.
+   * In the **MCP Servers** section, find **n8n** and click **Connect**.
+   * Enter your n8n server URL (shown on the **MCP Access** page).
+   * Save the connection. If successful, n8n redirects you to authorize Lovable.
 2. Verify connectivity.
-    - Once connected, Lovable can query for workflows with MCP access enabled.
-    - **Example:** Asking Lovable to build a workflow UI that lists users and allows deleting them.
+   * Once connected, Lovable can query for workflows with MCP access enabled.
+   * **Example:** Asking Lovable to build a workflow UI that lists users and allows deleting them.
 
 #### Connecting Claude Desktop to n8n MCP server <a href="#connecting-claude-desktop-to-n8n-mcp-server" id="connecting-claude-desktop-to-n8n-mcp-server"></a>
 
-##### Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
+**Using OAuth2**
 
 1. Navigate to **Settings** > **Connectors** in Claude Desktop.
 2. Click on **Add custom connector**.
 3. Enter the following details:
-   	- **Name:** n8n MCP
-    - **Remote MCP Server URL**: Your n8n base URL (shown on the **Instance-level MCP** page)
+   * **Name:** n8n MCP
+   * **Remote MCP Server URL**: Your n8n base URL (shown on the **Instance-level MCP** page)
 4. Save the connector.
 5. When prompted, authorize Claude Desktop to access your n8n instance.
 
-##### Using Access Token <a href="#using-access-token" id="using-access-token"></a>
+**Using Access Token**
 
 Add the following entry to your `claude_desktop_config.json` file:
 
@@ -246,11 +255,11 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+* `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 
 #### Connecting Claude Code to n8n MCP server <a href="#connecting-claude-code-to-n8n-mcp-server" id="connecting-claude-code-to-n8n-mcp-server"></a>
 
-##### OPTION 1: Authenticate using OAuth2 (Recommended) <a href="#option-1-authenticate-using-oauth2-recommended" id="option-1-authenticate-using-oauth2-recommended"></a>
+**OPTION 1: Authenticate using OAuth2 (Recommended)**
 
 Use the following CLI command:
 
@@ -273,9 +282,9 @@ Alternatively, add the following entry to your `claude.json` file:
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+* `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 
-##### OPTION 2: Authenticate using Access Token <a href="#option-2-authenticate-using-access-token" id="option-2-authenticate-using-access-token"></a>
+**OPTION 2: Authenticate using Access Token**
 
 Use the following CLI command:
 
@@ -302,12 +311,12 @@ Alternatively, add the following entry to your `claude.json` file:
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+* `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+* `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Codex CLI to n8n MCP server <a href="#connecting-codex-cli-to-n8n-mcp-server" id="connecting-codex-cli-to-n8n-mcp-server"></a>
 
-##### OPTION 1: Authenticate using OAuth2 (Recommended) <a href="#option-1-authenticate-using-oauth2-recommended" id="option-1-authenticate-using-oauth2-recommended"></a>
+**OPTION 1: Authenticate using OAuth2 (Recommended)**
 
 Use the following CLI command:
 
@@ -324,9 +333,9 @@ url = "http://localhost:5678/mcp-server/http"
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+* `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
 
-##### OPTION 2: Authenticate using Access Token <a href="#option-2-authenticate-using-access-token" id="option-2-authenticate-using-access-token"></a>
+**OPTION 2: Authenticate using Access Token**
 
 Add the following entry to your `~/.codex/config.toml` file:
 
@@ -338,8 +347,8 @@ http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 
 Here, replace:
 
-- `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-- `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+* `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
+* `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Google ADK agent to n8n MCP server <a href="#connecting-google-adk-agent-to-n8n-mcp-server" id="connecting-google-adk-agent-to-n8n-mcp-server"></a>
 
@@ -372,13 +381,12 @@ root_agent = Agent(
 
 For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-docs/tools/third-party/n8n/).
 
-
 ## Troubleshooting <a href="#troubleshooting" id="troubleshooting"></a>
 
 If you encounter issues connecting MCP clients to your n8n instance, consider the following:
 
-- Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
-- Verify that the MCP access is enabled in n8n settings.
-- Check that the workflows you want to execute or modify are marked as **Available in MCP**.
-- Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
-- Review n8n server logs for any error messages related to MCP connections.
+* Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
+* Verify that the MCP access is enabled in n8n settings.
+* Check that the workflows you want to execute or modify are marked as **Available in MCP**.
+* Confirm that the authentication method (OAuth2 or Access Token) is correctly configured in your MCP client.
+* Review n8n server logs for any error messages related to MCP connections.

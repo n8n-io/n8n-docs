@@ -1,16 +1,31 @@
 ---
-description: Manage settings for an individual workflow.
 contentType: howto
 nodeTitle: Configure workflow settings
 originalFilePath: workflows/settings.md
-originalUrl: 'https://docs.n8n.io/workflows/settings'
-url: 'https://docs.n8n.io/build/manage-workflows/configure-workflow-settings'
+originalUrl: https://docs.n8n.io/workflows/settings
+url: https://docs.n8n.io/build/manage-workflows/configure-workflow-settings
+description: Manage settings for an individual workflow.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Workflow settings <a href="#workflow-settings" id="workflow-settings"></a>
+# Configure workflow settings
 
 You can customize workflow behavior for individual workflows using workflow settings.
 
@@ -19,7 +34,7 @@ You can customize workflow behavior for individual workflows using workflow sett
 To open the settings:
 
 1. Open your workflow.
-1. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal.png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**. n8n opens the **Workflow settings** modal.
 
 ## Available settings <a href="#available-settings" id="available-settings"></a>
@@ -38,9 +53,7 @@ Choose the execution order for multi-branch workflows:
 
 Select a workflow to trigger if the current workflow fails. See [error workflows](../flow-logic/handle-errors-gracefully.md) for more details.
 
-
 ### This workflow can be called by <a href="#this-workflow-can-be-called-by" id="this-workflow-can-be-called-by"></a>
-
 
 Choose which other workflows can call this workflow.
 

@@ -1,17 +1,32 @@
 ---
-description: Annotate your workflows using sticky notes.
 contentType: howto
 nodeTitle: Add notes and documentation
 originalFilePath: workflows/components/sticky-notes.md
-originalUrl: 'https://docs.n8n.io/workflows/components/sticky-notes'
+originalUrl: https://docs.n8n.io/workflows/components/sticky-notes
 url: >-
   https://docs.n8n.io/build/understand-workflows/workflow-components/add-notes-and-documentation
+description: Annotate your workflows using sticky notes.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Sticky Notes <a href="#sticky-notes" id="sticky-notes"></a>
+# Add notes and documentation
 
 Sticky Notes allow you to annotate and comment on your workflows.
 
@@ -30,7 +45,7 @@ Sticky Notes are a core node. To add a new Sticky Note:
 ## Edit a Sticky Note <a href="#edit-a-sticky-note" id="edit-a-sticky-note"></a>
 
 1. Double click the Sticky Note you want to edit.
-2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
+2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
 3. Click away from the note, or press `Esc`, to stop editing.
 
 ## Change the color <a href="#change-the-color" id="change-the-color"></a>
@@ -51,7 +66,6 @@ In addition to the seven preset colors, you can select any custom color for your
 2. Use the color picker to select your desired color, or enter a hex color code (for example, `#FF5733`)
 3. Click **Apply** to set the color
 
-
 Your recently used custom colors (up to 8) are automatically saved and displayed in the color picker for quick access.
 
 Custom colors feature theme-aware borders that automatically adjust for optimal visibility in both light and dark modes.
@@ -63,7 +77,7 @@ You can:
 * Drag a Sticky Note anywhere on the canvas.
 * Drag Sticky Notes behind nodes. You can use this to visually group nodes.
 * Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
-* Change the color: select **Options** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options icon" data-size="line"> to open the color selector.
+* Change the color: select **Options** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> to open the color selector.
 
 ## Writing in Markdown <a href="#writing-in-markdown" id="writing-in-markdown"></a>
 

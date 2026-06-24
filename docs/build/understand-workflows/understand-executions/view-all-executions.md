@@ -1,17 +1,32 @@
 ---
-description: View and filter all executions for all workflows.
 contentType: howto
 nodeTitle: View all executions
 originalFilePath: workflows/executions/all-executions.md
-originalUrl: 'https://docs.n8n.io/workflows/executions/all-executions'
+originalUrl: https://docs.n8n.io/workflows/executions/all-executions
 url: >-
   https://docs.n8n.io/build/understand-workflows/understand-executions/view-all-executions
+description: View and filter all executions for all workflows.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# All executions <a href="#all-executions" id="all-executions"></a>
+# View all executions
 
 To view **all executions** from an n8n instance, navigate to the **Overview** page and then click into the Executions tab. This will show you all executions from the workflows you have access to.
 
@@ -27,13 +42,13 @@ When you delete a workflow, n8n deletes its execution history as well. This mean
 
 You can filter the executions list:
 
-1. Select the **Executions** tab either from within the **Overview** page or a specific **project** to open the list.
+1. Select the **Executions** tab either from within the **Overview** page or a specific **project** to open the list.
 2. Select **Filters**.
 3. Enter your filters. You can filter by:
-	* **Workflows**: choose all workflows, or a specific workflow name.
-	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
-	* **Execution start**: see executions that started in the given time.
-	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](customize-executions-data.md) for information on adding custom data.
+   * **Workflows**: choose all workflows, or a specific workflow name.
+   * **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
+   * **Execution start**: see executions that started in the given time.
+   * **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](customize-executions-data.md) for information on adding custom data.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/4ohnS4NGKS6lbgfQc4u9/" %}
 
@@ -41,8 +56,9 @@ You can filter the executions list:
 
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
-1. Select the **Executions** tab from within either the **Overview** page or a specific **project** to open the list. 
-2. On the execution you want to retry, select **Retry execution** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options menu icon" data-size="line">.
+1. Select the **Executions** tab from within either the **Overview** page or a specific **project** to open the list.
+2. On the execution you want to retry, select **Retry execution** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu icon" data-size="line">.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/RMwte6qQJdkcUpqXqnhz/" %}
 
 ## Load data from previous executions into your current workflow <a href="#load-data-from-previous-executions-into-your-current-workflow" id="load-data-from-previous-executions-into-your-current-workflow"></a>

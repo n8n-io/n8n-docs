@@ -193,7 +193,7 @@ You'll see explicit anchor tags on existing pages, like:
 ## Heading text <a href="#heading-text" id="heading-text"></a>
 ```
 
-The migration added these to pin a stable anchor, so links to the heading keep working even if its text changes later. Don't add them to new headings, and leave the existing ones in place. If you reword a heading that already has one, keep its anchor tag so existing links don't break.
+These pin a stable anchor, so links to the heading keep working even if its text changes later. It is not necessary to add them to new headings, but leave the existing ones in place. If you reword a heading that already has one, keep its anchor tag so existing links don't break.
 
 ### Links
 

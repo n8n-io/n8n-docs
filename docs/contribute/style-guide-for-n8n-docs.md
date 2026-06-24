@@ -125,7 +125,7 @@ You can run Vale locally on your machine as follows:
 
 1. Follow the Vale docs to [install Vale CLI](https://vale.sh/docs/vale-cli/installation/).
 2. Choose whether to lint from the command line, or install a text editor plugin:
-   1. Running `vale --glob="*.md" docs` will lint all Markdown files in the `docs` directory
+   1. Running `vale docs/` lints all Markdown files in the `docs` directory
    2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/chrischinchilla/vale-vscode) by ChrisChinchilla.
 
 ## Frontmatter
@@ -152,6 +152,29 @@ layout:
 You may see other frontmatter fields on existing n8n Docs pages, such as `contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, and `url`. These support migration management on pre-existing pages. Don't add them to new pages.
 {% endhint %}
 
+## Page navigation
+
+Each space has a `SUMMARY.md` file at its root that defines the sidebar: which pages appear, in what order, and how they nest. GitBook builds the navigation from this file, so a new page won't appear in the sidebar until you add it to `SUMMARY.md`. Creating the `.md` file isn't enough on its own.
+
+A `SUMMARY.md` is a nested Markdown list. Each entry links to a page using a path relative to the space root (the folder where `SUMMARY.md` lives), including the `.md` extension. A `README.md` is the landing page for the space or a section, and indentation nests pages under it:
+
+```
+# Summary
+
+* [Administer](README.md)
+* [Manage credentials](manage-credentials/README.md)
+  * [Share credentials securely](manage-credentials/share-credentials-securely.md)
+  * [Credential overwrites](manage-credentials/credential-overwrites.md)
+```
+
+When you add a page:
+
+* Add a line for it in the correct `SUMMARY.md`, in the position you want it to appear.
+* Use the page title as the link text. It doesn't have to match the page's heading exactly, but keep it close.
+* Indent it under its parent section to nest it. The order of entries sets the order in the sidebar.
+
+When you move, rename, or delete a page, update its `SUMMARY.md` entry to match.
+
 ## Markdown and GitBook blocks
 
 The site is generated with [GitBook](https://www.gitbook.com/). Pages are written in [Markdown](https://commonmark.org/), plus GitBook-specific components like callouts, tabs, and structured page elements. GitBook calls these components **blocks**, and the sections below cover the ones you'll use most often.
@@ -159,6 +182,18 @@ The site is generated with [GitBook](https://www.gitbook.com/). Pages are writte
 {% hint style="info" %}
 For the Markdown representation of every available block type, see the [GitBook documentation](https://gitbook.com/docs/creating-content/blocks).
 {% endhint %}
+
+### Headings
+
+Write headings as plain Markdown (`## Heading text`), in sentence case. GitBook generates a clickable anchor from the heading text automatically, so don't add anchor markup yourself.
+
+You'll see explicit anchor tags on existing pages, like:
+
+```
+## Heading text <a href="#heading-text" id="heading-text"></a>
+```
+
+These pin a stable anchor, so links to the heading keep working even if its text changes later. It is not necessary to add them to new headings, but leave the existing ones in place. If you reword a heading that already has one, keep its anchor tag so existing links don't break.
 
 ### Links
 
@@ -174,7 +209,9 @@ External links automatically open in a new tab.
 
 #### Internal links
 
-Use standard Markdown link syntax and link to the relative path of the target file, including its `.md` extension. Link to the target file rather than typing a raw path, as these references are automatically kept up to date when pages move or are renamed.
+How you link depends on whether the target page is in the **same space** or a **different space**. Each top-level folder under `docs/` (such as `build/`, `deploy/`, and `administer/`) is a separate GitBook space.
+
+**Within the same space**, use standard Markdown link syntax and link to the relative path of the target file, including its `.md` extension. Link to the target file rather than typing a raw path, as these references are automatically kept up to date when pages move or are renamed.
 
 The relative path depends on where the target sits in relation to the page you're editing. The examples below all assume you're editing `current-page.md` in this file tree:
 
@@ -223,11 +260,42 @@ Step up out of the current folder with `../` for each level, then down into the 
 
 **Link to a page in a different space**
 
-Spaces share the same `docs/` root, so step up to the root with `../`, then down through the target space and its subfolders:
+Relative file paths only resolve within a space. GitBook resolves links between spaces as page references, not file paths, so a `../../` path into another space won't work. Instead, link to the target page's GitBook URL:
 
 ```
-[link to a page](../../deploy/hosting/environment-variables.md)
+https://app.gitbook.com/s/<spaceId>/<page-path>
 ```
+
+Build the URL from two parts:
+
+* `<spaceId>`: the ID of the space the target page lives in. Find it in the table below.
+* `<page-path>`: the target page's path within its space folder, with the `.md` extension dropped. A `README.md` becomes its folder path (for example, `host-n8n/configure-n8n/README.md` is just `host-n8n/configure-n8n`).
+
+For example, to link from a page in the `administer` space to `docs/deploy/host-n8n/configure-n8n/user-management.md` in the `deploy` space:
+
+```
+[link to a page](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
+```
+
+Each top-level folder under `docs/` is a separate space:
+
+| Space folder | Space ID |
+| ------------------------------ | ---------------------- |
+| `get-started`                  | `CxSeOtVxqqhfxMSac0AV` |
+| `build`                        | `rPN1zU5jaYNvwH7RzxqA` |
+| `connect`                      | `r7wKI4I1BgdBCuq5Cvcx` |
+| `integrations`                 | `BKcbOzIWja8NfqKDcqHc` |
+| `deploy`                       | `jm0ZYRpZIPWge2ZSiDYO` |
+| `administer`                   | `wMJrGrimpx3PxCJpUswm` |
+| `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
+| `release-notes`                | `hhM8Cox90Piiv0u0EgHM` |
+| `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
+
+If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.
+
+{% hint style="info" %}
+Update this table if a space is added, removed, or recreated. Space IDs are stable as long as the space exists. Adding, moving, or editing pages doesn't change them, but a deleted and recreated space gets a new ID.
+{% endhint %}
 
 ### Images
 
@@ -422,16 +490,10 @@ The content is rendered following the normal Markdown syntax. To add a list:
 
 ### Embedded workflows
 
-You can embed an n8n workflow in a page so readers can view and interact with it directly in the docs. There are two ways to reference the workflow.
-
-Reference a published template by its template API URL:
+You can embed an n8n workflow in a page so readers can view and interact with it directly in the docs. Reference a published template by its template API URL:
 
 ```
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
 ```
 
-Reference a workflow JSON file stored in the docs repository:
-
-```
-{% @n8n-blocks/n8n-workflow-demo content="" url="what/should/filepath/be/let_your_ai_call_an_api.json" %}
-```
+Find the template API URL by taking a published template's ID and adding it to `https://api.n8n.io/workflows/templates/`.

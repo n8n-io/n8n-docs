@@ -27,11 +27,50 @@ layout:
 
 Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`). Don't add these to new pages.
 
+## Page navigation (SUMMARY.md)
+
+Each space has a `SUMMARY.md` at its root. GitBook builds the sidebar from it, so
+a new page won't appear in the navigation until you add it. Creating the `.md`
+file isn't enough.
+
+`SUMMARY.md` is a nested Markdown list. Each entry links to a page by its path
+relative to the space root (where `SUMMARY.md` lives), including `.md`. A
+`README.md` is the landing page for the space or a section, and indentation nests
+pages under it. Entry order sets sidebar order.
+
+```markdown
+# Summary
+
+* [Administer](README.md)
+* [Manage credentials](manage-credentials/README.md)
+  * [Share credentials securely](manage-credentials/share-credentials-securely.md)
+  * [Credential overwrites](manage-credentials/credential-overwrites.md)
+```
+
+When you add a page, add a matching entry in the correct `SUMMARY.md`. When you
+move, rename, or delete a page, update its entry.
+
+## Headings
+
+Write headings as plain Markdown (`## Heading text`) in sentence case. GitBook
+generates a clickable anchor from the heading text automatically, so don't add
+anchor markup yourself.
+
+Existing pages carry explicit anchor tags the migration added to pin a stable
+anchor:
+
+```markdown
+## Heading text <a href="#heading-text" id="heading-text"></a>
+```
+
+Don't add these to new headings. Leave existing ones in place, and keep a
+heading's anchor tag if you reword it, so existing links don't break.
+
 ## Links
 
 ### External links
 
-Use standard Markdown link syntax. External links open in the current tab by default. If the site is configured to open them in a new tab, no extra attributes are needed:
+Use standard Markdown link syntax. External links open in a new tab automatically, with no extra attributes needed:
 
 ```markdown
 [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
@@ -39,19 +78,59 @@ Use standard Markdown link syntax. External links open in the current tab by def
 
 ### Internal links
 
-Use standard Markdown link syntax and link to the relative path of the target
-file, including its `.md` extension. Link to the file rather than typing a raw
-URL path, so the reference stays valid when pages move or are renamed.
+Each top-level folder under `docs/` (such as `build/`, `deploy/`, `administer/`)
+is a separate GitBook space. How you link depends on whether the target is in the
+same space or a different one.
 
-The relative path depends on where the target sits in relation to the page
-you're editing:
+**Same space:** use standard Markdown link syntax and link to the relative path of
+the target file, including its `.md` extension. Link to the file rather than
+typing a raw URL path, so the reference stays valid when pages move or are
+renamed. The relative path depends on where the target sits in relation to the
+page you're editing:
 
 ```markdown
 [same folder](another-page.md)
 [parent (the folder's README.md)](./)
 [different subfolder, same space](../manage-workflows/export-import.md)
-[different space](../../deploy-n8n/hosting/environment-variables.md)
 ```
+
+**Different space:** relative file paths don't resolve across spaces. GitBook
+resolves cross-space links as page references, not file paths. Link to the target
+page's GitBook URL, built from the target space's ID and the page's path within
+its space folder (drop the `.md` extension; a `README.md` becomes its folder path):
+
+```markdown
+[different space](https://app.gitbook.com/s/<spaceId>/<page-path>)
+```
+
+For example, linking from an `administer` page to
+`docs/deploy/host-n8n/configure-n8n/user-management.md`:
+
+```markdown
+[different space](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
+```
+
+Each top-level folder under `docs/` is a separate space:
+
+| Space folder | Space ID |
+|------------------------|------------------------|
+| `get-started`          | `CxSeOtVxqqhfxMSac0AV` |
+| `build`                | `rPN1zU5jaYNvwH7RzxqA` |
+| `connect`              | `r7wKI4I1BgdBCuq5Cvcx` |
+| `integrations`         | `BKcbOzIWja8NfqKDcqHc` |
+| `deploy`               | `jm0ZYRpZIPWge2ZSiDYO` |
+| `administer`           | `wMJrGrimpx3PxCJpUswm` |
+| `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
+| `release-notes`        | `hhM8Cox90Piiv0u0EgHM` |
+| `contribute`           | `6OmLnmci5kZDzdkzKREn` |
+
+Alternatively, copy the page's link in GitBook, or use its published
+`https://docs.n8n.io/...` address if you don't have GitBook access.
+
+<!-- Keep this table in sync with the one in
+docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
+space is added, removed, or recreated. IDs are stable while a space exists; a
+recreated space gets a new ID. -->
 
 ## Hints (callouts)
 
@@ -193,12 +272,11 @@ supported domain) and embed the URL:
 ## Embedded workflows
 
 Embed an n8n workflow so readers can view and interact with it in the page.
-Reference either a published template by its template API URL, or a workflow JSON
-file stored in the docs repo:
+Reference a published template by its template API URL (the template ID appended
+to `https://api.n8n.io/workflows/templates/`):
 
 ```markdown
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
-{% @n8n-blocks/n8n-workflow-demo content="" url="path/to/workflow.json" %}
 ```
 
 ---

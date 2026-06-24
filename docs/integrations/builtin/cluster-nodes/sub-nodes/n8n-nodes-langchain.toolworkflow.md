@@ -21,7 +21,7 @@ layout:
 
 # Call n8n Workflow Tool node <a href="#call-n8n-workflow-tool-node" id="call-n8n-workflow-tool-node"></a>
 
-The Call n8n Workflow Tool node is a [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) that allows an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) to run another n8n workflow and fetch its output data. 
+The Call n8n Workflow Tool node is a tool[^1] that allows an agent[^2] to run another n8n workflow and fetch its output data. 
 
 On this page, you'll find the node parameters for the Call n8n Workflow Tool node, and links to more resources.
 
@@ -70,3 +70,5 @@ To get started with the `$fromAI()` function, select the "Let the model define t
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
+[^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

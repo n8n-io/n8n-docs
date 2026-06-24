@@ -45,7 +45,7 @@ The following settings are available:
 
 Choose the execution order for multi-branch workflows:
 
-**v1 (recommended)** executes each branch in turn, completing one branch before starting another. n8n orders the branches based on their position on the [canvas](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#canvas-n8n), from topmost to bottommost. If two branches are at the same height, the leftmost branch executes first.
+**v1 (recommended)** executes each branch in turn, completing one branch before starting another. n8n orders the branches based on their position on the canvas[^1], from topmost to bottommost. If two branches are at the same height, the leftmost branch executes first.
 
 **v0 (legacy)** executes the first node of each branch, then the second node of each branch, and so on.
 
@@ -113,3 +113,5 @@ Setting this lets n8n calculate the amount of time saved for [insights](https://
 ### Custom span attributes <a href="#custom-span-attributes" id="custom-span-attributes"></a>
 
 Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
+
+[^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.

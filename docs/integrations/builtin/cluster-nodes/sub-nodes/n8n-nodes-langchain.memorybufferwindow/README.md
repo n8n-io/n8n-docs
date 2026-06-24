@@ -21,7 +21,7 @@ layout:
 
 # Simple Memory node <a href="#simple-memory-node" id="simple-memory-node"></a>
 
-Use the Simple Memory node to [persist](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) chat history in your workflow.
+Use the Simple Memory node to persist[^1] chat history in your workflow.
 
 On this page, you'll find a list of operations the Simple Memory node supports, and links to more resources.
 
@@ -55,4 +55,4 @@ Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.lan
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
 
-
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

@@ -20,7 +20,7 @@ layout:
 
 # Custom Code Tool node <a href="#custom-code-tool-node" id="custom-code-tool-node"></a>
 
-Use the Custom Code Tool node to write code that an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) can run.
+Use the Custom Code Tool node to write code that an agent[^1] can run.
 
 On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
 
@@ -60,4 +60,4 @@ return myString.toLowerCase();
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

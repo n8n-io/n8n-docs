@@ -29,7 +29,7 @@ n8n isn't CPU intensive so even small instances (of providers such as AWS and GC
 
 ## Database considerations <a href="#database-considerations" id="database-considerations"></a>
 
-n8n uses its database to store [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n), past executions, and workflows.
+n8n uses its database to store credentials[^1], past executions, and workflows.
 
 A core feature of n8n is the flexibility to choose a database. All the supported databases have different advantages and disadvantages, which you have to consider individually and pick the one that best suits your needs. By default n8n creates an SQLite database if no database exists at the given location.
 
@@ -68,3 +68,5 @@ n8n recommends creating nightly backups by attaching another container, and copy
 ### Restarting <a href="#restarting" id="restarting"></a>
 
 If your instance is down or restarting, missed executions (for example, Cron or Webhook nodes) during this time aren't recoverable. If it's important for you to maintain 100% uptime, you need to build another proxy in front of it which caches the data.
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

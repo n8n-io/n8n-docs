@@ -28,7 +28,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) to transform [data](../work-with-data/overview.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
+	Use expressions[^1] to transform [data](../work-with-data/overview.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
 
 	[→ Expressions](../work-with-data/expressions-versus-data-nodes.md)
 
@@ -90,3 +90,5 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 	[→ Creating nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview)
 
 </div>
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

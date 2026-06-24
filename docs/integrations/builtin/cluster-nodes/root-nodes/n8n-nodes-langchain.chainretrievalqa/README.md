@@ -21,7 +21,7 @@ layout:
 
 # Question and Answer Chain node <a href="#question-and-answer-chain-node" id="question-and-answer-chain-node"></a>
 
-Use the Question and Answer Chain node to use a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store) as a retriever.
+Use the Question and Answer Chain node to use a [vector store](#user-content-fn-1)[^1] as a retriever.
 
 On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
 
@@ -46,4 +46,4 @@ Refer to [LangChain's documentation on retrieval chains](https://js.langchain.co
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).
 
-
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

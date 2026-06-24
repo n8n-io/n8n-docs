@@ -11,8 +11,6 @@ layout:
 
 # Core nodes library <a href="#core-nodes-library" id="core-nodes-library"></a>
 
-This section provides information about n8n's core [nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#node-n8n).
+This section provides information about n8n's core nodes[^1].
 
-
-
-
+[^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.

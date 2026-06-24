@@ -11,5 +11,6 @@ layout:
 
 # Triggers library <a href="#triggers-library" id="triggers-library"></a>
 
-This section provides information about [n8n's Triggers](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#trigger-node-n8n).
+This section provides information about [n8n's Triggers](#user-content-fn-1)[^1].
 
+[^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

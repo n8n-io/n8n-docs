@@ -37,7 +37,7 @@ Stores the history of a SAML connection.
 
 ### credentials_entity <a href="#credentialsentity" id="credentialsentity"></a>
 
-Stores the [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) used to authenticate with integrations.
+Stores the credentials[^1] used to authenticate with integrations.
 
 ### event_destinations <a href="#eventdestinations" id="eventdestinations"></a>
 
@@ -132,4 +132,4 @@ Maps tags to workflows. [tag_entity](#tag_entity) contains tag details.
 
 !["n8n ERD"](../../.gitbook/assets/n8n-database-diagram.png)
 
-
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

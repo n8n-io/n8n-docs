@@ -12,7 +12,7 @@ layout:
 
 # Workflow templates <a href="#workflow-templates" id="workflow-templates"></a>
 
-When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing [template](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#template-n8n).
+When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing template[^1].
 
 Templates provide:
 
@@ -34,3 +34,5 @@ If you use n8n's template library, this takes you to browse [Workflows on the n8
 ## Self-hosted n8n: Use your own library <a href="#self-hosted-n8n-use-your-own-library" id="self-hosted-n8n-use-your-own-library"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cgK7EOCm7kR3tJ35AVZI/" %}
+
+[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

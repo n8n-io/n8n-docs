@@ -53,7 +53,7 @@ To edit or delete a variable:
 
 ## Use variables in workflows <a href="#use-variables-in-workflows" id="use-variables-in-workflows"></a>
 
-You can access variables in the Code node and in [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n):
+You can access variables in the Code node and in expressions[^1]:
 
 ```javascript
 // Access a variable
@@ -71,3 +71,5 @@ When a project-scoped variable has the same key as a global variable, the projec
 {% endhint %}
 
 Variables are read-only. You must use the UI to change the values. If you need to set and access custom data within your workflow, use [Workflow static data](cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md).
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

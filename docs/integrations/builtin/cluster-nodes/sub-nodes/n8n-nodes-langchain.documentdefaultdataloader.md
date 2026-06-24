@@ -21,7 +21,7 @@ layout:
 
 # Default Data Loader node <a href="#default-data-loader-node" id="default-data-loader-node"></a>
 
-Use the Default Data Loader node to load binary data files or JSON data for [vector stores](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store) or summarization.
+Use the Default Data Loader node to load binary data files or JSON data for [vector stores](#user-content-fn-1)[^1] or summarization.
 
 On this page, you'll find a list of parameters the Default Data Loader node supports, and links to more resources.
 
@@ -53,3 +53,4 @@ On this page, you'll find a list of parameters the Default Data Loader node supp
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

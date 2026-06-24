@@ -36,7 +36,7 @@ layout:
 
 # OpenAI Chat Model
 
-Use the OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent).
+Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents[^1].
 
 On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
 
@@ -164,3 +164,5 @@ Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/r
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
+
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

@@ -27,7 +27,7 @@ layout:
 This node is deprecated, and will be removed in a future version. Use the verified **SerpApi Official** community node instead.
 {% endhint %}
 
-The SerpAPI node allows an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) in your workflow to call Google's Search API.
+The SerpAPI node allows an agent[^1] in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
 
@@ -58,3 +58,4 @@ Refer to [Serp's documentation](https://serpapi.com/search-api) for more informa
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

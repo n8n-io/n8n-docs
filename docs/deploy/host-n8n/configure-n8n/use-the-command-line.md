@@ -400,7 +400,7 @@ Clear your existing license from n8n's database and reset n8n to default feature
 n8n license:clear
 ```
 
-If your license includes [floating entitlements](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#entitlement-n8n), running this command will also attempt to release them back to the pool, making them available for other instances.
+If your license includes [floating entitlements](#user-content-fn-1)[^1], running this command will also attempt to release them back to the pool, making them available for other instances.
 
 ### Info <a href="#info" id="info"></a>
 
@@ -485,3 +485,5 @@ You can run a [security audit](security/run-security-audits.md) on your n8n inst
 ```sh
 n8n audit
 ```
+
+[^1]: In n8n, entitlements grant n8n instances access to plan-restricted features for a specific period of time.

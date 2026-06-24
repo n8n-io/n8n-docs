@@ -37,7 +37,7 @@ layout:
 RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 {% endhint %}
 
-n8n uses projects to group workflows and [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n), and assigns [roles](see-available-roles.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
+n8n uses projects to group workflows and credentials[^1], and assigns [roles](see-available-roles.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
 
 ### Create a project <a href="#create-a-project" id="create-a-project"></a>
 
@@ -97,3 +97,5 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 3. Select **Next**.
 4. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
 5. Select **Confirm move to new project**.
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

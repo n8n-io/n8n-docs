@@ -20,7 +20,7 @@ layout:
 
 # Reranker Cohere <a href="#reranker-cohere" id="reranker-cohere"></a>
 
-The Reranker Cohere node allows you to [rerank](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-reranking) the resulting chunks from a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store). You can connect this node to a vector store.
+The Reranker Cohere node allows you to rerank[^1] the resulting chunks from a [vector store](#user-content-fn-2)[^2]. You can connect this node to a vector store.
 
 The reranker reorders the list of documents retrieved from a vector store for a given query in order of descending relevance.
 
@@ -49,3 +49,5 @@ Choose the reranking model to use. You can find out more about the available mod
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to prioritize the most relevant information for generation or downstream tasks.
+[^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

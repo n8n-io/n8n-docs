@@ -32,7 +32,7 @@ Credentials are securely stored authentication information used to connect n8n w
 ## Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
 
 1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.
-2. If your n8n instance supports [projects](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#project-n8n), you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
+2. If your n8n instance supports projects[^1], you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
 3. Select the app or service you wish to connect to.
 
 Or:
@@ -67,7 +67,7 @@ This field prevents credential misuse, for example sending the credential to URL
 
 ## Expressions in credentials <a href="#expressions-in-credentials" id="expressions-in-credentials"></a>
 
-You can use [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) to set credentials dynamically as your workflow runs:
+You can use expressions[^2] to set credentials dynamically as your workflow runs:
 
 1. In your workflow, find the data path containing the credential. This varies depending on the exact parameter names in your data. Make sure that the data containing the credential is available in the workflow when you get to the node that needs it.
 2. When creating your credential, hover over the field where you want to use an expression.
@@ -81,3 +81,6 @@ You can use [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-con
 #### Using the example <a href="#using-the-example" id="using-the-example"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/W3cf8RxX3GdmfHohJtNP/" %}
+
+[^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
+[^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

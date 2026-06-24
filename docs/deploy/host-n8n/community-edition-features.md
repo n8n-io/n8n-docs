@@ -61,7 +61,7 @@ You can unlock extra features by registering your n8n community edition. You reg
 Registering unlocks these features for the community edition:
 
 * Folders: Organize your workflows into tidy folders
-* [Debug in editor](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/debug-executions): Copy and [pin](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#data-pinning-n8n) execution data when working on a workflow
+* [Debug in editor](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/debug-executions): Copy and pin[^1] execution data when working on a workflow
 * [Custom execution data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/customize-executions-data): Save, find, and annotate execution metadata
 
 To register a new community edition instance, select the option during your initial account creation.
@@ -76,3 +76,5 @@ To register an existing community edition instance:
 Once you have a license key, activate it by clicking the button in the license email or by visiting **Options > Settings > Usage and plan** and selecting **Enter activation key**.
 
 Once activated, your license will not expire. We may change the unlocked features in the future. This will not impact previously unlocked features.
+
+[^1]: Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.

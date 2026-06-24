@@ -27,7 +27,7 @@ layout:
 
 # Create and run workflows
 
-A [workflow](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#workflow-n8n) is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#canvas-n8n).
+A workflow[^1] is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](#user-content-fn-2)[^2].
 
 ## Create a workflow <a href="#create-a-workflow" id="create-a-workflow"></a>
 
@@ -58,3 +58,6 @@ You need to publish workflows that start with a trigger node or Webhook node so 
 To publish your workflow, open your workflow and click **Publish**. The option to unpublish is in the workflow settings menu.
 
 Published workflows run whenever its trigger conditions are met.
+
+[^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
+[^2]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.

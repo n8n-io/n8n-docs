@@ -22,7 +22,7 @@ This gives access to the static workflow data.
 {% hint style="info" %}
 **Experimental feature**
 
-- Static data isn't available when testing workflows. The workflow must be active and called by a [trigger](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#trigger-node-n8n) or webhook to save static data.
+- Static data isn't available when testing workflows. The workflow must be active and called by a trigger[^1] or webhook to save static data.
 - This feature may behave unreliably under high-frequency workflow executions.
 {% endhint %}
 You can save data directly in the workflow. This data should be small.
@@ -111,3 +111,5 @@ delete nodeStaticData.lastExecution
 
 
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/2538" %}
+
+[^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

@@ -28,7 +28,7 @@ In the HTTP Request node, select **Add Option** > **Pagination**.
 If the API returns the URL of the next page in its response:
 
 1. Set **Pagination Mode** to **Response Contains Next URL**. n8n displays the parameters for this option.
-1. In **Next URL**, use an [expression](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) to set the URL. The exact expression depends on the data returned by your API. For example, if the API includes a parameter called `next-page` in the response body:
+1. In **Next URL**, use an expression[^1] to set the URL. The exact expression depends on the data returned by your API. For example, if the API includes a parameter called `next-page` in the response body:
 	```javascript
 	{{ $response.body["next-page"] }}
 	```
@@ -64,4 +64,4 @@ If the API you're using supports choosing the page size in the query:
 1. Enter the **Name** of the query parameter. This depends on your API. For example, a lot of APIs use a query parameter named `limit` to set page size. So **Name** would be `limit`.
 1. In **Value**, enter your page size.
 
-
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

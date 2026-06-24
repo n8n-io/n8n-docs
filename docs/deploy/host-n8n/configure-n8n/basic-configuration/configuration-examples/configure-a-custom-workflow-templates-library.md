@@ -15,7 +15,7 @@ layout:
 
 # Configure a custom workflow templates library <a href="#configure-a-custom-workflow-templates-library" id="configure-a-custom-workflow-templates-library"></a>
 
-n8n provides a library of workflow [templates](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#template-n8n). When self-hosting n8n, you can:
+n8n provides a library of workflow templates[^1]. When self-hosting n8n, you can:
 
 * Continue to use n8n's workflow templates library (this is the default behavior)
 * Disable workflow templates
@@ -32,3 +32,5 @@ n8n provides a library of workflow [templates](https://app.gitbook.com/s/CxSeOtV
 ## Add your workflows to the n8n library <a href="#add-your-workflows-to-the-n8n-library" id="add-your-workflows-to-the-n8n-library"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/MUcc1VgekqT7ym7tQ6zX/" %}
+
+[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

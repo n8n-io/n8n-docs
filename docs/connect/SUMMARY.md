@@ -20,6 +20,7 @@
 * [n8n CLI](n8n-cli.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
+* [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
 * [Create nodes](create-nodes/README.md)
   * [Overview](create-nodes/overview.md)
   * [Plan your node](create-nodes/plan-your-node/README.md)

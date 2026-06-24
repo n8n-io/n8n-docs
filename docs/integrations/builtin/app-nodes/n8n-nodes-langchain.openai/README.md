@@ -85,7 +85,7 @@ Some operations allow you to connect tools. [Tools](https://app.gitbook.com/s/rP
 
 Select the **Tools** connector to browse the available tools and add them.
 
-Once you add a tool connection, the OpenAI node becomes a [root node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#root-node-n8n), allowing it to form a [cluster node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#cluster-node-n8n) with the tools [sub-nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#sub-node-n8n). See [Node types](../../node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
+Once you add a tool connection, the OpenAI node becomes a [root node](#user-content-fn-1)[^1], allowing it to form a [cluster node](#user-content-fn-2)[^2] with the tools sub-nodes[^3]. See [Node types](../../node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
 
 ### Operations that support tool connectors <a href="#operations-that-support-tool-connectors" id="operations-that-support-tool-connectors"></a>
 
@@ -96,3 +96,7 @@ Once you add a tool connection, the OpenAI node becomes a [root node](https://ap
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
+
+[^1]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub nodes attach to the root node to extend its functionality.
+[^2]: In n8n, cluster nodes are groups of nodes that work together to provide functionality in a workflow. They consist of a root node and one or more sub nodes that extend the node's functionality.
+[^3]: n8n cluster nodes consist of one or more sub nodes connected to a root node. Sub nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.

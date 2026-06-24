@@ -70,7 +70,7 @@ You can append `_FILE` to individual environment variables to provide their conf
 
 Refer to [Environment variables](basic-configuration/use-environment-variables/README.md) for details on each variable.
 
-While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) and database configuration. Here are some examples: 
+While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as credentials[^1] and database configuration. Here are some examples: 
 
 ```yaml
 CREDENTIALS_OVERWRITE_DATA_FILE=/path/to/credentials_data
@@ -86,3 +86,5 @@ DB_POSTGRESDB_SSL_CERT_FILE=/path/to/ssl_cert
 DB_POSTGRESDB_SSL_KEY_FILE=/path/to/ssl_key
 DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE=/path/to/ssl_reject_unauth
 ```
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

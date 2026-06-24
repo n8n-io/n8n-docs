@@ -31,7 +31,7 @@ You can find authentication information for this node [here](../credentials/http
 
 The MCP Server Trigger node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools.
 
-Unlike conventional [trigger nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#trigger-node-n8n), which respond to events and pass their output to the next [connected node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/connect-nodes-together), the MCP Server Trigger node only connects to and executes [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work) nodes. Clients can list the available tools and call individual tools to perform work.
+Unlike conventional [trigger nodes](#user-content-fn-1)[^1], which respond to events and pass their output to the next [connected node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/connect-nodes-together), the MCP Server Trigger node only connects to and executes [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work) nodes. Clients can list the available tools and call individual tools to perform work.
 
 You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
 
@@ -147,3 +147,5 @@ location /mcp/ {
     # . . .
 }
 ```
+
+[^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

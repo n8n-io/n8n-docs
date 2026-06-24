@@ -20,7 +20,7 @@ layout:
 
 # Postgres Chat Memory node <a href="#postgres-chat-memory-node" id="postgres-chat-memory-node"></a>
 
-Use the Postgres Chat Memory node to use Postgres as a [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) server for storing chat history.
+Use the Postgres Chat Memory node to use Postgres as a memory[^1] server for storing chat history.
 
 On this page, you'll find a list of operations the Postgres Chat Memory node supports, and links to more resources.
 
@@ -48,4 +48,4 @@ Refer to [LangChain's Postgres Chat Message History documentation](https://js.la
 
 If you add more than one Postgres Chat Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](./n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 
-
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

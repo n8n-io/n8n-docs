@@ -21,7 +21,7 @@ layout:
 
 # Chat Memory Manager node <a href="#chat-memory-manager-node" id="chat-memory-manager-node"></a>
 
-The Chat Memory Manager node manages chat message [memories](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store).
+The Chat Memory Manager node manages chat message memories[^1] within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](#user-content-fn-2)[^2].
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/AX0w52P6UHDs42hQvuqR/" %}
 
@@ -59,4 +59,5 @@ Refer to [LangChain's Memory documentation](https://langchain-ai.github.io/langg
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
-
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+[^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

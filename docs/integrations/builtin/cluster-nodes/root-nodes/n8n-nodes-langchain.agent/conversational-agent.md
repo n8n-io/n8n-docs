@@ -30,7 +30,7 @@ n8n removed this functionality in February 2025.
 
 The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
 
-The Conversational Agent describes [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](tools-agent.md).
+The Conversational Agent describes tools[^1] in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](tools-agent.md).
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
@@ -106,4 +106,4 @@ Refer to the main AI Agent node's [Templates and examples](README.md#templates-a
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
 
-
+[^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

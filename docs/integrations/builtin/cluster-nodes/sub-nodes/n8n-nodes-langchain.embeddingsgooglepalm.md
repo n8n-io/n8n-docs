@@ -20,7 +20,7 @@ layout:
 
 # Embeddings Google PaLM node <a href="#embeddings-google-palm-node" id="embeddings-google-palm-node"></a>
 
-Use the Embeddings Google PaLM node to generate [embeddings](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-embedding) for a given text.
+Use the Embeddings Google PaLM node to generate embeddings[^1] for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
 
@@ -49,3 +49,4 @@ Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.

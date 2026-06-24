@@ -16,7 +16,7 @@ layout:
 
 # What's memory in AI? <a href="#whats-memory-in-ai" id="whats-memory-in-ai"></a>
 
-Memory is a key part of AI chat services. The [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
+Memory is a key part of AI chat services. The memory[^1] keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
 
 ## AI memory in n8n <a href="#ai-memory-in-n8n" id="ai-memory-in-n8n"></a>
 
@@ -33,3 +33,5 @@ To add memory to your AI workflow you can use either:
 If you need to do advanced AI memory management in your workflows, use the [Chat Memory Manager](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node. 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/AX0w52P6UHDs42hQvuqR/" %}
+
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

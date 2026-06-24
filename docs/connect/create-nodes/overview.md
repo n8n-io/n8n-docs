@@ -11,7 +11,7 @@ layout:
 
 # Creating nodes <a href="#creating-nodes" id="creating-nodes"></a>
 
-Learn how to build your own custom [nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#node-n8n).
+Learn how to build your own custom nodes[^1].
 
 This section includes:
 
@@ -29,3 +29,5 @@ This section assumes the following:
 * Ability to manage your own development environment, including git.
 * Knowledge of npm, including creating and submitting packages.
 * Familiarity with n8n, including a good understanding of [data structures](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure) and [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items).
+
+[^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.

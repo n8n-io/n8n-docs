@@ -24,7 +24,7 @@ layout:
 {% endhint %}
 
 
-You can use an external secrets store to manage [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) for n8n.
+You can use an external secrets store to manage credentials[^1] for n8n.
 
 n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](../use-source-control-and-environments/README.md) in one central place.
 
@@ -233,7 +233,7 @@ To use a secret from your store in an n8n credential:
 1. On the field where you want to use a secret:
 	1. Hover over the field.
 	1. Select **Expression**.
-1. In the field where you want to use a secret, enter an [expression](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) referencing the secret name:
+1. In the field where you want to use a secret, enter an expression[^2] referencing the secret name:
 	```js
 	{{ $secrets.<vault-name>.<secret-name> }}
 	```
@@ -302,3 +302,6 @@ From version `2.13.0`, project editors and admins with [secrets access enabled](
 In versions before `2.13.0` (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
 
 In this case, only use external secrets in credentials owned by an instance owner or admin.
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+[^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

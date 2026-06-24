@@ -20,7 +20,7 @@ layout:
 
 # Google Vertex Chat Model node <a href="#google-vertex-chat-model-node" id="google-vertex-chat-model-node"></a>
 
-Use the Google Vertex AI Chat Model node to use Google's Vertex AI chat models with conversational [agents](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent).
+Use the Google Vertex AI Chat Model node to use Google's Vertex AI chat models with conversational agents[^1].
 
 On this page, you'll find the node parameters for the Google Vertex AI Chat Model node, and links to more resources.
 
@@ -58,3 +58,4 @@ Refer to [LangChain's Google Vertex AI documentation](https://js.langchain.com/d
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

@@ -63,7 +63,7 @@ Once running, you can access n8n by opening:
 
 ## Using with PostgreSQL <a href="#using-with-postgresql" id="using-with-postgresql"></a>
 
-By default, n8n uses SQLite to save [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n), past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
+By default, n8n uses SQLite to save credentials[^1], past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
 
 {% hint style="info" %}
 **Persisting the `.n8n` directory still recommended**
@@ -174,3 +174,5 @@ pnpm --filter n8n-containers services:clean
 
 * Find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yiPh3sntkE3OYC67RAnX/" %}
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

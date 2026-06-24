@@ -21,7 +21,7 @@ layout:
 
 # Vector Store Question Answer Tool node <a href="#vector-store-question-answer-tool-node" id="vector-store-question-answer-tool-node"></a>
 
-The Vector Store Question Answer node is a [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) that allows an [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) to summarize results and answer questions based on chunks from a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store). 
+The Vector Store Question Answer node is a tool[^1] that allows an agent[^2] to summarize results and answer questions based on chunks from a [vector store](#user-content-fn-3)[^3]. 
 
 On this page, you'll find the node parameters for the Vector Store Question Answer node, and links to more resources.
 
@@ -69,3 +69,6 @@ View [example workflows and related content](https://n8n.io/integrations/vector-
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
+[^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+[^3]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

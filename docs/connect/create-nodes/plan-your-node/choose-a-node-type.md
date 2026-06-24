@@ -17,7 +17,7 @@ Both types provide integrations with external services.
 
 ## Trigger nodes <a href="#trigger-nodes" id="trigger-nodes"></a>
 
-[Trigger nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#trigger-node-n8n) start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute, depending on the triggering event.
+[Trigger nodes](#user-content-fn-1)[^1] start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute, depending on the triggering event.
 
 There are three types of trigger nodes in n8n: 
 
@@ -31,3 +31,4 @@ There are three types of trigger nodes in n8n:
 
 Action nodes perform operations as part of your workflow. These can include manipulating data, and triggering events in other systems.
 
+[^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

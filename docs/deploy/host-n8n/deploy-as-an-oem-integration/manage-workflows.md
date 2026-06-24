@@ -36,7 +36,7 @@ The APIs referenced in this document are subject to change at any time. Be sure 
 There are three general steps to follow:
 
 * Obtain the credentials for each user, and any additional parameters that may be required based on the workflow.
-* Create the [n8n credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) for this user.
+* Create the [n8n credentials](#user-content-fn-1)[^1] for this user.
 * Create the workflow.
 
 ### 1. Obtain user credentials <a href="#1-obtain-user-credentials" id="1-obtain-user-credentials"></a>
@@ -404,3 +404,5 @@ The details and scope of this workflow will vary greatly according to the indivi
 ### Call the workflow <a href="#call-the-workflow" id="call-the-workflow"></a>
 
 For each new user, or for any existing user as may be needed, call the webhook defined as the workflow trigger and provide the necessary credentials (and any other workflow parameters).
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

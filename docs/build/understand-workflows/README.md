@@ -12,7 +12,7 @@ layout:
 
 # Workflows <a href="#workflows" id="workflows"></a>
 
-A [workflow](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#workflow-n8n) is a collection of nodes connected together to automate a process.
+A workflow[^1] is a collection of nodes connected together to automate a process.
 
 
 * [Create](create-and-run-workflows.md) a workflow.
@@ -22,3 +22,5 @@ A [workflow](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary
 * [Share](../manage-workflows/share-with-others.md) workflows between users.
 
 If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.
+
+[^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.

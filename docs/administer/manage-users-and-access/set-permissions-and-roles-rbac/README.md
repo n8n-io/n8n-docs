@@ -26,11 +26,6 @@ RBAC is available on all plans except the Community edition. Different plans hav
 Role types and [account types](../understand-account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](organize-work-in-projects.md).
 {% endhint %}
 
-RBAC is a way of managing access to workflows and [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
+RBAC is a way of managing access to workflows and credentials[^1] based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
 
-
-
-
-
-
-
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

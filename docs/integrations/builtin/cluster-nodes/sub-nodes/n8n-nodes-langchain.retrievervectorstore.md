@@ -21,7 +21,7 @@ layout:
 
 # Vector Store Retriever node <a href="#vector-store-retriever-node" id="vector-store-retriever-node"></a>
 
-Use the Vector Store Retriever node to retrieve documents from a [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store).
+Use the Vector Store Retriever node to retrieve documents from a [vector store](#user-content-fn-1)[^1].
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 
@@ -42,3 +42,4 @@ Refer to [LangChain's vector store retriever documentation](https://js.langchain
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

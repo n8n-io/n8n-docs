@@ -36,7 +36,7 @@ layout:
 
 # Simple Vector Store
 
-Use the Simple Vector Store node to store and retrieve [embeddings](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-embedding) in n8n's in-app memory.
+Use the Simple Vector Store node to store and retrieve embeddings[^1] in n8n's in-app memory.
 
 On this page, you'll find the node parameters for the Simple Vector Store node, and links to more resources.
 
@@ -47,7 +47,7 @@ On this page, you'll find the node parameters for the Simple Vector Store node, 
 
 The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](../sub-nodes/n8n-nodes-langchain.memorybufferwindow/).
 
-This node creates a [vector database](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store) in the app memory.
+This node creates a [vector database](#user-content-fn-2)[^2] in the app memory.
 {% endhint %}
 
 ## Data safety limitations <a href="#data-safety-limitations" id="data-safety-limitations"></a>
@@ -80,7 +80,7 @@ You can see an example of in step 2 of [this template](https://n8n.io/workflows/
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Simple Vector Store node directly to the [tool](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
+You can connect the Simple Vector Store node directly to the tool[^3] connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Simple Vector Store node.
 
@@ -153,3 +153,7 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/memory/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+
+[^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
+[^2]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+[^3]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

@@ -34,4 +34,6 @@ In this section:
 Related sections:
 
 * [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables): reusable values.
-* [External secrets](../manage-credentials/use-external-secret-stores.md): manage [credentials](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#credential-n8n) with an external secrets vault.
+* [External secrets](../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.
+
+[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

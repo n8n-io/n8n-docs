@@ -26,7 +26,7 @@ layout:
 This node is deprecated, and will be removed in a future version.
 {% endhint %}
 
-Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store) or summarization.
+Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](#user-content-fn-1)[^1] or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
 
@@ -62,3 +62,4 @@ You can find authentication information for this node [here](../../credentials/g
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

@@ -29,7 +29,7 @@ export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
 
 Keep in mind:
 
-- Concurrency control applies only to production executions: those started from a webhook or [trigger](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#trigger-node-n8n) node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
+- Concurrency control applies only to production executions: those started from a webhook or trigger[^1] node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 
@@ -48,3 +48,4 @@ Concurrency control in queue mode is a separate mechanism from concurrency contr
 
 Evaluation test runs use a separate concurrency limit from production executions. By default, the limit follows the instance's license tier (Community/Pro 1, Business 3, Enterprise 5). Override it with [`N8N_CONCURRENCY_EVALUATION_LIMIT`](../basic-configuration/use-environment-variables/executions.md). Refer to [Metric-based evaluations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) for how the slider behaves in the UI.
 
+[^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

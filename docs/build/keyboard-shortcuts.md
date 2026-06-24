@@ -89,7 +89,7 @@ n8n provides keyboard shortcuts for some actions.
 
 ## Within nodes <a href="#within-nodes" id="within-nodes"></a>
 
-- **=**: in an empty parameter input, this switches to [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) mode.
+- **=**: in an empty parameter input, this switches to expressions[^1] mode.
 
 ## Command bar <a href="#command-bar" id="command-bar"></a>
 
@@ -100,3 +100,4 @@ The Command Bar provides quick access to actions and navigation throughout n8n. 
 * **Execution actions:** Debug, copy, retry, stop, or delete executions
 * **General navigation:** Access Templates, Variables, Insights, Settings, Help resources, and Documentation
 
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

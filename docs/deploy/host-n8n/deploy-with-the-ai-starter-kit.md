@@ -31,7 +31,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ## What you can build <a href="#what-you-can-build" id="what-you-can-build"></a>
 
-⭐️ [AI Agents](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent){ data-preview} that can schedule appointments
+⭐️ [AI Agents](#user-content-fn-1)[^1]{ data-preview} that can schedule appointments
 
 ⭐️ Summaries of company PDFs without leaking data
 
@@ -50,3 +50,5 @@ Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter
 
 n8n designed this kit to help you get started with self-hosted AI workflows. While it’s not fully optimized for production environments, it combines robust components that work well together for proof-of-concept projects. Customize it to meet your needs. Secure and harden it before using in production.
 {% endhint %}
+
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

@@ -41,9 +41,9 @@ Here are some common errors and issues with the [Structured Output Parser node](
 
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
-The Structured Output Parser node is a [sub-node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#sub-node-n8n). Sub-nodes behave differently than other nodes when processing multiple items using expressions.
+The Structured Output Parser node is a sub-node[^1]. Sub-nodes behave differently than other nodes when processing multiple items using expressions.
 
-Most nodes, including [root nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#root-node-n8n), take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five name values, the expression `{{ $json.name }}` resolves to each name in turn.
+Most nodes, including [root nodes](#user-content-fn-2)[^2], take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five name values, the expression `{{ $json.name }}` resolves to each name in turn.
 
 In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
 
@@ -64,3 +64,6 @@ To request a specific format for intermediary output, include the response struc
 Structured output parsing is often not reliable when working with [agents](../../root-nodes/n8n-nodes-langchain.agent/).
 
 If your workflow uses agents, n8n recommends using a separate [LLM-chain](../../root-nodes/n8n-nodes-langchain.chainllm.md) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.
+
+[^1]: n8n cluster nodes consist of one or more sub nodes connected to a root node. Sub nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
+[^2]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub nodes attach to the root node to extend its functionality.

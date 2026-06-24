@@ -34,7 +34,7 @@ layout:
 Available on all Cloud plans, and Business and Enterprise self-hosted plans.
 {% endhint %}
 
-You can share a credential directly with other users to use in their own workflows. Or share a credential in a [project](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#project-n8n) for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
+You can share a credential directly with other users to use in their own workflows. Or share a credential in a project[^1] for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
 
 Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
 
@@ -64,3 +64,5 @@ To unshare a credential:
 4. Select **Sharing**.
 5. Select **trash icon**<img src="../.gitbook/assets/delete-node (1).png" alt="Trash icon" data-size="line"> on the user or project you want to remove from the list of shared users and projects.
 6. Select **Save** to apply the changes.
+
+[^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.

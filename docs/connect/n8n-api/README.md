@@ -27,7 +27,7 @@ layout:
 The n8n API isn't available during the free trial. Please upgrade to access this feature.
 {% endhint %}
 
-Using n8n's public [API](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#api), you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
+Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
 * How to [authenticate](authentication.md)
 * [Paginating](pagination.md) results
@@ -65,3 +65,5 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 
 Trying out the API in the [playground](use-an-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
 {% endhint %}
+
+[^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.

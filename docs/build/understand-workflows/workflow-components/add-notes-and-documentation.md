@@ -30,7 +30,7 @@ layout:
 
 Sticky Notes allow you to annotate and comment on your workflows.
 
-n8n recommends using Sticky Notes heavily, especially on [template workflows](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#template-n8n), to help other users understand your workflow.
+n8n recommends using Sticky Notes heavily, especially on [template workflows](#user-content-fn-1)[^1], to help other users understand your workflow.
 
 ![Screenshot of a basic workflow with an example sticky note](../../.gitbook/assets/example-sticky-note.png)
 
@@ -128,3 +128,5 @@ For example:
 ```
 
 To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with your video ID. The YouTube video ID is the string that follows `v=` in the YouTube URL.
+
+[^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

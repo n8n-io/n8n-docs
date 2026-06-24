@@ -21,7 +21,7 @@ layout:
 
 # AI Agent Tool node <a href="#ai-agent-tool-node" id="ai-agent-tool-node"></a>
 
-The AI Agent Tool node allows a root-level [agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) in your workflow to call other agents as tools to simplify multi-agent orchestration.
+The AI Agent Tool node allows a root-level agent[^1] in your workflow to call other agents as tools to simplify multi-agent orchestration.
 
 The [primary agent](../root-nodes/n8n-nodes-langchain.agent/tools-agent.md) can supervise and delegate work to AI Agent Tool nodes that specialize in different tasks and knowledge. This allows you to use multiple agents in a single workflow without the complexity of managing context and variables that sub-workflows require. You can nest AI Agent Tool nodes into multiple layers for more complex multi-tiered use cases.
 
@@ -59,4 +59,4 @@ Refine the AI Agent Tool node's behavior using these options:
 
 To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/use-ai-for-parameters).
 
-
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

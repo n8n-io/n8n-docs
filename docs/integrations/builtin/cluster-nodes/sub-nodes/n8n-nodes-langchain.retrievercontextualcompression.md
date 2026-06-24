@@ -22,7 +22,7 @@ layout:
 
 # Contextual Compression Retriever node <a href="#contextual-compression-retriever-node" id="contextual-compression-retriever-node"></a>
 
-The Contextual Compression Retriever node improves the answers returned from [vector store](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-vector-store) document similarity searches by taking into account the context from the query.
+The Contextual Compression Retriever node improves the answers returned from [vector store](#user-content-fn-1)[^1] document similarity searches by taking into account the context from the query.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
 
@@ -37,3 +37,4 @@ Refer to [LangChain's contextual compression retriever documentation](https://js
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
 
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.

@@ -21,7 +21,7 @@ layout:
 
 # AI Agent node <a href="#ai-agent-node" id="ai-agent-node"></a>
 
-An [AI agent](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent) is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself. This agent uses external [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. 
+An [AI agent](#user-content-fn-1)[^1] is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself. This agent uses external tools[^2] and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. 
 
 {% hint style="info" %}
 **Connect a tool**
@@ -52,4 +52,5 @@ New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).
 
-
+[^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+[^2]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

@@ -36,7 +36,7 @@ layout:
 
 # Tools Agent
 
-The Tools Agent uses external [tools](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-tool) and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
+The Tools Agent uses external tools[^1] and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
 
 This agent has an enhanced ability to work with tools and can ensure a standard output format.
 
@@ -252,3 +252,5 @@ For detailed setup instructions and best practices, refer to [Human-in-the-loop 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
+
+[^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

@@ -12,7 +12,7 @@ layout:
 
 # Built-in methods and variables <a href="#built-in-methods-and-variables" id="built-in-methods-and-variables"></a>
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides a reference of available methods and variables for use in [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n), with a short description. 
+n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides a reference of available methods and variables for use in expressions[^1], with a short description. 
 
 {% hint style="info" %}
 **Availability in the expressions editor and the Code node**
@@ -25,4 +25,4 @@ All data transformation functions are only available in the expressions editor.
 
 The [Cookbook](README.md) contains examples for some common tasks, including some [Code node only](cookbook/code-node/README.md) functions.
 
-
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

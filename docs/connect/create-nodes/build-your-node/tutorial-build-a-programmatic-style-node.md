@@ -25,7 +25,7 @@ You need some understanding of:
 - JavaScript/TypeScript
 - REST APIs
 - git
-- [Expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n) in n8n
+- Expressions[^1] in n8n
 
 
 ## Build your node <a href="#build-your-node" id="build-your-node"></a>
@@ -502,3 +502,5 @@ You need to update the `package.json` to include your own information, such as y
 * View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](reference/versioning.md).
 * Make sure you understand key concepts: [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) and [data structures](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure).
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

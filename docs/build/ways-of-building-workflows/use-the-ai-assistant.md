@@ -26,7 +26,7 @@ layout:
 
 # Use the AI assistant
 
-The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and [expressions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#expression-n8n), the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
+The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and expressions[^1], the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
 
 ## Current capabilities <a href="#current-capabilities" id="current-capabilities"></a>
 
@@ -82,4 +82,8 @@ Any user on a Cloud plan can use the assistant.
 
 ### How does the Assistant work? <a href="#how-does-the-assistant-work" id="how-does-the-assistant-work"></a>
 
-The underlying logic of the assistant is build with the advanced AI capabilities of n8n. It uses a combination of different [agents](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-agent), specialized in different areas of n8n, RAG to gather knowledge from the docs and the community forum, and custom prompts, [memory](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#ai-memory) and context.
+The underlying logic of the assistant is build with the advanced AI capabilities of n8n. It uses a combination of different agents[^2], specialized in different areas of n8n, RAG to gather knowledge from the docs and the community forum, and custom prompts, memory[^3] and context.
+
+[^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+[^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+[^3]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

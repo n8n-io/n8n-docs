@@ -24,7 +24,7 @@ You can use the Error Trigger node to create error workflows. When another linke
 
 ## Usage <a href="#usage" id="usage"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/geH8a4bHDCaSGYqSS37b/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/odStQfuU7M0KPowwye9k/" %}
 
 
 Note the following:
@@ -46,5 +46,5 @@ Read more about [Error workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA
 
 ## Error data <a href="#error-data" id="error-data"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DeA33zfTLE9PhrqQNw2Y/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rAiMowL1bA7C4GcH8FyS/" %}
 

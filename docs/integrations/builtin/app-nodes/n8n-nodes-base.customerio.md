@@ -48,5 +48,5 @@ Refer to [Customer.io credentials](../credentials/customerio.md) for guidance on
 
 [Browse Customer.io node documentation integration templates](https://n8n.io/integrations/customerio) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

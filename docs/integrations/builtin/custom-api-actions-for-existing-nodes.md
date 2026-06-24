@@ -11,7 +11,7 @@ layout:
 
 # Custom API operations <a href="#custom-api-operations" id="custom-api-operations"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/VdlSjndpr14a7NDwfPuF/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/k23mQunNshTkLRuOqark/" %}
 
 ## Predefined credential types <a href="#predefined-credential-types" id="predefined-credential-types"></a>
 
@@ -21,7 +21,7 @@ For example: you create an Asana credential, for use with the Asana node. Later,
 
 ### Using predefined credential types <a href="#using-predefined-credential-types" id="using-predefined-credential-types"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vYmlHw5tI5uYtGcuiyAS/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ZmZC9v8B1NG5lgRY44yF/" %}
 
 
 ### Credential scopes <a href="#credential-scopes" id="credential-scopes"></a>

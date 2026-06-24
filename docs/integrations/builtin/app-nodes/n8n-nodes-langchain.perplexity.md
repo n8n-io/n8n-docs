@@ -44,4 +44,4 @@ You can find authentication information for this node [here](../credentials/perp
 
 Refer to [Perplexity's documentation](https://docs.perplexity.ai/home) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

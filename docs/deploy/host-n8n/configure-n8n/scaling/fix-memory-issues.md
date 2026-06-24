@@ -54,7 +54,7 @@ On n8n cloud you need to upgrade to a larger plan.
 
 This approach is more complex and means re-building the workflows causing the issue. This section provides some guidelines on how to reduce memory consumption. Not all suggestions are applicable to all workflows.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/x69Nl9jqgwUIMnP1x6Hz/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzVIOV8i2lmQ5HW3xFoo/" %}
 
 ### Increase old memory <a href="#increase-old-memory" id="increase-old-memory"></a>
 

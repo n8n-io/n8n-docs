@@ -13,7 +13,7 @@ layout:
 
 This section contains the node[^1] library: reference documentation for every built-in node in n8n, and their credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7uoMagkHAZU3qCt3aYqE/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nqwVeyXZtOyDsX8afllD/" %}
 
 ## Core nodes <a href="#core-nodes" id="core-nodes"></a>
 
@@ -21,7 +21,7 @@ Core nodes can be actions or triggers[^2]. Whereas most nodes connect to a speci
 
 ## Cluster nodes <a href="#cluster-nodes" id="cluster-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zJOwS1oaLPBcpMdYXIs3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
 
 ## Credentials <a href="#credentials" id="credentials"></a>
 

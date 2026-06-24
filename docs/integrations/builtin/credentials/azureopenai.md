@@ -55,7 +55,7 @@ Once you deploy the resource, use the **Deployment name** as the model name for 
 
 ## Using Azure Entra ID (OAuth2) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 

@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Twilio node supports and link
 Refer to [Twilio credentials](../credentials/twilio.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -46,4 +46,4 @@ Refer to [Twilio credentials](../credentials/twilio.md) for guidance on setting 
 
 Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

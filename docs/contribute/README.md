@@ -49,7 +49,7 @@ The following video demonstrates the steps of sharing workflows on the community
 
 ## Contribute a workflow template <a href="#contribute-a-workflow-template" id="contribute-a-workflow-template"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/MUcc1VgekqT7ym7tQ6zX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mr8LBJxxxIAFYHNPNKU2/" %}
 
 ## Build a node <a href="#build-a-node" id="build-a-node"></a>
 

@@ -96,4 +96,4 @@ Refer to [Harvest credentials](../credentials/harvest.md) for guidance on settin
 
 [Browse Harvest node documentation integration templates](https://n8n.io/integrations/harvest) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

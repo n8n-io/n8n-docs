@@ -22,7 +22,7 @@ layout:
 
 Use this operation to get a file from Telegram. Refer to [Telegram](README.md) for more information on the Telegram node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Get File <a href="#get-file" id="get-file"></a>
 

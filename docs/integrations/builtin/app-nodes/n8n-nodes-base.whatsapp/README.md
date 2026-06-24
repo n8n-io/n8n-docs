@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the WhatsApp Business Cloud node 
 Refer to [WhatsApp Business Cloud credentials](../../credentials/whatsapp.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -41,7 +41,7 @@ Refer to [WhatsApp Business Cloud credentials](../../credentials/whatsapp.md) fo
 	* Download
 	* Delete
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DO3jZ432bOPsmoiDqIYg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -56,4 +56,4 @@ Refer to [WhatsApp Business Platform's Cloud API documentation](https://develope
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

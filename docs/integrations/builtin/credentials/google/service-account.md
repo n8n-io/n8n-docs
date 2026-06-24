@@ -55,13 +55,13 @@ There are four steps to connecting your n8n credential to a Google Service Accou
 
 First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/paEFxT9cGqxGvuYxg0Ej/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/n3k6ZZ7BRnKZ6enSxeVQ/" %}
 
 ### Enable APIs <a href="#enable-apis" id="enable-apis"></a>
 
 With your project created, enable the APIs you'll need access to:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WnNE7wjfHbu7rBfeO97t/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Xs1r022aU39nYSgCg3At/" %}
 
 ### Set up Google Cloud Service Account <a href="#set-up-google-cloud-service-account" id="set-up-google-cloud-service-account"></a>
 

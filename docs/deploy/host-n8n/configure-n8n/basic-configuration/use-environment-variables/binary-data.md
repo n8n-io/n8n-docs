@@ -21,7 +21,7 @@ layout:
 
 # Binary data environment variables <a href="#binary-data-environment-variables" id="binary-data-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](../../scaling/use-external-storage.md) for more information on using external storage for binary data. 
 

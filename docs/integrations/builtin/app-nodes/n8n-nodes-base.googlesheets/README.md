@@ -60,4 +60,4 @@ Refer to [Google Sheet's API documentation](https://developers.google.com/sheets
 
 For common questions or issues and suggested solutions, refer to [Common issues](common-issues.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -30,7 +30,7 @@ The first time you start n8n with `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true`, 
 
 Set the following environment variables on your n8n instance, then restart:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TjfmMoYY6Kb06aCUnGHG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
 
 {% hint style="info" %}
 **Community packages must be enabled**

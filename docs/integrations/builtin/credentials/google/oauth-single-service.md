@@ -45,7 +45,7 @@ This document contains instructions for creating a Google credential for a singl
 
 n8n Cloud users can use **Managed OAuth2** for the following nodes:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3hg9lh4E1cKGSLdAAfcv/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
 
 To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
 
@@ -73,13 +73,13 @@ There are five steps to connecting your n8n credential to Google services:
 
 First, create a Google Cloud Console project. If you already have a project, jump to the [next section](oauth-single-service.md#enable-apis):
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/paEFxT9cGqxGvuYxg0Ej/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/n3k6ZZ7BRnKZ6enSxeVQ/" %}
 
 ### Enable APIs <a href="#enable-apis" id="enable-apis"></a>
 
 With your project created, enable the APIs you'll need access to:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WnNE7wjfHbu7rBfeO97t/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Xs1r022aU39nYSgCg3At/" %}
 
 ### Configure your OAuth consent screen <a href="#configure-your-oauth-consent-screen" id="configure-your-oauth-consent-screen"></a>
 
@@ -133,11 +133,11 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 ### Google hasn't verified this app <a href="#google-hasnt-verified-this-app" id="google-hasnt-verified-this-app"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tj49fa4uxtfjnWkAXo65/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/uEYII1oKijzYurya61sf/" %}
 
 ### Google Cloud app becoming unauthorized <a href="#google-cloud-app-becoming-unauthorized" id="google-cloud-app-becoming-unauthorized"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eGnzeqNthIcbNwJqWUD7/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/PlbR0ntmBBE0DgjKiavq/" %}
 
 ### redirect\_uri\_mismatch <a href="#redirecturimismatch" id="redirecturimismatch"></a>
 

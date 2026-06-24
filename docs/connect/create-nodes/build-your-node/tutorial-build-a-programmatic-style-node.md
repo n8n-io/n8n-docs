@@ -18,7 +18,7 @@ This tutorial walks through building a programmatic-style node. Before you begin
 
 You need the following installed on your development machine:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zu69Es8XpVYF7Wjldwd1/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7rCdLiI9qnTIK3Afb3NX/" %}
 
 You need some understanding of:
 
@@ -77,7 +77,7 @@ npm i
 Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iV21vfNb9w8eJrJxc055/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dGOXJYk0OQgOLlRpyJnn/" %}
 
 
 ### Step 3: Define the node in the base file <a href="#step-3-define-the-node-in-the-base-file" id="step-3-define-the-node-in-the-base-file"></a>
@@ -494,7 +494,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Test your node <a href="#test-your-node" id="test-your-node"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7XjXX06uVcZBYZwANeP3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WlCAEDxY4EZLDV85eB8C/" %}
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 

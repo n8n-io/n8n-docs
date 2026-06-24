@@ -14,7 +14,7 @@ layout:
 
 # Manage users with SAML <a href="#manage-users-with-saml" id="manage-users-with-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/J0OeWX5WGkynzzMq197K/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
 
 There are some user management tasks that are affected by SAML.
 

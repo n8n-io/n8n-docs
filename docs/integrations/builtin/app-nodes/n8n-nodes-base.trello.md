@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Trello node supports and link
 Refer to [Trello credentials](../credentials/trello.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -87,7 +87,7 @@ Refer to [Trello credentials](../credentials/trello.md) for guidance on setting 
 
 [Browse Trello node documentation integration templates](https://n8n.io/integrations/trello) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Find the List ID <a href="#find-the-list-id" id="find-the-list-id"></a>
 

@@ -29,11 +29,11 @@ For each workflow, you can set an error workflow in **Workflow Settings**. It ru
 
 You can use the same error workflow for multiple workflows.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/geH8a4bHDCaSGYqSS37b/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/odStQfuU7M0KPowwye9k/" %}
 
 ## Error data <a href="#error-data" id="error-data"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DeA33zfTLE9PhrqQNw2Y/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rAiMowL1bA7C4GcH8FyS/" %}
 
 ## Cause a workflow execution failure using Stop And Error <a href="#cause-a-workflow-execution-failure-using-stop-and-error" id="cause-a-workflow-execution-failure-using-stop-and-error"></a>
 

@@ -21,7 +21,7 @@ layout:
 
 # External hooks environment variables <a href="#external-hooks-environment-variables" id="external-hooks-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 You can define external hooks that n8n executes whenever a specific operation runs. Refer to [External hooks](../../external-hooks.md) for the full reference, including available hooks and file formatting.
 

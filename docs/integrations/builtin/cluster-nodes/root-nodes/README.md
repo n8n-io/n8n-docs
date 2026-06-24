@@ -15,5 +15,5 @@ layout:
 
 Root nodes are the foundational nodes within a group of cluster nodes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zJOwS1oaLPBcpMdYXIs3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
 

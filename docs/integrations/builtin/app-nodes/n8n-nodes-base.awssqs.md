@@ -36,5 +36,5 @@ Refer to  [AWS SQS credentials](../credentials/aws.md) for guidance on setting u
 
 [Browse AWS SQS node documentation integration templates](https://n8n.io/integrations/aws-sqs) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

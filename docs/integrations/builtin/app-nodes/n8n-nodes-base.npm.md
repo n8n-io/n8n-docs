@@ -46,4 +46,4 @@ Refer to [npm credentials](../credentials/npm.md) for guidance on setting up aut
 
 Refer to [npm's documentation](https://docs.npmjs.com/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -93,7 +93,7 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 
 ### Step two: In-app setup <a href="#step-two-in-app-setup" id="step-two-in-app-setup"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JGkf5IJ2IgJDvCAmE9EN/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
 
 #### Pre-provision the instance owner from environment variables <a href="#pre-provision-the-instance-owner-from-environment-variables" id="pre-provision-the-instance-owner-from-environment-variables"></a>
 
@@ -113,8 +113,8 @@ To change the owner email after setup, see [Change the instance owner email for 
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mEgsMBFOyxbvvAop6dlZ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/75cM0VtFejV1gnDTFOSV/" %}
 
 ### Step three: Invite users <a href="#step-three-invite-users" id="step-three-invite-users"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IEZFsEbajGj1LU6iMXRW/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}

@@ -63,7 +63,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 
 ### Pin data <a href="#pin-data" id="pin-data"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9zLQ8R0Yheo32vbDfer4/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3EMfTKLe60rEZQ4dBdBw/" %}
 
 ### Unpin data <a href="#unpin-data" id="unpin-data"></a>
 

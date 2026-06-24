@@ -47,7 +47,7 @@ n8n provides a trigger node for Airtable. You can find the trigger node docs [he
 
 Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 
 ## Node reference <a href="#node-reference" id="node-reference"></a>

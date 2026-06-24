@@ -57,4 +57,4 @@ n8n also provides:
 * A [node](n8n-nodes-base.venafitlsprotectdatacenter.md) for Venafi TLS Protect Datacenter.
 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

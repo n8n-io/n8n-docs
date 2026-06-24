@@ -46,4 +46,4 @@ You can find authentication information for this node [here](../credentials/okta
 
 Refer to [Okta's documentation](https://developer.okta.com/docs/guides/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -72,7 +72,7 @@ Pre-provision the [instance owner](user-management.md) from environment variable
 This variable expects a pre-hashed bcrypt value. Setting a plaintext password breaks login.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mEgsMBFOyxbvvAop6dlZ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/75cM0VtFejV1gnDTFOSV/" %}
 
 ## SSO <a href="#sso" id="sso"></a>
 
@@ -92,11 +92,11 @@ Configure [single sign-on](security/configure-sso.md) from environment variables
 
 ### Activation and shared settings <a href="#activation-and-shared-settings" id="activation-and-shared-settings"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/htWVIv80BlJ84USCtbMw/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TJ7IUBpRrfLoXyEn4T4d/" %}
 
 ### OIDC <a href="#oidc" id="oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Fs30NzAy8snvvMNQHHrb/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/SBpz79jvy94Y5dKIvxqR/" %}
 
 ### SAML <a href="#saml" id="saml"></a>
 
@@ -106,7 +106,7 @@ Configure [single sign-on](security/configure-sso.md) from environment variables
 Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (URL), not both.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kBvC9y2nksYDmrJlw9Vg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NnYMdwgkElS7TK37owd0/" %}
 
 ## Security policy <a href="#security-policy" id="security-policy"></a>
 
@@ -118,7 +118,7 @@ Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (
 
 Manage the instance security policy from environment variables, including MFA enforcement and personal space restrictions.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Hlnt6L4Wk4TL9ywOlK1S/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xVIddGVtWAPFZlRYTrwL/" %}
 
 ## Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
@@ -130,7 +130,7 @@ Manage the instance security policy from environment variables, including MFA en
 
 Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destinations from environment variables. See [Configure using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YHtyyuz0AirCkMBMc394/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
 
 ## MCP <a href="#mcp" id="mcp"></a>
 
@@ -142,7 +142,7 @@ Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-an
 
 Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) from environment variables.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WQX68YIULWiDLaPhemU5/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Gf4nC8Xoy8uJDma1fIYg/" %}
 
 ## Community packages <a href="#community-packages" id="community-packages"></a>
 
@@ -156,7 +156,7 @@ Manage the set of installed [community packages](https://app.gitbook.com/s/BKcbO
 
 `N8N_COMMUNITY_PACKAGES_ENABLED` must also be set to `true` (the default). When community packages are disabled, n8n ignores `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV` and logs a warning.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TjfmMoYY6Kb06aCUnGHG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
 
 ## Combined example <a href="#combined-example" id="combined-example"></a>
 

@@ -54,5 +54,5 @@ Refer to [Brevo credentials](../credentials/brevo.md) for guidance on setting up
 
 [Browse Brevo node documentation integration templates](https://n8n.io/integrations/brevo) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

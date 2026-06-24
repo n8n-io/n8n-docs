@@ -22,7 +22,7 @@ It's important to keep your n8n version up to date. This ensures you get the lat
 
 Some tips when updating:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/n9aq4wdObipxIDqh83Fc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1Q2X3RjU5o2jnRfcKzuN/" %}
 
 For instructions on how to update, refer to the documentation for your installation method:
 

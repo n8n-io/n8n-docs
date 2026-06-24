@@ -52,5 +52,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 [Browse Webex by Cisco node documentation integration templates](https://n8n.io/integrations/webex-by-cisco) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

@@ -32,7 +32,7 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 
 This node runs in response to a call from the [Execute Sub-workflow](n8n-nodes-base.executeworkflow.md) or [Call n8n Workflow Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) nodes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/XwY7AayneZzH3fhi47iZ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wlwT5JcWyWTecnDN6aul/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -41,4 +41,4 @@ This node runs in response to a call from the [Execute Sub-workflow](n8n-nodes-b
 
 ## How data passes between workflows <a href="#how-data-passes-between-workflows" id="how-data-passes-between-workflows"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CTYo2n9a9l27vlfCe7rW/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/edKlUxnfiRMq38CujuFv/" %}

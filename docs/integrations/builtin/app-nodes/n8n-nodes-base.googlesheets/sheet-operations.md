@@ -38,7 +38,7 @@ layout:
 
 Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./) for more information on the Google Sheets node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Append or Update Row <a href="#append-or-update-row" id="append-or-update-row"></a>
 
@@ -62,7 +62,7 @@ Enter these parameters:
 
 ### Options <a href="#options" id="options"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zoGfQ5XXgsUwPLJyqGRS/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5qCFLvqGg2hlBEeEqCwp/" %}
 
 Refer to the [Method: spreadsheets.values.update | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update) API documentation for more information.
 
@@ -88,7 +88,7 @@ Enter these parameters:
 
 ### Options <a href="#options" id="options"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zoGfQ5XXgsUwPLJyqGRS/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5qCFLvqGg2hlBEeEqCwp/" %}
 
 Refer to the [Method: spreadsheets.values.append | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append) API documentation for more information.
 

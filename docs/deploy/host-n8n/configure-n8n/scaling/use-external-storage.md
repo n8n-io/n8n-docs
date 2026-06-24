@@ -115,7 +115,7 @@ n8n continues to read older binary data stored in the filesystem from the filesy
 
 If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yblSb5Vg8XtlyiZOzDbX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kct3MUrE5xSbDyeytQIX/" %}
 
 ### Upgrade best practices for S3 storage <a href="#upgrade-best-practices-for-s3-storage" id="upgrade-best-practices-for-s3-storage"></a>
 

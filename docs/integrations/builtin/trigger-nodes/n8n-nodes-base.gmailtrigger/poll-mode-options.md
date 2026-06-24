@@ -25,4 +25,4 @@ Use the [Gmail Trigger node's](README.md) **Poll Time** parameter to set how oft
 
 Refer to the sections below for details on using each **Mode**.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KvDkq7TZWDQ5wuoiHXVv/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DnRpcOvtlMPcHD6I3kyx/" %}

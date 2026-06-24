@@ -39,7 +39,7 @@ Refer to [Microsoft Entra ID's documentation](https://www.microsoft.com/en-us/se
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
@@ -193,7 +193,7 @@ The following scopes are required for each Microsoft integration as of March 202
 
 Here are the known common errors and issues with Microsoft Entra credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jqvB0gfEfubAawaXt51F/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}
 
 ### Admin approval required during delegated access setup <a href="#admin-approval-required-during-delegated-access-setup" id="admin-approval-required-during-delegated-access-setup"></a>
 

@@ -55,4 +55,4 @@ n8n provides a trigger node for Google Business Profile. You can find the trigge
 
 Refer to [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

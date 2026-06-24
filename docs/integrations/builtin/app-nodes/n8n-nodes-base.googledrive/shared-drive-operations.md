@@ -39,7 +39,7 @@ layout:
 
 Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](./) for more information on the Google Drive node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Create a shared drive <a href="#create-a-shared-drive" id="create-a-shared-drive"></a>
 

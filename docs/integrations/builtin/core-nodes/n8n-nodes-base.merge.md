@@ -102,7 +102,7 @@ When merging data by **Mode > Combine**, you can set these **Options**:
 
 ##### Clash Handling <a href="#clash-handling" id="clash-handling"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0B2SO8foVsOysyxClhk7/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/VJPiDgC5Bx5FmuGODmCq/" %}
 
 ### SQL Query <a href="#sql-query" id="sql-query"></a>
 
@@ -136,7 +136,7 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 
 ## Branch execution with If and Merge nodes <a href="#branch-execution-with-if-and-merge-nodes" id="branch-execution-with-if-and-merge-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9pbMrEP4mnRvYTv9rv4H/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/o5sVhTw0cyO5aAAkAVDj/" %}
 
 
 ## Try it out: A step by step example <a href="#try-it-out-a-step-by-step-example" id="try-it-out-a-step-by-step-example"></a>

@@ -51,5 +51,5 @@ curl --request POST \
 
 This means you can use a GitHub Action or GitLab CI/CD to automatically pull changes to the production instance on merge.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ueu3IerS0FzLuJu6xs1H/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/niFQjDjbGJDJTKB57Z1s/" %}
 

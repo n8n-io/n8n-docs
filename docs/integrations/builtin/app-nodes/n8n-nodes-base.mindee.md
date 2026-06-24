@@ -39,5 +39,5 @@ Refer to [Mindee credentials](../credentials/mindee.md) for guidance on setting 
 
 [Browse Mindee node documentation integration templates](https://n8n.io/integrations/mindee) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

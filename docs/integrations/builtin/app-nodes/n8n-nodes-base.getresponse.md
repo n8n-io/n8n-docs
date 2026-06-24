@@ -41,5 +41,5 @@ Refer to [GetResponse credentials](../credentials/getresponse.md) for guidance o
 
 [Browse GetResponse node documentation integration templates](https://n8n.io/integrations/getresponse) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

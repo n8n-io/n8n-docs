@@ -14,7 +14,7 @@ layout:
 
 # Set up SAML <a href="#set-up-saml" id="set-up-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/J0OeWX5WGkynzzMq197K/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
 
 {% hint style="info" %}
 **Configure using environment variables**

@@ -16,7 +16,7 @@ The HTTP Request node supports pagination. This page provides some example confi
 
 Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for more information on the node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbaOt2JaGE5phUkQX0Qt/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/91KTZVqkKv8rY72iELNl/" %}
 
 
 ## Enable pagination <a href="#enable-pagination" id="enable-pagination"></a>

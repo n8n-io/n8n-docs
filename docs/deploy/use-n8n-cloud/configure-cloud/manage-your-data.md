@@ -1,21 +1,36 @@
 ---
-description: How to manage your data on Cloud.
 contentType: howto
 nodeTitle: Manage your data
 originalFilePath: manage-cloud/cloud-data-management.md
-originalUrl: 'https://docs.n8n.io/manage-cloud/cloud-data-management'
-url: 'https://docs.n8n.io/deploy/use-n8n-cloud/configure-cloud/manage-your-data'
+originalUrl: https://docs.n8n.io/manage-cloud/cloud-data-management
+url: https://docs.n8n.io/deploy/use-n8n-cloud/configure-cloud/manage-your-data
+description: How to manage your data on Cloud.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Cloud data management <a href="#cloud-data-management" id="cloud-data-management"></a>
+# Manage your data
 
 There are two concerns when managing data on Cloud:
 
 * Memory usage: complex workflows processing large amounts of data can exceed n8n's memory limits. If this happens, the instance can crash and become inaccessible.
-* Data storage: depending on your execution settings and volume, your n8n database can grow in size and run out of storage. 
+* Data storage: depending on your execution settings and volume, your n8n database can grow in size and run out of storage.
 
 To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
 
@@ -59,14 +74,14 @@ There are two ways you can control how much execution data n8n stores in the dat
 In the admin dashboard:
 
 1. From your workspace or editor, navigate to **Admin Panel**.
-1. Select **Manage**.
-1. In **Executions to Save** deselect the executions you don't want to log.
+2. Select **Manage**.
+3. In **Executions to Save** deselect the executions you don't want to log.
 
 In your workflow settings:
 
-1. Select the **Options** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options menu" data-size="line"> menu.
-1. Select **Settings**. n8n opens the **Workflow settings** modal.
-1. Change **Save successful production executions** to **Do not save**.
+1. Select the **Options** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu" data-size="line"> menu.
+2. Select **Settings**. n8n opens the **Workflow settings** modal.
+3. Change **Save successful production executions** to **Do not save**.
 
 ## Cloud data pruning and out of memory incident prevention <a href="#cloud-data-pruning-and-out-of-memory-incident-prevention" id="cloud-data-pruning-and-out-of-memory-incident-prevention"></a>
 
@@ -84,6 +99,5 @@ Heavier executions and use cases can exceed database capacity despite the automa
 
 1. An alert system warns n8n if an instance is at 85% disk capacity.
 2. n8n prunes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
- 	
 
 Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to prune the data before the remaining disk space fills up.

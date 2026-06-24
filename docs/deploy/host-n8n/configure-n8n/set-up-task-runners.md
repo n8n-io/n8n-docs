@@ -1,19 +1,34 @@
 ---
 title: Task runners
-description: >-
-  How to configure task runners to execute tasks using internal or external
-  runner processes.
 contentType: howto
 nodeTitle: Set up task runners
 originalFilePath: hosting/configuration/task-runners.md
-originalUrl: 'https://docs.n8n.io/hosting/configuration/task-runners'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-task-runners'
+originalUrl: https://docs.n8n.io/hosting/configuration/task-runners
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-task-runners
+description: >-
+  How to configure task runners to execute tasks using internal or external
+  runner processes.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Task runners <a href="#task-runners" id="task-runners"></a>
+# Set up task runners
 
 Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code).
 
@@ -22,14 +37,14 @@ This document describes how task runners work and how you can configure them.
 {% hint style="warning" %}
 **Internal mode not recommended for production**
 
-Using internal mode in production environments can pose a security risk. For production deployments, use [external mode](#external-mode) to ensure proper isolation between n8n and task runner processes. Refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures.
+Using internal mode in production environments can pose a security risk. For production deployments, use [external mode](set-up-task-runners.md#external-mode) to ensure proper isolation between n8n and task runner processes. Refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
 
-![Task runner overview](../../.gitbook/assets/task-runner-concept.png)
+![Task runner overview](<../../.gitbook/assets/task-runner-concept (1).png>)
 
 Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
 
@@ -96,12 +111,12 @@ There are three layers of configuration: the n8n container, the runners containe
 
 These are the main environment variables that you can set on the n8n container running in external mode:
 
-| Environment variables                                  | Description                                                |
-|--------------------------------------------------------|------------------------------------------------------------|
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                      |
-| `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                         |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
-| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
+| Environment variables                                  | Description                                                                                                                                                                   |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                                                                                                                                         |
+| `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
+| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
+| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
 
 For full list of environment variables see [task runner environment variables](basic-configuration/use-environment-variables/task-runners.md).
 
@@ -109,11 +124,11 @@ For full list of environment variables see [task runner environment variables](b
 
 These are the main environment variables that you can set on the runners container running in external mode:
 
-| Environment variables | Description |
-| ------ | ----- |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker. |
-| `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | The address of the task broker server within the n8n instance. |
-| `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
+| Environment variables                                  | Description                                                                                                                                                                                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker.                                                                                                                                                            |
+| `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679`           | The address of the task broker server within the n8n instance.                                                                                                                                                              |
+| `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15`                 | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
 
 For full list of environment variables see [task runner environment variables](basic-configuration/use-environment-variables/task-runners.md).
 
@@ -134,7 +149,7 @@ path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 
 ## Adding extra dependencies <a href="#adding-extra-dependencies" id="adding-extra-dependencies"></a>
 
-### 1. Extend the `n8nio/runners` image <a href="#1-extend-the-n8niorunners-image" id="1-extend-the-n8niorunners-image"></a>
+### 1. Extend the `n8nio/runners` image <a href="#id-1-extend-the-n8niorunners-image" id="id-1-extend-the-n8niorunners-image"></a>
 
 You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need `n8nio/runners:1.121.0` or later to do this.
 
@@ -176,7 +191,7 @@ You must also allowlist any first-party or third-party packages for use by the C
 * `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
 * `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
 
-### 2. Build your custom image <a href="#2-build-your-custom-image" id="2-build-your-custom-image"></a>
+### 2. Build your custom image <a href="#id-2-build-your-custom-image" id="id-2-build-your-custom-image"></a>
 
 For example, from the n8n repository root:
 
@@ -187,7 +202,7 @@ docker buildx build \
   .
 ```
 
-### 3. Run the image <a href="#3-run-the-image" id="3-run-the-image"></a>
+### 3. Run the image <a href="#id-3-run-the-image" id="id-3-run-the-image"></a>
 
 For example:
 
@@ -199,4 +214,3 @@ docker run --rm -it \
   -p 5680:5680 \
   n8nio/runners:custom
 ```
-

@@ -1,23 +1,38 @@
 ---
 title: Opt out of data collection
-description: Opt out of data telemetry collection on your n8n instance.
 contentType: howto
 nodeTitle: Control telemetry
 originalFilePath: hosting/securing/telemetry-opt-out.md
-originalUrl: 'https://docs.n8n.io/hosting/securing/telemetry-opt-out'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/control-telemetry'
+originalUrl: https://docs.n8n.io/hosting/securing/telemetry-opt-out
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/control-telemetry
+description: Opt out of data telemetry collection on your n8n instance.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Data collection <a href="#data-collection" id="data-collection"></a>
+# Control telemetry
 
 n8n collects some anonymous data from self-hosted n8n installations. Use the instructions below to opt out of data telemetry collection.
 
 ## Collected data <a href="#collected-data" id="collected-data"></a>
 
-Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/privacy#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
+Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
 
 ## How collection works <a href="#how-collection-works" id="how-collection-works"></a>
 

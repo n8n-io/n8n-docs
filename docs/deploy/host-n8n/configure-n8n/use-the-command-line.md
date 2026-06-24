@@ -1,42 +1,57 @@
 ---
-description: 'Commands available in the Server CLI, the built-in n8n command-line interface.'
 contentType: reference
 nodeTitle: Use the command line
 originalFilePath: hosting/cli-commands.md
-originalUrl: 'https://docs.n8n.io/hosting/cli-commands'
-url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line'
+originalUrl: https://docs.n8n.io/hosting/cli-commands
+url: https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line
+description: Commands available in the Server CLI, the built-in n8n command-line interface.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Server CLI commands <a href="#server-cli-commands" id="server-cli-commands"></a>
+# Use the command line
 
 The **Server CLI** is a built-in command-line interface that runs on the same machine as your n8n installation. It provides direct database access for administrative tasks and can execute most commands even when n8n isn't running.
 
 {% hint style="info" %}
 **n8n CLI**
 
-Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx).
+Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n CLI](https://app.gitbook.com/o/gkeAaBEvbwHB2NmepVHG/s/r7wKI4I1BgdBCuq5Cvcx/).
 {% endhint %}
 
 ## When to use Server CLI vs n8n CLI <a href="#when-to-use-server-cli-vs-n8n-cli" id="when-to-use-server-cli-vs-n8n-cli"></a>
 
-| Feature | Server CLI | n8n CLI |
-|---------|-----------|---------|
-| **Where it runs** | Same machine as n8n | Any machine with network access |
-| **Authentication** | Direct database access | API key |
-| **Requires running n8n** | No (most commands) | Yes |
-| **Best for** | Instance operators, backups, migrations | Programmers, AI agents, remote management |
-| **Security model** | Bypasses access controls | Respects user permissions and API key scope |
-| **Use case examples** | Backup/restore, license management, emergency password resets | Workflow automation, credentials management through code |
+| Feature                  | Server CLI                                                    | n8n CLI                                                  |
+| ------------------------ | ------------------------------------------------------------- | -------------------------------------------------------- |
+| **Where it runs**        | Same machine as n8n                                           | Any machine with network access                          |
+| **Authentication**       | Direct database access                                        | API key                                                  |
+| **Requires running n8n** | No (most commands)                                            | Yes                                                      |
+| **Best for**             | Instance operators, backups, migrations                       | Programmers, AI agents, remote management                |
+| **Security model**       | Bypasses access controls                                      | Respects user permissions and API key scope              |
+| **Use case examples**    | Backup/restore, license management, emergency password resets | Workflow automation, credentials management through code |
 
 ## Running CLI commands <a href="#running-cli-commands" id="running-cli-commands"></a>
 
 You can use CLI commands with self-hosted n8n. Depending on how you choose to install n8n, there are differences in how to run the commands:
 
 * npm: the `n8n` command is directly available. The documentation uses this in the examples below.
-* Docker: the `n8n` command is available within your Docker container:
+*   Docker: the `n8n` command is available within your Docker container:
 
     ```sh
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
@@ -68,10 +83,10 @@ Use `publish:workflow` to publish a workflow by its ID. You can optionally publi
 
 Command flags:
 
-| Flag | Description |
-|------|-------------|
-| --help | Help prompt. |
-| --id | The ID of the workflow to publish. Required. |
+| Flag        | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
+| --help      | Help prompt.                                                                |
+| --id        | The ID of the workflow to publish. Required.                                |
 | --versionId | Optional version ID to publish. If omitted, the current draft is published. |
 
 {% hint style="info" %}
@@ -98,11 +113,11 @@ Use `unpublish:workflow` to unpublish a workflow by its ID, or all workflows at 
 
 Command flags:
 
-| Flag | Description |
-|------|-------------|
-| --help | Help prompt. |
-| --id | The ID of the workflow to unpublish. Can't be used with `--all`. |
-| --all | Unpublish all workflows. Can't be used with `--id`. |
+| Flag   | Description                                                      |
+| ------ | ---------------------------------------------------------------- |
+| --help | Help prompt.                                                     |
+| --id   | The ID of the workflow to unpublish. Can't be used with `--all`. |
+| --all  | Unpublish all workflows. Can't be used with `--id`.              |
 
 Unpublish a workflow by its ID:
 
@@ -121,7 +136,7 @@ n8n unpublish:workflow --all
 {% hint style="warning" %}
 **Deprecated in n8n 2.0**
 
-The `update:workflow` command is deprecated and will be removed. Use [`publish:workflow`](#publish-a-workflow) and [`unpublish:workflow`](#unpublish-a-workflow) instead. See the [n8n v2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) for details.
+The `update:workflow` command is deprecated and will be removed. Use [`publish:workflow`](use-the-command-line.md#publish-a-workflow) and [`unpublish:workflow`](use-the-command-line.md#unpublish-a-workflow) instead. See the [n8n v2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) for details.
 {% endhint %}
 
 Set the active status of a workflow by its ID to false:
@@ -154,11 +169,11 @@ You can export your database entities from n8n using the CLI. This tooling allow
 
 Command flags:
 
-| Flag | Description |
-|-------------|-------|
-| --help | Help prompt. |
-| --outputDir | Output directory path |
-| --includeExecutionHistoryDataTables | Include execution history data tables, these are excluded by default as they can be very large  |
+| Flag                                | Description                                                                                    |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------- |
+| --help                              | Help prompt.                                                                                   |
+| --outputDir                         | Output directory path                                                                          |
+| --includeExecutionHistoryDataTables | Include execution history data tables, these are excluded by default as they can be very large |
 
 ```bash
 n8n export:entities --outputDir=./outputs --includeExecutionHistoryDataTables=true
@@ -170,18 +185,18 @@ You can export your workflows and credentials from n8n using the CLI.
 
 Command flags:
 
-| Flag | Description |
-|-------------|-------|
-| --help | Help prompt. |
-| --all | Exports all workflows/credentials. |
-| --backup | Sets --all --pretty --separate for backups. You can optionally set --output. |
-| --id | The ID of the workflow to export. |
-| --output, -o | Outputs file name or directory if using separate files. |
-| --pretty | Formats the output in an easier to read fashion. |
-| --separate | Exports one file per workflow (useful for versioning). Must set a directory using --output. |
-| --decrypted | Exports the credentials in a plain text format. (Credentials only.) |
-| --version | The version ID of a specific historical version to export. (Workflows only, can't be used with `--all` or `--published`.) |
-| --published | Exports the published/active version of the workflow instead of the current draft. When combined with `--all`, unpublished workflows are skipped. (Workflows only, can't be used with `--version`.) |
+| Flag         | Description                                                                                                                                                                                         |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --help       | Help prompt.                                                                                                                                                                                        |
+| --all        | Exports all workflows/credentials.                                                                                                                                                                  |
+| --backup     | Sets --all --pretty --separate for backups. You can optionally set --output.                                                                                                                        |
+| --id         | The ID of the workflow to export.                                                                                                                                                                   |
+| --output, -o | Outputs file name or directory if using separate files.                                                                                                                                             |
+| --pretty     | Formats the output in an easier to read fashion.                                                                                                                                                    |
+| --separate   | Exports one file per workflow (useful for versioning). Must set a directory using --output.                                                                                                         |
+| --decrypted  | Exports the credentials in a plain text format. (Credentials only.)                                                                                                                                 |
+| --version    | The version ID of a specific historical version to export. (Workflows only, can't be used with `--all` or `--published`.)                                                                           |
+| --published  | Exports the published/active version of the workflow instead of the current draft. When combined with `--all`, unpublished workflows are skipped. (Workflows only, can't be used with `--version`.) |
 
 ### Workflows <a href="#workflows" id="workflows"></a>
 
@@ -208,6 +223,7 @@ Export all the workflows to a specific directory using the `--backup` flag (deta
 ```bash
 n8n export:workflow --backup --output=backups/latest/
 ```
+
 #### Export a specific workflow version <a href="#export-a-specific-workflow-version" id="export-a-specific-workflow-version"></a>
 
 You can export a specific historical version of a workflow by passing its `versionId` with `--version`:
@@ -282,11 +298,11 @@ The database is expected to be empty prior to import, this can be forced with th
 
 Command flags:
 
-| Flag | Description |
-|-------------|-------|
-| --help | Help prompt. |
-| --inputDir | Input directory that holds output files for import |
-| --truncateTables | Truncate tables before import  |
+| Flag             | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| --help           | Help prompt.                                       |
+| --inputDir       | Input directory that holds output files for import |
+| --truncateTables | Truncate tables before import                      |
 
 ```bash
 n8n import:entities --inputDir ./outputs --truncateTables true
@@ -304,15 +320,15 @@ When exporting workflows and credentials, n8n also exports their IDs. If you hav
 
 Available flags:
 
-| Flag | Description |
-|------|-------------|
-| --help | Help prompt. |
-| --input | Input file name or directory if you use --separate. |
-| --projectId | Import the workflow or credential to the specified project. Can't be used with `--userId`. |
-| --separate | Imports `*.json` files from directory provided by --input. |
-| --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
-| --skipMigrationChecks | Skip migration validation checks. |
-| --activeState | Controls the active state of imported workflows. Accepts `false` (default, deactivates all imported workflows) or `fromJson` (uses the `active` field from each workflow's JSON; multi-main mode only). |
+| Flag                  | Description                                                                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --help                | Help prompt.                                                                                                                                                                                            |
+| --input               | Input file name or directory if you use --separate.                                                                                                                                                     |
+| --projectId           | Import the workflow or credential to the specified project. Can't be used with `--userId`.                                                                                                              |
+| --separate            | Imports `*.json` files from directory provided by --input.                                                                                                                                              |
+| --userId              | Import the workflow or credential to the specified user. Can't be used with `--projectId`.                                                                                                              |
+| --skipMigrationChecks | Skip migration validation checks.                                                                                                                                                                       |
+| --activeState         | Controls the active state of imported workflows. Accepts `false` (default, deactivates all imported workflows) or `fromJson` (uses the `active` field from each workflow's JSON; multi-main mode only). |
 
 {% hint style="info" %}
 **Migrating to SQLite**
@@ -331,7 +347,7 @@ In this case, you can edit the names from the n8n interface and export again, or
 
 The behaviour of importing a previously active workflow differs depending on the mode you are running. This is a known bug.
 
-On multi-main and queue-mode instances the previously active workflow's cron triggers are deactivated on import. 
+On multi-main and queue-mode instances the previously active workflow's cron triggers are deactivated on import.
 
 On non multi-main instances the previously active workflows cron triggers will remain running until you restart the n8n instance.
 {% endhint %}
@@ -426,13 +442,13 @@ You can manage [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/
 
 Command flags:
 
- | Flag         | Description                                                                                                                      |
- |--------------|----------------------------------------------------------------------------------------------------------------------------------|
- | --help       | Show CLI help.                                                                                                                   |
- | --credential | The credential type. Get this value by visiting the node's `<NODE>.credential.ts` file and getting the value of `name`.            |
- | --package    | Package name of the community node.                                                                                              |
- | --uninstall  | Uninstalls the node.                                                                                                             |
- | --userId     | The ID of the user who owns the credential. On self-hosted, query the database. On cloud, query the API with your API key. |
+| Flag         | Description                                                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| --help       | Show CLI help.                                                                                                             |
+| --credential | The credential type. Get this value by visiting the node's `<NODE>.credential.ts` file and getting the value of `name`.    |
+| --package    | Package name of the community node.                                                                                        |
+| --uninstall  | Uninstalls the node.                                                                                                       |
+| --userId     | The ID of the user who owns the credential. On self-hosted, query the database. On cloud, query the API with your API key. |
 
 ### Nodes <a href="#nodes" id="nodes"></a>
 

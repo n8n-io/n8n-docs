@@ -45,6 +45,29 @@ You can find the release notes for older versions of n8n: [1.x](1.x.md) and [0.x
 
 
 
+## n8n@2.28.0 <a href="#n8n2280" id="n8n2280"></a>
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.0...n8n@2.28.0) for this version.<br />
+**Release date:** 2026-06-23
+
+This release contains bug fixes.
+
+### Contributors <a href="#contributors" id="contributors"></a>
+
+[jahanzaib-iqbal-dev](https://github.com/jahanzaib-iqbal-dev)  
+[Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)  
+[sinehypernova-0718](https://github.com/sinehypernova-0718)  
+[radiant-alex](https://github.com/radiant-alex)  
+[leodrivera](https://github.com/leodrivera)  
+[malexro](https://github.com/malexro)  
+[SanYann](https://github.com/SanYann)  
+[nachmo5](https://github.com/nachmo5)  
+[umidjon-2231](https://github.com/umidjon-2231)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@2.27.3 <a href="#n8n2273" id="n8n2273"></a>
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.27.2...n8n@2.27.3) for this version.<br />

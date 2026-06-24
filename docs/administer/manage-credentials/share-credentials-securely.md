@@ -1,18 +1,32 @@
 ---
 title: Credential sharing
-description: Share credentials within an organization.
 contentType: howto
 nodeTitle: Share credentials securely
 originalFilePath: credentials/credential-sharing.md
-originalUrl: 'https://docs.n8n.io/credentials/credential-sharing'
-url: 'https://docs.n8n.io/administer/manage-credentials/share-credentials-securely'
+originalUrl: https://docs.n8n.io/credentials/credential-sharing
+url: https://docs.n8n.io/administer/manage-credentials/share-credentials-securely
+description: Share credentials within an organization.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Credential sharing <a href="#credential-sharing" id="credential-sharing"></a>
-
+# Share credentials securely
 
 {% hint style="info" %}
 **Feature availability**
@@ -26,18 +40,18 @@ Users can share credentials they created and own. Only project admins can share 
 
 Refer to [Account types](../manage-users-and-access/understand-account-types.md) for more information about owners and admins.
 
-In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
+In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
 
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 
-To share a credential: 
+To share a credential:
 
 1. From the left menu, select either **Overview** or a project.
 2. Select **Credentials** to see a list of your credentials.
 3. Select the credential you want to share.
 4. Select **Sharing**.
 5. In the **Share with projects or users** dropdown, browse or search for the user or project with which you want to share your credentials.
-6. Select a user or project. 
+6. Select a user or project.
 7. Select **Save** to apply the changes.
 
 ## Remove access to a credential <a href="#remove-access-to-a-credential" id="remove-access-to-a-credential"></a>
@@ -48,5 +62,5 @@ To unshare a credential:
 2. Select **Credentials** to see a list of your credentials.
 3. Select the credential you want to unshare.
 4. Select **Sharing**.
-5. Select **trash icon**<img src="../.gitbook/assets/delete-node.png" alt="Trash icon" data-size="line"> on the user or project you want to remove from the list of shared users and projects.
+5. Select **trash icon**<img src="../.gitbook/assets/delete-node (1).png" alt="Trash icon" data-size="line"> on the user or project you want to remove from the list of shared users and projects.
 6. Select **Save** to apply the changes.

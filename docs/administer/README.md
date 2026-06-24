@@ -11,7 +11,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
   metadata:
     visible: true
   tags:

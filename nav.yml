@@ -275,7 +275,7 @@ nav:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
-        - Alibaba Cloud Model Studio: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
+        - Qwen Cloud: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -753,7 +753,7 @@ nav:
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - Embeddings Oracle Database: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md
-          - Alibaba Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
+          - Qwen Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md

@@ -1,18 +1,18 @@
 ---
-title: Alibaba Cloud Model Studio node documentation
+title: Qwen Cloud node documentation
 contentType:
   - integration
   - reference
-nodeTitle: Alibaba Cloud Model Studio node documentation
+nodeTitle: Qwen Cloud node documentation
 originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud.md
 originalUrl: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud
 url: >-
   https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.alibabacloud
 description: >-
-  Interact with Alibaba Cloud Qwen models via Model Studio. This page explains
-  how to use the node in n8n workflows to generate text completions, analyze or
-  generate images, and create videos from text
+  Interact with models available on Qwen Cloud. This page explains how to use
+  the node in n8n workflows to generate text completions, analyze or generate
+  images, and create videos from text
 layout:
   width: default
   title:
@@ -33,9 +33,9 @@ layout:
     visible: true
 ---
 
-# Alibaba Cloud Model Studio
+# Qwen Cloud
 
-The Alibaba Cloud Model Studio node lets you call Alibaba Cloud Qwen models (text, vision, and media models) from n8n. Use it to generate completions, analyze or create images, and produce short videos from text or images.
+The Qwen Cloud node lets you call models available on Qwen Cloud from n8n. Use it to generate completions, analyze or create images, and produce short videos from text or images.
 
 {% hint style="info" %}
 **Credentials**
@@ -157,8 +157,8 @@ Generate a video from one or more images using Wan models.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[Browse Alibaba Cloud Model Studio node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-model-studio) or [search all templates](https://n8n.io/workflows/)
+[Browse Qwen Cloud node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-model-studio) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Alibaba Cloud Model Studio documentation](https://www.alibabacloud.com/product/qwen) for more information about available models and API behavior.
+Refer to [Qwen Cloud documentation](https://docs.qwencloud.com/) for more information about available models and API behavior.

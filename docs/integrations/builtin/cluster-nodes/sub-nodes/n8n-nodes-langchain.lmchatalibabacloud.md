@@ -1,9 +1,9 @@
 ---
-title: Alibaba Cloud Chat Model node documentation
+title: Qwen Cloud Chat Model node documentation
 contentType:
   - integration
   - reference
-nodeTitle: Alibaba Cloud Chat Model node documentation
+nodeTitle: Qwen Cloud Chat Model node documentation
 originalFilePath: >-
   integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md
 originalUrl: >-
@@ -11,9 +11,9 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud
 description: >-
-  The Alibaba Cloud Chat Model node sends prompts to Alibaba Cloud's
-  conversational models (for advanced AI chains). This page explains how to
-  configure the node in n8n workflows and covers common uses
+  The Qwen Cloud Chat Model node sends prompts to conversational models available
+  on Qwen Cloud (for advanced AI chains). This page explains how to configure
+  the node in n8n workflows and covers common uses
 layout:
   width: default
   title:
@@ -34,9 +34,9 @@ layout:
     visible: true
 ---
 
-# Alibaba Cloud Chat Model
+# Qwen Cloud Chat Model
 
-The Alibaba Cloud Chat Model node sends chat prompts to Alibaba Cloud's conversational models, for advanced AI chains and LangChain integrations. Use it to generate conversational responses, integrate model outputs into workflows, or run prompts with custom sampling, retry, and timeout settings.
+The Qwen Cloud Chat Model node sends chat prompts to conversational models available on Qwen Cloud, for advanced AI chains and LangChain integrations. Use it to generate conversational responses, integrate model outputs into workflows, or run prompts with custom sampling, retry, and timeout settings.
 
 {% hint style="info" %}
 **Credentials**
@@ -50,11 +50,11 @@ You can find authentication information for this node [here](../../credentials/a
 
 ### Generate chat response <a href="#generate-chat-response" id="generate-chat-response"></a>
 
-Generate a chat-style response from the selected Alibaba Cloud model.
+Generate a chat-style response from the selected Qwen Cloud model.
 
 **Parameters**
 
-* **Model** (type: _options_, field: `model`): The model that generates the completion. Learn more about available models on Alibaba Cloud: [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models).
+* **Model** (type: _options_, field: `model`): The model that generates the completion. Learn more about available models on Qwen Cloud: [Choose models](https://docs.qwencloud.com/developer-guides/getting-started/model-selection).
 
 **Options**
 
@@ -69,8 +69,8 @@ Generate a chat-style response from the selected Alibaba Cloud model.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[Browse Alibaba Cloud Chat Model node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-chat-model) or [search all templates](https://n8n.io/workflows/)
+[Browse Qwen Cloud Chat Model node documentation integration templates](https://n8n.io/integrations/alibaba-cloud-chat-model) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Alibaba Cloud Model Studio — Models](https://www.alibabacloud.com/help/en/model-studio/getting-started/models) for more information about available models and their capabilities.
+Refer to [Choose models](https://docs.qwencloud.com/developer-guides/getting-started/model-selection) for more information about available models and their capabilities.

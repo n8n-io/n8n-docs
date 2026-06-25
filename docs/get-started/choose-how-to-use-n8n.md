@@ -21,7 +21,7 @@ n8n offers two primary deployment options: **n8n Cloud** (fully-managed) and **S
 
 **Start with n8n Cloud** for instant access with no installation required.
 
-[Start free trial](https://n8n.io/cloud/){ .md-button .md-button--primary }
+[Start free trial](https://n8n.io/cloud/)
 {% endhint %}
 
 ## Decision guide <a href="#decision-guide" id="decision-guide"></a>

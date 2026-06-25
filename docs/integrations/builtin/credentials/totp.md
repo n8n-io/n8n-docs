@@ -1,28 +1,39 @@
 ---
 title: TOTP credentials
-description: Documentation for TOTP credentials. Use these credentials to authenticate TOTP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for TOTP credentials. Use these credentials to authenticate TOTP
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: TOTP credentials
+originalFilePath: integrations/builtin/credentials/totp.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/totp'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/totp'
+layout:
+  description:
+    visible: false
 ---
 
-# TOTP credentials
+# TOTP credentials <a href="#totp-credentials" id="totp-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [TOTP](/integrations/builtin/core-nodes/n8n-nodes-base.totp.md)
+- [TOTP](../core-nodes/n8n-nodes-base.totp.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Generate a TOTP **Secret** and **Label**.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Secret and label
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Time-based One-time Password (TOTP) is an algorithm that generates a one-time password (OTP) using the current time. Refer to [Google Authenticator | Key URI format](https://github.com/google/google-authenticator/wiki/Key-Uri-Format) for more information.
 
-## Using secret and label
+## Using secret and label <a href="#using-secret-and-label" id="using-secret-and-label"></a>
 
 To configure this credential, you'll need:
 

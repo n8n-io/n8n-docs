@@ -1,24 +1,35 @@
 ---
 title: DFIR-IRIS credentials
-description: Documentation for the DFIR-IRIS credentials. Use these credentials to authenticate DFIR-IRIS in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the DFIR-IRIS credentials. Use these credentials to
+  authenticate DFIR-IRIS in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: DFIR-IRIS credentials
+originalFilePath: integrations/builtin/credentials/dfiriris.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/dfiriris'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/dfiriris'
+layout:
+  description:
+    visible: false
 ---
-# DFIR-IRIS credentials
+# DFIR-IRIS credentials <a href="#dfir-iris-credentials" id="dfir-iris-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/).
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/iris-dfir/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/iris-dfir/) on n8n's website.
 
 
-## Using API Key
+## Using API Key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

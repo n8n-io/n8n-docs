@@ -1,23 +1,36 @@
 ---
 title: Mautic node documentation
-description: Learn how to use the Mautic node in n8n. Follow technical documentation to integrate Mautic node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Mautic node in n8n. Follow technical documentation to
+  integrate Mautic node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Mautic node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mautic.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mautic'
+layout:
+  description:
+    visible: false
 ---
 
-# Mautic node
+# Mautic node <a href="#mautic-node" id="mautic-node"></a>
 
 Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campaign contacts. 
 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Mautic credentials](../credentials/mautic.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Campaign Contact
     * Add contact to a campaign
@@ -46,9 +59,9 @@ Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for g
 * Segment Email
     * Send
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mautic') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Mautic node documentation integration templates](https://n8n.io/integrations/mautic) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -1,38 +1,49 @@
 ---
 title: Ghost credentials
-description: Documentation for Ghost credentials. Use these credentials to authenticate Ghost in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Ghost credentials. Use these credentials to authenticate
+  Ghost in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Ghost credentials
+originalFilePath: integrations/builtin/credentials/ghost.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ghost'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/ghost'
+layout:
+  description:
+    visible: false
 ---
 
-# Ghost credentials
+# Ghost credentials <a href="#ghost-credentials" id="ghost-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Ghost](/integrations/builtin/app-nodes/n8n-nodes-base.ghost.md)
+- [Ghost](../app-nodes/n8n-nodes-base.ghost.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Ghost](https://ghost.org/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Admin API key
 - Content API key
 
 The keys are generated following the same steps, but the authorization flows and key format are different, so n8n stores the credentials separately. The Content API uses an API key; the Admin API uses an API key to generate a token for authentication.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to Ghost's [Admin API documentation](https://ghost.org/docs/admin-api/) for more information about the Admin API service. Refer to Ghost's [Content API documentation](https://ghost.org/docs/content-api/) for more information about the Content API service.
 
-## Using Admin API key
+## Using Admin API key <a href="#using-admin-api-key" id="using-admin-api-key"></a>
 
 To configure this credential, you'll need:
 
 - The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url) can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
 - An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication) for more detailed instructions. Copy the **Admin API Key** and use this as the **API Key** in the Ghost Admin n8n credential.
 
-## Using Content API key
+## Using Content API key <a href="#using-content-api-key" id="using-content-api-key"></a>
 
 To configure this credential, you'll need:
 

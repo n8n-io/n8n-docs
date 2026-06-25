@@ -1,30 +1,41 @@
 ---
 title: Mailjet credentials
-description: Documentation for Mailjet credentials. Use these credentials to authenticate Mailjet in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Mailjet credentials. Use these credentials to authenticate
+  Mailjet in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Mailjet credentials
+originalFilePath: integrations/builtin/credentials/mailjet.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mailjet'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mailjet'
+layout:
+  description:
+    visible: false
 ---
 
-# Mailjet credentials
+# Mailjet credentials <a href="#mailjet-credentials" id="mailjet-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailjet](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet.md)
-- [Mailjet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md)
+- [Mailjet](../app-nodes/n8n-nodes-base.mailjet.md)
+- [Mailjet Trigger](../trigger-nodes/n8n-nodes-base.mailjettrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Mailjet](https://www.mailjet.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Email API key: For use with Mailjet's Email API
 - SMS token: For use with Mailjet's SMS API
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/sms/reference/send-message/) for more information about each service.
 
-## Using Email API key
+## Using Email API key <a href="#using-email-api-key" id="using-email-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -39,7 +50,7 @@ For this credential, you can use either:
 
 Refer to Mailjet's [How to create a subaccount (or additional API key) documentation](https://documentation.mailjet.com/hc/en-us/articles/360042561974-How-to-create-a-subaccount-or-additional-API-Key) for detailed instructions on creating more API keys. Refer to [What are subaccounts and how does it help me?](https://documentation.mailjet.com/hc/en-us/articles/360042561854-What-are-subaccounts-and-how-does-it-help-me) page for more information on Mailjet subaccounts and when you might want to use one.
 
-## Using SMS Token
+## Using SMS Token <a href="#using-sms-token" id="using-sms-token"></a>
 
 To configure this credential, you'll need:
 

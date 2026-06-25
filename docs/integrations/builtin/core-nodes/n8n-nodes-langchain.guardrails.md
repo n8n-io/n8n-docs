@@ -1,33 +1,48 @@
 ---
 title: Guardrails node documentation
-description: Documentation for the Guardrails node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Guardrails node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
+nodeTitle: Guardrails node documentation
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails
+url: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.guardrails
+layout:
+  description:
+    visible: false
 ---
 
-# Guardrails node
+# Guardrails node <a href="#guardrails-node" id="guardrails-node"></a>
 
 Use the Guardrails node to enforce safety, security, and content policies on text. You can use it to validate user input _before_ sending it to an AI model, or to check the _output_ from an AI model before using it in your workflow.
 
-/// note | Chat Model Connection Required for LLM-based Guardrails
-This node requires a Chat Model node to be connected to its Model input when using the **Check Text for Violations** operation with LLM-based guardrails. Many guardrail checks (like Jailbreak, NSFW, and Topical Alignment) are LLM-based and use this connection to evaluate the input text.
-///
+{% hint style="info" %}
+**Chat Model Connection Required for LLM-based Guardrails**
 
-## Node parameters
+This node requires a Chat Model node to be connected to its Model input when using the **Check Text for Violations** operation with LLM-based guardrails. Many guardrail checks (like Jailbreak, NSFW, and Topical Alignment) are LLM-based and use this connection to evaluate the input text.
+{% endhint %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Use these parameters to configure the Guardrails node.
 
-### Operation
+### Operation <a href="#operation" id="operation"></a>
 
 The operation mode for this node to define its behavior.
 
 - **Check Text for Violations**: Provides a full set of guardrails. Any violation will send items to **Fail** branch.
 - **Sanitize Text**: Provides a subset of guardrails that can detect URLs, regular expressions, secret keys, or personally identifiable information (PII), such as phone numbers and credit card numbers. The node replaces detected violations with placeholders.
 
-### Text To Check
+### Text To Check <a href="#text-to-check" id="text-to-check"></a>
 
 The text the guardrails evaluate. Typically, you map this text using an expression from a previous node, such as text from a user query or a response from an AI model.
 
-### Guardrails
+### Guardrails <a href="#guardrails" id="guardrails"></a>
 
 Select one or more guardrails to apply to the **Text To Check**. When you add a guardrail from the list, its specific configuration options appear below.
 
@@ -65,6 +80,6 @@ Select one or more guardrails to apply to the **Text To Check**. When you add a 
     - **Name**: A name for your custom pattern. The node uses this name as a placeholder in the **Sanitize Text** mode.
     - **Regex**: Your regular expression pattern.
 
-### Customize System Message
+### Customize System Message <a href="#customize-system-message" id="customize-system-message"></a>
 
 If you turn this on, a text input appears with a message that the guardrail uses to enforce thresholds and JSON output according to schema. Change it to modify the global guardrails behavior.

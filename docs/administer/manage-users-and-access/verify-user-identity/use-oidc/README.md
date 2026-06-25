@@ -12,7 +12,7 @@ layout:
 
 # OpenID Connect (OIDC) <a href="#openid-connect-oidc" id="openid-connect-oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JuGp2V4GtW5r1Eg85Yby/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
 
 
 This section covers how to enable and manage OpenID Connect (OIDC) for single sign-on (SSO). You can learn more about how OIDC works by visiting [what is OpenID Connect](https://openid.net/developers/how-connect-works/) by the OpenID Foundation.

@@ -57,4 +57,4 @@ You can find authentication information for this node [here](../credentials/aws.
 
 Refer to [AWS Cognito's documentation](https://docs.aws.amazon.com/cognito/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

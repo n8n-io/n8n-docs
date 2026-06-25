@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the LinkedIn node supports and li
 Refer to [LinkedIn credentials](../credentials/linkedin.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -54,6 +54,6 @@ Refer to [LinkedIn credentials](../credentials/linkedin.md) for guidance on sett
 
 Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 

@@ -34,7 +34,7 @@ You can find authentication information for this node [here](../credentials/jwt.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 * **Credential to connect with**: Select or create a [JWT credential](../credentials/jwt.md) to connect with.
 * **Token**: Enter the token to **Verify** or **Decode**.

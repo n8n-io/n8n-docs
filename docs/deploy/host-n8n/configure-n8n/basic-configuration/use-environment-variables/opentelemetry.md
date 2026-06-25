@@ -21,7 +21,7 @@ layout:
 
 # OpenTelemetry environment variables <a href="#opentelemetry-environment-variables" id="opentelemetry-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 n8n can export workflow and node execution traces over OTLP to an OpenTelemetry collector. Refer to [OpenTelemetry tracing](../../../keep-n8n-running/trace-executions-with-opentelemetry.md) for details.
 

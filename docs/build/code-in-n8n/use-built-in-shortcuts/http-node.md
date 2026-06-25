@@ -27,4 +27,4 @@ Refer to [HTTP Request node cookbook | Pagination](../cookbook/http-request-node
 
 These variables are for use in expressions in the HTTP node. You can't use them in other nodes.
 {% endhint %}
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/AsIeOsKe5INh3A5A0g92/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I3wrw8MpZtbjn2khruiw/" %}

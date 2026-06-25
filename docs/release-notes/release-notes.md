@@ -23,11 +23,11 @@ New features and bug fixes for n8n.
 
 You can also view the [Releases](https://github.com/n8n-io/n8n/releases) in the GitHub repository.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CcSOA8s7oK44B90i5WIm/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## How to update n8n
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0acglFev0v4B75W0rZrK/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
 
 ## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
 

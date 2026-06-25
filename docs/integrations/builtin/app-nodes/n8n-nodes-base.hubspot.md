@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the HubSpot node supports and lin
 Refer to [HubSpot credentials](../credentials/hubspot.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -80,4 +80,4 @@ Refer to [HubSpot credentials](../credentials/hubspot.md) for guidance on settin
 
 [Browse HubSpot node documentation integration templates](https://n8n.io/integrations/hubspot) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

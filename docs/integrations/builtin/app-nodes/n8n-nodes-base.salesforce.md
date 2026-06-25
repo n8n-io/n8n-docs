@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Salesforce node supports and 
 Refer to [Salesforce credentials](../credentials/salesforce.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -115,7 +115,7 @@ Refer to [Salesforce credentials](../credentials/salesforce.md) for guidance on 
 
 [Browse Salesforce node documentation integration templates](https://n8n.io/integrations/salesforce) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Working with Salesforce custom fields <a href="#working-with-salesforce-custom-fields" id="working-with-salesforce-custom-fields"></a>
 

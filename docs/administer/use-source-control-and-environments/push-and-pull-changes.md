@@ -18,7 +18,7 @@ If your n8n instance connects to a Git repository, you need to keep your work in
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](use-git-in-n8n.md) for an introduction to how n8n works with Git.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/BC2zarvWdZMxGtKRfeJg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
 ## Fetch other people's work <a href="#fetch-other-peoples-work" id="fetch-other-peoples-work"></a>
 
@@ -30,7 +30,7 @@ You must be an instance owner or instance admin to pull changes from git.
 
 To pull work from Git, select **Pull** <img src="../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Yc0dOzdwSQU6BgRcqSZX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/z7oYIete6nifvfi0QZKs/" %}
 
 n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
 
@@ -80,7 +80,7 @@ If you pull changes to a published workflow, n8n unpublishes the workflow while 
 You must be an instance owner, instance admin, or project admin to push changes to git.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nX8c7I7dBRopkdv2QMmA/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jlwygEO1bOtH6HDbN3We/" %}
 
 ## What gets committed <a href="#what-gets-committed" id="what-gets-committed"></a>
 

@@ -47,7 +47,7 @@ On this page, you'll find the node parameters for the Azure AI Search Vector Sto
 You can find authentication information for this node [here](../../credentials/azureaisearch.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -156,11 +156,11 @@ See [this example](https://n8n.io/workflows/2465-building-your-first-whatsapp-ch
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NhmxpkeoTzl1WU1jhcbT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5aeZAt5P1m2YndTmiFTG/" %}
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzkuyHx0puco05IkndRC/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
 {% hint style="info" %}
 **Azure AI Search semantic reranking**
@@ -348,6 +348,6 @@ For authentication troubleshooting including API key errors, refer to the [crede
 * [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
 * [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ou1SzleSsYddnaSSV2H2/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dN5Se1JVH7wYGtmN4n0v/" %}

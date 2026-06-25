@@ -43,7 +43,7 @@ You can find authentication information for this node [here](../../credentials/m
 
 ## Node reference <a href="#node-reference" id="node-reference"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -54,7 +54,7 @@ You can find authentication information for this node [here](../../credentials/m
 
 Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/integrations/memory/motorhead_memory) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 

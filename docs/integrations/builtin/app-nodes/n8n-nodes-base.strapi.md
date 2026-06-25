@@ -45,4 +45,4 @@ Refer to [Strapi credentials](../credentials/strapi.md) for guidance on setting 
 
 Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

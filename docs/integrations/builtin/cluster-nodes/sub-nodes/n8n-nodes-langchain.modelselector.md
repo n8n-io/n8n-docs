@@ -25,7 +25,7 @@ The Model Selector node dynamically selects one of the connected language models
 
 This page covers node parameters for the Model Selector node and includes links to related resources.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -46,4 +46,4 @@ The Model Selector node evaluates rules sequentially, starting from the first in
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

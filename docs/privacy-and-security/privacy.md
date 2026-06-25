@@ -49,7 +49,7 @@ The sub-processor list has moved to [n8n.io/legal/sub-processors](https://n8n.io
 
 ### GDPR for self-hosted users <a href="#gdpr-for-self-hosted-users" id="gdpr-for-self-hosted-users"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wqHQl4HSSzXiyICBHVUz/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iLayKGKnzGLWFd5VGZVk/" %}
 
 
 

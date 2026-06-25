@@ -64,7 +64,7 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 Refer to [Microsoft Entra ID's documentation](https://learn.microsoft.com/en-us/graph/api/resources/identity-network-access-overview?view=graph-rest-1.0) for more information about the service.
 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

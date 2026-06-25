@@ -20,7 +20,7 @@ Python isn't supported.
 
 ## Use AI in the Code node <a href="#use-ai-in-the-code-node" id="use-ai-in-the-code-node"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/gvo0l6HUfoQWSJcu8JMl/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1MYzyKWyHTaQMU44vlTt/" %}
 
 ## Usage limits <a href="#usage-limits" id="usage-limits"></a>
 

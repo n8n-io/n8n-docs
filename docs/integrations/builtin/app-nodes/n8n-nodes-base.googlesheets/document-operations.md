@@ -39,7 +39,7 @@ layout:
 
 Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./) for more information on the Google Sheets node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Create a spreadsheet <a href="#create-a-spreadsheet" id="create-a-spreadsheet"></a>
 

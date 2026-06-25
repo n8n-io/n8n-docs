@@ -30,7 +30,7 @@ On this page, you'll find a list of operations the Postgres Chat Memory node sup
 You can find authentication information for this node [here](../../credentials/postgres.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -42,7 +42,7 @@ You can find authentication information for this node [here](../../credentials/p
 
 Refer to [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 

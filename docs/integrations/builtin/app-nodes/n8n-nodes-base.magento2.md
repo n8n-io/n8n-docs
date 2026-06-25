@@ -54,4 +54,4 @@ Refer to [Magento 2 credentials](../credentials/magento2.md) for guidance on set
 
 [Browse Magento 2 node documentation integration templates](https://n8n.io/integrations/magento-2) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

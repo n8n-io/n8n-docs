@@ -11,4 +11,4 @@ layout:
 
 # Building community nodes <a href="#building-community-nodes" id="building-community-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CUABss3Aj7KEbefXfPnQ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E552YKHiixJuJvzEdrBI/" %}

@@ -44,7 +44,7 @@ Refer to [Facebook Graph API credentials](../credentials/facebookgraph.md) for g
 
 ### Parameters <a href="#parameters" id="parameters"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 * **Host URL**: The host URL for the request. The following options are available:
     * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.

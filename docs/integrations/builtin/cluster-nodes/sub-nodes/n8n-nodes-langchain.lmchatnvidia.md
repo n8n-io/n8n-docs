@@ -32,7 +32,7 @@ On this page, you'll find the node parameters for the NVIDIA Nemotron Chat Model
 You can find authentication information for this node [here](../../credentials/nvidia.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -87,6 +87,6 @@ Use this option to set the probability the completion should use. Use a lower va
 
 Refer to [NVIDIA's build catalogue](https://build.nvidia.com/models) for the list of Nemotron models and to the [NIM documentation](https://docs.nvidia.com/nim/) for guidance on self-hosting. As the NVIDIA API is OpenAI-spec compatible, you can refer to [LangChain's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the underlying client.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 [^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

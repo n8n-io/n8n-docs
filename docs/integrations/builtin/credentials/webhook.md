@@ -48,9 +48,9 @@ You must use the authentication method required by the app or service you want t
 * JWT auth
 * None
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/19GkzHr83lKOpnZRz4y7/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vIyn1XsEkjlolZzHTfTG/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2s1bqrmqDMhCa3wUQV2Q/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fjWxEWe1g0CDvsx1igf6/" %}
 
 ## Using JWT auth <a href="#using-jwt-auth" id="using-jwt-auth"></a>
 

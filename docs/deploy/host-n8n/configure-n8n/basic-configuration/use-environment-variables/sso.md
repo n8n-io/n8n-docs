@@ -19,7 +19,7 @@ layout:
 
 # SSO environment variables <a href="#sso-environment-variables" id="sso-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 {% hint style="info" %}
 **Feature availability**
@@ -31,12 +31,12 @@ Refer to [Set up SSO](../../security/configure-sso.md) for in-app setup steps an
 
 ## Activation and shared settings <a href="#activation-and-shared-settings" id="activation-and-shared-settings"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/htWVIv80BlJ84USCtbMw/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TJ7IUBpRrfLoXyEn4T4d/" %}
 
 ## OIDC <a href="#oidc" id="oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Fs30NzAy8snvvMNQHHrb/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/SBpz79jvy94Y5dKIvxqR/" %}
 
 ## SAML <a href="#saml" id="saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kBvC9y2nksYDmrJlw9Vg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NnYMdwgkElS7TK37owd0/" %}

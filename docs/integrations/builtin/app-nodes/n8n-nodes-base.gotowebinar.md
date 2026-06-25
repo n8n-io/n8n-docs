@@ -63,4 +63,4 @@ Refer to [GoToWebinar credentials](../credentials/gotowebinar.md) for guidance o
 
 [Browse GoToWebinar node documentation integration templates](https://n8n.io/integrations/gotowebinar) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

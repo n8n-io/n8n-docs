@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Supabase node supports and li
 Refer to [Supabase credentials](../../credentials/supabase.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -50,7 +50,7 @@ In the new **Schema** field, provide the custom schema the Supabase node should 
 
 [Browse n8n-nodes-base.supabase integration templates](https://n8n.io/integrations/supabase) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

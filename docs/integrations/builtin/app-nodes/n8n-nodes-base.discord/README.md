@@ -28,9 +28,9 @@ On this page, you'll find a list of operations the Discord node supports and lin
 Refer to [Discord credentials](../../credentials/discord.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -54,7 +54,7 @@ Refer to [Discord credentials](../../credentials/discord.md) for guidance on set
 	- Role Add
 	- Role Remove
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DO3jZ432bOPsmoiDqIYg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 
 
 
@@ -67,7 +67,7 @@ Refer to [Discord credentials](../../credentials/discord.md) for guidance on set
 
 Refer to [Discord's documentation](https://discord.com/developers/docs/intro) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

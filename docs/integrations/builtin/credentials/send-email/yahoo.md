@@ -24,7 +24,7 @@ Follow these steps to configure the Send Email credentials with a Yahoo account.
 
 To follow these instructions, you must first generate an app password:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/4soqoHfNaeNU0PiTkc6P/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2ZBcW11hezK8c3JZNsKm/" %}
 
 ## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 

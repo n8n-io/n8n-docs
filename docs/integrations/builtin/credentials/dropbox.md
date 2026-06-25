@@ -70,7 +70,7 @@ On the **Settings** tab, you can add other users to your app, even with the acce
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 Cloud users need to select the **App Access Type**:
 

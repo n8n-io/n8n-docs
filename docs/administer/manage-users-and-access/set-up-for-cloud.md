@@ -22,8 +22,8 @@ Once you upgrade your Cloud instance to an n8n version with user management, you
 
 ## Step one: In-app setup <a href="#step-one-in-app-setup" id="step-one-in-app-setup"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JGkf5IJ2IgJDvCAmE9EN/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
 
 ## Step two: Invite users <a href="#step-two-invite-users" id="step-two-invite-users"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IEZFsEbajGj1LU6iMXRW/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}

@@ -25,7 +25,7 @@ The Token Splitter node splits a raw text string by first converting the text in
 
 On this page, you'll find the node parameters for the Token Splitter node, and links to more resources.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -41,5 +41,5 @@ On this page, you'll find the node parameters for the Token Splitter node, and l
 
 Refer to [LangChain's token documentation](https://js.langchain.com/docs/concepts/tokens/) and [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

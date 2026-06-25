@@ -36,9 +36,9 @@ Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on se
 If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -63,7 +63,7 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Get Many
     * Update
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DO3jZ432bOPsmoiDqIYg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -74,4 +74,4 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

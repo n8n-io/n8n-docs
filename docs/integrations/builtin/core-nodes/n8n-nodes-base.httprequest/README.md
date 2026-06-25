@@ -239,9 +239,9 @@ For example setups, refer to [HTTP Request node cookbook | Pagination](https://a
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/AsIeOsKe5INh3A5A0g92/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I3wrw8MpZtbjn2khruiw/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbaOt2JaGE5phUkQX0Qt/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/91KTZVqkKv8rY72iELNl/" %}
 
 ### Proxy <a href="#proxy" id="proxy"></a>
 

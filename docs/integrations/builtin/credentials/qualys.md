@@ -17,7 +17,7 @@ layout:
 
 # Qualys credentials <a href="#qualys-credentials" id="qualys-credentials"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

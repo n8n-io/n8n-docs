@@ -28,9 +28,9 @@ On this page, you'll find a list of operations the Google Chat node supports and
 Refer to [Google credentials](../credentials/google/README.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -47,7 +47,7 @@ Refer to [Google credentials](../credentials/google/README.md) for guidance on s
     * Get a space
     * Get all spaces the caller is a member of
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DO3jZ432bOPsmoiDqIYg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

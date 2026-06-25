@@ -21,7 +21,7 @@ layout:
 
 # Nodes environment variables <a href="#nodes-environment-variables" id="nodes-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 This page lists the environment variables configuration options for managing nodes[^1] in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, enabling community nodes, and configuring node-specific limits.
 
@@ -60,6 +60,6 @@ This page lists the environment variables configuration options for managing nod
 
 Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for the `*_MANAGED_BY_ENV` pattern.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TjfmMoYY6Kb06aCUnGHG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
 
 [^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.

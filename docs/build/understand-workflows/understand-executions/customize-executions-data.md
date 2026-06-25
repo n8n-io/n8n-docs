@@ -17,7 +17,7 @@ layout:
 
 You can set custom data on your workflow using the Code node or the [Execution Data node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executiondata). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/4ohnS4NGKS6lbgfQc4u9/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hEbJHXcEBce6m2wEE65f/" %}
 
 ## Set and access custom data using the Code node <a href="#set-and-access-custom-data-using-the-code-node" id="set-and-access-custom-data-using-the-code-node"></a>
 

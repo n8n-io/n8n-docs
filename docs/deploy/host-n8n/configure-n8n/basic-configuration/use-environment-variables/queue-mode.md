@@ -21,7 +21,7 @@ layout:
 
 # Queue mode environment variables <a href="#queue-mode-environment-variables" id="queue-mode-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](../../scaling/enable-queue-mode.md) for more information.
 

@@ -24,4 +24,4 @@ n8n provides these methods to make it easier to perform common tasks in the [Lan
 These variables are for use in expressions in the LangChain Code node. You can't use them in other nodes.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8r8guBR7sedkh8x4EzLf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iIcw3xaOoa9HryGmR8dX/" %}

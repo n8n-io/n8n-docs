@@ -16,7 +16,7 @@ layout:
 ---
 # SolarWinds IPAM credentials <a href="#solarwinds-ipam-credentials" id="solarwinds-ipam-credentials"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tpXm8e1W7wVyh16Nhf6p/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

@@ -47,7 +47,7 @@ On this page, you'll find the node parameters for the MongoDB Atlas Vector Store
 You can find authentication information for this node [here](../../credentials/mongodb.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -111,11 +111,11 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wxaa18Qg530lwp4KjOwq/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/EzkuyHx0puco05IkndRC/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
@@ -163,6 +163,6 @@ Refer to:
 * [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas) for more information about the service.
 * [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ou1SzleSsYddnaSSV2H2/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dN5Se1JVH7wYGtmN4n0v/" %}

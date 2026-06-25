@@ -61,7 +61,7 @@ Refer to [Twist credentials](../credentials/twist.md) for guidance on setting up
 
 [Browse Twist node documentation integration templates](https://n8n.io/integrations/twist) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Get the User ID <a href="#get-the-user-id" id="get-the-user-id"></a>
 

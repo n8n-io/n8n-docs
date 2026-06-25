@@ -12,4 +12,4 @@ layout:
 
 # Submit community nodes <a href="#submit-community-nodes" id="submit-community-nodes"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CUABss3Aj7KEbefXfPnQ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E552YKHiixJuJvzEdrBI/" %}

@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Notion node supports and link
 Refer to [Notion credentials](../../credentials/notion.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hLGdVKMP8bGrbsRtVcGc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 
@@ -63,7 +63,7 @@ n8n provides an app node for Notion. You can find the trigger node docs [here](.
 
 Refer to [Notion's documentation](https://developers.notion.com/) for details about their API.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

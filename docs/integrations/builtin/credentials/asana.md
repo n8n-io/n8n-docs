@@ -53,7 +53,7 @@ Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-s
 
 To configure this credential, you'll need an [Asana](https://asana.com/) account.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to register an application to set up OAuth:
 

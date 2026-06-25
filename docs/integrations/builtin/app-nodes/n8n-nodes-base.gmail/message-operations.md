@@ -22,7 +22,7 @@ layout:
 
 Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](README.md) for more information on the Gmail node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E4462HQ9P1zhTQgzmcLG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
 ## Add Label to a message <a href="#add-label-to-a-message" id="add-label-to-a-message"></a>
 

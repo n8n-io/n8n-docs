@@ -30,7 +30,7 @@ On this page, you'll find the node options for the SearXNG Tool node, and links 
 You can find authentication information for this node [here](../../credentials/searxng.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node Options <a href="#node-options" id="node-options"></a>
 
@@ -66,5 +66,5 @@ The quality and availability of search results depend on the configuration and h
 
 Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service. You can also view [LangChain's documentation on their SearXNG integration](https://python.langchain.com/docs/integrations/tools/searx_search/).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

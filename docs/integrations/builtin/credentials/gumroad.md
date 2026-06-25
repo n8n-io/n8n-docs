@@ -42,7 +42,7 @@ To configure this credential, you'll need:
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8WBawhAsMzeYnydxU5Sr/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), you'll need:
 

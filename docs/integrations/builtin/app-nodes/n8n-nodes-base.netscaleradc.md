@@ -46,5 +46,5 @@ Refer to [Netscaler ADC credentials](../credentials/netscaleradc.md) for guidanc
 
 Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

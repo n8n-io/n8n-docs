@@ -48,4 +48,4 @@ You can't create a mix of AND and OR rules.
 
 [Browse Filter integration templates](https://n8n.io/integrations/filter) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3PjVgh2AU4J6dwJ4Mhay/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bMMOCQFbQ4YpKDnWQQOg/" %}

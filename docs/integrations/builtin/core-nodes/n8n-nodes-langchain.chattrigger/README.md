@@ -196,7 +196,7 @@ This mode replaces the 'Using Respond to Webhook Node' mode from version 1.2 of 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Set the chat response manually <a href="#set-the-chat-response-manually" id="set-the-chat-response-manually"></a>
 

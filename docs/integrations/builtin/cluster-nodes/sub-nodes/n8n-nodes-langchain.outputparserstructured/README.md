@@ -25,13 +25,13 @@ Use the Structured Output Parser node to return fields based on a JSON Schema.
 
 On this page, you'll find the node parameters for the Structured Output Parser node, and links to more resources.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/L75pqqTYRK2D04H3RzmB/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Schema Type**: Define the output structure and validation. You have two options to provide the schema:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/MaaVU1emnYeYoCMR5VrT/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YQVaIUXYUYVnHpb9qPTu/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -42,7 +42,7 @@ On this page, you'll find the node parameters for the Structured Output Parser n
 
 Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

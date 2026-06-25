@@ -93,7 +93,7 @@ By configuring the LangChain Code node connectors (inputs and outputs) you can u
 
 n8n provides these methods to make it easier to perform common tasks in the LangChain Code node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8r8guBR7sedkh8x4EzLf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iIcw3xaOoa9HryGmR8dX/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -101,4 +101,4 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

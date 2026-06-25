@@ -25,11 +25,11 @@ Here are some common errors and issues with the [Google Drive node](README.md) a
 
 ## Google hasn't verified this app <a href="#google-hasnt-verified-this-app" id="google-hasnt-verified-this-app"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tj49fa4uxtfjnWkAXo65/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/uEYII1oKijzYurya61sf/" %}
 
 ## Google Cloud app becoming unauthorized <a href="#google-cloud-app-becoming-unauthorized" id="google-cloud-app-becoming-unauthorized"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eGnzeqNthIcbNwJqWUD7/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/PlbR0ntmBBE0DgjKiavq/" %}
 
 ## Google Drive OAuth error <a href="#google-drive-oauth-error" id="google-drive-oauth-error"></a>
 

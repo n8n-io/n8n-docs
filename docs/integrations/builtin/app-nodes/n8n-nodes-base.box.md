@@ -51,5 +51,5 @@ Refer to [Box credentials](../credentials/box.md) for guidance on setting up aut
 
 [Browse Box node documentation integration templates](https://n8n.io/integrations/box) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

@@ -15,7 +15,7 @@ layout:
 
 # Source control and environments <a href="#source-control-and-environments" id="source-control-and-environments"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Tf19KXxolDkcfArIYg5K/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 

@@ -33,7 +33,7 @@ Create a [Xata](https://xata.io/) database or an account on an existing database
 
 Refer to [Xata's documentation](https://xata.io/docs/rest-api/authentication) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

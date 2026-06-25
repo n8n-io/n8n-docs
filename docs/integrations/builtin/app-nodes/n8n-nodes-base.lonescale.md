@@ -45,4 +45,4 @@ Refer to [LoneScales documentation](https://help-center.lonescale.com/en/article
 
 n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.lonescaletrigger.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

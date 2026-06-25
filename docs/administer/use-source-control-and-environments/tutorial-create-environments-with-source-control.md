@@ -14,7 +14,7 @@ layout:
 
 # Tutorial: Create environments with source control <a href="#tutorial-create-environments-with-source-control" id="tutorial-create-environments-with-source-control"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Tf19KXxolDkcfArIYg5K/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
 
 This tutorial walks through the process of setting up environments end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
 
@@ -27,20 +27,20 @@ n8n has built its environments feature on top of Git, a version control software
 
 Before setting up source control and environments, you need to plan your environments, and how they relate to Git branches. n8n supports different [Branch patterns](choose-branching-patterns.md). For environments, you need to choose between two patterns: multi-instance, multi-branch, or multi-instance, single-branch. This tutorial covers both patterns.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/BC2zarvWdZMxGtKRfeJg/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
 ### Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>
 
 ![Diagram](../.gitbook/assets/vc-multi-multi.png)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xEgCoQp64sxGjkWFgpOd/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
 
 
 ### Multiple instances, one branch <a href="#multiple-instances-one-branch" id="multiple-instances-one-branch"></a>
 
 ![Diagram](../.gitbook/assets/vc-multi-one.png)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yYkDWyYtTymrpYPI3oxH/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
 
 ## Set up your repository <a href="#set-up-your-repository" id="set-up-your-repository"></a>
 
@@ -68,7 +68,7 @@ Create two n8n instances, one for development, one for production.
 
 ### Configure Git in n8n <a href="#configure-git-in-n8n" id="configure-git-in-n8n"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KaiwOahDeSwGBy1ukuoG/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/UqTgO2VbAzax4T8z4Fyh/" %}
 
 ### Set up a deploy key <a href="#set-up-a-deploy-key" id="set-up-a-deploy-key"></a>
 
@@ -96,7 +96,7 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 In your development instance, create a few workflows, tags, variables, and credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nX8c7I7dBRopkdv2QMmA/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jlwygEO1bOtH6HDbN3We/" %}
 
 ## Pull work to production <a href="#pull-work-to-production" id="pull-work-to-production"></a>
 
@@ -114,13 +114,13 @@ In your production instance, select **Pull** <img src="../.gitbook/assets/pull-i
 {% endtab %}
 {% endtabs %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Yc0dOzdwSQU6BgRcqSZX/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/z7oYIete6nifvfi0QZKs/" %}
 
 ### Optional: Use a GitHub Action to automate pulls <a href="#optional-use-a-github-action-to-automate-pulls" id="optional-use-a-github-action-to-automate-pulls"></a>
 
 If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions) and the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) to automatically pull every time you push new work to your production or main branch.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ueu3IerS0FzLuJu6xs1H/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/niFQjDjbGJDJTKB57Z1s/" %}
 
 
 ## Next steps <a href="#next-steps" id="next-steps"></a>

@@ -48,7 +48,7 @@ As well as using the built-in nodes, you can also install community-built nodes.
 
 ## Credential-only nodes and custom operations <a href="#credential-only-nodes-and-custom-operations" id="credential-only-nodes-and-custom-operations"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/VdlSjndpr14a7NDwfPuF/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/k23mQunNshTkLRuOqark/" %}
 
 Refer to [Custom operations](builtin/custom-api-actions-for-existing-nodes.md) for more information.
 

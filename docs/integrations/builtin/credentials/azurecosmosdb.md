@@ -50,4 +50,4 @@ Refer to [Get your primary key | Microsoft](https://learn.microsoft.com/en-us/pr
 
 Here are the known common errors and issues with Azure Cosmos DB credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jqvB0gfEfubAawaXt51F/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}

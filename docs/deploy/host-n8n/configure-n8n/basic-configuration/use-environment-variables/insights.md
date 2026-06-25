@@ -21,7 +21,7 @@ layout:
 
 # Insights environment variables <a href="#insights-environment-variables" id="insights-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 Insights gives instance owners and admins visibility into how workflows perform over time. Refer to [Insights](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights) for details.
 

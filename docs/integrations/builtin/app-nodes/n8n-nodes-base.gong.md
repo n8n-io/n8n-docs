@@ -48,4 +48,4 @@ You can find authentication information for this node [here](../credentials/gong
 
 Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

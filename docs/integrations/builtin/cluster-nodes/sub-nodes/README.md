@@ -15,5 +15,5 @@ layout:
 
 Sub nodes attach to root nodes within a group of cluster nodes. They configure the overall functionality of the cluster.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/zJOwS1oaLPBcpMdYXIs3/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
 

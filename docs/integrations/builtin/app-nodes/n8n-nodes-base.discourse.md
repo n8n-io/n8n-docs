@@ -56,5 +56,5 @@ Refer to [Discourse credentials](../credentials/discourse.md) for guidance on se
 
 [Browse Discourse node documentation integration templates](https://n8n.io/integrations/discourse) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

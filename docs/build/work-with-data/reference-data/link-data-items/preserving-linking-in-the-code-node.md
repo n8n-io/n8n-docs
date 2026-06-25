@@ -11,6 +11,6 @@ layout:
 ---
 
 # Preserving linking in the Code node <a href="#preserving-linking-in-the-code-node" id="preserving-linking-in-the-code-node"></a>
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xCfd2Uts28cfqwGU487j/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/XqCm6UXa2H3VaFURpo9h/" %}
 
 

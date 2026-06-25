@@ -43,7 +43,7 @@ Only instance owners can upgrade n8n Cloud versions. Contact your instance owner
 
 ## Best practices for updating <a href="#best-practices-for-updating" id="best-practices-for-updating"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/n9aq4wdObipxIDqh83Fc/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1Q2X3RjU5o2jnRfcKzuN/" %}
 
 ## Automatic update <a href="#automatic-update" id="automatic-update"></a>
 

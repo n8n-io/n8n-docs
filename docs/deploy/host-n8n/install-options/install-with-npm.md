@@ -13,7 +13,7 @@ layout:
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/CcSOA8s7oK44B90i5WIm/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Try n8n with npx <a href="#try-n8n-with-npx" id="try-n8n-with-npx"></a>
 
@@ -75,7 +75,7 @@ To install the `next` version:
 npm install -g n8n@next
 ```
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/0gFeDzK3sck6oRLoigFV/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WSJc9HCsn26Um2uT6zAQ/" %}
 
 {% hint style="info" %}
 **Docker required**

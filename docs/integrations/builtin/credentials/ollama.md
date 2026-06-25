@@ -51,7 +51,7 @@ Create and run an [Ollama](https://ollama.com/) instance with one user. Refer to
 
 Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TbnZmZEDZnkAWTXWp8th/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Using instance URL <a href="#using-instance-url" id="using-instance-url"></a>
 

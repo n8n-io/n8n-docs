@@ -39,5 +39,5 @@ Refer to [Bitly credentials](../credentials/bitly.md) for guidance on setting up
 
 [Browse Bitly node documentation integration templates](https://n8n.io/integrations/bitly) or [search all templates](https://n8n.io/workflows/)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

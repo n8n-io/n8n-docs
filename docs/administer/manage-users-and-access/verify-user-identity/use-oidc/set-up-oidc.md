@@ -14,7 +14,7 @@ layout:
 
 # Set up OIDC <a href="#set-up-oidc" id="set-up-oidc"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JuGp2V4GtW5r1Eg85Yby/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
 
 {% hint style="info" %}
 **Configure using environment variables**

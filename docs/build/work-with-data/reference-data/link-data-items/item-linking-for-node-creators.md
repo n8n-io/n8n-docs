@@ -13,4 +13,4 @@ layout:
 
 # Item linking for node creators <a href="#item-linking-for-node-creators" id="item-linking-for-node-creators"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/F5T7XjGfyT0ZFW2gGAEp/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kXGDlwgR3wBuMfOWaSGE/" %}

@@ -44,7 +44,7 @@ The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/d
 
 Refer to [AI Agent](./) for more information on the AI Agent node itself.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ATANgfFVHG8eIRH2Xynm/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cHtfs3gewkhPbGP31rjc/" %}
 
 This agent supports the following chat models:
 
@@ -186,11 +186,11 @@ Configure the Tools Agent using the following parameters.
 
 ### Prompt <a href="#prompt" id="prompt"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/tALAgzlpmog5eZk893Ez/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ss9Y6clfLTwlXMx69w6E/" %}
 
 ### Require Specific Output Format <a href="#require-specific-output-format" id="require-specific-output-format"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/FWz2tiBEchkNj9yOVoti/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/IsHMhvgDA3Ok5qdqnHnJ/" %}
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
@@ -198,23 +198,23 @@ Refine the Tools Agent node's behavior using these options:
 
 ### System Message <a href="#system-message" id="system-message"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iItrx0Sif4nFlvnhRC32/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Ci5NMdJiVoyT9dtdTE9w/" %}
 
 ### Max Iterations <a href="#max-iterations" id="max-iterations"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/5peNPbMzizpnVi5yyawQ/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8UflrA3Nx8LD5bKQn8Xc/" %}
 
 ### Return Intermediate Steps <a href="#return-intermediate-steps" id="return-intermediate-steps"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iCkxSCJ5heC6EkrCHxvn/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/skA96E8hAnMMKG7c4Lta/" %}
 
 ### Tracing Metadata <a href="#tracing-metadata" id="tracing-metadata"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8YMxu7WAgGuRiK8YvCjS/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GAsqtB1RVGEDrT5PMMLl/" %}
 
 ### Automatically Passthrough Binary Images <a href="#automatically-passthrough-binary-images" id="automatically-passthrough-binary-images"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hGtcy9hhFTRrDtmE9uhH/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2rKQZnqDH1pc3xlyYYdX/" %}
 
 ### Enable Streaming <a href="#enable-streaming" id="enable-streaming"></a>
 

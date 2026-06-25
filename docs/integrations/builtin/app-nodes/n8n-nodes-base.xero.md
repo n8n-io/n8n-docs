@@ -49,4 +49,4 @@ Refer to [Xero credentials](../credentials/xero.md) for guidance on setting up a
 
 Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/lMIxsgtfHVazfAS7oe1v/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

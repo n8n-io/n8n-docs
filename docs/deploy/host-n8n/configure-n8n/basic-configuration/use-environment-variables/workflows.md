@@ -21,7 +21,7 @@ layout:
 
 # Workflows environment variables <a href="#workflows-environment-variables" id="workflows-environment-variables"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WWmlKw7GKa6dRtz6RUkf/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

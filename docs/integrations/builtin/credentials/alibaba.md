@@ -50,6 +50,6 @@ To configure this credential, you'll need:
 5. Enter a description, then select **Generate Key**.
 6. Copy the API key. It displays only once.
 7. Enter the API key in your n8n credential.
-8. Set **Region** to **Singapore**. Other regions are available only through Alibaba Cloud Model Studio.
+8. For Qwen Cloud accounts, set **Region** to **Singapore**. Select another region only if you're using Alibaba Cloud Model Studio.
 
 Refer to [Qwen Cloud API key documentation](https://docs.qwencloud.com/developer-guides/administration/api-keys) for more information.

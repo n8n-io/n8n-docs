@@ -111,5 +111,6 @@
   * [Deploy as an OEM integration](host-n8n/deploy-as-an-oem-integration/README.md)
     * [Prerequisites](host-n8n/deploy-as-an-oem-integration/prerequisites.md)
     * [Manage workflows](host-n8n/deploy-as-an-oem-integration/manage-workflows.md)
+    * [Set up token exchange](host-n8n/deploy-as-an-oem-integration/set-up-token-exchange.md)
   * [Deploy with the AI starter kit](host-n8n/deploy-with-the-ai-starter-kit.md)
   * [Community edition features](host-n8n/community-edition-features.md)

@@ -59,7 +59,7 @@ n8n start
 
 ### Next steps <a href="#next-steps" id="next-steps"></a>
 
-Try out n8n using the [Quickstarts](/try-it-out/index.md).
+Try out n8n using the [Quickstarts](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow).
 
 ## Updating <a href="#updating" id="updating"></a>
 

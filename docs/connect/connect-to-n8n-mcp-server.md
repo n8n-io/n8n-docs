@@ -244,14 +244,19 @@ Add the following entry to your `claude_desktop_config.json` file:
 ```json
 "mcpServers": {
   "n8n-mcp": {
-    "type": "http",
-    "url": "https://<your-n8n-domain>/mcp-server/http",
-    "headers": {
-      "Authorization": "Bearer <YOUR_N8N_MCP_TOKEN>"
-    }
+    "command": "npx",
+    "args": [
+    "-y",
+    "supergateway",
+    "--streamableHttp",
+    "https://<your-n8n-domain>/mcp-server/http",
+    "--header",
+    "Authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
+    ]
   }
 }
 ```
+
 
 Here, replace:
 

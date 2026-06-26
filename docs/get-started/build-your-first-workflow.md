@@ -77,7 +77,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
 </details>
 
-1. Select the **Add node** <img src=".gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> connector on the Schedule Trigger node.
+1. Select the **Add node** <img src=".gitbook/assets/add-node-small.png" alt="Add node icon" data-size="line"> connector on the Schedule Trigger node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
 3. Select **NASA** to view a list of operations.
 4. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
@@ -112,7 +112,7 @@ n8n supports complex logic in workflows. In this tutorial we will use the [If no
 
 Add the If node:
 
-1. Select the **Add node** <img src=".gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> connector on the NASA node.
+1. Select the **Add node** <img src=".gitbook/assets/add-node-small.png" alt="Add node icon" data-size="line"> connector on the NASA node.
 2. Search for **If**. n8n shows a list of nodes that match the search.
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. You need to check the value of the `classType` property in the NASA data. To do this:
@@ -130,7 +130,7 @@ Add the If node:
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page.
 
-1. On the If node, select the **Add node** <img src=".gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> connector labeled **true**.
+1. On the If node, select the **Add node** <img src=".gitbook/assets/add-node-small.png" alt="Add node icon" data-size="line"> connector labeled **true**.
 2. Search for **PostBin**. n8n shows a list of nodes that match the search.
 3. Select **PostBin**.
 4. Select **Send a request**. n8n adds the node to the canvas and opens it.
@@ -149,7 +149,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 11. Close the expressions editor to return to the node.
 12. Close the Postbin node to return to the canvas.
 13. Add another Postbin node, to handle the **false** output path from the If node:
-    1. Hover over the Postbin node, then select **Node context menu** <img src=".gitbook/assets/node-context-menu (1).png" alt="Node context menu icon" data-size="line"> > **Duplicate node** to duplicate the first Postbin node.
+    1. Hover over the Postbin node, then select **Node context menu** <img src=".gitbook/assets/node-context-menu.png" alt="Node context menu icon" data-size="line"> > **Duplicate node** to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
 ## Step six: Test the workflow <a href="#step-six-test-the-workflow" id="step-six-test-the-workflow"></a>

@@ -1,83 +1,110 @@
 ---
 title: PGVector Vector Store node documentation
-description: Learn how to use the PGVector Vector Store node in n8n. Follow technical documentation to integrate PGVector Vector Store node into your workflows.
 priority: medium
+nodeTitle: PGVector Vector Store node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector
+description: >-
+  Learn how to use the PGVector Vector Store node in n8n. Follow technical
+  documentation to integrate PGVector Vector Store node into your workflows.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# PGVector Vector Store node
+# PGVector Vector Store
 
-PGVector is an extension of Postgresql. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+PGVector is an extension of Postgresql. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a chain[^1], or connect directly to an agent[^2] as a tool[^3].
 
 On this page, you'll find the node parameters for the PGVector node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postgres.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/postgres.md).
+{% endhint %}
 
-## Node usage patterns
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+
+## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the PGVector Vector Store node in the following patterns.
 
-### Use as a regular node to insert and retrieve documents
+### Use as a regular node to insert and retrieve documents <a href="#use-as-a-regular-node-to-insert-and-retrieve-documents" id="use-as-a-regular-node-to-insert-and-retrieve-documents"></a>
 
 You can use the PGVector Vector Store as a regular node to insert or get documents. This pattern places the PGVector Vector Store in the regular connection flow without using an agent.
 
 You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (the template uses the Supabase Vector Store, but the pattern is the same).
 
-### Connect directly to an AI agent as a tool
+### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the PGVector Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+You can connect the PGVector Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> PGVector Vector Store node.
 
-### Use a retriever to fetch documents
+### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the PGVector Vector Store node to fetch documents from the PGVector Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the PGVector Vector Store node to fetch documents from the PGVector Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> PGVector Vector Store.
 
-### Use the Vector Store Question Answer Tool to answer questions
+### Use the Vector Store Question Answer Tool to answer questions <a href="#use-the-vector-store-question-answer-tool-to-answer-questions" id="use-the-vector-store-question-answer-tool-to-answer-questions"></a>
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the PGVector Vector Store node. Rather than connecting the PGVector Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](../sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the PGVector Vector Store node. Rather than connecting the PGVector Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the Simple Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
 
-### Rerank Results
+### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
-<!-- vale off -->
-### Get Many parameters
-<!-- vale on -->
+### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
 * **Table name**: Enter the name of the table you want to query.
 * **Prompt**: Enter your search query.
 * **Limit**: Enter a number to set how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-### Insert Documents parameters
+### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
 * **Table name**: Enter the name of the table you want to query.
 
-### Retrieve Documents parameters (As Vector Store for Chain/Tool)
+### Retrieve Documents parameters (As Vector Store for Chain/Tool) <a href="#retrieve-documents-parameters-as-vector-store-for-chaintool" id="retrieve-documents-parameters-as-vector-store-for-chaintool"></a>
 
 * **Table name**: Enter the name of the table you want to query.
 
-### Retrieve Documents (As Tool for AI Agent) parameters
+### Retrieve Documents (As Tool for AI Agent) parameters <a href="#retrieve-documents-as-tool-for-ai-agent-parameters" id="retrieve-documents-as-tool-for-ai-agent-parameters"></a>
 
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
 * **Table Name**: Enter the PGVector table to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
-### Collection
+### Collection <a href="#collection" id="collection"></a>
 
 A way to separate datasets in PGVector. This creates a separate table and column to keep track of which collection a vector belongs to.
 
@@ -85,7 +112,7 @@ A way to separate datasets in PGVector. This creates a separate table and column
 * **Collection Name**: Enter the name of the collection you want to use.
 * **Collection Table Name**: Enter the name of the table to store collection information in.
 
-### Column Names
+### Column Names <a href="#column-names" id="column-names"></a>
 
 The following options specify the names of the columns to store the vectors and corresponding information in:
 
@@ -94,19 +121,22 @@ The following options specify the names of the columns to store the vectors and 
 * **Content Column Name**
 * **Metadata Column Name**
 
-### Metadata Filter
+### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'postgres-pgvector-store') ]]
+[Browse PGVector Vector Store node documentation integration templates](https://n8n.io/integrations/postgres-pgvector-store) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's PGVector documentation](https://js.langchain.com/docs/integrations/vectorstores/pgvector) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
---8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dN5Se1JVH7wYGtmN4n0v/" %}
+
+[^1]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
+[^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+[^3]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

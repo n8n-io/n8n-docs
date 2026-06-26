@@ -1,20 +1,33 @@
 ---
 title: KoboToolbox node documentation
-description: Learn how to use the KoboToolbox node in n8n. Follow technical documentation to integrate KoboToolbox node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the KoboToolbox node in n8n. Follow technical documentation
+  to integrate KoboToolbox node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: KoboToolbox node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox'
+layout:
+  description:
+    visible: false
 ---
 
-# KoboToolbox node
+# KoboToolbox node <a href="#kobotoolbox-node" id="kobotoolbox-node"></a>
 
 Use the KoboToolbox node to automate work in KoboToolbox, and integrate KoboToolbox with other applications. n8n has built-in support for a wide range of KoboToolbox features, including creating, updating, deleting, and getting files, forms, hooks, and submissions. 
 
 On this page, you'll find a list of operations the KoboToolbox node supports and links to more resources.
 
-/// note | Credentials
-Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [KoboToolbox credentials](../credentials/kobotoolbox.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * File
 	* Create
@@ -38,14 +51,14 @@ Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox
     * Get Validation Status
     * Update Validation Status
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'kobotoolbox') ]]
 
-## Options
+[Browse KoboToolbox node documentation integration templates](https://n8n.io/integrations/kobotoolbox) or [search all templates](https://n8n.io/workflows/)
 
-### Query Options
+## Options <a href="#options" id="options"></a>
+
+### Query Options <a href="#query-options" id="query-options"></a>
 
 The Query Submission operation supports query options:
 
@@ -59,14 +72,14 @@ The Query Submission operation supports query options:
 
 More details about these options can be found in the [Formhub API docs](https://github.com/SEL-Columbia/formhub/wiki/Formhub-Access-Points-(API)#api-parameters)
 
-### Submission options
+### Submission options <a href="#submission-options" id="submission-options"></a>
 
 All operations that return form submission data offer options to tweak the response. These include:
 
 - Download options lets you download any attachment linked to each particular form submissions, such as pictures and videos. It also lets you select the naming pattern, and the file size to download (if available - typically for images). 
 - Formatting options perform some reformatting as described in [About reformatting](#about-reformatting).
 
-#### About reformatting
+#### About reformatting <a href="#about-reformatting" id="about-reformatting"></a>
 
 The default JSON format for KoboToolbox submission data is sometimes hard to deal with, because it's not schema-aware, and all fields are therefore returned as strings.
 
@@ -184,4 +197,4 @@ With reformatting enabled, and the appropriate masks for multi-select and number
 ```
 
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

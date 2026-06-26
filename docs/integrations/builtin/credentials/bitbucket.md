@@ -1,28 +1,39 @@
 ---
 title: Bitbucket credentials
-description: Documentation for Bitbucket credentials. Use these credentials to authenticate Bitbucket in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Bitbucket credentials. Use these credentials to authenticate
+  Bitbucket in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Bitbucket credentials
+originalFilePath: integrations/builtin/credentials/bitbucket.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/bitbucket'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/bitbucket'
+layout:
+  description:
+    visible: false
 ---
 
-# Bitbucket credentials
+# Bitbucket credentials <a href="#bitbucket-credentials" id="bitbucket-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md)
+- [Bitbucket Trigger](../trigger-nodes/n8n-nodes-base.bitbuckettrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Bitbucket](https://www.bitbucket.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication) for more information about the service.
 
-## Configuring Bitbucket access token
+## Configuring Bitbucket access token <a href="#configuring-bitbucket-access-token" id="configuring-bitbucket-access-token"></a>
 
 1. Log in to Bitbucket and open your account or personal settings.
 2. Find the section for API tokens or security settings.

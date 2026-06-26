@@ -1,17 +1,31 @@
 ---
 title: Summarization Chain node documentation
-description: Learn how to use the Summarize Chain node in n8n. Follow technical documentation to integrate Summarize Chain node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Summarize Chain node in n8n. Follow technical
+  documentation to integrate Summarize Chain node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Summarization Chain node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization
+layout:
+  description:
+    visible: false
 ---
 
-# Summarization Chain node
+# Summarization Chain node <a href="#summarization-chain-node" id="summarization-chain-node"></a>
 
 Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Choose the type of data you need to summarize in **Data to Summarize**. The data type you choose determines the other node parameters.
 
@@ -21,7 +35,7 @@ Choose the type of data you need to summarize in **Data to Summarize**. The data
 		* Choose **Advanced** if you want to connect a splitter sub-node that provides more configuration options.
 * **Use Document Loader**: summarize data provided by a document loader sub-node.
 
-## Node Options
+## Node Options <a href="#node-options" id="node-options"></a>
 
 You can configure the summarization method and prompts. Select **Add Option** > **Summarization Method and Prompts**.
 
@@ -33,14 +47,14 @@ Options in **Summarization Method**:
 
 You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'summarization-chain') ]]
 
-## Related resources
+[Browse Summarization Chain node documentation integration templates](https://n8n.io/integrations/summarization-chain) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

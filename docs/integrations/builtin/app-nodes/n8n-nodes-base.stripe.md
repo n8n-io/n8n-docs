@@ -1,20 +1,33 @@
 ---
 title: Stripe node documentation
-description: Learn how to use the Stripe node in n8n. Follow technical documentation to integrate Stripe node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Stripe node in n8n. Follow technical documentation to
+  integrate Stripe node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Stripe node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.stripe.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.stripe'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.stripe'
+layout:
+  description:
+    visible: false
 ---
 
-# Stripe node
+# Stripe node <a href="#stripe-node" id="stripe-node"></a>
 
 Use the Stripe node to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge and meter events, and deleting customers. 
 
 On this page, you'll find a list of operations the Stripe node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Stripe credentials](/integrations/builtin/credentials/stripe.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Stripe credentials](../credentials/stripe.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Balance
     * Get a balance
@@ -45,9 +58,9 @@ Refer to [Stripe credentials](/integrations/builtin/credentials/stripe.md) for g
 * Token
     * Create a token
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'stripe') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Stripe node documentation integration templates](https://n8n.io/integrations/stripe) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

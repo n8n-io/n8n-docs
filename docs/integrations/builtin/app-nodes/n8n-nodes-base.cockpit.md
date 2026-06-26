@@ -1,20 +1,33 @@
 ---
 title: Cockpit node documentation
-description: Learn how to use the Cockpit node in n8n. Follow technical documentation to integrate Cockpit node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Cockpit node in n8n. Follow technical documentation to
+  integrate Cockpit node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Cockpit node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.cockpit.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cockpit'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.cockpit'
+layout:
+  description:
+    visible: false
 ---
 
-# Cockpit node
+# Cockpit node <a href="#cockpit-node" id="cockpit-node"></a>
 
 Use the Cockpit node to automate work in Cockpit, and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, including creating a collection entry, storing data from a form submission, and getting singletons.
 
 On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Cockpit credentials](/integrations/builtin/credentials/cockpit.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Cockpit credentials](../credentials/cockpit.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Collection
     * Create a collection entry
@@ -25,7 +38,7 @@ Refer to [Cockpit credentials](/integrations/builtin/credentials/cockpit.md) for
 * Singleton
     * Get a singleton
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'cockpit') ]]
+
+[Browse Cockpit node documentation integration templates](https://n8n.io/integrations/cockpit) or [search all templates](https://n8n.io/workflows/)

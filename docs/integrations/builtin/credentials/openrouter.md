@@ -1,29 +1,40 @@
 ---
 title: OpenRouter credentials
-description: Documentation for OpenRouter credentials. Use these credentials to authenticate OpenRouter in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for OpenRouter credentials. Use these credentials to
+  authenticate OpenRouter in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenRouter credentials
+originalFilePath: integrations/builtin/credentials/openrouter.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/openrouter'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/openrouter'
+layout:
+  description:
+    visible: false
 ---
 
-# OpenRouter credentials
+# OpenRouter credentials <a href="#openrouter-credentials" id="openrouter-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chat OpenRouter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md)
+- [Chat OpenRouter](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [OpenRouter](https://openrouter.ai/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [OpenRouter's API documentation](https://openrouter.ai/docs/quick-start) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

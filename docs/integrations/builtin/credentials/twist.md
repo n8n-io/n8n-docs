@@ -1,29 +1,40 @@
 ---
 title: Twist credentials
-description: Documentation for Twist credentials. Use these credentials to authenticate Twist in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Twist credentials. Use these credentials to authenticate
+  Twist in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Twist credentials
+originalFilePath: integrations/builtin/credentials/twist.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/twist'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/twist'
+layout:
+  description:
+    visible: false
 ---
 
-# Twist credentials
+# Twist credentials <a href="#twist-credentials" id="twist-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twist](/integrations/builtin/app-nodes/n8n-nodes-base.twist.md)
+- [Twist](../app-nodes/n8n-nodes-base.twist.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Twist](https://twist.com/) account.
 - [Create a general integration](https://twist.com/app_console/create_app) and configure a valid OAuth Redirect URL. Refer to [Using OAuth2](#using-oauth2) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Twist's API documentation](https://developer.twist.com/v3/#authorization) for more information about authenticating with the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 To configure this credential, you'll need:
 
 - A **Client ID**: Generated once you create a general integration.
@@ -33,16 +44,14 @@ To generate your Client ID and Client Secret, [create a general integration](htt
 
 Use these settings for your integration's **OAuth Authentication**:
 
-- Copy the **OAuth Redirect URL** from n8n and enter it as the **OAuth 2 redirect URL** in Twist.
+- Copy the **OAuth Redirect URL** from n8n and enter it as the **OAuth 2 redirect URL** in Twist.<br>
     
-    /// note | OAuth Redirect URL for self-hosted n8n
-    Twist doesn't accept a `localhost` Redirect URL. The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. If your n8n **OAuth Redirect URL** contains localhost, refer below to [Local environment redirect URL](#local-environment-redirect-url) for generating a URL that Twist will allow.
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>OAuth Redirect URL for self-hosted n8n</strong></p><p>Twist doesn't accept a <code>localhost</code> Redirect URL. The Redirect URL should be a URL in your domain, for example: <code>https://mytemplatemaker.example.com/gr_callback</code>. If your n8n <strong>OAuth Redirect URL</strong> contains localhost, refer below to <a href="#local-environment-redirect-url">Local environment redirect URL</a> for generating a URL that Twist will allow.</p></div>
 
 - Select **Update OAuth settings** to save those changes.
 - Copy the **Client ID** and **Client Secret** from Twist and enter them in the appropriate fields in n8n.
 
-### Local environment redirect URL
+### Local environment redirect URL <a href="#local-environment-redirect-url" id="local-environment-redirect-url"></a>
 
 Twist doesn't accept a localhost callback URL. These steps should allow you to configure the OAuth credentials for the local environment:
 

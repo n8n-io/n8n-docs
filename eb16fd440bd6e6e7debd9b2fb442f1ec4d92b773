@@ -1,0 +1,27 @@
+docs/workflows/executions/execution-data-redaction.md
+  s_d5136a739107b1::t_8a1a7efa24946c 81-88
+  s_d5136a739107b1::t_46f91cefb44ec5 44-47
+  s_d5136a739107b1::t_cf1c410ba65929 79-80
+  s_d5136a739107b1::t_ac11a85179119d 12,19
+  s_d5136a739107b1::t_742192c535e6fb 57-72,74-77
+  s_d5136a739107b1::t_c6d6a637808ff0 140-151
+  s_d5136a739107b1::t_f19568b8bf4fd0 113-115,117-119,125
+docs/security-settings.md
+  s_d5136a739107b1::t_50109d63b9f307 72-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "eb16fd440bd6e6e7debd9b2fb442f1ec4d92b773",
+  "prompts": {},
+  "sessions": {
+    "s_d5136a739107b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b27f84b3-920d-475b-af38-7d099719656c",
+        "model": "claude-fable-5"
+      },
+      "human_author": null
+    }
+  }
+}

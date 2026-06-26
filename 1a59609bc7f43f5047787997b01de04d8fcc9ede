@@ -1,0 +1,14 @@
+docs/hosting/grafana/grafana.md
+  h_c63dce324dfc7b 17,53,77,91,118
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "1a59609bc7f43f5047787997b01de04d8fcc9ede",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

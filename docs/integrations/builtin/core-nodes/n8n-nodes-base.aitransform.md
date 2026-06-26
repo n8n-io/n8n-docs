@@ -37,7 +37,7 @@ Use the AI Transform node to generate code snippets based on your prompt. The AI
 {% hint style="info" %}
 **Feature availability**
 
-Available only on [Cloud plans](../../../../manage-cloud/overview.md).
+Available only on [Cloud plans](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud).
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>

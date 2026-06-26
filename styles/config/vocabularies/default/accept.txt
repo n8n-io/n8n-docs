@@ -140,6 +140,7 @@ Lemlist
 Lenovo
 [Ll]inter
 LLMs?
+[Ll]oopback
 Luhn
 Luxon
 [Mm]agnetopause

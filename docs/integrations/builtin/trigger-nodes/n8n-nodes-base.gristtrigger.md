@@ -6,6 +6,9 @@ description: >-
 contentType:
   - integration
   - reference
+layout:
+  description:
+    visible: false
 ---
 
 # Grist Trigger node

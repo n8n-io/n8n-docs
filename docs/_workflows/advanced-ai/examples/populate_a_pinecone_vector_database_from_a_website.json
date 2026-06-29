@@ -1,0 +1,718 @@
+{
+  "name": "Populate a Pinecone vector database from a website",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "856f2426-b4b5-4180-a422-d26692844afb",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        80,
+        1040
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "1e702984-6f79-416e-981a-6728d4b3c233",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        260,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "splitCode": "markdown"
+        },
+        "requestOptions": {}
+      },
+      "id": "2d1f30fd-f251-4389-8f6d-2c950018a91f",
+      "name": "Recursive Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 10,
+        "options": {}
+      },
+      "id": "4e8a9d4c-6009-4d9b-b603-0438c65ba9df",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -840,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "e7967355-41b4-4bc5-b192-c8bc0699e925",
+      "name": "OpenAI Model",
+      "type": "@n8n/n8n-nodes-langchain.lmOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -1320,
+        1680
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://n8n-io.github.io/n8n-demo-website/sitemap.xml",
+        "options": {}
+      },
+      "id": "5fb88663-f28b-4da2-acd9-1cbb0c5d28e7",
+      "name": "Get sitemap",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1480,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "explicitRoot": false,
+          "ignoreAttrs": true
+        }
+      },
+      "id": "0e6287b8-9a65-4af0-8e69-3aae3648fd13",
+      "name": "Turn XML sitemap into JSON",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "url",
+        "options": {}
+      },
+      "id": "acd3e717-99f5-4238-aa4d-795caef660b1",
+      "name": "Turn the URL array into multiple items",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        740
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f3b4ad5e-b261-4b97-9077-3b9259d5b37d",
+      "name": "Wait 5 seconds",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -320,
+        1060
+      ],
+      "webhookId": "f4e7dead-77ad-4216-a5a0-ef95914bf3ab"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.loc }}",
+        "options": {}
+      },
+      "id": "361b2a70-d0c5-4498-8a70-0688710e76e6",
+      "name": "Get pages listed in the sitemap",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -580,
+        1060
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "14ddd282-9bf0-459f-9595-5154e16f9cc0",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1620,
+        1420
+      ],
+      "webhookId": "4b338d3c-b03f-42f2-94c1-9353d0f1fbc2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Chat Trigger').item.json.chatInput }}"
+      },
+      "id": "263585e6-02bb-4940-9bb3-15f32b0f8079",
+      "name": "Question and Answer Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.3,
+      "position": [
+        -1280,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "topK": 10,
+        "requestOptions": {}
+      },
+      "id": "91ad53ec-a761-43f6-a6f1-835263222e0c",
+      "name": "Vector Store Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        -1080,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "5c55cb38-be26-405d-bd39-d29e0a33b683",
+      "name": "Embeddings OpenAI2",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        2040
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "content"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "48dbd7f7-1ca1-41e2-9fd5-e916ea76589b",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Aggregate into one item**\n\nThe Pinecone node loops over each input item. This is standard n8n node behavior.\n\nThis means if you want to use the **Clear namespace** setting in the Pinecone node, you need to input a single item.",
+        "height": 381.66422439067196,
+        "color": 5
+      },
+      "id": "5b70d4ae-1889-43d3-b92d-bf73e43236bd",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Workflow to scrape data and send it to Pinecone",
+        "height": 878.8927796727229,
+        "width": 2382.6739342193496,
+        "color": 7
+      },
+      "id": "e9b5d557-51af-48d1-af33-8783f9ca3718",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1856.703373323493,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Workflow to chat and get answers from the Pinecone vector database",
+        "height": 825.9872504327399,
+        "width": 1181.407211476183,
+        "color": 7
+      },
+      "id": "7efa097b-d4f2-49a4-9da5-4fcf6b83be3b",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Try it out \n\n1. Set credentials and choose your Pinecone vector database. See the notes on individual nodes for details.\n2. Select **Execute workflow** to run the main workflow and load data into Pinecone.\n3. Select **Chat** and try asking:\n\n_What is the purpose of the n8n demo website?_",
+        "height": 326.49681260818465,
+        "color": 4
+      },
+      "id": "f21bc32b-a405-4d71-b6c9-7bffbb6faed9",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2040,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Setup**\n\n1. In Pinecone, create a vector database. Set **Dimensions** to `3072` and **Metric** to `cosine`. You can use the free starter plan.\n2. In the Pinecone node, set your credentials.\n3. Select your Pinecone index.",
+        "height": 381.3701016273242,
+        "width": 304.1011298750183,
+        "color": 2
+      },
+      "id": "4be87782-f811-418f-b4b5-9e12c4cf7970",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        140,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+        },
+        "options": {
+          "clearNamespace": true,
+          "pineconeNamespace": "test-web-scraper"
+        }
+      },
+      "id": "94035a97-5a09-493c-aaae-dcba7bbf8526",
+      "name": "Pinecone Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        160,
+        740
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "lruA9GaKZSEY8dky",
+          "name": "Debs Pinecone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "width": 331.8066536811489
+      },
+      "id": "2be1433b-0488-4c7e-8c10-e771d4dd4686",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 206.68134932939768,
+        "width": 182.42633582707612,
+        "color": 2
+      },
+      "id": "fffbb04d-6d61-4dfa-bfd3-46b8c92a36d5",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 184.89671964234537,
+        "width": 173.09006596119673,
+        "color": 2
+      },
+      "id": "810ac5e1-d730-47af-9282-64ab0b4fca16",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1369.107685156473,
+        1620.2285847094058
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 192.67694453057842,
+        "width": 221.3274602682409,
+        "color": 2
+      },
+      "id": "2cecc8ac-3c65-4294-8a5d-2842bc07d10a",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -860,
+        1980
+      ]
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "debs-test",
+          "mode": "list",
+          "cachedResultName": "debs-test"
+        },
+        "options": {
+          "pineconeNamespace": "test-web-scraper"
+        }
+      },
+      "id": "e673c46e-0815-4b58-9a8f-2fb86445b578",
+      "name": "Pinecone Vector Store2",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        -980,
+        1840
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "lruA9GaKZSEY8dky",
+          "name": "Debs Pinecone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**\n\n**Select your Pinecone index***",
+        "width": 367.59568816702017,
+        "color": 2
+      },
+      "id": "ca4499ae-4e27-4848-9654-f7e744c081e7",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1080,
+        1760
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b43ddbd1-adfd-4bba-bee5-4b81229e88dd",
+      "name": "Start the workflow by clicking \"Execute workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1700,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "content",
+              "cssSelector": ".md-content",
+              "returnValue": "html"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      },
+      "id": "d39624d7-93c0-4452-81b1-ffa04b216ceb",
+      "name": "Extract main content",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        -380,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Batch the calls to the website**\n\nFor the small demo website in this example, this is not essential. If you want to use this example with a larger website, batching like this helps avoid timeouts. Using the Wait node between batches avoids hitting the website with too many requests too fast.",
+        "height": 298.48800301054644,
+        "width": 316.2462039046831,
+        "color": 5
+      },
+      "id": "9825926d-ce6d-429e-9006-6ff5fd1f46ca",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## How to scrape a different website\n\nThis workflow uses a small example website provided by n8n. To use a different site:\n\n1. Change the sitemap URL in **Get sitemap**.\n2. Update **Extract main content** according to the HTML structure of the website you're scraping.",
+        "height": 356.06166718347
+      },
+      "id": "7c2e4bde-3900-49b0-9bee-704e34664163",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2040,
+        960
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Extract main content",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get pages listed in the sitemap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get sitemap": {
+      "main": [
+        [
+          {
+            "node": "Turn XML sitemap into JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Turn XML sitemap into JSON": {
+      "main": [
+        [
+          {
+            "node": "Turn the URL array into multiple items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Turn the URL array into multiple items": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5 seconds": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get pages listed in the sitemap": {
+      "main": [
+        [
+          {
+            "node": "Wait 5 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store2",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store2": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Retriever",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start the workflow by clicking \"Execute workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Get sitemap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract main content": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

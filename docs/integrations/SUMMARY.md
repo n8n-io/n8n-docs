@@ -799,6 +799,7 @@
     * [NVIDIA Nemotron credentials](builtin/credentials/nvidia.md)
     * [Odoo credentials](builtin/credentials/odoo.md)
     * [Okta credentials](builtin/credentials/okta.md)
+    * [Atomic Chat credentials](builtin/credentials/atomic-chat.md)
     * [Ollama credentials](builtin/credentials/ollama.md)
     * [One Simple API credentials](builtin/credentials/onesimpleapi.md)
     * [Onfleet credentials](builtin/credentials/onfleet.md)

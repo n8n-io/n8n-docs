@@ -31,7 +31,7 @@ Read the [Set up SAML](set-up-saml.md) guide first.
 
 ## Setup <a href="#setup" id="setup"></a>
 
-In addition to the following instructions, [this PDF](../../../../.gitbook/assets/n8n-saml-with-okta.pdf) provides visual step-by-step guide on how to setup SAML in n8n with Okta.
+In addition to the following instructions, [this PDF](../../../.gitbook/assets/n8n-saml-with-okta.pdf) provides visual step-by-step guide on how to setup SAML in n8n with Okta.
 
 1. In your Okta admin panel, select **Applications** > **Applications**.
 1. Select **Create App Integration**. Okta opens the app creation modal.

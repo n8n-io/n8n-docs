@@ -190,5 +190,5 @@ Documentation links for common IdPs.
 | Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml) |
 | JumpCloud | [How to setup SAML (SSO) applications with JumpCloud](https://jumpcloud.com/support/integrate-with-zoom#configuring-the-sso-integration) (using `Zoom` as an example) |
 | Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started) guide depending on your hosting. |
-| Okta | n8n provides a [Workforce Identity setup guide](set-up-okta-workforce-identity-saml.md) as well as a [step-by-step PDF guide](../../../.gitbook/assets/n8n-saml-with-okta.pdf) |
+| Okta | n8n provides a [Workforce Identity setup guide](set-up-okta-workforce-identity-saml.md), which includes a step-by-step PDF guide |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/pingone/getting_started_with_pingone/p1_p1sso_start.html) |

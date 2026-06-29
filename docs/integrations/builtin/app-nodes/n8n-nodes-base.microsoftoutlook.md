@@ -80,6 +80,7 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 * Folder Message
     * Get Many
 * Message
+	* Create Forward Draft 
 	* Delete
 	* Get
 	* Get Many

@@ -208,7 +208,9 @@ The steps to setup OIDC in Okta are similar as with Auth0 described below.
 
 For Okta, you can download a visual step-by-step guide as PDF:
 
-[n8n-oidc-with-okta.pdf](n8n-oidc-with-okta.pdf)
+{% file src="../../../.gitbook/assets/n8n-oidc-with-okta.pdf" %}
+Visual step-by-step guide for setting up OIDC with Okta
+{% endfile %}
 
 ### Auth0 <a href="#auth0" id="auth0"></a>
 

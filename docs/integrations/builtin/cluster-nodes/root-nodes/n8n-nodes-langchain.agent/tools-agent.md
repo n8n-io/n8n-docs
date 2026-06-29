@@ -60,7 +60,7 @@ This agent supports the following chat models:
 
 * [Call n8n Workflow](../../sub-nodes/n8n-nodes-langchain.toolworkflow.md)
 * [Code](../../sub-nodes/n8n-nodes-langchain.toolcode.md)
-* [HTTP Request](../../../../../../integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
+* [HTTP Request](../../../core-nodes/n8n-nodes-base.httprequest/README.md)
 * [Action Network](../../../app-nodes/n8n-nodes-base.actionnetwork.md)
 * [ActiveCampaign](../../../app-nodes/n8n-nodes-base.activecampaign.md)
 * [Affinity](../../../app-nodes/n8n-nodes-base.affinity.md)

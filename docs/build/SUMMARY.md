@@ -22,6 +22,7 @@
 * [Ways of building workflows](ways-of-building-workflows/README.md)
   * [Connect to n8n MCP server](ways-of-building-workflows/connect-to-n8n-mcp-server.md)
   * [Use templates](ways-of-building-workflows/use-templates.md)
+  * [Use AI Assistant (Preview)](ways-of-building-workflows/ai-assistant-preview.md)
   * [Use the AI assistant](ways-of-building-workflows/use-the-ai-assistant.md)
   * [AI Workflow Builder](ways-of-building-workflows/ai-workflow-builder.md)
   * [Chat Hub](ways-of-building-workflows/chat-hub.md)

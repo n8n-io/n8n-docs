@@ -67,7 +67,6 @@ To generate your personal access token:
 7. Select the **Expiration** you'd like for the token, or select **No expiration**.
 8. Select **Scopes** for your token. For most of the n8n GitHub nodes, add the `repo` scope.
     - A token without assigned scopes can only access public information.
-    - Refer to [Permissions for fine-grained PATs](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens?apiVersion=2026-03-10) for more information on GitHub scopes.
 9. Select **Generate token**.
 10. Copy the token.
 

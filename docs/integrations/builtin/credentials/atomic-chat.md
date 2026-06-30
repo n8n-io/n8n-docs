@@ -38,7 +38,7 @@ You can use these credentials to authenticate the following nodes with a locally
 * [OpenAI](../app-nodes/n8n-nodes-langchain.openai/)
 * [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 * [Embeddings OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
-* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/)
+* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 
 Atomic Chat runs an OpenAI-compatible server. Configure it through the **OpenAI** credential type and override the default API base URL.
 

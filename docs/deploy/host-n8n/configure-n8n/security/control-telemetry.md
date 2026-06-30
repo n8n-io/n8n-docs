@@ -32,7 +32,7 @@ n8n collects some anonymous data from self-hosted n8n installations. Use the ins
 
 ## Collected data <a href="#collected-data" id="collected-data"></a>
 
-Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
+Refer to [Privacy | Data collection in self-hosted n8n](../../../../privacy-and-security/privacy.md#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
 
 ## How collection works <a href="#how-collection-works" id="how-collection-works"></a>
 

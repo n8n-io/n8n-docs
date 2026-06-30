@@ -1,26 +1,37 @@
 ---
 title: Typeform credentials
-description: Documentation for Typeform credentials. Use these credentials to authenticate Typeform in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Typeform credentials. Use these credentials to authenticate
+  Typeform in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Typeform credentials
+originalFilePath: integrations/builtin/credentials/typeform.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/typeform'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/typeform'
+layout:
+  description:
+    visible: false
 ---
 
-# Typeform credentials
+# Typeform credentials <a href="#typeform-credentials" id="typeform-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md)
+- [Typeform Trigger](../trigger-nodes/n8n-nodes-base.typeformtrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Typeform's API documentation](https://www.typeform.com/developers/get-started/) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need a [Typeform](https://typeform.com/) account and:
 
@@ -40,7 +51,7 @@ To get your personal access token:
 
 Refer to Typeform's [Personal access token documentation](https://www.typeform.com/developers/get-started/personal-access-token/) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [Typeform](https://typeform.com/) account and:
 

@@ -1,20 +1,33 @@
 ---
 title: Intercom node documentation
-description: Learn how to use the Intercom node in n8n. Follow technical documentation to integrate Intercom node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Intercom node in n8n. Follow technical documentation to
+  integrate Intercom node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Intercom node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.intercom.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.intercom'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.intercom'
+layout:
+  description:
+    visible: false
 ---
 
-# Intercom node
+# Intercom node <a href="#intercom-node" id="intercom-node"></a>
 
 Use the Intercom node to automate work in Intercom, and integrate Intercom with other applications. n8n has built-in support for a wide range of Intercom features, including creating, updating, deleting, and getting companies, leads, and users. 
 
 On this page, you'll find a list of operations the Intercom node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Intercom credentials](/integrations/builtin/credentials/intercom.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Intercom credentials](../credentials/intercom.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Company
     * Create a new company
@@ -35,7 +48,7 @@ Refer to [Intercom credentials](/integrations/builtin/credentials/intercom.md) f
     * Get data of all users
     * Update a user
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'intercom') ]]
+
+[Browse Intercom node documentation integration templates](https://n8n.io/integrations/intercom) or [search all templates](https://n8n.io/workflows/)

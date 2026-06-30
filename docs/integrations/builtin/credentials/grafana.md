@@ -1,28 +1,39 @@
 ---
 title: Grafana credentials
-description: Documentation for Grafana credentials. Use these credentials to authenticate Grafana in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Grafana credentials. Use these credentials to authenticate
+  Grafana in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Grafana credentials
+originalFilePath: integrations/builtin/credentials/grafana.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/grafana'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/grafana'
+layout:
+  description:
+    visible: false
 ---
 
-# Grafana credentials
+# Grafana credentials <a href="#grafana-credentials" id="grafana-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Grafana](/integrations/builtin/app-nodes/n8n-nodes-base.grafana.md)
+- [Grafana](../app-nodes/n8n-nodes-base.grafana.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Grafana](https://grafana.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Grafana's API documentation](https://grafana.com/docs/grafana/latest/developers/http_api/) for more information about authenticating with the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

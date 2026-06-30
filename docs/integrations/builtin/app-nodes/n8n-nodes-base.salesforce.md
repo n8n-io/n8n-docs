@@ -1,23 +1,36 @@
 ---
 title: Salesforce node documentation
-description: Learn how to use the Salesforce node in n8n. Follow technical documentation to integrate Salesforce node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Salesforce node in n8n. Follow technical documentation to
+  integrate Salesforce node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Salesforce node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.salesforce'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.salesforce'
+layout:
+  description:
+    visible: false
 ---
 
-# Salesforce node
+# Salesforce node <a href="#salesforce-node" id="salesforce-node"></a>
 
 Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
 
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Salesforce credentials](../credentials/salesforce.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Account
     * Add note to an account
@@ -97,14 +110,14 @@ Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.m
     * Get a user
     * Get all users
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'salesforce') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Salesforce node documentation integration templates](https://n8n.io/integrations/salesforce) or [search all templates](https://n8n.io/workflows/)
 
-## Working with Salesforce custom fields
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
+
+## Working with Salesforce custom fields <a href="#working-with-salesforce-custom-fields" id="working-with-salesforce-custom-fields"></a>
 
 To add custom fields to your request:
 

@@ -1,18 +1,23 @@
 ---
 title: Schema Registry credentials
 description: Documentation for Schema Registry credentials. Use these credentials to authenticate Schema Registry in n8n, a workflow automation platform.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
 priority: medium
+layout:
+  description:
+    visible: false
 ---
 
 # Schema Registry credentials
 
 You can use these credentials to authenticate the following nodes when you enable **Use Schema Registry**:
 
-- [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md)
-- [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md)
+- [Kafka](../app-nodes/n8n-nodes-base.kafka.md)
+- [Kafka Trigger](../trigger-nodes/n8n-nodes-base.kafkatrigger.md)
 
-The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro messages. This credential is separate from your [Kafka credentials](/integrations/builtin/credentials/kafka.md): the registry has its own endpoint and authentication, distinct from the Kafka brokers.
+The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro messages. This credential is separate from your [Kafka credentials](kafka.md): the registry has its own endpoint and authentication, distinct from the Kafka brokers.
 
 ## Supported authentication methods
 

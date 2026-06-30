@@ -1,29 +1,40 @@
 ---
 title: Microsoft SQL credentials
-description: Documentation for Microsoft SQL credentials. Use these credentials to authenticate Microsoft SQL in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Microsoft SQL credentials. Use these credentials to
+  authenticate Microsoft SQL in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Microsoft SQL credentials
+originalFilePath: integrations/builtin/credentials/microsoftsql.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftsql'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/microsoftsql'
+layout:
+  description:
+    visible: false
 ---
 
-# Microsoft SQL credentials
+# Microsoft SQL credentials <a href="#microsoft-sql-credentials" id="microsoft-sql-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md)
+- [Microsoft SQL](../app-nodes/n8n-nodes-base.microsoftsql.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on a [Microsoft SQL server](https://learn.microsoft.com/en-us/sql/sql-server/what-is-sql-server) database.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - SQL database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Microsoft's Connect to SQL Server documentation](https://learn.microsoft.com/en-us/sql/sql-server/connect-to-database-engine?view=sql-server-ver16&tabs=sqldb#connect-to-sql-server) for more information about connecting to the service.
 
-## Using SQL database connection
+## Using SQL database connection <a href="#using-sql-database-connection" id="using-sql-database-connection"></a>
 
 To configure this credential, you'll need:
 

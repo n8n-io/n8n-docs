@@ -1,28 +1,39 @@
 ---
 title: Beeminder credentials
-description: Documentation for Beeminder credentials. Use these credentials to authenticate Beeminder in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Beeminder credentials. Use these credentials to authenticate
+  Beeminder in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Beeminder credentials
+originalFilePath: integrations/builtin/credentials/beeminder.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/beeminder'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/beeminder'
+layout:
+  description:
+    visible: false
 ---
 
-# Beeminder credentials
+# Beeminder credentials <a href="#beeminder-credentials" id="beeminder-credentials"></a>
 
 You can use these credentials to authenticate the following node:
 
-- [Beeminder](/integrations/builtin/app-nodes/n8n-nodes-base.beeminder.md)
+- [Beeminder](../app-nodes/n8n-nodes-base.beeminder.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Beeminder](https://www.beeminder.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API user token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Beeminder's API documentation](https://api.beeminder.com/#beeminder-api-reference) for more information about the service.
 
-## Using API user token
+## Using API user token <a href="#using-api-user-token" id="using-api-user-token"></a>
 
 To configure this credential, you'll need:
 

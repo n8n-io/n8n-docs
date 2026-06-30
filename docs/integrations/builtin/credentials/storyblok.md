@@ -1,33 +1,46 @@
 ---
 title: Storyblok credentials
-description: Documentation for Storyblok credentials. Use these credentials to authenticate Storyblok in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Storyblok credentials. Use these credentials to authenticate
+  Storyblok in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Storyblok credentials
+originalFilePath: integrations/builtin/credentials/storyblok.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/storyblok'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/storyblok'
+layout:
+  description:
+    visible: false
 ---
 
-# Storyblok credentials
+# Storyblok credentials <a href="#storyblok-credentials" id="storyblok-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Storyblok](/integrations/builtin/app-nodes/n8n-nodes-base.storyblok.md)
+- [Storyblok](../app-nodes/n8n-nodes-base.storyblok.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Storyblok](https://www.storyblok.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Content API key: For read-only access
 - Management API key: For full CRUD operations
 
-/// note | Content API support
-n8n supports Content API v1 only.
-///
+{% hint style="info" %}
+**Content API support**
 
-## Related resources
+n8n supports Content API v1 only.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1) and [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction) for more information about the services.
 
-## Using Content API key
+## Using Content API key <a href="#using-content-api-key" id="using-content-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -35,7 +48,7 @@ To configure this credential, you'll need:
 
 Refer to [Content v1 API Authentication](https://www.storyblok.com/docs/api/content-delivery/v1#topics/authentication) for more information about supported operations with each Access Level.
 
-## Using Management API key
+## Using Management API key <a href="#using-management-api-key" id="using-management-api-key"></a>
 
 To configure this credential, you'll need:
 

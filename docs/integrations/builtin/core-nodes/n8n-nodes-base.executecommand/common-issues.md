@@ -68,3 +68,9 @@ To fix this, write your PowerShell command on a single line. If the command is c
 ```powershell
 powershell -Command "Get-ChildItem C:\Data; Write-Output 'Done'"
 ```
+
+For longer scripts, save the script to a file and run it with the `-File` flag instead:
+
+```powershell
+powershell -File C:\Scripts\my-script.ps1
+```

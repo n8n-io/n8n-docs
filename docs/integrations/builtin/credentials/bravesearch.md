@@ -1,7 +1,12 @@
 ---
 title: Brave Search credentials
 description: Documentation for the Brave Search credentials. Use these credentials to authenticate Brave Search in n8n, a workflow automation platform.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
+layout:
+  description:
+    visible: false
 ---
 
 # Brave Search credentials

@@ -1,20 +1,33 @@
 ---
 title: Iterable node documentation
-description: Learn how to use the Iterable node in n8n. Follow technical documentation to integrate Iterable node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Iterable node in n8n. Follow technical documentation to
+  integrate Iterable node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Iterable node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.iterable.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.iterable'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.iterable'
+layout:
+  description:
+    visible: false
 ---
 
-# Iterable node
+# Iterable node <a href="#iterable-node" id="iterable-node"></a>
 
 Use the Iterable node to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating users, recording the actions performed by the users, and adding and removing users from the list. 
 
 On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Iterable credentials](/integrations/builtin/credentials/iterable.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Iterable credentials](../credentials/iterable.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Event
     * Record the actions a user perform
@@ -26,7 +39,7 @@ Refer to [Iterable credentials](/integrations/builtin/credentials/iterable.md) f
     * Add user to list
     * Remove a user from a list
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'iterable') ]]
+
+[Browse Iterable node documentation integration templates](https://n8n.io/integrations/iterable) or [search all templates](https://n8n.io/workflows/)

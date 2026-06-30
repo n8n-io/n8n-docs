@@ -1,27 +1,42 @@
 ---
 title: monday.com node documentation
-description: Learn how to use the monday.com node in n8n. Follow technical documentation to integrate monday.com node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the monday.com node in n8n. Follow technical documentation to
+  integrate monday.com node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: monday.com node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom'
+layout:
+  description:
+    visible: false
 ---
 
-# monday.com node
+# monday.com node <a href="#mondaycom-node" id="mondaycom-node"></a>
 
 Use the monday.com node to automate work in monday.com, and integrate monday.com with other applications. n8n has built-in support for a wide range of monday.com features, including creating a new board, and adding, deleting, and getting items on the board.
 
 On this page, you'll find a list of operations the monday.com node supports and links to more resources.
 
-/// warning | Minimum required version
+{% hint style="warning" %}
+**Minimum required version**
+
 This node requires n8n version 1.22.6 or above.
-///
+{% endhint %}
 
-/// note | Credentials
-Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [monday.com credentials](../credentials/mondaycom.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Board
     * Archive a board
@@ -46,9 +61,9 @@ Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md
     * Get items by column value
     * Move item to group
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mondaycom') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse monday.com node documentation integration templates](https://n8n.io/integrations/mondaycom) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

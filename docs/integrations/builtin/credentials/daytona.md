@@ -1,7 +1,12 @@
 ---
 title: Daytona credentials
 description: Documentation for the Daytona credentials. Use these credentials to authenticate Daytona in n8n, a workflow automation platform.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
+layout:
+  description:
+    visible: false
 ---
 
 # Daytona credentials

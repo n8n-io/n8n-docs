@@ -140,6 +140,7 @@ Lemlist
 Lenovo
 [Ll]inter
 LLMs?
+[Ll]oopback
 Luhn
 Luxon
 [Mm]agnetopause
@@ -214,6 +215,7 @@ Qdrant
 QRadar
 Qualys
 [Qq]uickstarts
+Qwen
 Realtime
 Rekognition
 requester

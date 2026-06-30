@@ -1,15 +1,20 @@
 ---
 title: Crypto credentials
 description: Documentation for the Crypto credentials. Use these credentials to authenticate the Crypto node in n8n, a workflow automation platform.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
 priority: medium
+layout:
+  description:
+    visible: false
 ---
 
 # Crypto credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Crypto](/integrations/builtin/core-nodes/n8n-nodes-base.crypto.md)
+- [Crypto](../core-nodes/n8n-nodes-base.crypto.md)
 
 ## Credential fields
 
@@ -23,4 +28,4 @@ Configure only the fields the action you're using needs. All fields are optional
 
 ## Related resources
 
-Refer to the [Crypto node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.crypto.md) for details on each action.
+Refer to the [Crypto node documentation](../core-nodes/n8n-nodes-base.crypto.md) for details on each action.

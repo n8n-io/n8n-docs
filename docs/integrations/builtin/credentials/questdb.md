@@ -1,28 +1,39 @@
 ---
 title: QuestDB credentials
-description: Documentation for QuestDB credentials. Use these credentials to authenticate QuestDB in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for QuestDB credentials. Use these credentials to authenticate
+  QuestDB in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: QuestDB credentials
+originalFilePath: integrations/builtin/credentials/questdb.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/questdb'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/questdb'
+layout:
+  description:
+    visible: false
 ---
 
-# QuestDB credentials
+# QuestDB credentials <a href="#questdb-credentials" id="questdb-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md)
+- [QuestDB](../app-nodes/n8n-nodes-base.questdb.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on an instance of [QuestDB](https://questdb.io/).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [QuestDB's documentation](https://questdb.io/docs) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential, you'll need:
 

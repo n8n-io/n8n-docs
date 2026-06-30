@@ -1,30 +1,43 @@
 ---
 title: monday.com credentials
-description: Documentation for monday.com credentials. Use these credentials to authenticate monday.com in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for monday.com credentials. Use these credentials to
+  authenticate monday.com in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: monday.com credentials
+originalFilePath: integrations/builtin/credentials/mondaycom.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mondaycom'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mondaycom'
+layout:
+  description:
+    visible: false
 ---
 
-# monday.com credentials
+# monday.com credentials <a href="#mondaycom-credentials" id="mondaycom-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md)
+- [monday.com](../app-nodes/n8n-nodes-base.mondaycom.md)
 
-/// info | Minimum required version
+{% hint style="info" %}
+**Minimum required version**
+
 The monday.com node requires n8n version 1.22.6 or above.
-///
+{% endhint %}
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [monday.com's API documentation](https://developer.monday.com/api-reference/docs/basics) for more information about authenticating with the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need a [monday.com](https://monday.com/) account and:
 
@@ -39,7 +52,7 @@ To get your token:
 
 Refer to [monday.com API Authentication](https://developer.monday.com/api-reference/docs/authentication) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [monday.com](https://monday.com/) account and:
 

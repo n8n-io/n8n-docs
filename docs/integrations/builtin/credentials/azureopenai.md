@@ -1,32 +1,43 @@
 ---
 title: Azure OpenAI credentials
-description: Documentation for Azure OpenAI credentials. Use these credentials to authenticate OpenAI in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Azure OpenAI credentials. Use these credentials to
+  authenticate OpenAI in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Azure OpenAI credentials
+originalFilePath: integrations/builtin/credentials/azureopenai.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/azureopenai'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/azureopenai'
+layout:
+  description:
+    visible: false
 ---
 
-# Azure OpenAI credentials
+# Azure OpenAI credentials <a href="#azure-openai-credentials" id="azure-openai-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chat Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
-- [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
+- [Chat Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+- [Embeddings Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Azure](https://azure.microsoft.com) subscription.
 - Access to Azure OpenAI within that subscription. You may need to [request access](https://aka.ms/oai/access) if your organization doesn't yet have it.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 - Azure Entra ID (OAuth2)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -36,13 +47,15 @@ To configure this credential, you'll need:
 
 To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource).
 
-/// note | Model name for Azure OpenAI nodes
+{% hint style="info" %}
+**Model name for Azure OpenAI nodes**
+
 Once you deploy the resource, use the **Deployment name** as the model name for the Azure OpenAI nodes where you're using this credential.
-///
+{% endhint %}
 
-## Using Azure Entra ID (OAuth2)
+## Using Azure Entra ID (OAuth2) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
@@ -51,7 +64,7 @@ For self-hosted users, there are two main steps to configure OAuth2 from scratch
 
 Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts). 
 
-### Register an application
+### Register an application <a href="#register-an-application" id="register-an-application"></a>
 
 Register an application with the Microsoft Identity Platform:
 
@@ -68,7 +81,7 @@ Register an application with the Microsoft Identity Platform:
 
 Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2) for more information.
 
-### Generate a client secret
+### Generate a client secret <a href="#generate-a-client-secret" id="generate-a-client-secret"></a>
 
 With your application created, generate a client secret for it:
 
@@ -83,7 +96,7 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
-## Setting custom scopes
+## Setting custom scopes <a href="#setting-custom-scopes" id="setting-custom-scopes"></a>
 
 Azure Entra ID credentials use the following scopes by default:
 

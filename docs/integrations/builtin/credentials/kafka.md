@@ -1,22 +1,39 @@
 ---
 title: Kafka credentials
-description: Documentation for Kafka credentials. Use these credentials to authenticate Kafka in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Kafka credentials. Use these credentials to authenticate
+  Kafka in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Kafka credentials
+originalFilePath: integrations/builtin/credentials/kafka.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/kafka'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/kafka'
+layout:
+  description:
+    visible: false
 ---
 
-# Kafka credentials
+# Kafka credentials <a href="#kafka-credentials" id="kafka-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md)
-- [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md)
+- [Kafka](../app-nodes/n8n-nodes-base.kafka.md)
+- [Kafka Trigger](../trigger-nodes/n8n-nodes-base.kafkatrigger.md)
 
-## Supported authentication methods
+{% hint style="info" %}
+**Schema Registry**
+
+These credentials authenticate the Kafka brokers. To connect to an authenticated Confluent Schema Registry for Avro encoding and decoding, use the separate [Schema Registry credentials](/integrations/builtin/credentials/schemaregistry.md).
+{% endhint %}
+
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Client ID
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Kafka's documentation](https://kafka.apache.org/documentation/) for more information about using the service.
 
@@ -24,7 +41,7 @@ If you're new to Kafka, refer to the [Apache Kafka Quickstart](https://kafka.apa
 
 Refer to [Encryption and Authentication using SSL](https://kafka.apache.org/documentation/#security_ssl) for working with SSL in Kafka.
 
-## Using client ID
+## Using client ID <a href="#using-client-id" id="using-client-id"></a>
 
 To configure this credential, you'll need a running Kafka environment and:
 

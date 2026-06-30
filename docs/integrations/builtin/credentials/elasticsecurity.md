@@ -1,30 +1,41 @@
 ---
 title: Elastic Security credentials
-description: Documentation for Elastic Security credentials. Use these credentials to authenticate Elastic Security in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Elastic Security credentials. Use these credentials to
+  authenticate Elastic Security in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Elastic Security credentials
+originalFilePath: integrations/builtin/credentials/elasticsecurity.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/elasticsecurity'
+layout:
+  description:
+    visible: false
 ---
 
-# Elastic Security credentials
+# Elastic Security credentials <a href="#elastic-security-credentials" id="elastic-security-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Elastic Security](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity.md)
+- [Elastic Security](../app-nodes/n8n-nodes-base.elasticsecurity.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Elastic Security](https://www.elastic.co/security) account.
 - [Deploy](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) an application.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 - API Key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Elastic Security's documentation](https://www.elastic.co/guide/en/security/current/es-overview.html) for more information about the service.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need:
 
@@ -36,11 +47,13 @@ To configure this credential, you'll need:
     2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
     3. Add this in n8n as the **Base URL**.
 
-/// note | Custom endpoint aliases
-If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html) to a deployment, update your n8n credential **Base URL** with the new endpoint.
-///
+{% hint style="info" %}
+**Custom endpoint aliases**
 
-## Using API key
+If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html) to a deployment, update your n8n credential **Base URL** with the new endpoint.
+{% endhint %}
+
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

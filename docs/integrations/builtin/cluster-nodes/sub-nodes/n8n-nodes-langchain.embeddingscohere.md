@@ -1,22 +1,38 @@
 ---
 title: Embeddings Cohere node documentation
-description: Learn how to use the Embeddings Cohere node in n8n. Follow technical documentation to integrate Embeddings Cohere node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Embeddings Cohere node in n8n. Follow technical
+  documentation to integrate Embeddings Cohere node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Embeddings Cohere node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere
+layout:
+  description:
+    visible: false
 ---
 
-# Embeddings Cohere node
+# Embeddings Cohere node <a href="#embeddings-cohere-node" id="embeddings-cohere-node"></a>
 
-Use the Embeddings Cohere node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+Use the Embeddings Cohere node to generate embeddings[^1] for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cohere.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/cohere.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Model**: Select the model to use to generate the embedding. Choose from:
     * **Embed-English-v2.0(4096 Dimensions)**
@@ -25,14 +41,15 @@ You can find authentication information for this node [here](/integrations/built
 
 Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models).
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'embeddings-cohere') ]]
 
-## Related resources
+[Browse Embeddings Cohere node documentation integration templates](https://n8n.io/integrations/embeddings-cohere) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/cohere/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
+[^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.

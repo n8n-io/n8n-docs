@@ -1,25 +1,34 @@
 ---
 title: Oracle Database Vector Store node documentation
 description: Learn how to use the Oracle Database Vector Store node in n8n. Follow technical documentation to integrate Oracle Database Vector Store node into your workflows.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
 priority: medium
+layout:
+  description:
+    visible: false
 ---
 
 # Oracle Database Vector Store node
 
-Use the Oracle Database Vector Store node to interact with Oracle Database as a [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+Use the Oracle Database Vector Store node to interact with Oracle Database as a vector store[^1]. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a chain[^2], or connect directly to an agent[^3] as a tool[^4].
 
 On this page, you'll find the node parameters for the Oracle Database Vector Store node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/oracledb.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-/// note | Oracle Database vector support
+You can find authentication information for this node [here](../../credentials/oracledb.md).
+{% endhint %}
+
+{% hint style="info" %}
+**Oracle Database vector support**
+
 Your Oracle Database instance must support Oracle AI Vector Search for vector store operations. For more details, refer to the [Oracle AI Vector Search Guide](https://docs.oracle.com/pls/topic/lookup?ctx=en/database/oracle/oracle-database/26/arpls&id=VECSE-GUID-29B9E7E1-5A99-4D95-8614-58CA07D29957).
-///
+{% endhint %}
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node usage patterns
 
@@ -33,29 +42,29 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Oracle Database Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+You can connect the Oracle Database Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Oracle Database Vector Store node.
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Oracle Database Vector Store node to fetch documents from the Oracle Database Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Oracle Database Vector Store node to fetch documents from the Oracle Database Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Oracle Database Vector Store.
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Oracle Database Vector Store node. Rather than connecting the Oracle Database Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](../sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Oracle Database Vector Store node. Rather than connecting the Oracle Database Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the Simple Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Oracle Database Vector Store.
 
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
 
 ### Rerank Results
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
 <!-- vale off -->
 ### Get Many parameters
@@ -101,15 +110,19 @@ If you specify more than one metadata filter field using the UI, all fields must
 
 For advanced filtering, Oracle Database Vector Store passes metadata filters through to Oracle AI Vector Search. This supports richer filter objects, including arrays, nested filters, comparison operators such as `$gte`, exclusion operators such as `$nin`, and logical operators such as `$and`.
 
-When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](../sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'oracle-database-vector-store') ]]
+[Browse Oracle Database Vector Store node documentation integration templates](https://n8n.io/integrations/oracle-database-vector-store) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources
 
 Refer to [Oracle AI Vector Search documentation](https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/) for more information about vector search in Oracle Database.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+
+[^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+[^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
+[^3]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+[^4]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.

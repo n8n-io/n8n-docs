@@ -1,13 +1,26 @@
 ---
 title: Data Table node table operations
-description: Reference documentation for Data Table node table operations, including create, delete, list, and update.
-contentType: [integration, reference]
+description: >-
+  Reference documentation for Data Table node table operations, including
+  create, delete, list, and update.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Data Table node table operations
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables
+url: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.datatable/tables
+layout:
+  description:
+    visible: false
 ---
 
-Use table operations to create, delete, list and update data tables. Refer to the [Data Table node](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md) documentation for more information on the node itself.
+Use table operations to create, delete, list and update data tables. Refer to the [Data Table node](README.md) documentation for more information on the node itself.
 
-## Create a data table
+## Create a data table <a href="#create-a-data-table" id="create-a-data-table"></a>
 
 Use this operation to create a new data table.
 
@@ -20,13 +33,13 @@ Enter these parameters:
     - **Name:** Set a name for the column, or define using an expression.
     - **Type:** Select the data type for the column: **Boolean**, **Date**, **Number**, or **String**.:
 
-### Create a data table options
+### Create a data table options <a href="#create-a-data-table-options" id="create-a-data-table-options"></a>
 
 Use these options to further refine the action's behavior:
 
 - **Reuse Existing Tables:** Enable to return an existing table if one exists with the same name, without throwing an error.
 
-## Delete a data table
+## Delete a data table <a href="#delete-a-data-table" id="delete-a-data-table"></a>
 
 Use this operation to permanently delete an existing data table. This action can't be undone.
 
@@ -39,7 +52,7 @@ Enter these parameters:
     - **By Name:** Enter the name of your data table.
     - **By ID:** Enter the ID of your data table
 
-## List data tables
+## List data tables <a href="#list-data-tables" id="list-data-tables"></a>
 
 Use this operation to list existing data tables. You can return all tables, all tables up to a defined limit, or filter for tables to return.
 
@@ -49,7 +62,7 @@ Enter these parameters:
 - **Operation:** Select **List**.
 - **Return All:** Enable to return all matching tables. Or, disable and enter a **Limit** for the number of tables to return, for example `50`.
 
-### List data tables options
+### List data tables options <a href="#list-data-tables-options" id="list-data-tables-options"></a>
 
 Use these options to further refine the action's behavior:
 
@@ -57,7 +70,7 @@ Use these options to further refine the action's behavior:
 - **Sort Field:** Select a field to sort results on.
 - **Sort Direction:** Select whether to sort results in **Ascending** or **Descending** direction.
 
-## Update a data table
+## Update a data table <a href="#update-a-data-table" id="update-a-data-table"></a>
 
 Use this operation to update the name of an existing data tables.
 

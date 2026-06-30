@@ -1,28 +1,39 @@
 ---
 title: Okta credentials
-description: Documentation for the Okta credentials. Use these credentials to authenticate Okta in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Okta credentials. Use these credentials to authenticate
+  Okta in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Okta credentials
+originalFilePath: integrations/builtin/credentials/okta.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/okta'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/okta'
+layout:
+  description:
+    visible: false
 ---
 
-# Okta credentials
+# Okta credentials <a href="#okta-credentials" id="okta-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Okta](/integrations/builtin/app-nodes/n8n-nodes-base.okta.md)
+- [Okta](../app-nodes/n8n-nodes-base.okta.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Okta free trial](https://www.okta.com/free-trial/) or create an admin account on an existing Okta org.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - SSWS API Access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Okta's documentation](https://developer.okta.com/docs/reference/) for more information about the service.
 
-## Using SSWS API access token
+## Using SSWS API access token <a href="#using-ssws-api-access-token" id="using-ssws-api-access-token"></a>
 
 To configure this credential, you'll need:
 

@@ -1,21 +1,36 @@
 ---
 title: Facebook Graph API node documentation
-description: Learn how to use the Facebook Graph API node in n8n. Follow technical documentation to integrate Facebook Graph API node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Facebook Graph API node in n8n. Follow technical
+  documentation to integrate Facebook Graph API node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Facebook Graph API node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi
+layout:
+  description:
+    visible: false
 ---
 
-# Facebook Graph API node
+# Facebook Graph API node <a href="#facebook-graph-api-node" id="facebook-graph-api-node"></a>
 
 Use the Facebook Graph API node to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
 
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Facebook Graph API credentials](../credentials/facebookgraph.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * **Default**
     * GET
@@ -27,9 +42,9 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
     * DELETE 
 
 
-### Parameters
+### Parameters <a href="#parameters" id="parameters"></a>
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 * **Host URL**: The host URL for the request. The following options are available:
     * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.
@@ -45,7 +60,7 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 * **Send Binary File**: Available for `POST` operations. If enabled binary data is sent as the body. Requires setting the following:
     * **Input Binary Field**: Name of the binary property which contains the data for the file to be uploaded.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'facebook-graph-api') ]]
+
+[Browse Facebook Graph API node documentation integration templates](https://n8n.io/integrations/facebook-graph-api) or [search all templates](https://n8n.io/workflows/)

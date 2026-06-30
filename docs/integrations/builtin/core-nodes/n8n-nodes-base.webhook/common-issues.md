@@ -1,27 +1,56 @@
 ---
-title: Webhook node common issues 
-description: Documentation for common issues and questions in the Webhook node in n8n, a workflow automation platform. Includes details of the issues and suggested solutions.
-contentType: [integration, reference]
+title: Webhook node common issues
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Webhook node common issues
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues
+url: >-
+  https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues
+description: >-
+  Documentation for common issues and questions in the Webhook node in n8n, a
+  workflow automation platform. Includes details of the issues and suggested
+  solutions.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Common issues and questions
+# Common issues
 
-Here are some common issues and questions for the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) and suggested solutions.
+Here are some common issues and questions for the [Webhook node](./) and suggested solutions.
 
-## Listen for multiple HTTP methods
+## Listen for multiple HTTP methods <a href="#listen-for-multiple-http-methods" id="listen-for-multiple-http-methods"></a>
 
 By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:
 
 1. Open the node **Settings**.
-1. Turn on **Allow Multiple HTTP Methods**.
-1. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
+2. Turn on **Allow Multiple HTTP Methods**.
+3. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
 
 The Webhook node has an output for each method, so you can perform different actions depending on the method.
 
-## Use the HTTP Request node to trigger the Webhook node
+## Use the HTTP Request node to trigger the Webhook node <a href="#use-the-http-request-node-to-trigger-the-webhook-node" id="use-the-http-request-node-to-trigger-the-webhook-node"></a>
 
-The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node makes HTTP requests to the URL you specify.
+The [HTTP Request](../n8n-nodes-base.httprequest/) node makes HTTP requests to the URL you specify.
 
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
@@ -30,14 +59,14 @@ The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/i
 5. If using the test URL for the webhook node: execute the workflow with the Webhook node.
 6. Execute the HTTP Request node.
 
-## Use curl to trigger the Webhook node
+## Use curl to trigger the Webhook node <a href="#use-curl-to-trigger-the-webhook-node" id="use-curl-to-trigger-the-webhook-node"></a>
 
-You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node. 
+You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node.
 
-/// note
-In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
+{% hint style="info" %}
+In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.\
 The examples make GET requests. You can use whichever HTTP method you set in **HTTP Method**.
-///
+{% endhint %}
 
 Make an HTTP request without any parameters:
 
@@ -62,9 +91,10 @@ Make an HTTP request to send a file:
 ```sh
 curl --request POST <https://your-n8n.url/webhook/path> --form 'key=@/path/to/file'
 ```
+
 Replace `/path/to/file` with the path of the file you want to send.
 
-## Send a response of type string
+## Send a response of type string <a href="#send-a-response-of-type-string" id="send-a-response-of-type-string"></a>
 
 By default, the response format is JSON or an array. To send a response of type string:
 
@@ -72,7 +102,7 @@ By default, the response format is JSON or an array. To send a response of type 
 2. Select **Response Data** > **First Entry JSON**.
 3. Select **Add Option** > **Property Name**.
 4. Enter the name of the property that contains the response. This defaults to `data`.
-5. Connect an [Edit Fields node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) to the Webhook node.
+5. Connect an [Edit Fields node](../n8n-nodes-base.set.md) to the Webhook node.
 6. In the Edit Fields node, select **Add Value** > **String**.
 7. Enter the name of the property in the **Name** field. The name should match the property name from step 4.
 8. Enter the string value in the **Value** field.
@@ -80,26 +110,26 @@ By default, the response format is JSON or an array. To send a response of type 
 
 When you call the Webhook, it sends the string response from the Edit Fields node.
 
-## Test URL versus Production URL
+## Test URL versus Production URL <a href="#test-url-versus-production-url" id="test-url-versus-production-url"></a>
 
 n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
 
 While building or testing a workflow, use the **Test URL**. Once you're ready to use your Webhook URL in production, use the **Production URL**.
 
-| **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
-| :--- | --- | --- | :---: |
-| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
-| Production URL | Publish the workflow | Until workflow is unpublished | :x: |
+| **URL type**   | **How to trigger**                                                         | **Listening duration**        | **Data shown in editor UI?** |
+| -------------- | -------------------------------------------------------------------------- | ----------------------------- | :--------------------------: |
+| Test URL       | Select **Listen for test event** and trigger a test event from the source. | 120 seconds                   |               ✅              |
+| Production URL | Publish the workflow                                                       | Until workflow is unpublished |               ❌              |
 
-Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
+Refer to [Workflow development](workflow-development.md) for more information.
 
-## IP addresses in whitelist are failing to connect
+## IP addresses in whitelist are failing to connect <a href="#ip-addresses-in-whitelist-are-failing-to-connect" id="ip-addresses-in-whitelist-are-failing-to-connect"></a>
 
 If you're unable to connect from IP addresses in your IP whitelist, check if you are running n8n behind a reverse proxy.
 
-If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/index.md) to the number of reverse-proxies n8n is running behind.
+If so, set the `N8N_PROXY_HOPS` [environment variable](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables) to the number of reverse-proxies n8n is running behind.
 
-## Only one webhook per path and method
+## Only one webhook per path and method <a href="#only-one-webhook-per-path-and-method" id="only-one-webhook-per-path-and-method"></a>
 
 n8n only permits registering one webhook for each path and HTTP method combination (for example, a `GET` request for `/my-request`). This avoids ambiguity over which webhook should receive requests.
 
@@ -108,7 +138,7 @@ If you receive a message that the path and method you chose are already in use, 
 * Unpublish the workflow with the conflicting webhook.
 * Change the webhook path and/or method for one of the conflicting webhooks.
 
-## Timeouts on n8n Cloud
+## Timeouts on n8n Cloud <a href="#timeouts-on-n8n-cloud" id="timeouts-on-n8n-cloud"></a>
 
 n8n Cloud uses Cloudflare to protect against malicious traffic. If your webhook doesn't respond within 100 seconds, the incoming request will fail with a [524 status code](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/).
 

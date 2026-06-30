@@ -1,29 +1,40 @@
 ---
 title: ServiceNow credentials
-description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for ServiceNow credentials. Use these credentials to
+  authenticate ServiceNow in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: ServiceNow credentials
+originalFilePath: integrations/builtin/credentials/servicenow.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/servicenow'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/servicenow'
+layout:
+  description:
+    visible: false
 ---
 
-# ServiceNow credentials
+# ServiceNow credentials <a href="#servicenow-credentials" id="servicenow-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md)
+- [ServiceNow](../app-nodes/n8n-nodes-base.servicenow.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference) developer account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [ServiceNow's API documentation](https://developer.servicenow.com/dev.do#!/reference/api/washingtondc/rest/) for more information about the service.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need:
 
@@ -31,7 +42,7 @@ To configure this credential, you'll need:
 - A **Password**: Enter your ServiceNow password.
 - A **Subdomain**: The subdomain for your servicenow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 

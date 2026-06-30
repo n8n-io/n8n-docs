@@ -1,29 +1,40 @@
 ---
 title: Emelia credentials
-description: Documentation for Emelia credentials. Use these credentials to authenticate Emelia in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Emelia credentials. Use these credentials to authenticate
+  Emelia in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Emelia credentials
+originalFilePath: integrations/builtin/credentials/emelia.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/emelia'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/emelia'
+layout:
+  description:
+    visible: false
 ---
 
-# Emelia credentials
+# Emelia credentials <a href="#emelia-credentials" id="emelia-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia.md)
-- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md)
+- [Emelia](../app-nodes/n8n-nodes-base.emelia.md)
+- [Emelia Trigger](../trigger-nodes/n8n-nodes-base.emeliatrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Emelia](https://emelia.io) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Emelia's API documentation](https://docs.emelia.io/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

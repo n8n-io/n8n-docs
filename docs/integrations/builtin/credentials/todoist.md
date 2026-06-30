@@ -1,26 +1,37 @@
 ---
 title: Todoist credentials
-description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Todoist credentials. Use these credentials to authenticate
+  Todoist in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Todoist credentials
+originalFilePath: integrations/builtin/credentials/todoist.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/todoist'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/todoist'
+layout:
+  description:
+    visible: false
 ---
 
-# Todoist credentials
+# Todoist credentials <a href="#todoist-credentials" id="todoist-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist.md)
+- [Todoist](../app-nodes/n8n-nodes-base.todoist.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Todoist's REST API documentation](https://developer.todoist.com/rest/v2/#overview) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [Todoist](https://todoist.com/) account and:
 
@@ -34,11 +45,11 @@ To get your **API Key**:
 
 Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-token-Jpzx9IIlB) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Todoist](https://todoist.com/) account and:
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need a [Todoist](https://todoist.com/) account and:
 
 - A **Client ID**
 - A **Client Secret**

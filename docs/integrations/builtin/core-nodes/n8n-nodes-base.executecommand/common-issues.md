@@ -55,3 +55,22 @@ To fix this error, review the following:
 This error happens when your command returns more output than the Execute Command node is able to process at one time.
 
 To avoid this error, reduce output your command produces. Check your command's manual page or documentation to see if there are flags to limit or filter output. If not, you may need to pipe the output to another command to remove unneeded info.
+
+
+## PowerShell commands get truncated at line breaks
+
+On Windows, the Execute Command node passes the **Command** parameter to the system shell as a single string. If your command contains line breaks, the shell only executes the first line and ignores the rest.
+
+This is a Windows shell limitation. The underlying `cmd.exe` process treats each line break as the end of the command.
+
+To fix this, write your PowerShell command on a single line. If the command is complex, join statements with semicolons:
+
+```powershell
+powershell -Command "Get-ChildItem C:\Data; Write-Output 'Done'"
+```
+
+For longer scripts, save the script to a file and run it with the `-File` flag instead:
+
+```powershell
+powershell -File C:\Scripts\my-script.ps1
+```

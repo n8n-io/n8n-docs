@@ -19,17 +19,19 @@ layout:
 
 # Scheduler environment variables <a href="#scheduler-environment-variables" id="scheduler-environment-variables"></a>
 
-The durable scheduler runs time-based work (such as schedule triggers) from a persisted store, so scheduled executions survive restarts. It's off by default. Set `N8N_SCHEDULER_ENABLED` to `true` to opt in. The remaining variables tune the engine and only take effect when the scheduler is enabled.
+The durable scheduler runs time-based workflows (such as Schedule Trigger nodes) from a database-backed queue. Due runs are recorded in the database before they start, so they survive restarts, and in a multi-instance setup each run executes once rather than once per instance.
+
+The scheduler is off by default, so existing instances keep using the in-memory scheduler and behave as before. Set `N8N_SCHEDULER_ENABLED` to `true` to opt in. The remaining variables only take effect when the scheduler is enabled; the defaults suit most instances, so change them only to tune timing precision or storage.
 
 All durations are in seconds.
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether the durable scheduler is enabled. |
-| `N8N_SCHEDULER_MATERIALIZATION_WINDOW` | Number | `60` | How far ahead, in seconds, the scheduler turns due schedules into concrete tasks. Must be greater than 0. |
-| `N8N_SCHEDULER_SWEEP_INTERVAL` | Number | `10` | Interval, in seconds, between sweeps that materialize due schedules into tasks. Must be greater than 0. |
-| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | Interval, in seconds, between executor passes that claim and run due tasks. Must be greater than 0. |
-| `N8N_SCHEDULER_REAPER_INTERVAL` | Number | `30` | Interval, in seconds, between reaper passes that reclaim expired task leases. Must be greater than 0. |
-| `N8N_SCHEDULER_LEASE_DURATION` | Number | `60` | How long, in seconds, a claimed task is leased before the reaper may reclaim it. Must be greater than 0. |
-| `N8N_SCHEDULER_RETENTION` | Number | `604800` | How long, in seconds, to retain finished tasks before purging them. Defaults to 7 days. Must be greater than 0. |
-| `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | Minimum allowed interval, in seconds, between schedule fires. Set to `0` to disable the clamp. |
+| `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether the durable scheduler is enabled. When on, scheduled runs are stored in the database before they execute, so a restart doesn't drop them and, across multiple instances, each run executes once. |
+| `N8N_SCHEDULER_MATERIALIZATION_WINDOW` | Number | `60` | How far into the future, in seconds, the scheduler works out and records upcoming runs. A larger window commits more runs in advance (more resilient to downtime, slightly more storage churn). Must be greater than 0. |
+| `N8N_SCHEDULER_SWEEP_INTERVAL` | Number | `10` | How often, in seconds, the scheduler scans active schedules to record their upcoming runs (those falling within the materialization window). Must be greater than 0. |
+| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | How often, in seconds, the scheduler checks for recorded runs whose time has arrived and starts them. Sets the worst-case delay between a run's scheduled time and when it starts; lower it for tighter timing at the cost of more frequent polling. Must be greater than 0. |
+| `N8N_SCHEDULER_REAPER_INTERVAL` | Number | `30` | How often, in seconds, the scheduler looks for runs an instance claimed but never finished (for example after a crash or shutdown) and makes them available again for another instance. Must be greater than 0. |
+| `N8N_SCHEDULER_LEASE_DURATION` | Number | `60` | How long, in seconds, a single instance holds an exclusive claim on a run it picked up, so no other instance starts the same one. If that instance stops without finishing, the claim expires after this long and another may take over. Keep it comfortably above the time a run needs to get going. Must be greater than 0. |
+| `N8N_SCHEDULER_RETENTION` | Number | `604800` | How long, in seconds, finished runs are kept in the scheduler's tables before being deleted. Defaults to 7 days. Raise it to keep scheduling history longer for auditing; lower it to reclaim database space sooner. Must be greater than 0. |
+| `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | The smallest gap, in seconds, allowed between consecutive runs of the same schedule. A schedule set to run more often is slowed to this gap. Defaults to `0`, which disables the limit and honors whatever interval each schedule specifies. |

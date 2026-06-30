@@ -26,7 +26,7 @@ layout:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
-Refer to [External storage](../../scaling/use-external-storage.md) for more information on using external storage for binary data.
+Refer to [External storage](../../scaling/use-external-storage.md) for more information on using external storage for binary data and execution data.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

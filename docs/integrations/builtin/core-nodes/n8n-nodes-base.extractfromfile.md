@@ -87,6 +87,6 @@ This parameter is only available for these operations:
 
 [Browse Extract From File integration templates](https://n8n.io/integrations/extract-from-file) or [search all templates](https://n8n.io/workflows/)
 
-[HTTP Request Node]: /integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
-[Webhook Node]: /integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
+[HTTP Request Node]: /integrations/builtin/core-nodes/n8n-nodes-base.httprequest/README.md
+[Webhook Node]: /integrations/builtin/core-nodes/n8n-nodes-base.webhook/README.md
 [base64]: https://datatracker.ietf.org/doc/html/rfc4648#section-4

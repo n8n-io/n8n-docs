@@ -36,7 +36,6 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 * [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/)
-* [HTTP Request Tool (legacy)](../../../../integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

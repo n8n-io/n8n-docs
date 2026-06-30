@@ -61,7 +61,11 @@ These examples show a range of possible prompts and tasks.
 
 #### Example 1: Find a piece of data inside a second dataset <a href="#example-1-find-a-piece-of-data-inside-a-second-dataset" id="example-1-find-a-piece-of-data-inside-a-second-dataset"></a>
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/find-a-piece-of-data.json) and import it into n8n.
+To try the example yourself, download the example workflow and import it into n8n:
+
+{% file src="../.gitbook/assets/find-a-piece-of-data.json" %}
+Example workflow
+{% endfile %}
 
 In the third Code node, enter this prompt:
 
@@ -85,7 +89,11 @@ return notionUser ? [{ json: { notionId: notionUser.json.id } }] : [];
 
 #### Example 2: Data transformation <a href="#example-2-data-transformation" id="example-2-data-transformation"></a>
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/data-transformation.json) and import it into n8n.
+To try the example yourself, download the example workflow and import it into n8n:
+
+{% file src="../.gitbook/assets/data-transformation.json" %}
+Example workflow
+{% endfile %}
 
 In the **Join items** Code node, enter this prompt:
 
@@ -104,7 +112,11 @@ return [{ json: { usernames: result } }];
 
 #### Example 3: Summarize data and create a Slack message <a href="#example-3-summarize-data-and-create-a-slack-message" id="example-3-summarize-data-and-create-a-slack-message"></a>
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/summarize-data.json) and import it into n8n.
+To try the example yourself, download the example workflow and import it into n8n:
+
+{% file src="../.gitbook/assets/summarize-data.json" %}
+Example workflow
+{% endfile %}
 
 In the **Summarize** Code node, enter this prompt:
 
@@ -165,7 +177,11 @@ If your incoming data contains nested fields, using dot notation to reference th
 
 !["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](../.gitbook/assets/reference-data-dot-notation.png)
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/reference-incoming-data-explicitly.json) and import it into n8n.
+To try the example yourself, download the example workflow and import it into n8n:
+
+{% file src="../.gitbook/assets/reference-incoming-data-explicitly.json" %}
+Example workflow
+{% endfile %}
 
 In the second Code node, enter this prompt:
 

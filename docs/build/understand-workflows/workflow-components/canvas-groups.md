@@ -16,7 +16,7 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Canvas Groups were released in version 2.28.0.
+Canvas Groups are available from version `2.28.0`.
 {% endhint %}
 
 Canvas Groups let you organize related nodes into a single named group on the canvas. Group the nodes that handle one part of a workflow, name it, and collapse it when you want a cleaner view. A Canvas Group saves with the workflow, so anyone who opens it sees the same structure. You can also collapse a Canvas Group for a cleaner view, which is a personal preference saved in your browser.

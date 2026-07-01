@@ -48,5 +48,5 @@ From the top navigation bar, select the three dots in the upper right <img src="
 
 ## From the command line <a href="#from-the-command-line" id="from-the-command-line"></a>
 
-* Export: See the [full list of commands ](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-workflows-and-credentials)for exporting workflows or credentials.
-* Import: See the [full list of commands ](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-workflows-and-credentials)for importing workflows or credentials.
+* Export: See the [export commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities)for exporting workflows or credentials.
+* Import: See the [import commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities)for importing workflows or credentials.

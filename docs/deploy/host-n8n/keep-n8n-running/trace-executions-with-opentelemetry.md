@@ -24,12 +24,6 @@ layout:
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/) traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
 
-{% hint style="info" %}
-**Feature availability**
-
-OpenTelemetry workflow tracing is only available on self-hosted n8n.
-{% endhint %}
-
 Watch an overview of OpenTelemetry tracing in n8n:
 
 {% embed url="https://www.youtube.com/embed/xOi8K_-GLRM" %}

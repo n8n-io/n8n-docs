@@ -35,7 +35,7 @@ n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welc
 {% hint style="info" %}
 **Enterprise-tier feature**
 
-You will need an [Enterprise license key](../manage-your-license.md) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
+You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
 {% endhint %}
 
 ### Setup <a href="#setup" id="setup"></a>

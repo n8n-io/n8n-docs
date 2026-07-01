@@ -50,7 +50,7 @@ From the top navigation bar, select the three dots in the upper right <img src="
 
 ### Using the new n8n package CLI
 
-See [n8n packages](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/build/manage-workflows/n8n-packages) to understand how to import and export workflows.
+See [n8n packages](n8n-packages.md) to understand how to import and export workflows.
 This feature is still under development (Beta).
 
 ### Using the Server CLI
@@ -60,5 +60,5 @@ This feature is still under development (Beta).
 
 ## From the Public API
 
-See [n8n packages](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/build/manage-workflows/n8n-packages) to understand how to import and export workflows via our Public API.
+See [n8n packages](n8n-packages.md) to understand how to import and export workflows via our Public API.
 This feature is still under development (Beta).

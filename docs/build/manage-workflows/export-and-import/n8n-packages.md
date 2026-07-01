@@ -78,7 +78,7 @@ Today, this import flow matches credentials by ID only, and the credential must 
 
 For the full list of options, see [Import a package](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/n8n-package#post-n8n-packages-import) in the Public API reference.
 
-You can also import a package using the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoint:
+You can also import a package using the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoint. See the [`package import` command reference](https://github.com/n8n-io/n8n/blob/master/packages/%40n8n/cli/docs/commands/package.md#package-import) for the available arguments:
 
 ```bash
 n8n-cli package import --file=export.n8np --conflict-policy=fail

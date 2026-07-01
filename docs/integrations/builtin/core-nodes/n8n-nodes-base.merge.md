@@ -143,7 +143,7 @@ SELECT * FROM input1 WHERE name = ? AND age > ?;
 Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use an expression with an array so the node can pull the name from each input item and compare the age:
 
 ```js
-{{ [ $json.name, 25 ] }}
+{{ [ "Alex", 20 ] }}
 ```
 
 ### Choose Branch <a href="#choose-branch" id="choose-branch"></a>

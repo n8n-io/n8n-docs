@@ -140,7 +140,7 @@ You can write a query with `?` placeholders:
 SELECT * FROM input1 WHERE name = ? AND age > ?;
 ```
 
-Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use an expression with an array so the node can pull the name from each input item and compare the age:
+Then in **Query Parameters**, provide the values to use. You can provide values separated by comma or an expression that returns an array. For this example, use an array:
 
 ```js
 {{ [ "Alex", 20 ] }}

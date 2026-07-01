@@ -115,6 +115,37 @@ SELECT * FROM input1 LEFT JOIN input2 ON input1.name = input2.id
 
 Data from previous nodes are available as tables and you can use them in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements) for a full list of supported SQL statements. 
 
+#### Use query parameters <a href="#use-query-parameters" id="use-query-parameters"></a>
+
+When creating a SQL query in the Merge node, you can use the **Query Parameters** field in the **Options** section to load values into the query. n8n treats query parameter values as data, which helps avoid changing the SQL query structure with dynamic values.
+
+For example, you want to find a person by their name. Given the following data in `input1`:
+
+```js
+[
+    {
+        "name": "Alex",
+        "age": 21
+    },
+    {
+        "name": "Jamie",
+        "age": 33
+    }
+]
+```
+
+You can write a query with `?` placeholders:
+
+```sql
+SELECT * FROM input1 WHERE name = ? AND age > ?;
+```
+
+Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use an expression with an array so the node can pull the name from each input item and compare the age:
+
+```js
+{{ [ $json.name, 25 ] }}
+```
+
 ### Choose Branch <a href="#choose-branch" id="choose-branch"></a>
 
 Choose which input to keep. This option always waits until the data from both inputs is available. You can choose to **Output**:

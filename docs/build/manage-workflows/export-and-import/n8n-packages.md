@@ -97,7 +97,6 @@ To import a package, provide the `.n8np` file along with options that control:
 * Whether imported workflows keep their original ID or get a new one.
 * How n8n matches the credentials the workflows depend on.
 
-Today, this import flow matches credentials by ID only, and the credential must already exist on the target instance before you import.
 
 For the full list of options, see [Import a package](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/n8n-package#post-n8n-packages-import) in the Public API reference.
 
@@ -106,3 +105,9 @@ You can also import a package using the [n8n CLI](https://app.gitbook.com/s/r7wK
 ```bash
 n8n-cli package import --file=export.n8np --conflict-policy=fail
 ```
+
+### Importing credentials
+
+Today, this import flow matches credentials by ID only, and the credential must already exist on the target instance before you import.
+
+// TODO: explain the special case of credential bindings, where when you import the first time, you need to capture credentials you created and pass them in on future imports

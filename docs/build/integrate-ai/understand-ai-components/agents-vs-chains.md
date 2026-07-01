@@ -39,7 +39,7 @@ In this workflow you can choose whether your chat query goes to an agent[^1] or 
 
 This workflow uses:
 
-* [Chat Trigger](/broken/spaces/BKcbOzIWja8NfqKDcqHc/pages/ufgV9cVbZYhO7UuKUvU1): start your workflow and respond to user chat interactions. The node provides a customizable chat interface.
+* [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger): start your workflow and respond to user chat interactions. The node provides a customizable chat interface.
 * [Switch node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch): directs your query to either the agent or chain, depending on which you specify in your query. If you say "agent" it sends it to the agent. If you say "chain" it sends it to the chain.
 * [Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent): the Agent node interacts with other components of the workflow and makes decisions about what tools[^3] to use.
 * [Basic LLM Chain](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm): the Basic LLM Chain node supports chatting with a connected LLM, but doesn't support memory[^4] or tools.

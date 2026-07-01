@@ -1,8 +1,25 @@
 ---
-description: Connect an AI tool to the n8n docs Model Context Protocol (MCP) server to search and read the documentation.
+description: >-
+  Connect an AI tool to the n8n docs Model Context Protocol (MCP) server to
+  search and read the documentation.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Connect to the n8n docs MCP server
@@ -21,7 +38,7 @@ The server exposes published documentation only. It uses HTTP transport, so your
 
 ## Connect your AI tool
 
-The steps differ by tool, but each one needs the server URL above. The following examples cover some common tools.
+The steps differ by tool, but each one needs the server URL above. The following examples cover some of the most common tools.
 
 {% tabs %}
 {% tab title="Claude Code" %}

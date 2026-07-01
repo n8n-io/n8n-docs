@@ -76,6 +76,15 @@ The `manifest.json` file describes the package's contents:
 * `workflows`: a list of the exported workflows, each with its `id`, `name`, and `target` (the path to its directory under `workflows`).
 * `requirements.credentials`: a list of the credentials the exported workflows use. Each entry has the credential's `id`, `name`, and `type`, and lists the IDs of the workflows that use it (`usedByWorkflows`). n8n doesn't include credential secrets in the package.
 
+## Use cases
+
+Use n8n packages when you need a repeatable, automatable way to move workflows between instances. Common scenarios include:
+
+* **CI/CD pipelines**: promote workflows from a development instance to staging or production as part of an automated pipeline.
+* **Backups**: export workflows and their credential references so you can restore them later, or recreate them on a new instance.
+* **Sharing workflows**: hand a workflow to a teammate or another team without sharing credential secrets.
+* **Instance migration**: move workflows from one n8n instance to another, for example when consolidating instances or setting up a new environment.
+
 ## Export a package
 
 To export a package, call the export endpoint with the IDs of the workflows you want to include. n8n returns a `.n8np` file containing those workflows and their credential stubs.

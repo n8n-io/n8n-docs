@@ -68,7 +68,7 @@ Some Microsoft services require extra information for OAuth2. Refer to [Service-
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
-2. [Generate a client secret](#generate-a-client-secret) for that application.
+2. Add a credential to that application, either by [generating a client secret](#generate-a-client-secret) or [registering a certificate](#authenticate-with-a-certificate).
 
 Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts).
 
@@ -104,6 +104,51 @@ With your application created, generate a client secret for it:
 1. Log in to your Microsoft account and allow the app to access your info.
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
+
+### Authenticate with a certificate <a href="#authenticate-with-a-certificate" id="authenticate-with-a-certificate"></a>
+
+Instead of a client secret, you can authenticate the application with a **certificate** (a signed client assertion, also known as `private_key_jwt`). This is useful when your organization's security policy doesn't allow text client secrets. The OAuth2 flow is otherwise unchanged: the same sign-in, consent screen, and permissions apply. Only the application's proof of identity at the token exchange and refresh changes from a secret to a signed assertion.
+
+The default authentication method is **Client Secret**, so existing credentials keep working. Switch a credential to **Certificate** only when you want to use one.
+
+#### Generate a certificate <a href="#generate-a-certificate" id="generate-a-certificate"></a>
+
+If you don't already have one, create a self-signed certificate and private key with [OpenSSL](https://www.openssl.org/):
+
+```shell
+openssl req -x509 -newkey rsa:2048 -nodes \
+  -keyout private-key.pem \
+  -out certificate.pem \
+  -days 365 \
+  -subj "/CN=n8n-microsoft-cert"
+```
+
+This produces two files:
+
+- `private-key.pem`: the RSA private key. Keep it private: you paste it into n8n, and n8n never sends it to Microsoft.
+- `certificate.pem`: the public certificate. You upload this to your Entra app registration.
+
+The private key must be an **RSA** key. n8n signs the client assertion with RS256, so EC and Ed25519 keys don't work.
+
+#### Register the certificate on your app <a href="#register-the-certificate-on-your-app" id="register-the-certificate-on-your-app"></a>
+
+1. On your Microsoft application page, select **Certificates & secrets** in the left navigation.
+2. Select the **Certificates** tab, then select **Upload certificate**.
+3. Select your `certificate.pem` file (the public certificate, not the private key).
+4. Enter an optional **Description**, such as `n8n credential`, then select **Add**.
+
+Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a certificate.
+
+#### Complete the credential in n8n <a href="#complete-the-certificate-credential-in-n8n" id="complete-the-certificate-credential-in-n8n"></a>
+
+1. Set **Authentication** to **Certificate**.
+2. Paste the contents of `private-key.pem` into the **Private Key** field.
+3. Paste the contents of `certificate.pem` into the **Certificate** field.
+4. If you see other fields in the n8n credential, refer to [Service-specific settings](#service-specific-settings) below for guidance on completing those fields.
+5. Select **Connect my account** in n8n to finish setting up the connection.
+6. Log in to your Microsoft account and allow the app to access your info.
+
+Token refresh also uses the certificate, so n8n never sends a client secret.
 
 ### Microsoft Graph API Base URL <a href="#microsoft-graph-api-base-url" id="microsoft-graph-api-base-url"></a>
 

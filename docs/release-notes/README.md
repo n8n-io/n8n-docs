@@ -8,6 +8,18 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/Pv5qtwcPHKJKdJPRJTs2/~/reusable/rUuvvFUxRYV3Lyc96WOk/" %}
 
+### n8n 2.23 — OpenTelemetry custom telemetry tags
+
+**Released:** 2026-05-27
+
+You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
+
+Learn more in the [documentation](https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19

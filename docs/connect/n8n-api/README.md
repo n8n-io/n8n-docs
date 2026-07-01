@@ -32,7 +32,7 @@ Using n8n's public API[^1], you can programmatically perform many of the same ta
 * How to [authenticate](authentication.md)
 * [Paginating](pagination.md) results
 * Using the [built-in API playground](use-an-api-playground.md) (self-hosted n8n only)
-* [Endpoint reference](api-reference.md)
+* The [endpoint reference](api-reference.md)
 
 n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 

@@ -101,6 +101,7 @@ Every command supports `--help` for detailed usage.
 | `user` | `list`, `get` |
 | `config` | `set-url`, `set-api-key`, `show` |
 | `source-control` | `pull` |
+| `package (beta)` | `export`, `import` |
 | `skill` | `install` |
 | `audit` | (top-level) |
 | `login` / `logout` | (top-level) |
@@ -178,3 +179,19 @@ n8n-cli credential create --type=gmailOAuth2 --name='My Gmail' --file=cred.json
 n8n-cli project create --name="My Project"
 n8n-cli workflow transfer <id> --project=<projectId>
 ```
+
+### Export and import packages <a href="#export-and-import-packages" id="export-and-import-packages"></a>
+
+{% hint style="warning" %}
+**Beta**
+
+The `package` command is still in beta. Breaking changes may occur
+{% endhint %}
+
+```bash
+n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
+n8n-cli package import --file=export.n8np --conflict-policy=fail
+n8n-cli package import --file=export.n8np --project=<project-id> --workflow-id-policy=source --conflict-policy=skip
+```
+
+See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what a package contains and how n8n resolves conflicts on import.

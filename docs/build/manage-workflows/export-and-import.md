@@ -48,5 +48,17 @@ From the top navigation bar, select the three dots in the upper right <img src="
 
 ## From the command line <a href="#from-the-command-line" id="from-the-command-line"></a>
 
+### Using the new n8n package CLI
+
+See [n8n packages](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/build/manage-workflows/n8n-packages) to understand how to import and export workflows.
+This feature is still under development (Beta).
+
+### Using the Server CLI
+
 * Export: See the [export commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities)for exporting workflows or credentials.
 * Import: See the [import commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities)for importing workflows or credentials.
+
+## From the Public API
+
+See [n8n packages](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/build/manage-workflows/n8n-packages) to understand how to import and export workflows via our Public API.
+This feature is still under development (Beta).

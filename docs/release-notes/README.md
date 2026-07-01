@@ -3,12 +3,10 @@
 Every n8n release moves the platform forward. The changelog is where we call out the changes that matter most to the technical teams who build on n8n: new capabilities, more control over how your workflows run, and clearer visibility into what they're actually doing. Each entry is tied to the version it shipped in, newest first, and written to stand on its own, so it's easy to share the one update your team has been waiting for.
 
 {% hint style="info" %}
-For complete, version-by-version detail on every release, see the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. This changelog covers stable n8n 2.x releases onward; release notes for [1.x](https://docs.n8n.io/release-notes/~/revisions/1K4QjDYoZjlEf3FgMnCh/1.x) and [0.x](https://docs.n8n.io/release-notes/~/revisions/1K4QjDYoZjlEf3FgMnCh/0.x) remain archived.
+For complete, version-by-version detail on every release, see the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. This changelog covers stable n8n 2.x releases onward; release notes for [1.x](release-notes-1.x.md) and [0.x](release-notes-0.x.md) remain archived.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/Pv5qtwcPHKJKdJPRJTs2/~/reusable/rUuvvFUxRYV3Lyc96WOk/" %}
-
-
 
 ### n8n 2.22 — Connect to MCP servers with less setup
 
@@ -32,7 +30,7 @@ Connect to MCP servers with less setup
 
 The [Microsoft Agent 365 Trigger node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
 
-<figure><img src=".gitbook/assets/microsoft_agent_365 (1).png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across <br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/microsoft_agent_365 (1).png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
 
 You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://docs.n8n.io/flow-logic/subworkflows/). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
 
@@ -285,8 +283,6 @@ Get precise control over where human judgment is required, without limiting what
 {% embed url="https://youtu.be/B-_nIFI27VY" %}
 Human in the loop for AI tool calls
 {% endembed %}
-
-
 
 ### n8n 2.5 — Chat node: human-in-the-loop actions
 

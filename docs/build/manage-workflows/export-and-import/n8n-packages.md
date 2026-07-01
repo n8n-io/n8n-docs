@@ -51,7 +51,30 @@ We are working on adding support for those.
 
 ## What's in a package
 
-A package is a tar file with the `.n8np` extension. It contains a manifest and the workflows you exported, along with the credentials those workflows use. n8n never includes credential secrets in a package. Instead, it exports a stub with the credential's ID, name, and type, so you can match it to a credential on the target instance.
+A package is a tar file with the `.n8np` extension. It contains a `manifest.json` and the workflows you exported, along with the credentials those workflows use. n8n never includes credential secrets in a package. Instead, it exports a stub with the credential's ID, name, and type, so you can match it to a credential on the target instance.
+
+### Content overview
+
+Extracting a `.n8np` archive gives you a directory containing a `manifest.json` file and a `workflows` directory. n8n creates one subdirectory per exported workflow, each holding a `workflow.json` file with that workflow's nodes, connections, and settings:
+
+```
+export/
+├── manifest.json
+└── workflows/
+    ├── marketing-agent/
+    │   └── workflow.json
+    └── personal-ai-assistant/
+        └── workflow.json
+```
+
+The `manifest.json` file describes the package's contents:
+
+* `packageFormatVersion`: the version of the package format.
+* `exportedAt`: the timestamp when n8n created the package.
+* `sourceN8nVersion`: the version of n8n that exported the package.
+* `sourceId`: an identifier for the n8n instance that exported the package.
+* `workflows`: a list of the exported workflows, each with its `id`, `name`, and `target` (the path to its directory under `workflows`).
+* `requirements.credentials`: a list of the credentials the exported workflows use. Each entry has the credential's `id`, `name`, and `type`, and lists the IDs of the workflows that use it (`usedByWorkflows`). n8n doesn't include credential secrets in the package.
 
 ## Export a package
 

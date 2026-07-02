@@ -36,7 +36,7 @@ Any feedback via GitHub issues on our main n8n repository is appreciated.
 
 A package is a "snapshot" tar file that bundles a workflow together with a manifest file describing its dependencies, similar to an `npm` package. You could export a package from one n8n instance and import it into another.
 
-You can import and export n8n packages through the Public API of your n8n instance, or through the n8n CLI, which wraps the same Public API endpoints.
+You can import and export n8n packages through the [Public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/n8n-package#post-n8n-packages-export) of your n8n instance, or through the n8n CLI, which wraps the same Public API endpoints.
 
 ## Known limitations
 
@@ -97,6 +97,16 @@ You can also export a package using the [n8n CLI](https://app.gitbook.com/s/r7wK
 n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
 ```
 
+Provide workflow IDs or project IDs, but not both.
+
+| Flag | Description |
+|------|-------------|
+| `-w, --workflow-id` | Workflow ID to include. Repeat the flag to export several. |
+| `-p, --project-id` | Project ID to include. Repeat the flag to export several. |
+| `-o, --output` | File to write the package to. Defaults to `export.n8np`. |
+
+Provide at least one `--workflow-id` or `--project-id`. Exporting workflows requires the API key to hold the `workflow:export` permission scope, and exporting projects requires the `project:export` permission scope.
+
 ## Import a package
 
 To import a package, provide the `.n8np` file along with options that control:
@@ -109,14 +119,28 @@ To import a package, provide the `.n8np` file along with options that control:
 
 For the full list of options, see [Import a package](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/n8n-package#post-n8n-packages-import) in the Public API reference.
 
-You can also import a package using the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoint. See the [`package import` command reference](https://github.com/n8n-io/n8n/blob/master/packages/%40n8n/cli/docs/commands/package.md#package-import) for the available arguments:
+You can also import a package using the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoint:
 
 ```bash
 n8n-cli package import --file=export.n8np --conflict-policy=fail
+n8n-cli package import --file=export.n8np --project=<id> --conflict-policy=new-version
+n8n-cli package import --file=export.n8np --conflict-policy=fail --credential-missing-mode=must-preexist
 ```
+
+| Flag | Description |
+|------|-------------|
+| `--file` | Path to the `.n8np` package file. Required. |
+| `--conflict-policy` | What to do when a workflow already exists by source ID: `new-version`, `fail`, or `skip`. Required. |
+| `--project` | Target project ID. Defaults to your personal project. |
+| `--folder` | Target folder ID within the project. Defaults to the project root. |
+| `--workflow-id-policy` | Whether imported workflows keep their source ID (`source`) or receive a new one (`new`). |
+| `--credential-matching-mode` | How credential references are matched on the target instance (`id-only`, more options to come). |
+| `--credential-missing-mode` | What to do when a referenced credential can't be resolved. `create-stub`, the instance default, creates empty placeholder credentials in the target project. `must-preexist` requires every referenced credential to already exist. |
+
+Importing requires the API key to hold the `workflow:import` permission scope. When the import is blocked, for example by a workflow conflict under `--conflict-policy=fail`, or by an unresolved credential under `--credential-missing-mode=must-preexist`, the command exits with a non-zero status and lists the blocking issues. With the default `create-stub` mode, n8n stubs missing credentials instead of blocking the import.
 
 ### Importing credentials
 
 Today, this import flow matches credentials by ID only, and the credential must already exist on the target instance before you import.
 
-// TODO: explain the special case of credential bindings, where when you import the first time, you need to capture credentials you created and pass them in on future imports
+<!-- TODO: explain the special case of credential bindings, where when you import the first time, you need to capture credentials you created and pass them in on future imports -->

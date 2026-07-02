@@ -4,7 +4,7 @@ contentType: howto
 nodeTitle: n8nPackages
 originalFilePath: workflows/n8n-packages.md
 url: https://docs.n8n.io/build/manage-workflows/export-and-import/n8n-packages
-description: How you can export and import content from your n8n instance with n8n pcakages
+description: How you can export and import content from your n8n instance with n8n packages
 layout:
   width: default
   title:
@@ -40,14 +40,14 @@ You can import and export n8n packages through the [Public API](https://app.gitb
 
 ## Known limitations
 
-There is no support for including the following data in n8n packages yet:
+The following entities are not supported in n8n packages yet:
 - subworkflows
 - error workflows
 - data tables
 - folders
 - projects
 
-We are working on adding support for those.
+We're working on adding support for those.
 
 ## What's in a package
 

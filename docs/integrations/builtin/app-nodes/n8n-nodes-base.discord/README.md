@@ -50,9 +50,13 @@ Refer to [Discord credentials](../../credentials/discord.md) for guidance on set
 	- Send
 	* Send and Wait for Response
 - Member
+	- Ban
 	- Get Many
+	- Kick
 	- Role Add
 	- Role Remove
+	- Timeout
+	- Unban
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 

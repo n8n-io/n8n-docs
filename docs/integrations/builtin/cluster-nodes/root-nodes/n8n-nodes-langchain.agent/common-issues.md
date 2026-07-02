@@ -74,6 +74,6 @@ To resolve this, click the + Chat Model button at the bottom of your screen when
 
 ## No prompt specified error <a href="#no-prompt-specified-error" id="no-prompt-specified-error"></a>
 
-This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](../../../core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression.md).
+This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](../../../core-nodes/n8n-nodes-langchain.chattrigger/README.md).
 
 To resolve this issue, find the **Prompt** parameter of the AI Agent node and change it from **Connected Chat Trigger Node** to **Define below**. This allows you to manually build your prompt by referencing output data from other nodes or by adding static text.

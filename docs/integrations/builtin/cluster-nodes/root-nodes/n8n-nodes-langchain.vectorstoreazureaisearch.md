@@ -134,13 +134,13 @@ Use the node directly in workflows to insert or retrieve documents without an ag
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-Connect to an [AI agent's](n8n-nodes-langchain.agent/) tool connector to use the vector store as a searchable knowledge base:
+Connect to an [AI agent's](n8n-nodes-langchain.agent/README.md) tool connector to use the vector store as a searchable knowledge base:
 
 AI agent (tools connector) → Azure AI Search Vector Store node
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) for retrieval-augmented generation:
+Use with [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) and [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) for retrieval-augmented generation:
 
 Question and Answer Chain (Retriever) → Vector Store Retriever (Vector Store) → Azure AI Search Vector Store
 

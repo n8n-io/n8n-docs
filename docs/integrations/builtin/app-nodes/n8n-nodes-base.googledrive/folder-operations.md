@@ -36,7 +36,7 @@ layout:
 
 # Folder operations
 
-Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](./) for more information on the Google Drive node itself.
+Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](./README.md) for more information on the Google Drive node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -46,7 +46,7 @@ Use this operation to create a new folder in a drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Folder**.
 * **Operation**: Select **Create**.
 * **Folder Name**: The name to use for the new folder.
@@ -68,7 +68,7 @@ Use this operation to delete a folder from a drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Folder**.
 * **Operation**: Select **Delete**.
 * **Folder**: Choose a folder you want to delete.
@@ -87,7 +87,7 @@ Use this operation to add sharing permissions to a folder.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Folder**.
 * **Operation**: Select **Share**.
 * **Folder**: Choose a file you want to move.

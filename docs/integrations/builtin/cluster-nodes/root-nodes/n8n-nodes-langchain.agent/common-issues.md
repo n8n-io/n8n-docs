@@ -37,7 +37,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [AI Agent node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [AI Agent node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Internal error: 400 Invalid value for 'content' <a href="#internal-error-400-invalid-value-for-content" id="internal-error-400-invalid-value-for-content"></a>
 
@@ -60,7 +60,7 @@ You might see this in one of two scenarios:
 
 ## Error in sub-node Simple Memory <a href="#error-in-sub-node-simple-memory" id="error-in-sub-node-simple-memory"></a>
 
-This error displays when n8n runs into an issue with the [Simple Memory](../../sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
+This error displays when n8n runs into an issue with the [Simple Memory](../../sub-nodes/n8n-nodes-langchain.memorybufferwindow/README.md) sub-node.
 
 It most often occurs when your workflow or the workflow template you copied uses an older version of the Simple memory node (previously known as "Window Buffer Memory").
 

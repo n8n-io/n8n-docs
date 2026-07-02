@@ -81,6 +81,6 @@ Use the Batching option to send more than one request, reducing the request size
 
 ### Paginate results <a href="#paginate-results" id="paginate-results"></a>
 
-APIs paginate their results when they need to send more data than they can handle in a single response. For more information on pagination in the HTTP Request node, refer to [HTTP Request node | Pagination](core-nodes/n8n-nodes-base.httprequest/#pagination).
+APIs paginate their results when they need to send more data than they can handle in a single response. For more information on pagination in the HTTP Request node, refer to [HTTP Request node | Pagination](core-nodes/n8n-nodes-base.httprequest/README.md#pagination).
 
 [^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.

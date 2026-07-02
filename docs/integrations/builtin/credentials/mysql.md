@@ -35,8 +35,8 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [MySQL](../app-nodes/n8n-nodes-base.mysql/)
-* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
+* [MySQL](../app-nodes/n8n-nodes-base.mysql/README.md)
+* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
 
 {% hint style="info" %}
 **Agent node users**

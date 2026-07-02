@@ -35,7 +35,7 @@ layout:
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) in your workflows.
 
-Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](/broken/spaces/r7wKI4I1BgdBCuq5Cvcx/pages/NjbdMwHH3QGuRDWQrwJY) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/user) for working with the API endpoints directly.
 
 {% hint style="info" %}
 **Credentials**
@@ -164,7 +164,7 @@ Configure this operation with this parameter:
   * `connections`
   * `settings`
 
-Refer to [n8n API reference](/broken/spaces/r7wKI4I1BgdBCuq5Cvcx/pages/NjbdMwHH3QGuRDWQrwJY) for more information.
+Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/user) for more information.
 
 ## Get many workflows <a href="#get-many-workflows" id="get-many-workflows"></a>
 

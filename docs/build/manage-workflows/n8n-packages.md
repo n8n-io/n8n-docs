@@ -40,8 +40,8 @@ You can import and export n8n packages through the [Public API](https://app.gitb
 
 ## Known limitations
 
-The following entities are not supported in n8n packages yet:
-- subworkflows
+The following entities aren't supported in n8n packages yet:
+- sub-workflows
 - error workflows
 - data tables
 - folders

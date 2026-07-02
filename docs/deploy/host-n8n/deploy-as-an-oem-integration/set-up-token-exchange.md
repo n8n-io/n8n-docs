@@ -538,7 +538,7 @@ A `200` response with an `access_token` confirms your keys, claims, and configur
 
 ## Related resources
 
-* [OEM deployment overview](./): embed and surface n8n's interface inside your product.
+* [OEM deployment overview](./README.md): embed and surface n8n's interface inside your product.
 * [Set up SSO](../configure-n8n/security/configure-sso.md): organization-wide single sign-on through SAML or OIDC.
 * [HTTP Request credentials: Using OAuth2](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/httprequest#using-oauth2): set up a generic OAuth 2.0 credential.
 * [OAuth 2.0 Token Exchange (RFC 8693)](https://datatracker.ietf.org/doc/html/rfc8693): the token exchange specification.

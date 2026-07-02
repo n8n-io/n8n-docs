@@ -36,7 +36,7 @@ layout:
 
 # WhatsApp Business Account
 
-Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook Trigger](./) for more information on the trigger itself.
+Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook Trigger](./README.md) for more information on the trigger itself.
 
 {% hint style="warning" %}
 **Use WhatsApp trigger**

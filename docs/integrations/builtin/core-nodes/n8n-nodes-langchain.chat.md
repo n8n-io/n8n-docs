@@ -127,7 +127,7 @@ Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node docu
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[Browse Chat node documentation integration templates](https://n8n.io/integrations/chat) or [search all templates](https://n8n.io/workflows/)
+[Browse n8n integration templates](https://n8n.io/integrations/) or [search all templates](https://n8n.io/workflows/)
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

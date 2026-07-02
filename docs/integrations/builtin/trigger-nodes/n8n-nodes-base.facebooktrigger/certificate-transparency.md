@@ -37,7 +37,7 @@ layout:
 
 # Certificate Transparency
 
-Use this object to receive updates about newly issued certificates for any domains that you have subscribed for certificate alerts or phishing alerts. Refer to [Facebook Trigger](./) for more information on the trigger itself.
+Use this object to receive updates about newly issued certificates for any domains that you have subscribed for certificate alerts or phishing alerts. Refer to [Facebook Trigger](./README.md) for more information on the trigger itself.
 
 {% hint style="info" %}
 **Credentials**

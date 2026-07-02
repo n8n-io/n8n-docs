@@ -106,7 +106,7 @@ Files this node writes on Cloud aren't guaranteed to persist across workflow exe
 
 n8n reserves the `/home/node/.n8n/` directory for its internal state. Don't write your own files there.
 
-For persistent file handling on Cloud, use a cloud storage node such as [AWS S3](../app-nodes/n8n-nodes-base.awss3.md), [Google Drive](../app-nodes/n8n-nodes-base.googledrive/), or [FTP](n8n-nodes-base.ftp.md).
+For persistent file handling on Cloud, use a cloud storage node such as [AWS S3](../app-nodes/n8n-nodes-base.awss3.md), [Google Drive](../app-nodes/n8n-nodes-base.googledrive/README.md), or [FTP](n8n-nodes-base.ftp.md).
 {% endhint %}
 
 ### Self-hosted n8n <a href="#self-hosted-n8n" id="self-hosted-n8n"></a>

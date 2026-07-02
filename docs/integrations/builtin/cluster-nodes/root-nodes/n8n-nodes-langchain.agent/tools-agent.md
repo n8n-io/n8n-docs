@@ -223,7 +223,7 @@ When enabled, the AI Agent sends data back to the user in real-time as it genera
 {% hint style="info" %}
 **Streaming requirements**
 
-For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](../../../core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression.md) or [Webhook](../../../core-nodes/n8n-nodes-base.webhook/) node with **Response Mode** set to **Streaming**.
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](../../../core-nodes/n8n-nodes-langchain.chattrigger/README.md) or [Webhook](../../../core-nodes/n8n-nodes-base.webhook/) node with **Response Mode** set to **Streaming**.
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>

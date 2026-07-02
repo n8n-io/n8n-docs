@@ -35,10 +35,10 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [OracleDB](../app-nodes/app-nodes.md)
+* [OracleDB](../app-nodes/n8n-nodes-base.oracledb.md)
 * [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
-* [Oracle Database Vector Store](../../../../integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md)
-* [Embeddings Oracle Database](../../../../integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md)
+* [Oracle Database Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb.md)
+* [Embeddings Oracle Database](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb.md)
 
 {% hint style="info" %}
 These nodes do not support SSH tunnels. They require Oracle Database **19c or later**. For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, they also require Oracle Client Libraries **19c or later**.

@@ -194,4 +194,4 @@ n8n-cli package import --file=export.n8np --conflict-policy=fail
 n8n-cli package import --file=export.n8np --project=<project-id> --workflow-id-policy=source --conflict-policy=skip
 ```
 
-See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what a package contains and how n8n resolves conflicts on import, and the [`package import` command reference](https://github.com/n8n-io/n8n/blob/master/packages/%40n8n/cli/docs/commands/package.md#package-import) for the available arguments.
+See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for a detailed overview of the available flags and what makes up a package.

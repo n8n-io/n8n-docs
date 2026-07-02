@@ -23,7 +23,7 @@ You can use these credentials to authenticate the following node:
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an-account) developer account.
+Create a [Brandfetch developer](https://developers.brandfetch.com) developer account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -31,10 +31,10 @@ Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis) for more information about the service.
+Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/get-started) for more information about the service.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account) to generate an API key.
+- An **API Key**: Refer to the [Brandfetch Create an Account documentation](https://developers.brandfetch.com) to generate an API key.

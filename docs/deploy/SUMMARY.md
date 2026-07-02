@@ -46,6 +46,7 @@
         * [Nodes](host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md)
         * [OpenTelemetry](host-n8n/configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
         * [Queue mode](host-n8n/configure-n8n/basic-configuration/use-environment-variables/queue-mode.md)
+        * [Scheduler](host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md)
         * [Security](host-n8n/configure-n8n/basic-configuration/use-environment-variables/security.md)
         * [Source control](host-n8n/configure-n8n/basic-configuration/use-environment-variables/source-control.md)
         * [SSO](host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso.md)

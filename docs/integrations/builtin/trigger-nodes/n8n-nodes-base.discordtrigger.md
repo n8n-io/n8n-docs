@@ -25,7 +25,7 @@ You can find authentication information for this node [here](../credentials/disc
 {% hint style="info" %}
 **Examples and templates**
 
-For usage examples and templates to help you get started, refer to n8n's [Discord Trigger integrations](https://n8n.io/integrations/discord-trigger/) page.
+For usage examples and templates to help you get started, refer to n8n's [Discord integrations](https://n8n.io/integrations/discord/) page.
 {% endhint %}
 
 {% hint style="info" %}
@@ -78,7 +78,7 @@ To enable them, open your application in the [Discord developer portal](https://
 
 n8n provides an app node for Discord. You can find the node docs [here](../app-nodes/n8n-nodes-base.discord/).
 
-View [example workflows and related content](https://n8n.io/integrations/discord-trigger/) on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/discord/) on n8n's website.
 
 Refer to Discord's [Gateway documentation](https://discord.com/developers/docs/events/gateway) for details about the events API this node uses.
 

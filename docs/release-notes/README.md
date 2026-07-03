@@ -53,6 +53,13 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
 
+#### Instance Data Duration
+
+n8n now retains insights data for 365 days by default on all instances, up from the previous roughly 180 days. This makes year-over-year workflow performance comparisons and seasonal trend analysis available without any configuration. On self-hosted instances, the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable lets operators set retention anywhere from 1 to 730 days, and the pruning behavior is now fully independent of license tier.
+
+Learn more in the [documentation](<https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights>).
+
+
 ### n8n 2.19 — IdP role mapping and instance bootstrapping (Enterprise)
 
 **Released:** 2026-04-28

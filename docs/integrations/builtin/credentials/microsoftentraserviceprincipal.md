@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Node version requirements**
 
-The Microsoft Excel 365, Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. Support for the Microsoft SharePoint node is planned.
+The Microsoft Excel 365, Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. n8n plans to support the Microsoft SharePoint node.
 {% endhint %}
 
 ## Prerequisites
@@ -55,7 +55,7 @@ With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With
 - **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel 365, **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
 - **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
 - **Pickers see the whole tenant.** For example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
-- **Some operations aren't available.** Anything that only exists for a signed-in user, such as drive search or Teams chats, is hidden or blocked with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
+- **Some operations aren't available.** The nodes hide anything that only exists for a signed-in user, such as drive search or Teams chats, or block it with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
 
 ## Set up the app registration
 
@@ -125,6 +125,8 @@ Add the application permissions for every node you plan to use, then grant admin
 
 The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permission per operation:
 
+<!-- vale off -->
+
 | Teams operation | Application permission |
 |---|---|
 | Channel: Get, Get Many | `Channel.ReadBasic.All` |
@@ -137,6 +139,8 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 | Trigger: New Channel Message | `ChannelMessage.Read.All` |
 | Trigger: New Team Member | `TeamMember.Read.All` |
 
+<!-- vale on -->
+
 {% hint style="info" %}
 **Reading Teams channel messages uses a metered API**
 
@@ -147,10 +151,14 @@ Reading channel messages with this credential uses Microsoft's metered Teams API
 
 Some Microsoft Graph operations only exist for a signed-in user. When you select this credential, the nodes hide or block them with an explanatory error. Use an OAuth2 credential if you need them:
 
-- **Microsoft OneDrive**: File: Search and Folder: Search. Drive search is delegated-only in Microsoft Graph.
+<!-- vale off -->
+
+- **Microsoft OneDrive**: File: Search and Folder: Search. Microsoft Graph only offers drive search to signed-in users.
 - **Microsoft Excel 365**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
 - **Microsoft Teams**: the whole Chat Message resource, Channel Message: Create, and Task: Get Many in Group Member mode.
 - **Microsoft Teams Trigger**: the New Chat and New Chat Message events, and the watch-all options. Pick a specific team or channel instead.
+
+<!-- vale on -->
 
 The Microsoft Outlook, Microsoft Outlook Trigger, and Microsoft To Do nodes have no blocked operations.
 
@@ -160,12 +168,16 @@ File: Share and Folder: Share in Microsoft OneDrive stay available, but creating
 
 Select the **Microsoft Graph API Base URL** that matches your tenant's cloud environment:
 
+<!-- vale off -->
+
 - **Global (https://graph.microsoft.com)**: standard Microsoft 365 tenants (default)
 - **US Government (https://graph.microsoft.us)**: Azure US Government tenants, including GCC High
 - **US Government DOD (https://dod-graph.microsoft.us)**: Azure US Government Department of Defense tenants
 - **China (https://microsoftgraph.chinacloudapi.cn)**: Microsoft 365 operated by 21Vianet in China
 
 n8n derives the matching sign-in endpoint automatically, for example `login.microsoftonline.us` for the US Government clouds and `login.partner.microsoftonline.cn` for China, so you don't need to configure any token or authorization URLs. Complete the app registration in your cloud's own Entra admin center, and the nodes route all Microsoft Graph calls through the endpoint you selected.
+
+<!-- vale on -->
 
 ## Common issues
 

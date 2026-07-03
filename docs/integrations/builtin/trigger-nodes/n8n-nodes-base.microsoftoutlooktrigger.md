@@ -30,7 +30,7 @@ On this page, you'll find a list of events the Microsoft Outlook Trigger node ca
 This node's **Authentication** dropdown offers three options:
 
 - **Outlook OAuth2**: the Microsoft Outlook-specific OAuth2 credential (default).
-- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Mail.ReadWrite`).
+- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Mail.ReadWrite`).
 - **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
 
 You can find authentication information for this node [here](../credentials/microsoft.md).

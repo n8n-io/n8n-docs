@@ -8,6 +8,14 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+### n8n 2.24 — Package Format & Import-Export API
+
+**Released:** 2026-07-03
+
+n8n now supports a portable `.n8np` package format for moving workflows between instances, along with REST API and CLI commands to automate the process. Export any set of workflows with their credential stubs and dependency manifest, then import to a target instance with validation, conflict resolution, and credential binding handled before any data is written. Conflict policies let you update in place, fail fast, or skip existing workflows, and credential stubs ensure every dependency is accounted for without exposing secret values.
+
+Learn more in the [documentation](<https://docs.n8n.io/build/manage-workflows/n8n-packages/>).
+
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19

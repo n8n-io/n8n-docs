@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the Microsoft To Do node supports
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
+Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication. This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user.
 {% endhint %}
 
 {% hint style="info" %}

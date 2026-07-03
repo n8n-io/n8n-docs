@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication. This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user.
+Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication. From version 2, this node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Service Principal (App-Only)** in the **Authentication** dropdown.
 {% endhint %}
 
 {% hint style="info" %}

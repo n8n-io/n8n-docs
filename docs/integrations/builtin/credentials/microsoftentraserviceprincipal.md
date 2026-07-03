@@ -52,8 +52,8 @@ Refer to Microsoft's documentation for more information:
 
 With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With the Service Principal credential, there's no signed-in user, which changes how you use the nodes:
 
-- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive and Microsoft Excel 365, **Mailbox** in Microsoft Outlook, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, a user object ID, or a drive ID. There's no list picker for these fields: paste the value directly.
-- **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
+- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel 365, **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
+- **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy. Pickers see the whole tenant too: for example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
 - **Some operations aren't available.** Anything that only exists for a signed-in user, such as drive search or Teams chats, is hidden or blocked with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
 
 ## Set up the app registration
@@ -117,7 +117,7 @@ Add the application permissions for every node you plan to use, then grant admin
 | All nodes (credential test) | `Organization.Read.All` or `Directory.Read.All` |
 | Microsoft OneDrive and Microsoft OneDrive Trigger | `Files.ReadWrite.All` (`Files.Read.All` is enough for read-only operations and the trigger) |
 | Microsoft Excel 365 | `Files.ReadWrite.All` |
-| Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, attachments), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts). Add only the ones your operations use. |
+| Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments — also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
 | Microsoft Outlook Trigger | `Mail.Read` |
 | Microsoft Teams and Microsoft Teams Trigger | `Team.ReadBasic.All`, plus the permissions for your operations in the table below |
 | Microsoft To Do | `Tasks.ReadWrite.All` |
@@ -153,6 +153,8 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 
 The Microsoft Outlook, Microsoft Outlook Trigger, and Microsoft To Do nodes have no blocked operations.
 
+File: Share and Folder: Share in Microsoft OneDrive stay available, but creating sharing links app-only can need extra tenant or admin configuration. The node shows a notice on these operations.
+
 ## Sovereign cloud environments
 
 Select the **Microsoft Graph API Base URL** that matches your tenant's cloud environment:
@@ -169,6 +171,6 @@ n8n derives the matching sign-in endpoint automatically, for example `login.micr
 Here are common errors and issues with the Microsoft Entra Service Principal credentials:
 
 - **The credential test fails even though you granted the node permissions.** The connection test calls `GET /v1.0/organization`, which needs an admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission. Add it and grant admin consent.
-- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent).
+- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft Teams nodes show a clearer message instead: "The app registration is missing a consented application permission for this operation."
 - **Permission or secret changes don't take effect right away.** n8n caches the access token. Retest the credential after granting consent or rotating a secret, and recreate it if the cached token keeps failing.
 - **"Microsoft Entra tenant ID is not a valid GUID or domain."** Enter the Directory (tenant) ID GUID from the app registration's **Overview** page, or a verified domain such as `contoso.onmicrosoft.com`. Don't enter a URL.

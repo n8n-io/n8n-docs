@@ -28,7 +28,7 @@ On this page, you'll find a list of events the Microsoft OneDrive Trigger node c
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/microsoft.md). This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user.
+You can find authentication information for this node [here](../credentials/microsoft.md). This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Microsoft Entra Service Principal (App-Only)** in the **Authentication** dropdown.
 {% endhint %}
 
 {% hint style="info" %}

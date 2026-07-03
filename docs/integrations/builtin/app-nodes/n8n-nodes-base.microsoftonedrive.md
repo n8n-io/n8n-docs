@@ -27,11 +27,11 @@ On this page, you'll find a list of operations the Microsoft OneDrive node suppo
 {% hint style="info" %}
 **Credentials**
 
-This node supports three authentication options:
+This node's **Authentication** dropdown offers three options:
 
-- **Microsoft Drive OAuth2 API**: the Microsoft OneDrive-specific OAuth2 credential (default).
-- **Microsoft OAuth2 API**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Files.ReadWrite.All`).
-- **Microsoft Entra Service Principal**: app-only access through a Microsoft Entra app registration, with no signed-in user. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
+- **OneDrive OAuth2**: the Microsoft OneDrive-specific OAuth2 credential (default).
+- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure the credential is granted the scopes this node needs (for example, `Files.ReadWrite.All`).
+- **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
 
 Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
 {% endhint %}

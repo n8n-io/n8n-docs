@@ -8,6 +8,14 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+### n8n 2.29 — UI Indicator for Out of Date Range in Insights
+
+**Released:** 2026-06-30
+
+Insights now displays a contextual alert banner when the selected date range extends beyond your available execution data. Three states are possible: no data in the selected range, partial data with the earliest available date noted, or complete coverage (no alert shown). This gives you immediate clarity on why a dashboard might look empty, without having to guess whether data is missing or simply outside your retention window.
+
+Learn more in the [documentation](<https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/insights>).
+
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19

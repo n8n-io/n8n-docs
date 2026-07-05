@@ -8,6 +8,15 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+### n8n 2.29 — UI Indicator for Out of Date Range in Insights
+
+**Released:** 2026-06-30
+
+You can now see contextual alerts in the Insights dashboard when your selected date range extends beyond your available execution data. You get a clear explanation of exactly what data is accessible given your retention policy.
+Insights surfaces one of three states depending on your selection. If the entire selected period falls outside your retention window, an alert tells you there is no data in that range. If only part of the range is covered, the alert indicates partial data and specifies the earliest available date so you can adjust accordingly. If your selection falls entirely within retained data, no alert appears and you can trust the results are complete. This is particularly useful when running reports over custom time windows, such as selecting "last 90 days" on an instance with a 30-day retention policy. The feature works across all plans and deployment types, and reflects whichever retention policy is configured on your instance, whether set by n8n on Cloud or configured directly on a self-hosted deployment.
+
+Learn more in the [documentation](<https://docs.n8n.io/administer/observe-and-log/track-usage-with-insights#insights-dashboard>).
+
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19

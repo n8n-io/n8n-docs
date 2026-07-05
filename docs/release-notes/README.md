@@ -12,7 +12,7 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 **Released:** 2026-06-16
 
-### OpenTelemetry configuration on n8n Cloud
+#### OpenTelemetry configuration on n8n Cloud
 You can now enable OpenTelemetry tracing on n8n Cloud through a settings page, instead of only through an environment variable on self-hosted instances. Workflow execution traces export to your existing OpenTelemetry backend from Cloud and self-hosted alike.
 
 Learn more in the [docs](<https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry>).

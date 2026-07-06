@@ -53,7 +53,7 @@ Refer to the sections below for detailed instructions.
 {% hint style="info" %}
 **Recommended access token type**
 
-n8n recommends using a personal access token (classic). GitHub's fine-grained personal access tokens are still in beta and can't access all endpoints.
+n8n recommends using a personal access token (classic). GitHub's fine-grained personal access tokens let you limit access to specific repositories and permissions, but they have some [limitations](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-tokens-limitations).
 {% endhint %}
 
 To generate your personal access token:
@@ -67,7 +67,6 @@ To generate your personal access token:
 7. Select the **Expiration** you'd like for the token, or select **No expiration**.
 8. Select **Scopes** for your token. For most of the n8n GitHub nodes, add the `repo` scope.
     - A token without assigned scopes can only access public information.
-    - Refer to 
 9. Select **Generate token**.
 10. Copy the token.
 

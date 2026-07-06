@@ -17,15 +17,12 @@ If you want to create credentials for the [Facebook Graph API](/integrations/bui
 
 ## Supported authentication methods
 
-- OAuth2
 - App access token
 
-For both methods, you need to:
+To set up this credential, you need to:
 
 1. [Create a Meta app](#create-a-meta-app) with the Webhooks product.
-2. Provide the access token to n8n, either:
-    - [Using OAuth2](#using-oauth2), or
-    - [Using an App Access Token](#using-an-app-access-token)
+2. [Provide the access token to n8n](#using-an-app-access-token).
 3. [Configure the Facebook Trigger](#configure-the-facebook-trigger).
 4. Optional: [Add an app secret](#optional-add-an-app-secret).
 5. Optional: Complete [App Review](#app-review)
@@ -36,7 +33,7 @@ Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/g
 
 ## Prerequisites
 
-Regardless of the authentication method you choose, you'll need a [Meta for Developers](https://developers.facebook.com/) account and a Meta app with the Webhooks product. The app provides the **App ID** and **App Secret** used by both authentication methods.
+You'll need a [Meta for Developers](https://developers.facebook.com/) account and a Meta app with the Webhooks product. The app provides the **App ID** and **App Secret**.
 
 ### Create a Meta app
 
@@ -66,36 +63,6 @@ In **Development** mode, only people with a role on the app (Administrator, Deve
 1. If you need users without a role on the app to authenticate, toggle the **App Mode** from **Development** to **Live**.
 
 For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes) and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types).
-
-## Using OAuth2
-
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/) account and:
-
-- A **Client ID**
-- A **Client Secret**
-
-Ensure you have already [created a Meta app](#create-a-meta-app) with the Webhooks product.
-
-1. In the Meta Developer [App Dashboard](https://developers.facebook.com/apps), navigate to dashboard of the app [you created](#create-a-meta app).
-2. In the side menu, select **Products** > **Add Product**.
-3. The **Add products to your app** page opens. Select **Facebook Login for Business** > **Set up**. This product is necessary for OAuth2 credential types.
-4. In n8n, create a new **Facebook Graph (App) OAuth2** credential.
-5. Copy the **OAuth Redirect URL** shown in the credential. Paste it under **Valid OAuth Redirect URIs** in the **Facebook Login for Business** setup page.
-6. Ensure **Client OAuth Login** and **Web OAuth Login** are enabled, then **Save changes**.
-7. In your Meta app, from the side menu open **App settings > Basic** and copy the **App ID** and **App Secret**.
-8. Back in the n8n credential, enter:
-    * **Client ID**: the **App ID**.
-    * **Client Secret**: the **App Secret**.
-9. Select **Connect my account** / **Sign in with Facebook** and approve the requested permissions in the Meta popup.
-10. On success, n8n stores and manages the token. Save your n8n credential.
-
-Refer to Meta's [Facebook Login](https://developers.facebook.com/docs/facebook-login) documentation for more information on the authorization flow and redirect URIs.
-
-To complete credential setup, you must now [configure the Facebook Trigger](#configure-the-facebook-trigger).
-
-You can then optionally:
-- [Add an app secret](#optional-add-an-app-secret).
-- Complete [App Review](#app-review)
 
 ## Using an App Access Token
 

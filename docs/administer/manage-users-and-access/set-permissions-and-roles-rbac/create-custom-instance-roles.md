@@ -126,6 +126,11 @@ The table below describes each permission group and its checkboxes as they appea
 {% hint style="warning" %}
 **Privilege escalation risk**
 
-Combining **Roles: Manage** with **Members: Manage** creates a privilege escalation risk. A user with both permissions can assign any custom role (including their own) to any user, effectively granting themselves or others elevated access without Owner or Admin approval. Only assign this combination to fully trusted users.
+Certain permission combinations create a privilege escalation risk:
+
+* A user with **Roles: Manage** can edit their own custom role to add permissions they weren't originally granted.
+* A user with **Members: Manage** can invite a user they control, then grant that user Admin-level access.
+
+Only assign these permissions to fully trusted users, and avoid combining them unless necessary.
 {% endhint %}
 

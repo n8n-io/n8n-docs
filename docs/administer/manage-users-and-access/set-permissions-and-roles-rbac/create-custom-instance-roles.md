@@ -67,7 +67,7 @@ To assign a custom instance role:
 
 ## Edit a custom instance role <a href="#edit-a-custom-instance-role" id="edit-a-custom-instance-role"></a>
 
-To modify an existing custom instance role:
+To update an existing custom instance role:
 
 1. Go to **Settings** > **Roles** > **Instance roles**.
 2. Find the custom role you want to edit.
@@ -78,7 +78,7 @@ To modify an existing custom instance role:
 {% hint style="warning" %}
 **Editing affects all assigned users**
 
-Changes to a custom instance role immediately affect all users assigned to that role across the entire instance.
+Changes to a custom instance role take effect for all users with that role across the entire instance.
 {% endhint %}
 
 ## Duplicate a custom instance role <a href="#duplicate-a-custom-instance-role" id="duplicate-a-custom-instance-role"></a>
@@ -88,7 +88,7 @@ To create a new role based on an existing one:
 1. Go to **Settings** > **Roles** > **Instance roles**.
 2. Find the role you want to duplicate.
 3. Select the **three-dot menu** > **Duplicate**.
-4. Modify the role name and permissions as needed.
+4. Update the role name and permissions as needed.
 5. Select **Create role**.
 
 ## Delete a custom instance role <a href="#delete-a-custom-instance-role" id="delete-a-custom-instance-role"></a>
@@ -103,7 +103,7 @@ To delete a custom instance role:
 {% hint style="info" %}
 **Reassign users before deletion**
 
-If users are assigned to this role, reassign them to a different role before deleting it.
+If users have this role, reassign them to a different role before deleting it.
 {% endhint %}
 
 ## Permissions reference <a href="#permissions-reference" id="permissions-reference"></a>

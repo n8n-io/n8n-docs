@@ -72,12 +72,12 @@ To assign a custom role:
 {% hint style="info" %}
 **Project-level permissions**
 
-Custom role permissions only apply within the project where the role is assigned. To grant the same permissions across multiple projects, assign the custom role in each project individually.
+Custom role permissions only apply within the project where the role is in use. To grant the same permissions across multiple projects, assign the custom role in each project individually.
 {% endhint %}
 
 ## Edit a custom role <a href="#edit-a-custom-role" id="edit-a-custom-role"></a>
 
-To modify an existing custom role:
+To update an existing custom role:
 
 1. Go to **Settings** > **Roles** > **Project roles**.
 2. Find the custom role you want to edit.
@@ -88,7 +88,7 @@ To modify an existing custom role:
 {% hint style="warning" %}
 **Editing affects all assigned users**
 
-Changes to a custom role immediately affect all users assigned to that role in any project. If the role is used across multiple projects, the permission changes apply everywhere the role is assigned.
+Changes to a custom role take effect for all users with that role in any project. If the role is in use across multiple projects, the permission changes apply everywhere the role is assigned.
 {% endhint %}
 
 ## Duplicate a custom role <a href="#duplicate-a-custom-role" id="duplicate-a-custom-role"></a>
@@ -98,7 +98,7 @@ To create a new role based on an existing one:
 1. Go to **Settings** > **Roles** > **Project roles**.
 2. Find the role you want to duplicate.
 3. Select the **three-dot menu** > **Duplicate**.
-4. Modify the role name and permissions as needed.
+4. Update the role name and permissions as needed.
 5. Select **Create role**.
 
 ## Delete a custom role <a href="#delete-a-custom-role" id="delete-a-custom-role"></a>

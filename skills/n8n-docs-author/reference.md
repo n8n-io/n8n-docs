@@ -94,6 +94,10 @@ page you're editing:
 [different subfolder, same space](../manage-workflows/export-import.md)
 ```
 
+Ending a same-space link with a trailing slash (`page/`) or with no extension
+(`page`) **breaks it**: GitBook can't resolve the link, and on the live site it
+404s to a GitHub URL. This is the most common internal-link mistake.
+
 **Different space:** relative file paths don't resolve across spaces. GitBook
 resolves cross-space links as page references, not file paths. Link to the target
 page's GitBook URL, built from the target space's ID and the page's path within
@@ -131,6 +135,30 @@ Alternatively, copy the page's link in GitBook, or use its published
 docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
 space is added, removed, or recreated. IDs are stable while a space exists; a
 recreated space gets a new ID. -->
+
+### Section anchors
+
+To link to a section within a page, add `#section-id` after the path (after the
+`.md` for a same-space link). GitBook generates the anchor from the heading text,
+lowercased with spaces replaced by hyphens:
+
+```markdown
+[same space](../host-n8n/configure-n8n/manage-settings-using-environment-variables.md#mcp)
+[different space](https://app.gitbook.com/s/<spaceId>/<page-path>#response-mode)
+```
+
+### Utility folders (not link targets)
+
+Only top-level folders with a `SUMMARY.md` are GitBook spaces and valid
+cross-space link targets. Four top-level folders under `docs/` are utility
+folders, not spaces, and aren't in the table above:
+
+- `_images`, `_video` — shared media assets
+- `_workflows` — workflow assets
+- `reusable-content` — shared includes
+
+Don't hand-author cross-space page links to these. For reusable content, use the
+GitBook include mechanism instead of a page link.
 
 ## Hints (callouts)
 

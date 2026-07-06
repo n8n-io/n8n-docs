@@ -37,7 +37,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [Structured Output Parser node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Structured Output Parser node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
@@ -49,7 +49,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Adding the structured output parser node to AI nodes <a href="#adding-the-structured-output-parser-node-to-ai-nodes" id="adding-the-structured-output-parser-node-to-ai-nodes"></a>
 
-You can attach output parser nodes to select [AI root nodes](../../root-nodes/).
+You can attach output parser nodes to select [AI root nodes](../../root-nodes/README.md).
 
 To add the Structured Output Parser to a node, enable the **Require Specific Output Format** option in the AI root node you wish to format. Once the option is enabled, a new **output parser** attachment point is displayed. Click the **output parser** attachment point to add the Structured Output Parser node to the node.
 
@@ -61,7 +61,7 @@ To request a specific format for intermediary output, include the response struc
 
 ## Structuring output from agents <a href="#structuring-output-from-agents" id="structuring-output-from-agents"></a>
 
-Structured output parsing is often not reliable when working with [agents](../../root-nodes/n8n-nodes-langchain.agent/).
+Structured output parsing is often not reliable when working with [agents](../../root-nodes/n8n-nodes-langchain.agent/README.md).
 
 If your workflow uses agents, n8n recommends using a separate [LLM-chain](../../root-nodes/n8n-nodes-langchain.chainllm.md) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.
 

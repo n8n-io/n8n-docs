@@ -37,7 +37,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [AI Agent node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [AI Agent node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Internal error: 400 Invalid value for 'content' <a href="#internal-error-400-invalid-value-for-content" id="internal-error-400-invalid-value-for-content"></a>
 
@@ -60,7 +60,7 @@ You might see this in one of two scenarios:
 
 ## Error in sub-node Simple Memory <a href="#error-in-sub-node-simple-memory" id="error-in-sub-node-simple-memory"></a>
 
-This error displays when n8n runs into an issue with the [Simple Memory](../../sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
+This error displays when n8n runs into an issue with the [Simple Memory](../../sub-nodes/n8n-nodes-langchain.memorybufferwindow/README.md) sub-node.
 
 It most often occurs when your workflow or the workflow template you copied uses an older version of the Simple memory node (previously known as "Window Buffer Memory").
 
@@ -74,6 +74,6 @@ To resolve this, click the + Chat Model button at the bottom of your screen when
 
 ## No prompt specified error <a href="#no-prompt-specified-error" id="no-prompt-specified-error"></a>
 
-This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](../../../core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression.md).
+This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](../../../core-nodes/n8n-nodes-langchain.chattrigger/README.md).
 
 To resolve this issue, find the **Prompt** parameter of the AI Agent node and change it from **Connected Chat Trigger Node** to **Define below**. This allows you to manually build your prompt by referencing output data from other nodes or by adding static text.

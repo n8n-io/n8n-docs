@@ -36,7 +36,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [Code node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Code node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Code doesn't return items properly <a href="#code-doesnt-return-items-properly" id="code-doesnt-return-items-properly"></a>
 
@@ -144,7 +144,7 @@ To set, update, and retrieve data directly to a workflow, use the [static data](
 {% hint style="info" %}
 **Use Remove Duplicates when possible**
 
-If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](../n8n-nodes-base.removeduplicates/) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
+If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](../n8n-nodes-base.removeduplicates/README.md) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
 {% endhint %}
 
 ## Can't access credentials in a code node <a href="#cant-access-credentials-in-a-code-node" id="cant-access-credentials-in-a-code-node"></a>
@@ -153,7 +153,7 @@ By design, Code nodes can't access credentials. They don't have access to n8n’
 
 Attempts to reference credentials in a Code node using expressions or methods like `this.getCredentials()` or `$getCredentials()` will result in errors, such as `this.getCredentials is not a function` and `$getCredentials is not defined`.
 
-If you need to make authenticated API calls, use the [HTTP Request node](../n8n-nodes-base.httprequest/) which provides credential support.
+If you need to make authenticated API calls, use the [HTTP Request node](../n8n-nodes-base.httprequest/README.md) which provides credential support.
 
 To work with credentials dynamically, handle the credential selection logic outside of the Code node:
 

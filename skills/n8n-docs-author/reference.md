@@ -83,15 +83,15 @@ is a separate GitBook space. How you link depends on whether the target is in th
 same space or a different one.
 
 **Same space:** use standard Markdown link syntax and link to the relative path of
-the target file, **always ending in `.md`** (or `/README.md` for a page that is a
-folder). Link to the file rather than typing a raw URL path, so the reference
-stays valid when pages move or are renamed. `../` moves up one folder:
+the target file, including its `.md` extension. Link to the file rather than
+typing a raw URL path, so the reference stays valid when pages move or are
+renamed. The relative path depends on where the target sits in relation to the
+page you're editing:
 
 ```markdown
 [same folder](another-page.md)
 [parent (the folder's README.md)](./)
 [different subfolder, same space](../manage-workflows/export-import.md)
-[a page that is a folder](../builtin/core-nodes/n8n-nodes-langchain.chattrigger/README.md)
 ```
 
 Ending a same-space link with a trailing slash (`page/`) or with no extension
@@ -159,20 +159,6 @@ folders, not spaces, and aren't in the table above:
 
 Don't hand-author cross-space page links to these. For reusable content, use the
 GitBook include mechanism instead of a page link.
-
-### Known issues and gotchas
-
-- **A trailing slash or missing `.md` breaks a same-space link** — the most common
-  mistake. Always end same-space links with `.md` (or `/README.md`).
-- **The GitBook UI rewrites relative links to `app.gitbook.com` URLs on export.**
-  When you add a same-space relative link inside the GitBook app, GitBook may
-  convert it to an `app.gitbook.com` URL when it syncs to GitHub. This is expected
-  for edited pages — don't "fix" those back to relative paths.
-- **Git Sync can skip an export when a change "looks identical."** If you change
-  only a link in the GitBook UI and it doesn't reach GitHub (the change appears,
-  then disappears, with no commit), Git Sync may have treated it as identical to
-  the previous version and skipped the export. Workaround: make one more small
-  edit to the page (even adding a space) and merge again to force the export.
 
 ## Hints (callouts)
 

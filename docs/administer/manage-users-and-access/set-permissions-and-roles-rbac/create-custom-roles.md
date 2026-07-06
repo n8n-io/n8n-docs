@@ -41,7 +41,7 @@ Instance owners and instance admins can create custom roles.
 
 To create a custom role:
 
-1. Go to **Settings** > **Project roles**.
+1. Go to **Settings** > **Roles** > **Project roles**.
 2. Select **Create role**.
 3. Enter a role name and optional description.
 4. Select the permissions (scopes) for this role:
@@ -79,7 +79,7 @@ Custom role permissions only apply within the project where the role is assigned
 
 To modify an existing custom role:
 
-1. Go to **Settings** > **Project roles**.
+1. Go to **Settings** > **Roles** > **Project roles**.
 2. Find the custom role you want to edit.
 3. Select the **three-dot menu** > **Edit**.
 4. Update the role name, description, or permissions.
@@ -95,7 +95,7 @@ Changes to a custom role immediately affect all users assigned to that role in a
 
 To create a new role based on an existing one:
 
-1. Go to **Settings** > **Project roles**.
+1. Go to **Settings** > **Roles** > **Project roles**.
 2. Find the role you want to duplicate.
 3. Select the **three-dot menu** > **Duplicate**.
 4. Modify the role name and permissions as needed.
@@ -105,7 +105,7 @@ To create a new role based on an existing one:
 
 To delete a custom role:
 
-1. Go to **Settings** > **Project roles**.
+1. Go to **Settings** > **Roles** > **Project roles**.
 2. Find the role you want to delete.
 3. Select the **three-dot menu** > **Delete**.
 4. Confirm the deletion.

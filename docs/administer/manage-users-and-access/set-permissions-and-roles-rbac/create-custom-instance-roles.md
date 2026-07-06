@@ -40,7 +40,7 @@ To create a custom instance role:
 1. Go to **Settings** > **Roles** > **Instance roles**.
 2. Select **Create role**.
 3. Enter a role name and optional description.
-4. Optionally, select a **Preset** (**Admin**, **Member**, or **Chat User**) to pre-fill permissions based on a built-in account type, then adjust as needed.
+4. Optionally, select a **Preset** (**Admin**, **Member**) to pre-fill permissions based on a built-in account type, then adjust as needed.
 5. Select the permissions for this role:
    * **Instance settings** > **Manage**: View and change instance-wide settings
    * **Members** > **Manage**: Invite, remove, and update users across the instance

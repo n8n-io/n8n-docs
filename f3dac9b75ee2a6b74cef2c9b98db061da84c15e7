@@ -1,0 +1,18 @@
+docs/reusable-content/.gitbook/includes/workflows/n8n-packages-beta-hint.md
+  h_c63dce324dfc7b 1-9
+docs/build/manage-workflows/export-and-import.md
+  h_c63dce324dfc7b 51-57,60-64
+docs/build/manage-workflows/n8n-packages.md
+  h_c63dce324dfc7b 1-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "f3dac9b75ee2a6b74cef2c9b98db061da84c15e7",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

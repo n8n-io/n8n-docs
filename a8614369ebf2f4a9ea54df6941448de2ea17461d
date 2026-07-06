@@ -1,0 +1,21 @@
+docs/connect/n8n-cli.md
+  s_adaf1c3a8eb7be::t_cbbb2f54edc275 197
+docs/build/manage-workflows/export-and-import/n8n-packages.md
+  s_adaf1c3a8eb7be::t_bfcc616b2bd8b1 81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "a8614369ebf2f4a9ea54df6941448de2ea17461d",
+  "prompts": {},
+  "sessions": {
+    "s_adaf1c3a8eb7be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "86a5ec55-1890-426f-8a5b-52f8e75ab193",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

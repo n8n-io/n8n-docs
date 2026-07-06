@@ -1,0 +1,27 @@
+nav.yml
+  s_b874bfae5cbe1c::t_5ccddeb6e816d5 1091
+docs/integrations/builtin/credentials/kafka.md
+  s_b874bfae5cbe1c::t_1ef24614235d59 15-18
+docs/integrations/builtin/credentials/schemaregistry.md
+  s_b874bfae5cbe1c::t_91d3778474e157 1-38
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+  s_b874bfae5cbe1c::t_31c13ebc326e0f 16-19
+docs/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
+  s_b874bfae5cbe1c::t_5ef2bf5e2ca4ed 18-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "2921a4834762f4a89d16d12ab4c9e48211a1df07",
+  "prompts": {},
+  "sessions": {
+    "s_b874bfae5cbe1c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3edf96de-b41a-4c24-b80d-bd021acf77bb",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

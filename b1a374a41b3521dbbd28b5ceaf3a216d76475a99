@@ -1,0 +1,24 @@
+docs/import-export/import-packages.md
+  s_acd0f248535fc1::t_53274c11dfa50e 33
+  s_acd0f248535fc1::t_f381e7e5adbfec 150
+docs/import-export/packages.md
+  s_acd0f248535fc1::t_7c9949480a6ebe 68
+docs/import-export/move-a-workflow.md
+  s_acd0f248535fc1::t_7020c66ccd92c5 86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b1a374a41b3521dbbd28b5ceaf3a216d76475a99",
+  "prompts": {},
+  "sessions": {
+    "s_acd0f248535fc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8e563e7b-0ce7-4e30-a199-206d6f231d7a",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

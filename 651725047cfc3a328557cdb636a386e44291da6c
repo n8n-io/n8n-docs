@@ -1,0 +1,25 @@
+docs/build/manage-workflows/export-and-import/n8n-packages.md
+  s_fc4f9c15638879::t_0fced02e2aab3c 81,83-86
+  h_c63dce324dfc7b 79-80,82,87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "651725047cfc3a328557cdb636a386e44291da6c",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_fc4f9c15638879": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "12ac817d-4c20-46eb-a450-1131447efcc6",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

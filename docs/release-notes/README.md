@@ -8,9 +8,9 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
-### n8n 2.24 — Move workflows between instances as packages
+### n8n 2.27 — Move workflows between instances as packages
 
-**Released:** 2026-07-03
+**Released:** 2026-06-16
 
 You can now bundle workflows into a portable `.n8np` package and move them between n8n instances through the Public API or a matching set of CLI commands that wrap the same endpoints. Copying workflow JSON by hand always worked for one-off moves. Packages make it repeatable and automatable, carrying a set of workflows along with their credential stubs and a `manifest.json` describing their dependencies in a single file.
 

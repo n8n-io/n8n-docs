@@ -39,7 +39,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./).
+For a curated summary of the changes that matter most, see the [Changelog](./README.md).
 {% endhint %}
 
 Features and bug fixes for n8n before the release of 1.0.0.

@@ -70,6 +70,6 @@ You can configure how the node listens for events.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Postgres. You can find the node docs [here](../app-nodes/n8n-nodes-base.postgres/).
+n8n provides an app node for Postgres. You can find the node docs [here](../app-nodes/n8n-nodes-base.postgres/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/) on n8n's website.

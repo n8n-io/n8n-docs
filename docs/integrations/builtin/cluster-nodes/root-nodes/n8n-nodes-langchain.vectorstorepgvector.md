@@ -133,7 +133,7 @@ The following options specify the names of the columns to store the vectors and 
 
 Whether to create the Postgres `vector` extension if it doesn't already exist. This option is turned off by default.
 
-Enable this option only if your database user has permission to create extensions. Creating the extension requires database superuser privileges. If the extension is already installed by a database administrator, leave this option turned off.
+Enable this option only if your database user has permission to create extensions. If the extension is already installed by a database administrator, leave this option turned off.
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 

@@ -35,7 +35,7 @@ layout:
 
 # Respond to Webhook
 
-Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](n8n-nodes-base.webhook/) node.
+Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](n8n-nodes-base.webhook/README.md) node.
 
 {% hint style="info" %}
 **Runs once for the first data item**
@@ -47,7 +47,7 @@ The Respond to Webhook node runs once, using the first incoming data item. Refer
 
 To use the Respond to Webhook node:
 
-1. Add a [Webhook](n8n-nodes-base.webhook/) node as the trigger node for the workflow.
+1. Add a [Webhook](n8n-nodes-base.webhook/README.md) node as the trigger node for the workflow.
 2. In the Webhook node, set **Respond** to **Using 'Respond to Webhook' node**.
 3. Add the Respond to Webhook node anywhere in your workflow. If you want it to return data from other nodes, place it after those nodes.
 

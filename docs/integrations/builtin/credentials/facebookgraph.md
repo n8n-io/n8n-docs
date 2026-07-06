@@ -40,7 +40,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Facebook Trigger credentials**
 
-If you want to create credentials for the [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App credentials](facebookapp.md) documentation.
+If you want to create credentials for the [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md) node, follow the instructions mentioned in the [Facebook App credentials](facebookapp.md) documentation.
 {% endhint %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>

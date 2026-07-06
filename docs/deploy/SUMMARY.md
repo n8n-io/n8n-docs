@@ -29,7 +29,7 @@
   * [Configure n8n](host-n8n/configure-n8n/README.md)
     * [Basic configuration](host-n8n/configure-n8n/basic-configuration.md)
       * [Use environment variables](host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md)
-        * [AI Assistant](host-n8n/configure-n8n/basic-configuration/use-environment-variables/ai-assistant.md)
+        * [Ask n8n AI](host-n8n/configure-n8n/basic-configuration/use-environment-variables/ai-assistant.md)
         * [Binary data](host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data.md)
         * [Credentials](host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials.md)
         * [Database](host-n8n/configure-n8n/basic-configuration/use-environment-variables/database.md)

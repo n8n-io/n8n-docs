@@ -39,14 +39,14 @@ layout:
 
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling). These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
-Refer to [AI Agent](./) for more information on the AI Agent node itself.
+Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cHtfs3gewkhPbGP31rjc/" %}
 
 {% hint style="info" %}
 **OpenAI Chat Model required**
 
-You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
+You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md) with this agent.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -83,7 +83,7 @@ Refine the OpenAI Functions Agent node's behavior using these options:
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./README.md#templates-and-examples) section.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

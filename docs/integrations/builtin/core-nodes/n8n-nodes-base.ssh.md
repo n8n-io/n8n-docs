@@ -50,7 +50,7 @@ You can find authentication information for this node [here](../credentials/ssh.
 {% hint style="info" %}
 **Uploading files**
 
-To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/) node to pass the file as a data property.
+To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the file as a data property.
 {% endhint %}
 
 ### Execute Command <a href="#execute-command" id="execute-command"></a>

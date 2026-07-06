@@ -89,12 +89,12 @@ Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` sho
 {% hint style="info" %}
 **Auth reference**
 
-Refer to the [Webhook node | Authentication documentation](n8n-nodes-base.webhook/#supported-authentication-methods) for more information on each auth type.
+Refer to the [Webhook node | Authentication documentation](n8n-nodes-base.webhook/README.md#supported-authentication-methods) for more information on each auth type.
 {% endhint %}
 
 #### HTTP Method <a href="#http-method" id="http-method"></a>
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](n8n-nodes-base.webhook/#http-method) for more information.
+Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](n8n-nodes-base.webhook/README.md#http-method) for more information.
 
 #### Response Code <a href="#response-code" id="response-code"></a>
 

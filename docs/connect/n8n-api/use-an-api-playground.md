@@ -16,7 +16,7 @@ This documentation site provides a playground to test out calls. Self-hosted use
 
 ## Documentation playground <a href="#documentation-playground" id="documentation-playground"></a>
 
-You can test API calls from this site's [API reference](api-reference.md). You need to set your server's base URL and instance name, and add an API key.
+You can test API calls from this site's [endpoint reference](api-reference.md). You need to set your server's base URL and instance name, and add an API key.
 
 n8n uses [Scalar's](https://github.com/scalar/scalar) open source API platform to power this functionality.
 

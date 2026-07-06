@@ -35,10 +35,10 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [OpenAI](../app-nodes/n8n-nodes-langchain.openai/)
-* [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [OpenAI](../app-nodes/n8n-nodes-langchain.openai/README.md)
+* [Chat OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
 * [Embeddings OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
-* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [LM OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

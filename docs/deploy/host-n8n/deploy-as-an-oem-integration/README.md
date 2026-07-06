@@ -25,7 +25,7 @@ This is distinct from [using n8n as a backend](../README.md), where workflows ex
 
 - [Prerequisites](prerequisites.md): Guidance on CPU, memory, and database requirements for planning your deployment.
 - [Managing workflows](manage-workflows.md): Patterns for managing workflows across multiple users or organizations within an embedded deployment.
-- [Token exchange](/hosting/oem-deployment/token-exchange.md): Authenticate users from your own identity provider through iframe SSO and call n8n APIs on their behalf.
+- [Token exchange](set-up-token-exchange.md): Authenticate users from your own identity provider through iframe SSO and call n8n APIs on their behalf.
 - [Workflow templates](../configure-n8n/basic-configuration/configuration-examples/configure-a-custom-workflow-templates-library.md): Configure a custom workflow template library for your users.
 - [Credential overwrites](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/credential-overwrites): Set OAuth credentials globally so your users can authenticate without seeing or entering client secrets.
 

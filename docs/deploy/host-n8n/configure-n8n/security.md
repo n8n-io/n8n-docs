@@ -19,7 +19,7 @@ At a high level, you can:
 * Conduct a [security audit](security/run-security-audits.md) to identify security risks.
 * [Set up SSL](security/set-up-ssl.md) to enforce secure connections.
 * [Set up Single Sign-On](security/configure-sso.md) for user account management.
-* Use [token exchange](/hosting/oem-deployment/token-exchange.md) to log users in from your own identity provider when embedding n8n, or to call n8n APIs on their behalf.
+* Use [token exchange](../deploy-as-an-oem-integration/set-up-token-exchange.md) to log users in from your own identity provider when embedding n8n, or to call n8n APIs on their behalf.
 * Use [two-factor authentication (2FA)](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth) for your users.
 * Enable [encryption key rotation](security/rotate-encryption-keys.md) to periodically replace the key that encrypts credentials and other sensitive data.
 * Enable [JWE token decryption for OAuth 2.0 credentials](security/decrypt-oauth-20-tokens-with-jwe.md) so your identity provider can encrypt access and ID tokens that only your instance can decrypt.

@@ -37,7 +37,7 @@ layout:
 
 Use this node if you want to start a workflow by selecting **Execute Workflow** and don't want any option for the workflow to run automatically.
 
-Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](n8n-nodes-base.scheduletrigger/) firing on a set schedule.
+Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](n8n-nodes-base.scheduletrigger/README.md) firing on a set schedule.
 
 The Manual Trigger node serves as the workflow trigger for workflows that don't have an automatic trigger.
 

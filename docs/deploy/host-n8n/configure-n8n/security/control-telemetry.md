@@ -28,7 +28,7 @@ layout:
 
 # Control telemetry
 
-n8n collects some anonymous data from self-hosted n8n installations. Use the instructions below to opt out of data telemetry collection.
+n8n collects anonymous telemetry data from self-hosted n8n installations. You can opt out of data telemetry collection.
 
 ## Collected data <a href="#collected-data" id="collected-data"></a>
 
@@ -36,7 +36,7 @@ Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/
 
 ## How collection works <a href="#how-collection-works" id="how-collection-works"></a>
 
-Your n8n instance sends most data to n8n as the events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours). These data types mostly fall into n8n telemetry collection.
+n8n sends most data when events occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
 
 ## Opting out of data collection <a href="#opting-out-of-data-collection" id="opting-out-of-data-collection"></a>
 
@@ -44,7 +44,7 @@ n8n enables telemetry collection by default. To disable it, configure the follow
 
 ### Opt out of telemetry events <a href="#opt-out-of-telemetry-events" id="opt-out-of-telemetry-events"></a>
 
-To opt out of telemetry events, set the `N8N_DIAGNOSTICS_ENABLED` environment variable to false, for example:
+To opt out of diagnostic telemetry, set the `N8N_DIAGNOSTICS_ENABLED` environment variable to false:
 
 ```bash
 export N8N_DIAGNOSTICS_ENABLED=false
@@ -52,7 +52,7 @@ export N8N_DIAGNOSTICS_ENABLED=false
 
 ### Opt out of checking for new versions of n8n <a href="#opt-out-of-checking-for-new-versions-of-n8n" id="opt-out-of-checking-for-new-versions-of-n8n"></a>
 
-To opt out of checking for new versions of n8n, set the `N8N_VERSION_NOTIFICATIONS_ENABLED` environment variable to false, for example:
+To opt out of version notifications, set the `N8N_VERSION_NOTIFICATIONS_ENABLED` environment variable to false:
 
 ```bash
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
@@ -60,10 +60,9 @@ export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 
 ## Disable all connection to n8n servers <a href="#disable-all-connection-to-n8n-servers" id="disable-all-connection-to-n8n-servers"></a>
 
-If you want to fully prevent all communication with n8n's servers, refer to [Isolate n8n](../basic-configuration/configuration-examples/isolate-n8n.md).
+To prevent all communication with n8n's servers, refer to [Isolate n8n](../basic-configuration/configuration-examples/isolate-n8n.md).
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these environment variables.
-
-Refer to [Configuration](../basic-configuration.md) for more information on setting environment variables.
+* [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): More information on these environment variables.
+* [Configuration](../basic-configuration.md): How to set environment variables.

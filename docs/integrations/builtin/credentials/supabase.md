@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Supabase](../app-nodes/n8n-nodes-base.supabase/)
+* [Supabase](../app-nodes/n8n-nodes-base.supabase/README.md)
 * [Supabase Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

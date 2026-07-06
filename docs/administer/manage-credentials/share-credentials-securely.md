@@ -40,7 +40,7 @@ Users can share credentials they created and own. Only project admins can share 
 
 Refer to [Account types](../manage-users-and-access/understand-account-types.md) for more information about owners and admins.
 
-In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
+In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
 
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 

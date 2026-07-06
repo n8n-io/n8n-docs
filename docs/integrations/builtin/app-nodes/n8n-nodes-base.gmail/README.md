@@ -40,7 +40,7 @@ On this page, you'll find a list of operations the Gmail node supports and links
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Google credentials](../../credentials/google/) for guidance on setting up authentication.
+Refer to [Google credentials](../../credentials/google/README.md) for guidance on setting up authentication.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
@@ -85,7 +85,7 @@ Refer to [Google credentials](../../credentials/google/) for guidance on setting
 
 Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
 
-n8n provides a trigger node for Gmail. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.gmailtrigger/).
+n8n provides a trigger node for Gmail. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.gmailtrigger/README.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

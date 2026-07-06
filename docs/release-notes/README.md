@@ -17,6 +17,22 @@ Insights surfaces one of three states depending on your selection. If the entire
 
 Learn more in the [documentation](<https://docs.n8n.io/administer/observe-and-log/track-usage-with-insights#insights-dashboard>).
 
+### n8n 2.27 — Move workflows between instances as packages
+
+**Released:** 2026-06-16
+
+You can now bundle workflows into a portable `.n8np` package and move them between n8n instances through the Public API or a matching set of CLI commands that wrap the same endpoints. Copying workflow JSON by hand always worked for one-off moves. Packages make it repeatable and automatable, carrying a set of workflows along with their credential stubs and a `manifest.json` describing their dependencies in a single file.
+
+Imports are checked up front. If a conflict or an unresolved credential would block the import, n8n stops and lists the issues instead of leaving you half-migrated. For each import you choose whether to bring a workflow in as a new version, fail on the first conflict, or skip ones that already exist. Credentials are matched by ID and their secrets never travel in the package; n8n exports a stub you match on the target instance, or fills in empty placeholders for later.
+
+This makes it easy to promote workflows from development to production, back up and restore an instance, hand a workflow to a teammate without sharing secrets, or migrate between instances.
+
+{% hint style="warning" %}
+This feature is in **beta**. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
+{% endhint %}
+
+Learn more in the [n8n Packages documentation](https://docs.n8n.io/build/manage-workflows/n8n-packages).
+
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19

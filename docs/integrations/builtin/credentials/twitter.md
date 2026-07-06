@@ -1,36 +1,49 @@
 ---
 title: X (formerly Twitter) credentials
-description: Documentation for X credentials. Use these credentials to authenticate X in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for X credentials. Use these credentials to authenticate X in
+  n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: X (formerly Twitter) credentials
+originalFilePath: integrations/builtin/credentials/twitter.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/twitter'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/twitter'
+layout:
+  description:
+    visible: false
 ---
 
-# X (formerly Twitter) credentials
+# X (formerly Twitter) credentials <a href="#x-formerly-twitter-credentials" id="x-formerly-twitter-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
+- [X (formerly Twitter)](../app-nodes/n8n-nodes-base.twitter.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [X developer](https://developer.x.com/en) account.
 - Create a [Twitter app](https://developer.x.com/en/docs/apps) or use the default project and app created when you sign up for the developer portal. Refer to each supported authentication method below for more details on the app's configuration.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-/// note | Deprecation warning
-n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a) authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x.md#n8n02360).
-///
+{% hint style="info" %}
+**Deprecation warning**
 
-## Related resources
+n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a) authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/0.x#n8n02360).
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api) for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview) for more information about authenticating with the service.
 
 Refer to [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only) for more information about app-only authentication.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 Use this method if you're using n8n version 0.236.0 or later.
 
@@ -56,11 +69,13 @@ To generate your Client ID and Client Secret:
 
 Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0) for more information on working with this authentication method.
 
-/// note | X rate limits
-This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
-///
+{% hint style="info" %}
+**X rate limits**
 
-## X rate limits
+This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
+{% endhint %}
+
+## X rate limits <a href="#x-rate-limits" id="x-rate-limits"></a>
 
 X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits) for the access plan level rate limits and guidance on avoiding hitting them.
 

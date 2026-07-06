@@ -1,20 +1,33 @@
 ---
 title: Keap node documentation
-description: Learn how to use the Keap node in n8n. Follow technical documentation to integrate Keap node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Keap node in n8n. Follow technical documentation to
+  integrate Keap node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Keap node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.keap.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.keap'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.keap'
+layout:
+  description:
+    visible: false
 ---
 
-# Keap node
+# Keap node <a href="#keap-node" id="keap-node"></a>
 
 Use the Keap node to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
 
 On this page, you'll find a list of operations the Keap node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Keap credentials](/integrations/builtin/credentials/keap.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Keap credentials](../credentials/keap.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Company
     * Create a company
@@ -53,9 +66,9 @@ Refer to [Keap credentials](/integrations/builtin/credentials/keap.md) for guida
     * Retrieve all files
     * Upload a file
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'keap') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Keap node documentation integration templates](https://n8n.io/integrations/keap) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

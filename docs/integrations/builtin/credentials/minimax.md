@@ -1,32 +1,43 @@
 ---
 title: MiniMax credentials
-description: Documentation for MiniMax credentials. Use these credentials to authenticate MiniMax in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for MiniMax credentials. Use these credentials to authenticate
+  MiniMax in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: MiniMax credentials
+originalFilePath: integrations/builtin/credentials/minimax.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/minimax'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/minimax'
+layout:
+  description:
+    visible: false
 ---
 
-# MiniMax credentials
+# MiniMax credentials <a href="#minimax-credentials" id="minimax-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [MiniMax](/integrations/builtin/app-nodes/n8n-nodes-langchain.minimax.md)
-* [MiniMax Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md)
+* [MiniMax](../app-nodes/n8n-nodes-langchain.minimax.md)
+* [MiniMax Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a [MiniMax](https://platform.minimax.io/){:target="_blank" .external-link} account.
+Create a [MiniMax](https://platform.minimax.io/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [MiniMax's API documentation](https://platform.minimax.io/docs/guides/models-intro){:target="_blank" .external-link} for more information about the service.
+Refer to [MiniMax's API documentation](https://platform.minimax.io/docs/guides/models-intro) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -35,7 +46,7 @@ To configure this credential, you'll need:
 
 To get your API key:
 
-1. Log in to your [MiniMax account](https://platform.minimax.io/){:target="_blank" .external-link}.
+1. Log in to your [MiniMax account](https://platform.minimax.io/).
 2. Go to **Account** > **API Keys**.
 3. Select **Create API Key**.
 4. Copy the key and enter it in your n8n credential.

@@ -1,28 +1,39 @@
 ---
 title: OpenCTI credentials
-description: Documentation for the OpenCTI credentials. Use these credentials to authenticate OpenCTI in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the OpenCTI credentials. Use these credentials to
+  authenticate OpenCTI in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: OpenCTI credentials
+originalFilePath: integrations/builtin/credentials/opencti.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/opencti'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/opencti'
+layout:
+  description:
+    visible: false
 ---
 
-# OpenCTI credentials
+# OpenCTI credentials <a href="#opencti-credentials" id="opencti-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [OpenCTI](https://filigran.io/solutions/open-cti/) developer account.
 
-## Authentication methods
+## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [OpenCTI's documentation](https://docs.opencti.io/latest/) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/opencti/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/opencti/) on n8n's website.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

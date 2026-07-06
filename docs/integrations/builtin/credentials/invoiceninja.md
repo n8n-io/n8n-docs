@@ -1,29 +1,40 @@
 ---
 title: Invoice Ninja credentials
-description: Documentation for Invoice Ninja credentials. Use these credentials to authenticate Invoice Ninja in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Invoice Ninja credentials. Use these credentials to
+  authenticate Invoice Ninja in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Invoice Ninja credentials
+originalFilePath: integrations/builtin/credentials/invoiceninja.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/invoiceninja'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/invoiceninja'
+layout:
+  description:
+    visible: false
 ---
 
-# Invoice Ninja credentials
+# Invoice Ninja credentials <a href="#invoice-ninja-credentials" id="invoice-ninja-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md)
-- [Invoice Ninja Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md)
+- [Invoice Ninja](../app-nodes/n8n-nodes-base.invoiceninja.md)
+- [Invoice Ninja Trigger](../trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Invoice Ninja](https://www.invoiceninja.com/) account. Only the Pro and Enterprise plans support API integrations.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to Invoice Ninja's [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html) and [v5 API documentation](https://api-docs.invoicing.co/) for more information about the APIs.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

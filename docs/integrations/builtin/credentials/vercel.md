@@ -1,30 +1,41 @@
 ---
 title: Vercel AI Gateway credentials
-description: Documentation for the Vercel AI Gateway credentials. Use these credentials to authenticate the Vercel AI Gateway in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Vercel AI Gateway credentials. Use these credentials to
+  authenticate the Vercel AI Gateway in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Vercel AI Gateway credentials
+originalFilePath: integrations/builtin/credentials/vercel.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/vercel'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/vercel'
+layout:
+  description:
+    visible: false
 ---
 
-# Vercel AI Gateway credentials
+# Vercel AI Gateway credentials <a href="#vercel-ai-gateway-credentials" id="vercel-ai-gateway-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chat Vercel AI Gateway](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md)
+- [Chat Vercel AI Gateway](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Vercel](https://vercel.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 - OIDC token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to the [Vercel AI Gateway documentation](https://vercel.com/docs/ai-gateway) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
@@ -38,7 +49,7 @@ To generate your API Key:
 4. Select **Add key** and proceed with **Create key** from the Dialog.
 4. Copy your key and add it as the **API Key** in n8n.
 
-## Using OIDC token
+## Using OIDC token <a href="#using-oidc-token" id="using-oidc-token"></a>
 
 To configure this credential, you'll need:
 

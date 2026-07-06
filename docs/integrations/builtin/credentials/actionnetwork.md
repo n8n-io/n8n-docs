@@ -1,25 +1,36 @@
 ---
 title: Action Network credentials
-description: Documentation for Action Network credentials. Use these credentials to authenticate Action Network in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Action Network credentials. Use these credentials to
+  authenticate Action Network in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Action Network credentials
+originalFilePath: integrations/builtin/credentials/actionnetwork.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/actionnetwork'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/actionnetwork'
+layout:
+  description:
+    visible: false
 ---
 
-# Action Network credentials
+# Action Network credentials <a href="#action-network-credentials" id="action-network-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork.md)
+- [Action Network](../app-nodes/n8n-nodes-base.actionnetwork.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Action Network's API documentation](https://actionnetwork.org/docs/) for more information about working with the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need an [Action Network](https://actionnetwork.org/) account with [API key access enabled](#request-api-access) and:
 
@@ -35,7 +46,7 @@ To get an API key:
 
 Refer to the [Action Network API Authentication instructions](https://actionnetwork.org/docs/v2/#auth) for more information.
 
-## Request API access
+## Request API access <a href="#request-api-access" id="request-api-access"></a>
 
 Each user account and group on the Action Network has a separate API key to access that user or group's data.
 

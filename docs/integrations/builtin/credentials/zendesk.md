@@ -1,31 +1,42 @@
 ---
 title: Zendesk credentials
-description: Documentation for Zendesk credentials. Use these credentials to authenticate Zendesk in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Zendesk credentials. Use these credentials to authenticate
+  Zendesk in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zendesk credentials
+originalFilePath: integrations/builtin/credentials/zendesk.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zendesk'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/zendesk'
+layout:
+  description:
+    visible: false
 ---
 
-# Zendesk credentials
+# Zendesk credentials <a href="#zendesk-credentials" id="zendesk-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md)
-- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md)
+- [Zendesk](../app-nodes/n8n-nodes-base.zendesk.md)
+- [Zendesk Trigger](../trigger-nodes/n8n-nodes-base.zendesktrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Zendesk](https://zendesk.com/) account.
 - For API token authentication, enable token access to the API in Admin Center under **Apps and integrations > APIs > Zendesk APIs**.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Zendesk's API documentation](https://developer.zendesk.com/api-reference/) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need:
 
@@ -33,7 +44,7 @@ To configure this credential, you'll need:
 - An **Email** address: Enter the email address you use to log in to Zendesk.
 - An **API Token**: Generate an API token in **Apps and integrations > APIs > Zendesk API**. Refer to [API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 

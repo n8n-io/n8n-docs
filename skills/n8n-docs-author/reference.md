@@ -1,73 +1,215 @@
 # n8n docs author — formatting reference
 
-Full syntax examples for MkDocs constructs used in n8n-docs.
+Full syntax examples for the GitBook constructs used in n8n-docs. The n8n Docs
+site is built with [GitBook](https://www.gitbook.com/): pages are Markdown plus
+GitBook-specific blocks. For the Markdown representation of every block type,
+see the [GitBook blocks documentation](https://gitbook.com/docs/creating-content/blocks).
 
-## External links
+## Frontmatter
 
-All external links must open in a new tab and carry the `.external-link` class:
+Every page opens with valid YAML frontmatter. Fields n8n Docs uses:
 
-```markdown
-[Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/){:target="_blank" .external-link}
+| Field | Use |
+|-------|-----|
+| `description` | Short summary of the page. May appear in search results and link previews. |
+| `layout.description.visible` | Always include and set to `false`. Hides the description on the rendered page. |
+| `hidden` | Set to `true` to remove the page from the side menu. Omit for normal pages (most pages appear in the menu). |
+| `generated` | `true` marks the page as fully automation-managed. Don't edit these by hand. |
+
+```yaml
+---
+description: Learn how to merge data streams in your n8n workflows.
+layout:
+  description:
+    visible: false
+---
 ```
 
-## Admonitions
+Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`). Don't add these to new pages.
 
-Use the experimental `///` syntax (not the `!!!` Material default):
+## Page navigation (SUMMARY.md)
+
+Each space has a `SUMMARY.md` at its root. GitBook builds the sidebar from it, so
+a new page won't appear in the navigation until you add it. Creating the `.md`
+file isn't enough.
+
+`SUMMARY.md` is a nested Markdown list. Each entry links to a page by its path
+relative to the space root (where `SUMMARY.md` lives), including `.md`. A
+`README.md` is the landing page for the space or a section, and indentation nests
+pages under it. Entry order sets sidebar order.
 
 ```markdown
-/// note | Note title
-Content here.
-///
+# Summary
 
-/// warning | Warning title
-Content here.
-///
-
-/// danger | Danger title
-Content here.
-///
-
-/// info | Info title
-Content here — typically used for feature restrictions (pricing tier, platform).
-///
+* [Administer](README.md)
+* [Manage credentials](manage-credentials/README.md)
+  * [Share credentials securely](manage-credentials/share-credentials-securely.md)
+  * [Credential overwrites](manage-credentials/credential-overwrites.md)
 ```
 
-**Don't over-use admonitions.** They lose their effectiveness if used frequently.
+When you add a page, add a matching entry in the correct `SUMMARY.md`. When you
+move, rename, or delete a page, update its entry.
 
-## Collapsible admonition blocks
+## Headings
 
-Uses standard Material theme syntax with `???`:
+Write headings as plain Markdown (`## Heading text`) in sentence case. GitBook
+generates a clickable anchor from the heading text automatically, so don't add
+anchor markup yourself.
+
+Existing pages carry explicit anchor tags the migration added to pin a stable
+anchor:
 
 ```markdown
-??? note "Collapsible title"
-    Content must be indented four spaces.
+## Heading text <a href="#heading-text" id="heading-text"></a>
+```
 
-    You can include lists, code blocks, and other Markdown here.
+Don't add these to new headings. Leave existing ones in place, and keep a
+heading's anchor tag if you reword it, so existing links don't break.
+
+## Links
+
+### External links
+
+Use standard Markdown link syntax. External links open in a new tab automatically, with no extra attributes needed:
+
+```markdown
+[Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
+```
+
+### Internal links
+
+Each top-level folder under `docs/` (such as `build/`, `deploy/`, `administer/`)
+is a separate GitBook space. How you link depends on whether the target is in the
+same space or a different one.
+
+**Same space:** use standard Markdown link syntax and link to the relative path of
+the target file, including its `.md` extension. Link to the file rather than
+typing a raw URL path, so the reference stays valid when pages move or are
+renamed. The relative path depends on where the target sits in relation to the
+page you're editing:
+
+```markdown
+[same folder](another-page.md)
+[parent (the folder's README.md)](./)
+[different subfolder, same space](../manage-workflows/export-import.md)
+```
+
+**Different space:** relative file paths don't resolve across spaces. GitBook
+resolves cross-space links as page references, not file paths. Link to the target
+page's GitBook URL, built from the target space's ID and the page's path within
+its space folder (drop the `.md` extension; a `README.md` becomes its folder path):
+
+```markdown
+[different space](https://app.gitbook.com/s/<spaceId>/<page-path>)
+```
+
+For example, linking from an `administer` page to
+`docs/deploy/host-n8n/configure-n8n/user-management.md`:
+
+```markdown
+[different space](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
+```
+
+Each top-level folder under `docs/` is a separate space:
+
+| Space folder | Space ID |
+|------------------------|------------------------|
+| `get-started`          | `CxSeOtVxqqhfxMSac0AV` |
+| `build`                | `rPN1zU5jaYNvwH7RzxqA` |
+| `connect`              | `r7wKI4I1BgdBCuq5Cvcx` |
+| `integrations`         | `BKcbOzIWja8NfqKDcqHc` |
+| `deploy`               | `jm0ZYRpZIPWge2ZSiDYO` |
+| `administer`           | `wMJrGrimpx3PxCJpUswm` |
+| `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
+| `release-notes`        | `hhM8Cox90Piiv0u0EgHM` |
+| `contribute`           | `6OmLnmci5kZDzdkzKREn` |
+
+Alternatively, copy the page's link in GitBook, or use its published
+`https://docs.n8n.io/...` address if you don't have GitBook access.
+
+<!-- Keep this table in sync with the one in
+docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
+space is added, removed, or recreated. IDs are stable while a space exists; a
+recreated space gets a new ID. -->
+
+## Hints (callouts)
+
+Hints draw attention to important information. There are four styles: `info`,
+`warning`, `danger`, and `success`.
+
+```markdown
+{% hint style="info" %}
+General notes, information to highlight, and feature restrictions (pricing tier, platform).
+{% endhint %}
+
+{% hint style="warning" %}
+Something has risks or unexpected behaviours.
+{% endhint %}
+
+{% hint style="danger" %}
+High security risk, or destructive (the user can permanently lose data).
+{% endhint %}
+
+{% hint style="success" %}
+Positive confirmations or tips. Use sparingly.
+{% endhint %}
+```
+
+To add a title, make a heading the first line of the hint:
+
+```markdown
+{% hint style="info" %}
+## This is the hint title
+
+Some hint content.
+{% endhint %}
+```
+
+**Don't over-use hints.** They lose their effectiveness if used frequently.
+
+## Collapsible blocks
+
+Similar to hints, but collapsed until the user clicks to expand. Use them for
+supplementary detail that would otherwise clutter the page. Rendered from a
+standard HTML `<details>` block:
+
+```markdown
+<details>
+
+<summary>Summary text the user clicks</summary>
+
+Some collapsible content. Standard Markdown works inside the block.
+
+</details>
 ```
 
 ## Tabbed content
 
-Use tabs when content differs by platform, language, or configuration. Use sparingly — they can hide content from users.
+Use tabs when content differs by platform, language, or configuration. Use
+sparingly, as they can hide content from users and hurt discoverability.
 
 ```markdown
-=== "First tab"
+{% tabs %}
+{% tab title="First tab" %}
+Content rendered with normal Markdown syntax:
 
-    Content indented four spaces.
+- List item one
+- List item two
+{% endtab %}
 
-    - List item one
-    - List item two
-
-=== "Second tab"
-
-    1. Numbered list
-    2. Another item
+{% tab title="Second tab" %}
+1. Numbered list
+2. Another item
+{% endtab %}
+{% endtabs %}
 ```
-
-See the [Material docs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs){:target="_blank" .external-link} for more detail.
 
 ## Code blocks
 
-Always use **tabs, not spaces** for indentation inside code blocks. This matches the n8n node linter convention and prevents linter failures if users copy the code.
+Always use **tabs, not spaces** for indentation inside code blocks. This matches
+the n8n node linter convention and prevents linter failures if users copy the code.
+
+Use fenced code blocks with a language identifier for syntax highlighting:
 
 ````markdown
 ```typescript
@@ -78,6 +220,17 @@ function example() {
 ```
 ````
 
+GitBook supports [optional code block settings](https://gitbook.com/docs/creating-content/blocks/code-block).
+Add a title, wrapping, or line numbers when they help the reader:
+
+````markdown
+{% code title="MyNode.node.ts" overflow="wrap" lineNumbers="true" %}
+```typescript
+// Your code here
+```
+{% endcode %}
+````
+
 ## Placeholders in code
 
 Placeholders inside code spans or blocks use hyphenated words in angle brackets:
@@ -86,22 +239,65 @@ Placeholders inside code spans or blocks use hyphenated words in angle brackets:
 Run `n8n start --tunnel` from `<your-project-directory>`.
 ```
 
+## Images
+
+Each space keeps all its images in one folder, `.gitbook/assets/` at the space
+root. You can't reference an image from another space's assets folder.
+
+Reference images with a path relative to the page: step up to the space root,
+then into `.gitbook/assets/`:
+
+```markdown
+![Alt text](../.gitbook/assets/workflow-overview.png)
+![Alt text](../../.gitbook/assets/workflow-overview.png)
+```
+
+**Alt text:** always descriptive. Describe what the image shows, not that it's a
+screenshot. Keep it under 125 characters. Don't start with "Image of" or
+"Screenshot of".
+
+**Files:** PNG for screenshots and diagrams, SVG for icons and simple
+illustrations. Compress before committing. Use lowercase, hyphenated names
+(`workflow-overview.png`, not `WorkflowOverview.PNG`).
+
+## Videos
+
+Don't commit video files to the repo. Host externally (YouTube, Loom, or another
+supported domain) and embed the URL:
+
+```markdown
+{% embed url="https://www.youtube.com/embed/your-video-id" %}
+```
+
+## Embedded workflows
+
+Embed an n8n workflow so readers can view and interact with it in the page.
+Reference a published template by its template API URL (the template ID appended
+to `https://api.n8n.io/workflows/templates/`):
+
+```markdown
+{% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
+```
+
 ---
 
 ## Linting
 
 ### Vale
 
-Vale checks spelling, grammar, and style guide adherence. Run locally:
+Vale checks spelling, grammar, and style guide adherence. The style rules ship
+with the repo, so no extra setup is needed. Run it from the repo root:
 
 ```bash
-vale --glob="*.md" docs
+vale docs/                 # lint a directory
+vale docs/path/to/file.md  # lint a single file
 ```
 
-Or install the [vale-vscode](https://github.com/chrischinchilla/vale-vscode){:target="_blank" .external-link} extension to see issues inline.
+Or install the [vale-vscode](https://github.com/chrischinchilla/vale-vscode)
+extension to see issues inline. Fix any errors and warnings before submitting a PR.
 
-Custom rules live in `styles/n8n-styles/`. Add accepted brand names to
-`styles/config/vocabularies/default/accept.txt`.
+Custom rules live in the `styles/` directory. Add accepted brand names to the
+Vale vocabulary accept list.
 
 ### Lexi
 

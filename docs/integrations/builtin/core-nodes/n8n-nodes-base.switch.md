@@ -1,15 +1,26 @@
 ---
 title: Switch
-description: Documentation for the Switch node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Switch node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Switch
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.switch.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.switch'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.switch'
+layout:
+  description:
+    visible: false
 ---
 
-# Switch
+# Switch <a href="#switch" id="switch"></a>
 
-Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node, but supports multiple output routes.
+Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](n8n-nodes-base.if.md) node, but supports multiple output routes.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Select the **Mode** the node should use:
 
@@ -18,7 +29,7 @@ Select the **Mode** the node should use:
 
 Node configuration depends on the **Mode** you select.
 
-### Rules
+### Rules <a href="#rules" id="rules"></a>
 
 To configure the node with this operation, use these parameters:
 
@@ -29,7 +40,7 @@ To configure the node with this operation, use these parameters:
 
 Select **Add Routing Rule** to add more rules.
 
-#### Rule options
+#### Rule options <a href="#rule-options" id="rule-options"></a>
 
 You can further configure the node with this operation using these **Options**:
 
@@ -41,21 +52,21 @@ You can further configure the node with this operation using these **Options**:
 - **Less Strict Type Validation**: Set whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off).
 - **Send data to all matching outputs**: Set whether to send data to all outputs meeting conditions (turned on) or whether to send the data to the first output matching the conditions (turned off).
 
-### Expression
+### Expression <a href="#expression" id="expression"></a>
 
 To configure the node with this operation, use these parameters:
 
 - **Number of Outputs**: Set how many outputs the node should have.
 - **Output Index**: Create an expression to calculate which input item should be routed to which output. The expression must return a number.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'switch') ]]
 
-## Related resources
+[Browse Switch integration templates](https://n8n.io/integrations/switch) or [search all templates](https://n8n.io/workflows/)
 
-Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
---8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
+Refer to [Splitting with conditionals](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/split-with-conditionals) for more information on using conditionals to create complex logic in n8n.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/bMMOCQFbQ4YpKDnWQQOg/" %}
 

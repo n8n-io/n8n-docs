@@ -1,29 +1,42 @@
 ---
 title: Adalo credentials
-description: Documentation for Adalo credentials. Use these credentials to authenticate Adalo in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Adalo credentials. Use these credentials to authenticate
+  Adalo in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Adalo credentials
+originalFilePath: integrations/builtin/credentials/adalo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/adalo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/adalo'
+layout:
+  description:
+    visible: false
 ---
 
-# Adalo credentials
+# Adalo credentials <a href="#adalo-credentials" id="adalo-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Adalo](/integrations/builtin/app-nodes/n8n-nodes-base.adalo.md)
+- [Adalo](../app-nodes/n8n-nodes-base.adalo.md)
 
-/// note | API access
+{% hint style="info" %}
+**API access**
+
 You need a Team or Business plan to use the Adalo APIs.
-///
+{% endhint %}
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Adalo's API collections documentation](https://help.adalo.com/integrations/the-adalo-api/collections) for more information about working with the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need an [Adalo](https://www.adalo.com/) account and:
 

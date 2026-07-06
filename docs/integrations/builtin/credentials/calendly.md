@@ -1,30 +1,43 @@
 ---
 title: Calendly credentials
-description: Documentation for Calendly credentials. Use these credentials to authenticate Calendly in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Calendly credentials. Use these credentials to authenticate
+  Calendly in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Calendly credentials
+originalFilePath: integrations/builtin/credentials/calendly.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/calendly'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/calendly'
+layout:
+  description:
+    visible: false
 ---
 
-# Calendly credentials
+# Calendly credentials <a href="#calendly-credentials" id="calendly-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md)
+- [Calendly Trigger](../trigger-nodes/n8n-nodes-base.calendlytrigger.md)
 
-/// warning | Supported Calendly plans
+{% hint style="warning" %}
+**Supported Calendly plans**
+
 The Calendly Trigger node relies on Calendly webhooks. Calendly only offers access to webhooks in their paid plans.
-///
+{% endhint %}
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Personal Access Token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Calendly's API documentation](https://developer.calendly.com/getting-started) for more information about the service.
 
-## Using Personal Access Token
+## Using Personal Access Token <a href="#using-personal-access-token" id="using-personal-access-token"></a>
 
 To configure this credential, you'll need a [Calendly](https://www.calendly.com/) account and:
 
@@ -41,7 +54,7 @@ To get your access token:
 
 Refer to [Calendly's API authentication documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [Calendly developer](https://developer.calendly.com) account and:
 
@@ -64,6 +77,8 @@ To get both, create a new OAuth app in Calendly:
 
 Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account) for more information.
 
-/// note | Local OAuth2 testing
+{% hint style="info" %}
+**Local OAuth2 testing**
+
 When testing OAuth2 with a tunnel (such as ngrok or Cloudflare Tunnel), open n8n through the same public URL you used as the **OAuth Redirect URL**. Otherwise, the OAuth callback may fail because the n8n session cookie belongs to a different host.
-///
+{% endhint %}

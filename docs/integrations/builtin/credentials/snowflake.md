@@ -1,29 +1,40 @@
 ---
 title: Snowflake credentials
-description: Documentation for Snowflake credentials. Use these credentials to authenticate Snowflake in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Snowflake credentials. Use these credentials to authenticate
+  Snowflake in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Snowflake credentials
+originalFilePath: integrations/builtin/credentials/snowflake.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/snowflake'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/snowflake'
+layout:
+  description:
+    visible: false
 ---
 
-# Snowflake credentials
+# Snowflake credentials <a href="#snowflake-credentials" id="snowflake-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Snowflake](/integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md)
+- [Snowflake](../app-nodes/n8n-nodes-base.snowflake.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Snowflake](https://www.snowflake.com/en/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - [Password](#using-password-authentication)
 - [Key-pair](#using-key-pair-authentication)
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Snowflake's API documentation](https://docs.snowflake.com/en/api-reference) and [SQL Command Reference](https://docs.snowflake.com/en/sql-reference-commands) for more information about the service.
 
-## Common configuration fields
+## Common configuration fields <a href="#common-configuration-fields" id="common-configuration-fields"></a>
 
 Both authentication methods require the following fields:
 
@@ -36,14 +47,14 @@ Both authentication methods require the following fields:
 
 Refer to [Session Commands](https://docs.snowflake.com/en/sql-reference/commands-session) for more information on these settings.
 
-## Using password authentication
+## Using password authentication <a href="#using-password-authentication" id="using-password-authentication"></a>
 
 In addition to the [common configuration fields](#common-configuration-fields), password authentication requires:
 
 - A **Username**
 - A **Password**
 
-## Using key-pair authentication
+## Using key-pair authentication <a href="#using-key-pair-authentication" id="using-key-pair-authentication"></a>
 
 Key-pair authentication provides enhanced security as an alternative to password-based authentication. This method uses a public-private key pair for authentication.
 

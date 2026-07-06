@@ -1,35 +1,46 @@
 ---
 title: MongoDB credentials
-description: Documentation for MongoDB credentials. Use these credentials to authenticate MongoDB in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for MongoDB credentials. Use these credentials to authenticate
+  MongoDB in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: MongoDB credentials
+originalFilePath: integrations/builtin/credentials/mongodb.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mongodb'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mongodb'
+layout:
+  description:
+    visible: false
 ---
 
-# MongoDB credentials
+# MongoDB credentials <a href="#mongodb-credentials" id="mongodb-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md)
-- [MongoDB Atlas Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md)
-- [MongoDB Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
+- [MongoDB](../app-nodes/n8n-nodes-base.mongodb.md)
+- [MongoDB Atlas Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md)
+- [MongoDB Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/) server.
-- As a Project Owner, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
+- As a Project Owner, add all the [n8n IP addresses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/find-your-ip-addresses) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
 
 If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection - Connection string
 - Database connection - Values
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
 
-## Using database connection - Connection string
+## Using database connection - Connection string <a href="#using-database-connection-connection-string" id="using-database-connection-connection-string"></a>
 
 To configure this credential, you'll need the [Prerequisites](#prerequisites) listed above. Then:
 
@@ -49,7 +60,7 @@ To configure this credential, you'll need the [Prerequisites](#prerequisites) li
 
 Refer to [MongoDB's x.509 documentation](https://www.mongodb.com/docs/manual/core/security-x.509/#std-label-client-x509-certificates-requirements) for more information on working with x.509 certificates.
 
-## Using database connection - Values
+## Using database connection - Values <a href="#using-database-connection-values" id="using-database-connection-values"></a>
 
 To configure this credential, you'll need the [Prerequisites](#prerequisites) listed above. Then:
 

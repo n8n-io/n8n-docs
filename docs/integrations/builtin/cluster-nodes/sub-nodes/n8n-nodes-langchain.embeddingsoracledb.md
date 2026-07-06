@@ -1,27 +1,36 @@
 ---
 title: Embeddings Oracle Database node documentation
 description: Learn how to use the Embeddings Oracle Database node in n8n. Follow technical documentation to integrate Embeddings Oracle Database node into your workflows.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
 priority: medium
+layout:
+  description:
+    visible: false
 ---
 
 # Embeddings Oracle Database node
 
-Use the Embeddings Oracle Database node to generate [embeddings](/glossary.md#ai-embedding) with ONNX models stored in Oracle Database. This node is useful for workflows that perform semantic search, similarity matching, retrieval-augmented generation, or other tasks that require vector representations of text.
+Use the Embeddings Oracle Database node to generate embeddings[^1] with ONNX models stored in Oracle Database. This node is useful for workflows that perform semantic search, similarity matching, retrieval-augmented generation, or other tasks that require vector representations of text.
 
 On this page, you'll find the node parameters for the Embeddings Oracle Database node, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/oracledb.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-/// note | ONNX models
+You can find authentication information for this node [here](../../credentials/oracledb.md).
+{% endhint %}
+
+{% hint style="info" %}
+**ONNX models**
+
 Your Oracle Database instance must support Oracle AI Vector Search and ONNX model execution capabilities.
 
 Import one or more ONNX embedding models into Oracle Database before using this node. Only imported models are available for selection.
-///
+{% endhint %}
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters
 
@@ -31,11 +40,12 @@ The node loads available models from the `USER_MINING_MODELS` view in the config
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'embeddings-oracle-database') ]]
+[Browse Embeddings Oracle Database node documentation integration templates](https://n8n.io/integrations/embeddings-oracle-database) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources
 
 Refer to [Oracle's ONNX model import documentation](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/import-onnx-models-oracle-ai-database-end-end-example.html) for more information about importing ONNX models into Oracle Database.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
+
+[^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.

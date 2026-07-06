@@ -1,32 +1,43 @@
 ---
 title: Azure Storage credentials
-description: Documentation for the Azure Storage credentials. Use these credentials to authenticate Azure Storage in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Azure Storage credentials. Use these credentials to
+  authenticate Azure Storage in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Azure Storage credentials
+originalFilePath: integrations/builtin/credentials/azurestorage.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/azurestorage'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/azurestorage'
+layout:
+  description:
+    visible: false
 ---
 
-# Azure Storage credentials
+# Azure Storage credentials <a href="#azure-storage-credentials" id="azure-storage-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Azure Storage](/integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md)
+* [Azure Storage](../app-nodes/n8n-nodes-base.azurestorage.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * Create an [Azure](https://azure.microsoft.com) subscription.
 * Create an [Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * OAuth2
 * Shared Key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Azure Storage's API documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
@@ -35,7 +46,7 @@ For self-hosted users, there are two main steps to configure OAuth2 from scratch
 
 Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts). 
 
-### Register an application
+### Register an application <a href="#register-an-application" id="register-an-application"></a>
 
 Register an application with the Microsoft Identity Platform:
 
@@ -52,7 +63,7 @@ Register an application with the Microsoft Identity Platform:
 
 Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2) for more information.
 
-### Generate a client secret
+### Generate a client secret <a href="#generate-a-client-secret" id="generate-a-client-secret"></a>
 
 With your application created, generate a client secret for it:
 
@@ -67,7 +78,7 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
-## Using Shared Key
+## Using Shared Key <a href="#using-shared-key" id="using-shared-key"></a>
 
 To configure this credential, you'll need:
 
@@ -76,8 +87,8 @@ To configure this credential, you'll need:
 
 Refer to [Manage storage account access keys | Microsoft](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage) for more detailed steps.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
 Here are the known common errors and issues with Azure Storage credentials.
 
---8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}

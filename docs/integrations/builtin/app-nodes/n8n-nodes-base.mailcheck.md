@@ -1,27 +1,40 @@
 ---
 title: Mailcheck node documentation
-description: Learn how to use the Mailcheck node in n8n. Follow technical documentation to integrate Mailcheck node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Mailcheck node in n8n. Follow technical documentation to
+  integrate Mailcheck node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Mailcheck node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mailcheck.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck'
+layout:
+  description:
+    visible: false
 ---
 
-# Mailcheck node
+# Mailcheck node <a href="#mailcheck-node" id="mailcheck-node"></a>
 
 Use the Mailcheck node to automate work in Mailcheck, and integrate Mailcheck with other applications. n8n has built-in support for a wide range of Mailcheck features, including checking emails. 
 
 On this page, you'll find a list of operations the Mailcheck node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Mailcheck credentials](../credentials/mailcheck.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Email
     * Check
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mailcheck') ]]
+
+[Browse Mailcheck node documentation integration templates](https://n8n.io/integrations/mailcheck) or [search all templates](https://n8n.io/workflows/)

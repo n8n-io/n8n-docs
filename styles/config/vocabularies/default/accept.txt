@@ -140,6 +140,7 @@ Lemlist
 Lenovo
 [Ll]inter
 LLMs?
+[Ll]oopback
 Luhn
 Luxon
 [Mm]agnetopause
@@ -214,6 +215,7 @@ Qdrant
 QRadar
 Qualys
 [Qq]uickstarts
+Qwen
 Realtime
 Rekognition
 requester
@@ -271,6 +273,7 @@ Typeform
 [Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
+[Uu]ngroup(s|ed|ing)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare

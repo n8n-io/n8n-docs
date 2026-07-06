@@ -1,39 +1,50 @@
 ---
 title: Gumroad credentials
-description: Documentation for Gumroad credentials. Use these credentials to authenticate Gumroad in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Gumroad credentials. Use these credentials to authenticate
+  Gumroad in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Gumroad credentials
+originalFilePath: integrations/builtin/credentials/gumroad.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/gumroad'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/gumroad'
+layout:
+  description:
+    visible: false
 ---
 
-# Gumroad credentials
+# Gumroad credentials <a href="#gumroad-credentials" id="gumroad-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Gumroad Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md)
+- [Gumroad Trigger](../trigger-nodes/n8n-nodes-base.gumroadtrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Gumroad](https://gumroad.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Gumroad's API documentation](https://app.gumroad.com/api) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 
 - An API **Access Token**: Create an application to generate an access token. Refer to the [Gumroad Create an application for the API documentation](https://gumroad.com/help/article/280-create-application-api) for detailed instructions on creating a new application and generating an access token.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-If you're [self-hosting n8n](/hosting/index.md), you'll need:
+If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n), you'll need:
 
 - An **OAuth Redirect URL**
 - A **Client ID**

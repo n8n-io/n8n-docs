@@ -1,30 +1,41 @@
 ---
 title: Strava credentials
-description: Documentation for Strava credentials. Use these credentials to authenticate Strava in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Strava credentials. Use these credentials to authenticate
+  Strava in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Strava credentials
+originalFilePath: integrations/builtin/credentials/strava.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/strava'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/strava'
+layout:
+  description:
+    visible: false
 ---
 
-# Strava credentials
+# Strava credentials <a href="#strava-credentials" id="strava-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava.md)
-- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md)
+- [Strava](../app-nodes/n8n-nodes-base.strava.md)
+- [Strava Trigger](../trigger-nodes/n8n-nodes-base.stravatrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Strava](https://strava.com) account.
 - Create a Strava application in [**Settings > API**](https://www.strava.com/settings/api). Refer to [Using OAuth2](#using-oauth2) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Strava's API documentation](https://developers.strava.com/docs/reference/) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 

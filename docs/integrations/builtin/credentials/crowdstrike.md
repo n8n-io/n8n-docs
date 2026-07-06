@@ -1,29 +1,40 @@
 ---
 title: CrowdStrike credentials
-description: Documentation for the CrowdStrike credentials. Use these credentials to authenticate CrowdStrike in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the CrowdStrike credentials. Use these credentials to
+  authenticate CrowdStrike in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: CrowdStrike credentials
+originalFilePath: integrations/builtin/credentials/crowdstrike.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/crowdstrike'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/crowdstrike'
+layout:
+  description:
+    visible: false
 ---
 
-# CrowdStrike credentials
+# CrowdStrike credentials <a href="#crowdstrike-credentials" id="crowdstrike-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [CrowdStrike](https://www.crowdstrike.com/en-us/) account.
 
-## Authentication methods 
+## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on their website to access the API documentation.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/) on n8n's website.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 

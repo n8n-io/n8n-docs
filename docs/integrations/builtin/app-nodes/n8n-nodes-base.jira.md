@@ -1,23 +1,36 @@
 ---
 title: Jira Software node documentation
-description: Learn how to use the Jira Software node in n8n. Follow technical documentation to integrate Jira Software node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Jira Software node in n8n. Follow technical documentation
+  to integrate Jira Software node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Jira Software node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.jira'
+layout:
+  description:
+    visible: false
 ---
 
-# Jira Software node
+# Jira Software node <a href="#jira-software-node" id="jira-software-node"></a>
 
 Use the Jira Software node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
 
 On this page, you'll find a list of operations the Jira Software node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Jira credentials](../credentials/jira.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Issue
     * Get issue changelog
@@ -44,18 +57,18 @@ Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guida
     * Delete a user.
     * Retrieve a user.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'jira-software') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Jira Software node documentation integration templates](https://n8n.io/integrations/jira-software) or [search all templates](https://n8n.io/workflows/)
 
-## Related resources
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to the [official JQL documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about Jira Query Language (JQL) to learn more about it.
 
-## Fetch issues for a specific project
+## Fetch issues for a specific project <a href="#fetch-issues-for-a-specific-project" id="fetch-issues-for-a-specific-project"></a>
 
 The **Get All** operation returns all the issues from Jira. To fetch issues for a particular project, you need to use Jira Query Language (JQL).
 

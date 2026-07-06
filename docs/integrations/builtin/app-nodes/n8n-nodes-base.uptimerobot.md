@@ -1,20 +1,33 @@
 ---
 title: UptimeRobot node documentation
-description: Learn how to use the UptimeRobot node in n8n. Follow technical documentation to integrate UptimeRobot node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the UptimeRobot node in n8n. Follow technical documentation
+  to integrate UptimeRobot node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: UptimeRobot node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot'
+layout:
+  description:
+    visible: false
 ---
 
-# UptimeRobot node
+# UptimeRobot node <a href="#uptimerobot-node" id="uptimerobot-node"></a>
 
 Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
 
 On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
-/// note | Credentials
-Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [UptimeRobot credentials](../credentials/uptimerobot.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Account
     * Get account details
@@ -43,7 +56,7 @@ Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot
     * Get a public status page
     * Get all a public status pages
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'uptimerobot') ]]
+
+[Browse UptimeRobot node documentation integration templates](https://n8n.io/integrations/uptimerobot) or [search all templates](https://n8n.io/workflows/)

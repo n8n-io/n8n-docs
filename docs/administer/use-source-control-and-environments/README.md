@@ -26,7 +26,7 @@ In this section:
 	* [Git and n8n](use-git-in-n8n.md): How n8n uses Git. 
 	* [Branch patterns](choose-branching-patterns.md): The possible relationships between n8n instances and Git branches.
 * [Set up source control for environments](set-up-source-control.md): How to connect your n8n instance to Git.
-* [Using](/source-control-environments/using/index.md):
+* Using:
 	* [Push and pull](push-and-pull-changes.md): Send work to Git, and fetch work from Git to your instance.
 	* [Copy work between environments](move-work-between-environments.md): How to copy work between different n8n instances.
 * [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md): An end-to-end tutorial, setting up environments using n8n's recommended configurations.

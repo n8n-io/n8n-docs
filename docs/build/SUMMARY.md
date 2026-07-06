@@ -31,6 +31,7 @@
   * [Tag workflows](manage-workflows/tag-workflows.md)
   * [View change history](manage-workflows/view-change-history.md)
   * [Export and import](manage-workflows/export-and-import.md)
+  * [n8n Packages](manage-workflows/n8n-packages.md)
   * [Share with others](manage-workflows/share-with-others.md)
 * [Flow logic](flow-logic/README.md)
   * [Split with conditionals](flow-logic/split-with-conditionals.md)

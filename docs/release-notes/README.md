@@ -6,21 +6,48 @@ Every n8n release moves the platform forward. The changelog is where we call out
 For complete, version-by-version detail on every release, see the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. This changelog covers stable n8n 2.x releases onward; release notes for [1.x](release-notes-1.x.md) and [0.x](release-notes-0.x.md) remain archived.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/Pv5qtwcPHKJKdJPRJTs2/~/reusable/rUuvvFUxRYV3Lyc96WOk/" %}
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+### n8n 2.27 — Move workflows between instances as packages
+
+**Released:** 2026-06-16
+
+You can now bundle workflows into a portable `.n8np` package and move them between n8n instances through the Public API or a matching set of CLI commands that wrap the same endpoints. Copying workflow JSON by hand always worked for one-off moves. Packages make it repeatable and automatable, carrying a set of workflows along with their credential stubs and a `manifest.json` describing their dependencies in a single file.
+
+Imports are checked up front. If a conflict or an unresolved credential would block the import, n8n stops and lists the issues instead of leaving you half-migrated. For each import you choose whether to bring a workflow in as a new version, fail on the first conflict, or skip ones that already exist. Credentials are matched by ID and their secrets never travel in the package; n8n exports a stub you match on the target instance, or fills in empty placeholders for later.
+
+This makes it easy to promote workflows from development to production, back up and restore an instance, hand a workflow to a teammate without sharing secrets, or migrate between instances.
+
+{% hint style="warning" %}
+This feature is in **beta**. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
+{% endhint %}
+
+Learn more in the [n8n Packages documentation](https://docs.n8n.io/build/manage-workflows/n8n-packages).
 
 ### n8n 2.22 — Connect to MCP servers with less setup
 
 **Released:** 2026-05-19
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient/) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry — Apify, Linear, monday.com, Notion, and PostHog — and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcpClient/) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup
 {% endembed %}
+
+#### OpenTelemetry custom telemetry tags
+
+You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
+
+Learn more in the [documentation](<https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes>).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 
 ### n8n 2.20 — Microsoft Agent 365 Trigger node
 
@@ -28,11 +55,11 @@ Connect to MCP servers with less setup
 
 #### Microsoft Agent 365 Trigger node
 
-The [Microsoft Agent 365 Trigger node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger/) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
+The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
 
 <figure><img src=".gitbook/assets/microsoft_agent_365 (1).png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
 
-You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://docs.n8n.io/flow-logic/subworkflows/). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
+You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/break-workflows-into-smaller-parts). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
 
 If you already use n8n with Microsoft services through individual nodes (Outlook, Teams, SharePoint, and so on), those workflows continue to work as before. Agent 365 is a new path for teams that want their agents to show up _inside_ Microsoft apps and interact like a member of the team. The node requires a Microsoft 365 tenant.
 
@@ -40,7 +67,7 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 #### Insights data duration
 
-Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://docs.n8n.io/insights/).
+Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
 
 ### n8n 2.19 — IdP role mapping and instance bootstrapping (Enterprise)
 
@@ -84,7 +111,7 @@ The embedding system holds an asymmetric private key and signs short-lived JWTs 
 
 Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
 
-Redaction is configured per workflow under **Workflow settings**, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://docs.n8n.io/workflows/executions/execution-data-redaction/).
+Redaction is configured per workflow under **Workflow settings**, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -134,14 +161,14 @@ What's new:
 
 * Project admins manage their own vault connections from project settings.
 * Project editors can use project-scoped secrets in credentials once the instance admin enables access.
-* [Custom roles](https://docs.n8n.io/user-management/rbac/custom-roles/) now include five secrets scopes: list, read, create, update, and delete.
+* [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) now include five secrets scopes: list, read, create, update, and delete.
 * Instance admins/owners no longer need to be project members for secrets to resolve.
 
 **For instance admins:** go to **Settings > External Secrets** and enable the **System Roles** toggle, or use custom roles for more granular control.
 
 **For project admins:** go to **Project Settings > External Secrets** to create and manage project-level connections. Instance-level connections shared with you appear as read-only.
 
-Refer to [External secrets](https://docs.n8n.io/external-secrets/) for more information.
+Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -152,14 +179,14 @@ Refer to [External secrets](https://docs.n8n.io/external-secrets/) for more info
 The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
 
 {% hint style="info" %}
-**Availability:** Enterprise. Requires [Environments](https://docs.n8n.io/source-control-environments/setup/) configured.
+**Availability:** Enterprise. Requires [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control) configured.
 {% endhint %}
 
 ### n8n 2.12 — 1Password as an external secrets provider (Enterprise)
 
 **Released:** 2026-03-09
 
-n8n now supports 1Password Connect Server as an [external secrets](https://docs.n8n.io/external-secrets/) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
+n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
 
 Secrets are fetched at runtime and never stored in n8n: 1Password stays the single source of truth. Multi-field items are available as structured sub-paths: `$secrets.<vault>.<item>.<field>`.
 
@@ -191,15 +218,15 @@ Things to keep in mind:
 
 #### Custom roles: Assignments tab (Enterprise)
 
-Instance admins now have a dedicated **Assignments** tab on each [custom role](https://docs.n8n.io/user-management/rbac/custom-roles/) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
+Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
 
 #### Project-scoped external secrets: instance admin setup (Enterprise)
 
-Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected. Refer to [External secrets](https://docs.n8n.io/external-secrets/) for more information.
+Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
 #### Workflow execute as a separate permission scope (Enterprise)
 
-`workflow:execute` is now a distinct scope in [custom project roles](https://docs.n8n.io/user-management/rbac/custom-roles/), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
+`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
 
 {% hint style="info" %}
 **Availability:** Custom roles and project-scoped external secrets are available on n8n Enterprise.
@@ -220,7 +247,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on recent updates to the permissions model, including [custom project roles](https://docs.n8n.io/user-management/rbac/custom-roles/), to better support policy-driven governance.
+This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
 
 <figure><img src=".gitbook/assets/personal_space_policies (1).png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
@@ -253,7 +280,7 @@ This makes it easier to audit who has access to which projects and credentials w
 
 _Released in 2.8.0 (2026-02-09)._
 
-Workflow publishing permissions for [custom roles](https://docs.n8n.io/user-management/rbac/custom-roles/) have been split into two separate scopes: `workflow:publish` and `workflow:unpublish`. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
+Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: `workflow:publish` and `workflow:unpublish`. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
 
 {% hint style="info" %}
 **Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on n8n Enterprise.
@@ -278,7 +305,7 @@ Because the review step is implemented using standard n8n integrations, approval
 
 **How to use it:** on the connection from the AI Agent to the tool you want to gate, click the **+** icon and choose **Add human review step**. The Tools panel opens with nodes you can use to handle the review; select one and configure the approver, the message, and the available actions.
 
-Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://docs.n8n.io/advanced-ai/human-in-the-loop-tools/).
+Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
 {% embed url="https://youtu.be/B-_nIFI27VY" %}
 Human in the loop for AI tool calls
@@ -304,7 +331,7 @@ When used as an agent tool, the agent can ask for clarification before proceedin
 
 Keep in mind: if you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action. For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
 
-Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chat/#operation).
+Learn more in the [Chat node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chat#operation).
 
 {% embed url="https://youtu.be/CpFqawY0RCc" %}
 Human in the loop for the Chat node

@@ -35,8 +35,8 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
-* [Chat Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/)
+* [Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/README.md)
+* [Chat Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/README.md)
 * [Embeddings Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

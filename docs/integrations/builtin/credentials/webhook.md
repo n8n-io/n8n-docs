@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Webhook](../core-nodes/n8n-nodes-base.webhook/)
+* [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

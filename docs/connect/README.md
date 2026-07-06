@@ -48,7 +48,7 @@ Best for:
 * Triggering and monitoring executions from external systems
 * Automating workflow and credential management
 
-Start with [n8n API](n8n-api/).
+Start with [n8n API](n8n-api/README.md).
 {% endtab %}
 
 {% tab title="n8n CLI" %}

@@ -26,7 +26,7 @@ Custom instance roles are available on Self-hosted Enterprise and Cloud Enterpri
 n8n has two types of custom roles:
 
 * **Custom instance roles**: Roles that apply across the entire n8n instance. Assign them to users who need specific instance-level capabilities regardless of which project they're in.
-* **Custom project roles**: Roles that apply within a specific project. Refer to [Create custom project roles](create-custom-roles.md).
+* **Custom project roles**: Roles that apply within a specific project. Refer to [Create custom project roles](create-custom-project-roles.md).
 {% endhint %}
 
 Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike the built-in account types (Owner, Admin, Member), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide resources.

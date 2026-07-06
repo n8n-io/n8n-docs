@@ -20,7 +20,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-- [Microsoft Agent 365 Trigger](../cluster-nodes/root-nodes/root-nodes.md)
+- [Microsoft Agent 365 Trigger](../cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger.md)
 
 {% hint style="warning" %}
 **Early preview**

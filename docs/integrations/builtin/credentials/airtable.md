@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Airtable](../app-nodes/n8n-nodes-base.airtable/)
+* [Airtable](../app-nodes/n8n-nodes-base.airtable/README.md)
 * [Airtable Trigger](../trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

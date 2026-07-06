@@ -1,0 +1,75 @@
+{
+  "name": "Reference incoming data explicitly",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "0abbe7f6-f8a0-4f71-8229-f4fd1a3c2683",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n   \"id\": 0001,\n   \"personal_info\": {\n    \"first_name\": \"Natalie\",\n    \"surname\": \"Berlin\"\n   },\n   \"work_info\": {\n    \"job_title\": \"Automation engineer\"\n   }\n  },\n  {\n    \"id\": 0002,\n    \"personal_info\": {\n     \"first_name\": \"Nathan\",\n     \"surname\": \"Berlin\"\n    },\n    \"work_info\": {\n     \"job_title\": \"Automation designer\"\n    }\n   }\n]"
+      },
+      "id": "e19f11cd-c868-4aca-b88e-04b4ee6f0187",
+      "name": "Mock data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        840,
+        520
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ef54d477-0596-441a-98e5-1ab005e9a268",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        520
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Mock data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock data": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4e3a0a21-c993-4851-848b-01bd5c090b6b",
+  "id": "EipyYyqKKQm7siq4",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}

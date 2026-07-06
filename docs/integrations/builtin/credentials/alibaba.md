@@ -1,13 +1,13 @@
 ---
-title: Alibaba Cloud credentials
+title: Qwen Cloud credentials
 description: >-
-  Documentation for Alibaba Cloud credentials. Use these credentials to
-  authenticate Alibaba Cloud in n8n, a workflow automation platform.
+  Documentation for Qwen Cloud credentials. Use these credentials to
+  authenticate Qwen Cloud in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
-nodeTitle: Alibaba Cloud credentials
+nodeTitle: Qwen Cloud credentials
 originalFilePath: integrations/builtin/credentials/alibaba.md
 originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/alibaba'
 url: 'https://docs.n8n.io/integrations/builtin/credentials/alibaba'
@@ -16,16 +16,16 @@ layout:
     visible: false
 ---
 
-# Alibaba Cloud credentials <a href="#alibaba-cloud-credentials" id="alibaba-cloud-credentials"></a>
+# Qwen Cloud credentials <a href="#alibaba-cloud-credentials" id="alibaba-cloud-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Alibaba Cloud Model Studio](../app-nodes/n8n-nodes-langchain.alibabacloud.md)
-- [Alibaba Cloud Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md)
+- [Qwen Cloud](../app-nodes/n8n-nodes-langchain.alibabacloud.md)
+- [Qwen Cloud Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create an [Alibaba Cloud](https://www.alibabacloud.com/) account and activate [Model Studio](https://www.alibabacloud.com/en/product/modelstudio).
+Create a [Qwen Cloud](https://qwencloud.com/) account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -33,7 +33,7 @@ Create an [Alibaba Cloud](https://www.alibabacloud.com/) account and activate [M
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Alibaba Cloud Model Studio's documentation](https://www.alibabacloud.com/help/en/model-studio/) for more information about the service.
+Refer to [Qwen Cloud API key documentation](https://docs.qwencloud.com/developer-guides/administration/api-keys) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
@@ -43,12 +43,13 @@ To configure this credential, you'll need:
 
 - An **API Key**
 
-1. Sign in to the [Alibaba Cloud Model Studio console](https://modelstudio.console.alibabacloud.com/).
-2. In the top right of the screen, select your target region.
-3. In the top menu, select **Dashboard**, then in the side menu, **API Key**.
-4. Select **Create API Key**.
-5. In the dialog box, select a workspace and key description, then select **OK**.
-6. Copy the API key (it displays only once), and enter it in your n8n credential.
-7. Ensure the region of your n8n credential matches the region you selected in the Alibaba Cloud Model Studio console.
+1. Sign in to [Qwen Cloud](https://qwencloud.com/).
+2. Go to **API Keys**.
+3. Use the workspace switcher at the bottom of the sidebar to select the workspace where you want to create the key.
+4. Select **Create API key**.
+5. Enter a description, then select **Generate Key**.
+6. Copy the API key. It displays only once.
+7. Enter the API key in your n8n credential.
+8. For Qwen Cloud accounts, set **Region** to **Singapore**. Select another region only if you're using Alibaba Cloud Model Studio.
 
-Refer to [Alibaba Cloud's API key documentation](https://www.alibabacloud.com/help/en/model-studio/developer-reference/get-api-key) for more information.
+Refer to [Qwen Cloud API key documentation](https://docs.qwencloud.com/developer-guides/administration/api-keys) for more information.

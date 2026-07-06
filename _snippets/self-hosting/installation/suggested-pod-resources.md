@@ -1,3 +1,0 @@
-- **Start**: 320mb RAM, 10 millicore CPU burstable
-- **Pro (10k executions)**: 640mb RAM, 20 millicore CPU burstable
-- **Pro (50k executions)**: 1280mb RAM, 80 millicore CPU burstable

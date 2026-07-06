@@ -1,0 +1,75 @@
+{
+  "name": "Summarize data and prepare Slack message",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5d4bd82f-24e9-484e-a17e-c5de889087d9",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        860,
+        540
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "0d73c3df-300a-4397-8f53-fb0750dbf97f",
+      "name": "Summarize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n{\n\"id\":\n\"0001\",\n\"name\":\n\"Example feature 1\",\n\"url\": \"example.com\",\n\"property_tags\":\n[\n],\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n2\n},\n{\n\"id\":\n\"0002\",\n\"name\":\n\"Example feature 2\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n3\n},\n{\n\"id\":\n\"0003\",\n\"name\":\n\"Example feature 3\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n1\n},\n{\n\"id\":\n\"0004\",\n\"name\":\n\"Example bug 1\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Bug\"\n],\n\"property_votes\":\n0\n},\n{\n\"id\":\n\"0005\",\n\"name\":\n\"Example idea 1\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Idea\"\n],\n\"property_votes\":\n4\n}\n]"
+      },
+      "id": "fda17968-61a5-4c0b-ab83-adb4e0bbf7c5",
+      "name": "Mock Ideas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        540
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Mock Ideas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Ideas": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "077fe5dc-2214-4149-9f1b-ef6342e45dec",
+  "id": "5IoF8z4YUoSUpBUk",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}

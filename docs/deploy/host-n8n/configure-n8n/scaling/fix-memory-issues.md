@@ -16,7 +16,7 @@ n8n doesn't restrict the amount of data each node can fetch and process. While t
 {% hint style="info" %}
 **Only for self-hosted n8n**
 
-This page describes memory-related errors when [self-hosting n8n](../../README.md). Visit [Cloud data management](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn about memory limits for [n8n Cloud](/manage-cloud/overview.md).
+This page describes memory-related errors when [self-hosting n8n](../../README.md). Visit [Cloud data management](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn about memory limits for [n8n Cloud](../../../use-n8n-cloud/README.md).
 {% endhint %}
 
 ## Identifying out of memory situations <a href="#identifying-out-of-memory-situations" id="identifying-out-of-memory-situations"></a>

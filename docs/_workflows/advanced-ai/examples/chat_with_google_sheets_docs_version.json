@@ -1,0 +1,654 @@
+{
+  "name": "Chat with Google Sheets (docs version)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e96a5e41-f0d6-49c1-977e-ff724a857212",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        540,
+        1240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Sub-workflow: Custom tool\nThe agent above can call this workflow. It returns three different types of data from the Google Sheet, which can be used together for more complex queries without returning the whole sheet (which might be too big for GPT to handle).",
+        "height": 612.0936015224503,
+        "width": 1449.2963504228514,
+        "color": 7
+      },
+      "id": "67facef0-e9c6-4280-8232-78f654b420d5",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        461.9740563285368,
+        970.616715060075
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Main workflow: AI agent using custom tool",
+        "height": 486.5625,
+        "width": 927.5,
+        "color": 7
+      },
+      "id": "bc448102-954b-451e-9bf7-bcadbc53bdbc",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        460,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Try it out\n\nSelect **Chat** at the bottom and enter:\n\n_Which is our biggest customer?_",
+        "height": 183.85014518022527,
+        "width": 185.9375,
+        "color": 4
+      },
+      "id": "afb2da2f-8da2-4ee8-bff9-55a99eeecc5c",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        540
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "5d56d128-9a83-45ee-a34c-bc1190d59322",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        600,
+        560
+      ],
+      "webhookId": "e3f23177-c7c1-417b-a513-1c1090dda0a2",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.sheetUrl }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.sheetUrl }}"
+        },
+        "options": {}
+      },
+      "id": "3c0e4b48-a27b-472f-948e-9aa001c49149",
+      "name": "Get Google sheet contents",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        980,
+        1240
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "sheetUrl"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "67f9c172-e70f-4a0f-afd3-513cfeae09db",
+      "name": "Set Google Sheet URL",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        760,
+        1240
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "response",
+              "stringValue": "={{ Object.keys($json) }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "d49223eb-2927-4ddd-bd2c-cd439f927341",
+      "name": "Get column names",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1440,
+        1060
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "jsCode": "return {\n  'response': JSON.stringify($input.all().map(x => x.json))\n}"
+      },
+      "id": "37ceba7a-1f0b-4de7-ae4a-d29a18dabaf6",
+      "name": "Prepare output",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1720,
+        1240
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "name": "list_columns_tool",
+        "description": "=### List all column names in customer data\nThis is useful to find out what data is available for each customer. Returns a JSON array containing all the column names.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "column_names"
+            }
+          ]
+        }
+      },
+      "id": "94516eb1-89fc-4d3f-8000-d0fa43cd71cd",
+      "name": "List columns tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        940,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "name": "get_customer_tool",
+        "description": "=### Get all columns for a given customer\nTo use this mode, pass the row number of the customer. Returns a JSON object with all the column names and their values.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "row"
+            }
+          ]
+        }
+      },
+      "id": "006745a1-3df7-4de9-9483-c6e133272c55",
+      "name": "Get customer tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        1220,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "c3d20569-1374-4f8d-8779-23b98952d124",
+      "name": "Simple Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        800,
+        780
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "name": "column_values_tool",
+        "description": "=### Get the specified column value for all customers\nThis is useful if you want to find out which customers have a certain value for a given column. Returns an array of JSON objects, one per customer. Each JSON object includes the column being requested, plus the row_number column. (The row_number column can be used to request the full customer data in a second step.). To use this mode, pass the name of the column to fetch.\n\nYou may want to call the 'list columns' tool first to find out which columns you could be fetching.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "column_values"
+            }
+          ]
+        }
+      },
+      "id": "3a370ae9-eaf8-4e84-948b-848c461ac9eb",
+      "name": "Get column values tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        1080,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "maxIterations": 10
+        }
+      },
+      "id": "8f2a4854-2177-4ac8-9501-fa36cf2a3d73",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        820,
+        560
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "content": "**These tools all call the sub-workflow below**",
+        "height": 179.21380662202682,
+        "width": 432.3271051132649,
+        "color": 5
+      },
+      "id": "2576563b-a104-4d99-b3c8-b53bff4c740c",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        900,
+        740.8693557231958
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Change the URL of the Google Sheet**",
+        "height": 226.64416053838073,
+        "width": 179.99762227826224,
+        "color": 2
+      },
+      "id": "5b623d9e-e188-403d-a702-9ece6172a487",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        723,
+        1172
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "2b8c8a67-a4df-4f5c-8c13-3cb2d25d2c5f",
+      "name": "GPT4 Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        660,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 171,
+        "width": 150,
+        "color": 2
+      },
+      "id": "f39d0c9b-4055-4331-83c8-3dbffb43478e",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        620,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 237,
+        "width": 176,
+        "color": 2
+      },
+      "id": "a8e09ef8-4dc6-4918-9194-047de402a8fa",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1172
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "height": 126.0084096222716,
+        "width": 291.1204551358572
+      },
+      "id": "a391dfb1-f408-4498-99cd-d35a258d6c9a",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_names",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col names"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "9fe58592-72e2-4379-9bdb-10da19c8218b",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_values",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col values"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "c1836f93-7874-43a4-98ff-cc487b276600",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "row",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "rows"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "907deea9-26cc-427e-93fc-52ce6b67e5e1",
+      "name": "Check operations",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1220,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "={{ $('Execute Workflow Trigger').item.json.query }}",
+              "stringValue": "={{ $json[$('Execute Workflow Trigger').item.json.query] }}"
+            },
+            {
+              "name": "row_number",
+              "stringValue": "={{ $json.row_number }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "f2ebcae6-3cfb-4862-a927-dc66bd24f197",
+      "name": "Prepare column data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1440,
+        1240
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "bf712098-97e4-42cb-8e08-2ee32d19d3e7",
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "={{ $('Execute Workflow Trigger').item.json.query }}"
+            }
+          ]
+        },
+        "options": {
+          "looseTypeValidation": true
+        }
+      },
+      "id": "f40acb04-ef06-4670-b8b1-86b04f066af8",
+      "name": "Filter out other rows",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        1440,
+        1420
+      ],
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "GPT4 Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get column names": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get customer tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List columns tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Google Sheet URL": {
+      "main": [
+        [
+          {
+            "node": "Get Google sheet contents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get column values tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Google Sheet URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Google sheet contents": {
+      "main": [
+        [
+          {
+            "node": "Check operations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check operations": {
+      "main": [
+        [
+          {
+            "node": "Get column names",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare column data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Filter out other rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare column data": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter out other rows": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

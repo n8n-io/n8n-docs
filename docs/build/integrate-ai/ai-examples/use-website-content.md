@@ -41,7 +41,7 @@ This workflow uses:
 * [HTTP node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest): fetches website data.
 * [HTML node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.html): simplifies the data by extracting the main content from the page.
 * [Pinecone Vector Store node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone) and [Embeddings OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai): transform the data into vectors and store it in Pinecone.
-* [Chat Trigger](/broken/spaces/BKcbOzIWja8NfqKDcqHc/pages/ufgV9cVbZYhO7UuKUvU1) and [Question and Answer Chain](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa) to query the vector database.
+* [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) and [Question and Answer Chain](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa) to query the vector database.
 
 ## Using the example <a href="#using-the-example" id="using-the-example"></a>
 

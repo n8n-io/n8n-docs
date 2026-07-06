@@ -36,7 +36,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [Supabase node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Supabase node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Filtering rows by metadata <a href="#filtering-rows-by-metadata" id="filtering-rows-by-metadata"></a>
 
@@ -78,7 +78,7 @@ When configuring [Supabase credentials](../../credentials/supabase.md), use the 
 
 ## Records are accessible through Postgres but not Supabase <a href="#records-are-accessible-through-postgres-but-not-supabase" id="records-are-accessible-through-postgres-but-not-supabase"></a>
 
-If queries for records return empty using the Supabase node, but are available through the [Postgres](../n8n-nodes-base.postgres/) node or with a Postgres client, there may be a conflict with Supabase's [Row Level Security (RLS)](https://supabase.com/docs/guides/database/postgres/row-level-security) policy.
+If queries for records return empty using the Supabase node, but are available through the [Postgres](../n8n-nodes-base.postgres/README.md) node or with a Postgres client, there may be a conflict with Supabase's [Row Level Security (RLS)](https://supabase.com/docs/guides/database/postgres/row-level-security) policy.
 
 Supabase always enables RLS when you create a table in a public schema with the Table Editor. When RLS is active, the API doesn't return any data with the public `anon` key until you create policies. This is a security measure to ensure that you only expose data you intend to.
 

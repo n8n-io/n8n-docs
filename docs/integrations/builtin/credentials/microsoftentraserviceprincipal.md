@@ -1,8 +1,13 @@
 ---
+title: Microsoft Entra Service Principal credentials
 description: >-
   Documentation for the Microsoft Entra Service Principal credentials. Use
   these credentials to authenticate Microsoft services in n8n, a workflow
   automation platform.
+contentType:
+  - integration
+  - reference
+priority: medium
 layout:
   description:
     visible: false

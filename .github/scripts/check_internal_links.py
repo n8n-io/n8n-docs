@@ -119,9 +119,13 @@ def strip_code(text: str) -> str:
 
 
 def space_of(rel_path: str) -> str | None:
-    """Top-level docs space (folder) for a repo-relative path, or None."""
+    """Top-level docs space (folder) for a repo-relative path, or None.
+
+    Requires at least 3 parts (docs/<space>/<file...>) so a file directly under
+    docs/ has no space, rather than mistaking its filename for a space name.
+    """
     parts = Path(rel_path).parts
-    if len(parts) >= 2 and parts[0] == "docs":
+    if len(parts) >= 3 and parts[0] == "docs":
         return parts[1]
     return None
 

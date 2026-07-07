@@ -22,7 +22,7 @@ layout:
 
 ## `$item`.**`json`** <a href="#dollaritemjson" id="dollaritemjson"></a>
 
-**Description:** Returns the JSON data the item contains. <a href="/data/data-structure/">More info</a>
+**Description:** Returns the JSON data the item contains. <a href="../../understand-n8ns-data-structure.md">More info</a>
 
 **Syntax:** `$item`.`$item`.**`json`**
 

@@ -197,12 +197,16 @@ def classify_cross_space(target: str):
     base = DOCS_ROOT / folder
     if page_path == "":
         return None  # link to space root always resolves
+    broken = ("cross-space-broken", f"cross-space target not found in space '{folder}': {target}")
+    # A valid GitBook page path is relative to the space root and never contains
+    # `.`/`..` segments. Reject them so the filesystem check below can't resolve
+    # `..` at the OS level and escape the mapped space folder (false negative).
+    segments = page_path.split("/")
+    if any(seg in ("", ".", "..") for seg in segments):
+        return broken
     if (base / (page_path + ".md")).is_file() or (base / page_path).is_dir():
         return None
-    return (
-        "cross-space-broken",
-        f"cross-space target not found in space '{folder}': {target}",
-    )
+    return broken
 
 
 def classify(md_file: Path, line: int, target: str):

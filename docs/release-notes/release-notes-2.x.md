@@ -718,7 +718,7 @@ This release contains bug fixes and features.
 {% hint style="info" %}
 ### Microsoft Agent 365 Trigger node <a href="#microsoft-agent-365-trigger-node" id="microsoft-agent-365-trigger-node"></a>
 
-The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/root-nodes) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
+The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant permissions to a SharePoint site, just like a teammate.
 
 <img src=".gitbook/assets/microsoft_agent_365.png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow." data-size="original">
 

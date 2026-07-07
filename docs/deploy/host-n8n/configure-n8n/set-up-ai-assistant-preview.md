@@ -42,7 +42,7 @@ Most AI Assistant settings use `N8N_INSTANCE_AI_*` environment variables. `INSTA
 Make sure you have:
 
 * Access to configure environment variables for the n8n instance.
-* A recent version of n8n. We recommend running the latest stable release or later. Older versions may work, but newer versions are recommended.
+* A recent version of n8n. Run the latest stable release or later; older versions may work, but newer is better.
 * An API key for a supported LLM provider:
   * Anthropic
   * OpenAI

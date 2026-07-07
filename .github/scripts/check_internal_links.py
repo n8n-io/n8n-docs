@@ -41,6 +41,35 @@ EXCLUDE_FILES = {
     "docs/contribute/style-guide-for-n8n-docs.md",
 }
 
+# The style guide holds the canonical `space folder -> space ID` table used for
+# cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
+# single source of truth the team already maintains.
+SPACE_ID_TABLE_FILE = REPO_ROOT / "docs" / "contribute" / "style-guide-for-n8n-docs.md"
+# Row form: | `space-folder` | `SpaceId` |
+SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
+APP_GITBOOK_RE = re.compile(
+    r"^https?://app\.gitbook\.com/s/([A-Za-z0-9]+)(?:/([^#?\s]*))?", re.IGNORECASE
+)
+
+
+def load_space_ids() -> dict[str, str]:
+    """Parse the style-guide table into {space_id: folder}. Empty on failure."""
+    id_to_folder: dict[str, str] = {}
+    try:
+        for line in SPACE_ID_TABLE_FILE.read_text(encoding="utf-8").split("\n"):
+            m = SPACE_ID_ROW_RE.match(line)
+            if m and (DOCS_ROOT / m.group(1)).is_dir():
+                id_to_folder[m.group(2)] = m.group(1)
+    except OSError:
+        pass
+    return id_to_folder
+
+
+SPACE_ID_TO_FOLDER = load_space_ids()
+
+# Run-level stats for coverage transparency (not errors).
+_STATS = {"unknown_space_ids": set(), "unknown_space_links": 0}
+
 # Hidden/utility spaces: include mechanisms, not real link targets.
 HIDDEN_SPACES = {"_workflows", "reusable-content"}
 
@@ -145,8 +174,45 @@ def iter_targets(text: str):
             yield i, m.group(1).strip()
 
 
+def classify_cross_space(target: str):
+    """Validate an app.gitbook.com/s/<id>/<path> cross-space link.
+
+    Returns (category, message) if broken, "unknown" if the space ID isn't in
+    the table (can't verify — e.g. the reusable-content utility space), or None
+    if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
+    matching `.md` file or a directory (folder page, whatever its index file).
+    """
+    m = APP_GITBOOK_RE.match(target)
+    if not m:
+        return None
+    space_id, page_path = m.group(1), (m.group(2) or "")
+    folder = SPACE_ID_TO_FOLDER.get(space_id)
+    if folder is None:
+        # Space ID not in the table (e.g. the reusable-content utility space);
+        # we can't map it to a folder, so we don't verify it. Track for transparency.
+        _STATS["unknown_space_ids"].add(space_id)
+        _STATS["unknown_space_links"] += 1
+        return "unknown"
+    page_path = page_path.strip("/")
+    base = DOCS_ROOT / folder
+    if page_path == "":
+        return None  # link to space root always resolves
+    if (base / (page_path + ".md")).is_file() or (base / page_path).is_dir():
+        return None
+    return (
+        "cross-space-broken",
+        f"cross-space target not found in space '{folder}': {target}",
+    )
+
+
 def classify(md_file: Path, line: int, target: str):
     """Return (category, message) for a broken link, or None if the link is fine."""
+    # Cross-space app.gitbook.com links: validate against the space-ID table
+    # before the generic http scheme is skipped below.
+    if APP_GITBOOK_RE.match(target):
+        result = classify_cross_space(target)
+        return None if result == "unknown" else result
+
     # Strip anchor and query.
     path_part = target.split("#", 1)[0].split("?", 1)[0].strip()
 
@@ -266,6 +332,15 @@ def main() -> int:
         for w in sorted(warnings):
             print(f"  {w}")
         print()
+
+    if _STATS["unknown_space_links"]:
+        n_links = _STATS["unknown_space_links"]
+        n_ids = len(_STATS["unknown_space_ids"])
+        print(
+            f"ℹ️  Skipped {n_links} cross-space link(s) to {n_ids} space ID(s) not in "
+            f"the style-guide table (e.g. the reusable-content utility space); "
+            f"can't verify these.\n"
+        )
 
     if errors:
         print(f"❌ {len(errors)} broken internal link(s):\n")

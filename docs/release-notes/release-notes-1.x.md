@@ -5698,7 +5698,7 @@ This release contains new nodes for advanced AI, node enhancements, new features
 {% hint style="info" %}
 #### Chat trigger <a href="#chat-trigger" id="chat-trigger"></a>
 
-n8n has created a new [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
+n8n has created a new [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
 {% endhint %}
 
 {% hint style="info" %}

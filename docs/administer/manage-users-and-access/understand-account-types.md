@@ -50,4 +50,8 @@ n8n recommends that owners create a member-level account for themselves. Owners 
 | Add and remove users | ✅ | ✅ | ❌ |
 | Access the Cloud dashboard | ✅ | ❌ | ❌ |
 
+## Custom instance roles <a href="#custom-instance-roles" id="custom-instance-roles"></a>
 
+If the built-in account types don't match your access needs, you can create custom instance roles with granular permissions. Custom instance roles let you grant specific instance-level capabilities (such as managing users, tags, or API keys) without giving full Admin access.
+
+Refer to [Create custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) for instructions on creating and managing them.

@@ -20,12 +20,6 @@ Until now, Microsoft automations were tied to a person's OAuth session: when tha
 
 _OneDrive and Outlook support released in 2.29 (2026-06-30)._
 
-### GitHub App authentication
-
-_Released in 2.29 (2026-06-30)._
-
-[GitHub nodes](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.
-
 ### mTLS authentication for Kafka
 
 The [Kafka credential](https://docs.n8n.io/integrations/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
@@ -70,6 +64,14 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 * **List and choose credentials.** You can now list the credentials on your instance and pick the right one when several could apply, for example among five Gmail credentials (v2.21).
 
 Learn more in the [n8n MCP server documentation](https://docs.n8n.io/connect/connect-to-n8n-mcp-server).
+
+---
+
+## `n8n 2.29` GitHub App authentication
+
+**Released:** 2026-06-30
+
+[GitHub nodes](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.
 
 ---
 

@@ -56,4 +56,10 @@ To set up the credential:
 2. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations) and follow the [custom client app registration guide](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/custom-client-app-registration) for Microsoft Agent 365. Once your custom client app is created, copy the Application (client) ID into n8n as the **Client ID**.
 3. Follow the [credentials guide](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?tabs=client-secret) to generate a client secret and copy the **Secret** in the **Value** column and paste it into n8n as the **Client Secret**.
 
+{% hint style="info" %}
+**Incoming request validation**
+
+The Microsoft Agent 365 Trigger node also uses your **Client ID** to validate incoming webhook requests, so it must match the application (client) ID of your agent's app registration. Refer to [Webhook authentication](../cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger.md#webhook-authentication).
+{% endhint %}
+
 We recommend using [Agent 365 CLI](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/agent-365-cli) to create your agent blueprint and manifest.

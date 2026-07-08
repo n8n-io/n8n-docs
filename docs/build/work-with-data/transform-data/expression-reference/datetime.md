@@ -188,6 +188,21 @@ layout:
   dt.format("HH 'hours and' mm 'minutes'") //=> '18 hours and 49 minutes'
   ```
 
+{% hint style="warning" %}
+**Not available in the Code node**
+
+`format()` is a custom n8n extension added to Luxon `DateTime` objects in the expressions editor. It doesn't exist in the [Code node](/build/code-in-n8n/code-node.md), because Code node scripts run against plain, unmodified Luxon. Calling it there throws `... .format is not a function`.
+
+Use Luxon's native [`toFormat()`](https://moment.github.io/luxon/api-docs/index.html#datetimetoformat) instead:
+
+```javascript
+// In the Code node
+DateTime.now().toFormat('dd/LL/yyyy'); //=> '30/04/2024'
+```
+
+This applies to any method on this page marked **Source: Custom n8n functionality**: it's available in expressions (e.g. the Set node) but may not be available in the Code node. See [Built-in methods and variables](/build/code-in-n8n/use-built-in-shortcuts.md#availability-in-the-expressions-editor-and-the-code-node) for more on this distinction.
+{% endhint %}
+
 ## _`DateTime`_.**`hasSame()`** <a href="#datetimehassame" id="datetimehassame"></a>
 
 **Description:** Returns <code>true</code> if the two DateTimes are the same, down to the unit specified. Time zones are ignored (only local times are compared), so use <code>toUTC()</code> first if needed.
@@ -331,6 +346,10 @@ layout:
   dt.minus(4, 'years') //=> 2020-04-30T18:49
   ```
 
+{% hint style="info" %}
+**Code node:** Luxon's native `DateTime.prototype.minus()` also exists in the Code node, but only accepts a single [Duration-like object](https://moment.github.io/luxon/api-docs/index.html#datetimeminus) (e.g. `dt.minus({ days: 7 })`), not this page's n8n-only `(n, unit)` shorthand. Passing `dt.minus(7, 'days')` in the Code node will not raise an error but will not subtract 7 days either — double-check the result if you use this signature there.
+{% endhint %}
+
 ## _`DateTime`_.**`minute`** <a href="#datetimeminute" id="datetimeminute"></a>
 
 **Description:** The minute of the hour (0-59)
@@ -435,6 +454,10 @@ layout:
   // dt = "2024-03-30T18:49".toDateTime()
   dt.plus(4, 'years') //=> 2028-04-30T18:49
   ```
+
+{% hint style="info" %}
+**Code node:** Luxon's native `DateTime.prototype.plus()` also exists in the Code node, but only accepts a single [Duration-like object](https://moment.github.io/luxon/api-docs/index.html#datetimeplus) (e.g., `dt.plus({ days: 7 })`), not this page's n8n-only `(n, unit)` shorthand. Passing `dt.plus(7, 'days')` in the Code node will not raise an error but will not add 7 days either. Double-check the result if you use this signature there.
+{% endhint %}
 
 ## _`DateTime`_.**`quarter`** <a href="#datetimequarter" id="datetimequarter"></a>
 
@@ -870,4 +893,3 @@ layout:
   ```javascript
   $now.zone //=> {"zoneName": "Europe/Berlin", "valid": true}
   ```
-

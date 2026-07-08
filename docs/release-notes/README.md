@@ -401,3 +401,24 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure><img src=".gitbook/assets/time_saved_node_2 (1).png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
+
+
+### n8n ?.? — Insights alerts you when date ranges exceed available data
+
+**Released:** 2026-07-08
+
+When you select a date range in the Insights dashboard, you can now see at a glance whether your data retention policy covers that period. Instead of staring at an empty chart and wondering whether something is broken, an alert banner tells you exactly what is happening with your data coverage.
+
+Three states guide you as you work with custom date ranges:
+
+* **No data in range:** The entire selected period falls outside your retention window, so no executions are available to display.
+* **Partial data:** Some executions exist within the range. The alert specifies the earliest available date so you know where your data begins.
+* **Complete data:** All executions in the selected range are present. No alert appears.
+
+To use this, open the Insights dashboard, choose a date range with the date range picker, and check the alert banner at the top of the dashboard. If you see a partial or no-data alert, adjust your range to align with the dates your retention policy covers. Note that the alerts reflect your current retention configuration and do not extend how long execution data is stored.
+
+Learn more in the [documentation](<https://docs.n8n.io/administer/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection>).
+
+{% hint style="info" %}
+**Availability:** Pro and above.
+{% endhint %}

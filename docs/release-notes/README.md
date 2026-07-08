@@ -28,6 +28,23 @@ Learn more in the [documentation](<https://docs.n8n.io/administer/observe-and-lo
 **Availability:** Pro and above.
 {% endhint %}
 
+### n8n 2.29 — MCP server updates
+
+**Released:** 2026-06-30
+
+We've shipped a number of updates to the n8n MCP server over the past few weeks. Here's a roundup, with the version each change landed in.
+
+* **Build with custom and community nodes.** You can now use your installed custom and community nodes in the workflows you build, not just the built-in ones (v2.29).
+* **Read and change workflow settings.** Workflow settings are now editable through the MCP server, so you can connect an error workflow, set the timezone, or adjust execution options (v2.29).
+* **View and restore workflow history.** You can now browse a workflow's version history and restore an earlier version (v2.29).
+* **More reliable credential assignment.** Fixed a bug where the server could assign a credential that wasn't valid for a node (v2.28).
+* **Look up real field values.** Dynamic fields like Slack channels or Google Sheets tabs now resolve to live values, so nodes are configured with valid selections instead of placeholder IDs (v2.27).
+* **Work with tags.** Tags are now supported, so you can filter a workflow search by tag and apply tags when creating or updating workflows (v2.27).
+* **Faster, targeted edits.** Workflow updates now change only the nodes that need to change instead of rewriting the whole thing (v2.22).
+* **List and choose credentials.** You can now list the credentials on your instance and pick the right one when several could apply, for example among five Gmail credentials (v2.21).
+
+Learn more in the [n8n MCP server documentation](https://docs.n8n.io/connect/connect-to-n8n-mcp-server).
+
 ### n8n 2.28 — Organize large workflows with Canvas Groups
 
 **Released:** 2026-06-29

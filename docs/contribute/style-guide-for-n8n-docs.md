@@ -111,6 +111,99 @@ Obvious exceptions:
 * **Avoid em dashes** (—). Use a comma or a new sentence. "Add a node, then save", not "Add a node — then save".
 * **Avoid ellipses** (…). "Configure the settings, then continue", not "Configure the settings...".
 
+## Versioning and release status
+
+Many features, settings, and nodes are tied to a specific n8n release, or carry a status like preview or deprecated. Reference versions and status consistently so readers can tell whether a given install supports a feature.
+
+### Two version types
+
+n8n has two separate version numbers. Never leave the reader guessing which one you mean.
+
+* **Instance version**: the n8n release, written as three-part semver, such as 2.30.0. Use it for features, environment variables, APIs, CLI commands, and hooks.
+* **Node version**: a node's version number, usually two parts, such as 4.7. Use it only for node-specific facts.
+
+In prose, qualify a bare number: write "n8n 2.30.0" or "node version 4.7", not just "version 2".
+
+### Writing version numbers
+
+Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8n instance versions:
+
+* **Use the product name and numerals**: n8n 2.30.0.
+* **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
+* **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
+
+### Where to put the marker
+
+Put an availability, status, or deprecation marker at the scope of what it describes:
+
+* **A whole page about the feature**: a hint (callout) directly below the page title.
+* **A section within a page**: a hint directly below that section's heading.
+* **A feature mentioned in passing**, with no heading of its own: fold it into the sentence instead of using a hint. For example, "The Data table node (available from n8n 2.17.0) stores data between executions", or "Avoid the `tablePrefix` option; it's deprecated from n8n 2.0".
+* **A single row in a table** (one environment variable, one hook): put it in the description cell as "(available from n8n 2.17.0)". When many rows differ, add a dedicated column.
+
+Match the hint style to the status:
+
+| Status | Hint style |
+| :--- | :--- |
+| Available from | `info` |
+| Preview | `info` |
+| Deprecated or removed | `warning` |
+
+For example:
+
+```
+{% hint style="info" %}
+**Available from n8n 2.17.0**
+{% endhint %}
+```
+
+```
+{% hint style="warning" %}
+**Deprecated from n8n 2.0**
+
+Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0.
+{% endhint %}
+```
+
+### Marking preview features
+
+A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status. Reserve "beta" for release channels, version tracks, and access programs (a beta release, the beta Cloud instance, a closed beta).
+
+Add an `info` hint at the [right scope](#where-to-put-the-marker) that says what the status means for the reader:
+
+```
+{% hint style="info" %}
+**This feature is in preview**
+
+Preview features may change in future releases. Avoid relying on them in production workflows.
+{% endhint %}
+```
+
+* **Tie it to a version when it helps**: "In preview from n8n 2.20.0".
+
+### Marking when a feature became available
+
+Follow the placement rules above, plus:
+
+* **State the consequence for older versions** when there is one: "On earlier versions, use `OLD_VAR` instead".
+* **Keep availability separate from plan or platform limits.** Put tier restrictions (Cloud, Enterprise, self-hosted) in their own `info` hint, separate from the version marker.
+
+### Marking deprecations and removals
+
+Deprecated features still work but you shouldn't use them. Removed features no longer exist. Follow the placement rules above, plus:
+
+* **Name the replacement and the removal version**, if known: "Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0". If removal isn't scheduled, say so: "Removal isn't scheduled yet".
+* **Always name the version** that deprecates or removes something. Don't use vague timeframes like "soon" or "in the near future".
+* **For a deprecated item in a table**, tag the identifier with `(deprecated)` and state the version in the description. For example:
+
+  | Variable | Type | Default | Description |
+  | :--- | :--- | :--- | :--- |
+  | `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. Still required in 1.x, where you must set it to `true`. |
+
+### Deprecated, removed, and versioned nodes
+
+Node version facts live in one place: [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes). This page is auto-updated from the codebase.
+
 ## Vale linting
 
 n8n uses [Vale](https://docs.errata.ai/) to lint documentation. Linting enforces the rules defined in this guide and supports writing quality.

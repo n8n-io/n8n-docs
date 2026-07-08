@@ -8,7 +8,9 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
-### n8n 2.29 — Insights alerts you when date ranges exceed available data
+---
+
+## `n8n 2.29` Insights alerts you when date ranges exceed available data
 
 **Released:** 2026-06-30
 
@@ -28,7 +30,9 @@ Learn more in the [documentation](<https://docs.n8n.io/administer/observe-and-lo
 **Availability:** Pro and above.
 {% endhint %}
 
-### n8n 2.29 — MCP server updates
+---
+
+## `n8n 2.29` MCP server updates
 
 **Released:** 2026-06-30
 
@@ -45,7 +49,9 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 
 Learn more in the [n8n MCP server documentation](https://docs.n8n.io/connect/connect-to-n8n-mcp-server).
 
-### n8n 2.28 — Organize large workflows with Canvas Groups
+---
+
+## `n8n 2.28` Organize large workflows with Canvas Groups
 
 **Released:** 2026-06-29
 
@@ -59,7 +65,9 @@ A Canvas Group is saved with the workflow, so anyone who opens it sees the same 
 
 Learn more in the [Canvas Groups documentation](https://docs.n8n.io/build/understand-workflows/workflow-components/canvas-groups).
 
-### n8n 2.27 — Move workflows between instances as packages
+---
+
+## `n8n 2.27` Move workflows between instances as packages
 
 **Released:** 2026-06-16
 
@@ -75,7 +83,9 @@ This feature is in **beta**. The package format and APIs are still under develop
 
 Learn more in the [n8n Packages documentation](https://docs.n8n.io/build/manage-workflows/n8n-packages).
 
-### n8n 2.22 — Connect to MCP servers with less setup
+---
+
+## `n8n 2.22` Connect to MCP servers with less setup
 
 **Released:** 2026-05-19
 
@@ -89,7 +99,7 @@ If you need to connect to an MCP server that isn't in the list, you can still us
 Connect to MCP servers with less setup
 {% endembed %}
 
-#### OpenTelemetry custom telemetry tags
+### OpenTelemetry custom telemetry tags
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
@@ -100,11 +110,13 @@ Learn more in the [documentation](<https://docs.n8n.io/deploy/host-n8n/keep-n8n-
 {% endhint %}
 
 
-### n8n 2.20 — Microsoft Agent 365 Trigger node
+---
+
+## `n8n 2.20` Microsoft Agent 365 Trigger node
 
 **Released:** 2026-05-05
 
-#### Microsoft Agent 365 Trigger node
+### Microsoft Agent 365 Trigger node
 
 The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
 
@@ -116,15 +128,17 @@ If you already use n8n with Microsoft services through individual nodes (Outlook
 
 For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8n-agents-that-show-up-as-members-of-the-team-inside-microsoft-apps/).
 
-#### Insights data duration
+### Insights data duration
 
 Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
 
-### n8n 2.19 — IdP role mapping and instance bootstrapping (Enterprise)
+---
+
+## `n8n 2.19` IdP role mapping and instance bootstrapping (Enterprise)
 
 **Released:** 2026-04-28
 
-#### IdP role mapping inside n8n
+### IdP role mapping inside n8n
 
 Instance admins can now define group-to-role mappings inside n8n instead of encoding n8n-specific role logic in the IdP. With JIT provisioning enabled, admins write expressions against SAML attributes or OIDC claims to assign instance and project roles automatically at login. The IdP only needs to send standard group membership data: n8n handles the mapping, and role assignments are re-evaluated on every login, so access stays in sync without IdP changes.
 
@@ -134,7 +148,7 @@ Open **Settings → SSO**, pick **Instance roles via SSO** or **Instance and pro
 **Availability:** Enterprise and Business.
 {% endhint %}
 
-#### Instance bootstrapping
+### Instance bootstrapping
 
 n8n can now be fully configured at startup through environment variables. Owner accounts, SSO (OIDC and SAML), security policies, and log streaming destinations are all applied on first boot, with no manual UI interaction required. Fields managed this way are locked in the UI and re-applied on every restart.
 
@@ -144,11 +158,13 @@ This makes deployment configuration the single source of truth, so you can stand
 **Availability:** Enterprise.
 {% endhint %}
 
-### n8n 2.16 — Embedded access and execution data redaction (Enterprise)
+---
+
+## `n8n 2.16` Embedded access and execution data redaction (Enterprise)
 
 **Released:** 2026-04-07
 
-#### Token exchange authentication for embedded access
+### Token exchange authentication for embedded access
 
 n8n now supports OAuth 2.0 Token Exchange (RFC 8693) as a second authentication mechanism alongside API keys. Two scenarios are covered: seamless iframe embedding, where users see n8n inside another product without a separate login screen, and delegated API access, where a system acts on behalf of a user with full audit attribution.
 
@@ -158,7 +174,7 @@ The embedding system holds an asymmetric private key and signs short-lived JWTs 
 **Availability:** Enterprise. Requires an asymmetric key pair configured via `N8N_TOKEN_EXCHANGE_TRUSTED_KEYS`. Uses role-based scoping.
 {% endhint %}
 
-#### Execution data redaction
+### Execution data redaction
 
 Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
 
@@ -168,12 +184,14 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 **Availability:** Enterprise.
 {% endhint %}
 
-#### Public API improvements
+### Public API improvements
 
 * **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
 * **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
 
-### n8n 2.15 — OpenTelemetry support for workflows
+---
+
+## `n8n 2.15` OpenTelemetry support for workflows
 
 **Released:** 2026-03-30
 
@@ -196,17 +214,19 @@ This is the foundational T1 feature. It was extended across later releases: node
 **Availability:** Free, Pro, and Enterprise.
 {% endhint %}
 
-### n8n 2.13 — Visual diff in version history
+---
+
+## `n8n 2.13` Visual diff in version history
 
 **Released:** 2026-03-16
 
-#### Visual diff comes to version history
+### Visual diff comes to version history
 
 Open version history, click **Compare changes**, pick any two versions, and the canvas renders both side by side with changed nodes highlighted. A change count badge on each version helps you spot significant edits at a glance.
 
 Visual diff is available on Cloud Pro and above.
 
-#### Project-scoped external secrets: full team access (Enterprise)
+### Project-scoped external secrets: full team access (Enterprise)
 
 What's new:
 
@@ -225,7 +245,7 @@ Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manag
 **Availability:** Enterprise.
 {% endhint %}
 
-#### Folder-based filtering in the push and pull dialog (Enterprise)
+### Folder-based filtering in the push and pull dialog (Enterprise)
 
 The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
 
@@ -233,7 +253,9 @@ The push and pull dialogs now include a **Folder** filter alongside Status and O
 **Availability:** Enterprise. Requires [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control) configured.
 {% endhint %}
 
-### n8n 2.12 — 1Password as an external secrets provider (Enterprise)
+---
+
+## `n8n 2.12` 1Password as an external secrets provider (Enterprise)
 
 **Released:** 2026-03-09
 
@@ -252,11 +274,13 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 **Availability:** Enterprise.
 {% endhint %}
 
-### n8n 2.11 — Easier credential setup on Cloud
+---
+
+## `n8n 2.11` Easier credential setup on Cloud
 
 **Released:** 2026-03-02
 
-#### Easier credential setup on Cloud
+### Easier credential setup on Cloud
 
 Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
 
@@ -267,15 +291,15 @@ Things to keep in mind:
 * If you prefer to use your own OAuth configuration, you can still switch to manual setup from the auth mode dropdown at any time.
 * This feature is only available on n8n Cloud, where n8n manages the OAuth apps on your behalf.
 
-#### Custom roles: Assignments tab (Enterprise)
+### Custom roles: Assignments tab (Enterprise)
 
 Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
 
-#### Project-scoped external secrets: instance admin setup (Enterprise)
+### Project-scoped external secrets: instance admin setup (Enterprise)
 
 Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
-#### Workflow execute as a separate permission scope (Enterprise)
+### Workflow execute as a separate permission scope (Enterprise)
 
 `workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
 
@@ -283,11 +307,13 @@ Instance admins can now create vault connections scoped to a specific project. S
 **Availability:** Custom roles and project-scoped external secrets are available on n8n Enterprise.
 {% endhint %}
 
-### n8n 2.8 — Personal space policies and finer-grained governance (Enterprise)
+---
+
+## `n8n 2.8` Personal space policies and finer-grained governance (Enterprise)
 
 **Released:** 2026-02-09 – 2026-02-13 (2.8.0–2.8.3)
 
-#### Personal space policies
+### Personal space policies
 
 _Released in 2.8.3 (2026-02-13)._
 
@@ -302,7 +328,7 @@ This release builds on recent updates to the permissions model, including [custo
 
 <figure><img src=".gitbook/assets/personal_space_policies (1).png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
-#### Custom roles: improved discoverability and permission visibility
+### Custom roles: improved discoverability and permission visibility
 
 _Released in 2.8.3 (2026-02-13)._
 
@@ -310,13 +336,13 @@ The project role selector now separates built-in system roles and custom roles i
 
 <figure><img src=".gitbook/assets/custom_roles_selector (1).png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
 
-#### Stronger external secrets validation
+### Stronger external secrets validation
 
 _Released in 2.8.0 (2026-02-09)._
 
 n8n now verifies that the current user has access to the referenced vaults before allowing a credential that uses `$secrets...` expressions to be saved. If access is missing, the save operation fails. This prevents secret values from being exposed through guessed secret paths.
 
-#### Improved API auditability
+### Improved API auditability
 
 _Released in 2.8.0 (2026-02-09)._
 
@@ -327,7 +353,7 @@ API endpoints have been expanded to provide clearer visibility into project memb
 
 This makes it easier to audit who has access to which projects and credentials without manually reviewing each one in the UI.
 
-#### More granular workflow permissions
+### More granular workflow permissions
 
 _Released in 2.8.0 (2026-02-09)._
 
@@ -337,7 +363,9 @@ Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJ
 **Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on n8n Enterprise.
 {% endhint %}
 
-### n8n 2.6 — Human-in-the-loop for AI tool calls
+---
+
+## `n8n 2.6` Human-in-the-loop for AI tool calls
 
 **Released:** 2026-01-26
 
@@ -362,7 +390,9 @@ Get precise control over where human judgment is required, without limiting what
 Human in the loop for AI tool calls
 {% endembed %}
 
-### n8n 2.5 — Chat node: human-in-the-loop actions
+---
+
+## `n8n 2.5` Chat node: human-in-the-loop actions
 
 **Released:** 2026-01-20
 
@@ -388,25 +418,29 @@ Learn more in the [Chat node documentation](https://app.gitbook.com/s/BKcbOzIWja
 Human in the loop for the Chat node
 {% endembed %}
 
-### n8n 2.4 — TLS for Syslog log streaming and credential updates via API
+---
+
+## `n8n 2.4` TLS for Syslog log streaming and credential updates via API
 
 **Released:** 2026-01-12
 
-#### TLS support for Syslog log streaming
+### TLS support for Syslog log streaming
 
 The Syslog log streaming destination now supports TLS over TCP for encrypted connections. This enables secure log streaming to enterprise SIEM and observability platforms that require encrypted transport. With this release, log streaming is now compatible with a broader range of enterprise SIEM platforms.
 
-#### Update credentials via API
+### Update credentials via API
 
 n8n's public API now supports updating existing credentials by ID via a new `PATCH /credentials/:id` endpoint. Previously, credentials could only be created through the API, so any changes required deleting and recreating the credential.
 
 When updating, you can either replace all credential data at once (useful for bulk updates) or set `isPartialData: true` to merge changes with existing data. Ideal for automated secret rotation or fixing individual values without losing your configuration.
 
-### n8n 2.2 — Finer-grained workflow permissions and richer audit events
+---
+
+## `n8n 2.2` Finer-grained workflow permissions and richer audit events
 
 **Released:** 2025-12-22
 
-#### More granular workflow permissions within Custom Project Roles (Enterprise)
+### More granular workflow permissions within Custom Project Roles (Enterprise)
 
 Custom Project Roles allow you to define fine-grained permissions at the project level. With this release, workflow permissions have been further refined by separating workflow editing from workflow publishing.
 
@@ -414,7 +448,7 @@ This change makes it easier to align access controls with internal processes whe
 
 <figure><img src=".gitbook/assets/WorkflowEditor (1).png" alt="Custom Project Roles"><figcaption><p>Custom Project Roles</p></figcaption></figure>
 
-#### Log streaming: more audit events for improved observability
+### Log streaming: more audit events for improved observability
 
 Log streaming now includes additional audit events to improve visibility into operational and security-relevant changes.
 
@@ -422,7 +456,9 @@ This update adds events for manual workflow cancellations and workflow activatio
 
 Workflow settings updates are also logged with the specific parameters that changed (for example, selecting a new error workflow), instead of a generic "updated" event.
 
-### n8n 2.1 — Time Saved node
+---
+
+## `n8n 2.1` Time Saved node
 
 **Released:** 2025-12-16
 

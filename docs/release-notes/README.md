@@ -242,11 +242,11 @@ This makes deployment configuration the single source of truth, so you can stand
 
 **Released:** 2026-04-21
 
-You can now mark projects, folders, workflows, and data tables as favorites for quick access. Instead of searching for the same handful of resources every day, pin them once and they're one click away. The bigger your instance grows — more projects, more teammates, more workflows — the more time this saves.
+You can now mark projects, folders, workflows, and data tables as favorites, so the resources you work with every day are one click away instead of a search away.
 
 ### Slack Trigger: App Home opens as a dedicated event
 
-The Slack Trigger now offers **app_home_opened** as a dedicated event option. Previously, reacting to App Home opens meant subscribing to Any Event and filtering downstream, which started an execution for every unrelated Slack event. Now workflows subscribe to exactly this event and nothing else runs.
+The Slack Trigger now offers **app_home_opened** as a dedicated event option. Previously, reacting to App Home opens meant subscribing to Any Event and filtering downstream, which started an execution for every unrelated Slack event.
 
 ### Linear Trigger: webhook signature verification
 

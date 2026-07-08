@@ -8,6 +8,20 @@ For complete, version-by-version detail on every release, see the [Releases page
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+### n8n 2.28 — Organize large workflows with Canvas Groups
+
+**Released:** 2026-06-29
+
+You can now organize related nodes into a single named Canvas Group and collapse it for a cleaner view. Group the nodes that handle one part of a workflow, give the group a name, and collapse it to hide the detail until you need it. A large workflow that used to sprawl across the canvas shrinks to a handful of labeled blocks you can read at a glance, so it's faster to find your way around a workflow a teammate built or one you haven't opened in months.
+
+<figure><img src=".gitbook/assets/canvas-groups.jpg" alt="Three connected nodes selected on the canvas, with the Group nodes action and its Ctrl/Cmd + G shortcut shown above the selection."><figcaption><p>Select a connected run of nodes, then group them with the Group nodes button or Ctrl/Cmd + G.</p></figcaption></figure>
+
+To create a group, select a connected run of nodes by dragging a box around them or holding `Ctrl/Cmd` and clicking each one, then press `Ctrl/Cmd` + `G` or select the **Group nodes** icon in the toolbar. n8n creates the group and highlights the name field so you can name it straight away. Collapse or expand a group with its toggle icon, and ungroup it at any time with `Ctrl/Cmd` + `Shift` + `G`, which leaves the nodes on the canvas.
+
+A Canvas Group is saved with the workflow, so anyone who opens it sees the same structure. Whether a group is collapsed or expanded is a personal preference stored in your browser, so your view stays put when you come back without changing what teammates see. A few rules decide which nodes you can combine into one group: triggers stay outside them, the nodes have to form one connected chain, and an AI node keeps its sub-nodes (chat model, memory, and tools) inside the same group.
+
+Learn more in the [Canvas Groups documentation](https://docs.n8n.io/build/understand-workflows/workflow-components/canvas-groups).
+
 ### n8n 2.27 — Move workflows between instances as packages
 
 **Released:** 2026-06-16

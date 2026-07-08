@@ -52,9 +52,11 @@ When you decompress a `.tar.gz` or `.tgz` archive, the node extracts all member 
 - **Input Binary Field(s)**: Enter the name of the fields in the input data that contain the binary files you want to decompress. To decompress more than one file, use a comma-separated list.
 - **Output Prefix**: Enter a prefix to add to the output file name. The node uses this prefix, followed by an incrementing index, to name each extracted file.
 
-/// warning | Unsupported formats
+{% hint style="warning" %}
+#### Unsupported formats
+
 If you pass a file with an unsupported extension, the node throws an error instead of silently producing empty output. Supported formats are `zip`, `gzip`, `tar`, `tar.gz`, and `tgz`.
-///
+{% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

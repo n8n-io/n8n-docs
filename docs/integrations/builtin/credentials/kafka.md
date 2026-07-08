@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Schema Registry**
 
-These credentials authenticate the Kafka brokers. To connect to an authenticated Confluent Schema Registry for Avro encoding and decoding, use the separate [Schema Registry credentials](/integrations/builtin/credentials/schemaregistry.md).
+These credentials authenticate the Kafka brokers. To connect to an authenticated Confluent Schema Registry for Avro encoding and decoding, use the separate [Schema Registry credentials](schemaregistry.md).
 {% endhint %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>

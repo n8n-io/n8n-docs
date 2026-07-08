@@ -6,7 +6,6 @@ Adalo
 [Aa]ggregate
 Airtable
 Airtop
-Alibaba
 [Aa]llowlists?
 Anthropic
 APIs
@@ -134,7 +133,6 @@ JumpCloud
 Keap
 Keycloak
 Kibana
-Kimi
 Kitemaker
 kubectl
 Kafka

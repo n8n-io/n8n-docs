@@ -20,7 +20,7 @@ Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans.
 
 Custom roles let you define granular permissions beyond the built-in roles. Instead of giving users full Admin access, you can create a role with only the capabilities they need.
 
-n8n supports custom roles at two levels:
+n8n has two types of custom roles:
 
 * **Custom project roles**: Define permissions within a specific project, including access to workflows, credentials, folders, and other project resources. Assign them to project members to control what they can do inside that project.
 

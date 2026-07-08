@@ -191,7 +191,7 @@ layout:
 {% hint style="warning" %}
 **Not available in the Code node**
 
-`format()` is a custom n8n extension added to Luxon `DateTime` objects in the expressions editor. It doesn't exist in the [Code node](/build/code-in-n8n/code-node.md), because Code node scripts run against plain, unmodified Luxon. Calling it there throws `... .format is not a function`.
+`format()` is a custom n8n extension added to Luxon `DateTime` objects in the expressions editor. It doesn't exist in the Code node, because Code node scripts run against plain, unmodified Luxon. Calling it there throws `... .format is not a function`.
 
 Use Luxon's native [`toFormat()`](https://moment.github.io/luxon/api-docs/index.html#datetimetoformat) instead:
 
@@ -200,7 +200,7 @@ Use Luxon's native [`toFormat()`](https://moment.github.io/luxon/api-docs/index.
 DateTime.now().toFormat('dd/LL/yyyy'); //=> '30/04/2024'
 ```
 
-This applies to any method on this page marked **Source: Custom n8n functionality**: it's available in expressions (e.g. the Set node) but may not be available in the Code node. See [Built-in methods and variables](/build/code-in-n8n/use-built-in-shortcuts.md#availability-in-the-expressions-editor-and-the-code-node) for more on this distinction.
+This applies to any method on this page marked **Source: Custom n8n functionality**: it's available in expressions (e.g. the Set node) but may not be available in the Code node. See [Built-in methods and variables](../../../code-in-n8n/use-built-in-shortcuts.md) for more on this distinction.
 {% endhint %}
 
 ## _`DateTime`_.**`hasSame()`** <a href="#datetimehassame" id="datetimehassame"></a>

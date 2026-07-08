@@ -17,7 +17,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 {% hint style="warning" %}
 **Availability in the expressions editor and the Code node**
 
-Not every method and variable in this reference works in the [Code node](code-node.md). The Code node runs plain JavaScript against native Luxon, not n8n's expression engine, so any entry marked **Source: Custom n8n functionality** on a reference page (for example, [`DateTime.format()`](/build/work-with-data/transform-data/expression-reference/datetime.md#datetimeformat)) is an n8n-only extension that may not exist, or may behave differently, in the Code node.
+Not every method and variable in this reference works in the [Code node](cookbook/code-node/README.md). The Code node runs plain JavaScript against native Luxon, not n8n's expression engine, so any entry marked **Source: Custom n8n functionality** on a reference page (for example, [`DateTime.format()`](../work-with-data/transform-data/expression-reference/datetime.md#datetimeformat)) is an n8n-only extension that may not exist, or may behave differently, in the Code node.
 
 If code in the Code node throws `... is not a function`, or silently produces the wrong result:
 

@@ -25,11 +25,12 @@ Custom instance roles are available on Self-hosted Enterprise and Cloud Enterpri
 
 n8n has two types of custom roles:
 
-* **Custom instance roles**: Roles that apply across the entire n8n instance. Assign them to users who need specific instance-level capabilities regardless of which project they're in.
-* **Custom project roles**: Roles that apply within a specific project. Refer to [Create custom project roles](create-custom-project-roles.md).
+**Custom instance roles**: Roles that relate to the administrative capabilities a user needs at the instance level.
+
+**Custom project roles**: Roles that apply within a specific project. Refer to [Create custom project roles](create-custom-project-roles.md).
 {% endhint %}
 
-Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike the built-in account types (Owner, Admin, Member), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide resources.
+Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike built-in roles (Owner, Admin, Member), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide management.
 
 ## Create a custom instance role <a href="#create-a-custom-instance-role" id="create-a-custom-instance-role"></a>
 
@@ -40,12 +41,12 @@ To create a custom instance role:
 1. Go to **Settings** > **Roles** > **Instance roles**.
 2. Select **Create role**.
 3. Enter a role name and optional description.
-4. Optionally, select a **Preset** (**Admin**, **Member**) to pre-fill permissions based on a built-in account type, then adjust as needed.
+4. Optionally, select a **Preset** (**Admin**, **Member**) to pre-fill permissions based on a built-in role, then adjust as needed.
 5. Select the permissions for this role:
    * **Instance settings** > **Manage**: View and change instance-wide settings
    * **Members** > **Manage**: Invite, remove, and update users across the instance
    * **Roles** > **Manage project roles**: Create, edit, and delete custom project roles only
-   * **Roles** > **Manage**: Create, edit, and delete all custom roles (instance and project). Selecting this automatically includes **Manage project roles**.
+   * **Roles** > **Manage all roles**: Create, edit, and delete all custom roles (instance and project). Selecting this automatically includes **Manage project roles**.
    * **API keys** > **Manage own**: Create and delete the user's own API keys
    * **API keys** > **Manage others**: View and delete other users' API keys. Automatically includes **Manage own**.
    * **Tags** > **View**: View all tags
@@ -56,7 +57,7 @@ To create a custom instance role:
 
 ## Assign a custom instance role to users <a href="#assign-a-custom-instance-role-to-users" id="assign-a-custom-instance-role-to-users"></a>
 
-Users with the **Roles: Manage** permission can assign custom instance roles. A user can hold both a built-in account type (Owner, Admin, Member) and one or more custom instance roles at the same time.
+Users with the **Roles: Manage all roles** permission can assign custom instance roles.
 
 To assign a custom instance role:
 
@@ -115,7 +116,7 @@ The table below describes each permission group and its checkboxes as they appea
 | Instance settings | Manage | View and change instance-wide settings |
 | Members | Manage | Invite, remove, and update users across the instance |
 | Roles | Manage project roles | Create, edit, duplicate, delete, and assign custom project roles only |
-| Roles | Manage | Create, edit, duplicate, delete, and assign all custom roles (instance and project). Automatically includes **Manage project roles**. |
+| Roles | Manage all roles | Create, edit, duplicate, delete, and assign all custom roles (instance and project). Automatically includes **Manage project roles**. |
 | API keys | Manage own | Create and delete the user's own API keys |
 | API keys | Manage others | View and delete other users' API keys. Automatically includes **Manage own**. |
 | Tags | View | View all tags |
@@ -128,7 +129,7 @@ The table below describes each permission group and its checkboxes as they appea
 
 Certain permission combinations create a privilege escalation risk:
 
-* A user with **Roles: Manage** can edit their own custom role to add permissions they weren't originally granted.
+* A user with **Roles: Manage all roles** can edit their own custom role to add permissions they weren't originally granted.
 * A user with **Members: Manage** can invite a user they control, then grant that user Admin-level access.
 
 Only assign these permissions to fully trusted users, and avoid combining them unless necessary.

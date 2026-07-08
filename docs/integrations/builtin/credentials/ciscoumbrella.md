@@ -1,30 +1,41 @@
 ---
 title: Cisco Umbrella credentials
-description: Documentation for the Cisco Umbrella credentials. Use these credentials to authenticate Cisco Umbrella in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Cisco Umbrella credentials. Use these credentials to
+  authenticate Cisco Umbrella in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Cisco Umbrella credentials
+originalFilePath: integrations/builtin/credentials/ciscoumbrella.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/ciscoumbrella'
+layout:
+  description:
+    visible: false
 ---
 
-# Cisco Umbrella credentials
+# Cisco Umbrella credentials <a href="#cisco-umbrella-credentials" id="cisco-umbrella-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Cisco DevNet developer account](https://developer.cisco.com).
 - A [Cisco Umbrella user account](https://umbrella.cisco.com/) with **Full Admin** role.
 
-## Authentication methods
+## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Cisco Umbrella's API documentation](https://developer.cisco.com/docs/cloud-security/) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-umbrella/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-umbrella/) on n8n's website.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

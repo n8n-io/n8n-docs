@@ -1,21 +1,35 @@
 ---
-title: OpenAI Audio operations 
-description: Documentation for the Audio operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+title: OpenAI Audio operations
+description: >-
+  Documentation for the Audio operations in OpenAI node in n8n, a workflow
+  automation platform. Includes details of operations and configuration, and
+  links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenAI Audio operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations
+layout:
+  description:
+    visible: false
 ---
 
-# OpenAI Audio operations
+# OpenAI Audio operations <a href="#openai-audio-operations" id="openai-audio-operations"></a>
 
-Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
-## Generate Audio
+## Generate Audio <a href="#generate-audio" id="generate-audio"></a>
 
 Use this operation to create audio from a text prompt. 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Generate Audio**.
 - **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts) for more information.
@@ -24,7 +38,7 @@ Enter these parameters:
 - **Text Input**: Enter the text to generate the audio for. The maximum length is 4096 characters.
 - **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart).
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Response Format**: Select the format for the audio response. Choose from **MP3** (default), **OPUS**, **AAC**, **FLAC**, **WAV**, and **PCM**.
 - **Audio Speed**: Enter the speed for the generated audio from a value from `0.25` to `4.0`. Defaults to `1`.
@@ -32,41 +46,41 @@ Enter these parameters:
 
 Refer to [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech) documentation for more information.
 
-## Transcribe a Recording
+## Transcribe a Recording <a href="#transcribe-a-recording" id="transcribe-a-recording"></a>
 
 Use this operation to transcribe audio into text. OpenAI API limits the size of the audio file to 25 MB. OpenAI will use the `whisper-1` model by default. 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Transcribe a Recording**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Language of the Audio File**: Enter the language of the input audio in  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). Use this option to improve accuracy and latency.
 - **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
 
 Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription) documentation for more information.
 
-## Translate a Recording
+## Translate a Recording <a href="#translate-a-recording" id="translate-a-recording"></a>
 
 Use this operation to translate audio into English. OpenAI API limits the size of the audio file to 25 MB. OpenAI will use the `whisper-1` model by default. 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Translate a Recording**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
 
 Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription) documentation for more information.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).

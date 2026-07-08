@@ -1,23 +1,36 @@
 ---
 title: GitLab node documentation
-description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the GitLab node in n8n. Follow technical documentation to
+  integrate GitLab node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: GitLab node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
+layout:
+  description:
+    visible: false
 ---
 
-# GitLab node
+# GitLab node <a href="#gitlab-node" id="gitlab-node"></a>
 
 Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
-/// note | Credentials
-Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [GitLab credentials](../credentials/gitlab.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * File
 	* Create
@@ -43,16 +56,16 @@ Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for g
 * User
     * Returns the repositories of a user
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'gitlab') ]]
 
-## Related resources
+[Browse GitLab node documentation integration templates](https://n8n.io/integrations/gitlab) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/) for more information about the service.
 
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
+n8n provides a trigger node for GitLab. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

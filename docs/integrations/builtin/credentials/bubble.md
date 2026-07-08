@@ -1,29 +1,42 @@
 ---
 title: Bubble credentials
-description: Documentation for Bubble credentials. Use these credentials to authenticate Bubble in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Bubble credentials. Use these credentials to authenticate
+  Bubble in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Bubble credentials
+originalFilePath: integrations/builtin/credentials/bubble.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/bubble'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/bubble'
+layout:
+  description:
+    visible: false
 ---
 
-# Bubble credentials
+# Bubble credentials <a href="#bubble-credentials" id="bubble-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble.md)
+- [Bubble](../app-nodes/n8n-nodes-base.bubble.md)
 
-/// note | API access
+{% hint style="info" %}
+**API access**
+
 You need a paid plan to access the Bubble APIs.
-///
+{% endhint %}
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Bubble's API documentation](https://manual.bubble.io/help-guides/integrations/api) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a paid [Bubble](https://bubble.io) account and:
 

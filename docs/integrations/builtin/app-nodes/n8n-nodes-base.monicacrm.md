@@ -1,20 +1,33 @@
 ---
 title: Monica CRM node documentation
-description: Learn how to use the Monica CRM node in n8n. Follow technical documentation to integrate Monica CRM node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Monica CRM node in n8n. Follow technical documentation to
+  integrate Monica CRM node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Monica CRM node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm'
+layout:
+  description:
+    visible: false
 ---
 
-# Monica CRM node
+# Monica CRM node <a href="#monica-crm-node" id="monica-crm-node"></a>
 
 Use the Monica CRM node to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
 
 On this page, you'll find a list of operations the Monica CRM node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Monica CRM credentials](/integrations/builtin/credentials/monicacrm.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Monica CRM credentials](../credentials/monicacrm.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Activity
     * Create an activity
@@ -81,7 +94,7 @@ Refer to [Monica CRM credentials](/integrations/builtin/credentials/monicacrm.md
     * Retrieve all tasks
     * Update a task
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'monica-crm') ]]
+
+[Browse Monica CRM node documentation integration templates](https://n8n.io/integrations/monica-crm) or [search all templates](https://n8n.io/workflows/)

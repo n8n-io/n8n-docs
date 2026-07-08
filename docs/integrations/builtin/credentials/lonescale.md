@@ -1,29 +1,40 @@
 ---
 title: LoneScale credentials
-description: Documentation for LoneScale credentials. Use these credentials to authenticate LoneScale in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for LoneScale credentials. Use these credentials to authenticate
+  LoneScale in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: LoneScale credentials
+originalFilePath: integrations/builtin/credentials/lonescale.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/lonescale'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/lonescale'
+layout:
+  description:
+    visible: false
 ---
 
-# LoneScale credentials
+# LoneScale credentials <a href="#lonescale-credentials" id="lonescale-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [LoneScale](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md)
-- [LoneScale Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md)
+- [LoneScale](../app-nodes/n8n-nodes-base.lonescale.md)
+- [LoneScale Trigger](../trigger-nodes/n8n-nodes-base.lonescaletrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [LoneScale](https://www.lonescale.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LoneScale's API documentation](https://public-api.lonescale.com/api) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

@@ -1,28 +1,39 @@
 ---
 title: HaloPSA credentials
-description: Documentation for HaloPSA credentials. Use these credentials to authenticate HaloPSA in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for HaloPSA credentials. Use these credentials to authenticate
+  HaloPSA in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: HaloPSA credentials
+originalFilePath: integrations/builtin/credentials/halopsa.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/halopsa'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/halopsa'
+layout:
+  description:
+    visible: false
 ---
 
-# HaloPSA credentials
+# HaloPSA credentials <a href="#halopsa-credentials" id="halopsa-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa.md)
+- [HaloPSA](../app-nodes/n8n-nodes-base.halopsa.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [HaloPSA](https://halopsa.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [HaloPSA's API documentation](https://usehalo.com/halopsa/guides/1823/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

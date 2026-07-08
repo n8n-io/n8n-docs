@@ -1,32 +1,45 @@
 ---
 title: TheHive 5 credentials
-description: Documentation for TheHive 5 credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for TheHive 5 credentials. Use these credentials to authenticate
+  TheHive in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: TheHive 5 credentials
+originalFilePath: integrations/builtin/credentials/thehive5.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/thehive5'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/thehive5'
+layout:
+  description:
+    visible: false
 ---
 
-# TheHive 5 credentials
+# TheHive 5 credentials <a href="#thehive-5-credentials" id="thehive-5-credentials"></a>
 
 You can use these credentials to authenticate the following nodes with TheHive 5.
 
-- [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md)
+- [TheHive 5](../app-nodes/n8n-nodes-base.thehive5.md)
 
-/// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. If you're using TheHive node for TheHive 3 or TheHive 4, use [TheHive credentials](/integrations/builtin/credentials/thehive.md).
-///
+{% hint style="info" %}
+**TheHive and TheHive 5**
 
-## Prerequisites
+n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. If you're using TheHive node for TheHive 3 or TheHive 4, use [TheHive credentials](thehive.md).
+{% endhint %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install [TheHive 5](https://docs.strangebee.com/thehive/download/) on your server.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

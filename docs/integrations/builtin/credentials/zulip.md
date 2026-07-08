@@ -1,28 +1,39 @@
 ---
 title: Zulip credentials
-description: Documentation for Zulip credentials. Use these credentials to authenticate Zulip in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Zulip credentials. Use these credentials to authenticate
+  Zulip in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zulip credentials
+originalFilePath: integrations/builtin/credentials/zulip.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zulip'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/zulip'
+layout:
+  description:
+    visible: false
 ---
 
-# Zulip credentials
+# Zulip credentials <a href="#zulip-credentials" id="zulip-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zulip](/integrations/builtin/app-nodes/n8n-nodes-base.zulip.md)
+- [Zulip](../app-nodes/n8n-nodes-base.zulip.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Zulip](https://zulip.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Zulip's API documentation](https://zulip.com/api/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

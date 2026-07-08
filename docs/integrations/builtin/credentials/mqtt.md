@@ -1,34 +1,45 @@
 ---
 title: MQTT credentials
-description: Documentation for MQTT credentials. Use these credentials to authenticate MQTT in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for MQTT credentials. Use these credentials to authenticate MQTT
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: MQTT credentials
+originalFilePath: integrations/builtin/credentials/mqtt.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mqtt'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mqtt'
+layout:
+  description:
+    visible: false
 ---
 
-# MQTT credentials
+# MQTT credentials <a href="#mqtt-credentials" id="mqtt-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md)
-- [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md)
+- [MQTT](../app-nodes/n8n-nodes-base.mqtt.md)
+- [MQTT Trigger](../trigger-nodes/n8n-nodes-base.mqtttrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install an [MQTT broker](https://mqtt.org/).
 
 MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Broker connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [MQTT's documentation](https://mqtt.org/) for more information about the MQTT protocol.
 
 Refer to your broker provider's documentation for more detailed configuration and details.
 
-## Using broker connection
+## Using broker connection <a href="#using-broker-connection" id="using-broker-connection"></a>
 
 To configure this credential, you'll need:
 

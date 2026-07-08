@@ -1,17 +1,30 @@
 ---
 title: Gmail node Message Operations documentation
-description: Learn how to use the Message Operations of the Gmail node in n8n. Follow technical documentation to integrate Message Operations into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Message Operations of the Gmail node in n8n. Follow
+  technical documentation to integrate Message Operations into your workflows.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Gmail node Message Operations documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations
+layout:
+  description:
+    visible: false
 ---
 
-# Gmail node Message Operations
+# Gmail node Message Operations <a href="#gmail-node-message-operations" id="gmail-node-message-operations"></a>
 
-Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
+Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](README.md) for more information on the Gmail node itself.
 
---8<-- "_snippets/integrations/builtin/app-nodes/hitl-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
-## Add Label to a message
+## Add Label to a message <a href="#add-label-to-a-message" id="add-label-to-a-message"></a>
 
 Use this operation to add one or more labels to a message.
 
@@ -23,17 +36,19 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you want to add the label to.
 * **Label Names or IDs**: Select the Label names you want to add or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
-<!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
-<!-- vale on -->
 
-## Delete a message
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
+
+
+## Delete a message <a href="#delete-a-message" id="delete-a-message"></a>
 
 Use this operation to immediately and permanently delete a message.
 
-/// note | Permanent deletion
-This operation can't be undone. For recoverable deletions, use the [Thread Trash operation](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md#trash-a-thread) instead.
-///
+{% hint style="info" %}
+**Permanent deletion**
+
+This operation can't be undone. For recoverable deletions, use the [Thread Trash operation](thread-operations.md#trash-a-thread) instead.
+{% endhint %}
 
 Enter these parameters:
 
@@ -44,7 +59,7 @@ Enter these parameters:
 
 Refer to the [Gmail API Method: users.messages.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/delete) documentation for more information.
 
-## Get a message
+## Get a message <a href="#get-a-message" id="get-a-message"></a>
 
 Use this operation to get a single message.
 
@@ -59,9 +74,9 @@ Enter these parameters:
 
 Refer to the [Gmail API Method: users.messages.get](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get) documentation for more information.
 
-<!-- vale off -->
-## Get Many messages
-<!-- vale on -->
+
+## Get Many messages <a href="#get-many-messages" id="get-many-messages"></a>
+
 
 Use this operation to get two or more messages.
 
@@ -75,9 +90,9 @@ Enter these parameters:
 * **Simplify**: Choose whether to return a simplified version of the response (turned on) or the raw data (turned off). Default is on.
     * This is the same as setting the `format` for the API call to `metadata`, which returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 
-<!-- vale off -->
-### Get Many messages filters
-<!-- vale on -->
+
+### Get Many messages filters <a href="#get-many-messages-filters" id="get-many-messages-filters"></a>
+
 
 Use these filters to further refine the node's behavior:
 
@@ -91,7 +106,7 @@ Use these filters to further refine the node's behavior:
 
 Refer to the [Gmail API Method: users.messages.list](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list) documentation for more information.
 
-## Mark as Read
+## Mark as Read <a href="#mark-as-read" id="mark-as-read"></a>
 
 Use this operation to mark a message as read.
 
@@ -102,11 +117,11 @@ Enter these parameters:
 * **Operation**: Select **Mark as Read**.
 * **Message ID**: Enter the ID of the message you wish to mark as read.
 
-<!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
-<!-- vale on -->
 
-## Mark as Unread
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
+
+
+## Mark as Unread <a href="#mark-as-unread" id="mark-as-unread"></a>
 
 Use this operation to mark a message as unread.
 
@@ -117,11 +132,11 @@ Enter these parameters:
 * **Operation**: Select **Mark as Unread**.
 * **Message ID**: Enter the ID of the message you wish to mark as unread.
 
-<!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
-<!-- vale on -->
 
-## Remove Label from a message
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
+
+
+## Remove Label from a message <a href="#remove-label-from-a-message" id="remove-label-from-a-message"></a>
 
 Use this operation to remove one or more labels from a message.
 
@@ -133,11 +148,11 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you want to remove the label from.
 * **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
-<!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
-<!-- vale on -->
 
-## Reply to a message
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
+
+
+## Reply to a message <a href="#reply-to-a-message" id="reply-to-a-message"></a>
 
 Use this operation to send a message as a reply to an existing message.
 
@@ -150,7 +165,7 @@ Enter these parameters:
 * Select the **Email Type**. Choose from **Text** or **HTML**.
 * **Message**: Enter the email message body.
 
-### Reply options
+### Reply options <a href="#reply-options" id="reply-options"></a>
 
 Use these options to further refine the node's behavior:
 
@@ -164,7 +179,7 @@ Use these options to further refine the node's behavior:
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
-## Send a message
+## Send a message <a href="#send-a-message" id="send-a-message"></a>
 
 Use this operation to send a message.
 
@@ -178,7 +193,7 @@ Enter these parameters:
 * Select the **Email Type**. Choose from **Text** or **HTML**.
 * **Message**: Enter the email message body.
 
-### Send options
+### Send options <a href="#send-options" id="send-options"></a>
 
 Use these options to further refine the node's behavior:
 
@@ -193,13 +208,15 @@ Use these options to further refine the node's behavior:
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
-## Send a message and wait for approval
+## Send a message and wait for approval <a href="#send-a-message-and-wait-for-approval" id="send-a-message-and-wait-for-approval"></a>
 
 Use this operation to send a message and wait for approval from the recipient before continuing the workflow execution.
 
-/// info | Use Wait for complex approvals
-The **Send and Wait for Approval** operation is well-suited for simple approval processes. For more complex approvals, consider using the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md).
-///
+{% hint style="info" %}
+**Use Wait for complex approvals**
+
+The **Send and Wait for Approval** operation is well-suited for simple approval processes. For more complex approvals, consider using the [Wait node](../../core-nodes/n8n-nodes-base.wait.md).
+{% endhint %}
 
 Enter these parameters:
 
@@ -210,7 +227,7 @@ Enter these parameters:
 * **Subject**: Enter the subject line.
 * **Message**: Enter the email message body.
 
-### Send and wait for approval options
+### Send and wait for approval options <a href="#send-and-wait-for-approval-options" id="send-and-wait-for-approval-options"></a>
 
 Use these options to further refine the node's behavior:
 
@@ -222,6 +239,6 @@ Use these options to further refine the node's behavior:
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).

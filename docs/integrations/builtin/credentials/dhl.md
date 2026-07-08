@@ -1,25 +1,36 @@
 ---
 title: DHL credentials
-description: Documentation for DHL credentials. Use these credentials to authenticate DHL in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for DHL credentials. Use these credentials to authenticate DHL
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: DHL credentials
+originalFilePath: integrations/builtin/credentials/dhl.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/dhl'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/dhl'
+layout:
+  description:
+    visible: false
 ---
 
-# DHL credentials
+# DHL credentials <a href="#dhl-credentials" id="dhl-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl.md)
+- [DHL](../app-nodes/n8n-nodes-base.dhl.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [DHL's Developer documentation](https://support-developer.dhl.com/support/home) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [DHL Developer](https://developer.dhl.com/user/register) account and:
 

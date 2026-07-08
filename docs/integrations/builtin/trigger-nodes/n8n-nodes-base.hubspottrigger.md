@@ -1,27 +1,46 @@
 ---
 title: HubSpot Trigger node documentation
-description: Learn how to use the HubSpot Trigger node in n8n. Follow technical documentation to integrate HubSpot Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the HubSpot Trigger node in n8n. Follow technical
+  documentation to integrate HubSpot Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: HubSpot Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger
+layout:
+  description:
+    visible: false
 ---
 
-# HubSpot Trigger node
+# HubSpot Trigger node <a href="#hubspot-trigger-node" id="hubspot-trigger-node"></a>
 
 [HubSpot](https://www.hubspot.com/) provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
 
-/// warning | Webhooks
-If you activate a second trigger, the previous trigger stops working. This is because the trigger registers a new webhook with HubSpot when activated. HubSpot only allows one webhook at a time. 
-///
+{% hint style="warning" %}
+**Webhooks**
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot.md).
-///
+If you activate a second trigger, the previous trigger stops working. This is because the trigger registers a new webhook with HubSpot when activated. HubSpot only allows one webhook at a time.
+{% endhint %}
 
-/// note | Examples and templates
+{% hint style="info" %}
+**Credentials**
+
+You can find authentication information for this node [here](../credentials/hubspot.md).
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [HubSpot Trigger integrations](https://n8n.io/integrations/hubspot-trigger/) page.
-///
+{% endhint %}
 
-## Events
+## Events <a href="#events" id="events"></a>
 
 * Company
 	* Created
@@ -47,9 +66,9 @@ For usage examples and templates to help you get started, refer to n8n's [HubSpo
 	* Deleted
 	* Property changed 
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md).
+n8n provides an app node for HubSpot. You can find the node docs [here](../app-nodes/n8n-nodes-base.hubspot.md).
 
 View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/) on n8n's website.
 

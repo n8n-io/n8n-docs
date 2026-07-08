@@ -1,20 +1,33 @@
 ---
 title: Customer.io node documentation
-description: Learn how to use the Customer.io node in n8n. Follow technical documentation to integrate Customer.io node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Customer.io node in n8n. Follow technical documentation
+  to integrate Customer.io node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Customer.io node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.customerio.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.customerio'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.customerio'
+layout:
+  description:
+    visible: false
 ---
 
-# Customer.io node
+# Customer.io node <a href="#customerio-node" id="customerio-node"></a>
 
 Use the Customer.io node to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
 
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Customer.io credentials](../credentials/customerio.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Customer
     * Create/Update a customer.
@@ -30,10 +43,10 @@ Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio.
     * Add Customer
     * Remove Customer
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'customerio') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Customer.io node documentation integration templates](https://n8n.io/integrations/customerio) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

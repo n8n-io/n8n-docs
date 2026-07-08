@@ -1,25 +1,36 @@
 ---
 title: Form.io Trigger credentials
-description: Documentation for Form.io Trigger credentials. Use these credentials to authenticate Form.io Trigger in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Form.io Trigger credentials. Use these credentials to
+  authenticate Form.io Trigger in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Form.io Trigger credentials
+originalFilePath: integrations/builtin/credentials/formiotrigger.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/formiotrigger'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/formiotrigger'
+layout:
+  description:
+    visible: false
 ---
 
-# Form.io Trigger credentials
+# Form.io Trigger credentials <a href="#formio-trigger-credentials" id="formio-trigger-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md)
+- [Form.io Trigger](../trigger-nodes/n8n-nodes-base.formiotrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Form.io's API documentation](https://apidocs.form.io/) for more information about the service.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need a [Form.io](https://www.form.io/) account and:
 

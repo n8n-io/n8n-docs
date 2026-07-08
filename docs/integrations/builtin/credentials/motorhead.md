@@ -1,31 +1,44 @@
 ---
 title: Motorhead credentials
-description: Documentation for the Motorhead credentials. Use these credentials to authenticate Motorhead in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Motorhead credentials. Use these credentials to
+  authenticate Motorhead in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Motorhead credentials
+originalFilePath: integrations/builtin/credentials/motorhead.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/motorhead'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/motorhead'
+layout:
+  description:
+    visible: false
 ---
 
-# Motorhead credentials
+# Motorhead credentials <a href="#motorhead-credentials" id="motorhead-credentials"></a>
 
-/// warning | Deprecated
-The Motorhead project is no longer maintained. The [Motorhead node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
-///
+{% hint style="warning" %}
+**Deprecated**
+
+The Motorhead project is no longer maintained. The [Motorhead node](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
+{% endhint %}
 
 You can use these credentials to authenticate the following nodes:
 
-* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md)
+* [Motorhead](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Motorhead's API documentation](https://docs.getmetal.io/rest-api/introduction) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [Motorhead](https://www.metal.ai/) account and:
 

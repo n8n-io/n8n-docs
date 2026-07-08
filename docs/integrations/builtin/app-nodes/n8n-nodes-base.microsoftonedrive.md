@@ -1,27 +1,50 @@
 ---
 title: Microsoft OneDrive node documentation
-description: Learn how to use the Microsoft OneDrive node in n8n. Follow technical documentation to integrate Microsoft OneDrive node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Microsoft OneDrive node in n8n. Follow technical
+  documentation to integrate Microsoft OneDrive node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Microsoft OneDrive node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive
+layout:
+  description:
+    visible: false
 ---
 
-# Microsoft OneDrive node
+# Microsoft OneDrive node <a href="#microsoft-onedrive-node" id="microsoft-onedrive-node"></a>
 
 Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
 
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
-///
+{% hint style="info" %}
+**Credentials**
 
-/// tip | Government Cloud Support
+This node's **Authentication** dropdown offers three options:
+
+- **OneDrive OAuth2**: the Microsoft OneDrive-specific OAuth2 credential (default).
+- **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Files.ReadWrite.All`).
+- **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
+
+Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
+{% endhint %}
+
+{% hint style="info" %}
+**Government Cloud Support**
+
 If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
-///
+{% endhint %}
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
-## Operations
+## Operations <a href="#operations" id="operations"></a>
 
 * File
     * Copy a file
@@ -40,16 +63,16 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Search a folder
     * Share a folder
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'microsoft-onedrive') ]]
 
-## Related resources
+[Browse Microsoft OneDrive node documentation integration templates](https://n8n.io/integrations/microsoft-onedrive) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/) for more information about the service.
 
-## Find the folder ID
+## Find the folder ID <a href="#find-the-folder-id" id="find-the-folder-id"></a>
 
 To perform operations on folders, you need to supply the ID. You can find this:
 

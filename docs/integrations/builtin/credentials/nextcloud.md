@@ -1,28 +1,39 @@
 ---
 title: Nextcloud credentials
-description: Documentation for Nextcloud credentials. Use these credentials to authenticate Nextcloud in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Nextcloud credentials. Use these credentials to authenticate
+  Nextcloud in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Nextcloud credentials
+originalFilePath: integrations/builtin/credentials/nextcloud.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/nextcloud'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/nextcloud'
+layout:
+  description:
+    visible: false
 ---
 
-# Nextcloud credentials
+# Nextcloud credentials <a href="#nextcloud-credentials" id="nextcloud-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud.md)
+- [Nextcloud](../app-nodes/n8n-nodes-base.nextcloud.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Nextcloud's API documentation](https://nextcloud-server.netlify.app/) for more information about the service.
 
 Refer to [Nextcloud's user manual](https://docs.nextcloud.com/server/stable/user_manual/en/contents.html) for more information on installing and configuring Nextcloud.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need a [Nextcloud](https://nextcloud.com/) account and:
 
@@ -42,7 +53,7 @@ To set it up:
     3. Scroll to the bottom to the **App Password** section and create a new app password.
     4. Copy that app password and enter it in n8n as your **Password**.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [Nextcloud](https://nextcloud.com/) account and:
 
@@ -59,11 +70,9 @@ To set it up:
 4. Copy the **OAuth Callback URL** from n8n and enter it as the **Redirection URI**.
 5. Then select **Add** in Nextcloud.
 6. In n8n, update the **Authorization URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. For example, if you access Nextcloud at `https://cloud.n8n.com`, the Authorization URL is `https://cloud.n8n.com/apps/oauth2/authorize`.
-7. In n8n, update the **Access Token URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. For example, if you access Nextcloud at `https://cloud.n8n.com`, the Access Token URL is `https://cloud.n8n.com/apps/oauth2/api/v1/token`.
+7. In n8n, update the **Access Token URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. For example, if you access Nextcloud at `https://cloud.n8n.com`, the Access Token URL is `https://cloud.n8n.com/apps/oauth2/api/v1/token`.<br>
 
-    /// note | Pretty URL configuration
-    The **Authorization URL** and **Access Token URL** assume that you've configured Nextcloud to use [Pretty URLs](https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html#pretty-urls). If you haven't, you must add `/index.php/` between your Nextcloud URL and the `/apps/oauth2` portion, for example: `https://cloud.n8n.com/index.php/apps/oauth2/api/v1/token`.
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Pretty URL configuration</strong></p><p>The <strong>Authorization URL</strong> and <strong>Access Token URL</strong> assume that you've configured Nextcloud to use <a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html#pretty-urls">Pretty URLs</a>. If you haven't, you must add <code>/index.php/</code> between your Nextcloud URL and the <code>/apps/oauth2</code> portion, for example: <code>https://cloud.n8n.com/index.php/apps/oauth2/api/v1/token</code>.</p></div>
     
 8. Copy the Nextcloud **Client Identifier** for your OAuth2 client and enter it as the **Client ID** in n8n.
 9. Copy the Nextcloud **Secret** and enter it as the **Client Secret** in n8n.

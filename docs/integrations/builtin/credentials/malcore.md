@@ -1,24 +1,35 @@
 ---
 title: Malcore credentials
-description: Documentation for the Malcore credentials. Use these credentials to authenticate Malcore in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Malcore credentials. Use these credentials to
+  authenticate Malcore in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Malcore credentials
+originalFilePath: integrations/builtin/credentials/malcore.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/malcore'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/malcore'
+layout:
+  description:
+    visible: false
 ---
-# Malcore credentials
+# Malcore credentials <a href="#malcore-credentials" id="malcore-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Malcore](https://app.malcore.io/register) account.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Malcore's API documentation](https://malcore.readme.io/reference/) for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/malcore/) on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/malcore/) on n8n's website.
 
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

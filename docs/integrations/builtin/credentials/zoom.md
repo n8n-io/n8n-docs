@@ -1,16 +1,27 @@
 ---
 title: Zoom credentials
-description: Documentation for Zoom credentials. Use these credentials to authenticate Zoom in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Zoom credentials. Use these credentials to authenticate Zoom
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Zoom credentials
+originalFilePath: integrations/builtin/credentials/zoom.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/zoom'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/zoom'
+layout:
+  description:
+    visible: false
 ---
 
-# Zoom credentials
+# Zoom credentials <a href="#zoom-credentials" id="zoom-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md)
+- [Zoom](../app-nodes/n8n-nodes-base.zoom.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Zoom](https://zoom.us/) account. Your account must have one of the following permissions:
 
@@ -18,20 +29,22 @@ Create a [Zoom](https://zoom.us/) account. Your account must have one of the fol
 - Account admin
 - Zoom for developers role
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API JWT token
 - OAuth2
 
-/// warning | API JWT token deprecation
-Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
-///
+{% hint style="warning" %}
+**API JWT token deprecation**
 
-## Related resources
+Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Zoom's API documentation](https://developers.zoom.us/docs/api/) for more information about the service.
 
-## Using API JWT token
+## Using API JWT token <a href="#using-api-jwt-token" id="using-api-jwt-token"></a>
 
 This authentication method has been fully deprecated by Zoom. Don't create new credentials with it.
 
@@ -39,7 +52,7 @@ To configure this credential, you'll need:
 
 - A **JWT token**: To create a JWT token, create a new JWT app in the [Zoom App Marketplace](https://marketplace.zoom.us/).
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -53,7 +66,7 @@ Use these settings for your OAuth app:
 - Select **User-managed app** for **Select how the app is managed**.
 - Copy the **OAuth Callback URL** from n8n and enter it as an **OAuth Redirect URL** in Zoom.
 - If your n8n credential displays a **Whitelist URL**, also enter that URL as a an **OAuth Redirect URL**.
-- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md) node, select:
+- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](../app-nodes/n8n-nodes-base.zoom.md) node, select:
     - `meeting:read`
     - `meeting:write`
     - Refer to [OAuth scopes | Meeting scopes](https://developers.zoom.us/docs/integrations/oauth-scopes/#meeting-scopes) for more information on meeting scopes.

@@ -1,22 +1,35 @@
 ---
 title: QuickBooks Online node documentation
-description: Learn how to use the QuickBooks Online node in n8n. Follow technical documentation to integrate QuickBooks Online node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the QuickBooks Online node in n8n. Follow technical
+  documentation to integrate QuickBooks Online node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: QuickBooks Online node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.quickbooks.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks'
+layout:
+  description:
+    visible: false
 ---
 
-# QuickBooks Online node
+# QuickBooks Online node <a href="#quickbooks-online-node" id="quickbooks-online-node"></a>
 
 Use the QuickBooks node to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
 
 On this page, you'll find a list of operations the QuickBooks node supports and links to more resources.
 
-/// note | Credentials
-Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [QuickBooks credentials](../credentials/quickbooks.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Bill
     * Create
@@ -71,9 +84,9 @@ Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks.m
     * Get All
     * Update
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'quickbooks-online') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse QuickBooks Online node documentation integration templates](https://n8n.io/integrations/quickbooks-online) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

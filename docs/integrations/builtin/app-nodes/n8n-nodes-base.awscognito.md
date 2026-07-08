@@ -1,21 +1,34 @@
 ---
 title: AWS Cognito node documentation
-description: Learn how to use the AWS Cognito node in n8n. Follow technical documentation to integrate AWS Cognito node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the AWS Cognito node in n8n. Follow technical documentation
+  to integrate AWS Cognito node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: AWS Cognito node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscognito'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.awscognito'
+layout:
+  description:
+    visible: false
 ---
 
-# AWS Cognito node
+# AWS Cognito node <a href="#aws-cognito-node" id="aws-cognito-node"></a>
 
 Use the AWS Cognito node to automate work in AWS Cognito and integrate AWS Cognito with other applications. n8n has built-in support for a wide range of AWS Cognito features, which includes creating, retrieving, updating, and deleting groups, users, and user pools.
 
 On this page, you'll find a list of operations the AWS Cognito node supports, and links to more resources.
 
-///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
-///
+{% hint style="info" %}
+**Credentials**
+
+You can find authentication information for this node [here](../credentials/aws.md).
+{% endhint %}
 
 
-## Operations
+## Operations <a href="#operations" id="operations"></a>
 
 * Group:
 	* Create: Create a new group.
@@ -34,14 +47,14 @@ You can find authentication information for this node [here](/integrations/built
 * User Pool:
 	* Get: Retrieve information about an existing user pool.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'aws-cognito') ]]
 
-## Related resources
+[Browse AWS Cognito node documentation integration templates](https://n8n.io/integrations/aws-cognito) or [search all templates](https://n8n.io/workflows/)
 
-<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
+## Related resources <a href="#related-resources" id="related-resources"></a>
+
+
 Refer to [AWS Cognito's documentation](https://docs.aws.amazon.com/cognito/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

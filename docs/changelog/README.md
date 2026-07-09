@@ -43,6 +43,26 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 
 Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
+### AI Assistant: from a description to a working workflow
+
+_Released in 2.29.9 (2026-07-09)._
+
+You can now describe an automation in plain language and have the AI Assistant plan, build, test, and fix it for you, instead of stitching nodes together by hand first. Open the chat, tell it what you want to automate, and it proposes a plan, builds the workflow in your selected project, runs it, and troubleshoots failed executions until it works. The result is a normal n8n workflow: you can open it, inspect every node, edit it, test it, and publish it like anything else you build, so there's no black box to reverse-engineer later.
+
+Because it works inside n8n rather than generating code off to the side, you keep the things that make a workflow production-ready: a visible canvas, step-by-step execution logs you can audit, the 400+ existing integrations it draws on instead of rebuilding API connections, and a shared workspace your teammates can see and reuse. The Assistant handles credentials securely without exposing secrets in the chat, and it can create or update supporting resources such as Data Tables as it builds. You stay in control throughout, reviewing what it produces before anything goes live.
+
+This is an early first step toward describe-it-to-build-it in n8n, and we want your feedback on where to take it next.
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant-preview).
+
+{% hint style="warning" %}
+This feature is in **preview**. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+{% hint style="info" %}
+**Availability:** Cloud only.
+{% endhint %}
+
 ### GitHub App authentication
 
 [GitHub nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.

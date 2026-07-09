@@ -42,19 +42,77 @@ To configure this credential, you'll need a [Slack](https://slack.com/) account 
 
 - An **Access Token**
 
-To generate an access token, create a Slack app:
+To generate an access token, create a Slack app. n8n recommends creating the app from a manifest, which configures all the scopes in one step:
 
+{% tabs %}
+{% tab title="From a manifest" %}
+1. Open your [Slack API Apps](https://api.slack.com/apps) page.
+2. Select **Create New App > From a manifest**.
+3. Select the **Workspace** where you'll be developing your app, then select **Next**.
+4. Select the **JSON** tab and replace the default manifest with the JSON below. Adjust the [scopes](#scopes) if needed.
+5. Select **Next**.
+6. Review the summary and select **Create**. The app details open.
+
+```json
+{
+	"display_information": {
+		"name": "n8n integration"
+	},
+	"features": {
+		"bot_user": {
+			"display_name": "n8n integration"
+		}
+	},
+	"oauth_config": {
+		"scopes": {
+			"bot": [
+				"channels:read",
+				"channels:history",
+				"chat:write",
+				"files:read",
+				"files:write",
+				"groups:read",
+				"groups:history",
+				"im:read",
+				"im:history",
+				"mpim:read",
+				"mpim:history",
+				"reactions:read",
+				"reactions:write",
+				"usergroups:read",
+				"usergroups:write",
+				"users.profile:read",
+				"users:read"
+			]
+		}
+	},
+	"settings": {
+		"org_deploy_enabled": false,
+		"socket_mode_enabled": false,
+		"token_rotation_enabled": false
+	}
+}
+```
+{% endtab %}
+
+{% tab title="From scratch" %}
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From scratch**.
 3. Enter an **App Name**.
 4. Select the **Workspace** where you'll be developing your app.
 5. Select **Create App**. The app details open.
 6. In the left menu under **Features**, select **OAuth & Permissions**.
-8. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
-9. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
-10. Select **Allow**.
-12. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
-13. If you're using this credential for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
+7. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
+{% endtab %}
+{% endtabs %}
+
+Then install the app and copy the token:
+
+1. In the left menu under **Features**, select **OAuth & Permissions**.
+2. In the **OAuth Tokens** section, select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
+3. Select **Allow**.
+4. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
+5. If you're using this credential for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
 
 Refer to the Slack API [Quickstart](https://api.slack.com/quickstart) for more information.
 
@@ -74,6 +132,10 @@ To use your Slack app with the [Slack Trigger](../trigger-nodes/n8n-nodes-base.s
 
 Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening) for more information.
 
+{% hint style="info" %}
+After Slack verifies the **Request URL**, you can also manage the event subscription in your app's manifest: go to **Settings** > **App Manifest** and edit the `settings.event_subscriptions` block.
+{% endhint %}
+
 n8n recommends enabling request signature verification for your Slack Trigger for additional security:
 
 1. Go to [Your Apps](https://api.slack.com/apps/) in Slack and select the app you want to use.
@@ -90,24 +152,145 @@ If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host
 - A **Client ID**
 - A **Client Secret**
 
-To get both, create a Slack app:
+To get both, create a Slack app. n8n recommends creating the app from a manifest, which configures the scopes and redirect URL in one step:
 
+{% tabs %}
+{% tab title="From a manifest" %}
+1. In n8n, copy the **OAuth Callback URL** from your Slack credential.
+2. Open your [Slack API Apps](https://api.slack.com/apps) page.
+3. Select **Create New App > From a manifest**.
+4. Select the **Workspace** where you'll be developing your app, then select **Next**.
+5. Select the **JSON** tab and replace the default manifest with the JSON below. Replace `<your-oauth-callback-url>` with the URL you copied from n8n and adjust the [scopes](#scopes) if needed.
+6. Select **Next**.
+7. Review the summary and select **Create**. The app details open.
+
+```json
+{
+	"display_information": {
+		"name": "n8n integration"
+	},
+	"features": {
+		"bot_user": {
+			"display_name": "n8n integration"
+		}
+	},
+	"oauth_config": {
+		"redirect_urls": [
+			"<your-oauth-callback-url>"
+		],
+		"scopes": {
+			"bot": [
+				"channels:read",
+				"channels:history",
+				"chat:write",
+				"files:read",
+				"files:write",
+				"groups:read",
+				"groups:history",
+				"im:read",
+				"im:history",
+				"mpim:read",
+				"mpim:history",
+				"reactions:read",
+				"reactions:write",
+				"usergroups:read",
+				"usergroups:write",
+				"users.profile:read",
+				"users:read"
+			],
+			"user": [
+				"channels:write",
+				"search:read",
+				"stars:read",
+				"stars:write",
+				"users.profile:write"
+			]
+		}
+	},
+	"settings": {
+		"org_deploy_enabled": false,
+		"socket_mode_enabled": false,
+		"token_rotation_enabled": false
+	}
+}
+```
+
+<details>
+
+<summary>Manifest with user scopes only</summary>
+
+Some Slack API endpoints, including Slack's MCP endpoints, only work with user tokens and not bot tokens. If you need a user token, use this manifest instead. It requests all scopes as user scopes:
+
+```json
+{
+	"display_information": {
+		"name": "n8n integration"
+	},
+	"oauth_config": {
+		"redirect_urls": [
+			"<your-oauth-callback-url>"
+		],
+		"scopes": {
+			"user": [
+				"channels:read",
+				"channels:write",
+				"channels:history",
+				"chat:write",
+				"files:read",
+				"files:write",
+				"groups:read",
+				"groups:history",
+				"im:read",
+				"im:history",
+				"mpim:read",
+				"mpim:history",
+				"reactions:read",
+				"reactions:write",
+				"stars:read",
+				"stars:write",
+				"usergroups:read",
+				"usergroups:write",
+				"users.profile:read",
+				"users.profile:write",
+				"users:read",
+				"search:read"
+			]
+		}
+	},
+	"settings": {
+		"org_deploy_enabled": false,
+		"socket_mode_enabled": false,
+		"token_rotation_enabled": false
+	}
+}
+```
+
+</details>
+{% endtab %}
+
+{% tab title="From scratch" %}
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From scratch**.
 3. Enter an **App Name**.
 4. Select the **Workspace** where you'll be developing your app.
 5. Select **Create App**. The app details open.
-6. In **Settings > Basic Information**, open the **App Credentials** section.
-7. Copy the **Client ID** and **Client Secret**. Paste these into the corresponding fields in n8n.
 6. In the left menu under **Features**, select **OAuth & Permissions**.
 7. In the **Redirect URLs** section, select **Add New Redirect URL**.
 8. Copy the **OAuth Callback URL** from n8n and enter it as the new Redirect URL in Slack.
 9. Select **Add**.
 10. Select **Save URLs**.
 11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
-13. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
-14. Select **Allow**.
-15. At this point, you should be able to select the OAuth button in your n8n credential to connect.
+{% endtab %}
+{% endtabs %}
+
+Then finish connecting the app to n8n:
+
+1. In **Settings > Basic Information**, open the **App Credentials** section.
+2. Copy the **Client ID** and **Client Secret**. Paste these into the corresponding fields in n8n.
+3. In the left menu under **Features**, select **OAuth & Permissions**.
+4. In the **OAuth Tokens** section, select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
+5. Select **Allow**.
+6. At this point, you should be able to select the OAuth button in your n8n credential to connect.
 
 Refer to the Slack API [Quickstart](https://api.slack.com/quickstart) for more information. Refer to the Slack [Installing with OAuth](https://api.slack.com/authentication/oauth-v2) documentation for more details on the OAuth flow itself.
 
@@ -118,7 +301,7 @@ Scopes determine what permissions an app has.
 * If you want your app to act on behalf of users who authorize the app, add the required scopes under the **User Token Scopes** section.
 * If you're building a bot, add the required scopes under the **Bot Token Scopes** section.
 
-Here's the list of scopes the OAuth credential requires, which are a good starting point:
+Here's the list of scopes the OAuth credential requires, which are a good starting point. The app manifests above already include these scopes:
 
 | **Scope name**        | **Notes** |
 |-----------------------| -- |
@@ -143,7 +326,7 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 | `users.profile:read`  | |
 | `users.profile:write` | Not available as a bot token scope |
 | `users:read`          | |
-| `search:read`         | |
+| `search:read`         | Not available as a bot token scope |
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

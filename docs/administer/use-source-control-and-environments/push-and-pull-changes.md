@@ -39,7 +39,7 @@ When the changes include new variable or credential stubs, n8n notifies you that
 {% hint style="info" %}
 **How deleted resources are handled**
 
-When workflows, credentials, variables, tags, and data tables are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+When workflows, credentials, variables, tags, and data tables are deleted from the repository, pulling deletes your local versions of these resources. Interactive pulls list the affected resources in the confirmation dialog and only delete them if you confirm. Pulls that use the force option, for example, through the API or in automated setups, delete them without asking.
 {% endhint %}
 
 ### Workflow and credential owner may change on pull <a href="#workflow-and-credential-owner-may-change-on-pull" id="workflow-and-credential-owner-may-change-on-pull"></a>
@@ -144,7 +144,7 @@ On pull:
 * n8n creates data tables that don't exist locally.
 * n8n updates existing data tables to match the schema in Git: it adds new columns and removes columns that no longer exist in the remote version. n8n keeps the data in the remaining columns.
 * n8n matches data tables by their name within a project. If a data table was deleted and recreated with the same name in the source environment, or created with the same name in both environments, n8n treats it as the same table: it updates the schema like any other change and keeps the local rows.
-* If a data table exists locally but not in Git, pulling deletes it, including all of its row data. Interactive pulls list the table as **Deleted** in the confirmation dialog before anything happens. Pulls that use the force option, for example through the API or in automated setups, delete the table without asking. To keep such a table, push it before pulling.
+* If a data table exists locally but not in Git, pulling deletes it, including all of its row data. Interactive pulls list the table as **Deleted** in the confirmation dialog before anything happens. Pulls that use the force option, for example, through the API or in automated setups, delete the table without asking. To keep such a table, push it before pulling.
 
 {% hint style="warning" %}
 **Column removal causes data loss**

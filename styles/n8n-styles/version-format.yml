@@ -4,4 +4,4 @@ link: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
 level: warning
 ignorecase: false
 tokens:
-  - '\bv\d+\.\d+(\.\d+)?'
+  - '\bv\d+\.\d+(\.\d+)?\b'

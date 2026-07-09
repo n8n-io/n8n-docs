@@ -146,16 +146,16 @@ Bindings tell n8n how to map the entities a workflow depends on in the package t
 
 To supply bindings, pass `--bindings` a JSON object keyed by entity type. n8n applies your explicit bindings first, then resolves any remaining credentials with the matching mode.
 
-n8n returns the bindings it used under `bindings.credentials` in the import response. Save them and pass them back on later imports to keep the mapping stable.
+n8n returns the bindings it used under the `bindings` section of the import response. Save them and pass them back on later imports to keep the mapping stable.
 
 ### Credentials
 
 When you import a package, n8n resolves each credential the workflows use to a credential on the target instance. You can let n8n match credentials automatically, or bind them explicitly.
 
-To map a credential yourself, add it to the `credentials` object in `--bindings`, keyed by source credential ID. For example, your source instance has a workflow that uses a `slack` credential with the ID `CHEDDAR`. On your target instance you have a `slack` credential with the ID `BRIE` that you want the workflow to use. Bind `CHEDDAR` to `BRIE` so every workflow that uses `CHEDDAR` maps to `BRIE`:
+To map a credential yourself, add it to the `credentials` object in `--bindings`, keyed by source credential ID. For example, your source instance has a workflow that uses a `slack` credential with the ID `aBc123`. On your target instance you have a `slack` credential with the ID `xYz456` that you want the workflow to use. Bind `aBc123` to `xYz456` so every workflow that uses `aBc123` maps to `xYz456`:
 
 ```bash
-n8n-cli package import --file=export.n8np --conflict-policy=fail --bindings='{"credentials": {"CHEDDAR": "BRIE"}}'
+n8n-cli package import --file=export.n8np --conflict-policy=fail --bindings='{"credentials": {"aBc123": "xYz456"}}'
 ```
 
 When you don't bind a credential explicitly, n8n resolves it with the mode set by `--credential-matching-mode`:

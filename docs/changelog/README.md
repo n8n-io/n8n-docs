@@ -43,15 +43,17 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 
 Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
-### AI Assistant: from a description to a working workflow
+### AI Assistant: describe a goal, get a working automation
 
 _Released in 2.29.9 (2026-07-09)._
 
-You can now describe an automation in plain language and have the AI Assistant plan, build, test, and fix it for you, instead of stitching nodes together by hand first. Open the chat, tell it what you want to automate, and it proposes a plan, builds the workflow in your selected project, runs it, and troubleshoots failed executions until it works. The result is a normal n8n workflow: you can open it, inspect every node, edit it, test it, and publish it like anything else you build, so there's no black box to reverse-engineer later.
+You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
 
-Because it works inside n8n rather than generating code off to the side, you keep the things that make a workflow production-ready: a visible canvas, step-by-step execution logs you can audit, the 400+ existing integrations it draws on instead of rebuilding API connections, and a shared workspace your teammates can see and reuse. The Assistant handles credentials securely without exposing secrets in the chat, and it can create or update supporting resources such as Data Tables as it builds. You stay in control throughout, reviewing what it produces before anything goes live.
+<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a prompt box asking What do you want to automate, with suggestions such as Score my leads and Process invoices."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
 
-This is an early first step toward describe-it-to-build-it in n8n, and we want your feedback on where to take it next.
+AI Assistant supersedes the AI Workflow Builder and Chat Hub, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
+
+Everything it produces is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
 
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant-preview).
 

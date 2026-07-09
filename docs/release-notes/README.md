@@ -62,7 +62,7 @@ To use this, open the Insights dashboard, choose a date range with the date rang
 Learn more in the [documentation](<https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection>).
 
 {% hint style="info" %}
-**Availability:** Pro and above.
+**Availability:** Pro, Business, and Enterprise.
 {% endhint %}
 
 ---
@@ -206,7 +206,7 @@ Self-hosted instances can now retain insights data for up to 365 days by default
 
 ---
 
-## `n8n 2.19` IdP role mapping and instance bootstrapping (Enterprise)
+## `n8n 2.19` IdP role mapping and instance bootstrapping
 
 **Released:** 2026-04-28
 
@@ -217,7 +217,7 @@ Instance admins can now define group-to-role mappings inside n8n instead of enco
 Open **Settings → SSO**, pick **Instance roles via SSO** or **Instance and project roles via SSO** under User role provisioning, switch the mapping card from "Map rules on your IdP" to "Map rules inside n8n", and add expressions using the `$claims` object to match users for each role. Expression-based matching handles non-standard group structures that plain string matching can't reach.
 
 {% hint style="info" %}
-**Availability:** Enterprise and Business.
+**Availability:** Business and Enterprise.
 {% endhint %}
 
 ### Instance bootstrapping
@@ -270,7 +270,7 @@ The NVIDIA Nemotron Embeddings node generates embeddings from NeMo Retriever mod
 
 ---
 
-## `n8n 2.16` Embedded access and execution data redaction (Enterprise)
+## `n8n 2.16` Embedded access and execution data redaction
 
 **Released:** 2026-04-07
 
@@ -321,7 +321,7 @@ Standard OTel variables (`OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_SERVICE_NAME`) are
 This is the foundational T1 feature. It was extended across later releases: node-level spans (v2.16), workflow version IDs in spans and distributed trace context propagation (v2.18 to v2.19), and AI Agent telemetry (v2.20).
 
 {% hint style="info" %}
-**Availability:** Free, Pro, and Enterprise.
+**Availability:** Self-hosted only.
 {% endhint %}
 
 ---
@@ -350,9 +350,11 @@ Workflow, credential, and data table cards, as well as the data table detail vie
 
 Open version history, click **Compare changes**, pick any two versions, and the canvas renders both side by side with changed nodes highlighted. A change count badge on each version helps you spot significant edits at a glance.
 
-Visual diff is available on Cloud Pro and above.
+{% hint style="info" %}
+**Availability:** Pro, Business, and Enterprise.
+{% endhint %}
 
-### Project-scoped external secrets: full team access (Enterprise)
+### Project-scoped external secrets: full team access
 
 What's new:
 
@@ -371,7 +373,7 @@ Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manag
 **Availability:** Enterprise.
 {% endhint %}
 
-### Folder-based filtering in the push and pull dialog (Enterprise)
+### Folder-based filtering in the push and pull dialog
 
 The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
 
@@ -381,7 +383,7 @@ The push and pull dialogs now include a **Folder** filter alongside Status and O
 
 ---
 
-## `n8n 2.12` 1Password as an external secrets provider (Enterprise)
+## `n8n 2.12` 1Password as an external secrets provider
 
 **Released:** 2026-03-09
 
@@ -415,27 +417,31 @@ Setting up credentials on n8n Cloud is now much simpler. For supported services,
 Things to keep in mind:
 
 * If you prefer to use your own OAuth configuration, you can still switch to manual setup from the auth mode dropdown at any time.
-* This feature is only available on n8n Cloud, where n8n manages the OAuth apps on your behalf.
+* n8n manages the OAuth apps on your behalf.
 
-### Custom roles: Assignments tab (Enterprise)
+{% hint style="info" %}
+**Availability:** Cloud only.
+{% endhint %}
+
+### Custom roles: Assignments tab
 
 Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
 
-### Project-scoped external secrets: instance admin setup (Enterprise)
+### Project-scoped external secrets: instance admin setup
 
 Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
-### Workflow execute as a separate permission scope (Enterprise)
+### Workflow execute as a separate permission scope
 
 `workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
 
 {% hint style="info" %}
-**Availability:** Custom roles and project-scoped external secrets are available on n8n Enterprise.
+**Availability:** Custom roles and project-scoped external secrets are available on Enterprise.
 {% endhint %}
 
 ---
 
-## `n8n 2.8` Personal space policies and finer-grained governance (Enterprise)
+## `n8n 2.8` Personal space policies and finer-grained governance
 
 **Released:** 2026-02-09 – 2026-02-13 (2.8.0–2.8.3)
 
@@ -486,7 +492,7 @@ _Released in 2.8.0 (2026-02-09)._
 Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: `workflow:publish` and `workflow:unpublish`. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
 
 {% hint style="info" %}
-**Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on n8n Enterprise.
+**Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on Enterprise.
 {% endhint %}
 
 ---
@@ -566,13 +572,17 @@ When updating, you can either replace all credential data at once (useful for bu
 
 **Released:** 2025-12-22
 
-### More granular workflow permissions within Custom Project Roles (Enterprise)
+### More granular workflow permissions within Custom Project Roles
 
 Custom Project Roles allow you to define fine-grained permissions at the project level. With this release, workflow permissions have been further refined by separating workflow editing from workflow publishing.
 
 This change makes it easier to align access controls with internal processes where building workflows and publishing them are handled by different users or teams.
 
 <figure><img src=".gitbook/assets/WorkflowEditor (1).png" alt="Custom Project Roles"><figcaption><p>Custom Project Roles</p></figcaption></figure>
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
 
 ### Log streaming: more audit events for improved observability
 

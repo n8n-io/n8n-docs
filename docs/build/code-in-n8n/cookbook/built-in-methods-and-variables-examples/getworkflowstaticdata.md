@@ -22,7 +22,7 @@ This gives access to the static workflow data.
 {% hint style="info" %}
 **Experimental feature**
 
-- Static data isn't available when testing workflows. The workflow must be active and called by a trigger[^1] or webhook to save static data.
+- Static data isn't available when testing workflows. The workflow must be published and called by a trigger[^1] or webhook to save static data.
 - This feature may behave unreliably under high-frequency workflow executions.
 {% endhint %}
 You can save data directly in the workflow. This data should be small.

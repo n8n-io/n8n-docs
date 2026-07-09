@@ -39,7 +39,9 @@ When the changes include new variable or credential stubs, n8n notifies you that
 {% hint style="info" %}
 **How deleted resources are handled**
 
-When workflows, credentials, variables, tags, and data tables are deleted from the repository, pulling deletes your local versions of these resources. Interactive pulls list the affected resources in the confirmation dialog and only delete them if you confirm. Pulls that use the force option, for example, through the API or in automated setups, delete them without asking.
+When workflows, credentials, variables, tags, and data tables are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+
+For data tables, this confirmation only applies to interactive pulls. Pulls that use the force option delete local data tables without asking. See [Data tables](#data-tables) for details.
 {% endhint %}
 
 ### Workflow and credential owner may change on pull <a href="#workflow-and-credential-owner-may-change-on-pull" id="workflow-and-credential-owner-may-change-on-pull"></a>

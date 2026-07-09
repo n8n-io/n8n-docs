@@ -102,7 +102,7 @@ Imports are checked up front. If a conflict or an unresolved credential would bl
 This makes it easy to promote workflows from development to production, back up and restore an instance, hand a workflow to a teammate without sharing secrets, or migrate between instances.
 
 {% hint style="warning" %}
-This feature is in **beta**. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
+This feature is in **preview**. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
 {% endhint %}
 
 Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).

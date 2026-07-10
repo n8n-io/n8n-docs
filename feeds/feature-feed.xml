@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>n8n feature feed: editor and nodes</title>
+<link>https://docs.n8n.io/release-notes/feature-feed</link>
+<atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/feature-feed.xml" rel="self" type="application/rss+xml"/>
+<description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
+<language>en</language>
+<lastBuildDate>Fri, 10 Jul 2026 09:18:56 GMT</lastBuildDate>
+<item>
+<title>Render AI Assistant reasoning as separate blocks in the run timeline</title>
+<link>https://github.com/n8n-io/n8n/pull/33676</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33676</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>AI Assistant chat now shows reasoning as separate collapsible blocks placed where they actually occurred during a run, instead of merging all reasoning into one block at the top of the message. As the assistant streams through multiple steps and tool calls, each reasoning stage appears interleaved in order, both live and after reloading the page. Older conversations still display their reasoning as a single top block.</description>
+</item>
+<item>
+<title>Deprecate $getPairedItem in the expression editor</title>
+<link>https://github.com/n8n-io/n8n/pull/33549</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33549</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The undocumented $getPairedItem expression helper is now flagged as deprecated in the expression editor, showing an error message when used. It continues to work as before during actual workflow execution, so existing workflows are unaffected; this change only warns users in the editor UI to discourage further use of the helper.</description>
+</item>
+<item>
+<title>Add certificate authentication to the Microsoft Entra Service Principal credential</title>
+<link>https://github.com/n8n-io/n8n/pull/33420</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33420</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Microsoft Entra Service Principal credential now supports certificate-based authentication as an alternative to Client Secret. Choose Certificate to reveal Private Key and Certificate (PEM) fields; n8n signs a client assertion (RS256 JWT with SHA-1 thumbprint) for the OAuth token exchange. Client Secret remains the default, and existing credentials continue working unchanged. All nodes using this credential automatically gain certificate support with no changes needed.</description>
+</item>
+<item>
+<title>NDV one-line credential row with connect/connected/disconnect states</title>
+<link>https://github.com/n8n-io/n8n/pull/33371</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33371</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The credential section in the node editing view (NDV) has been redesigned into a compact one-line row showing the credential name, a private-credential indicator, and a clear connection status. Users see a red dot with 'Not connected' and a Connect button, or a green dot with a 'Connected' dropdown offering Modify and Disconnect. Disconnecting now shows a confirmation dialog with a 'Don't show again' option, making it clearer to separate template editing from personal account connection.</description>
+</item>
+<item>
+<title>Include response timestamp in Send and Wait responses</title>
+<link>https://github.com/n8n-io/n8n/pull/33283</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33283</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>Send and Wait (Human-in-the-Loop) responses now include a respondedAt field with an ISO-8601 timestamp of when n8n received the reply. It applies to approval, free-text, and custom-form response types, and works automatically across all nodes using Send and Wait, including Slack, Telegram, Discord, WhatsApp, Google Chat, Gmail, Outlook, Email, Microsoft Teams, and the Chat Trigger node. The addition is optional and does not change existing output fields.</description>
+</item>
+<item>
+<title>Kafka Node: Add mTLS (client certificate) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/33236</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33236</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Kafka credential now supports mutual TLS (mTLS) authentication, letting n8n connect to brokers that require a client certificate. When SSL is enabled, you can optionally provide a CA certificate, client certificate, and client private key, plus an 'Ignore SSL Issues' toggle for testing. This applies consistently to the Kafka node, Kafka Trigger, and credential test. Existing SSL and SASL credentials are unaffected, and invalid or incomplete certificate/key pairs now fail with a clear error instead of an opaque TLS handshake failure.</description>
+</item>
+<item>
+<title>Make data table artifacts editable when AI is not running</title>
+<link>https://github.com/n8n-io/n8n/pull/33210</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33210</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>Data table artifacts shown in the AI Assistant are now editable once the agent finishes working: you can edit cells, add or delete rows, and manage columns directly in the preview panel. The grid locks automatically while the agent is streaming, sending a message, or running in the background, and refreshes after each agent edit. Permissions follow the same rules as the main data table view, and read-only source-control branches remain uneditable. Also fixed two edge cases where paste and column dragging could bypass read-only restrictions.</description>
+</item>
+<item>
+<title>Microsoft Teams Node: Add Service Principal (app-only) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/33105</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33105</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Microsoft Teams action node and Trigger node now support authenticating via a Microsoft Entra Service Principal (app-only) credential, alongside existing Teams OAuth2 and generic Microsoft Graph OAuth2 options. This enables app-only automation for listing teams, channel operations, Planner tasks, and channel message retrieval, plus New Channel/Channel Message/Team Member triggers. Chat-related resources and some operations remain unavailable under this credential, with clear in-node notices and friendly errors. Existing OAuth2 workflows are unaffected.</description>
+</item>
+<item>
+<title>Microsoft To Do Node: Add Service Principal (app-only) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/33081</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33081</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Microsoft To Do node now supports Microsoft Entra Service Principal (app-only) authentication, in addition to existing OAuth2 credentials. Since app-only Graph access has no personal '/me' context, a required User field (UPN or object ID) specifies whose task lists and tasks to manage. Existing OAuth2 workflows are unaffected and continue to work exactly as before.</description>
+</item>
+<item>
+<title>Read-only credential view and connect banner for private credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/33055</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33055</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>Users with read-only access to private credentials now see the full credential form with disabled fields instead of an empty modal. A new credential:connect permission lets members without edit rights authorize or reconnect OAuth credentials directly, without triggering a misleading save. This capability is now assignable in the custom-role editor, and the read-only notice for team-owned credentials has been reworded for clarity.</description>
+</item>
+<item>
+<title>Microsoft Excel Node: Add Service Principal (app-only) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/33014</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33014</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Microsoft Excel node now supports Microsoft Entra Service Principal (app-only) authentication alongside existing OAuth2 credentials. Since app-only Graph access has no personal drive context, a new &quot;Access As&quot; option lets you target a specific user, drive, or site by ID. Existing OAuth2-based Excel workflows continue to work unchanged, as the authentication selector defaults to the prior OAuth2 credential. Workbook search/list is not supported under this new credential type; workbooks must be referenced by ID.</description>
+</item>
+<item>
+<title>Show private credential icon on execution list runs</title>
+<link>https://github.com/n8n-io/n8n/pull/32957</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32957</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>Execution lists now show an icon when a run used a private (end-user-resolved) credential, even if the node using it errored. The icon appears in both the workflow-level executions sidebar and the global project executions table, with a tooltip explaining it ran using end-user credentials. This helps identify executions involving dynamically resolved credentials at a glance.</description>
+</item>
+<item>
+<title>Improve data table node</title>
+<link>https://github.com/n8n-io/n8n/pull/28199</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/28199</guid>
+<pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.30</category>
+<description>The Data Table node's &quot;Update&quot; table operation has been renamed to &quot;Rename&quot; to better reflect that it only renames a table. A new &quot;Clear&quot; operation lets you delete all rows from a data table while keeping its structure and ID intact. This clear action is also available via the public API as DELETE /data-tables/{dataTableId}/rows/clear.</description>
+</item>
+<item>
+<title>Show AI Assistant disclaimer only after the AI responds</title>
+<link>https://github.com/n8n-io/n8n/pull/33234</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33234</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>In the AI Assistant panel, the input disclaimer ('Preview version. AI can make mistakes; always verify responses.') now only appears once the assistant has produced a visible response. It stays hidden on an empty thread and while your first message is still being processed, reducing clutter before there's actually an AI reply to caveat.</description>
+</item>
+<item>
+<title>Update AI Assistant input disclaimer copy</title>
+<link>https://github.com/n8n-io/n8n/pull/33213</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33213</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Updated the disclaimer text shown below the AI Assistant input field. It now reads &quot;Preview version. AI can make mistakes; always verify responses.&quot; instead of the previous &quot;AI can make mistakes. Check important info.&quot; This clarifies that the AI Assistant is a preview feature and encourages users to verify its responses.</description>
+</item>
+<item>
+<title>Add AI disclaimer to Instance AI chat</title>
+<link>https://github.com/n8n-io/n8n/pull/33101</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33101</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The Instance AI chat now displays a small, muted disclaimer beneath the message composer reading &quot;AI can make mistakes. Check important info.&quot; This appears only within an active chat thread, reminding users to verify important information from AI responses, consistent with similar notices in other AI chat tools.</description>
+</item>
+<item>
+<title>Microsoft Outlook Node: Add Service Principal (app-only) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/33098</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33098</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The Microsoft Outlook node (v2) and Outlook Trigger now support Microsoft Entra Service Principal (app-only) authentication, alongside existing OAuth2 options. When selected, a required Mailbox field (UPN or object ID) specifies which mailbox to act on, since app-only Graph access has no '/me'. All resources—messages, drafts, contacts, calendars, events, folders, and attachments—work against the chosen mailbox, and the trigger polls it too. Existing OAuth2 workflows are unaffected.</description>
+</item>
+<item>
+<title>Allow assigning custom instance roles and restyle the Users page role dropdown</title>
+<link>https://github.com/n8n-io/n8n/pull/33029</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33029</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Custom instance roles can now be assigned to users throughout the admin experience: in the Invite Users modal, the Users table role dropdown, the reinvite flow, and personal settings, where they display correctly once assigned. Roles not covered by the current license appear disabled rather than hidden. The Users page role dropdown has also been restyled to match the project-roles dropdown design, with shared underlying components reducing duplicated logic.</description>
+</item>
+<item>
+<title>Add instance role create/edit/view page behind env flag</title>
+<link>https://github.com/n8n-io/n8n/pull/32942</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32942</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Added a create, edit, and read-only view for instance-level (global) custom roles, available behind the N8N_ENV_FEAT_CUSTOM_INSTANCE_ROLES flag on Enterprise licenses with Custom Roles. Admins can define custom instance roles with selected scopes, base them on presets matching system roles, and manage them via duplicate and delete actions, while system roles remain view-only. Requires the appropriate role:manage permission.</description>
+</item>
+<item>
+<title>xAI Grok Chat Model Node: Add reasoning effort and priority options</title>
+<link>https://github.com/n8n-io/n8n/pull/32931</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32931</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The xAI Grok Chat Model node now supports two new options: Reasoning Effort (none, low, medium, high) to control how much the model thinks before responding, and Enable Priority to request higher scheduling priority via xAI's priority processing tier. Both settings are sent as part of the request to the xAI API and only apply on reasoning-capable Grok models that support them.</description>
+</item>
+<item>
+<title>Microsoft OneDrive Node: Add Service Principal (app-only) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/32911</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32911</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The Microsoft OneDrive node and trigger now support an app-only Microsoft Entra Service Principal credential, letting workflows run without a signed-in user by targeting a specific User, Drive, or Site. A new Move operation is added for files and folders. Search is disabled with this credential (Graph limitation), showing a clear message instead of a raw error. Existing OAuth2-based workflows are unaffected.</description>
+</item>
+<item>
+<title>Add instance role permission grouping config and selector</title>
+<link>https://github.com/n8n-io/n8n/pull/32907</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32907</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Added internal groundwork for a future instance role permission editor, introducing a grouping config that organizes permission scopes by resource (e.g. Members, Roles, API keys, Tags) into simpler options like View/Manage. Also reorganized the roles feature folder structure internally. This is not yet exposed in any user-facing screen and has no visible effect for users in this release.</description>
+</item>
+<item>
+<title>Add reusable PrivateCredentialIcon component</title>
+<link>https://github.com/n8n-io/n8n/pull/32866</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32866</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Workflows with private (dynamically resolved) credentials now show a compact key icon with a tooltip on workflow cards, replacing the previous badge. Also fixed a bug where searching credential types in the 'Add credential' modal could throw a 'Maximum call stack size exceeded' error in development mode; search now filters reliably by credential name.</description>
+</item>
+<item>
+<title>Add Microsoft Entra Service Principal credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32759</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32759</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>Added a new Microsoft Entra Service Principal credential for app-only authentication to Microsoft Graph using a client secret (OAuth2 client_credentials grant). It supports Global, US Gov, US Gov DOD, and China cloud environments, automatically requests the correct token host and scope, and caches/refreshes access tokens. This credential is not yet wired to any node; certificate-based sign-in is planned for a future release.</description>
+</item>
+<item>
+<title>Slack Node: Add schedule message and look up user by email operations</title>
+<link>https://github.com/n8n-io/n8n/pull/31243</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/31243</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The Slack node now supports four new operations: looking up a user by email address, scheduling a message to be sent at a future date/time, deleting a previously scheduled message, and retrieving a list of pending scheduled messages with optional channel/date filters. These are additive operations with no changes to existing workflows or node versioning.</description>
+</item>
+<item>
+<title>GitHub Node: Add GitHub App API credential</title>
+<link>https://github.com/n8n-io/n8n/pull/31235</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/31235</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The GitHub and GitHub Trigger nodes now support authenticating via a GitHub App credential, in addition to the existing personal access token and OAuth2 options. Users can configure App ID, Installation ID, and a private key; n8n handles JWT signing and installation access token retrieval automatically, refreshing tokens as needed for API requests.</description>
+</item>
+<item>
+<title>Snowflake Node: Add optional origin hostname support</title>
+<link>https://github.com/n8n-io/n8n/pull/29653</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/29653</guid>
+<pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.29</category>
+<description>The Snowflake credential now supports an optional Origin Hostname field, letting users specify a custom host for connections that go through a proxy or require an explicit hostname instead of the default account-derived address. Existing connections are unaffected if the field is left blank, and standard Snowflake setups continue to work as before.</description>
+</item>
+<item>
+<title>Google Ads Node: Upgrade API from v20 to v21</title>
+<link>https://github.com/n8n-io/n8n/pull/32791</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32791</guid>
+<pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.27.4</category>
+<description>The Google Ads node now uses Google Ads API v21 instead of the deprecated v20, updating all endpoint URLs used for credential testing, campaign search, and related requests. This ensures continued compatibility with Google Ads as v20 is phased out.</description>
+</item>
+<item>
+<title>Add Roles settings area with instance roles tab</title>
+<link>https://github.com/n8n-io/n8n/pull/32775</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32775</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Behind the N8N_ENV_FEAT_CUSTOM_INSTANCE_ROLES flag, the Settings menu entry 'Project roles' is renamed to 'Roles' and now opens a tabbed page with Instance roles (default) and Project roles tabs. The instance roles tab lists system and custom instance roles with member counts, locking system roles from destructive actions while allowing duplicate/delete on custom ones. Old /settings/project-roles links redirect to the new page. Behavior is unchanged when the flag is off.</description>
+</item>
+<item>
+<title>Investigate failed executions on Instance AI editor hand-offs</title>
+<link>https://github.com/n8n-io/n8n/pull/32675</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32675</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Instance AI editor hand-offs now recognize failed executions: opening the assistant from a node error or a failed canvas run starts a new thread asking the agent to investigate, instead of a blank greeting. Fixed a bug where using Ask AI Assistant from a node's error view could leave a blank screen due to the node detail view not closing before navigation. Also, credential setup questions in a new tab no longer misleadingly reference a node name, while in-thread credential questions still do.</description>
+</item>
+<item>
+<title>Google Calendar Node: Allow custom OAuth2 scopes</title>
+<link>https://github.com/n8n-io/n8n/pull/32661</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32661</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Google Calendar OAuth2 credentials now support a Custom Scopes toggle. By default, scopes remain unchanged for existing credentials, but users can enable the option to reveal an editable Enabled Scopes field, pre-filled with the current defaults, allowing them to request additional or different OAuth permissions when connecting. Manually entered scopes now persist across credential reconnects.</description>
+</item>
+<item>
+<title>Google Sheets Node: Allow custom OAuth2 scopes</title>
+<link>https://github.com/n8n-io/n8n/pull/32660</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32660</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Google Sheets OAuth2 credential now supports a Custom Scopes toggle. When enabled, an Enabled Scopes field appears, pre-filled with the current defaults, letting users request additional OAuth scopes beyond what n8n normally asks for. Existing credentials are unaffected: default behavior and scopes remain unchanged unless the toggle is turned on. Custom scopes also persist across credential reconnects.</description>
+</item>
+<item>
+<title>Google Cloud Storage Node: Allow custom OAuth2 scopes</title>
+<link>https://github.com/n8n-io/n8n/pull/32659</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32659</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Google Cloud Storage node's OAuth2 credential now supports a Custom Scopes toggle. By default it behaves exactly as before, but enabling the toggle reveals an editable Enabled Scopes field pre-filled with the standard scopes, letting users request additional or different permissions. Manually entered scopes are preserved across reconnects, matching behavior already available for credentials like Strava, Wordpress, Figma, and Discord.</description>
+</item>
+<item>
+<title>Improve credential saving UX for OAuth credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/32653</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32653</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Improved the credential saving experience for OAuth credentials. The Save button is now always visible instead of hidden until an account is connected, and stays disabled until required fields are filled and a change is made. Save/Saved states now transition smoothly, a success toast appears on every save, and the &quot;Connect your account&quot; banner has moved below the private credentials toggle, removing a redundant standalone connect button.</description>
+</item>
+<item>
+<title>Compression Node: Add tar and tar.gz support</title>
+<link>https://github.com/n8n-io/n8n/pull/32547</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32547</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Compression node now supports tar archives. Decompress handles .tar, .tar.gz and .tgz files, which previously produced empty output silently; unsupported formats like .rar now raise a clear error. Compress adds two new output formats, Tar and Tar (Gzip), bundling input binary fields into a single archive with the same File Name/output field UX as Zip. Includes size, entry-count, path-traversal and symlink safeguards matching the existing zip handling.</description>
+</item>
+<item>
+<title>Microsoft To Do Node: Allow custom OAuth2 scopes</title>
+<link>https://github.com/n8n-io/n8n/pull/32538</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32538</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft To Do OAuth2 credential now supports custom scopes. A new Custom Scopes toggle lets users reveal an editable Enabled Scopes field, pre-filled with the default scopes (openid offline_access Tasks.ReadWrite), so additional Microsoft Graph permissions can be requested. When the toggle is off, behavior is unchanged and existing credentials keep working as before.</description>
+</item>
+<item>
+<title>Microsoft Outlook Node: Accept the generic Microsoft OAuth2 (Graph) credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32531</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32531</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft Outlook v2 action node and Outlook Trigger now also accept the generic Microsoft OAuth2 (Graph) credential, in addition to the existing Outlook-specific OAuth2 credential. This lets you reuse a single Microsoft Graph credential across Outlook, OneDrive, and Excel nodes. Existing workflows using the Outlook-specific credential continue to work unchanged, as this is fully backward compatible.</description>
+</item>
+<item>
+<title>Microsoft Graph Security Node: Support authenticating with the generic Microsoft OAuth2 credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32529</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32529</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft Graph Security node now offers an Authentication option letting you choose between the existing node-specific Graph Security OAuth2 credential (default, unchanged) or the generic Microsoft OAuth2 credential, useful for enterprise/Entra-managed tenants using a single centrally administered Graph app registration. Existing workflows continue working without changes. The generic option requires the SecurityEvents.ReadWrite.All offline_access scope with admin consent.</description>
+</item>
+<item>
+<title>Surface execution data size in the executions view</title>
+<link>https://github.com/n8n-io/n8n/pull/32505</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32505</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Executions view now shows the total execution data size (JSON plus binary data, e.g. 144KB) in the execution detail header, alongside the running time and execution ID. The segment is hidden when there is no recorded data size. This is a frontend-only change; the underlying size data was already tracked and served by the API.</description>
+</item>
+<item>
+<title>Microsoft To Do Node: Accept the generic Microsoft OAuth2 (Graph) credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32492</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32492</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft To Do node now supports a new Authentication dropdown, letting you choose between the existing node-specific OAuth2 credential (default) or the generic Microsoft OAuth2 (Graph) credential. This lets enterprise or Entra-managed tenants authenticate To Do using a centrally administered Graph app registration with the Tasks.ReadWrite scope. Existing saved workflows continue working unchanged, as the default remains the original credential type.</description>
+</item>
+<item>
+<title>Render workflow history and template previews natively</title>
+<link>https://github.com/n8n-io/n8n/pull/32468</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32468</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Workflow previews in the template detail page and workflow history panel now render natively instead of in an iframe, removing the postMessage handshake. Previews load faster and more reliably, display read-only, and never show pin data. Template previews also correctly resolve community node icons and shapes.</description>
+</item>
+<item>
+<title>Microsoft Teams Node: Accept the generic Microsoft OAuth2 (Graph) credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32455</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32455</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft Teams action node and Trigger now support a new Authentication option, letting you choose between the existing Teams-specific OAuth2 credential (default) or the generic Microsoft OAuth2 (Graph) credential. This lets enterprises using Entra-managed Graph app registrations authenticate Teams workflows centrally. Existing workflows continue to work unchanged since the Teams credential remains the default.</description>
+</item>
+<item>
+<title>Rename n8n Connect usage table header from Model to Resource</title>
+<link>https://github.com/n8n-io/n8n/pull/32448</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32448</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>In Settings → n8n Connect, the usage history table column previously labeled &quot;Model&quot; is now labeled &quot;Resource&quot; to better reflect non-model providers such as Firecrawl. This is a label-only change; the underlying data and API field remain the same.</description>
+</item>
+<item>
+<title>Microsoft Excel 365 Node: Accept the generic Microsoft OAuth2 (Graph) credential</title>
+<link>https://github.com/n8n-io/n8n/pull/32434</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32434</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Microsoft Excel 365 node (v2) now supports the generic Microsoft OAuth2 (Graph) credential alongside the existing Excel-specific credential. A new Authentication dropdown lets you choose between them, defaulting to the original Excel OAuth2 credential so existing workflows continue to work unchanged. This aligns Excel 365 with other Microsoft nodes adopting shared Graph authentication.</description>
+</item>
+<item>
+<title>Add owner filter to API keys &quot;All&quot; tab</title>
+<link>https://github.com/n8n-io/n8n/pull/32430</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32430</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>Admins with API key management permissions can now filter the API keys &quot;All&quot; tab by owner, using a new multi-select control next to the search box. It supports live search, per-owner key counts, a clear/reset option, and defaults to showing all owners. The filter is hidden on the Mine tab and only applies for users with the appropriate permission.</description>
+</item>
+<item>
+<title>Open the current workflow and credentials in Instance AI from the editor</title>
+<link>https://github.com/n8n-io/n8n/pull/32398</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32398</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>When Instance AI is enabled, the editor's AI entry points now hand off to Instance AI instead of the built-in builder panel. Clicking the canvas AI button, 'Build with AI', or 'Ask AI Assistant' on a node error opens a new Instance AI thread with the current workflow (and its execution) attached as an artifact. In credential setup, 'Ask AI Assistant' opens Instance AI in a new tab with a setup question, or appends to the current thread if already inside an Instance AI artifact.</description>
+</item>
+<item>
+<title>Add rotate action for API keys</title>
+<link>https://github.com/n8n-io/n8n/pull/32342</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32342</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>You can now rotate your own API keys from Settings &gt; n8n API. Choosing Rotate from the row menu re-issues the key's secret while keeping its name, scopes and expiration, immediately invalidating the old secret. A confirmation dialog warns that the current key stops working, then the new key is shown once for copying. Rotate is unavailable for expired keys or keys owned by other users.</description>
+</item>
+<item>
+<title>Google Sheets Trigger Node: Add Service Account credential support</title>
+<link>https://github.com/n8n-io/n8n/pull/32312</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32312</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Google Sheets Trigger node now supports Service Account authentication in addition to OAuth2, matching the regular Google Sheets node. Select Service Account and choose a Google Service Account credential to enable server-to-server, non-interactive authentication. Existing OAuth2 workflows are unaffected, remaining the default with saved settings preserved. Row update detection now works correctly under Service Account auth by requesting the minimal additional Drive read-only scope needed.</description>
+</item>
+<item>
+<title>GitHub Node: Add Pull Request resource with create, update, merge, comments, diff and patch</title>
+<link>https://github.com/n8n-io/n8n/pull/32261</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32261</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The GitHub node now includes a dedicated Pull Request resource. It supports creating pull requests (including cross-fork and draft PRs), updating title/body/state/base branch, closing and reopening, fetching a single PR, adding and editing comments, retrieving raw diffs and patches, and merging with merge, squash, or rebase methods, including merge-queue handling.</description>
+</item>
+<item>
+<title>Telegram Node: Add rich message and message draft operations</title>
+<link>https://github.com/n8n-io/n8n/pull/32173</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32173</guid>
+<pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.28</category>
+<description>The Telegram node now supports three new Message operations: Send Message Draft, Send Rich Message, and Send Rich Message Draft. Message drafts stream a live 'generating...' preview to users, while rich messages let you send richly formatted content (headings, lists, tables, media, quotes) via Markdown or HTML without manually building the underlying object structure. These operations reuse existing Chat ID and additional-fields settings, and require no node version upgrade.</description>
+</item>
+</channel>
+</rss>

@@ -107,6 +107,12 @@ This feature is in **preview**. The package format and APIs are still under deve
 
 Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).
 
+### Configure OpenTelemetry tracing from the UI
+
+You can now set up OpenTelemetry tracing from **Settings > OpenTelemetry** instead of environment variables, which brings workflow execution tracing to n8n Cloud for the first time. Enter your collector endpoint, tune sampling and span options, and select **Send test trace** to confirm n8n can reach your backend before you rely on it. Changes apply without a restart, and in queue mode n8n reloads the configuration across workers and webhook processors automatically. On self-hosted instances, environment variables still work and take precedence over UI settings. You need to be an instance owner or admin to configure tracing in the UI.
+
+Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry).
+
 ---
 
 ## `n8n 2.25` Web search for AI agents

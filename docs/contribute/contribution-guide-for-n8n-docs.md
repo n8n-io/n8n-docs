@@ -143,7 +143,13 @@ Ensure you've followed the general checklist, and edit your PR as necessary if y
 
 **Preview your changes**
 
-When you open a pull request, GitBook automatically builds a preview of your changes and links it from the PR. Use this preview to check how your changes render on the live site. Both the browser and local methods above go through a pull request, so there's no need to build the site locally.
+When you open a pull request, GitBook automatically builds a preview of your changes and links it from the PR. On the PR's **Conversation** tab, find the checks section at the bottom and click **Check the live preview on your docs site** for the space you edited:
+
+![GitBook preview link on a pull request](.gitbook/assets/gitbook-preview-link.png)
+
+You can then check how your changes render on the docs site.
+
+It's not possible to build the site locally.
 
 ### Open an issue
 

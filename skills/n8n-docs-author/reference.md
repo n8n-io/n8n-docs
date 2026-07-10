@@ -125,7 +125,7 @@ Each top-level folder under `docs/` is a separate space:
 | `deploy`               | `jm0ZYRpZIPWge2ZSiDYO` |
 | `administer`           | `wMJrGrimpx3PxCJpUswm` |
 | `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
-| `release-notes`        | `hhM8Cox90Piiv0u0EgHM` |
+| `changelog`            | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`           | `6OmLnmci5kZDzdkzKREn` |
 
 Alternatively, copy the page's link in GitBook, or use its published
@@ -421,7 +421,7 @@ Vale vocabulary accept list.
 One custom rule enforces the versioning conventions above:
 
 - `n8n-styles.version-format` flags `v`-prefixed version numbers (write
-  `n8n 2.17.0`, not `n8n v2.17.0`). It's disabled on `release-notes/` pages,
+  `n8n 2.17.0`, not `n8n v2.17.0`). It's disabled on `changelog/` pages,
   which use `vX.Y` shorthand and reference many external versions. It can't tell
   an n8n version from an external service's version, so dismiss the occasional
   match on a third-party API version.

@@ -381,7 +381,7 @@ Each top-level folder under `docs/` is a separate space:
 | `deploy`                       | `jm0ZYRpZIPWge2ZSiDYO` |
 | `administer`                   | `wMJrGrimpx3PxCJpUswm` |
 | `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
-| `release-notes`                | `hhM8Cox90Piiv0u0EgHM` |
+| `changelog`                    | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
 
 If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.

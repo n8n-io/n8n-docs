@@ -307,6 +307,97 @@ to `https://api.n8n.io/workflows/templates/`):
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
 ```
 
+## Versioning and release status
+
+Many features, settings, and nodes are tied to a specific n8n release, or carry a
+status like preview or deprecated. Reference versions and status consistently so
+readers can tell whether their install supports a feature, and so automated tools
+can extract the facts reliably.
+
+**Two version types.** Never leave the reader guessing which one you mean:
+
+- **Instance version** — the n8n release, three-part semver (`2.30.0`). Use for
+  features, environment variables, APIs, CLI commands, and hooks.
+- **Node version** — a node's version number, usually two parts (`4.7`). Use
+  only for node-specific facts.
+
+In prose, qualify a bare number: "n8n 2.30.0" or "node version 4.7", not "version 2".
+
+**Writing the number.** Product name plus numerals: `n8n 2.30.0`. No `v` prefix
+(`n8n 2.30.0`, not `n8n v2.30.0`), and don't write "version" after "n8n".
+
+**Where to put the marker.** Match the scope of what it describes:
+
+- **A whole page** about the feature: a hint directly below the page title.
+- **A section** within a page: a hint directly below that section's heading.
+- **Mentioned in passing**, with no heading of its own: fold it into the sentence,
+  not a hint — "The Data table node (available from n8n 2.17.0) stores data
+  between executions".
+- **A single table row** (one environment variable, one hook): the description
+  cell, as `(available from n8n 2.17.0)`; add an **Available from** column when
+  many rows differ.
+
+**Availability.** Use an `info` hint:
+
+```markdown
+{% hint style="info" %}
+**Available from n8n 2.17.0**
+{% endhint %}
+```
+
+- State the consequence for older versions: "On earlier versions, use `OLD_VAR` instead".
+- Add a release date only when it aids planning: `**Available from n8n 2.30.0 (released July 7, 2026)**`.
+- Keep tier limits (Cloud, Enterprise, self-hosted) in their own `info` hint,
+  separate from the version marker.
+
+**Preview.** A preview feature is available but not yet complete or stable, and
+may change. Use "preview" for a feature's status, not "beta": reserve "beta" for
+release channels, version tracks, and access programs (a beta release, the beta
+Cloud instance, a closed beta). Use an `info` hint at the page or section scope:
+
+```markdown
+{% hint style="info" %}
+**This feature is in preview**
+
+Preview features may change in future releases. Avoid relying on them in
+production workflows.
+{% endhint %}
+```
+
+- Tie it to a version when it helps: "In preview from n8n 2.20.0".
+
+**Deprecation and removal.** Deprecated features still work but shouldn't be
+used; removed features no longer exist. Use a `warning` hint:
+
+```markdown
+{% hint style="warning" %}
+**Deprecated from n8n 2.0**
+
+Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0.
+{% endhint %}
+```
+
+Deprecation is an ongoing state (use "from"); removal is a one-time event (use
+"in"): **Available from** n8n 2.17.0, **Deprecated from** n8n 2.0, **Removed in**
+n8n 3.0.
+
+- Always name the version that deprecates or removes something. Never write
+  "soon" or "in the near future". If removal isn't scheduled, say so.
+- For a deprecated table entry, tag the identifier with `(deprecated)` and state
+  the version in the description:
+
+  ```markdown
+  | `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. Still required in 1.x, where you must set it to `true`. |
+  ```
+
+- Link to the matching [breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes)
+  or migration guide entry.
+
+**Node status.** Deprecated, removed, and versioned nodes are tracked on one page:
+[Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes).
+Link to it rather than scattering version notes across node pages. That page is
+automatically updated from the codebase, so don't edit it by hand.
+
 ---
 
 ## Linting
@@ -326,6 +417,18 @@ extension to see issues inline. Fix any errors and warnings before submitting a 
 
 Custom rules live in the `styles/` directory. Add accepted brand names to the
 Vale vocabulary accept list.
+
+One custom rule enforces the versioning conventions above:
+
+- `n8n-styles.version-format` flags `v`-prefixed version numbers (write
+  `n8n 2.17.0`, not `n8n v2.17.0`). It's disabled on `release-notes/` pages,
+  which use `vX.Y` shorthand and reference many external versions. It can't tell
+  an n8n version from an external service's version, so dismiss the occasional
+  match on a third-party API version.
+
+The version inside a marker hint sits in bold text (`**Available from n8n 2.17.0**`),
+and Vale excludes bold text from linting, so `version-format` can't check it there.
+Get the format right by hand.
 
 ### Lexi
 

@@ -142,7 +142,7 @@ Importing requires the API key to hold the `workflow:import` permission scope. W
 
 ## Bindings
 
-Bindings tell n8n how to map the entities a workflow depends on in the package to the matching entities on your instance. Each binding pairs a source ID (what's in the package) with a target ID (what's on your instance). You can bind credentials.
+Bindings tell n8n how to map the entities a workflow depends on in the package to the matching entities on your instance. Each binding pairs a source ID (what's in the package) with a target ID (what's on your instance). Currently, you can bind credentials.
 
 To supply bindings, pass `--bindings` a JSON object keyed by entity type. n8n applies your explicit bindings first, then resolves any remaining credentials with the matching mode.
 

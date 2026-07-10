@@ -282,12 +282,12 @@ Global vaults created in **Settings** > **External Secrets** are visible in **Pr
 
 ### Custom roles <a href="#custom-roles" id="custom-roles"></a>
 
-For more fine-grained access control, instance owners and admins can create a [custom project role](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md). Go to **Settings** > **Project roles** > **Create role**. In the list of permissions, configure:
+For more fine-grained access control, instance owners and admins can create a [custom project role](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md). Go to **Settings** > **Roles** > **Project roles** > **Create role**. In the list of permissions, configure:
 
 - **Secrets vaults**: Controls vault management (view, create, edit, delete, and sync vaults).
 - **Secrets**: Controls whether the role can use secrets in credential expressions.
 
-Both permissions are independent. For example, a role may need only the **Secrets** permission to use secrets in credentials without managing vaults. Refer to [Secret vault scopes](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md#secret-vault-scopes) for the full list of available scopes.
+Both permissions are independent. For example, a role may need only the **Secrets** permission to use secrets in credentials without managing vaults. Refer to [Secret vault scopes](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md#secret-vault-scopes) for the full list of available scopes.
 
 ## Troubleshooting <a href="#troubleshooting" id="troubleshooting"></a>
 

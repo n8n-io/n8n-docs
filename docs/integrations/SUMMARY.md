@@ -771,6 +771,7 @@
     * [Microsoft credentials](builtin/credentials/microsoft.md)
     * [Microsoft Azure Monitor credentials](builtin/credentials/microsoftazuremonitor.md)
     * [Microsoft Entra ID credentials](builtin/credentials/microsoftentra.md)
+    * [Microsoft Entra Service Principal credentials](builtin/credentials/microsoftentraserviceprincipal.md)
     * [Microsoft SQL credentials](builtin/credentials/microsoftsql.md)
     * [Microsoft Agent 365 credentials](builtin/credentials/microsoftagent365.md)
     * [Milvus credentials](builtin/credentials/milvus.md)

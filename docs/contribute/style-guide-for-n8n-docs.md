@@ -206,7 +206,7 @@ Node version facts live in one place: [Deprecated and versioned nodes](https://a
 
 ## Vale linting
 
-n8n uses [Vale](https://docs.errata.ai/) to lint documentation. Linting enforces the rules defined in this guide and supports writing quality.
+n8n uses [Vale](https://vale.sh/) to lint documentation. Linting enforces the rules defined in this guide and supports writing quality.
 
 The setup comprises:
 

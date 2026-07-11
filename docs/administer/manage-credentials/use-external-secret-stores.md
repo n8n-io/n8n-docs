@@ -22,6 +22,7 @@ layout:
 * From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
+
 * Credentials stored in External secrets stores only resolve in Credentials fields, not in any other fields supporting expressions.
 
 

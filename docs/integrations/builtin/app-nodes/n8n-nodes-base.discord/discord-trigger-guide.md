@@ -74,7 +74,7 @@ Popular options:
 * [`n8n-nodes-discord`](https://www.npmjs.com/package/n8n-nodes-discord) — provides Discord Trigger, action, and interaction nodes.
 * [`n8n-nodes-discord-trigger`](https://www.npmjs.com/package/n8n-nodes-discord-trigger) — a lighter-weight trigger-only package.
 
-Refer to [Install community nodes](../../../../integrations/community-nodes/installation/index.md) for installation instructions.
+Refer to [Install community nodes](../../../../integrations/community-nodes/installation-and-management/README.md) for installation instructions.
 
 {% hint style="warning" %}
 Community nodes aren't maintained by n8n. Review the source, permissions, and update cadence before installing one on a production instance.

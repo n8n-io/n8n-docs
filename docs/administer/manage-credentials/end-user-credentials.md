@@ -50,9 +50,9 @@ A workflow can mix fixed and end-user credentials across nodes. For example, you
 ## Requirements and limitations
 
 * **Enterprise only.** End-user credentials are an Enterprise feature.
-* **Controlled creation.** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials, but you can grant this to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md) with permission to manage them. Limiting who can create them keeps credential management intentional and central: an admin can set up a blueprint once and share it to the projects that need it, rather than many users setting up duplicate blueprints and adding management overhead.
+* **Controlled creation.** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials, but you can grant this to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md) with permission to manage them. Limiting who can create them keeps credential management intentional and central: an admin can set up an end-user credential blueprint once and share it to the projects that need it, rather than many users each setting up their own and adding management overhead.
 * **OAuth credentials only.** End-user credentials currently support OAuth-based credential types.
-* **One connection per user.** Each user has a single connected account per blueprint.
+* **One connection per user.** Each user has a single connected account per end-user credential.
 * **Supported triggers.** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), and the MCP Server Trigger.
 
 {% hint style="info" %}
@@ -68,11 +68,11 @@ Webhook triggers can also run workflows on behalf of an external user, but this 
 3. Configure the connection. For OAuth credentials, this includes the **Client ID** and **Client Secret** for the OAuth app, and the **OAuth Redirect URL** to register with the service.
 4. Select **Save**.
 
-The credential is now a blueprint. Users with access to the project can connect their own account against it.
+The credential is now an end-user credential. Users with access to the project can connect their own account against it.
 
 ## Connect your account
 
-Before you can use an end-user credential in a workflow, connect your own account against the blueprint. You can do this from a few places:
+Before you can use an end-user credential in a workflow, connect your own account against the end-user credential blueprint. You can do this from a few places:
 
 * **From a node**: when you open a node that uses an end-user credential, it shows whether you've connected your account. If you haven't, select **Connect** there.
 * **From the credential**: open the end-user credential and connect your account in the credential modal.
@@ -80,7 +80,7 @@ Before you can use an end-user credential in a workflow, connect your own accoun
 
 Whichever route you take, you complete the OAuth flow for your account. Once connected, the node shows your account, for example **Connected as you@example.com**.
 
-Your connection is private to you. Other users connect their own accounts against the same blueprint and never use yours.
+Your connection is private to you. Other users connect their own accounts against the same end-user credential and never use yours.
 
 ## Execution data and privacy
 
@@ -92,9 +92,9 @@ Everyone with workflow access can see that the execution happened, which workflo
 
 Admin access follows a principle of visibility without access.
 
-An admin can see that an end-user credential (the blueprint) exists and that it has connections attached. For example, when deleting a blueprint, an admin sees how many user connections are attached to it. That count is all they see: they can't view anything about the individual connections, view a connection's stored tokens, use anyone's connected account in their own workflows, or see the redacted output of executions that ran on someone else's connection.
+An admin can see that an end-user credential (the blueprint) exists and that it has connections attached. For example, when deleting an end-user credential, an admin sees how many user connections are attached to it. That count is all they see: they can't view anything about the individual connections, view a connection's stored tokens, use anyone's connected account in their own workflows, or see the redacted output of executions that ran on someone else's connection.
 
-Sharing works the same as any credential, but it only ever shares the blueprint. An admin can share the blueprint into other projects or with other users, and each recipient connects their own account. Sharing never shares a user's connected account with anyone.
+Sharing works the same as any credential, but it only ever shares the end-user credential itself. An admin can share it into other projects or with other users, and each recipient connects their own account. Sharing never shares a user's connected account with anyone.
 
 {% hint style="warning" %}
 **Deleting an end-user credential removes every connection**
@@ -104,9 +104,9 @@ Deleting the top-level end-user credential deletes the whole credential, includi
 
 ## Share end-user credentials across projects
 
-You can share an end-user credential into other projects using the standard [credential sharing](share-credentials-securely.md) mechanism. Sharing shares the blueprint, not a connection: users in the other project see an option to connect their own account, they don't get the original owner's connection.
+You can share an end-user credential into other projects using the standard [credential sharing](share-credentials-securely.md) mechanism. Sharing shares the end-user credential, not a connection: users in the other project see an option to connect their own account, they don't get the original owner's connection.
 
-A good practice is to create your end-user credentials, for example Gmail, Linear, Jira, and Google Sheets, in a single project, then share them into the other projects that need them. Each project gets a connect option for the same blueprint, and every user connects once.
+A good practice is to create your end-user credentials, for example Gmail, Linear, Jira, and Google Sheets, in a single project, then share them into the other projects that need them. Each project gets a connect option for the same end-user credential, and every user connects once.
 
 ## Related resources
 

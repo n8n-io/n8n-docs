@@ -45,7 +45,7 @@ In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.m
 {% hint style="info" %}
 **Sharing end-user credentials**
 
-Sharing an [end-user credential](end-user-credentials.md) shares the blueprint, not a connection. Users you share it with connect their own account, they don't use yours.
+Sharing an [end-user credential](end-user-credentials.md) shares the credential itself, not a connection. Users you share it with connect their own account, they don't use yours.
 {% endhint %}
 
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>

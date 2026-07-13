@@ -212,7 +212,7 @@ Consider using coding agents (such as Claude Code or Google ADK agents) instead 
 
 The n8n MCP server exposes tools for workflow management, workflow building, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md).
 
-## n8n Skills for coding agents <a href="#n8n-skills-for-coding-agents" id="n8n-skills-for-coding-agents"></a>
+## n8n Skills for coding agents
 
 When you connect a coding agent to the n8n MCP server, the agent can build and edit workflows, but it doesn't automatically know n8n's conventions for expressions, node configuration, error handling, and other patterns. n8n Skills give the agent that knowledge so it gets workflows right the first time.
 

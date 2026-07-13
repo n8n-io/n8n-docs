@@ -58,7 +58,7 @@ n8n names new credentials "_node name_ account" by default. You can rename the c
 When you create or edit a credential, you choose a **Credential type**:
 
 * **Fixed credential**: the same credential is used regardless of who runs the workflow. This is the standard behaviour.
-* **End-user credential**: each user connects their own account, which is only used when they trigger the workflow.
+* **End-user credential**: each user's credential is used at runtime, and can only be seen and used by that user.
 
 End-user credentials let a workflow run with the credentials of the person who triggers it, and keep each user's data private to them. To learn how to set them up, see [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials).
 

@@ -28,7 +28,7 @@ Preview features may change in future releases. Avoid relying on them in product
 When you create or edit a credential, you choose a **Credential type**:
 
 * **Fixed credential**: the same credential is used regardless of who runs the workflow. This is the standard behaviour.
-* **End-user credential**: each user connects their own account, which is only used when they trigger the workflow.
+* **End-user credential**: each user's credential is used at runtime, and can only be seen and used by that user.
 
 An end-user credential acts as a blueprint. The person who creates it configures the connection once, for example the OAuth app details for Gmail. Every user who has access then connects their own account against that blueprint. Each connection belongs to the user who made it: only they can use it, and only they can see the data it returns.
 

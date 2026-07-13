@@ -90,7 +90,11 @@ Everyone with workflow access can see that the execution happened, which workflo
 
 ### Admin visibility
 
-Admin access follows a principle of visibility without access. Admins know an end-user credential exists and know its connections exist. For example, when deleting a blueprint, an admin sees how many user connections are attached to it. Admins can't view or use those connections anywhere else, can't view the stored tokens, can't use the credential in their own workflows, can't reshare it, and can't see the redacted output of executions that used it.
+Admin access follows a principle of visibility without access.
+
+An admin can see that an end-user credential (the blueprint) exists and that it has connections attached. For example, when deleting a blueprint, an admin sees how many user connections are attached to it. That count is all they see: they can't view anything about the individual connections, view a connection's stored tokens, use anyone's connected account in their own workflows, or see the redacted output of executions that ran on someone else's connection.
+
+Sharing works the same as any credential, but it only ever shares the blueprint. An admin can share the blueprint into other projects or with other users, and each recipient connects their own account. Sharing never shares a user's connected account with anyone.
 
 {% hint style="warning" %}
 **Deleting a blueprint removes every connection**

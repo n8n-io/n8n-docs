@@ -15,7 +15,7 @@ layout:
 
 You can run a security audit on your n8n instance, to detect common security issues.
 
-## Run an audit <a href="#run-an-audit" id="run-an-audit"></a>
+## How do I run a security audit in n8n? <a href="#run-an-audit" id="run-an-audit"></a>
 
 You can run an audit using the CLI, the public API, or the n8n node.
 
@@ -32,7 +32,7 @@ Make a `POST` call to the `/audit` endpoint. You must authenticate as the instan
 
 Add the [n8n node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
 
-## Report contents <a href="#report-contents" id="report-contents"></a>
+## What's in the security audit report? <a href="#report-contents" id="report-contents"></a>
 
 The audit generates five risk reports:
 

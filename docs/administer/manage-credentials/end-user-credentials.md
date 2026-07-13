@@ -50,7 +50,7 @@ A workflow can mix fixed and end-user credentials across nodes. For example, you
 ## Requirements and limitations
 
 * **Enterprise only.** End-user credentials are an Enterprise feature.
-* **Project admins create them.** Only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials. They're meant to be set up by someone building a workflow for many people to use.
+* **Controlled creation.** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials, but you can grant this to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md) with permission to manage them. Limiting who can create them keeps setup deliberate and central: a blueprint can be configured once and shared where it's needed, rather than many users each creating their own without realising the implications for who can access their data.
 * **OAuth credentials only.** End-user credentials currently support OAuth-based credential types.
 * **One connection per user.** Each user has a single connected account per blueprint.
 * **Supported triggers.** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), and the MCP Server Trigger.

@@ -58,7 +58,7 @@ A workflow can mix fixed and end-user credentials across nodes. For example, you
 {% hint style="info" %}
 **Webhooks**
 
-Webhook triggers can also run workflows on behalf of an external user, but this works differently. It relies on a custom implementation and some setup outside of n8n, rather than the standard connect flow described here. n8n is updating this approach to fit the end-user credential model.
+Webhook triggers can also run workflows on behalf of an external user, but this works differently. It relies on a custom implementation and some setup outside of n8n: your external application sends an access token that identifies the user, which n8n uses to resolve their credentials, rather than the connect flow described here. This is still supported, but n8n is updating the approach to fit the new end-user credential model.
 {% endhint %}
 
 ## Create an end-user credential

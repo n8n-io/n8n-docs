@@ -9,7 +9,7 @@ layout:
 
 End-user credentials let a workflow run with the credentials of the person who triggers it, rather than a single shared account. A project admin creates one credential as a blueprint, and each user connects their own account to it. When a user runs the workflow, n8n uses that user's connected account and keeps their data private to them.
 
-This solves a common problem with shared credentials: normally, anyone who can run a workflow uses the same stored account, which can expose one person's access and data to everyone else. End-user credentials give each user their own connection and isolate their execution data.
+This solves a common problem with shared credentials: normally, anyone who can run a workflow uses the same fixed credentials, which can expose one person's access and data to everyone else. End-user credentials give each user their own connection and isolate their execution data.
 
 {% hint style="info" %}
 **Feature availability**

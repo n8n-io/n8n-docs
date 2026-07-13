@@ -1,0 +1,28 @@
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+  s_4f46c8dd42276e::t_385dc90c47ed51 159
+docs/integrations/builtin/credentials/slack.md
+  s_4f46c8dd42276e::t_c9534a663ff621 23,30,32
+docs/integrations/SUMMARY.md
+  s_4f46c8dd42276e::t_45abc2304c2d52 340
+docs/integrations/builtin/app-nodes/n8n-nodes-base.slack/README.md
+  s_4f46c8dd42276e::t_23c0b85850bd87 96
+  s_4f46c8dd42276e::t_84d0e73aca0eb3 28
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
+  s_4f46c8dd42276e::t_43af57af3086aa 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "8829163c925e31a8d3a07edac1cdaa10c9536336",
+  "prompts": {},
+  "sessions": {
+    "s_4f46c8dd42276e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51c2f211-ded9-4850-93a9-f427649d0cea",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

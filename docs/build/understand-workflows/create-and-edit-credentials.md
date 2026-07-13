@@ -53,6 +53,15 @@ When you save a credential, n8n tests it to confirm it works.
 n8n names new credentials "_node name_ account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app or service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
 {% endhint %}
 
+## Choose a credential type <a href="#choose-a-credential-type" id="choose-a-credential-type"></a>
+
+When you create or edit a credential, you choose a **Credential type**:
+
+* **Fixed credential**: the same credential is used regardless of who runs the workflow. This is the standard behaviour.
+* **End-user credential**: each user connects their own account, which is only used when they trigger the workflow.
+
+End-user credentials let a workflow run with the credentials of the person who triggers it, and keep each user's data private to them. To learn how to set them up, see [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials).
+
 ## Allowed HTTP request domains <a href="#allowed-http-request-domains" id="allowed-http-request-domains"></a>
 
 The **Allowed HTTP Request Domains** field appears on many n8n credentials for web-based APIs and services. It controls which domains the credential is permitted to be used against when the credential is selected in an **HTTP Request** node. It has no effect when the credential is used in its own dedicated node.

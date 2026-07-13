@@ -42,6 +42,12 @@ Refer to [Account types](../manage-users-and-access/understand-account-types.md)
 
 In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
 
+{% hint style="info" %}
+**Sharing end-user credentials**
+
+Sharing an [end-user credential](end-user-credentials.md) shares the blueprint, not a connection. Users you share it with connect their own account, they don't use yours.
+{% endhint %}
+
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 
 To share a credential:

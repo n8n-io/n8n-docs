@@ -224,7 +224,7 @@ Turn on [Make Chat Publicly Available](#make-chat-publicly-available), then choo
 
 ### How do I set the chatbot's response from my workflow?
 
-By default, the Chat Trigger sends the Agent or Chain node's `output` or `text` value to the user. To customize the response, create a parameter named `text` or `output`. See [Set the chat response manually](#set-the-chat-response-manually). If you use a Chat node, set **Response Mode** to **Using Response Nodes**.
+In a basic workflow, the Chat Trigger sends the Agent or Chain node's `output` or `text` value to the user. To customize the response, create a parameter named `text` or `output`. See [Set the chat response manually](#set-the-chat-response-manually). If you use a Chat node, set **Response Mode** to **Using Response Nodes**.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

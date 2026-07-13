@@ -172,7 +172,7 @@ This has the following implications:
 
 ### How do I trigger a workflow from an external event?
 
-Add the Webhook node as your trigger. It creates a webhook URL that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
+Add the Webhook node as your trigger. It creates a [webhook URL](#webhook-urls) that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
 
 ### What's the difference between the test and production webhook URLs?
 

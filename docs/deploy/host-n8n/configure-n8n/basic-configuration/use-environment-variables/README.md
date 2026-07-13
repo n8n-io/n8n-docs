@@ -8,8 +8,8 @@ hide:
   - toc
   - tags
 nodeTitle: Use environment variables
-originalFilePath: deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/index.md
-originalUrl: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables'
+originalFilePath: hosting/configuration/environment-variables/index.md
+originalUrl: 'https://docs.n8n.io/hosting/configuration/environment-variables'
 url: >-
   https://docs.n8n.io/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables
 layout:

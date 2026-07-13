@@ -30,6 +30,12 @@ Refer to [Slack credentials](../../credentials/slack.md) for guidance on setting
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
+{% hint style="info" %}
+**Approvals in Slack**
+
+With the Slack node, approvers can also respond directly inside Slack. Refer to [Approvals in Slack](approvals.md).
+{% endhint %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * **Channel**

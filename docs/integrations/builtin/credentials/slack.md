@@ -143,6 +143,8 @@ n8n recommends enabling request signature verification for your Slack Trigger fo
 3. Copy the value of **Signing**.
 4. In n8n, Paste this value into the **Signature Secret** field for the credential.
 
+The **Signature Secret** field is also required for [Approvals in Slack](../app-nodes/n8n-nodes-base.slack/approvals.md).
+
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}

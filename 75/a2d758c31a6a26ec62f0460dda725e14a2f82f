@@ -1,0 +1,32 @@
+docs/integrations/builtin/credentials/microsoft.md
+  s_aa40f315c412bf::t_70550c25e161e5 108-111,113-127,129-130,132-135,139-144,150,152
+  s_aa40f315c412bf::t_1c9799471afea8 131
+  s_aa40f315c412bf::t_7a37446cc1cc76 151
+  s_aa40f315c412bf::t_3d08c7a92795e0 136-138
+  s_aa40f315c412bf::t_ef66f05a38f4d5 128
+  s_aa40f315c412bf::t_ef3c4a1021742e 145-149
+  s_aa40f315c412bf::t_01cd61c7c8ce6e 71
+  s_aa40f315c412bf::t_7aba5de8f6a3a0 112
+docs/integrations/builtin/credentials/azurestorage.md
+  s_aa40f315c412bf::t_7661ef4ff3e3f1 82
+  s_aa40f315c412bf::t_3aae786fcbaa8c 81
+docs/integrations/builtin/credentials/microsoftentra.md
+  s_aa40f315c412bf::t_f683aaae97030b 84
+  s_aa40f315c412bf::t_b8cf8183b7c855 83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "75a2d758c31a6a26ec62f0460dda725e14a2f82f",
+  "prompts": {},
+  "sessions": {
+    "s_aa40f315c412bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3d1db2c7-ef71-408d-a28c-9f53a28738b9",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": null
+    }
+  }
+}

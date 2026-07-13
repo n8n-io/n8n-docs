@@ -1,0 +1,24 @@
+docs/integrations/builtin/credentials/azurestorage.md
+  s_aa40f315c412bf::t_7661ef4ff3e3f1 81-86
+docs/integrations/builtin/credentials/microsoft.md
+  s_aa40f315c412bf::t_01cd61c7c8ce6e 71
+  s_aa40f315c412bf::t_70550c25e161e5 108-156
+docs/integrations/builtin/credentials/microsoftentra.md
+  s_aa40f315c412bf::t_f683aaae97030b 83-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "cc3f8af0af74f6ab21aaffaecd99173b9c2063ba",
+  "prompts": {},
+  "sessions": {
+    "s_aa40f315c412bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3d1db2c7-ef71-408d-a28c-9f53a28738b9",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

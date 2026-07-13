@@ -103,6 +103,24 @@ marketing words. Prefer the plainer version:
 - Lead with the action: "To schedule a workflow, add a Schedule Trigger" beats
   "There is a node available that can be used to schedule workflows."
 
+## Page length and granularity
+
+One focused page per concept, task, or reference category. Aim for a band, not
+the shortest possible page. Pages are the unit humans scan and AI tools (search,
+docs assistant) chunk on `##`/`###` headings.
+
+- **Healthy range:** ~1,500–20,000 characters (~250–3,000 words).
+- **Merge** pages or sections under ~1,500 characters — too small to retrieve
+  well; fold stubs into a parent or sibling.
+- **Split** when over ~25,000 characters, when a page mixes content types
+  (concept + how-to + reference), or when one section grows without bound
+  (per-client examples).
+- **Hard limit ~50,000 characters:** agents truncate longer pages.
+- **Split by type or task, not by length.** Keep related facts together (all env
+  vars for a category, all parameters for a node).
+- **Self-contained sections:** descriptive headings, and restate context instead
+  of "as above" — agents retrieve sections out of order.
+
 ## Versioning and release status
 
 Reference n8n versions and status (available, preview, deprecated) consistently.

@@ -111,6 +111,27 @@ Obvious exceptions:
 * **Avoid em dashes** (—). Use a comma or a new sentence. "Add a node, then save", not "Add a node — then save".
 * **Avoid ellipses** (…). "Configure the settings, then continue", not "Configure the settings...".
 
+## Page length and granularity
+
+Split content into focused pages, each covering a single concept, task, or reference category. Aim for a middle band: neither one monolithic page nor scattered fragments. Human readers and AI tools (which power search and the docs assistant) both do best with self-contained, heading-structured pages.
+
+### Length
+
+* **Healthy range:** roughly 1,500 to 20,000 characters (about 250 to 3,000 words). This reads as scannable sections for people, and as clean retrievable chunks for AI tools, which split content on `##` and `###` headings.
+* **Merge if under ~1,500 characters.** A page or section that small sits below the useful chunk size: AI search merges it with unrelated neighbours, and splitting one topic across many tiny pages measurably lowers answer quality. Fold stubs into a parent or sibling page.
+* **Split if over ~25,000 characters**, if the page mixes content types (concept, how-to, and reference together), or if one section grows without bound (such as a list of per-client examples).
+* **Never exceed ~50,000 characters.** Agents truncate longer pages, so anything past the limit is invisible to them.
+
+### How to split
+
+* Split along **type or task** boundaries (concept, how-to, reference, examples), not arbitrarily by length. This matches how readers navigate and keeps each chunk about one thing.
+* Keep related facts **on one page** (all environment variables for a category, all parameters for a node). AI search keeps adjacent content together, so proximity preserves context.
+
+### Keep each page self-contained
+
+* Write descriptive, sentence-case headings. They become the unit AI search retrieves, often without the rest of the page.
+* Make each section stand on its own. Restate key context instead of relying on "as described above" or "see the previous page": agents retrieve sections out of order and waste effort chasing cross-references.
+
 ## Versioning and release status
 
 Many features, settings, and nodes are tied to a specific n8n release, or carry a status like preview or deprecated. Reference versions and status consistently so readers can tell whether a given install supports a feature.

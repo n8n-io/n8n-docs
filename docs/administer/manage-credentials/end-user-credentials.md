@@ -41,7 +41,7 @@ Say you build a workflow with a manual trigger that reads messages from Gmail an
 Builders pick a credential on a node the same way as always, using the credential dropdown. There's no separate setting on the node. The node reflects whichever type the chosen credential is:
 
 * With a fixed credential, the node behaves as it always has.
-* With an end-user credential, the node shows that it uses the triggering user's own account, and prompts the viewer to connect their account if they haven't yet.
+* With an end-user credential, the node shows that it uses the triggering user's own account, and prompts the person on the canvas to connect their account if they haven't yet.
 
 At runtime, n8n resolves the credential to the connected account of the user who triggers the workflow. Every user with workflow access sees the node in the context of their own identity: if they've connected their account, that connection runs; if not, they need to connect before they can trigger the workflow.
 

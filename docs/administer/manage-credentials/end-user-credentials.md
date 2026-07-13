@@ -72,11 +72,13 @@ The credential is now a blueprint. Users with access to the project can connect 
 
 ## Connect your account
 
-To use an end-user credential in a workflow, connect your own account against the blueprint:
+Before you can use an end-user credential in a workflow, connect your own account against the blueprint. You can do this from a few places:
 
-1. Open a node that uses the end-user credential.
-2. In the credential section, select **Connect** and complete the OAuth flow for your account.
-3. Once connected, the node shows your account, for example **Connected as you@example.com**.
+* **From a node**: when you open a node that uses an end-user credential, it shows whether you've connected your account. If you haven't, select **Connect** there.
+* **From the credential**: open the end-user credential and connect your account in the credential modal.
+* **From the credentials list**: in a project's **Credentials** list, the end-user credential's card has a **Connect** option.
+
+Whichever route you take, you complete the OAuth flow for your account. Once connected, the node shows your account, for example **Connected as you@example.com**.
 
 Your connection is private to you. Other users connect their own accounts against the same blueprint and never use yours.
 

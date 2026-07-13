@@ -86,7 +86,7 @@ Your connection is private to you. Other users connect their own accounts agains
 
 When a workflow execution uses an end-user credential, the execution is still visible to anyone with access to that workflow's executions. What changes is who can see the data inside it.
 
-Everyone with workflow access can see that the execution happened, who triggered it, and which workflow ran. Only the credential owner can see the input and output data for nodes that used their connected account, including the data returned from the connected service. For anyone else, including instance admins, those nodes show redacted output.
+Everyone with workflow access can see that the execution happened, which workflow ran, and that it used an end-user credential. Only the credential owner can see the input and output data for nodes that used their connected account, including the data returned from the connected service. For anyone else, including instance admins, those nodes show redacted output.
 
 ### Admin visibility
 

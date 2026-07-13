@@ -97,9 +97,9 @@ An admin can see that an end-user credential (the blueprint) exists and that it 
 Sharing works the same as any credential, but it only ever shares the blueprint. An admin can share the blueprint into other projects or with other users, and each recipient connects their own account. Sharing never shares a user's connected account with anyone.
 
 {% hint style="warning" %}
-**Deleting a blueprint removes every connection**
+**Deleting an end-user credential removes every connection**
 
-Deleting an end-user credential removes every user's connection to it, not just your own. Any workflow relying on it stops resolving for those users until they reconnect against a new blueprint. n8n warns you before you delete a blueprint with connections attached.
+Deleting the top-level end-user credential deletes the whole credential, including every user's connection to it, not just your own. Any workflow that relies on it stops resolving for those users until the credential is set up again and they reconnect. n8n warns you before you delete an end-user credential that has connections attached.
 {% endhint %}
 
 ## Share end-user credentials across projects

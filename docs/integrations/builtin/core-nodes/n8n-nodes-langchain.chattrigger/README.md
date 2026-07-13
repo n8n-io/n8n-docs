@@ -212,6 +212,20 @@ If you need to manually create the response sent to the user, you must create a 
 When you are using a [Chat](../n8n-nodes-langchain.chat.md) node to manually create the response sent to the user, you must set the Chat Trigger response mode to 'Using Response Nodes'.
 {% endhint %}
 
+## FAQ
+
+### How do I connect a chat interface to an n8n workflow?
+
+Add the Chat Trigger node as the workflow's trigger, then connect an agent or chain root node to it. Every message a user sends runs the workflow, so your backend logic processes each message.
+
+### How do I make the chat public or embed it on my site?
+
+Turn on [Make Chat Publicly Available](#make-chat-publicly-available), then choose a **Mode**. **Hosted Chat** uses n8n's hosted interface with no extra setup. **Embedded Chat** lets you use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat) or your own interface, which calls the **Chat URL** webhook shown in the node.
+
+### How do I set the chatbot's response from my workflow?
+
+By default, the Chat Trigger sends the Agent or Chain node's `output` or `text` value to the user. To customize the response, create a parameter named `text` or `output`. See [Set the chat response manually](#set-the-chat-response-manually). If you use a Chat node, set **Response Mode** to **Using Response Nodes**.
+
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common Issues](common-issues.md).

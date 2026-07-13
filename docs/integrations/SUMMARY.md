@@ -337,7 +337,7 @@
     * [seven](builtin/app-nodes/n8n-nodes-base.sms77.md)
     * [Shopify](builtin/app-nodes/n8n-nodes-base.shopify.md)
     * [SIGNL4](builtin/app-nodes/n8n-nodes-base.signl4.md)
-    * [Slack](builtin/app-nodes/n8n-nodes-base.slack.md)
+    * [Slack](builtin/app-nodes/n8n-nodes-base.slack/README.md)
     * [Snowflake](builtin/app-nodes/n8n-nodes-base.snowflake.md)
     * [Splunk](builtin/app-nodes/n8n-nodes-base.splunk.md)
     * [Spotify](builtin/app-nodes/n8n-nodes-base.spotify.md)

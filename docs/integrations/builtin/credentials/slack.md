@@ -20,16 +20,16 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-- [Slack](../app-nodes/n8n-nodes-base.slack.md)
+- [Slack](../app-nodes/n8n-nodes-base.slack/README.md)
 - [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md)
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token:
     - Required for the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
-    - Works with the [Slack](../app-nodes/n8n-nodes-base.slack.md) node, but not recommended.
+    - Works with the [Slack](../app-nodes/n8n-nodes-base.slack/README.md) node, but not recommended.
 - OAuth2:
-    - Recommended method for the [Slack](../app-nodes/n8n-nodes-base.slack.md) node.
+    - Recommended method for the [Slack](../app-nodes/n8n-nodes-base.slack/README.md) node.
     - Doesn't work with the [Slack Trigger](../trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>

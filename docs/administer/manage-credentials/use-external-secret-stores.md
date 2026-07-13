@@ -23,6 +23,8 @@ layout:
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
 
+* Credentials stored in External secrets stores only resolve in Credentials fields, not in any other fields supporting expressions.
+
 
 You can use an external secrets store to manage credentials[^1] for n8n.
 

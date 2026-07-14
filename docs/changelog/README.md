@@ -3,7 +3,7 @@
 Every n8n release moves the platform forward. The changelog is where we call out the changes that matter most to the technical teams who build on n8n: new capabilities, more control over how your workflows run, and clearer visibility into what they're actually doing. Each entry is tied to the version it shipped in, newest first, and written to stand on its own, so it's easy to share the one update your team has been waiting for.
 
 {% hint style="info" %}
-For complete, version-by-version detail on every release, see the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. This changelog covers stable n8n 2.x releases onward; release notes for [1.x](release-notes-1.x.md) and [0.x](release-notes-0.x.md) remain archived.
+This changelog tells the curated story of each release. For every feature that ships, one line each, see the [Feature feed](feature-feed.md); for full technical detail including bug fixes, the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. Coverage here starts with stable n8n 2.x; release notes for [1.x](release-notes-1.x.md) and [0.x](release-notes-0.x.md) remain archived.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}

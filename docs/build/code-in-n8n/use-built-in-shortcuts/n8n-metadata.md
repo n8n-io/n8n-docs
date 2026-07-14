@@ -36,7 +36,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | `$execution.id` | The unique ID of the current workflow execution. | ✅ |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | ✅ |
 | `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). | ✅ |
-| `$getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. | ✅ |
+| `$getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be published and called by a trigger or webhook to save static data. This gives access to the static workflow data. | ✅ |
 | `$("<node-name>").isExecuted` | Check whether a node has already executed. | ✅ |
 | `$itemIndex` | The index of an item in a list of items. | ❌ |
 | `$nodeVersion` | Get the version of the current node. | ✅ |
@@ -67,7 +67,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | `_execution.id` | The unique ID of the current workflow execution. | 
 | `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | 
 | `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). |
-| `_getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. |
+| `_getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be published and called by a trigger or webhook to save static data. This gives access to the static workflow data. |
 | `_("<node-name>").isExecuted` | Check whether a node has already executed. |
 | `_nodeVersion` | Get the version of the current node. | ✅ |
 | `_prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `_prevNode` always uses the first input connector. | 

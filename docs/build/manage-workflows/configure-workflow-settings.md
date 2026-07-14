@@ -70,11 +70,11 @@ If you don't configure the workflow or instance timezone, n8n defaults to the ED
 
 ### Save failed production executions <a href="#save-failed-production-executions" id="save-failed-production-executions"></a>
 
-Whether n8n should save failed executions for active workflows.
+Whether n8n should save failed executions for published workflows.
 
 ### Save successful production executions <a href="#save-successful-production-executions" id="save-successful-production-executions"></a>
 
-Whether n8n should save successful executions for active workflows.
+Whether n8n should save successful executions for published workflows.
 
 ### Save manual executions <a href="#save-manual-executions" id="save-manual-executions"></a>
 

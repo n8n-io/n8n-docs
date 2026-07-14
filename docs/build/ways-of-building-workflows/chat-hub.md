@@ -55,7 +55,7 @@ For more complex scenarios, use n8n workflow agents (built by you or your collea
     <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>Only chat triggers of the newest version will work. To get the newest chat trigger version, delete your existing chat trigger and insert a new one.</p></div>
 3. Enable the **Make Available in n8n Chat** option and set the name and description of the personal agent.
 4. Make sure that your AI Agent node has the **Enable Streaming** option enabled.
-5. Activate your workflow.
+5. Publish your workflow.
 
 Once defined, you can select your workflow from the model selector in Chat Hub. Your colleagues need access to the workflow by sharing it or having it in a project where they have at least viewer access.
 

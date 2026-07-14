@@ -226,6 +226,22 @@ When enabled, the AI Agent sends data back to the user in real-time as it genera
 For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](../../../core-nodes/n8n-nodes-langchain.chattrigger/README.md) or [Webhook](../../../core-nodes/n8n-nodes-base.webhook/README.md) node with **Response Mode** set to **Streaming**.
 {% endhint %}
 
+## Binary data from tools
+
+When a connected tool returns binary data, the Tools Agent forwards it to the model along with the tool's text output. This lets a tool hand images, documents, or other files to models that support multimodal input. This behavior is always on. It's separate from the **Automatically Passthrough Binary Images** option, which controls binary attached to the agent's own input.
+
+The agent handles each file based on its MIME type:
+
+- Text-based files, such as `text/*`, `application/json`, `application/xml`, `application/csv`, and YAML, are decoded and inlined as text.
+- Images (`image/*`) are passed as image content the model can view.
+- All other types are passed as file content.
+
+To keep requests within model limits, n8n skips any single file larger than the size set by the `N8N_AI_AGENT_MAX_PASSTHROUGH_BINARY_SIZE_BYTES` environment variable. The default is 50 MB. When n8n skips a file, it adds a note in the tool's output so the model knows a file was left out.
+
+{% hint style="info" %}
+The model must support the type of file you send. For example, sending an image only works with a multimodal model that can process images.
+{% endhint %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 Refer to the main AI Agent node's [Templates and examples](./README.md#templates-and-examples) section.

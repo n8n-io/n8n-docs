@@ -37,7 +37,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 {% hint style="info" %}
 **Manual Executions vs. Activation**
 
-On manual executions this node will return the last event matching its search criteria. If no event matches the criteria (for example because you are watching for files to be created but no files have been created so far), an error is thrown. Once saved and activated, the node will regularly check for any matching events and will trigger your workflow for each event found.
+On manual executions this node will return the last event matching its search criteria. If no event matches the criteria (for example because you are watching for files to be created but no files have been created so far), an error is thrown. Once saved and published, the node will regularly check for any matching events and will trigger your workflow for each event found.
 {% endhint %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>

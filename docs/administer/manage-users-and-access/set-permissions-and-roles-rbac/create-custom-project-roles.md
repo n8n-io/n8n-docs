@@ -25,12 +25,13 @@ Secret vault scopes are available from n8n version `2.13.0`.
 {% endhint %}
 
 {% hint style="info" %}
-**Custom project roles vs custom instance roles**
+**Instance roles vs project roles**
 
-n8n supports custom roles at two levels:
+n8n has two types of custom roles:
 
-* **Custom project roles** (this page): Define granular permissions within a specific project. Useful for tailoring access to workflows, credentials, and other project resources.
-* **Custom instance roles** ([Create custom instance roles](create-custom-instance-roles.md)): Define permissions that apply across the entire n8n instance, such as managing users, tags, or API keys.
+**Custom instance roles**: Roles that relate to the administrative capabilities a user needs at the instance level. Refer to [Create custom instance roles](create-custom-instance-roles.md).
+
+**Custom project roles**: Roles that apply within a specific project.
 {% endhint %}
 
 Custom project roles allow you to create roles with specific permissions tailored to your team's needs. Unlike the built-in project roles (Admin, Editor, Viewer), custom roles let you define granular access to workflows, credentials, and other project resources.

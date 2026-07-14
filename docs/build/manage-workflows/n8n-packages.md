@@ -134,13 +134,39 @@ n8n-cli package import --file=export.n8np --conflict-policy=fail --credential-mi
 | `--project` | Target project ID. Defaults to your personal project. |
 | `--folder` | Target folder ID within the project. Defaults to the project root. |
 | `--workflow-id-policy` | Whether imported workflows keep their source ID (`source`) or receive a new one (`new`). |
-| `--credential-matching-mode` | How credential references are matched on the target instance (`id-only`, more options to come). |
+| `--credential-matching-mode` | How credentials are matched on the target instance when no explicit binding applies: `id-only` (default), `name-and-type`, or `type-only`. |
 | `--credential-missing-mode` | What to do when a referenced credential can't be resolved. `create-stub`, the instance default, creates empty placeholder credentials in the target project. `must-preexist` requires every referenced credential to already exist. |
+| `--bindings` | Explicit source-to-target ID mappings as a JSON object keyed by entity type, applied before the matching mode. Currently supports `credentials`, for example `{"credentials": {"<source-id>": "<target-id>"}}`. |
 
 Importing requires the API key to hold the `workflow:import` permission scope. When the import is blocked, for example by a workflow conflict under `--conflict-policy=fail`, or by an unresolved credential under `--credential-missing-mode=must-preexist`, the command exits with a non-zero status and lists the blocking issues. With the default `create-stub` mode, n8n stubs missing credentials instead of blocking the import.
 
-### Importing credentials
+## Bindings
 
-Today, this import flow matches credentials by ID only, and the credential must already exist on the target instance before you import.
+Bindings tell n8n how to map the entities a workflow depends on in the package to the matching entities on your instance. Each binding pairs a source ID (what's in the package) with a target ID (what's on your instance). Currently, you can bind credentials.
 
-<!-- TODO: explain the special case of credential bindings, where when you import the first time, you need to capture credentials you created and pass them in on future imports -->
+To supply bindings, pass `--bindings` a JSON object keyed by entity type. n8n applies your explicit bindings first, then resolves any remaining credentials with the matching mode.
+
+n8n returns the bindings it used under the `bindings` section of the import response. Save them and pass them back on later imports to keep the mapping stable.
+
+### Credentials
+
+When you import a package, n8n resolves each credential the workflows use to a credential on the target instance. You can let n8n match credentials automatically, or bind them explicitly.
+
+To map a credential yourself, add it to the `credentials` object in `--bindings`, keyed by source credential ID. For example, your source instance has a workflow that uses a `slack` credential with the ID `aBc123`. On your target instance you have a `slack` credential with the ID `xYz456` that you want the workflow to use. Bind `aBc123` to `xYz456` so every workflow that uses `aBc123` maps to `xYz456`:
+
+```bash
+n8n-cli package import --file=export.n8np --conflict-policy=fail --bindings='{"credentials": {"aBc123": "xYz456"}}'
+```
+
+When you don't bind a credential explicitly, n8n resolves it with the mode set by `--credential-matching-mode`:
+
+* `id-only` (the default): matches a package credential to a target credential with the same ID.
+* `name-and-type`: matches a target credential with the same name and type.
+* `type-only`: matches a target credential with the same type.
+
+For `name-and-type` and `type-only`, when more than one credential matches, n8n prefers credentials owned by the target project, then credentials shared with it, then global credentials, and picks the most recently updated within that group.
+
+If n8n can't match a credential, it falls back to `--credential-missing-mode`:
+
+* `must-preexist`: n8n rejects the import if the credential doesn't already exist on the target instance.
+* `create-stub` (the instance default): n8n imports the workflow and creates an empty credential stub, then returns the new binding under `bindings.credentials` in the import response. Pass that binding on later imports to reuse the stub instead of creating another.

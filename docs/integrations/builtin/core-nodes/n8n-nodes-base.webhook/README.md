@@ -107,7 +107,7 @@ Refer to [Webhook credentials](../../credentials/webhook.md) for more informatio
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node.
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
 
 ### Response Code <a href="#response-code" id="response-code"></a>
 

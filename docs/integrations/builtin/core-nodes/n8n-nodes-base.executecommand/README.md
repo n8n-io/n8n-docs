@@ -69,7 +69,7 @@ Choose whether you want the node to execute only once (turned on) or once for ev
 
 ### Command <a href="#command" id="command"></a>
 
-Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](./#run-multiple-commands) and [cURL commands](./#run-curl-command).
+Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](./README.md#run-multiple-commands) and [cURL commands](./README.md#run-curl-command).
 
 #### Run multiple commands <a href="#run-multiple-commands" id="run-multiple-commands"></a>
 
@@ -89,7 +89,7 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command <a href="#run-curl-command" id="run-curl-command"></a>
 
-You can also use the [HTTP Request](../n8n-nodes-base.httprequest/) node to make a cURL request.
+You can also use the [HTTP Request](../n8n-nodes-base.httprequest/README.md) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
 

@@ -56,7 +56,7 @@ For usage examples and templates to help you get started, refer to n8n's [Notion
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Notion. You can find the node docs [here](../app-nodes/n8n-nodes-base.notion/).
+n8n provides an app node for Notion. You can find the node docs [here](../app-nodes/n8n-nodes-base.notion/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/notion-trigger-beta/) on n8n's website.
 

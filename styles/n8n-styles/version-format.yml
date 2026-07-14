@@ -1,0 +1,7 @@
+extends: existence
+message: "Write n8n versions without a 'v' prefix (e.g., 'n8n 2.17' or 'n8n 2.17.0'). Found '%s'."
+link: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
+level: warning
+ignorecase: false
+tokens:
+  - '\bv\d+\.\d+(\.\d+)?\b'

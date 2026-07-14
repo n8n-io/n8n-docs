@@ -26,7 +26,7 @@ The n8n API isn't available during the free trial. Please upgrade to access this
 1. Go to **Settings** > **n8n API**.
 1. Select **Create an API key**.
 1. Choose a **Label** and set an **Expiration** time for the key.
-1. If on an enterprise plan, choose the **Scopes** to give the key. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
+1. If on an Enterprise plan, choose the **Scopes** to give the key. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
 1. Copy **My API Key** and use this key to authenticate your calls.
 
 ## Call the API using your key <a href="#call-the-api-using-your-key" id="call-the-api-using-your-key"></a>

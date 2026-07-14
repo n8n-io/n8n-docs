@@ -7,7 +7,7 @@ layout:
 
 # End-user credentials
 
-End-user credentials let a workflow run with the credentials of the person who triggers it, rather than a single shared account. A project admin creates one credential as a blueprint, and each user connects their own account to it. When a user runs the workflow, n8n uses that user's connected account and keeps their data private to them.
+End-user credentials let a workflow run with the credentials of the person who triggers it, rather than a fixed credential. A project admin creates one credential as a blueprint, and each user connects their own account to it. When a user runs the workflow, n8n uses that user's connected account and keeps their data private to them.
 
 This solves a common problem with shared credentials: normally, anyone who can run a workflow uses the same fixed credentials, which can expose one person's access and data to everyone else. End-user credentials give each user their own connection and isolate their execution data.
 
@@ -55,12 +55,6 @@ A workflow can mix fixed and end-user credentials across nodes. For example, you
 * **One connection per user.** Each user can have a single connected account per end-user credential blueprint.
 * **Supported triggers.** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), and the MCP Server Trigger.
 
-{% hint style="info" %}
-**Webhooks**
-
-Webhook triggers can also run workflows on behalf of an external user, but this works differently. It relies on a custom implementation and some setup outside of n8n: your external application sends an access token that identifies the user, which n8n uses to resolve their credentials, rather than the connect flow described here. This is still supported, but n8n is updating the approach to fit the new end-user credential model.
-{% endhint %}
-
 ## Create an end-user credential
 
 1. Create a credential as usual, or open an existing one you want to change.
@@ -86,18 +80,18 @@ Your connection is private to you. Other users connect their own accounts agains
 
 When a workflow execution uses an end-user credential, the execution metadata is still visible to anyone with access to that workflow's executions, for example the status, when it ran, and that it used an end-user credential. What changes is who can see the data inside it.
 
-Only the credential owner can see the input and output data for nodes that used their connected account, including the data returned from the connected service. For anyone else, including instance admins, those nodes show redacted output.
+Only the user who triggered the workflow with their own connected account can see the input and output data for those nodes, including the data returned from the connected service. For anyone else, including instance admins, those nodes show redacted output.
 
 ### Admin visibility
 
 An admin can see that an end-user credential (the blueprint) exists and that it has connections attached. For example, when deleting an end-user credential, an admin sees how many user connections are attached to it. That count is all they see: they can't view anything about the individual connections, view a connection's secrets, use anyone's connected account in their own workflows, or see the redacted output of executions that ran on someone else's connection.
 
-Sharing works the same as any credential, but it only ever shares the end-user credential blueprint itself. An admin can share it into other projects or with other users, and each recipient connects their own account. Sharing never shares a user's connected account with anyone.
+Sharing works the same as any credential, but it only ever shares the blueprint, not the connected accounts. An admin can share it into other projects or with other users, and each recipient connects their own account.
 
 {% hint style="warning" %}
 **Deleting an end-user credential removes every connection**
 
-Deleting the top-level end-user credential deletes the whole credential, including every user's connection to it, not just your own. Any workflow that relies on it stops resolving for those users until the credential is set up again and they reconnect. n8n warns you before you delete an end-user credential that has connections attached.
+Deleting the credential blueprint deletes the whole credential, including every user's connection to it, not just your own. Any workflow that relies on it stops resolving for those users until the credential is set up again and they reconnect. n8n warns you before you delete an end-user credential that has connections attached.
 {% endhint %}
 
 ## Share end-user credentials across projects

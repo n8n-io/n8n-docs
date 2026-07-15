@@ -7,7 +7,7 @@ The same entries are also published as an [RSS feed](https://raw.githubuserconte
 Use this page alongside n8n's other two release resources depending on what you need:
 
 * [Changelog](README.md): a curated, narrative summary of the most important new features as they're rolled out.
-* Release notes (this page): a listing of all feature-level updates in each release.
+* **Release notes** (this page): a listing of all feature-level updates in each release.
 * [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
 
 {% hint style="info" %}

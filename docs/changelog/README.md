@@ -5,18 +5,16 @@ Every n8n release moves the platform forward. The changelog is where we call out
 {% hint style="info" %}
 Use this page alongside n8n's other release resources depending on what you need:
 
-- **Changelog** (this page): a curated, narrative summary of the most important new features as they're rolled out.
-
-- [Release notes](release-notes.md): a listing of all feature-level updates in each release.
-
-- [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
+* **Changelog** (this page): a curated, narrative summary of the most important new features as they're rolled out.
+* [Release notes](release-notes.md): a listing of all feature-level updates in each release.
+* [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
 
 Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-notes-1.x.md), and [0.x](release-notes-0.x.md) remain archived. Everything in the 2.x archive is covered by this changelog and the Release notes.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
----
+***
 
 ## App-only authentication for Microsoft nodes
 
@@ -32,7 +30,7 @@ _OneDrive and Outlook support released in 2.29 (2026-06-30)._
 
 The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
 
----
+***
 
 ## MCP server updates
 
@@ -67,13 +65,13 @@ Three states guide you as you work with custom date ranges:
 
 To use this, open the Insights dashboard, choose a date range with the date range picker, and check the alert banner at the top of the dashboard. If you see a partial or no-data alert, adjust your range to align with the dates your retention policy covers. Note that the alerts reflect your current retention configuration and do not extend how long execution data is stored.
 
-Learn more in the [documentation](<https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection>).
+Learn more in the [documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
 
 {% hint style="info" %}
 **Availability:** Pro, Business, and Enterprise.
 {% endhint %}
 
----
+***
 
 ## Organize large workflows with Canvas Groups
 
@@ -97,7 +95,7 @@ The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nod
 
 The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based **Only run if** option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
 
----
+***
 
 ## Move workflows between instances as packages
 
@@ -121,7 +119,7 @@ You can now set up OpenTelemetry tracing from **Settings > OpenTelemetry** inste
 
 Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry).
 
----
+***
 
 ## Web search for AI agents
 
@@ -137,7 +135,7 @@ The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-n
 
 The OneDrive, Outlook, and SharePoint OAuth2 credentials now include a **Custom Scopes** toggle. Defaults stay unchanged, but you can grant additional Microsoft Graph permissions or trim scopes down to what your tenant allows, instead of being limited to n8n's default consent set.
 
----
+***
 
 ## Rebuilt Odoo node and Oracle vector search
 
@@ -153,17 +151,17 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 When a sub-workflow's last node runs more than once, the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) (v1.2) now returns the items from every run, concatenated per output branch. Previously you only got the final run. Older trigger versions keep their existing behavior and gain an **Items to return** option to opt in.
 
----
+***
 
 ## Connect to MCP servers with less setup
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry — Apify, Linear, monday.com, Notion, and PostHog — and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup
@@ -173,14 +171,13 @@ Connect to MCP servers with less setup
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
-Learn more in the [documentation](<https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes>).
+Learn more in the [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
 {% endhint %}
 
-
----
+***
 
 ## Verified webhooks across fourteen trigger nodes
 
@@ -196,7 +193,7 @@ This is part of a broader hardening pass across releases: Netlify verification s
 
 The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a **Cloud (OAuth2)** authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
 
----
+***
 
 ## Microsoft Agent 365 Trigger node
 
@@ -206,7 +203,7 @@ The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes
 
 The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
 
-<figure><img src=".gitbook/assets/microsoft_agent_365 (1).png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/microsoft_agent_365.png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
 
 You build the agent in n8n using the trigger node: add a system prompt and give it access to tools, MCP servers, and your existing workflows using [sub-workflows as tools](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/break-workflows-into-smaller-parts). You then set the agent up on the Microsoft side, which gives it an Entra ID identity with an email address. Microsoft handles identity, lifecycle, security, and compliance (via Entra ID, Purview, and Defender); n8n handles workflow-level governance like RBAC, credential management, and execution logs.
 
@@ -218,7 +215,7 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
 
----
+***
 
 ## IdP role mapping and instance bootstrapping
 
@@ -244,7 +241,7 @@ This makes deployment configuration the single source of truth, so you can stand
 **Availability:** Enterprise.
 {% endhint %}
 
----
+***
 
 ## Favorites
 
@@ -254,19 +251,19 @@ You can now mark projects, folders, workflows, and data tables as favorites, so 
 
 ### Slack Trigger: App Home opens as a dedicated event
 
-The [Slack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) now offers **app_home_opened** as a dedicated event option. Previously, reacting to App Home opens meant subscribing to Any Event and filtering downstream, which started an execution for every unrelated Slack event.
+The [Slack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) now offers **app\_home\_opened** as a dedicated event option. Previously, reacting to App Home opens meant subscribing to Any Event and filtering downstream, which started an execution for every unrelated Slack event.
 
 ### Linear Trigger: webhook signature verification
 
 Linear credentials gain an optional signing secret. When set, the [Linear Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.lineartrigger) verifies each incoming webhook's HMAC-SHA256 signature and validates its timestamp within a 60-second window, rejecting invalid or replayed requests with a 401.
 
----
+***
 
 ## New model providers: Moonshot Kimi and Alibaba Cloud Model Studio
 
 **Released:** 2026-04-13 in [n8n 2.17](release-notes.md#n8n217)
 
-Two model providers join n8n's AI lineup natively. **Moonshot Kimi** arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. **[Alibaba Cloud Model Studio](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud)** brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
+Two model providers join n8n's AI lineup natively. **Moonshot Kimi** arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. [**Alibaba Cloud Model Studio**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud) brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
 
 More providers followed in later releases:
 
@@ -282,7 +279,7 @@ _Released in 2.26 (2026-06-09)._
 
 The NVIDIA Nemotron Embeddings node generates embeddings from NeMo Retriever models via build.nvidia.com or a self-hosted NIM, reusing the existing NVIDIA credential. The node automatically sets the right input type per call ("passage" when indexing, "query" when searching), preventing the silent retrieval-quality degradation that mismatched input types cause.
 
----
+***
 
 ## Embedded access and execution data redaction
 
@@ -313,7 +310,7 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 * **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
 * **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
 
----
+***
 
 ## OpenTelemetry support for workflows
 
@@ -338,7 +335,7 @@ This is the foundational T1 feature. It was extended across later releases: node
 **Availability:** Self-hosted only.
 {% endhint %}
 
----
+***
 
 ## Databricks node
 
@@ -354,7 +351,7 @@ The [Perplexity node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app
 
 Workflow, credential, and data table cards, as well as the data table detail view, now show dependency information, so you can check what relies on a resource before you delete or change it.
 
----
+***
 
 ## Visual diff in version history
 
@@ -395,7 +392,7 @@ The push and pull dialogs now include a **Folder** filter alongside Status and O
 **Availability:** Enterprise. Requires [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control) configured.
 {% endhint %}
 
----
+***
 
 ## 1Password as an external secrets provider
 
@@ -416,7 +413,7 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 **Availability:** Enterprise.
 {% endhint %}
 
----
+***
 
 ## Easier credential setup on Cloud
 
@@ -426,7 +423,7 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 
 Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
 
-<figure><img src=".gitbook/assets/quick_connect_slack (1).png" alt="Setting up Slack credentials with managed OAuth"><figcaption><p>Setting up Slack credentials with managed OAuth</p></figcaption></figure>
+<figure><img src=".gitbook/assets/quick_connect_slack.png" alt="Setting up Slack credentials with managed OAuth"><figcaption><p>Setting up Slack credentials with managed OAuth</p></figcaption></figure>
 
 Things to keep in mind:
 
@@ -453,7 +450,7 @@ Instance admins can now create vault connections scoped to a specific project. S
 **Availability:** Custom roles and project-scoped external secrets are available on Enterprise.
 {% endhint %}
 
----
+***
 
 ## Personal space policies and finer-grained governance
 
@@ -472,7 +469,7 @@ Available policies include:
 
 This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
 
-<figure><img src=".gitbook/assets/personal_space_policies (1).png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
+<figure><img src=".gitbook/assets/personal_space_policies.png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
 ### Custom roles: improved discoverability and permission visibility
 
@@ -480,7 +477,7 @@ _Released in 2.8.3 (2026-02-13)._
 
 The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
 
-<figure><img src=".gitbook/assets/custom_roles_selector (1).png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
+<figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
 
 ### Stronger external secrets validation
 
@@ -509,7 +506,7 @@ Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJ
 **Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on Enterprise.
 {% endhint %}
 
----
+***
 
 ## Human-in-the-loop for AI tool calls
 
@@ -536,7 +533,7 @@ Get precise control over where human judgment is required, without limiting what
 Human in the loop for AI tool calls
 {% endembed %}
 
----
+***
 
 ## Chat node: human-in-the-loop actions
 
@@ -564,7 +561,7 @@ Learn more in the [Chat node documentation](https://app.gitbook.com/s/BKcbOzIWja
 Human in the loop for the Chat node
 {% endembed %}
 
----
+***
 
 ## TLS for Syslog log streaming and credential updates via API
 
@@ -580,7 +577,7 @@ n8n's public API now supports updating existing credentials by ID via a new `PAT
 
 When updating, you can either replace all credential data at once (useful for bulk updates) or set `isPartialData: true` to merge changes with existing data. Ideal for automated secret rotation or fixing individual values without losing your configuration.
 
----
+***
 
 ## Finer-grained workflow permissions and richer audit events
 
@@ -592,7 +589,7 @@ Custom Project Roles allow you to define fine-grained permissions at the project
 
 This change makes it easier to align access controls with internal processes where building workflows and publishing them are handled by different users or teams.
 
-<figure><img src=".gitbook/assets/WorkflowEditor (1).png" alt="Custom Project Roles"><figcaption><p>Custom Project Roles</p></figcaption></figure>
+<figure><img src=".gitbook/assets/WorkflowEditor.png" alt="Custom Project Roles"><figcaption><p>Custom Project Roles</p></figcaption></figure>
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -606,7 +603,7 @@ This update adds events for manual workflow cancellations and workflow activatio
 
 Workflow settings updates are also logged with the specific parameters that changed (for example, selecting a new error workflow), instead of a generic "updated" event.
 
----
+***
 
 ## Time Saved node
 
@@ -619,8 +616,8 @@ With this release you can now:
 * **Choose fixed value or dynamic time tracking**: use a fixed time saved value for simple workflows, or use one or many Time Saved nodes to calculate savings dynamically based on the actual execution path taken.
 * **Configure per-item calculations**: when using the Time Saved node, choose whether to calculate time saved once for all items or multiply by the number of items processed.
 
-<figure><img src=".gitbook/assets/time_saved_node_1 (1).png" alt="Time saved node in a workflow"><figcaption><p>Time saved node in a workflow</p></figcaption></figure>
+<figure><img src=".gitbook/assets/time_saved_node_1.png" alt="Time saved node in a workflow"><figcaption><p>Time saved node in a workflow</p></figcaption></figure>
 
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
-<figure><img src=".gitbook/assets/time_saved_node_2 (1).png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
+<figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>

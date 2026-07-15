@@ -3,16 +3,24 @@
 Every n8n release moves the platform forward. The changelog is where we call out the changes that matter most to the technical teams who build on n8n: new capabilities, more control over how your workflows run, and clearer visibility into what they're actually doing. Each entry is tied to the version it shipped in, newest first, and written to stand on its own, so it's easy to share the one update your team has been waiting for.
 
 {% hint style="info" %}
-This changelog tells the curated story of each release. For every feature that ships, one line each, see the [Feature feed](feature-feed.md); for full technical detail including bug fixes, the [Releases page](https://github.com/n8n-io/n8n/releases) on GitHub. Coverage here starts with stable n8n 2.x; release notes for [1.x](release-notes-1.x.md) and [0.x](release-notes-0.x.md) remain archived.
+Use this page alongside n8n's other release resources depending on what you need:
+
+- **Changelog** (this page): a curated, narrative summary of the most important new features as they're rolled out.
+
+- [Release notes](release-notes.md): a listing of all feature-level updates in each release.
+
+- [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
+
+Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-notes-1.x.md), and [0.x](release-notes-0.x.md) remain archived. Everything in the 2.x archive is covered by this changelog and the Release notes.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ---
 
-## `n8n 2.30` App-only authentication for Microsoft nodes
+## App-only authentication for Microsoft nodes
 
-**Released:** 2026-07-07
+**Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
 
 You can now authenticate Microsoft nodes with a [Microsoft Entra Service Principal](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal), so workflows run as an application instead of a signed-in user. OneDrive and Outlook gained the option in 2.29; Excel 365, Microsoft Teams, and Microsoft To Do follow in 2.30, all sharing a single app-only credential.
 
@@ -26,9 +34,9 @@ The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cr
 
 ---
 
-## `n8n 2.29` MCP server updates
+## MCP server updates
 
-**Released:** 2026-06-30
+**Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
 
 We've shipped a number of updates to the n8n MCP server over the past few weeks. Here's a roundup, with the version each change landed in.
 
@@ -67,9 +75,9 @@ Learn more in the [documentation](<https://app.gitbook.com/s/wMJrGrimpx3PxCJpUsw
 
 ---
 
-## `n8n 2.28` Organize large workflows with Canvas Groups
+## Organize large workflows with Canvas Groups
 
-**Released:** 2026-06-29
+**Released:** 2026-06-29 in [n8n 2.28](release-notes.md#n8n228)
 
 You can now organize related nodes into a single named Canvas Group and collapse it for a cleaner view. Group the nodes that handle one part of a workflow, give the group a name, and collapse it to hide the detail until you need it. A large workflow that used to sprawl across the canvas shrinks to a handful of labeled blocks you can read at a glance, so it's faster to find your way around a workflow a teammate built or one you haven't opened in months.
 
@@ -91,9 +99,9 @@ The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-n
 
 ---
 
-## `n8n 2.27` Move workflows between instances as packages
+## Move workflows between instances as packages
 
-**Released:** 2026-06-16
+**Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
 
 You can now bundle workflows into a portable `.n8np` package and move them between n8n instances through the Public API or a matching set of CLI commands that wrap the same endpoints. Copying workflow JSON by hand always worked for one-off moves. Packages make it repeatable and automatable, carrying a set of workflows along with their credential stubs and a `manifest.json` describing their dependencies in a single file.
 
@@ -115,9 +123,9 @@ Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/
 
 ---
 
-## `n8n 2.25` Web search for AI agents
+## Web search for AI agents
 
-**Released:** 2026-06-02
+**Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
 
 Your AI agents can now search the web out of the box. Enable web search from the agent's Advanced panel: where the model provider offers a native search tool, the agent uses it directly, and for providers without one, n8n falls back to Brave Search or a self-hosted SearXNG instance. Until now, giving an agent live web access meant wiring up a community node or an external API by hand; now it's built in, so agents can ground their answers in current information like prices, docs, and news, without extra setup.
 
@@ -131,9 +139,9 @@ The OneDrive, Outlook, and SharePoint OAuth2 credentials now include a **Custom 
 
 ---
 
-## `n8n 2.23` Rebuilt Odoo node and Oracle vector search
+## Rebuilt Odoo node and Oracle vector search
 
-**Released:** 2026-05-27
+**Released:** 2026-05-27 in [n8n 2.23](release-notes.md#n8n223)
 
 The [Odoo node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.odoo) has been rebuilt as v2, while existing v1 workflows keep working unchanged. The new version supports API-key authentication for Odoo 19+, searchable resource locators so you pick records from a list instead of pasting IDs, and dynamic field mapping on create and update that shows the actual fields of your Odoo instance, with read-only and computed fields hidden so you can't write to what can't be written. Contact, Opportunity, Activity, and Custom resources round out the coverage, and the node selects the right API transport for your Odoo version automatically.
 
@@ -147,9 +155,9 @@ When a sub-workflow's last node runs more than once, the [Execute Workflow Trigg
 
 ---
 
-## `n8n 2.22` Connect to MCP servers with less setup
+## Connect to MCP servers with less setup
 
-**Released:** 2026-05-19
+**Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
 Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
@@ -174,9 +182,9 @@ Learn more in the [documentation](<https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDY
 
 ---
 
-## `n8n 2.21` Verified webhooks across fourteen trigger nodes
+## Verified webhooks across fourteen trigger nodes
 
-**Released:** 2026-05-12
+**Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
 Fourteen trigger nodes now verify the signatures of incoming webhooks, so forged or tampered requests are rejected with a 401 before they ever start an execution: Acuity Scheduling, Asana, Cal.com, Calendly, Customer.io, Figma, Formstack, GitLab, MailerLite, Mautic, Onfleet, Taiga, Trello, and Twilio.
 
@@ -190,9 +198,9 @@ The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes
 
 ---
 
-## `n8n 2.20` Microsoft Agent 365 Trigger node
+## Microsoft Agent 365 Trigger node
 
-**Released:** 2026-05-05
+**Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
 ### Microsoft Agent 365 Trigger node
 
@@ -212,9 +220,9 @@ Self-hosted instances can now retain insights data for up to 365 days by default
 
 ---
 
-## `n8n 2.19` IdP role mapping and instance bootstrapping
+## IdP role mapping and instance bootstrapping
 
-**Released:** 2026-04-28
+**Released:** 2026-04-28 in [n8n 2.19](release-notes.md#n8n219)
 
 ### IdP role mapping inside n8n
 
@@ -238,9 +246,9 @@ This makes deployment configuration the single source of truth, so you can stand
 
 ---
 
-## `n8n 2.18` Favorites
+## Favorites
 
-**Released:** 2026-04-21
+**Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
 You can now mark projects, folders, workflows, and data tables as favorites, so the resources you work with every day are one click away instead of a search away.
 
@@ -254,9 +262,9 @@ Linear credentials gain an optional signing secret. When set, the [Linear Trigge
 
 ---
 
-## `n8n 2.17` New model providers: Moonshot Kimi and Alibaba Cloud Model Studio
+## New model providers: Moonshot Kimi and Alibaba Cloud Model Studio
 
-**Released:** 2026-04-13
+**Released:** 2026-04-13 in [n8n 2.17](release-notes.md#n8n217)
 
 Two model providers join n8n's AI lineup natively. **Moonshot Kimi** arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. **[Alibaba Cloud Model Studio](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud)** brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
 
@@ -276,9 +284,9 @@ The NVIDIA Nemotron Embeddings node generates embeddings from NeMo Retriever mod
 
 ---
 
-## `n8n 2.16` Embedded access and execution data redaction
+## Embedded access and execution data redaction
 
-**Released:** 2026-04-07
+**Released:** 2026-04-07 in [n8n 2.16](release-notes.md#n8n216)
 
 ### Token exchange authentication for embedded access
 
@@ -307,9 +315,9 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 
 ---
 
-## `n8n 2.15` OpenTelemetry support for workflows
+## OpenTelemetry support for workflows
 
-**Released:** 2026-03-30
+**Released:** 2026-03-30 in [n8n 2.15](release-notes.md#n8n215)
 
 n8n now emits OpenTelemetry traces for workflow executions. Runs become traces in your existing OpenTelemetry backend, with no sidecars, custom exporters, or timing hacks. Teams already using Jaeger, Datadog, Grafana Tempo, Honeycomb, New Relic, or Splunk see n8n alongside everything else they observe.
 
@@ -332,9 +340,9 @@ This is the foundational T1 feature. It was extended across later releases: node
 
 ---
 
-## `n8n 2.14` Databricks node
+## Databricks node
 
-**Released:** 2026-03-24
+**Released:** 2026-03-24 in [n8n 2.14](release-notes.md#n8n214)
 
 n8n now connects natively to Databricks. The new node runs SQL with asynchronous polling and chunked results (each row arrives as its own item), manages Unity Catalog objects (catalogs, schemas, tables, volumes, and functions), calls Model Serving endpoints with automatic input detection and validation, interacts with Genie AI, handles file operations up to 5 GiB, and manages Vector Search indexes. Lakehouse data can flow through the same workflows as the rest of your stack, without custom HTTP wiring. Learn more in the [Databricks node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.databricks).
 
@@ -348,9 +356,9 @@ Workflow, credential, and data table cards, as well as the data table detail vie
 
 ---
 
-## `n8n 2.13` Visual diff in version history
+## Visual diff in version history
 
-**Released:** 2026-03-16
+**Released:** 2026-03-16 in [n8n 2.13](release-notes.md#n8n213)
 
 ### Visual diff comes to version history
 
@@ -389,9 +397,9 @@ The push and pull dialogs now include a **Folder** filter alongside Status and O
 
 ---
 
-## `n8n 2.12` 1Password as an external secrets provider
+## 1Password as an external secrets provider
 
-**Released:** 2026-03-09
+**Released:** 2026-03-09 in [n8n 2.12](release-notes.md#n8n212)
 
 n8n now supports 1Password Connect Server as an [external secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) provider, alongside HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and GCP Secret Manager.
 
@@ -410,9 +418,9 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 
 ---
 
-## `n8n 2.11` Easier credential setup on Cloud
+## Easier credential setup on Cloud
 
-**Released:** 2026-03-02
+**Released:** 2026-03-02 in [n8n 2.11](release-notes.md#n8n211)
 
 ### Easier credential setup on Cloud
 
@@ -447,9 +455,9 @@ Instance admins can now create vault connections scoped to a specific project. S
 
 ---
 
-## `n8n 2.8` Personal space policies and finer-grained governance
+## Personal space policies and finer-grained governance
 
-**Released:** 2026-02-09 – 2026-02-13 (2.8.0–2.8.3)
+**Released:** 2026-02-09 – 2026-02-13 in [n8n 2.8.0–2.8.3](release-notes.md#n8n28)
 
 ### Personal space policies
 
@@ -503,9 +511,9 @@ Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJ
 
 ---
 
-## `n8n 2.6` Human-in-the-loop for AI tool calls
+## Human-in-the-loop for AI tool calls
 
-**Released:** 2026-01-26
+**Released:** 2026-01-26 in [n8n 2.6](release-notes.md#n8n26)
 
 You can now require explicit human approval before an AI Agent executes specific tools.
 
@@ -530,9 +538,9 @@ Human in the loop for AI tool calls
 
 ---
 
-## `n8n 2.5` Chat node: human-in-the-loop actions
+## Chat node: human-in-the-loop actions
 
-**Released:** 2026-01-20
+**Released:** 2026-01-20 in [n8n 2.5](release-notes.md#n8n25)
 
 The **Chat** node now includes two new actions for human-in-the-loop interactions in agentic workflows:
 
@@ -558,9 +566,9 @@ Human in the loop for the Chat node
 
 ---
 
-## `n8n 2.4` TLS for Syslog log streaming and credential updates via API
+## TLS for Syslog log streaming and credential updates via API
 
-**Released:** 2026-01-12
+**Released:** 2026-01-12 in [n8n 2.4](release-notes.md#n8n24)
 
 ### TLS support for Syslog log streaming
 
@@ -574,9 +582,9 @@ When updating, you can either replace all credential data at once (useful for bu
 
 ---
 
-## `n8n 2.2` Finer-grained workflow permissions and richer audit events
+## Finer-grained workflow permissions and richer audit events
 
-**Released:** 2025-12-22
+**Released:** 2025-12-22 in [n8n 2.2](release-notes.md#n8n22)
 
 ### More granular workflow permissions within Custom Project Roles
 
@@ -600,9 +608,9 @@ Workflow settings updates are also logged with the specific parameters that chan
 
 ---
 
-## `n8n 2.1` Time Saved node
+## Time Saved node
 
-**Released:** 2025-12-16
+**Released:** 2025-12-16 in [n8n 2.1](release-notes.md#n8n21)
 
 Previously, teams could only track a single fixed time saved value for each workflow regardless of which path an execution takes. The new Time Saved node enables more precise time savings calculations where different execution paths save different amounts of time.
 

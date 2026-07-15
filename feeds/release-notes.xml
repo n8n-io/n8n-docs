@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>n8n feature feed: editor and nodes</title>
-<link>https://docs.n8n.io/release-notes/feature-feed</link>
-<atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/feature-feed.xml" rel="self" type="application/rss+xml"/>
+<title>n8n release notes: editor and nodes</title>
+<link>https://docs.n8n.io/changelog/release-notes</link>
+<atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
 <description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
 <language>en</language>
 <lastBuildDate>Fri, 10 Jul 2026 09:18:56 GMT</lastBuildDate>

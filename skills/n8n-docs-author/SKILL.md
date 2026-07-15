@@ -18,6 +18,7 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 
 - **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
 - **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
+- **Terminology:** `docs/contribute/terminology.md` — official product terms to use, and the non-official ones to avoid.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -103,6 +104,16 @@ marketing words. Prefer the plainer version:
 - Lead with the action: "To schedule a workflow, add a Schedule Trigger" beats
   "There is a node available that can be used to schedule workflows."
 
+## Terminology and naming
+
+Use one term per concept, and prefer the official product term over a synonym.
+Full do/don't list: `docs/contribute/terminology.md`. Highest-value rules:
+
+- **"publish a workflow"**, not "activate".
+- **`n8n`** lowercase always; node and UI names in **bold** with exact casing.
+- Common fixes: workflow (not flow/automation/scenario), node (not step/block),
+  sub-workflow (not subworkflow), self-hosted, community node (not custom node).
+
 ## Page length and granularity
 
 One focused page per concept, task, or reference category. Aim for a band, not
@@ -118,8 +129,13 @@ docs assistant) chunk on `##`/`###` headings.
 - **Hard limit ~50,000 characters:** agents truncate longer pages.
 - **Split by type or task, not by length.** Keep related facts together (all env
   vars for a category, all parameters for a node).
-- **Self-contained sections:** descriptive headings, and restate context instead
-  of "as above" — agents retrieve sections out of order.
+- **Self-contained sections:** AI search and agents retrieve one `##`/`###`
+  section at a time, without its neighbours, so a section that leans on
+  surrounding context arrives stripped of it and the agent guesses. Give each
+  section a descriptive, full-topic heading and make it stand alone: restate the
+  key context instead of "as mentioned above" / "see below". Restate, don't
+  duplicate — repeat a fact or two, not whole paragraphs (sections that need the
+  same long explanation belong under one heading).
 
 ## Versioning and release status
 
@@ -189,6 +205,16 @@ See [reference.md](reference.md) for full examples. Quick reference:
 | Tabbed content | `{% tabs %}{% tab title="Name" %}` … `{% endtab %}{% endtabs %}` |
 | Code block (with options) | `{% code title="File.ts" %}` ```` ``` ```` … `{% endcode %}` |
 | Embedded workflow | `{% @n8n-blocks/n8n-workflow-demo content="" url="..." %}` |
+
+**Tabs:** short parallel snippets only (block under ~3,000 chars). AI tools serialize every variant. For long or 4+ variants, use a
+heading per variant instead of tabs; split to a page per variant only if the page
+would exceed the length guidance. Keep shared content outside the tabs.
+
+**Images:** supplementary only. Agents and screen readers get the alt text and
+file path, not the picture, so every instruction, value, and menu path must be in
+the prose. Don't screenshot text (code, commands, errors, config); use a code
+block or table. Screenshots confirm or orient; they never carry a step on their
+own. See [reference.md](reference.md).
 
 ### Hint types
 

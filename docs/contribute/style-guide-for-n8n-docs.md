@@ -71,6 +71,12 @@ Write for everyone.
 * **Use "they" for an unknown person.** "Every user can configure their settings", not "his settings".
 * **Choose gender-neutral terms.** "Chair", not "chairman". "Main", not "master".
 
+### Terminology and naming
+
+Use the same term for the same concept everywhere, and prefer the official product term over a plausible synonym (for example, "publish a workflow", not "activate a workflow"). In prose, use sentence case; for a literal UI label or node name, use bold with the product's exact casing. Write the product name as "n8n", lowercase, even at the start of a sentence.
+
+See the [Terminology and naming](terminology.md) word list for the full set of terms to use and avoid.
+
 ### Text formatting
 
 * Headings: sentence case ([more info](https://docs.microsoft.com/en-us/style-guide/scannable-content/headings#formatting-headings))
@@ -117,8 +123,8 @@ Split content into focused pages, each covering a single concept, task, or refer
 
 ### Length
 
-* **Healthy range:** roughly 1,500 to 20,000 characters (about 250 to 3,000 words). This reads as scannable sections for people, and as clean retrievable chunks for AI tools, which split content on `##` and `###` headings.
-* **Merge if under ~1,500 characters.** A page or section that small sits below the useful chunk size: AI search merges it with unrelated neighbours, and splitting one topic across many tiny pages measurably lowers answer quality. Fold stubs into a parent or sibling page.
+* **Healthy range:** about 1,500 to 20,000 characters (250 to 3,000 words). This reads as scannable sections for people, and as clean retrievable chunks for AI tools, which split content on `##` and `###` headings.
+* **Merge if under ~1,500 characters.** A page or section that small sits below the useful chunk size: AI search merges it with unrelated neighbours, and over-splitting a topic across small pages measurably lowers answer quality. Fold stubs into a parent or sibling page.
 * **Split if over ~25,000 characters**, if the page mixes content types (concept, how-to, and reference together), or if one section grows without bound (such as a list of per-client examples).
 * **Never exceed ~50,000 characters.** Agents truncate longer pages, so anything past the limit is invisible to them.
 
@@ -127,10 +133,13 @@ Split content into focused pages, each covering a single concept, task, or refer
 * Split along **type or task** boundaries (concept, how-to, reference, examples), not arbitrarily by length. This matches how readers navigate and keeps each chunk about one thing.
 * Keep related facts **on one page** (all environment variables for a category, all parameters for a node). AI search keeps adjacent content together, so proximity preserves context.
 
-### Keep each page self-contained
+### Keep each section self-contained
 
-* Write descriptive, sentence-case headings. They become the unit AI search retrieves, often without the rest of the page.
-* Make each section stand on its own. Restate key context instead of relying on "as described above" or "see the previous page": agents retrieve sections out of order and waste effort chasing cross-references.
+AI search and coding agents chunk pages by heading, retrieving a single `##` or `###` section at a time without the sections around it. A section that depends on its neighbours arrives stripped of that context, so the agent fills the gap by guessing. Write each section so a reader who lands on it alone can understand it:
+
+* **Write descriptive, sentence-case headings.** The heading is the unit AI search retrieves, often without the rest of the page, so name the section's topic in full: "Configure the Schedule Trigger", not "Configuration".
+* **Make each section understandable on its own.** Restate the key context a reader needs instead of pointing back to it. Avoid "as mentioned above", "as described in the previous section", and "see below". An agent that retrieves this section out of order, or a reader who arrives from search, can't follow those references.
+* **Restate, don't duplicate.** Repeat the one or two facts the section needs, not whole paragraphs. If two sections need the same long explanation, that's a sign they belong together under one heading. Keep restatements short so the page stays concise (see [Plain language](#plain-language)).
 
 ## Versioning and release status
 
@@ -413,6 +422,12 @@ Update this table if a space is added, removed, or recreated. Space IDs are stab
 
 ### Images
 
+Images supplement the text; they never carry information on their own. AI search, the docs assistant, and coding agents read the page as Markdown, so all they receive from an image is its alt text and file path, not the picture. Screen readers work the same way. Anything the reader must do or know has to be in the prose:
+
+* **Write every instruction in text.** A screenshot can show what a screen looks like, but the step ("Select **Add trigger**, then choose **On schedule**") must be written out. Never leave the only copy of a setting, value, menu path, or click target inside an image.
+* **Don't screenshot text.** Put code, commands, error messages, and configuration values in code blocks or tables, so readers can copy them and agents can read them. Don't paste a picture of a terminal or a code editor.
+* **Treat screenshots as confirmation, not instruction.** Use them to orient the reader or confirm they're in the right place, alongside the written steps, not instead of them.
+
 Each space has a single folder for all its images, at `.gitbook/assets/` in the root of that space:
 
 ```
@@ -567,6 +582,8 @@ Some collapsible content. Standard Markdown works inside the block.
 ### Tabbed content
 
 When a block of content is different due to external considerations (platform, coding language etc) it **can** be useful to separate it using tabs, so the user sees only the content relevant to them. Use tabbed sections sparingly as they could impact discoverability.
+
+Use tabs only for **short** parallel variants. A reader sees one variant, but AI tools serialize every variant into the text they read, so long variants, or a lot of them, bloat the page and bury the relevant one. Keep the whole tab block under about one screen (~3,000 characters combined). When variants outgrow that (a full procedure each, or four or more non-trivial variants), drop the tabs and give each variant its own heading on the page, so each becomes a clean, self-contained section. Split into a page per variant only if the combined page would exceed the [page length guidance](#page-length-and-granularity), or the set of variants is open-ended. Keep shared setup and explanation outside the tabbed block so it isn't repeated across variants.
 
 Denote tabbed content like this:
 

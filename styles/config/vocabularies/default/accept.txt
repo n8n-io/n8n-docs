@@ -32,7 +32,7 @@ Bing
 Bitly
 Bitwarden
 blockquote
-[Bb]oolean
+[Bb]ooleans?
 [Bb]orderless
 bot
 Brandfetch
@@ -111,6 +111,7 @@ Groq
 GSuite
 Gumroad
 [Gg]zip
+healthz
 Hetzner
 Homeserver
 [Hh]ostnames?
@@ -286,6 +287,7 @@ uProc
 URI
 URIs
 URL
+URLencoded
 Venafi
 VERO
 Vhost
@@ -298,6 +300,7 @@ Webex
 Webflow
 [Ww]ebsockets?
 WeKan
+winston
 [Ww]ireframe
 WordPress
 Wufoo
@@ -311,4 +314,5 @@ Zendesk
 Zep
 Zoho
 Zscaler
+endhint
 iCalendar

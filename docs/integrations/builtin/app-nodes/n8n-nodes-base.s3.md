@@ -66,7 +66,7 @@ Refer to [S3 credentials](../credentials/s3.md) for guidance on setting up authe
     * Get all files
     * Upload a file
 
-    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Attach file for upload</strong></p><p>To attach a file for upload, use another node to pass the file as a data property. Nodes like the <a href="../core-nodes/n8n-nodes-base.readwritefile.md">Read/Write Files from Disk</a> node or the <a href="../core-nodes/n8n-nodes-base.httprequest/">HTTP Request</a> work well.</p></div>
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Attach file for upload</strong></p><p>To attach a file for upload, use another node to pass the file as a data property. Nodes like the <a href="../core-nodes/n8n-nodes-base.readwritefile.md">Read/Write Files from Disk</a> node or the <a href="../core-nodes/n8n-nodes-base.httprequest/README.md">HTTP Request</a> work well.</p></div>
 * Folder
   * Create a folder
   * Delete a folder

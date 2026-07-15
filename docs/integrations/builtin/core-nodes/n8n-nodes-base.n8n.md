@@ -35,7 +35,7 @@ layout:
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) in your workflows.
 
-Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/user) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) for more information on using the n8n API. Refer to [API endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for working with the API endpoints directly.
 
 {% hint style="info" %}
 **Credentials**
@@ -64,7 +64,7 @@ This node doesn't support SSL. If your server requires an SSL connection, use th
 * Workflow
   * [**Publish** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
   * [**Create** a workflow](n8n-nodes-base.n8n.md#create-workflow)
-  * [**Deactivate** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
+  * [**Unpublish** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
   * [**Delete** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
   * [**Get** a workflow](n8n-nodes-base.n8n.md#activate-deactivate-delete-and-get-workflow)
   * [**Get Many** workflows](n8n-nodes-base.n8n.md#get-many-workflows)
@@ -146,9 +146,9 @@ Configure this operation with this parameter:
 
 * **Execution ID**: Enter the ID of the execution you want to delete.
 
-## Activate, deactivate, delete, and get workflow <a href="#activate-deactivate-delete-and-get-workflow" id="activate-deactivate-delete-and-get-workflow"></a>
+## Publish, unpublish, delete, and get workflow <a href="#activate-deactivate-delete-and-get-workflow" id="activate-deactivate-delete-and-get-workflow"></a>
 
-The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations all include the same parameter for you to select the **Workflow** you want to perform the operation on. Options include:
+The **Publish**, **Unpublish**, **Delete**, and **Get** workflow operations all include the same parameter for you to select the **Workflow** you want to perform the operation on. Options include:
 
 * **From list**: Select the workflow from the list.
 * **By URL**: Enter the URL of the workflow.
@@ -164,7 +164,7 @@ Configure this operation with this parameter:
   * `connections`
   * `settings`
 
-Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/user) for more information.
+Refer to [n8n API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference) for more information.
 
 ## Get many workflows <a href="#get-many-workflows" id="get-many-workflows"></a>
 
@@ -177,7 +177,7 @@ Configure this operation with these parameters:
 
 You can further configure this operation with these **Filters**:
 
-* **Return Only Active Workflows**: Select whether to return only active workflows (turned on) or active and inactive workflows (turned off).
+* **Return Only Published Workflows**: Select whether to return only published workflows (turned on) or published and unpublished workflows (turned off).
 * **Tags**: Enter a comma-separated list of tags the returned workflows must have.
 
 ## Update workflow <a href="#update-workflow" id="update-workflow"></a>

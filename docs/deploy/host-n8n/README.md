@@ -19,6 +19,8 @@ layout:
 
 # Self-hosting n8n <a href="#self-hosting-n8n" id="self-hosting-n8n"></a>
 
+You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker, Kubernetes, or npm.
+
 All self-hosted installations use the same core product. Without a license key, n8n runs as the free [Community edition](community-edition-features.md). Adding a Business or Enterprise license key enables those editions.
 
 ## Choose your installation method <a href="#choose-your-installation-method" id="choose-your-installation-method"></a>

@@ -28,6 +28,31 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
+## `n8n 2.31` Notion node overhauled with new API, plus 17 other features <a href="#n8n231" id="n8n231"></a>
+
+**Released:** 2026-07-14
+
+* [Microsoft Excel Node: Rename node to Microsoft Excel (OneDrive)](https://github.com/n8n-io/n8n/pull/33963): The Microsoft Excel node has been renamed to "Microsoft Excel (OneDrive)" to clarify that it operates on workbooks stored in OneDrive. The node's description and in-node notice were updated accordingly, and "OneDrive" was added as a search alias. This is a display-only change; the node's underlying type identifier is unchanged, so existing workflows continue to work without modification.
+* [AWS Bedrock Chat Model Node: Expand inference parameters](https://github.com/n8n-io/n8n/pull/33668): The AWS Bedrock Chat Model node now supports five additional optional inference parameters: Top P, Max Retries, Additional Model Request Fields (for model-specific JSON parameters like Claude's top_k or Nova's inferenceConfig), Latency Optimization, and Guardrail settings. These give users finer control over Bedrock models without switching providers. All new fields are optional and default to prior behavior when unset; invalid JSON in Additional Model Request Fields shows a clear error.
+* [AWS IAM Node: Add Assume Role authentication to Cognito and IAM nodes](https://github.com/n8n-io/n8n/pull/32016): The AWS IAM and AWS Cognito nodes now support an Authentication option to choose between AWS (IAM) and AWS (Assume Role) credentials, matching other AWS nodes like S3, Lambda, and SNS. Existing workflows and credentials continue to work unchanged, defaulting to the previous IAM access-key authentication.
+* [Remove preview label from Instance-level MCP settings](https://github.com/n8n-io/n8n/pull/34084): Instance-level MCP settings are now generally available. The "preview" label has been removed from the MCP settings sidebar item and the MCP settings page heading, along with its explanatory tooltip, reflecting that the feature is no longer in preview.
+* [Zendesk Node: Allow custom OAuth2 scopes](https://github.com/n8n-io/n8n/pull/33734): The Zendesk OAuth2 credential now supports custom OAuth scopes. Previously scopes were hardcoded to "read write" and couldn't be changed. A new Custom Scopes toggle lets users enable an editable Enabled Scopes field to request additional Zendesk permissions, and these custom scopes are preserved when reconnecting the credential rather than being reset to defaults.
+* [Form Trigger Node: Add "Show Headers" option](https://github.com/n8n-io/n8n/pull/30205): The Form Trigger node now has a new "Show Headers" option, which, when enabled, includes the HTTP request headers from a form submission in the node's output data. Sensitive headers like authorization and cookie values are automatically redacted in execution logs, matching existing Webhook node behavior.
+* [Google BigQuery Node: Allow custom OAuth2 scopes](https://github.com/n8n-io/n8n/pull/33822): The Google BigQuery OAuth2 credential now supports custom OAuth2 scopes. By default it continues using the required BigQuery scopes, but users can toggle on Custom Scopes to reveal an editable Enabled Scopes field, pre-filled with the defaults, to request additional or narrower permissions. Custom scopes now persist across reconnects instead of resetting to defaults, matching behavior already available for other Google and Slack/Discord OAuth2 credentials.
+* [Form Node: Support multiple files when returning binary from form ending](https://github.com/n8n-io/n8n/pull/33780): The Form node's "Return Binary File" completion mode now supports returning multiple files. In the Input Data Field Name(s) setting, you can specify several binary field names separated by commas, and each will be downloaded when the form completion page loads, instead of only the single file supported previously.
+* [Link to data tables referenced by ID in resource locator](https://github.com/n8n-io/n8n/pull/33654): In the Data Table node's resource locator, selecting a table by ID now shows a clickable external-link icon, just like list mode. n8n looks up the table across all projects you can access, and only shows the link when it exists and is visible to you. Expressions that resolve to a concrete table ID are also supported.
+* [MCP Server Trigger Node: Present credential-connect link via elicitation](https://github.com/n8n-io/n8n/pull/33868): When the MCP Server Trigger blocks a tool call because a required credential isn't connected, the connection link is now presented through the client's native URL elicitation UI (for clients that support it, like ones advertising elicitation.url), instead of appearing as plain text some clients flag as suspicious. Clients without this capability, or if elicitation fails, still receive the original plain-text response with the connection URL, so existing behavior is unaffected for them.
+* [Merge Node: Add `NODES_MERGE_SQL_SANDBOX_MEMORY_LIMIT_MB` variable](https://github.com/n8n-io/n8n/pull/33652): Added a new environment variable, NODES_MERGE_SQL_SANDBOX_MEMORY_LIMIT_MB, letting admins configure the memory limit in MB, default 64, for the sandbox used by the Merge node's SQL-based combine mode. This helps avoid out-of-memory errors when processing large datasets in the SQL sandbox by allowing the limit to be increased as needed.
+* [Open logs panel on artifact execution and make execute button secondary](https://github.com/n8n-io/n8n/pull/34049): When the AI Assistant shows a workflow artifact, the logs panel now opens automatically as soon as an execution starts (whether triggered by you or the agent), making it easier to watch data flow through nodes. The embedded 'Execute workflow' button is now styled as a secondary action, since the conversation is the main focus. Regular editor behavior is unchanged.
+* [Merge Node: Add queryParameters option](https://github.com/n8n-io/n8n/pull/33385): The Merge node's Combine by SQL mode now supports a Query Parameters option, letting you bind values separately from the SQL query text using ? placeholders, similar to the Postgres and MySQL nodes. This helps avoid injecting expression values directly into the query string, improving safety and readability. A notice was added explaining how to use query parameters, with a link to documentation.
+* [Notion Node: Migrate to new API and overhaul the node](https://github.com/n8n-io/n8n/pull/33749): The Notion node has been overhauled with a new v3, migrating to Notion API 2026-03-11, which replaces database queries with data sources. It adds a Data Source resource (Get, Search), markdown get/update operations for pages and blocks, JSON block support, file downloads for database pages, and a reorderable block builder. The Notion Trigger now also supports data sources. Database IDs are no longer accepted for database-page query/create; a data source must be selected instead.
+* [Add Group/Ungroup context menu actions](https://github.com/n8n-io/n8n/pull/33839): You can now group and ungroup nodes directly from the canvas context menu. Right-clicking a valid node selection shows a new Group option (disabled when the selection can't form a valid group), and right-clicking a group shows Rename group and Ungroup nodes options, making it easier to organize workflows without keyboard shortcuts.
+* [Rocketchat Node: Add Subscriptions & IM ops](https://github.com/n8n-io/n8n/pull/31432): The Rocket.Chat node now supports a Subscriptions resource, letting you retrieve all subscriptions or mark a room as read, and a Direct Message (IM) resource to fetch messages from a direct message room, with optional pagination via Return All/Limit. These additions extend the node's API coverage beyond the existing Chat operations.
+* [Rename private credentials to end-user credentials](https://github.com/n8n-io/n8n/pull/33629): Renamed "private credentials" to "end-user credentials" throughout the app for consistency. Tooltips, dialogs, credential-type cards, connect-screen text, node/workflow issue messages, and backend errors now use the new terminology. "Private" pills are replaced with an identity icon across the credentials list, node picker, credential header, and canvas badges. Deleting or switching a connected end-user credential to Fixed now shows a type-to-confirm dialog with a correctly pluralized count of affected people, and unsupported-trigger warnings now name the specific trigger.
+* [Improve node group selection UX](https://github.com/n8n-io/n8n/pull/33893): Node groups on the canvas now behave like nodes for selection and context menus. Selecting a title bar or all members selects the whole group with a single selection ring, and selection persists through collapse/expand. Group context menus mirror multi-selection actions worded for the group, with new Expand/Collapse all groups and Expand/Collapse selected options, plus keyboard shortcuts. Selection rectangles now fully wrap groups.
+
+---
+
 ## `n8n 2.30` Service Principal authentication across Microsoft nodes, plus 12 other features <a href="#n8n230" id="n8n230"></a>
 
 **Released:** 2026-07-07
@@ -189,7 +214,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 2.22.5-exp` Quick MCP access toggle on workflow cards
+## `n8n 2.22.5-exp` Quick MCP access toggle on workflow cards <a href="#n8n2225-exp" id="n8n2225-exp"></a>
 
 **Released:** 2026-06-01
 
@@ -424,7 +449,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 2.9.4-exp` Setup panel verifies credentials before marking complete
+## `n8n 2.9.4-exp` Setup panel verifies credentials before marking complete <a href="#n8n294-exp" id="n8n294-exp"></a>
 
 **Released:** 2026-02-27
 

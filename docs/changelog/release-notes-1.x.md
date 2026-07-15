@@ -3145,6 +3145,22 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0
 
 This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
 
+### Deprecation notice: agent types in the AI Agent node <a href="#agent-types-deprecation" id="agent-types-deprecation"></a>
+
+_This notice was added retroactively in July 2026._
+
+As of this release, **Tools Agent** is the only agent type available when adding a new AI Agent node. The following agent types are deprecated and can no longer be selected for new nodes:
+
+* Conversational Agent
+* OpenAI Functions Agent
+* Plan and Execute Agent
+* ReAct Agent
+* SQL Agent
+
+Existing workflows that use these agent types continue to run for now, but the underlying code will be removed in n8n v3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
+
+<br>
+
 ### Tidy up <a href="#tidy-up" id="tidy-up"></a>
 
 Tidy up instantly aligns nodes, centers stickies, untangles connections, and brings structure to your workflows. Whether you're preparing to share a workflow or just want to improve readability, this feature saves you time and makes your logic easier to follow. Clean, well-organized workflows aren't just nicer to look at—they’re also quicker to understand.

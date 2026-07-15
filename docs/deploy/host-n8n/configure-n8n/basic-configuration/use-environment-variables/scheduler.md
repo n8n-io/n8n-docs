@@ -21,6 +21,12 @@ layout:
 
 The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. This page explains what the durable scheduler changes, how to turn it on, and what each environment variable does.
 
+{% hint style="warning" %}
+**Preview feature**
+
+The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+{% endhint %}
+
 {% hint style="info" %}
 The durable scheduler is off by default and rolling out gradually. Existing instances keep using the in-memory scheduler and behave as before until you opt in. n8n recommends testing it in a non-production environment first.
 {% endhint %}
@@ -73,15 +79,20 @@ Across multiple instances, every main runs all four stages. Claiming keeps this 
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 
-`N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how a Schedule Trigger node's "every N seconds" and "every N minutes" schedules fire under the durable scheduler. It has two values:
+Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (late runs after downtime, and each run executing once across instances), two cadences fire differently from the in-memory scheduler in specific cases:
 
-- `legacy` (default): runs stay aligned to the clock (on the minute, on the hour), matching the in-memory scheduler. The interval restarts every minute, so an interval that doesn't divide evenly into 60 drifts. "Every 7 seconds", for example, leaves a 4-second gap across each minute boundary.
-- `new`: runs sit a steady N apart, timed from when you activated the workflow rather than from clock boundaries. This keeps a uniform gap throughout, even across minute boundaries.
+- **"Every N seconds" and "every N minutes".** `N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how these fire. It's the only cadence the setting affects.
+- **"Every N hours", "days", "weeks", or "months".** These fire as before in everyday use, under either mode. The durable scheduler handles a few rare calendar edge cases more correctly than the in-memory scheduler: leap years, the 53rd week of a year, and daylight-saving transitions, where the in-memory scheduler could be off by one period.
+
+`N8N_SCHEDULER_TRIGGER_NODE_MODE` has two values:
+
+- `legacy` (default): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
+- `new`: runs fire a fixed number of seconds apart, counted from the moment you activated the workflow instead of from clock boundaries. If you activate at :07, "every 30 seconds" fires at :07, :37, :07, and so on. The gap stays exactly the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
 
 `legacy` is the default, so timing stays the same while the durable scheduler rolls out. `new` is the intended future default.
 
 {% hint style="info" %}
-This setting only affects "every N seconds" and "every N minutes" schedules. Longer schedules (every N hours, days, weeks, or months) and raw cron expressions fire the same way under either value.
+`N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
 {% endhint %}
 
 ## Environment variables <a href="#environment-variables" id="environment-variables"></a>

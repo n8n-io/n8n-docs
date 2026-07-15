@@ -20,7 +20,7 @@ There are three built-in instance roles: Owner, Admin, and Member. If these don'
 {% hint style="info" %}
 **Feature availability**
 
-To use admin role, you need a pro or enterprise plan.
+The Admin role is available on Pro and Enterprise plans.
 {% endhint %}
 
 {% hint style="info" %}
@@ -32,7 +32,7 @@ n8n has two levels of roles. Instance roles control what a user can do across th
 {% hint style="info" %}
 **Create a Member role account for the owner**
 
-n8n recommends that owners create a second account with the **Member** for themselves. Owners can see and edit all workflows, credentials, and projects. However, there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+n8n recommends that owners create a second account with the **Member** role for themselves. Owners can see and edit all workflows, credentials, and projects. However, there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
 {% endhint %}
 
 

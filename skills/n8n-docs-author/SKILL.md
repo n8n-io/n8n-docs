@@ -129,13 +129,21 @@ docs assistant) chunk on `##`/`###` headings.
 - **Hard limit ~50,000 characters:** agents truncate longer pages.
 - **Split by type or task, not by length.** Keep related facts together (all env
   vars for a category, all parameters for a node).
-- **Self-contained sections:** AI search and agents retrieve one `##`/`###`
-  section at a time, without its neighbours, so a section that leans on
+- **Self-contained sections:** retrieved on its own, a section that leans on
   surrounding context arrives stripped of it and the agent guesses. Give each
   section a descriptive, full-topic heading and make it stand alone: restate the
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
+- **Cross-references:** link every page to its prerequisites and its next step,
+  link parents and children both ways (an overview lists all its child pages;
+  each child links back with `./`), and aim for each page to sit in a cluster of
+  5+ interlinked pages on the same topic (AI search cites connected clusters far
+  more than standalone pages). Put
+  links in the body at the first meaningful mention, with descriptive anchor text
+  naming the target ([Configure the Schedule Trigger](...), never "click here").
+  Links point to separate topics; they don't replace context a section needs, so
+  restate that instead.
 
 ## Versioning and release status
 
@@ -215,6 +223,14 @@ file path, not the picture, so every instruction, value, and menu path must be i
 the prose. Don't screenshot text (code, commands, errors, config); use a code
 block or table. Screenshots confirm or orient; they never carry a step on their
 own. See [reference.md](reference.md).
+
+**Worked examples:** for any code, expression, or config surface, include an
+example — readers and agents rely on examples more than prose. Cover the common
+case, then edge cases and failures (the error and the fix). Favour diverse
+examples over near-identical ones, comment each example's intent inline, label
+placeholders as `<hyphenated-words>`, and put parameters, defaults, and limits in
+a table or schema block, not a paragraph. If you show a wrong example, pair it
+with the correct one beside it.
 
 ### Hint types
 

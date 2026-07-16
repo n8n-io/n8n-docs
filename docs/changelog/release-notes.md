@@ -1,22 +1,59 @@
-# Feature feed
+# Release notes
 
 This page is a running log of feature-level updates from each n8n release: what shipped in the editor and the integration nodes, one line per feature, newest first.
 
-The same entries are also published as an [RSS feed](https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/feature-feed.xml), so you can subscribe and get new entries directly in your reader.
+The same entries are also published as an [RSS feed](https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml), so you can subscribe and get new entries directly in your reader.
 
-Use this feed alongside n8n's other two release resources depending on what you need:
+Use this page alongside n8n's other two release resources depending on what you need:
 
 * [Changelog](README.md): a curated, narrative summary of the most important new features as they're rolled out.
-* Feature feed (this page): a listing of all feature-level updates in each release.
-* [GitHub release notes](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
+* **Release notes** (this page): a listing of all feature-level updates in each release.
+* [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
 
 {% hint style="info" %}
 Entries are generated from merged pull requests and reviewed before publishing. Publishing here doesn't guarantee a feature is available to you yet: some ship behind a feature flag you may need to enable, and others roll out gradually to Cloud or self-hosted instances before reaching everyone.
 {% endhint %}
 
+## How to update n8n
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/D8oFoz7X85mQuXGFYlv9/" %}
+
+## Semantic versioning in n8n <a href="#semantic-versioning-in-n8n" id="semantic-versioning-in-n8n"></a>
+
+n8n uses [semantic versioning](https://semver.org/). All version numbers are in the format `MAJOR.MINOR.PATCH`. Version numbers increment as follows:
+
+* MAJOR version when making incompatible changes which can require user action.
+* MINOR version when adding functionality in a backward-compatible manner.
+* PATCH version when making backward-compatible bug fixes.
+
 ---
 
-## `n8n 2.30` Service Principal authentication across Microsoft nodes, plus 12 other features
+## `n8n 2.31` Notion node overhauled with new API, plus 17 other features <a href="#n8n231" id="n8n231"></a>
+
+**Released:** 2026-07-14
+
+* [Microsoft Excel Node: Rename node to Microsoft Excel (OneDrive)](https://github.com/n8n-io/n8n/pull/33963): The Microsoft Excel node has been renamed to "Microsoft Excel (OneDrive)" to clarify that it operates on workbooks stored in OneDrive. The node's description and in-node notice were updated accordingly, and "OneDrive" was added as a search alias. This is a display-only change; the node's underlying type identifier is unchanged, so existing workflows continue to work without modification.
+* [AWS Bedrock Chat Model Node: Expand inference parameters](https://github.com/n8n-io/n8n/pull/33668): The AWS Bedrock Chat Model node now supports five additional optional inference parameters: Top P, Max Retries, Additional Model Request Fields (for model-specific JSON parameters like Claude's top_k or Nova's inferenceConfig), Latency Optimization, and Guardrail settings. These give users finer control over Bedrock models without switching providers. All new fields are optional and default to prior behavior when unset; invalid JSON in Additional Model Request Fields shows a clear error.
+* [AWS IAM Node: Add Assume Role authentication to Cognito and IAM nodes](https://github.com/n8n-io/n8n/pull/32016): The AWS IAM and AWS Cognito nodes now support an Authentication option to choose between AWS (IAM) and AWS (Assume Role) credentials, matching other AWS nodes like S3, Lambda, and SNS. Existing workflows and credentials continue to work unchanged, defaulting to the previous IAM access-key authentication.
+* [Remove preview label from Instance-level MCP settings](https://github.com/n8n-io/n8n/pull/34084): Instance-level MCP settings are now generally available. The "preview" label has been removed from the MCP settings sidebar item and the MCP settings page heading, along with its explanatory tooltip, reflecting that the feature is no longer in preview.
+* [Zendesk Node: Allow custom OAuth2 scopes](https://github.com/n8n-io/n8n/pull/33734): The Zendesk OAuth2 credential now supports custom OAuth scopes. Previously scopes were hardcoded to "read write" and couldn't be changed. A new Custom Scopes toggle lets users enable an editable Enabled Scopes field to request additional Zendesk permissions, and these custom scopes are preserved when reconnecting the credential rather than being reset to defaults.
+* [Form Trigger Node: Add "Show Headers" option](https://github.com/n8n-io/n8n/pull/30205): The Form Trigger node now has a new "Show Headers" option, which, when enabled, includes the HTTP request headers from a form submission in the node's output data. Sensitive headers like authorization and cookie values are automatically redacted in execution logs, matching existing Webhook node behavior.
+* [Google BigQuery Node: Allow custom OAuth2 scopes](https://github.com/n8n-io/n8n/pull/33822): The Google BigQuery OAuth2 credential now supports custom OAuth2 scopes. By default it continues using the required BigQuery scopes, but users can toggle on Custom Scopes to reveal an editable Enabled Scopes field, pre-filled with the defaults, to request additional or narrower permissions. Custom scopes now persist across reconnects instead of resetting to defaults, matching behavior already available for other Google and Slack/Discord OAuth2 credentials.
+* [Form Node: Support multiple files when returning binary from form ending](https://github.com/n8n-io/n8n/pull/33780): The Form node's "Return Binary File" completion mode now supports returning multiple files. In the Input Data Field Name(s) setting, you can specify several binary field names separated by commas, and each will be downloaded when the form completion page loads, instead of only the single file supported previously.
+* [Link to data tables referenced by ID in resource locator](https://github.com/n8n-io/n8n/pull/33654): In the Data Table node's resource locator, selecting a table by ID now shows a clickable external-link icon, just like list mode. n8n looks up the table across all projects you can access, and only shows the link when it exists and is visible to you. Expressions that resolve to a concrete table ID are also supported.
+* [MCP Server Trigger Node: Present credential-connect link via elicitation](https://github.com/n8n-io/n8n/pull/33868): When the MCP Server Trigger blocks a tool call because a required credential isn't connected, the connection link is now presented through the client's native URL elicitation UI (for clients that support it, like ones advertising elicitation.url), instead of appearing as plain text some clients flag as suspicious. Clients without this capability, or if elicitation fails, still receive the original plain-text response with the connection URL, so existing behavior is unaffected for them.
+* [Merge Node: Add `NODES_MERGE_SQL_SANDBOX_MEMORY_LIMIT_MB` variable](https://github.com/n8n-io/n8n/pull/33652): Added a new environment variable, NODES_MERGE_SQL_SANDBOX_MEMORY_LIMIT_MB, letting admins configure the memory limit in MB, default 64, for the sandbox used by the Merge node's SQL-based combine mode. This helps avoid out-of-memory errors when processing large datasets in the SQL sandbox by allowing the limit to be increased as needed.
+* [Open logs panel on artifact execution and make execute button secondary](https://github.com/n8n-io/n8n/pull/34049): When the AI Assistant shows a workflow artifact, the logs panel now opens automatically as soon as an execution starts (whether triggered by you or the agent), making it easier to watch data flow through nodes. The embedded 'Execute workflow' button is now styled as a secondary action, since the conversation is the main focus. Regular editor behavior is unchanged.
+* [Merge Node: Add queryParameters option](https://github.com/n8n-io/n8n/pull/33385): The Merge node's Combine by SQL mode now supports a Query Parameters option, letting you bind values separately from the SQL query text using ? placeholders, similar to the Postgres and MySQL nodes. This helps avoid injecting expression values directly into the query string, improving safety and readability. A notice was added explaining how to use query parameters, with a link to documentation.
+* [Notion Node: Migrate to new API and overhaul the node](https://github.com/n8n-io/n8n/pull/33749): The Notion node has been overhauled with a new v3, migrating to Notion API 2026-03-11, which replaces database queries with data sources. It adds a Data Source resource (Get, Search), markdown get/update operations for pages and blocks, JSON block support, file downloads for database pages, and a reorderable block builder. The Notion Trigger now also supports data sources. Database IDs are no longer accepted for database-page query/create; a data source must be selected instead.
+* [Add Group/Ungroup context menu actions](https://github.com/n8n-io/n8n/pull/33839): You can now group and ungroup nodes directly from the canvas context menu. Right-clicking a valid node selection shows a new Group option (disabled when the selection can't form a valid group), and right-clicking a group shows Rename group and Ungroup nodes options, making it easier to organize workflows without keyboard shortcuts.
+* [Rocketchat Node: Add Subscriptions & IM ops](https://github.com/n8n-io/n8n/pull/31432): The Rocket.Chat node now supports a Subscriptions resource, letting you retrieve all subscriptions or mark a room as read, and a Direct Message (IM) resource to fetch messages from a direct message room, with optional pagination via Return All/Limit. These additions extend the node's API coverage beyond the existing Chat operations.
+* [Rename private credentials to end-user credentials](https://github.com/n8n-io/n8n/pull/33629): Renamed "private credentials" to "end-user credentials" throughout the app for consistency. Tooltips, dialogs, credential-type cards, connect-screen text, node/workflow issue messages, and backend errors now use the new terminology. "Private" pills are replaced with an identity icon across the credentials list, node picker, credential header, and canvas badges. Deleting or switching a connected end-user credential to Fixed now shows a type-to-confirm dialog with a correctly pluralized count of affected people, and unsupported-trigger warnings now name the specific trigger.
+* [Improve node group selection UX](https://github.com/n8n-io/n8n/pull/33893): Node groups on the canvas now behave like nodes for selection and context menus. Selecting a title bar or all members selects the whole group with a single selection ring, and selection persists through collapse/expand. Group context menus mirror multi-selection actions worded for the group, with new Expand/Collapse all groups and Expand/Collapse selected options, plus keyboard shortcuts. Selection rectangles now fully wrap groups.
+
+---
+
+## `n8n 2.30` Service Principal authentication across Microsoft nodes, plus 12 other features <a href="#n8n230" id="n8n230"></a>
 
 **Released:** 2026-07-07
 
@@ -36,7 +73,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.29` Microsoft Entra Service Principal authentication support, plus 13 other features
+## `n8n 2.29` Microsoft Entra Service Principal authentication support, plus 13 other features <a href="#n8n229" id="n8n229"></a>
 
 **Released:** 2026-06-30
 
@@ -57,7 +94,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.28` GitHub node adds pull request resource, plus 27 other features
+## `n8n 2.28` GitHub node adds pull request resource, plus 27 other features <a href="#n8n228" id="n8n228"></a>
 
 **Released:** 2026-06-23
 
@@ -92,7 +129,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.27.4` Google Ads node upgraded to API v21
+## `n8n 2.27.4` Google Ads node upgraded to API v21 <a href="#n8n2274" id="n8n2274"></a>
 
 **Released:** 2026-06-24
 
@@ -100,7 +137,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.27` Create variables and data tables from add menu, plus 17 other features
+## `n8n 2.27` Create variables and data tables from add menu, plus 17 other features <a href="#n8n227" id="n8n227"></a>
 
 **Released:** 2026-06-16
 
@@ -125,7 +162,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.26` AWS Assume Role support for Bedrock, plus 6 other features
+## `n8n 2.26` AWS Assume Role support for Bedrock, plus 6 other features <a href="#n8n226" id="n8n226"></a>
 
 **Released:** 2026-06-09
 
@@ -139,7 +176,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.25.1` Web search for agents, plus 13 other features
+## `n8n 2.25.1` Web search for agents, plus 13 other features <a href="#n8n2251" id="n8n2251"></a>
 
 **Released:** 2026-06-02
 
@@ -160,7 +197,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.23` Quick access to new AI chat, plus 9 other features
+## `n8n 2.23` Quick access to new AI chat, plus 9 other features <a href="#n8n223" id="n8n223"></a>
 
 **Released:** 2026-05-27
 
@@ -177,7 +214,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.22.5-exp` Quick MCP access toggle on workflow cards
+## `n8n 2.22.5-exp` Quick MCP access toggle on workflow cards <a href="#n8n2225-exp" id="n8n2225-exp"></a>
 
 **Released:** 2026-06-01
 
@@ -185,7 +222,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.22` Crypto node adds encryption and decryption, plus 10 other features
+## `n8n 2.22` Crypto node adds encryption and decryption, plus 10 other features <a href="#n8n222" id="n8n222"></a>
 
 **Released:** 2026-05-19
 
@@ -203,7 +240,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.21` Webhook signature verification added across trigger nodes, plus 23 other features
+## `n8n 2.21` Webhook signature verification added across trigger nodes, plus 23 other features <a href="#n8n221" id="n8n221"></a>
 
 **Released:** 2026-05-12
 
@@ -234,7 +271,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.20` Netlify Trigger node verifies webhook requests, plus 6 other features
+## `n8n 2.20` Netlify Trigger node verifies webhook requests, plus 6 other features <a href="#n8n220" id="n8n220"></a>
 
 **Released:** 2026-05-05
 
@@ -248,7 +285,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.19` New standalone MiniMax node added, plus 10 other features
+## `n8n 2.19` New standalone MiniMax node added, plus 10 other features <a href="#n8n219" id="n8n219"></a>
 
 **Released:** 2026-04-28
 
@@ -266,7 +303,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.18.5` Warning for AI gateway credentials on publish, plus 2 other features
+## `n8n 2.18.5` Warning for AI gateway credentials on publish, plus 2 other features <a href="#n8n2185" id="n8n2185"></a>
 
 **Released:** 2026-04-29
 
@@ -276,7 +313,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.18` Favoriting for projects, folders, workflows and data tables, plus 4 other features
+## `n8n 2.18` Favoriting for projects, folders, workflows and data tables, plus 4 other features <a href="#n8n218" id="n8n218"></a>
 
 **Released:** 2026-04-21
 
@@ -288,7 +325,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.17` New Moonshot Kimi and Alibaba Model Studio nodes, plus 5 other features
+## `n8n 2.17` New Moonshot Kimi and Alibaba Model Studio nodes, plus 5 other features <a href="#n8n217" id="n8n217"></a>
 
 **Released:** 2026-04-13
 
@@ -301,7 +338,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.16` Notion node now supports OAuth authentication, plus 4 other features
+## `n8n 2.16` Notion node now supports OAuth authentication, plus 4 other features <a href="#n8n216" id="n8n216"></a>
 
 **Released:** 2026-04-07
 
@@ -313,7 +350,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.15` WordPress node adds OAuth2 support, plus 3 other features
+## `n8n 2.15` WordPress node adds OAuth2 support, plus 3 other features <a href="#n8n215" id="n8n215"></a>
 
 **Released:** 2026-03-30
 
@@ -324,7 +361,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.14` New Databricks node with full API support, plus 8 other features
+## `n8n 2.14` New Databricks node with full API support, plus 8 other features <a href="#n8n214" id="n8n214"></a>
 
 **Released:** 2026-03-24
 
@@ -340,7 +377,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.13` Baserow node adds batch operations support, plus 7 other features
+## `n8n 2.13` Baserow node adds batch operations support, plus 7 other features <a href="#n8n213" id="n8n213"></a>
 
 **Released:** 2026-03-16
 
@@ -355,7 +392,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.12` Switch versions directly in workflow history diff, plus 6 other features
+## `n8n 2.12` Switch versions directly in workflow history diff, plus 6 other features <a href="#n8n212" id="n8n212"></a>
 
 **Released:** 2026-03-09
 
@@ -369,7 +406,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.11.2` Checkbox confirmation added to quick connect
+## `n8n 2.11.2` Checkbox confirmation added to quick connect <a href="#n8n2112" id="n8n2112"></a>
 
 **Released:** 2026-03-09
 
@@ -377,7 +414,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.11` Compare workflow history versions side by side, plus 12 other features
+## `n8n 2.11` Compare workflow history versions side by side, plus 12 other features <a href="#n8n211" id="n8n211"></a>
 
 **Released:** 2026-03-03
 
@@ -397,7 +434,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.10` Streaming canvas chat with Chat SDK, plus 7 other features
+## `n8n 2.10` Streaming canvas chat with Chat SDK, plus 7 other features <a href="#n8n210" id="n8n210"></a>
 
 **Released:** 2026-02-23
 
@@ -412,7 +449,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.9.4-exp` Setup panel verifies credentials before marking complete
+## `n8n 2.9.4-exp` Setup panel verifies credentials before marking complete <a href="#n8n294-exp" id="n8n294-exp"></a>
 
 **Released:** 2026-02-27
 
@@ -420,7 +457,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.9` Focused Nodes for targeted AI Builder context, plus 10 other features
+## `n8n 2.9` Focused Nodes for targeted AI Builder context, plus 10 other features <a href="#n8n29" id="n8n29"></a>
 
 **Released:** 2026-02-16
 
@@ -438,7 +475,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.8` External secrets sharing and project settings integration, plus 12 other features
+## `n8n 2.8` External secrets sharing and project settings integration, plus 12 other features <a href="#n8n28" id="n8n28"></a>
 
 **Released:** 2026-02-11
 
@@ -458,7 +495,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.7` Secret store connection modal for multiple providers, plus 10 other features
+## `n8n 2.7` Secret store connection modal for multiple providers, plus 10 other features <a href="#n8n27" id="n8n27"></a>
 
 **Released:** 2026-02-02
 
@@ -476,7 +513,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.6` Kafka trigger node gets batch processing, plus 12 other features
+## `n8n 2.6` Kafka trigger node gets batch processing, plus 12 other features <a href="#n8n26" id="n8n26"></a>
 
 **Released:** 2026-01-26
 
@@ -496,7 +533,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.5` ChromaDB node adds local vector database support, plus 12 other features
+## `n8n 2.5` ChromaDB node adds local vector database support, plus 12 other features <a href="#n8n25" id="n8n25"></a>
 
 **Released:** 2026-01-20
 
@@ -516,7 +553,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.4` Workflows now autosave automatically as you edit, plus 6 other features
+## `n8n 2.4` Workflows now autosave automatically as you edit, plus 6 other features <a href="#n8n24" id="n8n24"></a>
 
 **Released:** 2026-01-12
 
@@ -530,7 +567,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.3` Data Table node gains full CRUD operations, plus 4 other features
+## `n8n 2.3` Data Table node gains full CRUD operations, plus 4 other features <a href="#n8n23" id="n8n23"></a>
 
 **Released:** 2026-01-05
 
@@ -542,7 +579,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.2` Connect workflows to MCP from settings, plus 1 other feature
+## `n8n 2.2` Connect workflows to MCP from settings, plus 1 other feature <a href="#n8n22" id="n8n22"></a>
 
 **Released:** 2025-12-22
 
@@ -551,7 +588,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.1` Credential resolvers for dynamic credential mapping, plus 10 other features
+## `n8n 2.1` Credential resolvers for dynamic credential mapping, plus 10 other features <a href="#n8n21" id="n8n21"></a>
 
 **Released:** 2025-12-15
 
@@ -569,7 +606,7 @@ Entries are generated from merged pull requests and reviewed before publishing. 
 
 ---
 
-## `n8n 2.0` Workflow activation now requires a trigger node, plus 4 other features
+## `n8n 2.0` Workflow activation now requires a trigger node, plus 4 other features <a href="#n8n20" id="n8n20"></a>
 
 **Released:** 2025-12-08
 

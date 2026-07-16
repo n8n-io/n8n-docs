@@ -21,7 +21,7 @@ layout:
 
 This section lists the environment variables that you can use to change n8n's configuration settings when self-hosting n8n.
 
-For the complete and most up-to-date list of all environment variables, see the full reference in the n8n docs repository: [Full environment variables index](https://github.com/n8n-io/n8n-docs/tree/main/docs/hosting/configuration/environment-variables).
+For the complete and most up-to-date list of all environment variables, see the full reference in the n8n docs repository: [Full environment variables index](https://github.com/n8n-io/n8n-docs/tree/main/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
 
 {% hint style="info" %}
 **File-based configuration**

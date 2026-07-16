@@ -212,6 +212,32 @@ Consider using coding agents (such as Claude Code or Google ADK agents) instead 
 
 The n8n MCP server exposes tools for workflow management, workflow building, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md).
 
+## n8n Skills for coding agents
+
+When you connect a coding agent to the n8n MCP server, the agent can build and edit workflows, but it doesn't automatically know n8n's conventions for expressions, node configuration, error handling, and other patterns. n8n Skills give the agent that knowledge so it gets workflows right the first time.
+
+n8n Skills are a set of capability modules published in the [n8n-io/skills](https://github.com/n8n-io/skills) repository. They pair with the instance-level MCP server and include:
+
+* **13 capability skills** covering workflow best practices, including subworkflows, expressions, loops, AI agents, error handling, credentials, Data Tables, and debugging.
+* **50+ reference documents and examples** with per-node guidance, decision trees, and copy-paste workflow snippets.
+* **Hooks** that load the right guidance automatically, so the agent reads the relevant skill before it makes high-impact MCP calls.
+
+A 14th meta-skill, `using-n8n-skills-official`, routes the agent to the matching capability skill for each task.
+
+### Why use skills <a href="#why-use-skills" id="why-use-skills"></a>
+
+Skills load guidance at the moment the agent needs it, rather than relying on the model's general knowledge. This helps the agent:
+
+* Follow n8n best practices for the node or feature it's working with.
+* Avoid common mistakes, such as incorrect expression syntax or missing error handling.
+* Produce workflows that need less back-and-forth to fix.
+
+The skills are plain Markdown, so you can read, fork, and modify them for your own conventions.
+
+### Installing skills <a href="#installing-skills" id="installing-skills"></a>
+
+The [n8n-io/skills](https://github.com/n8n-io/skills) repository has up-to-date install instructions for Claude Code, Codex, and other coding agents. Follow the steps in the repository README to add the skills to your agent.
+
 ## Examples <a href="#examples" id="examples"></a>
 
 #### Connecting Lovable to n8n MCP server <a href="#connecting-lovable-to-n8n-mcp-server" id="connecting-lovable-to-n8n-mcp-server"></a>

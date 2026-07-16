@@ -72,7 +72,7 @@ When configuring [Supabase credentials](../../credentials/supabase.md), the `loc
 
 If both n8n and Supabase are running in Docker in separate containers, you can use Docker networking to connect them.
 
-Configure Supabase to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official [Docker compose configuration](https://supabase.com/docs/guides/self-hosting/docker) already does this this). Add both the Supabase and n8n components to the same [user-defined bridge network](https://docs.docker.com/engine/network/drivers/bridge/) if you aren't already managing them together in the same Docker Compose file.
+Configure Supabase to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official [Docker compose configuration](https://supabase.com/docs/guides/self-hosting/docker) already does this). Add both the Supabase and n8n components to the same [user-defined bridge network](https://docs.docker.com/engine/network/drivers/bridge/) if you aren't already managing them together in the same Docker Compose file.
 
 When configuring [Supabase credentials](../../credentials/supabase.md), use the Supabase API gateway container's name (`supabase-kong` by default) as the host address instead of `localhost`. For example, if you use the default configuration, you would set the **Host** to `http://supabase-kong:8000`.
 

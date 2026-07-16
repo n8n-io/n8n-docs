@@ -30,6 +30,7 @@ A Project Admin role has the highest level of permissions. Project admins can:
 * Manage project settings: Change name, delete project.
 * Manage project members: Invite members and remove members, change members' roles.
 * View, create, update, and delete any workflows, credentials, or executions within a project. 
+* Create [end-user credentials](../../manage-credentials/end-user-credentials.md). By default, only project admins can create this credential type, but you can grant it to other users through custom roles.
 
 ## Project Editor <a href="#project-editor" id="project-editor"></a>
 

@@ -9,6 +9,10 @@ layout:
 [share-credentials-securely.md](share-credentials-securely.md)
 {% endcontent-ref %}
 
+{% content-ref url="end-user-credentials.md" %}
+[end-user-credentials.md](end-user-credentials.md)
+{% endcontent-ref %}
+
 {% content-ref url="credential-overwrites.md" %}
 [credential-overwrites.md](credential-overwrites.md)
 {% endcontent-ref %}

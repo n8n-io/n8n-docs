@@ -23,6 +23,8 @@ layout:
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
 
+* Credentials stored in External secrets stores only resolve in Credentials fields, not in any other fields supporting expressions.
+
 
 You can use an external secrets store to manage credentials[^1] for n8n.
 
@@ -254,7 +256,7 @@ You can share a vault with a project so that only that project's credentials can
 {% hint style="info" %}
 **Version `2.13.0` and later**
 
-Before version `2.13.0`, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-account-types.md) as a member of the project.
+Before version `2.13.0`, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
 From version `2.13.0`, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.

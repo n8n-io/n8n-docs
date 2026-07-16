@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/)
+* [Facebook Trigger](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md)
 
 {% hint style="info" %}
 **Facebook Graph API credentials**
@@ -73,24 +73,29 @@ Refer to the detailed instructions below for each step.
 To create a Meta app:
 
 1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps) and select **Create App**.
-2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
-3. Select **Other**, then select **Next**.
-4. Select **Business** and **Next**.
-5. Complete the essential information:
+2. Complete the app details:
    * Add an **App name**.
    * Add an **App contact email**.
-   * Here again you can connect to a business portfolio or skip it.
+3. Select the **Use case** that aligns with how you wish to use the app. The Webhooks product is part of Meta's **Business** suite, so select **Other**, then select **Next**.
+4. For **App type**, select **Business** and **Next**.
+5. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, leave it at **No business portfolio selected**.
 6. Select **Create app**.
-7. The **Add products to your app** page opens.
-8. Select **App settings > Basic** from the left menu.
-9. Enter a **Privacy Policy URL**. (Required to take the app "Live.")
-10. Select **Save changes**.
-11. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
-12. In the left menu, select **Add Product**.
-13. The **Add products to your app** page appears. Select **Webhooks**.
-14. The **Webhooks** product opens.
+7. The **Add products to your app** page opens. Select **Webhooks**.
 
 Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+
+### Taking a Meta app live
+
+{% hint style="info" %}
+**When to take your app Live**
+
+In **Development** mode, only people with a role on the app (Administrator, Developer, or Tester) can authenticate or generate tokens. If you're only connecting your own account, you can leave the app in Development mode.
+{% endhint %}
+
+1. Select **App settings > Basic** from the left menu.
+2. Enter a **Privacy Policy URL**. (Required before you can take the app Live.)
+3. Select **Save changes**.
+4. If you need users without a role on the app to authenticate, toggle the **App Mode** from **Development** to **Live**.
 
 For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes) and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types).
 
@@ -126,7 +131,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
    4. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
    5. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
 
-Refer to the [Facebook Trigger node](../trigger-nodes/n8n-nodes-base.facebooktrigger/) documentation for more information.
+Refer to the [Facebook Trigger node](../trigger-nodes/n8n-nodes-base.facebooktrigger/README.md) documentation for more information.
 
 ### Optional: Add an App Secret <a href="#optional-add-an-app-secret" id="optional-add-an-app-secret"></a>
 

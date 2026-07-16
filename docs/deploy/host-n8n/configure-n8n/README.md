@@ -1,9 +1,25 @@
 ---
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
-# Configure n8n <a href="#configure-n8n" id="configure-n8n"></a>
+
+# Configure n8n
 
 {% content-ref url="basic-configuration.md" %}
 [basic-configuration.md](basic-configuration.md)
@@ -35,6 +51,10 @@ layout:
 
 {% content-ref url="set-up-task-runners.md" %}
 [set-up-task-runners.md](set-up-task-runners.md)
+{% endcontent-ref %}
+
+{% content-ref url="set-up-ai-assistant-preview.md" %}
+[set-up-ai-assistant-preview.md](set-up-ai-assistant-preview.md)
 {% endcontent-ref %}
 
 {% content-ref url="manage-your-license.md" %}

@@ -42,9 +42,9 @@ A Project Viewer is effectively a `read-only` role with access to all workflows,
 Viewers aren't able to manually execute any workflows that exist in a project. 
 
 {% hint style="info" %}
-**Role types and account types**
+**Project roles and instance roles**
 
-Role types and [account types](../understand-account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](organize-work-in-projects.md).
+n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) control what a user can do across the entire instance. Project roles control what a user can do within a specific [project](organize-work-in-projects.md), and a user can have different project roles in different projects.
 {% endhint %}
 
 | Permission | Admin | Editor | Viewer | 

@@ -12,7 +12,7 @@ layout:
 
 ## `$execution.customData`.**`get()`** <a href="#dollarexecutioncustomdataget" id="dollarexecutioncustomdataget"></a>
 
-**Description:** Returns the custom execution data stored under the given key. <a href="/workflows/executions/custom-executions-data/">More info</a>
+**Description:** Returns the custom execution data stored under the given key. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>
 
 **Syntax:** `$execution.customData`.get(key)
 
@@ -33,7 +33,7 @@ layout:
 
 ## `$execution.customData`.**`getAll()`** <a href="#dollarexecutioncustomdatagetall" id="dollarexecutioncustomdatagetall"></a>
 
-**Description:** Returns all the key-value pairs of custom data that have been set in the current execution. <a href="/workflows/executions/custom-executions-data/">More info</a>
+**Description:** Returns all the key-value pairs of custom data that have been set in the current execution. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>
 
 **Syntax:** `$execution.customData`.getAll()
 
@@ -49,7 +49,7 @@ layout:
 
 ## `$execution.customData`.**`set()`** <a href="#dollarexecutioncustomdataset" id="dollarexecutioncustomdataset"></a>
 
-**Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
+**Description:** Stores custom execution data under the key specified. Use this to easily filter executions by this data. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>
 
 **Syntax:** `$execution.customData`.set(key, value)
 
@@ -69,7 +69,7 @@ layout:
 
 ## `$execution.customData`.**`setAll()`** <a href="#dollarexecutioncustomdatasetall" id="dollarexecutioncustomdatasetall"></a>
 
-**Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. <a href="/workflows/executions/custom-executions-data/">More info</a>
+**Description:** Sets multiple key-value pairs of  custom data for the execution. Use this to easily filter executions by this data. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>
 
 **Syntax:** `$execution.customData`.setAll(obj)
 

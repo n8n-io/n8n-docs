@@ -31,7 +31,7 @@ You can find authentication information for this node [here](../credentials/kafk
 {% hint style="info" %}
 **Schema Registry**
 
-To decode messages with an authenticated Confluent Schema Registry (for example, Confluent Cloud), enable **Use Schema Registry** in the node and add a [Schema Registry credential](/integrations/builtin/credentials/schemaregistry.md).
+To decode messages with an authenticated Confluent Schema Registry (for example, Confluent Cloud), enable **Use Schema Registry** in the node and add a [Schema Registry credential](../credentials/schemaregistry.md).
 {% endhint %}
 
 {% hint style="warning" %}

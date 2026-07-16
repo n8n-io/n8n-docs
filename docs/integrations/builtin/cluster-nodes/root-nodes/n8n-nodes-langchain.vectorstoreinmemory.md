@@ -45,7 +45,7 @@ On this page, you'll find the node parameters for the Simple Vector Store node, 
 {% hint style="info" %}
 **This node is different from AI memory nodes**
 
-The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](../sub-nodes/n8n-nodes-langchain.memorybufferwindow/).
+The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](../sub-nodes/n8n-nodes-langchain.memorybufferwindow/README.md).
 
 This node creates a [vector database](#user-content-fn-2)[^2] in the app memory.
 {% endhint %}
@@ -80,13 +80,13 @@ You can see an example of in step 2 of [this template](https://n8n.io/workflows/
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Simple Vector Store node directly to the tool[^3] connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
+You can connect the Simple Vector Store node directly to the tool[^3] connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Simple Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Simple Vector Store node to fetch documents from the Simple Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Simple Vector Store node to fetch documents from the Simple Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Simple Vector Store.
 

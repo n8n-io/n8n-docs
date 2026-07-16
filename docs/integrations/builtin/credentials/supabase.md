@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Supabase](../app-nodes/n8n-nodes-base.supabase/)
+* [Supabase](../app-nodes/n8n-nodes-base.supabase/README.md)
 * [Supabase Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -50,16 +50,22 @@ Create a [Supabase](https://supabase.com/dashboard/sign-up) account.
 
 Refer to [Supabase's API documentation](https://supabase.com/docs/guides/api) for more information about the service.
 
-## Using access token <a href="#using-access-token" id="using-access-token"></a>
+## Using secret key <a href="#using-secret-key" id="using-secret-key"></a>
 
 To configure this credential, you'll need:
 
 * A **Host**
-* A **Service Role Secret**
+* A **Secret Key**
 
-To generate your API Key:
+The credential connects to your project using the Supabase [Data API](https://supabase.com/docs/guides/api), which must be enabled. You can check and enable it in your project's [Data API settings](https://supabase.com/dashboard/project/_/integrations/data_api/overview).
+
+To generate your secret key:
 
 1. In your Supabase account, go to the **Dashboard** and create or select a project for which you want to create an API key.
-2. Go to [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api) to see the API Settings for your project.
-3. Copy the **URL** from the **Project URL** section and enter it as your n8n **Host**. Refer to [API URL and keys](https://supabase.com/docs/guides/api#api-url-and-keys) for more detailed instruction.
-4. Reveal and copy the **Project API key** for the `service_role`. Copy that key and enter it as your n8n **Service Role Secret**. Refer to [Understanding API Keys](https://supabase.com/docs/guides/api/api-keys) for more information on the `service_role` privileges.
+2. Go to [**Integrations > Data API**](https://supabase.com/dashboard/project/_/integrations/data_api/overview) and copy the **Project URL**. Enter it as your n8n **Host**, omitting the `/rest/v1` path at the end (use `https://your_project.supabase.co`, not `https://your_project.supabase.co/rest/v1`).
+3. Go to [**Project Settings > API Keys**](https://supabase.com/dashboard/project/_/settings/api-keys) to see the API keys for your project.
+4. Create or reveal a **secret key** and enter it as your n8n **Secret Key**. Refer to [Understanding API keys](https://supabase.com/docs/guides/getting-started/api-keys) for more information.
+
+{% hint style="info" %}
+Existing credentials that use a legacy `service_role` secret keep working, but Supabase is [phasing out legacy API keys](https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys). Replace the legacy secret with a new secret key before legacy keys are disabled at the end of 2026.
+{% endhint %}

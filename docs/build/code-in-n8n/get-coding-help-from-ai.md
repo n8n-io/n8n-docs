@@ -1,22 +1,32 @@
 ---
 title: AI coding
-description: Use GPT to generate code in the Code node.
 contentType: explanation
 nodeTitle: Get coding help from AI
 originalFilePath: code/ai-code.md
-originalUrl: 'https://docs.n8n.io/code/ai-code'
-url: 'https://docs.n8n.io/build/code-in-n8n/get-coding-help-from-ai'
+originalUrl: https://docs.n8n.io/code/ai-code
+url: https://docs.n8n.io/build/code-in-n8n/get-coding-help-from-ai
+description: Use GPT to generate code in the Code node.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# AI coding with GPT <a href="#ai-coding-with-gpt" id="ai-coding-with-gpt"></a>
-
-Not available on self-hosted.  
-
-Python isn't supported.
-///
+# Get coding help from AI
 
 ## Use AI in the Code node <a href="#use-ai-in-the-code-node" id="use-ai-in-the-code-node"></a>
 
@@ -37,8 +47,6 @@ The ChatGPT implementation in n8n has the following limitations:
 * May have issues if there are a lot of nodes before the code node.
 
 ## Writing good prompts <a href="#writing-good-prompts" id="writing-good-prompts"></a>
-
-
 
 Writing good prompts increases the chance of getting useful code back.
 
@@ -120,7 +128,7 @@ Example workflow
 
 In the **Summarize** Code node, enter this prompt:
 
-> Create a markdown text for Slack that counts how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. A feature has the property "Feature", a bug has the property "Bug" and an idea has the property "Bug". Also, list the five top submissions by vote in that message. Use "<url|text>" as markdown for links.
+> Create a markdown text for Slack that counts how many ideas, features and bugs have been submitted. The type of submission is saved in the property\_type field. A feature has the property "Feature", a bug has the property "Bug" and an idea has the property "Bug". Also, list the five top submissions by vote in that message. Use "\<url|text>" as markdown for links.
 
 Take a look at the code the AI generates.
 
@@ -169,8 +177,6 @@ ${topSubmissionText}`;
 return [{ json: { slackMessage } }];
 ```
 
-
-
 ### Reference incoming node data explicitly <a href="#reference-incoming-node-data-explicitly" id="reference-incoming-node-data-explicitly"></a>
 
 If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
@@ -185,7 +191,7 @@ Example workflow
 
 In the second Code node, enter this prompt:
 
-> The data in "Mock data" represents a list of people. For each person, return a new item containing personal_info.first_name and work_info.job_title.
+> The data in "Mock data" represents a list of people. For each person, return a new item containing personal\_info.first\_name and work\_info.job\_title.
 
 This is the JavaScript you need:
 
@@ -207,8 +213,6 @@ return newItems;
 ### Related resources <a href="#related-resources" id="related-resources"></a>
 
 Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding), which includes example prompts.
-
-
 
 ## Fixing the code <a href="#fixing-the-code" id="fixing-the-code"></a>
 

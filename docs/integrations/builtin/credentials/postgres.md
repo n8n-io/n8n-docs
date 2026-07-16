@@ -35,8 +35,8 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Postgres](../app-nodes/n8n-nodes-base.postgres/)
-* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
+* [Postgres](../app-nodes/n8n-nodes-base.postgres/README.md)
+* [Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md)
 * [Postgres Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md)
 * [PGVector Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md)
 
@@ -110,6 +110,6 @@ Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org
 
 Only use the **SSH Tunnel** setting if:
 
-* You're using the credential with the [Postgres](../app-nodes/n8n-nodes-base.postgres/) node (Agent node doesn't support SSH tunnels).
+* You're using the credential with the [Postgres](../app-nodes/n8n-nodes-base.postgres/README.md) node (Agent node doesn't support SSH tunnels).
 * You have an SSH server running on the same machine as the Postgres server.
 * You have a user account that can log in using `ssh`.

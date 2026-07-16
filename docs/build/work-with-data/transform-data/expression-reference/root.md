@@ -237,7 +237,7 @@ layout:
 
 ## **`$json`** <a href="#dollarjson" id="dollarjson"></a>
 
-**Description:** Returns the JSON input data to the current node, for the current item. Shorthand for <code>$input.item.json</code>. <a href="/data/data-structure/">More info</a>
+**Description:** Returns the JSON input data to the current node, for the current item. Shorthand for <code>$input.item.json</code>. <a href="../../understand-n8ns-data-structure.md">More info</a>
 
 **Syntax:** **`$json`**
 
@@ -361,7 +361,7 @@ When in a ‘Merge’ node, always uses the first input connector.
 
 ## **`$secrets`** <a href="#dollarsecrets" id="dollarsecrets"></a>
 
-**Description:** The secrets from an <a href="/external-secrets/">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
+**Description:** The secrets from an <a href="https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-secrets">external secrets vault</a>, if configured. Secret values are never displayed to the user. Only available in credential fields.
 
 **Syntax:** **`$secrets`**
 
@@ -383,7 +383,7 @@ Uses the instance’s time zone (unless overridden in the workflow’s settings)
 
 ## **`$vars`** <a href="#dollarvars" id="dollarvars"></a>
 
-**Description:** The <a href="/code/variables/">variables</a> available to the workflow
+**Description:** The <a href="../../../code-in-n8n/define-custom-variables.md">variables</a> available to the workflow
 
 **Syntax:** **`$vars`**
 

@@ -57,7 +57,7 @@ These terms make the environment variables easier to reason about:
 - **Schedule**: a recurring rule, such as a Schedule Trigger node's "every 15 minutes" setting. The scheduler stores each schedule in the database.
 - **Run**: a single firing of a schedule at a specific time. The scheduler records upcoming runs ahead of time as individual rows.
 
-The scheduler moves each run through four stages, and each stage has its own environment variables:
+The scheduler moves each run through four stages, and each stage has its own [environment variables](basic-configuration/use-environment-variables/scheduler.md):
 
 1. **Materialization.** The scheduler scans your active schedules and records the runs coming up soon (within the *materialization window*). This commits runs to the database before they're due.
 2. **Execution.** The scheduler checks for recorded runs whose time has arrived, claims each one so no other instance takes it, and starts the workflow.

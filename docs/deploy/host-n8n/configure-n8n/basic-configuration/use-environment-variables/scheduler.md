@@ -27,15 +27,13 @@ These environment variables configure the durable scheduler, which runs time-bas
 The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}
 
-## Environment variables <a href="#environment-variables" id="environment-variables"></a>
-
-### Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
+## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether to turn on the durable scheduler. When on, the scheduler stores scheduled runs in the database before they execute, so a restart doesn't drop them and, across multiple instances, each run executes once. Requires `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to take over Schedule Trigger nodes. |
 
-### Materialization <a href="#materialization-vars" id="materialization-vars"></a>
+## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
 
 Controls how far ahead and how often the scheduler records upcoming runs to the database.
 
@@ -45,7 +43,7 @@ Controls how far ahead and how often the scheduler records upcoming runs to the 
 | `N8N_SCHEDULER_MATERIALIZATION_INTERVAL` | Number | `10` | How often, in seconds, the scheduler scans active schedules to record the runs falling within the window. Must be greater than 0. |
 | `N8N_SCHEDULER_MATERIALIZATION_TIMEOUT` | Number | `60` | How long, in seconds, a single scan may run before it's abandoned and retried on the next interval. Guards against a scan stuck on a slow database. Must be greater than 0. |
 
-### Execution <a href="#execution-vars" id="execution-vars"></a>
+## Execution <a href="#execution-vars" id="execution-vars"></a>
 
 Controls how often the scheduler starts due runs and how it claims each one so only one instance runs it.
 
@@ -56,7 +54,7 @@ Controls how often the scheduler starts due runs and how it claims each one so o
 | `N8N_SCHEDULER_LEASE_DURATION` | Number | `60` | How long, in seconds, an instance holds an exclusive claim on a run it picked up, so no other instance starts the same one. If the instance stops without finishing, the claim expires after this long and another instance may take over. Keep it comfortably above the time a run needs to get going: too short risks a double run, too long delays recovery after a crash. Must be greater than 0. |
 | `N8N_SCHEDULER_CLAIM_BATCH_SIZE` | Number | `100` | The most runs a single claim takes from the queue in one pass. Larger batches drain a backlog faster but hold more work on one instance per tick. Must be greater than 0. |
 
-### Recovery <a href="#recovery-vars" id="recovery-vars"></a>
+## Recovery <a href="#recovery-vars" id="recovery-vars"></a>
 
 Controls the reaper, which releases runs an instance claimed but never finished so another instance can take them.
 
@@ -66,7 +64,7 @@ Controls the reaper, which releases runs an instance claimed but never finished 
 | `N8N_SCHEDULER_REAPER_BATCH_SIZE` | Number | `100` | The most expired-claim runs a single reaper pass reclaims. Larger batches recover a backlog faster but hold more work on one instance per pass. Must be greater than 0. |
 | `N8N_SCHEDULER_REAPER_TIMEOUT` | Number | `60` | How long, in seconds, a single recovery pass may run before it's abandoned and retried on the next interval. Must be greater than 0. |
 
-### Retention <a href="#retention-vars" id="retention-vars"></a>
+## Retention <a href="#retention-vars" id="retention-vars"></a>
 
 Controls how long the scheduler keeps finished runs as history and how often it deletes old ones. n8n keeps failed and missed runs longer than clean ones so you have time to notice and debug a problem.
 
@@ -77,7 +75,7 @@ Controls how long the scheduler keeps finished runs as history and how often it 
 | `N8N_SCHEDULER_RETENTION_INTERVAL` | Number | `3600` | How often, in seconds, the scheduler deletes finished runs older than the retention windows. Defaults to one hour. Must be greater than 0. |
 | `N8N_SCHEDULER_RETENTION_TIMEOUT` | Number | `300` | How long, in seconds, a single cleanup pass may run before it's abandoned and retried on the next interval. Defaults to five minutes. Must be greater than 0. |
 
-### Coordination across instances <a href="#coordination-vars" id="coordination-vars"></a>
+## Coordination across instances <a href="#coordination-vars" id="coordination-vars"></a>
 
 Controls how the scheduler overlaps its background passes and spreads database load across instances.
 
@@ -86,7 +84,7 @@ Controls how the scheduler overlaps its background passes and spreads database l
 | `N8N_SCHEDULER_MAX_CONCURRENT_PASSES` | Number | `10` | The most background passes of the same kind that can run at once on one instance, when the database supports overlapping passes (PostgreSQL). If a pass comes due while the limit is already in use, n8n skips it. On SQLite, passes never overlap, so this setting has no effect. Must be greater than 0. |
 | `N8N_SCHEDULER_JITTER_RATIO` | Number | `0.1` | A small random variation added to the timing of each periodic pass, as a fraction of the interval. With `0.1`, a pass set to run every 10 seconds actually runs every 9 to 11 seconds. This spreads out database queries from instances started at the same time, such as during a rolling deploy. Set it to `0` for exact intervals, or raise it to spread load more evenly. Must be at least 0 and below 1. |
 
-### Schedule behavior <a href="#behavior-vars" id="behavior-vars"></a>
+## Schedule behavior <a href="#behavior-vars" id="behavior-vars"></a>
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

@@ -4,7 +4,7 @@
 * [Manage users and access](manage-users-and-access/README.md)
   * [Set up for Cloud](manage-users-and-access/set-up-for-cloud.md)
   * [Add and remove users](manage-users-and-access/add-and-remove-users.md)
-  * [Understand account types](manage-users-and-access/understand-account-types.md)
+  * [Understand instance roles](manage-users-and-access/understand-instance-roles.md)
   * [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md)
     * [See available roles](manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
     * [Organize work in projects](manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)

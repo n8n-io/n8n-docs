@@ -125,7 +125,7 @@ This agent supports the following chat models:
 * [Mattermost](../../../app-nodes/n8n-nodes-base.mattermost.md)
 * [Mautic](../../../app-nodes/n8n-nodes-base.mautic.md)
 * [Medium](../../../app-nodes/n8n-nodes-base.medium.md)
-* [Microsoft Excel 365](../../../app-nodes/n8n-nodes-base.microsoftexcel.md)
+* [Microsoft Excel (OneDrive)](../../../app-nodes/n8n-nodes-base.microsoftexcel.md)
 * [Microsoft OneDrive](../../../app-nodes/n8n-nodes-base.microsoftonedrive.md)
 * [Microsoft Outlook](../../../app-nodes/n8n-nodes-base.microsoftoutlook.md)
 * [Microsoft SQL](../../../app-nodes/n8n-nodes-base.microsoftsql.md)

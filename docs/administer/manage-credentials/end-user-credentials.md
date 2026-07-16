@@ -87,7 +87,7 @@ An admin can see that an end-user credential template exists and that it has con
 * View anything about individual connections
 * View a connection's secrets
 * Use anyone's connected account in their own workflows
-* See the redacted output of executions that ran on someone else's connection
+* See the redacted output of executions that ran on another user's connection
 
 Sharing works the same as any credential, but only shares the template, not the connected accounts. An admin can share it into other projects or with other users, and each recipient connects their own account.
 

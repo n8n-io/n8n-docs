@@ -129,6 +129,20 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 [Browse Pinecone Vector Store node documentation integration templates](https://n8n.io/integrations/pinecone-vector-store) or [search all templates](https://n8n.io/workflows/)
 
+## FAQ
+
+### How do I store documents in Pinecone from n8n?
+
+Use the Pinecone Vector Store as a [regular node](#use-as-a-regular-node-to-insert-update-and-retrieve-documents) with the **Insert Documents** operation, and select your **Pinecone Index**. The node stores the documents in Pinecone as vectors, so you can retrieve them later.
+
+### How do I retrieve the most relevant documents for a query?
+
+Enter your search in the **Prompt** field and set **Limit** to control how many results come back, for example `10` for the ten best matches. See the [Get Many parameters](#get-many-parameters). To feed the results into a summarization chain, use a [retriever](#use-a-retriever-to-fetch-documents) with the Question and Answer Chain node.
+
+### How do I connect the vector store to an AI agent as a tool?
+
+Connect the Pinecone Vector Store node to the AI agent's tool connector, so the agent can query the store when it answers. See [Connect directly to an AI agent as a tool](#connect-directly-to-an-ai-agent-as-a-tool). To summarize the results instead of returning raw documents, use the [Vector Store Question Answer Tool](#use-the-vector-store-question-answer-tool-to-answer-questions).
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.

@@ -12,7 +12,10 @@ GitBook rules enforced (see docs/contribute + the internal-linking guide):
   2. A relative `.md` link must point at a file that exists.
   3. Relative `../` links can't cross GitBook spaces (top-level folders under
      docs/). Cross-space links must use an app.gitbook.com URL, so a relative
-     link resolving into another space is reported.
+     link resolving into another space is reported. An app.gitbook.com link's
+     page path is checked against a `.md` file in the target space, EXCEPT for
+     GitBook-generated subtrees (see GENERATED_PATH_PREFIXES) that have no `.md`
+     source to resolve against, e.g. the OpenAPI-rendered API reference.
 
 External URLs (http/https), mailto:, in-page anchors (#...), and links inside
 code blocks are ignored. See EXCLUDE_FILES for intentional example links.
@@ -68,10 +71,27 @@ def load_space_ids() -> dict[str, str]:
 SPACE_ID_TO_FOLDER = load_space_ids()
 
 # Run-level stats for coverage transparency (not errors).
-_STATS = {"unknown_space_ids": set(), "unknown_space_links": 0}
+_STATS = {"unknown_space_ids": set(), "unknown_space_links": 0, "generated_links": 0}
 
 # Hidden/utility spaces: include mechanisms, not real link targets.
 HIDDEN_SPACES = {"_workflows", "reusable-content"}
+
+# Sub-trees inside a space whose pages GitBook generates (e.g. the public API
+# reference, rendered from an OpenAPI spec) rather than backing them with a `.md`
+# file in this repo. A cross-space link into one of these paths has no source
+# file to resolve against, so we accept it instead of reporting a false positive.
+# Keyed by space folder; values are path prefixes relative to the space root.
+GENERATED_PATH_PREFIXES: dict[str, tuple[str, ...]] = {
+    "connect": ("n8n-api",),  # public REST API reference, generated from OpenAPI
+}
+
+
+def is_generated_page(folder: str, page_path: str) -> bool:
+    """True if page_path falls under a GitBook-generated subtree of the space."""
+    return any(
+        page_path == prefix or page_path.startswith(prefix + "/")
+        for prefix in GENERATED_PATH_PREFIXES.get(folder, ())
+    )
 
 # Asset extensions we don't treat as doc-link violations (checked for existence
 # only, not for the .md rule).
@@ -205,6 +225,11 @@ def classify_cross_space(target: str):
     if any(seg in ("", ".", "..") for seg in segments):
         return broken
     if (base / (page_path + ".md")).is_file() or (base / page_path).is_dir():
+        return None
+    if is_generated_page(folder, page_path):
+        # No `.md` source in the repo, but GitBook generates this page (e.g. the
+        # OpenAPI-rendered API reference), so there's nothing to verify against.
+        _STATS["generated_links"] += 1
         return None
     return broken
 
@@ -344,6 +369,13 @@ def main() -> int:
             f"ℹ️  Skipped {n_links} cross-space link(s) to {n_ids} space ID(s) not in "
             f"the style-guide table (e.g. the reusable-content utility space); "
             f"can't verify these.\n"
+        )
+
+    if _STATS["generated_links"]:
+        print(
+            f"ℹ️  Accepted {_STATS['generated_links']} cross-space link(s) to "
+            f"GitBook-generated pages (e.g. the OpenAPI API reference) that have "
+            f"no .md source to verify.\n"
         )
 
     if errors:

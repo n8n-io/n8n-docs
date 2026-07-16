@@ -30,6 +30,8 @@ tags:
   - release
   - release notes
   - changelog
+  - tag: archived
+    primary: true
 ---
 
 # Release notes 1.x
@@ -39,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./README.md).
+For a curated summary of the changes that matter most, see the [Changelog](./).
 {% endhint %}
 
 New features and bug fixes for n8n.
@@ -664,7 +666,7 @@ Previously, this functionality was only available through AI Agents using the **
 {% endhint %}
 
 {% hint style="info" %}
-### Custom project roles  <a href="#custom-project-roles-lessbrgreater" id="custom-project-roles-lessbrgreater"></a>
+### Custom project roles <a href="#custom-project-roles-lessbrgreater" id="custom-project-roles-lessbrgreater"></a>
 
 **What's new**\
 You can now define **custom project roles** that precisely control what a user can do **inside a project**.<br>
@@ -797,10 +799,7 @@ Once connected, these platforms can discover and interact with your workflows di
 \
 This feature simplifies integration and improves visibility across AI platforms that support MCP, helping you use your n8n workflows directly in the tools where you already work and experiment. [Learn more in documentation.](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server)<br>
 
-<img src=".gitbook/assets/instance_mcp_settings.png" alt="Enable MCP for an instance in instance settings." data-size="original">
-
-<br>
-
+<img src=".gitbook/assets/instance_mcp_settings.png" alt="Enable MCP for an instance in instance settings." data-size="original">\
 <img src=".gitbook/assets/instance_mcp_workflow_settings.png" alt="Enable MCP for each workflow in workflow settings." data-size="original">
 {% endhint %}
 
@@ -904,9 +903,7 @@ For more info, see [Guardrails documentation](https://app.gitbook.com/s/BKcbOzIW
 
 The MCP Client Tool now supports OAuth authentication, enabling secure connections to APIs that implement delegated access flows. [Learn more](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) about the MCP Client Tool node.<br>
 
-<img src=".gitbook/assets/oauthmcp.png" alt="Authentication options in MCP Client Tool node" data-size="original">
-
-<br>
+<img src=".gitbook/assets/oauthmcp.png" alt="Authentication options in MCP Client Tool node" data-size="original"><br>
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -1051,10 +1048,10 @@ This release contains bug fixes.
 
 You can now easily migrate n8n data between different database types. This new tooling currently supports SQLite and Postgres, making the transition to a scaling database choice simpler, allowing you to take your data with you.\
 The tooling comes in the form of two new CLI commands, `export:entities` and `import:entities`\
-&#xNAN;**`Export`** The new export command lets you export data from your existing n8n database (SQLite / Postgres), producing a set of encrypted files within a compressed directory for you to move around and use with the import commands.
+\&#xNAN;**`Export`** The new export command lets you export data from your existing n8n database (SQLite / Postgres), producing a set of encrypted files within a compressed directory for you to move around and use with the import commands.
 
 For details, see [Export entities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities)\
-&#xNAN;**`Import`** The new import command allows you to read from a compressed and encrypted set of files generated from the new export command, and import them in to your new database of choice (SQLite / Postgres) to be used with your n8n instance.
+\&#xNAN;**`Import`** The new import command allows you to read from a compressed and encrypted set of files generated from the new export command, and import them in to your new database of choice (SQLite / Postgres) to be used with your n8n instance.
 
 For details, see [Import entities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities)
 {% endhint %}
@@ -1269,8 +1266,6 @@ We’re excited to introduce **data tables**, bringing built-in data storage to 
 Previously, persisting data meant provisioning and connecting to an external store such as Redis or Google Sheets. That added credential setup, infrastructure overhead, latency, and constant context switching. **Data tables** eliminate that friction and keeps your data easily editable and close to your workflows.
 
 Data tables are available today on all plans. They currently support numbers, strings, and datetimes with JSON support coming soon. On Cloud, each instance can store up to 50 MB. On self-hosted setups, the default is also 50 MB, but this limit can be adjusted if your infrastructure allows.
-
-
 
 🛠️ **How to:**
 
@@ -1652,7 +1647,7 @@ This release contains performance improvements, core updates, editor improvement
 
 We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.\
 \
-&#xNAN;_**What’s new**_\
+\&#xNAN;_**What’s new**_\
 \
 **No more limit of active workflows.**
 
@@ -1676,7 +1671,7 @@ Please note that this plan only includes support from our community forum. For d
 
 Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions.\
 \
-&#xNAN;_**What you need to do**_
+\&#xNAN;_**What you need to do**_
 
 To ensure these changes apply to your account, update your n8n instance to the latest version.\
 <br>
@@ -1906,11 +1901,8 @@ You can still define your own custom metrics, but for common use cases, the buil
 
 * Registered Community Edition enables analysis of one evaluation in the **Evaluations** tab which allows easy comparison of evaluation runs over time. Pro and Enterprise plans allow unlimited evaluations in the **Evaluations** tab.
 
-<br>
-
-<img src=".gitbook/assets/Built-in_metrics.png" alt="Built-in Metrics" data-size="original">
-
-<br>
+\
+<img src=".gitbook/assets/Built-in_metrics.png" alt="Built-in Metrics" data-size="original"><br>
 
 [Learn more](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test) about setting up and customizing evaluations.
 {% endhint %}
@@ -2312,11 +2304,8 @@ By implementing **Evaluations for AI workflows** in n8n, you can assess how your
 
 The **Evaluation node** includes several operations that, when used together, enable end-to-end AI evaluation.
 
-<br>
-
-<img src=".gitbook/assets/Evaluations_node.png" alt="Evaluation node" data-size="original">
-
-<br>
+\
+<img src=".gitbook/assets/Evaluations_node.png" alt="Evaluation node" data-size="original"><br>
 
 Use this node to:
 
@@ -2343,11 +2332,8 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
     > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#2-add-metrics-to-workflow).
 
-<br>
-
-<img src=".gitbook/assets/Evaluations_workflow.png" alt="Evaluation workflow" data-size="original">
-
-<br>
+\
+<img src=".gitbook/assets/Evaluations_workflow.png" alt="Evaluation workflow" data-size="original"><br>
 
 When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab.\
 <br>
@@ -3743,7 +3729,7 @@ This release contains node updates, performance improvements, and bug fixes.
 
 We're introducing a significant performance upgrade to the Code node with our new Task runner system. This enhancement moves JavaScript code execution to a separate process, improving your workflow execution speed while adding better isolation.
 
-<img src=".gitbook/assets/task-runner-concept (1).png" alt="Task runners overview" data-size="original">
+<img src=".gitbook/assets/task-runner-concept.png" alt="Task runners overview" data-size="original">
 
 Our benchmarks show up to 6x improvement in workflow executions using Code nodes - from approximately 6 to 35 executions per second. All these improvements happen under the hood, keeping your Code node experience exactly the same.
 

@@ -1,0 +1,21 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
+  s_60ce6e746ce9d3::t_9c85b7041260b4 346-347,349,352,356-360,363,366,375-383
+  s_60ce6e746ce9d3::t_e40396ddba4851 367
+  s_60ce6e746ce9d3::t_3dd58b19efd1fa 348,350-351,353-355,361-362,364-365,368-374
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "a5b4278d5833c69149c049692376bdab2fc2c098",
+  "prompts": {},
+  "sessions": {
+    "s_60ce6e746ce9d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84124d3-ce9c-4a73-9716-80eb657f790d",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}

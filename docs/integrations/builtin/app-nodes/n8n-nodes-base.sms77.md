@@ -33,6 +33,8 @@ Refer to [seven credentials](../credentials/sms77.md) for guidance on setting up
     * Send SMS
 * Voice Call
     * Converts text to voice and calls a given number
+* RCS
+	* Send RCS
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

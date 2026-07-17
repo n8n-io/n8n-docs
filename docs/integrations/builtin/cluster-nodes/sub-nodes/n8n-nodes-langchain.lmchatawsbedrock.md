@@ -57,7 +57,7 @@ Guardrails let your organization enforce content and safety policies on model in
 
 * **Guardrail Identifier**: The ID or full ARN of the guardrail to apply.
 * **Guardrail Version**: The guardrail version to use: a numeric version string (for example `1`) or `DRAFT` for the working draft. Defaults to `DRAFT`.
-* **Trace**: Whether AWS includes diagnostic trace information about the guardrail's evaluation in the response.
+* **Trace**: Whether AWS includes diagnostic trace information about the guardrail's evaluation in the response: **Disabled** (default), **Enabled**, or **Enabled (Full)**. Note: enabling trace makes AWS include guardrail assessment details (which can echo matched input content, e.g. PII findings) in responses; n8n doesn't currently surface these in the AI log.
 
 When a guardrail intervenes, the node returns the guardrail's configured blocked message in place of the model output, as a normal response rather than an error. n8n doesn't expose the underlying stop reason: to detect an intervention downstream, match on your guardrail's blocked message text. An invalid guardrail identifier or version fails the node with the AWS validation error. Guardrails apply to both streaming and non-streaming requests.
 

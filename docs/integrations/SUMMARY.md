@@ -412,6 +412,7 @@
     * [Copper Trigger](builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md)
     * [crowd.dev Trigger](builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md)
     * [Customer.io Trigger](builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md)
+    * [Discord Trigger](builtin/trigger-nodes/n8n-nodes-base.discordtrigger.md)
     * [Emelia Trigger](builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md)
     * [Eventbrite Trigger](builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md)
     * [Facebook Lead Ads Trigger](builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md)

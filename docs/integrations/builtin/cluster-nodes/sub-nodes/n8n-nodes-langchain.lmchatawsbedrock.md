@@ -45,7 +45,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
+* **Top P**: Set the probability threshold for token selection. A lower value limits the pool to more probable tokens; a higher value allows more diverse options.
 * **Max Retries**: Enter the maximum number of times to retry a request.
 * **Additional Model Request Fields**: Enter model-family-specific inference parameters as JSON, for example Claude's `top_k` or Nova's `inferenceConfig`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the parameters each model family supports.
 * **Latency Optimization**: Choose whether requests use **Standard** or **Optimized** latency. Optimized mode can reduce response time for supported models and regions. Refer to the [AWS latency-optimized inference documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/latency-optimized-inference.html) for availability.

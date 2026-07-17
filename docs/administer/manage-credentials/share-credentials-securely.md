@@ -38,9 +38,15 @@ You can share a credential directly with other users to use in their own workflo
 
 Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
 
-Refer to [Account types](../manage-users-and-access/understand-account-types.md) for more information about owners and admins.
+Refer to [Instance roles](../manage-users-and-access/understand-instance-roles.md) for more information about owners and admins.
 
 In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
+
+{% hint style="info" %}
+**Sharing end-user credentials**
+
+Sharing an [end-user credential](end-user-credentials.md) shares the credential itself, not a connection. Users you share it with connect their own account, they don't use yours.
+{% endhint %}
 
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 

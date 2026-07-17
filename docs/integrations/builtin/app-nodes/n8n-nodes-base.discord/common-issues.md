@@ -110,3 +110,14 @@ Once you have the user or channel ID, you can format your message with the follo
 * **User**: `<@USER_ID>`
 * **Channel**: `<#CHANNEL_ID>`
 * **Role**: `<@&ROLE_ID>`
+
+## Moderation actions fail with a permissions error
+
+The **Ban**, **Kick**, and **Timeout** operations on the **Member** resource need the bot to have the matching permission and to sit above the target member in the server's role hierarchy. When either check fails, Discord returns a `Missing Permissions` error.
+
+Make sure that:
+
+* The bot's role includes the required permission: **Ban Members** for Ban and Unban, **Kick Members** for Kick, and **Moderate Members** for Timeout.
+* The bot's highest role is above the target member's highest role. Discord blocks moderation actions against members with an equal or higher role, and against the server owner.
+
+You can review and reorder roles and their permissions in your Discord server settings, under **Roles**. After you update them, run the workflow again.

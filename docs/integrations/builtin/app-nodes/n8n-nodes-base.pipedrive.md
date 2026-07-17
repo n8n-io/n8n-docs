@@ -63,6 +63,7 @@ Refer to [Pipedrive credentials](../credentials/pipedrive.md) for guidance on se
     * Delete a lead
     * Get data of a lead
     * Get data of all leads
+    * Search a lead
     * Update a lead
 * Note
     * Create a note

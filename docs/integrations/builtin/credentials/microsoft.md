@@ -22,6 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Microsoft Dynamics CRM](../app-nodes/n8n-nodes-base.microsoftdynamicscrm.md)
 - [Microsoft Excel (OneDrive)](../app-nodes/n8n-nodes-base.microsoftexcel.md)
+- [Microsoft Excel (SharePoint)](../app-nodes/n8n-nodes-base.microsoftexcelsharepoint.md)
 - [Microsoft Graph Security](../app-nodes/n8n-nodes-base.microsoftgraphsecurity.md)
 - [Microsoft OneDrive](../app-nodes/n8n-nodes-base.microsoftonedrive.md)
 - [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)

@@ -28,6 +28,8 @@ On this page, you'll find the node parameters for the Embeddings AWS Bedrock nod
 **Credentials**
 
 You can find authentication information for this node [here](../../credentials/aws.md).
+
+If you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://docs.aws.amazon.com/bedrock/latest/userguide/vpc-interface-endpoints.html) without private DNS, set the **Bedrock Endpoint** and **Bedrock Runtime Endpoint** custom endpoints in the credential.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

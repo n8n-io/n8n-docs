@@ -63,6 +63,7 @@ Controls the reaper, which releases runs an instance claimed but never finished 
 | `N8N_SCHEDULER_REAPER_INTERVAL` | Number | `30` | How often, in seconds, the scheduler looks for runs an instance claimed but never finished (for example after a crash or shutdown) and makes them available again. Must be greater than 0. |
 | `N8N_SCHEDULER_REAPER_BATCH_SIZE` | Number | `100` | The most expired-claim runs a single reaper pass reclaims. Larger batches recover a backlog faster but hold more work on one instance per pass. Must be greater than 0. |
 | `N8N_SCHEDULER_REAPER_TIMEOUT` | Number | `60` | How long, in seconds, a single recovery pass may run before it's abandoned and retried on the next interval. Must be greater than 0. |
+| `N8N_SCHEDULER_MAX_ATTEMPTS` | Number | `5` | How many times n8n attempts a scheduled run before dead-lettering it. Counted against every reclaim the reaper makes for that run, whether the previous attempt's claim simply expired (for example after a crash) or its handler ran and errored. Must be greater than 0. |
 
 ## Retention <a href="#retention-vars" id="retention-vars"></a>
 

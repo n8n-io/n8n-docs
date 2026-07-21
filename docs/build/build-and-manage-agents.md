@@ -19,25 +19,13 @@ Agents are in Preview. They can make mistakes, and their behavior may change whi
 
 ## What you can build with agents
 
-Use agents to:
-
-- Answer questions using your uploaded files and connected services.
-- Take actions in tools like Slack, Google Sheets, or Linear.
-- Trigger and coordinate workflows to complete larger tasks.
-- Delegate parts of a task to other agents.
-- Run on a schedule to check something and act on it.
+Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](#add-sub-agents) and [Schedules](#run-agents-on-a-schedule) below.
 
 ## How agents work
 
-An agent runs a reasoning loop. When you send it a message or a schedule triggers it, the agent:
+An agent runs a reasoning loop. When you send it a message, or a schedule triggers it, the agent reads your instructions, looks at the request, and decides what to do next:  call a tool, search your knowledge base, hand off to another agent, or ask a follow-up question. It repeats this loop until it produces a final response.
 
-1. Reads your instructions
-2. Looks at the request
-3. Decides what to do next
-
-The agent can call a tool, search your knowledge base, hand off to another agent, or ask a follow-up question. It repeats this loop until it produces a final answer.
-
-Each conversation with an agent is a **session**. n8n stores each session so you can resume it later and so the agent can recall earlier context through memory.
+Each conversation with an agent is a **session**, which n8n stores so you can resume it later and so the agent can recall context through memory.
 
 ## Parts of an agent
 
@@ -47,70 +35,57 @@ Configure these parts of an agent in the Agent Builder:
 | --- | --- |
 | **Model** | The language model that reasons and generates responses. Choose a provider and model when you set up the agent. |
 | **Instructions** | The system prompt that describes the agent's role, tone, and constraints. |
-| **Tools** | Actions the agent can take. Tools include workflows, custom code, built-in n8n integrations, and MCP servers. |
-| **Skills** | Reusable behavior bundles. A skill packages instructions with the tools the agent needs to complete a specific task. |
+| **Tools** | Actions the agent can take: workflows, custom code, built-in n8n integrations, and MCP servers. |
+| **Skills** | Reusable behavior bundles that package instructions with the tools needed for a specific task. |
 | **Channels** | Places people can reach the agent, like Slack, Telegram, or Linear. |
-| **Schedules** | Tasks the agent runs on a recurring basis once you publish it. |
+| **Schedules** | Tasks the agent runs on a recurring basis once published. |
 | **Sub-agents** | Other published agents this agent can delegate work to. |
-| **Knowledge base** | Files the agent can search and read to answer questions and pull in context (n8n Cloud only). |
-| **Memory** | Session memory keeps the current conversation. Episodic memory lets the agent recall context from earlier sessions. |
+| **Knowledge base** | Files the agent can search and read for context (n8n Cloud only). |
+| **Memory** | Session memory keeps the current conversation. Episodic memory recalls context from earlier sessions. |
+
+Model, Instructions, Tools, Skills, Knowledge, Memory, and Sub-agents are configured while building the agent. Channels and Schedules take effect once you publish.
 
 ## Draft and published versions
 
-Every agent has a **draft** version and, once you're ready, a published version.
+Every agent has a **draft** version and, once you're ready, a published version. The draft is where you make changes; n8n saves them automatically. The published version is what runs when someone chats with the agent, a channel triggers it, or a schedule fires.
 
-- The **draft** is where you make changes. n8n saves your changes automatically as you edit.
-- The **published** version runs when someone chats with the agent, when a channel triggers it, or when a schedule fires.
-
-Publishing takes a snapshot of the draft, so the running agent doesn't change unexpectedly while you edit. Every publish adds a new version to the publish history. You can restore an earlier version or revert the draft to match the published version at any time.
+Publishing takes a snapshot of the draft, so the running agent doesn't change while you edit. Every publish adds a version to the publish history, and you can restore or revert to an earlier version at any time.
 
 ## Build an agent
 
-Build agents in the Agent Builder. Start with a name and a model, add instructions, then attach the tools, skills, and knowledge the agent needs. n8n saves your changes to the draft automatically as you work.
+Build agents in the Agent Builder. Start with a name and a model, add instructions, then attach the tools, skills, knowledge, memory, and sub-agents the agent needs. n8n saves your changes to the draft automatically.
 
 ### Create the agent
 
-1. Open your project and go to **Agents**.
-2. Select **New Agent**. n8n opens the Agent Builder with a blank draft.
+1. Select your project from the left menu. Then navigate to the **Agents** tab.
+2. Select **Create Agent**. n8n opens the Agent Builder with a blank draft.
 3. In the **Agent** tab, enter a name for the agent. Use the icon picker to change the icon.
 
 {% hint style="info" %}
 **Use the AI Assistant**
 
-Describe what you want the agent to do to the AI Assistant. It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
+Describe what you want the agent to do to the [AI Assistant](./ways-of-building-workflows/ai-assistant-preview.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
 {% endhint %}
 
 ### Choose a model
 
-The model powers the agent's reasoning. In the **Agent** tab, open the **Model** field and pick a provider and a model. If the provider needs credentials, follow the prompt to add them.
+In the **Agent** tab, open the Model field and pick a provider and model. If the provider needs credentials, follow the prompt to add them.
 
 ### Write instructions
 
-Instructions are the agent's system prompt. In the **Instructions** field, describe:
+In the **Instructions** field, describe the agent's role, its tone and response format, what it should and shouldn't do, and which tools or skills it should prefer for common tasks.
 
-- The role the agent plays
-- The tone and format of responses
-- What the agent should and shouldn't do
-- Which tools or skills to prefer for common tasks
-
-Keep instructions specific. If the agent doesn't behave as expected, refine the instructions first before adding more tools.
+Keep instructions specific; if the agent doesn't behave as expected, refine the instructions first before adding more tools.
 
 ### Add tools
 
-Tools are the actions the agent can take. In the **Tools** section, select **Add tool** and pick from:
+In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools via MCP servers.
 
-- **Built-in tools**: Actions from n8n integrations, like Slack, Google Sheets, or HTTP requests
-- **Workflows**: Workflows in the same project that the agent can call with inputs you define
-- **Custom tools**: Tools you define in code with a JSON schema for inputs and outputs
-- **MCP servers**: External tools the agent can reach through the Model Context Protocol
-
-The agent decides which tool to use based on your instructions and the task. If a tool needs credentials, the agent uses the credentials you attach when you add the tool.
-
-For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](#approve-tool-calls).
+The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](#approve-tool-calls).
 
 ### Bundle capabilities with skills
 
-A skill packages instructions with the tools the agent needs to complete a specific task. Use skills when the agent handles several distinct tasks and each has its own steps.
+A skill packages instructions with the tools needed for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps.
 
 To add a skill:
 
@@ -180,16 +155,6 @@ To roll out your changes:
 
 To discard unsaved changes and match the published version, select **Revert changes** from the publish menu.
 
-### Manage versions
-
-Every time you publish, n8n adds a version to the publish history.
-
-1. Open the publish menu in the header.
-2. Select **Publish history**. n8n lists every published version and marks the currently published version.
-3. From the history, you can:
-    - Select **Revert to this version** to copy an earlier version into the current draft. The draft becomes editable from that state.
-    - Select **Publish this version** to make an earlier version live again without changing your draft.
-
 ### Unpublish an agent
 
 To take an agent offline while keeping the draft in your project, select **Unpublish** from the publish menu. Users, channels, and schedules can no longer run the agent until you publish it again. The draft remains editable.
@@ -231,6 +196,13 @@ Schedules let agents run on their own on a recurring basis. Add a schedule from 
 - Custom cron
 
 Schedules run only against the published version of the agent. n8n shows the next run time, the last run time, and the outcome of the last run for each schedule.
+
+## Use agents in workflows
+
+You can use agents within your workflows in two ways:
+
+- **Create agents inline**: Add an agent as a node directly in a workflow. This lets you build and configure an agent without leaving the workflow editor.
+- **Message existing agents**: Send messages to already created agents from a workflow. This lets you access published agents and integrate their capabilities into your automation.
 
 ## Agent executions and pricing
 

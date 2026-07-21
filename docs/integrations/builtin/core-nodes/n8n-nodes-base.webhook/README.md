@@ -107,7 +107,7 @@ Refer to [Webhook credentials](../../credentials/webhook.md) for more informatio
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node.
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
 
 ### Response Code <a href="#response-code" id="response-code"></a>
 
@@ -167,6 +167,20 @@ This has the following implications:
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 [Browse n8n-nodes-base.webhook integration templates](https://n8n.io/integrations/webhook) or [search all templates](https://n8n.io/workflows/)
+
+## FAQ
+
+### How do I trigger a workflow from an external event?
+
+Add the Webhook node as your trigger. It creates a [webhook URL](#webhook-urls) that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
+
+### What's the difference between the test and production webhook URLs?
+
+The node has two [webhook URLs](#webhook-urls). The **test** URL works when you select **Listen for Test Event**, and it shows the incoming data in the editor. The **production** URL registers when you publish the workflow, and it doesn't display data in the editor. You can view production runs in the workflow's **Executions** tab.
+
+### How do I secure a webhook?
+
+Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL. You can also limit callers with the **IP(s) Whitelist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

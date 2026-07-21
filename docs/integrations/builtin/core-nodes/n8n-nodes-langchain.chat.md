@@ -18,12 +18,12 @@ layout:
 
 # Chat node <a href="#chat-node" id="chat-node"></a>
 
-Use the Chat node with the [Chat Trigger](n8n-nodes-base.compression/n8n-nodes-base.compression.md) node to send messages into the chat and optionally wait for responses from users. This enables human-in-the-loop (HITL) use cases in chat workflows, allowing you to have multiple chat interactions within a single execution. The Chat node also works as a tool for AI Agents.
+Use the Chat node with the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node to send messages into the chat and optionally wait for responses from users. This enables human-in-the-loop (HITL) use cases in chat workflows, allowing you to have multiple chat interactions within a single execution. The Chat node also works as a tool for AI Agents.
 
 {% hint style="info" %}
 **Chat Trigger node**
 
-The Chat node requires a [Chat Trigger](n8n-nodes-base.compression/n8n-nodes-base.compression.md) node to be present in the workflow, with the [Response Mode](n8n-nodes-base.compression/n8n-nodes-base.compression.md#response-mode) set to 'Using Response Nodes'.
+The Chat node requires a [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node to be present in the workflow, with the [Response Mode](n8n-nodes-langchain.chattrigger/README.md#response-mode) set to 'Using Response Nodes'.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -123,11 +123,11 @@ The Approval response type also offers the following option:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-Refer to the [Chat Trigger](n8n-nodes-base.compression/n8n-nodes-base.compression.md) node documentation for information about setting up the chat interface.
+Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node documentation for information about setting up the chat interface.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[Browse Chat node documentation integration templates](https://n8n.io/integrations/chat) or [search all templates](https://n8n.io/workflows/)
+[Browse n8n integration templates](https://n8n.io/integrations/) or [search all templates](https://n8n.io/workflows/)
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
@@ -136,4 +136,4 @@ Refer to the [Chat Trigger](n8n-nodes-base.compression/n8n-nodes-base.compressio
 - The Chat node doesn't work when used in a subworkflow. This includes usage in a subworkflow that's being used as a tool for an AI Agent.
 - Make sure the Chat Trigger node's Response Mode is set to "Using Response Nodes" for the Chat node to function properly.
 
-For common questions or issues with the Chat Trigger node, refer to [Common Chat Trigger Node Issues](n8n-nodes-base.compression/common-issues.md).
+For common questions or issues with the Chat Trigger node, refer to [Common Chat Trigger Node Issues](n8n-nodes-langchain.chattrigger/common-issues.md).

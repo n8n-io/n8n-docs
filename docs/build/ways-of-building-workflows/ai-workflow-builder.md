@@ -1,19 +1,35 @@
 ---
 title: AI Workflow Builder
-description: >-
-  Create, refine, and debug workflows using natural language descriptions of
-  your goals.
 status: beta
 nodeTitle: AI Workflow Builder
 originalFilePath: advanced-ai/ai-workflow-builder.md
-originalUrl: 'https://docs.n8n.io/advanced-ai/ai-workflow-builder'
-url: 'https://docs.n8n.io/build/ways-of-building-workflows/ai-workflow-builder'
+originalUrl: https://docs.n8n.io/advanced-ai/ai-workflow-builder
+url: https://docs.n8n.io/build/ways-of-building-workflows/ai-workflow-builder
+description: >-
+  Create, refine, and debug workflows using natural language descriptions of
+  your goals.
+hidden: true
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# AI Workflow Builder <a href="#ai-workflow-builder" id="ai-workflow-builder"></a>
+# Use AI Workflow Builder
 
 AI Workflow Builder enables you to create, refine, and debug workflows using natural language descriptions of your goals.
 
@@ -25,14 +41,13 @@ For details of pricing and availability of AI Workflow Builder, see [n8n Plans a
 
 1. **Describe your workflow:** Either select an example prompt or describe your requirements in natural language.
 2. **Monitor the build:** The builder provides real-time feedback through several phases.
-3. **Review and refine the generated workflow:** Review required credentials and other parameters. Refine the workflow using prompts.
-    
+3.  **Review and refine the generated workflow:** Review required credentials and other parameters. Refine the workflow using prompts.
+
     ![ai-workflow-builder.png](../.gitbook/assets/ai-workflow-builder.png)
-    
 
 ### Commands you can run in the builder <a href="#commands-you-can-run-in-the-builder" id="commands-you-can-run-in-the-builder"></a>
 
-- `/clear`: Clears the context for the LLM and lets you start from scratch
+* `/clear`: Clears the context for the LLM and lets you start from scratch
 
 ## Understanding credits <a href="#understanding-credits" id="understanding-credits"></a>
 
@@ -42,14 +57,14 @@ Each time you send a message to the builder asking it to create or modify a work
 
 ✅ **Counts as an interaction**
 
-- Sending a message to create a new workflow
-- Asking the builder to modify an existing workflow
-- Clicking the **Execute and refine** button in the builder window after a workflow is built
+* Sending a message to create a new workflow
+* Asking the builder to modify an existing workflow
+* Clicking the **Execute and refine** button in the builder window after a workflow is built
 
 ❌ **Does NOT count as an interaction**
 
-- Messages that fail or produce generation errors
-- Requests you manually stop by clicking the stop button
+* Messages that fail or produce generation errors
+* Requests you manually stop by clicking the stop button
 
 ### Getting more credits <a href="#getting-more-credits" id="getting-more-credits"></a>
 
@@ -61,11 +76,11 @@ For details on plans and pricing, see [n8n Plans and Pricing](https://n8n.io/pri
 
 The following data are sent to the LLM:
 
-- Text prompts that you provide to create, refine, or debug the workflow
-- Node definitions, parameters, and connections and the current workflow definition.
-- Any mock execution data that is loaded when using the builder
+* Text prompts that you provide to create, refine, or debug the workflow
+* Node definitions, parameters, and connections and the current workflow definition.
+* Any mock execution data that is loaded when using the builder
 
 The following data are not sent:
 
-- Details of any credentials you use
-- Past executions of the workflow
+* Details of any credentials you use
+* Past executions of the workflow

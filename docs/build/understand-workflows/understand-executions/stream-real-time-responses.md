@@ -39,7 +39,7 @@ Streaming responses let you send data back to users as an AI Agent node generate
 
 You can enable streaming using either:
 
-* The [Chat Trigger](/broken/spaces/BKcbOzIWja8NfqKDcqHc/pages/ufgV9cVbZYhO7UuKUvU1)
+* The [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger)
 * The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook)
 
 In both cases, set the node's **Response Mode** to **Streaming**.

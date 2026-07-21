@@ -60,13 +60,13 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool <a href="#connect-directly-to-an-ai-agent-as-a-tool" id="connect-directly-to-an-ai-agent-as-a-tool"></a>
 
-You can connect the Pinecone Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/) to use a vector store as a resource when answering queries.
+You can connect the Pinecone Vector Store node directly to the tool connector of an [AI agent](n8n-nodes-langchain.agent/README.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Pinecone Vector Store node.
 
 ### Use a retriever to fetch documents <a href="#use-a-retriever-to-fetch-documents" id="use-a-retriever-to-fetch-documents"></a>
 
-You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Pinecone Vector Store node to fetch documents from the Pinecone Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](../sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Pinecone Vector Store node to fetch documents from the Pinecone Vector Store node. This is often used with the [Question and Answer Chain](n8n-nodes-langchain.chainretrievalqa/README.md) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Pinecone Vector Store.
 
@@ -128,6 +128,20 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 [Browse Pinecone Vector Store node documentation integration templates](https://n8n.io/integrations/pinecone-vector-store) or [search all templates](https://n8n.io/workflows/)
+
+## FAQ
+
+### How do I store documents in Pinecone from n8n?
+
+Use the Pinecone Vector Store as a [regular node](#use-as-a-regular-node-to-insert-update-and-retrieve-documents) with the **Insert Documents** operation, and select your **Pinecone Index**. The node stores the documents in Pinecone as vectors, so you can retrieve them later.
+
+### How do I retrieve the most relevant documents for a query?
+
+Enter your search in the **Prompt** field and set **Limit** to control how many results come back, for example `10` for the ten best matches. See the [Get Many parameters](#get-many-parameters). To feed the results into a summarization chain, use a [retriever](#use-a-retriever-to-fetch-documents) with the Question and Answer Chain node.
+
+### How do I connect the vector store to an AI agent as a tool?
+
+Connect the Pinecone Vector Store node to the AI agent's tool connector, so the agent can query the store when it answers. See [Connect directly to an AI agent as a tool](#connect-directly-to-an-ai-agent-as-a-tool). To summarize the results instead of returning raw documents, use the [Vector Store Question Answer Tool](#use-the-vector-store-question-answer-tool-to-answer-questions).
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

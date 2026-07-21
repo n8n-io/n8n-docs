@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Deploy](README.md)
 * [Use n8n Cloud](use-n8n-cloud/README.md)
@@ -29,7 +29,7 @@
   * [Configure n8n](host-n8n/configure-n8n/README.md)
     * [Basic configuration](host-n8n/configure-n8n/basic-configuration.md)
       * [Use environment variables](host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md)
-        * [AI Assistant](host-n8n/configure-n8n/basic-configuration/use-environment-variables/ai-assistant.md)
+        * [Ask n8n AI](host-n8n/configure-n8n/basic-configuration/use-environment-variables/ai-assistant.md)
         * [Binary data](host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data.md)
         * [Credentials](host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials.md)
         * [Database](host-n8n/configure-n8n/basic-configuration/use-environment-variables/database.md)
@@ -46,6 +46,7 @@
         * [Nodes](host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes.md)
         * [OpenTelemetry](host-n8n/configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
         * [Queue mode](host-n8n/configure-n8n/basic-configuration/use-environment-variables/queue-mode.md)
+        * [Scheduler](host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md)
         * [Security](host-n8n/configure-n8n/basic-configuration/use-environment-variables/security.md)
         * [Source control](host-n8n/configure-n8n/basic-configuration/use-environment-variables/source-control.md)
         * [SSO](host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso.md)
@@ -76,6 +77,8 @@
     * [Change instance owner email](host-n8n/configure-n8n/change-instance-owner-email.md)
     * [Manage settings using environment variables](host-n8n/configure-n8n/manage-settings-using-environment-variables.md)
     * [Set up task runners](host-n8n/configure-n8n/set-up-task-runners.md)
+    * [Durable scheduler](host-n8n/configure-n8n/durable-scheduler.md)
+    * [Set up AI Assistant (Preview)](host-n8n/configure-n8n/set-up-ai-assistant-preview.md)
     * [Manage your license](host-n8n/configure-n8n/manage-your-license.md)
     * [Security](host-n8n/configure-n8n/security.md)
       * [Manage security policies](host-n8n/configure-n8n/security/manage-security-policies.md)

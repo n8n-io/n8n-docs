@@ -54,14 +54,14 @@ Here are some common errors and issues with the Facebook Lead Ads Trigger node a
 
 Facebook Lead Ads only allows you to register a single webhook per app. This means that every time you switch from using the testing URL to the production URL (and vice versa), Facebook Lead Ads overwrites the registered webhook URL. 
 
-You may have trouble with this if you try to test a workflow that's also active in production. Facebook Lead Ads will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+You may have trouble with this if you try to test a workflow that's also published. Facebook Lead Ads will only send events to one of the two webhook URLs, so the other will never receive event notifications.
 
 To work around this, you can disable your workflow when testing:
 
 {% hint style="warning" %}
 **Halts production traffic**
 
-This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's unpublished.
 {% endhint %}
 
 1. Go to your workflow page.

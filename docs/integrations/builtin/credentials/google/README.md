@@ -59,11 +59,11 @@ Once configured, you can use your credentials to authenticate the following node
 | Node                                                                                            | OAuth | Service Account |
 | ----------------------------------------------------------------------------------------------- | :---: | :-------------: |
 | [Google Ads](../../app-nodes/n8n-nodes-base.googleads.md)                                       |   ✅   |        ❌        |
-| [Gmail](../../app-nodes/n8n-nodes-base.gmail/)                                                  |   ✅   |        ⚠️       |
+| [Gmail](../../app-nodes/n8n-nodes-base.gmail/README.md)                                                  |   ✅   |        ⚠️       |
 | [Google Analytics](../../app-nodes/n8n-nodes-base.googleanalytics.md)                           |   ✅   |        ❌        |
 | [Google BigQuery](../../app-nodes/n8n-nodes-base.googlebigquery.md)                             |   ✅   |        ✅        |
 | [Google Books](../../app-nodes/n8n-nodes-base.googlebooks.md)                                   |   ✅   |        ✅        |
-| [Google Calendar](../../app-nodes/n8n-nodes-base.googlecalendar/)                               |   ✅   |        ❌        |
+| [Google Calendar](../../app-nodes/n8n-nodes-base.googlecalendar/README.md)                               |   ✅   |        ❌        |
 | [Google Chat](../../app-nodes/n8n-nodes-base.googlechat.md)                                     |   ✅   |        ✅        |
 | [Google Cloud Storage](../../app-nodes/n8n-nodes-base.googlecloudstorage.md)                    |   ✅   |        ✅        |
 | [Google Contacts](../../app-nodes/n8n-nodes-base.googlecontacts.md)                             |   ✅   |        ❌        |
@@ -71,10 +71,10 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Cloud Natural Language](../../app-nodes/n8n-nodes-base.googlecloudnaturallanguage.md)   |   ✅   |        ❌        |
 | [Google Cloud Realtime Database](../../app-nodes/n8n-nodes-base.googlecloudrealtimedatabase.md) |   ✅   |        ❌        |
 | [Google Docs](../../app-nodes/n8n-nodes-base.googledocs.md)                                     |   ✅   |        ✅        |
-| [Google Drive](../../app-nodes/n8n-nodes-base.googledrive/)                                     |   ✅   |        ✅        |
-| [Google Drive Trigger](../../trigger-nodes/n8n-nodes-base.googledrivetrigger/)                  |   ✅   |        ✅        |
+| [Google Drive](../../app-nodes/n8n-nodes-base.googledrive/README.md)                                     |   ✅   |        ✅        |
+| [Google Drive Trigger](../../trigger-nodes/n8n-nodes-base.googledrivetrigger/README.md)                  |   ✅   |        ✅        |
 | [Google Perspective](../../app-nodes/n8n-nodes-base.googleperspective.md)                       |   ✅   |        ❌        |
-| [Google Sheets](../../app-nodes/n8n-nodes-base.googlesheets/)                                   |   ✅   |        ✅        |
+| [Google Sheets](../../app-nodes/n8n-nodes-base.googlesheets/README.md)                                   |   ✅   |        ✅        |
 | [Google Slides](../../app-nodes/n8n-nodes-base.googleslides.md)                                 |   ✅   |        ✅        |
 | [Google Tasks](../../app-nodes/n8n-nodes-base.googletasks.md)                                   |   ✅   |        ❌        |
 | [Google Translate](../../app-nodes/n8n-nodes-base.googletranslate.md)                           |   ✅   |        ✅        |

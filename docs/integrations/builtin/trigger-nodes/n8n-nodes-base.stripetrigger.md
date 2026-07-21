@@ -28,6 +28,12 @@ layout:
 You can find authentication information for this node [here](../credentials/stripe.md).
 {% endhint %}
 
+## Webhook authentication <a href="#webhook-authentication" id="webhook-authentication"></a>
+
+From n8n version 2.25.7 and 2.26.2, the Stripe Trigger node can verify that incoming requests genuinely come from Stripe. When you set a **Signature Secret** on your [Stripe credential](../credentials/stripe.md), the node checks the `Stripe-Signature` header on each request and rejects any request that's unsigned, forged, or more than five minutes old with a `401 Unauthorized` response. n8n doesn't run your workflow for rejected requests.
+
+Without a **Signature Secret**, the node doesn't verify incoming requests, so anyone who knows your webhook URL could send forged events. n8n strongly recommends setting one. For setup steps, refer to [Verify incoming requests](../credentials/stripe.md#verify-incoming-requests).
+
 {% hint style="info" %}
 **Examples and templates**
 

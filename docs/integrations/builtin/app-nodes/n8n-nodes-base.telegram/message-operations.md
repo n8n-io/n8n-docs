@@ -36,7 +36,7 @@ layout:
 
 # Message operations
 
-Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](./) for more information on the Telegram node itself.
+Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](./README.md) for more information on the Telegram node itself.
 
 {% hint style="info" %}
 **Add bot to channel**
@@ -58,7 +58,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Delete Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to delete in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to delete.
 
 Refer to the Telegram Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage) documentation for more information.
@@ -73,7 +73,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Edit Message Text**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to edit.
 * **Reply Markup**: Select whether to use the **Inline Keyboard** to display the InlineKeyboardMarkup **None** not to. This sets the `reply_markup` parameter. Refer to the [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) documentation for more information.
 * **Text**: Enter the text you want to edit the message to.
@@ -97,7 +97,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Pin Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to pin the message to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to pin.
 
 Refer to the Telegram Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage) documentation for more information.
@@ -118,7 +118,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Animation**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the animation to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Animation**: If you aren't using the **Binary File**, enter the animation to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -152,7 +152,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Audio**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the audio to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Audio**: If you aren't using the **Binary File**, enter the audio to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -186,7 +186,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Chat Action**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the chat action to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Action**: Select the action you'd like to broadcast the bot as taking. The options here include: **Find Location**, **Typing**, **Recording** audio or video, and **Uploading** file types.
 
 Refer to Telegram's Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction) documentation for more information.
@@ -201,7 +201,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Document**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the document to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Document**: If you aren't using the **Binary File**, enter the document to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -232,7 +232,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Location**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the location to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Latitude**: Enter the latitude of the location.
 * **Longitude**: Enter the longitude of the location.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -257,7 +257,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Media Group**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the media group to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Media**: Use **Add Media** to add different media types to your media group. For each medium, select:
   * **Type**: The type of media this is. Choose from **Photo** and **Video**.
   * **Media File**: Enter the media file to send. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
@@ -285,7 +285,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the message to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Text**: Enter the text to send, max 4096 characters after entities parsing.
 
 Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage) documentation for more information.
@@ -317,7 +317,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send and Wait for Response**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the message to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Message**: Enter the text to send.
 * **Response Type**: The approval or response type to use:
   * **Approval**: Users can approve or disapprove from within the message.
@@ -343,6 +343,44 @@ The **Approval** response type adds these options:
 * **Type of Approval**: Whether to present only an approval button or both an approval and disapproval buttons.
 * **Button Label**: The label for the approval or disapproval button. The default choice is `✅ Approve` and `❌ Decline` for approval and disapproval actions respectively.
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Approve Within Chat**: Whether approvers respond with a single tap on the message's buttons, instead of opening a link in their browser. Refer to [Approve Within Chat](#approve-within-chat) below for more information.
+
+#### Approve within chat
+
+{% hint style="info" %}
+**Requirements**
+
+To use **Approve Within Chat**, your n8n instance must be reachable from the internet over HTTPS, on port `443`, `80`, `88`, or `8443` (the ports Telegram supports for webhooks). There's nothing to register on Telegram's side and no extra secrets to configure: n8n registers the webhook for you, using your existing [Telegram credential](../../credentials/telegram.md).
+{% endhint %}
+
+When you turn on **Approve Within Chat**, approvers respond with a single tap on the message's buttons, instead of opening a link in their browser:
+
+* The node's output includes the responder's Telegram user ID, username, and name.
+* You can restrict who's allowed to respond. A tap from anyone else doesn't resolve the execution, and that person sees a popup telling them they aren't authorized.
+* After a decision, n8n edits the message: how depends on the **After Decision** option below.
+
+Telegram allows only one webhook per bot. If you also use a [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) with the same bot, n8n automatically shares that webhook between the trigger and **Approve Within Chat**: you don't need a second bot. If the trigger was activated before this feature was available, re-activate its workflow (or update it to the latest version) so button taps reach n8n. If the bot's webhook is already used by something outside n8n, use a different bot for **Approve Within Chat**, or turn the option off.
+
+{% hint style="info" %}
+**Fallback to link buttons**
+
+If your instance isn't reachable over public HTTPS, or you turn **Approve Within Chat** off, the node falls back to sending link buttons instead.
+{% endhint %}
+
+{% hint style="info" %}
+**Private chats, groups, and channels**
+
+Button taps behave the same way in private chats, groups, and channels. As with any other **Message** operation, your bot needs to be a member of the channel to post and edit messages there. Refer to [Common Issues | Add a bot to a Telegram channel](common-issues.md#add-a-bot-to-a-telegram-channel) for more information.
+{% endhint %}
+
+Turning on **Approve Within Chat** reveals a **Chat Approval Options** section with these fields:
+
+* **Restrict to User IDs**: The Telegram user IDs allowed to approve or decline. Separate multiple IDs with a comma. If you leave this empty, anyone who can see the message can respond.
+* **Unauthorized Reply**: The message shown, as a Telegram popup, to someone who taps a button but isn't on the approver list.
+* **After Decision**: What happens to the message after someone responds:
+    * **Show Outcome and Remove Buttons**: Removes the buttons and adds a line showing who approved or declined.
+    * **Remove Buttons Only**: Removes the buttons without adding an outcome line.
+    * **Keep Message Unchanged**: Leaves the message as it was.
 
 #### Free Text <a href="#free-text" id="free-text"></a>
 
@@ -378,7 +416,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Photo**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the photo to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Photo**: If you aren't using the **Binary File**, enter the photo to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -405,7 +443,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Sticker**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the sticker to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Sticker**: If you aren't using the **Binary File**, enter the photo to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -430,7 +468,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Video**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the video to in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Binary File**: To send a binary file from the node itself, turn this option on. If you turn this parameter on, you must enter the **Input Binary Field** containing the file you want to send.
 * **Video**: If you aren't using the **Binary File**, enter the video to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](message-operations.md#reply-markup-parameters) for more information on these options and how to use them.
@@ -464,7 +502,7 @@ Enter these parameters:
 * **Resource**: Select **Message**.
 * **Operation**: Select **Pin Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to unpin the message from in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to unpin.
 
 Refer to the Telegram Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage) documentation for more information.

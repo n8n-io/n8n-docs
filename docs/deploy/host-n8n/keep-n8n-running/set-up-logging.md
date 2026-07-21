@@ -18,7 +18,7 @@ Logging is an important feature for debugging. n8n uses the [winston](https://ww
 
 n8n Self-hosted Enterprise tier includes [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems), in addition to the logging options described in this document.
 {% endhint %}
-## Setup <a href="#setup" id="setup"></a>
+## How do I set up logging in n8n? <a href="#setup" id="setup"></a>
 
 To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](../configure-n8n/basic-configuration/use-environment-variables/README.md))
 
@@ -59,7 +59,7 @@ n8n uses standard log levels to report:
 - `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
 
 
-## Development <a href="#development" id="development"></a>
+## How do I add logging during development? <a href="#development" id="development"></a>
 
 During development, adding log messages is a good practice. It assists in debugging errors. To configure logging for development, follow the guide below.
 
@@ -100,6 +100,6 @@ When creating new loggers, some useful standards to keep in mind are:
 - Include multiple IDs (for example, `executionId`, `workflowId`, and `sessionId`) throughout all logs.
 - Use node types instead of node names (or both) as this is more consistent, and so easier to search.
 
-## Front-end logs <a href="#front-end-logs" id="front-end-logs"></a>
+## Are front-end logs available? <a href="#front-end-logs" id="front-end-logs"></a>
 
 As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.

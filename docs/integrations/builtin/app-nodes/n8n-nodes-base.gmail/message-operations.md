@@ -236,6 +236,53 @@ Use these options to further refine the node's behavior:
 * **Approve Button Style**: Whether to style the approval button as a **Primary** (default) or **Secondary** button.
 * **Disapprove Button Label**: The label to use for the disapproval button (**Decline** by default). Only visible when you set **Type of Approval** to **Approve and Disapprove**.
 * **Disapprove Button Style**: Whether to style the disapproval button as a **Primary** or **Secondary** (default) button. Only visible when you set **Type of Approval** to **Approve and Disapprove**.
+* **Show Confirmation Page**: Whether the response link opens a page where the responder confirms their choice, instead of recording the response as soon as the link opens. Refer to [Show confirmation page](#show-confirmation-page) below for more information.
+* **Advanced Email Options**: Whether to set more email fields such as CC, BCC, sender name, and reply threading. Refer to [Advanced email options](#advanced-email-options) below for more information.
+
+{% hint style="info" %}
+**No Google-side setup**
+
+**Show Confirmation Page** and **Advanced Email Options** work with your existing [Google credential](../../credentials/google/README.md), whether you connect with OAuth2 or a service account. There's nothing to configure on Google's side, before or after turning them on.
+{% endhint %}
+
+#### Show confirmation page
+
+When you turn on **Show Confirmation Page**, the approval link in the email opens a page showing the request and a single confirmation button. n8n records the response—and resumes the workflow—when the responder presses that button, not when the link opens.
+
+The extra click protects the approval from automation. Email security tools open links in incoming email automatically to scan them, which can record a response before anyone reads the message. With the confirmation page on, opening the link only displays the page: n8n records a response only when a person presses the button.
+
+How the page behaves:
+
+* The button on the page repeats the choice the responder selected in the email, using your **Approve Button Label** or **Disapprove Button Label**. To pick the other option, the responder returns to the email and selects the other link.
+* Once someone responds, the links stop working: anyone opening them later sees a page saying the request already has a response.
+
+With **Show Confirmation Page** off, the node behaves as before: opening the approval link records the response directly.
+
+#### Advanced email options
+
+Turning on **Advanced Email Options** lets you address the approval email like a regular email:
+
+* **To**: Accepts more than one recipient. Separate addresses with a comma.
+* **CC** / **BCC**: The email addresses of the copy and blind copy recipients. Separate multiple addresses with a comma.
+* **Reply in Thread**: The ID of a Gmail conversation to send the message in, instead of starting a new one. Useful for keeping recurring approvals in a single conversation. n8n takes the email subject from the thread and ignores the **Subject** field.
+* **Send Replies To**: The email address that receives the reply when a recipient answers the email instead of using the approval link.
+* **Sender Name**: The name displayed in recipients' inboxes alongside your Gmail address.
+
+{% hint style="info" %}
+**The first response wins**
+
+All recipients—including CC and BCC—receive the same response links. The workflow resumes with the first response; anyone responding later sees a page saying the request already has a response.
+{% endhint %}
+
+#### What the approval email can't do
+
+Gmail's interactive email features (Gmail Actions and AMP for Email) are only available to senders registered with Google, which rules out some things the chat-based **Send and Wait** nodes can do:
+
+* **No buttons inside the email**: Approvers always follow a link; they can't respond from within the message itself.
+* **No record of who responded**: An email link carries no identity, so the node's output tells you the decision, not who made it.
+* **The sent email can't be changed**: Unlike a chat message, n8n can't edit the email after a decision to show the outcome or remove the links.
+
+If you need in-message buttons or the responder's identity, use the [Slack](../n8n-nodes-base.slack.md) or [Telegram](../n8n-nodes-base.telegram/message-operations.md) **Send and Wait** operations instead.
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 

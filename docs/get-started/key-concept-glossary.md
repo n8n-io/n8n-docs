@@ -75,6 +75,10 @@ In n8n, credentials store authentication information to connect with specific ap
 
 Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.
 
+#### edition (n8n)
+
+When you self-host n8n, the edition is the variant of the software you run: Community, registered Community, Business, or Enterprise. All editions share the same core product. A license key unlocks the paid Business and Enterprise editions. Edition describes the self-hosted software you run; plan describes the subscription tier you buy. See also plan and license.
+
 #### editor (n8n) <a href="#editor-n8n" id="editor-n8n"></a>
 
 The n8n editor UI allows you to create and manage workflows. The main area is the canvas, where you can compose workflows by adding, configuring, and connecting nodes. The side and top panels allow you to access other areas of the UI like credentials, templates, variables, executions, and more.
@@ -101,9 +105,17 @@ LangChain is an AI-development framework used to work with large language models
 
 Large language models, or LLMs, are AI machine learning models designed to excel in natural language processing (NLP) tasks. They're built by training on large amounts of data to develop probabilistic models of language and other data.
 
+#### license (n8n)
+
+License has two senses in n8n. First, it's the legal terms the n8n source code is distributed under. Second, it's the license key that unlocks a paid plan or edition. When you self-host, you add a license key to activate a Business or Enterprise edition. See also entitlement.
+
 #### node (n8n) <a href="#node-n8n" id="node-n8n"></a>
 
 In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
+
+#### plan (n8n)
+
+A plan is a commercial subscription tier, such as Starter, Pro, Business, or Enterprise. Your plan sets the features, usage limits, and price for your subscription, whether you use n8n Cloud or self-host. See also edition and license.
 
 #### project (n8n) <a href="#project-n8n" id="project-n8n"></a>
 

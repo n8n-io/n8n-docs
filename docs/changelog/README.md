@@ -49,6 +49,28 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 
 Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
+### AI Assistant: describe a goal, get a working automation
+
+_Released in 2.29.9 (2026-07-09)._
+
+You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
+
+<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a prompt box asking What do you want to automate, with suggestions such as Score my leads and Process invoices."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
+
+AI Assistant supersedes the AI Workflow Builder and Chat Hub, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
+
+Everything it produces is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant-preview).
+
+{% hint style="warning" %}
+This feature is in **preview**. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+{% hint style="info" %}
+**Availability:** Cloud only.
+{% endhint %}
+
 ### GitHub App authentication
 
 [GitHub nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.

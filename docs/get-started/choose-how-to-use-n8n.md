@@ -123,7 +123,7 @@ To register a Community edition instance for the extra free features, go to **Se
 
 ## Which features need a paid plan or edition <a href="#which-features-need-a-paid-plan-or-edition" id="which-features-need-a-paid-plan-or-edition"></a>
 
-Some features aren't in the free Community edition. They're available on the self-hosted Business and Enterprise plans, and some are on the paid Cloud plans:
+Some features require certain paid plan subscriptions, including:
 
 - Custom variables
 - Environments

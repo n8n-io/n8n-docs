@@ -44,7 +44,7 @@ For the environment variables used to register hooks, refer to [External hooks e
 | `workflow.afterUpdate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called after an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.create` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called before a workflow gets created. Use to restrict the number of saved workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.delete` | `[workflowId: string]` | Called before a workflow gets deleted. |
-| `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
+| `workflow.postExecute` | `[fullRunData: IRun \| undefined, workflowData: IWorkflowBase, executionId: string, workflowContext: WorkflowHookContextService]` | Called after a workflow gets executed. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.23.0). |
 | `workflow.update` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called before an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.afterArchive` | `[workflowId: string]` | Called after you archive a workflow. |
@@ -123,7 +123,7 @@ Some workflow hooks receive a `workflowContext` argument, an instance of `Workfl
 {% hint style="info" %}
 **Available from n8n 2.32.0**
 
-n8n passes `workflowContext` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.update`, and `workflow.afterUpdate` hooks from n8n 2.32.0. The `workflow.preExecute` hook receives it from n8n 2.23.0.
+n8n passes `workflowContext` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.update`, `workflow.afterUpdate`, and `workflow.postExecute` hooks from n8n 2.32.0. The `workflow.preExecute` hook receives it from n8n 2.23.0.
 {% endhint %}
 
 The context provides these methods:

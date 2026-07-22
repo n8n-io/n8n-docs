@@ -49,7 +49,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top P**: Set the probability threshold for token selection. A lower value limits the pool to more probable tokens; a higher value allows more diverse options.
 * **Max Retries**: Enter the maximum number of times to retry a request.
-* **Timeout**: Enter the maximum time in milliseconds to wait for a request to complete. Increase this for long generations. Set it to `0` to disable the timeout.
+* **Timeout** (available from n8n 2.32.0): Enter the maximum time in milliseconds to wait for a request to complete. Increase this for long generations. Set it to `0` to disable the timeout.
 * **Additional Model Request Fields**: Enter model-family-specific inference parameters as JSON, for example Claude's `top_k` or Nova's `inferenceConfig`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the parameters each model family supports.
 * **Latency Optimization**: Choose whether requests use **Standard** or **Optimized** latency. Optimized mode can reduce response time for supported models and regions. Refer to the [AWS latency-optimized inference documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/latency-optimized-inference.html) for availability.
 * **Guardrail**: Apply an [Amazon Bedrock guardrail](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html) to requests. Refer to [Using AWS Guardrails](#using-aws-guardrails) for details.

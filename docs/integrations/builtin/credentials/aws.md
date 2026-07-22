@@ -75,6 +75,7 @@ To create an access key and set up the credential:
     - SES
     - SQS
     - S3
+    - SSM
     - Bedrock
 
     Bedrock has two endpoint fields: **Bedrock Endpoint**, used to list available models, and **Bedrock Runtime Endpoint**, used for inference by the [AWS Bedrock Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md) and [Embeddings AWS Bedrock](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md) nodes. Set both if you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://docs.aws.amazon.com/bedrock/latest/userguide/vpc-interface-endpoints.html) without private DNS.

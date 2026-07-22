@@ -131,7 +131,7 @@ The context provides these methods:
 | Method | Returns | Description |
 | :----- | :------ | :---------- |
 | `getWorkflowTags(workflowId: string)` | `Promise<string[]>` | Returns the names of the tags attached to the given workflow. |
-| `isTriggerNodeType(type: string, typeVersion?: number)` | `boolean` | Returns `true` if the given node type is a trigger. `type` is the fully-qualified node type name, for example `n8n-nodes-base.manualTrigger`. `typeVersion` defaults to the latest registered version. Throws if the node type isn't registered on the instance. |
+| `isTriggerNodeType(type: string, typeVersion?: number)` | `boolean` | Returns `true` if the given node type is a trigger. `type` is the fully qualified node type name, for example `n8n-nodes-base.manualTrigger`. `typeVersion` defaults to the latest registered version. Throws if the node type isn't registered on the instance. |
 
 This example uses `isTriggerNodeType` to block activating a workflow that doesn't contain a trigger node:
 

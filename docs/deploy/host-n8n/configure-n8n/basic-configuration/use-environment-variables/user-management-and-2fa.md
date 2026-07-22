@@ -56,7 +56,7 @@ Refer to [User management](../../user-management.md) for more information on set
 
 When `N8N_EMAIL_MODE=microsoftGraph`, n8n sends system emails through the Microsoft Graph `sendMail` API using OAuth2 client-credentials. Register an app in Microsoft Entra with the `Mail.Send` application permission (admin-consented), then set the four `MICROSOFT_GRAPH_*` variables. n8n ignores the `N8N_SMTP_*` variables in this mode.
 
-The `Mail.Send` application permission grants the app the ability to send email as _any_ mailbox in the tenant. `MICROSOFT_GRAPH_SENDER` only selects the mailbox n8n sends from; it does not restrict the token. To limit the app to the intended mailbox, scope it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access), and protect `MICROSOFT_GRAPH_CLIENT_SECRET` accordingly.
+The `Mail.Send` application permission grants the app the ability to send email as _any_ mailbox in the tenant. `MICROSOFT_GRAPH_SENDER` only selects the mailbox n8n sends from; it does not restrict the token. To limit the app to the intended mailbox, scope it with [Exchange Online RBAC for Applications](https://learn.microsoft.com/en-us/exchange/permissions-exo/application-rbac) (or the older [application access policies](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access)), and protect `MICROSOFT_GRAPH_CLIENT_SECRET` accordingly.
 {% endhint %}
 
 

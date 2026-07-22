@@ -1,8 +1,8 @@
 ---
 title: Try n8n Cloud free, then choose a plan
 description: >-
-  Start a free n8n Cloud trial, then compare the Starter, Pro, Business, and
-  Enterprise plans to choose the right one.
+  Start a free n8n Cloud trial, then compare the Starter, Pro, and Enterprise
+  plans to choose the right one.
 contentType: overview
 nodeTitle: Try free then choose a plan
 originalFilePath: manage-cloud/cloud-free-trial.md

@@ -29,6 +29,19 @@ This page helps with both.
 [Start free trial](https://n8n.io/cloud/)
 {% endhint %}
 
+<figure>
+  <picture>
+    <source
+      srcset=".gitbook/assets/choose-your-n8n-diag-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <img
+      src=".gitbook/assets/choose-your-n8n-diag-light.png"
+      alt="Diagram of how to choose your n8n deployment option, plan, and edition"
+    />
+  </picture>
+  <figcaption>Choosing your n8n deployment option, plan, and edition</figcaption>
+</figure>
 
 ## Decision 1: Cloud or self-hosted <a href="#decision-1-cloud-or-self-hosted" id="decision-1-cloud-or-self-hosted"></a>
 
@@ -45,7 +58,7 @@ Use this guide to choose a deployment option:
 | Have infrastructure and technical resources | **Self-hosted** | You can manage your own deployment |
 | Need production-ready deployment | **Both options work** | Both Cloud and self-hosted support production use |
 
-Both options support production use. For the current feature and price breakdown, see the [pricing page](https://n8n.io/pricing/).
+For specific feature availability across different plans, see the [pricing page](https://n8n.io/pricing/).
 
 ### Pros and cons comparison <a href="#pros-and-cons-comparison" id="pros-and-cons-comparison"></a>
 
@@ -55,13 +68,13 @@ Both options support production use. For the current feature and price breakdown
 | Installation | ✅ No installation needed | ❌ Requires setup (npm, Docker, or server) |
 | Technical expertise | ✅ None required | ❌ Required for installation and configuration |
 | **Infrastructure Management** |
-| Hosting | ✅ Fully hosted by n8n | ❌ You provide and manage infrastructure |
+| Hosting | ✅ Fully hosted by n8n | ❌ You must provide and manage infrastructure |
 | Maintenance | ✅ Handled by n8n | ❌ Your responsibility |
 | **Control & Customization** |
 | Deployment control | ❌ Managed by n8n | ✅ Full control over deployment |
 | Customization | ❌ Limited to available options | ✅ Recommended for customized use cases |
 | **Cost** |
-| Free option | ⚠️ Free trial available | ✅ Free Community edition with most features |
+| Free option | ⚠️ Free trial available | ✅ Free Community Edition with most features |
 | Paid options | ✅ Range of paid plans | ✅ Paid Business and Enterprise options available |
 | **Features** |
 | Core features | ✅ Included | ✅ Included in free Community Edition |

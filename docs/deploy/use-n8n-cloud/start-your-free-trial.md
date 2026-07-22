@@ -32,6 +32,8 @@ The trial gives you Pro plan features with a limit of 1000 executions and the sa
 
 After your trial, you can move to a paid plan. Each plan suits a different user and includes different features, usage limits, and computing power.
 
+The following plans are available for n8n Cloud users:
+
 | Plan | Designed for |
 |------|--------------|
 | **Free trial** | Trying n8n Cloud with Pro features for 14 days|

@@ -21,14 +21,6 @@ n8n offers two primary deployment options: **n8n Cloud** (fully-managed) and **S
 
 This page helps with both.
 
-{% hint style="info" %}
-**Want to try n8n quickly?**
-
-**Start with n8n Cloud** for instant access with no installation required.
-
-[Start free trial](https://n8n.io/cloud/)
-{% endhint %}
-
 <figure>
   <picture>
     <source
@@ -37,11 +29,19 @@ This page helps with both.
     />
     <img
       src=".gitbook/assets/choose-your-n8n-diag-light.png"
-      alt="Diagram of how to choose your n8n deployment option, plan, and edition"
+      alt="Decision flowchart: n8n Cloud offers the Starter, Pro, and Enterprise plans; self-hosted offers the Community, registered Community, Business, and Enterprise editions"
     />
   </picture>
   <figcaption>Choosing your n8n deployment option, plan, and edition</figcaption>
 </figure>
+
+{% hint style="info" %}
+**Want to try n8n quickly?**
+
+**Start with n8n Cloud** for instant access with no installation required.
+
+[Start free trial](https://n8n.io/cloud/)
+{% endhint %}
 
 ## Decision 1: Cloud or self-hosted <a href="#decision-1-cloud-or-self-hosted" id="decision-1-cloud-or-self-hosted"></a>
 
@@ -50,13 +50,14 @@ Use this guide to choose a deployment option:
 | Your situation | Recommended option | Reason |
 |----------------|-------------------|---------|
 | Want to start quickly | **n8n Cloud** | No installation needed |
-| Don't have technical expertise | **n8n Cloud** | Fully managed, no setup or maintenance required|
+| Don't have technical expertise | **n8n Cloud** | Fully managed, no setup or maintenance required |
+| Need production-ready deployment | **Both options work** | Both Cloud and self-hosted support production use |
 | Don't want to manage infrastructure | **n8n Cloud** | n8n handles hosting, updates, and scaling |
 | Need full control over deployment | **Self-hosted** | You control the environment and configuration |
 | Have customized use cases | **Self-hosted** | Full control over deployment and configuration |
-| Want to run n8n for free | **Self-hosted (Community edition)** | Free with almost complete feature set |
+| Need enterprise features (SSO, environments, projects, etc.) | **Both options work** | Enterprise plans (paid) are available with both |
 | Have infrastructure and technical resources | **Self-hosted** | You can manage your own deployment |
-| Need production-ready deployment | **Both options work** | Both Cloud and self-hosted support production use |
+| Want to run n8n for free | **Self-hosted (Community edition)** | Free with almost the complete feature set |
 
 For specific feature availability across different plans, see the [pricing page](https://n8n.io/pricing/).
 
@@ -74,11 +75,11 @@ For specific feature availability across different plans, see the [pricing page]
 | Deployment control | ❌ Managed by n8n | ✅ Full control over deployment |
 | Customization | ❌ Limited to available options | ✅ Recommended for customized use cases |
 | **Cost** |
-| Free option | ⚠️ Free trial available | ✅ Free Community Edition with most features |
+| Free option | ⚠️ Free trial available | ✅ Free Community edition with most features |
 | Paid options | ✅ Range of paid plans | ✅ Paid Business and Enterprise options available |
 | **Features** |
-| Core features | ✅ Included | ✅ Included in free Community Edition |
-| Enterprise features | ❌ Requires paid plans | ❌ Requires Enterprise license (free Community limited) |
+| Core features | ✅ Included | ✅ Included in free Community edition |
+| Enterprise features | ❌ Requires paid plans | ❌ Requires a paid plan (free Community limited) |
 | **Use Cases** |
 | Quick start | ✅ Ideal for getting started | ⚠️ Takes longer to set up |
 | Production use | ✅ Supported | ✅ Recommended for production |
@@ -90,11 +91,11 @@ For specific feature availability across different plans, see the [pricing page]
 
 ## Decision 2: Choose a plan or edition <a href="#decision-2-choose-a-plan-or-edition" id="decision-2-choose-a-plan-or-edition"></a>
 
-Once you've chosen a deployment option, pick a plan. The [pricing page](https://n8n.io/pricing/) lists each plan's definitive features, usage limits, and prices.
+Once you've chosen a deployment option, pick a plan or edition. The [pricing page](https://n8n.io/pricing/) lists the definitive features, usage limits, and prices.
 
 ### Pick a plan for n8n Cloud <a href="#if-you-chose-n8n-cloud-pick-a-plan" id="if-you-chose-n8n-cloud-pick-a-plan"></a>
 
-Every plan runs the same core product with different features, usage limits, and computing power.
+Every plan runs on the same underlying product with different features, usage limits, and computing power.
 
 | Plan | Designed for |
 |------|--------------|
@@ -105,7 +106,7 @@ Every plan runs the same core product with different features, usage limits, and
 
 For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
-### Pick a plan for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
+### Pick a plan/edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
 
 Every self-hosted installation runs on the same underlying product. You can stick with the basic Community edition for free, indefinitely. Alternatively, register to unlock extra features for free, or subscribe to a paid plan to get a license key that unlocks the features for that plan.
 
@@ -116,13 +117,13 @@ Every self-hosted installation runs on the same underlying product. You can stic
 | **Business** | Paid (license key when you subscribe to Business plan) | Teams needing paid features like SSO, environments, and projects |
 | **Enterprise** | Paid (license key when you subscribe to Enterprise plan) | Organizations needing the most advanced security, scaling, and governance |
 
-For the differences between editions and how to register or license an instance, see [Compare editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
+For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
 To register a Community edition instance for the extra free features, go to **Settings > Usage and plan** and select **Unlock**.
 
 ## Which features need a paid plan or edition <a href="#which-features-need-a-paid-plan-or-edition" id="which-features-need-a-paid-plan-or-edition"></a>
 
-Some features aren't in the free Community edition. They're available on the self-hosted Business and Enterprise editions, and some are on the paid Cloud plans:
+Some features aren't in the free Community edition. They're available on the self-hosted Business and Enterprise plans, and some are on the paid Cloud plans:
 
 - Custom variables
 - Environments
@@ -135,13 +136,13 @@ Some features aren't in the free Community edition. They're available on the sel
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted editions differ.
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ.
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 
 Ready to begin?
 
 - **[Get started with n8n Cloud](https://n8n.io/cloud/)** — sign up for instant access, then [choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial)
-- **[Get started with self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)** — installation and deployment guides, then [choose an edition](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features)
+- **[Get started with self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)** — installation and deployment guides, then [choose a plan or edition](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features)
 
 For the current plans, editions, licenses, and prices, always check the [pricing page](https://n8n.io/pricing/).

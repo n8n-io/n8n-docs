@@ -44,11 +44,13 @@ Every self-hosted installation runs on the same underlying product. You can stic
 {% hint style="info" %}
 **Plan, edition, or license?**
 
-An **edition** is the variant of the self-hosted software you run: Community, registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
+An **edition** is the variant of the self-hosted software you run: Community, registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. Registering a free Community edition also uses a license key. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
 {% endhint %}
 
 {% hint style="info" %}
-Exact features per edition can change. For the current breakdown, see the [pricing page](https://n8n.io/pricing/). This page explains what the editions are and the main differences between them, not the full feature list.
+**The pricing page is the source of truth**
+
+Exact features per plan and edition can change. For the current breakdown, see the [pricing page](https://n8n.io/pricing/). This page explains what the plans and editions are and the main differences between them, not the full feature list.
 {% endhint %}
 
 ## Community edition <a href="#community-edition" id="community-edition"></a>
@@ -70,9 +72,7 @@ These features are available on the Business and Enterprise plans. Some are also
 
 ## Registered Community edition <a href="#registered-community-edition" id="registered-community-edition"></a>
 
-You can unlock extra features by registering your Community edition. You register with your email and receive a license key. Registering is free.
-
-Registering unlocks these features for the Community edition:
+Register your Community edition with your email to receive a free license key. It unlocks these features for the Community edition:
 
 * Folders: Organize your workflows into tidy folders
 * [Debug in editor](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/debug-executions): Copy and pin[^1] execution data when working on a workflow
@@ -88,8 +88,6 @@ To register an existing Community edition instance:
 4. Check your email for the account you entered.
 
 Once you have a license key, activate it by selecting the button in the license email, or by going to **Options > Settings > Usage and plan** and selecting **Enter activation key**.
-
-Once activated, your license won't expire. n8n may change the unlocked features in the future. This won't affect features you already unlocked.
 
 ## Business and Enterprise plans <a href="#business-and-enterprise-editions" id="business-and-enterprise-editions"></a>
 

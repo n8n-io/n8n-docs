@@ -87,7 +87,7 @@ The n8n editor UI allows you to create and manage workflows. The main area is th
 
 In n8n, entitlements grant n8n instances access to plan-restricted features for a specific period of time.
 
-Floating entitlements are a pool of entitlements that you can distribute among various n8n instances. You can re-assign a floating entitlement to transfer its access to a different n8n instance.
+Floating entitlements are a pool of entitlements that you can distribute among various n8n instances. You can re-assign a floating entitlement to transfer its access to a different n8n instance. See also [license](#license-n8n) and [plan](#plan-n8n).
 
 #### evaluation (n8n) <a href="#evaluation-n8n" id="evaluation-n8n"></a>
 
@@ -107,7 +107,7 @@ Large language models, or LLMs, are AI machine learning models designed to excel
 
 #### license (n8n) <a href="#license-n8n" id="license-n8n"></a>
 
-License has two senses in n8n. First, it's the legal terms the n8n source code is distributed under. Second, it's the license key that unlocks the features for a paid plan. When you self-host and subscribe to a paid Business or Enterprise plan, you add the license key to your instance to unlock the features for that plan. See also [entitlement](#entitlement-n8n) and [plan](#plan-n8n).
+License has two senses in n8n. First, it's the legal terms the n8n source code is distributed under. Second, it's the license key that unlocks the features for a paid plan. When you self-host and subscribe to a paid Business or Enterprise plan, you add the license key to your instance to activate it. See also [entitlement](#entitlement-n8n) and [plan](#plan-n8n).
 
 #### node (n8n) <a href="#node-n8n" id="node-n8n"></a>
 

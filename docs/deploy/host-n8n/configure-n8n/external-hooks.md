@@ -38,15 +38,15 @@ For the environment variables used to register hooks, refer to [External hooks e
 | `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
 | `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Use to overwrite an OAuth callback URL. |
 | `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Use to overwrite an OAuth callback URL. |
-| `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Use to restrict the number of active workflows. |
-| `workflow.afterCreate` | `[workflowId: string]` | Called after a workflow gets created. |
+| `workflow.activate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called before a workflow gets activated. Use to restrict the number of active workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
+| `workflow.afterCreate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called after a workflow gets created. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.afterDelete` | `[workflowId: string]` | Called after a workflow gets deleted. |
-| `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | Called after an existing workflow gets saved. |
-| `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
+| `workflow.afterUpdate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called after an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
+| `workflow.create` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called before a workflow gets created. Use to restrict the number of saved workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.delete` | `[workflowId: string]` | Called before a workflow gets deleted. |
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
-| `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Hook examples](#hook-examples) for an example using the `workflowContext` argument (only available from version 2.23.0). |
-| `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
+| `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.23.0). |
+| `workflow.update` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService]` | Called before an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
 | `workflow.afterArchive` | `[workflowId: string]` | Called after you archive a workflow. |
 | `workflow.afterUnarchive` | `[workflowId: string]` | Called after you restore a workflow from the archive. |
 
@@ -109,6 +109,42 @@ module.exports = {
 				const workflowTags = await workflowContext.getWorkflowTags(workflow.id);
 				if (!workflowTags.includes(requiredTag)) {
 					throw new Error(`Workflow is missing required tag "${requiredTag}", aborting`);
+				}
+			},
+		],
+	},
+};
+```
+
+### Workflow hook context
+
+Some workflow hooks receive a `workflowContext` argument, an instance of `WorkflowHookContextService`. It exposes helper methods you can call inside the hook function.
+
+{% hint style="info" %}
+**Available from n8n 2.32.0**
+
+n8n passes `workflowContext` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.update`, and `workflow.afterUpdate` hooks from n8n 2.32.0. The `workflow.preExecute` hook receives it from n8n 2.23.0.
+{% endhint %}
+
+The context provides these methods:
+
+| Method | Returns | Description |
+| :----- | :------ | :---------- |
+| `getWorkflowTags(workflowId: string)` | `Promise<string[]>` | Returns the names of the tags attached to the given workflow. |
+| `isTriggerNodeType(type: string, typeVersion?: number)` | `boolean` | Returns `true` if the given node type is a trigger. `type` is the fully-qualified node type name, for example `n8n-nodes-base.manualTrigger`. `typeVersion` defaults to the latest registered version. Throws if the node type isn't registered on the instance. |
+
+This example uses `isTriggerNodeType` to block activating a workflow that doesn't contain a trigger node:
+
+```js
+module.exports = {
+	workflow: {
+		activate: [
+			async function (workflowData, workflowContext) {
+				const hasTrigger = workflowData.nodes.some((node) =>
+					workflowContext.isTriggerNodeType(node.type, node.typeVersion),
+				);
+				if (!hasTrigger) {
+					throw new Error('Workflow must contain a trigger node, aborting activation');
 				}
 			},
 		],

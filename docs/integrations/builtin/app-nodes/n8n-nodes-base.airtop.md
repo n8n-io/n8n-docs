@@ -36,10 +36,13 @@ Refer to [Airtop credentials](../credentials/airtop.md) for guidance on setting 
     * Create session
     * Save profile on termination
     * Terminate session
+    * Wait for download
 * Window
     * Create a new browser window
     * Load URL
     * Take screenshot
+    * Get live view
+    * List windows
     * Close window
 * Extraction
     * Query page
@@ -47,8 +50,16 @@ Refer to [Airtop credentials](../credentials/airtop.md) for guidance on setting 
     * Smart scrape page
 * Interaction
     * Click an element
+    * Fill form
     * Hover on an element
+    * Scroll
     * Type
+* File
+    * Upload a file
+    * Get a file
+    * Get many files
+    * Load a file
+    * Delete a file
 
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
@@ -69,11 +80,21 @@ Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assis
 
 ### Run an agent
 
-Run a published Airtop agent. In the **Agent** field, select the agent to run, then map its input parameters. To run against a specific browser profile, set the optional **Browser Profile ID** field. Leave it empty to use the agent's default profile.
+Run a published Airtop agent. In the **Agent** field, select the agent to run, then map its input parameters. To run the agent against a specific browser profile, enter its ID in the optional **Browser Profile ID** field. Leave it empty to use the agent's default profile.
 
 ### Create a session and window <a href="#create-a-session-and-window" id="create-a-session-and-window"></a>
 
 Create an Airtop browser session to get a **Session ID**, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
+
+### Manage windows
+
+Work with the browser windows in a session:
+
+- **Load URL**: Navigate a window to a page.
+- **Get live view**: Get a Live View URL to watch and control a window in real time.
+- **Take screenshot**: Capture an image of a window.
+- **List windows**: List the windows open in a session.
+- **Close window**: Close a specific window.
 
 ### Extract content <a href="#extract-content" id="extract-content"></a>
 
@@ -87,7 +108,24 @@ Get JSON responses by using the **JSON Output Schema** parameter in query operat
 
 ### Interacting with pages <a href="#interacting-with-pages" id="interacting-with-pages"></a>
 
-Click, hover, or type on elements by describing the element you want to interact with.
+Interact with a page in a session by describing the element you want to act on in natural language:
+
+- **Click an element**, **Hover on an element**, or **Type** text.
+- **Fill form**: Fill several fields at once from a plain-language description of the values.
+- **Scroll**: Scroll to a described element, or by a set amount toward a page edge.
+
+### Work with files
+
+Upload files to Airtop and use them in your browser automations:
+
+- **Upload a file**: Upload a file from a URL or binary data, and optionally attach it to a page's file input in a session.
+- **Load a file**: Attach a previously uploaded file to a page's file input in an existing session.
+- **Get a file** and **Get many files**: Retrieve file details, or download a ready file as binary data.
+- **Delete a file**: Permanently remove an uploaded file by its **File ID**.
+
+### Wait for a download
+
+After you trigger a download in a session, use **Wait for download** to wait until the file is ready, then get its file ID and download URL.
 
 ### Terminate a session <a href="#terminate-a-session" id="terminate-a-session"></a>
 

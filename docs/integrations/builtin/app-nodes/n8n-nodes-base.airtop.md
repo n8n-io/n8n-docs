@@ -30,6 +30,8 @@ Refer to [Airtop credentials](../credentials/airtop.md) for guidance on setting 
 
 ## Operations <a href="#operations" id="operations"></a>
 
+* Agent
+    * Run an agent
 * Session
     * Create session
     * Save profile on termination
@@ -64,6 +66,10 @@ Refer to [Airtop's documentation](https://docs.airtop.ai/api-reference/airtop-ap
 Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
 
 ## Node reference <a href="#node-reference" id="node-reference"></a>
+
+### Run an agent
+
+Run a published Airtop agent. In the **Agent** field, select the agent to run, then map its input parameters. To run against a specific browser profile, set the optional **Browser Profile ID** field. Leave it empty to use the agent's default profile.
 
 ### Create a session and window <a href="#create-a-session-and-window" id="create-a-session-and-window"></a>
 

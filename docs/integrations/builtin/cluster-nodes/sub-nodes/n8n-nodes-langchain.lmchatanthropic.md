@@ -47,6 +47,8 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+* **Enable Prompt Caching**: Turn this on to cache the system prompt, tool definitions, and conversation history between requests using [Anthropic prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching). Available on node version 1.6 and above.
+* **Cache TTL**: Choose how long cached content stays valid before it needs to be written again: **5 Minutes** (the default) or **1 Hour**. Use **1 Hour** if tool calls or approval waits often exceed five minutes between requests. Only available when **Enable Prompt Caching** is on.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

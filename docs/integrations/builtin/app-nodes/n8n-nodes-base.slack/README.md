@@ -25,7 +25,7 @@ On this page, you'll find a list of operations the Slack node supports and links
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Slack credentials](../credentials/slack.md) for guidance on setting up authentication.
+Refer to [Slack credentials](../../credentials/slack.md) for guidance on setting up authentication.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
@@ -59,7 +59,7 @@ Refer to [Slack credentials](../credentials/slack.md) for guidance on setting up
     * **Get permalink**: Get a message's permalink.
     * **Search** for messages
     * **Send** a message
-    * **Send and Wait for Response**: Send a message and wait for a response from the recipient before continuing.
+    * **Send and Wait for Response**: Send a message and wait for a response from the recipient before continuing. Approvers can also respond directly inside Slack. Refer to [Approvals in Slack](approvals.md) for more information.
     * **Update** a message
 * **Reaction**
     * **Add** a reaction to a message.
@@ -93,7 +93,7 @@ Refer to [Slack's documentation](https://api.slack.com/) for more information ab
 
 ## Required scopes <a href="#required-scopes" id="required-scopes"></a>
 
-Once you create a Slack app for your [Slack credentials](../credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](../credentials/slack.md#scopes) page.
+Once you create a Slack app for your [Slack credentials](../../credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](../../credentials/slack.md#scopes) page.
 
 If those aren't enough, use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
 

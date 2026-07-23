@@ -121,7 +121,7 @@ AWS Role Assumption allows you to securely access AWS resources by temporarily a
 * **Principle of least privilege:** Grant only the permissions needed for specific tasks
 * **Audit trail:** Better tracking of who accessed what resources
 
-n8n uses the official AWS SDK to make the STS `AssumeRole` call. It caches the temporary credentials and refreshes them shortly before they expire, so long-running workflows keep working without any manual steps.
+n8n uses the official AWS SDK to make the STS `AssumeRole` call, and requests fresh temporary credentials when it signs node requests, so you don't need to manage their expiry. This differs from the **Temporary security credential** option on the AWS (IAM) credential, where you enter a static session token that n8n can't renew: when that token expires, you must enter a new one.
 
 ### Setting up AWS Assume Role credentials <a href="#setting-up-aws-assume-role-credentials" id="setting-up-aws-assume-role-credentials"></a>
 
@@ -251,7 +251,7 @@ Things to keep in mind:
 
 * AWS injects the detection variables for sources 2 to 4 automatically when you configure the platform feature. You don't set them yourself.
 * If you set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` on the container, they take precedence over IRSA, Pod Identity, and instance roles. Remove them if you want the federated source to be used.
-* n8n caches credentials and refreshes them automatically before they expire. For example, IRSA token refresh is handled for you.
+* n8n resolves system credentials when it needs them, so rotated or short-lived source credentials (for example, the IRSA token that Kubernetes rotates) are picked up automatically.
 * Reading AWS CLI profiles from `~/.aws` (`AWS_PROFILE`) is intentionally not supported.
 
 #### Amazon EKS with IRSA

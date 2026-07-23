@@ -41,6 +41,8 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 * Schedules will run at the times you've defined
 * Events from connected apps will trigger this workflow
 
+Publishing is asynchronous. When you publish, n8n works out which triggers changed between your last published version and the new one, then applies only those changes in the background. Triggers that haven't changed keep running without interruption. The new version goes live as part of this process. The **Publish** button shows a **Publishing** state until n8n confirms the result, which it does even if you reload the page.
+
 **Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 
 ![](../.gitbook/assets/publish-initial.png)
@@ -64,6 +66,12 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 **Published, error** The workflow is published, but there are errors in your recent changes that need to be fixed before you can publish again.
 
 ![](../.gitbook/assets/published-error.png)
+
+**Publishing** After you publish, n8n registers your triggers in the background. The button shows this state until n8n confirms the result.
+
+**Published, partial** n8n published the new version, but at least one trigger failed to activate, for example because a connected app was unavailable. The workflow keeps running the triggers that did activate, and n8n doesn't unpublish it. Hover over the button to see which triggers failed, then publish again to retry them.
+
+**Failed to publish** None of the workflow's triggers activated, so the workflow isn't running. The published version stays set, so you can publish again to retry.
 
 ## How collaboration works <a href="#how-collaboration-works" id="how-collaboration-works"></a>
 

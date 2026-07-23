@@ -343,6 +343,44 @@ The **Approval** response type adds these options:
 * **Type of Approval**: Whether to present only an approval button or both an approval and disapproval buttons.
 * **Button Label**: The label for the approval or disapproval button. The default choice is `✅ Approve` and `❌ Decline` for approval and disapproval actions respectively.
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Approve Within Chat**: Whether approvers respond with a single tap on the message's buttons, instead of opening a link in their browser. Refer to [Approve Within Chat](#approve-within-chat) below for more information.
+
+#### Approve within chat
+
+{% hint style="info" %}
+**Requirements**
+
+To use **Approve Within Chat**, your n8n instance must be reachable from the internet over HTTPS, on port `443`, `80`, `88`, or `8443` (the ports Telegram supports for webhooks). There's nothing to register on Telegram's side and no extra secrets to configure: n8n registers the webhook for you, using your existing [Telegram credential](../../credentials/telegram.md).
+{% endhint %}
+
+When you turn on **Approve Within Chat**, approvers respond with a single tap on the message's buttons, instead of opening a link in their browser:
+
+* The node's output includes the responder's Telegram user ID, username, and name.
+* You can restrict who's allowed to respond. A tap from anyone else doesn't resolve the execution, and that person sees a popup telling them they aren't authorized.
+* After a decision, n8n edits the message: how depends on the **After Decision** option below.
+
+Telegram allows only one webhook per bot. If you also use a [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) with the same bot, n8n automatically shares that webhook between the trigger and **Approve Within Chat**: you don't need a second bot. If the trigger was activated before this feature was available, re-activate its workflow (or update it to the latest version) so button taps reach n8n. If the bot's webhook is already used by something outside n8n, use a different bot for **Approve Within Chat**, or turn the option off.
+
+{% hint style="info" %}
+**Fallback to link buttons**
+
+If your instance isn't reachable over public HTTPS, or you turn **Approve Within Chat** off, the node falls back to sending link buttons instead.
+{% endhint %}
+
+{% hint style="info" %}
+**Private chats, groups, and channels**
+
+Button taps behave the same way in private chats, groups, and channels. As with any other **Message** operation, your bot needs to be a member of the channel to post and edit messages there. Refer to [Common Issues | Add a bot to a Telegram channel](common-issues.md#add-a-bot-to-a-telegram-channel) for more information.
+{% endhint %}
+
+Turning on **Approve Within Chat** reveals a **Chat Approval Options** section with these fields:
+
+* **Restrict to User IDs**: The Telegram user IDs allowed to approve or decline. Separate multiple IDs with a comma. If you leave this empty, anyone who can see the message can respond.
+* **Unauthorized Reply**: The message shown, as a Telegram popup, to someone who taps a button but isn't on the approver list.
+* **After Decision**: What happens to the message after someone responds:
+    * **Show Outcome and Remove Buttons**: Removes the buttons and adds a line showing who approved or declined.
+    * **Remove Buttons Only**: Removes the buttons without adding an outcome line.
+    * **Keep Message Unchanged**: Leaves the message as it was.
 
 #### Free Text <a href="#free-text" id="free-text"></a>
 

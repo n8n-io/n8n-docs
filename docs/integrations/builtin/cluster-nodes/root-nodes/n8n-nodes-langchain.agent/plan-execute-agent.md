@@ -22,6 +22,12 @@ layout:
 
 # Plan and Execute Agent node <a href="#plan-and-execute-agent-node" id="plan-and-execute-agent-node"></a>
 
+{% hint style="info" %}
+**Feature removed**
+
+n8n removed this functionality in February 2025.
+{% endhint %}
+
 The Plan and Execute Agent is like the [ReAct agent](react-agent.md) but with a focus on planning. It first creates a high-level plan to solve the given task and then executes the plan step by step. This agent is most useful for tasks that require a structured approach and careful planning.
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.

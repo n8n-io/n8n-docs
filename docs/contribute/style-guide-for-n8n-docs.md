@@ -27,7 +27,7 @@ layout:
 
 ## Writing style
 
-n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/). This page highlights the elements that matter most for n8n Docs and adds our custom style choices.
+Test. n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/). This page highlights the elements that matter most for n8n Docs and adds our custom style choices.
 
 ### Plain language
 

@@ -19,8 +19,10 @@ On this page, you'll find a list of operations the Microsoft Excel (SharePoint) 
 
 The node offers two ways to sign in, chosen with the **Authentication** dropdown:
 
-* **Microsoft OAuth2 (Graph)**: sign in as a person with the generic [Microsoft OAuth2 credential](../credentials/microsoft.md). Enable the scopes the node needs on the credential: `Sites.Read.All` to browse and read, `Sites.ReadWrite.All` to write.
+* **Microsoft OAuth2 (Graph)**: sign in as a person with the generic [Microsoft OAuth2 credential](../credentials/microsoft.md). Enter the scopes the node needs in the credential's **Scope** field: `Sites.Read.All` to browse and read, `Sites.ReadWrite.All` to write. Include `openid offline_access` so the credential can refresh its tokens. For example, to perform all of the node's operations: `openid offline_access Sites.ReadWrite.All`.
 * **Microsoft Entra Service Principal (App-Only)**: sign in as an app, for unattended workflows where no user is present, with the [Microsoft Entra Service Principal credential](../credentials/microsoftentraserviceprincipal.md). Grant the app registration `Sites.Read.All` to read and `Sites.ReadWrite.All` to write, with admin consent. To limit the app to specific sites, grant `Sites.Selected` for each site instead.
+
+These are the only credentials the node accepts. The node-specific **Microsoft Excel** and **Microsoft SharePoint** credentials don't work with it: the Excel credential doesn't include the SharePoint (`Sites.*`) scopes, and the SharePoint credential issues tokens for the SharePoint REST API rather than for Microsoft Graph, which this node uses.
 {% endhint %}
 
 ## Which Excel node should I use?
@@ -51,6 +53,7 @@ There are three ways to point the node at a workbook:
   * Get Rows: read rows from a range or the used range of a sheet.
   * Update: update rows matched by a column value.
 * **Table**:
+  * Append: append rows to the end of a table.
   * Convert to Range: convert a table to a plain range of cells.
   * Create: create a table from a range of cells.
   * Delete: delete a table.

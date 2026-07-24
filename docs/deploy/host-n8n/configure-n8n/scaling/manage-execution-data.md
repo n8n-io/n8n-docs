@@ -12,6 +12,12 @@ layout:
 
 # Execution data <a href="#execution-data" id="execution-data"></a>
 
+{% hint style="info" %}
+**Only for self-hosted n8n**
+
+This document discusses execution data for self-hosted n8n. On n8n Cloud, n8n manages execution data storage and pruning automatically. Read [Manage your data](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn how it works.
+{% endhint %}
+
 Depending on your executions settings and volume, your n8n database can grow in size and run out of storage.
 
 To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.

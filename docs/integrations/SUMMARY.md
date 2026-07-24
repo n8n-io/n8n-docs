@@ -250,6 +250,7 @@
     * [Microsoft Dynamics CRM](builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm.md)
     * [Microsoft Entra ID](builtin/app-nodes/n8n-nodes-base.microsoftentra.md)
     * [Microsoft Excel (OneDrive)](builtin/app-nodes/n8n-nodes-base.microsoftexcel.md)
+    * [Microsoft Excel (SharePoint)](builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint.md)
     * [Microsoft Graph Security](builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md)
     * [Microsoft OneDrive](builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md)
     * [Microsoft Outlook](builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md)

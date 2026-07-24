@@ -1,0 +1,29 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_3c8c407e7844ab::t_4954b28b093cd7 22,29
+  s_3c8c407e7844ab::t_9293d70d083061 78
+  s_3c8c407e7844ab::t_dbebcfcc2001cf 46
+  s_3c8c407e7844ab::t_4c036ac6b8ccd5 87
+  s_3c8c407e7844ab::t_0b25010a959ffa 103
+  s_3c8c407e7844ab::t_b49585c620988f 30
+  s_3c8c407e7844ab::t_4212c14ad8a403 147
+  s_3c8c407e7844ab::t_1410de0cc3a3ca 8
+  s_3c8c407e7844ab::t_e34e9e96ff8758 1-7,9-21,23-28,31-45,47-77,79-86,88-102,104-146,148-178
+docs/administer/SUMMARY.md
+  s_3c8c407e7844ab::t_da7ad4196acb22 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "965b79c27cbe6c98c19f164a3724b235c9b7acf6",
+  "prompts": {},
+  "sessions": {
+    "s_3c8c407e7844ab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2b5df97d-850e-40e3-9c46-ace0a372f45b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": null
+    }
+  }
+}

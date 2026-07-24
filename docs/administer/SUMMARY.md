@@ -33,6 +33,7 @@
   * [Push and pull changes](use-source-control-and-environments/push-and-pull-changes.md)
   * [Compare versions](use-source-control-and-environments/compare-versions.md)
   * [Move work between environments](use-source-control-and-environments/move-work-between-environments.md)
+  * [Use environments programmatically with the public API](use-source-control-and-environments/use-environments-via-api.md)
   * [Tutorial: Create environments with source control](use-source-control-and-environments/tutorial-create-environments-with-source-control.md)
 * [Manage credentials](manage-credentials/README.md)
   * [Share credentials securely](manage-credentials/share-credentials-securely.md)

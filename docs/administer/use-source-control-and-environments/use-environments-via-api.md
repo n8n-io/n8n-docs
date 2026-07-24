@@ -41,11 +41,11 @@ Every request needs an API key sent in the `X-N8N-API-KEY` header. On Enterprise
 | `sourceControl:push` | Push local changes to Git. |
 | `sourceControl:read` | Read the status of pending changes. |
 
-Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull` and nothing else. That key can't push, so production stays read-only by design, not by convention.
+Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull` and nothing else. That key can't push, so production stays read-only by design.
 
 ## Check the status, then act
 
-Don't push or pull blind. A push sends whatever differs between your instance and Git, so you should see that difference first. The `status` endpoint gives you that preview, and its response has the same shape that `push` accepts. You can review the list, filter it, and pass the result straight back.
+Don't push or pull blind. A push sends whatever differs between your instance and Git, so you should see that difference first. The `status` endpoint gives you that preview and its response has the same shape that `push` accepts. You can review the list, filter it, and pass the result straight back.
 
 The pattern is always the same:
 
@@ -77,7 +77,7 @@ The response lists each pending file, including its `id`, `name`, `type` (such a
 
 ## Promotion flow from development to read-only production
 
-This is the most common setup: you make changes on a development instance, then promote them to a production instance that only ever receives work. This example uses a single Git branch shared by both instances.
+This is the most common setup: you make changes on a development instance, then promote them to a production instance that only ever receives updates. This example uses a single Git branch shared by both instances.
 
 Give each instance a scoped API key:
 

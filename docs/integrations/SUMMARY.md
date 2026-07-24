@@ -356,7 +356,7 @@
       * [Callback operations](builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md)
       * [File operations](builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md)
       * [Message operations](builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md)
-      * [Cmmon issues](builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md)
+      * [Common issues](builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md)
     * [TheHive](builtin/app-nodes/n8n-nodes-base.thehive.md)
     * [TheHive 5](builtin/app-nodes/n8n-nodes-base.thehive5.md)
     * [TimescaleDB](builtin/app-nodes/n8n-nodes-base.timescaledb.md)

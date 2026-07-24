@@ -33,6 +33,17 @@ The Calendly Trigger node relies on Calendly webhooks. Calendly only offers acce
 - Personal Access Token
 - OAuth2
 
+## Required scopes <a href="#required-scopes" id="required-scopes"></a>
+
+To use Calendly nodes and triggers in n8n, your credentials must have the following scopes:
+
+- `users:read`: Read user information
+- `webhooks:read`: Read webhook subscriptions
+- `webhooks:write`: Create and manage webhook subscriptions
+- `scheduled_events:read`: Read scheduled event information
+
+Personal Access Tokens have all permissions by default. For OAuth2, you must configure these scopes when creating your application.
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Calendly's API documentation](https://developer.calendly.com/getting-started) for more information about the service.
@@ -70,10 +81,15 @@ To get both, create a new OAuth app in Calendly:
 3. In **Environment type**, select the environment that corresponds to your usage, either **Sandbox** or **Production**.
     - Calendly recommends starting with **Sandbox** for development and creating a second application for **Production** when you're ready to go live.
 4. Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URI** in the OAuth app.
-5. Select **Save & Continue**. The app details display.
-5. Copy the **Client ID** and enter this as your n8n **Client ID**.
-6. Copy the **Client secret** and enter this as your n8n **Client Secret**.
-1. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.
+5. In the **Scopes** section, add the following required scopes:
+    - `users:read`
+    - `webhooks:read`
+    - `webhooks:write`
+    - `scheduled_events:read`
+6. Select **Save & Continue**. The app details display.
+7. Copy the **Client ID** and enter this as your n8n **Client ID**.
+8. Copy the **Client secret** and enter this as your n8n **Client Secret**.
+9. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.
 
 Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account) for more information.
 

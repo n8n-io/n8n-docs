@@ -76,7 +76,7 @@ From the **Data tables** tab, you can:
 
 ## Considerations and limitations of data tables <a href="#considerations-and-limitations-of-data-tables" id="considerations-and-limitations-of-data-tables"></a>
 
-- Data tables are suitable for light to moderate data storage. By default, the total storage used by all data tables in an instance is limited to 50MB. In self-hosted environments, you can increase this default size limit using the environment variable `N8N_DATA_TABLES_MAX_SIZE_BYTES`.
+- Data tables are suitable for light to moderate data storage. By default, the total storage used by all data tables in an instance is limited to 200 MiB. In self-hosted environments, you can change this size limit using the environment variable `N8N_DATA_TABLES_MAX_SIZE_BYTES`.
 - When your data tables approach 80% of your storage limit, n8n displays a warning. A final warning appears when you reach the storage limit. Exceeding this limit will disable manual additions to tables and cause workflow execution errors during attempts to insert or update data.
 - By default, data tables created within a project are accessible to all team members in that project.
 - Admins and Owner can see all Users' data tables.

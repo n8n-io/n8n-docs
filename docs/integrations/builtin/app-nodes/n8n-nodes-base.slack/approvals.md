@@ -22,16 +22,16 @@ With the **Message** > **Send and Wait for Response** operation, approvers can a
 | What | Link buttons (default) | Approvals in Slack |
 |------|------------------------|--------------------|
 | Where the decision happens | Opens an n8n page in the browser | One click inside Slack |
-| Who can respond | Anyone who can click the link | Only the approvers you list (an empty list lets anyone who can see the message respond). Anyone else gets a private "not authorized" note and the workflow keeps waiting. |
+| Who can respond | Anyone who can click the link | Only the approvers you list (an empty list lets anyone who can see the message respond). Anyone else gets a private note you can word yourself, and the workflow keeps waiting. |
 | Output | `approved` and `respondedAt` | Adds who responded (ID, name, username, and email) plus the channel and message |
-| The message after the decision | Unchanged. The buttons stay clickable, but later clicks show a "no action required" page. The first decision stands. | Locked and updated to show the outcome and the responder |
+| The message after the decision | Unchanged. The buttons stay clickable, but later clicks show a "no action required" page. The first decision stands. | Your choice: show the outcome and remove the buttons (default), remove the buttons only, or leave the message unchanged |
 | Security | Signed links: no one can tamper with the URL or its action, but anyone who has the link can respond, and n8n can't tell who clicked | n8n verifies every callback came from Slack (using Slack's request signing) and checks the responder against your approver list |
 
 ## Requirements
 
 To approve within Slack, you need:
 
-- Your n8n instance must be reachable from Slack over public HTTPS. Slack calls your instance back when someone responds, so an instance running on localhost won't work.
+- Your n8n instance to be reachable from Slack over public HTTPS. Slack calls your instance back when someone responds, so an instance running on localhost won't work.
 - A Slack credential, using either an API access token or OAuth2.
 - The **Signature Secret** field of your Slack credential must contain your Slack app's signing secret, found in **Settings** > **Basic Information**. Without it, the buttons render but clicks don't resume the workflow.
 - **Response Type** set to **Approval**.
@@ -63,7 +63,15 @@ n8n uses the signing secret to verify that each callback really comes from Slack
 
 ### 4. Configure the node
 
-In the Slack node, select the **Message** resource with the **Send and Wait for Response** operation, and set **Response Type** to **Approval**. Turn on **Capture Who Responded** to switch the approval buttons to Slack interactive buttons and record who responded. To restrict who can act, select users in **Approver Names or IDs**. You can also specify user IDs with an expression. Anyone not on the list who clicks gets a private notice, and the workflow keeps waiting.
+In the Slack node, select the **Message** resource with the **Send and Wait for Response** operation, and set **Response Type** to **Approval**. The settings below then appear under the **Advanced Interactivity** section header.
+
+- **Capture Who Responded**: turn this on to switch the approval buttons to Slack interactive buttons and record who responded. The remaining settings appear once it's on.
+- **Restrict Who Can Approve**: select the users allowed to act. You can also specify user IDs with an expression. Anyone not on the list who clicks gets a private notice, and the workflow keeps waiting.
+- **Unauthorized Reply**: the private (ephemeral) message shown to someone who clicks but isn't on the approver list. Defaults to `You are not authorized to respond to this request.`
+- **After Decision**: what happens to the original Slack message once someone approves or declines.
+    - **Show Outcome and Remove Buttons** (default): removes the buttons and adds a line naming the decision and the responder.
+    - **Remove Buttons Only**: removes the buttons and leaves the rest of the message as it was.
+    - **Keep Message Unchanged**: leaves the message exactly as sent, buttons included. Later clicks don't change the recorded decision, which is the first one.
 
 If you leave the approver list empty, anyone who can see the message can approve or decline. In a channel, that's every member. The list controls who can respond, not who can see the request, so post sensitive approvals to a private channel or direct message.
 
@@ -108,5 +116,5 @@ Existing workflows keep working unchanged.
 ## Troubleshooting
 
 - **The buttons don't do anything, or Slack shows a warning**: the **Request URL** is wrong, your instance isn't publicly reachable over HTTPS, or the **Signature Secret** is missing or wrong. Slack shows the same warning for a rejected callback as for an unreachable URL.
-- **Someone gets a "not authorized" reply**: that user isn't listed in **Approver Names or IDs**.
+- **Someone gets a "not authorized" reply**: that user isn't listed in **Restrict Who Can Approve**. The wording comes from **Unauthorized Reply**.
 - **The workflow never resumes although someone responded**: the **Signature Secret** is missing or doesn't match your app's **Signing Secret**. n8n rejects callbacks it can't verify, and the workflow keeps waiting.

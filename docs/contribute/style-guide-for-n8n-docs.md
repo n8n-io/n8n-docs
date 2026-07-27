@@ -4,7 +4,7 @@ originalFilePath: dummy1.md
 originalUrl: https://docs.n8n.io/dummy1
 url: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
 layout:
-  width: default
+  width: defaul
   title:
     visible: true
   description:
@@ -153,9 +153,189 @@ Connect each page to the others on its topic. Explicit, descriptive links let an
 
 ## Versioning and release status
 
-Many features, settings, and nodes are tied to a specific n8n release, or carry a status like preview or deprecated. Reference versions and status consistently so readers can tell whether a given install supports a feature.
+Many features are limited to **certain n8n Cloud plans or self-hosted editions**, and only available (or deprecated/removed) from **certain n8n versions**. Document this at one of four scopes:
 
-### Two version types
+* **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
+* **Inline:** a short note next to a small control, option, field, role, or behavior within a larger feature. See Inline availability limits, below.
+* **Passing mention:** a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Passing mentions and table rows, below.
+* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See Passing mentions and table rows, below.
+
+### Feature availability hints (page and section level)
+
+**Both plan and version:**
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.30.0 or later.
+
+Compare plans and editions | See release notes
+{% endhint %}
+```
+
+**Plan only:**
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+Compare plans and editions
+{% endhint %}
+```
+
+**Plan only, one platform** — with the required absence line:
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
+
+Compare plans and editions
+{% endhint %}
+```
+
+**Plan caveat, plus version** — shows the full order below the bullets: the caveat (in the absence line's place), then version, then links.
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available on:
+
+- **Self-hosted:** Enterprise
+
+On n8n Cloud Enterprise, contact n8n to enable it.
+
+Available from n8n 2.30.0 or later.
+
+Compare plans and editions | See release notes
+{% endhint %}
+```
+
+**Version only:**
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available from n8n 2.30.0 or later.
+
+See release notes
+{% endhint %}
+```
+
+**Version, plus preview status:**
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+Available from n8n 2.30.0 or later.
+
+This feature is in preview and may change in future releases. Avoid relying on it in production workflows.
+
+See release notes
+{% endhint %}
+```
+
+**Deprecated or removed** — uses `warning`, not `info`. Swap the wording for a removal ("Removed from n8n 2.30.0").
+
+```
+{% hint style="warning" %}
+**Feature availability**
+
+Deprecated from n8n 2.30.0
+
+See release notes
+{% endhint %}
+```
+
+Rules:
+
+* **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
+* **Platform bullets:** lead with "Available on:". Name both platforms — never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
+* **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
+* **Write "n8n Cloud", not "Cloud"** — bare "Cloud" is ambiguous.
+* **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro) — never list the trial itself; cover it only on the trial page.
+* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) the preview sentence, (4) any other feature-specific caveat, (5) the plan-comparison link.
+* **Version-only, deprecation, or removal** (no plan limit): skip the bullets — just the title, the sentence, and the release-notes link.
+* **Both plan and version:** plan bullets first, then the version sentence, then both links together at the end.
+
+### Inline availability limits
+
+Use inline wording only for a small control, option, field, role, or behavior inside a larger feature — not for a page- or section-wide limit (use the hint instead).
+
+* Name the specific thing, not "this feature", unless the referent is obvious.
+* One sentence per item; two if plan/platform and version both apply — plan/platform first.
+* Mention both platforms if both matter; don't imply absence by omission.
+* State version, deprecation, or removal plainly ("available from version X", "deprecated from version X") — skip the "Available from" hint-style lead-in.
+* Skip the plan-comparison and release-notes links inline, unless there's no nearby hint and this is the page's only availability note.
+* If it needs more than two sentences, both platform bullets, or plan + version + deprecation together, promote it to a scoped hint instead.
+
+```
+This option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
+```
+
+```
+This setting is available on self-hosted Enterprise. On n8n Cloud Enterprise, contact n8n to enable it.
+```
+
+```
+This option is available from n8n 2.30.0 or later.
+```
+
+```
+This field is deprecated from n8n 2.30.0.
+```
+
+```
+This role is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise, from n8n 2.30.0 or later.
+```
+
+### Passing mentions and table rows
+
+For a whole feature, node, or item with no heading of its own, or one row among many in a table. Use the same vocabulary and ordering as inline text.
+
+```
+The Data table node (available from n8n 2.17.0) stores data between executions.
+```
+
+```
+The environments feature (n8n Cloud Enterprise, self-hosted Enterprise) lets you promote workflows between instances.
+```
+
+In a table, put the limit in the description cell:
+
+| Variable | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. |
+
+Or add a dedicated column if several rows differ:
+
+| Variable | Available on | Description |
+| :--- | :--- | :--- |
+| `N8N_LDAP_ENABLED` | Self-hosted Business, Enterprise | Whether LDAP sign-in is enabled. |
+| `N8N_SMTP_HOST` | All editions | SMTP server hostname for outgoing email. |
+
+### Versioning wording
+
+#### Two version types
 
 n8n has two separate version numbers. Never leave the reader guessing which one you mean.
 
@@ -164,7 +344,7 @@ n8n has two separate version numbers. Never leave the reader guessing which one 
 
 In prose, qualify a bare number: write "n8n 2.30.0" or "node version 4.7", not just "version 2".
 
-### Writing version numbers
+#### Writing version numbers
 
 Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8n instance versions:
 
@@ -172,38 +352,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 * **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
 * **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
 
-### Where to put the marker
 
-Put an availability, status, or deprecation marker at the scope of what it describes:
-
-* **A whole page about the feature**: a hint (callout) directly below the page title.
-* **A section within a page**: a hint directly below that section's heading.
-* **A feature mentioned in passing**, with no heading of its own: fold it into the sentence instead of using a hint. For example, "The Data table node (available from n8n 2.17.0) stores data between executions", or "Avoid the `tablePrefix` option; it's deprecated from n8n 2.0".
-* **A single row in a table** (one environment variable, one hook): put it in the description cell as "(available from n8n 2.17.0)". When many rows differ, add a dedicated column.
-
-Match the hint style to the status:
-
-| Status | Hint style |
-| :--- | :--- |
-| Available from | `info` |
-| Preview | `info` |
-| Deprecated or removed | `warning` |
-
-For example:
-
-```
-{% hint style="info" %}
-**Available from n8n 2.17.0**
-{% endhint %}
-```
-
-```
-{% hint style="warning" %}
-**Deprecated from n8n 2.0**
-
-Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0.
-{% endhint %}
-```
 
 ### Marking preview features
 
@@ -220,29 +369,6 @@ Preview features may change in future releases. Avoid relying on them in product
 ```
 
 * **Tie it to a version when it helps**: "In preview from n8n 2.20.0".
-
-### Marking when a feature became available
-
-Follow the placement rules above, plus:
-
-* **State the consequence for older versions** when there is one: "On earlier versions, use `OLD_VAR` instead".
-* **Keep availability separate from plan or platform limits.** Put tier restrictions (Cloud, Enterprise, self-hosted) in their own `info` hint, separate from the version marker.
-
-### Marking deprecations and removals
-
-Deprecated features still work but you shouldn't use them. Removed features no longer exist. Follow the placement rules above, plus:
-
-* **Name the replacement and the removal version**, if known: "Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0". If removal isn't scheduled, say so: "Removal isn't scheduled yet".
-* **Always name the version** that deprecates or removes something. Don't use vague timeframes like "soon" or "in the near future".
-* **For a deprecated item in a table**, tag the identifier with `(deprecated)` and state the version in the description. For example:
-
-  | Variable | Type | Default | Description |
-  | :--- | :--- | :--- | :--- |
-  | `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. Still required in 1.x, where you must set it to `true`. |
-
-### Deprecated, removed, and versioned nodes
-
-Node version facts live in one place: [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes). This page is auto-updated from the codebase.
 
 ## Vale linting
 
@@ -349,7 +475,7 @@ How you link depends on whether the target page is in the **same space** or a **
 The relative path depends on where the target sits in relation to the page you're editing. The examples below all assume you're editing `current-page.md` in this file tree:
 
 ```
-docs/                                     # docs root
+docs/                                     # docs roo
 ├── build/                                # current space
 │   ├── README.md                         # space landing page
 │   ├── understand-workflows/             # subfolder (section) in the space
@@ -441,8 +567,8 @@ Images supplement the text; they never carry information on their own. Agents an
 Each space has a single folder for all its images, at `.gitbook/assets/` in the root of that space:
 
 ```
-docs/                                     # docs root
-├── build/                                # space root
+docs/                                     # docs roo
+├── build/                                # space roo
 │   ├── .gitbook/
 │   │   └── assets/                       # all images for this space live here
 │   │       └── workflow-overview.png
@@ -500,12 +626,12 @@ Use tabs not spaces. This is important because the n8n node linter enforces this
 Use fenced code blocks with a language identifier for syntax highlighting:
 
 ````
-```typescript
+```typescrip
 // Your code here
 ```
 ````
 
-```typescript
+```typescrip
 // Your code here
 ```
 
@@ -513,14 +639,14 @@ GitBook supports [optional code block settings](https://gitbook.com/docs/creatin
 
 ````
 {% code title="MyNode.node.ts" overflow="wrap" lineNumbers="true" %}
-```typescript
+```typescrip
 // Your code here
 ```
 {% endcode %}
 ````
 
 {% code title="MyNode.node.ts" overflow="wrap" lineNumbers="true" %}
-```typescript
+```typescrip
 // Your code here
 ```
 {% endcode %}
@@ -566,7 +692,7 @@ If you want to add a header block, or title, to your hint, add a header block as
 {% hint style="info" %}
 ## This is the hint title/heading
 
-Some hint content
+Some hint conten
 
 {% endhint %}
 ```
@@ -574,7 +700,7 @@ Some hint content
 {% hint style="info" %}
 ### This is the hint title/heading
 
-Some hint content
+Some hint conten
 {% endhint %}
 
 ### Collapsible blocks
@@ -601,7 +727,7 @@ Some collapsible content. Standard Markdown works inside the block.
 
 </details>
 
-### Tabbed content
+### Tabbed conten
 
 When a block of content is different due to external considerations (platform, coding language etc) it **can** be useful to separate it using tabs, so the user sees only the content relevant to them. Use tabbed sections sparingly as they could impact discoverability.
 

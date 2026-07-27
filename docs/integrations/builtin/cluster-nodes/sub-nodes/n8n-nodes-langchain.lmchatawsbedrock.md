@@ -37,7 +37,11 @@ You can find authentication information for this node [here](../../credentials/a
 * **Authentication**: Select the authentication method:
     * **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
     * **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
-* **Model**: Select the model that generates the completion.
+* **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) that generates the completion. The dropdown lists on-demand foundation models and cross-region inference profiles together. The newest models (for example Claude Sonnet 4.x) are only available as inference profiles. If part of the list is missing, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. You can also switch the field to **Expression** mode and enter a model ID, inference profile ID, or ARN directly.
+
+{% hint style="info" %}
+On node versions before 1.2, the dropdown only lists on-demand foundation models. Use the **Model Source** parameter to switch it to inference profiles.
+{% endhint %}
 
 Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).
 
@@ -47,6 +51,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top P**: Set the probability threshold for token selection. A lower value limits the pool to more probable tokens; a higher value allows more diverse options.
 * **Max Retries**: Enter the maximum number of times to retry a request.
+* **Timeout**: Enter the maximum amount of time a request can take in milliseconds, or `0` to disable the timeout.
 * **Additional Model Request Fields**: Enter model-family-specific inference parameters as JSON, for example Claude's `top_k` or Nova's `inferenceConfig`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the parameters each model family supports.
 * **Latency Optimization**: Choose whether requests use **Standard** or **Optimized** latency. Optimized mode can reduce response time for supported models and regions. Refer to the [AWS latency-optimized inference documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/latency-optimized-inference.html) for availability.
 * **Guardrail**: Apply an [Amazon Bedrock guardrail](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html) to requests. Refer to [Using AWS Guardrails](#using-aws-guardrails) for details.

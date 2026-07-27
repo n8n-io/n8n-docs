@@ -37,9 +37,15 @@ You can find authentication information for this node [here](../../credentials/a
 * **Authentication**: Select the authentication method:
     * **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
     * **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
-* **Model**: Select the model to use to generate the embedding. If the dropdown is empty, your IAM role may not have the `bedrock:ListFoundationModels` permission. Switch the field to **Expression** mode and enter the model ID directly.
+* **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) to use to generate the embedding. The dropdown lists on-demand embedding models and embedding inference profiles together. If the dropdown is empty or incomplete, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. Switch the field to **Expression** mode and enter the model or inference profile ID directly.
 
-Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html). 
+Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html).
+
+## Node options <a href="#node-options" id="node-options"></a>
+
+* **Additional Model Request Fields**: Enter model-specific request fields as JSON, for example Titan's `dimensions` and `normalize` or Cohere's `input_type` and `truncate`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the fields each model family supports.
+* **Max Retries**: Enter the maximum number of times to retry a request.
+* **Timeout**: Enter the maximum amount of time a request can take in milliseconds, or `0` to disable the timeout.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
@@ -48,7 +54,7 @@ Learn more about available models in the [Amazon Bedrock documentation](https://
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's AWS Bedrock embeddings documentation](https://js.langchain.com/docs/integrations/platforms/aws/#text-embedding-models) and the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/) for more information about AWS Bedrock.
+Refer to the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/) for more information about AWS Bedrock.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

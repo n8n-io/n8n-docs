@@ -9,6 +9,7 @@ Airtop
 [Aa]llowlists?
 Anthropic
 APIs
+[Aa]pprovers?
 ARNs
 Asana
 Atlassian
@@ -221,6 +222,7 @@ Realtime
 Rekognition
 requester
 [Rr]erank(er|ing|ed)?
+[Rr]esponders?
 Rundeck
 Salesmate
 [Ss]andboxed

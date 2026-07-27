@@ -42,7 +42,7 @@ To use Calendly nodes and triggers in n8n, your credentials must have the follow
 - `webhooks:write`: Create and manage webhook subscriptions
 - `scheduled_events:read`: Read scheduled event information
 
-Personal Access Tokens have all permissions by default. For OAuth2, you must configure these scopes when creating your application.
+Personal Access Tokens also require the same scopes. When creating a Personal Access Token in Calendly, select the same scopes listed above.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

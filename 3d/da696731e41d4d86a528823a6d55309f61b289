@@ -1,0 +1,23 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+  s_9fd94dc7f517d6::t_3385c8eed33fe9 40,42-48
+  s_9fd94dc7f517d6::t_56374f84efcf95 57
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+  s_9fd94dc7f517d6::t_903d55f979a343 40-44
+  s_9fd94dc7f517d6::t_0a39db4f510a27 54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "3dda696731e41d4d86a528823a6d55309f61b289",
+  "prompts": {},
+  "sessions": {
+    "s_9fd94dc7f517d6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82e206ef-44bd-4542-9e57-f65bc35ee0cb",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

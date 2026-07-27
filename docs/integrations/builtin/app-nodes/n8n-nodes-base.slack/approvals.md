@@ -15,7 +15,7 @@ layout:
 Preview features may change in future releases. Avoid relying on them in production workflows. n8n is rolling this feature out gradually, so it may not be available on your instance yet.
 {% endhint %}
 
-With the **Message** > **Send and Wait for Response** operation, approvers can approve or decline directly inside Slack. No browser page opens: the workflow resumes immediately, and the output records who responded.
+With the **Message** > **Send and Wait for Response** operation, approvers can approve or decline directly inside Slack. No browser page opens: the workflow resumes as soon as someone responds, and the output records who responded.
 
 ## How it differs from link buttons
 
@@ -59,7 +59,7 @@ Slack allows one **Request URL** per app, so one Slack app serves one n8n instan
 1. In your Slack app, go to **Settings** > **Basic Information** and copy the **Signing Secret** from the **App Credentials** section.
 2. In n8n, paste it into the **Signature Secret** field of your Slack credential.
 
-n8n uses the signing secret to verify that each callback really comes from Slack. n8n rejects callbacks that fail verification, and the workflow keeps waiting.
+n8n uses the signing secret to verify that each callback comes from Slack. n8n rejects callbacks that fail verification, and the workflow keeps waiting.
 
 ### 4. Configure the node
 
@@ -70,8 +70,8 @@ In the Slack node, select the **Message** resource with the **Send and Wait for 
 - **Unauthorized Reply**: the private (ephemeral) message shown to someone who clicks but isn't on the approver list. Defaults to `You are not authorized to respond to this request.`
 - **After Decision**: what happens to the original Slack message once someone approves or declines.
     - **Show Outcome and Remove Buttons** (default): removes the buttons and adds a line naming the decision and the responder.
-    - **Remove Buttons Only**: removes the buttons and leaves the rest of the message as it was.
-    - **Keep Message Unchanged**: leaves the message exactly as sent, buttons included. Later clicks don't change the recorded decision, which is the first one.
+    - **Remove Buttons Only**: removes the buttons without adding an outcome line.
+    - **Keep Message Unchanged**: leaves the message as sent, buttons included. Later clicks don't change the recorded decision, which is the first one.
 
 If you leave the approver list empty, anyone who can see the message can approve or decline. In a channel, that's every member. The list controls who can respond, not who can see the request, so post sensitive approvals to a private channel or direct message.
 

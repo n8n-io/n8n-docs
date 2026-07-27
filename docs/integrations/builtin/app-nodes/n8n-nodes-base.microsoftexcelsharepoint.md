@@ -1,8 +1,12 @@
 ---
+title: Microsoft Excel (SharePoint) node documentation
 description: >-
   Learn how to use the Microsoft Excel (SharePoint) node in n8n. Follow
   technical documentation to integrate Microsoft Excel (SharePoint) node into
   your workflows.
+contentType:
+  - integration
+  - reference
 layout:
   description:
     visible: false

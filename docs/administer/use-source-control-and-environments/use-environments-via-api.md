@@ -140,7 +140,7 @@ curl --request POST \
 	}'
 ```
 
-Omitting `fileNames` pushes every eligible file, so the branch always reflects the current state of the instance.
+Omitting `fileNames` pushes every eligible file, so each run commits a full snapshot of the resources n8n tracks in source control. This isn't a complete mirror of the instance. n8n commits only [certain resource types](push-and-pull-changes.md#what-gets-committed), so data like credential values and execution history isn't backed up. A push also overwrites what's in the branch, so make sure the instance holds the versions you want before each scheduled run, or you risk overwriting more recent changes.
 
 ## Push specific files
 

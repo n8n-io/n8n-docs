@@ -84,7 +84,7 @@ Build agents in the Agent Builder. Start with a name and a model, add instructio
 {% hint style="info" %}
 **Use the AI Assistant**
 
-Describe what you want the agent to do to the [AI Assistant](ways-of-building-workflows/ai-assistant-preview.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
+Describe what you want the agent to do to the [AI Assistant](ways-of-building-workflows/ai-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
 {% endhint %}
 
 #### Choose a model

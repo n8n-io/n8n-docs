@@ -26,6 +26,12 @@ layout:
 AI Assistant is a preview feature.
 {% endhint %}
 
+{% hint style="warning" %}
+AI Assistant isn't yet available for self-hosted Enterprise. Support for self-hosted Enterprise is coming soon.
+
+If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
+{% endhint %}
+
 To run AI Assistant on a self-hosted instance, you need:
 
 * An API key for an LLM provider.

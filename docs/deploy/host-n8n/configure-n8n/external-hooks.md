@@ -38,18 +38,18 @@ For the environment variables used to register hooks, refer to [External hooks e
 | `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
 | `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Use to overwrite an OAuth callback URL. |
 | `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Use to overwrite an OAuth callback URL. |
-| `workflow.activate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets activated. Use to restrict the number of active workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0) and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.afterCreate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called after a workflow gets created. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0) and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.afterDelete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.afterUpdate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called after an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0) and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.create` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets created. Use to restrict the number of saved workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0) and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.deactivate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deactivated. Throw an error to abort the deactivation and keep the workflow active (available from n8n 2.32.0). Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
-| `workflow.delete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.postExecute` | `[fullRunData: IRun \| undefined, workflowData: IWorkflowBase, executionId: string, workflowContext: WorkflowHookContextService]` | Called after a workflow gets executed. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0). |
+| `workflow.activate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets activated. Use to restrict the number of active workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.afterCreate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called after a workflow gets created. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.afterDelete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.afterUpdate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called after an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.create` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets created. Use to restrict the number of saved workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.deactivate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deactivated, while `active` is still `true`. Throw an error to abort the deactivation and keep the workflow active. Available from n8n 2.33.0. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.delete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.postExecute` | `[fullRunData: IRun \| undefined, workflowData: IWorkflowBase, executionId: string, workflowContext: WorkflowHookContextService]` | Called after a workflow gets executed. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument. |
 | `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.23.0). |
-| `workflow.update` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.32.0) and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.afterArchive` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after you archive a workflow. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
-| `workflow.afterUnarchive` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after you restore a workflow from the archive. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument (available from n8n 2.32.0). |
+| `workflow.update` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.afterArchive` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after you archive a workflow. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.afterUnarchive` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after you restore a workflow from the archive. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
 
 ### Registering hooks <a href="#registering-hooks" id="registering-hooks"></a>
 
@@ -122,9 +122,9 @@ module.exports = {
 Some workflow hooks receive a `workflowContext` argument, an instance of `WorkflowHookContextService`. It exposes helper methods you can call inside the hook function.
 
 {% hint style="info" %}
-**Available from n8n 2.32.0**
+**Availability**
 
-n8n passes `workflowContext` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, and `workflow.postExecute` hooks from n8n 2.32.0. The `workflow.preExecute` hook receives it from n8n 2.23.0.
+The `workflow.preExecute` hook receives `workflowContext` from n8n 2.23.0. The `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, and `workflow.postExecute` hooks receive it from n8n 2.33.1.
 {% endhint %}
 
 The context provides these methods:
@@ -132,9 +132,9 @@ The context provides these methods:
 | Method | Returns | Description |
 | :----- | :------ | :---------- |
 | `getWorkflowTags(workflowId: string)` | `Promise<string[]>` | Returns the names of the tags attached to the given workflow. |
-| `isTriggerNodeType(type: string, typeVersion?: number)` | `boolean` | Returns `true` if the given node type is a trigger. `type` is the fully qualified node type name, for example `n8n-nodes-base.manualTrigger`. `typeVersion` defaults to the latest registered version. Throws if the node type isn't registered on the instance. |
+| `resolveIsTriggerNodeType(type: string, typeVersion?: number)` | `boolean` | Returns `true` if the given node type is a trigger. `type` is the fully qualified node type name, for example `n8n-nodes-base.manualTrigger`. `typeVersion` defaults to the latest registered version. Returns `false` when n8n can't resolve the node type, for example when it isn't registered on the instance. |
 
-This example uses `isTriggerNodeType` to block activating a workflow that doesn't contain a trigger node:
+This example uses `resolveIsTriggerNodeType` to block activating a workflow that doesn't contain a trigger node:
 
 ```js
 module.exports = {
@@ -142,7 +142,7 @@ module.exports = {
 		activate: [
 			async function (workflowData, workflowContext) {
 				const hasTrigger = workflowData.nodes.some((node) =>
-					workflowContext.isTriggerNodeType(node.type, node.typeVersion),
+					workflowContext.resolveIsTriggerNodeType(node.type, node.typeVersion),
 				);
 				if (!hasTrigger) {
 					throw new Error('Workflow must contain a trigger node, aborting activation');
@@ -158,9 +158,9 @@ module.exports = {
 Some workflow lifecycle hooks receive an `actor` argument, a minimal projection of the user who performed the operation. Use it to attribute the action, for example to allow or reject an operation based on the user's identity or role.
 
 {% hint style="info" %}
-**Available from n8n 2.32.0**
+**Available from n8n 2.33.0**
 
-n8n passes `actor` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, `workflow.delete`, `workflow.afterDelete`, `workflow.afterArchive`, and `workflow.afterUnarchive` hooks from n8n 2.32.0. The argument is optional and can be `undefined` when n8n can't determine the acting user.
+n8n passes `actor` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, `workflow.delete`, `workflow.afterDelete`, `workflow.afterArchive`, and `workflow.afterUnarchive` hooks from n8n 2.33.0. The argument is optional and can be `undefined` when n8n can't determine the acting user.
 {% endhint %}
 
 The `actor` object has these properties:

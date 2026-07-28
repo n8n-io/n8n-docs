@@ -153,14 +153,14 @@ Connect each page to the others on its topic. Explicit, descriptive links let an
 
 ## Versioning and release status
 
-Many features are limited to **certain n8n Cloud plans or self-hosted editions**, and only available (or deprecated/removed) from **certain n8n versions**. Document this at one of four scopes:
+Many features are limited to **certain [n8n Cloud plans or self-hosted editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) **, and only available (or deprecated/removed) from **certain [n8n versions](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)**. Document this at one of four scopes:
 
 * **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
-* **Inline:** a short note next to a small control, option, field, role, or behavior within a larger feature. See Inline availability limits, below.
-* **Passing mention:** a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Passing mentions and table rows, below.
-* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See Passing mentions and table rows, below.
+* **Inline:** a short note next to a small control, option, field, role, or behavior within a larger feature. See Inline and passing mentions, below.
+* **Passing mention:** a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Inline and passing mentions, below.
+* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
 
-### Feature availability hints (page and section level)
+### Feature availability hint examples (page and section level)
 
 **Both plan and version:**
 
@@ -277,9 +277,9 @@ Rules:
 * **Version-only, deprecation, or removal** (no plan limit): skip the bullets — just the title, the sentence, and the release-notes link.
 * **Both plan and version:** plan bullets first, then the version sentence, then both links together at the end.
 
-### Inline availability limits
+### Inline and passing mentions
 
-Use inline wording only for a small control, option, field, role, or behavior inside a larger feature — not for a page- or section-wide limit (use the hint instead).
+Use inline wording for a small control, option, field, role, or behavior inside a larger feature, or for a whole feature or node named in prose with no heading of its own — not for a page- or section-wide limit (use the hint instead).
 
 * Name the specific thing, not "this feature", unless the referent is obvious.
 * One sentence per item; two if plan/platform and version both apply — plan/platform first.
@@ -287,6 +287,8 @@ Use inline wording only for a small control, option, field, role, or behavior in
 * State version, deprecation, or removal plainly ("available from version X", "deprecated from version X") — skip the "Available from" hint-style lead-in.
 * Skip the plan-comparison and release-notes links inline, unless there's no nearby hint and this is the page's only availability note.
 * If it needs more than two sentences, both platform bullets, or plan + version + deprecation together, promote it to a scoped hint instead.
+
+For a control, option, field, or role inside a larger feature, use a full sentence:
 
 ```
 This option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
@@ -308,9 +310,7 @@ This field is deprecated from n8n 2.30.0.
 This role is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise, from n8n 2.30.0 or later.
 ```
 
-### Passing mentions and table rows
-
-For a whole feature, node, or item with no heading of its own, or one row among many in a table. Use the same vocabulary and ordering as inline text.
+For a whole feature or node named in prose with no heading of its own, fold the limit into the sentence using the same vocabulary and ordering:
 
 ```
 The Data table node (available from n8n 2.17.0) stores data between executions.
@@ -320,7 +320,11 @@ The Data table node (available from n8n 2.17.0) stores data between executions.
 The environments feature (n8n Cloud Enterprise, self-hosted Enterprise) lets you promote workflows between instances.
 ```
 
-In a table, put the limit in the description cell:
+### Table rows
+
+For one row among many in a table. Use the same vocabulary and ordering as inline text.
+
+Put the limit in the description cell:
 
 | Variable | Type | Default | Description |
 | :--- | :--- | :--- | :--- |

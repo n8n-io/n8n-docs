@@ -26,6 +26,12 @@ layout:
 AI Assistant is a preview feature.
 {% endhint %}
 
+{% hint style="warning" %}
+AI Assistant isn't yet available for self-hosted Enterprise. Support for self-hosted Enterprise is coming soon.
+
+If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
+{% endhint %}
+
 To run AI Assistant on a self-hosted instance, you need:
 
 * An API key for an LLM provider.
@@ -174,7 +180,7 @@ AI Assistant runs its work in an isolated sandbox, so a sandbox provider is requ
 | `daytona`     | Recommended setup for most self-hosted instances.                  |
 | `n8n-sandbox` | Advanced setup when you want to host the sandbox service yourself. |
 
-### Daytona
+### Option A: Daytona
 
 If you follow [Quick setup with Daytona](set-up-ai-assistant-preview.md#quick-setup-with-daytona), you already have the required Daytona variables in place.
 

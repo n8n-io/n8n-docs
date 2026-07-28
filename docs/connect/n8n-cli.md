@@ -17,12 +17,6 @@ layout:
 
 **n8n CLI** is a lightweight command-line client that communicates with a running n8n instance through the [n8n API](n8n-api/README.md). It can run from any machine with network access and authenticates using an API key.
 
-{% hint style="info" %}
-**n8n CLI is in beta**
-
-Use it only for experimenting, local development, and personal projects and not for production workflows.
-{% endhint %}
-
 Use the API CLI to:
 
 - List and inspect workflows  

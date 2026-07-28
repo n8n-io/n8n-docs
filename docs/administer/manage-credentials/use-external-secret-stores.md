@@ -91,7 +91,7 @@ Whichever method you choose, the underlying IAM identity must have the `secretsm
 
 n8n doesn't take any credentials input for that vault; it resolves whatever identity is available in its runtime environment. That means every vault you configure with Auto Detect on the same n8n instance shares one IAM identity and one set of permissions. You can't assign different IAM scopes (for example, restricting one vault to a project's secrets and another vault to a different project's secrets) to separate Auto Detect vaults.
 
-If you need to scope secret access per vault, per project, or per team, use IAM User instead: create a separate IAM user and access key per vault, and attach an ARN-scoped policy to each one (see the example policy below). Auto Detect is best suited to a single global vault, or to setups where every project sharing that vault should have the same AWS access.
+If you need to scope secret access per vault, per project, or per team, use IAM User instead: create a separate IAM user and access key per vault, and attach an ARN-scoped policy to each one (see the restrictive ARN-scoped policy example in the section below). Auto Detect is best suited to a single global vault, or to setups where every project sharing that vault should have the same AWS access.
 {% endhint %}
 
 To give n8n access to all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:

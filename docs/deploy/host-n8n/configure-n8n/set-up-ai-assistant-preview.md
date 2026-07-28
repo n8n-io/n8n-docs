@@ -174,7 +174,7 @@ AI Assistant runs its work in an isolated sandbox, so a sandbox provider is requ
 | `daytona`     | Recommended setup for most self-hosted instances.                  |
 | `n8n-sandbox` | Advanced setup when you want to host the sandbox service yourself. |
 
-### Daytona
+### Option A: Daytona
 
 If you follow [Quick setup with Daytona](set-up-ai-assistant-preview.md#quick-setup-with-daytona), you already have the required Daytona variables in place.
 

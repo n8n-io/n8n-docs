@@ -4,7 +4,7 @@ originalFilePath: dummy1.md
 originalUrl: https://docs.n8n.io/dummy1
 url: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
 layout:
-  width: defaul
+  width: default
   title:
     visible: true
   description:

@@ -113,14 +113,23 @@ Obvious exceptions:
 
 ## Feature availability
 
-Many features are limited to **certain [n8n Cloud plans or self-hosted editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) **, and only available (or deprecated/removed) from **certain [n8n versions](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)**. Document this at one of four scopes:
+A feature's availability can be limited in three ways:
+
+* **Plan or platform** — which [n8n Cloud plans or self-hosted editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) it's on.
+* **Version** — which [n8n version](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) introduced, deprecated, or removed it.
+* **Preview status** — whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
+
+Plan/platform and version limits share one documentation system, covered first below. Preview status works differently and is always documented separately — see Preview status, further down.
+
+### Plan, platform, and version limits
+
+Document these at one of three scopes:
 
 * **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
-* **Inline:** a short note next to a small control, option, field, role, or behavior within a larger feature. See Inline and passing mentions, below.
-* **Passing mention:** a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Inline and passing mentions, below.
+* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Inline and passing mentions, below.
 * **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
 
-### Feature availability hint examples (page and section level)
+#### Feature availability hints
 
 **Both plan and version:**
 
@@ -135,7 +144,7 @@ Available on:
 
 Available from n8n 2.30.0 or later.
 
-Compare plans and editions | See release notes
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) | [See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 ```
 
@@ -150,7 +159,7 @@ Available on:
 - **n8n Cloud:** Pro, Enterprise
 - **Self-hosted:** Enterprise
 
-Compare plans and editions
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 ```
 
@@ -166,11 +175,11 @@ Available on:
 
 It isn't available on n8n Cloud.
 
-Compare plans and editions
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 ```
 
-**Plan caveat, plus version** — shows the full order below the bullets: the caveat (in the absence line's place), then version, then links.
+**Plan caveat, plus version:**
 
 ```
 {% hint style="info" %}
@@ -184,7 +193,7 @@ On n8n Cloud Enterprise, contact n8n to enable it.
 
 Available from n8n 2.30.0 or later.
 
-Compare plans and editions | See release notes
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) | [See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 ```
 
@@ -196,21 +205,7 @@ Compare plans and editions | See release notes
 
 Available from n8n 2.30.0 or later.
 
-See release notes
-{% endhint %}
-```
-
-**Version, plus preview status:**
-
-```
-{% hint style="info" %}
-**Feature availability**
-
-Available from n8n 2.30.0 or later.
-
-This feature is in preview and may change in future releases. Avoid relying on it in production workflows.
-
-See release notes
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 ```
 
@@ -222,7 +217,7 @@ See release notes
 
 Deprecated from n8n 2.30.0
 
-See release notes
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 ```
 
@@ -233,11 +228,10 @@ Rules:
 * **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
 * **Write "n8n Cloud", not "Cloud"** — bare "Cloud" is ambiguous.
 * **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro) — never list the trial itself; cover it only on the trial page.
-* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) the preview sentence, (4) any other feature-specific caveat, (5) the plan-comparison link.
-* **Version-only, deprecation, or removal** (no plan limit): skip the bullets — just the title, the sentence, and the release-notes link.
-* **Both plan and version:** plan bullets first, then the version sentence, then both links together at the end.
+* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) any other feature-specific caveat, (4) the link(s) — plan-comparison, release-notes, or both together if both apply.
+* **No plan limit** (version-only, deprecation, or removal): skip the bullets — just the title, the sentence, and the release-notes link.
 
-### Inline and passing mentions
+#### Inline and passing mentions
 
 Use inline wording for a small control, option, field, role, or behavior inside a larger feature, or for a whole feature or node named in prose with no heading of its own — not for a page- or section-wide limit (use the hint instead).
 
@@ -280,7 +274,7 @@ The Data table node (available from n8n 2.17.0) stores data between executions.
 The environments feature (n8n Cloud Enterprise, self-hosted Enterprise) lets you promote workflows between instances.
 ```
 
-### Table rows
+#### Table rows
 
 For one row among many in a table. Use the same vocabulary and ordering as inline text.
 
@@ -316,13 +310,11 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 * **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
 * **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
 
-
-
-### Marking preview features
+### Preview status
 
 A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status. Reserve "beta" for release channels, version tracks, and access programs (a beta release, the beta Cloud instance, a closed beta).
 
-Add an `info` hint at the [right scope](#where-to-put-the-marker) that says what the status means for the reader:
+**Page or section:**
 
 ```
 {% hint style="info" %}
@@ -332,7 +324,33 @@ Preview features may change in future releases. Avoid relying on them in product
 {% endhint %}
 ```
 
+If the entire page is about a feature in preview, also add frontmatter so the status shows as a label on the page and in the side menu:
+
+```
+---
+status: preview
+tags:
+  - tag: preview
+    primary: true
+---
+```
+
+* The space's `.gitbook/tags.yaml` must define the `preview` tag (its label and color) — check it exists before relying on this, and add it if it's missing. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for a working example.
+* This frontmatter tag is a visual label only — it doesn't replace the hint above, which is where you explain what "preview" means for this page.
+
+**Inline or passing mention:** for a small control, or a whole feature or node named in prose with no heading of its own:
+
+```
+This option is in preview and may change in future releases.
+```
+
+```
+The Data table node is in preview and may change in future releases.
+```
+
 * **Tie it to a version when it helps**: "In preview from n8n 2.20.0".
+* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both — a preview hint alongside an availability hint, or a preview sentence alongside an availability sentence — rather than folding the preview wording into the other one.
+* **If an inline preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
 
 ## Vale linting
 

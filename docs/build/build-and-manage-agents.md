@@ -231,6 +231,10 @@ Agents run on self-hosted n8n from version `2.32.3` (Beta). There are two ways t
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
 * **Full experience**: also set up [AI Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
+{% hint style="warning" %}
+AI Assistant isn't yet available for self-hosted Enterprise (support is coming soon), so the full experience isn't available to self-hosted Enterprise customers yet. Building agents manually with the `agents` module doesn't need AI Assistant.
+{% endhint %}
+
 For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
 
 ### Agent executions and pricing

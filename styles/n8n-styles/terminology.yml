@@ -1,0 +1,12 @@
+extends: substitution
+message: "Use '%s', not '%s'. See the terminology word list."
+link: https://docs.n8n.io/contribute/terminology
+level: warning
+ignorecase: true
+action:
+  name: replace
+swap:
+  'self hosted': self-hosted
+  subworkflow: sub-workflow
+  'sub workflow': sub-workflow
+  'on-prem(?:ises?)?': self-hosted

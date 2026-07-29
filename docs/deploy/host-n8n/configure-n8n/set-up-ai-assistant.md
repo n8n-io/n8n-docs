@@ -1,5 +1,8 @@
 ---
 description: Set up the AI Assistant on self-hosted n8n using environment variables.
+tags:
+  - tag: preview
+    primary: true
 layout:
   width: default
   title:
@@ -20,7 +23,7 @@ layout:
     visible: true
 ---
 
-# Set up AI Assistant (Preview)
+# Set up AI Assistant
 
 {% hint style="info" %}
 AI Assistant is a preview feature.
@@ -180,9 +183,9 @@ AI Assistant runs its work in an isolated sandbox, so a sandbox provider is requ
 | `daytona`     | Recommended setup for most self-hosted instances.                  |
 | `n8n-sandbox` | Advanced setup when you want to host the sandbox service yourself. |
 
-### Daytona
+### Option A: Daytona
 
-If you follow [Quick setup with Daytona](set-up-ai-assistant-preview.md#quick-setup-with-daytona), you already have the required Daytona variables in place.
+If you follow [Quick setup with Daytona](set-up-ai-assistant.md#quick-setup-with-daytona), you already have the required Daytona variables in place.
 
 Daytona creates sandboxes on demand.
 

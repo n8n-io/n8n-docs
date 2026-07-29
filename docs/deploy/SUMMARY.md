@@ -78,7 +78,7 @@
     * [Manage settings using environment variables](host-n8n/configure-n8n/manage-settings-using-environment-variables.md)
     * [Set up task runners](host-n8n/configure-n8n/set-up-task-runners.md)
     * [Durable scheduler](host-n8n/configure-n8n/durable-scheduler.md)
-    * [Set up AI Assistant (Preview)](host-n8n/configure-n8n/set-up-ai-assistant-preview.md)
+    * [Set up AI Assistant](host-n8n/configure-n8n/set-up-ai-assistant.md)
     * [Manage your license](host-n8n/configure-n8n/manage-your-license.md)
     * [Security](host-n8n/configure-n8n/security.md)
       * [Manage security policies](host-n8n/configure-n8n/security/manage-security-policies.md)

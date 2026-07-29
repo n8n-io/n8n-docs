@@ -1,15 +1,17 @@
 ---
-title: Use AI Assistant (Preview)
+title: Use AI Assistant
 description: >-
   Use the AI Assistant to create, edit, test, and troubleshoot n8n workflows from
   a chat.
-status: preview
+tags:
+  - tag: preview
+    primary: true
 layout:
   description:
     visible: false
 ---
 
-# Use AI Assistant (Preview)
+# Use AI Assistant
 
 The AI Assistant is a chat-based agent in n8n that helps you create, edit, test, and troubleshoot workflows from natural language. It can also build agents and help with instance tasks, such as renaming or publishing workflows.
 

@@ -18,6 +18,7 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 
 - **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
 - **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
+- **Terminology:** `docs/contribute/terminology.md` — official product terms to use, and the non-official ones to avoid.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -103,6 +104,47 @@ marketing words. Prefer the plainer version:
 - Lead with the action: "To schedule a workflow, add a Schedule Trigger" beats
   "There is a node available that can be used to schedule workflows."
 
+## Terminology and naming
+
+Use one term per concept, and prefer the official product term over a synonym.
+Full do/don't list: `docs/contribute/terminology.md`. Highest-value rules:
+
+- **"publish a workflow"**, not "activate".
+- **`n8n`** lowercase always; node and UI names in **bold** with exact casing.
+- Common fixes: workflow (not flow/automation/scenario), node (not step/block),
+  sub-workflow (not subworkflow), self-hosted, community node (not custom node).
+
+## Page length and granularity
+
+One focused page per concept, task, or reference category. Aim for a band, not
+the shortest possible page. Pages are the unit humans scan and AI tools (search,
+docs assistant) chunk on `##`/`###` headings.
+
+- **Healthy range:** ~1,500–20,000 characters (~250–3,000 words).
+- **Merge** pages or sections under ~1,500 characters — too small to retrieve
+  well; fold stubs into a parent or sibling.
+- **Split** when over ~25,000 characters, when a page mixes content types
+  (concept + how-to + reference), or when one section grows without bound
+  (per-client examples).
+- **Hard limit ~50,000 characters:** agents truncate longer pages.
+- **Split by type or task, not by length.** Keep related facts together (all env
+  vars for a category, all parameters for a node).
+- **Self-contained sections:** retrieved on its own, a section that leans on
+  surrounding context arrives stripped of it and the agent guesses. Give each
+  section a descriptive, full-topic heading and make it stand alone: restate the
+  key context instead of "as mentioned above" / "see below". Restate, don't
+  duplicate — repeat a fact or two, not whole paragraphs (sections that need the
+  same long explanation belong under one heading).
+- **Cross-references:** link every page to its prerequisites and its next step,
+  link parents and children both ways (an overview lists all its child pages;
+  each child links back with `./`), and aim for each page to sit in a cluster of
+  5+ interlinked pages on the same topic (AI search cites connected clusters far
+  more than standalone pages). Put
+  links in the body at the first meaningful mention, with descriptive anchor text
+  naming the target ([Configure the Schedule Trigger](...), never "click here").
+  Links point to separate topics; they don't replace context a section needs, so
+  restate that instead.
+
 ## Versioning and release status
 
 Reference n8n versions and status (available, preview, deprecated) consistently.
@@ -171,6 +213,24 @@ See [reference.md](reference.md) for full examples. Quick reference:
 | Tabbed content | `{% tabs %}{% tab title="Name" %}` … `{% endtab %}{% endtabs %}` |
 | Code block (with options) | `{% code title="File.ts" %}` ```` ``` ```` … `{% endcode %}` |
 | Embedded workflow | `{% @n8n-blocks/n8n-workflow-demo content="" url="..." %}` |
+
+**Tabs:** short parallel snippets only (block under ~3,000 chars). AI tools serialize every variant. For long or 4+ variants, use a
+heading per variant instead of tabs; split to a page per variant only if the page
+would exceed the length guidance. Keep shared content outside the tabs.
+
+**Images:** supplementary only. Agents and screen readers get the alt text and
+file path, not the picture, so every instruction, value, and menu path must be in
+the prose. Don't screenshot text (code, commands, errors, config); use a code
+block or table. Screenshots confirm or orient; they never carry a step on their
+own. See [reference.md](reference.md).
+
+**Worked examples:** for any code, expression, or config surface, include an
+example — readers and agents rely on examples more than prose. Cover the common
+case, then edge cases and failures (the error and the fix). Favour diverse
+examples over near-identical ones, comment each example's intent inline, label
+placeholders as `<hyphenated-words>`, and put parameters, defaults, and limits in
+a table or schema block, not a paragraph. If you show a wrong example, pair it
+with the correct one beside it.
 
 ### Hint types
 

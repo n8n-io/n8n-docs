@@ -357,7 +357,7 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ### Enable agents
 
-Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to build and run agents on your instance. Agents need n8n `2.32.3` (Beta) or later.
+Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n `2.32.3` (Beta) or later.
 
 {% hint style="warning" %}
 Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.

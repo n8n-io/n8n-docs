@@ -1,0 +1,30 @@
+docs/connect/n8n-cli.md
+  h_c63dce324dfc7b 104,183,188
+  s_9f88e166d2a176::t_e3c83011024953 181-182,184-187,189-197
+docs/build/manage-workflows/n8n-packages.md
+  s_9f88e166d2a176::t_5a543111b58bd1 60
+  s_9f88e166d2a176::t_4fdb84c9a17d18 73
+  h_c63dce324dfc7b 50-51,82
+  s_9f88e166d2a176::t_a9a03bee303e3d 39,52-59,61-72,74-81
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "fe02d877705352d3c1680bee35d693a1c306e463",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_9f88e166d2a176": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0662e721-167a-4643-bd40-1bd4f0f31729",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

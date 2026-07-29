@@ -17,15 +17,15 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+* Project roles are available on all plans except the Community edition.
+* Custom roles (instance and project) require an Enterprise plan.
+
+Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 {% endhint %}
 
-{% hint style="info" %}
-**Role types and account types**
+RBAC in n8n lets you control access at two levels:
 
-Role types and [account types](../understand-account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](organize-work-in-projects.md).
-{% endhint %}
+* **Instance roles**: determine what a user can do across the entire instance. Built-in instance roles are Owner, Admin, and Member. You can also create custom instance roles for more granular control. Refer to [Instance roles](../understand-instance-roles.md).
+* **Project roles**: determine what a user can do within a specific project. You group workflows and credentials into projects, and a user can have different project roles in different projects. Refer to [See available roles](see-available-roles.md).
 
-RBAC is a way of managing access to workflows and credentials[^1] based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
-
-[^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+This section provides guidance on setting up and using RBAC in n8n.

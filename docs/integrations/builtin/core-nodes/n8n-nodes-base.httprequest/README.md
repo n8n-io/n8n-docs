@@ -317,6 +317,20 @@ This option always imports any parameter values as strings. If you wish to prese
 
 [Browse n8n-nodes-base.httprequest integration templates](https://n8n.io/integrations/http-request) or [search all templates](https://n8n.io/workflows/)
 
+## FAQ
+
+### How do I call an API without writing code?
+
+Use the HTTP Request node to query data from any app or service with a REST API. Set the [node parameters](#node-parameters) (method, URL, query parameters, headers, and body), or [import a curl command](#import-curl-command) from the service's API documentation and n8n fills the fields for you.
+
+### How do I authenticate an API request?
+
+Set this up in the [Authentication](#authentication) section. Use a **Predefined Credential Type** when n8n supports the service, since it's the easiest to set up. For other APIs, use generic credentials, which support Basic auth, Header auth, OAuth1, OAuth2, and more. Refer to [HTTP Request credentials](../../credentials/httprequest.md).
+
+### How do I handle an API that returns results across many pages?
+
+Turn on the [Pagination](#pagination) option. Set a **Pagination Mode** to update a parameter on each request, or to follow the next-page URL in the response, so n8n fetches every page instead of just the first.
+
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common Issues](common-issues.md).

@@ -56,7 +56,7 @@ The `/metrics` endpoint isn't available on n8n Cloud.
 {% endhint %}
 
 
-## Enable metrics and health checks for self-hosted n8n <a href="#enable-metrics-and-health-checks-for-self-hosted-n8n" id="enable-metrics-and-health-checks-for-self-hosted-n8n"></a>
+## How do I enable metrics and health checks? <a href="#enable-metrics-and-health-checks-for-self-hosted-n8n" id="enable-metrics-and-health-checks-for-self-hosted-n8n"></a>
 
 The `/metrics` endpoint is disabled by default. The health endpoint is always enabled on the main n8n server. For worker servers in [queue mode](../configure-n8n/scaling/enable-queue-mode.md), the health endpoint is disabled by default.
 

@@ -19,7 +19,7 @@ The Microsoft Entra Service Principal credential gives n8n app-only access to Mi
 
 You can use these credentials to authenticate the following nodes:
 
-* [Microsoft Excel 365](../app-nodes/n8n-nodes-base.microsoftexcel.md)
+* [Microsoft Excel (OneDrive)](../app-nodes/n8n-nodes-base.microsoftexcel.md)
 * [Microsoft OneDrive](../app-nodes/n8n-nodes-base.microsoftonedrive.md)
 * [Microsoft OneDrive Trigger](../trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md)
 * [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
@@ -31,7 +31,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Node version requirements**
 
-The Microsoft Excel 365, Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. n8n plans to support the Microsoft SharePoint node.
+The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. n8n plans to support the Microsoft SharePoint node.
 {% endhint %}
 
 ## Prerequisites
@@ -57,7 +57,7 @@ Refer to Microsoft's documentation for more information:
 
 With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With the Service Principal credential, there's no signed-in user, which changes how you use the nodes:
 
-- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel 365, **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
+- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
 - **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
 - **Pickers see the whole tenant.** For example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
 - **Some operations aren't available.** The nodes hide anything that only exists for a signed-in user, such as drive search or Teams chats, or block it with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
@@ -122,7 +122,7 @@ Add the application permissions for every node you plan to use, then grant admin
 |---|---|
 | All nodes (credential test) | `Organization.Read.All` or `Directory.Read.All` |
 | Microsoft OneDrive and Microsoft OneDrive Trigger | `Files.ReadWrite.All` (`Files.Read.All` is enough for read-only operations and the trigger) |
-| Microsoft Excel 365 | `Files.ReadWrite.All` |
+| Microsoft Excel (OneDrive) | `Files.ReadWrite.All` |
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
 | Microsoft Outlook Trigger | `Mail.Read` |
 | Microsoft Teams and Microsoft Teams Trigger | `Team.ReadBasic.All`, plus the permissions for your operations in the table below |
@@ -159,7 +159,7 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 <!-- vale off -->
 
 - **Microsoft OneDrive**: File: Search and Folder: Search. Microsoft Graph only offers drive search to signed-in users.
-- **Microsoft Excel 365**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
+- **Microsoft Excel (OneDrive)**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
 - **Microsoft Teams**: the whole Chat Message resource, Channel Message: Create, and Task: Get Many in Group Member mode.
 - **Microsoft Teams Trigger**: the New Chat and New Chat Message events, and the watch-all options. Pick a specific team or channel instead.
 

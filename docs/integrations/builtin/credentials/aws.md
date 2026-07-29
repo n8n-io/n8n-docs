@@ -88,6 +88,7 @@ You can use these credentials to authenticate the following nodes with enhanced 
 * [AWS Comprehend](../app-nodes/n8n-nodes-base.awscomprehend.md)
 * [AWS DynamoDB](../app-nodes/n8n-nodes-base.awsdynamodb.md)
 * [AWS Elastic Load Balancing](../app-nodes/n8n-nodes-base.awselb.md)
+* [AWS IAM](../app-nodes/n8n-nodes-base.awsiam.md)
 * [AWS Rekognition](../app-nodes/n8n-nodes-base.awsrekognition.md)
 * [AWS S3](../app-nodes/n8n-nodes-base.awss3.md)
 * [AWS SES](../app-nodes/n8n-nodes-base.awsses.md)

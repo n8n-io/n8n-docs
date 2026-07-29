@@ -71,7 +71,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack.md).
+n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 

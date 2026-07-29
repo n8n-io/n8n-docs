@@ -12,6 +12,8 @@ layout:
 
 # Securing n8n <a href="#securing-n8n" id="securing-n8n"></a>
 
+You can secure a self-hosted n8n instance to protect credentials and workflow data: run a security audit, set up SSL and SSO, restrict nodes and the public API, and redact execution data.
+
 Securing your n8n instance can take several forms.
 
 At a high level, you can:

@@ -21,6 +21,8 @@ layout:
 
 # AI Agent node <a href="#ai-agent-node" id="ai-agent-node"></a>
 
+The AI Agent node lets you build an AI agent in n8n. Connect a chat model and one or more tools, and the agent decides which tools to call to complete a task.
+
 An [AI agent](#user-content-fn-1)[^1] is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself. This agent uses external tools[^2] and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. 
 
 {% hint style="info" %}

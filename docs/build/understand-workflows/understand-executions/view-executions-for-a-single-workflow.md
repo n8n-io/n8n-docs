@@ -36,6 +36,12 @@ Workflow history is previous versions of the workflow: for example, a version wi
 
 In the workflow, select the **Executions** tab in the top menu. You can preview all executions of that workflow.
 
+{% hint style="info" %}
+**Executions using end-user credentials**
+
+When an execution uses an [end-user credential](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials), only the user whose connected account ran the node can see that node's data. For everyone else, including admins, the output is redacted.
+{% endhint %}
+
 ## Filter executions <a href="#filter-executions" id="filter-executions"></a>
 
 You can filter the executions list.

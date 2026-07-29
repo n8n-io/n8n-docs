@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Changelog](README.md)
-* [Feature feed](feature-feed.md)
+* [Release notes](release-notes.md)
 * [Release notes 2.x](release-notes-2.x.md)
 * [Release notes 1.x](release-notes-1.x.md)
 * [Release notes 0.x](release-notes-0.x.md)

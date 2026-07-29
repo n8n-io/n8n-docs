@@ -97,7 +97,7 @@ module.exports = {
 
 #### Block workflow execution if a required tag is missing <a href="#block-workflow-execution-if-a-required-tag-is-missing" id="block-workflow-execution-if-a-required-tag-is-missing"></a>
 
-Please note: the `workflowContext` argument is only supplied to `workflow.preExecute` hooks from n8n version `2.23.0`.
+Please note: the `workflowContext` argument is supplied to `workflow.preExecute` hooks from n8n 2.23.0. Refer to [Workflow hook context](#workflow-hook-context) for the full list of hooks that receive it and from which version.
 
 Use `workflow.preExecute` to abort execution when a workflow doesn't have a required tag:
 

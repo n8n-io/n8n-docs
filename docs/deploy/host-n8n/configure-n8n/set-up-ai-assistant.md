@@ -386,7 +386,7 @@ WEBHOOK_URL=https://your-public-url
 The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
 {% endhint %}
 
-For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](../../../build/build-and-manage-agents.md).
+For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
 ### Disable AI Assistant
 

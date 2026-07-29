@@ -43,7 +43,7 @@ For the environment variables used to register hooks, refer to [External hooks e
 | `workflow.afterDelete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called after a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
 | `workflow.afterUpdate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called after an existing workflow gets saved. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
 | `workflow.create` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets created. Use to restrict the number of saved workflows. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
-| `workflow.deactivate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deactivated, while `active` is still `true`. Throw an error to abort the deactivation and keep the workflow active. Available from n8n 2.33.0. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
+| `workflow.deactivate` | `[workflowData: IWorkflowBase, workflowContext: WorkflowHookContextService, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deactivated, while `active` is still `true`. Throw an error to abort the deactivation and keep the workflow active. Available from n8n 2.33.1. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument and [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
 | `workflow.delete` | `[workflowId: string, actor?: WorkflowLifecycleHookActor]` | Called before a workflow gets deleted. Refer to [Workflow lifecycle hook actor](#workflow-lifecycle-hook-actor) for the `actor` argument. |
 | `workflow.postExecute` | `[fullRunData: IRun \| undefined, workflowData: IWorkflowBase, executionId: string, workflowContext: WorkflowHookContextService]` | Called after a workflow gets executed. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument. |
 | `workflow.preExecute` | `[workflow: Workflow, mode: WorkflowExecuteMode, workflowContext: WorkflowHookContextService]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. Refer to [Workflow hook context](#workflow-hook-context) for the `workflowContext` argument (available from n8n 2.23.0). |
@@ -158,9 +158,9 @@ module.exports = {
 Some workflow lifecycle hooks receive an `actor` argument, a minimal projection of the user who performed the operation. Use it to attribute the action, for example to allow or reject an operation based on the user's identity or role.
 
 {% hint style="info" %}
-**Available from n8n 2.33.0**
+**Available from n8n 2.33.1**
 
-n8n passes `actor` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, `workflow.delete`, `workflow.afterDelete`, `workflow.afterArchive`, and `workflow.afterUnarchive` hooks from n8n 2.33.0. The argument is optional and can be `undefined` when n8n can't determine the acting user.
+n8n passes `actor` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, `workflow.delete`, `workflow.afterDelete`, `workflow.afterArchive`, and `workflow.afterUnarchive` hooks. The argument is optional and can be `undefined` when n8n can't determine the acting user.
 {% endhint %}
 
 The `actor` object has these properties:

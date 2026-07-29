@@ -355,6 +355,43 @@ Free or unauthenticated providers, including SearXNG, can hit rate limits. Use B
 
 If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
 
+### Enable agents
+
+Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n `2.32.3` (Beta) or later.
+
+{% hint style="warning" %}
+Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+{% endhint %}
+
+You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
+
+Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-assisted building:
+
+```bash
+# Enable the agents module (keep instance-ai for AI-assisted building)
+N8N_ENABLED_MODULES=instance-ai,agents
+
+# Knowledge base, optional: reuses the Daytona sandbox you set up for AI Assistant
+N8N_AGENTS_AI_SANDBOX_ENABLED=true
+N8N_AGENTS_AI_SANDBOX_PROVIDER=daytona
+
+# Channels, optional: public URL so Slack, Telegram, and Linear can reach your instance
+WEBHOOK_URL=https://your-public-url
+```
+
+| Variable                        | Description                                                                                                                    |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `N8N_ENABLED_MODULES`           | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building.                                            |
+| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox.                    |
+| `N8N_AGENTS_AI_SANDBOX_PROVIDER`| Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for AI Assistant.                       |
+| `WEBHOOK_URL`                   | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear.              |
+
+{% hint style="info" %}
+The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
+{% endhint %}
+
+For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+
 ### Disable AI Assistant
 
 To disable AI Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.

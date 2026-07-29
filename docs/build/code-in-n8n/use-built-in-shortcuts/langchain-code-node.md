@@ -19,7 +19,7 @@ layout:
 n8n provides these methods to make it easier to perform common tasks in the [LangChain Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code).
 
 {% hint style="info" %}
-**Only for the LangChain Code node**
+**LangChain Code node only**
 
 The built-in methods and variables on this page are for use in expressions in the LangChain Code node. You can't use them in other nodes.
 {% endhint %}

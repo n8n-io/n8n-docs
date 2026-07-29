@@ -155,9 +155,9 @@ Select the **Azure Cloud** environment your Key Vault is hosted in. This sets th
 
 | Azure Cloud | Vault URL suffix | Entra authority host |
 |-------------|------------------|----------------------|
-| **Azure Public Cloud** (default) | `vault.azure.net` | `login.microsoftonline.com` |
-| **Azure US Government** | `vault.usgovcloudapi.net` | `login.microsoftonline.us` |
-| **Azure China** | `vault.azure.cn` | `login.partner.microsoftonline.cn` |
+| **Azure Public Cloud** (default) | `vault.azure.net` | `https://login.microsoftonline.com` |
+| **Azure US Government** | `vault.usgovcloudapi.net` | `https://login.microsoftonline.us` |
+| **Azure China** | `vault.azure.cn` | `https://login.partner.microsoftonline.cn` |
 | **Custom** | You provide the full URL | You provide the host |
 
 For **Azure Public Cloud**, **Azure US Government**, and **Azure China**, provide your **Vault Name**. n8n builds the vault URL from the name and the selected cloud's suffix.

@@ -3,7 +3,9 @@ title: Use AI Assistant
 description: >-
   Use the AI Assistant to create, edit, test, and troubleshoot n8n workflows from
   a chat.
-status: preview
+tags:
+  - tag: preview
+    primary: true
 layout:
   description:
     visible: false

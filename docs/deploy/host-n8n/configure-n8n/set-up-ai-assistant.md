@@ -1,6 +1,8 @@
 ---
 description: Set up the AI Assistant on self-hosted n8n using environment variables.
-status: preview
+tags:
+  - tag: preview
+    primary: true
 layout:
   width: default
   title:

@@ -359,6 +359,10 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to build and run agents on your instance. Agents need n8n `2.32.3` (Beta) or later.
 
+{% hint style="warning" %}
+Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+{% endhint %}
+
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
 
 Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-assisted building:

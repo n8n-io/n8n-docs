@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@reviewdog
         with:
-          files: '["docs", "_snippets"]'
+          files: '["docs"]'

@@ -1,25 +1,36 @@
 ---
 title: Home Assistant credentials
-description: Documentation for Home Assistant credentials. Use these credentials to authenticate Home Assistant in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Home Assistant credentials. Use these credentials to
+  authenticate Home Assistant in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Home Assistant credentials
+originalFilePath: integrations/builtin/credentials/homeassistant.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/homeassistant'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/homeassistant'
+layout:
+  description:
+    visible: false
 ---
 
-# Home Assistant credentials
+# Home Assistant credentials <a href="#home-assistant-credentials" id="home-assistant-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant.md)
+- [Home Assistant](../app-nodes/n8n-nodes-base.homeassistant.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Home Assistant's API documentation](https://developers.home-assistant.io/docs/api/rest) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need to [Install](https://www.home-assistant.io/installation/) Home Assistant, create a [Home Assistant](https://www.home-assistant.io/getting-started/onboarding) account, and have:
 

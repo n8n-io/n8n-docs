@@ -1,16 +1,27 @@
 ---
 title: Strapi credentials
-description: Documentation for Strapi credentials. Use these credentials to authenticate Strapi in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Strapi credentials. Use these credentials to authenticate
+  Strapi in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Strapi credentials
+originalFilePath: integrations/builtin/credentials/strapi.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/strapi'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/strapi'
+layout:
+  description:
+    visible: false
 ---
 
-# Strapi credentials
+# Strapi credentials <a href="#strapi-credentials" id="strapi-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Strapi](/integrations/builtin/app-nodes/n8n-nodes-base.strapi.md)
+- [Strapi](../app-nodes/n8n-nodes-base.strapi.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Strapi](https://strapi.io/) admin account with:
 
@@ -20,16 +31,16 @@ Create a [Strapi](https://strapi.io/) admin account with:
 
 Refer to the Strapi developer [Quick Start Guide](https://docs.strapi.io/dev-docs/quick-start) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API user account: Requires a user account with appropriate content permissions.
 - API token: Requires an admin account.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest) for more information about the service.
 
-## Using API user account
+## Using API user account <a href="#using-api-user-account" id="using-api-user-account"></a>
 
 To configure this credential, you'll need:
 
@@ -48,7 +59,7 @@ In Strapi, the configuration involves two steps:
 
 Refer to the more detailed instructions below for each step.
 
-### Configure a role
+### Configure a role <a href="#configure-a-role" id="configure-a-role"></a>
 
 For API access, use the Users & Permissions Plugin in **Settings > Users & Permissions Plugin**.
 
@@ -73,7 +84,7 @@ For either option, once you open the role:
 
 Refer to [Endpoints](https://docs.strapi.io/dev-docs/api/rest#endpoints) for more information on the permission options.
 
-### Create a user account
+### Create a user account <a href="#create-a-user-account" id="create-a-user-account"></a>
 
 Now that you have an appropriate role, create an end-user account and assign the role to it:
 
@@ -88,15 +99,13 @@ Now that you have an appropriate role, create an end-user account and assign the
 Refer to [Managing end-user accounts](https://docs.strapi.io/user-docs/users-roles-permissions/managing-end-users) for more information.
 
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need:
 
-- An **API Token**: Create an API token from **Settings > Global Settings > API Tokens**. Refer to Strapi's [Creating a new API token documentation](https://docs.strapi.io/user-docs/settings/API-tokens#creating-a-new-api-token) for more details and information on regenerating API tokens.
+- An **API Token**: Create an API token from **Settings > Global Settings > API Tokens**. Refer to Strapi's [Creating a new API token documentation](https://docs.strapi.io/user-docs/settings/API-tokens#creating-a-new-api-token) for more details and information on regenerating API tokens.<br>
     
-    /// note | API tokens permission
-    If you don't see the **API tokens** option in **Global settings**, your account doesn't have the **API tokens > Read** permission.
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>API tokens permission</strong></p><p>If you don't see the <strong>API tokens</strong> option in <strong>Global settings</strong>, your account doesn't have the <strong>API tokens &gt; Read</strong> permission.</p></div>
     
 - The **URL**: Use the public URL of your Strapi server, defined in `./config/server.js` as the `url` parameter. Strapi recommends using an absolute URL.
     - For Strapi Cloud projects, use the URL of your Cloud project, for example: `https://my-strapi-project-name.strapiapp.com`

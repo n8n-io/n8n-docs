@@ -130,6 +130,10 @@ exclude = [
   '^https://api\.mist\.com/',  # Only works when logged in
   '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
   '^https://developer\.paddle\.com/',  # Times out on automated checks
+  '^https://console\.cloud\.google\.com/apis/library',  # Redirect loop on automated checks (works in a browser)
+  '^https://github\.com/(CxGarcia|miguel-mconf|yoky-devsavant|kirill-chertkov|bramknuever|bugagashenkj|FFTDB)$',  # Deleted contributor accounts credited in historical release notes
+  '^https://developers\.facebook\.com/docs/(certificate-transparency-api|graph-api/webhooks/getting-started/webhooks-for-certificate-transparency|graph-api/webhooks/reference/certificate-transparency)',  # Meta removed/moved these docs (404); needs content review
+  '^https://docs\.openwebui\.com/getting-started/api-endpoints',  # OpenWebUI moved these docs (404); needs content review
   ]
 
 # Exclude these filesystem paths from getting checked.

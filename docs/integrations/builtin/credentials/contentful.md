@@ -1,29 +1,40 @@
 ---
 title: Contentful credentials
-description: Documentation for Contentful credentials. Use these credentials to authenticate Contentful in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Contentful credentials. Use these credentials to
+  authenticate Contentful in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Contentful credentials
+originalFilePath: integrations/builtin/credentials/contentful.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/contentful'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/contentful'
+layout:
+  description:
+    visible: false
 ---
 
-# Contentful credentials
+# Contentful credentials <a href="#contentful-credentials" id="contentful-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Contentful](/integrations/builtin/app-nodes/n8n-nodes-base.contentful.md)
+- [Contentful](../app-nodes/n8n-nodes-base.contentful.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Contentful](https://www.contentful.com/) account.
 - Create a [Contentful space](https://www.contentful.com/help/getting-started/contentful-101/#step-2-create-a-space).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Contentful's API documentation](https://www.contentful.com/developers/docs/references/) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 

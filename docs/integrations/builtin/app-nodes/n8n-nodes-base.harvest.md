@@ -1,20 +1,33 @@
 ---
 title: Harvest node documentation
-description: Learn how to use the Harvest node in n8n. Follow technical documentation to integrate Harvest node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Harvest node in n8n. Follow technical documentation to
+  integrate Harvest node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Harvest node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.harvest.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.harvest'
+layout:
+  description:
+    visible: false
 ---
 
-# Harvest node
+# Harvest node <a href="#harvest-node" id="harvest-node"></a>
 
 Use the Harvest node to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
 
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Harvest credentials](/integrations/builtin/credentials/harvest.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Harvest credentials](../credentials/harvest.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Client
     * Create a client
@@ -78,9 +91,9 @@ Refer to [Harvest credentials](/integrations/builtin/credentials/harvest.md) for
     * Get data of authenticated user
     * Update a user
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'harvest') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Harvest node documentation integration templates](https://n8n.io/integrations/harvest) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

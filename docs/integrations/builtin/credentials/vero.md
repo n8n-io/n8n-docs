@@ -1,28 +1,39 @@
 ---
 title: Vero credentials
-description: Documentation for Vero credentials. Use these credentials to authenticate Vero in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Vero credentials. Use these credentials to authenticate Vero
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Vero credentials
+originalFilePath: integrations/builtin/credentials/vero.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/vero'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/vero'
+layout:
+  description:
+    visible: false
 ---
 
-# Vero credentials
+# Vero credentials <a href="#vero-credentials" id="vero-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero.md)
+- [Vero](../app-nodes/n8n-nodes-base.vero.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Vero](https://getvero.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API auth token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Vero's API documentation](https://developers.getvero.com/track-api-reference/#/) for more information about the service.
 
-## Using API auth token
+## Using API auth token <a href="#using-api-auth-token" id="using-api-auth-token"></a>
 
 To configure this credential, you'll need:
 

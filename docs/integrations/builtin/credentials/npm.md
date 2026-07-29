@@ -1,28 +1,39 @@
 ---
 title: npm credentials
-description: Documentation for the npm credentials. Use these credentials to authenticate npm in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the npm credentials. Use these credentials to authenticate
+  npm in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: npm credentials
+originalFilePath: integrations/builtin/credentials/npm.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/npm'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/npm'
+layout:
+  description:
+    visible: false
 ---
 
-# npm credentials
+# npm credentials <a href="#npm-credentials" id="npm-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm.md)
+- [npm](../app-nodes/n8n-nodes-base.npm.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [npm](https://www.npmjs.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [npm's external integrations documentation](https://docs.npmjs.com/integrations/integrating-npm-with-external-services) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 

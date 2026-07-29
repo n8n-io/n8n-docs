@@ -1,28 +1,39 @@
 ---
 title: Pushbullet credentials
-description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Pushbullet credentials. Use these credentials to
+  authenticate Pushbullet in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Pushbullet credentials
+originalFilePath: integrations/builtin/credentials/pushbullet.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/pushbullet'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/pushbullet'
+layout:
+  description:
+    visible: false
 ---
 
-# Pushbullet credentials
+# Pushbullet credentials <a href="#pushbullet-credentials" id="pushbullet-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pushbullet](/integrations/builtin/app-nodes/n8n-nodes-base.pushbullet.md)
+- [Pushbullet](../app-nodes/n8n-nodes-base.pushbullet.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Pushbullet](https://www.pushbullet.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Pushbullet's API documentation](https://docs.pushbullet.com/) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -33,7 +44,9 @@ To generate the **Client ID** and **Client Secret**, go to the [create client](h
 
 Refer to Pushbullet's [OAuth2 Guide](https://docs.pushbullet.com/#oauth2) for more information.
 
-/// note | Pushbullet OAuth test link
+{% hint style="info" %}
+**Pushbullet OAuth test link**
+
 Pushbullet offers a test link during the client creation process described above. This link isn't compatible with n8n. To verify the authentication works, use the **Connect my account** button in n8n.
-///
+{% endhint %}
 

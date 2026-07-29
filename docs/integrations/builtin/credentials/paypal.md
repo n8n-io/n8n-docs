@@ -1,29 +1,40 @@
 ---
 title: PayPal credentials
-description: Documentation for PayPal credentials. Use these credentials to authenticate PayPal in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for PayPal credentials. Use these credentials to authenticate
+  PayPal in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: PayPal credentials
+originalFilePath: integrations/builtin/credentials/paypal.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/paypal'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/paypal'
+layout:
+  description:
+    visible: false
 ---
 
-# PayPal credentials
+# PayPal credentials <a href="#paypal-credentials" id="paypal-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal.md)
-- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md)
+- [PayPal](../app-nodes/n8n-nodes-base.paypal.md)
+- [PayPal Trigger](../trigger-nodes/n8n-nodes-base.paypaltrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [PayPal developer](https://developer.paypal.com/home) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API client and secret
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Paypal's API documentation](https://developer.paypal.com/api/rest/) for more information about the service.
 
-## Using API client and secret
+## Using API client and secret <a href="#using-api-client-and-secret" id="using-api-client-and-secret"></a>
 
 To configure this credential, you'll need:
 

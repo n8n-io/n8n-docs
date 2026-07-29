@@ -1,32 +1,45 @@
 ---
 title: Paddle credentials
-description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Paddle credentials. Use these credentials to authenticate
+  Paddle in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Paddle credentials
+originalFilePath: integrations/builtin/credentials/paddle.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/paddle'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/paddle'
+layout:
+  description:
+    visible: false
 ---
 
-# Paddle credentials
+# Paddle credentials <a href="#paddle-credentials" id="paddle-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Paddle](/integrations/builtin/app-nodes/n8n-nodes-base.paddle.md)
+- [Paddle](../app-nodes/n8n-nodes-base.paddle.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Paddle](https://paddle.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token (Classic)
 
-/// warning | Paddle Classic API
-This credential works with Paddle Classic's API. If you joined Paddle after August 2023, you're using the [Paddle Billing API](https://developer.paddle.com/api-reference/overview) and this credential may not work for you.
-///
+{% hint style="warning" %}
+**Paddle Classic API**
 
-## Related resources
+This credential works with Paddle Classic's API. If you joined Paddle after August 2023, you're using the [Paddle Billing API](https://developer.paddle.com/api-reference/overview) and this credential may not work for you.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Paddle Classic's API documentation](https://developer.paddle.com/classic/api-reference/1384a288aca7a-api-reference) for more information about the service.
 
-## Using API access token (Classic)
+## Using API access token (Classic) <a href="#using-api-access-token-classic" id="using-api-access-token-classic"></a>
 
 To configure this credential, you'll need:
 

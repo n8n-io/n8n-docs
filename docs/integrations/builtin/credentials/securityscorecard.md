@@ -1,29 +1,40 @@
 ---
 title: SecurityScorecard credentials
-description: Documentation for SecurityScorecard credentials. Use these credentials to authenticate SecurityScorecard in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for SecurityScorecard credentials. Use these credentials to
+  authenticate SecurityScorecard in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: SecurityScorecard credentials
+originalFilePath: integrations/builtin/credentials/securityscorecard.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/securityscorecard'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/securityscorecard'
+layout:
+  description:
+    visible: false
 ---
 
-# SecurityScorecard credentials
+# SecurityScorecard credentials <a href="#securityscorecard-credentials" id="securityscorecard-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard.md)
+- [SecurityScorecard](../app-nodes/n8n-nodes-base.securityscorecard.md)
 
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [SecurityScorecard](https://securityscorecard.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [SecurityScorecard's Developer documentation](https://securityscorecard.readme.io/docs/integrate-ratings-platform-services) and [API documentation](https://securityscorecard.readme.io/reference/introduction) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

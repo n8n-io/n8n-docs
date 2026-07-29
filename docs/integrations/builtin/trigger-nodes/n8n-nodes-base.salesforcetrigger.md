@@ -1,24 +1,41 @@
 ---
 title: Salesforce Trigger node documentation
-description: Learn how to use the Salesforce Trigger node in n8n. Follow technical documentation to integrate Salesforce Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Salesforce Trigger node in n8n. Follow technical
+  documentation to integrate Salesforce Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Salesforce Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger
+layout:
+  description:
+    visible: false
 ---
 
-# Salesforce Trigger node
+# Salesforce Trigger node <a href="#salesforce-trigger-node" id="salesforce-trigger-node"></a>
 
 Use the Salesforce Trigger node to respond to events in [Salesforce](https://login.salesforce.com/) and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce events.
 
 On this page, you'll find a list of events the Salesforce Trigger node can respond to, and links to more resources.
 
-///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/salesforce.md).
-///
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Salesforce trigger integrations](https://n8n.io/integrations/salesforce-trigger/) page.
-///
+{% hint style="info" %}
+**Credentials**
 
-## Events
+You can find authentication information for this node [here](../credentials/salesforce.md).
+{% endhint %}
+{% hint style="info" %}
+**Examples and templates**
+
+For usage examples and templates to help you get started, refer to n8n's [Salesforce trigger integrations](https://n8n.io/integrations/salesforce-trigger/) page.
+{% endhint %}
+
+## Events <a href="#events" id="events"></a>
 
 * On Account Created
 * On Account Updated
@@ -39,8 +56,8 @@ For usage examples and templates to help you get started, refer to n8n's [Salesf
 * On User Created
 * On User Updated
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Salesforce. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md).
+n8n provides an app node for Salesforce. You can find the node docs [here](../app-nodes/n8n-nodes-base.salesforce.md).
 
 View [example workflows and related content](https://n8n.io/integrations/salesforce-trigger/) on n8n's website.

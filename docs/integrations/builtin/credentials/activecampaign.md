@@ -1,26 +1,37 @@
 ---
 title: ActiveCampaign credentials
-description: Documentation for ActiveCampaign credentials. Use these credentials to authenticate ActiveCampaign in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for ActiveCampaign credentials. Use these credentials to
+  authenticate ActiveCampaign in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: ActiveCampaign credentials
+originalFilePath: integrations/builtin/credentials/activecampaign.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/activecampaign'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/activecampaign'
+layout:
+  description:
+    visible: false
 ---
 
-# ActiveCampaign credentials
+# ActiveCampaign credentials <a href="#activecampaign-credentials" id="activecampaign-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [ActiveCampaign](/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign.md)
-- [Active Campaign Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md)
+- [ActiveCampaign](../app-nodes/n8n-nodes-base.activecampaign.md)
+- [Active Campaign Trigger](../trigger-nodes/n8n-nodes-base.activecampaigntrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [ActiveCampaign's API documentation](https://help.activecampaign.com/hc/en-us/sections/360005740979-ActiveCampaign-API-Resources) for more information about working with the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need an [ActiveCampaign](https://www.activecampaign.com/) account and:
 

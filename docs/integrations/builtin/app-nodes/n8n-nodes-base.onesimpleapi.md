@@ -1,21 +1,34 @@
 ---
 title: One Simple API node documentation
-description: Learn how to use the One Simple API node in n8n. Follow technical documentation to integrate One Simple API node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the One Simple API node in n8n. Follow technical
+  documentation to integrate One Simple API node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: One Simple API node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi'
+layout:
+  description:
+    visible: false
 ---
-<!-- vale off -->
-<!-- linting off because 'simple' isn't something I want to add to accept.txt -->
-# One Simple API node
+
+
+# One Simple API node <a href="#one-simple-api-node" id="one-simple-api-node"></a>
 
 Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
 
 On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 
-/// note | Credentials
-Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [One Simple API credentials](../credentials/onesimpleapi.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Information
     * Convert a value between currencies
@@ -32,13 +45,13 @@ Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpl
     * Get SEO information from website
     * Create a screenshot from a webpage
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'one-simple-api') ]]
 
-## Related resources
+[Browse One Simple API node documentation integration templates](https://n8n.io/integrations/one-simple-api) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
-<!-- vale on -->
+

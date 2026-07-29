@@ -1,28 +1,39 @@
 ---
 title: Hugging Face credentials
-description: Documentation for the Hugging Face credentials. Use these credentials to authenticate Hugging Face in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Hugging Face credentials. Use these credentials to
+  authenticate Hugging Face in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Hugging Face credentials
+originalFilePath: integrations/builtin/credentials/huggingface.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/huggingface'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/huggingface'
+layout:
+  description:
+    visible: false
 ---
 
-# Hugging Face credentials
+# Hugging Face credentials <a href="#hugging-face-credentials" id="hugging-face-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md)
-* [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md)
+* [Hugging Face Inference](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md)
+* [Embeddings Hugging Face Inference](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Hugging Face's documentation](https://huggingface.co/docs/api-inference/quicktour) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [Hugging Face](https://huggingface.co/) account and:
 

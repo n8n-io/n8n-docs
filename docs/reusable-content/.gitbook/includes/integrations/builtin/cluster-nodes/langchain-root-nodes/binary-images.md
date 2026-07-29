@@ -1,0 +1,4 @@
+---
+title: binary-images
+---
+Use this option to control whether binary images should be automatically passed through to the agent as image type messages (turned on) or not (turned off).

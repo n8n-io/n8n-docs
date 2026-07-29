@@ -1,22 +1,35 @@
 ---
 title: Agile CRM node documentation
-description: Learn how to use the Agile CRM node in n8n. Follow technical documentation to integrate Agile CRM node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Agile CRM node in n8n. Follow technical documentation to
+  integrate Agile CRM node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Agile CRM node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.agilecrm.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm'
+layout:
+  description:
+    visible: false
 ---
 
-# Agile CRM node
+# Agile CRM node <a href="#agile-crm-node" id="agile-crm-node"></a>
 
 Use the Agile CRM node to automate work in Agile CRM, and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, including creating, getting, updating and deleting companies, contracts, and deals.
 
 On this page, you'll find a list of operations the Agile CRM node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Agile CRM credentials](/integrations/builtin/credentials/agilecrm.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Agile CRM credentials](../credentials/agilecrm.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Company
     * Create a new company
@@ -37,7 +50,7 @@ Refer to [Agile CRM credentials](/integrations/builtin/credentials/agilecrm.md) 
     * Get all deals
     * Update deal properties
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'agile-crm') ]]
+
+[Browse Agile CRM node documentation integration templates](https://n8n.io/integrations/agile-crm) or [search all templates](https://n8n.io/workflows/)

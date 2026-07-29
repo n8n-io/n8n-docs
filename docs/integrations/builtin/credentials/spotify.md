@@ -1,29 +1,40 @@
 ---
 title: Spotify credentials
-description: Documentation for Spotify credentials. Use these credentials to authenticate Spotify in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Spotify credentials. Use these credentials to authenticate
+  Spotify in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Spotify credentials
+originalFilePath: integrations/builtin/credentials/spotify.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/spotify'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/spotify'
+layout:
+  description:
+    visible: false
 ---
 
-# Spotify credentials
+# Spotify credentials <a href="#spotify-credentials" id="spotify-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Spotify](/integrations/builtin/app-nodes/n8n-nodes-base.spotify.md)
+- [Spotify](../app-nodes/n8n-nodes-base.spotify.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Spotify's Web API documentation](https://developer.spotify.com/documentation/web-api) for more information about the service.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/) account so you can create a Spotify app:
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/) account so you can create a Spotify app:
 
 1. Open the [Spotify developer dashboard](https://developer.spotify.com/dashboard).
 2. Select **Create an app**.

@@ -48,7 +48,7 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 - **Deleted Business Messages**: Trigger when messages are deleted from a connected business account.
 - **Edited Business Message**: Trigger on new version of a message from a connected business account.
 - **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot is edited.
-- **Edited Message**: Trigger on new version of a channel post that is known to the bot is edited.
+- **Edited Message**: Trigger on new version of a message that is known to the bot and was edited.
 - **Inline Query**: Trigger on new incoming inline query.
 - **Message**: Trigger on new incoming message of any kind — text, photo, sticker, and so on.
 - **Message Reaction**: Trigger when a reaction to a message is changed by a user. The bot must be an administrator in the chat. The update isn't received for reactions set by bots.

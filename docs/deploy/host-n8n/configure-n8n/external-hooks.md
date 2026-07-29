@@ -122,9 +122,15 @@ module.exports = {
 Some workflow hooks receive a `workflowContext` argument, an instance of `WorkflowHookContextService`. It exposes helper methods you can call inside the hook function.
 
 {% hint style="info" %}
-**Availability**
+**Available from n8n 2.23.0**
 
-The `workflow.preExecute` hook receives `workflowContext` from n8n 2.23.0. The `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, and `workflow.postExecute` hooks receive it from n8n 2.33.1.
+n8n passes `workflowContext` to the `workflow.preExecute` hook.
+{% endhint %}
+
+{% hint style="info" %}
+**Available from n8n 2.33.1**
+
+n8n passes `workflowContext` to the `workflow.create`, `workflow.afterCreate`, `workflow.activate`, `workflow.deactivate`, `workflow.update`, `workflow.afterUpdate`, and `workflow.postExecute` hooks.
 {% endhint %}
 
 The context provides these methods:

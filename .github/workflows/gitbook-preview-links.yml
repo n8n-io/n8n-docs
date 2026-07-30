@@ -9,7 +9,7 @@ name: GitBook preview links
 # default branch (the script + reusable index come from there) and overlays only
 # the PR's changed *file contents* via the API — data, never code.
 on:
-  status: {}
+  status:
   workflow_dispatch:
     inputs:
       sha:
@@ -67,24 +67,39 @@ jobs:
           SHA: ${{ steps.resolve.outputs.sha }}
         run: |
           set -euo pipefail
-          gh api "repos/$GH_REPO/pulls/$PR/files" --paginate > /tmp/files.json
+          # --slurp + `add`: a multi-page PR paginates into several JSON arrays;
+          # merge them into one array the script can parse.
+          gh api "repos/$GH_REPO/pulls/$PR/files" --paginate --slurp | jq 'add' > /tmp/files.json
           gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
 
-          # Overlay the PR's version of each changed docs file onto the trusted
-          # tree, so titles / SUMMARY membership reflect the PR (incl. added
-          # pages) — fetching data only, never executing PR code.
-          jq -r '.[] | select(.status != "removed") | .filename' /tmp/files.json \
-            | while read -r f; do
-                case "$f" in
-                  docs/*.md)
-                    mkdir -p "$(dirname "$f")"
-                    gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' \
-                      | tr -d '\n' | base64 -d > "$f" || true
-                    ;;
-                esac
-              done
+          # Overlay the PR's version of each changed docs file (and the reusable
+          # index, if changed) onto the trusted tree, so titles / SUMMARY
+          # membership / reusable resolution reflect the PR incl. added pages.
+          # Data only — never executing PR code. Fetch to a temp file and replace
+          # only on a clean, non-empty decode, so a failed fetch can't overwrite
+          # the trusted base-branch copy with an empty/corrupt file.
+          overlay() {
+            local f="$1" tmp
+            tmp="$(mktemp)"
+            if gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' 2>/dev/null \
+                 | tr -d '\n' | base64 -d > "$tmp" 2>/dev/null && [ -s "$tmp" ]; then
+              mkdir -p "$(dirname "$f")"
+              mv "$tmp" "$f"
+            else
+              rm -f "$tmp"
+              echo "warn: could not fetch $f at $SHA; using base-branch version"
+            fi
+          }
+          while read -r f; do
+            case "$f" in
+              docs/*.md|REUSABLE_CONTENT_INDEX.md) overlay "$f" ;;
+            esac
+          done < <(jq -r '.[] | select(.status != "removed") | .filename' /tmp/files.json)
 
-          python3 .github/scripts/gitbook_preview_links.py /tmp/files.json /tmp/status.json > /tmp/body.md || true
+          # No `|| true`: a real script error should fail the step (visible,
+          # rerunnable). A legitimate "nothing to post yet" is an empty stdout
+          # with exit 0, handled by the has_body check below.
+          python3 .github/scripts/gitbook_preview_links.py /tmp/files.json /tmp/status.json > /tmp/body.md
           if [ -s /tmp/body.md ]; then
             echo "has_body=1" >> "$GITHUB_OUTPUT"
           else

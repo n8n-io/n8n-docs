@@ -97,6 +97,14 @@ def page_title(path: Path, rel: str) -> str:
     return fm.get("title") or fm.get("nodeTitle") or first_heading(path) or humanize(rel)
 
 
+def md_escape(s: str) -> str:
+    """Neutralize Markdown/HTML in PR-controlled text (page titles) before
+    embedding it in the trusted comment, so a crafted title can't inject links
+    or markup."""
+    s = re.sub(r"\s+", " ", s).strip()
+    return re.sub(r"([\\`*_\[\]()<>|])", r"\\\1", s)
+
+
 # --------------------------------------------------------------------------- #
 # GitBook statuses
 # --------------------------------------------------------------------------- #
@@ -127,20 +135,31 @@ def load_spaces(status_json) -> dict:
 # --------------------------------------------------------------------------- #
 # Path -> URL mapping
 # --------------------------------------------------------------------------- #
+PROD_BASE = "https://docs.n8n.io/"
+
+
 def space_of(filename: str):
     parts = filename.split("/")
     return parts[1] if len(parts) >= 3 and parts[0] == "docs" else None
 
 
-def rel_path(filename: str, space: str) -> str:
-    """Space-relative slug, derived from the file path — which is how GitBook
-    Git Sync builds page URLs. (Frontmatter `url:` exists but is unreliable
-    migration residue: some pages point it at the space root.) README maps to
-    the folder index."""
-    rel = filename[len(f"docs/{space}/"):]
-    rel = re.sub(r"\.md$", "", rel)
+def _rel(filename: str, prefix: str) -> str:
+    rel = re.sub(r"\.md$", "", filename[len(prefix):])
     rel = re.sub(r"(^|/)README$", "", rel)
     return rel.strip("/")
+
+
+# NOTE: URLs are derived from the file path (top folder == URL segment), which is
+# how GitBook Git Sync publishes. Frontmatter `url:` is deliberately NOT used: in
+# this repo it holds the pre-migration URL and is stale. Verified against the live
+# site — path-derived URLs return 200 while `url:`-derived ones 404 or redirect:
+#   changelog/release-notes-2.x        -> 200   (url: release-notes/release-notes -> 404)
+#   changelog/release-notes-1.x        -> 200   (url: release-notes/1.x -> 301 to canonical)
+#   build/manage-workflows/n8n-packages-> 200   (url: manage-workflows/export-and-import/... -> 404)
+#   contribute                          -> 200   (url: contribute-to-n8n -> 404)
+def rel_path(filename: str, space: str) -> str:
+    """Space-relative slug (no space segment, no domain), from the file path."""
+    return _rel(filename, f"docs/{space}/")
 
 
 def deep_link(space_info: dict, rel: str) -> str:
@@ -148,16 +167,10 @@ def deep_link(space_info: dict, rel: str) -> str:
     return base + rel if rel else base
 
 
-PROD_BASE = "https://docs.n8n.io/"
-
-
 def production_url(filename: str) -> str:
-    """Live docs URL for a page, derived from its path (top folder == URL
-    segment; README -> folder index). Used for pages GitBook doesn't build a
-    preview for (reusable-content fan-out)."""
-    rel = re.sub(r"\.md$", "", filename[len("docs/"):])
-    rel = re.sub(r"(^|/)README$", "", rel)
-    return PROD_BASE + rel.strip("/")
+    """Live docs URL for a page GitBook doesn't build a preview for (reusable
+    fan-out), path-derived (top folder == URL segment)."""
+    return PROD_BASE + _rel(filename, "docs/")
 
 
 def in_summary(space: str, filename: str) -> bool:
@@ -221,7 +234,7 @@ def resolve_reusable(filename: str, index: dict):
 def page_line(space_info: dict, filename: str) -> str:
     space = space_of(filename)
     rel = rel_path(filename, space)
-    title = page_title(REPO / filename, rel)
+    title = md_escape(page_title(REPO / filename, rel))
     url = deep_link(space_info, rel)
     edit = space_info.get("editor_url")
     edit_md = f" · [edit]({edit})" if edit else ""
@@ -301,7 +314,7 @@ def render(changed, spaces, index) -> str:
             out.append(f"<details><summary>Show {len(shown)} of {total} pages</summary>")
             out.append("")
             for p in shown:
-                title = page_title(REPO / p, p)
+                title = md_escape(page_title(REPO / p, p))
                 out.append(f"- [{title}]({production_url(p)}) — `{p[len('docs/'):]}`")
             if total > len(shown):
                 out.append(f"- …and {total - len(shown)} more")

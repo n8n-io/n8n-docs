@@ -39,6 +39,8 @@ CHANGED = [
     {"status": "modified", "filename": "docs/spacea/README.md"},
     {"status": "modified", "filename": "docs/spacea/page-one.md"},
     {"status": "added", "filename": "docs/spacea/sub/page-two.md"},
+    {"status": "modified", "filename": "docs/spacea/custom.md"},         # custom slug
+    {"status": "modified", "filename": "docs/spacea/nested/README.md"},  # stale-root url
     {"status": "modified", "filename": "docs/spacea/orphan.md"},      # not in SUMMARY
     {"status": "modified", "filename": "docs/spacea/SUMMARY.md"},     # nav
     {"status": "modified", "filename": "docs/spaceb/other.md"},
@@ -96,6 +98,27 @@ def main():
     check("SUMMARY.md is a non-page", "SUMMARY.md" in out)
     check("asset is a non-page", "x.png" in out)
     check("removed file never appears", "deleted.md" not in out)
+
+    # Frontmatter `url:` is stale in this repo (pre-migration); URLs must be
+    # PATH-derived. These pages carry a misleading `url:` and must ignore it.
+    check("stale frontmatter url ignored (custom.md -> path slug)",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/custom" in out
+          and "real/custom-slug" not in out)
+    check("stale space-root url ignored (nested README -> path)",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/nested" in out)
+
+    # unit-level checks on the slug/URL helpers (path derivation only)
+    check("rel_path custom.md is path-derived", gb.rel_path("docs/spacea/custom.md", "spacea") == "custom")
+    check("rel_path nested README -> folder", gb.rel_path("docs/spacea/nested/README.md", "spacea") == "nested")
+    check("rel_path space README -> empty", gb.rel_path("docs/spacea/README.md", "spacea") == "")
+    check("production_url is path-derived (folder == segment)",
+          gb.production_url("docs/spaceb/custom-live.md") == "https://docs.n8n.io/spaceb/custom-live")
+
+    # markdown injection in title is escaped
+    check("title markdown escaped (no raw ']( ' breakout)",
+          "Weird \\]\\( title \\[x\\]" in out and "[Weird ](" not in out)
+    check("md_escape neutralizes link breakout",
+          gb.md_escape("a](http://evil) b") == r"a\]\(http://evil\) b")
 
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:

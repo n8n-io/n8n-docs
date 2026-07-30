@@ -1,0 +1,111 @@
+name: GitBook preview links
+# GitBook's own PR checks link to the space landing page, not the page a PR
+# changed. When a GitBook preview build succeeds, this posts (and keeps updated)
+# a single PR comment with a deep link to each changed page. See
+# .github/scripts/gitbook_preview_links.py.
+#
+# Security: triggered by `status`, this job has a write token, so it must never
+# execute code from the (possibly forked) PR head. It checks out the trusted
+# default branch (the script + reusable index come from there) and overlays only
+# the PR's changed *file contents* via the API — data, never code.
+on:
+  status: {}
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: PR head commit SHA to build preview links for (dry-run)
+        required: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  # All per-space GitBook statuses for one commit share this group and run
+  # serially, so the sticky-comment upsert can't race itself into duplicates.
+  group: gitbook-preview-${{ github.event.sha || github.event.inputs.sha }}
+  cancel-in-progress: false
+
+jobs:
+  preview-links:
+    # Only for a successful GitBook status, or a manual dry-run.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.state == 'success' && startsWith(github.event.context, 'GitBook ('))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve the open PR for this commit
+        id: resolve
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          SHA: ${{ github.event.sha || github.event.inputs.sha }}
+        run: |
+          set -euo pipefail
+          PR=$(gh api "repos/$GH_REPO/commits/$SHA/pulls" \
+                --jq '[.[] | select(.state=="open")][0].number // empty')
+          if [ -z "$PR" ]; then
+            echo "No open PR for $SHA; nothing to do."
+            exit 0
+          fi
+          echo "pr=$PR" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+      # Trusted checkout: the default branch, NOT the PR head. This is the code
+      # (script) and the reusable-content index we run against.
+      - name: Checkout default branch (trusted)
+        if: steps.resolve.outputs.pr != ''
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Build the comment body
+        id: build
+        if: steps.resolve.outputs.pr != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ steps.resolve.outputs.pr }}
+          SHA: ${{ steps.resolve.outputs.sha }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GH_REPO/pulls/$PR/files" --paginate > /tmp/files.json
+          gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
+
+          # Overlay the PR's version of each changed docs file onto the trusted
+          # tree, so titles / SUMMARY membership reflect the PR (incl. added
+          # pages) — fetching data only, never executing PR code.
+          jq -r '.[] | select(.status != "removed") | .filename' /tmp/files.json \
+            | while read -r f; do
+                case "$f" in
+                  docs/*.md)
+                    mkdir -p "$(dirname "$f")"
+                    gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' \
+                      | tr -d '\n' | base64 -d > "$f" || true
+                    ;;
+                esac
+              done
+
+          python3 .github/scripts/gitbook_preview_links.py /tmp/files.json /tmp/status.json > /tmp/body.md || true
+          if [ -s /tmp/body.md ]; then
+            echo "has_body=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "No preview body (GitBook build not ready yet); skipping."
+          fi
+
+      - name: Upsert the sticky comment
+        if: steps.build.outputs.has_body == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ steps.resolve.outputs.pr }}
+        run: |
+          set -euo pipefail
+          MARKER='<!-- gitbook-preview-links -->'
+          CID=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
+                 --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
+          if [ -n "$CID" ]; then
+            gh api -X PATCH "repos/$GH_REPO/issues/comments/$CID" -F body=@/tmp/body.md >/dev/null
+            echo "Updated comment $CID on PR #$PR"
+          else
+            gh api -X POST "repos/$GH_REPO/issues/$PR/comments" -F body=@/tmp/body.md >/dev/null
+            echo "Created comment on PR #$PR"
+          fi

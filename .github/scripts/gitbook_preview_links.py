@@ -148,6 +148,18 @@ def deep_link(space_info: dict, rel: str) -> str:
     return base + rel if rel else base
 
 
+PROD_BASE = "https://docs.n8n.io/"
+
+
+def production_url(filename: str) -> str:
+    """Live docs URL for a page, derived from its path (top folder == URL
+    segment; README -> folder index). Used for pages GitBook doesn't build a
+    preview for (reusable-content fan-out)."""
+    rel = re.sub(r"\.md$", "", filename[len("docs/"):])
+    rel = re.sub(r"(^|/)README$", "", rel)
+    return PROD_BASE + rel.strip("/")
+
+
 def in_summary(space: str, filename: str) -> bool:
     summary = REPO / "docs" / space / "SUMMARY.md"
     try:
@@ -218,8 +230,8 @@ def page_line(space_info: dict, filename: str) -> str:
 
 
 def render(changed, spaces, index) -> str:
-    direct: dict = {}          # space -> [file]
-    reusable: dict = {}        # space -> [(name, [pages], total)]
+    direct: dict = {}          # space -> [file]  (pages with a real preview)
+    reusable_blocks = []       # (name, [affected page paths], total)
     non_pages = []             # files that aren't pages
     unresolved_reusable = []   # include files we couldn't map
 
@@ -235,17 +247,7 @@ def render(changed, spaces, index) -> str:
             if not pages:
                 unresolved_reusable.append(filename)
                 continue
-            # group resolved pages by the space that actually built a preview
-            by_space: dict = {}
-            for p in pages:
-                sp = space_of(p)
-                if sp in spaces and (REPO / p).exists():
-                    by_space.setdefault(sp, []).append(p)
-            if not by_space:
-                unresolved_reusable.append(filename)
-                continue
-            for sp, pgs in by_space.items():
-                reusable.setdefault(sp, []).append((name, pgs, len(pages)))
+            reusable_blocks.append((name, pages, len(pages)))
             continue
 
         if Path(filename).name == "SUMMARY.md" or "/.gitbook/" in filename:
@@ -260,40 +262,51 @@ def render(changed, spaces, index) -> str:
 
     out = [MARKER, "## 📖 GitBook preview for this PR", ""]
 
-    if not direct and not reusable:
+    if not direct and not reusable_blocks:
         out.append("No standalone page previews for this PR's changes.")
         _append_extras(out, spaces, non_pages, unresolved_reusable)
         return "\n".join(out).rstrip() + "\n"
 
-    out.append("Pages you changed, deep-linked into this PR's GitBook revision:")
-    out.append("")
-
-    for space in sorted(set(direct) | set(reusable)):
-        info = spaces[space]
-        out.append(f"### {space}")
-
-        lines = [page_line(info, f) for f in sorted(direct.get(space, []))]
-        if len(lines) > SPACE_COLLAPSE_AFTER:
-            out.append(f"<details><summary>{len(lines)} pages changed</summary>")
+    # Pages changed directly — deep-linked into this PR's GitBook revision.
+    if direct:
+        out.append("Pages you changed, deep-linked into this PR's GitBook revision:")
+        out.append("")
+        for space in sorted(direct):
+            info = spaces[space]
+            out.append(f"### {space}")
+            lines = [page_line(info, f) for f in sorted(direct[space])]
+            if len(lines) > SPACE_COLLAPSE_AFTER:
+                out.append(f"<details><summary>{len(lines)} pages changed</summary>")
+                out.append("")
+                out.extend(lines)
+                out.append("</details>")
+            else:
+                out.extend(lines)
             out.append("")
-            out.extend(lines)
-            out.append("</details>")
-        else:
-            out.extend(lines)
 
-        for name, pages, total in reusable.get(space, []):
+    # Reusable content: GitBook builds a preview for the reusable-content space
+    # only — NOT for the pages that embed the block. So we link the block's diff
+    # (the actual change) and list the live pages it renders on (blast radius).
+    if reusable_blocks:
+        diff = spaces.get("reusable-content", {}).get("editor_url")
+        out.append("### Reusable content")
+        out.append("GitBook previews the reusable block itself, not the pages that "
+                   "embed it. Links below are the block diff plus the **live** pages "
+                   "it renders on.")
+        out.append("")
+        for name, pages, total in reusable_blocks:
+            diff_md = f" · [view diff]({diff})" if diff else ""
+            out.append(f"**`{name}`** — renders on {total} page(s){diff_md}")
             shown = pages[:REUSABLE_CAP]
-            out.append(f"_Reusable block **`{name}`** changed — rendered on "
-                       f"{total} page(s):_")
-            out.append(f"<details><summary>Show {len(shown)} of {total} affected pages</summary>")
+            out.append(f"<details><summary>Show {len(shown)} of {total} pages</summary>")
             out.append("")
             for p in shown:
-                out.append(page_line(info, p))
-            if total > len(shown) and info.get("editor_url"):
-                out.append(f"- …and {total - len(shown)} more — see the "
-                           f"[space diff]({info['editor_url']})")
+                title = page_title(REPO / p, p)
+                out.append(f"- [{title}]({production_url(p)}) — `{p[len('docs/'):]}`")
+            if total > len(shown):
+                out.append(f"- …and {total - len(shown)} more")
             out.append("</details>")
-        out.append("")
+            out.append("")
 
     _append_extras(out, spaces, non_pages, unresolved_reusable)
     return "\n".join(out).rstrip() + "\n"
@@ -313,7 +326,7 @@ def _append_extras(out, spaces, non_pages, unresolved_reusable):
                    + ", ".join(f"`{p}`" for p in sorted(non_pages)[:10])
                    + (" …" if len(non_pages) > 10 else "") + "</sub>")
     out.append("")
-    out.append("<sub>Links point to this PR's GitBook revision · comment updates on each push</sub>")
+    out.append("<sub>Preview links follow this PR's GitBook revision · comment updates on each push</sub>")
 
 
 def main() -> int:

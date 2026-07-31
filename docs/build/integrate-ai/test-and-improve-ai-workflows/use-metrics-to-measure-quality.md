@@ -18,9 +18,16 @@ layout:
 
 
 {% hint style="info" %}
-**Available on Pro and Enterprise plans**
+**Feature availability**
 
-Metric-based evaluation is available on Pro and Enterprise plans. Registered community and Starter plan users can also use it for a single workflow.
+Available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+On n8n Cloud Starter and self-hosted Registered Community, you can use metric-based evaluations for a single workflow.
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 
 ### What are metric-based evaluations? <a href="#what-are-metric-based-evaluations" id="what-are-metric-based-evaluations"></a>
@@ -86,6 +93,17 @@ Switch to the **Evaluations** tab on your workflow and click the **Run Test** bu
 You can see the results for each test case by clicking on the test run row. Clicking on an individual test case will open the execution that produced it (in a new tab).
 
 #### Run test cases in parallel <a href="#run-test-cases-in-parallel" id="run-test-cases-in-parallel"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Available on:
+
+- **n8n Cloud:** Business, Enterprise
+- **Self-hosted:** Business, Enterprise
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
+{% endhint %}
 
 On plans that support concurrency, **Run Test** is a split-button. The caret to the right opens a popover with a slider that controls how many test cases run at the same time.
 

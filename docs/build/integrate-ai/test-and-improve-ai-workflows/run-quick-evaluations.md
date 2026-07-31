@@ -18,9 +18,14 @@ layout:
 
 
 {% hint style="info" %}
-**Available on registered community and paid plans**
+**Feature availability**
 
-Light evaluations are available to registered community users and on all paid plans.
+Available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Registered Community, Business, Enterprise
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 
 ## What are light evaluations? <a href="#what-are-light-evaluations" id="what-are-light-evaluations"></a>

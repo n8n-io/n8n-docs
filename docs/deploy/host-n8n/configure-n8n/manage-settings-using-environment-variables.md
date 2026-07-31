@@ -59,9 +59,11 @@ The other environment variables for an area have no effect unless `<AREA>_MANAGE
 ## Instance owner <a href="#instance-owner" id="instance-owner"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.17.0**
+**Feature availability**
 
+Available from n8n 2.17.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 Pre-provision the [instance owner](user-management.md) from environment variables instead of going through the in-app setup. To change the owner email after setup, see [Change the instance owner email for self-hosted n8n](change-instance-owner-email.md).
@@ -77,9 +79,11 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 ## SSO <a href="#sso" id="sso"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.18.0**
+**Feature availability**
 
+Available from n8n 2.18.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 {% hint style="info" %}
@@ -111,9 +115,11 @@ Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (
 ## Security policy <a href="#security-policy" id="security-policy"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.18.0**
+**Feature availability**
 
+Available from n8n 2.18.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 Manage the instance security policy from environment variables, including MFA enforcement and personal space restrictions.
@@ -123,9 +129,11 @@ Manage the instance security policy from environment variables, including MFA en
 ## Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.19.0**
+**Feature availability**
 
+Available from n8n 2.19.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destinations from environment variables. See [Configure using environment variables](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#configure-using-environment-variables) for the per-destination JSON shape.
@@ -135,9 +143,11 @@ Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-an
 ## MCP <a href="#mcp" id="mcp"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.20.0**
+**Feature availability**
 
+Available from n8n 2.20.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) from environment variables.
@@ -147,9 +157,11 @@ Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvc
 ## Community packages <a href="#community-packages" id="community-packages"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Feature availability**
 
+Available from n8n 2.21.0 or later.
 
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 Manage the set of installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. n8n reconciles the installed packages against the list on every startup. Managed packages can't be uninstalled or updated through the UI.

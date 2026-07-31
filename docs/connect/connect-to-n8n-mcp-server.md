@@ -47,7 +47,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### Key considerations when using instance-level MCP access <a href="#key-considerations-when-using-instance-level-mcp-access" id="key-considerations-when-using-instance-level-mcp-access"></a>
 
-* MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (v2.13 onward).
+* MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (available from n8n 2.13).
 * It doesn’t provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception here is the `search_workflows` tool, which is able to access all workflows current user has access to but it will only be able to surface previews, not the full workflow data.
 * It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
 * Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
@@ -139,7 +139,7 @@ MCP clients can discover previews of all workflows the current user has access t
 
 ### Enabling access for individual workflows <a href="#enabling-access-for-individual-workflows" id="enabling-access-for-individual-workflows"></a>
 
-#### Option 1: From MCP settings page (available from n8n v2.2.0) <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
+#### Option 1: From MCP settings page (available from n8n 2.2.0) <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
 1. Click the **Enable workflows** button (in the workflows table header or in the table's empty state)
 2. Search for the desired workflow (by name or description) and select it from the list
@@ -161,7 +161,11 @@ MCP clients can discover previews of all workflows the current user has access t
 ### Enabling access for projects/folders <a href="#enabling-access-for-projectsfolders" id="enabling-access-for-projectsfolders"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.24.0**
+**Feature availability**
+
+Available from n8n 2.24.0 or later.
+
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options menu" data-size="line"> in the workflow list to toggle MCP access for all workflows in the current project or folder:
@@ -185,7 +189,7 @@ The **Instance-level MCP** settings page shows all workflows enabled for MCP cli
 * Open a workflow, its home project or parent folder directly
 * Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
 * Update workflow description using the action menu (or use the menu in the workflow editor)
-* Enable access for more workflows using the **Enable workflows** button (available from n8n v2.2.0)
+* Enable access for more workflows using the **Enable workflows** button (available from n8n 2.2.0)
 
 ### Workflow descriptions <a href="#workflow-descriptions" id="workflow-descriptions"></a>
 

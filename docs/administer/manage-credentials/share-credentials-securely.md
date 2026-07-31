@@ -31,7 +31,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Available on all Cloud plans, and Business and Enterprise self-hosted plans.
+Available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Business, Enterprise
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 
 You can share a credential directly with other users to use in their own workflows. Or share a credential in a project[^1] for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.

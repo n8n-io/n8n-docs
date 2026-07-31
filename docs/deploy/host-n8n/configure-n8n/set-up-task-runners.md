@@ -111,15 +111,19 @@ There are three layers of configuration: the n8n container, the runners containe
 
 These are the main environment variables that you can set on the n8n container running in external mode:
 
-{% hint style="info" %}
-**`N8N_RUNNERS_ENABLED` is deprecated from version 2.0**
+{% hint style="warning" %}
+**Feature availability**
 
-From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners.
+Deprecated from n8n 2.0.
+
+You no longer need to set `N8N_RUNNERS_ENABLED` from version 2.0 onward. It's still supported in version 1.x, where you must set it to `true` to enable task runners.
+
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 | Environment variables                                  | Description                                                                                                                                                                   |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from version 2.0 onwards. Still supported in version 1.x.                                                                                    |
+| `N8N_RUNNERS_ENABLED=true` (deprecated)                | Enables task runners. Deprecated from n8n 2.0; you no longer need to set it. Still supported in version 1.x.                                                                  |
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |

@@ -23,9 +23,11 @@ You can use these credentials to authenticate the following nodes:
 - [monday.com](../app-nodes/n8n-nodes-base.mondaycom.md)
 
 {% hint style="info" %}
-**Minimum required version**
+**Feature availability**
 
-The monday.com node requires n8n version 1.22.6 or above.
+Available from n8n 1.22.6 or later.
+
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>

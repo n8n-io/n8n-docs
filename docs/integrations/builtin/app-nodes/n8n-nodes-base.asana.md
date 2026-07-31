@@ -29,9 +29,13 @@ Refer to [Asana credentials](../credentials/asana.md) for guidance on setting up
 {% endhint %}
 
 {% hint style="info" %}
-**Update to 1.22.2 or above**
+**Feature availability**
 
-Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
+Available from n8n 1.22.2 or later.
+
+Due to changes in Asana's API, some operations in this node stopped working on January 17, 2023. Upgrade to n8n 1.22.2 or later to restore them.
+
+[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}

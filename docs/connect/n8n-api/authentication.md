@@ -17,7 +17,14 @@ n8n uses API keys to authenticate API calls.
 {% hint style="info" %}
 **Feature availability**
 
-The n8n API isn't available during the free trial. Please upgrade to access this feature.
+Available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** All editions
+
+It isn't available during the free trial.
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 
 ## Create an API key <a href="#create-an-api-key" id="create-an-api-key"></a>
@@ -26,7 +33,7 @@ The n8n API isn't available during the free trial. Please upgrade to access this
 1. Go to **Settings** > **n8n API**.
 1. Select **Create an API key**.
 1. Choose a **Label** and set an **Expiration** time for the key.
-1. If on an Enterprise plan, choose the **Scopes** to give the key. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
+1. On n8n Cloud Enterprise and self-hosted Enterprise, choose the **Scopes** to give the key. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
 1. Copy **My API Key** and use this key to authenticate your calls.
 
 ## Call the API using your key <a href="#call-the-api-using-your-key" id="call-the-api-using-your-key"></a>
@@ -69,9 +76,20 @@ For the available operations and parameters, refer to the [n8n node](https://app
 
 ## API Scopes <a href="#api-scopes" id="api-scopes"></a>
 
-Users of [enterprise instances](https://n8n.io/enterprise/) can limit which resources and actions an API key can access with scopes. Choose the minimum scopes needed for the key's intended purpose.
+{% hint style="info" %}
+**Feature availability**
 
-Non-enterprise API keys have full access to all the account's resources and capabilities.
+Available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+On other plans, API keys have full access to all the account's resources and capabilities.
+
+[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
+{% endhint %}
+
+Scopes let you limit which resources and actions an API key can access. Choose the minimum scopes needed for the key's intended purpose.
 
 {% hint style="info" %}
 **API key scopes vs. project role scopes**

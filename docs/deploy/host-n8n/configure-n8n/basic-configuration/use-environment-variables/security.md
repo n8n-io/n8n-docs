@@ -35,6 +35,7 @@ layout:
 | `N8N_SAMESITE_COOKIE` | Enum string: `strict`, `lax`, `none` | `lax` | Controls cross-site cookie behavior ([learn more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)):<ul><li>`strict`: Sent only for first-party requests.</li><li>`lax` (default): Sent with top-level navigation requests.</li><li>`none`: Sent in all contexts (requires HTTPS).</li></ul> |
 | `N8N_GIT_NODE_DISABLE_BARE_REPOS` | Boolean | `false` | Set to `true` to prevent the [Git node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git) from working with bare repositories, enhancing security. |
 | `N8N_GIT_NODE_ENABLE_HOOKS` | Boolean | `false` | Set to `true` to allow the [Git node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git) to execute Git hooks. |
+| `N8N_POSTMESSAGE_ALLOWED_ORIGINS` | String |  | Origins allowed to exchange `postMessage` commands with the editor when it's embedded in another page. Only relevant when embedding the editor is possible, for example when running with `N8N_PREVIEW_MODE=true`. Provide multiple origins as a comma-separated list, for example `https://n8n.io,https://app.example.com`. When empty (the default), the editor accepts messages from any origin. |
 
 ## Security policy using environment variables <a href="#security-policy-using-environment-variables" id="security-policy-using-environment-variables"></a>
 

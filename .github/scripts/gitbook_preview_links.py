@@ -234,12 +234,12 @@ def resolve_reusable(filename: str, index: dict):
 def page_line(space_info: dict, filename: str) -> str:
     space = space_of(filename)
     rel = rel_path(filename, space)
-    title = md_escape(page_title(REPO / filename, rel))
+    safe_title = md_escape(page_title(REPO / filename, rel))  # PR-controlled -> escaped
     url = deep_link(space_info, rel)
     edit = space_info.get("editor_url")
     edit_md = f" · [edit]({edit})" if edit else ""
     shown = rel or "(home)"
-    return f"- **[{title}]({url})** — `{shown}`{edit_md}"
+    return f"- **[{safe_title}]({url})** — `{shown}`{edit_md}"
 
 
 def render(changed, spaces, index) -> str:
@@ -314,8 +314,8 @@ def render(changed, spaces, index) -> str:
             out.append(f"<details><summary>Show {len(shown)} of {total} pages</summary>")
             out.append("")
             for p in shown:
-                title = md_escape(page_title(REPO / p, p))
-                out.append(f"- [{title}]({production_url(p)}) — `{p[len('docs/'):]}`")
+                safe_title = md_escape(page_title(REPO / p, p))  # PR-controlled -> escaped
+                out.append(f"- [{safe_title}]({production_url(p)}) — `{p[len('docs/'):]}`")
             if total > len(shown):
                 out.append(f"- …and {total - len(shown)} more")
             out.append("</details>")

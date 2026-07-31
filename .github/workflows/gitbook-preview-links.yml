@@ -93,17 +93,19 @@ jobs:
               echo "warn: could not decode $f at $SHA; using base-branch version"
             fi
           }
-          while IFS="$(printf '\t')" read -r st f; do
-            case "$f" in
-              docs/*.md|REUSABLE_CONTENT_INDEX.md) ;;
-              *) continue ;;
-            esac
+          tracked() { case "$1" in docs/*.md|REUSABLE_CONTENT_INDEX.md) return 0 ;; *) return 1 ;; esac; }
+          while IFS="$(printf '\t')" read -r st f prev; do
             if [ "$st" = "removed" ]; then
-              rm -f "$f"
-            else
-              overlay "$f"
+              tracked "$f" && rm -f "$f"
+              continue
             fi
-          done < <(jq -r '.[] | [.status, .filename] | @tsv' /tmp/files.json)
+            # A rename leaves the old path in the checkout — delete it so a moved
+            # SUMMARY/index/page isn't read stale.
+            if [ "$st" = "renamed" ] && [ -n "$prev" ]; then
+              tracked "$prev" && rm -f "$prev"
+            fi
+            tracked "$f" && overlay "$f"
+          done < <(jq -r '.[] | [.status, .filename, (.previous_filename // "")] | @tsv' /tmp/files.json)
 
           # No `|| true`: a real script error should fail the step (visible,
           # rerunnable). A legitimate "nothing to post yet" is an empty stdout

@@ -1,0 +1,39 @@
+docs/build/manage-workflows/export-and-import/n8n-packages.md
+  s_adaf1c3a8eb7be::t_cedba105926151 64-67,83,85
+  s_fcbbb21b04a353::t_5c0af3d51d2bbe 6
+  h_c63dce324dfc7b 60,62-63,70,77-79
+  s_adaf1c3a8eb7be::t_144abfd7dc957e 81
+  s_fcbbb21b04a353::t_8de41877b9538d 3-5
+  s_adaf1c3a8eb7be::t_b60c922fdcab24 82
+  s_adaf1c3a8eb7be::t_8987e7434ab604 84
+  s_adaf1c3a8eb7be::t_92bbb729f9038a 1-2,7-59,61,68-69,71-76,80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "e5cf58ce699ded1f48a0e9de30818659f80d1c23",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_adaf1c3a8eb7be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "86a5ec55-1890-426f-8a5b-52f8e75ab193",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    },
+    "s_fcbbb21b04a353": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b7ab3032-2b1d-4a73-8f44-2173bab42952",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

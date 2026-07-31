@@ -1,0 +1,24 @@
+docs/integrations/builtin/credentials/microsoft.md
+  s_b0a89255a47c24::t_6f58ef22112df4 23-26
+  s_b0a89255a47c24::t_5019b309e58651 17
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md
+  s_b0a89255a47c24::t_fb90d3db153503 15-19
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+  s_b0a89255a47c24::t_f426e65262872f 15-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "9db896bf5b673361cbcb9514dfc9aaccc7824192",
+  "prompts": {},
+  "sessions": {
+    "s_b0a89255a47c24": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "30520d71-378b-4553-961e-c99a53925fe2",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

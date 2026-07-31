@@ -1,0 +1,20 @@
+docs/integrations/builtin/credentials/supabase.md
+  s_fefbc5985f8175::t_92d5b6029764d0 65
+  s_fefbc5985f8175::t_a661028096ff56 53,58,60-62,66-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3598468868561c24155eb590a05f036a7d1eab71",
+  "prompts": {},
+  "sessions": {
+    "s_fefbc5985f8175": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b96c1492-05d9-4fd4-be90-0bb729eae822",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Dimitri Lavrenük <dimitri.lavrenuek@n8n.io>"
+    }
+  }
+}

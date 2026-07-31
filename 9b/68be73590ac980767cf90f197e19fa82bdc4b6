@@ -1,0 +1,19 @@
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+  s_1d05dc51cdbfe8::t_fe65f797fa44f5 20-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "9b68be73590ac980767cf90f197e19fa82bdc4b6",
+  "prompts": {},
+  "sessions": {
+    "s_1d05dc51cdbfe8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "60661925-24b5-4d59-93cd-bfba7a418a1d",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

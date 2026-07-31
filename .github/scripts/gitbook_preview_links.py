@@ -132,6 +132,19 @@ def load_spaces(status_json) -> dict:
     return spaces
 
 
+def gitbook_spaces(status_json) -> set:
+    """All spaces that have any GitBook status (success OR pending). Used to tell
+    'this space's preview is still building' apart from 'not a page' — a page
+    whose space is only pending must not be reported as a non-page."""
+    statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    out = set()
+    for s in statuses:
+        m = LIVE_RE.match(s.get("context", "")) or EDIT_RE.match(s.get("context", ""))
+        if m:
+            out.add(m.group(1))
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # Path -> URL mapping
 # --------------------------------------------------------------------------- #
@@ -242,8 +255,9 @@ def page_line(space_info: dict, filename: str) -> str:
     return f"- **[{safe_title}]({url})** — `{shown}`{edit_md}"
 
 
-def render(changed, spaces, index) -> str:
+def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
     direct: dict = {}          # space -> [file]  (pages with a real preview)
+    pending: dict = {}         # space -> [file]  (page whose space is still building)
     reusable_blocks = []       # (name, [affected page paths], total)
     non_pages = []             # files that aren't pages
     unresolved_reusable = []   # include files we couldn't map
@@ -268,14 +282,19 @@ def render(changed, spaces, index) -> str:
             continue
 
         space = space_of(filename)
-        if space not in spaces or not in_summary(space, filename):
+        if not in_summary(space, filename):
             non_pages.append(filename)
-            continue
-        direct.setdefault(space, []).append(filename)
+        elif space in spaces:
+            direct.setdefault(space, []).append(filename)
+        elif space in pending_spaces:
+            # It IS a page; its space's GitBook build just hasn't finished yet.
+            pending.setdefault(space, []).append(filename)
+        else:
+            non_pages.append(filename)
 
     out = [MARKER, "## 📖 GitBook preview for this PR", ""]
 
-    if not direct and not reusable_blocks:
+    if not direct and not reusable_blocks and not pending:
         out.append("No standalone page previews for this PR's changes.")
         _append_extras(out, spaces, non_pages, unresolved_reusable)
         return "\n".join(out).rstrip() + "\n"
@@ -321,6 +340,16 @@ def render(changed, spaces, index) -> str:
             out.append("</details>")
             out.append("")
 
+    # Pages whose space is still building — not links yet. The comment updates on
+    # each push / status event, so these become deep links once the build lands.
+    if pending:
+        total_pending = sum(len(v) for v in pending.values())
+        spaces_list = ", ".join(f"`{s}`" for s in sorted(pending))
+        out.append(f"⏳ GitBook is still building the preview for {spaces_list} — "
+                   f"{total_pending} changed page(s). This comment updates when the "
+                   f"build finishes.")
+        out.append("")
+
     _append_extras(out, spaces, non_pages, unresolved_reusable)
     return "\n".join(out).rstrip() + "\n"
 
@@ -352,8 +381,9 @@ def main() -> int:
     if not spaces:
         # No successful GitBook build yet: emit nothing so the workflow skips.
         return 0
+    pending_spaces = gitbook_spaces(status_json) - set(spaces)
     index = load_reusable_index()
-    sys.stdout.write(render(changed, spaces, index))
+    sys.stdout.write(render(changed, spaces, index, pending_spaces))
     return 0
 
 

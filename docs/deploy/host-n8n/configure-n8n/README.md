@@ -53,8 +53,8 @@ layout:
 [set-up-task-runners.md](set-up-task-runners.md)
 {% endcontent-ref %}
 
-{% content-ref url="set-up-ai-assistant-preview.md" %}
-[set-up-ai-assistant-preview.md](set-up-ai-assistant-preview.md)
+{% content-ref url="set-up-ai-assistant.md" %}
+[set-up-ai-assistant.md](set-up-ai-assistant.md)
 {% endcontent-ref %}
 
 {% content-ref url="manage-your-license.md" %}

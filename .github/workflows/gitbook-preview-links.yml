@@ -72,29 +72,38 @@ jobs:
           gh api "repos/$GH_REPO/pulls/$PR/files" --paginate --slurp | jq 'add' > /tmp/files.json
           gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
 
-          # Overlay the PR's version of each changed docs file (and the reusable
-          # index, if changed) onto the trusted tree, so titles / SUMMARY
-          # membership / reusable resolution reflect the PR incl. added pages.
-          # Data only — never executing PR code. Fetch to a temp file and replace
-          # only on a clean, non-empty decode, so a failed fetch can't overwrite
-          # the trusted base-branch copy with an empty/corrupt file.
+          # Reflect the PR precisely on the trusted checkout before running the
+          # script: overlay changed files' PR-head *content* (data, never code),
+          # and delete files the PR removes so stale base-branch copies aren't
+          # read (e.g. a removed SUMMARY.md or reusable index). Fetch failure is
+          # detected by gh's exit code (keep the base copy), so a legitimately
+          # emptied file — a valid zero-byte decode — is still applied.
           overlay() {
-            local f="$1" tmp
+            local f="$1" b64 tmp
+            if ! b64="$(gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' 2>/dev/null)"; then
+              echo "warn: could not fetch $f at $SHA; using base-branch version"
+              return
+            fi
             tmp="$(mktemp)"
-            if gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' 2>/dev/null \
-                 | tr -d '\n' | base64 -d > "$tmp" 2>/dev/null && [ -s "$tmp" ]; then
+            if printf '%s' "$b64" | tr -d '\n' | base64 -d > "$tmp" 2>/dev/null; then
               mkdir -p "$(dirname "$f")"
-              mv "$tmp" "$f"
+              mv "$tmp" "$f"     # zero-byte decode is valid (file cleared in the PR)
             else
               rm -f "$tmp"
-              echo "warn: could not fetch $f at $SHA; using base-branch version"
+              echo "warn: could not decode $f at $SHA; using base-branch version"
             fi
           }
-          while read -r f; do
+          while IFS="$(printf '\t')" read -r st f; do
             case "$f" in
-              docs/*.md|REUSABLE_CONTENT_INDEX.md) overlay "$f" ;;
+              docs/*.md|REUSABLE_CONTENT_INDEX.md) ;;
+              *) continue ;;
             esac
-          done < <(jq -r '.[] | select(.status != "removed") | .filename' /tmp/files.json)
+            if [ "$st" = "removed" ]; then
+              rm -f "$f"
+            else
+              overlay "$f"
+            fi
+          done < <(jq -r '.[] | [.status, .filename] | @tsv' /tmp/files.json)
 
           # No `|| true`: a real script error should fail the step (visible,
           # rerunnable). A legitimate "nothing to post yet" is an empty stdout

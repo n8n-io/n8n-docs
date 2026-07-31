@@ -120,6 +120,23 @@ def main():
     check("md_escape neutralizes link breakout",
           gb.md_escape("a](http://evil) b") == r"a\]\(http://evil\) b")
 
+    # Removed reusable index (workflow deletes it from the checkout): the script
+    # must degrade gracefully to an empty index -> reusable changes go unresolved
+    # rather than reporting stale affected pages.
+    saved = gb.REPO
+    try:
+        gb.REPO = HERE  # a dir with no REUSABLE_CONTENT_INDEX.md
+        empty_idx = gb.load_reusable_index()
+        out_no_idx = gb.render(
+            [{"status": "modified",
+              "filename": "docs/reusable-content/.gitbook/includes/block-one.md"}],
+            spaces, empty_idx)
+    finally:
+        gb.REPO = saved
+    check("missing index -> empty mapping", empty_idx == {})
+    check("missing index -> reusable unresolved (no stale pages)",
+          "couldn't be mapped" in out_no_idx)
+
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}")

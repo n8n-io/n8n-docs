@@ -9,6 +9,7 @@ Airtop
 [Aa]llowlists?
 Anthropic
 APIs
+[Aa]pprovers?
 ARNs
 Asana
 Atlassian
@@ -66,6 +67,7 @@ Cron
 Datadog
 Databricks
 Datastore
+Daytona
 [Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
@@ -221,6 +223,7 @@ Realtime
 Rekognition
 requester
 [Rr]erank(er|ing|ed)?
+[Rr]esponders?
 Rundeck
 Salesmate
 [Ss]andboxed

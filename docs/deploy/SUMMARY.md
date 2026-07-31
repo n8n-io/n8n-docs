@@ -2,7 +2,7 @@
 
 * [Deploy](README.md)
 * [Use n8n Cloud](use-n8n-cloud/README.md)
-  * [Start your free trial](use-n8n-cloud/start-your-free-trial.md)
+  * [Try free then choose a plan](use-n8n-cloud/start-your-free-trial.md)
   * [Use the admin dashboard](use-n8n-cloud/use-the-admin-dashboard.md)
   * [Update your version](use-n8n-cloud/update-your-version.md)
   * [Configure Cloud](use-n8n-cloud/configure-cloud/README.md)
@@ -78,7 +78,7 @@
     * [Manage settings using environment variables](host-n8n/configure-n8n/manage-settings-using-environment-variables.md)
     * [Set up task runners](host-n8n/configure-n8n/set-up-task-runners.md)
     * [Durable scheduler](host-n8n/configure-n8n/durable-scheduler.md)
-    * [Set up AI Assistant (Preview)](host-n8n/configure-n8n/set-up-ai-assistant-preview.md)
+    * [Set up AI Assistant](host-n8n/configure-n8n/set-up-ai-assistant.md)
     * [Manage your license](host-n8n/configure-n8n/manage-your-license.md)
     * [Security](host-n8n/configure-n8n/security.md)
       * [Manage security policies](host-n8n/configure-n8n/security/manage-security-policies.md)
@@ -116,4 +116,4 @@
     * [Manage workflows](host-n8n/deploy-as-an-oem-integration/manage-workflows.md)
     * [Set up token exchange](host-n8n/deploy-as-an-oem-integration/set-up-token-exchange.md)
   * [Deploy with the AI starter kit](host-n8n/deploy-with-the-ai-starter-kit.md)
-  * [Community edition features](host-n8n/community-edition-features.md)
+  * [Compare editions](host-n8n/community-edition-features.md)

@@ -1,0 +1,137 @@
+name: GitBook preview links
+# GitBook's own PR checks link to the space landing page, not the page a PR
+# changed. When a GitBook preview build succeeds, this posts (and keeps updated)
+# a single PR comment with a deep link to each changed page. See
+# .github/scripts/gitbook_preview_links.py.
+#
+# Security: triggered by `status`, this job has a write token, so it must never
+# execute code from the (possibly forked) PR head. It checks out the trusted
+# default branch (the script + reusable index come from there) and overlays only
+# the PR's changed *file contents* via the API — data, never code.
+on:
+  status:
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: PR head commit SHA to build preview links for (dry-run)
+        required: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  # All per-space GitBook statuses for one commit share this group and run
+  # serially, so the sticky-comment upsert can't race itself into duplicates.
+  group: gitbook-preview-${{ github.event.sha || github.event.inputs.sha }}
+  cancel-in-progress: false
+
+jobs:
+  preview-links:
+    # Only for a successful GitBook status, or a manual dry-run.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.state == 'success' && startsWith(github.event.context, 'GitBook ('))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve the open PR for this commit
+        id: resolve
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          SHA: ${{ github.event.sha || github.event.inputs.sha }}
+        run: |
+          set -euo pipefail
+          PR=$(gh api "repos/$GH_REPO/commits/$SHA/pulls" \
+                --jq '[.[] | select(.state=="open")][0].number // empty')
+          if [ -z "$PR" ]; then
+            echo "No open PR for $SHA; nothing to do."
+            exit 0
+          fi
+          echo "pr=$PR" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+      # Trusted checkout: the default branch, NOT the PR head. This is the code
+      # (script) and the reusable-content index we run against.
+      - name: Checkout default branch (trusted)
+        if: steps.resolve.outputs.pr != ''
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Build the comment body
+        id: build
+        if: steps.resolve.outputs.pr != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ steps.resolve.outputs.pr }}
+          SHA: ${{ steps.resolve.outputs.sha }}
+        run: |
+          set -euo pipefail
+          # --slurp + `add`: a multi-page PR paginates into several JSON arrays;
+          # merge them into one array the script can parse.
+          gh api "repos/$GH_REPO/pulls/$PR/files" --paginate --slurp | jq 'add' > /tmp/files.json
+          gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
+
+          # Reflect the PR precisely on the trusted checkout before running the
+          # script: overlay changed files' PR-head *content* (data, never code),
+          # and delete files the PR removes so stale base-branch copies aren't
+          # read (e.g. a removed SUMMARY.md or reusable index). Fetch failure is
+          # detected by gh's exit code (keep the base copy), so a legitimately
+          # emptied file — a valid zero-byte decode — is still applied.
+          overlay() {
+            local f="$1" b64 tmp
+            if ! b64="$(gh api "repos/$GH_REPO/contents/$f?ref=$SHA" --jq '.content' 2>/dev/null)"; then
+              echo "warn: could not fetch $f at $SHA; using base-branch version"
+              return
+            fi
+            tmp="$(mktemp)"
+            if printf '%s' "$b64" | tr -d '\n' | base64 -d > "$tmp" 2>/dev/null; then
+              mkdir -p "$(dirname "$f")"
+              mv "$tmp" "$f"     # zero-byte decode is valid (file cleared in the PR)
+            else
+              rm -f "$tmp"
+              echo "warn: could not decode $f at $SHA; using base-branch version"
+            fi
+          }
+          tracked() { case "$1" in docs/*.md|REUSABLE_CONTENT_INDEX.md) return 0 ;; *) return 1 ;; esac; }
+          while IFS="$(printf '\t')" read -r st f prev; do
+            if [ "$st" = "removed" ]; then
+              tracked "$f" && rm -f "$f"
+              continue
+            fi
+            # A rename leaves the old path in the checkout — delete it so a moved
+            # SUMMARY/index/page isn't read stale.
+            if [ "$st" = "renamed" ] && [ -n "$prev" ]; then
+              tracked "$prev" && rm -f "$prev"
+            fi
+            tracked "$f" && overlay "$f"
+          done < <(jq -r '.[] | [.status, .filename, (.previous_filename // "")] | @tsv' /tmp/files.json)
+
+          # No `|| true`: a real script error should fail the step (visible,
+          # rerunnable). A legitimate "nothing to post yet" is an empty stdout
+          # with exit 0, handled by the has_body check below.
+          python3 .github/scripts/gitbook_preview_links.py /tmp/files.json /tmp/status.json > /tmp/body.md
+          if [ -s /tmp/body.md ]; then
+            echo "has_body=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "No preview body (GitBook build not ready yet); skipping."
+          fi
+
+      - name: Upsert the sticky comment
+        if: steps.build.outputs.has_body == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ steps.resolve.outputs.pr }}
+        run: |
+          set -euo pipefail
+          MARKER='<!-- gitbook-preview-links -->'
+          CID=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
+                 --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
+          if [ -n "$CID" ]; then
+            gh api -X PATCH "repos/$GH_REPO/issues/comments/$CID" -F body=@/tmp/body.md >/dev/null
+            echo "Updated comment $CID on PR #$PR"
+          else
+            gh api -X POST "repos/$GH_REPO/issues/$PR/comments" -F body=@/tmp/body.md >/dev/null
+            echo "Created comment on PR #$PR"
+          fi

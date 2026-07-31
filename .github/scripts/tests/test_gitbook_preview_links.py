@@ -159,6 +159,24 @@ def main():
           "still building the preview for `spaceb`" in out_pend
           and "aren't standalone pages" not in out_pend)
 
+    # A FAILED build must not be treated as pending (would promise a never-coming
+    # update); the space just isn't available.
+    fail_status = {"statuses": [
+        {"context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/X/"},
+        {"context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+    ]}
+    check("failed build not counted as pending", gb.gitbook_spaces(fail_status) == set())
+
+    # All-pending (no space succeeded yet): main() must still be able to render a
+    # building note rather than exit empty. Exercise via render with empty spaces.
+    out_allpend = gb.render(
+        [{"status": "modified", "filename": "docs/spaceb/other.md"}],
+        {}, gb.load_reusable_index(), {"spaceb"})
+    check("all-pending still yields a building note",
+          "still building the preview for `spaceb`" in out_allpend)
+
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}")

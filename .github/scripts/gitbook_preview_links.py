@@ -133,12 +133,15 @@ def load_spaces(status_json) -> dict:
 
 
 def gitbook_spaces(status_json) -> set:
-    """All spaces that have any GitBook status (success OR pending). Used to tell
-    'this space's preview is still building' apart from 'not a page' — a page
-    whose space is only pending must not be reported as a non-page."""
+    """Spaces whose GitBook build is success or pending (in progress). Used to
+    tell 'this space's preview is still building' apart from 'not a page'. Failed
+    builds are excluded — a page there shouldn't promise an update that never
+    lands (it falls through to the non-page footnote instead)."""
     statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
     out = set()
     for s in statuses:
+        if s.get("state") not in ("success", "pending"):
+            continue
         m = LIVE_RE.match(s.get("context", "")) or EDIT_RE.match(s.get("context", ""))
         if m:
             out.add(m.group(1))
@@ -378,10 +381,11 @@ def main() -> int:
     changed = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     status_json = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
     spaces = load_spaces(status_json)
-    if not spaces:
-        # No successful GitBook build yet: emit nothing so the workflow skips.
-        return 0
     pending_spaces = gitbook_spaces(status_json) - set(spaces)
+    if not spaces and not pending_spaces:
+        # No GitBook build in progress or done yet: emit nothing so the
+        # workflow skips (nothing to preview or promise).
+        return 0
     index = load_reusable_index()
     sys.stdout.write(render(changed, spaces, index, pending_spaces))
     return 0

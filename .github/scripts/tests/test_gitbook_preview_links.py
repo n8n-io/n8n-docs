@@ -67,8 +67,8 @@ def main():
     print("=" * 70)
 
     # section grouping + per-space revisions
-    check("spacea section", "### spacea" in out)
-    check("spaceb section", "### spaceb" in out)
+    check("spacea section", "### 📂 spacea" in out)
+    check("spaceb section", "### 📂 spaceb" in out)
     check("spacea uses REVA", "/spacea/~/revisions/REVA/" in out)
     check("spaceb uses REVB (distinct per-space revision)", "/spaceb/~/revisions/REVB/" in out)
 
@@ -83,7 +83,7 @@ def main():
           "[Other page](https://docs.n8n.io/spaceb/~/revisions/REVB/other)" in out)
 
     # reusable: basename match + cap, heading-fallback match, diff link
-    check("reusable section", "### Reusable content" in out)
+    check("reusable section", "### ♻️ Reusable content" in out)
     check("block-one resolved by basename to 12 pages", "renders on 12 page(s)" in out)
     check("reusable cap at 10 + remainder", "Show 10 of 12 pages" in out and "…and 2 more" in out)
     check("reusable pages use LIVE production URLs",
@@ -94,7 +94,7 @@ def main():
     check("no unresolved reusable", "couldn't be mapped" not in out)
 
     # non-pages: orphan + SUMMARY + asset; NOT the removed file
-    check("orphan (unlisted) is a non-page", "orphan.md" in out and "aren't standalone pages" in out)
+    check("orphan (unlisted) is a non-page", "orphan.md" in out and "aren't published as pages" in out)
     check("SUMMARY.md is a non-page", "SUMMARY.md" in out)
     check("asset is a non-page", "x.png" in out)
     check("removed file never appears", "deleted.md" not in out)
@@ -157,7 +157,7 @@ def main():
     check("pending space detected", pend_pending == {"spaceb"})
     check("page in a building space shown as pending, not non-page",
           "still building the preview for `spaceb`" in out_pend
-          and "aren't standalone pages" not in out_pend)
+          and "aren't published as pages" not in out_pend)
 
     # A FAILED build must not be treated as pending (would promise a never-coming
     # update); the space just isn't available.

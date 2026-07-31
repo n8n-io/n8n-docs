@@ -137,6 +137,46 @@ def main():
     check("missing index -> reusable unresolved (no stale pages)",
           "couldn't be mapped" in out_no_idx)
 
+    # A page whose space is still BUILDING (pending GitBook status) must be shown
+    # as pending, not misreported as a non-page.
+    pend_status = {"statuses": [
+        {"context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"context": "GitBook (./docs/spacea)", "state": "success",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+        {"context": "GitBook (./docs/spaceb) - docs.n8n.io/spaceb/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spaceb/~/revisions/REVB/"},
+        {"context": "GitBook (./docs/spaceb)", "state": "pending",
+         "target_url": "https://app.gitbook.com/s/SB/~/diff/~/revisions/REVB/"},
+    ]}
+    pend_spaces = gb.load_spaces(pend_status)
+    pend_pending = gb.gitbook_spaces(pend_status) - set(pend_spaces)
+    out_pend = gb.render(
+        [{"status": "modified", "filename": "docs/spaceb/other.md"}],
+        pend_spaces, gb.load_reusable_index(), pend_pending)
+    check("pending space detected", pend_pending == {"spaceb"})
+    check("page in a building space shown as pending, not non-page",
+          "still building the preview for `spaceb`" in out_pend
+          and "aren't standalone pages" not in out_pend)
+
+    # A FAILED build must not be treated as pending (would promise a never-coming
+    # update); the space just isn't available.
+    fail_status = {"statuses": [
+        {"context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/X/"},
+        {"context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+    ]}
+    check("failed build not counted as pending", gb.gitbook_spaces(fail_status) == set())
+
+    # All-pending (no space succeeded yet): main() must still be able to render a
+    # building note rather than exit empty. Exercise via render with empty spaces.
+    out_allpend = gb.render(
+        [{"status": "modified", "filename": "docs/spaceb/other.md"}],
+        {}, gb.load_reusable_index(), {"spaceb"})
+    check("all-pending still yields a building note",
+          "still building the preview for `spaceb`" in out_allpend)
+
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}")

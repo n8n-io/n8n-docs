@@ -238,9 +238,9 @@ Use this generic authentication if your app or service expects static authentica
 
 Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. The credential form shows one field per placeholder, and n8n replaces each marker with the field's value when it sends a request.
 
-The [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) sets up this credential type when it builds a workflow for a service that has no dedicated n8n credential. It fills in everything except the secret values, and records the service's API host so that n8n only offers the credential to nodes calling the same service.
+This split exists so that the setup part can be prepared for you. When the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
 
-To configure the credential manually, select **Edit setup** in the credential modal and enter:
+You can also set up the credential yourself. Select **Edit setup** in the credential modal and enter:
 
 * An **Auth template**: The JSON n8n merges into every request that uses this credential. You can use `headers`, `qs`, `body`, or a mix, with a `{{placeholder}}` marker wherever a secret or account-specific value goes. Don't put real values in the template itself.
 * The **Fields** settings for each placeholder: a **Label**, whether the value is **Secret** (masked) or **Plain text**, whether it's **Required**, and an optional **Hint** clarifying the expected value, such as its format.

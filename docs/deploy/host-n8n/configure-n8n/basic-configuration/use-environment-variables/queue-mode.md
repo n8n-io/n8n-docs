@@ -53,7 +53,7 @@ In queue mode, a worker sends a webhook response back to the main instance insid
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` | Number | `64` | Maximum size (in MiB) of a response a worker sends back to the main instance inside a queue message. Redis holds several copies of a response in flight, so budget about 1.5 times this value in Redis memory per response in flight. The same limit applies to a tool result an MCP Trigger workflow returns. |
-| `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Boolean | `false` | Whether a worker stores a response body above `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` in binary data storage, so the main instance can stream it to the client, instead of failing the node. Needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores (`filesystem`, `database`, `s3`, or `azure`), and storage every instance can read. Set this on your workers only after every main instance runs n8n 2.34.0 or later. |
+| `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Boolean | `false` | Whether a worker stores a response body above `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` in binary data storage, so the main instance can stream it to the client, instead of failing the node. Needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores (`filesystem`, `database`, `s3`, or `azure`), and storage every instance can read. Set this on your workers only after every main and webhook instance runs n8n 2.34.0 or later. |
 
 ## Multi-main setup <a href="#multi-main-setup" id="multi-main-setup"></a>
 

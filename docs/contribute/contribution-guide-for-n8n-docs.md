@@ -151,6 +151,8 @@ You can then check how your changes render on the docs site.
 
 Once the preview finishes building, a bot also posts a **GitBook page previews** comment on your PR with a direct link to each page you changed, so you don't have to find them in the navigation. The comment updates on every push.
 
+![GitBook page previews comment on a pull request](.gitbook/assets/gitbook-preview-links-comment.png)
+
 It's not possible to build the site locally.
 
 ### Open an issue

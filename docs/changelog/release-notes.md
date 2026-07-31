@@ -28,6 +28,12 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
+## `n8n 2.34` Offload large webhook responses in queue mode <a href="#n8n234" id="n8n234"></a>
+
+**Released:** 2026-08-04
+
+* [Offload large webhook responses to storage in scaling mode](https://github.com/n8n-io/n8n/pull/35036): In queue mode a webhook response travels from the worker back to the main instance inside a queue message, and a response above `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` (64 MiB) fails the node. Setting the new `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` variable on your workers stores a larger response body in binary data storage instead: the queue message carries only a reference, the main instance streams the body to the client, and n8n deletes the stored body once it delivers the response. Offloading needs an `N8N_DEFAULT_BINARY_DATA_MODE` that stores (any mode except `default`) and storage every instance can read, with `s3` and `azure` recommended since they stream. The variable defaults to off, because only a main instance running 2.34.0 or later reads an offloaded body, and an older one returns the storage reference instead: upgrade every main instance first, then turn it on. A tool result an MCP Trigger workflow returns from a worker is now measured against the same limit, and an oversized one reaches the MCP client as a tool error naming the limit.
+
 ## `n8n 2.33` Redesigned instance settings for AI assistant, plus 10 other features <a href="#n8n233" id="n8n233"></a>
 
 **Released:** 2026-07-28

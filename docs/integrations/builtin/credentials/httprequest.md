@@ -236,19 +236,19 @@ In older versions, use [Custom auth](httprequest.md#using-custom-auth) instead.
 
 Use this generic authentication if your app or service expects static authentication values in headers, query parameters, or the request body, and you want to keep the secret values separate from the request definition.
 
-Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. When n8n sends a request, it replaces each marker with the matching entry from **Placeholder Values**. With the template in place, the credential modal shows a simplified form with one input per placeholder, and you can switch to the advanced fields to edit the template itself.
+Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. The credential form shows one field per placeholder, and n8n replaces each marker with the field's value when it sends a request.
 
-The [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) creates this credential type when it builds a workflow for a service that has no dedicated n8n credential. It fills in everything except the secret values.
+The [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) sets up this credential type when it builds a workflow for a service that has no dedicated n8n credential. It fills in everything except the secret values, and records the service's API host so that n8n only offers the credential to nodes calling the same service.
 
-To configure this credential, enter:
+To configure the credential manually, select **Edit setup** in the credential modal and enter:
 
-* A **Template**: The JSON merged into every request that uses this credential. You can use `headers`, `qs`, `body`, or a mix, with a `{{placeholder}}` marker wherever a secret value goes. Don't put secrets in the template itself.
-* _Optional:_ **Placeholders**: A JSON array describing the input shown for each placeholder: its `name`, a user-facing `title`, help text (`info`), and a `type` (`password` masks the input, `plain` doesn't). Add `"optional": true` to make a placeholder optional.
-* **Placeholder Values**: A JSON object with the secret value for each placeholder, by placeholder name. n8n redacts the values after saving.
-* _Optional:_ A **Test URL**: A GET endpoint n8n calls with the authentication applied to verify the credential when you save it. Pick a side-effect-free endpoint that never triggers billable work, such as an account or profile endpoint.
-* _Optional:_ A **Documentation URL**: The provider page where you create or copy the secret, such as the API keys page of your account.
-* _Optional:_ A **Service Host**: The host of the API this credential authenticates against, such as `api.example.com`. n8n only offers the credential automatically to nodes calling the same host, including subdomains. If empty, n8n never offers the credential automatically.
-* _Optional:_ **Accepted Status Codes**: A JSON array of status codes the credential test shouldn't treat as an authentication rejection, such as `[401]` for services that respond with 401 to a valid GET request.
+* An **Auth template**: The JSON n8n merges into every request that uses this credential. You can use `headers`, `qs`, `body`, or a mix, with a `{{placeholder}}` marker wherever a secret or account-specific value goes. Don't put real values in the template itself.
+* The **Fields** settings for each placeholder: a **Label**, whether the value is **Secret** (masked) or **Plain text**, whether it's **Required**, and an optional **Hint** clarifying the expected value, such as its format.
+* _Optional:_ A **Test URL**: A GET endpoint n8n calls with the authentication applied to check that the credential works when you save it. Pick a side-effect-free endpoint that never triggers billable work, such as an account or profile endpoint.
+* _Optional:_ **Accepted status codes**: Status codes to treat as success alongside 2xx responses when testing the credential, such as `403` for services that return 403 for a valid key with limited scopes.
+* _Optional:_ A **Documentation URL**: The provider page where you create or copy the secret. It doesn't appear in the credential form; the AI Assistant uses it to point you to the exact page.
+
+Then go back to the form and enter a value for each field. n8n redacts the values after saving.
 
 ### Sending an API key in a header
 
@@ -262,30 +262,9 @@ A template that sends a bearer token:
 }
 ```
 
-A placeholder definition that shows a masked **API key** input:
+The credential form shows one field for `api_key`. When the node sends a request, n8n replaces the marker with the field's value, resulting in the header `Authorization: Bearer <your-api-key>`.
 
-```
-[
-	{
-		"name": "api_key",
-		"title": "API key",
-		"info": "Create one on the provider's API keys page",
-		"type": "password"
-	}
-]
-```
-
-The placeholder values holding the secret:
-
-```
-{
-	"api_key": "<your-api-key>"
-}
-```
-
-When the node sends a request, n8n resolves the template to the header `Authorization: Bearer <your-api-key>`.
-
-If a placeholder has no value, requests fail with an error rather than sending the literal marker to the service. If the placeholder is optional and empty, n8n removes the template entries that use it from the request.
+If a required field is empty, requests fail with an error rather than sending the literal marker to the service. If an optional field is empty, n8n removes the template entries that use it from the request.
 
 ## Provide an SSL certificate <a href="#provide-an-ssl-certificate" id="provide-an-ssl-certificate"></a>
 

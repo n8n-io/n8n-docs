@@ -69,6 +69,7 @@ You can select one of the following methods:
 * OAuth1 API
 * OAuth2 API
 * Query auth
+* Simplified Custom Auth
 
 Refer to [HTTP request credentials](../../credentials/httprequest.md) for more information on setting up each credential type.
 

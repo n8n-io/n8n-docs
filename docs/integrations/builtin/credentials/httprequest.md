@@ -54,6 +54,7 @@ If you need to secure the authentication with an SSL certificate, refer to [Prov
 * OAuth1 (generic credential type)
 * OAuth2 (generic credential type)
 * Query auth (generic credential type)
+* Simplified Custom Auth (generic credential type)
 
 Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) for more information relating to generic credential types.
 
@@ -224,6 +225,67 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 	}
 }
 ```
+
+## Using Simplified Custom Auth
+
+{% hint style="info" %}
+**Available from n8n 2.34.0**
+
+In older versions, use [Custom auth](httprequest.md#using-custom-auth) instead.
+{% endhint %}
+
+Use this generic authentication if your app or service expects static authentication values in headers, query parameters, or the request body, and you want to keep the secret values separate from the request definition.
+
+Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. When n8n sends a request, it replaces each marker with the matching entry from **Placeholder Values**. With the template in place, the credential modal shows a simplified form with one input per placeholder, and you can switch to the advanced fields to edit the template itself.
+
+The [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) creates this credential type when it builds a workflow for a service that has no dedicated n8n credential. It fills in everything except the secret values.
+
+To configure this credential, enter:
+
+* A **Template**: The JSON merged into every request that uses this credential. You can use `headers`, `qs`, `body`, or a mix, with a `{{placeholder}}` marker wherever a secret value goes. Don't put secrets in the template itself.
+* _Optional:_ **Placeholders**: A JSON array describing the input shown for each placeholder: its `name`, a user-facing `title`, help text (`info`), and a `type` (`password` masks the input, `plain` doesn't). Add `"optional": true` to make a placeholder optional.
+* **Placeholder Values**: A JSON object with the secret value for each placeholder, by placeholder name. n8n redacts the values after saving.
+* _Optional:_ A **Test URL**: A GET endpoint n8n calls with the authentication applied to verify the credential when you save it. Pick a side-effect-free endpoint that never triggers billable work, such as an account or profile endpoint.
+* _Optional:_ A **Documentation URL**: The provider page where you create or copy the secret, such as the API keys page of your account.
+* _Optional:_ A **Service Host**: The host of the API this credential authenticates against, such as `api.example.com`. n8n only offers the credential automatically to nodes calling the same host, including subdomains. If empty, n8n never offers the credential automatically.
+* _Optional:_ **Accepted Status Codes**: A JSON array of status codes the credential test shouldn't treat as an authentication rejection, such as `[401]` for services that respond with 401 to a valid GET request.
+
+### Sending an API key in a header
+
+A template that sends a bearer token:
+
+```
+{
+	"headers": {
+		"Authorization": "Bearer {{api_key}}"
+	}
+}
+```
+
+A placeholder definition that shows a masked **API key** input:
+
+```
+[
+	{
+		"name": "api_key",
+		"title": "API key",
+		"info": "Create one on the provider's API keys page",
+		"type": "password"
+	}
+]
+```
+
+The placeholder values holding the secret:
+
+```
+{
+	"api_key": "<your-api-key>"
+}
+```
+
+When the node sends a request, n8n resolves the template to the header `Authorization: Bearer <your-api-key>`.
+
+If a placeholder has no value, requests fail with an error rather than sending the literal marker to the service. If the placeholder is optional and empty, n8n removes the template entries that use it from the request.
 
 ## Provide an SSL certificate <a href="#provide-an-ssl-certificate" id="provide-an-ssl-certificate"></a>
 

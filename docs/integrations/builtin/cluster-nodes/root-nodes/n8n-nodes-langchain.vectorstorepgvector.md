@@ -43,6 +43,12 @@ On this page, you'll find the node parameters for the PGVector node, and links t
 You can find authentication information for this node [here](../../credentials/postgres.md).
 {% endhint %}
 
+{% hint style="warning" %}
+**Database privileges**
+
+If your Postgres database role isn't a superuser, leave **Create Extension** turned off (the default). The node no longer creates the `vector` extension automatically, so have a database administrator install the `pgvector` (`vector`) extension beforehand. This avoids the error *"Because vector isn't a trusted extension, only members of … are allowed to use CREATE EXTENSION vector"*.
+{% endhint %}
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
@@ -124,6 +130,14 @@ The following options specify the names of the columns to store the vectors and 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
+
+### Create Extension <a href="#create-extension" id="create-extension"></a>
+
+Whether to create the `pgvector` extension if it doesn't already exist. Off by default.
+
+Enabling this restores the previous behavior: the node runs `CREATE EXTENSION IF NOT EXISTS vector` (schema-qualified if you've configured a custom extension schema) before creating the table. This requires database superuser privileges.
+
+Turn this on only if you have superuser access and the extension isn't already installed. Otherwise, leave it off and ask a database administrator to install the `vector` extension ahead of time.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

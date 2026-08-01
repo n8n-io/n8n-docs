@@ -135,7 +135,7 @@ The following options specify the names of the columns to store the vectors and 
 
 Whether to create the `pgvector` extension if it doesn't already exist. Off by default.
 
-Enabling this restores the previous behavior: the node runs `CREATE EXTENSION IF NOT EXISTS vector` (schema-qualified if you've configured a custom extension schema) before creating the table. This requires database superuser privileges.
+Enabling this restores the previous behavior: the node runs `CREATE EXTENSION IF NOT EXISTS vector` before creating the table. This requires database superuser privileges.
 
 Turn this on only if you have superuser access and the extension isn't already installed. Otherwise, leave it off and ask a database administrator to install the `vector` extension ahead of time.
 

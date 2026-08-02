@@ -57,7 +57,24 @@ Refer to [OpenAI's API documentation](https://platform.openai.com/docs/introduct
 To configure this credential, you'll need:
 
 * An **API Key**
+* A **Base URL** (optional): Override the default `https://api.openai.com/v1` to point at any OpenAI-compatible endpoint. Leave the default for official OpenAI.
 * An **Organization ID**: Required if you belong to multiple organizations; otherwise, leave this blank.
+
+### Using an OpenAI-compatible base URL
+
+The OpenAI credential's **Base URL** field accepts any server that implements the OpenAI HTTP API (chat completions, embeddings, and so on). Common cases:
+
+* Self-hosted runtimes such as [Ollama](https://ollama.com/) or [LocalAI](https://localai.io/) (for example `http://localhost:11434/v1` or `http://localhost:8080/v1`)
+* Cloud or self-hosted OpenAI-compatible gateways (for example `https://api.daoxe.com/v1`, or your own reverse proxy)
+
+When you change the Base URL:
+
+1. Paste the gateway or local server's `/v1` root into **Base URL**.
+2. Use an API key issued by that endpoint (not necessarily an OpenAI platform key).
+3. Pick a **model name that the endpoint actually serves** — model IDs differ across providers. Call the endpoint's `/v1/models` (or check its docs) if you're unsure.
+4. Keep **Organization ID** blank unless the target service uses OpenAI-style org headers.
+
+n8n sends the same request shape either way; only the host and key change.
 
 To generate your API Key:
 

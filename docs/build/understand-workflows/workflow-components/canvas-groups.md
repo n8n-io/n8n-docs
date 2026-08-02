@@ -37,7 +37,7 @@ When you create a Canvas Group, n8n automatically assigns a default name (for ex
 
 To rename a Canvas Group later, select it and press `Space`, or select **Rename group** in its right-click menu. On an expanded group, this highlights the name so you can edit it inline; on a collapsed group, it opens a dialog where you can edit the name. You can also click an expanded group's name directly to edit it. Click anywhere outside the group to save. Group names can't be blank.
 
-## Add a description to a Canvas Group
+## Add a description to a Canvas Group <a href="#add-a-description-to-a-canvas-group" id="add-a-description-to-a-canvas-group"></a>
 
 You can give a Canvas Group an optional description of up to 145 characters, so readers can see what that part of the workflow does without expanding it. Descriptions save with the workflow, and stay with the Canvas Group when you duplicate or copy and paste it.
 

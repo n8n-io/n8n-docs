@@ -61,7 +61,7 @@ n8n remembers which Canvas Groups you've expanded and keeps your view the same w
 
 To break a Canvas Group back into separate nodes, select the **Ungroup** icon <img src="../../.gitbook/assets/ungroup.svg" alt="Ungroup icon" data-size="line"> above it, select **Ungroup nodes** in its right-click menu, or press `Ctrl/Cmd` + `Shift` + `G`. The nodes stay on the canvas.
 
-## Group actions from the context menu
+## Group actions from the context menu <a href="#group-actions-from-the-context-menu" id="group-actions-from-the-context-menu"></a>
 
 Right-click a Canvas Group to open its context menu. **Rename group** and **Ungroup nodes** sit at the top, followed by the same actions you get for a multi-node selection, worded for the group (**Copy group**, **Delete group**, and so on). The menu also works on collapsed groups, where actions apply to the hidden nodes inside.
 

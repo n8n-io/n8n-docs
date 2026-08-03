@@ -404,10 +404,10 @@ The setup comprises:
 
 You can run Vale locally on your machine as follows:
 
-1. Follow the Vale docs to [install Vale CLI](https://vale.sh/docs/vale-cli/installation/).
+1. Follow the Vale docs to [install Vale CLI](https://github.com/errata-ai/vale#installation).
 2. Choose whether to lint from the command line, or install a text editor plugin:
    1. Running `vale docs/` lints all Markdown files in the `docs` directory
-   2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/chrischinchilla/vale-vscode) by ChrisChinchilla.
+   2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/errata-ai/vale#installation) by ChrisChinchilla.
 
 ## Frontmatter
 

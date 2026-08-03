@@ -172,8 +172,6 @@ See [reference.md](reference.md) for full examples and rules.
   both platforms — add an absence line ("It isn't available on n8n Cloud.") or
   caveat line if it's on one only. Skip the bullets entirely for a version-only,
   deprecation, or removal hint.
-- **Don't link to "Compare plans and editions" or the release notes** from
-  inside a hint — state the fact in the sentence instead.
 - **Preview:** an `info` hint naming the feature or node in the title (not
   "this feature") saying it may change and isn't for production. Use "preview",
   not "beta", for a feature's status.

@@ -27,6 +27,38 @@ layout:
 
 Existing pages may carry migration-support fields (`contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, `url`). Don't add these to new pages.
 
+### Tags
+
+A **visual tag** renders as a label on the page and, if `primary: true`, in
+the side menu too. It only renders if it's defined in the space's
+`.gitbook/tags.yaml` (label and color). Add it as an object in the `tags` array:
+
+```yaml
+---
+tags:
+  - release
+  - tag: preview
+    primary: true
+---
+```
+
+Only `tag: preview` above is a visual tag. `release` is a plain string with no
+matching `.gitbook/tags.yaml` entry, so it renders nothing — the `tags` array
+can carry inert strings like this alongside a real visual tag; they're a
+different thing, not a second visual tag.
+
+- A visual tag must already be defined in the space's `.gitbook/tags.yaml`
+  before you can apply it — check it exists, add it if missing.
+- A visual tag is a label only. It doesn't replace the explanatory hint on the
+  page — the hint explains what the status means; the tag just flags it in the UI.
+- Only `preview` and `beta` are verified values for the separate `status:`
+  field in this codebase. Don't assume every visual tag has a matching
+  `status:` — `deprecated` doesn't (see Feature availability, in the style guide).
+- The current set of visual tags allowed in docs is: **Deprecated** (a whole
+  page about a deprecated feature), **Preview** (a whole page about a feature
+  in preview), and **Archived** (a page no longer updated). Don't create or
+  use any visual tag other than these three.
+
 ## Page navigation (SUMMARY.md)
 
 Each space has a `SUMMARY.md` at its root. GitBook builds the sidebar from it, so
@@ -437,6 +469,19 @@ Rules for the `Available on:` bullets:
 - Link to the matching [breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes)
   or migration guide entry.
 
+If the whole page is about the deprecated or removed feature, also add a
+primary `deprecated` tag (label "Deprecated", color red — see
+[Tags](#tags) for how tags work). No `status:` field; `deprecated` isn't a
+verified value for it:
+
+```yaml
+---
+tags:
+  - tag: deprecated
+    primary: true
+---
+```
+
 **Inline or passing mention** — a small control, option, field, role, or a
 whole feature/node with no heading of its own. One full sentence, naming the
 specific thing (never "this feature" or "this option" — the sentence must
@@ -475,8 +520,8 @@ production workflows.
 {% endhint %}
 ```
 
-If the whole page is about the preview feature, also set frontmatter so the
-status shows as a label on the page and in the side menu:
+If the whole page is about the preview feature, also set `status: preview` and
+add a primary `preview` tag (see [Tags](#tags) for how tags work):
 
 ```yaml
 ---
@@ -486,11 +531,6 @@ tags:
     primary: true
 ---
 ```
-
-Confirm the space's `.gitbook/tags.yaml` defines the `preview` tag (label and
-color) before relying on this — add it if missing. The frontmatter tag is a
-visual label only; it doesn't replace the hint, which is where you explain what
-"preview" means for this page.
 
 **Inline or passing mention:**
 

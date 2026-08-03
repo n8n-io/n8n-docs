@@ -261,6 +261,18 @@ The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Tr
 {% endhint %}
 ```
 
+If the entire page is about a deprecated or removed feature, also add a primary `deprecated` tag (see [Tags](#tags), under Frontmatter, for how tags work) — no `status:` field, since `deprecated` isn't a verified value for it:
+
+```
+---
+tags:
+  - tag: deprecated
+    primary: true
+---
+```
+
+The tag needs label "Deprecated" and color red defined in the space's `.gitbook/tags.yaml`.
+
 Rules:
 
 * **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
@@ -353,7 +365,7 @@ Preview features may change in future releases. Avoid relying on them in product
 {% endhint %}
 ```
 
-If the entire page is about a feature in preview, also add frontmatter so the status shows as a label on the page and in the side menu:
+If the entire page is about a feature in preview, also set `status: preview` and add a primary `preview` tag (see [Tags](#tags), under Frontmatter, for how tags work):
 
 ```
 ---
@@ -364,8 +376,7 @@ tags:
 ---
 ```
 
-* The space's `.gitbook/tags.yaml` must define the `preview` tag (its label and color) — check it exists before relying on this, and add it if it's missing. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for a working example.
-* This frontmatter tag is a visual label only — it doesn't replace the hint above, which is where you explain what "preview" means for this page.
+See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for a working example.
 
 **Inline or passing mention:** for a small control, or a whole feature or node named in prose with no heading of its own:
 
@@ -421,6 +432,25 @@ layout:
 {% hint style="info" %}
 You may see other frontmatter fields on existing n8n Docs pages, such as `contentType`, `nodeTitle`, `originalFilePath`, `originalUrl`, and `url`. These support migration management on pre-existing pages. Don't add them to new pages.
 {% endhint %}
+
+### Tags
+
+A **visual tag** renders as a label on the page and, if `primary: true`, in the side menu too. It only renders if it's defined in the space's `.gitbook/tags.yaml` (its label and color). Add it as an object in the `tags` array:
+
+```
+---
+tags:
+  - release
+  - tag: preview
+    primary: true
+---
+```
+
+In this example, only `tag: preview` is a visual tag. `release` is a plain string with no matching `.gitbook/tags.yaml` entry, so it renders nothing — the `tags` array can carry inert strings like this alongside a real visual tag; they're a different thing, not a second visual tag.
+
+* A visual tag must already be defined in the space's `.gitbook/tags.yaml` before you can apply it — check it exists, and add it if it's missing.
+* A visual tag is a label only. It doesn't replace the explanatory hint on the page — the hint is where you explain what the status means; the tag just flags it in the UI.
+* The current set of visual tags allowed in docs is: **Deprecated** (a whole page about a deprecated feature), **Preview** (a whole page about a feature in [preview](#preview-status)), and **Archived** (a page no longer updated). Don't create or use any visual tag other than these three.
 
 ## Page navigation
 

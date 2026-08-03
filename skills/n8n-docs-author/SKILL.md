@@ -174,11 +174,13 @@ See [reference.md](reference.md) for full examples and rules.
   deprecation, or removal hint.
 - **Preview:** an `info` hint naming the feature or node in the title (not
   "this feature") saying it may change and isn't for production. Use "preview",
-  not "beta", for a feature's status.
+  not "beta", for a feature's status. Whole page → also set `status: preview`
+  plus a primary `preview` tag (see Frontmatter's `tags` field, below).
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0"
   — never "removed in"). Name the replacement and removal version if known.
-  Always name a version, never a vague timeframe.
+  Always name a version, never a vague timeframe. Whole page → also add a
+  primary `deprecated` tag (label "Deprecated", color red), no `status:` field.
 - **Node status** (deprecated, removed, versioned): link to the Deprecated and
   versioned nodes page rather than restating per node. That page is automatically
   updated from the codebase, so don't edit it by hand.
@@ -191,6 +193,12 @@ Every page opens with valid YAML frontmatter. Fields n8n Docs uses:
 - `layout.description.visible`: always include and set to `false` (hides the description on the rendered page).
 - `hidden`: set to `true` to remove the page from the side menu. Omit for normal pages (most pages appear in the menu).
 - `generated`: `true` marks the page as fully automation-managed. Don't edit these by hand.
+- `tags`: a **visual tag** renders as a label on the page and side menu, but
+  only if it's defined in the space's `.gitbook/tags.yaml` first — an
+  unregistered plain string in the array is inert and renders nothing. Use
+  `- tag: <name>, primary: true` for the main visual label. Only three visual
+  tags are allowed docs-wide: **Deprecated**, **Preview**, and **Archived**.
+  See [reference.md](reference.md) for the full format.
 
 Minimal frontmatter for a new page:
 

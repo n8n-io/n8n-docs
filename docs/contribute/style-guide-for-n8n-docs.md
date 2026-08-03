@@ -355,13 +355,13 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 
 A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status.
 
-**Page or section:** name the node or feature in the title instead of writing "this feature" — hints get skimmed independently of the surrounding heading:
+**Page or section:** use the same `**Feature availability**` title as an availability hint — name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
 
 ```
 {% hint style="info" %}
-**The Data table node is in preview**
+**Feature availability**
 
-Preview features may change in future releases. Avoid relying on them in production workflows.
+The Data table node is in preview and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 ```
 

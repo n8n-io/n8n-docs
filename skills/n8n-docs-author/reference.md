@@ -508,15 +508,17 @@ automatically updated from the codebase, so don't edit it by hand.
 A preview feature works but isn't complete or stable, and may change. "Preview"
 is a feature's maturity label. Use it, not "beta", to describe a feature's status.
 
-**Page or section:** name the node or feature in the title itself, instead of
-writing "this feature" — same reasoning as the availability hint above:
+**Page or section:** same `**Feature availability**` title as an availability
+hint, above — name the node or feature in the sentence below it, not in the
+title. Hints get skimmed independently of the surrounding heading, so the
+sentence must carry the naming:
 
 ```markdown
 {% hint style="info" %}
-**The Data table node is in preview**
+**Feature availability**
 
-Preview features may change in future releases. Avoid relying on them in
-production workflows.
+The Data table node is in preview and may change in future releases. Avoid
+relying on it in production workflows.
 {% endhint %}
 ```
 

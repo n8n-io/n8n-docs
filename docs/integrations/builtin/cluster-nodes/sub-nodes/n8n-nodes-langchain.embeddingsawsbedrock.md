@@ -39,15 +39,15 @@ If you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://do
 * **Authentication**: Select the authentication method:
     * **AWS (IAM)**: Use an IAM access key. Select an **AWS** credential.
     * **AWS (Assume Role)**: Temporarily assume an IAM role. Select an **AWS (Assume Role)** credential.
-* **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) to use to generate the embedding. The dropdown lists on-demand embedding models and embedding inference profiles together. If the dropdown is empty or incomplete, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. Switch the field to **Expression** mode and enter the model or inference profile ID directly.
+* **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) that generates the embedding. The dropdown lists on-demand embedding models and embedding inference profiles together. If the dropdown is empty or incomplete, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. Switch the field to **Expression** mode and enter the model or inference profile ID directly.
 
 Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html).
 
-## Node options <a href="#node-options" id="node-options"></a>
+## Node options
 
 * **Additional Model Request Fields**: Enter model-specific request fields as JSON, for example Titan's `dimensions` and `normalize` or Cohere's `input_type` and `truncate`. Refer to the [AWS model parameters documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) for the fields each model family supports.
 * **Max Retries**: Enter the maximum number of times to retry a request.
-* **Timeout**: Enter the maximum amount of time a request can take in milliseconds, or `0` to disable the timeout.
+* **Timeout**: Enter the maximum time in milliseconds to wait for a request to complete. Set it to `0` to disable the timeout.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

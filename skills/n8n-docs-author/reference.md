@@ -450,9 +450,8 @@ The **Scopes** option is available on n8n Cloud Pro, Enterprise, and self-hosted
 The **Legacy format** field is deprecated from n8n 2.30.0.
 ```
 
-Two sentences max (plan/platform first, then version). If it needs more, or
-both platform bullets, or plan + version + deprecation together, promote it to
-a scoped hint instead.
+Two sentences max, plan/platform first. More than two sentences, or both
+platform bullets: promote it to a scoped hint instead.
 
 **Node status.** Deprecated, removed, and versioned nodes are tracked on one page:
 [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes).

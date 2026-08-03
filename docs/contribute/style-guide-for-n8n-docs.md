@@ -275,37 +275,25 @@ Rules:
 
 #### Inline and passing mentions
 
-Use inline wording for a small control, option, field, role, or behavior inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Do not use for a feature/limit that applies at page or section scope (use the hint instead).
+Use inline wording for a small control, option, field, or role inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Not for a page- or section-wide limit — use a hint instead.
 
-* Name the specific thing, not "this feature" or "this option" — the sentence must stand on its own if skimmed or retrieved out of context.
-* One sentence per item; two if plan/platform and version both apply — plan/platform first.
+* Name the specific thing, not "this feature" or "this option" — it must stand on its own out of context.
+* One sentence per item; two if plan/platform and version both apply, plan/platform first.
 * Mention both platforms if both matter; don't imply absence by omission.
-* State version, deprecation, or removal plainly ("available from version X", "deprecated from version X") — skip the "Available from" hint-style lead-in.
-* If it needs more than two sentences, both platform bullets, or plan + version + deprecation together, promote it to a scoped hint instead.
+* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X") — skip the hint-style "Available from" lead-in.
+* More than two sentences, or both platform bullets: promote it to a scoped hint instead.
 
-For a control, option, field, or role inside a larger feature, use a full sentence:
+For a control, option, field, or role:
 
 ```
 The **Scopes** option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
 ```
 
 ```
-The **Concurrency** setting is available on self-hosted Enterprise. On n8n Cloud Enterprise, contact n8n to enable it.
-```
-
-```
-The **Allowed Origin (CORS)** option is available from n8n 2.30.0.
-```
-
-```
 The **Legacy format** field is deprecated from n8n 2.30.0.
 ```
 
-```
-The Editor role is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise, from n8n 2.30.0.
-```
-
-For a whole feature or node named in prose with no heading of its own, fold the limit into the sentence using the same vocabulary and ordering:
+For a whole feature or node with no heading of its own, fold the limit into the sentence:
 
 ```
 The Data table node (available from n8n 2.17.0) stores data between executions.

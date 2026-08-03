@@ -42,7 +42,7 @@ If you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://do
 * **Model**: Select the model or [inference profile](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles.html) that generates the completion. The dropdown lists on-demand foundation models and cross-region inference profiles together. The newest models (for example Claude Sonnet 4.x) are only available as inference profiles. If part of the list is missing, your IAM role may lack the `bedrock:ListFoundationModels` or `bedrock:ListInferenceProfiles` permission. You can also switch the field to **Expression** mode and enter a model ID, inference profile ID, or ARN directly.
 
 {% hint style="info" %}
-On node versions before 1.2, the dropdown only lists on-demand foundation models. On node version 1.1, use the **Model Source** parameter to switch it to inference profiles.
+On node version 1.1, the dropdown shows one list at a time: use the **Model Source** parameter to switch between on-demand foundation models and inference profiles. Node version 1 only supports on-demand foundation models.
 {% endhint %}
 
 Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).

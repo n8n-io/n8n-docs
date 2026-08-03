@@ -667,7 +667,7 @@ Use tabs not spaces. This is important because the n8n node linter enforces this
 Use fenced code blocks with a language identifier for syntax highlighting:
 
 ````
-```typescrip
+```typescript
 // Your code here
 ```
 ````

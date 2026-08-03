@@ -621,3 +621,14 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
+
+
+### n8n 2.27 — Authenticate multiple Microsoft nodes with one credential
+
+**Released:** 2026-06-16
+
+You can now use a single **Microsoft OAuth2 API** credential across Microsoft OneDrive, Excel, Outlook, Teams, To Do, and Graph Security nodes, instead of creating and maintaining a separate OAuth2 app registration for each service. In your Microsoft Entra tenant, you create one app registration, grant it the delegated permissions your workflows need, and then select **Microsoft OAuth2 (Graph)** in the Authentication dropdown of any supported node to reuse that credential. This reduces the number of app registrations and admin-consent flows your IT team has to manage.
+
+To get started, register an app in your Entra tenant and add the scopes for the services you use. For example: `Files.ReadWrite.All` for OneDrive and Excel; `Mail.ReadWrite`, `Mail.Send`, `Calendars.ReadWrite`, and `Contacts.ReadWrite` for Outlook; `Tasks.ReadWrite` for To Do; `SecurityEvents.ReadWrite.All` for Graph Security. Always include `openid` and `offline_access`. Grant admin consent for any `.All` permissions, then create a Microsoft OAuth2 API credential in n8n, set the Scope field to your space-separated permission list, and complete the OAuth2 flow. Open any supported node, set Authentication to **Microsoft OAuth2 (Graph)**, and select the credential. If your organization uses a sovereign cloud (US Government, US Government DOD, or China), set the Graph API Base URL on the credential once and it applies to every node that uses it. Existing workflows using node-specific credentials such as Microsoft OneDrive OAuth2 API or Microsoft Excel OAuth2 API continue to work unchanged. The generic credential is an additive option: the Authentication dropdown defaults to the node-specific credential for saved nodes, so nothing breaks on upgrade.
+
+Learn more in the [documentation](https://docs.n8n.io/integrations/builtin/credentials/microsoft)

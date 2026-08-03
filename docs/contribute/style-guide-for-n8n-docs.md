@@ -155,19 +155,19 @@ Connect each page to the others on its topic. Explicit, descriptive links let an
 
 A feature's availability can be limited in three ways:
 
-* **Plan or platform** — which n8n Cloud plan or self-hosted edition it's on.
-* **Version** — which n8n version introduced, deprecated, or removed it.
-* **Preview status** — whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
+* **Plan or platform**: which n8n Cloud plan or self-hosted edition it's on.
+* **Version**: which n8n version introduced, deprecated, or removed it.
+* **Preview status**: whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
 
-Plan/platform and version limits share one documentation system, covered first below. Preview status works differently and is always documented separately — see Preview status, further down.
+Plan/platform and version limits share one documentation system, covered first below. Preview status works differently and is always documented separately, see [Preview status](#preview-status), further down.
 
 ### Plan, platform, and version limits
 
 Document these at one of three scopes:
 
 * **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
-* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own — fold the limit into the sentence. See Inline and passing mentions, below.
-* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
+* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions], below.
+* **Table row:** one row among many, put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
 
 #### Feature availability hints
 
@@ -201,7 +201,7 @@ Single sign-on is available on:
 {% endhint %}
 ```
 
-**Plan only, one platform** — with the required absence line:
+**Plan only, one platform**, with the required absence line:
 
 ```
 {% hint style="info" %}
@@ -231,7 +231,7 @@ Available from n8n 2.30.0.
 {% endhint %}
 ```
 
-**Version only** — the subject can be a named feature:
+**Version only**: the subject can be a named feature:
 
 ```
 {% hint style="info" %}
@@ -241,7 +241,7 @@ Canvas Groups are available from n8n 2.28.0.
 {% endhint %}
 ```
 
-**Version only, node case** — the subject can be a node:
+**Version only, node case**: the subject can be a node:
 
 ```
 {% hint style="info" %}

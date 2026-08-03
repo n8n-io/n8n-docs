@@ -34,7 +34,7 @@ layout:
     visible: true
 ---
 
-# Cmmon issues
+# Common issues
 
 Here are some common errors and issues with the [Telegram node](./README.md) and steps to resolve or troubleshoot them.
 

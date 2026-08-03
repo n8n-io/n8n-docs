@@ -216,6 +216,15 @@ Some collapsible content. Standard Markdown works inside the block.
 Use tabs when content differs by platform, language, or configuration. Use
 sparingly, as they can hide content from users and hurt discoverability.
 
+Use tabs only for **short** parallel variants. AI tools serialize all tabs inline,
+so a reader sees one variant but an agent reads every variant in sequence. Keep
+the block under ~3,000 characters combined, and label each variant so the
+serialized content stays legible. For long
+parallel content (a full procedure per variant, or 4+ variants), replace the tabs
+with a heading per variant on the same page. Split into a page per variant only
+when the combined page would exceed the page length guidance, or the variant set
+is open-ended. Keep shared content outside the tabs.
+
 ```markdown
 {% tabs %}
 {% tab title="First tab" %}
@@ -268,6 +277,21 @@ Run `n8n start --tunnel` from `<your-project-directory>`.
 ```
 
 ## Images
+
+Images are supplementary. AI search, the docs assistant, coding agents, and
+screen readers read the page as text, so all they receive from an image is its
+alt text and file path, not the picture itself. Multimodal image reading exists
+but is rare in docs pipelines, and too slow and costly to rely on. So:
+
+- **Write every instruction in text.** A screenshot can show what a screen looks
+  like, but the step must be written out ("Select **Add trigger**, then **On
+  schedule**"). Never leave the only copy of a setting, value, menu path, or
+  click target inside an image.
+- **Don't screenshot text.** Put code, commands, error messages, and config
+  values in code blocks or tables, so readers can copy them and agents can read
+  them.
+- **Screenshots confirm, they don't instruct.** Use them to orient the reader
+  alongside the written steps, not instead of them.
 
 Each space keeps all its images in one folder, `.gitbook/assets/` at the space
 root. You can't reference an image from another space's assets folder.

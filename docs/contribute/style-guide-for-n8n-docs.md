@@ -251,7 +251,7 @@ The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Tr
 {% endhint %}
 ```
 
-**Deprecated or removed** — uses `warning`, not `info`. Swap the wording for a removal (for example, "`N8N_RUNNERS_ENABLED` removed from n8n 3.0"). The subject here is a setting:
+**Deprecated or removed** uses `warning`, not `info`. Swap the wording for a removal (for example, "`N8N_RUNNERS_ENABLED` removed from n8n 3.0"). The subject here is a setting:
 
 ```
 {% hint style="warning" %}
@@ -261,7 +261,7 @@ The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Tr
 {% endhint %}
 ```
 
-If the entire page is about a deprecated or removed feature, also add a primary `deprecated` tag (see [Tags](#tags), under Frontmatter, for how tags work) — no `status:` field, since `deprecated` isn't a verified value for it:
+If the entire page is about a deprecated or removed feature, also add a primary `deprecated` tag (see [Tags](#tags), under Frontmatter, for how tags work). Don't add a `status:` field, since `deprecated` isn't a verified value for it:
 
 ```
 ---
@@ -276,23 +276,23 @@ The tag needs label "Deprecated" and color red defined in the space's `.gitbook/
 Rules:
 
 * **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
-* **Name the subject in the body.** The "Feature availability" hint title doesn't say what's available — name the node, setting, or feature in the following sentence. Don't rely on a heading outside the hint. Keep "available from n8n X.Y.Z" as an unbroken substring.
-* **Platform bullets:** lead with "<Feature> <is/are> available on:". Name both platforms — never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
+* **Name the subject in the body.** The "Feature availability" hint title doesn't say what's available, so name the node, setting, or feature in the following sentence. Don't rely on a heading outside the hint. Keep "available from n8n X.Y.Z" as an unbroken substring.
+* **Platform bullets:** lead with "<Feature> <is/are> available on:". Name both platforms, never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
 * **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
-* **Write "n8n Cloud", not "Cloud"** — bare "Cloud" is ambiguous.
-* **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro) — never list the trial itself; cover it only on the trial page.
+* **Write "n8n Cloud", not "Cloud".** Bare "Cloud" is ambiguous.
+* **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro). Never list the trial itself; cover it only on the trial page.
 * **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) any other feature-specific caveat.
-* **No plan limit** (version-only, deprecation, or removal): skip the bullets — just the title and the sentence.
+* **No plan limit** (version-only, deprecation, or removal): skip the bullets, just the title and the sentence.
 * **Don't link to Compare plans and editions or the release notes.** Earlier drafts of this guidance added those links to every hint; state the fact in the sentence instead and let the reader search if they need the source.
 
 #### Inline and passing mentions
 
-Use inline wording for a small control, option, field, or role inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Not for a page- or section-wide limit — use a hint instead.
+Use inline wording for a small control, option, field, or role inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Not for a page- or section-wide limit: use a hint instead.
 
-* Name the specific thing, not "this feature" or "this option" — it must stand on its own out of context.
+* Name the specific thing, not "this feature" or "this option", since it must stand on its own out of context.
 * One sentence per item; two if plan/platform and version both apply, plan/platform first.
 * Mention both platforms if both matter; don't imply absence by omission.
-* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X") — skip the hint-style "Available from" lead-in.
+* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X"). Skip the hint-style "Available from" lead-in.
 * More than two sentences, or both platform bullets: promote it to a scoped hint instead.
 
 For a control, option, field, or role:
@@ -355,7 +355,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 
 A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status.
 
-**Page or section:** use the same `**Feature availability**` title as an availability hint — name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
+**Page or section:** use the same `**Feature availability**` title as an availability hint. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
 
 ```
 {% hint style="info" %}
@@ -389,7 +389,7 @@ The Data table node is in preview and may change in future releases.
 ```
 
 * **Tie it to a version when it helps**: "In preview from n8n 2.20.0".
-* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both — a preview hint alongside an availability hint, or a preview sentence alongside an availability sentence — rather than folding the preview wording into the other one.
+* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a preview hint alongside an availability hint, or a preview sentence alongside an availability sentence, rather than folding the preview wording into the other one.
 * **If an inline preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
 
 ## Vale linting
@@ -446,10 +446,10 @@ tags:
 ---
 ```
 
-In this example, only `tag: preview` is a visual tag. `release` is a plain string with no matching `.gitbook/tags.yaml` entry, so it renders nothing — the `tags` array can carry inert strings like this alongside a real visual tag; they're a different thing, not a second visual tag.
+In this example, only `tag: preview` is a visual tag. `release` is a plain string with no matching `.gitbook/tags.yaml` entry, so it renders nothing. The `tags` array can carry inert strings like this alongside a real visual tag; they're a different thing, not a second visual tag.
 
-* A visual tag must already be defined in the space's `.gitbook/tags.yaml` before you can apply it — check it exists, and add it if it's missing.
-* A visual tag is a label only. It doesn't replace the explanatory hint on the page — the hint is where you explain what the status means; the tag just flags it in the UI.
+* A visual tag must already be defined in the space's `.gitbook/tags.yaml` before you can apply it: check it exists, and add it if it's missing.
+* A visual tag is a label only. It doesn't replace the explanatory hint on the page. The hint is where you explain what the status means; the tag just flags it in the UI.
 * The current set of visual tags allowed in docs is: **Deprecated** (a whole page about a deprecated feature), **Preview** (a whole page about a feature in [preview](#preview-status)), and **Archived** (a page no longer updated). Don't create or use any visual tag other than these three.
 
 ## Page navigation
@@ -516,7 +516,7 @@ How you link depends on whether the target page is in the **same space** or a **
 The relative path depends on where the target sits in relation to the page you're editing. The examples below all assume you're editing `current-page.md` in this file tree:
 
 ```
-docs/                                     # docs roo
+docs/                                     # docs root
 ├── build/                                # current space
 │   ├── README.md                         # space landing page
 │   ├── understand-workflows/             # subfolder (section) in the space
@@ -608,7 +608,7 @@ Images supplement the text; they never carry information on their own. Agents an
 Each space has a single folder for all its images, at `.gitbook/assets/` in the root of that space:
 
 ```
-docs/                                     # docs roo
+docs/                                     # docs root
 ├── build/                                # space roo
 │   ├── .gitbook/
 │   │   └── assets/                       # all images for this space live here
@@ -768,7 +768,7 @@ Some collapsible content. Standard Markdown works inside the block.
 
 </details>
 
-### Tabbed conten
+### Tabbed content
 
 When a block of content is different due to external considerations (platform, coding language etc) it **can** be useful to separate it using tabs, so the user sees only the content relevant to them. Use tabbed sections sparingly as they could impact discoverability.
 

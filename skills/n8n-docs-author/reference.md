@@ -43,17 +43,17 @@ tags:
 ```
 
 Only `tag: preview` above is a visual tag. `release` is a plain string with no
-matching `.gitbook/tags.yaml` entry, so it renders nothing — the `tags` array
+matching `.gitbook/tags.yaml` entry, so it renders nothing. The `tags` array
 can carry inert strings like this alongside a real visual tag; they're a
 different thing, not a second visual tag.
 
 - A visual tag must already be defined in the space's `.gitbook/tags.yaml`
-  before you can apply it — check it exists, add it if missing.
+  before you can apply it: check it exists, add it if missing.
 - A visual tag is a label only. It doesn't replace the explanatory hint on the
-  page — the hint explains what the status means; the tag just flags it in the UI.
+  page. The hint explains what the status means; the tag just flags it in the UI.
 - Only `preview` and `beta` are verified values for the separate `status:`
   field in this codebase. Don't assume every visual tag has a matching
-  `status:` — `deprecated` doesn't (see Feature availability, in the style guide).
+  `status:`; `deprecated` doesn't (see Feature availability, in the style guide).
 - The current set of visual tags allowed in docs is: **Deprecated** (a whole
   page about a deprecated feature), **Preview** (a whole page about a feature
   in preview), and **Archived** (a page no longer updated). Don't create or
@@ -375,16 +375,16 @@ the facts reliably even without the surrounding page for context.
 
 Never leave the reader guessing which one you mean:
 
-- **Instance version** — the n8n release, three-part semver (`2.30.0`). Use for
+- **Instance version**: the n8n release, three-part semver (`2.30.0`). Use for
   features, environment variables, APIs, CLI commands, and hooks.
-- **Node version** — a node's version number, usually two parts (`4.7`). Use
+- **Node version**: a node's version number, usually two parts (`4.7`). Use
   only for node-specific facts.
 
 In prose, qualify a bare number: "n8n 2.30.0" or "node version 4.7", not "version 2".
 
 **Writing the number.** Product name plus numerals: `n8n 2.30.0`. No `v` prefix
 (`n8n 2.30.0`, not `n8n v2.30.0`), don't write "version" after "n8n", and don't
-add "or later" — "available from" already means "and onward".
+add "or later"; "available from" already means "and onward".
 
 ### Plan, platform, and version limits
 
@@ -393,14 +393,14 @@ add "or later" — "available from" already means "and onward".
 - **A whole page or section:** an `info` hint titled **Feature availability**,
   directly below the page title or that section's heading.
 - **Mentioned in passing**, with no heading of its own: fold it into the
-  sentence, not a hint — "The Data table node (available from n8n 2.17.0)
+  sentence, not a hint: "The Data table node (available from n8n 2.17.0)
   stores data between executions".
 - **A single table row** (one environment variable, one hook): the description
   cell, or a dedicated **Available on** / **Available from** column when many
   rows differ.
 
-**Name the subject in the body — every time.** The hint's title is always the
-generic literal string `**Feature availability**` — it never says what's
+**Name the subject in the body, every time.** The hint's title is always the
+generic literal string `**Feature availability**`; it never says what's
 available, so the sentence underneath must. Don't rely on the page or section
 heading to carry that meaning; hints get skimmed or retrieved independently of
 surrounding prose:
@@ -426,7 +426,7 @@ Single sign-on is available on:
 
 Rules for the `Available on:` bullets:
 
-- Lead with "`<subject>` is/are available on:". Name both platforms — never
+- Lead with "`<subject>` is/are available on:". Name both platforms, never
   by omission. On one platform only, add an absence line below the bullet
   ("It isn't available on n8n Cloud.") or, if available elsewhere on request,
   a caveat line in its place ("On n8n Cloud Enterprise, contact n8n to enable it.").
@@ -435,17 +435,17 @@ Rules for the `Available on:` bullets:
   Enterprise. Use the exact capitalized names; spell out "Registered Community" in full.
 - Write "n8n Cloud", not bare "Cloud".
 - Whole platform: write `All plans` or `All editions` instead of listing every
-  tier. "All plans" already includes the free trial — never list the trial itself.
+  tier. "All plans" already includes the free trial. Never list the trial itself.
 - Below the bullets, in order: the absence/caveat line, then the version
   sentence, then any other feature-specific caveat.
-- Version-only, deprecation, or removal: skip the bullets — just the title and
+- Version-only, deprecation, or removal: skip the bullets, just the title and
   the sentence.
 - **Don't link to "Compare plans and editions" or the release notes** from
   inside the hint. State the fact in the sentence and let the reader search
   for the source if they need it.
 
 **Deprecation and removal.** Same `**Feature availability**` title, but a
-`warning` hint, and use "from" for both — never "removed in":
+`warning` hint, and use "from" for both, never "removed in":
 
 ```markdown
 {% hint style="warning" %}
@@ -455,7 +455,7 @@ Rules for the `Available on:` bullets:
 {% endhint %}
 ```
 
-- Always name a version. Never write "soon" or "in the near future" — if
+- Always name a version. Never write "soon" or "in the near future"; if
   removal isn't scheduled, say so.
 - Name the replacement, and the removal version if known, as a second sentence
   (for example, "Use `publish:workflow` instead. Removed from n8n 3.0.").
@@ -470,7 +470,7 @@ Rules for the `Available on:` bullets:
   or migration guide entry.
 
 If the whole page is about the deprecated or removed feature, also add a
-primary `deprecated` tag (label "Deprecated", color red — see
+primary `deprecated` tag (label "Deprecated", color red; see
 [Tags](#tags) for how tags work). No `status:` field; `deprecated` isn't a
 verified value for it:
 
@@ -482,9 +482,9 @@ tags:
 ---
 ```
 
-**Inline or passing mention** — a small control, option, field, role, or a
+**Inline or passing mention**: a small control, option, field, role, or a
 whole feature/node with no heading of its own. One full sentence, naming the
-specific thing (never "this feature" or "this option" — the sentence must
+specific thing (never "this feature" or "this option"; the sentence must
 stand on its own out of context):
 
 ```markdown
@@ -509,7 +509,7 @@ A preview feature works but isn't complete or stable, and may change. "Preview"
 is a feature's maturity label. Use it, not "beta", to describe a feature's status.
 
 **Page or section:** same `**Feature availability**` title as an availability
-hint, above — name the node or feature in the sentence below it, not in the
+hint, above. Name the node or feature in the sentence below it, not in the
 title. Hints get skimmed independently of the surrounding heading, so the
 sentence must carry the naming:
 

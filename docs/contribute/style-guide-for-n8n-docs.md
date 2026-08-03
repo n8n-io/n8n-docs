@@ -115,8 +115,8 @@ Obvious exceptions:
 
 A feature's availability can be limited in three ways:
 
-* **Plan or platform** — which [n8n Cloud plans or self-hosted editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) it's on.
-* **Version** — which [n8n version](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) introduced, deprecated, or removed it.
+* **Plan or platform** — which n8n Cloud plan or self-hosted edition it's on.
+* **Version** — which n8n version introduced, deprecated, or removed it.
 * **Preview status** — whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
 
 Plan/platform and version limits share one documentation system, covered first below. Preview status works differently and is always documented separately — see Preview status, further down.
@@ -131,20 +131,20 @@ Document these at one of three scopes:
 
 #### Feature availability hints
 
+Examples:
+
 **Both plan and version:**
 
 ```
 {% hint style="info" %}
 **Feature availability**
 
-Available on:
+Environments are available on:
 
 - **n8n Cloud:** Pro, Enterprise
 - **Self-hosted:** Enterprise
 
-Available from n8n 2.30.0 or later.
-
-[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) | [See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
+Available from n8n 2.30.0.
 {% endhint %}
 ```
 
@@ -154,12 +154,10 @@ Available from n8n 2.30.0 or later.
 {% hint style="info" %}
 **Feature availability**
 
-Available on:
+Single sign-on is available on:
 
 - **n8n Cloud:** Pro, Enterprise
 - **Self-hosted:** Enterprise
-
-[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 ```
 
@@ -169,13 +167,11 @@ Available on:
 {% hint style="info" %}
 **Feature availability**
 
-Available on:
+Multi-main setup is available on:
 
 - **Self-hosted:** Enterprise
 
 It isn't available on n8n Cloud.
-
-[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition)
 {% endhint %}
 ```
 
@@ -185,83 +181,88 @@ It isn't available on n8n Cloud.
 {% hint style="info" %}
 **Feature availability**
 
-Available on:
+Custom roles are available on:
 
 - **Self-hosted:** Enterprise
 
 On n8n Cloud Enterprise, contact n8n to enable it.
 
-Available from n8n 2.30.0 or later.
-
-[Compare plans and editions](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) | [See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
+Available from n8n 2.30.0.
 {% endhint %}
 ```
 
-**Version only:**
+**Version only** — the subject can be a named feature:
 
 ```
 {% hint style="info" %}
 **Feature availability**
 
-Available from n8n 2.30.0 or later.
-
-[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
+Canvas Groups are available from n8n 2.28.0.
 {% endhint %}
 ```
 
-**Deprecated or removed** — uses `warning`, not `info`. Swap the wording for a removal ("Removed from n8n 2.30.0").
+**Version only, node case** — the subject can be a node:
+
+```
+{% hint style="info" %}
+**Feature availability**
+
+The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node.
+{% endhint %}
+```
+
+**Deprecated or removed** — uses `warning`, not `info`. Swap the wording for a removal (for example, "`N8N_RUNNERS_ENABLED` removed from n8n 3.0"). The subject here is a setting:
 
 ```
 {% hint style="warning" %}
 **Feature availability**
 
-Deprecated from n8n 2.30.0
-
-[See release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes)
+`N8N_RUNNERS_ENABLED` is deprecated from n8n 2.0.
 {% endhint %}
 ```
 
 Rules:
 
 * **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
-* **Platform bullets:** lead with "Available on:". Name both platforms — never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
+* **Name the subject in the body.** The "Feature availability" hint title doesn't say what's available — name the node, setting, or feature in the following sentence. Don't rely on a heading outside the hint. Keep "available from n8n X.Y.Z" as an unbroken substring.
+* **Platform bullets:** lead with "<Feature> <is/are> available on:". Name both platforms — never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
 * **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
 * **Write "n8n Cloud", not "Cloud"** — bare "Cloud" is ambiguous.
 * **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro) — never list the trial itself; cover it only on the trial page.
-* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) any other feature-specific caveat, (4) the link(s) — plan-comparison, release-notes, or both together if both apply.
-* **No plan limit** (version-only, deprecation, or removal): skip the bullets — just the title, the sentence, and the release-notes link.
+* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) any other feature-specific caveat.
+* **No plan limit** (version-only, deprecation, or removal): skip the bullets — just the title and the sentence.
+* **Don't link to Compare plans and editions or the release notes.** Earlier drafts of this guidance added those links to every hint; state the fact in the sentence instead and let the reader search if they need the source.
 
 #### Inline and passing mentions
 
-Use inline wording for a small control, option, field, role, or behavior inside a larger feature, or for a whole feature or node named in prose with no heading of its own — not for a page- or section-wide limit (use the hint instead).
+Use inline wording for a small control, option, field, role, or behavior inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Do not use for a feature/limit that applies at page or section scope (use the hint instead).
 
-* Name the specific thing, not "this feature", unless the referent is obvious.
+* Name the specific thing, not "this feature" or "this option" — the sentence must stand on its own if skimmed or retrieved out of context.
 * One sentence per item; two if plan/platform and version both apply — plan/platform first.
 * Mention both platforms if both matter; don't imply absence by omission.
 * State version, deprecation, or removal plainly ("available from version X", "deprecated from version X") — skip the "Available from" hint-style lead-in.
-* Skip the plan-comparison and release-notes links inline, unless there's no nearby hint and this is the page's only availability note.
 * If it needs more than two sentences, both platform bullets, or plan + version + deprecation together, promote it to a scoped hint instead.
 
 For a control, option, field, or role inside a larger feature, use a full sentence:
 
 ```
-This option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
+The **Scopes** option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
 ```
 
 ```
-This setting is available on self-hosted Enterprise. On n8n Cloud Enterprise, contact n8n to enable it.
+The **Concurrency** setting is available on self-hosted Enterprise. On n8n Cloud Enterprise, contact n8n to enable it.
 ```
 
 ```
-This option is available from n8n 2.30.0 or later.
+The **Allowed Origin (CORS)** option is available from n8n 2.30.0.
 ```
 
 ```
-This field is deprecated from n8n 2.30.0.
+The **Legacy format** field is deprecated from n8n 2.30.0.
 ```
 
 ```
-This role is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise, from n8n 2.30.0 or later.
+The Editor role is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise, from n8n 2.30.0.
 ```
 
 For a whole feature or node named in prose with no heading of its own, fold the limit into the sentence using the same vocabulary and ordering:
@@ -312,13 +313,13 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 
 ### Preview status
 
-A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status. Reserve "beta" for release channels, version tracks, and access programs (a beta release, the beta Cloud instance, a closed beta).
+A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status.
 
-**Page or section:**
+**Page or section:** name the node or feature in the title instead of writing "this feature" — hints get skimmed independently of the surrounding heading:
 
 ```
 {% hint style="info" %}
-**This feature is in preview**
+**The Data table node is in preview**
 
 Preview features may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
@@ -341,7 +342,7 @@ tags:
 **Inline or passing mention:** for a small control, or a whole feature or node named in prose with no heading of its own:
 
 ```
-This option is in preview and may change in future releases.
+The **Streaming response** option is in preview and may change in future releases.
 ```
 
 ```

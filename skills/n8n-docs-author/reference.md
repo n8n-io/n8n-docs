@@ -307,14 +307,17 @@ to `https://api.n8n.io/workflows/templates/`):
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1747" %}
 ```
 
-## Versioning and release status
+## Feature availability
 
-Many features, settings, and nodes are tied to a specific n8n release, or carry a
-status like preview or deprecated. Reference versions and status consistently so
-readers can tell whether their install supports a feature, and so automated tools
-can extract the facts reliably.
+A feature's availability can be limited by plan/platform, by n8n version
+(introduced, deprecated, removed), or by preview status. Reference all three
+consistently so readers can tell whether their install supports a feature, and
+so automated tools (search, docs assistants, chunk-based retrieval) can extract
+the facts reliably even without the surrounding page for context.
 
-**Two version types.** Never leave the reader guessing which one you mean:
+### Two version types
+
+Never leave the reader guessing which one you mean:
 
 - **Instance version** — the n8n release, three-part semver (`2.30.0`). Use for
   features, environment variables, APIs, CLI commands, and hooks.
@@ -324,79 +327,159 @@ can extract the facts reliably.
 In prose, qualify a bare number: "n8n 2.30.0" or "node version 4.7", not "version 2".
 
 **Writing the number.** Product name plus numerals: `n8n 2.30.0`. No `v` prefix
-(`n8n 2.30.0`, not `n8n v2.30.0`), and don't write "version" after "n8n".
+(`n8n 2.30.0`, not `n8n v2.30.0`), don't write "version" after "n8n", and don't
+add "or later" — "available from" already means "and onward".
 
-**Where to put the marker.** Match the scope of what it describes:
+### Plan, platform, and version limits
 
-- **A whole page** about the feature: a hint directly below the page title.
-- **A section** within a page: a hint directly below that section's heading.
-- **Mentioned in passing**, with no heading of its own: fold it into the sentence,
-  not a hint — "The Data table node (available from n8n 2.17.0) stores data
-  between executions".
+**Where to put it.** Match the scope of what it describes:
+
+- **A whole page or section:** an `info` hint titled **Feature availability**,
+  directly below the page title or that section's heading.
+- **Mentioned in passing**, with no heading of its own: fold it into the
+  sentence, not a hint — "The Data table node (available from n8n 2.17.0)
+  stores data between executions".
 - **A single table row** (one environment variable, one hook): the description
-  cell, as `(available from n8n 2.17.0)`; add an **Available from** column when
-  many rows differ.
+  cell, or a dedicated **Available on** / **Available from** column when many
+  rows differ.
 
-**Availability.** Use an `info` hint:
+**Name the subject in the body — every time.** The hint's title is always the
+generic literal string `**Feature availability**` — it never says what's
+available, so the sentence underneath must. Don't rely on the page or section
+heading to carry that meaning; hints get skimmed or retrieved independently of
+surrounding prose:
 
 ```markdown
 {% hint style="info" %}
-**Available from n8n 2.17.0**
+**Feature availability**
+
+Canvas Groups are available from n8n 2.28.0.
 {% endhint %}
 ```
 
-- State the consequence for older versions: "On earlier versions, use `OLD_VAR` instead".
-- Add a release date only when it aids planning: `**Available from n8n 2.30.0 (released July 7, 2026)**`.
-- Keep tier limits (Cloud, Enterprise, self-hosted) in their own `info` hint,
-  separate from the version marker.
+```markdown
+{% hint style="info" %}
+**Feature availability**
 
-**Preview.** A preview feature is available but not yet complete or stable, and
-may change. Use "preview" for a feature's status, not "beta": reserve "beta" for
-release channels, version tracks, and access programs (a beta release, the beta
-Cloud instance, a closed beta). Use an `info` hint at the page or section scope:
+Single sign-on is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+{% endhint %}
+```
+
+Rules for the `Available on:` bullets:
+
+- Lead with "`<subject>` is/are available on:". Name both platforms — never
+  by omission. On one platform only, add an absence line below the bullet
+  ("It isn't available on n8n Cloud.") or, if available elsewhere on request,
+  a caveat line in its place ("On n8n Cloud Enterprise, contact n8n to enable it.").
+- Tiers list low to high, comma-separated, never "and": Cloud order Starter,
+  Pro, Enterprise; self-hosted order Community, Registered Community, Business,
+  Enterprise. Use the exact capitalized names; spell out "Registered Community" in full.
+- Write "n8n Cloud", not bare "Cloud".
+- Whole platform: write `All plans` or `All editions` instead of listing every
+  tier. "All plans" already includes the free trial — never list the trial itself.
+- Below the bullets, in order: the absence/caveat line, then the version
+  sentence, then any other feature-specific caveat.
+- Version-only, deprecation, or removal: skip the bullets — just the title and
+  the sentence.
+- **Don't link to "Compare plans and editions" or the release notes** from
+  inside the hint. State the fact in the sentence and let the reader search
+  for the source if they need it.
+
+**Deprecation and removal.** Same `**Feature availability**` title, but a
+`warning` hint, and use "from" for both — never "removed in":
+
+```markdown
+{% hint style="warning" %}
+**Feature availability**
+
+`N8N_RUNNERS_ENABLED` is deprecated from n8n 2.0.
+{% endhint %}
+```
+
+- Always name a version. Never write "soon" or "in the near future" — if
+  removal isn't scheduled, say so.
+- Name the replacement, and the removal version if known, as a second sentence
+  (for example, "Use `publish:workflow` instead. Removed from n8n 3.0.").
+- For a deprecated table entry, tag the identifier with `(deprecated)` and
+  state the version in the description:
+
+  ```markdown
+  | `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. |
+  ```
+
+- Link to the matching [breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes)
+  or migration guide entry.
+
+**Inline or passing mention** — a small control, option, field, role, or a
+whole feature/node with no heading of its own. One full sentence, naming the
+specific thing (never "this feature" or "this option" — the sentence must
+stand on its own out of context):
+
+```markdown
+The **Scopes** option is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise.
+```
+
+```markdown
+The **Legacy format** field is deprecated from n8n 2.30.0.
+```
+
+Two sentences max (plan/platform first, then version). If it needs more, or
+both platform bullets, or plan + version + deprecation together, promote it to
+a scoped hint instead.
+
+**Node status.** Deprecated, removed, and versioned nodes are tracked on one page:
+[Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes).
+Link to it rather than scattering version notes across node pages. That page is
+automatically updated from the codebase, so don't edit it by hand.
+
+### Preview status
+
+A preview feature works but isn't complete or stable, and may change. "Preview"
+is a feature's maturity label. Use it, not "beta", to describe a feature's status.
+
+**Page or section:** name the node or feature in the title itself, instead of
+writing "this feature" — same reasoning as the availability hint above:
 
 ```markdown
 {% hint style="info" %}
-**This feature is in preview**
+**The Data table node is in preview**
 
 Preview features may change in future releases. Avoid relying on them in
 production workflows.
 {% endhint %}
 ```
 
-- Tie it to a version when it helps: "In preview from n8n 2.20.0".
+If the whole page is about the preview feature, also set frontmatter so the
+status shows as a label on the page and in the side menu:
 
-**Deprecation and removal.** Deprecated features still work but shouldn't be
-used; removed features no longer exist. Use a `warning` hint:
-
-```markdown
-{% hint style="warning" %}
-**Deprecated from n8n 2.0**
-
-Use `publish:workflow` instead. n8n removes `update:workflow` in 3.0.
-{% endhint %}
+```yaml
+---
+status: preview
+tags:
+  - tag: preview
+    primary: true
+---
 ```
 
-Deprecation is an ongoing state (use "from"); removal is a one-time event (use
-"in"): **Available from** n8n 2.17.0, **Deprecated from** n8n 2.0, **Removed in**
-n8n 3.0.
+Confirm the space's `.gitbook/tags.yaml` defines the `preview` tag (label and
+color) before relying on this — add it if missing. The frontmatter tag is a
+visual label only; it doesn't replace the hint, which is where you explain what
+"preview" means for this page.
 
-- Always name the version that deprecates or removes something. Never write
-  "soon" or "in the near future". If removal isn't scheduled, say so.
-- For a deprecated table entry, tag the identifier with `(deprecated)` and state
-  the version in the description:
+**Inline or passing mention:**
 
-  ```markdown
-  | `N8N_RUNNERS_ENABLED` (deprecated) | Boolean | `false` | Whether task runners are enabled. Deprecated from n8n 2.0; you no longer need to set it. Still required in 1.x, where you must set it to `true`. |
-  ```
+```markdown
+The **Streaming response** option is in preview and may change in future releases.
+```
 
-- Link to the matching [breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes)
-  or migration guide entry.
-
-**Node status.** Deprecated, removed, and versioned nodes are tracked on one page:
-[Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes).
-Link to it rather than scattering version notes across node pages. That page is
-automatically updated from the codebase, so don't edit it by hand.
+- Tie it to a version when it helps: "In preview from n8n 2.20.0".
+- Keep it in a separate sentence (or a separate hint) from any plan/version
+  availability note — don't fold preview wording into the availability sentence.
+- If an inline preview note needs more than one sentence, promote it to a
+  page- or section-level hint instead.
 
 ---
 
@@ -426,9 +509,10 @@ One custom rule enforces the versioning conventions above:
   an n8n version from an external service's version, so dismiss the occasional
   match on a third-party API version.
 
-The version inside a marker hint sits in bold text (`**Available from n8n 2.17.0**`),
-and Vale excludes bold text from linting, so `version-format` can't check it there.
-Get the format right by hand.
+The hint's bold title is always the fixed string `**Feature availability**` —
+the version number lives in the plain-text sentence below it (for example,
+"Canvas Groups are available from n8n 2.28.0"), so `version-format` does check
+it. Get the format right regardless; don't rely on linting alone to catch it.
 
 ### Lexi
 

@@ -166,7 +166,7 @@ Plan/platform and version limits share one documentation system, covered first b
 Document these at one of three scopes:
 
 * **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
-* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions], below.
+* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions), below.
 * **Table row:** one row among many, put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
 
 #### Feature availability hints
@@ -404,10 +404,10 @@ The setup comprises:
 
 You can run Vale locally on your machine as follows:
 
-1. Follow the Vale docs to [install Vale CLI](https://github.com/errata-ai/vale#installation).
+1. Follow the Vale docs to [install Vale CLI](https://github.com/ChrisChinchilla/vale-vscode).
 2. Choose whether to lint from the command line, or install a text editor plugin:
    1. Running `vale docs/` lints all Markdown files in the `docs` directory
-   2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/errata-ai/vale#installation) by ChrisChinchilla.
+   2. Or install a plugin and view problems automatically in your text editor. If using VS Code, install [vale-vscode](https://github.com/ChrisChinchilla/vale-vscode) by ChrisChinchilla.
 
 ## Frontmatter
 

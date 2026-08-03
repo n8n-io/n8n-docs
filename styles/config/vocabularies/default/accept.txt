@@ -67,6 +67,7 @@ Cron
 Datadog
 Databricks
 Datastore
+Daytona
 [Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication

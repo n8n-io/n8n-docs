@@ -156,7 +156,7 @@ This agent supports the following chat models:
 * [SendGrid](../../../app-nodes/n8n-nodes-base.sendgrid.md)
 * [SerpApi (Google Search)](../../sub-nodes/n8n-nodes-langchain.toolserpapi.md)
 * [Shopify](../../../app-nodes/n8n-nodes-base.shopify.md)
-* [Slack](../../../app-nodes/n8n-nodes-base.slack.md)
+* [Slack](../../../app-nodes/n8n-nodes-base.slack/README.md)
 * [Spotify](../../../app-nodes/n8n-nodes-base.spotify.md)
 * [Stripe](../../../app-nodes/n8n-nodes-base.stripe.md)
 * [Supabase](../../../app-nodes/n8n-nodes-base.supabase/README.md)

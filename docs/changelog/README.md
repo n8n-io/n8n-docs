@@ -623,9 +623,9 @@ n8n automatically totals the time from all Time Saved nodes executed during each
 <figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
 
 
-### n8n 2.27 — Authenticate multiple Microsoft nodes with one credential
+## Authenticate multiple Microsoft nodes with one credential
 
-**Released:** 2026-06-16
+**Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
 
 You can now use a single **Microsoft OAuth2 API** credential across Microsoft OneDrive, Excel, Outlook, Teams, To Do, and Graph Security nodes, instead of creating and maintaining a separate OAuth2 app registration for each service. In your Microsoft Entra tenant, you create one app registration, grant it the delegated permissions your workflows need, and then select **Microsoft OAuth2 (Graph)** in the Authentication dropdown of any supported node to reuse that credential. This reduces the number of app registrations and admin-consent flows your IT team has to manage.
 

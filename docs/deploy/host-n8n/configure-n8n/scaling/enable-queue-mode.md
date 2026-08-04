@@ -234,7 +234,7 @@ When disabling the webhook process in the main process, run the main process and
 
 ## Large webhook responses
 
-In queue mode a worker runs the execution, but the client that sent the webhook request stays connected to the main or webhook instance. A response from a **Respond to Webhook** node travels from the worker back to that instance inside a queue message, so Redis holds the whole response while the message is in flight.
+In queue mode, a worker runs the execution, but the client that sent the webhook request stays connected to the main or webhook instance. A response from a **Respond to Webhook** node travels from the worker back to that instance inside a queue message, so Redis holds the whole response while the message is in flight.
 
 `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` sets how large that message can be, in MiB. It defaults to `64`. Redis holds several copies of a response in flight, so budget about 1.5 times this value in Redis memory for each response in flight. Without offloading, a response above the limit fails the node.
 

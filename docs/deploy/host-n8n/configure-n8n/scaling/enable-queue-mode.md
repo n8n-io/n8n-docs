@@ -256,7 +256,7 @@ export N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true
 export N8N_DEFAULT_BINARY_DATA_MODE=s3
 ```
 
-n8n recommends `s3` or `azure` for large responses. Both stream the body, so the main instance holds one chunk at a time. Refer to [External storage](use-external-storage.md) for how to configure them. In `database` mode the main instance loads the whole body into memory before sending it, and the response passes through your primary database. In `filesystem` mode every instance needs to mount the same disk, which n8n doesn't recommend. The `default` mode keeps binary data in memory, so there's nothing for the main instance to read, and a response above the limit still fails the node.
+n8n recommends `s3` or `azure` for large responses. Both stream the body, so the main instance holds one chunk at a time. Refer to [External storage](use-external-storage.md) for how to configure them. In `database` mode, the main instance loads the whole body into memory before sending it, and the response passes through your primary database. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend. The `default` mode keeps binary data in memory, so there's nothing for the main instance to read, and a response above the limit still fails the node.
 
 n8n only offloads the response body. It measures the rest of the response, its headers and status code, against the same limit, so a response whose headers alone exceed the limit fails either way.
 

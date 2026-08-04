@@ -68,7 +68,7 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 {% hint style="info" %}
 **Database considerations**
 
-n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
+n8n recommends using PostgreSQL over SQLite. Refer to [Supported PostgreSQL versions](../choose-n8ns-database.md#supported-postgresql-versions) for n8n's supported PostgreSQL versions. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 {% endhint %}
 
 Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.

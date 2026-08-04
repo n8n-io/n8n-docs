@@ -60,7 +60,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 3. Configure the connection. For OAuth credentials, include the **Client ID**, **Client Secret**, and **OAuth Redirect URL** to register with the service.
 4. Select **Save**.
 
-Users with access to the project can now connect their own account to this credential.
+Any n8n user can now connect their own account to this credential. Users with project access connect directly, either by opening a node on the canvas or from the project's **Credentials** list. Users without project access are prompted to connect when they run a workflow that uses the credential.
 
 ## Connect your account
 

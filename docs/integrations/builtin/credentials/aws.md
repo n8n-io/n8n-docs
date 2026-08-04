@@ -100,9 +100,12 @@ You can use these credentials to authenticate the following nodes with enhanced 
 * [AWS DynamoDB](../app-nodes/n8n-nodes-base.awsdynamodb.md)
 * [AWS Elastic Load Balancing](../app-nodes/n8n-nodes-base.awselb.md)
 * [AWS IAM](../app-nodes/n8n-nodes-base.awsiam.md)
+* [AWS Lambda](../app-nodes/n8n-nodes-base.awslambda.md)
 * [AWS Rekognition](../app-nodes/n8n-nodes-base.awsrekognition.md)
 * [AWS S3](../app-nodes/n8n-nodes-base.awss3.md)
 * [AWS SES](../app-nodes/n8n-nodes-base.awsses.md)
+* [AWS SNS](../app-nodes/n8n-nodes-base.awssns.md)
+* [AWS SNS Trigger](../trigger-nodes/n8n-nodes-base.awssnstrigger.md)
 * [AWS SQS](../app-nodes/n8n-nodes-base.awssqs.md)
 * [AWS Textract](../app-nodes/n8n-nodes-base.awstextract.md)
 * [AWS Transcribe](../app-nodes/n8n-nodes-base.awstranscribe.md)
@@ -125,7 +128,7 @@ AWS Role Assumption allows you to securely access AWS resources by temporarily a
 * **Principle of least privilege:** Grant only the permissions needed for specific tasks
 * **Audit trail:** Better tracking of who accessed what resources
 
-n8n uses the official AWS SDK to make the STS `AssumeRole` call, and requests fresh temporary credentials when it signs node requests, so you don't need to manage their expiry. This differs from the **Temporary security credential** option on the AWS (IAM) credential, where you enter a static session token that n8n can't renew: when that token expires, you must enter a new one.
+n8n uses the official AWS SDK to make the STS `AssumeRole` call. It requests fresh temporary credentials when it signs node requests, so you don't need to manage their expiry. This differs from the **Temporary security credential** option on the AWS (IAM) credential, where you enter a static session token that n8n can't renew: when that token expires, you must enter a new one.
 
 ### Setting up AWS Assume Role credentials <a href="#setting-up-aws-assume-role-credentials" id="setting-up-aws-assume-role-credentials"></a>
 
@@ -178,7 +181,7 @@ If system credentials aren't available, provide these manually:
 
 ### Setup Steps <a href="#setup-steps" id="setup-steps"></a>
 
-1. Create the IAM Role in the target AWS account.
+1. Create the IAM Role in the target AWS account. This trust policy is for **Option 2: Manual STS Credentials**. If you use **Option 1: Use system credentials**, the `Principal` is the role n8n itself runs as. Refer to [Trust policy for system credentials](#trust-policy-for-system-credentials).
 
    ```json
    {
@@ -227,6 +230,12 @@ When n8n runs on AWS infrastructure, the infrastructure itself can provide an AW
 
 n8n reads these **system credentials** with the official AWS SDK credential providers, and uses them as the starting credentials for the **AWS (Assume Role)** credential when **Use System Credentials** is turned on. This works for all nodes that accept the AWS (Assume Role) credential, including the AWS Bedrock AI nodes.
 
+{% hint style="info" %}
+System credentials are always the starting point for a role assumption, never the identity n8n calls AWS with directly. You must still enter a **Role ARN**, and that role must trust the identity n8n runs as.
+
+If the role n8n already runs as has the permissions your workflows need, enter that same role's ARN and allow it to assume itself. Refer to [Trust policy for system credentials](#trust-policy-for-system-credentials).
+{% endhint %}
+
 ### Enabling access
 
 Access to system credentials is **disabled by default**. To enable it, set this environment variable on every n8n instance (main and workers):
@@ -248,10 +257,10 @@ n8n tries these sources in order and uses the first one that returns credentials
 | Order | Source | How n8n detects it | Typical platform |
 |---|---|---|---|
 | 1 | Environment variables | `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` (optionally `AWS_SESSION_TOKEN`) | Any |
-| 2 | IAM Roles for Service Accounts (IRSA) | `AWS_ROLE_ARN` and `AWS_WEB_IDENTITY_TOKEN_FILE` | Amazon EKS |
+| 2 | EKS IAM Roles for Service Accounts (IRSA) | `AWS_ROLE_ARN` and `AWS_WEB_IDENTITY_TOKEN_FILE` | Amazon EKS |
 | 3 | EKS Pod Identity | `AWS_CONTAINER_CREDENTIALS_FULL_URI` | Amazon EKS |
-| 4 | Container task role | `AWS_CONTAINER_CREDENTIALS_RELATIVE_URI` | Amazon ECS / Fargate |
-| 5 | Instance profile | EC2 instance metadata service (IMDSv2) | Amazon EC2 |
+| 4 | ECS or Fargate task role | `AWS_CONTAINER_CREDENTIALS_RELATIVE_URI` | Amazon ECS / Fargate |
+| 5 | EC2 instance profile | EC2 instance metadata service (IMDSv2) | Amazon EC2 |
 
 Things to keep in mind:
 
@@ -266,7 +275,7 @@ Things to keep in mind:
 
 #### Amazon EKS with Pod Identity
 
-[EKS Pod Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) is the newer alternative to IRSA. Install the Pod Identity Agent add-on and create a pod identity association between the n8n service account and an IAM role. No OIDC provider setup needed.
+[EKS Pod Identity](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) is the newer alternative to IRSA. Install the Pod Identity Agent add-on and create a pod identity association between the n8n service account and an IAM role. No OIDC provider setup is needed.
 
 #### Amazon ECS and Fargate
 
@@ -275,6 +284,36 @@ Assign a [task role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide
 #### Amazon EC2
 
 Attach an [instance profile](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) to the instance running n8n. n8n uses IMDSv2, so instances with IMDSv1 disabled work.
+
+### Trust policy for system credentials
+
+The role you enter as **Role ARN** must trust the identity n8n runs as: the IRSA role, the Pod Identity role, the ECS task role, or the EC2 instance role. Use that role's ARN as the `Principal`, not the account root.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::123456789012:role/n8n-service-account-role"
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "sts:ExternalId": "your-unique-external-id"
+        }
+      }
+    }
+  ]
+}
+```
+
+To find the ARN to use as the `Principal`, run `aws sts get-caller-identity` from inside the n8n container or instance.
+
+If the role n8n runs as already has the permissions your workflows need, use that same role as the **Role ARN** and add its own ARN to its trust policy as shown above. AWS requires this even when a role assumes itself.
+
+The role n8n runs as also needs `sts:AssumeRole` permission on the target role. Grant it on the specific roles workflows should use rather than on `*`.
 
 ### AWS China and GovCloud
 
@@ -299,5 +338,6 @@ If your instance uses an HTTP(S) proxy (`HTTPS_PROXY`, `HTTP_PROXY`, `NO_PROXY`)
 ### Troubleshooting
 
 * **"Access to AWS system credentials disabled, contact your administrator."**: The **Use System Credentials** option is on, but `N8N_AWS_SYSTEM_CREDENTIALS_ACCESS_ENABLED` isn't set to `true` on the server.
-* **The wrong identity is used**: Check the source order above. Environment variables beat IRSA, which beats Pod Identity, ECS, and EC2. A stray `AWS_ACCESS_KEY_ID` in the container is the most common cause.
+* **The wrong identity is used**: Environment variables beat IRSA, which beats Pod Identity, ECS, and EC2. A stray `AWS_ACCESS_KEY_ID` in the container is the most common cause. Refer to [Supported credential sources](#supported-credential-sources).
 * **Credential test fails on EKS**: Verify the service account annotation (IRSA) or the pod identity association, and confirm the pod received the injected environment variables (`kubectl exec <pod-name> -- env | grep AWS`).
+* **`AccessDenied` when calling `sts:AssumeRole`**: n8n found system credentials, but the target role rejected them. Check that the role's trust policy names the identity n8n runs as, and that the **External ID** matches the policy's condition. Refer to [Trust policy for system credentials](#trust-policy-for-system-credentials).

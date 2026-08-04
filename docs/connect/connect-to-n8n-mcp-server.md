@@ -442,7 +442,7 @@ http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 Here, replace:
 
 * `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-* `<YOUR_N8N_MCP_TOKEN>`: Your generated API key
+* `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Google ADK agent to n8n MCP server <a href="#connecting-google-adk-agent-to-n8n-mcp-server" id="connecting-google-adk-agent-to-n8n-mcp-server"></a>
 

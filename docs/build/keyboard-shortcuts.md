@@ -52,12 +52,16 @@ n8n provides keyboard shortcuts for some actions.
 
 - **Double click** on a node: open the node details
 - **Ctrl/Cmd** + **Double click** on a sub-workflow node: open the sub-workflow in a new tab
+- **Alt** + **g**: expand all groups
+- **Shift** + **Alt** + **g**: collapse all groups
 - **Ctrl/Cmd** + **a**: select all nodes
 - **Ctrl/Cmd** + **v**: paste nodes
 - **Shift** + **s**: add sticky note
 
 ### With one or more nodes selected in canvas <a href="#with-one-or-more-nodes-selected-in-canvas" id="with-one-or-more-nodes-selected-in-canvas"></a>
 
+ - **Alt** + **g**: expand selected groups (also works with nodes inside a group selected)
+ - **Shift** + **Alt** + **g**: collapse selected groups (also works with nodes inside a group selected)
  - **ArrowDown**: select sibling node below the current one
  - **ArrowLeft**: select node left of the current one
  - **ArrowRight**: select node right of the current one
@@ -73,6 +77,7 @@ n8n provides keyboard shortcuts for some actions.
  - **P**: pin data in node. Refer to [Data pinning](work-with-data/pin-and-mock-data.md) for more information.
  - **Shift** + **ArrowLeft**: select all nodes left of the current one
  - **Shift** + **ArrowRight**: select all nodes right of the current one
+ - **Space**: rename the selected group
  - **Ctrl/Cmd** + **Shift** + **o** on a sub-workflow node: open the sub-workflow in a new tab 
 
 ## Node panel <a href="#node-panel" id="node-panel"></a>

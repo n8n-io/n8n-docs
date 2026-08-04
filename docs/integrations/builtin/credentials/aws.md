@@ -153,7 +153,7 @@ Turn on **Use System Credentials** if the environment your n8n server runs in al
 2. EKS IAM Roles for Service Accounts (IRSA)
 3. EKS Pod Identity
 4. ECS or Fargate task role
-5. EC2 instance profile
+5. EC2 Instance profile
 
 This option requires your n8n administrator to enable system credentials access by setting the environment variable `N8N_AWS_SYSTEM_CREDENTIALS_ACCESS_ENABLED` to `true`. Refer to [Using AWS system credentials](#using-aws-system-credentials-federated-authentication) for setup details and security considerations.
 

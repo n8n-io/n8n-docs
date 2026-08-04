@@ -90,19 +90,15 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 
 ### Using OAuth (recommended) <a href="#using-oauth2" id="using-oauth2"></a>
 
-On the **OAuth** tab, use the **Your client** dropdown to pick your AI assistant, IDE, or CLI. n8n shows tailored setup steps grouped into:
-
-* **CLI**: Claude Code, Codex, Gemini CLI.
-* **Web**: Claude.ai, ChatGPT.
-* **IDE**: Cursor, VS Code, Windsurf.
-
-The setup steps depend on the client type:
-
-* **Web clients** show a **One-click setup** button that adds n8n to the client directly, and/or a **Server URL** to paste in yourself.
-* **CLI clients** show a command that installs and configures n8n in one step, a manual configuration snippet you can add to the client's configuration file instead, and an **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](#connecting-claude-code-to-n8n-mcp-server) and [Codex](#connecting-codex-cli-to-n8n-mcp-server) examples below for the exact commands).
-* **IDE clients** show a one-click install link (where the editor supports one), the **Server URL**, and a manual configuration snippet.
-
-After connecting, the client redirects you to n8n so you can approve access.
+1. Navigate to **Settings > Instance-level MCP**.
+2. In **Connection details**, select **Connect** to open the **Connect a client** dialog.
+3. Make sure the **OAuth (recommended)** tab is selected.
+4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
+5. Follow the steps shown for your client type:
+   * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client yourself.
+   * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](#connecting-claude-code-to-n8n-mcp-server) and [Codex](#connecting-codex-cli-to-n8n-mcp-server) examples below for the exact commands).
+   * **IDE clients**: select the one-click install link (where the editor supports one), or copy the **Server URL** and add the manual configuration snippet to the editor yourself.
+6. When the client redirects you to n8n, approve access to finish connecting it.
 
 #### Reviewing and revoking client access <a href="#revoking-client-access" id="revoking-client-access"></a>
 
@@ -115,17 +111,11 @@ Each connected client only has the permissions you granted it when it connected,
 
 ### Using API key <a href="#using-access-token" id="using-access-token"></a>
 
-1. Navigate to **Settings > Instance-level MCP. 
-2. In **Connection details**, select **Connect** to open the **Connect a client** dialog. 
-3. Go to the **API key** tab to view your instance server URL and personal access token. 
-
-Unlike the OAuth tab, this tab isn't client-specific: it shows the same server URL, token, and configuration snippet regardless of any specific client.
-
-When you first open the **API key** tab, n8n automatically generates a personal access token tied to your user account.
-
-{% hint style="info" %}
-Copy your token right away. On future visits, you'll only see a redacted value and the copy button will be disabled.
-{% endhint %}
+1. Navigate to **Settings > Instance-level MCP**.
+2. In **Connection details**, select **Connect** to open the **Connect a client** dialog.
+3. Switch to the **API key** tab. n8n automatically generates a personal access token tied to your user account the first time you open it.
+4. Copy what you need: the **Configuration JSON** block, already filled in with your server URL and an `Authorization: Bearer` header carrying your token, or the individual **Server URL** and access token values if your client doesn't use that JSON format (for example, Codex's TOML config). Once you leave this tab, n8n only shows a redacted token value, and you won't be able to copy it again unless you [rotate it](#rotating-your-token).
+5. Paste what you copied into your MCP client's configuration: drop the **Configuration JSON** straight in for clients that accept an `mcpServers` JSON snippet, or use the individual **Server URL** and token for clients that need a different format. This tab isn't client-specific, so the same values work no matter which client you're setting up (see the [examples](#examples) below for client-specific formats).
 
 #### Rotating your access token <a href="#rotating-your-token" id="rotating-your-token"></a>
 
@@ -317,7 +307,7 @@ The **Connect a client** dialog generates ready-to-use setup steps for Claude Co
 1. Navigate to **Settings** > **Connectors** in Claude Desktop.
 2. Click on **Add custom connector**.
 3. Enter the following details:
-   * **Name:** n8n
+   * **Name:** n8n MCP
    * **Remote MCP Server URL**: Your n8n base URL (shown on the **Instance-level MCP** page)
 4. Save the connector.
 5. When prompted, authorize Claude Desktop to access your n8n instance.

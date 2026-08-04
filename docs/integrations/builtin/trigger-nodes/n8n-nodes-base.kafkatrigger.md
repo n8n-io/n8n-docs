@@ -41,6 +41,12 @@ The Kafka Trigger can consume uncompressed messages and messages compressed with
 {% endhint %}
 
 {% hint style="info" %}
+**Deactivating a workflow**
+
+If you set **Resolve Offset** to **On Execution Completion**, **On Execution Success**, or **On Allowed Execution Statuses**, deactivating the workflow stops the trigger without waiting for executions that are already running. n8n doesn't commit the offsets for those messages, so Kafka redelivers them the next time the workflow is active.
+{% endhint %}
+
+{% hint style="info" %}
 **Examples and templates**
 
 For usage examples and templates to help you get started, refer to n8n's [Kafka Trigger integrations](https://n8n.io/integrations/kafka-trigger/) page.

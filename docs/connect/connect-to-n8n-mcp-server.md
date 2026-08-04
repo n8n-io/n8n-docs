@@ -98,7 +98,7 @@ On the **OAuth** tab, use the **Your client** dropdown to pick your AI assistant
 
 The setup steps depend on the client type:
 
-* **Web clients** show a **One-click setup** button that adds n8n to the client directly, plus the **Server URL** if you'd rather paste it in yourself.
+* **Web clients** show a **One-click setup** button that adds n8n to the client directly, and/or a **Server URL** to paste in yourself.
 * **CLI clients** show a command that installs and configures n8n in one step, a manual configuration snippet you can add to the client's configuration file instead, and an **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](#connecting-claude-code-to-n8n-mcp-server) and [Codex](#connecting-codex-cli-to-n8n-mcp-server) examples below for the exact commands).
 * **IDE clients** show a one-click install link (where the editor supports one), the **Server URL**, and a manual configuration snippet.
 
@@ -115,7 +115,11 @@ Each connected client only has the permissions you granted it when it connected,
 
 ### Using API key <a href="#using-access-token" id="using-access-token"></a>
 
-Use your instance server URL and your personal access token from the **API key** tab in the **Connect a client** dialog. Unlike the OAuth tab, this tab isn't client-specific: it shows the same server URL, token, and configuration snippet regardless of the client you picked.
+1. Navigate to **Settings > Instance-level MCP. 
+2. In **Connection details**, select **Connect** to open the **Connect a client** dialog. 
+3. Go to the **API key** tab to view your instance server URL and personal access token. 
+
+Unlike the OAuth tab, this tab isn't client-specific: it shows the same server URL, token, and configuration snippet regardless of any specific client.
 
 When you first open the **API key** tab, n8n automatically generates a personal access token tied to your user account.
 
@@ -332,7 +336,7 @@ Add the following entry to your `claude_desktop_config.json` file:
     "--streamableHttp",
     "https://<your-n8n-domain>/mcp-server/http",
     "--header",
-    "Authorization:Bearer <YOUR_N8N_MCP_API_KEY>"
+    "Authorization:Bearer <YOUR_N8N_MCP_TOKEN>"
     ]
   }
 }
@@ -378,7 +382,7 @@ Use the following CLI command:
 
 ```bash
 claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/http \
-  --header "Authorization: Bearer <YOUR_N8N_MCP_API_KEY>"
+  --header "Authorization: Bearer <YOUR_N8N_MCP_TOKEN>"
 ```
 
 Alternatively, add the following entry to your `claude.json` file:
@@ -390,7 +394,7 @@ Alternatively, add the following entry to your `claude.json` file:
             "type": "http",
             "url": "https://<your-n8n-domain>/mcp-server/http",
             "headers": {
-                "Authorization": "Bearer <YOUR_N8N_MCP_API_KEY>"
+                "Authorization": "Bearer <YOUR_N8N_MCP_TOKEN>"
             }
         }
     }
@@ -400,7 +404,7 @@ Alternatively, add the following entry to your `claude.json` file:
 Here, replace:
 
 * `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-* `<YOUR_N8N_MCP_API_KEY>`: Your generated API key
+* `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ### Connecting Codex CLI to n8n MCP server <a href="#connecting-codex-cli-to-n8n-mcp-server" id="connecting-codex-cli-to-n8n-mcp-server"></a>
 
@@ -442,13 +446,13 @@ experimental_use_rmcp_client = true
 
 [mcp_servers.n8n-mcp]
 url = "https://<your-n8n-domain>/mcp-server/http"
-http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_API_KEY>" }
+http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 ```
 
 Here, replace:
 
 * `<your-n8n-domain>`: Your n8n base URL (shown on the **Instance-level MCP** page)
-* `<YOUR_N8N_MCP_API_KEY>`: Your generated API key
+* `<YOUR_N8N_MCP_TOKEN>`: Your generated API key
 
 ### Connecting Google ADK agent to n8n MCP server <a href="#connecting-google-adk-agent-to-n8n-mcp-server" id="connecting-google-adk-agent-to-n8n-mcp-server"></a>
 

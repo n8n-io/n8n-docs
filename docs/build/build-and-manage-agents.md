@@ -235,6 +235,10 @@ Agents run on self-hosted n8n from version `2.32.3` (Beta). There are two ways t
 Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
 {% endhint %}
 
+{% hint style="warning" %}
+Agents aren't supported in queue mode yet. Agents run in queue mode, but we haven't tested it, and connecting channels (such as Telegram) can fail. Run agents in regular mode for now.
+{% endhint %}
+
 For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
 
 ### Agent executions and pricing

@@ -609,7 +609,7 @@ Each space has a single folder for all its images, at `.gitbook/assets/` in the 
 
 ```
 docs/                                     # docs root
-├── build/                                # space roo
+├── build/                                # space root
 │   ├── .gitbook/
 │   │   └── assets/                       # all images for this space live here
 │   │       └── workflow-overview.png
@@ -672,7 +672,7 @@ Use fenced code blocks with a language identifier for syntax highlighting:
 ```
 ````
 
-```typescrip
+```typescript
 // Your code here
 ```
 
@@ -680,14 +680,14 @@ GitBook supports [optional code block settings](https://gitbook.com/docs/creatin
 
 ````
 {% code title="MyNode.node.ts" overflow="wrap" lineNumbers="true" %}
-```typescrip
+```typescript
 // Your code here
 ```
 {% endcode %}
 ````
 
 {% code title="MyNode.node.ts" overflow="wrap" lineNumbers="true" %}
-```typescrip
+```typescript
 // Your code here
 ```
 {% endcode %}
@@ -733,7 +733,7 @@ If you want to add a header block, or title, to your hint, add a header block as
 {% hint style="info" %}
 ## This is the hint title/heading
 
-Some hint conten
+Some hint content.
 
 {% endhint %}
 ```
@@ -741,7 +741,7 @@ Some hint conten
 {% hint style="info" %}
 ### This is the hint title/heading
 
-Some hint conten
+Some hint content.
 {% endhint %}
 
 ### Collapsible blocks

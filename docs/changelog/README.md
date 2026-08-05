@@ -52,7 +52,7 @@ The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cr
 
 You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
 
-<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a prompt box asking What do you want to automate, with suggestions such as Score my leads and Process invoices."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a chat box asking what to automate, with suggestions like Score my leads."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
 
 AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
 
@@ -65,7 +65,7 @@ This feature is in **preview**. It can make mistakes, and its behavior may chang
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
 
 {% hint style="info" %}
-**Availability:** Cloud only. Self-hosted support is coming.
+**Availability:** n8n Cloud only. Self-hosted support is coming.
 {% endhint %}
 
 ***

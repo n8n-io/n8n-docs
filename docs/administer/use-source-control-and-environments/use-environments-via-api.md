@@ -1,13 +1,13 @@
 ---
-description: Use the n8n public API to preview, push, and pull source control changes between environments.
+description: Use the n8n Public API to preview, push, and pull source control changes between environments.
 layout:
   description:
     visible: false
 ---
 
-# Use environments programmatically with the public API
+# Use environments programmatically with the Public API
 
-You can drive n8n environments from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
+You can drive n8n environments from scripts and pipelines using the Public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
 
 This page explains how the source control API endpoints work together. It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
 
@@ -19,7 +19,7 @@ Source control and environments is an Enterprise feature. The n8n API isn't avai
 
 ## The endpoints
 
-The public API exposes three source control operations:
+The Public API exposes three source control operations:
 
 | Endpoint | Method | What it does |
 |----------|--------|--------------|
@@ -45,13 +45,13 @@ Scoping keys this way is how you enforce direction. A production instance that s
 
 ## Check the status, then act
 
-Don't push or pull blind. A push sends whatever differs between your instance and Git, so you should see that difference first. The `status` endpoint gives you that preview and its response has the same shape that `push` accepts. You can review the list, filter it, and pass the result straight back.
+Don't push blind. `push` requires a `fileNames` array and only commits the files you list there, so call `status` first to see what's eligible. Because `status` and `push` share the same file shape, you can pass its response straight back with no reshaping, whether you're sending all of it or a subset.
 
 The pattern is always the same:
 
-1. Call `status` to see what would change.
-1. Review or filter the returned files.
-1. Call `push` or `pull` to apply the change.
+1. Call `status` to see what's eligible.
+2. Decide what to include: the full list to push everything, or a subset to push only some of it.
+3. Call `push` with those files in `fileNames`.
 
 Call `status` with a `direction` query parameter to choose which side you're previewing:
 
@@ -92,7 +92,7 @@ curl --request GET \
 	--header 'X-N8N-API-KEY: <DEV-API-KEY>'
 ```
 
-**2. Push from development to Git.** Send a commit message. Omit `fileNames` to push everything eligible, or pass a subset of the files from step 1 to push only those:
+**2. Push from development to Git.** Send a commit message and the files to promote, listed in `fileNames`. Pass every file from step 1's `status` response to promote all of it, or only a subset to promote part of it:
 
 ```curl
 curl --request POST \
@@ -100,7 +100,16 @@ curl --request POST \
 	--header 'Content-Type: application/json' \
 	--header 'X-N8N-API-KEY: <DEV-API-KEY>' \
 	--data '{
-		"commitMessage": "Promote sales reporting workflows"
+		"commitMessage": "Promote sales reporting workflows",
+		"fileNames": [
+			{
+				"id": "1a2b3c",
+				"name": "Daily sales report",
+				"type": "workflow",
+				"status": "modified",
+				"file": "workflows/1a2b3c.json"
+			}
+		]
 	}'
 ```
 
@@ -127,7 +136,17 @@ If your instances use different Git branches, you can't promote directly. Push f
 
 ## Scheduled backup flow
 
-To version your instance in Git on a schedule, push everything on a timer. This is a common GitOps backup pattern. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger):
+To version your instance in Git on a schedule, fetch every eligible file and push all of it on a timer. This is a common GitOps backup pattern. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger):
+
+**1. Get every eligible file.** Call `status` with `direction=push`:
+
+```curl
+curl --request GET \
+	--location '<YOUR-INSTANCE-URL>/api/v1/source-control/status?direction=push' \
+	--header 'X-N8N-API-KEY: <YOUR-API-KEY>'
+```
+
+**2. Push the full list.** Pass everything the `status` response returned as `fileNames`:
 
 ```curl
 curl --request POST \
@@ -136,11 +155,20 @@ curl --request POST \
 	--header 'X-N8N-API-KEY: <YOUR-API-KEY>' \
 	--data '{
 		"commitMessage": "Scheduled backup",
-		"force": true
+		"force": true,
+		"fileNames": [
+			{
+				"id": "1a2b3c",
+				"name": "Daily sales report",
+				"type": "workflow",
+				"status": "modified",
+				"file": "workflows/1a2b3c.json"
+			}
+		]
 	}'
 ```
 
-Omitting `fileNames` pushes every eligible file, so each run commits a full snapshot of the resources n8n tracks in source control. This isn't a complete mirror of the instance. n8n commits only [certain resource types](push-and-pull-changes.md#what-gets-committed), so data like credential values and execution history isn't backed up. A push also overwrites what's in the branch, so make sure the instance holds the versions you want before each scheduled run, or you risk overwriting more recent changes.
+Build `fileNames` from the `status` response programmatically rather than hardcoding it, since the set of eligible files changes between runs. Each run then commits a full snapshot of the resources n8n tracks in source control. This isn't a complete mirror of the instance. n8n commits only [certain resource types](push-and-pull-changes.md#what-gets-committed), so data like credential values and execution history isn't backed up. A push also overwrites what's in the branch, so make sure the instance holds the versions you want before each scheduled run, or you risk overwriting more recent changes.
 
 ## Push specific files
 

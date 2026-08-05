@@ -86,9 +86,9 @@ To configure dynamic time saved:
 When you use dynamic time saved, n8n adds up the time from all Time Saved nodes that execute during a workflow run to calculate the total time saved for that execution.
 
 {% hint style="info" %}
-**Subworkflow support**
+**Sub-workflow and error workflow support**
 
-Time saved tracking currently only works on parent workflows. Time saved from subworkflows isn't currently supported, with plans to support this in a future release.
+Time saved tracking currently only works on parent workflows. Time saved from sub-workflows isn't currently supported, with plans to support this in a future release. Error workflow executions don't contribute to Time saved, even though n8n includes them in the other insights metrics.
 {% endhint %}
 
 ## Disable or configure insights metrics collection <a href="#disable-or-configure-insights-metrics-collection" id="disable-or-configure-insights-metrics-collection"></a>
@@ -112,7 +112,9 @@ Raising those thresholds above the defaults keeps finer detail longer. That adds
 
 ### Which executions do n8n use to calculate the values in the insights banner and dashboard? <a href="#which-executions-do-n8n-use-to-calculate-the-values-in-the-insights-banner-and-dashboard" id="which-executions-do-n8n-use-to-calculate-the-values-in-the-insights-banner-and-dashboard"></a>
 
-n8n insights only collects data from production executions (for example, those from active workflows triggered on a schedule or a webhook) from the main (parent) workflow. This means that it doesn't count manual (test) executions or executions from sub-workflows or error workflows.
+Insights collects data from production executions, for example those from published workflows triggered on a schedule or a webhook. This includes error workflow executions. It doesn't include manual (test) executions or sub-workflow executions.
+
+n8n records an error workflow execution's own outcome and run time against the error workflow itself, not the workflow that failed. This affects total executions, failure metrics, and run time average. In n8n 2.23.0 and later, error workflow executions don't contribute to Time saved.
 
 ### Does n8n use historic execution data when upgrading to a version with insights? <a href="#does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights" id="does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights"></a>
 

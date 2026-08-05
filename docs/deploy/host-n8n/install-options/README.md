@@ -9,7 +9,7 @@ layout:
 [install-from-command-line.md](install-from-command-line.md)
 {% endcontent-ref %}
 
-{% content-ref url="install-with-npm.md" %}
+{% content-ref url="install-using-docker-compose.md" %}
 [install-using-docker-compose.md](install-using-docker-compose.md)
 {% endcontent-ref %}
 

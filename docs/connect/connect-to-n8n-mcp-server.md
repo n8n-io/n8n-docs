@@ -54,16 +54,26 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ## Enabling MCP access <a href="#enabling-mcp-access" id="enabling-mcp-access"></a>
 
+{% hint style="info" %}
+**Available from n8n 2.33.0**
+
+The settings layout described below (**Connection details**, **Access**, **Connected clients**), the **Connect a client** dialog, and **Allowed callback URLs** replace the previous single-page MCP settings screen. On older versions, this page shows a simpler layout without per-client setup steps.
+{% endhint %}
+
 ### For Cloud and self-hosted instances <a href="#for-cloud-and-self-hosted-instances" id="for-cloud-and-self-hosted-instances"></a>
 
 1. Navigate to **Settings > Instance-level MCP**.
 2. Select **Enable MCP access** (requires instance owner or admin permissions).
+
+![The Instance-level MCP page before MCP is enabled, showing the Enable MCP access button](.gitbook/assets/mcp-enable-screen.png)
 
 Once enabled, the page groups settings into three sections:
 
 * **Connection details**: shows the **MCP status** and a **Connect** button that opens setup steps for your MCP client.
 * **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients. Select **Workflows exposed** to manage which workflows clients can access, or **Agents exposed** to manage which agents clients can access. n8n grants permissions per client, not all-or-nothing for every connection, see [Reviewing and revoking client access](#revoking-client-access). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
 * **Connected clients**: shows how many clients currently have access. Select **View all** to manage or revoke access for individual clients.
+
+![The Instance-level MCP page after MCP is enabled, showing Connection details, Access, and Connected clients](.gitbook/assets/mcp-enabled-screen.png)
 
 **To disable:** In **Connection details**, select the **MCP status** control and choose **Disable**. n8n asks you to confirm, since disabling disconnects every connected client and revokes its access. You can turn MCP access back on later.
 
@@ -220,6 +230,8 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 
 {% hint style="info" %}
+**Available from n8n 2.34.0**
+
 Agents are a separate feature from workflows, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). This section only applies if agents are available on your instance.
 {% endhint %}
 

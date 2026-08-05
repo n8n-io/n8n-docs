@@ -198,7 +198,7 @@ Full setup steps, including which model providers are supported, are in [setting
 | Symptom | Likely cause |
 |---|---|
 | `sandbox-api` or `sandbox-runner-1` fail to start, cert errors | `sandbox-certs` didn't complete. Check `docker compose logs sandbox-certs`. |
-| `sandbox-api` never becomes `healthy` | Check its logs; also confirm `wget` actually exists in that image (see note in Step 3). |
+| `sandbox-api` never becomes `healthy` | Check its logs; also confirm `wget` actually exists in that image. |
 | `sandbox-runner-1` crash-loops on startup with `... must be set` errors | It's missing required environment variables, most commonly `SANDBOX_RUNNER_API_KEYS` or `SANDBOX_RUNNER_REGISTRATION_TOKEN`. For the full list of environment variables the runner requires, run `strings /usr/local/bin/sandbox-runner \| grep -oE 'SANDBOX_[A-Z_]+ must be set'` inside the runner container. |
 | Runner never registers with the API | `SANDBOX_RUNNER_REGISTRATION_TOKEN` mismatch, or `SANDBOX_RUNNER_API_GRPC_ADDR` wrong. |
 | n8n's sandbox calls fail | Sandbox URL/key in `.env` doesn't match `sandbox-api`'s address or `SANDBOX_API_KEYS`. |

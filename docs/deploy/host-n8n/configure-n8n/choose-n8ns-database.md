@@ -35,7 +35,7 @@ The following environment variables get used by all databases:
 
 ## PostgresDB <a href="#postgresdb" id="postgresdb"></a>
 
-### Supported PostgreSQL versions
+### Supported PostgreSQL versions <a href="#supported-postgresql-versions" id="supported-postgresql-versions"></a>
 
 n8n supports:
 

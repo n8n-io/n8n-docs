@@ -163,7 +163,15 @@ curl --request POST \
 				"type": "workflow",
 				"status": "modified",
 				"file": "workflows/1a2b3c.json"
-			}
+			},
+			{
+				"id": "4d5e6f",
+				"name": "Customer onboarding",
+				"type": "workflow",
+				"status": "new",
+				"file": "workflows/4d5e6f.json"
+			},
+			...
 		]
 	}'
 ```

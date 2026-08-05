@@ -9,7 +9,7 @@ layout:
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-script install](/deploy/host-n8n/install-options/install-from-command-line) instead; it sets up everything below automatically.
+If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-script install](/deploy/host-n8n/install-options/install-from-command-line.md) instead; it sets up everything below automatically.
 
 ## What you need before you start
 

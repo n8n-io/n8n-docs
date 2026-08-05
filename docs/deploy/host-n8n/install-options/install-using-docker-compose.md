@@ -167,7 +167,7 @@ docker compose logs sandbox-api | grep -i runner
 curl -sf http://localhost:5678/healthz
 ```
 
-Launch n8n by pointing your web browser to `https://localhost:5678`
+Launch n8n by pointing your web browser to `http://localhost:5678`
 
 ## Optional: Turn on the AI Assistant
 

@@ -45,7 +45,7 @@ Scoping keys this way is how you enforce direction. A production instance that s
 
 ## Check the status, then act
 
-Don't push blind. `push` requires a `fileNames` array and only commits the files you list there, so call `status` first to see what's eligible. Because `status` and `push` share the same file shape, you can pass its response straight back with no reshaping, whether you're sending all of it or a subset.
+Don't push blind. `push` requires a `fileNames` array and only commits the files you list there, so call `status` first to see what's eligible. Because `status` and `push` share the same file shape, you can pass its response straight back with no reshaping, whether you're sending all or a subset.
 
 The pattern is always the same:
 
@@ -92,7 +92,7 @@ curl --request GET \
 	--header 'X-N8N-API-KEY: <DEV-API-KEY>'
 ```
 
-**2. Push from development to Git.** Send a commit message and the files to promote, listed in `fileNames`. Pass every file from step 1's `status` response to promote all of it, or only a subset to promote part of it:
+**2. Push from development to Git.** Send a commit message and the files to promote, listed in `fileNames`. Pass every file from step 1's `status` response to promote in entirety, or a subset to promote part of it:
 
 ```curl
 curl --request POST \
@@ -136,7 +136,7 @@ If your instances use different Git branches, you can't promote directly. Push f
 
 ## Scheduled backup flow
 
-To version your instance in Git on a schedule, fetch every eligible file and push all of it on a timer. This is a common GitOps backup pattern. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger):
+To version your instance in Git on a schedule, fetch every eligible file and push everything on a timer. This is a common GitOps backup pattern. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger):
 
 **1. Get every eligible file.** Call `status` with `direction=push`:
 
@@ -168,7 +168,7 @@ curl --request POST \
 	}'
 ```
 
-Build `fileNames` from the `status` response programmatically rather than hardcoding it, since the set of eligible files changes between runs. Each run then commits a full snapshot of the resources n8n tracks in source control. This isn't a complete mirror of the instance. n8n commits only [certain resource types](push-and-pull-changes.md#what-gets-committed), so data like credential values and execution history isn't backed up. A push also overwrites what's in the branch, so make sure the instance holds the versions you want before each scheduled run, or you risk overwriting more recent changes.
+Build `fileNames` from the `status` response programmatically rather than building it yourself, since the set of eligible files changes between runs. Each run then commits a full snapshot of the resources n8n tracks in source control. This isn't a complete mirror of the instance. n8n commits only [certain resource types](push-and-pull-changes.md#what-gets-committed), so data like credential values and execution history isn't backed up. A push also overwrites what's in the branch, so make sure the instance holds the versions you want before each scheduled run, or you risk overwriting more recent changes.
 
 ## Push specific files
 

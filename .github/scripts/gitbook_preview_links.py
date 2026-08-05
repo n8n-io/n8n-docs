@@ -267,9 +267,14 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
 
     for f in changed:
         filename = f.get("filename", "")
+        # Skip removals and non-page artifacts entirely. Assets (images, etc.),
+        # nav (SUMMARY.md), and GitBook config are *expected* not to be pages, so
+        # listing them under "not published as pages" is noise. The non-page note
+        # is reserved for real content pages a contributor forgot to add to nav.
         if f.get("status") == "removed" or not filename.endswith(".md"):
-            if f.get("status") != "removed" and filename:
-                non_pages.append(filename)
+            continue
+        is_gitbook_config = "/.gitbook/" in filename and "/.gitbook/includes/" not in filename
+        if Path(filename).name == "SUMMARY.md" or is_gitbook_config:
             continue
 
         if "/.gitbook/includes/" in filename:
@@ -280,12 +285,15 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
             reusable_blocks.append((name, pages, len(pages)))
             continue
 
-        if Path(filename).name == "SUMMARY.md" or "/.gitbook/" in filename:
-            non_pages.append(filename)
-            continue
-
         space = space_of(filename)
+        if space is None:
+            # A .md file outside docs/ (e.g. skills/*.md, a top-level README).
+            # It isn't a docs-space page, so there's no preview to link — and
+            # in_summary() would choke on the None space. Nothing to do.
+            continue
         if not in_summary(space, filename):
+            # A real content .md that isn't in the space's SUMMARY.md — the one
+            # actionable case: GitBook won't publish it until it's added to nav.
             non_pages.append(filename)
         elif space in spaces:
             direct.setdefault(space, []).append(filename)
@@ -295,20 +303,20 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
         else:
             non_pages.append(filename)
 
-    out = [MARKER, "## 📖 GitBook preview for this PR", ""]
+    out = [MARKER, "## 🔗 GitBook page previews", ""]
 
     if not direct and not reusable_blocks and not pending:
-        out.append("No standalone page previews for this PR's changes.")
+        out.append("No page previews to show for this PR's changes yet.")
         _append_extras(out, spaces, non_pages, unresolved_reusable)
         return "\n".join(out).rstrip() + "\n"
 
     # Pages changed directly — deep-linked into this PR's GitBook revision.
     if direct:
-        out.append("Pages you changed, deep-linked into this PR's GitBook revision:")
+        out.append("> 👉 **Jump straight to each page you changed** in this PR's GitBook preview:")
         out.append("")
         for space in sorted(direct):
             info = spaces[space]
-            out.append(f"### {space}")
+            out.append(f"### 📂 {space}")
             lines = [page_line(info, f) for f in sorted(direct[space])]
             if len(lines) > SPACE_COLLAPSE_AFTER:
                 out.append(f"<details><summary>{len(lines)} pages changed</summary>")
@@ -324,7 +332,7 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
     # (the actual change) and list the live pages it renders on (blast radius).
     if reusable_blocks:
         diff = spaces.get("reusable-content", {}).get("editor_url")
-        out.append("### Reusable content")
+        out.append("### ♻️ Reusable content")
         out.append("GitBook previews the reusable block itself, not the pages that "
                    "embed it. Links below are the block diff plus the **live** pages "
                    "it renders on.")
@@ -348,7 +356,7 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
     if pending:
         total_pending = sum(len(v) for v in pending.values())
         spaces_list = ", ".join(f"`{s}`" for s in sorted(pending))
-        out.append(f"⏳ GitBook is still building the preview for {spaces_list} — "
+        out.append(f"> ⏳ GitBook is still building the preview for {spaces_list} — "
                    f"{total_pending} changed page(s). This comment updates when the "
                    f"build finishes.")
         out.append("")
@@ -366,12 +374,13 @@ def _append_extras(out, spaces, non_pages, unresolved_reusable):
                    + ", ".join(f"`{p}`" for p in sorted(unresolved_reusable)))
     if non_pages:
         out.append("")
-        out.append(f"<sub>{len(non_pages)} other changed file(s) aren't standalone "
-                   f"pages (nav, assets, or unlisted): "
+        out.append(f"> ⚠️ **{len(non_pages)} changed page(s) aren't in the nav** — "
+                   f"not listed in the space's `SUMMARY.md`, so GitBook won't publish "
+                   f"them until they're added there: "
                    + ", ".join(f"`{p}`" for p in sorted(non_pages)[:10])
-                   + (" …" if len(non_pages) > 10 else "") + "</sub>")
+                   + (" …" if len(non_pages) > 10 else ""))
     out.append("")
-    out.append("<sub>Preview links follow this PR's GitBook revision · comment updates on each push</sub>")
+    out.append("<sub>🔄 Links follow this PR's GitBook revision · this comment updates on every push</sub>")
 
 
 def main() -> int:

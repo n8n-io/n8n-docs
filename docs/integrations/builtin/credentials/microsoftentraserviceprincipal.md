@@ -20,6 +20,7 @@ The Microsoft Entra Service Principal credential gives n8n app-only access to Mi
 You can use these credentials to authenticate the following nodes:
 
 * [Microsoft Excel (OneDrive)](../app-nodes/n8n-nodes-base.microsoftexcel.md)
+* [Microsoft Excel (SharePoint)](../app-nodes/n8n-nodes-base.microsoftexcelsharepoint.md)
 * [Microsoft OneDrive](../app-nodes/n8n-nodes-base.microsoftonedrive.md)
 * [Microsoft OneDrive Trigger](../trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md)
 * [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
@@ -31,7 +32,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Node version requirements**
 
-The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. n8n plans to support the Microsoft SharePoint node.
+The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from version 1. n8n plans to support the Microsoft SharePoint node.
 {% endhint %}
 
 ## Prerequisites

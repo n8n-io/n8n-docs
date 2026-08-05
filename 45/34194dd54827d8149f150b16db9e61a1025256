@@ -1,0 +1,19 @@
+nav.yml
+  s_f39bcf6c409a67::t_fad385921a9781 1282
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "4534194dd54827d8149f150b16db9e61a1025256",
+  "prompts": {},
+  "sessions": {
+    "s_f39bcf6c409a67": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "18dcf6bc-c0b8-4a1f-bc3b-c502f1400148",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

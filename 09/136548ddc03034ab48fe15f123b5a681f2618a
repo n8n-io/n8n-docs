@@ -1,0 +1,28 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.slack/approvals.md
+  s_4f46c8dd42276e::t_cead333ad39a2e 66
+  s_4f46c8dd42276e::t_f3fdbada250236 83-84,88
+  s_4f46c8dd42276e::t_84171410ec66ca 26
+  s_4f46c8dd42276e::t_4c99e60553fa9e 44
+  s_4f46c8dd42276e::t_639cdf759263b3 38
+  s_4f46c8dd42276e::t_584b135ac71880 104
+  s_4f46c8dd42276e::t_c4964072669179 13,15
+  s_4f46c8dd42276e::t_3a38d3c20ee454 35
+  s_4f46c8dd42276e::t_74b15aa98f7052 96
+  s_4f46c8dd42276e::t_ac6b00515a96b2 111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "09136548ddc03034ab48fe15f123b5a681f2618a",
+  "prompts": {},
+  "sessions": {
+    "s_4f46c8dd42276e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51c2f211-ded9-4850-93a9-f427649d0cea",
+        "model": "claude-fable-5"
+      },
+      "human_author": null
+    }
+  }
+}

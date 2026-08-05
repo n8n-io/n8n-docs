@@ -1,0 +1,22 @@
+docs/integrations/builtin/credentials/schemaregistry.md
+  s_b874bfae5cbe1c::t_fc7b65899b0bf1 15
+  s_b874bfae5cbe1c::t_29e3e5437e1d34 20
+styles/config/vocabularies/default/accept.txt
+  s_b874bfae5cbe1c::t_04953cb5b5adaa 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4947f1a996493dd53f8cfb85535db2c7109f2fd1",
+  "prompts": {},
+  "sessions": {
+    "s_b874bfae5cbe1c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3edf96de-b41a-4c24-b80d-bd021acf77bb",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

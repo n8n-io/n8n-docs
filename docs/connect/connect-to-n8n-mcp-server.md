@@ -91,6 +91,12 @@ This action removes MCP endpoints and hides all related UI elements.
 
 ## Connecting MCP clients <a href="#setting-up-mcp-authentication" id="setting-up-mcp-authentication"></a>
 
+{% hint style="info" %}
+**Available from n8n 2.33.0**
+
+Earlier versions don't show per-client connection setup steps. Use the manual instructions in [Examples](#examples) to configure your client instead.
+{% endhint %}
+
 In **Connection details**, select **Connect** to open the **Connect a client** dialog, then choose an authentication method: [OAuth (recommended)](#using-oauth2) or [API key](#using-access-token).
 
 ### Using OAuth (recommended) <a href="#using-oauth2" id="using-oauth2"></a>
@@ -100,8 +106,8 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 3. Make sure the **OAuth (recommended)** tab is selected.
 4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
 5. Follow the steps shown for your client type:
-   * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client yourself.
-   * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](#connecting-claude-code-to-n8n-mcp-server) and [Codex](#connecting-codex-cli-to-n8n-mcp-server) examples below for the exact commands).
+   * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client's own connector settings yourself.
+   * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](#connecting-claude-code-to-n8n-mcp-server) and [Codex](#connecting-codex-cli-to-n8n-mcp-server) examples for the exact commands).
    * **IDE clients**: select the one-click install link (where the editor supports one), or copy the **Server URL** and add the manual configuration snippet to the editor yourself.
 6. When the client redirects you to n8n, approve access to finish connecting it.
 
@@ -295,7 +301,7 @@ The [n8n-io/skills](https://github.com/n8n-io/skills) repository has up-to-date 
 ## Examples <a href="#examples" id="examples"></a>
 
 {% hint style="info" %}
-The **Connect a client** dialog available from n8n 2.33.0 generates ready-to-use setup steps for Claude Code, Codex, Gemini CLI, Claude.ai, ChatGPT, Cursor, VS Code, and Windsurf. The manual examples below remain useful for clients not covered by the dialog, such as Lovable and Google ADK agents, or if you prefer to configure a client by hand.
+The **Connect a client** dialog (available from n8n 2.33.0) shows these same setup steps interactively for Claude Code, Codex, Gemini CLI, Claude.ai, ChatGPT, Cursor, VS Code, and Windsurf. The examples below spell out the exact commands and configuration for each client, which is useful if you're reading this page without access to a live n8n instance, or configuring a client by hand. Claude.ai and ChatGPT aren't listed separately below: both only need the **Server URL** pasted into their own web-based connector settings, with no client-side configuration file. Lovable and Google ADK agents aren't in the dialog at all, so their examples below are the only setup instructions for those clients.
 {% endhint %}
 
 ### Connecting Lovable to n8n MCP server <a href="#connecting-lovable-to-n8n-mcp-server" id="connecting-lovable-to-n8n-mcp-server"></a>
@@ -451,6 +457,106 @@ Here, replace:
 
 * `<your-n8n-domain>`: Your n8n domain, without a path — copy the **Server URL** shown in the **Connect a client** dialog, but drop the `/mcp-server/http` suffix
 * `<YOUR_N8N_MCP_TOKEN>`: Your generated token
+
+### Connecting Gemini CLI to n8n MCP server <a href="#connecting-gemini-cli-to-n8n-mcp-server" id="connecting-gemini-cli-to-n8n-mcp-server"></a>
+
+Use the following CLI command:
+
+```bash
+gemini mcp add --transport http n8n https://<your-n8n-domain>/mcp-server/http
+```
+
+Alternatively, add the following entry to your `~/.gemini/settings.json` file:
+
+```json
+{
+    "mcpServers": {
+        "n8n": {
+            "httpUrl": "https://<your-n8n-domain>/mcp-server/http"
+        }
+    }
+}
+```
+
+Here, replace:
+
+* `<your-n8n-domain>`: Your n8n domain, without a path — copy the **Server URL** shown in the **Connect a client** dialog, but drop the `/mcp-server/http` suffix
+
+Run `/mcp` in Gemini CLI and select **n8n** to complete the OAuth authorization.
+
+### Connecting Cursor to n8n MCP server <a href="#connecting-cursor-to-n8n-mcp-server" id="connecting-cursor-to-n8n-mcp-server"></a>
+
+In the **Connect a client** dialog, select **Cursor** from **Your client**, then select **One-click setup** to open Cursor and add the n8n server automatically. Approve access when Cursor redirects you back to n8n.
+
+Alternatively, add the following entry to your `~/.cursor/mcp.json` file (or the project's `.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "n8n": {
+      "type": "streamable-http",
+      "url": "https://<your-n8n-domain>/mcp-server/http"
+    }
+  }
+}
+```
+
+{% hint style="warning" %}
+Cursor treats a plain `"http"` type as SSE, not streamable HTTP. Use `"streamable-http"` exactly as shown, or Cursor won't connect to n8n's endpoint correctly.
+{% endhint %}
+
+Here, replace:
+
+* `<your-n8n-domain>`: Your n8n domain, without a path — copy the **Server URL** shown in the **Connect a client** dialog, but drop the `/mcp-server/http` suffix
+
+### Connecting VS Code to n8n MCP server <a href="#connecting-vs-code-to-n8n-mcp-server" id="connecting-vs-code-to-n8n-mcp-server"></a>
+
+In the **Connect a client** dialog, select **VS Code** from **Your client**, then select **One-click setup** to open VS Code and add the n8n server automatically. Approve access when VS Code redirects you back to n8n.
+
+Alternatively, add the following entry to your workspace's `.vscode/mcp.json` file:
+
+```json
+{
+  "servers": {
+    "n8n": {
+      "type": "http",
+      "url": "https://<your-n8n-domain>/mcp-server/http"
+    }
+  }
+}
+```
+
+{% hint style="info" %}
+VS Code's MCP config uses a top-level `servers` key, not `mcpServers` like the other clients on this page.
+{% endhint %}
+
+Here, replace:
+
+* `<your-n8n-domain>`: Your n8n domain, without a path — copy the **Server URL** shown in the **Connect a client** dialog, but drop the `/mcp-server/http` suffix
+
+### Connecting Windsurf to n8n MCP server <a href="#connecting-windsurf-to-n8n-mcp-server" id="connecting-windsurf-to-n8n-mcp-server"></a>
+
+Add the following entry to your `~/.codeium/windsurf/mcp_config.json` file:
+
+```json
+{
+  "mcpServers": {
+    "n8n": {
+      "serverUrl": "https://<your-n8n-domain>/mcp-server/http"
+    }
+  }
+}
+```
+
+{% hint style="info" %}
+Windsurf's config uses a `serverUrl` field instead of `url`.
+{% endhint %}
+
+Here, replace:
+
+* `<your-n8n-domain>`: Your n8n domain, without a path — copy the **Server URL** shown in the **Connect a client** dialog, but drop the `/mcp-server/http` suffix
+
+Approve access when Windsurf redirects you to n8n on its first connection attempt.
 
 ### Connecting Google ADK agent to n8n MCP server <a href="#connecting-google-adk-agent-to-n8n-mcp-server" id="connecting-google-adk-agent-to-n8n-mcp-server"></a>
 

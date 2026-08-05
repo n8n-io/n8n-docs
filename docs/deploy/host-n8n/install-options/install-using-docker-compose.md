@@ -5,12 +5,20 @@ layout:
     visible: false
 ---
 
-## Prerequisites
+## Who this is for
 
-- Docker Engine and Compose v2 installed. Run `docker compose version` to check your Compose version.
-- At least 4 GB RAM / 2 vCPU: `sandbox-runner-1` runs Docker-in-Docker, which is heavier than a typical container.
+This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-> **Windows users:** Use WSL with either Docker Desktop (WSL2 backend) or Docker Engine installed directly in your Linux distro. Keep your project folder inside the WSL filesystem (for example, `~/n8n`), not under `/mnt/c/...` — bind mounts across that boundary are slow and can cause permission issues.
+If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-script install](/deploy/host-n8n/install-options/install-from-command-line) instead; it sets up everything below automatically.
+
+## What you need before you start
+
+- Docker Engine and Docker Compose v2. Run `docker compose version` to check.
+- At least 4 GB of RAM and 2 vCPUs. The sandbox that runs AI-generated code (`sandbox-runner-1`) uses Docker-in-Docker, which needs more headroom than a typical container.
+
+{% hint style="info" %}
+**Windows users:** Use WSL, with either Docker Desktop (WSL2 backend) or Docker Engine installed directly in your Linux distro. Keep your project folder inside the WSL filesystem (for example, `~/n8n`), not under `/mnt/c/...`. Bind mounts across that boundary are slow and can cause permission issues.
+{% endhint %}
 
 ## Step 1: Create a project folder
 
@@ -20,13 +28,9 @@ mkdir n8n && cd n8n
 
 ## Step 2: Create `.env`
 
-Create a file named `.env` with your secrets. Keep this file out of version control.
+This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
-# n8n / model access
-N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
-INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
-
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
 SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
@@ -36,7 +40,11 @@ SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
 N8N_INSTANCE_AI_SANDBOX_API_KEY=change-me-api-key
 ```
 
+You don't need an AI provider key yet; see [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) below once everything's running.
+
 ## Step 3: Create `compose.yml`
+
+This defines every service you're setting up: n8n itself, plus the sandbox stack that lets the AI Assistant safely run code.
 
 ```yaml
 volumes:
@@ -126,6 +134,17 @@ services:
       N8N_INSTANCE_AI_SANDBOX_API_URL: http://sandbox-api:8080
 ```
 
+## What you've just set up
+
+| Component | What it's for |
+|---|---|
+| **n8n** | The workflow editor itself, available at `http://localhost:5678`. |
+| **sandbox-certs** | Runs once to generate the TLS certificates the other sandbox services need, then exits. |
+| **sandbox-api** | The control plane n8n talks to when the AI Assistant needs to run code. |
+| **sandbox-runner-1** | Does the actual work — a privileged Docker-in-Docker container that creates and runs the sandboxes. |
+
+There's no database service defined here — n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production setup with Postgres, queue mode, and persistent storage, see the [Docker Compose deployment guide](https://docs.n8n.io/hosting/).
+
 ## Step 4: Start everything
 
 ```bash
@@ -150,6 +169,29 @@ curl -sf http://localhost:5678/healthz
 
 Launch n8n by pointing your web browser to `https://localhost:5678`
 
+## Optional: Turn on the AI Assistant
+
+Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use:
+
+1. Add your AI provider key to `.env`:
+
+   ```
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+   ```
+
+2. Restart n8n so it picks up the change:
+
+   ```bash
+   docker compose up -d n8n
+   ```
+
+By default, the assistant has no web search configured in this setup (there's no bundled search service in the compose file above). To enable it, add your Brave Search key to `.env` as well:
+
+```
+INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+```
+
+Full setup steps, including which model providers are supported, are in [setting up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant).
 
 ## Troubleshooting
 

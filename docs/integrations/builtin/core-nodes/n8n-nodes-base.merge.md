@@ -29,7 +29,7 @@ The n8n team overhauled this node in n8n 0.194.0. This document reflects the lat
 {% hint style="info" %}
 **Minor changes in 1.49.0**
 
-n8n version 1.49.0 introduced the option to add more than two inputs. Older versions only support up to two inputs. If you're running an older version and want to combine multiple inputs in these versions, use the [Code node](https://deploy-preview-2225--n8n-docs.netlify.app/code/code-node/).
+n8n version 1.49.0 introduced the option to add more than two inputs. Older versions only support up to two inputs. If you're running an older version and want to combine multiple inputs in these versions, use the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 
 The **Mode > SQL Query** feature was also added in n8n version 1.49.0 and isn't available in older versions.
 {% endhint %}
@@ -114,6 +114,37 @@ SELECT * FROM input1 LEFT JOIN input2 ON input1.name = input2.id
 ```
 
 Data from previous nodes are available as tables and you can use them in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements) for a full list of supported SQL statements. 
+
+#### Use query parameters <a href="#use-query-parameters" id="use-query-parameters"></a>
+
+When creating a SQL query in the Merge node, you can use the **Query Parameters** field in the **Options** section to load values into the query. n8n treats query parameter values as data, which helps avoid changing the SQL query structure with dynamic values.
+
+For example, you want to find a person by their name. Given the following data in `input1`:
+
+```js
+[
+    {
+        "name": "Alex",
+        "age": 21
+    },
+    {
+        "name": "Jamie",
+        "age": 33
+    }
+]
+```
+
+You can write a query with `?` placeholders:
+
+```sql
+SELECT * FROM input1 WHERE name = ? AND age > ?;
+```
+
+Then in **Query Parameters**, provide the values to use. You can provide comma-separated values or an expression that returns an array. For this example, use an array:
+
+```js
+{{ [ "Alex", 20 ] }}
+```
 
 ### Choose Branch <a href="#choose-branch" id="choose-branch"></a>
 

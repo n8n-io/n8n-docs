@@ -34,11 +34,13 @@ Refer to [Notion credentials](../../credentials/notion.md) for guidance on setti
 
 * Block
 	* Append After
-	* Get Child Blocks
+	* Get Many
+	* Get Markdown
+* Data Source
+	* Get
+	* Search
 * Database
 	* Get
-	* Get Many
-	* Search
 * Database Page
 	* Create
 	* Get
@@ -47,7 +49,9 @@ Refer to [Notion credentials](../../credentials/notion.md) for guidance on setti
 * Page
 	* Archive
 	* Create
+	* Get Markdown
 	* Search
+	* Update Markdown
 * User
 	* Get
 	* Get Many

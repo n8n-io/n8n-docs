@@ -37,6 +37,12 @@ layout:
 
 # OpenAI Functions Agent
 
+{% hint style="info" %}
+**Feature deprecated**
+
+n8n deprecated this functionality in February 2025. New AI Agent nodes use the Tools Agent.
+{% endhint %}
+
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling). These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
 Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.

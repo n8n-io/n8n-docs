@@ -53,9 +53,9 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 ## Enabling MCP access <a href="#enabling-mcp-access" id="enabling-mcp-access"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.33.0**
+**Feature availability**
 
-The settings layout described below (**Connection details**, **Access**, **Connected clients**), the **Connect a client** dialog, and **Allowed callback URLs** replace the previous single-page MCP settings screen. On older versions, this page shows a simpler layout without per-client setup steps.
+The settings layout described below (**Connection details**, **Access**, **Connected clients**), the **Connect a client** dialog, and **Allowed callback URLs** are available from n8n 2.33.0. These replace the previous single-page MCP settings screen. On older versions, this page shows a simpler layout without per-client setup steps.
 {% endhint %}
 
 ### For Cloud and self-hosted instances <a href="#for-cloud-and-self-hosted-instances" id="for-cloud-and-self-hosted-instances"></a>
@@ -92,9 +92,9 @@ This action removes MCP endpoints and hides all related UI elements.
 ## Connecting MCP clients <a href="#setting-up-mcp-authentication" id="setting-up-mcp-authentication"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.33.0**
+**Feature availability**
 
-Earlier versions don't show per-client connection setup steps. Use the manual instructions in [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md) to configure your client instead.
+Per-client connection setup steps are available from n8n 2.33.0. Earlier versions don't show these steps. Use the manual instructions in [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md) to configure your client instead.
 {% endhint %}
 
 In **Connection details**, select **Connect** to open the **Connect a client** dialog, then choose an authentication method: [OAuth (recommended)](#using-oauth2) or [API key](#using-access-token).
@@ -176,7 +176,9 @@ Only workflows that are published, and that contain a webhook, form, schedule, o
 ### Enabling access for projects/folders <a href="#enabling-access-for-projectsfolders" id="enabling-access-for-projectsfolders"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.24.0**
+**Feature availability**
+
+Project and folder-level MCP access control is available from n8n 2.24.0.
 {% endhint %}
 
 You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options menu" data-size="line"> in the workflow list to toggle MCP access for all workflows in the current project or folder:
@@ -222,9 +224,9 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.34.0**
+**Feature availability**
 
-Agents are a separate feature from workflows, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). This section only applies if agents are available on your instance.
+Agents are available from n8n 2.34.0. Agents are a separate feature from workflows, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). This section only applies if agents are available on your instance.
 {% endhint %}
 
 {% hint style="info" %}

@@ -659,3 +659,14 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
+
+
+### n8n 2.31 — Configure instance settings programmatically via REST API
+
+**Released:** 2026-07-14
+
+You can now read and update instance-level settings through the n8n public REST API, starting with security policy in v2.31.0. Instead of clicking through the UI to configure each instance, you can drive configuration from a CI/CD pipeline, an infrastructure-as-code tool, or any HTTP client. Every write goes through the same validation logic as the UI, so API-driven changes take effect exactly as they would if you clicked Save in the settings panel.
+
+The security policy endpoint, available at `GET /api/v1/settings/security-policy` and `PUT /api/v1/settings/security-policy`, lets you read and update settings such as personal-space publishing and execution-data redaction enforcement. The PUT endpoint requires the full configuration object: partial bodies are rejected with a 400 response, so you always know exactly what you are writing. If a setting is currently managed via environment variables, the API returns a 409 Conflict and leaves the value unchanged, preventing accidental overwrites of declarative config. Sensitive fields are redacted in GET responses; sending back the redacted placeholder in a PUT keeps the stored value unchanged, while providing a new value updates it. To use these endpoints, generate a new API key with the `securitySettings:manage` scope (existing keys do not pick up new scopes automatically) and ensure the Personal Space Policy feature is licensed. Additional settings endpoints for log streaming, SAML, OpenTelemetry, OIDC, and LDAP are rolling out in subsequent releases.
+
+Learn more in the [documentation](https://docs.n8n.io/connect/n8n-api/security-policy#retrieve-the-security-policy).

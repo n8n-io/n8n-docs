@@ -80,7 +80,19 @@ n8n reads all vaults and items accessible to the token. Each 1Password item beco
 
 ### AWS Secrets Manager <a href="#aws-secrets-manager" id="aws-secrets-manager"></a>
 
-Provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
+Choose an authentication method:
+* **IAM User:** Provide the **access key ID**, **secret access key**, and **region** for an IAM user.
+* **Auto Detect:** n8n uses the AWS SDK default credential provider chain to find credentials automatically from the environment n8n is running in (for example, environment variables, a shared credentials file, or an EC2/ECS/EKS instance role). Use this if n8n already runs somewhere with AWS credentials available, so you don't have to manage a long-lived access key.
+
+Whichever method you choose, the underlying IAM identity must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
+
+{% hint style="warning"%}
+**Auto Detect and secret scoping with Auto Detect**
+
+n8n doesn't take any credentials input for that vault; it resolves whatever identity is available in its runtime environment. That means every vault you configure with Auto Detect on the same n8n instance shares one IAM identity and one set of permissions. You can't assign different IAM scopes (for example, restricting one vault to a project's secrets and another vault to a different project's secrets) to separate Auto Detect vaults.
+
+If you need to scope secret access per vault, per project, or per team, use IAM User instead: create a separate IAM user and access key per vault, and attach an ARN-scoped policy to each one (see the restrictive ARN-scoped policy example in the section below). Auto Detect is best suited to a single global vault, or to setups where every project sharing that vault should have the same AWS access.
+{% endhint %}
 
 To give n8n access to all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
 

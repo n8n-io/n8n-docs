@@ -34,10 +34,12 @@ Task runners are a generic mechanism to execute tasks in a secure and performant
 
 This document describes how task runners work and how you can configure them.
 
-{% hint style="warning" %}
-**Internal mode not recommended for production**
+{% hint style="danger" %}
+**Always use task runners in production**
 
-Using internal mode in production environments can pose a security risk. For production deployments, use [external mode](set-up-task-runners.md#external-mode) to ensure proper isolation between n8n and task runner processes. Refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures.
+Task runners are the only isolation layer between user-provided code and your n8n instance. Without them, or with [internal mode](set-up-task-runners.md#internal-mode), Code node scripts run with the same access as n8n itself, including your database, [encryption key](basic-configuration/configuration-examples/set-a-custom-encryption-key.md), stored credentials, and environment variables. Anyone who can edit a workflow could potentially read or exfiltrate every credential on the instance.
+
+For production, and any instance holding sensitive credentials or data, use [external mode](set-up-task-runners.md#external-mode) and refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures. Only consider skipping external mode on isolated instances that contain nothing but trusted or mock data, where you accept the risk to reduce hosting costs.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
@@ -58,7 +60,9 @@ You can use task runners in two different modes: internal and external.
 
 ### Internal mode <a href="#internal-mode" id="internal-mode"></a>
 
-In internal mode, the n8n instance launches the task runner as a child process. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n. This is **not** recommended for production.
+In internal mode, the n8n instance launches the task runner as a child process. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
+
+Internal mode is **not** recommended for production. Because the runner runs as the same user on the same host as n8n, user-provided code that escapes the runner's sandbox can read n8n's files and environment, including the database and the encryption key that protects stored credentials. Use internal mode only on isolated instances that hold no sensitive credentials or data.
 
 ### External mode <a href="#external-mode" id="external-mode"></a>
 
@@ -114,7 +118,7 @@ These are the main environment variables that you can set on the n8n container r
 {% hint style="info" %}
 **`N8N_RUNNERS_ENABLED` is deprecated from version 2.0**
 
-From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners.
+From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners. Leaving task runners disabled on 1.x runs Code node scripts inside the main n8n process with no isolation at all. Don't do this on any instance that holds sensitive credentials or data.
 {% endhint %}
 
 | Environment variables                                  | Description                                                                                                                                                                   |

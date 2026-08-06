@@ -228,7 +228,9 @@ Agents are a separate feature from workflows, see [Build and manage agents](http
 {% endhint %}
 
 {% hint style="info" %}
-Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development.
+**Feature availability**
+
+Agents are in preview and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
 If your instance has the agents feature, the **Access** section also shows **Agents exposed**. As with workflows, MCP clients can't read or manage an agent unless you explicitly enable MCP access for it.

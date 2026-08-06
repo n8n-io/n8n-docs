@@ -30,6 +30,7 @@
 * [Manage workflows](manage-workflows/README.md)
   * [Configure workflow settings](manage-workflows/configure-workflow-settings.md)
   * [Tag workflows](manage-workflows/tag-workflows.md)
+  * [Favorite items](manage-workflows/favorite-items.md)
   * [View change history](manage-workflows/view-change-history.md)
   * [Export and import](manage-workflows/export-and-import.md)
   * [n8n Packages](manage-workflows/n8n-packages.md)

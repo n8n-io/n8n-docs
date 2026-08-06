@@ -92,6 +92,7 @@ Eventbrite
 [Ff]aircode
 Fargate
 [Ff]avicon
+[Ff]avorit(e|es|ing|ed)
 Figma
 FileMaker
 Firestore
@@ -275,6 +276,7 @@ Typeform
 [Uu]narchive
 [Uu]ncomment
 [Uu]nencrypted
+[Uu]nfavorit(e|es|ing|ed)
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
 [Uu]ngroup(s|ed|ing)?

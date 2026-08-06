@@ -278,7 +278,7 @@ Instance owners and admins can restrict which URLs an OAuth client can redirect 
 Consider using coding agents (such as Claude Code or Google ADK agents) instead of chat clients as your MCP clients. Coding agents are optimized for generating and validating TypeScript code, making them ideal for building workflows programmatically.
 {% endhint %}
 
-The n8n MCP server exposes tools for workflow management, workflow building, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md).
+The n8n MCP server exposes tools for workflow management, workflow building, agent management, and data tables. For a complete list of available tools and their parameters, refer to the [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md).
 
 ## n8n Skills for coding agents
 

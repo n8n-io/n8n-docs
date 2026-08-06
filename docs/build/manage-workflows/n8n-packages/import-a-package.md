@@ -257,6 +257,21 @@ Nothing was written. The CLI exits with a non-zero status and prints the list.
 
 For the full list of reasons an import can be refused, and which status each returns, see [Why an import is refused](how-import-works.md#why-an-import-is-refused).
 
+## Events
+
+Every import emits an event on both the log streaming and telemetry paths, so you can audit what arrived on an instance.
+
+| Event | Emitted when |
+|-------|--------------|
+| `n8n.audit.n8n-package.import.success` | The import succeeded |
+| `n8n.audit.n8n-package.import.failed` | The import failed |
+
+The success event carries the user, the projects and folder the contents landed in, the workflows that were written, every option the import ran with, the source instance ID and format version from the package, and the credential IDs split into matched, created, and updated. Skipped workflows are left out. A package holding several projects still emits one event.
+
+The failure event carries the user, a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`, and the target project and folder if the import got far enough to resolve them. It carries no workflow IDs, because many failures happen before n8n reads the package.
+
+A refused import emits no success event. Log streaming events carry IDs but no counts, and telemetry events carry counts but no IDs.
+
 ## Read next
 
 * [How import works](how-import-works.md) for the order n8n writes things in and how it resolves each entity type.

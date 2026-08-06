@@ -121,11 +121,9 @@ Both operations emit events on the log streaming and telemetry paths, so you can
 | `n8n.audit.n8n-package.import.success` | An import succeeds |
 | `n8n.audit.n8n-package.import.failed` | An import fails |
 
-Log streaming events carry IDs: which workflows, folders, and projects were exported, or on import which were written, along with every option used and the credential IDs split into matched, created, and updated. Telemetry events carry per-entity counts instead of IDs.
+Subscribe a log streaming destination to all four to track every package moving in or out of the instance. Log streaming events carry entity IDs, and the matching telemetry events carry per-entity counts instead. A failure event classifies the reason as `access-denied`, `entity-not-found`, `blocked`, or `validation`.
 
-A failure event classifies the reason as `access-denied`, `entity-not-found`, `blocked`, or `validation`.
-
-An import that's refused emits no success event. A successful import emits one event however many projects the package held.
+For what each event's payload holds, see [Events](export-a-package.md#events) on the export page and [Events](import-a-package.md#events) on the import page.
 
 ## Read next
 

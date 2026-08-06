@@ -174,6 +174,25 @@ Error bodies carry a `message` only, and it names how many entities were affecte
 
 To find which dependency is missing, export again with `--missing-workflow-dependency-policy=reference-only` and read `requirements.workflows` in the [manifest](package-format.md#manifestjson).
 
+## Events
+
+Every export emits an event on both the log streaming and telemetry paths, so you can audit what left an instance.
+
+| Event | Emitted when |
+|-------|--------------|
+| `n8n.audit.n8n-package.export.success` | The export succeeded |
+| `n8n.audit.n8n-package.export.failed` | The export failed |
+
+The success event carries the user and the `workflowIds`, `folderIds`, and `projectIds` that actually ended up in the package, so it reflects folder contents and auto-included sub-workflows rather than what you asked for. Each list is present only when it isn't empty.
+
+The failure event carries the user, the IDs you requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
+
+Log streaming events carry IDs but no counts. The telemetry events carry the per-entity counts instead, and no IDs.
+
+{% hint style="info" %}
+n8n emits the success event before it streams the archive to you. If the download then fails part-way, the same request emits the failure event too, so one export can produce both. A client that disconnects before the download finishes emits neither an error nor a failure event.
+{% endhint %}
+
 ## Read next
 
 * [Import a package](import-a-package.md) to move the file onto another instance.

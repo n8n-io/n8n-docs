@@ -9,6 +9,7 @@ Airtop
 [Aa]llowlists?
 Anthropic
 APIs
+[Aa]pprovers?
 ARNs
 Asana
 Atlassian
@@ -17,9 +18,11 @@ Authentik
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
+Avro
 Axios
 Backblaze
 [Bb]ackend
+[Bb]ackoff
 balancer's
 Bannerbear
 [Bb]asename
@@ -30,7 +33,7 @@ Bing
 Bitly
 Bitwarden
 blockquote
-[Bb]oolean
+[Bb]ooleans?
 [Bb]orderless
 bot
 Brandfetch
@@ -62,7 +65,9 @@ Cron
 [Cc]rypto
 [Dd]atacenters?
 Datadog
+Databricks
 Datastore
+Daytona
 [Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
@@ -108,6 +113,7 @@ Groq
 GSuite
 Gumroad
 [Gg]zip
+healthz
 Hetzner
 Homeserver
 [Hh]ostnames?
@@ -122,6 +128,7 @@ Infisical
 Intuit
 IP
 [Ii]terable
+Jaeger
 Jira
 Jina
 JMESPath
@@ -136,6 +143,7 @@ Lemlist
 Lenovo
 [Ll]inter
 LLMs?
+[Ll]oopback
 Luhn
 Luxon
 [Mm]agnetopause
@@ -163,15 +171,18 @@ n8n
 nanoids
 namespaces?
 NASA
+Nemotron
 Netlify
 Netscaler
 Nextcloud
 [Nn]ginx
 ngrok
+NIM
 Nodelinter
 npm
 NPM
 npx
+NVIDIA
 nvm
 OAuth
 Odoo
@@ -179,6 +190,8 @@ Okta
 Ollama
 onboarding
 Onfleet
+[Oo]pen[Tt]elemetry
+OTLP
 Ortto
 Oura
 PDFs?
@@ -205,10 +218,12 @@ Qdrant
 QRadar
 Qualys
 [Qq]uickstarts
+Qwen
 Realtime
 Rekognition
 requester
 [Rr]erank(er|ing|ed)?
+[Rr]esponders?
 Rundeck
 Salesmate
 [Ss]andboxed
@@ -225,6 +240,7 @@ Spotify
 spreadsheetId
 Stackby
 Stackshare
+stdout
 Storyblok
 Strapi
 Strava
@@ -261,6 +277,7 @@ Typeform
 [Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
+[Uu]ngroup(s|ed|ing)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare
@@ -273,6 +290,7 @@ uProc
 URI
 URIs
 URL
+URLencoded
 Venafi
 VERO
 Vhost
@@ -285,6 +303,7 @@ Webex
 Webflow
 [Ww]ebsockets?
 WeKan
+winston
 [Ww]ireframe
 WordPress
 Wufoo
@@ -298,3 +317,5 @@ Zendesk
 Zep
 Zoho
 Zscaler
+endhint
+iCalendar

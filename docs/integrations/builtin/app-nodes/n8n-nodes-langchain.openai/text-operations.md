@@ -1,25 +1,41 @@
 ---
-title: OpenAI Text operations 
-description: Documentation for the Text operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+title: OpenAI Text operations
+description: >-
+  Documentation for the Text operations in OpenAI node in n8n, a workflow
+  automation platform. Includes details of operations and configuration, and
+  links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenAI Text operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations
+layout:
+  description:
+    visible: false
 ---
 
-# OpenAI Text operations
+# OpenAI Text operations <a href="#openai-text-operations" id="openai-text-operations"></a>
 
-Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
-/// note | Previous node versions
+{% hint style="info" %}
+**Previous node versions**
+
 n8n version 1.117.0 introduces the OpenAI node V2 that supports the OpenAI Responses API. It renames the 'Message a Model' operation to 'Generate a Chat Completion' to clarify its association with the Chat Completions API and introduces a separate 'Generate a Model Response' operation that uses the Responses API.
-///
+{% endhint %}
 
-## Generate a Chat Completion
+## Generate a Chat Completion <a href="#generate-a-chat-completion" id="generate-a-chat-completion"></a>
 
 Use this operation to send a message or prompt to an OpenAI model - using the Chat Completions API - and receive a response.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Generate a Chat Completion**.
 - **Model**: Select the model you want to use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models) for more information. 
@@ -30,7 +46,7 @@ Enter these parameters:
 - **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data. 
 - **Output Content as JSON**: Turn on to attempt to return the response in JSON format. Compatible with `GPT-4 Turbo` and all `GPT-3.5 Turbo` models newer than `gpt-3.5-turbo-1106`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Frequency Penalty**: Apply a penalty to reduce the model's tendency to repeat similar lines. The range is between `0.0` and `2.0`.
 - **Maximum Number of Tokens**: Set the maximum number of tokens for the response. One token is roughly four characters for standard English text. Use this to limit the length of the output. 
@@ -41,13 +57,13 @@ Enter these parameters:
 
 Refer to [Chat Completions | OpenAI](https://platform.openai.com/docs/api-reference/chat) documentation for more information.
 
-## Generate a Model Response
+## Generate a Model Response <a href="#generate-a-model-response" id="generate-a-model-response"></a>
 
 Use this operation to send a message or prompt to an OpenAI model - using the Responses API - and receive a response.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Generate a Model Response**.
 - **Model**: Select the model you want to use. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models) for an overview. 
@@ -61,7 +77,7 @@ Enter these parameters:
         - **System**: By default, the system message is `"You are a helpful assistant"`. You can define instructions in the user message, but the instructions set in the system message are more effective. You can only set one system message per conversation. Use this to set the model's behavior or context for the next user message.
 - **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data. 
 
-### Built-in Tools
+### Built-in Tools <a href="#built-in-tools" id="built-in-tools"></a>
 The OpenAI Responses API provides a range of [built-in tools](https://platform.openai.com/docs/guides/tools) to enrich the model's response:
 
 - **Web Search**: Allows models to search the web for the latest information before generating a response.
@@ -69,7 +85,7 @@ The OpenAI Responses API provides a range of [built-in tools](https://platform.o
 - **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Maximum Number of Tokens**: Set the maximum number of tokens for the response. One token is roughly four characters for standard English text. Use this to limit the length of the output. 
 - **Output Randomness (Temperature)**: Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around `0.7`) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. Defaults to `1.0`. 
@@ -83,7 +99,7 @@ The OpenAI Responses API provides a range of [built-in tools](https://platform.o
 
 Refer to [Responses | OpenAI](https://platform.openai.com/docs/api-reference/responses/create) documentation for more information.
 
-## Classify Text for Violations
+## Classify Text for Violations <a href="#classify-text-for-violations" id="classify-text-for-violations"></a>
 
 Use this operation to identify and flag content that might be harmful. OpenAI model will analyze the text and return a response containing:
 
@@ -93,18 +109,18 @@ Use this operation to identify and flag content that might be harmful. OpenAI mo
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Classify Text for Violations**.
 - **Text Input**: Enter text to classify if it violates the moderation policy. 
 - **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Use Stable Model**: Turn on to use the stable version of the model instead of the latest version, accuracy may be slightly lower.
 
 Refer to [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/moderations) documentation for more information.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).

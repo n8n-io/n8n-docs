@@ -1,27 +1,38 @@
 ---
 title: Pipedrive credentials
-description: Documentation for Pipedrive credentials. Use these credentials to authenticate Pipedrive in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Pipedrive credentials. Use these credentials to authenticate
+  Pipedrive in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Pipedrive credentials
+originalFilePath: integrations/builtin/credentials/pipedrive.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/pipedrive'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/pipedrive'
+layout:
+  description:
+    visible: false
 ---
 
-# Pipedrive credentials
+# Pipedrive credentials <a href="#pipedrive-credentials" id="pipedrive-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md)
-- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md)
+- [Pipedrive](../app-nodes/n8n-nodes-base.pipedrive.md)
+- [Pipedrive Trigger](../trigger-nodes/n8n-nodes-base.pipedrivetrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Pipedrive's developer documentation](https://pipedrive.readme.io/docs/getting-started) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need a [Pipedrive](https://pipedrive.com/) account and:
 
@@ -42,7 +53,7 @@ If you have multiple companies, you'll need to select the correct company first:
 
 Refer to [How to find the API token](https://pipedrive.readme.io/docs/how-to-find-the-api-token) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need a [Pipedrive developer sandbox account](https://developers.pipedrive.com/) and:
 
@@ -52,11 +63,9 @@ To configure this credential, you'll need a [Pipedrive developer sandbox account
 To get both, you'll need to register a new app:
 
 1. Select your profile name in the upper right corner.
-2. Find the company name of your sandbox account and select **Developer Hub**.
+2. Find the company name of your sandbox account and select **Developer Hub**.<br>
 
-    /// note | No Developer Hub
-    If you don't see **Developer Hub** in your account dropdown, sign up for a [developer sandbox account](https://developers.pipedrive.com/).
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>No Developer Hub</strong></p><p>If you don't see <strong>Developer Hub</strong> in your account dropdown, sign up for a <a href="https://developers.pipedrive.com/">developer sandbox account</a>.</p></div>
 
 3. Select **Create an app**.
 4. Select **Create public app**. The app's **Basic info** tab opens.
@@ -69,11 +78,11 @@ To get both, you'll need to register a new app:
 
 Refer to [Registering a public app](https://pipedrive.readme.io/docs/marketplace-registering-the-app) for more information.
 
-### Pipedrive node scopes
+### Pipedrive node scopes <a href="#pipedrive-node-scopes" id="pipedrive-node-scopes"></a>
 
 The scopes you add to your app depend on which node(s) you want to use it for in n8n and what actions you want to complete with those.
 
-Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md) node:
+Scopes you may need for the [Pipedrive](../app-nodes/n8n-nodes-base.pipedrive.md) node:
 
 | **Object** | **Node action** | **UI scope** | **Actual scope** |
 | --- | --- | --- | --- |
@@ -95,19 +104,21 @@ Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-node
 | Person | Create <br> Delete <br> Update | **Contacts: Full Access** | `contacts:full` |
 | Product | Get data of all products | **Products: Read Only** | `products:read` |
 
-/// note | Files and Notes
+{% hint style="info" %}
+**Files and Notes**
+
 The scopes for Files and Notes depend on which object they relate to:
 
 - Files relate to Deals, Activities, or Contacts.
 - Notes relate to Deals or Contacts.
 
 Refer to those objects' scopes.
-///
+{% endhint %}
 
 The Pipedrive node also supports Custom API calls. Add relevant scopes for whatever custom API calls you intend to make.
 
 Refer to [Scopes and permissions explanations](https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations) for more information.
 
-### Pipedrive Trigger node scopes
+### Pipedrive Trigger node scopes <a href="#pipedrive-trigger-node-scopes" id="pipedrive-trigger-node-scopes"></a>
 
-The [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node requires the **Webhooks: Full access** (`webhooks:full`) scope.
+The [Pipedrive Trigger](../trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node requires the **Webhooks: Full access** (`webhooks:full`) scope.

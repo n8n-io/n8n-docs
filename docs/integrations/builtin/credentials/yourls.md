@@ -1,28 +1,39 @@
 ---
 title: Yourls credentials
-description: Documentation for Yourls credentials. Use these credentials to authenticate Yourls in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Yourls credentials. Use these credentials to authenticate
+  Yourls in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Yourls credentials
+originalFilePath: integrations/builtin/credentials/yourls.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/yourls'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/yourls'
+layout:
+  description:
+    visible: false
 ---
 
-# Yourls credentials
+# Yourls credentials <a href="#yourls-credentials" id="yourls-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Yourls](/integrations/builtin/app-nodes/n8n-nodes-base.yourls.md)
+- [Yourls](../app-nodes/n8n-nodes-base.yourls.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install [Yourls](https://github.com/YOURLS/YOURLS) on your server.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Yourl's documentation](https://yourls.org/docs) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

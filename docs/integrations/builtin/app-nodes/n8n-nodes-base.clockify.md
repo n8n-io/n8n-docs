@@ -1,20 +1,33 @@
 ---
 title: Clockify node documentation
-description: Learn how to use the Clockify node in n8n. Follow technical documentation to integrate Clockify node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Clockify node in n8n. Follow technical documentation to
+  integrate Clockify node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Clockify node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.clockify.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.clockify'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.clockify'
+layout:
+  description:
+    visible: false
 ---
 
-# Clockify node
+# Clockify node <a href="#clockify-node" id="clockify-node"></a>
 
 Use the Clockify node to automate work in Clockify, and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, including creating, updating, getting, and deleting tasks, time entries, projects, and tags.
 
 On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Clockify credentials](/integrations/builtin/credentials/clockify.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Clockify credentials](../credentials/clockify.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Project
     * Create a project
@@ -39,10 +52,10 @@ Refer to [Clockify credentials](/integrations/builtin/credentials/clockify.md) f
     * Get time entry
     * Update a time entry
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'clockify') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Clockify node documentation integration templates](https://n8n.io/integrations/clockify) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

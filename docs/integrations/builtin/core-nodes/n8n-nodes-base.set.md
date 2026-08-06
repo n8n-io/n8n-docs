@@ -1,23 +1,49 @@
 ---
 title: Edit Fields (Set)
-description: Documentation for the Edit Fields node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: Edit Fields (Set)
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.set.md
+originalUrl: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set
+url: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set
+description: >-
+  Documentation for the Edit Fields node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Edit Fields (Set)
 
 Use the Edit Fields node to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 These are the settings and options available in the Edit Fields node.
 
-### Mode
+### Mode <a href="#mode" id="mode"></a>
 
 You can either use **Manual Mapping** to edit fields using the GUI or **JSON Output** to write JSON that n8n adds to the input data.
 
-### Fields to Set
+### Fields to Set <a href="#fields-to-set" id="fields-to-set"></a>
 
 If you select **Mode** > **Manual Mapping**, you can configure the fields by dragging and dropping values from **INPUT**.
 
@@ -28,36 +54,36 @@ The default behavior when you drag a value is:
 
 If you don't want to use expressions:
 
-1. Hover over a field. n8n displays the **Fixed | Expressions** toggle. 
-1. Select **Fixed**.
+1. Hover over a field. n8n displays the **Fixed | Expressions** toggle.
+2. Select **Fixed**.
 
 You can do this for both the name and value of the field.
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
+![A gif showing the drag and drop action, as well as changing a field to fixed](<../../.gitbook/assets/drag-drop-fixed-toggle (1).gif>)
 
-### Keep Only Set Fields
+### Keep Only Set Fields <a href="#keep-only-set-fields" id="keep-only-set-fields"></a>
 
 Enable this to discard any input data that you don't use in **Fields to Set**.
 
-### Include in Output
+### Include in Output <a href="#include-in-output" id="include-in-output"></a>
 
 Choose which input data to include in the node's output data.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 Use these options to customize the behavior of the node.
 
-### Include Binary Data
+### Include Binary Data <a href="#include-binary-data" id="include-binary-data"></a>
 
 If the input data includes binary data, choose whether to include it in the Edit Fields node's output data.
 
-### Ignore Type Conversion Errors
+### Ignore Type Conversion Errors <a href="#ignore-type-conversion-errors" id="ignore-type-conversion-errors"></a>
 
 Manual Mapping only.
 
 Enabling this allows n8n to ignore some data type errors when mapping fields.
 
-### Support Dot Notation
+### Support Dot Notation <a href="#support-dot-notation" id="support-dot-notation"></a>
 
 By default, n8n supports dot notation.
 
@@ -72,12 +98,12 @@ You can prevent this behavior by selecting **Add Option** > **Support Dot Notati
 ```json
 { "number.one": 20 }
 ```
-## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'set') ]]
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-## Arrays and expressions in JSON Output mode
+[Browse Edit Fields (Set) integration templates](https://n8n.io/integrations/set) or [search all templates](https://n8n.io/workflows/)
+
+## Arrays and expressions in JSON Output mode <a href="#arrays-and-expressions-in-json-output-mode" id="arrays-and-expressions-in-json-output-mode"></a>
 
 You can use arrays and expressions when creating your JSON Output.
 
@@ -238,7 +264,3 @@ You get this output:
   }
 ]
 ```
-
-
-
-

@@ -1,20 +1,33 @@
 ---
 title: Brandfetch node documentation
-description: Learn how to use the Brandfetch node in n8n. Follow technical documentation to integrate Brandfetch node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Brandfetch node in n8n. Follow technical documentation to
+  integrate Brandfetch node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Brandfetch node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.brandfetch.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch'
+layout:
+  description:
+    visible: false
 ---
 
-# Brandfetch node
+# Brandfetch node <a href="#brandfetch-node" id="brandfetch-node"></a>
 
 Use the Brandfetch node to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
 
 On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Brandfetch credentials](../credentials/brandfetch.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Return a company's colors
 * Return a company's data
@@ -22,7 +35,7 @@ Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch.m
 * Return a company's industry
 * Return a company's logo & icon
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'brandfetch') ]]
+
+[Browse Brandfetch node documentation integration templates](https://n8n.io/integrations/brandfetch) or [search all templates](https://n8n.io/workflows/)

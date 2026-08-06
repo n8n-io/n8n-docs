@@ -1,20 +1,33 @@
 ---
 title: Salesmate node documentation
-description: Learn how to use the Salesmate node in n8n. Follow technical documentation to integrate Salesmate node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Salesmate node in n8n. Follow technical documentation to
+  integrate Salesmate node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Salesmate node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.salesmate.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.salesmate'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.salesmate'
+layout:
+  description:
+    visible: false
 ---
 
-# Salesmate node
+# Salesmate node <a href="#salesmate-node" id="salesmate-node"></a>
 
 Use the Salesmate node to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
 
 On this page, you'll find a list of operations the Salesmate node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Salesmate credentials](../credentials/salesmate.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Activity
     * Create an activity
@@ -35,7 +48,7 @@ Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate.md)
     * Get all deals
     * Update a deal
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'salesmate') ]]
+
+[Browse Salesmate node documentation integration templates](https://n8n.io/integrations/salesmate) or [search all templates](https://n8n.io/workflows/)

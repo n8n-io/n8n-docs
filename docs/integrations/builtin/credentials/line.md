@@ -1,31 +1,44 @@
 ---
 title: Line credentials
-description: Documentation for Line credentials. Use these credentials to authenticate the Line node in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Line credentials. Use these credentials to authenticate the
+  Line node in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Line credentials
+originalFilePath: integrations/builtin/credentials/line.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/line'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/line'
+layout:
+  description:
+    visible: false
 ---
 
-# Line credentials
+# Line credentials <a href="#line-credentials" id="line-credentials"></a>
 
-<!-- vale off -->
-/// warning | Deprecated: End of service
+
+{% hint style="warning" %}
+**Deprecated: End of service**
+
 LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce) for more information.
-///
-<!-- vale on -->
+{% endhint %}
+
 
 You can use these credentials to authenticate the following nodes:
 
-- [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line.md)
+- [Line](../app-nodes/n8n-nodes-base.line.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Notify OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Line Notify's API documentation](https://notify-bot.line.me/doc/en/) for more information about the service.
 
-## Using Notify OAuth2
+## Using Notify OAuth2 <a href="#using-notify-oauth2" id="using-notify-oauth2"></a>
 
 To configure this credential, you'll need a [Line](https://line.me/en/) account and:
 

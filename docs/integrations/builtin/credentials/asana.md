@@ -1,27 +1,38 @@
 ---
 title: Asana credentials
-description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Asana credentials. Use these credentials to authenticate
+  Asana in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Asana credentials
+originalFilePath: integrations/builtin/credentials/asana.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/asana'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/asana'
+layout:
+  description:
+    visible: false
 ---
 
-# Asana credentials
+# Asana credentials <a href="#asana-credentials" id="asana-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana.md)
-- [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md)
+- [Asana](../app-nodes/n8n-nodes-base.asana.md)
+- [Asana Trigger](../trigger-nodes/n8n-nodes-base.asanatrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Access token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview) for more information about working with the service.
 
-## Using Access token
+## Using Access token <a href="#using-access-token" id="using-access-token"></a>
 
 To configure this credential, you'll need an [Asana](https://asana.com/) account and:
 
@@ -38,13 +49,13 @@ To get your PAT:
 
 Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup) for more information.
 
-## Using OAuth2
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need an [Asana](https://asana.com/) account.
 
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to register an application to set up OAuth:
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you'll need to register an application to set up OAuth:
 
 1. Open the Asana [developer console](https://app.asana.com/0/my-apps).
 2. In the **My apps** section, select **Create new app**.

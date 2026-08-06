@@ -1,22 +1,35 @@
 ---
 title: Reddit node documentation
-description: Learn how to use the Reddit node in n8n. Follow technical documentation to integrate Reddit node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Reddit node in n8n. Follow technical documentation to
+  integrate Reddit node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Reddit node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.reddit.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.reddit'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.reddit'
+layout:
+  description:
+    visible: false
 ---
 
-# Reddit node
+# Reddit node <a href="#reddit-node" id="reddit-node"></a>
 
 Use the Reddit node to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
 
 On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Reddit credentials](/integrations/builtin/credentials/reddit.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Reddit credentials](../credentials/reddit.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Post
     * Submit a post to a subreddit
@@ -37,9 +50,9 @@ Refer to [Reddit credentials](/integrations/builtin/credentials/reddit.md) for g
 * User
     * Get
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'reddit') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Reddit node documentation integration templates](https://n8n.io/integrations/reddit) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

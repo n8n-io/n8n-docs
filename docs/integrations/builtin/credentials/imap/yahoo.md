@@ -1,21 +1,32 @@
 ---
 title: Yahoo
-description: Documentation for Yahoo IMAP credentials. Use these credentials to authenticate Yahoo IMAP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Yahoo IMAP credentials. Use these credentials to
+  authenticate Yahoo IMAP in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Yahoo
+originalFilePath: integrations/builtin/credentials/imap/yahoo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/imap/yahoo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/imap/yahoo'
+layout:
+  description:
+    visible: false
 ---
 
-# Yahoo IMAP credentials
+# Yahoo IMAP credentials <a href="#yahoo-imap-credentials" id="yahoo-imap-credentials"></a>
 
 Follow these steps to configure the IMAP credentials with a Yahoo account.
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To follow these instructions, you must first generate an app password:
 
---8<-- "_snippets/integrations/builtin/credentials/email/yahoo-app-password.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2ZBcW11hezK8c3JZNsKm/" %}
 
-## Set up the credential
+## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 
 To set up the IMAP credential with a Yahoo Mail account, use these settings:
 

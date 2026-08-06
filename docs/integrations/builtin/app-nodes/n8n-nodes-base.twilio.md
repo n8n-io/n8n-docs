@@ -1,36 +1,49 @@
 ---
 title: Twilio node documentation
-description: Learn how to use the Twilio node in n8n. Follow technical documentation to integrate Twilio node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Twilio node in n8n. Follow technical documentation to
+  integrate Twilio node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Twilio node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.twilio.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twilio'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.twilio'
+layout:
+  description:
+    visible: false
 ---
 
-# Twilio node
+# Twilio node <a href="#twilio-node" id="twilio-node"></a>
 
 Use the Twilio node to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
 
 On this page, you'll find a list of operations the Twilio node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Twilio credentials](../credentials/twilio.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * SMS
     * Send SMS/MMS/WhatsApp message
 * Call
     * Make a phone call using text-to-speech to say a message
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'twilio') ]]
 
-## Related resources
+[Browse Twilio node documentation integration templates](https://n8n.io/integrations/twilio) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -1,24 +1,39 @@
 ---
 title: Microsoft SharePoint node documentation
-description: Learn how to use the Microsoft SharePoint node in n8n. Follow technical documentation to integrate Microsoft SharePoint node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Microsoft SharePoint node in n8n. Follow technical
+  documentation to integrate Microsoft SharePoint node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Microsoft SharePoint node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint
+layout:
+  description:
+    visible: false
 ---
 
-# Microsoft SharePoint node
+# Microsoft SharePoint node <a href="#microsoft-sharepoint-node" id="microsoft-sharepoint-node"></a>
 
 Use the Microsoft SharePoint node to automate work in Microsoft SharePoint and integrate Microsoft SharePoint with other applications. n8n has built-in support for a wide range of Microsoft SharePoint features, which includes downloading, uploading, and updating files, managing items in a list, and getting lists and list items.
 
 On this page, you'll find a list of operations the Microsoft SharePoint node supports, and links to more resources.
 
-///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
-///
+{% hint style="info" %}
+**Credentials**
+
+You can find authentication information for this node [here](../credentials/microsoft.md).
+{% endhint %}
 
 
-## Operations
+## Operations <a href="#operations" id="operations"></a>
 
-<!-- To avoid warning about "many" -->
-<!-- vale from-write-good.Weasel = NO -->
+
+
 * **File**:
 	* Download: Download a file.
 	* Update: Update a file.
@@ -33,15 +48,15 @@ You can find authentication information for this node [here](/integrations/built
 * **List**:
 	* Get: Retrieve details of a single list.
 	* Get Many: Retrieve a list of lists.
-<!-- vale from-write-good.Weasel = YES -->
 
-## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'microsoft-sharepoint') ]]
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API docs -->
+[Browse Microsoft SharePoint node documentation integration templates](https://n8n.io/integrations/microsoft-sharepoint) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
+
+
 Refer to [Microsoft's SharePoint documentation](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for more information about the service.
 

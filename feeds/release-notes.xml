@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>n8n release notes: editor and nodes</title>
+<link>https://docs.n8n.io/changelog/release-notes</link>
+<atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
+<description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
+<language>en</language>
+<lastBuildDate>Wed, 05 Aug 2026 13:00:58 GMT</lastBuildDate>
+<item>
+<title>Add a guided setup view for Simplified Custom Auth credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/35324</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35324</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Simplified Custom Auth credentials now offer a guided setup experience in the credential modal. Instead of raw JSON, a form shows one labeled input per template placeholder, with values masked and prefilled like native credential fields. An in-place &quot;Edit setup&quot; view exposes the auth template, field definitions, test URL, and status codes. Connection testing now probes the saved credential and reports that the service accepted it, rather than claiming full verification.</description>
+</item>
+<item>
+<title>Inconsistent spacing of buttons on canvas (in top-right vs bottom-left)</title>
+<link>https://github.com/n8n-io/n8n/pull/35319</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35319</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Fixed inconsistent spacing between button groups on the canvas controls (top-right and bottom-left) by introducing a shared ButtonList layout component that applies uniform gaps to grouped buttons, both horizontally and vertically.</description>
+</item>
+<item>
+<title>Slack Node: Show user real names and handles in user pickers</title>
+<link>https://github.com/n8n-io/n8n/pull/35279</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35279</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Slack node (V2) user pickers now show real names alongside handles, e.g. &quot;John Doe (@john.doe)&quot;, making it easier to find colleagues. Handles remain in the label since real names aren't unique in Slack. Users without a real name (bots, unconfigured accounts) still show just their handle. Search works by real name or handle, and dropdown sorting is now case-insensitive. Stored values are unchanged, so existing workflows continue targeting the same users. Slack V1 is unaffected.</description>
+</item>
+<item>
+<title>Add ap-east-2 and ap-southeast-6 AWS regions</title>
+<link>https://github.com/n8n-io/n8n/pull/35278</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35278</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>AWS credentials in n8n now support two additional regions, ap-east-2 (Taipei) and ap-southeast-6 (New Zealand). Users can select these regions when configuring AWS credentials without triggering an 'Unsupported AWS region' error.</description>
+</item>
+<item>
+<title>Show the latest workflow review state in the canvas header</title>
+<link>https://github.com/n8n-io/n8n/pull/35233</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35233</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The canvas header now shows a compact pill indicating the latest workflow review status: in progress, needs action, or approved. Clicking it opens a popover explaining the state and offering the relevant action, such as retrying publish for an approved but unpublished version. The banner disappears once the approved version, or a newer one, is published. Requires an enterprise license with workflow reviews enabled.</description>
+</item>
+<item>
+<title>Make the review inbox URL-addressable with deep-linkable reviews</title>
+<link>https://github.com/n8n-io/n8n/pull/35201</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35201</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The workflow reviews inbox is now URL-addressable: selecting a review updates the URL, and the Open/Closed tab state is stored in the query string, so reloading a page keeps the same review and tab selected. Reviews can now be deep-linked, including from the submit-for-review and update-review confirmation dialogs, which link directly to the relevant review. Unknown or inaccessible review links show an inline not-found message instead of redirecting.</description>
+</item>
+<item>
+<title>Add Require Workflow Execute Permission toggle for n8n User Auth (Webhook trigger)</title>
+<link>https://github.com/n8n-io/n8n/pull/35195</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35195</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The Webhook node now shows a &quot;Require Workflow Execute Permission&quot; toggle when using n8n User Auth (OAuth2) authentication. Enabled by default, it requires an authenticated caller to also hold workflow:execute permission before the webhook can run; disabling it allows any authenticated caller through. This mirrors the existing MCP Server Trigger behavior. The toggle is only visible behind the N8N_ENV_FEAT_WEBHOOK_PRIVATE_CREDENTIALS environment flag.</description>
+</item>
+<item>
+<title>Make OIDC RP-initiated logout an opt-in setting</title>
+<link>https://github.com/n8n-io/n8n/pull/35146</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35146</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>OIDC RP-Initiated Logout is now opt-in and disabled by default. A new 'Log out from identity provider' toggle in SSO settings (also available via the public API) controls whether signing out of n8n also ends the session at the identity provider. Local n8n sign-out always happens regardless. This also fixes a rare case where a token encryption error during login could leave users on an error page.</description>
+</item>
+<item>
+<title>HTTP Request Node: Add Simplified Custom Auth generic credential</title>
+<link>https://github.com/n8n-io/n8n/pull/35068</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35068</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Added a new generic credential type, Simplified Custom Auth, for the HTTP Request node. It lets users define a JSON auth template with placeholder values (headers, query, or body) to authenticate against custom APIs, with sensitive values redacted in previews. A new backend probe endpoint lets the credential test itself against its own saved test URL, reporting whether the service accepted it. This is the first of three planned PRs; a guided setup UI and AI Assistant integration will follow.</description>
+</item>
+<item>
+<title>Cal.com Trigger Node: Fully migrate to API v2</title>
+<link>https://github.com/n8n-io/n8n/pull/35055</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35055</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The Cal.com Trigger node now has a new version that fully uses Cal.com's API v2, fixing incorrect endpoints and response handling that previously caused errors since API v1 was deprecated. Credentials authentication and testing were also updated to work with API v2. Existing workflows using older node versions are unaffected, as previous versions remain unchanged.</description>
+</item>
+<item>
+<title>Close directly opened MCP settings after saving</title>
+<link>https://github.com/n8n-io/n8n/pull/35018</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35018</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>When opening an MCP server's settings directly from the Connections card, the settings modal now closes automatically after tools are saved successfully. If settings are instead opened from the tools list, the modal stays open so the Back button remains available, and failed saves keep the modal open in both cases so users can retry.</description>
+</item>
+<item>
+<title>Embeddings AWS Bedrock Node: Add inference profile models and node options</title>
+<link>https://github.com/n8n-io/n8n/pull/34991</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34991</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The Embeddings AWS Bedrock node now lists inference profile models alongside on-demand foundation models in its model picker, and adds a new Options collection for Timeout, Max Retries, and Additional Model Request Fields (JSON pass-through, supporting Titan and Cohere-specific parameters). Cohere embedding models are now supported. Existing workflows and stored vectors are unaffected.</description>
+</item>
+<item>
+<title>Execute Workflow Node: Deprecate Local File and URL sources</title>
+<link>https://github.com/n8n-io/n8n/pull/34959</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34959</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The Execute Workflow node now shows a deprecation notice when its Source is set to 'Local File' or 'URL' (versions 1.1 and earlier), advising users to switch to the 'Database' source or paste workflow JSON into the 'Parameter' source instead. These sources are planned for removal in a future major version. This change only adds warnings and a migration report rule; no runtime behavior changes, and the removal itself is not part of this release.</description>
+</item>
+<item>
+<title>Migrate API keys settings page to new instance settings UI</title>
+<link>https://github.com/n8n-io/n8n/pull/34925</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34925</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The API keys settings page has been redesigned with the new instance-settings layout. The keys table now has clearer owner filtering, Mine and All tabs, a working scopes dialog, and improved create and edit flows showing expiration states including Never, which explains keys stay active until manually revoked. Generated keys use a copy field with truncated display and copy-to-check feedback, and Revoke now uses a clearer danger-styled action.</description>
+</item>
+<item>
+<title>Auto-select credentials for pasted and imported nodes</title>
+<link>https://github.com/n8n-io/n8n/pull/34687</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34687</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Nodes pasted or imported into a workflow now have matching credentials auto-selected immediately, instead of only when the node editor is opened. This removes the brief credential error that used to flash on pasted or imported nodes. A toast notifies you when credentials were auto-selected, naming the credential for a single node or showing a generic message for multiple nodes. HTTP Request nodes are excluded since their credentials are generic.</description>
+</item>
+<item>
+<title>Show restricted API keys and instance roles sections with a reason instead of hiding them</title>
+<link>https://github.com/n8n-io/n8n/pull/34644</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34644</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>Users with a custom instance role lacking certain permissions no longer have entire sections hidden. The Roles page now shows both tabs, with Instance roles disabled and tooltipped when unauthorized. The API keys page is visible to everyone, letting users view and revoke their own keys regardless of role; creating, editing, or rotating keys remains restricted by role scopes, with disabled buttons and read-only views explaining why.</description>
+</item>
+<item>
+<title>Add OIDC logout support</title>
+<link>https://github.com/n8n-io/n8n/pull/32756</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32756</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>n8n now supports OIDC RP-Initiated Logout. When a user signs out and their session was established via an OIDC provider, n8n also invalidates the session at the identity provider, not just locally. The provider's ID token is stored encrypted in a cookie during login and used to build the logout URL; if the provider doesn't support this or the token is unavailable, sign-out still completes locally.</description>
+</item>
+<item>
+<title>Brandfetch Node: Use explicit route types and simplify operations</title>
+<link>https://github.com/n8n-io/n8n/pull/28846</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/28846</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The Brandfetch node now has a new v2 version using Brandfetch's explicit typed routes such as Domain, Stock or ETF Ticker, Crypto Symbol, and ISIN instead of a single generic endpoint, avoiding identifier collisions. It adds a Type selector and Identifier field, plus simplified operations: Return Logos or Symbols or Icon, Return Colors, Return All Brand Data, and Return Brand Context. The previous version remains available as v1.</description>
+</item>
+<item>
+<title>OpenAI Chat Model Node: Add optional extraBody option</title>
+<link>https://github.com/n8n-io/n8n/pull/13992</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/13992</guid>
+<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.34</category>
+<description>The OpenAI Chat Model node now supports an optional Extra Body field, letting you add custom JSON properties to the request body sent to OpenAI-compatible APIs such as Qwen-Max or vLLM. This enables use of provider-specific parameters not otherwise exposed by the node. Invalid or non-object JSON input is rejected with a clear error.</description>
+</item>
+<item>
+<title>AWS Bedrock Chat Model Node: Surface inference-profile models in the default model picker</title>
+<link>https://github.com/n8n-io/n8n/pull/34983</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34983</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>The AWS Bedrock Chat Model node's Model dropdown now shows both on-demand foundation models and cross-region inference profiles together, so newer models like Claude Sonnet 4.x and Nova are visible without switching a separate Model Source toggle. This works with IAM and Assume Role credentials, and respects custom Bedrock Endpoint overrides. Existing workflows on older node versions keep their previous Model Source toggle and settings unchanged.</description>
+</item>
+<item>
+<title>Migrate OpenTelemetry settings page to new instance settings UI</title>
+<link>https://github.com/n8n-io/n8n/pull/34965</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34965</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>The OpenTelemetry settings page has been redesigned with n8n's updated instance settings UI. Enabling or disabling tracing now applies instantly via a single control, with a floating save bar for other changes like endpoint, sample rate, and headers. Sample rate and timeout fields now format values consistently, and configuration errors and environment-managed fields are shown more clearly.</description>
+</item>
+<item>
+<title>Microsoft Excel (SharePoint) Node: Add node for Excel workbooks in SharePoint document libraries</title>
+<link>https://github.com/n8n-io/n8n/pull/34847</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34847</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>The Microsoft Excel (SharePoint) node is now visible in the nodes panel. Previously registered but hidden while operations were built out to match the OneDrive Excel node, it has now reached full parity and been verified against a real Microsoft 365 tenant with both OAuth2 and Entra Service Principal credentials. Existing workflows using it are unaffected, as the node was always functional.</description>
+</item>
+<item>
+<title>Polish end-user credential setup modal and NDV states</title>
+<link>https://github.com/n8n-io/n8n/pull/34766</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34766</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>Improved the end-user credential setup experience for OAuth credentials. The credential type selector is now a dropdown, disabled with a tooltip for users without permission to change it. Connection banners are clearer: a neutral disconnected state, and a connected state showing it's private to you with Switch account and Disconnect options. The NDV credential picker also gains a simplified connect placeholder with Switch account/Disconnect actions.</description>
+</item>
+<item>
+<title>Allow custom OAuth scopes for the remaining Google credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/34631</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34631</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>Google OAuth2 credentials for Gmail, Google Ads, Analytics, Books, Business Profile, Chat, Cloud Natural Language, Contacts, Docs, Drive, Firebase (Firestore and Realtime Database), Perspective, Sheets Trigger, Slides, Tasks, Translate, YouTube, and Workspace Admin now support custom OAuth scopes. A Custom Scopes toggle reveals a warning and an editable Enabled Scopes field prefilled with each credential's defaults, letting users request additional Google API permissions during authorization while default behavior remains unchanged when the toggle is off.</description>
+</item>
+<item>
+<title>Adds modal to see all projects a user can access in a list</title>
+<link>https://github.com/n8n-io/n8n/pull/34619</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34619</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>In the admin Users list, the Projects column for members with access to specific projects is now clickable, opening a modal listing all their projects with each project's role (e.g. admin, editor) and an icon. The modal includes a search field to filter by project name. This doesn't apply to Owners/Admins ('All projects') or users with only a personal project.</description>
+</item>
+<item>
+<title>Allow custom OAuth scopes for Microsoft Azure Monitor, Dynamics, Graph Security and Azure Storage</title>
+<link>https://github.com/n8n-io/n8n/pull/34612</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34612</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>You can now customize OAuth scopes for the Microsoft Azure Monitor, Microsoft Dynamics, Microsoft Graph Security, and Azure Storage credentials. A new Custom Scopes toggle reveals an Enabled Scopes field, prefilled with defaults for Graph Security and Azure Storage, or a placeholder example for Dynamics and Azure Monitor where scopes depend on other fields. Default behavior is unchanged when the toggle stays off.</description>
+</item>
+<item>
+<title>Gmail Node: Add warning notice when Simplify is disabled</title>
+<link>https://github.com/n8n-io/n8n/pull/34611</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34611</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>The Gmail Trigger and Gmail node (Message Get/Get Many, Thread Get) now show a warning notice when Simplify is turned off, explaining that fetching the full raw email uses much more memory and can cause crashes. The notice appears directly below the Simplify toggle. AI Builder guidance was also updated to keep Simplify enabled unless the full email content is actually needed.</description>
+</item>
+<item>
+<title>Show confirmation modal when updating a custom instance role with assigned users</title>
+<link>https://github.com/n8n-io/n8n/pull/34544</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34544</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>When editing a custom instance role (Settings → Roles → Instance) that is assigned to one or more users, saving changes now shows a confirmation modal warning that permissions for those users will be updated immediately. Cancelling discards the change; confirming applies it. Roles with no assigned users save as before, without a modal. This mirrors the existing confirmation shown for project roles. Requires an enterprise license with custom roles enabled.</description>
+</item>
+<item>
+<title>Configure the AI Assistant through a redesigned instance settings page</title>
+<link>https://github.com/n8n-io/n8n/pull/34493</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34493</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>Owners and admins on self-hosted instances can now configure AI Assistant model, sandbox, and search provider connections inline from a redesigned settings page. Connections are stored as instance-scoped credentials, kept separate from workflow credentials, and validated on save. Environment variable configuration remains as a fallback, with clear indicators for environment-managed versus manually configured settings, plus a guided model-to-sandbox setup flow.</description>
+</item>
+<item>
+<title>Revamp MCP settings view with instance settings components</title>
+<link>https://github.com/n8n-io/n8n/pull/34041</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34041</guid>
+<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.33</category>
+<description>The Instance-level MCP settings page has been redesigned with n8n's updated settings components. Tabs are replaced by a single page showing MCP status, a guided &quot;Connect a client&quot; dialog with tailored setup steps for popular AI assistants, IDEs, and CLIs, a workflows-exposed summary, an allowed-callback-URLs dialog, and a connected-clients preview with links to full sub-views. Underlying functionality and permissions are unchanged; this is a frontend-only redesign.</description>
+</item>
+<item>
+<title>Add `showOnDeployment` option, show warning for read file node on cloud</title>
+<link>https://github.com/n8n-io/n8n/pull/34417</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34417</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The Read/Write File node now shows a notice on n8n Cloud explaining that it can only access paths under /home/node/, clarifying why other paths like /tmp/ or /data/ fail with access errors. Internally, this introduces a new showOnDeployment option to control whether fields or notices display based on cloud vs. hosted deployment, replacing the older hideOnCloud flag across several credentials and nodes.</description>
+</item>
+<item>
+<title>Rename N8nActionBox to N8nEmptyState and add icon-cards variant</title>
+<link>https://github.com/n8n-io/n8n/pull/34407</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34407</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The design system's empty-state component, formerly called ActionBox, has been renamed to N8nEmptyState to better reflect its purpose, with an updated test id and CSS class. It also gains a new 'icon-cards' variant showing a fanned trio of icon cards, optionally animated, used for pages like the instance MCP settings. Spacing within the component has also been refined for better visual rhythm. Internal use only; no direct end-user facing feature change beyond visual polish on affected pages.</description>
+</item>
+<item>
+<title>Add sticky support for canvas groups</title>
+<link>https://github.com/n8n-io/n8n/pull/34317</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34317</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>Sticky notes can now be full members of canvas groups, moving, saving, and displaying alongside regular nodes instead of being excluded or breaking group validity. Groups must now contain at least two connectable (non-sticky) nodes to be created, preventing pointless one-node groups, though existing groups can still degenerate to fewer members without being deleted.</description>
+</item>
+<item>
+<title>Save canvas group description pinned state in local storage</title>
+<link>https://github.com/n8n-io/n8n/pull/34220</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34220</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>When you pin a collapsed canvas group's description so it stays visible, that pinned state now persists per workflow in local storage, surviving page reloads. Unpinning also persists. Additionally, new context menu items let you show or hide a single group's description, or all group descriptions at once, from the canvas or empty-canvas menu.</description>
+</item>
+<item>
+<title>Add descriptions to canvas groups</title>
+<link>https://github.com/n8n-io/n8n/pull/34219</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34219</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>Canvas groups can now have an optional plain-text description (up to 155 characters) to explain their purpose. Expanded groups show it under the title; collapsed groups display an info icon revealing the description on hover, with an option to pin it open. Descriptions support editing with undo/redo, persist through duplication, copy/paste, and import, and are validated across the editor, REST API, and public API, with over-long values truncated on import with a warning.</description>
+</item>
+<item>
+<title>Grist Node: Use a single Grist URL field in the credential</title>
+<link>https://github.com/n8n-io/n8n/pull/34190</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34190</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The Grist API credential now uses a single Grist URL field instead of separate Plan Type, Custom Subdomain, and Self-Hosted URL fields, defaulting to the hosted Grist API. The API Key field now shows where to find your key. Credential testing is stricter, verifying the account can actually access at least one organization rather than just authenticating. Existing credentials keep working without needing to be re-entered.</description>
+</item>
+<item>
+<title>Improve sub workflow extraction</title>
+<link>https://github.com/n8n-io/n8n/pull/34169</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34169</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>Converting nodes to a sub-workflow now automatically includes any attached AI sub-nodes (like Chat Models or Memory) connected to the selected node. If a sub-node is also used by other nodes remaining in the parent, it's copied into the new sub-workflow while staying connected in the parent; sub-nodes with no other consumers are moved entirely, preventing broken connections after extraction.</description>
+</item>
+<item>
+<title>AWS Bedrock Chat Model Node: Add Timeout option</title>
+<link>https://github.com/n8n-io/n8n/pull/34072</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34072</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The AWS Bedrock Chat Model node now includes a Timeout option (default 60000ms, 0 disables it), preventing AI Agent executions from hanging indefinitely when a connection silently drops. Additionally, the existing Max Retries option now actually works, since it was previously ignored due to a bug where retries were always governed by the AWS SDK's default rather than the configured value.</description>
+</item>
+<item>
+<title>Add Mine/All tabs, search and filters to MCP connected clients</title>
+<link>https://github.com/n8n-io/n8n/pull/33857</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33857</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>Settings → MCP → Clients now supports admin oversight: owners/admins see Mine/All tabs with unfiltered count badges, a search box, and filters for client type, connected-by user, and connection date. The All tab shows every user's consents with a Connected by column. Revoking a client now requires confirmation, and admins revoking another user's client trigger a notification email to the owner.</description>
+</item>
+<item>
+<title>Show per-scope tool details on the MCP consent screen</title>
+<link>https://github.com/n8n-io/n8n/pull/33783</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33783</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The MCP OAuth consent screen now shows, for each scope group (Workflows, Executions, Credentials, Data tables, Projects and folders), a pill with the number of MCP tools that group unlocks. Hovering or focusing the pill opens a popover listing each tool with an enabled/disabled indicator, updating live as you switch between All, Read only, and Custom scope modes.</description>
+</item>
+<item>
+<title>Show access and client details in the connected MCP clients list</title>
+<link>https://github.com/n8n-io/n8n/pull/33714</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33714</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The MCP settings Connected clients table now shows more detail per connection: a brand icon and client type (CLI, IDE, Editor, Assistant) for recognized clients like Claude, Cursor, and VS Code, a summary of granted access scopes, and the relative time the connection was granted. Clicking a row opens a details modal showing the client, connection time, and scopes grouped into Read-only and Write, with a Revoke access action available from both the row and the modal.</description>
+</item>
+<item>
+<title>Add scope selection to MCP OAuth consent screen</title>
+<link>https://github.com/n8n-io/n8n/pull/33710</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33710</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The MCP OAuth consent screen now lets users choose exactly what an MCP client (e.g. Claude Code) can access, using the same scope picker as the API key modal: All, Read only, or Custom presets across workflows, executions, credentials, data tables, and projects/folders. Granted scopes are enforced end to end, so out-of-scope tools are not listed or callable. Existing connections keep full access after the update.</description>
+</item>
+<item>
+<title>Mailgun Node: Add reply-to, custom headers, and tags</title>
+<link>https://github.com/n8n-io/n8n/pull/28558</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/28558</guid>
+<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.32</category>
+<description>The Mailgun node now supports setting a Reply-To address, adding custom email headers (sent with an h: prefix), and tagging messages via comma-separated tags for segmentation and analytics. These new fields appear as node parameters in the editor, letting users customize outbound email metadata without additional configuration.</description>
+</item>
+<item>
+<title>Remove preview label from Instance-level MCP settings</title>
+<link>https://github.com/n8n-io/n8n/pull/34084</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34084</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>Instance-level MCP settings are now generally available. The &quot;preview&quot; label has been removed from the MCP settings sidebar item and the MCP settings page heading, along with its explanatory tooltip, reflecting that the feature is no longer in preview.</description>
+</item>
+<item>
+<title>Open logs panel on artifact execution and make execute button secondary</title>
+<link>https://github.com/n8n-io/n8n/pull/34049</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34049</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>When the AI Assistant shows a workflow artifact, the logs panel now opens automatically as soon as an execution starts (whether triggered by you or the agent), making it easier to watch data flow through nodes. The embedded 'Execute workflow' button is now styled as a secondary action, since the conversation is the main focus. Regular editor behavior is unchanged.</description>
+</item>
+<item>
+<title>Microsoft Excel Node: Rename node to Microsoft Excel (OneDrive)</title>
+<link>https://github.com/n8n-io/n8n/pull/33963</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33963</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>The Microsoft Excel node has been renamed to &quot;Microsoft Excel (OneDrive)&quot; to clarify that it operates on workbooks stored in OneDrive. The node's description and in-node notice were updated accordingly, and &quot;OneDrive&quot; was added as a search alias. This is a display-only change; the node's underlying type identifier is unchanged, so existing workflows continue to work without modification.</description>
+</item>
+<item>
+<title>Improve node group selection UX</title>
+<link>https://github.com/n8n-io/n8n/pull/33893</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33893</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>Node groups on the canvas now behave like nodes for selection and context menus. Selecting a title bar or all members selects the whole group with a single selection ring, and selection persists through collapse/expand. Group context menus mirror multi-selection actions worded for the group, with new Expand/Collapse all groups and Expand/Collapse selected options, plus keyboard shortcuts. Selection rectangles now fully wrap groups.</description>
+</item>
+<item>
+<title>MCP Server Trigger Node: Present credential-connect link via elicitation</title>
+<link>https://github.com/n8n-io/n8n/pull/33868</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33868</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>When the MCP Server Trigger blocks a tool call because a required credential isn't connected, the connection link is now presented through the client's native URL elicitation UI (for clients that support it, like ones advertising elicitation.url), instead of appearing as plain text some clients flag as suspicious. Clients without this capability, or if elicitation fails, still receive the original plain-text response with the connection URL, so existing behavior is unaffected for them.</description>
+</item>
+<item>
+<title>Add Group/Ungroup context menu actions</title>
+<link>https://github.com/n8n-io/n8n/pull/33839</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33839</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>You can now group and ungroup nodes directly from the canvas context menu. Right-clicking a valid node selection shows a new Group option (disabled when the selection can't form a valid group), and right-clicking a group shows Rename group and Ungroup nodes options, making it easier to organize workflows without keyboard shortcuts.</description>
+</item>
+<item>
+<title>Google BigQuery Node: Allow custom OAuth2 scopes</title>
+<link>https://github.com/n8n-io/n8n/pull/33822</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33822</guid>
+<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.31</category>
+<description>The Google BigQuery OAuth2 credential now supports custom OAuth2 scopes. By default it continues using the required BigQuery scopes, but users can toggle on Custom Scopes to reveal an editable Enabled Scopes field, pre-filled with the defaults, to request additional or narrower permissions. Custom scopes now persist across reconnects instead of resetting to defaults, matching behavior already available for other Google and Slack/Discord OAuth2 credentials.</description>
+</item>
+</channel>
+</rss>

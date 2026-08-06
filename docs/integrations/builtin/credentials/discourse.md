@@ -1,29 +1,40 @@
 ---
 title: Discourse credentials
-description: Documentation for Discourse credentials. Use these credentials to authenticate Discourse in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Discourse credentials. Use these credentials to authenticate
+  Discourse in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Discourse credentials
+originalFilePath: integrations/builtin/credentials/discourse.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/discourse'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/discourse'
+layout:
+  description:
+    visible: false
 ---
 
-# Discourse credentials
+# Discourse credentials <a href="#discourse-credentials" id="discourse-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Discourse](/integrations/builtin/app-nodes/n8n-nodes-base.discourse.md)
+- [Discourse](../app-nodes/n8n-nodes-base.discourse.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Host an instance of [Discourse](https://discourse.org/)
 - Create an account on your hosted instance and make sure that you are an admin
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Discourse's API documentation](https://docs.discourse.org/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

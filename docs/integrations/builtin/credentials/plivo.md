@@ -1,28 +1,39 @@
 ---
 title: Plivo credentials
-description: Documentation for Plivo credentials. Use these credentials to authenticate Plivo in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Plivo credentials. Use these credentials to authenticate
+  Plivo in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Plivo credentials
+originalFilePath: integrations/builtin/credentials/plivo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/plivo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/plivo'
+layout:
+  description:
+    visible: false
 ---
 
-# Plivo credentials
+# Plivo credentials <a href="#plivo-credentials" id="plivo-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo.md)
+- [Plivo](../app-nodes/n8n-nodes-base.plivo.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Plivo](https://www.plivo.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Plivo's API documentation](https://www.plivo.com/docs/voice/api/overview/) for more information about the service.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need:
 

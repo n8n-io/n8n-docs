@@ -1,23 +1,36 @@
 ---
 title: Mattermost node documentation
-description: Learn how to use the Mattermost node in n8n. Follow technical documentation to integrate Mattermost node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Mattermost node in n8n. Follow technical documentation to
+  integrate Mattermost node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Mattermost node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mattermost'
+layout:
+  description:
+    visible: false
 ---
 
-# Mattermost node
+# Mattermost node <a href="#mattermost-node" id="mattermost-node"></a>
 
 Use the Mattermost node to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
 
 On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Mattermost credentials](../credentials/mattermost.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Channel
     * Add a user to a channel
@@ -44,24 +57,24 @@ Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost.m
     * Invite user to team
 
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mattermost') ]]
 
-## Related resources
+[Browse Mattermost node documentation integration templates](https://n8n.io/integrations/mattermost) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Mattermost's documentation](https://api.mattermost.com/) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
-## Channel ID field error
+## Channel ID field error <a href="#channel-id-field-error" id="channel-id-field-error"></a>
 
 If you're not the System Administrator, you might get an error: **there was a problem loading the parameter options from server: "Mattermost error response: You do not have the appropriate permissions.** next to the **Channel ID** field.
 
 Ask your system administrator to grant you the `post:channel` permission.
 
-## Find the channel ID
+## Find the channel ID <a href="#find-the-channel-id" id="find-the-channel-id"></a>
 
 To find the channel ID in Mattermost:
 

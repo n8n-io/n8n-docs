@@ -1,41 +1,57 @@
 ---
 title: Redis Chat Memory node documentation
-description: Learn how to use the Redis Chat Memory node in n8n. Follow technical documentation to integrate Redis Chat Memory node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Redis Chat Memory node in n8n. Follow technical
+  documentation to integrate Redis Chat Memory node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Redis Chat Memory node documentation
+originalFilePath: >-
+  integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat
+url: >-
+  https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat
+layout:
+  description:
+    visible: false
 ---
 
-# Redis Chat Memory node
+# Redis Chat Memory node <a href="#redis-chat-memory-node" id="redis-chat-memory-node"></a>
 
-Use the Redis Chat Memory node to use Redis as a [memory](/glossary.md#ai-memory) server.
+Use the Redis Chat Memory node to use Redis as a memory[^1] server.
 
 On this page, you'll find a list of operations the Redis Chat Memory node supports, and links to more resources.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/redis.md).
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+You can find authentication information for this node [here](../../credentials/redis.md).
+{% endhint %}
 
-## Node parameters
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
+
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Session Key**: Enter the key to use to store the memory in the workflow data.
 * **Session Time To Live**: Use this parameter to make the session expire after a given number of seconds.
 * **Context Window Length**: Enter the number of previous interactions to consider for context.
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'redis-chat-memory') ]]
 
-## Related resources
+[Browse Redis Chat Memory node documentation integration templates](https://n8n.io/integrations/redis-chat-memory) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [LangChain's Redis Chat Memory documentation](https://js.langchain.com/docs/integrations/memory/redis) for more information about the service.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Single memory instance
+## Single memory instance <a href="#single-memory-instance" id="single-memory-instance"></a>
 
-[[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
+If you add more than one Redis Chat Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](./n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 
-
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

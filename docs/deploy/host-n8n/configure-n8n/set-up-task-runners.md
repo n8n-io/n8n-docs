@@ -60,7 +60,7 @@ You can use task runners in two different modes: internal and external.
 
 ### Internal mode <a href="#internal-mode" id="internal-mode"></a>
 
-In internal mode, the n8n instance launches the task runner as a child process, which is unsafe by design. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
+In internal mode, the n8n instance launches the task runner as a child process, which is insecure by design. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
 
 {% hint style="warning" %}
 **Internal mode not recommended for production**

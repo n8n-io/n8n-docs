@@ -59,7 +59,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
 - Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
-- Filtering by `tags`, and the `tags` field in results, are available from n8n v2.27.0. Use `list_workflow_tags` to discover the available tag names.
+- Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>
@@ -160,9 +160,9 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 ### test_workflow <a href="#testworkflow" id="testworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.15.0**
+**Feature availability**
 
-
+`test_workflow` is available from n8n 2.15.0.
 {% endhint %}
 
 Test a workflow using pin data to bypass external services. Trigger nodes, nodes with credentials, and HTTP Request nodes are pinned (use simulated data). Other nodes (Set, If, Code, etc.) execute normally, including credential-free I/O nodes like Execute Command or file read/write nodes.
@@ -194,9 +194,9 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 ### prepare_workflow_pin_data <a href="#preparetestpindata" id="preparetestpindata"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.15.0**
+**Feature availability**
 
-
+`prepare_workflow_pin_data` is available from n8n 2.15.0.
 {% endhint %}
 
 Prepare test pin data for a workflow. Trigger nodes, nodes with credentials, and HTTP Request nodes need pin data. Logic nodes (Set, If, Code, etc.) and credential-free I/O nodes (Execute Command, file read/write) execute normally without pin data. Returns JSON Schemas describing the expected output shape for each node that needs pin data.
@@ -224,16 +224,16 @@ Prepare test pin data for a workflow. Trigger nodes, nodes with credentials, and
 #### Notes <a href="#notes" id="notes"></a>
 
 - Schemas should be used to generate realistic sample data for `test_workflow`.
-- Renamed from `prepare_test_pin_data` in n8n v2.34.0.
+- Renamed from `prepare_test_pin_data` in n8n 2.34.0.
 
 ---
 
 ### publish_workflow <a href="#publishworkflow" id="publishworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`publish_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Publish (activate) a workflow to make it available for production execution. This creates an active version from the current draft.
@@ -260,9 +260,9 @@ Publish (activate) a workflow to make it available for production execution. Thi
 ### unpublish_workflow <a href="#unpublishworkflow" id="unpublishworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`unpublish_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Unpublish (deactivate) a workflow to stop it from being available for production execution.
@@ -287,9 +287,9 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 ### search_projects <a href="#searchprojects" id="searchprojects"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.14.0**
+**Feature availability**
 
-
+`search_projects` is available from n8n 2.14.0.
 {% endhint %}
 
 Search for projects accessible to the current user. Use this to resolve a project ID before creating workflows or data tables in a specific project.
@@ -312,7 +312,7 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | `data[].type` | `"personal" | "team"` | The project type |
 | `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
-| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n v2.26.0. |
+| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n 2.26.0. |
 | `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous (for example, no exact match but multiple partial matches), or when team projects aren't licensed on this instance |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -326,9 +326,9 @@ Search for projects accessible to the current user. Use this to resolve a projec
 ### search_folders <a href="#searchfolders" id="searchfolders"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.14.0**
+**Feature availability**
 
-
+`search_folders` is available from n8n 2.14.0.
 {% endhint %}
 
 Search for folders within a project.
@@ -361,9 +361,9 @@ Search for folders within a project.
 ### list_workflow_tags <a href="#listtags" id="listtags"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-
+`list_workflow_tags` is available from n8n 2.27.0.
 {% endhint %}
 
 List all workflow tags in the instance. Tags are global (not project-scoped) and can be used with `search_workflows` to filter results.
@@ -394,7 +394,7 @@ List all workflow tags in the instance. Tags are global (not project-scoped) and
 - `usageCount` only counts non-archived workflows.
 - Requires the `tag:list` global permission.
 - Only available when workflow tags are enabled on the instance. If tags are disabled in the instance settings, this tool isn't exposed.
-- Renamed from `list_tags` in n8n v2.34.0.
+- Renamed from `list_tags` in n8n 2.34.0.
 
 ---
 
@@ -403,9 +403,9 @@ List all workflow tags in the instance. Tags are global (not project-scoped) and
 ### get_workflow_execution <a href="#getexecution" id="getexecution"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_workflow_execution` is available from n8n 2.12.0.
 {% endhint %}
 
 Get execution details by execution ID and workflow ID. By default returns metadata only.
@@ -441,16 +441,16 @@ Get execution details by execution ID and workflow ID. By default returns metada
 
 - Use lightweight metadata queries (default) when full execution data isn't needed.
 - Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets.
-- Renamed from `get_execution` in n8n v2.34.0.
+- Renamed from `get_execution` in n8n 2.34.0.
 
 ---
 
 ### search_workflow_executions <a href="#searchexecutions" id="searchexecutions"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.20.0**
+**Feature availability**
 
-
+`search_workflow_executions` is available from n8n 2.20.0.
 {% endhint %}
 
 Search for workflow executions with optional filters. Returns execution metadata including status, timing, and workflow ID.
@@ -484,7 +484,7 @@ Search for workflow executions with optional filters. Returns execution metadata
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- Renamed from `search_executions` in n8n v2.34.0.
+- Renamed from `search_executions` in n8n 2.34.0.
 
 ---
 
@@ -493,9 +493,9 @@ Search for workflow executions with optional filters. Returns execution metadata
 ### list_credentials <a href="#listcredentials" id="listcredentials"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Feature availability**
 
-
+`list_credentials` is available from n8n 2.21.0.
 {% endhint %}
 
 List credentials the current user can access. Use this to find a credential ID before referencing it from a workflow node. Never returns credential secret data.
@@ -541,9 +541,9 @@ List credentials the current user can access. Use this to find a credential ID b
 ### get_workflow_sdk_reference <a href="#getsdkreference" id="getsdkreference"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_workflow_sdk_reference` is available from n8n 2.12.0.
 {% endhint %}
 
 Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance.
@@ -565,16 +565,16 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 - Should be called first before building any workflows.
 - Omit `section`, or set it to `"all"`, to retrieve the full reference.
 - Use `"patterns_detailed"` for expanded workflow pattern examples.
-- Renamed from `get_sdk_reference` in n8n v2.34.0.
+- Renamed from `get_sdk_reference` in n8n 2.34.0.
 
 ---
 
 ### search_nodes <a href="#searchnodes" id="searchnodes"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`search_nodes` is available from n8n 2.12.0.
 {% endhint %}
 
 Search for n8n nodes by service name, trigger type, or utility function. Set `usage` to `"agentTool"` to return only agent-compatible tool nodes. Returns node IDs, discriminators (resource/operation/mode), and related nodes needed for `get_node_types` tool.
@@ -594,7 +594,7 @@ Search for n8n nodes by service name, trigger type, or utility function. Set `us
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- `usage` is available from n8n v2.34.0.
+- `usage` is available from n8n 2.34.0.
 - Use `usage="agentTool"` when searching for nodes to attach to an agent as a tool, for example with `mutate_agent` or `create_agent`. This excludes nodes that can't run as an agent tool, such as human-in-the-loop and MCP client nodes.
 
 ---
@@ -602,9 +602,9 @@ Search for n8n nodes by service name, trigger type, or utility function. Set `us
 ### get_node_types <a href="#getnodetypes" id="getnodetypes"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_node_types` is available from n8n 2.12.0.
 {% endhint %}
 
 Get TypeScript type definitions for n8n nodes. Returns exact parameter names and structures.
@@ -634,7 +634,7 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 #### Notes <a href="#notes" id="notes"></a>
 
 - Critical for correct node configuration - MCP clients should always call before writing workflow code.
-- From n8n v2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
+- From n8n 2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
 - Use the `resource`, `operation`, and `mode` discriminators for multi-variant nodes.
 
 ---
@@ -642,9 +642,9 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 ### get_workflow_best_practices <a href="#getworkflowbestpractices" id="getworkflowbestpractices"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.26.0**
+**Feature availability**
 
-
+`get_workflow_best_practices` is available from n8n 2.26.0.
 {% endhint %}
 
 Get best-practices guidance for a workflow technique. Useful this before searching for nodes or writing workflow code.
@@ -678,9 +678,9 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 ### explore_node_resources <a href="#explorenoderesources" id="explorenoderesources"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-
+`explore_node_resources` is available from n8n 2.27.0.
 {% endhint %}
 
 Resolve the real values behind a node's resource locator or load-options dropdown (for example Slack channels, Google Sheets tabs, or available AI models). Requires a credential to be set for the desired service.
@@ -722,9 +722,9 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 ### validate_workflow <a href="#validateworkflow" id="validateworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`validate_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Always validate before creating or updating a workflow.
@@ -760,9 +760,9 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 ### validate_node_config <a href="#validatenodeconfig" id="validatenodeconfig"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.25.1**
+**Feature availability**
 
-
+`validate_node_config` is available from n8n 2.25.1.
 {% endhint %}
 
 Validate one or more node configurations independently against their generated node schemas. Useful while composing nodes, before assembling workflow code or calling `update_workflow`.
@@ -805,9 +805,9 @@ Validate one or more node configurations independently against their generated n
 ### create_workflow_from_code <a href="#createworkflowfromcode" id="createworkflowfromcode"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`create_workflow_from_code` is available from n8n 2.12.0.
 {% endhint %}
 
 Create a workflow in n8n from validated SDK code. Parses the code into a workflow and saves it.
@@ -852,16 +852,16 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
-- From n8n v2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
 
 ---
 
 ### update_workflow <a href="#updateworkflow" id="updateworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.**
+**Feature availability**
 
-
+`update_workflow` is available from n8n 2.12.0. From n8n 2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 {% endhint %}
 
 Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
@@ -936,9 +936,9 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 ### archive_workflow <a href="#archiveworkflow" id="archiveworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`archive_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Archive a workflow in n8n by its ID.
@@ -966,12 +966,18 @@ Archive a workflow in n8n by its ID.
 ## Agent management <a href="#agent-management" id="agent-management"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.34.0**
+**Feature availability**
 
-Agent management tools are available when the workflow builder and the agents module are both enabled on the instance. On self-hosted n8n, enable the agents module by adding `agents` to `N8N_ENABLED_MODULES`.
+Agent management tools are available from n8n 2.34.0, when the workflow builder and the agents module are both enabled on the instance. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details.
 {% endhint %}
 
-These tools create, configure, publish, and manage n8n agents: persisted, first-class conversational assistants with their own model, tools, skills, tasks, and channel integrations. An agent is a separate resource from a workflow, even though a workflow can contain an AI Agent node. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for the equivalent editor experience.
+{% hint style="info" %}
+**Feature availability**
+
+Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+{% endhint %}
+
+These tools create, configure, publish, and manage n8n agents: persisted, first-class conversational assistants with their own model, tools, skills, tasks, and channel integrations. An agent is a separate resource from a workflow, even though a workflow can contain an AI Agent node.
 
 Tools that take an `agentId` resolve the project from the agent, so callers don't need to pass a project ID separately. Every tool other than `search_agents` only operates on agents with `availableInMCP` set to true; `search_agents` still returns every agent the current user can access, so a client can tell the user what exists and prompt them to enable MCP access if needed.
 
@@ -1458,9 +1464,9 @@ For MCP clients that support resources, n8n also exposes the agent builder refer
 ### search_data_tables <a href="#searchdatatables" id="searchdatatables"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`search_data_tables` is available from n8n 2.16.0.
 {% endhint %}
 
 Search for data tables accessible to the current user. Use this to find a data table ID before modifying or adding data to it.
@@ -1499,9 +1505,9 @@ Search for data tables accessible to the current user. Use this to find a data t
 ### create_data_table <a href="#createdatatable" id="createdatatable"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`create_data_table` is available from n8n 2.16.0.
 {% endhint %}
 
 Create a new data table with the specified columns.
@@ -1535,9 +1541,9 @@ Create a new data table with the specified columns.
 ### add_data_table_column <a href="#adddatatablecolumn" id="adddatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`add_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Add a new column to an existing data table.
@@ -1572,9 +1578,9 @@ Add a new column to an existing data table.
 ### rename_data_table_column <a href="#renamedatatablecolumn" id="renamedatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`rename_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Rename a column in a data table.
@@ -1608,9 +1614,9 @@ Rename a column in a data table.
 ### delete_data_table_column <a href="#deletedatatablecolumn" id="deletedatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`delete_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Delete a column from a data table. This permanently removes the column and all its data.
@@ -1639,9 +1645,9 @@ Delete a column from a data table. This permanently removes the column and all i
 ### rename_data_table <a href="#renamedatatable" id="renamedatatable"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`rename_data_table` is available from n8n 2.16.0.
 {% endhint %}
 
 Rename an existing data table.
@@ -1670,9 +1676,9 @@ Rename an existing data table.
 ### add_data_table_rows <a href="#adddatatablerows" id="adddatatablerows"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`add_data_table_rows` is available from n8n 2.16.0.
 {% endhint %}
 
 Insert rows into an existing data table. Each row is an object mapping column names to values.

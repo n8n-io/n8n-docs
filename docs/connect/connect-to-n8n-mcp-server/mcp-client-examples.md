@@ -22,7 +22,7 @@ The examples below are useful if interactive steps aren't shown in n8n for your 
 ## Connecting Lovable to n8n MCP server <a href="#connecting-lovable-to-n8n-mcp-server" id="connecting-lovable-to-n8n-mcp-server"></a>
 
 1. Configure MCP Server in Lovable (OAuth).
-   * Navigate to your workspace  **Settings > Integrations**.
+   * Navigate to your workspace **Settings > Integrations**.
    * In the **MCP Servers** section, find **n8n** and click **Connect**.
    * Enter your n8n server URL: the **Server URL** value shown in the **Connect a client** dialog.
    * Save the connection. If successful, n8n redirects you to authorize Lovable.

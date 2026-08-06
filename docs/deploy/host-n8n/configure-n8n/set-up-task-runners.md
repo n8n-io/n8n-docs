@@ -37,9 +37,9 @@ This document describes how task runners work and how you can configure them.
 {% hint style="warning" %}
 **Always use task runners in production**
 
-Task runners are the only isolation layer between user-provided code and your n8n instance. Without them, or with [internal mode](set-up-task-runners.md#internal-mode), Code node scripts run with the same access as n8n itself, including your database, [encryption key](basic-configuration/configuration-examples/set-a-custom-encryption-key.md), stored credentials, and environment variables. Anyone who can edit a workflow could potentially read or exfiltrate every credential on the instance.
+Task runners are the only isolation layer between user-provided code and n8n. Without them, or with [internal mode](set-up-task-runners.md#internal-mode), anyone who can edit a workflow could potentially read your database, [encryption key](basic-configuration/configuration-examples/set-a-custom-encryption-key.md), stored credentials, and environment variables.
 
-For production, and any instance holding sensitive credentials or data, use [external mode](set-up-task-runners.md#external-mode) and refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures. Only consider skipping external mode on isolated instances that contain nothing but trusted or mock data, where you accept the risk to reduce hosting costs.
+In production, and on any instance holding sensitive data, use [external mode](set-up-task-runners.md#external-mode) plus the measures in [Hardening task runners](security/harden-task-runners.md). Skipping external mode to save hosting costs is only a reasonable tradeoff on isolated instances that hold nothing but trusted or mock data.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>

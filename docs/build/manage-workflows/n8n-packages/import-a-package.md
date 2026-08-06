@@ -52,7 +52,7 @@ For a workflow or folder package, you choose the destination:
 | Flag | Description |
 |------|-------------|
 | `--file` | Path to the `.n8np` file. Required. No short alias, because `-f` is `--format`. |
-| `-p, --project-id` | Target project ID. Defaults to your personal project. Aliases: `--project`. |
+| `--project-id`, `-p` | Target project ID. Defaults to your personal project. Aliases: `--project`. |
 | `--folder-id` | Target folder ID within the project. Defaults to the project root. Aliases: `--folder`. |
 
 {% hint style="warning" %}

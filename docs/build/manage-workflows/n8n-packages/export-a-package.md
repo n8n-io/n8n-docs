@@ -45,16 +45,16 @@ Pass at least one ID. Repeat a flag to name several: there's no comma-separated 
 
 ```bash
 # Two workflows
-n8n-cli package export -w wf7Kq2 -w wf9Zx1 -o triage.n8np
+n8n-cli package export --workflow-id=wf7Kq2 --workflow-id=wf9Zx1 --output=triage.n8np
 
 # A folder, and everything nested inside it
-n8n-cli package export --folder-id=fdInProg -o in-progress.n8np
+n8n-cli package export --folder-id=fdInProg --output=in-progress.n8np
 
 # A workflow and a folder together
-n8n-cli package export -w wf7Kq2 --folder-id=fdInProg -o mixed.n8np
+n8n-cli package export --workflow-id=wf7Kq2 --folder-id=fdInProg --output=mixed.n8np
 
 # Two whole projects
-n8n-cli package export -p prTeam9 -p prOps3 -o teams.n8np
+n8n-cli package export --project-id=prTeam9 --project-id=prOps3 --output=teams.n8np
 ```
 
 Workflow and folder IDs can be combined. Project IDs can't be combined with either, because a project package has a different shape. Mixing the two groups returns a `400`.
@@ -69,10 +69,10 @@ An empty project exports as project metadata only, with no `workflows` list in t
 
 | Flag | Description |
 |------|-------------|
-| `-w, --workflow-id` | Workflow ID to include. Repeat to export several. |
+| `--workflow-id`, `-w` | Workflow ID to include. Repeat to export several. |
 | `--folder-id` | Folder ID to include, with everything nested inside it. Repeat to export several. |
-| `-p, --project-id` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id` or `--folder-id`. |
-| `-o, --output` | File to write the package to. Defaults to `export.n8np` in the current directory. |
+| `--project-id`, `-p` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id` or `--folder-id`. |
+| `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
 | `--missing-workflow-dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a sub-workflow you didn't name. See [Sub-workflow dependencies](#sub-workflow-dependencies). |
@@ -103,12 +103,12 @@ The everyday promotion case has two forms:
 
 ```bash
 # Name the dependency yourself
-n8n-cli package export -w wf7Kq2 -w wf9Zx1 -o triage.n8np
+n8n-cli package export --workflow-id=wf7Kq2 --workflow-id=wf9Zx1 --output=triage.n8np
 
 # Or let n8n work it out
-n8n-cli package export -w wf7Kq2 \
+n8n-cli package export --workflow-id=wf7Kq2 \
 	--missing-workflow-dependency-policy=include-in-package \
-	-o triage.n8np
+	--output=triage.n8np
 ```
 
 {% hint style="warning" %}

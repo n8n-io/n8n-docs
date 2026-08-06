@@ -226,7 +226,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available from n8n 2.34.0. Agents are a separate feature from workflows, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). This section only applies if agents are available on your instance.
+Agents are available from n8n 2.34.0 and are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. This section only applies if agents are enabled on your instance.
 {% endhint %}
 
 {% hint style="info" %}

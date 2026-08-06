@@ -34,7 +34,7 @@ Task runners are a generic mechanism to execute tasks in a secure and performant
 
 This document describes how task runners work and how you can configure them.
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 **Always use task runners in production**
 
 Task runners are the only isolation layer between user-provided code and your n8n instance. Without them, or with [internal mode](set-up-task-runners.md#internal-mode), Code node scripts run with the same access as n8n itself, including your database, [encryption key](basic-configuration/configuration-examples/set-a-custom-encryption-key.md), stored credentials, and environment variables. Anyone who can edit a workflow could potentially read or exfiltrate every credential on the instance.

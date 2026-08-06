@@ -1,7 +1,7 @@
 ---
 description: >-
   What's inside a .n8np file: the three package shapes, the directory layout,
-  the manifest, and what each entity file holds.
+  and the manifest.
 status: preview
 layout:
   description:
@@ -173,7 +173,7 @@ Last comes `requirements`, which lists what the workflows need to run on the tar
 | `workflows` | `{ id, name, usedByWorkflows }` | Sub-workflow and error workflow references. `name` is optional, because a referenced workflow may not be one the exporting user can see |
 | `variables` | `{ name, usedByWorkflows }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
 | `tags` | `{ id, name, usedByWorkflows }` | |
-| `nodeTypes` | `{ type, typeVersion, usedByWorkflows }` | Informational. Import works out node type usage from the workflows themselves and never trusts this list |
+| `nodeTypes` | `{ type, typeVersion, usedByWorkflows }` | Every node type and version the workflows use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list from the workflows on import rather than trusting this one |
 
 {% hint style="warning" %}
 `requirements` lists what the workflows need, which isn't the same as what the package contains. `requirements.workflows` lists every static workflow reference, including sub-workflows that are bundled in the package. A credential the exporting user can't read appears in `requirements.credentials` with no matching file. Don't read `requirements` as an inventory of the archive; read the entry lists for that.
@@ -231,28 +231,6 @@ A full manifest for a workflow package holding two workflows:
 	}
 }
 ```
-
-## The entity files
-
-n8n validates each entity file it reads against the format below. `folder.json`, `variable.json`, and `data-table.json` are strict: a file carrying a field the format doesn't define is rejected. Unknown fields in `workflow.json` and `project.json` are ignored rather than rejected. `credential.json` and `tag.json` aren't read on import at all, because the credentials and tags n8n resolves come from the manifest's `requirements`. Either way, don't add fields of your own: nothing outside the format below travels.
-
-| File | Fields | Notes |
-|------|--------|-------|
-| `workflow.json` | `id`, `name`, `nodes`, `connections`, `settings`, `versionId`, `parentFolderId`, `isPublished`, `isArchived`, `tagIds` | No pinned data, static data, execution history, timestamps, owner, or sharing |
-| `credential.json` | `id`, `name`, `type` | Nothing else can travel. See [Credential secrets](#credential-secrets) |
-| `folder.json` | `id`, `name`, `parentFolderId` | `parentFolderId` is relative to the export: a folder at the root of the exported tree has `null`, even if it has a parent on the source instance |
-| `project.json` | `id`, `name`, `description`, `icon`, `customTelemetryTags` | No members, roles, or sharing |
-| `variable.json` | `name`, `type`, `value` | `value` is left out when you export with `--include-variable-values=false` |
-| `data-table.json` | `id`, `name`, `columns` | Each column is `{ name, type, index }`. Schema only, never rows |
-| `tag.json` | `id`, `name` | |
-
-Some `workflow.json` fields are informational, and import ignores them. A workflow's parent folder comes from where the workflow sits in the package, not from its `parentFolderId`. `versionId` is discarded. `isPublished` feeds the publishing policy rather than being applied directly. For what n8n does with the rest, see [How import works](how-import-works.md).
-
-### Credential secrets
-
-A `credential.json` holds an ID, a name, and a type. That's the whole file.
-
-This rules out more than the secret. Everything you filled in when you created the credential lives in the same encrypted store: the API key, and also the host, base URL, region, scopes, and every other field. None of it travels. A credential that the import creates as a placeholder is completely empty, and you fill in every field on the target instance.
 
 ## Version compatibility
 

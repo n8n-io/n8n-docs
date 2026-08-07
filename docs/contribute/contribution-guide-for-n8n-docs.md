@@ -102,14 +102,14 @@ You can make contributions in a variety of different ways:
 
 ### Edit a page in your browser
 
-This method is best for quick edits to a single page. Click **Edit this page** on any n8n Docs page and GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
+This method is best for quick edits to a single page. Open the **Copy** dropdown at the top of any n8n Docs page, and select **Edit on GitHub**. GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
 
 **Prerequisites:** A [GitHub](https://github.com/) account.
 
-1. On any n8n Docs page, click **Edit** from the dropdown menu at the top right. This takes you to the page in the [n8n Docs GitHub repository](https://github.com/n8n-io/n8n-docs).
+1. Open the **Copy** dropdown at the top of any n8n Docs page, and select **Edit on GitHub**. This takes you to the page in the [n8n Docs GitHub repository](https://github.com/n8n-io/n8n-docs).
 2. Click the pencil icon to edit the page.
 
-You may be prompted to fork the repository first. Click **Fork this repository** and GitHub automatically creates a fork for you.
+If you're an external contributor, GitHub will prompt you to fork the repository before making changes. Click **Fork this repository** and GitHub automatically creates a fork for you.
 
 3. Make your edits in the text editor, and click **Commit changes** > **Propose changes**.
 

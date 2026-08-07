@@ -19,7 +19,7 @@ tags:
 n8n packages are in preview. The import options may change in future releases.
 {% endhint %}
 
-Import reads an [n8n package](README.md), a [`.n8np` archive](package-format.md), and writes its contents to the target instance. n8n checks the whole package first: if anything would block the import, it writes nothing and returns every problem at once. See [How import works](how-import-works.md) for the detail.
+Import reads an [n8n package](README.md), a [.n8np archive](package-format.md), and writes its contents to the target instance. n8n checks the whole package first: if anything would block the import, it writes nothing and returns every problem at once. See [How import works](how-import-works.md) for the detail.
 
 Use the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli):
 
@@ -193,10 +193,10 @@ A successful import returns `200` with eight keys:
 	"workflows": [
 		{ "sourceWorkflowId": "wf9Zx1", "localId": "wf9Zx1", "name": "Send email",
 			"projectId": "prProd4", "parentFolderId": null,
-			"activeVersionId": "<version-id>", "publishing": { "state": "published" }, "status": "created" },
+			"activeVersionId": null, "publishing": { "state": "unchanged" }, "status": "created" },
 		{ "sourceWorkflowId": "wf7Kq2", "localId": "wf7Kq2", "name": "Triage inbound",
 			"projectId": "prProd4", "parentFolderId": null,
-			"activeVersionId": "<version-id>", "publishing": { "state": "published" }, "status": "created" }
+			"activeVersionId": null, "publishing": { "state": "unchanged" }, "status": "created" }
 	],
 	"folders": [],
 	"projects": [],
@@ -226,6 +226,8 @@ There's no data table summary in the response.
 A workflow's `localId` is its ID on the target instance: the package's ID under `--workflow-id-policy=source`, a fresh ID under `new`, and the existing workflow's ID when it was updated or skipped.
 
 `publishing.state` is one of `published`, `unpublished`, `unchanged`, `blocked`, or `failed`. For what each means, see [Publishing outcomes](how-import-works.md#publishing-outcomes).
+
+Both workflows in the example are new, and the default `preserve-published-state` never publishes a new workflow, so each reports `unchanged` with a null `activeVersionId`. `activeVersionId` is non-null exactly when the workflow ends up published. To have new workflows arrive published, use `--workflow-publishing-policy=publish-all`, or `match-source` when they were published in the package.
 
 ## Errors
 

@@ -21,6 +21,10 @@ layout:
 [export-and-import.md](export-and-import.md)
 {% endcontent-ref %}
 
+{% content-ref url="n8n-packages/README.md" %}
+[README.md](n8n-packages/README.md)
+{% endcontent-ref %}
+
 {% content-ref url="share-with-others.md" %}
 [share-with-others.md](share-with-others.md)
 {% endcontent-ref %}

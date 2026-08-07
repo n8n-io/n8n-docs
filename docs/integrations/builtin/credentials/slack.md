@@ -202,7 +202,12 @@ To get both, create a Slack app. n8n recommends creating the app from a manifest
 			],
 			"user": [
 				"channels:write",
+				"groups:write",
 				"search:read",
+				"search:read.public",
+				"search:read.private",
+				"search:read.im",
+				"search:read.mpim",
 				"stars:read",
 				"stars:write",
 				"users.profile:write"
@@ -241,6 +246,7 @@ Some Slack API endpoints, including Slack's MCP endpoints, only work with user t
 				"files:read",
 				"files:write",
 				"groups:read",
+				"groups:write",
 				"groups:history",
 				"im:read",
 				"im:history",
@@ -255,7 +261,11 @@ Some Slack API endpoints, including Slack's MCP endpoints, only work with user t
 				"users.profile:read",
 				"users.profile:write",
 				"users:read",
-				"search:read"
+				"search:read",
+				"search:read.public",
+				"search:read.private",
+				"search:read.im",
+				"search:read.mpim"
 			]
 		}
 	},
@@ -314,6 +324,7 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 | `files:read`          | |
 | `files:write`         | |
 | `groups:read`         | |
+| `groups:write`        | For private-channel management operations |
 | `groups:history`      | |
 | `im:read`             | |
 | `im:history`          | |
@@ -328,7 +339,11 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 | `users.profile:read`  | |
 | `users.profile:write` | Not available as a bot token scope |
 | `users:read`          | |
-| `search:read`         | Not available as a bot token scope |
+| `search:read`         | Deprecated by Slack; retained for node versions <= 2.6 |
+| `search:read.public`  | For public-channel message search |
+| `search:read.private` | Not available as a bot token scope |
+| `search:read.im`      | Not available as a bot token scope |
+| `search:read.mpim`    | Not available as a bot token scope |
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

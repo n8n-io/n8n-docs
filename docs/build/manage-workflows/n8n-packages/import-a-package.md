@@ -227,7 +227,7 @@ A workflow's `localId` is its ID on the target instance: the package's ID under 
 
 `publishing.state` is one of `published`, `unpublished`, `unchanged`, `blocked`, or `failed`. For what each means, see [Publishing outcomes](how-import-works.md#publishing-outcomes).
 
-Both workflows in the example are new, and the default `preserve-published-state` never publishes a new workflow, so each reports `unchanged` with a null `activeVersionId`. `activeVersionId` is non-null exactly when the workflow ends up published. To have new workflows arrive published, use `--workflow-publishing-policy=publish-all`, or `match-source` when they were published in the package.
+Both workflows in the example are new, and the default `preserve-published-state` never publishes a new workflow, so each reports `unchanged`. To have new workflows arrive published, use `--workflow-publishing-policy=publish-all`, or `match-source` when they are specified as `published` in the package.
 
 ## Errors
 

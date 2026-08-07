@@ -185,17 +185,10 @@ Every export emits an event on both the log streaming and telemetry paths, so yo
 
 The success event carries the user and the `workflowIds`, `folderIds`, and `projectIds` that actually ended up in the package, so it reflects folder contents and auto-included sub-workflows rather than what you asked for. Each list is present only when it isn't empty.
 
-The failure event carries the user, the IDs you requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
+The failure event carries the user, the IDs requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
 
-Log streaming events carry IDs but no counts. The telemetry events carry the per-entity counts instead, and no IDs.
-
-{% hint style="info" %}
-n8n emits the success event as soon as it finishes building the archive, before it sends the first byte. The event records what went into the archive, not what reached you.
-
-If the transfer then breaks, because you disconnect, the connection resets, or a proxy times out, n8n emits nothing further: no failure event and no error. The audit trail shows a successful export even though you received a partial file or none of it. Check the size of what you downloaded rather than trusting the `200`.
-
-One request emits both events only when n8n hits an error building or compressing the archive mid-transfer: the success event, then the failure event with a `reason` of `validation`. The response has already started with a `200` by then, so you get a truncated file rather than an error body.
-{% endhint %}
+Log streaming events carry IDs. 
+Telemetry events emit counts to keep the data anonymized.
 
 ## Read next
 

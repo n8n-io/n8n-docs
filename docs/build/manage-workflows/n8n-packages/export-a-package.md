@@ -170,9 +170,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.
 
-Error bodies carry a `message` only. For a missing or inaccessible entity, a blocked sub-workflow dependency, or a variable name collision, that message counts the affected entities rather than naming them: `2 workflow(s) not found or not accessible. Export aborted.` The offending IDs aren't in the response. The CLI prints the same message, and the log streaming event records only the failure reason and the IDs you asked for.
-
-To find which dependency is missing, export again with `--missing-workflow-dependency-policy=reference-only` and read `requirements.workflows` in the [manifest](package-format.md#manifestjson).
+Error bodies carry a `message` only. 
 
 ## Events
 

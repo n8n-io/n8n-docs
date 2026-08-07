@@ -65,7 +65,7 @@ In internal mode, the n8n instance launches the task runner as a child process, 
 {% hint style="warning" %}
 **Internal mode not recommended for production**
 
-Because the runner runs as the same user on the same host as n8n, user-provided code that escapes the runner's sandbox can read n8n's files and environment, including the database and the encryption key that protects stored credentials. Use internal mode only on isolated instances that hold no sensitive credentials or data.
+Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
 {% endhint %}
 
 ### External mode <a href="#external-mode" id="external-mode"></a>

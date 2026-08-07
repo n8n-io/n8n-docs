@@ -94,9 +94,9 @@ def main():
     check("no unresolved reusable", "couldn't be mapped" not in out)
 
     # non-pages: orphan + SUMMARY + asset; NOT the removed file
-    check("orphan (unlisted) is a non-page", "orphan.md" in out and "aren't published as pages" in out)
-    check("SUMMARY.md is a non-page", "SUMMARY.md" in out)
-    check("asset is a non-page", "x.png" in out)
+    check("orphan (unlisted .md) is flagged as not-in-nav", "orphan.md" in out and "aren't in the nav" in out)
+    check("SUMMARY.md file is NOT reported (expected non-page)", "docs/spacea/SUMMARY.md" not in out)
+    check("asset is NOT reported (expected non-page)", "x.png" not in out)
     check("removed file never appears", "deleted.md" not in out)
 
     # Frontmatter `url:` is stale in this repo (pre-migration); URLs must be
@@ -157,7 +157,7 @@ def main():
     check("pending space detected", pend_pending == {"spaceb"})
     check("page in a building space shown as pending, not non-page",
           "still building the preview for `spaceb`" in out_pend
-          and "aren't published as pages" not in out_pend)
+          and "aren't in the nav" not in out_pend)
 
     # A FAILED build must not be treated as pending (would promise a never-coming
     # update); the space just isn't available.
@@ -176,6 +176,22 @@ def main():
         {}, gb.load_reusable_index(), {"spaceb"})
     check("all-pending still yields a building note",
           "still building the preview for `spaceb`" in out_allpend)
+
+    # Regression (DOC-2188): a changed .md file OUTSIDE docs/ (e.g. a skill file
+    # or top-level README) has no space. render() must skip it silently, never
+    # feeding a None space into in_summary() (which would raise TypeError).
+    check("space_of outside docs/ is None", gb.space_of("skills/n8n-docs-author/SKILL.md") is None)
+    out_nondocs = gb.render(
+        [{"status": "modified", "filename": "skills/n8n-docs-author/SKILL.md"},
+         {"status": "modified", "filename": "README.md"},
+         {"status": "modified", "filename": "docs/spacea/page-one.md"}],
+        spaces, gb.load_reusable_index())
+    check("non-docs .md doesn't crash and isn't reported",
+          "SKILL.md" not in out_nondocs
+          and "README.md" not in out_nondocs
+          and "aren't in the nav" not in out_nondocs)
+    check("a real docs page alongside it still renders",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_nondocs)
 
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:

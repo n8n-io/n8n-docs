@@ -22,6 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Microsoft Dynamics CRM](../app-nodes/n8n-nodes-base.microsoftdynamicscrm.md)
 - [Microsoft Excel (OneDrive)](../app-nodes/n8n-nodes-base.microsoftexcel.md)
+- [Microsoft Excel (SharePoint)](../app-nodes/n8n-nodes-base.microsoftexcelsharepoint.md)
 - [Microsoft Graph Security](../app-nodes/n8n-nodes-base.microsoftgraphsecurity.md)
 - [Microsoft OneDrive](../app-nodes/n8n-nodes-base.microsoftonedrive.md)
 - [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
@@ -34,7 +35,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Choosing a credential type**
 
-Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential.
+Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -164,6 +165,7 @@ This setting applies to all Microsoft Graph API nodes that use Microsoft credent
 - Microsoft Teams
 - Microsoft Outlook
 - Microsoft Excel (OneDrive)
+- Microsoft Excel (SharePoint)
 - Microsoft OneDrive
 - Microsoft Graph Security
 - Microsoft To Do

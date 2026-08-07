@@ -170,7 +170,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.
 
-Error bodies carry a `message` only, and it names how many entities were affected rather than which. The CLI prints the same message, and the log streaming event records only the failure reason and the IDs you asked for, so the offending IDs aren't surfaced anywhere.
+Error bodies carry a `message` only. For a missing or inaccessible entity, a blocked sub-workflow dependency, or a variable name collision, that message counts the affected entities rather than naming them: `2 workflow(s) not found or not accessible. Export aborted.` The offending IDs aren't in the response. The CLI prints the same message, and the log streaming event records only the failure reason and the IDs you asked for.
 
 To find which dependency is missing, export again with `--missing-workflow-dependency-policy=reference-only` and read `requirements.workflows` in the [manifest](package-format.md#manifestjson).
 
@@ -190,7 +190,11 @@ The failure event carries the user, the IDs you requested, and a `reason` of `ac
 Log streaming events carry IDs but no counts. The telemetry events carry the per-entity counts instead, and no IDs.
 
 {% hint style="info" %}
-n8n emits the success event before it streams the archive to you. If the download then fails part-way, the same request emits the failure event too, so one export can produce both. A client that disconnects before the download finishes emits neither an error nor a failure event.
+n8n emits the success event as soon as it finishes building the archive, before it sends the first byte. The event records what went into the archive, not what reached you.
+
+If the transfer then breaks, because you disconnect, the connection resets, or a proxy times out, n8n emits nothing further: no failure event and no error. The audit trail shows a successful export even though you received a partial file or none of it. Check the size of what you downloaded rather than trusting the `200`.
+
+One request emits both events only when n8n hits an error building or compressing the archive mid-transfer: the success event, then the failure event with a `reason` of `validation`. The response has already started with a `200` by then, so you get a truncated file rather than an error body.
 {% endhint %}
 
 ## Read next

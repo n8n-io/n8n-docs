@@ -19,7 +19,7 @@ tags:
 n8n packages are in preview. The export options may change in future releases.
 {% endhint %}
 
-Export writes an [n8n package](README.md), a [`.n8np` archive](package-format.md), containing what you asked for, plus references to everything those workflows need on the target instance. Export doesn't modify the source instance.
+Export writes an [n8n package](README.md), a [.n8np archive](package-format.md), containing what you asked for, plus references to everything those workflows need on the target instance. Export doesn't modify the source instance.
 
 Use the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli):
 

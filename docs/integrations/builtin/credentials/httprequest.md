@@ -98,7 +98,7 @@ To configure this credential, enter:
 
 For most OAuth1 integrations, you'll need to configure an app, service, or integration to generate the values for most of these fields. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
 
-Read more about [OAuth1](https://oauth.net/1/) and the [OAuth1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
+Read more about [OAuth1](https://oauth.net/1/) and the [OAuth1 authorization flow](https://datatracker.ietf.org/doc/html/rfc5849#section-2).
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 

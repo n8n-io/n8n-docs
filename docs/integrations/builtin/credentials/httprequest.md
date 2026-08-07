@@ -229,7 +229,7 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 ## Using Simplified Custom Auth
 
 {% hint style="info" %}
-**Available from n8n 2.34.0**
+**Available from n8n 2.35.0**
 
 In older versions, use [Custom auth](httprequest.md#using-custom-auth) instead.
 {% endhint %}

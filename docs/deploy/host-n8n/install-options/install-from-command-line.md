@@ -1,4 +1,11 @@
 ---
+description: Install n8n from the command line using the one-script installer.
+layout:
+  description:
+    visible: false
+---
+
+# Install n8n from the command line
 contentType: tutorial
 nodeTitle: Install n8n from the command line
 layout:

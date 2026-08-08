@@ -10,6 +10,10 @@ layout:
 ---
 
 {% hint style="warning" %}
+**Feature availability**
+
+npm-based installs are deprecated from n8n 3.0.
+{% endhint %}
 npm-based installs will be deprecated in v3.0 of n8n.
 {% endhint %}
 

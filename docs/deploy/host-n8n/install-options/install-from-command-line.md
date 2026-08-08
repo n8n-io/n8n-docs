@@ -92,7 +92,7 @@ If you're setting n8n up for a team or a production environment, you'll likely w
 
 ## Optional: Turn on the AI Assistant
 
-n8n works fully without the AI Assistant, which is is an optional extra. To turn it on:
+n8n works fully without the AI Assistant, which is an optional extra. To turn it on:
 
 1. Open the `.env` file the command created (in `./n8n/.env` by default).
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.

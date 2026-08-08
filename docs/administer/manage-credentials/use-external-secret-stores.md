@@ -143,7 +143,26 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 
 ### Azure Key Vault <a href="#azure-key-vault" id="azure-key-vault"></a>
 
-Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
+{% hint style="info" %}
+**Available from n8n `<version>`**
+
+The **Azure Cloud** setting is available from n8n `<version>`. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
+{% endhint %}
+
+Provide your **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
+
+Select the **Azure Cloud** environment your Key Vault is hosted in. This sets the vault URL and the Microsoft Entra authority host:
+
+| Azure Cloud | Vault URL suffix | Entra authority host |
+|-------------|------------------|----------------------|
+| **Azure Public Cloud** (default) | `vault.azure.net` | `https://login.microsoftonline.com` |
+| **Azure US Government** | `vault.usgovcloudapi.net` | `https://login.microsoftonline.us` |
+| **Azure China** | `vault.azure.cn` | `https://login.partner.microsoftonline.cn` |
+| **Custom** | You provide the full URL | You provide the host |
+
+For **Azure Public Cloud**, **Azure US Government**, and **Azure China**, provide your **Vault Name**. n8n builds the vault URL from the name and the selected cloud's suffix.
+
+For **Custom**, provide the full **Vault URL** (for example, `https://my-vault.vault.usgovcloudapi.net`) instead of a vault name. You can also set an optional **Authority Host** (for example, `https://login.microsoftonline.us`) to authenticate against a different Microsoft Entra authority. Leave **Authority Host** empty to use the default (`https://login.microsoftonline.com`). Use **Custom** for setups such as Azure Stack or proxied environments.
 
 ### GCP Secrets Manager <a href="#gcp-secrets-manager" id="gcp-secrets-manager"></a>
 

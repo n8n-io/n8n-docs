@@ -9,11 +9,15 @@ layout:
     visible: false
 ---
 
-# npm <a href="#npm" id="npm"></a>
+{% hint style="warning" %}
+**Feature availability**
+
+npm-based installs are deprecated from n8n 3.0.
+{% endhint %}
+npm-based installs will be deprecated in v3.0 of n8n.
+{% endhint %}
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Try n8n with npx <a href="#try-n8n-with-npx" id="try-n8n-with-npx"></a>
 

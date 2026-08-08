@@ -170,9 +170,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.
 
-Error bodies carry a `message` only, and it names how many entities were affected rather than which. The CLI prints the same message, and the log streaming event records only the failure reason and the IDs you asked for, so the offending IDs aren't surfaced anywhere.
-
-To find which dependency is missing, export again with `--missing-workflow-dependency-policy=reference-only` and read `requirements.workflows` in the [manifest](package-format.md#manifestjson).
+Error bodies carry a `message` only. 
 
 ## Events
 
@@ -185,13 +183,10 @@ Every export emits an event on both the log streaming and telemetry paths, so yo
 
 The success event carries the user and the `workflowIds`, `folderIds`, and `projectIds` that actually ended up in the package, so it reflects folder contents and auto-included sub-workflows rather than what you asked for. Each list is present only when it isn't empty.
 
-The failure event carries the user, the IDs you requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
+The failure event carries the user, the IDs requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
 
-Log streaming events carry IDs but no counts. The telemetry events carry the per-entity counts instead, and no IDs.
-
-{% hint style="info" %}
-n8n emits the success event before it streams the archive to you. If the download then fails part-way, the same request emits the failure event too, so one export can produce both. A client that disconnects before the download finishes emits neither an error nor a failure event.
-{% endhint %}
+Log streaming events carry IDs. 
+Telemetry events emit counts to keep the data anonymized.
 
 ## Read next
 

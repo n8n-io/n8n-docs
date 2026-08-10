@@ -80,6 +80,10 @@ To delete a project:
    * **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
    * **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
 
+### Favorite a project <a href="#favorite-a-project" id="favorite-a-project"></a>
+
+You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **three-dot menu** and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
+
 ### Move workflows and credentials between projects or users <a href="#move-workflows-and-credentials-between-projects-or-users" id="move-workflows-and-credentials-between-projects-or-users"></a>
 
 Workflow and credential owners can move workflows or credentials (changing ownership) to other users or projects they have access to.

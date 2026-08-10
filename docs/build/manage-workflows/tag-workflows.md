@@ -48,3 +48,7 @@ You can edit existing tags. Instance owners can delete tags.
 
 Tags are global. If you edit or delete a tag, this affects all users of your n8n instance.
 {% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
+
+* [Favorite items](favorite-items.md): Pin workflows, folders, projects, and data tables for quick access.

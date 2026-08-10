@@ -136,7 +136,7 @@ If your instances use different Git branches, you can't promote directly. Push f
 
 ## Scheduled backup flow
 
-To version your instance in Git on a schedule, fetch every eligible file and push everything on a timer. This is a common GitOps backup pattern. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger):
+To version your instance in Git on a schedule, fetch every eligible file and push everything on a timer. Run this from a cron job, a CI pipeline, or an n8n workflow on a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger)
 
 **1. Get every eligible file.** Call `status` with `direction=push`:
 

@@ -102,7 +102,7 @@ You can make contributions in a variety of different ways:
 
 ### Edit a page in your browser
 
-This method is best for quick edits to a single page. Open the **Copy** dropdown at the top of any n8n Docs page, and select **Edit on GitHub**. GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
+This method is best for quick edits to a single page. GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
 
 **Prerequisites:** A [GitHub](https://github.com/) account.
 

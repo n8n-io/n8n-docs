@@ -5,8 +5,8 @@ layout:
 ---
 # Install options <a href="#install-options" id="install-options"></a>
 
-{% content-ref url="install-from-command-line.md" %}
-[install-from-command-line.md](install-from-command-line.md)
+{% content-ref url="one-line-setup.md" %}
+[one-line-setup.md](one-line-setup.md)
 {% endcontent-ref %}
 
 {% content-ref url="install-using-docker-compose.md" %}

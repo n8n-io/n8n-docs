@@ -9,7 +9,7 @@ layout:
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-script install](../install-options/install-from-command-line.md) instead; it sets up everything below automatically.
+If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-line setup](../install-options/one-line-setup.md) instead; it sets up everything below automatically.
 
 ## What you need before you start
 
@@ -38,13 +38,29 @@ SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
 
 # Must match a value in SANDBOX_API_KEYS above — this is how n8n authenticates to the sandbox
 N8N_INSTANCE_AI_SANDBOX_API_KEY=change-me-api-key
+
+# Web search: secret for the bundled SearXNG instance — pick your own value
+SEARXNG_SECRET=change-me-searxng-secret
+N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 ```
 
 You don't need an AI provider key yet; see [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) below once everything's running.
 
-## Step 3: Create `compose.yml`
+## Step 3: Create `searxng-settings.yml`
 
-This defines every service you're setting up: n8n itself, plus the sandbox stack that lets the AI Assistant safely run code.
+The stock SearXNG image only serves HTML; n8n's web search needs its JSON API, which this file turns on.
+
+```yaml
+use_default_settings: true
+search:
+  formats:
+    - html
+    - json
+```
+
+## Step 4: Create `compose.yml`
+
+This defines every service you're setting up: n8n itself, the sandbox stack that lets the AI Assistant safely run code, and SearXNG for web search.
 
 ```yaml
 volumes:
@@ -52,7 +68,7 @@ volumes:
 
 services:
   sandbox-certs:
-    image: n8nio/n8n-sandbox-service-api:latest
+    image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
     user: '0:0'
     entrypoint: ['sh', '-c']
     command:
@@ -66,7 +82,7 @@ services:
       - sandbox-tls:/tls
 
   sandbox-api:
-    image: n8nio/n8n-sandbox-service-api:latest
+    image: ghcr.io/n8n-io/n8n-sandbox-service-api:latest
     depends_on:
       sandbox-certs:
         condition: service_completed_successfully
@@ -93,7 +109,7 @@ services:
     # n8n reaches this container by service name over the default Compose network.
 
   sandbox-runner-1:
-    image: n8nio/n8n-sandbox-service-runner-dind:latest
+    image: ghcr.io/n8n-io/n8n-sandbox-service-runner-dind:latest
     privileged: true
     depends_on:
       sandbox-api:
@@ -106,7 +122,7 @@ services:
       SANDBOX_RUNNER_CONTROL_GRPC_LISTEN_ADDR: ':9091'
       SANDBOX_RUNNER_CONTROL_GRPC_ADVERTISE_ADDR: sandbox-runner-1:9091
       SANDBOX_RUNNER_ID: runner-1
-      SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: n8nio/n8n-sandbox-service-sandbox:latest
+      SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
       SANDBOX_RUNNER_REGISTRATION_GRPC_CA_FILE: /tls/runner/ca.crt
       SANDBOX_RUNNER_REGISTRATION_GRPC_CERT_FILE: /tls/runner/grpc-client.crt
       SANDBOX_RUNNER_REGISTRATION_GRPC_KEY_FILE: /tls/runner/grpc-client.key
@@ -118,8 +134,16 @@ services:
       - sandbox-tls:/tls:ro
     # Never expose this container's ports publicly — it runs privileged Docker-in-Docker.
 
+  searxng:
+    image: ghcr.io/searxng/searxng:latest
+    environment:
+      SEARXNG_SECRET: ${SEARXNG_SECRET}
+    volumes:
+      - ./searxng-settings.yml:/etc/searxng/settings.yml:ro
+    # Internal-only: n8n reaches it by service name. Never publish its port.
+
   n8n:
-    image: docker.n8n.io/n8nio/n8n
+    image: docker.io/n8nio/n8n
     depends_on:
       sandbox-api:
         condition: service_healthy
@@ -130,7 +154,7 @@ services:
       N8N_ENABLED_MODULES: instance-ai
       N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
       N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
-      N8N_INSTANCE_AI_SANDBOX_IMAGE: n8nio/n8n-sandbox-service-sandbox:latest
+      N8N_INSTANCE_AI_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
       N8N_INSTANCE_AI_SANDBOX_API_URL: http://sandbox-api:8080
 ```
 
@@ -141,11 +165,14 @@ services:
 | **n8n** | The workflow editor itself, available at `http://localhost:5678`. |
 | **sandbox-certs** | Runs once to generate the TLS certificates the other sandbox services need, then exits. |
 | **sandbox-api** | The control plane n8n talks to when the AI Assistant needs to run code. |
-| **sandbox-runner-1** | Does the actual work — a privileged Docker-in-Docker container that creates and runs the sandboxes. |
+| **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
+| **searxng** | Bundled web search backend for the AI Assistant. |
 
-There's no database service defined here — n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production setup with Postgres, queue mode, and persistent storage, see the [Docker Compose deployment guide](https://docs.n8n.io/hosting/).
+This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant) for how to configure a Daytona sandbox.
 
-## Step 4: Start everything
+There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite]() below.
+
+## Step 5: Start everything
 
 ```bash
 docker compose up -d
@@ -154,7 +181,7 @@ docker compose ps
 
 Wait until `sandbox-api` shows `healthy`; `sandbox-runner-1` and `n8n` will then start automatically.
 
-## Step 5: Verify it's working
+## Step 6: Verify it's working
 
 ```bash
 # sandbox-api is reachable from n8n
@@ -191,7 +218,78 @@ By default, the assistant has no web search configured in this setup (there's no
 INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
 ```
 
-Full setup steps, including which model providers are supported, are in [setting up the AI Assistant](https://docs.n8n.io/deploy/host-n8n/configure-n8n/set-up-ai-assistant).
+Web search runs through the bundled SearXNG service by default. If you'd rather use Brave Search instead, add your Brave API key to `.env` as well; it takes priority over SearXNG once set:
+
+```
+INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+```
+
+Full setup steps, including which model providers are supported, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
+
+## Optional: Use PostgreSQL instead of SQLite
+
+SQLite is fine for trying things out, but for a production instance that must handle more than a handful of users or workflows running around the clock use Postgres instead.
+
+1. Add the Postgres credentials to `.env`, alongside the sandbox secrets:
+
+   ```
+   POSTGRES_USER=change-me-user
+   POSTGRES_PASSWORD=change-me-password
+   POSTGRES_DB=n8n
+   ```
+
+2. Add a `postgres` service to `compose.yml`, and a volume for its data:
+
+   ``` yaml
+   volumes:
+     db-storage:
+
+   services:
+     postgres:
+       image: postgres:16
+       restart: always
+       environment:
+         POSTGRES_USER: ${POSTGRES_USER}
+         POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+         POSTGRES_DB: ${POSTGRES_DB}
+       volumes:
+         - db-storage:/var/lib/postgresql/data
+       healthcheck:
+         test: ["CMD-SHELL", "pg_isready -h localhost -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+         interval: 5s
+         timeout: 5s
+         retries: 10
+   ```
+
+3. Point n8n at it by adding these to the n8n service's environment block, and making it wait on Postgres too:
+
+   ``` yaml
+   environment:
+         # ...your existing N8N_ENABLED_MODULES, N8N_INSTANCE_AI_* settings stay as they are
+         DB_TYPE: postgresdb
+         DB_POSTGRESDB_HOST: postgres
+         DB_POSTGRESDB_PORT: '5432'
+         DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+         DB_POSTGRESDB_USER: ${POSTGRES_USER}
+         DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+     depends_on:
+       sandbox-api:
+         condition: service_healthy
+       postgres:
+         condition: service_healthy
+   ```
+
+4. Restart everything:
+
+   ``` bash
+   docker compose up -d
+   ```
+
+   n8n migrates itself to the new Postgres database on startup. Existing SQLite data doesn't carry over automatically. This is meant for a fresh instance, not an in-place migration.
+
+   {% hint style="info" %} For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres
+   ) in the n8n hosting repository.
+   {% endhint %}
 
 ## Troubleshooting
 

@@ -1,25 +1,19 @@
 ---
-description: Install n8n from the command line using the one-script installer.
+description: Install n8n from the command line using a one-line setup.
 layout:
   description:
     visible: false
 ---
 
-# Install n8n from the command line
-contentType: tutorial
-nodeTitle: Install n8n from the command line
-layout:
-  description:
-    visible: false
----
+# One-line setup <a href="#one-line-setup" id="one-line-setup"></a>
 
 ## Who this is for
 
-This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n v3 onwards. It's the fastest way to get n8n running, whether or not you've used Docker before.
+This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0 onwards (launching October 2026). It's the fastest way to get n8n running, whether or not you've used Docker before.
 
 It's meant for fresh installs, not for changing an existing setup:
 
-- **Already self-hosting with your own Docker Compose file?** Keep using it; nothing changes for you, and you don't need to switch to this script.
+- **Already self-hosting with your own Docker Compose file?** You don't need to switch to this script, but feel free to take inspiration from [the Docker Compose setup process](./install-using-docker-compose.md).
 - **Currently installing n8n via npm?** From v3, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
 
 ## What you need before you start
@@ -31,7 +25,7 @@ This method uses Docker, a tool that runs n8n in a self-contained package so you
 You don't need to know Docker to use this guide; just have it installed and running in the background.
 
 {% hint style="info" %}
-The command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
+The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 {% endhint %}
 
 ## Run the command
@@ -85,10 +79,12 @@ Running the command sets up everything below automatically. There's nothing extr
 | Component | What it's for |
 |---|---|
 | **n8n** | The workflow editor itself, running at `http://localhost:5678`. |
-| **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file — no separate database server to install or manage. |
+| **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. There is no separate database server to install or manage. |
 | **AI Assistant support services** | A sandbox that safely runs code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
 
 If you're setting n8n up for a team or a production environment, you'll likely want a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
+
+The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant) for how to configure it.
 
 ## Optional: Turn on the AI Assistant
 
@@ -112,7 +108,7 @@ You don't need to open any extra ports or configure anything for these services.
 |---|---|
 | Stop n8n | `docker compose -f ./n8n/compose.yml down` |
 | Start it again | `docker compose -f ./n8n/compose.yml up -d` |
-| Upgrade to the latest version | `curl -fsSL https://get.n8n.io | sh -s -- --upgrade` |
+| Upgrade to the latest version | `curl -fsSL https://get.n8n.io \| sh -s -- --upgrade` |
 | Remove n8n and delete its data | `docker compose -f ./n8n/compose.yml down -v` then `rm -rf ./n8n` |
 
 ## Flags (for more control)
@@ -138,7 +134,10 @@ sh get-n8n.sh
 
 ## Windows users
 
-This command needs a terminal that understands shell scripts, which the standard Windows Command Prompt or PowerShell don't. Run it instead from:
+The one-line setup command needs a terminal that understands shell scripts, which the standard Windows Command Prompt or PowerShell don't. Run it instead from:
 
-- **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)), with Docker Desktop running, or
 - **WSL** (Windows Subsystem for Linux), with Docker Desktop's WSL2 integration turned on.
+- **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)) with Docker Desktop running can also run POSIX shell scripts, but it hasn't been verified end-to-end for the one-line setup command. Stick with WSL unless you've confirmed Git Bash works for your setup.
+
+
+

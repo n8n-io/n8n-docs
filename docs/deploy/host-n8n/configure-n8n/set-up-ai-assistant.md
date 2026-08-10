@@ -43,6 +43,12 @@ Every setup needs three things:
 * **A sandbox:** An isolated environment where AI Assistant runs code. This is required.
 * **A search provider (optional):** Lets AI Assistant look things up on the web.
 
+How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically. For production, use Daytona instead.
+
+[Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
+
+{% hint style="info" %} Most AI Assistant settings use `N8N_INSTANCE_AI_*` environment variables. `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is a deliberate exception. The internal module name is `instance-ai`. {% endhint %}
+
 How you provide the sandbox is the main decision. [Pick your setup](#pick-your-setup) below based on how you installed n8n.
 
 ### Before you start
@@ -50,20 +56,20 @@ How you provide the sandbox is the main decision. [Pick your setup](#pick-your-s
 Make sure you have:
 
 * Access to configure environment variables for the n8n instance.
-* A recent version of n8n — run the latest stable release or later; older versions may work, but newer is better.
+* A recent version of n8n. Run the latest stable release or later; older versions may work, but newer is better.
 * An API key for a supported LLM provider: Anthropic, OpenAI, or OpenRouter.
 
 ## Pick your setup
 
-| Setup | Use this if... | Sandbox hosted by |
-| --- | --- | --- |
-| [1. Already running the sandbox](#1-already-running-the-sandbox-recommended) | You installed with the one-script installer or the Docker Compose guide. | You (already done) |
-| [2. Self-host the sandbox manually](#2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You |
-| [3. Daytona (managed sandbox)](#3-daytona-managed-sandbox) | You don't want to run sandbox containers yourself. | Daytona |
+| Setup | Use this if... | Sandbox hosted by | Best for |
+| --- | --- | --- | --- |
+| [1. Already running the sandbox](#1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
+| [2. Self-host the sandbox manually](#2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
+| [3. Daytona (managed sandbox)](#3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
 
-### 1. Already running the sandbox (recommended)
+### 1. Already running the sandbox (recommended for local development)
 
-If you installed n8n with the [one-script installer](../install-options/install-from-command-line.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox — and search, via bundled SearXNG — are already running. All that's left is a model key.
+If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, via bundled SearXNG, are already running. All that's left is a model key.
 
 **What you need:** an LLM API key. Nothing else.
 
@@ -82,10 +88,10 @@ If you installed n8n with the [one-script installer](../install-options/install-
 
 ### 2. Self-host the sandbox manually (advanced)
 
-Use this if you're configuring n8n outside of the one-script installer or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
+Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
 
 {% hint style="warning" %}
-This means hosting two extra containers yourself - the sandbox API and a privileged Docker-in-Docker runner — plus mutual TLS between them. Use [Daytona](#3-daytona-managed-sandbox) instead unless you specifically need to self-host.
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, Use [Daytona](#3-daytona-managed-sandbox) instead.
 {% endhint %}
 
 **What you need:**
@@ -124,13 +130,13 @@ Expected response: `{"status":"ok"}`
 
 **Notes:**
 
-* Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers — see the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
+* Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
 * Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
-### 3. Daytona (managed sandbox)
+### 3. Daytona (managed sandbox, recommended for production)
 
-Use this if you'd rather not host the sandbox containers yourself — Daytona creates sandboxes on demand instead.
+Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the sandbox provider n8n recommends for production use.
 
 **What you need:** a Daytona account and API key, plus an LLM API key.
 
@@ -174,7 +180,7 @@ Use this if you'd rather not host the sandbox containers yourself — Daytona cr
    ```yaml
    services:
      n8n:
-       image: docker.n8n.io/n8nio/n8n
+       image: docker.io/n8nio/n8n
        environment:
          N8N_ENABLED_MODULES: instance-ai
          N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
@@ -198,7 +204,7 @@ N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
 ```
 
 {% hint style="info" %}
-By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after 1 hour, and deletes it after 7 days. Change these with the variables above.
+By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after 1 hour, and deletes it after 7 days. Change these settings with the variables above.
 {% endhint %}
 
 ## Choose a model provider
@@ -253,7 +259,7 @@ Some local servers don't require an API key.
 
 Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
 
-If you used the [one-script installer](../install-options/install-from-command-line.md), SearXNG is already bundled and running. No setup needed unless you'd rather use Brave Search instead.
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
 
 ```bash
 # Brave Search
@@ -276,7 +282,7 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n `2.32.3` (Beta) or later.
 
 {% hint style="warning" %}
-Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+Agents aren't ready for self-hosted Enterprise yet.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.

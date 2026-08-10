@@ -194,7 +194,7 @@ Once you open a pull request, the n8n Docs team will review it and either merge 
 | `action:needs-review`       | Your PR is in the queue and waiting for a technical writer to review it                                                                                 |
 | `action:needs-sme`          | Your PR requires review from a subject matter expert before it can be merged                                                                            |
 | `status:pending-dev`        | Your PR is linked to an unmerged code change and will be reviewed once that merges                                                                      |
-| `status:in-next-release`    | The linked code change has merged and your PR will be reviewed shortly                                                                                  |
+| `status:awaiting-release`    | The linked code change has merged, but not yet been released. Your PR will be reviewed shortly                                                                                  |
 | `status:dev-cancelled`      | The code change your PR was linked to has been cancelled — the docs PR will be closed                                                                   |
 | `status:duplicate`          | Your PR covers the same ground as an existing PR or issue - the PR will be closed                                                                       |
 | `status:outdated`           | Your PR has been overtaken by subsequent changes to the docs - the PR will be closed                                                                    |

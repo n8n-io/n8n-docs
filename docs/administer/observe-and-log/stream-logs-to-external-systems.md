@@ -97,6 +97,10 @@ The following events are available. You can choose which events to stream in **S
 	* Package installed
 	* Package updated
 	* Package deleted
+	* n8n package import success
+	* n8n package export success
+	* n8n package export failed
+	* n8n package import failed
 	* Workflow created
 	* Workflow deleted
 	* Workflow updated
@@ -163,6 +167,8 @@ The following events are available. You can choose which events to stream in **S
 	* Job completed
 	* Job failed
 	* Job stalled
+
+Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
 
 ## Destinations <a href="#destinations" id="destinations"></a>
 

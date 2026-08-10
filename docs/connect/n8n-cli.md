@@ -95,7 +95,7 @@ Every command supports `--help` for detailed usage.
 | `user` | `list`, `get` |
 | `config` | `set-url`, `set-api-key`, `show` |
 | `source-control` | `pull` |
-| `package (beta)` | `export`, `import` |
+| `package (preview)` | `export`, `import` |
 | `skill` | `install` |
 | `audit` | (top-level) |
 | `login` / `logout` | (top-level) |
@@ -176,16 +176,17 @@ n8n-cli workflow transfer <id> --project=<projectId>
 
 ### Export and import packages <a href="#export-and-import-packages" id="export-and-import-packages"></a>
 
-{% hint style="warning" %}
-**Beta**
+{% hint style="info" %}
+**Feature availability**
 
-The `package` command is still in beta. Breaking changes may occur
+The `package` command is in preview and may change in future releases.
 {% endhint %}
 
 ```bash
 n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
-n8n-cli package import --file=export.n8np --conflict-policy=fail
-n8n-cli package import --file=export.n8np --project=<project-id> --workflow-id-policy=source --conflict-policy=skip
+n8n-cli package export --project-id=<project-id> --output=project.n8np
+n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
+n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
 ```
 
-See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for a detailed overview of the available flags and what makes up a package.
+See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages/import-a-package) for every available flag.

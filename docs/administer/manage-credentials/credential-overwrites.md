@@ -21,6 +21,10 @@ In the Editor UI, n8n hides all overwritten fields by default, so users can auth
 
 For the environment variables used to configure credential overwrites, refer to [Credentials environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials).
 
+Watch a tutorial on credential overwrites, including how to set them up [using the REST API](#using-the-rest-api) with a [ready-made workflow template](https://n8n.io/workflows/17052-register-credential-overwrites-on-startup-with-the-n8n-api/):
+
+{% embed url="https://www.youtube.com/embed/VtCbCdKrqAE" %}
+
 ## Using environment variables <a href="#using-environment-variables" id="using-environment-variables"></a>
 
 Set `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.

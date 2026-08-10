@@ -285,7 +285,7 @@ This makes deployment configuration the single source of truth, so you can stand
 
 **Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
-You can now mark projects, folders, workflows, and data tables as favorites, so the resources you work with every day are one click away instead of a search away.
+You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
 
 ### Slack Trigger: App Home opens as a dedicated event
 

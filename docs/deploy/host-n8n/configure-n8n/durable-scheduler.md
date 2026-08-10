@@ -68,7 +68,7 @@ Across multiple instances, every main runs all four stages. Claiming keeps this 
 
 ## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
 
-A run counts as missed once it's more than `N8N_SCHEDULER_MISFIRE_GRACE` seconds late (one minute by default). What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy. n8n fixes the policy per trigger type; it isn't something you configure per workflow.
+A run counts as missed once it's more than `N8N_SCHEDULER_MISFIRE_GRACE` seconds late (one minute by default). What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy. n8n fixes the policy per trigger type. You can't configure it per workflow.
 
 - **Schedule Trigger nodes coalesce.** A backlog of missed runs collapses into a single catch-up run, at the most recent missed time, then resumes on schedule. n8n discards the rest of the backlog rather than queuing it to fire back to back.
 - **Trigger nodes with a Poll Times parameter (such as Google Sheets Trigger or Airtable Trigger) skip.** n8n discards a backlog of missed poll runs entirely, and polling resumes from the next scheduled run.

@@ -18,7 +18,7 @@ Developing with the [`n8n-node` tool](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5
 * Include `n8n-community-node-package` in your package keywords.
 * Make sure that you add your nodes and credentials to the `package.json` file inside the `n8n` attribute.
 * Check your node using the linter (`npm run lint`) and test it locally (`npm run dev`) to ensure it works.
-* Publish the package to npm. If you plan to submit your node for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes), you must publish using a GitHub Actions workflow with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). See Publishing to npm below.
+* Publish the package to npm. If you plan to submit your node for verification through the [n8n Creator Portal](https://creators.n8n.io/nodes), you must publish using a GitHub Actions workflow with a [provenance statement](https://docs.npmjs.com/generating-provenance-statements). See **Publishing to npm** below.
 
 ## Publishing to npm <a href="#publishing-to-npm" id="publishing-to-npm"></a>
 

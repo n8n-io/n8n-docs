@@ -9,6 +9,10 @@ layout:
     visible: false
 ---
 
+{% hint style="warning" %}
+**This content is outdated.** Please refer to [Install using Docker Compose](install-using-docker-compose.md) for the recommended installation method.
+{% endhint %}
+
 # Docker Installation <a href="#docker-installation" id="docker-installation"></a>
 
 n8n recommends using [Docker](https://www.docker.com/) for most self-hosting needs. It provides a clean, isolated environment, avoids operating system and tooling incompatibilities, and makes database and environment management simpler.

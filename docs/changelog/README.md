@@ -30,6 +30,32 @@ Refer to [Large webhook responses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDY
 
 ***
 
+## Read and write SharePoint Excel workbooks directly in n8n
+
+**Released:** 2026-07-28 in [n8n 2.33](release-notes.md#n8n233)
+
+You can now read and write Excel workbooks stored in SharePoint document libraries, including files shared through Microsoft Teams sites, using the new Microsoft Excel (SharePoint) node. This gives you direct access to workbook data without needing separate authentication or intermediate steps to retrieve file contents.
+
+The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
+
+Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+
+***
+
+## Capture who approved and when in human-in-the-loop steps
+
+**Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
+
+You can now get a full audit trail for every human-in-the-loop step in your workflows. Every Send and Wait node across Slack, Telegram, Discord, WhatsApp, Google Chat, Gmail, Outlook, Email/SMTP, Microsoft Teams, and the Chat Trigger node now includes a `respondedAt` ISO-8601 timestamp in its output the moment n8n receives a response. No configuration is required: the field appears automatically alongside the existing `approved`, `text`, or `form` fields and does not change the output shape for existing workflows.
+
+For Slack and Telegram, you can go further with the new **Advanced Interactivity** options on the Send and Wait for Response operation. Approvers respond with a single tap or click inside the app itself, and the node output records who responded: their ID, name, username, and (for Slack, when scopes allow) email, plus the channel and message ID. You can restrict which users are allowed to approve by listing their IDs in **Restrict Who Can Approve**. Anyone not on the list gets a private notice you can word yourself, and the workflow keeps waiting. You can also control what happens to the message after a decision with the **After Decision** setting: show the outcome and remove the buttons (the default), remove the buttons only, or leave the message unchanged.
+
+To enable approvals in Slack, your n8n instance must be reachable from Slack over public HTTPS. You will need to turn on Interactivity in your Slack app, set the **Request URL** to `https://<your-n8n-instance>/webhook-waiting-slack`, and paste your app's signing secret into the **Signature Secret** field of your Slack credential. Then, in the Slack node, set **Response Type** to **Approval** and turn on **Capture Who Responded** under the **Advanced Interactivity** section. For Telegram, your instance must be reachable over public HTTPS on a port Telegram supports for webhooks (443, 80, 88, or 8443). Enable **Approve Within Chat** in the same section: n8n registers the webhook for you using your existing Telegram credential, with no additional setup on Telegram's side.
+
+Learn more in the [Approvals in Slack documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack/approvals).
+
+***
+
 ## App-only authentication for Microsoft nodes
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
@@ -103,7 +129,7 @@ Three states guide you as you work with custom date ranges:
 
 To use this, open the Insights dashboard, choose a date range with the date range picker, and check the alert banner at the top of the dashboard. If you see a partial or no-data alert, adjust your range to align with the dates your retention policy covers. Note that the alerts reflect your current retention configuration and do not extend how long execution data is stored.
 
-Learn more in the [documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
+Learn more in the [insights retention documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
 
 {% hint style="info" %}
 **Availability:** Pro, Business, and Enterprise.
@@ -113,7 +139,7 @@ Learn more in the [documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm
 
 ## Organize large workflows with Canvas Groups
 
-**Released:** 2026-06-29 in [n8n 2.28](release-notes.md#n8n228)
+**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
 You can now organize related nodes into a single named Canvas Group and collapse it for a cleaner view. Group the nodes that handle one part of a workflow, give the group a name, and collapse it to hide the detail until you need it. A large workflow that used to sprawl across the canvas shrinks to a handful of labeled blocks you can read at a glance, so it's faster to find your way around a workflow a teammate built or one you haven't opened in months.
 
@@ -132,6 +158,18 @@ The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nod
 ### Webhook node: Only Run If
 
 The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based **Only run if** option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
+
+### One credential for multiple Microsoft nodes
+
+The generic **Microsoft OAuth2 API** credential now works with Microsoft Excel 365, Outlook, Teams, To Do, and Graph Security, alongside OneDrive. Instead of registering a separate Microsoft Entra app for every Microsoft service you automate, you register one and grant it the delegated permissions your workflows need. To use it, open any supported node, set **Authentication** to **Microsoft OAuth2 (Graph)**, and select the credential. Your IT team approves and maintains a single app registration instead of one per service.
+
+Set the credential's **Scope** field to the space-separated permissions the nodes you use require, for example `Files.ReadWrite.All` for OneDrive and Excel, or `Mail.ReadWrite` and `Mail.Send` for Outlook, always including `openid` and `offline_access`. Some permissions, such as `SecurityEvents.ReadWrite.All` for Graph Security, need admin consent. If your organization runs on a sovereign cloud (US Government, US Government DOD, or China), set the **Microsoft Graph API Base URL** on the credential and every node using it picks it up.
+
+Nothing changes for existing workflows. On saved nodes the **Authentication** dropdown stays on the node-specific credential, so credentials like Microsoft Excel OAuth2 API keep working untouched. The generic credential is an additive option, not a replacement.
+
+_Microsoft OneDrive support released in 2.27 (2026-06-16)._
+
+Learn more in the [Microsoft credentials documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoft).
 
 ***
 
@@ -209,7 +247,7 @@ Connect to MCP servers with less setup
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
-Learn more in the [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
+Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
 
 {% hint style="info" %}
 **Availability:** Enterprise.

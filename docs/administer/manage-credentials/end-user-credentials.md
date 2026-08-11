@@ -60,7 +60,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 3. Configure the connection. For OAuth credentials, include the **Client ID**, **Client Secret**, and **OAuth Redirect URL** to register with the service.
 4. Select **Save**.
 
-Any n8n user can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. Users with project access can also connect within the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
+Users with project access can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. They can also connect from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
 
 {% hint style="info" %}
 Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user also has permission to execute the trigger. When you enable this, only users with a project role that allows them to execute workflows can trigger it, so a user without that role couldn't connect their account.

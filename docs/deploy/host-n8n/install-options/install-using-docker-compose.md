@@ -170,7 +170,7 @@ services:
 
 This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure a Daytona sandbox.
 
-There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite]() below.
+There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](#optional-use-postgresql-instead-of-sqlite) below.
 
 ## Step 5: Start everything
 
@@ -200,8 +200,6 @@ Launch n8n by pointing your web browser to `http://localhost:5678`
 
 Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or via `.env` if you'd rather configure it before first login:
 
-Prefer to configure it before you ever log in? Edit `.env` instead:
-
 1. Add your AI provider key to `.env`:
 
    ```
@@ -215,12 +213,6 @@ Prefer to configure it before you ever log in? Edit `.env` instead:
    ```
 
 Web search runs through the bundled SearXNG service by default. If you'd rather use Brave Search instead, you can set it from the UI or add your Brave API key to `.env`; it takes priority over SearXNG once set:
-
-```
-INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
-```
-
-Web search runs through the bundled SearXNG service by default. If you'd rather use Brave Search instead, add your Brave API key to `.env` as well; it takes priority over SearXNG once set:
 
 ```
 INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
@@ -289,8 +281,7 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
    n8n migrates itself to the new Postgres database on startup. Existing SQLite data doesn't carry over automatically. This is meant for a fresh instance, not an in-place migration.
 
-   {% hint style="info" %} For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres
-   ) in the n8n hosting repository.
+   {% hint style="info" %} For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres) in the n8n hosting repository.
    {% endhint %}
 
 ## Troubleshooting

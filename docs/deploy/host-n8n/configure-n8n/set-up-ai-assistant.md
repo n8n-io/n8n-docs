@@ -47,8 +47,6 @@ How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8
 
 [Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 
-How you provide the sandbox is the main decision. [Pick your setup](#pick-your-setup) below based on how you installed n8n.
-
 ### Before you start
 
 Make sure you have:
@@ -73,7 +71,7 @@ If you installed n8n with the [one-line setup command](../install-options/one-li
 
 **Steps:**
 
-The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?
+The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?  Use the steps below.
 
 1. Add your model key to `.env`:
 
@@ -91,7 +89,7 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
 
 {% hint style="warning" %}
-This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, Use [Daytona](#3-daytona-managed-sandbox) instead.
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#3-daytona-managed-sandbox-recommended-for-production) instead.
 {% endhint %}
 
 **What you need:**
@@ -107,16 +105,16 @@ This means hosting two extra containers yourself: the sandbox API and a privileg
    ```bash
    N8N_INSTANCE_AI_SANDBOX_ENABLED=true
    N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-   N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
-   N8N_SANDBOX_SERVICE_API_KEY=my-sandbox-api-key
+   N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
+   N8N_INSTANCE_AI_SANDBOX_API_KEY=my-sandbox-api-key
    ```
 
    | Variable | Description |
    | --- | --- |
    | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. |
    | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`. |
-   | `N8N_SANDBOX_SERVICE_URL` | URL of the sandbox API, reachable from n8n. |
-   | `N8N_SANDBOX_SERVICE_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
+   | `N8N_INSTANCE_AI_SANDBOX_API_URL` | URL of the sandbox API, reachable from n8n. |
+   | `N8N_INSTANCE_AI_SANDBOX_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
 
 3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
 
@@ -131,6 +129,7 @@ Expected response: `{"status":"ok"}`
 **Notes:**
 
 * Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
+* `N8N_INSTANCE_AI_SANDBOX_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
 * Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
@@ -337,9 +336,9 @@ If AI Assistant doesn't appear or doesn't work, check for these issues.
 
 **Self-hosted sandbox (setup 2)**
 
-* `N8N_SANDBOX_SERVICE_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
+* `N8N_INSTANCE_AI_SANDBOX_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
 * The sandbox health check returns `{"status":"ok"}`.
-* `N8N_SANDBOX_SERVICE_URL` is reachable from the n8n container.
+* `N8N_INSTANCE_AI_SANDBOX_API_URL` is reachable from the n8n container.
 
 **Daytona (setup 3)**
 

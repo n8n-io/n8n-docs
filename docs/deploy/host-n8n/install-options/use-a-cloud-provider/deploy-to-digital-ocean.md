@@ -198,7 +198,7 @@ sudo docker compose stop
 
 The AI Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](../install-using-docker-compose.md) to this setup. A few things are worth knowing before you start:
 
-* This sandbox is suitable for local devlopment and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
+* This sandbox is suitable for local development and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
 * **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
 * **No networking changes required.** Caddy only ever proxies n8n itself; the sandbox services stay internal to the Compose network and don't need DNS, firewall, or Caddyfile changes.
 
@@ -315,21 +315,20 @@ The AI Assistant needs a sandbox to run code in. You can add the same sandbox st
     - N8N_INSTANCE_AI_SANDBOX_ENABLED=true
     - N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
     - N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
-    - N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
-    - N8N_SANDBOX_SERVICE_API_KEY=${SANDBOX_API_KEYS}
+    - N8N_INSTANCE_AI_SANDBOX_API_KEY=${SANDBOX_API_KEYS}
     - N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
    depends_on:
     sandbox-api:
       condition: service_healthy
    ```
 
-4. Restart everything so the new services pick up the changes:
+5. Restart everything so the new services pick up the changes:
 
    ```bash
    sudo docker compose up -d
    ```
 
-5. Add your model API key. See [Set up AI Assistant](../../configure-n8n/set-up-ai-assistant.md) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
+6. Add your model API key. See [Set up AI Assistant](../../configure-n8n/set-up-ai-assistant.md) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
 
 {% hint style="warning" %}
 Replace the `change-me-...` placeholders in `.env` with your own unique secrets before exposing this Droplet to the internet. `sandbox-runner-1` runs privileged Docker-in-Docker. Never publish its ports, and don't route Caddy to it.

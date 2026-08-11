@@ -14,7 +14,11 @@ layout:
 
 npm-based installs are deprecated from n8n 3.0.
 {% endhint %}
-npm-based installs will be deprecated in v3.0 of n8n.
+
+{% hint style="info" %}
+**AI Assistant not available**
+
+The AI Assistant feature is not available when using the npm installation method.
 {% endhint %}
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.

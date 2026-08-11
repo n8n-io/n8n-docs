@@ -47,8 +47,6 @@ How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8
 
 [Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 
-{% hint style="info" %} Most AI Assistant settings use `N8N_INSTANCE_AI_*` environment variables. `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is a deliberate exception. The internal module name is `instance-ai`. {% endhint %}
-
 How you provide the sandbox is the main decision. [Pick your setup](#pick-your-setup) below based on how you installed n8n.
 
 ### Before you start
@@ -74,6 +72,8 @@ If you installed n8n with the [one-line setup command](../install-options/one-li
 **What you need:** an LLM API key. Nothing else.
 
 **Steps:**
+
+The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?
 
 1. Add your model key to `.env`:
 

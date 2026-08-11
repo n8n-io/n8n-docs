@@ -88,7 +88,7 @@ The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which 
 
 ## Optional: Turn on the AI Assistant
 
-n8n works fully without the AI Assistant, which is an optional extra. To turn it on:
+n8n works fully without the AI Assistant, which is an optional extra. Once n8n is running, the easiest way to turn it on is from the UI in the instance's AI settings. Add your model API key there. Prefer to configure it before you ever log in? Edit `.env` instead:
 
 1. Open the `.env` file the command created (in `./n8n/.env` by default).
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.

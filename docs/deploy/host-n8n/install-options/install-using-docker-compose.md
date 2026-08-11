@@ -198,7 +198,9 @@ Launch n8n by pointing your web browser to `http://localhost:5678`
 
 ## Optional: Turn on the AI Assistant
 
-Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use:
+Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or via `.env` if you'd rather configure it before first login:
+
+Prefer to configure it before you ever log in? Edit `.env` instead:
 
 1. Add your AI provider key to `.env`:
 
@@ -212,7 +214,7 @@ Everything above runs the full sandbox stack, but the AI Assistant itself stays 
    docker compose up -d n8n
    ```
 
-By default, the assistant has no web search configured in this setup (there's no bundled search service in the compose file above). To enable it, add your Brave Search key to `.env` as well:
+Web search runs through the bundled SearXNG service by default. If you'd rather use Brave Search instead, you can set it from the UI or add your Brave API key to `.env`; it takes priority over SearXNG once set:
 
 ```
 INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx

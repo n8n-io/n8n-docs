@@ -64,6 +64,30 @@ The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cr
 
 ***
 
+## AI Assistant: describe a goal, get a working automation
+
+**Released:** 2026-07-09 in [n8n 2.29.9](release-notes.md#n8n229)
+
+You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
+
+<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a chat box asking what to automate, with suggestions like Score my leads."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
+
+AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
+
+Every workflow it builds is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
+
+{% hint style="warning" %}
+This feature is in **preview**. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
+
+{% hint style="info" %}
+**Availability:** n8n Cloud only. Self-hosted support is coming.
+{% endhint %}
+
+***
+
 ## MCP server updates
 
 **Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
@@ -279,7 +303,7 @@ This makes deployment configuration the single source of truth, so you can stand
 
 **Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
-You can now mark projects, folders, workflows, and data tables as favorites, so the resources you work with every day are one click away instead of a search away.
+You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
 
 ### Slack Trigger: App Home opens as a dedicated event
 

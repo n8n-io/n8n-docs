@@ -145,32 +145,44 @@ docs assistant) chunk on `##`/`###` headings.
   Links point to separate topics; they don't replace context a section needs, so
   restate that instead.
 
-## Versioning and release status
+## Feature availability
 
-Reference n8n versions and status (available, preview, deprecated) consistently.
-See [reference.md](reference.md) for full examples and the marker formats.
+Reference plan/platform limits, n8n versions, and preview status consistently.
+See [reference.md](reference.md) for full examples and rules.
 
 - **Two version types:** instance version (the n8n release, three-part semver
   like `2.30.0`) and node version (a node's version, usually two parts like
   `4.7`). Qualify a bare number in prose ("n8n 2.30.0", "node version 4.7"),
   never just "version 2".
-- **Format:** product name plus numerals: `n8n 2.30.0`. No `v` prefix, and don't
-  write "version" after "n8n".
-- **Placement (both markers):** match the scope. Whole page → a hint under the
-  page title. A section → a hint under its heading. Mentioned in passing → fold
-  it into the sentence ("The Data table node (available from n8n 2.17.0) stores
-  data between executions"). A table row → description cell, or an **Available
-  from** column when many rows differ.
-- **Availability:** an `info` hint containing `**Available from n8n 2.17.0**`.
-  State the fallback for older versions when there is one.
-- **Preview:** an `info` hint saying the feature may change and isn't for
-  production. Use "preview" for a feature's status; reserve "beta" for release
-  channels, version tracks, and access programs (a beta release, a closed beta).
-- **Deprecation:** a `warning` hint with `**Deprecated from n8n 2.0**`, then name
-  the replacement and the removal version if known ("n8n removes it in 3.0").
-  Always name a version, never a vague timeframe.
-- **Tier vs version:** plan or platform limits (Cloud, Enterprise, self-hosted)
-  go in their own `info` hint, separate from the version marker.
+- **Format:** product name plus numerals: `n8n 2.30.0`. No `v` prefix, don't
+  write "version" after "n8n", and don't add "or later"; "available from"
+  already means "and onward".
+- **Placement:** match the scope. Whole page or section → an `info` hint titled
+  `**Feature availability**` under the page title or heading. Mentioned in
+  passing with no heading of its own → fold it into the sentence ("The Data
+  table node (available from n8n 2.17.0) stores data between executions"). A
+  table row → description cell, or a dedicated column when many rows differ.
+- **Name the subject in the body, always.** The hint title is the fixed string
+  `**Feature availability**`; it never says what's available, so the sentence
+  underneath must ("Canvas Groups are available from n8n 2.28.0.", not
+  "Available from n8n 2.28.0."). Same for inline mentions: never "this feature"
+  or "this option".
+- **Plan/platform bullets:** `<subject> is/are available on:` then
+  `- **n8n Cloud:** ...` / `- **Self-hosted:** ...`, tiers low to high. Name
+  both platforms. Add an absence line ("It isn't available on n8n Cloud.") or
+  caveat line if it's on one only. Skip the bullets entirely for a version-only,
+  deprecation, or removal hint.
+- **Preview:** an `info` hint, same `**Feature availability**` title as an
+  availability hint. Name the feature or node in the sentence below it, not
+  the title (never "this feature"), saying it may change and isn't for
+  production. Use "preview", not "beta", for a feature's status. Whole page →
+  also set `status: preview` plus a primary `preview` tag (see Frontmatter's
+  `tags` field, below).
+- **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
+  title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
+  never "removed in"). Name the replacement and removal version if known.
+  Always name a version, never a vague timeframe. Whole page → also add a
+  primary `deprecated` tag (label "Deprecated", color red), no `status:` field.
 - **Node status** (deprecated, removed, versioned): link to the Deprecated and
   versioned nodes page rather than restating per node. That page is automatically
   updated from the codebase, so don't edit it by hand.
@@ -183,6 +195,12 @@ Every page opens with valid YAML frontmatter. Fields n8n Docs uses:
 - `layout.description.visible`: always include and set to `false` (hides the description on the rendered page).
 - `hidden`: set to `true` to remove the page from the side menu. Omit for normal pages (most pages appear in the menu).
 - `generated`: `true` marks the page as fully automation-managed. Don't edit these by hand.
+- `tags`: a **visual tag** renders as a label on the page and side menu, but
+  only if it's defined in the space's `.gitbook/tags.yaml` first. An
+  unregistered plain string in the array is inert and renders nothing. Use
+  `- tag: <name>, primary: true` for the main visual label. Only three visual
+  tags are allowed docs-wide: **Deprecated**, **Preview**, and **Archived**.
+  See [reference.md](reference.md) for the full format.
 
 Minimal frontmatter for a new page:
 

@@ -286,6 +286,11 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
             continue
 
         space = space_of(filename)
+        if space is None:
+            # A .md file outside docs/ (e.g. skills/*.md, a top-level README).
+            # It isn't a docs-space page, so there's no preview to link — and
+            # in_summary() would choke on the None space. Nothing to do.
+            continue
         if not in_summary(space, filename):
             # A real content .md that isn't in the space's SUMMARY.md — the one
             # actionable case: GitBook won't publish it until it's added to nav.

@@ -30,6 +30,18 @@ Refer to [Large webhook responses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDY
 
 ***
 
+## Read and write SharePoint Excel workbooks directly in n8n
+
+**Released:** 2026-07-28 in [n8n 2.33](release-notes.md#n8n233)
+
+You can now read and write Excel workbooks stored in SharePoint document libraries, including files shared through Microsoft Teams sites, using the new Microsoft Excel (SharePoint) node. This gives you direct access to workbook data without needing separate authentication or intermediate steps to retrieve file contents.
+
+The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
+
+Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+
+***
+
 ## Capture who approved and when in human-in-the-loop steps
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)

@@ -56,12 +56,11 @@ Then:
 	- `read:jira-work`
 	- `write:jira-work`
 	- `manage:jira-webhook`
-	- `manage:jira-user`
 	- `offline_access`
 10. Select **Settings** in the left sidebar.
 11. Copy the **Client ID** and paste it into n8n.
 12. Copy the **Secret** and paste it as the **Client Secret** in n8n.
-13. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+13. Enter the **Site URL** you access Jira on, for example `https://example.atlassian.net`.
 14. Select **Connect to Jira SW Cloud** and follow the prompts to complete the OAuth2 flow.
 
 Refer to [OAuth 2.0 (3LO) apps](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/) in Atlassian's documentation for more information.

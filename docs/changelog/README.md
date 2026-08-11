@@ -16,6 +16,46 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 
 ***
 
+## Return webhook responses of any size from your workers
+
+**Released:** 2026-08-04 in [n8n 2.34](release-notes.md#n8n234)
+
+Your queue mode workers can now return a webhook response however large the payload. In queue mode the worker runs the execution, but the client that made the request stays connected to the main or webhook instance, so a response from a [Respond to Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.respondtowebhook) node has to travel back through the queue. Redis holds the whole response while that message is in flight, which is why n8n caps it at 64 MiB by default (`N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`). A response that serialized to more than that failed the node: a wide result set from a database query, a batch of aggregated API calls, or a CSV or XML document assembled in the workflow.
+
+Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers and n8n stores a response body above that limit in [binary data storage](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/handle-binary-data) instead. The queue message then carries only a reference, the main instance streams the body from storage to the client, and n8n deletes the stored copy once it delivers the response, so nothing accumulates. Redis memory stays flat no matter how large the response gets.
+
+Offloading needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores data (any mode except `default`) and storage that every instance can read. n8n recommends `s3` or `azure`, since both stream the body a chunk at a time. Only a main instance running 2.34.0 or later can read an offloaded body, so the variable ships turned off: upgrade your main and webhook instances first, then enable it on your workers.
+
+Refer to [Large webhook responses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#large-webhook-responses) for the full configuration, upgrade order, and troubleshooting.
+
+***
+
+## Read and write SharePoint Excel workbooks directly in n8n
+
+**Released:** 2026-07-28 in [n8n 2.33](release-notes.md#n8n233)
+
+You can now read and write Excel workbooks stored in SharePoint document libraries, including files shared through Microsoft Teams sites, using the new Microsoft Excel (SharePoint) node. This gives you direct access to workbook data without needing separate authentication or intermediate steps to retrieve file contents.
+
+The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
+
+Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+
+***
+
+## Capture who approved and when in human-in-the-loop steps
+
+**Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
+
+You can now get a full audit trail for every human-in-the-loop step in your workflows. Every Send and Wait node across Slack, Telegram, Discord, WhatsApp, Google Chat, Gmail, Outlook, Email/SMTP, Microsoft Teams, and the Chat Trigger node now includes a `respondedAt` ISO-8601 timestamp in its output the moment n8n receives a response. No configuration is required: the field appears automatically alongside the existing `approved`, `text`, or `form` fields and does not change the output shape for existing workflows.
+
+For Slack and Telegram, you can go further with the new **Advanced Interactivity** options on the Send and Wait for Response operation. Approvers respond with a single tap or click inside the app itself, and the node output records who responded: their ID, name, username, and (for Slack, when scopes allow) email, plus the channel and message ID. You can restrict which users are allowed to approve by listing their IDs in **Restrict Who Can Approve**. Anyone not on the list gets a private notice you can word yourself, and the workflow keeps waiting. You can also control what happens to the message after a decision with the **After Decision** setting: show the outcome and remove the buttons (the default), remove the buttons only, or leave the message unchanged.
+
+To enable approvals in Slack, your n8n instance must be reachable from Slack over public HTTPS. You will need to turn on Interactivity in your Slack app, set the **Request URL** to `https://<your-n8n-instance>/webhook-waiting-slack`, and paste your app's signing secret into the **Signature Secret** field of your Slack credential. Then, in the Slack node, set **Response Type** to **Approval** and turn on **Capture Who Responded** under the **Advanced Interactivity** section. For Telegram, your instance must be reachable over public HTTPS on a port Telegram supports for webhooks (443, 80, 88, or 8443). Enable **Approve Within Chat** in the same section: n8n registers the webhook for you using your existing Telegram credential, with no additional setup on Telegram's side.
+
+Learn more in the [Approvals in Slack documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.slack/approvals).
+
+***
+
 ## App-only authentication for Microsoft nodes
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
@@ -29,6 +69,30 @@ _OneDrive and Outlook support released in 2.29 (2026-06-30)._
 ### mTLS authentication for Kafka
 
 The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
+
+***
+
+## AI Assistant: describe a goal, get a working automation
+
+**Released:** 2026-07-09 in [n8n 2.29.9](release-notes.md#n8n229)
+
+You can now describe an automation in plain language and have AI Assistant plan, build, test, and iterate on it until it actually runs. Open the chat from anywhere in your instance, or expand it into a side-by-side view with the workflow canvas, and tell it what you want to automate. It proposes a structured plan, asks clarifying questions, builds the workflow in your selected project, executes it as it goes, and fixes the errors it finds.
+
+<figure><img src=".gitbook/assets/ai-assistant-entry-point.png" alt="The AI Assistant entry point: a chat box asking what to automate, with suggestions like Score my leads."><figcaption><p>Describe what you want to automate, or start from a suggestion.</p></figcaption></figure>
+
+AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy. The AI Workflow Builder generated a workflow and handed off, leaving you to run it and debug failures yourself. AI Assistant works toward your goal: it runs what it builds, detects failures, and retries until the automation works. Its scope is broader than building, too. It can manage executions, credentials, nodes, and Data Tables, run one-off tasks, and research the web when web access is enabled. Credential setup happens progressively as it builds: fill values in manually, let it fetch what it can, or mock and skip where needed, with secrets never exposed in the chat.
+
+Every workflow it builds is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
+
+{% hint style="warning" %}
+This feature is in **preview**. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
+
+{% hint style="info" %}
+**Availability:** n8n Cloud only. Self-hosted support is coming.
+{% endhint %}
 
 ***
 
@@ -65,7 +129,7 @@ Three states guide you as you work with custom date ranges:
 
 To use this, open the Insights dashboard, choose a date range with the date range picker, and check the alert banner at the top of the dashboard. If you see a partial or no-data alert, adjust your range to align with the dates your retention policy covers. Note that the alerts reflect your current retention configuration and do not extend how long execution data is stored.
 
-Learn more in the [documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
+Learn more in the [insights retention documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#disable-or-configure-insights-metrics-collection).
 
 {% hint style="info" %}
 **Availability:** Pro, Business, and Enterprise.
@@ -89,7 +153,7 @@ Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/rPN1zU
 
 ### GitHub node: manage the full pull request lifecycle
 
-The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) now has a dedicated Pull Request resource. Create pull requests (including drafts and cross-fork PRs), update, close, and reopen them, read and add comments, fetch diffs and patches, and merge with merge, squash, or rebase. These native operations replace the custom HTTP Request setups that such tasks used to need. Errors are surfaced exactly as GitHub returns them, so failures are easy to diagnose.
+The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) now has a dedicated Pull Request resource. Create pull requests (including drafts and cross-fork PRs), update, close, and reopen them, read and add comments, fetch diffs and patches, and merge with merge, squash, or rebase. These native operations replace the custom HTTP Request setups that such tasks used to need. Errors are surfaced exactly as GitHub returns them, so failures are easy to diagnose.
 
 ### Webhook node: Only Run If
 
@@ -169,11 +233,11 @@ When a sub-workflow's last node runs more than once, the [Execute Workflow Trigg
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry — Apify, Linear, monday.com, Notion, and PostHog — and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup
@@ -183,7 +247,7 @@ Connect to MCP servers with less setup
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
-Learn more in the [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
+Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -259,7 +323,7 @@ This makes deployment configuration the single source of truth, so you can stand
 
 **Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
-You can now mark projects, folders, workflows, and data tables as favorites, so the resources you work with every day are one click away instead of a search away.
+You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
 
 ### Slack Trigger: App Home opens as a dedicated event
 

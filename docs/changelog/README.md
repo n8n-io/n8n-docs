@@ -627,7 +627,7 @@ n8n automatically totals the time from all Time Saved nodes executed during each
 
 **Released:** 2026-07-21
 
-You can now run Schedule Trigger nodes from a database-backed queue instead of from each instance's memory. The durable scheduler records every upcoming run in the database before it is due, so a restart or crash no longer silently drops work. Any run whose time passed while an instance was down fires when the instance recovers rather than being skipped.
+You can now run Schedule Trigger nodes from a database-backed queue instead of from each instance's memory. The durable scheduler records every upcoming run in the database before it's due, so a restart or crash no longer silently drops work. Any run whose time passed while an instance was down fires when the instance recovers rather than being skipped.
 
 In a multi-main setup, every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so scheduling load spreads across your whole fleet instead of depending on a single leader instance. Dispatch fires at the exact scheduled instant: the scheduler claims each run ahead of time and holds it with a precision timer, so steady-state timing is not limited to a polling cadence.
 

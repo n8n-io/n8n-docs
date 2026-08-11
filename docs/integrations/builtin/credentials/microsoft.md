@@ -35,7 +35,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Choosing a credential type**
 
-Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials.
+Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials. The Microsoft SharePoint node works the same way from version 2 of the node, while version 1 keeps using the node-specific Microsoft SharePoint credential.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -168,6 +168,7 @@ This setting applies to all Microsoft Graph API nodes that use Microsoft credent
 - Microsoft Excel (SharePoint)
 - Microsoft OneDrive
 - Microsoft Graph Security
+- Microsoft SharePoint (from version 2 of the node)
 - Microsoft To Do
 
 {% hint style="warning" %}
@@ -213,6 +214,8 @@ Outlook OAuth2 supports the credential accessing a user's primary email inbox or
 2. Enter the target user's UPN or ID as the **User Principal Name**.
 
 #### SharePoint <a href="#sharepoint" id="sharepoint"></a>
+
+These settings apply to the node-specific Microsoft SharePoint credential, which version 1 of the Microsoft SharePoint node uses. Version 2 of the node uses the generic Microsoft OAuth2 credential (no subdomain needed) or the [Microsoft Entra Service Principal credential](microsoftentraserviceprincipal.md); refer to the [Microsoft SharePoint node documentation](../app-nodes/n8n-nodes-base.microsoftsharepoint.md) for the scopes to enter.
 
 SharePoint OAuth2 requires information about your SharePoint **Subdomain**.
 

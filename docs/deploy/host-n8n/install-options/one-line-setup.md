@@ -33,8 +33,10 @@ The one-line setup command requires the `docker compose` v2 plugin specifically 
 Open a terminal and run:
 
 ```bash
-curl -fsSL https://get.n8n.io | sh
+curl -fsSL https://get.n8n.io | sh -s -- --version 2.35.0
 ```
+
+The version specification is necessary until n8n 2.35.0 (currently a beta release) is a stable release.
 
 This does everything for you:
 

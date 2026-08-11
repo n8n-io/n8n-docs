@@ -42,10 +42,6 @@ To enable approvals in Slack, your n8n instance must be reachable from Slack ove
 
 Learn more in the [documentation](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/approvals).
 
-{% hint style="info" %}
-**Availability:** Cloud, Self-hosted.
-{% endhint %}
-
 ***
 
 ## App-only authentication for Microsoft nodes

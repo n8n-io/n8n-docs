@@ -75,7 +75,7 @@ Learn more in the [documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm
 
 ## Organize large workflows with Canvas Groups
 
-**Released:** 2026-06-29 in [n8n 2.28](release-notes.md#n8n228)
+**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
 You can now organize related nodes into a single named Canvas Group and collapse it for a cleaner view. Group the nodes that handle one part of a workflow, give the group a name, and collapse it to hide the detail until you need it. A large workflow that used to sprawl across the canvas shrinks to a handful of labeled blocks you can read at a glance, so it's faster to find your way around a workflow a teammate built or one you haven't opened in months.
 
@@ -94,6 +94,18 @@ The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nod
 ### Webhook node: Only Run If
 
 The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based **Only run if** option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
+
+### One credential for multiple Microsoft nodes
+
+The generic **Microsoft OAuth2 API** credential now works with Microsoft Excel 365, Outlook, Teams, To Do, and Graph Security, alongside OneDrive. Instead of registering a separate Microsoft Entra app for every Microsoft service you automate, you register one, grant it the delegated permissions your workflows need, and reuse it: open any supported node, set **Authentication** to **Microsoft OAuth2 (Graph)**, and select the credential. Your IT team approves and maintains a single app registration instead of one per service.
+
+Set the credential's **Scope** field to the space-separated permissions the nodes you use require, for example `Files.ReadWrite.All` for OneDrive and Excel, or `Mail.ReadWrite` and `Mail.Send` for Outlook, always including `openid` and `offline_access`. Some permissions, such as `SecurityEvents.ReadWrite.All` for Graph Security, need admin consent. If your organization runs on a sovereign cloud (US Government, US Government DOD, or China), set the **Microsoft Graph API Base URL** on the credential and every node using it picks it up.
+
+Nothing changes for existing workflows. On saved nodes the **Authentication** dropdown stays on the node-specific credential, so credentials like Microsoft Excel OAuth2 API keep working untouched. The generic credential is an additive option, not a replacement.
+
+_Microsoft OneDrive support released in 2.27 (2026-06-16)._
+
+Learn more in the [Microsoft credentials documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoft).
 
 ***
 
@@ -621,14 +633,3 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
-
-
-## Authenticate multiple Microsoft nodes with one credential
-
-**Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
-
-You can now use a single **Microsoft OAuth2 API** credential across Microsoft OneDrive, Excel, Outlook, Teams, To Do, and Graph Security nodes, instead of creating and maintaining a separate OAuth2 app registration for each service. In your Microsoft Entra tenant, you create one app registration, grant it the delegated permissions your workflows need, and then select **Microsoft OAuth2 (Graph)** in the Authentication dropdown of any supported node to reuse that credential. This reduces the number of app registrations and admin-consent flows your IT team has to manage.
-
-To get started, register an app in your Entra tenant and add the scopes for the services you use. For example: `Files.ReadWrite.All` for OneDrive and Excel; `Mail.ReadWrite`, `Mail.Send`, `Calendars.ReadWrite`, and `Contacts.ReadWrite` for Outlook; `Tasks.ReadWrite` for To Do; `SecurityEvents.ReadWrite.All` for Graph Security. Always include `openid` and `offline_access`. Grant admin consent for any `.All` permissions, then create a Microsoft OAuth2 API credential in n8n, set the Scope field to your space-separated permission list, and complete the OAuth2 flow. Open any supported node, set Authentication to **Microsoft OAuth2 (Graph)**, and select the credential. If your organization uses a sovereign cloud (US Government, US Government DOD, or China), set the Graph API Base URL on the credential once and it applies to every node that uses it. Existing workflows using node-specific credentials such as Microsoft OneDrive OAuth2 API or Microsoft Excel OAuth2 API continue to work unchanged. The generic credential is an additive option: the Authentication dropdown defaults to the node-specific credential for saved nodes, so nothing breaks on upgrade.
-
-Learn more in the [documentation](https://docs.n8n.io/integrations/builtin/credentials/microsoft)

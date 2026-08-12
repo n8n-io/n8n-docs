@@ -151,7 +151,7 @@ Select **Add Option** to view more configuration options:
 * **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component.
 * **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers.
 * **Include User in Output**: Only relevant when **Authentication** is set to **n8n User Auth**. Turn off to exclude the submitting user's ID, email, first name, and last name from the node's output (turned on by default).
-* **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/build/manage-workflows/configure-workflow-settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output.
+* **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](../../../build/manage-workflows/configure-workflow-settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output.
 * **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 
 ## Customizing Form Trigger node behavior <a href="#customizing-form-trigger-node-behavior" id="customizing-form-trigger-node-behavior"></a>

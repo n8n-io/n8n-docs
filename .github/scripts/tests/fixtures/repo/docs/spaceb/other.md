@@ -1,0 +1,4 @@
+---
+title: Other page
+---
+# Other

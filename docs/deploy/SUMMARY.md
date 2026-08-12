@@ -14,6 +14,8 @@
   * [Download workflows](use-n8n-cloud/download-workflows.md)
 * [Host n8n](host-n8n/README.md)
   * [Install options](host-n8n/install-options/README.md)
+    * [One-line setup](host-n8n/install-options/one-line-setup.md)
+    * [Install using Docker Compose](host-n8n/install-options/install-using-docker-compose.md)
     * [Install with npm](host-n8n/install-options/install-with-npm.md)
     * [Install with Docker](host-n8n/install-options/install-with-docker.md)
     * [Use a cloud provider](host-n8n/install-options/use-a-cloud-provider/README.md)

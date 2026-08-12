@@ -98,7 +98,7 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 #### Pre-provision the instance owner from environment variables <a href="#pre-provision-the-instance-owner-from-environment-variables" id="pre-provision-the-instance-owner-from-environment-variables"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.17.0**
+**Available from n8n 2.17.0**
 
 
 {% endhint %}

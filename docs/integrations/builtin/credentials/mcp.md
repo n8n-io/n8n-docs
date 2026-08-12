@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You need an MCP server that supports OAuth2 authentication. Refer to the [MCP specification's authorization guide](https://modelcontextprotocol.io/specification/basic/authorization) for details on how MCP servers implement OAuth2.
+You need an MCP server that supports OAuth2 authentication.
 
 ## Supported authentication methods
 

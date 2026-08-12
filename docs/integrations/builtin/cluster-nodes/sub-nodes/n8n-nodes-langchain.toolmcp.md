@@ -33,7 +33,7 @@ The MCP Client Tool node supports [Bearer](../../credentials/httprequest.md#usin
 Configure the node with the following parameters.
 
 * **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
-* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](/../../credentials/mcp.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
+* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/mcp.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
 	* **Multiple Headers Auth**: Use this when your MCP server requires more than one header, for example an API key and a username. Add each header as a **Name** and **Value** pair in the credential. You can add as many headers as you need.
 * **Tools to Include**: Choose which tools you want to expose to the AI Agent:
 	* **All**: Expose all the tools given by the MCP server.

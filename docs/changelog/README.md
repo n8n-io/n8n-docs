@@ -581,6 +581,20 @@ This release builds on recent updates to the permissions model, including [custo
 
 ***
 
+## Inspect a role's permissions before assigning it
+
+**Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
+
+The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
+
+<figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
+***
+
 ## Human-in-the-loop for AI tool calls
 
 **Released:** 2026-01-26 in [n8n 2.6](release-notes.md#n8n26)
@@ -640,7 +654,11 @@ Human in the loop for the Chat node
 
 **Released:** 2026-01-12 in [n8n 2.4](release-notes.md#n8n24)
 
-The Syslog log streaming destination now supports TLS over TCP. Previously it sent log events unencrypted, which ruled it out for SIEM and observability platforms that require encrypted transport. Enable TLS on the destination and point it at your platform's TLS port, and n8n streams audit and execution events over an encrypted connection.
+The Syslog [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) destination now supports TLS over TCP. Previously it sent log events over plain UDP or TCP, which ruled it out for SIEM and observability platforms that require encrypted transport. Set the destination's transport protocol to TLS instead of the default UDP, and supply the PEM-formatted CA certificate for the connection.
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
 
 ***
 
@@ -679,6 +697,10 @@ Log streaming now includes additional audit events to improve visibility into op
 This update adds events for manual workflow cancellations and workflow activation/deactivation (publish/unpublish), variable lifecycle events (create/update/delete), and user management actions (including enabling/disabling 2FA).
 
 Workflow settings updates are also logged with the specific parameters that changed (for example, selecting a new error workflow), instead of a generic "updated" event.
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
 
 ***
 

@@ -75,7 +75,7 @@ frontmatter) or **course** content (frozen). See the contribution guide's
 - **Ranges:** "from X to Y" in prose; en dash (–) for numeric ranges in tables/labels.
 - **UI elements:** **bold**.
 - **User input, file names, paths, commands:** `code formatted`.
-- **Placeholders:** `<hyphenated-words>` inside code spans, lowercase by default or uppercase to match a convention such as environment variables (e.g. `<YOUR-API-KEY>`).
+- **Placeholders:** `<hyphenated-words>` inside code spans, lowercase by default or uppercase to match a convention such as environment variables (for example `<YOUR-API-KEY>`).
 - **Brand names:** match exactly — "GitHub" not "Github", "n8n" never "N8n".
 - **Concise:** cut filler words. Short sentences. No Latin abbreviations
   (use "for example" not "e.g.", "that is" not "i.e.").

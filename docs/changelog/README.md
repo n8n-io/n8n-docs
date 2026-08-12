@@ -355,11 +355,9 @@ Self-hosted instances can now retain insights data for up to 365 days by default
 
 ***
 
-## IdP role mapping and instance bootstrapping
+## IdP role mapping inside n8n
 
 **Released:** 2026-04-28 in [n8n 2.19](release-notes.md#n8n219)
-
-### IdP role mapping inside n8n
 
 Instance admins can now define group-to-role mappings inside n8n instead of encoding n8n-specific role logic in the IdP. With JIT provisioning enabled, admins write expressions against SAML attributes or OIDC claims to assign instance and project roles automatically at login. The IdP only needs to send standard group membership data: n8n handles the mapping, and role assignments are re-evaluated on every login, so access stays in sync without IdP changes.
 
@@ -369,7 +367,11 @@ Open **Settings → SSO**, pick **Instance roles via SSO** or **Instance and pro
 **Availability:** Business and Enterprise.
 {% endhint %}
 
-### Instance bootstrapping
+***
+
+## Instance bootstrapping
+
+**Released:** 2026-04-28 in [n8n 2.19](release-notes.md#n8n219)
 
 n8n can now be fully configured at startup through environment variables. Owner accounts, SSO (OIDC and SAML), security policies, and log streaming destinations are all applied on first boot, with no manual UI interaction required. Fields managed this way are locked in the UI and re-applied on every restart.
 
@@ -411,11 +413,9 @@ The NVIDIA Nemotron Embeddings node generates embeddings from NeMo Retriever mod
 
 ***
 
-## Embedded access and execution data redaction
+## Token exchange authentication for embedded access
 
 **Released:** 2026-04-07 in [n8n 2.16](release-notes.md#n8n216)
-
-### Token exchange authentication for embedded access
 
 n8n now supports OAuth 2.0 Token Exchange (RFC 8693) as a second authentication mechanism alongside API keys. Two scenarios are covered: seamless iframe embedding, where users see n8n inside another product without a separate login screen, and delegated API access, where a system acts on behalf of a user with full audit attribution.
 
@@ -425,7 +425,11 @@ The embedding system holds an asymmetric private key and signs short-lived JWTs 
 **Availability:** Enterprise. Requires an asymmetric key pair configured via `N8N_TOKEN_EXCHANGE_TRUSTED_KEYS`. Uses role-based scoping.
 {% endhint %}
 
-### Execution data redaction
+***
+
+## Execution data redaction
+
+**Released:** 2026-04-07 in [n8n 2.16](release-notes.md#n8n216)
 
 Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
 
@@ -434,11 +438,6 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 {% hint style="info" %}
 **Availability:** Enterprise.
 {% endhint %}
-
-### Public API improvements
-
-* **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
-* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in n8n 2.17.
 
 ***
 
@@ -473,13 +472,21 @@ This is the foundational T1 feature. It was extended across later releases: node
 
 n8n now connects natively to Databricks. The new node runs SQL with asynchronous polling and chunked results (each row arrives as its own item), manages Unity Catalog objects (catalogs, schemas, tables, volumes, and functions), calls Model Serving endpoints with automatic input detection and validation, interacts with Genie AI, handles file operations up to 5 GiB, and manages Vector Search indexes. Lakehouse data can flow through the same workflows as the rest of your stack, without custom HTTP wiring. Learn more in the [Databricks node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.databricks).
 
-### Perplexity node v2
+***
 
-The [Perplexity node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.perplexity) moves to v2 with full API coverage while keeping v1 workflows compatible: agent responses with third-party models, tools, and JSON-schema structured outputs; raw search with advanced filters; and embeddings, including contextualized embeddings.
+## Perplexity node v2
 
-### See what depends on what
+**Released:** 2026-03-24 in [n8n 2.14](release-notes.md#n8n214)
 
-Workflow, credential, and data table cards, as well as the data table detail view, now show dependency information, so you can check what relies on a resource before you delete or change it.
+The [Perplexity node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.perplexity) moves to v2 with full API coverage, and existing v1 workflows keep working. Agent responses now handle third-party models, tool calls, and JSON-schema structured output, so results come back in a shape the next node can parse. Raw search gains advanced filters, and the node adds embeddings, including contextualized embeddings.
+
+***
+
+## See what depends on what
+
+**Released:** 2026-03-24 in [n8n 2.14](release-notes.md#n8n214)
+
+Before you delete or change a resource, you can now see what relies on it. Workflow, credential, and data table cards show dependency information, as does the data table detail view. Previously you had to open everything that might reference a credential or table and check by hand, or find out after the change broke something.
 
 ***
 
@@ -493,31 +500,22 @@ Open version history, click **Compare changes**, pick any two versions, and the 
 **Availability:** Pro, Business, and Enterprise.
 {% endhint %}
 
-### Project-scoped external secrets: full team access
+***
 
-What's new:
+## Project-scoped external secrets
 
-* Project admins manage their own vault connections from project settings.
-* Project editors can use project-scoped secrets in credentials once the instance admin enables access.
-* [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) now include five secrets scopes: list, read, create, update, and delete.
-* Instance admins/owners no longer need to be project members for secrets to resolve.
+**Released:** 2026-03-16 in [n8n 2.13](release-notes.md#n8n213)
 
-**For instance admins:** go to **Settings > External Secrets** and enable the **System Roles** toggle, or use custom roles for more granular control.
+Vault connections can now be scoped to a single project. Secrets from that connection appear only in that project's credentials, not across the instance, and instance-level connections are unaffected. This shipped in two halves: instance admins could create project-scoped connections first, and project teams got self-service access in the following release.
 
-**For project admins:** go to **Project Settings > External Secrets** to create and manage project-level connections. Instance-level connections shared with you appear as read-only.
+_Instance admin setup released in n8n 2.11 (2026-03-02)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
+
+_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
 
 Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
 {% hint style="info" %}
 **Availability:** Enterprise.
-{% endhint %}
-
-### Folder-based filtering in the push and pull dialog
-
-The push and pull dialogs now include a **Folder** filter alongside Status and Owner. Selecting a folder scopes the list to workflows in that folder and its subfolders, shown as a hierarchical tree with folder-level checkboxes. Text search also matches folder names.
-
-{% hint style="info" %}
-**Availability:** Enterprise. Requires [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control) configured.
 {% endhint %}
 
 ***
@@ -560,31 +558,11 @@ Things to keep in mind:
 **Availability:** Cloud only.
 {% endhint %}
 
-### Custom roles: Assignments tab
-
-Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them, with no more navigating project by project.
-
-### Project-scoped external secrets: instance admin setup
-
-Instance admins can now create vault connections scoped to a specific project. Secrets from that connection appear only within that project's credentials, not across the instance. Instance-level connections are unaffected. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
-
-### Workflow execute as a separate permission scope
-
-`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
-
-{% hint style="info" %}
-**Availability:** Custom roles and project-scoped external secrets are available on Enterprise.
-{% endhint %}
-
 ***
 
-## Personal space policies and finer-grained governance
+## Personal space policies
 
-**Released:** 2026-02-09 – 2026-02-13 in [n8n 2.8.0–2.8.3](release-notes.md#n8n28)
-
-### Personal space policies
-
-_Released in n8n 2.8.3 (2026-02-13)._
+**Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
 
 A new **Security & policies** settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
 
@@ -597,39 +575,8 @@ This release builds on recent updates to the permissions model, including [custo
 
 <figure><img src=".gitbook/assets/personal_space_policies.png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
-### Custom roles: improved discoverability and permission visibility
-
-_Released in n8n 2.8.3 (2026-02-13)._
-
-The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
-
-<figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
-
-### Stronger external secrets validation
-
-_Released in n8n 2.8.0 (2026-02-09)._
-
-n8n now verifies that the current user has access to the referenced vaults before allowing a credential that uses `$secrets...` expressions to be saved. If access is missing, the save operation fails. This prevents secret values from being exposed through guessed secret paths.
-
-### Improved API auditability
-
-_Released in n8n 2.8.0 (2026-02-09)._
-
-API endpoints have been expanded to provide clearer visibility into project membership and credentials:
-
-* `GET /projects/{projectId}/users` returns all members of a project including their assigned role.
-* `GET /credentials` returns a paginated list of all credentials across the instance, including the project they belong to.
-
-This makes it easier to audit who has access to which projects and credentials without manually reviewing each one in the UI.
-
-### More granular workflow permissions
-
-_Released in n8n 2.8.0 (2026-02-09)._
-
-Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: `workflow:publish` and `workflow:unpublish`. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
-
 {% hint style="info" %}
-**Availability:** Personal space policies, custom roles, stronger external secrets validation, and improved API auditability are available on Enterprise.
+**Availability:** Enterprise.
 {% endhint %}
 
 ***
@@ -689,15 +636,17 @@ Human in the loop for the Chat node
 
 ***
 
-## TLS for Syslog log streaming and credential updates via API
+## TLS support for Syslog log streaming
 
 **Released:** 2026-01-12 in [n8n 2.4](release-notes.md#n8n24)
 
-### TLS support for Syslog log streaming
+The Syslog log streaming destination now supports TLS over TCP. Previously it sent log events unencrypted, which ruled it out for SIEM and observability platforms that require encrypted transport. Enable TLS on the destination and point it at your platform's TLS port, and n8n streams audit and execution events over an encrypted connection.
 
-The Syslog log streaming destination now supports TLS over TCP for encrypted connections. This enables secure log streaming to enterprise SIEM and observability platforms that require encrypted transport. With this release, log streaming is now compatible with a broader range of enterprise SIEM platforms.
+***
 
-### Update credentials via API
+## Update credentials via API
+
+**Released:** 2026-01-12 in [n8n 2.4](release-notes.md#n8n24)
 
 n8n's public API now supports updating existing credentials by ID via a new `PATCH /credentials/:id` endpoint. Previously, credentials could only be created through the API, so any changes required deleting and recreating the credential.
 
@@ -705,11 +654,9 @@ When updating, you can either replace all credential data at once (useful for bu
 
 ***
 
-## Finer-grained workflow permissions and richer audit events
+## More granular workflow permissions in custom project roles
 
 **Released:** 2025-12-22 in [n8n 2.2](release-notes.md#n8n22)
-
-### More granular workflow permissions within Custom Project Roles
 
 Custom Project Roles allow you to define fine-grained permissions at the project level. With this release, workflow permissions have been further refined by separating workflow editing from workflow publishing.
 
@@ -721,7 +668,11 @@ This change makes it easier to align access controls with internal processes whe
 **Availability:** Enterprise.
 {% endhint %}
 
-### Log streaming: more audit events for improved observability
+***
+
+## Log streaming: more audit events for improved observability
+
+**Released:** 2025-12-22 in [n8n 2.2](release-notes.md#n8n22)
 
 Log streaming now includes additional audit events to improve visibility into operational and security-relevant changes.
 

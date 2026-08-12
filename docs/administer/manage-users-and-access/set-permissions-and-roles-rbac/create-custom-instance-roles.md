@@ -17,7 +17,7 @@ layout:
 
 Custom instance roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 
-**Available from:** n8n version 2.30.0 (released July 7, 2026)
+**Available from:** n8n 2.30.0 (released July 7, 2026)
 {% endhint %}
 
 {% hint style="info" %}

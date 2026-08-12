@@ -35,16 +35,17 @@ AI Assistant isn't yet available for self-hosted Enterprise. Support for self-ho
 If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
 {% endhint %}
 
-To run AI Assistant on a self-hosted instance, you need:
+## What AI Assistant needs
 
-* An API key for an LLM provider.
-* An AI model. n8n uses `anthropic/claude-opus-4-8` by default, or you can set your own.
-* A sandbox provider. Daytona is recommended.
-* A search provider if you want web search. Brave Search is recommended.
+Every setup needs three things:
 
-{% hint style="info" %}
-Most AI Assistant settings use `N8N_INSTANCE_AI_*` environment variables. `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is a deliberate exception. The internal module name is `instance-ai`.
-{% endhint %}
+* **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
+* **A sandbox:** An isolated environment where AI Assistant runs code. This is required.
+* **A search provider (optional):** Lets AI Assistant look things up on the web.
+
+How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically. For production, use Daytona instead.
+
+[Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 
 ### Before you start
 
@@ -52,81 +53,160 @@ Make sure you have:
 
 * Access to configure environment variables for the n8n instance.
 * A recent version of n8n. Run the latest stable release or later; older versions may work, but newer is better.
-* An API key for a supported LLM provider:
-  * Anthropic
-  * OpenAI
-  * OpenRouter
-* A sandbox provider. Daytona is recommended.
-* A search provider if you want web search. Brave Search is recommended.
+* An API key for a supported LLM provider: Anthropic, OpenAI, or OpenRouter.
 
-### Quick setup with Daytona
+## Pick your setup
 
-Daytona is the recommended sandbox provider for most self-hosted setups.
+| Setup | Use this if... | Sandbox hosted by | Best for |
+| --- | --- | --- | --- |
+| [1. Already running the sandbox](#1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
+| [2. Self-host the sandbox manually](#2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
+| [3. Daytona (managed sandbox)](#3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
 
-This setup enables AI Assistant with an Anthropic model, Daytona, and Brave Search for web search.
+### 1. Already running the sandbox (recommended for local development)
 
-Set these environment variables on your n8n instance:
+If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, via bundled SearXNG, are already running. All that's left is a model key.
+
+**What you need:** an LLM API key. Nothing else.
+
+**Steps:**
+
+The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?  Use the steps below.
+
+1. Add your model key to `.env`:
+
+   ```bash
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+   ```
+
+2. Restart n8n.
+3. Open the editor and confirm AI Assistant appears and responds.
+
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+
+### 2. Self-host the sandbox manually (advanced)
+
+Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
+
+{% hint style="warning" %}
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#3-daytona-managed-sandbox-recommended-for-production) instead.
+{% endhint %}
+
+**What you need:**
+
+* The n8n Sandbox Service running and reachable from n8n. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full stack (`sandbox-certs`, `sandbox-api`, `sandbox-runner-1`) and its secrets.
+* An LLM API key.
+
+**Steps:**
+
+1. Stand up the sandbox stack (Docker Compose guide linked above).
+2. Point n8n at it:
+
+   ```bash
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
+   N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
+   N8N_INSTANCE_AI_SANDBOX_API_KEY=my-sandbox-api-key
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`. |
+   | `N8N_INSTANCE_AI_SANDBOX_API_URL` | URL of the sandbox API, reachable from n8n. |
+   | `N8N_INSTANCE_AI_SANDBOX_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
+
+3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
+
+**Verify:**
 
 ```bash
-# Enable the module and choose a model
-N8N_ENABLED_MODULES=instance-ai
-N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
-N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
-
-# Sandbox, required
-N8N_INSTANCE_AI_SANDBOX_ENABLED=true
-N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
-N8N_INSTANCE_AI_SANDBOX_IMAGE=daytonaio/sandbox:0.5.3-slim
-
-# Daytona
-DAYTONA_API_URL=https://app.daytona.io/api
-DAYTONA_API_KEY=dtn_xxx
-
-# Web search, recommended
-INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+curl http://<sandbox-api-host>:8080/healthz
 ```
 
-These variables do the following:
+Expected response: `{"status":"ok"}`
 
-| Variable                           | Description                                                                                                         |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `N8N_ENABLED_MODULES`              | Must include `instance-ai` to enable the module.                                                                    |
-| `N8N_INSTANCE_AI_MODEL`            | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`), so setting it is optional. |
-| `N8N_INSTANCE_AI_MODEL_API_KEY`    | API key for the selected provider.                                                                                  |
-| `N8N_INSTANCE_AI_SANDBOX_ENABLED`  | Set to `true`. AI Assistant requires a sandbox.                                                                     |
-| `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Sandbox provider. Use `daytona` for Daytona.                                                                        |
-| `N8N_INSTANCE_AI_SANDBOX_IMAGE`    | Base container image for Daytona sandboxes.                                                                         |
-| `DAYTONA_API_URL`                  | Daytona API endpoint.                                                                                               |
-| `DAYTONA_API_KEY`                  | Your Daytona API key.                                                                                               |
-| `INSTANCE_AI_BRAVE_SEARCH_API_KEY` | Brave Search API key for web search. This variable intentionally doesn't use the `N8N_` prefix.                     |
+**Notes:**
 
-### Docker Compose example
+* Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
+* `N8N_INSTANCE_AI_SANDBOX_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
+* The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
+* Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
-```yaml
-services:
-  n8n:
-    image: docker.n8n.io/n8nio/n8n
-    environment:
-      N8N_ENABLED_MODULES: instance-ai
-      N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
-      N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
-      N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
-      N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
-      N8N_INSTANCE_AI_SANDBOX_IMAGE: daytonaio/sandbox:0.5.3-slim
-      DAYTONA_API_URL: https://app.daytona.io/api
-      DAYTONA_API_KEY: dtn_xxx
-      INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
+### 3. Daytona (managed sandbox, recommended for production)
+
+Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the sandbox provider n8n recommends for production use.
+
+**What you need:** a Daytona account and API key, plus an LLM API key.
+
+**Steps:**
+
+1. Set these environment variables on your n8n instance:
+
+   ```bash
+   # Enable the module and choose a model
+   N8N_ENABLED_MODULES=instance-ai
+   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+
+   # Sandbox, required
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
+   N8N_INSTANCE_AI_SANDBOX_IMAGE=daytonaio/sandbox:0.5.3-slim
+
+   # Daytona
+   DAYTONA_API_URL=https://app.daytona.io/api
+   DAYTONA_API_KEY=dtn_xxx
+
+   # Web search, recommended
+   INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
+   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`), so setting it is optional. |
+   | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. AI Assistant requires a sandbox. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
+   | `N8N_INSTANCE_AI_SANDBOX_IMAGE` | Base container image for Daytona sandboxes. |
+   | `DAYTONA_API_URL` | Daytona API endpoint. |
+   | `DAYTONA_API_KEY` | Your Daytona API key. |
+   | `INSTANCE_AI_BRAVE_SEARCH_API_KEY` | Brave Search API key for web search. This variable intentionally doesn't use the `N8N_` prefix. |
+
+   Docker Compose example:
+
+   ```yaml
+   services:
+     n8n:
+       image: docker.io/n8nio/n8n
+       environment:
+         N8N_ENABLED_MODULES: instance-ai
+         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
+         N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
+         N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
+         N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
+         N8N_INSTANCE_AI_SANDBOX_IMAGE: daytonaio/sandbox:0.5.3-slim
+         DAYTONA_API_URL: https://app.daytona.io/api
+         DAYTONA_API_KEY: dtn_xxx
+         INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
+   ```
+
+2. Restart n8n, open the editor, and confirm AI Assistant appears and responds.
+
+**Optional: tune the sandbox lifecycle**
+
+```bash
+N8N_INSTANCE_AI_SANDBOX_AUTO_STOP_MINUTES=15
+N8N_INSTANCE_AI_SANDBOX_AUTO_ARCHIVE_MINUTES=60
+N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
 ```
 
-### Apply and verify
+{% hint style="info" %}
+By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after 1 hour, and deletes it after 7 days. Change these settings with the variables above.
+{% endhint %}
 
-After you set the variables:
-
-1. Restart all n8n processes.
-2. Open the editor.
-3. Confirm that AI Assistant appears and responds.
-
-### Choose a model provider
+## Choose a model provider
 
 `N8N_INSTANCE_AI_MODEL` uses this format:
 
@@ -174,168 +254,11 @@ N8N_INSTANCE_AI_MODEL_API_KEY=optional-key
 
 Some local servers don't require an API key.
 
-### Configure a sandbox provider
+## Enable web search
 
-AI Assistant runs its work in an isolated sandbox, so a sandbox provider is required.
+Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
 
-| Provider      | Best for                                                           |
-| ------------- | ------------------------------------------------------------------ |
-| `daytona`     | Recommended setup for most self-hosted instances.                  |
-| `n8n-sandbox` | Advanced setup when you want to host the sandbox service yourself. |
-
-### Option A: Daytona
-
-If you follow [Quick setup with Daytona](set-up-ai-assistant.md#quick-setup-with-daytona), you already have the required Daytona variables in place.
-
-Daytona creates sandboxes on demand.
-
-Tune the sandbox lifecycle with these variables:
-
-```bash
-N8N_INSTANCE_AI_SANDBOX_AUTO_STOP_MINUTES=15
-N8N_INSTANCE_AI_SANDBOX_AUTO_ARCHIVE_MINUTES=60
-N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
-```
-
-{% hint style="info" %}
-By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after 1 hour, and deletes it after 7 days. Change these with the auto-stop, auto-archive, and auto-delete variables above.
-{% endhint %}
-
-### Option B: n8n Sandbox Service
-
-Use the [n8n Sandbox Service](https://github.com/n8n-io/n8n-sandbox-service) if you want to host the sandbox service yourself.
-
-{% hint style="warning" %}
-This is an advanced setup. Use Daytona unless you need to run the sandbox service yourself.
-{% endhint %}
-
-The n8n Sandbox Service has two containers:
-
-* `n8nio/n8n-sandbox-service-api`: the HTTP API that n8n talks to.
-* `n8nio/n8n-sandbox-service-runner-dind`: the runner that executes sandboxes as Docker-in-Docker containers.
-
-{% hint style="warning" %}
-The runner must run in privileged mode.
-{% endhint %}
-
-The API and runner communicate over mutual TLS. The API image includes a `bootstrap-mtls.sh` script that generates the certificates.
-
-#### Full Docker Compose example
-
-Run this alongside your n8n service:
-
-{% code expandable="true" %}
-```yaml
-volumes:
-  sandbox-tls:
-
-services:
-  # One-shot: generates mTLS certificates, then exits
-  sandbox-certs:
-    image: n8nio/n8n-sandbox-service-api:latest
-    user: '0:0'
-    entrypoint: ['sh', '-c']
-    command:
-      - >
-        bootstrap-mtls.sh --out-dir /tls --api-san sandbox-api
-        --control-san-prefix sandbox-runner --world-readable &&
-        chown -R sandbox-api:sandbox-api /tls/api && chmod -R a+rX /tls
-    environment:
-      NUM_RUNNERS: '1'
-    volumes:
-      - sandbox-tls:/tls
-
-  sandbox-api:
-    image: n8nio/n8n-sandbox-service-api:latest
-    depends_on:
-      sandbox-certs:
-        condition: service_completed_successfully
-    environment:
-      SANDBOX_API_KEYS: my-sandbox-api-key
-      SANDBOX_API_RUNNER_REGISTRATION_TOKEN: my-registration-token
-      SANDBOX_API_RUNNER_API_KEY: my-runner-key
-      SANDBOX_API_GRPC_TLS_CERT_FILE: /tls/api/grpc-server.crt
-      SANDBOX_API_GRPC_TLS_KEY_FILE: /tls/api/grpc-server.key
-      SANDBOX_API_GRPC_TLS_CLIENT_CA_FILE: /tls/api/ca.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CA_FILE: /tls/api/ca.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/api/control-grpc-api-client.crt
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/api/control-grpc-api-client.key
-      SANDBOX_API_RUNNER_CONTROL_GRPC_TLS_SERVER_NAME: sandbox-runner-1
-    volumes:
-      - sandbox-tls:/tls:ro
-
-  sandbox-runner-1:
-    image: n8nio/n8n-sandbox-service-runner-dind:latest
-    privileged: true
-    depends_on:
-      - sandbox-api
-    environment:
-      SANDBOX_RUNNER_API_KEYS: my-runner-key
-      SANDBOX_RUNNER_REGISTRATION_TOKEN: my-registration-token
-      SANDBOX_RUNNER_API_GRPC_ADDR: sandbox-api:9090
-      SANDBOX_RUNNER_HTTP_BASE_URL: http://sandbox-runner-1:8080
-      SANDBOX_RUNNER_CONTROL_GRPC_LISTEN_ADDR: ':9091'
-      SANDBOX_RUNNER_CONTROL_GRPC_ADVERTISE_ADDR: sandbox-runner-1:9091
-      SANDBOX_RUNNER_ID: runner-1
-      SANDBOX_RUNNER_DOCKER_SANDBOX_IMAGE: n8nio/n8n-sandbox-service-sandbox:latest
-      SANDBOX_RUNNER_REGISTRATION_GRPC_CA_FILE: /tls/runner/ca.crt
-      SANDBOX_RUNNER_REGISTRATION_GRPC_CERT_FILE: /tls/runner/grpc-client.crt
-      SANDBOX_RUNNER_REGISTRATION_GRPC_KEY_FILE: /tls/runner/grpc-client.key
-      SANDBOX_RUNNER_REGISTRATION_GRPC_SERVER_NAME: sandbox-api
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_CERT_FILE: /tls/runner/control-grpc-server.crt
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_KEY_FILE: /tls/runner/control-grpc-server.key
-      SANDBOX_RUNNER_CONTROL_GRPC_TLS_CLIENT_CA_FILE: /tls/runner/ca.crt
-    volumes:
-      - sandbox-tls:/tls:ro
-```
-{% endcode %}
-
-#### Point n8n at the sandbox service
-
-After the service is running, set these variables on your n8n instance:
-
-```bash
-N8N_INSTANCE_AI_SANDBOX_ENABLED=true
-N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
-N8N_SANDBOX_SERVICE_API_KEY=my-sandbox-api-key
-```
-
-| Variable                           | Description                                         |
-| ---------------------------------- | --------------------------------------------------- |
-| `N8N_INSTANCE_AI_SANDBOX_ENABLED`  | Set to `true`.                                      |
-| `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`.                               |
-| `N8N_SANDBOX_SERVICE_URL`          | URL of the sandbox API, reachable from n8n.         |
-| `N8N_SANDBOX_SERVICE_API_KEY`      | Must match `SANDBOX_API_KEYS` on the API container. |
-
-Verify that the service is running:
-
-```bash
-curl http://<sandbox-api-host>:8080/healthz
-```
-
-Expected response:
-
-```json
-{"status":"ok"}
-```
-
-Notes:
-
-* Replace `my-sandbox-api-key`, `my-registration-token`, and `my-runner-key` with your own secrets.
-* The runner pulls `n8nio/n8n-sandbox-service-sandbox` from Docker Hub on first use.
-* For air-gapped setups, preload `n8nio/n8n-sandbox-service-sandbox` into the runner's inner Docker.
-* Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
-
-### Optional features
-
-After the base setup works, you can adjust web search.
-
-#### Enable web search
-
-Web search lets AI Assistant look things up on the web. It requires a search provider.
-
-Brave Search is the recommended provider. The recommended setup includes Brave Search by default. If you don't configure web search, the rest of AI Assistant still works, but the web-search action stays disabled.
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
 
 ```bash
 # Brave Search
@@ -349,18 +272,16 @@ N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 `INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable exactly as shown.
 {% endhint %}
 
-If you want web search, configure Brave Search. If you also configure SearXNG, Brave Search takes priority over SearXNG.
-
-Free or unauthenticated providers, including SearXNG, can hit rate limits. Use Brave Search for a more reliable setup.
+If you configure both, Brave Search takes priority over SearXNG. Free or unauthenticated providers, including SearXNG, can hit rate limits, so use Brave Search for a more reliable setup.
 
 If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
 
-### Enable agents
+## Enable agents
 
-Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n `2.32.3` (Beta) or later.
+Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n 2.32.3 (Beta) or later.
 
 {% hint style="warning" %}
-Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+Agents aren't ready for self-hosted Enterprise yet.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
@@ -379,12 +300,12 @@ N8N_AGENTS_AI_SANDBOX_PROVIDER=daytona
 WEBHOOK_URL=https://your-public-url
 ```
 
-| Variable                        | Description                                                                                                                    |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `N8N_ENABLED_MODULES`           | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building.                                            |
-| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox.                    |
-| `N8N_AGENTS_AI_SANDBOX_PROVIDER`| Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for AI Assistant.                       |
-| `WEBHOOK_URL`                   | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear.              |
+| Variable | Description |
+| --- | --- |
+| `N8N_ENABLED_MODULES` | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building. |
+| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox. |
+| `N8N_AGENTS_AI_SANDBOX_PROVIDER` | Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for AI Assistant. |
+| `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 {% hint style="info" %}
 The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
@@ -392,7 +313,7 @@ The knowledge base is a preview feature on self-hosted and needs the Daytona san
 
 For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
-### Disable AI Assistant
+## Disable AI Assistant
 
 To disable AI Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.
 
@@ -402,17 +323,29 @@ You can also disable the module explicitly:
 N8N_DISABLED_MODULES=instance-ai
 ```
 
-### Troubleshooting
+## Troubleshooting
 
-If AI Assistant doesn't appear or doesn't work, check that:
+If AI Assistant doesn't appear or doesn't work, check for these issues.
+
+**General**
 
 * `N8N_ENABLED_MODULES` includes `instance-ai`.
 * The model value uses `provider/model` format if you set `N8N_INSTANCE_AI_MODEL`.
 * The API key is valid for the selected provider.
 * `N8N_INSTANCE_AI_SANDBOX_ENABLED` is set to `true`.
-* A sandbox provider is configured.
-* The sandbox provider is reachable from the n8n instance.
-* For Daytona, `DAYTONA_API_URL` and `DAYTONA_API_KEY` are set.
-* If you want web search, `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
-* For n8n Sandbox Service, `N8N_SANDBOX_SERVICE_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
-* The sandbox service health check returns `{"status":"ok"}`.
+
+**Self-hosted sandbox (setup 2)**
+
+* `N8N_INSTANCE_AI_SANDBOX_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
+* The sandbox health check returns `{"status":"ok"}`.
+* `N8N_INSTANCE_AI_SANDBOX_API_URL` is reachable from the n8n container.
+
+**Daytona (setup 3)**
+
+* `DAYTONA_API_URL` and `DAYTONA_API_KEY` are set.
+* Your Daytona account has capacity to create a new sandbox.
+
+**Web search**
+
+* `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
+* If nothing is set, this is expected. Web search is optional and the rest of AI Assistant still works.

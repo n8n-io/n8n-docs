@@ -52,7 +52,7 @@ n8n also handles trace context propagation:
 ## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Available from n8n 2.27.0**
 
 You need to be an instance owner or admin to configure OpenTelemetry in the UI.
 {% endhint %}
@@ -187,7 +187,7 @@ n8n supports the following custom attribute levels:
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
 
-Project and workflow custom span attributes are available from n8n `2.24.0`. Node custom span attributes are available from n8n `2.22.0`.
+Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 
 ### Add project span attributes <a href="#add-project-span-attributes" id="add-project-span-attributes"></a>
 
@@ -289,7 +289,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.name` | Workflow name. |
 | `n8n.workflow.version_id` | Workflow version ID. |
 | `n8n.workflow.node_count` | Number of nodes in the workflow. |
-| `n8n.project.id` | Project ID. Available from n8n `2.23.0`. |
+| `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
 | `n8n.execution.status` | Final execution status. |

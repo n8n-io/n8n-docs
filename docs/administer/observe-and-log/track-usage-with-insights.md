@@ -118,4 +118,4 @@ n8n records an error workflow execution's own outcome and run time against the e
 
 ### Does n8n use historic execution data when upgrading to a version with insights? <a href="#does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights" id="does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights"></a>
 
-n8n only starts collecting data for insights once you update to the first supported version (1.89.0). This means it only reports on executions from that point forward and you won't see execution data in insights from prior periods.
+n8n only starts collecting data for insights once you update to n8n 1.89.0, the first supported version. This means it only reports on executions from that point forward and you won't see execution data in insights from prior periods.

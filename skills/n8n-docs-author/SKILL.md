@@ -157,7 +157,7 @@ See [reference.md](reference.md) for full examples and rules.
 - **Format:** product name plus numerals: `n8n 2.30.0`. No `v` prefix, don't
   write "version" after "n8n", and don't add "or later"; "available from"
   already means "and onward". Don't wrap the version in inline code formatting
-  in running text (write "n8n 2.30.0", not "n8n `2.30.0`") — only use code
+  in running text (write "n8n 2.30.0", not "n8n `2.30.0`"). Only use code
   formatting when the version is part of an actual code snippet, command, or
   file path (`n8n@2.30.0`, a Docker tag, a `package.json` value).
 - **Placement:** match the scope. Whole page or section → an `info` hint titled

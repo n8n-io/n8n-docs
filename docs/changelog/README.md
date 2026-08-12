@@ -508,7 +508,7 @@ Open version history, click **Compare changes**, pick any two versions, and the 
 
 Vault connections can now be scoped to a single project. Secrets from that connection appear only in that project's credentials, not across the instance, and instance-level connections are unaffected. This shipped in two halves: instance admins could create project-scoped connections first, and project teams got self-service access in the following release.
 
-_Instance admin setup released in n8n 2.11 (2026-03-02)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
+_Instance admin setup released in n8n 2.11 (2026-03-03)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
 
 _Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
 
@@ -543,7 +543,7 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 
 ## Easier credential setup on Cloud
 
-**Released:** 2026-03-02 in [n8n 2.11](release-notes.md#n8n211)
+**Released:** 2026-03-03 in [n8n 2.11](release-notes.md#n8n211)
 
 Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
 

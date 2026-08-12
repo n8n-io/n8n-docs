@@ -24,7 +24,7 @@ Your queue mode workers can now return a webhook response however large the payl
 
 Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers and n8n stores a response body above that limit in [binary data storage](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/handle-binary-data) instead. The queue message then carries only a reference, the main instance streams the body from storage to the client, and n8n deletes the stored copy once it delivers the response, so nothing accumulates. Redis memory stays flat no matter how large the response gets.
 
-Offloading needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores data (any mode except `default`) and storage that every instance can read. n8n recommends `s3` or `azure`, since both stream the body a chunk at a time. Only a main instance running 2.34.0 or later can read an offloaded body, so the variable ships turned off: upgrade your main and webhook instances first, then enable it on your workers.
+Offloading needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores data (any mode except `default`) and storage that every instance can read. n8n recommends `s3` or `azure`, since both stream the body a chunk at a time. Only a main instance running n8n 2.34.0 or later can read an offloaded body, so the variable ships turned off: upgrade your main and webhook instances first, then enable it on your workers.
 
 Refer to [Large webhook responses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#large-webhook-responses) for the full configuration, upgrade order, and troubleshooting.
 
@@ -60,11 +60,11 @@ Learn more in the [Approvals in Slack documentation](https://app.gitbook.com/s/B
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
 
-You can now authenticate Microsoft nodes with a [Microsoft Entra Service Principal](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal), so workflows run as an application instead of a signed-in user. OneDrive and Outlook gained the option in 2.29; Excel 365, Microsoft Teams, and Microsoft To Do follow in 2.30, all sharing a single app-only credential.
+You can now authenticate Microsoft nodes with a [Microsoft Entra Service Principal](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal), so workflows run as an application instead of a signed-in user. OneDrive and Outlook gained the option in n8n 2.29; Excel 365, Microsoft Teams, and Microsoft To Do follow in n8n 2.30, all sharing a single app-only credential.
 
 Until now, Microsoft automations were tied to a person's OAuth session: when that person left the company or their token expired, the workflow broke. With app-only authentication, the workflow authenticates non-interactively with tenant-level permissions and targets the user, mailbox, drive, or site you specify: read a shared mailbox, process files in any user's drive, or post to Teams channels with nobody logged in. OAuth2 remains the default everywhere, so existing workflows are untouched, and operations that only make sense for a signed-in user are disabled per node with a clear error.
 
-_OneDrive and Outlook support released in 2.29 (2026-06-30)._
+_OneDrive and Outlook support released in n8n 2.29 (2026-06-30)._
 
 ***
 
@@ -106,14 +106,14 @@ Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5
 
 We've shipped a number of updates to the n8n MCP server over the past few weeks. Here's a roundup, with the version each change landed in.
 
-* **Build with custom and community nodes.** You can now use your installed custom and community nodes in the workflows you build, not just the built-in ones (v2.29).
-* **Read and change workflow settings.** Workflow settings are now editable through the MCP server, so you can connect an error workflow, set the timezone, or adjust execution options (v2.29).
-* **View and restore workflow history.** You can now browse a workflow's version history and restore an earlier version (v2.29).
-* **More reliable credential assignment.** Fixed a bug where the server could assign a credential that wasn't valid for a node (v2.28).
-* **Look up real field values.** Dynamic fields like Slack channels or Google Sheets tabs now resolve to live values, so nodes are configured with valid selections instead of placeholder IDs (v2.27).
-* **Work with tags.** Tags are now supported, so you can filter a workflow search by tag and apply tags when creating or updating workflows (v2.27).
-* **Faster, targeted edits.** Workflow updates now change only the nodes that need to change instead of rewriting the whole thing (v2.22).
-* **List and choose credentials.** You can now list the credentials on your instance and pick the right one when several could apply, for example among five Gmail credentials (v2.21).
+* **Build with custom and community nodes.** You can now use your installed custom and community nodes in the workflows you build, not just the built-in ones (n8n 2.29).
+* **Read and change workflow settings.** Workflow settings are now editable through the MCP server, so you can connect an error workflow, set the timezone, or adjust execution options (n8n 2.29).
+* **View and restore workflow history.** You can now browse a workflow's version history and restore an earlier version (n8n 2.29).
+* **More reliable credential assignment.** Fixed a bug where the server could assign a credential that wasn't valid for a node (n8n 2.28).
+* **Look up real field values.** Dynamic fields like Slack channels or Google Sheets tabs now resolve to live values, so nodes are configured with valid selections instead of placeholder IDs (n8n 2.27).
+* **Work with tags.** Tags are now supported, so you can filter a workflow search by tag and apply tags when creating or updating workflows (n8n 2.27).
+* **Faster, targeted edits.** Workflow updates now change only the nodes that need to change instead of rewriting the whole thing (n8n 2.22).
+* **List and choose credentials.** You can now list the credentials on your instance and pick the right one when several could apply, for example among five Gmail credentials (n8n 2.21).
 
 Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
@@ -191,7 +191,7 @@ Set the credential's **Scope** field to the space-separated permissions the node
 
 Nothing changes for existing workflows. On saved nodes the **Authentication** dropdown stays on the node-specific credential, so credentials like Microsoft Excel OAuth2 API keep working untouched. The generic credential is an additive option, not a replacement.
 
-_Microsoft OneDrive support released in 2.27 (2026-06-16)._
+_Microsoft OneDrive support released in n8n 2.27 (2026-06-16)._
 
 Learn more in the [Microsoft credentials documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoft).
 
@@ -291,11 +291,7 @@ Fourteen trigger nodes now verify the signatures of incoming webhooks, so forged
 
 Verification uses each service's own signing mechanism, typically an HMAC signature header, with constant-time comparison and, where the service supports it, replay protection. Signing secrets are generated and registered automatically when n8n creates the webhook and stored with the workflow. Existing webhooks without a stored secret keep working, so nothing breaks on upgrade; new webhooks simply come out more secure by default.
 
-This is part of a broader hardening pass across releases: the Linear Trigger gained an optional signing secret in 2.18, Netlify verification shipped in 2.20, and AWS SNS, Box, and Microsoft Teams followed in 2.22.
-
-***
-
-## Jira: OAuth2 authentication
+This is part of a broader hardening pass across releases: Netlify verification shipped in n8n 2.20, and AWS SNS, Box, and Microsoft Teams followed in n8n 2.22.
 
 **Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
@@ -371,13 +367,13 @@ More providers followed in later releases:
 
 ### MiniMax
 
-_Released in 2.18 (2026-04-21)._
+_Released in n8n 2.18 (2026-04-21)._
 
 A [MiniMax chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatminimax) (OpenAI-compatible API, default MiniMax-M2.7, with a Hide Thinking option that strips reasoning traces for clean responses) plus a [standalone MiniMax node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.minimax) covering chat, image generation, asynchronous video generation, and text-to-speech with voice, emotion, speed, and pitch controls.
 
 ### NVIDIA Nemotron embeddings
 
-_Released in 2.26 (2026-06-09)._
+_Released in n8n 2.26 (2026-06-09)._
 
 The NVIDIA Nemotron Embeddings node generates embeddings from NeMo Retriever models via build.nvidia.com or a self-hosted NIM, reusing the existing NVIDIA credential. The node automatically sets the right input type per call ("passage" when indexing, "query" when searching), preventing the silent retrieval-quality degradation that mismatched input types cause.
 
@@ -410,7 +406,7 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 ### Public API improvements
 
 * **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
-* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
+* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in n8n 2.17.
 
 ***
 
@@ -431,7 +427,7 @@ N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://your-collector:4318
 
 Standard OTel variables (`OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_SERVICE_NAME`) are also respected.
 
-This is the foundational T1 feature. It was extended across later releases: node-level spans (v2.16), workflow version IDs in spans and distributed trace context propagation (v2.18 to v2.19), and AI Agent telemetry (v2.20).
+This is the foundational T1 feature. It was extended across later releases: node-level spans (n8n 2.16), workflow version IDs in spans and distributed trace context propagation (n8n 2.18 to n8n 2.19), and AI Agent telemetry (n8n 2.20).
 
 {% hint style="info" %}
 **Availability:** Self-hosted only.
@@ -556,7 +552,7 @@ Instance admins can now create vault connections scoped to a specific project. S
 
 ### Personal space policies
 
-_Released in 2.8.3 (2026-02-13)._
+_Released in n8n 2.8.3 (2026-02-13)._
 
 A new **Security & policies** settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
 
@@ -571,7 +567,7 @@ This release builds on recent updates to the permissions model, including [custo
 
 ### Custom roles: improved discoverability and permission visibility
 
-_Released in 2.8.3 (2026-02-13)._
+_Released in n8n 2.8.3 (2026-02-13)._
 
 The project role selector now separates built-in system roles and custom roles into distinct sections, making it easier to find and choose the right role. Hovering over a role shows a summary of its configured permissions, with an option to view the full permission details.
 
@@ -579,13 +575,13 @@ The project role selector now separates built-in system roles and custom roles i
 
 ### Stronger external secrets validation
 
-_Released in 2.8.0 (2026-02-09)._
+_Released in n8n 2.8.0 (2026-02-09)._
 
 n8n now verifies that the current user has access to the referenced vaults before allowing a credential that uses `$secrets...` expressions to be saved. If access is missing, the save operation fails. This prevents secret values from being exposed through guessed secret paths.
 
 ### Improved API auditability
 
-_Released in 2.8.0 (2026-02-09)._
+_Released in n8n 2.8.0 (2026-02-09)._
 
 API endpoints have been expanded to provide clearer visibility into project membership and credentials:
 
@@ -596,7 +592,7 @@ This makes it easier to audit who has access to which projects and credentials w
 
 ### More granular workflow permissions
 
-_Released in 2.8.0 (2026-02-09)._
+_Released in n8n 2.8.0 (2026-02-09)._
 
 Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: `workflow:publish` and `workflow:unpublish`. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
 

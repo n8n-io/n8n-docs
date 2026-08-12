@@ -350,6 +350,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 * **Use the product name and numerals**: n8n 2.30.0.
 * **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
 * **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
+* **Don't put the version number in inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Only use code formatting when the version appears inside an actual code snippet, command, or file path, for example `n8n@2.30.0`, a Docker tag, or a `package.json` value.
 
 ### Preview status
 

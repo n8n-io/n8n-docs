@@ -18,8 +18,8 @@ layout:
 
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 * n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
-* From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
-* From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
+* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
 
@@ -190,9 +190,9 @@ path "kv/*" {
 ### Infisical <a href="#infisical" id="infisical"></a>
 
 {% hint style="info" %}
-**Version `2.26.0` and later**
+**n8n 2.26.0 and later**
 
-Infisical secrets management support is only available from version `2.26.0`.
+Infisical secrets management support is only available from n8n 2.26.0.
 {% endhint %}
 
 
@@ -249,17 +249,17 @@ For example, you have two n8n instances, one for development and one for product
 
 ## Using external secrets in projects <a href="#using-external-secrets-in-projects" id="using-external-secrets-in-projects"></a>
 
-You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from version `2.11.0`.
+You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from n8n 2.11.0.
 
 ### Access for project roles <a href="#access-for-project-roles" id="access-for-project-roles"></a>
 
 {% hint style="info" %}
-**Version `2.13.0` and later**
+**n8n 2.13.0 and later**
 
-Before version `2.13.0`, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
-From version `2.13.0`, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
+From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
 
 To enable this:
 
@@ -296,9 +296,9 @@ Both permissions are independent. For example, a role may need only the **Secret
 ### Secrets don't resolve in production <a href="#secrets-dont-resolve-in-production" id="secrets-dont-resolve-in-production"></a>
 
 {% hint style="info" %}
-**Version `2.13.0` and later**
+**n8n 2.13.0 and later**
 
-From version `2.13.0`, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
+From n8n 2.13.0, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
 {% endhint %}
 
 In versions before `2.13.0` (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.

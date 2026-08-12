@@ -319,7 +319,7 @@ Fourteen trigger nodes now verify the signatures of incoming webhooks, so forged
 
 Verification uses each service's own signing mechanism, typically an HMAC signature header, with constant-time comparison and, where the service supports it, replay protection. Signing secrets are generated and registered automatically when n8n creates the webhook and stored with the workflow. Existing webhooks without a stored secret keep working, so nothing breaks on upgrade; new webhooks simply come out more secure by default.
 
-This is part of a broader hardening pass across releases: Netlify verification shipped in n8n 2.20, and AWS SNS, Box, and Microsoft Teams followed in n8n 2.22.
+This is part of a broader hardening pass across releases: the Linear Trigger gained an optional signing secret in n8n 2.18, Netlify verification shipped in n8n 2.20, and AWS SNS, Box, and Microsoft Teams followed in n8n 2.22.
 
 ***
 

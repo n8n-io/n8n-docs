@@ -2,14 +2,36 @@
 contentType: tutorial
 nodeTitle: Install with Docker
 originalFilePath: hosting/installation/docker.md
-originalUrl: 'https://docs.n8n.io/hosting/installation/docker'
-url: 'https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker'
+originalUrl: https://docs.n8n.io/hosting/installation/docker
+url: https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker
+hidden: true
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
-# Docker Installation <a href="#docker-installation" id="docker-installation"></a>
+# Install with Docker
+
+{% hint style="warning" %}
+**This content is outdated.** Please refer to [Install using Docker Compose](install-using-docker-compose.md) for the recommended installation method.
+{% endhint %}
+
+## Docker Installation <a href="#docker-installation" id="docker-installation"></a>
 
 n8n recommends using [Docker](https://www.docker.com/) for most self-hosting needs. It provides a clean, isolated environment, avoids operating system and tooling incompatibilities, and makes database and environment management simpler.
 
@@ -21,7 +43,7 @@ You can also follow along with our video guide here:
 
 {% embed url="https://www.youtube.com/embed/6ET3G7GiqZA?si=mwCKbtyLqNCRc2pa" %}
 
-## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
+### Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Before proceeding, install Docker:
 
@@ -30,7 +52,7 @@ Before proceeding, install Docker:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
-## Starting n8n <a href="#starting-n8n" id="starting-n8n"></a>
+### Starting n8n <a href="#starting-n8n" id="starting-n8n"></a>
 
 From your terminal, run the following commands, replacing the `<YOUR_TIMEZONE>` placeholders with [your timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List):
 
@@ -52,8 +74,8 @@ This command creates a volume to store persistent data, downloads the required n
 
 * Maps and exposes port `5678` on the host.
 * Sets the timezone for the container:
-	* the `TZ` environment variable sets the system timezone to control what scripts and commands like `date` return.
-	* the [`GENERIC_TIMEZONE` environment variable](../configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization.md) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
+  * the `TZ` environment variable sets the system timezone to control what scripts and commands like `date` return.
+  * the [`GENERIC_TIMEZONE` environment variable](../configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization.md) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
 * Enforces secure file permissions for the n8n configuration file.
 * Enables [task runners](../configure-n8n/set-up-task-runners.md), the recommended way of executing tasks in n8n.
 * Mounts the `n8n_data` volume to the `/home/node/.n8n` directory to persist your data across container restarts.
@@ -64,10 +86,9 @@ This command creates a volume to store persistent data, downloads the required n
 From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners.
 {% endhint %}
 
-Once running, you can access n8n by opening:
-[http://localhost:5678](http://localhost:5678)
+Once running, you can access n8n by opening: [http://localhost:5678](http://localhost:5678)
 
-## Using with PostgreSQL <a href="#using-with-postgresql" id="using-with-postgresql"></a>
+### Using with PostgreSQL <a href="#using-with-postgresql" id="using-with-postgresql"></a>
 
 By default, n8n uses SQLite to save credentials[^1], past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
 
@@ -102,7 +123,7 @@ docker run -it --rm \
 
 You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
 
-## Updating <a href="#updating" id="updating"></a>
+### Updating <a href="#updating" id="updating"></a>
 
 To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
 
@@ -137,13 +158,13 @@ docker rm <container_id>
 docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 ```
 
-### Updating Docker Compose <a href="#updating-docker-compose" id="updating-docker-compose"></a>
+#### Updating Docker Compose <a href="#updating-docker-compose" id="updating-docker-compose"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yA5x9FIRtnDGdghFU93g/" %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WSJc9HCsn26Um2uT6zAQ/" %}
 
-### Full stack <a href="#full-stack" id="full-stack"></a>
+#### Full stack <a href="#full-stack" id="full-stack"></a>
 
 This runs n8n and cloudflared together in containers. The tunnel URL prints on startup and everything is wired automatically:
 
@@ -151,7 +172,7 @@ This runs n8n and cloudflared together in containers. The tunnel URL prints on s
 pnpm stack --tunnel
 ```
 
-### Services only <a href="#services-only" id="services-only"></a>
+#### Services only <a href="#services-only" id="services-only"></a>
 
 If you prefer to run n8n locally with `pnpm dev` or `pnpm start`, you can start cloudflared as a standalone service:
 
@@ -176,9 +197,10 @@ Clean up when done:
 pnpm --filter n8n-containers services:clean
 ```
 
-## Next steps <a href="#next-steps" id="next-steps"></a>
+### Next steps <a href="#next-steps" id="next-steps"></a>
 
 * Find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

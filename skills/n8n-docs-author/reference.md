@@ -384,7 +384,11 @@ In prose, qualify a bare number: "n8n 2.30.0" or "node version 4.7", not "versio
 
 **Writing the number.** Product name plus numerals: `n8n 2.30.0`. No `v` prefix
 (`n8n 2.30.0`, not `n8n v2.30.0`), don't write "version" after "n8n", and don't
-add "or later"; "available from" already means "and onward".
+add "or later"; "available from" already means "and onward". Don't wrap the
+version in inline code formatting in running text ("n8n 2.30.0", not
+"n8n `2.30.0`") — reserve code formatting for when the version is part of an
+actual code snippet, command, or file path (`n8n@2.30.0`, a Docker tag, a
+`package.json` value).
 
 ### Plan, platform, and version limits
 

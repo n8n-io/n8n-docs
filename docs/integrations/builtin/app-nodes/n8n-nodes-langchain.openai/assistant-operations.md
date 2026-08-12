@@ -27,7 +27,7 @@ Use this operation to create, delete, list, message, or update an assistant in O
 {% hint style="info" %}
 **Assistant operations deprecated in OpenAI node V2**
 
-n8n version 1.117.0 introduces V2 of the OpenAI node that supports the OpenAI Responses API and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
+n8n 1.117.0 introduces V2 of the OpenAI node that supports the OpenAI Responses API and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
 {% endhint %}
 
 ## Create an Assistant <a href="#create-an-assistant" id="create-an-assistant"></a>

@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./).
+For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}
 
 Features and bug fixes for n8n before the release of 1.0.0.
@@ -122,7 +122,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a [crowd.dev](https://www.crowd.dev/) node and crowd.dev Trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
 
-[crowd.dev node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.crowddev).
+The crowd.dev node was later removed. See [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for details.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -420,7 +420,7 @@ This release deprecates the following:
 * The `EXECUTIONS_PROCESS` environment variable.
 * Running n8n in own mode. Main mode is now the default. Use [Queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) if you need full execution isolation.
 * The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
-* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in version 1.0. n8n recommends using PostgreSQL instead.
+* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in n8n 1.0. n8n recommends using PostgreSQL instead.
 
 ## n8n@0.226.2 <a href="#n8n02262" id="n8n02262"></a>
 

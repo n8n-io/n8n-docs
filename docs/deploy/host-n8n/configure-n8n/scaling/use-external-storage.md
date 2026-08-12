@@ -73,16 +73,16 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
 {% endhint %}
 
-## Validate and update your S3 bucket region format (v2.6.4 onward) <a href="#validate-and-update-your-s3-bucket-region-format-v264-onward" id="validate-and-update-your-s3-bucket-region-format-v264-onward"></a>
+## Validate and update your S3 bucket region format (n8n 2.6.4 onward) <a href="#validate-and-update-your-s3-bucket-region-format-v264-onward" id="validate-and-update-your-s3-bucket-region-format-v264-onward"></a>
 
-Starting from n8n v2.6.4, the value of the environment variable `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` must meet these conditions:
+Starting from n8n 2.6.4, the value of the environment variable `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` must meet these conditions:
 
 - Only contain alphanumeric characters (`a-z`, `A-Z`, `0-9`) and hyphens (`-`).
 - Not contain underscores (`_`) or other special characters.
 
 If these conditions are not met, n8n will fail startup with connection errors even if the storage endpoint is reachable and was previously working in older versions.
 
-If S3 connection fails after upgrading n8n to v2.6.4, verify your region value matches these conditions and redeploy n8n.
+If S3 connection fails after upgrading n8n to 2.6.4, verify your region value matches these conditions and redeploy n8n.
 
 Tell n8n to store binary data in S3:
 

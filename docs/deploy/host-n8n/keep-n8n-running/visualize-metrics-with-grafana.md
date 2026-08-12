@@ -58,7 +58,7 @@ Grafana confirms the connection with a success message.
 
 ## Webhook observability <a href="#webhook-observability" id="webhook-observability"></a>
 
-Available from n8n version 2.28.0.
+Available from n8n 2.28.0.
 
 n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook call. Enable these environment variables to collect it:
 
@@ -100,7 +100,7 @@ Each series carries these labels:
 
 ## Form submission observability <a href="#form-submission-observability" id="form-submission-observability"></a>
 
-Available from n8n version 2.28.0.
+Available from n8n 2.28.0.
 
 n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form submission. Enable these environment variables to collect it:
 
@@ -147,7 +147,7 @@ Form submissions don't include a `method` label because n8n only accepts form da
 
 ## Workflow name lookup <a href="#workflow-name-lookup" id="workflow-name-lookup"></a>
 
-Available from n8n version 2.28.0.
+Available from n8n 2.28.0.
 
 When you enable `N8N_METRICS_INCLUDE_WORKFLOW_INFO`, n8n exposes one gauge per workflow:
 

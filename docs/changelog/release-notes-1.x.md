@@ -1,5 +1,5 @@
 ---
-title: Release notes pre 2.0
+title: Release notes pre n8n 2.0
 hide:
   - tags
 contentType: reference
@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./).
+For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}
 
 New features and bug fixes for n8n.
@@ -756,7 +756,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.121.0...n8n@1.121.1) for this version.<br>
 
 * Prepared patch release 1.121.1 by updating version numbers across all packages.
-* Added a changelog entry for version 1.121.1 to document the release.
+* Added a changelog entry for n8n 1.121.1 to document the release.
 
 **Release date:** 2025-11-19
 
@@ -819,7 +819,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.120.3...n8n@1.120
 **Release date:** 2025-11-19
 
 * Prepared for release 1.120.4 by updating version numbers across all core, backend, AI/LLM, frontend, and tooling packages.
-* Added a changelog entry for version 1.120.4 to document the release.
+* Added a changelog entry for n8n 1.120.4 to document the release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
@@ -846,7 +846,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.119.0...n8n@1.120.0) for this version.\
 **Release date:** 2025-11-10
 
-This release contains **security updates** and bug fixes. We recommend all users upgrade promptly to version 1.120 or higher.
+This release contains **security updates** and bug fixes. We recommend all users upgrade promptly to n8n 1.120 or higher.
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 
@@ -988,8 +988,8 @@ AI Workflow Builder turns prompts into workflows. Describe what you want to buil
 **What’s new:**
 
 * Previously available to Starter and Pro users, AI Workflow Builder is now accessible to Enterprise Cloud users as well, with 1,000 monthly credits.
-* Supported on n8n version 1.115+. **If you don’t see the feature yet, open /settings/usage to trigger a license refresh.**
-* We’ve fixed a bug and now cloud users on v1.117.1 onwards will have access to a more reliable builder.
+* Supported on n8n 1.115+. **If you don’t see the feature yet, open /settings/usage to trigger a license refresh.**
+* We’ve fixed a bug and now cloud users on n8n 1.117.1 onwards will have access to a more reliable builder.
 * We’re currently working on bringing AI Workflow Builder to self-hosted users as well, including Community, Business, and Enterprise.
 {% endhint %}
 
@@ -1135,7 +1135,7 @@ Learn more about how we we’re building this feature in our [forum post](https:
 
 **Rollout timing:**
 
-* To ensure the smoothest experience for all users, this feature will be rolled out to users on version 1.115.0 over the course of a week so you may not have access to the feature immediately when you upgrade to 1.115.0.
+* To ensure the smoothest experience for all users, this feature will be rolled out to users on n8n 1.115.0 over the course of a week so you may not have access to the feature immediately when you upgrade to n8n 1.115.0.
 
 **Credit limits by plan:** This feature will have monthly credit limits [by plan](https://n8n.io/pricing/).
 
@@ -1312,8 +1312,8 @@ This release contains core updates, editor improvements, a new node, node update
 
 We’ve made updates to strengthen Single Sign-On (SSO) reliability and security, especially for enterprise and multi-instance setups.
 
-* OIDC and SAML sync in multi-main setups \[version: 1.113.0]: In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
-* Enhanced OIDC integration \[version 1.111.0]: n8n now supports OIDC providers that enforce state and nonce parameters. These are validated during login, providing smoother and more secure Single Sign-On.
+* OIDC and SAML sync in multi-main setups \[n8n 1.113.0]: In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
+* Enhanced OIDC integration \[n8n 1.111.0]: n8n now supports OIDC providers that enforce state and nonce parameters. These are validated during login, providing smoother and more secure Single Sign-On.
 
 ### Filter insights by project <a href="#filter-insights-by-project" id="filter-insights-by-project"></a>
 
@@ -2221,7 +2221,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.96.0
 {% hint style="warning" %}
 **Build failure**
 
-This release failed to build. Please use `1.97.0` instead.
+This release failed to build. Please use n8n 1.97.0 instead.
 {% endhint %}
 
 This release contains API updates, core changes, editor improvements, node updates, and bug fixes.
@@ -2393,7 +2393,7 @@ Learn more about this update and find out which nodes are already installable fr
 
 💻 **Use a verified node**
 
-Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes). In both cases, verified nodes are enabled by default.
+Make sure you're on **n8n 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes). In both cases, verified nodes are enabled by default.
 
 * Open the **Nodes panel** from the editor
 * Search for the Node. Verified nodes are indicated by a shield 🛡️
@@ -3143,7 +3143,7 @@ As of this release, **Tools Agent** is the only agent type available when adding
 * ReAct Agent
 * SQL Agent
 
-Existing workflows that use these agent types continue to run for now, but the underlying code will be removed in n8n v3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
+Existing workflows that use these agent types continue to run for now, but the underlying code will be removed in n8n 3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
 
 <br>
 
@@ -4152,7 +4152,7 @@ This release contains new features, node enhancements and bug fixes.
 {% hint style="info" %}
 **Skipped 1.62.0**
 
-We skipped 1.62.0 and went straight to 1.62.1 with an additional fix.
+We skipped n8n 1.62.0 and went straight to n8n 1.62.1 with an additional fix.
 {% endhint %}
 
 {% hint style="info" %}
@@ -5623,7 +5623,7 @@ This release removes `own` mode for self-hosted n8n. You must now use `EXECUTION
 {% hint style="info" %}
 **Skip this release**
 
-Please upgrade directly to 1.27.1.
+Please upgrade directly to n8n 1.27.1.
 {% endhint %}
 
 This release contains node enhancements and bug fixes.
@@ -5780,9 +5780,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.2...n8n@1.22.3
 **Release date:** 2023-12-27
 
 {% hint style="info" %}
-**Upgrade directly to 1.22.4**
+**Upgrade directly to n8n 1.22.4**
 
-Due to issues with this release, upgrade directly to 1.22.4.
+Due to issues with this release, upgrade directly to n8n 1.22.4.
 {% endhint %}
 
 This is a bug fix release.
@@ -5795,9 +5795,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.1...n8n@1.22.2
 **Release date:** 2023-12-27
 
 {% hint style="info" %}
-**Upgrade directly to 1.22.4**
+**Upgrade directly to n8n 1.22.4**
 
-Due to issues with this release, upgrade directly to 1.22.4.
+Due to issues with this release, upgrade directly to n8n 1.22.4.
 {% endhint %}
 
 This is a bug fix release.
@@ -5861,7 +5861,7 @@ This release contains new features and nodes, node enhancements, and bug fixes.
 
 This release introduces a third account type: admin. This role is available on pro and enterprise plans. Admins have similar permissions to instance owners.
 
-[Read more about user roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-account-types)
+[Read more about user roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles)
 {% endhint %}
 
 {% hint style="info" %}
@@ -5941,9 +5941,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.0...n8n@1.19.0
 **Release date:** 2023-11-29
 
 {% hint style="info" %}
-**Upgrade directly to 1.19.4**
+**Upgrade directly to n8n 1.19.4**
 
-Due to issues with this release, upgrade directly to 1.19.4.
+Due to issues with this release, upgrade directly to n8n 1.19.4.
 {% endhint %}
 
 This release contains new features, node enhancements, and bug fixes.
@@ -6130,9 +6130,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.12.2...n8n@1.13.0
 This release contains new features, feature enhancements, and bug fixes.
 
 {% hint style="info" %}
-**Upgrade directly to 1.14.0**
+**Upgrade directly to n8n 1.14.0**
 
-This release failed to publish to npm. Upgrade directly to 1.14.0.
+This release failed to publish to npm. Upgrade directly to n8n 1.14.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -6389,9 +6389,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.5.1...n8n@1.6.0) 
 This release contains bug fixes, new features, and node enhancements.
 
 {% hint style="info" %}
-**Upgrade directly to 1.6.1**
+**Upgrade directly to n8n 1.6.1**
 
-Skip this version and upgrade directly to 1.6.1, which contains essential bug fixes.
+Skip this version and upgrade directly to n8n 1.6.1, which contains essential bug fixes.
 {% endhint %}
 
 {% hint style="info" %}
@@ -6427,9 +6427,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.4.1...n8n@1.5.0) 
 This release contains new features, node enhancements, and bug fixes.
 
 {% hint style="info" %}
-**Upgrade directly to 1.5.1**
+**Upgrade directly to n8n 1.5.1**
 
-Skip this version and upgrade directly to 1.5.1, which contains essential bug fixes.
+Skip this version and upgrade directly to n8n 1.5.1, which contains essential bug fixes.
 {% endhint %}
 
 ### Highlights <a href="#highlights" id="highlights"></a>
@@ -6539,9 +6539,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.1...n8n@1.2.0) 
 This release contains new features, node enhancements, bug fixes, and performance improvements.
 
 {% hint style="info" %}
-**Upgrade directly to 1.2.1**
+**Upgrade directly to n8n 1.2.1**
 
-When upgrading, skip this release and go directly to 1.2.1.
+When upgrading, skip this release and go directly to n8n 1.2.1.
 {% endhint %}
 
 ### Highlights <a href="#highlights" id="highlights"></a>
@@ -6591,7 +6591,7 @@ This is a bug fix release.
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6606,7 +6606,7 @@ This release contains new features, bug fixes, and node enhancements.
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 ### Highlights <a href="#highlights" id="highlights"></a>
@@ -6642,7 +6642,7 @@ This is a bug fix release.
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6657,7 +6657,7 @@ This is a bug fix release.
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6677,7 +6677,7 @@ This release contains API enhancements and adds support for sending messages to 
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -6696,7 +6696,7 @@ This is a bug fix release.
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -6711,19 +6711,19 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1) 
 {% hint style="warning" %}
 **Breaking changes**
 
-Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+Please note that this version contains breaking changes. For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 This is n8n's version one release.
 
-For full details, refer to the [n8n v1.0 migration guide](v10-migration-guide.md).
+For full details, refer to the [n8n 1.0 migration guide](v10-migration-guide.md).
 
 ### Highlights <a href="#highlights" id="highlights"></a>
 
 {% hint style="info" %}
 #### Python support <a href="#python-support" id="python-support"></a>
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>

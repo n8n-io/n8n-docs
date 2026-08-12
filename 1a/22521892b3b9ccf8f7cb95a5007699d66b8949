@@ -1,0 +1,19 @@
+docs/build/manage-workflows/export-and-import.md
+  s_9103d662b67efd::t_858bcf4e7cb768 55-58,61-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1a22521892b3b9ccf8f7cb95a5007699d66b8949",
+  "prompts": {},
+  "sessions": {
+    "s_9103d662b67efd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6adb89d5-a0d0-4661-bb53-78d474a4e8db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

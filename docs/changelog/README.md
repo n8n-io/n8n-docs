@@ -42,7 +42,7 @@ Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.
 
 You can now get a full audit trail for every human-in-the-loop step in your workflows. Every Send and Wait node across Slack, Telegram, Discord, WhatsApp, Google Chat, Gmail, Outlook, Email/SMTP, Microsoft Teams, and the Chat Trigger node now includes a `respondedAt` ISO-8601 timestamp in its output the moment n8n receives a response. No configuration is required: the field appears automatically alongside the existing `approved`, `text`, or `form` fields and does not change the output shape for existing workflows.
 
-For Slack and Telegram, you can go further with the new **Advanced Interactivity** options on the Send and Wait for Response operation. Approvers respond with a single tap or click inside the app itself, and the node output records who responded: their ID, name, username, and (for Slack, when scopes allow) email, plus the channel and message ID. You can restrict which users are allowed to approve by listing their IDs in **Restrict Who Can Approve**. Anyone not on the list gets a private notice you can word yourself, and the workflow keeps waiting. You can also control what happens to the message after a decision with the **After Decision** setting: show the outcome and remove the buttons (the default), remove the buttons only, or leave the message unchanged.
+For Slack and Telegram, you can go further with the new Advanced Interactivity options on the Send and Wait for Response operation. Approvers respond with a single tap or click inside the app itself, and the node output records who responded: their ID, name, username, and (for Slack, when scopes allow) email, plus the channel and message ID. You can restrict which users are allowed to approve by listing their IDs in Restrict Who Can Approve. Anyone not on the list gets a private notice you can word yourself, and the workflow keeps waiting. You can also control what happens to the message after a decision with the After Decision setting: show the outcome and remove the buttons (the default), remove the buttons only, or leave the message unchanged.
 
 To enable approvals in Slack, your n8n instance must be reachable from Slack over public HTTPS. You will need to turn on Interactivity in your Slack app, set the **Request URL** to `https://<your-n8n-instance>/webhook-waiting-slack`, and paste your app's signing secret into the **Signature Secret** field of your Slack credential. Then, in the Slack node, set **Response Type** to **Approval** and turn on **Capture Who Responded** under the **Advanced Interactivity** section. For Telegram, your instance must be reachable over public HTTPS on a port Telegram supports for webhooks (443, 80, 88, or 8443). Enable **Approve Within Chat** in the same section: n8n registers the webhook for you using your existing Telegram credential, with no additional setup on Telegram's side.
 
@@ -155,11 +155,11 @@ Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/rPN1zU
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) now has a dedicated **Pull Request** resource. The whole life of a pull request is available as node operations, instead of hand-rolled HTTP Request calls against the GitHub API.
+The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) now has a dedicated Pull Request resource. The whole life of a pull request is available as node operations, instead of hand-rolled HTTP Request calls against the GitHub API.
 
 Create a pull request from one branch into another, including drafts and PRs from a fork. Update its title, body, state, or base branch as it moves along, and close or reopen it. Fetch a single PR to read its current state, and create or edit comments on it. Merge with the method your repository is configured for: merge commit, squash, or rebase, with merge queues handled for you.
 
-Two operations return the change itself rather than its metadata. **Get Diff** and **Get Patch** fetch the raw diff and patch, which is what makes a pull request usable as workflow input. Hand the diff to an AI agent for a first-pass review, scan it for files that need sign-off, or post a summary to the repository's channel.
+Two operations return the change itself rather than its metadata. Get Diff and Get Patch fetch the raw diff and patch, which is what makes a pull request usable as workflow input. Hand the diff to an AI agent for a first-pass review, scan it for files that need sign-off, or post a summary to the repository's channel.
 
 All of this was possible with the HTTP Request node, but you had to know the REST paths, assemble the payload for each call, and interpret GitHub's responses yourself. The native operations take a repository and the fields each operation needs. Errors surface exactly as GitHub returns them, so a refused merge tells you why.
 
@@ -169,7 +169,7 @@ Refer to the [GitHub node documentation](https://app.gitbook.com/s/BKcbOzIWja8Nf
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based **Only run if** option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
+The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based Only run if option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
 
 ## One credential for multiple Microsoft nodes
 
@@ -227,7 +227,7 @@ Your AI agents can now search the web out of the box. Enable web search from the
 
 **Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
 
-The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an **n8n User Auth** authentication option. It limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public. Visitors who aren't signed in are redirected to the n8n login page, and a submission without a valid session is rejected with a 401.
+The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an n8n User Auth authentication option. It limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public. Visitors who aren't signed in are redirected to the n8n login page, and a submission without a valid session is rejected with a 401.
 
 This is about attribution as much as access. Every submission carries the authenticated user's ID, email, and first and last name alongside the form fields, taken from their n8n account rather than from anything they typed. Nobody can file a request under a colleague's name, and you don't need to ask for an email address at all. Downstream nodes can act on the submitter: open the ticket under their name, send the confirmation to their real address, or check them against an approver list. To keep those details out of your execution data, turn off **Include User in Output**.
 
@@ -283,7 +283,7 @@ This is part of a broader hardening pass across releases: the Linear Trigger gai
 
 **Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
-The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a **Cloud (OAuth2)** authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
+The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a Cloud (OAuth2) authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
 
 ## Microsoft Agent 365 Trigger node
 
@@ -311,7 +311,7 @@ Self-hosted instances can now retain insights data for up to 365 days by default
 
 Instance admins can now define group-to-role mappings inside n8n instead of encoding n8n-specific role logic in the IdP. With JIT provisioning enabled, admins write expressions against SAML attributes or OIDC claims to assign instance and project roles automatically at login. The IdP only needs to send standard group membership data: n8n handles the mapping, and role assignments are re-evaluated on every login, so access stays in sync without IdP changes.
 
-Open **Settings → SSO**, pick **Instance roles via SSO** or **Instance and project roles via SSO** under User role provisioning, switch the mapping card from "Map rules on your IdP" to "Map rules inside n8n", and add expressions using the `$claims` object to match users for each role. Expression-based matching handles non-standard group structures that plain string matching can't reach.
+Open **Settings > SSO**, pick **Instance roles via SSO** or **Instance and project roles via SSO** under User role provisioning, switch the mapping card from "Map rules on your IdP" to "Map rules inside n8n", and add expressions using the `$claims` object to match users for each role. Expression-based matching handles non-standard group structures that plain string matching can't reach.
 
 {% hint style="info" %}
 **Availability:** Business and Enterprise.
@@ -373,7 +373,7 @@ The embedding system holds an asymmetric private key and signs short-lived JWTs 
 
 Instance and project admins can now redact execution data. When enabled, sensitive data from production runs is never displayed in the UI, and isn't fetched from the database until a user with the reveal permission explicitly requests it. Manual executions can be left fully visible so developers can keep building and debugging without interruption. Every reveal is logged as an audit event.
 
-Redaction is configured per workflow under **Workflow settings**, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data).
+Redaction is configured per workflow under Workflow settings, and reveal access is granted via project or instance settings to specific users only. See the [execution data redaction docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -486,7 +486,7 @@ Things to keep in mind:
 
 **Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
 
-A new **Security & policies** settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
+A new Security & policies settings section provides a central place for enforcing security requirements on your instance. In addition to the existing two-factor authentication enforcement, admins can now control what users can do in their personal spaces.
 
 Available policies include:
 
@@ -542,12 +542,12 @@ Human in the loop for AI tool calls
 
 **Released:** 2026-01-20 in [n8n 2.5](release-notes.md#n8n25)
 
-The **Chat** node now includes two new actions for human-in-the-loop interactions in agentic workflows:
+The Chat node now includes two new actions for human-in-the-loop interactions in agentic workflows:
 
 * **Send a message**: send a message to the user and continue the workflow.
 * **Send a message and wait for response**: send a message and pause execution until the user replies. Users can respond with free text in the Chat or by clicking inline approval buttons, as defined in the node's configuration.
 
-These actions can be used as deterministic workflow steps or as tools for an **AI Agent**, enabling multi-turn human interaction within a single execution when using the **Chat Trigger**.
+These actions can be used as deterministic workflow steps or as tools for an AI Agent, enabling multi-turn human interaction within a single execution when using the Chat Trigger.
 
 When used as an agent tool, the agent can ask for clarification before proceeding, helping it better interpret user intent and follow instructions. Agents can also send updates during long-running workflows using these actions.
 
@@ -556,7 +556,7 @@ To set this up:
 1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the **Response Mode** option and set it to **Using Response Nodes**.
 2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the operations: **Send a message** or **Send a message and wait for response**.
 
-Keep in mind: if you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action. For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
+Keep in mind: if you want an AI Agent to choose between sending a message or waiting for input, add two Chat tool nodes, one for each action. For AI Agents triggered by the Chat Trigger node, adding Send a message and wait for response is recommended so the agent can request clarification when needed.
 
 Learn more in the [Chat node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chat#operation).
 

@@ -66,7 +66,11 @@ Until now, Microsoft automations were tied to a person's OAuth session: when tha
 
 _OneDrive and Outlook support released in n8n 2.29 (2026-06-30)._
 
-### mTLS authentication for Kafka
+***
+
+## mTLS authentication for Kafka
+
+**Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)
 
 The [Kafka credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/kafka) now supports mutual TLS: provide a CA certificate, client certificate, and private key (PEM) to connect to brokers that require client-certificate authentication. mTLS applies to the Kafka node, the Kafka Trigger, and the credential test, and n8n validates that certificate and key match before you save.
 
@@ -113,11 +117,19 @@ We've shipped a number of updates to the n8n MCP server over the past few weeks.
 
 Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
-### GitHub App authentication
+***
+
+## GitHub App authentication
+
+**Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
 
 [GitHub nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.
 
-### Insights alerts you when date ranges exceed available data
+***
+
+## Insights alerts you when date ranges exceed available data
+
+**Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
 
 When you select a date range in the Insights dashboard, you can now see at a glance whether your data retention policy covers that period. Instead of staring at an empty chart and wondering whether something is broken, an alert banner tells you exactly what is happening with your data coverage.
 
@@ -151,15 +163,27 @@ A Canvas Group is saved with the workflow, so anyone who opens it sees the same 
 
 Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/canvas-groups).
 
-### GitHub node: manage the full pull request lifecycle
+***
+
+## GitHub node: manage the full pull request lifecycle
+
+**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
 The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) now has a dedicated Pull Request resource. Create pull requests (including drafts and cross-fork PRs), update, close, and reopen them, read and add comments, fetch diffs and patches, and merge with merge, squash, or rebase. These native operations replace the custom HTTP Request setups that such tasks used to need. Errors are surfaced exactly as GitHub returns them, so failures are easy to diagnose.
 
-### Webhook node: Only Run If
+***
+
+## Webhook node: Only Run If
+
+**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
 The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) gains an expression-based **Only run if** option that rejects requests that don't match a condition before an execution starts. Filter out health checks, retries, or irrelevant events at the door instead of starting a run that immediately exits: fewer no-op executions, less noise in your execution list, and saved execution quota.
 
-### One credential for multiple Microsoft nodes
+***
+
+## One credential for multiple Microsoft nodes
+
+**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
 The generic **Microsoft OAuth2 API** credential now works with Microsoft Excel 365, Outlook, Teams, To Do, and Graph Security, alongside OneDrive. Instead of registering a separate Microsoft Entra app for every Microsoft service you automate, you register one and grant it the delegated permissions your workflows need. To use it, open any supported node, set **Authentication** to **Microsoft OAuth2 (Graph)**, and select the credential. Your IT team approves and maintains a single app registration instead of one per service.
 
@@ -189,7 +213,11 @@ This feature is in **preview**. The package format and APIs are still under deve
 
 Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).
 
-### Configure OpenTelemetry tracing from the UI
+***
+
+## Configure OpenTelemetry tracing from the UI
+
+**Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
 
 You can now set up OpenTelemetry tracing from **Settings > OpenTelemetry** instead of environment variables, which brings workflow execution tracing to n8n Cloud for the first time. Enter your collector endpoint, tune sampling and span options, and select **Send test trace** to confirm n8n can reach your backend before you rely on it. Changes apply without a restart, and in queue mode n8n reloads the configuration across workers and webhook processors automatically. On self-hosted instances, environment variables still work and take precedence over UI settings. You need to be an instance owner or admin to configure tracing in the UI.
 
@@ -203,13 +231,13 @@ Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/
 
 Your AI agents can now search the web out of the box. Enable web search from the agent's Advanced panel: where the model provider offers a native search tool, the agent uses it directly, and for providers without one, n8n falls back to Brave Search or a self-hosted SearXNG instance. Until now, giving an agent live web access meant wiring up a community node or an external API by hand; now it's built in, so agents can ground their answers in current information like prices, docs, and news, without extra setup.
 
-### Form Trigger: restrict forms to logged-in users
+***
+
+## Form Trigger: restrict forms to logged-in users
+
+**Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
 
 The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (v2.6) adds an **n8n User Auth** option that gates a form to authenticated users of your instance. Visitors who aren't signed in are redirected to the n8n login, and the trigger outputs the authenticated user's ID, email, and name alongside the submission (with an opt-out). It works with all n8n auth modes and across multi-page forms, which makes it ideal for internal request forms where you need to know reliably who submitted.
-
-### Custom OAuth scopes for Microsoft credentials
-
-The OneDrive, Outlook, and SharePoint OAuth2 credentials now include a **Custom Scopes** toggle. Defaults stay unchanged, but you can grant additional Microsoft Graph permissions or trim scopes down to what your tenant allows, instead of being limited to n8n's default consent set.
 
 ***
 
@@ -222,10 +250,6 @@ The [Odoo node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes
 ### Oracle Database as a vector store
 
 New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreoracledb) and [Oracle ONNX Embedding](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsoracledb) nodes bring retrieval-augmented generation to data that lives in Oracle. Insert, load, and retrieve documents (including retrieve-as-tool for AI agents) with configurable distance strategies and metadata filtering that supports nested AND/OR conditions. Embeddings are generated by an ONNX model loaded in the database itself, so vectors and source data stay in one place. Requires an ONNX model in the database.
-
-### Complete results from multi-run sub-workflows
-
-When a sub-workflow's last node runs more than once, the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) (v1.2) now returns the items from every run, concatenated per output branch. Previously you only got the final run. Older trigger versions keep their existing behavior and gain an **Items to return** option to opt in.
 
 ***
 
@@ -243,7 +267,11 @@ If you need to connect to an MCP server that isn't in the list, you can still us
 Connect to MCP servers with less setup
 {% endembed %}
 
-### OpenTelemetry custom telemetry tags
+***
+
+## OpenTelemetry custom telemetry tags
+
+**Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
@@ -265,7 +293,7 @@ Verification uses each service's own signing mechanism, typically an HMAC signat
 
 This is part of a broader hardening pass across releases: Netlify verification shipped in n8n 2.20, and AWS SNS, Box, and Microsoft Teams followed in n8n 2.22.
 
-### Jira: OAuth2 authentication
+**Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
 The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a **Cloud (OAuth2)** authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.
 
@@ -274,8 +302,6 @@ The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes
 ## Microsoft Agent 365 Trigger node
 
 **Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
-
-### Microsoft Agent 365 Trigger node
 
 The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
 
@@ -287,7 +313,11 @@ If you already use n8n with Microsoft services through individual nodes (Outlook
 
 For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8n-agents-that-show-up-as-members-of-the-team-inside-microsoft-apps/).
 
-### Insights data duration
+***
+
+## Insights data duration
+
+**Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
 Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
 
@@ -324,14 +354,6 @@ This makes deployment configuration the single source of truth, so you can stand
 **Released:** 2026-04-21 in [n8n 2.18](release-notes.md#n8n218)
 
 You can now mark projects, folders, workflows, and data tables as [favorites](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items), so the resources you work with every day are one click away instead of a search away.
-
-### Slack Trigger: App Home opens as a dedicated event
-
-The [Slack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) now offers **app\_home\_opened** as a dedicated event option. Previously, reacting to App Home opens meant subscribing to Any Event and filtering downstream, which started an execution for every unrelated Slack event.
-
-### Linear Trigger: webhook signature verification
-
-Linear credentials gain an optional signing secret. When set, the [Linear Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.lineartrigger) verifies each incoming webhook's HMAC-SHA256 signature and validates its timestamp within a 60-second window, rejecting invalid or replayed requests with a 401.
 
 ***
 
@@ -433,8 +455,6 @@ Workflow, credential, and data table cards, as well as the data table detail vie
 
 **Released:** 2026-03-16 in [n8n 2.13](release-notes.md#n8n213)
 
-### Visual diff comes to version history
-
 Open version history, click **Compare changes**, pick any two versions, and the canvas renders both side by side with changed nodes highlighted. A change count badge on each version helps you spot significant edits at a glance.
 
 {% hint style="info" %}
@@ -494,8 +514,6 @@ Requires a self-hosted 1Password Connect Server with read-only access.
 ## Easier credential setup on Cloud
 
 **Released:** 2026-03-02 in [n8n 2.11](release-notes.md#n8n211)
-
-### Easier credential setup on Cloud
 
 Setting up credentials on n8n Cloud is now much simpler. For supported services, just click the **Connect** button, authenticate with the service, and you're ready to go. Skip the manual setup for Slack, Firecrawl, HubSpot, GitHub, Google Calendar, PagerDuty, Apify, and more.
 

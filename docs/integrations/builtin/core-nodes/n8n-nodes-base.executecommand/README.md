@@ -89,7 +89,7 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command <a href="#run-curl-command" id="run-curl-command"></a>
 
-You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md) node to make a cURL request.
+You can also use the [HTTP Request](../n8n-nodes-base.httprequest/README.md) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux.
 

@@ -81,7 +81,7 @@ See the [Terminology and naming](terminology.md) word list for the full set of t
 
 * Headings: sentence case ([more info](https://docs.microsoft.com/en-us/style-guide/scannable-content/headings#formatting-headings))
 * UI elements: bold ([more info](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/formatting-text-in-instructions))
-* User input: code formatted. Placeholders as hyphenated words in angle brackets. For example `<your-root-directory>`.
+* User input: code formatted. Placeholders as hyphenated words in angle brackets, lowercase by default or uppercase to match a convention such as environment variables. For example `<your-root-directory>` or `<YOUR-API-KEY>`.
 * File names, directory names, and paths: code formatted.
 * Make sure you match brand names precisely. For example: "GitHub", not "Github".
 
@@ -350,6 +350,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 * **Use the product name and numerals**: n8n 2.30.0.
 * **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
 * **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
+* **Don't put the version number in inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Only use code formatting when the version appears inside an actual code snippet, command, or file path, for example `n8n@2.30.0`, a Docker tag, or a `package.json` value.
 
 ### Preview status
 
@@ -699,7 +700,7 @@ For anything with a code, expression, or configuration surface, include a worked
 * **Cover the common case, then the ones that break.** Show the straightforward path, then edge cases (empty input, pagination, rate limits) and failures (the error the reader sees, and the fix).
 * **Favour diversity over volume.** Three examples that each show something different beat six near-identical ones. Don't pad; vary.
 * **Comment the intent inline.** Say what each example does and why, so it isn't mistaken for another instruction.
-* **Label every placeholder.** Use hyphenated words in angle brackets, matching [Text formatting](#text-formatting): `<your-api-key>`, not `YOUR_KEY` or a real value.
+* **Label every placeholder.** Use hyphenated words in angle brackets, matching [Text formatting](#text-formatting): `<your-api-key>` or `<YOUR-API-KEY>`, not `YOUR_KEY` or a real value.
 * **Structure constraints, don't narrate them.** Put parameters, defaults, and limits in a table or schema block, not a paragraph.
 
 If you show a wrong example, pair it with the correct one beside it. A broken snippet left alone gets copied.

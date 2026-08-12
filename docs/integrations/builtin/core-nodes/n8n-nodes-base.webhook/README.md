@@ -146,7 +146,7 @@ Select **Add Option** to view more configuration options. The available options 
 | Binary Property        | <p>Either:<br>HTTP Method > POST<br>HTTP Method > PATCH<br>HTTP Method > PUT</p>      |
 | Ignore Bots            | Any                                                                                   |
 | IP(s) Allowlist        | Any                                                                                   |
-| Only Run If.           | Any                                                                                   |
+| Only Run If           | Any                                                                                   |
 | Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
 | No Response Body       | Respond > Immediately                                                                 |
 | Raw Body               | Any                                                                                   |

@@ -13,7 +13,7 @@ layout:
 # Manage community packages from environment variables <a href="#manage-community-packages-from-environment-variables" id="manage-community-packages-from-environment-variables"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Available from n8n 2.21.0**
 
 
 {% endhint %}

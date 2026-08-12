@@ -1,8 +1,8 @@
 ---
-title: n8n v2.0 breaking changes
-description: Breaking changes coming in version 2.0
+title: n8n 2.0 breaking changes
+description: Breaking changes coming in n8n 2.0
 contentType: reference
-nodeTitle: v2.0 breaking changes
+nodeTitle: n8n 2.0 breaking changes
 originalFilePath: 2-0-breaking-changes.md
 originalUrl: 'https://docs.n8n.io/2-0-breaking-changes'
 url: 'https://docs.n8n.io/release-notes/v20-breaking-changes'
@@ -11,9 +11,9 @@ layout:
     visible: false
 ---
 
-# n8n v2.0 breaking changes <a href="#n8n-v20-breaking-changes" id="n8n-v20-breaking-changes"></a>
+# n8n 2.0 breaking changes <a href="#n8n-v20-breaking-changes" id="n8n-v20-breaking-changes"></a>
 
-n8n v2.0 has been released, and with it came some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+n8n 2.0 has been released, and with it came some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
 The release of n8n 2.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
@@ -31,11 +31,11 @@ Parent-Workflow:
 Sub-Workflow:
 ![Sub-Workflow](.gitbook/assets/subworkflow.png)
 
-v1: The parent-execution reproduces the sub-execution's input as its output.:
-![v1: Parent execution won't receive the result of the child execution](.gitbook/assets/before1.png)
+n8n 1.0: The parent-execution reproduces the sub-execution's input as its output.:
+![n8n 1.0: Parent execution won't receive the result of the child execution](.gitbook/assets/before1.png)
 
-v2: The parent execution receives the result of the child execution:
-![v2: Parent execution will receive the result of the child execution](.gitbook/assets/after1.png)
+n8n 2.0: The parent execution receives the result of the child execution:
+![n8n 2.0: Parent execution will receive the result of the child execution](.gitbook/assets/after1.png)
 
 This allows using human-in-the-loop nodes in the sub-workflow and use the results (for example approving or declining an action) in the parent-workflow.
 
@@ -78,13 +78,13 @@ To improve security, n8n will block access to environment variables from the Cod
 
 n8n will require strict file permissions for configuration files to improve security. By default, configuration files must use `0600` permissions, which means only the file owner can read and write them. This approach is similar to how SSH protects private keys.
 
-**Migration path:** To test this behavior before v2.0, set `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true`. If your environment doesn't support file permissions (for example, on Windows), set `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false` to disable this requirement.
+**Migration path:** To test this behavior before n8n 2.0, set `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true`. If your environment doesn't support file permissions (for example, on Windows), set `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false` to disable this requirement.
 
 ### Enable task runners by default <a href="#enable-task-runners-by-default" id="enable-task-runners-by-default"></a>
 
 n8n will enable [task runners](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners) by default to improve security and isolation. All Code node executions will run on task runners.
 
-**Migration path:** Before upgrading to v2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode).
+**Migration path:** Before upgrading to n8n 2.0, set N8N_RUNNERS_ENABLED=true to test this behavior. Make sure your infrastructure meets the requirements for running task runners. For additional security, consider using [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode).
 
 ### `$evaluateExpression` no longer works in the Code node <a href="#dollarevaluateexpression-no-longer-works-in-the-code-node" id="dollarevaluateexpression-no-longer-works-in-the-code-node"></a>
 
@@ -100,13 +100,13 @@ Because Code node executions now run on task runners in secure mode by default, 
 
 ### Remove task runner from `n8nio/n8n` docker image <a href="#remove-task-runner-from-n8nion8n-docker-image" id="remove-task-runner-from-n8nion8n-docker-image"></a>
 
-Starting with v2.0, the main `n8nio/n8n` Docker image will no longer include the task runner for external mode. You must use the separate `n8nio/runners` Docker image to run task runners in external mode.
+Starting with n8n 2.0, the main `n8nio/n8n` Docker image will no longer include the task runner for external mode. You must use the separate `n8nio/runners` Docker image to run task runners in external mode.
 
 **Migration path:** If you run task runners in Docker with external mode, update your setup to use the `n8nio/runners` image instead of `n8nio/n8n`.
 
 ### Remove Pyodide-based Python Code node and tool <a href="#remove-pyodide-based-python-code-node-and-tool" id="remove-pyodide-based-python-code-node-and-tool"></a>
 
-n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners) implementation that uses native Python for better security and performance. Starting in v2.0, you can only use Python Code nodes with task runners in [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode) and native Python tools.
+n8n will remove the Pyodide-based Python Code node and tool and replace them with a [task runner-based](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners) implementation that uses native Python for better security and performance. Starting in n8n 2.0, you can only use Python Code nodes with task runners in [external mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#external-mode) and native Python tools.
 
 The native Python Code node doesn't support built-in variables like `_input` or dot access notation, which were available in the Pyodide-based version. For details, see the [Code node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code#python-native).
 
@@ -124,7 +124,7 @@ n8n will disable the `ExecuteCommand` and `LocalFileTrigger` nodes by default be
 
 n8n will require authentication for OAuth callback endpoints by default. The default value for `N8N_SKIP_AUTH_ON_OAUTH_CALLBACK` will change from `true` (no authentication required) to `false` (authentication required).
 
-**Migration path:** Before upgrading to v2.0, set `N8N_SKIP_AUTH_ON_OAUTH_CALLBACK=false` and test your OAuth integrations to ensure they work with authentication enabled.
+**Migration path:** Before upgrading to n8n 2.0, set `N8N_SKIP_AUTH_ON_OAUTH_CALLBACK=false` and test your OAuth integrations to ensure they work with authentication enabled.
 
 ### Set default value for N8N_RESTRICT_FILE_ACCESS_TO <a href="#set-default-value-for-n8nrestrictfileaccessto" id="set-default-value-for-n8nrestrictfileaccessto"></a>
 
@@ -142,9 +142,9 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support <a href="#drop-mysqlmariadb-support" id="drop-mysqlmariadb-support"></a>
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in v1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in n8n 1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
-**Migration path:** Before upgrading to v2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
+**Migration path:** Before upgrading to n8n 2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
 ### Remove SQLite legacy driver <a href="#remove-sqlite-legacy-driver" id="remove-sqlite-legacy-driver"></a>
 
@@ -154,7 +154,7 @@ n8n will remove the legacy SQLite driver due to reliability issues. The pooling 
 
 ### Remove in-memory binary data mode <a href="#remove-in-memory-binary-data-mode" id="remove-in-memory-binary-data-mode"></a>
 
-n8n will remove the `default` mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which keeps execution binary data in memory during execution. For better performance and stability the following options will be available starting from v2:
+n8n will remove the `default` mode for `N8N_DEFAULT_BINARY_DATA_MODE`, which keeps execution binary data in memory during execution. For better performance and stability the following options will be available starting from n8n 2.0:
 
 - `filesystem`: Binary data is stored in the filesystem. Default option in regular mode.
 - `database`: Binary data is stored in the database. Default option in queue mode.
@@ -178,7 +178,7 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 ### Remove `n8n --tunnel` option <a href="#remove-n8n-tunnel-option" id="remove-n8n-tunnel-option"></a>
 
-The `n8n --tunnel` command-line option will be removed in v2.0.
+The `n8n --tunnel` command-line option will be removed in n8n 2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 

@@ -18,8 +18,8 @@ layout:
 
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
 * n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
-* From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
-* From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
+* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
 

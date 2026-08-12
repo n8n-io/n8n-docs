@@ -52,7 +52,7 @@ n8n also handles trace context propagation:
 ## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Available from n8n 2.27.0**
 
 You need to be an instance owner or admin to configure OpenTelemetry in the UI.
 {% endhint %}

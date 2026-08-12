@@ -34,7 +34,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Deprecation warning**
 
-n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a) authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/0.x#n8n02360).
+n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a) authentication method. n8n deprecated this method with the release of V2 of the X node in n8n [0.236.0](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/0.x#n8n02360).
 {% endhint %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -45,7 +45,7 @@ Refer to [Application-only Authentication](https://developer.twitter.com/en/docs
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-Use this method if you're using n8n version 0.236.0 or later.
+Use this method if you're using n8n 0.236.0 or later.
 
 To configure this credential, you'll need:
 

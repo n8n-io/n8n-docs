@@ -1054,7 +1054,7 @@ Redaction is configured per workflow under **Workflow settings**, and reveal acc
 ### Public API improvements <a href="#public-api-improvements" id="public-api-improvements"></a>
 
 * **Community packages.** Install, list, update, and uninstall community packages programmatically through new endpoints under `/api/v1/community-packages`. Each operation requires an API key with the matching `communityPackage:*` scope.
-* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in v2.17.
+* **Insights scope.** A new `insights:read` API key scope, setting up the insights summary endpoint that ships in n8n 2.17.
 {% endhint %}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -1082,7 +1082,7 @@ N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://your-collector:4318
 
 Standard OTel variables (`OTEL_EXPORTER_OTLP_ENDPOINT`, `OTEL_SERVICE_NAME`) are also respected.
 
-This is the foundational T1 feature. It was extended across later releases: node-level spans (v2.16), workflow version IDs in spans and distributed trace context propagation (v2.18 to v2.19), and AI Agent telemetry (v2.20).
+This is the foundational T1 feature. It was extended across later releases: node-level spans (n8n 2.16), workflow version IDs in spans and distributed trace context propagation (n8n 2.18 to n8n 2.19), and AI Agent telemetry (n8n 2.20).
 
 **Availability.** Free, Pro, and Enterprise.
 {% endhint %}
@@ -2118,20 +2118,20 @@ For the full story behind 2.0, read our [announcement blog post](https://blog.n8
 
 ### Breaking changes <a href="#breaking-changes" id="breaking-changes"></a>
 
-Version 2.0 includes breaking changes across security defaults, data handling, and configuration. Key changes include:
+n8n 2.0 includes breaking changes across security defaults, data handling, and configuration. Key changes include:
 
 * Task runners enabled by default (Code node executions now run in isolated environments)
 * Environment variable access blocked from Code nodes by default
 * ExecuteCommand and LocalFileTrigger nodes disabled by default
 * In-memory binary data mode removed
 
-Review the complete list and migration guidance in the [v2.0 breaking changes docs.](https://docs.n8n.io/2-0-breaking-changes/)
+Review the complete list and migration guidance in the [n8n 2.0 breaking changes docs.](https://docs.n8n.io/2-0-breaking-changes/)
 
 ### Before you upgrade <a href="#before-you-upgrade" id="before-you-upgrade"></a>
 
 Use the **Migration Report** tool to identify workflow-level and instance-level issues that need attention before upgrading.
 
-See the [v2.0 migration tool docs](https://docs.n8n.io/migration-tool-v2/) for details.
+See the [n8n 2.0 migration tool docs](https://docs.n8n.io/migration-tool-v2/) for details.
 
 ### Product updates <a href="#product-updates" id="product-updates"></a>
 

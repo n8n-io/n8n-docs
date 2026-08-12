@@ -6,7 +6,79 @@
 <atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
 <description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
 <language>en</language>
-<lastBuildDate>Wed, 05 Aug 2026 13:00:58 GMT</lastBuildDate>
+<lastBuildDate>Wed, 12 Aug 2026 13:01:01 GMT</lastBuildDate>
+<item>
+<title>GitHub Node: Add timeout option to Dispatch and Wait for Completion</title>
+<link>https://github.com/n8n-io/n8n/pull/35837</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35837</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The GitHub node's Dispatch and Wait for Completion operation now supports a Limit Wait Time option, letting you cap how long the execution waits for the dispatched GitHub Actions workflow to call back, either after a time interval or until a specified date and time. Previously the execution waited indefinitely if the callback never arrived. If the limit is not set, existing behavior is unchanged; on timeout the node resumes silently with its input data instead of the callback payload.</description>
+</item>
+<item>
+<title>Kafka Node: Add compression options to version 2</title>
+<link>https://github.com/n8n-io/n8n/pull/35727</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35727</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The Kafka node (version 2) now includes a Compression option supporting None, GZIP, Snappy, LZ4, and Zstd, letting users choose how messages are compressed before sending. Previously, only GZIP was available via a toggle in version 1, since the older library lacked native support for other codecs. Version 1 behavior is unchanged. Note that version 1 of the Kafka Trigger cannot decode Snappy, LZ4, or Zstd, so use GZIP or None if version 1 triggers consume the topic.</description>
+</item>
+<item>
+<title>Merge Node: Add &quot;Append&quot; and &quot;Combine&quot; search aliases</title>
+<link>https://github.com/n8n-io/n8n/pull/35709</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35709</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>You can now find the Merge node in the nodes panel by searching for &quot;Append&quot; or &quot;Combine&quot;, in addition to its existing search terms. This makes the node easier to discover when you're looking for ways to combine or append data streams.</description>
+</item>
+<item>
+<title>Improve agent file upload visibility</title>
+<link>https://github.com/n8n-io/n8n/pull/35513</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35513</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The AI agent builder's file upload area now shows a clear empty state with a labeled Upload file button and text describing supported formats (CSV, PDF, Markdown, TXT) when no files exist, replacing a plain empty table row. When files are present, a labeled upload button appears in the toolbar. Headings and spacing for the files and vector stores panels are also aligned for consistency.</description>
+</item>
+<item>
+<title>Kafka Node: Add version 2 to send messages via the new Kafka library</title>
+<link>https://github.com/n8n-io/n8n/pull/35450</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35450</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The Kafka node adds version 2, which sends messages using the modern @confluentinc/kafka-javascript library instead of the unmaintained kafkajs. It keeps the same UI and options as v1 (minus Compression, coming later) and fixes the 'Acks' option so 'all replicas' actually maps to all in-sync replicas rather than leader-only. Existing workflows default to v1; new nodes can opt into v2.</description>
+</item>
+<item>
+<title>Enable enhanced HITL Slack/Telegram</title>
+<link>https://github.com/n8n-io/n8n/pull/35411</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35411</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>Enhanced human-in-the-loop (HITL) approval options are now enabled for everyone using the Slack and Telegram nodes. Advanced parameters like restricting who can respond, capturing who approved, and post-decision behavior are now always visible in these nodes, rather than being hidden behind an experimental feature flag.</description>
+</item>
+<item>
+<title>Restore one-click connector for ChatGPT MCP client</title>
+<link>https://github.com/n8n-io/n8n/pull/35396</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35396</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>When connecting the ChatGPT MCP client from Settings &gt; MCP &gt; Connect a client, a one-click 'Add to ChatGPT' button now appears again. It links directly to ChatGPT's create-connector form, so users just need to paste the server URL instead of navigating ChatGPT's connectors settings page (which previously required developer mode).</description>
+</item>
+<item>
+<title>Slack Node: Use Real-time Search API for message search</title>
+<link>https://github.com/n8n-io/n8n/pull/35291</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35291</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The Slack node's Message Search now uses Slack's new Real-time Search API (node version 2.7), replacing the deprecated search.messages endpoint. New options include Channel Types, After/Before date filters, and Keyword Search Only (to disable semantic matching). Return All is removed in favor of a capped Limit (max 50) due to Slack's rate limits. Existing workflows on node version 2.6 or earlier are unaffected, but users must reconnect their Slack credential to grant new search scopes before using search on 2.7.</description>
+</item>
+<item>
+<title>Salesforce Trigger Node: Add OAuth2 JWT authentication support</title>
+<link>https://github.com/n8n-io/n8n/pull/32257</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32257</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The Salesforce Trigger node now supports OAuth2 JWT authentication, in addition to OAuth2. A new Authentication dropdown lets you choose between OAuth2 and OAuth2 JWT and select the corresponding credential, matching the regular Salesforce node. Existing trigger workflows are unaffected since OAuth2 remains the default.</description>
+</item>
 <item>
 <title>Add a guided setup view for Simplified Custom Auth credentials</title>
 <link>https://github.com/n8n-io/n8n/pull/35324</link>
@@ -334,78 +406,6 @@
 <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.32</category>
 <description>The MCP settings Connected clients table now shows more detail per connection: a brand icon and client type (CLI, IDE, Editor, Assistant) for recognized clients like Claude, Cursor, and VS Code, a summary of granted access scopes, and the relative time the connection was granted. Clicking a row opens a details modal showing the client, connection time, and scopes grouped into Read-only and Write, with a Revoke access action available from both the row and the modal.</description>
-</item>
-<item>
-<title>Add scope selection to MCP OAuth consent screen</title>
-<link>https://github.com/n8n-io/n8n/pull/33710</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33710</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>The MCP OAuth consent screen now lets users choose exactly what an MCP client (e.g. Claude Code) can access, using the same scope picker as the API key modal: All, Read only, or Custom presets across workflows, executions, credentials, data tables, and projects/folders. Granted scopes are enforced end to end, so out-of-scope tools are not listed or callable. Existing connections keep full access after the update.</description>
-</item>
-<item>
-<title>Mailgun Node: Add reply-to, custom headers, and tags</title>
-<link>https://github.com/n8n-io/n8n/pull/28558</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/28558</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>The Mailgun node now supports setting a Reply-To address, adding custom email headers (sent with an h: prefix), and tagging messages via comma-separated tags for segmentation and analytics. These new fields appear as node parameters in the editor, letting users customize outbound email metadata without additional configuration.</description>
-</item>
-<item>
-<title>Remove preview label from Instance-level MCP settings</title>
-<link>https://github.com/n8n-io/n8n/pull/34084</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34084</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>Instance-level MCP settings are now generally available. The &quot;preview&quot; label has been removed from the MCP settings sidebar item and the MCP settings page heading, along with its explanatory tooltip, reflecting that the feature is no longer in preview.</description>
-</item>
-<item>
-<title>Open logs panel on artifact execution and make execute button secondary</title>
-<link>https://github.com/n8n-io/n8n/pull/34049</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34049</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>When the AI Assistant shows a workflow artifact, the logs panel now opens automatically as soon as an execution starts (whether triggered by you or the agent), making it easier to watch data flow through nodes. The embedded 'Execute workflow' button is now styled as a secondary action, since the conversation is the main focus. Regular editor behavior is unchanged.</description>
-</item>
-<item>
-<title>Microsoft Excel Node: Rename node to Microsoft Excel (OneDrive)</title>
-<link>https://github.com/n8n-io/n8n/pull/33963</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33963</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>The Microsoft Excel node has been renamed to &quot;Microsoft Excel (OneDrive)&quot; to clarify that it operates on workbooks stored in OneDrive. The node's description and in-node notice were updated accordingly, and &quot;OneDrive&quot; was added as a search alias. This is a display-only change; the node's underlying type identifier is unchanged, so existing workflows continue to work without modification.</description>
-</item>
-<item>
-<title>Improve node group selection UX</title>
-<link>https://github.com/n8n-io/n8n/pull/33893</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33893</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>Node groups on the canvas now behave like nodes for selection and context menus. Selecting a title bar or all members selects the whole group with a single selection ring, and selection persists through collapse/expand. Group context menus mirror multi-selection actions worded for the group, with new Expand/Collapse all groups and Expand/Collapse selected options, plus keyboard shortcuts. Selection rectangles now fully wrap groups.</description>
-</item>
-<item>
-<title>MCP Server Trigger Node: Present credential-connect link via elicitation</title>
-<link>https://github.com/n8n-io/n8n/pull/33868</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33868</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>When the MCP Server Trigger blocks a tool call because a required credential isn't connected, the connection link is now presented through the client's native URL elicitation UI (for clients that support it, like ones advertising elicitation.url), instead of appearing as plain text some clients flag as suspicious. Clients without this capability, or if elicitation fails, still receive the original plain-text response with the connection URL, so existing behavior is unaffected for them.</description>
-</item>
-<item>
-<title>Add Group/Ungroup context menu actions</title>
-<link>https://github.com/n8n-io/n8n/pull/33839</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33839</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>You can now group and ungroup nodes directly from the canvas context menu. Right-clicking a valid node selection shows a new Group option (disabled when the selection can't form a valid group), and right-clicking a group shows Rename group and Ungroup nodes options, making it easier to organize workflows without keyboard shortcuts.</description>
-</item>
-<item>
-<title>Google BigQuery Node: Allow custom OAuth2 scopes</title>
-<link>https://github.com/n8n-io/n8n/pull/33822</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33822</guid>
-<pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.31</category>
-<description>The Google BigQuery OAuth2 credential now supports custom OAuth2 scopes. By default it continues using the required BigQuery scopes, but users can toggle on Custom Scopes to reveal an editable Enabled Scopes field, pre-filled with the defaults, to request additional or narrower permissions. Custom scopes now persist across reconnects instead of resetting to defaults, matching behavior already available for other Google and Slack/Discord OAuth2 credentials.</description>
 </item>
 </channel>
 </rss>

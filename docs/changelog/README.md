@@ -612,7 +612,7 @@ Workflow settings updates are also logged with the specific parameters that chan
 
 ## Time Saved node
 
-**Released:** 2025-12-16 in [n8n 2.1](release-notes.md#n8n21)
+**Released:** 2025-12-15 in [n8n 2.1](release-notes.md#n8n21)
 
 Previously, teams could only track a single fixed time saved value for each workflow regardless of which path an execution takes. The new Time Saved node enables more precise time savings calculations where different execution paths save different amounts of time.
 

@@ -28,7 +28,7 @@ If you want to use MCP tools as tools for an AI Agent, use the [MCP Client Tool 
 {% hint style="info" %}
 **Credentials**
 
-The MCP Client node supports [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth), generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](/integrations/builtin/credentials/mcp.md#using-oauth2) authentication methods.
+The MCP Client node supports [Bearer](../credentials/httprequest.md#using-bearer-auth), generic [header](../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../credentials/mcp.md#using-oauth2) authentication methods.
 {% endhint %}
 
 

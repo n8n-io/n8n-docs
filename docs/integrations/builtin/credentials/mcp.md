@@ -9,7 +9,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-* [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
+* [MCP Client Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
 
 ## Prerequisites
 

@@ -77,7 +77,7 @@ AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy.
 Every workflow it builds is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
 
 {% hint style="warning" %}
-This feature is in **preview**. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+This feature is in preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 {% endhint %}
 
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
@@ -175,11 +175,11 @@ The [Webhook node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-n
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The generic **Microsoft OAuth2 API** credential now works with Microsoft Excel 365, Outlook, Teams, To Do, and Graph Security, alongside OneDrive. Instead of registering a separate Microsoft Entra app for every Microsoft service you automate, you register one and grant it the delegated permissions your workflows need. To use it, open any supported node, set **Authentication** to **Microsoft OAuth2 (Graph)**, and select the credential. Your IT team approves and maintains a single app registration instead of one per service.
+The generic Microsoft OAuth2 API credential now works with Microsoft Excel 365, Outlook, Teams, To Do, and Graph Security, alongside OneDrive. Instead of registering a separate Microsoft Entra app for every Microsoft service you automate, you register one and grant it the delegated permissions your workflows need. To use it, open any supported node, set **Authentication** to **Microsoft OAuth2 (Graph)**, and select the credential. Your IT team approves and maintains a single app registration instead of one per service.
 
 Set the credential's **Scope** field to the space-separated permissions the nodes you use require, for example `Files.ReadWrite.All` for OneDrive and Excel, or `Mail.ReadWrite` and `Mail.Send` for Outlook, always including `openid` and `offline_access`. Some permissions, such as `SecurityEvents.ReadWrite.All` for Graph Security, need admin consent. If your organization runs on a sovereign cloud (US Government, US Government DOD, or China), set the **Microsoft Graph API Base URL** on the credential and every node using it picks it up.
 
-Nothing changes for existing workflows. On saved nodes the **Authentication** dropdown stays on the node-specific credential, so credentials like Microsoft Excel OAuth2 API keep working untouched. The generic credential is an additive option, not a replacement.
+Nothing changes for existing workflows. On saved nodes the Authentication dropdown stays on the node-specific credential, so credentials like Microsoft Excel OAuth2 API keep working untouched. The generic credential is an additive option, not a replacement.
 
 _Microsoft OneDrive support released in n8n 2.27 (2026-06-16)._
 
@@ -196,7 +196,7 @@ Imports are checked up front. If a conflict or an unresolved credential would bl
 This makes it easy to promote workflows from development to production, back up and restore an instance, hand a workflow to a teammate without sharing secrets, or migrate between instances.
 
 {% hint style="warning" %}
-This feature is in **preview**. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
+This feature is in preview. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
 {% endhint %}
 
 Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).
@@ -339,7 +339,7 @@ You can now mark projects, folders, workflows, and data tables as [favorites](ht
 
 **Released:** 2026-04-13 in [n8n 2.17](release-notes.md#n8n217)
 
-Two model providers join n8n's AI lineup natively. **Moonshot Kimi** arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. [**Alibaba Cloud Model Studio**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud) brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
+Two model providers join n8n's AI lineup natively. Moonshot Kimi arrives as both a [chat-model sub-node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmoonshot) for AI Agents (with a dynamic model list, defaulting to kimi-k2.5) and a [standalone node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.moonshot) with multi-turn chat, tool calling, built-in web search, thinking mode, JSON responses, and image analysis. [Alibaba Cloud Model Studio](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.alibabacloud) brings the Qwen family: chat with web search and agent-tool support, vision-language image analysis, text-to-image, and text- and image-to-video generation with automatic download of results.
 
 More providers followed in later releases:
 
@@ -454,7 +454,7 @@ n8n now supports 1Password Connect Server as an [external secrets](https://app.g
 
 Secrets are fetched at runtime and never stored in n8n: 1Password stays the single source of truth. Multi-field items are available as structured sub-paths: `$secrets.<vault>.<item>.<field>`.
 
-**How to connect:**
+To connect:
 
 1. Deploy a 1Password Connect Server and create an access token scoped to the vaults n8n should read.
 2. In n8n, go to **Settings > External Secrets**, select **1Password**, and enter your Connect Server URL and token.
@@ -523,14 +523,14 @@ Human-in-the-loop (HITL) for AI tool calls enforces review directly at the tool 
 
 Because the review step is implemented using standard n8n integrations, approvals are not limited to a single user or interface. Decisions can be routed across people and systems, enforcing approval from the right person using the channels they already work in.
 
-**What you can do:**
+What you can do:
 
 * Require explicit human approval for any tool the agent can call, including the MCP Client tool or sub-workflows exposed as tools.
 * Apply approval selectively, so some tools execute autonomously while others require review.
 * Route approvals across users and channels (for example, send a Slack-initiated action for approval by another user via email).
 * Add safety checks for high-impact or potentially destructive operations without complex workflow patterns or brittle prompt logic.
 
-**How to use it:** on the connection from the AI Agent to the tool you want to gate, click the **+** icon and choose **Add human review step**. The Tools panel opens with nodes you can use to handle the review; select one and configure the approver, the message, and the available actions.
+To gate a tool, click the **+** icon on its connection from the AI Agent and choose **Add human review step**. The Tools panel opens with nodes you can use to handle the review; select one and configure the approver, the message, and the available actions.
 
 Get precise control over where human judgment is required, without limiting what your agent can do. Learn more in the [human-in-the-loop tools docs](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
@@ -551,10 +551,10 @@ These actions can be used as deterministic workflow steps or as tools for an **A
 
 When used as an agent tool, the agent can ask for clarification before proceeding, helping it better interpret user intent and follow instructions. Agents can also send updates during long-running workflows using these actions.
 
-**How to:**
+To set this up:
 
-1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the _Response Mode_ option and set it to _Using Response Nodes_.
-2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the operations: _Send a message_ or _Send a message and wait for response_.
+1. Trigger your workflow with the **Chat Trigger** node. In the node parameters, add the **Response Mode** option and set it to **Using Response Nodes**.
+2. Add a **Chat** node later in the workflow, or add it as a tool for an **AI Agent**. Select one of the operations: **Send a message** or **Send a message and wait for response**.
 
 Keep in mind: if you want an AI Agent to choose between sending a message or waiting for input, add two **Chat** tool nodes, one for each action. For AI Agents triggered by the **Chat Trigger** node, adding **Send a message and wait for response** is recommended so the agent can request clarification when needed.
 

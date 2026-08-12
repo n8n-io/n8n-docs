@@ -1,12 +1,13 @@
 ---
 title: MCP credentials
 description: Documentation for MCP credentials. Use these credentials to authenticate MCP servers in n8n, a workflow automation platform.
-description: Documentation for MCP credentials. Use these credentials to authenticate MCP servers in n8n, a workflow automation platform.
 layout:
   description:
     visible: false
 contentType: [integration, reference]
-# MCP OAuth2 API credentials
+---
+
+# MCP credentials
 
 You can use these credentials to authenticate the following nodes:
 

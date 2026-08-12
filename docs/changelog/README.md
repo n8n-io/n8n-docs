@@ -321,6 +321,10 @@ Verification uses each service's own signing mechanism, typically an HMAC signat
 
 This is part of a broader hardening pass across releases: Netlify verification shipped in n8n 2.20, and AWS SNS, Box, and Microsoft Teams followed in n8n 2.22.
 
+***
+
+## Jira: OAuth2 authentication
+
 **Released:** 2026-05-12 in [n8n 2.21](release-notes.md#n8n221)
 
 The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.jira) and [Jira Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.jiratrigger) add a **Cloud (OAuth2)** authentication option using Atlassian's OAuth 2.0 authorization code flow (3LO). Connect through auth.atlassian.com with your Atlassian cloud ID resolved and cached automatically. No more creating and rotating API tokens by hand for Jira Cloud.

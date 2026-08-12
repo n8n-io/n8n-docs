@@ -156,7 +156,10 @@ See [reference.md](reference.md) for full examples and rules.
   never just "version 2".
 - **Format:** product name plus numerals: `n8n 2.30.0`. No `v` prefix, don't
   write "version" after "n8n", and don't add "or later"; "available from"
-  already means "and onward".
+  already means "and onward". Don't wrap the version in inline code formatting
+  in running text (write "n8n 2.30.0", not "n8n `2.30.0`") — only use code
+  formatting when the version is part of an actual code snippet, command, or
+  file path (`n8n@2.30.0`, a Docker tag, a `package.json` value).
 - **Placement:** match the scope. Whole page or section → an `info` hint titled
   `**Feature availability**` under the page title or heading. Mentioned in
   passing with no heading of its own → fold it into the sentence ("The Data

@@ -21,7 +21,7 @@ Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans.
 
 **Available from:** n8n 1.122.0 (released November 24, 2025)
 
-Secret vault scopes are available from n8n `2.13.0`.
+Secret vault scopes are available from n8n 2.13.0.
 {% endhint %}
 
 {% hint style="info" %}

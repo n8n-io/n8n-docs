@@ -2221,7 +2221,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.96.0
 {% hint style="warning" %}
 **Build failure**
 
-This release failed to build. Please use n8n `1.97.0` instead.
+This release failed to build. Please use n8n 1.97.0 instead.
 {% endhint %}
 
 This release contains API updates, core changes, editor improvements, node updates, and bug fixes.

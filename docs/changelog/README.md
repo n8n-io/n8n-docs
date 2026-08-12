@@ -183,7 +183,7 @@ Create a pull request from one branch into another, including drafts and PRs fro
 
 Two operations return the change itself rather than its metadata. **Get Diff** and **Get Patch** fetch the raw diff and patch, which is what makes a pull request usable as workflow input. Hand the diff to an AI agent for a first-pass review, scan it for files that need sign-off, or post a summary to the repository's channel.
 
-All of this was possible with the HTTP Request node, but you had to know the REST paths, assemble the payload for each call, and interpret GitHub's responses yourself. The native operations take a repository and the fields that operation needs. Errors surface exactly as GitHub returns them, so a refused merge tells you why.
+All of this was possible with the HTTP Request node, but you had to know the REST paths, assemble the payload for each call, and interpret GitHub's responses yourself. The native operations take a repository and the fields each operation needs. Errors surface exactly as GitHub returns them, so a refused merge tells you why.
 
 Refer to the [GitHub node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) for the full list of operations.
 
@@ -235,9 +235,9 @@ Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5
 
 **Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
 
-You can now configure OpenTelemetry tracing from **Settings > OpenTelemetry**. Until now, tracing meant setting environment variables on every n8n instance and restarting each one. That put it out of reach on n8n Cloud, where you don't control the environment. This brings workflow execution tracing to Cloud for the first time.
+You can now configure OpenTelemetry tracing from **Settings > OpenTelemetry**. Until now, tracing meant setting environment variables on every n8n instance and restarting each one. That put it out of reach on n8n Cloud, where you don't control the environment. This brings workflow execution tracing to n8n Cloud for the first time.
 
-Turn on **Enable OpenTelemetry**, enter your OTLP endpoint and any headers your collector needs, then set your sampling and span options under **Tracing** and select **Save settings**. To check the connection, select **Send test trace** under **Verify configuration**. n8n sends a single span and reports whether your collector accepted it. Changes apply without a restart, and in queue mode n8n reloads the configuration across your workers and webhook processors.
+Turn on **Enable OpenTelemetry**, enter your OTLP endpoint and any headers your collector needs, set your sampling and span options under **Tracing**, then select **Save settings**. To check the connection, select **Send test trace** under **Verify configuration**. n8n sends a single span and reports whether your collector accepted it. Changes apply without a restart, and in queue mode n8n reloads the configuration across your workers and webhook processors.
 
 Each execution exports a `workflow.execute` span with the workflow ID, name, version, node count, execution mode, status, and error type. Nested inside it, a `node.execute` span per node records its input and output item counts. Both carry resource attributes identifying the instance and its role: main, worker, or webhook.
 

@@ -17,7 +17,10 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+Custom roles are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
 **Available from:** n8n 1.122.0 (released November 24, 2025)
 

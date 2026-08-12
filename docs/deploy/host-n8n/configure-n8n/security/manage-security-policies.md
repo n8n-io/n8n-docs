@@ -18,7 +18,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Security settings are available on Business and Enterprise plans. Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
+Security settings are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
 {% endhint %}
 
 Security settings let you manage instance-wide security policies. You can enforce two-factor authentication for all users and control what users can do in their personal spaces.
@@ -90,9 +95,12 @@ You can enforce [execution data redaction](redact-execution-data.md) for all wor
 {% hint style="info" %}
 **Feature availability**
 
-Data redaction enforcement is available on Enterprise Self-hosted and Enterprise Cloud plans.
+Data redaction enforcement is available on:
 
-**Available from:** n8n 2.26.0
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.26.0.
 {% endhint %}
 
 To enforce data redaction:
@@ -114,7 +122,7 @@ Redaction enforcement requires an Enterprise license with the data redaction fea
 
 ## Configure security policy with environment variables <a href="#configure-security-policy-with-environment-variables" id="configure-security-policy-with-environment-variables"></a>
 
-You can also manage security policy settings from environment variables instead of through the UI. Available from n8n 2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+You can also manage security policy settings from environment variables instead of through the UI, available from n8n 2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
 When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
 

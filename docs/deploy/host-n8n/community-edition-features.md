@@ -8,7 +8,7 @@ originalFilePath: hosting/community-edition-features.md
 originalUrl: https://docs.n8n.io/hosting/community-edition-features
 url: https://docs.n8n.io/deploy/host-n8n/community-edition-features
 description: >-
-  Compare the self-hosted n8n plans and editions: Community, registered
+  Compare the self-hosted n8n plans and editions: Community, Registered
   Community, Business, and Enterprise.
 layout:
   width: default
@@ -44,7 +44,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 {% hint style="info" %}
 **Plan, edition, or license?**
 
-An **edition** is the variant of the self-hosted software you run: Community, registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. Registering a free Community edition also uses a license key. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
+An **edition** is the variant of the self-hosted software you run: Community, Registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. Registering a free Community edition also uses a license key. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
 {% endhint %}
 
 {% hint style="info" %}
@@ -68,7 +68,7 @@ The Community edition includes almost the complete feature set of n8n. It doesn'
 * Sharing ([workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others), [credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely)) (Only the instance owner and the user who creates them can access workflows and credentials)
 * [Version control using Git](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
 
-These features are available on the Business and Enterprise plans. Some are also available on the Starter, Pro, and Enterprise n8n Cloud plans. See [pricing](https://n8n.io/pricing/) for the current breakdown.
+These features are available on self-hosted Business, Enterprise. Some are also available on n8n Cloud Starter, Pro, Enterprise. See [pricing](https://n8n.io/pricing/) for the current breakdown.
 
 ## Registered Community edition <a href="#registered-community-edition" id="registered-community-edition"></a>
 

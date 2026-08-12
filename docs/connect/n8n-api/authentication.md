@@ -26,7 +26,7 @@ The n8n API isn't available during the free trial. Please upgrade to access this
 1. Go to **Settings** > **n8n API**.
 1. Select **Create an API key**.
 1. Choose a **Label** and set an **Expiration** time for the key.
-1. If on an Enterprise plan, choose the **Scopes** to give the key. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
+1. Choose the **Scopes** to give the key. The **Scopes** option is available on n8n Cloud Enterprise and self-hosted Enterprise. Refer to [API Scopes](#api-scopes) for the full list of available scopes.
 1. Copy **My API Key** and use this key to authenticate your calls.
 
 ## Call the API using your key <a href="#call-the-api-using-your-key" id="call-the-api-using-your-key"></a>
@@ -69,9 +69,9 @@ For the available operations and parameters, refer to the [n8n node](https://app
 
 ## API Scopes <a href="#api-scopes" id="api-scopes"></a>
 
-Users of [enterprise instances](https://n8n.io/enterprise/) can limit which resources and actions an API key can access with scopes. Choose the minimum scopes needed for the key's intended purpose.
+On [Enterprise instances](https://n8n.io/enterprise/), you can limit which resources and actions an API key can access with scopes. Choose the minimum scopes needed for the key's intended purpose.
 
-Non-enterprise API keys have full access to all the account's resources and capabilities.
+Non-Enterprise API keys have full access to all the account's resources and capabilities.
 
 {% hint style="info" %}
 **API key scopes vs. project role scopes**

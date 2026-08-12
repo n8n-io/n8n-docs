@@ -40,7 +40,7 @@ The Execute Command node runs shell commands on the host machine that runs n8n.
 {% hint style="warning" %}
 **Security considerations**
 
-The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default starting from version 2.0.
+The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default from n8n 2.0.
 {% endhint %}
 
 {% hint style="info" %}

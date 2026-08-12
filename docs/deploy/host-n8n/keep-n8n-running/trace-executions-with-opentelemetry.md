@@ -18,7 +18,7 @@ layout:
 {% hint style="warning" %}
 **This feature is still under development**
 
-- Initially available from 2.19.0
+- OpenTelemetry tracing is initially available from n8n 2.19.0
 - Open telemetry formatted metrics will be coming soon
 {% endhint %}
 
@@ -52,9 +52,9 @@ n8n also handles trace context propagation:
 ## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.27.0**
+**Feature availability**
 
-You need to be an instance owner or admin to configure OpenTelemetry in the UI.
+Configuring OpenTelemetry tracing from the UI is available from n8n 2.27.0. You need to be an instance owner or admin to configure OpenTelemetry in the UI.
 {% endhint %}
 
 Instead of setting environment variables, you can configure tracing from **Settings > OpenTelemetry**. n8n applies your changes without a restart, and reloads them across workers and webhook processors in [queue mode](../configure-n8n/scaling/enable-queue-mode.md).
@@ -139,7 +139,9 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ## Agent tracing <a href="#agent-tracing" id="agent-tracing"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.33.0**
+**Feature availability**
+
+Agent tracing is available from n8n 2.33.0.
 {% endhint %}
 
 n8n can also emit spans for AI agent runs, using the same tracer as workflow tracing. This covers agent runs started from a workflow (for example, the AI Agent node), from chat integrations, and from scheduled tasks.
@@ -174,7 +176,13 @@ You can add custom attributes to project, workflow, and node spans. n8n exports 
 {% hint style="info" %}
 **Feature availability**
 
-Custom span attributes are available on Enterprise plans.
+Custom span attributes are available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
+
+Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 {% endhint %}
 
 Don't include secrets, personal data, or other sensitive values in attribute values.
@@ -186,8 +194,6 @@ n8n supports the following custom attribute levels:
 | Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
-
-Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 
 ### Add project span attributes <a href="#add-project-span-attributes" id="add-project-span-attributes"></a>
 
@@ -368,7 +374,7 @@ n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVE
 
 Check that:
 
-- You have an Enterprise license.
+- You have a self-hosted Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
 

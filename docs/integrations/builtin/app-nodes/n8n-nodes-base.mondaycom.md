@@ -25,7 +25,7 @@ On this page, you'll find a list of operations the monday.com node supports and 
 {% hint style="warning" %}
 **Minimum required version**
 
-This node requires n8n 1.22.6 or above.
+This node requires n8n 1.22.6.
 {% endhint %}
 
 {% hint style="info" %}

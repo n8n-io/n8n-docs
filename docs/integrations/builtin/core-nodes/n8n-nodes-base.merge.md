@@ -27,11 +27,9 @@ The n8n team overhauled this node in n8n 0.194.0. This document reflects the lat
 {% endhint %}
 
 {% hint style="info" %}
-**Minor changes in 1.49.0**
+**Feature availability**
 
-n8n 1.49.0 introduced the option to add more than two inputs. Older versions only support up to two inputs. If you're running an older version and want to combine multiple inputs in these versions, use the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
-
-The **Mode > SQL Query** feature was also added in n8n 1.49.0 and isn't available in older versions.
+Adding more than two inputs and the **Mode > SQL Query** feature are available from n8n 1.49.0. Older versions only support up to two inputs and don't include **Mode > SQL Query**. If you're running an older version and want to combine multiple inputs, use the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>

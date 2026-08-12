@@ -155,7 +155,13 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## How n8n secures HTML responses <a href="#how-n8n-secures-html-responses" id="how-n8n-secures-html-responses"></a>
 
-Starting with n8n 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
+{% hint style="info" %}
+**Feature availability**
+
+n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. Available from n8n 1.103.0.
+{% endhint %}
+
+This is a security mechanism to protect the instance users.
 
 This has the following implications:
 

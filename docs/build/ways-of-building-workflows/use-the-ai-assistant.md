@@ -57,7 +57,7 @@ Ask n8n AI offers a range of tools to support you:
 ## AI usage settings <a href="#ai-usage-settings" id="ai-usage-settings"></a>
 
 {% hint style="info" %}
-Available in n8n v2.7.0 and above.
+Available in n8n 2.7.0 and above.
 {% endhint %}
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance. Here, you can control what data is shared with Ask n8n AI.

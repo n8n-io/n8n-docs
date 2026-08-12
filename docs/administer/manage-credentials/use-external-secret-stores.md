@@ -144,9 +144,9 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 ### Azure Key Vault <a href="#azure-key-vault" id="azure-key-vault"></a>
 
 {% hint style="info" %}
-**Available from n8n `<version>`**
+**Available from n8n 2.35.0**
 
-The **Azure Cloud** setting is available from n8n `<version>`. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
+The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
 {% endhint %}
 
 Provide your **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.

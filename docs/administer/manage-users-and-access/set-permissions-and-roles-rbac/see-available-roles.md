@@ -61,6 +61,6 @@ n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) c
 | Use external secrets in credentials | ✅* | ✅* | ❌ |
 | Manage project secret vaults | ✅* | ❌ | ❌ |
 
-\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). This is available from n8n version `2.13.0`.
+\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). This is available from n8n 2.13.0.
 
 [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.

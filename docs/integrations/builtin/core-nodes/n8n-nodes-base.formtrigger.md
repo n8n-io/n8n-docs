@@ -146,7 +146,7 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 Select **Add Option** to view more configuration options: 
 
-* **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
+- **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
 * **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
 * **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component.
 * **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers.

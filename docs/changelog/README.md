@@ -219,13 +219,13 @@ Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/
 
 ## Web search for AI agents
 
-**Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
+**Released:** 2026-06-02 in [n8n 2.25.1](release-notes.md#n8n2251)
 
 Your AI agents can now search the web out of the box. Enable web search from the agent's Advanced panel: where the model provider offers a native search tool, the agent uses it directly, and for providers without one, n8n falls back to Brave Search or a self-hosted SearXNG instance. Until now, giving an agent live web access meant wiring up a community node or an external API by hand; now it's built in, so agents can ground their answers in current information like prices, docs, and news, without extra setup.
 
 ## Form Trigger: restrict forms to logged-in users
 
-**Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
+**Released:** 2026-06-02 in [n8n 2.25.1](release-notes.md#n8n2251)
 
 The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an n8n User Auth authentication option. It limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public. Visitors who aren't signed in are redirected to the n8n login page, and a submission without a valid session is rejected with a 401.
 

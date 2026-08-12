@@ -89,26 +89,38 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command <a href="#run-curl-command" id="run-curl-command"></a>
 
-You can also use the [HTTP Request](../n8n-nodes-base.httprequest/README.md) node to make a cURL request.
+You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md) node to make a cURL request.
 
-If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
+If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux.
+
+{% hint style="info" %}
+**`apk` isn't included in the n8n image**
+
+The `apk` package manager was removed from the official n8n Docker image. To install a package like `curl`, you need to restore `apk` from a fresh Alpine base image first, as shown below.
+{% endhint %}
 
 1. Create a file named `Dockerfile`.
-2.  Add the below code snippet to the Dockerfile.
+2. Add the below code snippet to the Dockerfile.
 
-    ```shell
-    FROM docker.n8n.io/n8nio/n8n
-    USER root
-    RUN apk --update add curl
-    USER node
-    ```
-3.  In the same folder, execute the command below to build the Docker image.
+```shell
+   FROM docker.n8n.io/n8nio/n8n
+   USER root
 
-    ```shell
-    docker build -t n8n-curl
-    ```
+   # Restore the apk package manager (removed from the base image)
+   COPY --from=alpine:3.22 /sbin/apk /sbin/apk
+   COPY --from=alpine:3.22 /lib/apk /lib/apk
+   COPY --from=alpine:3.22 /usr/lib/libapk* /usr/lib/
+
+   RUN apk add --no-cache curl
+   USER node
+```
+3. In the same folder, execute the command below to build the Docker image.
+
+```shell
+   docker build -t n8n-curl .
+```
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
-5. Run the newly created Docker image. You'll now be able to execute ssh using the Execute Command Node.
+5. Run the newly created Docker image. You'll now be able to execute curl using the Execute Command Node.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

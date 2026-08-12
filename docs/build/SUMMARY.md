@@ -120,6 +120,7 @@
     * [Store and search data with vectors](integrate-ai/understand-ai-components/store-and-search-data-with-vectors.md)
     * [Retrieve relevant context](integrate-ai/understand-ai-components/retrieve-relevant-context.md)
     * [Agents vs chains](integrate-ai/understand-ai-components/agents-vs-chains.md)
+  * [LangChain in n8n](integrate-ai/langchain-in-n8n.md)
   * [Test and improve AI workflows](integrate-ai/test-and-improve-ai-workflows/README.md)
     * [Understand why to test](integrate-ai/test-and-improve-ai-workflows/understand-why-to-test.md)
     * [Run quick evaluations](integrate-ai/test-and-improve-ai-workflows/run-quick-evaluations.md)

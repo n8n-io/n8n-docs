@@ -123,7 +123,15 @@ Learn more in the [n8n MCP server documentation](https://app.gitbook.com/s/r7wKI
 
 **Released:** 2026-06-30 in [n8n 2.29](release-notes.md#n8n229)
 
-[GitHub nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) can now authenticate as a GitHub App instead of a personal access token. Authentication is JWT-based with standardized private-key handling, so your GitHub automations belong to the organization rather than to whoever created the token, with fine-grained permissions and no PAT to rotate when people move on.
+The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github) and [GitHub Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.githubtrigger) can now authenticate as a GitHub App, alongside the existing personal access token and OAuth2 options.
+
+A personal access token belongs to a person, which is the awkward part of automating GitHub. The workflow that triages issues or merges release PRs runs with one engineer's identity and one engineer's access, so the day they change teams or leave the company it stops working, and until then every action it takes shows up in the audit log as that engineer doing it by hand.
+
+A GitHub App belongs to the organization. You register it once, install it on the repositories it should reach, and grant only the permissions it needs (read pull requests, write issues) rather than the broad `repo` scope a classic token hands out. Nobody's departure breaks it, its activity is attributed to the app instead of a colleague, and it gets its own rate limit rather than competing with everything else that person's token is used for.
+
+To set it up, create the App in your organization settings, install it, and generate a private key. In n8n, create a GitHub App credential and enter the App ID, the Installation ID, and that private key. n8n handles the rest of the exchange: it signs the JWT, trades it for an installation access token, and refreshes that token as it expires, so there's no rotation schedule to keep and no expiry date to put in a calendar.
+
+Existing credentials are untouched. Personal access token and OAuth2 stay available and stay selected on saved nodes, so this is an option to move to when it suits you rather than a migration you have to plan.
 
 ***
 
@@ -169,7 +177,15 @@ Learn more in the [Canvas Groups documentation](https://app.gitbook.com/s/rPN1zU
 
 **Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
 
-The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) now has a dedicated Pull Request resource. Create pull requests (including drafts and cross-fork PRs), update, close, and reopen them, read and add comments, fetch diffs and patches, and merge with merge, squash, or rebase. These native operations replace the custom HTTP Request setups that such tasks used to need. Errors are surfaced exactly as GitHub returns them, so failures are easy to diagnose.
+The [GitHub node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) now has a dedicated **Pull Request** resource, so the whole life of a PR is available as node operations instead of hand-rolled HTTP Request calls against the GitHub API.
+
+Create a pull request from one branch into another, including drafts and PRs that come from a fork, then update its title, body, state, or base branch as it moves along. Close and reopen it, fetch a single PR to read its current state, and create or edit comments on it. Merge with whichever method your repository is configured for: merge commit, squash, or rebase, with merge queues handled for you.
+
+Two operations return the change itself rather than its metadata. **Get Diff** and **Get Patch** fetch the raw diff and patch, which is what turns a pull request into usable workflow input: hand the diff to an AI agent for a first-pass review, scan it for changes to files that need sign-off from a particular team, or post a summary to the channel that owns the repository.
+
+All of this was possible with the HTTP Request node, but it meant knowing the REST paths, assembling the payload for each call, and interpreting GitHub's responses yourself. Something as ordinary as merging a PR took a request to check whether it was mergeable, a second to merge it, and your own code to tell the two failure modes apart. The native operations take a repository and the fields the operation needs, and surface errors exactly as GitHub returns them, so a refused merge tells you why GitHub refused it.
+
+Refer to the [GitHub node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.github#operations) for the full list of operations.
 
 ***
 
@@ -219,7 +235,13 @@ Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5
 
 **Released:** 2026-06-16 in [n8n 2.27](release-notes.md#n8n227)
 
-You can now set up OpenTelemetry tracing from **Settings > OpenTelemetry** instead of environment variables, which brings workflow execution tracing to n8n Cloud for the first time. Enter your collector endpoint, tune sampling and span options, and select **Send test trace** to confirm n8n can reach your backend before you rely on it. Changes apply without a restart, and in queue mode n8n reloads the configuration across workers and webhook processors automatically. On self-hosted instances, environment variables still work and take precedence over UI settings. You need to be an instance owner or admin to configure tracing in the UI.
+Turning on OpenTelemetry tracing used to mean setting environment variables on every n8n instance and restarting each one, which put it out of reach on n8n Cloud, where you don't control the environment. You can now configure tracing from **Settings > OpenTelemetry**, bringing workflow execution tracing to n8n Cloud for the first time.
+
+Turn on **Enable OpenTelemetry**, enter your OTLP endpoint and any headers your collector needs to authenticate, set your sampling and span options under **Tracing**, and select **Save settings**. Before you rely on it, select **Send test trace** under **Verify configuration**: n8n sends a single span and reports whether the collector accepted it, so a wrong endpoint or a missing token surfaces now rather than during your next incident. Changes apply without a restart, and in queue mode n8n reloads the configuration across your workers and webhook processors for you.
+
+Once tracing is on, every execution exports a `workflow.execute` span carrying the workflow ID, name, version, node count, execution mode, status, and error type, with a nested `node.execute` span per node recording its input and output item counts. Spans carry resource attributes identifying the instance and its role (main, worker, or webhook). n8n propagates W3C trace context in both directions: a `traceparent` header on an inbound webhook becomes the parent of the workflow span, and HTTP Request nodes inject one into outbound calls, so an execution reads as one segment of a trace that crosses your whole stack.
+
+On self-hosted instances, environment variables keep working and take precedence. Each field maps to the variable it replaces, shown in the field's tooltip, and n8n disables any field whose variable you've set, so leave a variable unset to manage that setting from the UI. You need to be an instance owner or admin to configure tracing.
 
 Learn more in the [OpenTelemetry tracing documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry).
 
@@ -237,7 +259,11 @@ Your AI agents can now search the web out of the box. Enable web search from the
 
 **Released:** 2026-06-02 in [n8n 2.25](release-notes.md#n8n2251)
 
-The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (v2.6) adds an **n8n User Auth** option that gates a form to authenticated users of your instance. Visitors who aren't signed in are redirected to the n8n login, and the trigger outputs the authenticated user's ID, email, and name alongside the submission (with an opt-out). It works with all n8n auth modes and across multi-page forms, which makes it ideal for internal request forms where you need to know reliably who submitted.
+The [Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger) (node version 2.6 and later) adds an **n8n User Auth** authentication option that limits a form to people signed in to your n8n instance. Select it from the node's **Authentication** dropdown and the form stops being public: a visitor who isn't signed in is redirected to the n8n login page, and a submission that arrives without a valid session is rejected with a 401.
+
+The point isn't only who gets in, it's that n8n knows who they are. Every submission carries the authenticated user's ID, email, and first and last name alongside the form fields, taken from their n8n account rather than from anything they typed. Nobody can file a request under a colleague's name by putting it in a text field, and you don't need to ask for an email address at all. Downstream nodes can act on the submitter directly: open the ticket under their name, send the confirmation to their real address, or check them against an approver list before the workflow does anything. If you'd rather keep those details out of your execution data, turn off **Include User in Output** and n8n passes through the form fields only.
+
+That combination makes the Form Trigger a sensible front door for internal requests: access requests, expense claims, IT tickets, anything where who asked matters and a name field is the only thing standing between you and a mistake. It works with every n8n login method, including SSO, so the form inherits whatever authentication your instance already enforces, and it applies across every page of a multi-page form rather than just the first one.
 
 ***
 
@@ -259,7 +285,7 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
-Initial coverage includes some of the most-used services in the official MCP registry — Apify, Linear, monday.com, Notion, and PostHog — and we'll expand the list to cover more services soon.
+Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
 If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
@@ -307,7 +333,7 @@ The [Jira node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes
 
 **Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
-The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to — just like a teammate.
+The [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) lets you build n8n agents that show up as members of your team inside Microsoft 365 apps. Once deployed, your agent gets its own identity in your Microsoft tenant, with an email address you can @mention in Teams, send email to, or grant SharePoint permissions to, just like a teammate.
 
 <figure><img src=".gitbook/assets/microsoft_agent_365.png" alt="A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow."><figcaption><p>A Microsoft Agent 365 Trigger node with a chat model, memory, and tools across<br>Zendesk, Salesforce, PagerDuty, Datadog, and a sub-workflow.</p></figcaption></figure>
 
@@ -323,7 +349,11 @@ For the full launch story, see the [n8n blog post](https://blog.n8n.io/deploy-n8
 
 **Released:** 2026-05-05 in [n8n 2.20](release-notes.md#n8n220)
 
-Self-hosted instances can now retain insights data for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [insights docs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
+Insights data is now retained for up to 365 days by default, with a configurable maximum of 730 days. Retention is controlled by the new `N8N_INSIGHTS_MAX_AGE_DAYS` environment variable and is no longer tied to license logic. See the [Insights documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights).
+
+{% hint style="info" %}
+**Availability:** Self-hosted only.
+{% endhint %}
 
 ***
 
@@ -534,7 +564,7 @@ Things to keep in mind:
 
 ### Custom roles: Assignments tab
 
-Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
+Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them, with no more navigating project by project.
 
 ### Project-scoped external secrets: instance admin setup
 

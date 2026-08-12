@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./).
+For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}
 
 Features and bug fixes for n8n before the release of 1.0.0.
@@ -122,7 +122,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a [crowd.dev](https://www.crowd.dev/) node and crowd.dev Trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
 
-[crowd.dev node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.crowddev).
+The crowd.dev node was later removed. See [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for details.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>

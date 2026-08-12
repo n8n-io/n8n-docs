@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](./).
+For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}
 
 New features and bug fixes for n8n.
@@ -5861,7 +5861,7 @@ This release contains new features and nodes, node enhancements, and bug fixes.
 
 This release introduces a third account type: admin. This role is available on pro and enterprise plans. Admins have similar permissions to instance owners.
 
-[Read more about user roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-account-types)
+[Read more about user roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles)
 {% endhint %}
 
 {% hint style="info" %}

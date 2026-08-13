@@ -131,8 +131,9 @@ Select **Add Option** to view more configuration options. The available options 
 * **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use `*` (default) to allow all origins.
 * **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
 * **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
-* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
+* **IP(s) Allowlist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the allowlist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
 * **No Response Body**: Enable this to prevent n8n sending a body with the response.
+* **Only Run If**: An expression evaluated against the incoming request. The workflow only runs if the expression returns `true`. Use `$json` to access the request as `{ body, headers, params, query }`. For example, `{{ $json.body.campaign_id === 'user-research-invite' }}`. Requests that don't match receive a 200 response without creating an execution. If the expression fails to evaluate, n8n logs a warning and lets the request through rather than blocking it. This runs after IP allowlist and authentication checks, and applies to both test and production webhook URLs.
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.
 * **Response Data**: Send custom data with the response.
@@ -144,7 +145,8 @@ Select **Add Option** to view more configuration options. The available options 
 | Allowed Origins (CORS) | Any                                                                                   |
 | Binary Property        | <p>Either:<br>HTTP Method > POST<br>HTTP Method > PATCH<br>HTTP Method > PUT</p>      |
 | Ignore Bots            | Any                                                                                   |
-| IP(s) Whitelist        | Any                                                                                   |
+| IP(s) Allowlist        | Any                                                                                   |
+| Only Run If           | Any                                                                                   |
 | Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
 | No Response Body       | Respond > Immediately                                                                 |
 | Raw Body               | Any                                                                                   |
@@ -180,7 +182,7 @@ The node has two [webhook URLs](#webhook-urls). The **test** URL works when you 
 
 ### How do I secure a webhook?
 
-Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL. You can also limit callers with the **IP(s) Whitelist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
+Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

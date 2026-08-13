@@ -764,6 +764,7 @@
     * [Matrix credentials](builtin/credentials/matrix.md)
     * [Mattermost credentials](builtin/credentials/mattermost.md)
     * [Mautic credentials](builtin/credentials/mautic.md)
+    * [MCP credentials](builtin/credentials/mcp.md)
     * [Medium credentials](builtin/credentials/medium.md)
     * [MessageBird credentials](builtin/credentials/messagebird.md)
     * [Metabase credentials](builtin/credentials/metabase.md)

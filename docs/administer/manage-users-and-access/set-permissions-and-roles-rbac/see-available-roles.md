@@ -14,6 +14,20 @@ layout:
 
 # RBAC role types <a href="#rbac-role-types" id="rbac-role-types"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
+The **Project Editor** role is available on:
+
+- **n8n Cloud:** Pro
+- **Self-hosted:** Enterprise
+
+The **Project Viewer** role is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+{% endhint %}
+
 Within projects, there are three user roles: Admin, Editor, and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
 
 ## Project Admin <a href="#project-admin" id="project-admin"></a>

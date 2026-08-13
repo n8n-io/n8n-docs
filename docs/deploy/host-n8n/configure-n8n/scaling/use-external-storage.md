@@ -42,7 +42,7 @@ S3 binary data storage is available on:
 
 - **Self-hosted:** Enterprise
 
-On n8n Cloud Enterprise, contact n8n to enable it.
+It isn't available on n8n Cloud.
 
 You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
 {% endhint %}
@@ -145,7 +145,7 @@ Azure Blob Storage for binary data is available on:
 
 - **Self-hosted:** Enterprise
 
-On n8n Cloud Enterprise, contact n8n to enable it.
+It isn't available on n8n Cloud.
 
 You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `azure` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
 {% endhint %}

@@ -158,10 +158,10 @@ Select **Add Option** to view more configuration options. The available options 
 {% hint style="info" %}
 **Feature availability**
 
-n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. Available from n8n 1.103.0.
+Automatic wrapping of HTML responses to webhooks in `<iframe>` tags was introduced in n8n 1.103.0.
 {% endhint %}
 
-This is a security mechanism to protect the instance users.
+Starting with n8n 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 

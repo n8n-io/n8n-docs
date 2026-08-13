@@ -22,7 +22,7 @@ layout:
 Debugging and re-running past executions is available on:
 
 - **n8n Cloud:** All plans
-- **Self-hosted:** Registered Community
+- **Self-hosted:** Registered Community, Business, Enterprise
 {% endhint %}
 
 You can load data from a previous execution into your current workflow. This is useful for debugging data from failed production executions: you can see a failed execution, make changes to your workflow to fix it, then re-run it with the previous execution data.

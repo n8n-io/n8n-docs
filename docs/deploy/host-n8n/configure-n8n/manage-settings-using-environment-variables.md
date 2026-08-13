@@ -61,7 +61,7 @@ The other environment variables for an area have no effect unless `<AREA>_MANAGE
 {% hint style="info" %}
 **Feature availability**
 
-Managing the instance owner from environment variables is available from n8n 2.17.0.
+Instance owner management through environment variables is available from n8n 2.17.0.
 {% endhint %}
 
 Pre-provision the [instance owner](user-management.md) from environment variables instead of going through the in-app setup. To change the owner email after setup, see [Change the instance owner email for self-hosted n8n](change-instance-owner-email.md).

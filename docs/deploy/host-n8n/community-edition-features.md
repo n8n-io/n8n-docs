@@ -68,7 +68,7 @@ The Community edition includes almost the complete feature set of n8n. It doesn'
 * Sharing ([workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others), [credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely)) (Only the instance owner and the user who creates them can access workflows and credentials)
 * [Version control using Git](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
 
-These features are available on self-hosted Business, Enterprise. Some are also available on n8n Cloud Starter, Pro, Enterprise. See [pricing](https://n8n.io/pricing/) for the current breakdown.
+These features are available on self-hosted Business and Enterprise plans. Some are also available on n8n Cloud. See [pricing](https://n8n.io/pricing/) for the current breakdown.
 
 ## Registered Community edition <a href="#registered-community-edition" id="registered-community-edition"></a>
 

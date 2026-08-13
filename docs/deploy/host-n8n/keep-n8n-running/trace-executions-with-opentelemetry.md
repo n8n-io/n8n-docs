@@ -180,7 +180,7 @@ Custom span attributes are available on:
 
 - **Self-hosted:** Enterprise
 
-It isn't available on n8n Cloud.
+They aren't available on n8n Cloud.
 
 Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 {% endhint %}
@@ -374,7 +374,7 @@ n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVE
 
 Check that:
 
-- You have a self-hosted Enterprise license.
+- You have an Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
 

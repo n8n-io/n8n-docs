@@ -62,8 +62,10 @@ Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-
 {% hint style="info" %}
 **Feature availability**
 
-The Stripe Trigger node can verify that incoming webhook requests genuinely come from Stripe. Available from n8n 2.25.7 and n8n 2.26.2.
+Verification of incoming requests is available from n8n 2.25.7 and n8n 2.26.2.
 {% endhint %}
+
+The Stripe Trigger node can verify that incoming webhook requests genuinely come from Stripe.
 
 n8n strongly recommends setting a **Signature Secret** so others can't send forged events to your workflow, even if they know your webhook URL.
 

@@ -260,7 +260,7 @@ You can share a vault with a project so that only that project's credentials can
 {% hint style="info" %}
 **Feature availability**
 
-Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
 From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
@@ -302,7 +302,7 @@ Both permissions are independent. For example, a role may need only the **Secret
 {% hint style="info" %}
 **Feature availability**
 
-From n8n 2.13.0, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
+Using external secrets in your own credentials, as a project editor or admin with [secrets access enabled](#access-for-project-roles), is available from n8n 2.13.0. The restriction below applies only to older versions or when the opt-in toggle is off.
 {% endhint %}
 
 In versions before n8n 2.13.0 (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.

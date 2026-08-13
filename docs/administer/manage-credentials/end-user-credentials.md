@@ -52,6 +52,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 
 ## Requirements and limitations
 
+* **Enterprise only:** End-user credentials require an Enterprise plan.
 * **Controlled creation:** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials. Grant this permission to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.

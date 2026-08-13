@@ -1,8 +1,12 @@
 ---
 description: Let each user connect their own account to a credential, so a workflow runs with the credentials of the person who triggers it.
+status: preview
 layout:
   description:
     visible: false
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # End-user credentials
@@ -21,9 +25,9 @@ End-user credentials are available on:
 {% endhint %}
 
 {% hint style="info" %}
-**This feature is in preview**
+**Feature availability**
 
-Preview features may change in future releases. Don't rely on them in production workflows.
+End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}
 
 ## What are end-user credentials

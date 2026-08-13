@@ -1,19 +1,23 @@
 ---
 title: Durable scheduler
 description: How the durable scheduler runs time-based workflows from a database-backed queue for your self-hosted n8n instance.
+status: preview
 layout:
   description:
     visible: false
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Durable scheduler
 
 The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. This page explains what the durable scheduler changes, how to turn it on, and how it works. For the environment variables that configure it, see [Scheduler environment variables](basic-configuration/use-environment-variables/scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Feature availability**
 
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+The durable scheduler is in Preview and behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}
 
 {% hint style="info" %}

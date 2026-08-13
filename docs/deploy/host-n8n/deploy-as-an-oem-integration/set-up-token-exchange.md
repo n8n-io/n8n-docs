@@ -2,9 +2,13 @@
 title: Token exchange for embedding partners
 description: Use OAuth 2.0 Token Exchange to authenticate users and act on their behalf inside an embedded n8n instance, through iframe SSO and delegated API access.
 contentType: howto
+status: preview
 layout:
   description:
     visible: false
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Token exchange for embedding partners
@@ -22,10 +26,10 @@ Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true
 Intended for embedding partners who run an external identity provider (IdP) or backend that mints signed JWTs.
 {% endhint %}
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Feature availability**
 
-Token exchange is a preview feature behind an environment flag. The environment variables, endpoint paths, and JWT claim contract can change before the feature reaches general availability. Pin your n8n version and retest your integration after each upgrade.
+Token exchange is in Preview and behind an environment flag. The environment variables, endpoint paths, and JWT claim contract can change before the feature reaches general availability. Pin your n8n version and retest your integration after each upgrade.
 {% endhint %}
 
 OAuth 2.0 Token Exchange ([RFC 8693](https://datatracker.ietf.org/doc/html/rfc8693)) lets embedding partners authenticate users and act on their behalf within an embedded n8n instance. Token exchange supports two use cases:
@@ -40,7 +44,7 @@ Both flows start the same way. Your backend mints a short-lived JWT signed with 
 You need:
 
 * An Enterprise license with the token exchange feature enabled.
-* The preview feature flag set on your instance: `N8N_ENV_FEAT_TOKEN_EXCHANGE=true`.
+* The Preview feature flag set on your instance: `N8N_ENV_FEAT_TOKEN_EXCHANGE=true`.
 * An RSA or EC key pair, or a JWKS endpoint that your IdP already publishes. See [Generate a key pair](#generate-a-key-pair).
 * An n8n instance served over HTTPS. Browsers reject the `SameSite=None; Secure` session cookie over plain HTTP, so the iframe SSO flow silently fails without it. If you run n8n behind a TLS-terminating proxy, make sure the proxy sets the `X-Forwarded-Proto` header.
 
@@ -79,7 +83,7 @@ If your IdP already publishes a JWKS endpoint, as most OAuth 2.0 and OIDC provid
 ### Required for all setups
 
 ```bash
-# Enable the preview module
+# Enable the Preview module
 N8N_ENV_FEAT_TOKEN_EXCHANGE=true
 
 # Register your public key(s) - see Configure trusted keys
@@ -528,7 +532,7 @@ A `200` response with an `access_token` confirms your keys, claims, and configur
 
 | Symptom | Likely cause |
 | :------ | :----------- |
-| `404` on both endpoints | The preview flag `N8N_ENV_FEAT_TOKEN_EXCHANGE` isn't `true`, or your license doesn't include the token exchange feature. n8n doesn't load the module at all. |
+| `404` on both endpoints | The Preview flag `N8N_ENV_FEAT_TOKEN_EXCHANGE` isn't `true`, or your license doesn't include the token exchange feature. n8n doesn't load the module at all. |
 | `501 - Token exchange is not enabled on this instance` | `N8N_TOKEN_EXCHANGE_ENABLED` isn't `true`. |
 | `501 - Embed login is not enabled on this instance` | `N8N_EMBED_LOGIN_ENABLED` isn't `true`. |
 | `400 - unsupported_grant_type` | The `grant_type` field is missing or not exactly `urn:ietf:params:oauth:grant-type:token-exchange`. |

@@ -1,6 +1,9 @@
 ---
 title: Set up and use n8n MCP server
-status: beta
+status: preview
+tags:
+  - tag: preview
+    primary: true
 nodeTitle: Connect to n8n MCP server
 originalFilePath: advanced-ai/mcp/accessing-n8n-mcp-server.md
 originalUrl: https://docs.n8n.io/advanced-ai/mcp/accessing-n8n-mcp-server
@@ -36,6 +39,12 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 * Interact with workflows marked as available in MCP
 * Trigger and test exposed workflows
 * Create and edit workflows and data tables
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n's instance-level MCP server is in Preview and may change in future releases. Avoid relying on it in production workflows.
+{% endhint %}
 
 ## Difference between instance-level MCP access and MCP Server Trigger node <a href="#difference-between-instance-level-mcp-access-and-mcp-server-trigger-node" id="difference-between-instance-level-mcp-access-and-mcp-server-trigger-node"></a>
 
@@ -234,7 +243,7 @@ Agents are available from n8n 2.34.0 and are a separate feature from workflows. 
 {% hint style="info" %}
 **Feature availability**
 
-Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 If your instance has the agents feature, the **Access** section also shows **Agents exposed**. As with workflows, MCP clients can't read or manage an agent unless you explicitly enable MCP access for it.

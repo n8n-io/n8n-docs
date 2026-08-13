@@ -56,7 +56,7 @@ different thing, not a second visual tag.
   `status:`; `deprecated` doesn't (see Feature availability, in the style guide).
 - The current set of visual tags allowed in docs is: **Deprecated** (a whole
   page about a deprecated feature), **Preview** (a whole page about a feature
-  in preview), and **Archived** (a page no longer updated). Don't create or
+  in Preview), and **Archived** (a page no longer updated). Don't create or
   use any visual tag other than these three.
 
 ## Page navigation (SUMMARY.md)
@@ -509,8 +509,9 @@ automatically updated from the codebase, so don't edit it by hand.
 
 ### Preview status
 
-A preview feature works but isn't complete or stable, and may change. "Preview"
-is a feature's maturity label. Use it, not "beta", to describe a feature's status.
+A feature in Preview works but isn't complete or stable, and may change. "Preview"
+is a feature's maturity label, capitalized as a formal release stage name (like
+"Beta" or "GA"). Use it, not "beta", to describe a feature's status.
 
 **Page or section:** same `**Feature availability**` title as an availability
 hint, above. Name the node or feature in the sentence below it, not in the
@@ -521,12 +522,12 @@ sentence must carry the naming:
 {% hint style="info" %}
 **Feature availability**
 
-The Data table node is in preview and may change in future releases. Avoid
+The Data table node is in Preview and may change in future releases. Avoid
 relying on it in production workflows.
 {% endhint %}
 ```
 
-If the whole page is about the preview feature, also set `status: preview` and
+If the whole page is about the feature in Preview, also set `status: preview` and
 add a primary `preview` tag (see [Tags](#tags) for how tags work):
 
 ```yaml
@@ -541,13 +542,13 @@ tags:
 **Inline or passing mention:**
 
 ```markdown
-The **Streaming response** option is in preview and may change in future releases.
+The **Streaming response** option is in Preview and may change in future releases.
 ```
 
-- Tie it to a version when it helps: "In preview from n8n 2.20.0".
+- Tie it to a version when it helps: "In Preview from n8n 2.20.0".
 - Keep it in a separate sentence (or a separate hint) from any plan/version
-  availability note — don't fold preview wording into the availability sentence.
-- If an inline preview note needs more than one sentence, promote it to a
+  availability note — don't fold Preview wording into the availability sentence.
+- If an inline Preview note needs more than one sentence, promote it to a
   page- or section-level hint instead.
 
 ---

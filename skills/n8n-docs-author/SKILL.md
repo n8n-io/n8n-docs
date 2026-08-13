@@ -178,9 +178,11 @@ See [reference.md](reference.md) for full examples and rules.
 - **Preview:** an `info` hint, same `**Feature availability**` title as an
   availability hint. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. Use "preview", not "beta", for a feature's status. Whole page →
-  also set `status: preview` plus a primary `preview` tag (see Frontmatter's
-  `tags` field, below).
+  production. Use "Preview", not "beta" — "Preview" is a formal release stage
+  name and is always capitalized in prose (like "Beta" or "GA"), unlike the
+  lowercase `preview` value used in the `status:` and `tag:` frontmatter
+  fields. Whole page → also set `status: preview` plus a primary `preview` tag
+  (see Frontmatter's `tags` field, below).
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

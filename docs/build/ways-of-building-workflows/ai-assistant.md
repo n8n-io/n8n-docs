@@ -3,6 +3,7 @@ title: Use AI Assistant
 description: >-
   Use the AI Assistant to create, edit, test, and troubleshoot n8n workflows from
   a chat.
+status: preview
 tags:
   - tag: preview
     primary: true
@@ -162,6 +163,6 @@ To reduce unnecessary usage:
 - Review the AI Assistant's plan before asking it to build.
 - Avoid asking it to regenerate the same workflow without adding new guidance.
 
-To get more credits during Preview, upgrade your plan. More ways to top up are coming.
+To get more credits while the AI Assistant is in Preview, upgrade your plan. More ways to top up are coming.
 
 For current plan details, see [n8n Plans and Pricing](https://n8n.io/pricing/).

@@ -1,5 +1,6 @@
 ---
 description: Set up the AI Assistant on self-hosted n8n using environment variables.
+status: preview
 tags:
   - tag: preview
     primary: true
@@ -26,13 +27,15 @@ layout:
 # Set up AI Assistant
 
 {% hint style="info" %}
-AI Assistant is a preview feature.
+**Feature availability**
+
+AI Assistant is in Preview and may change in future releases.
 {% endhint %}
 
 {% hint style="warning" %}
 AI Assistant isn't yet available for self-hosted Enterprise. Support for self-hosted Enterprise is coming soon.
 
-If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
+If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about Preview access.
 {% endhint %}
 
 ## What AI Assistant needs
@@ -278,7 +281,7 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ## Enable agents
 
-Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n 2.32.3 (Beta) or later.
+Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview from n8n 2.32.3.
 
 {% hint style="warning" %}
 Agents aren't ready for self-hosted Enterprise yet.
@@ -308,7 +311,7 @@ WEBHOOK_URL=https://your-public-url
 | `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 {% hint style="info" %}
-The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
+The knowledge base is a Preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
 {% endhint %}
 
 For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).

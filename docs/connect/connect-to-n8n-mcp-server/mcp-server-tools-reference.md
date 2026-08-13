@@ -971,10 +971,10 @@ Archive a workflow in n8n by its ID.
 Agent management tools are available from n8n 2.34.0, when the workflow builder and the agents module are both enabled on the instance. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details.
 {% endhint %}
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
-Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 These tools create, configure, publish, and manage n8n agents: persisted, first-class conversational assistants with their own model, tools, skills, tasks, and channel integrations. An agent is a separate resource from a workflow, even though a workflow can contain an AI Agent node.

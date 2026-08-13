@@ -24,8 +24,8 @@ End-user credentials are available on:
 - **Self-hosted:** Enterprise
 {% endhint %}
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}

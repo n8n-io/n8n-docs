@@ -13,10 +13,10 @@ tags:
 
 # Export a package
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
-n8n packages are in preview. The export options may change in future releases.
+n8n packages are in Preview. The export options may change in future releases.
 {% endhint %}
 
 Export writes an [n8n package](README.md), a [.n8np archive](package-format.md), containing what you asked for, plus references to everything those workflows need on the target instance. Export doesn't modify the source instance.

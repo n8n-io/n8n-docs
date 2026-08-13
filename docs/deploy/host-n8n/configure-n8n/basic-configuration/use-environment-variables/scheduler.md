@@ -24,8 +24,8 @@ layout:
 
 These environment variables configure the durable scheduler, which runs time-based workflows from a database-backed queue instead of from each instance's memory. For what the durable scheduler changes, how to turn it on, and how it works, see [Durable scheduler](../../durable-scheduler.md).
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 The durable scheduler is in Preview and behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}

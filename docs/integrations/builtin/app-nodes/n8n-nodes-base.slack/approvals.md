@@ -2,21 +2,17 @@
 description: >-
   Learn how approvers can approve or decline n8n workflow actions directly
   inside Slack with the Slack node's Send and Wait for Response operation.
-status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Approvals in Slack
 
 {% hint style="info" %}
-**Feature availability**
+**This feature is in preview**
 
-Approvals in Slack is in Preview and may change in future releases. Avoid relying on it in production workflows. n8n is rolling this feature out gradually, so it may not be available on your instance yet.
+Preview features may change in future releases. Avoid relying on them in production workflows. n8n is rolling this feature out gradually, so it may not be available on your instance yet.
 {% endhint %}
 
 With the **Message** > **Send and Wait for Response** operation, approvers can approve or decline directly inside Slack. No browser page opens: the workflow resumes as soon as someone responds, and the output records who responded.

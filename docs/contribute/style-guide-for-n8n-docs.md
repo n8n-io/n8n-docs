@@ -275,7 +275,7 @@ The tag needs label "Deprecated" and color red defined in the space's `.gitbook/
 
 Rules:
 
-* **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
+* **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for a plain plan/version availability fact. A hint combining deprecation with a plan/version fact uses `warning`. (Preview status is a separate case: see [Preview status](#preview-status), which also uses `warning`, but never combines with a plan/version hint.)
 * **Name the subject in the body.** The "Feature availability" hint title doesn't say what's available, so name the node, setting, or feature in the following sentence. Don't rely on a heading outside the hint. Keep "available from n8n X.Y.Z" as an unbroken substring.
 * **Platform bullets:** lead with "<Feature> <is/are> available on:". Name both platforms, never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
 * **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
@@ -356,11 +356,11 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 
 A feature in Preview is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label, capitalized as a formal release stage name, like "Beta" or "GA" elsewhere in the industry. Use it, not "beta", to describe a feature's status.
 
-**Page or section:** use the same `**Feature availability**` title as an availability hint. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
+**Page or section:** use `warning` style with the title `**Feature availability: Preview**`. Plan/version availability hints and deprecation hints both use the plain `**Feature availability**` title, so the `: Preview` qualifier keeps a Preview hint from rendering identically to a deprecation hint, which also uses `warning`. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
 
 ```
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 The Data table node is in Preview and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
@@ -390,7 +390,7 @@ The Data table node is in Preview and may change in future releases.
 ```
 
 * **Tie it to a version when it helps**: "In Preview from n8n 2.20.0".
-* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a Preview hint alongside an availability hint, or a Preview sentence alongside an availability sentence, rather than folding the Preview wording into the other one.
+* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a `**Feature availability: Preview**` hint alongside a plain `**Feature availability**` hint, or a Preview sentence alongside an availability sentence, rather than folding the Preview wording into the other one.
 * **If an inline Preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
 
 ## Vale linting

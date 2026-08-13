@@ -26,8 +26,8 @@ Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true
 Intended for embedding partners who run an external identity provider (IdP) or backend that mints signed JWTs.
 {% endhint %}
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 Token exchange is in Preview and behind an environment flag. The environment variables, endpoint paths, and JWT claim contract can change before the feature reaches general availability. Pin your n8n version and retest your integration after each upgrade.
 {% endhint %}

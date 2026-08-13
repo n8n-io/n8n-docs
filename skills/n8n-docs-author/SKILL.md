@@ -175,14 +175,19 @@ See [reference.md](reference.md) for full examples and rules.
   both platforms. Add an absence line ("It isn't available on n8n Cloud.") or
   caveat line if it's on one only. Skip the bullets entirely for a version-only,
   deprecation, or removal hint.
-- **Preview:** an `info` hint, same `**Feature availability**` title as an
-  availability hint. Name the feature or node in the sentence below it, not
-  the title (never "this feature"), saying it may change and isn't for
-  production. Use "Preview", not "beta" — "Preview" is a formal release stage
-  name and is always capitalized in prose (like "Beta" or "GA"), unlike the
-  lowercase `preview` value used in the `status:` and `tag:` frontmatter
-  fields. Whole page → also set `status: preview` plus a primary `preview` tag
-  (see Frontmatter's `tags` field, below).
+- **Preview:** a `warning` hint (not `info`), titled
+  `**Feature availability: Preview**` — the `: Preview` qualifier keeps it
+  from rendering identically to a plain availability hint or a deprecation
+  hint, both of which use the bare `**Feature availability**` title (and
+  deprecation also uses `warning`). Name the feature or node in the sentence
+  below it, not the title (never "this feature"), saying it may change and
+  isn't for production. Use "Preview", not "beta" — "Preview" is a formal
+  release stage name and is always capitalized in prose (like "Beta" or "GA"),
+  unlike the lowercase `preview` value used in the `status:` and `tag:`
+  frontmatter fields. Never combine a Preview hint with a plan/version
+  availability hint — stack them separately even when both apply to the same
+  feature. Whole page → also set `status: preview` plus a primary `preview`
+  tag (see Frontmatter's `tags` field, below).
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

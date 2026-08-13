@@ -17,8 +17,12 @@ tags:
 **Feature availability**
 
 n8n packages are available from n8n 2.27.0, and n8n has added options in most releases since, so check your version if an option here isn't recognized.
+{% endhint %}
 
-n8n packages are in preview. The package format and the API may change in future releases, so avoid relying on them for critical automation without a plan to update.
+{% hint style="warning" %}
+**Feature availability: Preview**
+
+n8n packages are in Preview. The package format and the API may change in future releases, so avoid relying on them for critical automation without a plan to update.
 {% endhint %}
 
 An n8n package is a single file that holds a slice of your n8n instance: some workflows, plus the structure and references those workflows need to run. Export a package from one instance, move the file, and import it into another. Think of it as an `npm` package for part of your n8n instance.

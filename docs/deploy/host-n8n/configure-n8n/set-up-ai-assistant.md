@@ -26,8 +26,8 @@ layout:
 
 # Set up AI Assistant
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 AI Assistant is in Preview and may change in future releases.
 {% endhint %}

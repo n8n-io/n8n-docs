@@ -176,10 +176,10 @@ n8n-cli workflow transfer <id> --project=<projectId>
 
 ### Export and import packages <a href="#export-and-import-packages" id="export-and-import-packages"></a>
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
-The `package` command is in preview and may change in future releases.
+The `package` command is in Preview and may change in future releases.
 {% endhint %}
 
 ```bash

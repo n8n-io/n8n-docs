@@ -28,8 +28,8 @@ tags:
 * Requires an identity provider (IdP) that can encrypt tokens as JWE.
 {% endhint %}
 
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 JWE token decryption is in Preview and gated by an environment flag. Field names, the environment variable, the JWKS endpoint path, and the supported algorithms can change before the feature reaches general availability. Pin your n8n version and retest your OAuth 2.0 credentials after each upgrade.
 {% endhint %}

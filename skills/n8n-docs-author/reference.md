@@ -513,14 +513,18 @@ A feature in Preview works but isn't complete or stable, and may change. "Previe
 is a feature's maturity label, capitalized as a formal release stage name (like
 "Beta" or "GA"). Use it, not "beta", to describe a feature's status.
 
-**Page or section:** same `**Feature availability**` title as an availability
-hint, above. Name the node or feature in the sentence below it, not in the
-title. Hints get skimmed independently of the surrounding heading, so the
-sentence must carry the naming:
+**Page or section:** `warning` style (not `info`), titled
+`**Feature availability: Preview**`. Plan/version availability hints and
+deprecation hints both use the plain `**Feature availability**` title and also
+use `warning` for deprecation, so the `: Preview` qualifier is what keeps a
+Preview hint from rendering identically to a deprecation hint. Name the node
+or feature in the sentence below it, not in the title. Hints get skimmed
+independently of the surrounding heading, so the sentence must carry the
+naming:
 
 ```markdown
-{% hint style="info" %}
-**Feature availability**
+{% hint style="warning" %}
+**Feature availability: Preview**
 
 The Data table node is in Preview and may change in future releases. Avoid
 relying on it in production workflows.
@@ -547,7 +551,9 @@ The **Streaming response** option is in Preview and may change in future release
 
 - Tie it to a version when it helps: "In Preview from n8n 2.20.0".
 - Keep it in a separate sentence (or a separate hint) from any plan/version
-  availability note — don't fold Preview wording into the availability sentence.
+  availability note — don't fold Preview wording into the availability
+  sentence. If both apply, stack a `**Feature availability: Preview**` hint
+  alongside the plain `**Feature availability**` hint.
 - If an inline Preview note needs more than one sentence, promote it to a
   page- or section-level hint instead.
 

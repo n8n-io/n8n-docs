@@ -35,6 +35,8 @@ You must connect at least one tool [sub-node](../../sub-nodes/README.md) to an A
 **Agent type**
 
 Prior to version 1.82.0, the AI Agent had a setting for working as different agent types. This has now been removed and all AI Agent nodes work as a `Tools Agent` which was the recommended and most frequently used setting. If you're working with older versions of the AI Agent in workflows or templates, as long as they were set to 'Tools Agent', they should continue to behave as intended with the updated node.
+
+The version of this node (v1) that has this agent type setting will be removed in version 3 of n8n. If you are using an older version of the AI Agent node, we recommend updating to the latest version. If you need to use an SQL Agent for example, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
 {% endhint %}
 
 

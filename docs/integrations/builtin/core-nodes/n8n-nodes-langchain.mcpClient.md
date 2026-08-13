@@ -38,7 +38,7 @@ Configure the node with the following parameters.
 
 * **Server Transport**: The transport protocol used by the MCP Server endpoint you want to connect to.
 * **MCP Endpoint URL**: The URL of the external MCP Server. For example, `https://mcp.notion.com/mcp`.
-* **Authentication**: The authentication method for authentication to your MCP server. The MCP Client node supports [bearer](../credentials/httprequest.md#using-bearer-auth), generic [header](../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../credentials/httprequest.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
+* **Authentication**: The authentication method for authentication to your MCP server. The MCP Client node supports [bearer](../credentials/httprequest.md#using-bearer-auth), generic [header](../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../credentials/mcp.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
 	* **Multiple Headers Auth**: Use this when your MCP server requires more than one header, for example an API key and a username. Add each header as a **Name** and **Value** pair in the credential. You can add as many headers as you need.
 * **Tool**: Select the tool to use in the node. The list of tools is automatically fetched from the external MCP server.
 * **Input Mode**: 

@@ -33,7 +33,3 @@ This credential extends n8n's generic [OAuth2 API credential](./httprequest.md#u
 
 If you see errors related to a mismatched or invalid redirect URI during the OAuth2 flow, double-check that your MCP server's Dynamic Client Registration endpoint is configured to accept n8n's OAuth Redirect URL exactly as shown in the credential.
 {% endhint %}
-
-## Related resources
-
-Refer to the [MCP specification](https://modelcontextprotocol.io/specification/) and its [authorization guide](https://modelcontextprotocol.io/specification/basic/authorization) for more information about how MCP servers implement OAuth2 and Dynamic Client Registration.

@@ -177,6 +177,22 @@ def main():
     check("all-pending still yields a building note",
           "still building the preview for `spaceb`" in out_allpend)
 
+    # Regression (DOC-2188): a changed .md file OUTSIDE docs/ (e.g. a skill file
+    # or top-level README) has no space. render() must skip it silently, never
+    # feeding a None space into in_summary() (which would raise TypeError).
+    check("space_of outside docs/ is None", gb.space_of("skills/n8n-docs-author/SKILL.md") is None)
+    out_nondocs = gb.render(
+        [{"status": "modified", "filename": "skills/n8n-docs-author/SKILL.md"},
+         {"status": "modified", "filename": "README.md"},
+         {"status": "modified", "filename": "docs/spacea/page-one.md"}],
+        spaces, gb.load_reusable_index())
+    check("non-docs .md doesn't crash and isn't reported",
+          "SKILL.md" not in out_nondocs
+          and "README.md" not in out_nondocs
+          and "aren't in the nav" not in out_nondocs)
+    check("a real docs page alongside it still renders",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_nondocs)
+
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}")

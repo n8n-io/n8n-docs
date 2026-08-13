@@ -97,6 +97,10 @@ The following events are available. You can choose which events to stream in **S
 	* Package installed
 	* Package updated
 	* Package deleted
+	* n8n package import success
+	* n8n package export success
+	* n8n package export failed
+	* n8n package import failed
 	* Workflow created
 	* Workflow deleted
 	* Workflow updated
@@ -164,6 +168,8 @@ The following events are available. You can choose which events to stream in **S
 	* Job failed
 	* Job stalled
 
+Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+
 ## Destinations <a href="#destinations" id="destinations"></a>
 
 n8n supports three destination types:
@@ -174,7 +180,7 @@ n8n supports three destination types:
 
 ## Configure using environment variables <a href="#configure-using-environment-variables" id="configure-using-environment-variables"></a>
 
-If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. Available from n8n v2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
+If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. Available from n8n 2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
 

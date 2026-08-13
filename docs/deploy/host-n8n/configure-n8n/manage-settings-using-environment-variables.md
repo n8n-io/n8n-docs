@@ -59,7 +59,7 @@ The other environment variables for an area have no effect unless `<AREA>_MANAGE
 ## Instance owner <a href="#instance-owner" id="instance-owner"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.17.0**
+**Available from n8n 2.17.0**
 
 
 {% endhint %}
@@ -77,7 +77,7 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 ## SSO <a href="#sso" id="sso"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.18.0**
+**Available from n8n 2.18.0**
 
 
 {% endhint %}
@@ -111,7 +111,7 @@ Set either `N8N_SSO_SAML_METADATA` (inline XML) or `N8N_SSO_SAML_METADATA_URL` (
 ## Security policy <a href="#security-policy" id="security-policy"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.18.0**
+**Available from n8n 2.18.0**
 
 
 {% endhint %}
@@ -123,7 +123,7 @@ Manage the instance security policy from environment variables, including MFA en
 ## Log streaming <a href="#log-streaming" id="log-streaming"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.19.0**
+**Available from n8n 2.19.0**
 
 
 {% endhint %}
@@ -135,7 +135,7 @@ Manage [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-an
 ## MCP <a href="#mcp" id="mcp"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.20.0**
+**Available from n8n 2.20.0**
 
 
 {% endhint %}
@@ -147,7 +147,7 @@ Manage [instance-level MCP access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvc
 ## Community packages <a href="#community-packages" id="community-packages"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Available from n8n 2.21.0**
 
 
 {% endhint %}

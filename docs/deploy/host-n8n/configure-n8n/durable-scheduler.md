@@ -44,7 +44,7 @@ Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
 {% endhint %}
 
-Poll triggers stay on the in-memory scheduler unless you also opt them in. See [Poll triggers](#poll-triggers).
+Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows.
 
 To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
 
@@ -76,12 +76,12 @@ What happens to a missed run, and to any backlog behind it, depends on the trigg
 - **Run the Most Recent Missed Execution.** The backlog collapses into a single catch-up run for the node, at the most recent missed time across all its trigger rules, then the schedule resumes.
 - **Run the Most Recent Missed Execution Per Rule.** Like the previous policy, but each trigger rule catches up on its own, so a node with several trigger rules can fire one catch-up run per rule.
 
-From n8n 2.36, Schedule Trigger nodes choose the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs: a poll fetches everything new since it last ran, so replaying missed polls would repeat the same fetch.
+From n8n 2.36, Schedule Trigger nodes choose the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
 
 Whatever the policy, the schedule's clock advances past the backlog: no policy replays it run by run. A one-off schedule has no next occurrence to resume from, so a catch-up policy still runs it late, while skipping discards it for good.
 
 {% hint style="info" %}
-`N8N_SCHEDULER_MISFIRE_GRACE` should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`: a run has to survive until the next check for due runs to get a chance to start. n8n warns at startup if it doesn't.
+To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE` above both `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW` (n8n warns at startup if it isn't). Above that floor, set it to the longest delay a run should tolerate before it counts as missed, such as the time a restart or a leadership change takes on your instance. With the defaults, that's anything above 60 seconds.
 {% endhint %}
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
@@ -101,16 +101,3 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 {% hint style="info" %}
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
 {% endhint %}
-
-## Poll triggers <a href="#poll-triggers" id="poll-triggers"></a>
-
-By default, the durable scheduler only takes over Schedule Trigger nodes. From n8n 2.33, you can also route polling triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) through it by setting `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` to `true` alongside `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`.
-
-{% hint style="warning" %}
-Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows. This doesn't affect Schedule Trigger support, which is stable.
-{% endhint %}
-
-When on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Two behaviors are specific to poll triggers:
-
-- **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
-- **A poll can occasionally run twice.** For poll triggers the scheduler guarantees that each poll runs at least once, but not that it runs only once. Two polls at the same instant can legitimately return different data anyway, so a repeated poll is tolerable.

@@ -32,11 +32,11 @@ The durable scheduler is available from n8n 2.36. Earlier versions back to n8n 2
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether to turn on the durable scheduler. When on, the scheduler stores scheduled runs in the database before they execute, so a restart doesn't drop them and, across multiple instances, each run executes once. Requires `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to take over Schedule Trigger nodes. |
-| `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` | Boolean | `false` | Whether the durable scheduler also takes over polling triggers (trigger nodes with a Poll Times parameter). Requires `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. See [Poll triggers](../../durable-scheduler.md#poll-triggers). Available from n8n 2.33.0. |
+| `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` | Boolean | `false` | Whether the durable scheduler also takes over polling triggers (trigger nodes with a Poll Times parameter). Requires `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. Available from n8n 2.33.0. |
 | `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` | Boolean | `false` | Whether Schedule Trigger nodes show a **Skip Durable Scheduler** setting that keeps an individual trigger on the in-memory scheduler while the durable scheduler is on. A temporary escape hatch for migrating gradually; a future release will remove it. |
 
 {% hint style="warning" %}
-Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows. This doesn't affect Schedule Trigger support, which is stable.
+Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics with [`N8N_METRICS_INCLUDE_SCHEDULER_METRICS`](endpoints.md) to watch scheduling lag, retries, and dead-letters. This doesn't affect Schedule Trigger support, which is stable.
 {% endhint %}
 
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>

@@ -16,8 +16,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Business and Enterprise, and Cloud Enterprise plans.
-* You need access to the n8n instance owner account.
+LDAP is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+You need access to the n8n instance owner account.
 {% endhint %}
 
 This page tells you how to enable LDAP in n8n. It assumes you're familiar with LDAP, and have an existing LDAP server set up.

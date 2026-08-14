@@ -12,7 +12,12 @@ End-user credentials let workflows run with the credentials of the person who tr
 With fixed credentials, everyone who runs a workflow uses the same account, which can expose one person's access and data to everyone else. End-user credentials give each user their own connection and isolate their execution data.
 
 {% hint style="info" %}
-**Available on Enterprise plans**
+**Feature availability**
+
+End-user credentials are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 {% hint style="info" %}

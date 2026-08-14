@@ -20,7 +20,7 @@ Custom instance roles are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-**Available from:** n8n 2.30.0 (released July 7, 2026)
+Available from n8n 2.30.0 (released July 7, 2026)
 {% endhint %}
 
 {% hint style="info" %}

@@ -148,7 +148,7 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 ### Azure Key Vault <a href="#azure-key-vault" id="azure-key-vault"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.35.0**
+**Feature availability**
 
 The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
 {% endhint %}

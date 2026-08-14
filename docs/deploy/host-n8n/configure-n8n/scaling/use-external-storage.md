@@ -26,7 +26,8 @@ External storage is available on:
 
 - **Self-hosted:** Enterprise
 
-On n8n Cloud Enterprise, contact n8n to enable it.
+It isn't available on n8n Cloud.
+
 {% endhint %}
 
 n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.

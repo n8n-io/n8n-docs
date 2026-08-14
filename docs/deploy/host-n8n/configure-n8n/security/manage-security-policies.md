@@ -122,7 +122,7 @@ Redaction enforcement requires an Enterprise license with the data redaction fea
 
 ## Configure security policy with environment variables <a href="#configure-security-policy-with-environment-variables" id="configure-security-policy-with-environment-variables"></a>
 
-You can also manage security policy settings from environment variables instead of through the UI, available from n8n 2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+You can also manage security policy settings from environment variables instead of through the UI. This option is available from n8n 2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
 When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
 

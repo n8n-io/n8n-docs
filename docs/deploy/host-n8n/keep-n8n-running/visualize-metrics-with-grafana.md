@@ -62,7 +62,12 @@ Grafana confirms the connection with a success message.
 
 ## Webhook observability <a href="#webhook-observability" id="webhook-observability"></a>
 
+
+{% hint style="info" %}
+**Feature availability**
+
 Webhook observability is available from n8n 2.28.0.
+{% endhint %}
 
 n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook call. Enable these environment variables to collect it:
 

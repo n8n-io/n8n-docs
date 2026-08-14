@@ -31,7 +31,7 @@ Refer to [Asana credentials](../credentials/asana.md) for guidance on setting up
 {% hint style="info" %}
 **Feature availability**
 
-Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. The Asana node requires n8n 1.22.2 to support these operations.
+Due to changes in Asana's API, some operations in this node stopped working on January 17, 2023. The Asana node requires n8n 1.22.2 to support these operations.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}

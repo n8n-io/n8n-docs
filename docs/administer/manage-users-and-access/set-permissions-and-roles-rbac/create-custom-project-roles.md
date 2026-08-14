@@ -22,7 +22,7 @@ Custom project roles are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Custom project roles are available from n8n 1.122.0.
+Available from n8n 1.122.0.
 {% endhint %}
 
 {% hint style="info" %}

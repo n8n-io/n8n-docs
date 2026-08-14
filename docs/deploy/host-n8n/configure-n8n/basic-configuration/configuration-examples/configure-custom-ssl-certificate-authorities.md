@@ -22,7 +22,7 @@ You can add your own certificate authority (CA) or self-signed certificate to n8
 {% hint style="info" %}
 **Feature availability**
 
-Using your own certificate authority or self-signed certificate is available from n8n 1.42.0.
+You can use your own certificate authority or self-signed certificate starting from n8n 1.42.0.
 {% endhint %}
 
 To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container. 

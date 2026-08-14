@@ -23,7 +23,7 @@ Use the Merge node to combine data from multiple streams, once data of all strea
 {% hint style="info" %}
 **Feature availability**
 
-The Merge node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. Documentation for older versions of n8n is available [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md).
+The Merge node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. Documentation for older versions of n8n is available in the [pre-overhaul Merge node docs](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md).
 
 Using the Merge node with more than two inputs, and the **Mode > SQL Query** feature, are both available from n8n 1.49.0. Older versions only support up to two inputs and don't include **Mode > SQL Query**. If you're running an older version and want to combine multiple inputs, use the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 {% endhint %}

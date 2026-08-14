@@ -81,8 +81,9 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 
 Single sign-on is available on:
 
-- **n8n Cloud:** Enterprise
 - **Self-hosted:** Business, Enterprise
+
+n8n Cloud Enterprise also supports single sign-on, but not through the environment variables on this page.
 
 Managing SSO from environment variables is available from n8n 2.18.0.
 {% endhint %}

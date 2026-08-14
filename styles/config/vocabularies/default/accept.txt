@@ -42,8 +42,8 @@ buildpack
 [Bb]urstable
 Caddy
 Calendly
-camelCase
 [Cc]allout
+camelCase
 Capterra
 cartesian
 Chargebee
@@ -115,9 +115,9 @@ Groq
 GSuite
 Gumroad
 [Gg]zip(ped)?
+[Hh]ardlinks?
 healthz
 Hetzner
-[Hh]ardlinks?
 Homeserver
 [Hh]ostnames?
 howto
@@ -136,11 +136,11 @@ Jira
 Jina
 JMESPath
 JumpCloud
+[Kk]ebab-case
 Keap
 Keycloak
 Kibana
 Kitemaker
-[Kk]ebab-case
 kubectl
 Kafka
 Lemlist
@@ -167,8 +167,8 @@ Metabase
 Milvus('s)?
 Mindee
 [Mm]inimum
-[Mm]ultipart
 Mocean
+[Mm]ultipart
 Motorhead
 [Mm]ultiple
 [Mm]ultitenan(cy|t)
@@ -179,8 +179,8 @@ NASA
 Nemotron
 Netlify
 Netscaler
-Nextcloud
 [Nn]amespacing
+Nextcloud
 [Nn]ginx
 ngrok
 NIM
@@ -243,8 +243,8 @@ signup
 Splunk
 Spontit
 Spotify
-spreadsheetId
 [Ss]lug(ging|s)?
+spreadsheetId
 Stackby
 Stackshare
 stdout

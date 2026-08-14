@@ -24,7 +24,7 @@ These environment variables configure the durable scheduler, which runs time-bas
 {% hint style="info" %}
 **Feature availability**
 
-The durable scheduler is generally available from n8n 2.36. Earlier versions back to n8n 2.32 include it as a preview feature.
+The durable scheduler is available from n8n 2.36. Earlier versions back to n8n 2.32 include it as a preview feature.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
@@ -33,10 +33,10 @@ The durable scheduler is generally available from n8n 2.36. Earlier versions bac
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether to turn on the durable scheduler. When on, the scheduler stores scheduled runs in the database before they execute, so a restart doesn't drop them and, across multiple instances, each run executes once. Requires `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to take over Schedule Trigger nodes. |
 | `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` | Boolean | `false` | Whether the durable scheduler also takes over polling triggers (trigger nodes with a Poll Times parameter). Requires `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. See [Poll triggers](../../durable-scheduler.md#poll-triggers). Available from n8n 2.33.0. |
-| `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` | Boolean | `false` | Whether Schedule Trigger nodes show a **Skip Durable Scheduler** setting that keeps an individual trigger on the in-memory scheduler while the durable scheduler is on. A temporary escape hatch for migrating gradually; it will be removed in a future release. |
+| `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` | Boolean | `false` | Whether Schedule Trigger nodes show a **Skip Durable Scheduler** setting that keeps an individual trigger on the in-memory scheduler while the durable scheduler is on. A temporary escape hatch for migrating gradually; a future release will remove it. |
 
 {% hint style="warning" %}
-Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to monitor your polling workflows closely. This doesn't affect Schedule Trigger support, which is generally available.
+Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows. This doesn't affect Schedule Trigger support, which is stable.
 {% endhint %}
 
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
@@ -55,7 +55,7 @@ Controls how often the scheduler starts due runs and how it claims each one so o
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | How often, in seconds, the scheduler checks for recorded runs coming due. Each check claims the runs due within the next interval and holds them on a precise timer, so a run starts at its scheduled instant rather than on the polling cadence. The interval sets how promptly the scheduler picks up a newly activated or edited schedule. Must be greater than 0. |
+| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | How often, in seconds, the scheduler checks for recorded runs coming due. Each check claims the runs due within the next interval and holds them on a precise timer, so a run starts at its scheduled instant rather than on the polling cadence. The interval caps how long the scheduler takes to pick up a newly activated or edited schedule. Must be greater than 0. |
 | `N8N_SCHEDULER_EXECUTOR_TIMEOUT` | Number | `60` | How long, in seconds, a single check for due runs may run before it's abandoned and retried on the next interval. Must be greater than 0. |
 | `N8N_SCHEDULER_LEASE_DURATION` | Number | `60` | How long, in seconds, an instance holds an exclusive claim on a run it picked up, so no other instance starts the same one. If the instance stops without finishing, the claim expires after this long and another instance may take over. Keep it comfortably above the time a run needs to get going: too short risks a double run, too long delays recovery after a crash. Must be greater than 0. |
 | `N8N_SCHEDULER_CLAIM_BATCH_SIZE` | Number | `100` | The most runs a single claim takes from the queue in one pass. Larger batches drain a backlog faster but hold more work on one instance per tick. Must be greater than 0. |

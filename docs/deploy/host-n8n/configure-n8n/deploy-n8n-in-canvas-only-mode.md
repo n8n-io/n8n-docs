@@ -8,7 +8,7 @@ layout:
 
 # Deploy n8n in canvas-only mode
 
-Canvas-only mode means that when the user opens an individual workflow, they will only see that workflow's canvas and any elements that would navigate away from this workflow (e.g. command bar) are no longer available.
+In canvas-only mode, when you open a workflow you see only that workflow's canvas. Elements that would navigate away from it, like the command bar, are hidden.
 
 
 {% hint style="info" %}

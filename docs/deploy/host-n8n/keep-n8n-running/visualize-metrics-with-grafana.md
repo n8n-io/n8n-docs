@@ -109,7 +109,11 @@ Each series carries these labels:
 
 ## Form submission observability <a href="#form-submission-observability" id="form-submission-observability"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
 Form submission observability is available from n8n 2.28.0.
+{% endhint %}
 
 n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form submission. Enable these environment variables to collect it:
 
@@ -156,7 +160,11 @@ Form submissions don't include a `method` label because n8n only accepts form da
 
 ## Workflow name lookup <a href="#workflow-name-lookup" id="workflow-name-lookup"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
 Workflow name lookup is available from n8n 2.28.0.
+{% endhint %}
 
 When you enable `N8N_METRICS_INCLUDE_WORKFLOW_INFO`, n8n exposes one gauge per workflow:
 

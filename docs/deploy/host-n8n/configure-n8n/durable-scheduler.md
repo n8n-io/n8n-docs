@@ -10,14 +10,10 @@ layout:
 
 The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. This page explains what the durable scheduler changes, how to turn it on, and how it works. For the environment variables that configure it, see [Scheduler environment variables](basic-configuration/use-environment-variables/scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
-
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
-{% endhint %}
-
 {% hint style="info" %}
-The durable scheduler is off by default and rolling out gradually. Existing instances keep using the in-memory scheduler and behave as before until you opt in. n8n recommends testing it in a non-production environment first.
+**Feature availability**
+
+The durable scheduler is generally available from n8n 2.36. Earlier versions back to n8n 2.32 include it as a preview feature. It's off by default: existing instances keep using the in-memory scheduler and behave as before until you opt in.
 {% endhint %}
 
 ## In-memory scheduler compared to the durable scheduler <a href="#in-memory-vs-durable" id="in-memory-vs-durable"></a>
@@ -29,16 +25,16 @@ By default, n8n schedules time-based workflows in memory. Each main instance wor
 
 The durable scheduler addresses both by moving scheduling into the database:
 
-- **Runs survive restarts.** The scheduler records each upcoming run in the database before it's due. A restart doesn't drop it. A run whose time passed while the instance was down still runs when the instance comes back, so it fires late rather than not at all.
+- **Runs survive restarts.** The scheduler records each upcoming run in the database before it's due. A restart doesn't drop it. A run whose time passed while the instance was down still fires late when the instance comes back, as long as it's within its grace period; beyond that, the trigger's [misfire policy](#misfire-policy) decides what happens to it.
 - **Each run executes once across instances.** Every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so the work spreads across your mains instead of depending on a single leader.
 
 ### What changes functionally <a href="#functional-changes" id="functional-changes"></a>
 
 When you turn the durable scheduler on, keep these behavior changes in mind:
 
-- **Timing precision.** The scheduler checks for due runs on a short interval (`N8N_SCHEDULER_EXECUTOR_INTERVAL`, five seconds by default), so a run can start up to one interval after its scheduled time. The in-memory scheduler fires closer to the exact instant.
+- **Timing stays precise.** The scheduler claims each run up to one check interval (`N8N_SCHEDULER_EXECUTOR_INTERVAL`, five seconds by default) ahead of its scheduled time and holds it on a precise timer, so it fires at the scheduled instant rather than on a polling cadence. The interval affects how promptly the scheduler picks up a newly activated or edited schedule, not steady-state timing.
 - **Clock-aligned timing is the default.** For "every N seconds" and "every N minutes" schedules, the durable scheduler keeps the same clock-aligned timing as the in-memory scheduler unless you change `N8N_SCHEDULER_TRIGGER_NODE_MODE`. See [Schedule Trigger timing](#trigger-node-mode).
-- **Late runs after downtime.** Because the scheduler records runs in advance, a run missed during downtime fires when the instance recovers instead of dropping.
+- **Missed runs follow a misfire policy.** Because the scheduler records runs in advance, a run missed during downtime isn't silently dropped. Within its grace period it still fires, late; beyond that, the trigger's [misfire policy](#misfire-policy) decides whether n8n discards it or runs a catch-up run.
 
 ## Turn on the durable scheduler <a href="#turn-on" id="turn-on"></a>
 
@@ -47,6 +43,10 @@ Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
 {% hint style="warning" %}
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
 {% endhint %}
+
+Poll triggers stay on the in-memory scheduler unless you also opt them in. See [Poll triggers](#poll-triggers).
+
+To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary and will be removed in a future release.
 
 The [remaining variables](basic-configuration/use-environment-variables/scheduler.md) only take effect once the scheduler is on. The defaults suit most instances, so change them only to tune timing precision, storage, or load across instances. All durations are in seconds unless stated otherwise.
 
@@ -60,7 +60,7 @@ These terms make the environment variables easier to reason about:
 The scheduler moves each run through four stages, and each stage has its own [environment variables](basic-configuration/use-environment-variables/scheduler.md):
 
 1. **Materialization.** The scheduler scans your active schedules and records the runs coming up soon (within the *materialization window*). This commits runs to the database before they're due. If a run is already past its [misfire grace](#misfire-policy) when materialization catches it, the schedule's misfire policy handles it instead of the scheduler recording it as-is.
-2. **Execution.** The scheduler checks for recorded runs whose time has arrived, claims each one so no other instance takes it, and starts the workflow.
+2. **Execution.** The scheduler claims each recorded run shortly before its time, so no other instance takes it, and starts the workflow at the scheduled instant.
 3. **Recovery.** If an instance claims a run but stops before finishing (for example after a crash), the *reaper* releases the run so another instance can pick it up.
 4. **Retention.** The scheduler keeps finished runs for a while as recent history, then deletes them to keep its tables small.
 
@@ -68,20 +68,25 @@ Across multiple instances, every main runs all four stages. Claiming keeps this 
 
 ## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
 
-A run counts as missed once it's more than `N8N_SCHEDULER_MISFIRE_GRACE` seconds late (one minute by default). What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy. n8n fixes the policy per trigger type. You can't configure it per workflow.
+A run counts as missed once it's later than its grace period. The grace period defaults to `N8N_SCHEDULER_MISFIRE_GRACE` (one minute by default); from n8n 2.36, a Schedule Trigger node can set its own with the **Missed Execution Grace Period (Seconds)** node option. n8n raises a node's grace period to an instance-derived minimum (based on `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`) when set below it, and caps it at 30 days.
 
-- **Schedule Trigger nodes coalesce.** A backlog of missed runs collapses into a single catch-up run, at the most recent missed time, then resumes on schedule. n8n discards the rest of the backlog rather than queuing it to fire back to back.
-- **Trigger nodes with a Poll Times parameter (such as Google Sheets Trigger or Airtable Trigger) skip.** n8n discards a backlog of missed poll runs entirely, and polling resumes from the next scheduled run.
+What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy:
 
-Either way the schedule's clock advances past the backlog: neither policy replays it. A one-off schedule has no next occurrence to resume from, so coalesce still runs it late, while skip discards it for good.
+- **Don't Run Missed Executions** (default). n8n discards the backlog of missed runs entirely, and the schedule resumes from its next run. This matches the in-memory scheduler, which never runs a missed occurrence late.
+- **Run the Most Recent Missed Execution.** The backlog collapses into a single catch-up run for the node, at the most recent missed time across all its trigger rules, then the schedule resumes.
+- **Run the Most Recent Missed Execution Per Rule.** Like the previous policy, but each trigger rule catches up on its own, so a node with several trigger rules can fire one catch-up run per rule.
+
+From n8n 2.36, Schedule Trigger nodes choose the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs: a poll fetches everything new since it last ran, so replaying missed polls would repeat the same fetch.
+
+Whatever the policy, the schedule's clock advances past the backlog: no policy replays it run by run. A one-off schedule has no next occurrence to resume from, so a catch-up policy still runs it late, while skipping discards it for good.
 
 {% hint style="info" %}
-`N8N_SCHEDULER_MISFIRE_GRACE` must exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`. n8n warns at startup if it doesn't.
+`N8N_SCHEDULER_MISFIRE_GRACE` should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`: a run has to survive until the next check for due runs to get a chance to start. n8n warns at startup if it doesn't.
 {% endhint %}
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 
-Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (late runs after downtime, and each run executing once across instances), two cadences fire differently from the in-memory scheduler in specific cases:
+Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (missed runs following a misfire policy, and each run executing once across instances), two cadences fire differently from the in-memory scheduler in specific cases:
 
 - **"Every N seconds" and "every N minutes".** `N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how these fire. It's the only cadence the setting affects.
 - **"Every N hours", "days", "weeks", or "months".** These fire as before in everyday use, under either mode. The durable scheduler handles a few rare calendar edge cases more correctly than the in-memory scheduler: leap years, the 53rd week of a year, and daylight-saving transitions, where the in-memory scheduler could be off by one period.
@@ -91,8 +96,21 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 - `legacy` (default): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
 - `new`: runs fire a fixed number of seconds apart, counted from the moment you activated the workflow instead of from clock boundaries. If you activate at :07, "every 30 seconds" fires at :07, :37, :07, and so on. The gap stays exactly the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
 
-`legacy` is the default, so timing stays the same while the durable scheduler rolls out. `new` is the intended future default.
+`legacy` is the default, so timing doesn't change when you switch to the durable scheduler. `new` is the intended future default.
 
 {% hint style="info" %}
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
 {% endhint %}
+
+## Poll triggers <a href="#poll-triggers" id="poll-triggers"></a>
+
+By default, the durable scheduler only takes over Schedule Trigger nodes. From n8n 2.33, you can also route polling triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) through it by setting `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` to `true`, in addition to `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`.
+
+{% hint style="warning" %}
+Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to monitor your polling workflows closely. This doesn't affect Schedule Trigger support, which is generally available.
+{% endhint %}
+
+When on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Two behaviors are specific to poll triggers:
+
+- **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
+- **A poll can occasionally run twice.** For poll triggers the scheduler guarantees at-least-once rather than effectively-once execution. Two polls at the same instant can legitimately return different data anyway, so a repeated poll is tolerable.

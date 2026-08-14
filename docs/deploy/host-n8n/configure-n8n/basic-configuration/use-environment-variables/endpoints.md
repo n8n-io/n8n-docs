@@ -43,6 +43,7 @@ This page lists environment variables for customizing endpoints in n8n.
 | `N8N_METRICS_INCLUDE_API_STATUS_CODE_LABEL` | Boolean | `false` | Whether to include a label for the HTTP status code (200, 404, ...) of API invocations. |
 | `N8N_METRICS_INCLUDE_QUEUE_METRICS` | Boolean | `false` | Whether to include metrics for jobs in scaling mode. |
 | `N8N_METRICS_QUEUE_METRICS_INTERVAL` | Integer | `20` | How often (in seconds) to update queue metrics. |
+| `N8N_METRICS_INCLUDE_SCHEDULER_METRICS` | Boolean | `false` | Whether to include metrics for the [durable scheduler](../../durable-scheduler.md), such as queue depth, scheduling lag, dispatch throughput, retries, and dead-letters. |
 | `N8N_METRICS_INCLUDE_SSRF_METRICS` | Boolean | `false` | Whether to include metrics for SSRF protection checks. |
 | `N8N_METRICS_INCLUDE_DNS_CACHE_METRICS` | Boolean | `false` | Whether to include metrics for the DNS cache (currently only used by SSRF protection). |
 | `N8N_ENDPOINT_REST` | String | `rest` | The path used for REST endpoint. |

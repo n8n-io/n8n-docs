@@ -29,7 +29,7 @@ On this page, you'll find a list of operations the OpenAI node supports and link
 
 The OpenAI node V2 is available from n8n 1.117.0. It supports the OpenAI Responses API, and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
 
-From n8n 1.29.0, the OpenAI node replaces the OpenAI assistant node
+From n8n 1.29.0, the OpenAI node replaces the OpenAI assistant node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -154,8 +154,7 @@ Only workflows that are published, and that contain a webhook, form, schedule, o
 
 #### Option 1: From the Workflows exposed page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
-The Workflows exposed page is available from n8n 2.2.0.
-
+From the **Workflows exposed** page (available from n8n 2.2.0), you can enable access for individual workflows:
 1. Navigate to **Settings > Instance-level MCP**.
 2. Select **Workflows exposed**.
 3. Click the **Enable workflows** button (in the workflows table header or in the table's empty state).

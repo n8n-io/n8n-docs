@@ -192,7 +192,30 @@ You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-men
 {% hint style="info" %}
 **Note**
 
-This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). You will still need to toggle access for any workflows added in the future.
+This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). To expose workflows you create later without toggling each one, use [Auto-expose new workflows](#auto-exposing-new-workflows).
+{% endhint %}
+
+### Auto-exposing new workflows <a href="#auto-exposing-new-workflows" id="auto-exposing-new-workflows"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Auto-exposing new workflows is rolling out gradually from n8n 2.36.0, so the setting isn't visible on every instance yet.
+{% endhint %}
+
+Instead of enabling MCP access for each workflow individually, you can expose every newly created workflow automatically:
+
+1. Navigate to **Settings > Instance-level MCP**.
+2. Turn on **Auto-expose new workflows**.
+
+This setting is off by default. Turning it on only affects workflows created afterwards. Workflows that already exist keep their current setting, so use one of the options above to expose those.
+
+Only instance owners and admins can change this setting. It's read-only on instances where MCP access is managed through environment variables.
+
+{% hint style="info" %}
+**Note**
+
+Workflows still need to meet the eligibility rules to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>

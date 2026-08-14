@@ -34,7 +34,7 @@ On the workflow details route, canvas-only mode hides:
 - **The header's top menu.** The workflow name, breadcrumbs, save controls, and tags no longer show.
 - **The sidebar.** n8n's main navigation isn't visible.
 - **Overlay elements.** The command bar and "Ask AI assistant" button are no longer shown.
-- **Keyboard shortcuts.** The following keyboard shortcuts are disabled in canvas-only mode: `cmd+s` (save), `cmd+alt+n` (create new workflow), `cmd+p` (publish), `cmd+u` (unpublish)
+- **Keyboard shortcuts.** The following keyboard shortcuts are disabled in canvas-only mode: **Ctrl/Cmd** + **s** (save), **Ctrl/Cmd** + **Alt** + **n** (create new workflow), **Ctrl/Cmd** + **p** (publish), **Ctrl/Cmd** + **u** (unpublish)
 
 n8n keeps the following visible:
 

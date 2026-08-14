@@ -44,7 +44,7 @@ Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
 {% endhint %}
 
-Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows.
+Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows. For how polls behave under the durable scheduler, and for the [durable poll cursors](#durable-poll-cursors) n8n recommends turning on with it, see [Poll triggers](#poll-triggers).
 
 To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
 
@@ -100,6 +100,34 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 
 {% hint style="info" %}
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
+{% endhint %}
+
+## Poll triggers <a href="#poll-triggers" id="poll-triggers"></a>
+
+When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Two behaviors are specific to poll triggers:
+
+- **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
+- **A poll can occasionally run twice.** For poll triggers the scheduler guarantees that each poll runs at least once, but not that it runs only once. Two polls at the same instant can legitimately return different data anyway, so a repeated poll is tolerable. [Durable poll cursors](#durable-poll-cursors) keep the trigger's state correct when it happens.
+
+### Durable poll cursors <a href="#durable-poll-cursors" id="durable-poll-cursors"></a>
+
+A polling trigger only fetches what's new since the last check. To know what's new, each poll trigger node keeps a cursor: its record of how far it has already read, such as the timestamp or ID of the newest item it has seen.
+
+By default, a poll trigger node stores its cursor in the workflow's static data, and n8n saves the cursor and the execution the poll produced as two separate writes. A crash between the two leaves them out of step, in one of two ways:
+
+- The cursor advanced but the execution wasn't saved. The next poll starts past the items from the failed round, so n8n silently drops them.
+- The execution was saved but the cursor didn't advance. The next poll fetches the same items again, so the workflow processes them twice.
+
+From n8n 2.36.0, setting `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` closes that gap:
+
+- **Cursors move to their own table.** Each poll trigger node's cursor lives in a dedicated database table instead of workflow static data.
+- **The cursor and the execution commit together.** The cursor advance and the execution the poll produced commit in a single transaction. Either the poll round fully happened, or it didn't happen at all.
+- **Stale polls can't overwrite newer state.** When the durable scheduler dispatches polls (`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`), the commit first checks that the poll round still holds its claim from the scheduler. A poll that lost its claim, for example because it stalled and another instance took over, doesn't advance the cursor. This keeps cursor state correct even when polls overlap or run twice across instances.
+
+The first poll after you turn the setting on moves that node's cursor to the new table, starting from the node's current position, so the switch doesn't fetch anything twice or skip anything. A node whose cursor has moved keeps using the new storage even if you later set `N8N_POLLER_DURABLE_CURSORS_ENABLED` back to `false`: turning it off only makes the cursor and the execution save as two separate writes again, it doesn't move cursors back to static data.
+
+{% hint style="warning" %}
+Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` before, or together with, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. When the durable scheduler dispatches polls across instances while cursors still live in workflow static data, overlapping poll rounds can save the cursor out of order, which risks dropped or duplicated items.
 {% endhint %}
 
 ## Observability

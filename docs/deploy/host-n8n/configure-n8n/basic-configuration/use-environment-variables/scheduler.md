@@ -41,6 +41,14 @@ The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n
 Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics to watch scheduling lag, retries, and dead-letters (see [Durable scheduler observability](../../durable-scheduler.md#observability)). This doesn't affect Schedule Trigger support, which is stable.
 {% endhint %}
 
+## Poll triggers <a href="#poll-trigger-vars" id="poll-trigger-vars"></a>
+
+Controls how trigger nodes with a **Poll Times** parameter (such as Gmail Trigger or Airtable Trigger) store their cursor, the node's record of how far it has already read. To route these nodes through the durable scheduler, use `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` above. See [Poll triggers](../../durable-scheduler.md#poll-triggers).
+
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_POLLER_DURABLE_CURSORS_ENABLED` | Boolean | `false` | Whether a poll trigger node's cursor is stored in a dedicated database table and committed in the same transaction as the execution the poll produced, so a crash mid-poll can't drop or duplicate data. Available from n8n 2.36.0. See [Durable poll cursors](../../durable-scheduler.md#durable-poll-cursors). |
+
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
 
 Controls how far ahead and how often the scheduler records upcoming runs to the database.

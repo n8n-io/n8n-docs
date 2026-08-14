@@ -1,0 +1,14 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment.md
+  h_c63dce324dfc7b 62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "1808d75f42dc8adac227a3d7a1fc13a5cdd91d4b",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

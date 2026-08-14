@@ -4,9 +4,10 @@ description: Environment variables to configure the durable scheduler for your s
 contentType: reference
 tags:
   - environment variables
+  - tag: preview
+    primary: true
 hide:
   - toc
-  - tags
 nodeTitle: Scheduler
 originalFilePath: hosting/configuration/environment-variables/scheduler.md
 originalUrl: 'https://docs.n8n.io/hosting/configuration/environment-variables/scheduler'
@@ -15,16 +16,17 @@ url: >-
 layout:
   description:
     visible: false
+status: preview
 ---
 
 # Scheduler environment variables <a href="#scheduler-environment-variables" id="scheduler-environment-variables"></a>
 
 These environment variables configure the durable scheduler, which runs time-based workflows from a database-backed queue instead of from each instance's memory. For what the durable scheduler changes, how to turn it on, and how it works, see [Durable scheduler](../../durable-scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Preview status**
 
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+The durable scheduler is a Preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>

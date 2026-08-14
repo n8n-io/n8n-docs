@@ -1,5 +1,6 @@
 ---
 description: Set up the AI Assistant on self-hosted n8n using environment variables.
+status: preview
 tags:
   - tag: preview
     primary: true
@@ -26,7 +27,9 @@ layout:
 # Set up AI Assistant
 
 {% hint style="info" %}
-AI Assistant is a preview feature.
+**Preview status**
+
+AI Assistant is a Preview feature.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -308,7 +311,15 @@ WEBHOOK_URL=https://your-public-url
 | `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 {% hint style="info" %}
-The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
+**Feature availability**
+
+The knowledge base needs the Daytona sandbox on self-hosted. Without it, the rest of the agent still works.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+On self-hosted, the knowledge base is in Preview.
 {% endhint %}
 
 For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).

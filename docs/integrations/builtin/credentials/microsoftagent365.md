@@ -22,10 +22,10 @@ You can use these credentials to authenticate the following nodes:
 
 - [Microsoft Agent 365 Trigger](../cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger.md)
 
-{% hint style="warning" %}
-**Early preview**
+{% hint style="info" %}
+**Preview status**
 
-Microsoft Agent 365 is an early preview feature. You need to be part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access.
+Microsoft Agent 365 is an early Preview feature. You need to be part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

@@ -231,9 +231,9 @@ Agents are available from n8n 2.34.0 and are a separate feature from workflows. 
 {% endhint %}
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 If your instance has the agents feature, the **Access** section also shows **Agents exposed**. As with workflows, MCP clients can't read or manage an agent unless you explicitly enable MCP access for it.

@@ -1,0 +1,40 @@
+docs/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/README.md
+  s_c752a1aa645f44::t_6d181d479ec11d 131-141,145-146
+  s_c752a1aa645f44::t_7888cf47a4afc6 142-144
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_c752a1aa645f44::t_7e74ee4fdeb7b1 58
+  s_c752a1aa645f44::t_173327cba22ca6 100
+  s_c752a1aa645f44::t_8f5a73f430251f 25
+  s_c752a1aa645f44::t_852b7c8a5a9d80 24,27,35-40
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_c752a1aa645f44::t_1c9adb0dd25806 16
+  s_c752a1aa645f44::t_7311fd572cea00 63
+  s_c752a1aa645f44::t_82e35e725ea29a 84
+  s_c752a1aa645f44::t_57bacd71f74a6f 99
+  s_c752a1aa645f44::t_b2476652c20bfc 104-116
+  s_c752a1aa645f44::t_a84513f36dae32 14-15
+  s_c752a1aa645f44::t_2b4cf96d7541d2 35,37
+  s_c752a1aa645f44::t_89937aaa4aeb78 89
+  s_c752a1aa645f44::t_8c8d283228ff74 79
+  s_c752a1aa645f44::t_33e57ebe5bfd73 71-73,75-77,80-81
+  s_c752a1aa645f44::t_b8bd742b238b77 28
+  s_c752a1aa645f44::t_663c1d051dc1b8 47-50
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints.md
+  s_c752a1aa645f44::t_fe97644b4cc943 46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "971fdfb6ef359c1063f7e415512fe71451e5d1c3",
+  "prompts": {},
+  "sessions": {
+    "s_c752a1aa645f44": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "99206efd-4ad6-4bb9-8b7b-26d81ac07dd4",
+        "model": "claude-fable-5"
+      },
+      "human_author": null
+    }
+  }
+}

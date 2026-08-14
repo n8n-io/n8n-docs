@@ -115,8 +115,8 @@ A polling trigger only fetches what's new since the last check. To know what's n
 
 By default, a poll trigger node stores its cursor in the workflow's static data, and n8n saves the cursor and the execution the poll produced as two separate writes. A crash between the two leaves them out of step, in one of two ways:
 
-- The cursor advanced but the execution wasn't saved. The next poll starts past the items from the failed round, so n8n silently drops them.
-- The execution was saved but the cursor didn't advance. The next poll fetches the same items again, so the workflow processes them twice.
+- The cursor advanced but n8n never saved the execution. The next poll starts past the items from the failed round, so n8n drops them with no error.
+- n8n saved the execution but the cursor didn't advance. The next poll fetches the same items again, so the workflow processes them twice.
 
 From n8n 2.36.0, setting `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` closes that gap:
 

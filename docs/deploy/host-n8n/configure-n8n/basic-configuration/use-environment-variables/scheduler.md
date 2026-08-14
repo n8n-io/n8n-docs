@@ -47,7 +47,7 @@ Controls how trigger nodes with a **Poll Times** parameter (such as Gmail Trigge
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_POLLER_DURABLE_CURSORS_ENABLED` | Boolean | `false` | Whether a poll trigger node's cursor is stored in a dedicated database table and committed in the same transaction as the execution the poll produced, so a crash mid-poll can't drop or duplicate data. Available from n8n 2.36.0. See [Durable poll cursors](../../durable-scheduler.md#durable-poll-cursors). |
+| `N8N_POLLER_DURABLE_CURSORS_ENABLED` | Boolean | `false` | Whether n8n stores a poll trigger node's cursor in a dedicated database table and commits it in the same transaction as the execution the poll produced, so a crash mid-poll can't drop or duplicate data. Available from n8n 2.36.0. See [Durable poll cursors](../../durable-scheduler.md#durable-poll-cursors). |
 
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
 

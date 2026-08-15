@@ -43,7 +43,7 @@ Tell n8n which workflow to call. You can choose either:
 * **Define Below** and copy in a complete [workflow JSON](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import).
 
 {% hint style="warning" %}
-When using **Database** as the workflow source, the sub-workflow must be published. If it isn't, the tool call fails with the error `Workflow is not active and cannot be executed.`. The error text is returned to the agent as the tool result, so the agent typically continues and answers as if no data was found, which can make this easy to miss. If the agent reports that it couldn't retrieve data, check that the sub-workflow is published and that its execution list shows a run.
+When using **Database** as the workflow source, the sub-workflow must be published. If it isn't, the tool call fails with the error `Workflow is not active and cannot be executed.`. The error text is returned to the agent as the tool result. The agent then typically answers as if no data was found, so the failure is easy to miss. If the agent reports that it couldn't retrieve data, check that the sub-workflow is published and that its execution list shows a run.
 {% endhint %}
 
 ### Workflow Inputs <a href="#workflow-inputs" id="workflow-inputs"></a>

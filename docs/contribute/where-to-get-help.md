@@ -26,8 +26,8 @@ This is the best source for answers of all kinds, as both the n8n support team a
 
 n8n offers email support through the [help@n8n.io](mailto:help@n8n.io) for the following plans:
 
-* [Enterprise plans](https://n8n.io/enterprise/) can use email support with an SLA for technical, account, billing, and other inquiries.
-* Other [Cloud plans](https://n8n.io/pricing/) can use email support for admin and billing issues. For technical support, please refer to the forum.
+* [n8n Cloud Enterprise and self-hosted Enterprise](https://n8n.io/enterprise/) plans can use email support with an SLA for technical, account, billing, and other inquiries.
+* Other [n8n Cloud plans](https://n8n.io/pricing/) can use email support for admin and billing issues. For technical support, please refer to the forum.
 
 ## What to include in your message <a href="#what-to-include-in-your-message" id="what-to-include-in-your-message"></a>
 

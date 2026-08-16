@@ -16,7 +16,11 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
+External secrets are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
 * n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
 * From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
 * From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
@@ -144,7 +148,7 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 ### Azure Key Vault <a href="#azure-key-vault" id="azure-key-vault"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.35.0**
+**Feature availability**
 
 The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
 {% endhint %}
@@ -209,9 +213,9 @@ path "kv/*" {
 ### Infisical <a href="#infisical" id="infisical"></a>
 
 {% hint style="info" %}
-**n8n 2.26.0 and later**
+**Feature availability**
 
-Infisical secrets management support is only available from n8n 2.26.0.
+Infisical secrets management support is available from n8n 2.26.0.
 {% endhint %}
 
 
@@ -273,9 +277,9 @@ You can share a vault with a project so that only that project's credentials can
 ### Access for project roles <a href="#access-for-project-roles" id="access-for-project-roles"></a>
 
 {% hint style="info" %}
-**n8n 2.13.0 and later**
+**Feature availability**
 
-Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
 From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
@@ -315,12 +319,12 @@ Both permissions are independent. For example, a role may need only the **Secret
 ### Secrets don't resolve in production <a href="#secrets-dont-resolve-in-production" id="secrets-dont-resolve-in-production"></a>
 
 {% hint style="info" %}
-**n8n 2.13.0 and later**
+**Feature availability**
 
-From n8n 2.13.0, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
+Using external secrets in your own credentials, as a project editor or admin with [secrets access enabled](#access-for-project-roles), is available from n8n 2.13.0. The restriction below applies only to older versions or when the opt-in toggle is off.
 {% endhint %}
 
-In versions before `2.13.0` (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
+In versions before n8n 2.13.0 (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
 
 In this case, only use external secrets in credentials owned by an instance owner or admin.
 

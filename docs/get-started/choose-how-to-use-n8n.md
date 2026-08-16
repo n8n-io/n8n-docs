@@ -1,6 +1,6 @@
 ---
 description: >-
-  Choose between our Cloud service, or self-hosting options. Learn more about
+  Choose between our n8n Cloud service, or self-hosting options. Learn more about
   licenses and n8n payment plans.
 contentType: overview
 nodeTitle: Choose how to use n8n
@@ -29,7 +29,7 @@ This page helps with both.
     />
     <img
       src=".gitbook/assets/choose-your-n8n-diag-light.png"
-      alt="Decision flowchart: n8n Cloud offers the Starter, Pro, and Enterprise plans; self-hosted offers the Community, registered Community, Business, and Enterprise editions"
+      alt="Decision flowchart: n8n Cloud offers the Starter, Pro, and Enterprise plans; self-hosted offers the Community, Registered Community, Business, and Enterprise editions"
     />
   </picture>
   <figcaption>Choosing your n8n deployment option, plan, and edition</figcaption>
@@ -51,7 +51,7 @@ Use this guide to choose a deployment option:
 |----------------|-------------------|---------|
 | Want to start quickly | **n8n Cloud** | No installation needed |
 | Don't have technical expertise | **n8n Cloud** | Fully managed, no setup or maintenance required |
-| Need production-ready deployment | **Both options work** | Both Cloud and self-hosted support production use |
+| Need production-ready deployment | **Both options work** | Both n8n Cloud and self-hosted support production use |
 | Don't want to manage infrastructure | **n8n Cloud** | n8n handles hosting, updates, and scaling |
 | Need full control over deployment | **Self-hosted** | You control the environment and configuration |
 | Have customized use cases | **Self-hosted** | Full control over deployment and configuration |
@@ -99,7 +99,7 @@ Every plan runs on the same underlying product with different features, usage li
 
 | Plan | Designed for |
 |------|--------------|
-| **Free trial** | Trying Cloud with Pro features for 14 days |
+| **Free trial** | Trying n8n Cloud with Pro features for 14 days |
 | **Starter** | Individuals and small projects getting started |
 | **Pro** | Power users and small teams that need higher limits, admin accounts, and insights |
 | **Enterprise** | Organizations that need advanced security, scaling, and dedicated support |

@@ -4,9 +4,10 @@ description: Environment variables to configure the durable scheduler for your s
 contentType: reference
 tags:
   - environment variables
+  - tag: preview
+    primary: true
 hide:
   - toc
-  - tags
 nodeTitle: Scheduler
 originalFilePath: hosting/configuration/environment-variables/scheduler.md
 originalUrl: 'https://docs.n8n.io/hosting/configuration/environment-variables/scheduler'
@@ -15,16 +16,17 @@ url: >-
 layout:
   description:
     visible: false
+status: preview
 ---
 
 # Scheduler environment variables <a href="#scheduler-environment-variables" id="scheduler-environment-variables"></a>
 
 These environment variables configure the durable scheduler, which runs time-based workflows from a database-backed queue instead of from each instance's memory. For what the durable scheduler changes, how to turn it on, and how it works, see [Durable scheduler](../../durable-scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Preview status**
 
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+The durable scheduler is a Preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
@@ -91,3 +93,4 @@ Controls how the scheduler overlaps its background passes and spreads database l
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | The smallest gap, in seconds, allowed between consecutive runs of the same schedule. n8n slows a schedule set to run more often down to this gap. Defaults to `0`, which disables the limit and honors whatever interval each schedule specifies. Set it to stop a runaway every-second schedule from overloading the instance. |
 | `N8N_SCHEDULER_TRIGGER_NODE_MODE` | Enum (`legacy`, `new`) | `legacy` | How a Schedule Trigger node's "every N seconds" and "every N minutes" schedules fire. `legacy` keeps clock-aligned timing matching the in-memory scheduler; `new` spaces runs a steady N apart from activation time. Only affects second and minute intervals. See [Schedule Trigger timing](../../durable-scheduler.md#trigger-node-mode). |
+| `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger type's misfire policy decides what happens to it and to any backlog behind it. Must exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |

@@ -119,15 +119,15 @@ There are three layers of configuration: the n8n container, the runners containe
 
 These are the main environment variables that you can set on the n8n container running in external mode:
 
-{% hint style="info" %}
-**`N8N_RUNNERS_ENABLED` is deprecated from version 2.0**
+{% hint style="warning" %}
+**Feature availability**
 
-From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners. Leaving task runners disabled on 1.x runs Code node scripts inside the main n8n process with no isolation at all. Don't do this on any instance that holds sensitive credentials or data.
+`N8N_RUNNERS_ENABLED` is deprecated from n8n 2.0. You no longer need to set it. It's still supported in n8n 1.x, where you must set it to `true` to enable task runners. Leaving task runners disabled on 1.x runs Code node scripts inside the main n8n process with no isolation at all. Don't do this on any instance that holds sensitive credentials or data.
 {% endhint %}
 
 | Environment variables                                  | Description                                                                                                                                                                   |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from version 2.0 onwards. Still supported in version 1.x.                                                                                    |
+| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from n8n 2.0. Still supported in n8n 1.x.                                                                                    |
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
@@ -165,7 +165,7 @@ path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 
 ### 1. Extend the `n8nio/runners` image <a href="#id-1-extend-the-n8niorunners-image" id="id-1-extend-the-n8niorunners-image"></a>
 
-You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need `n8nio/runners:1.121.0` or later to do this.
+You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need at least `n8nio/runners:1.121.0` to do this.
 
 ```dockerfile
 FROM n8nio/runners:1.121.0

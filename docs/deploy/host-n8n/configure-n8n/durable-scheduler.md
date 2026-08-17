@@ -4,16 +4,20 @@ description: How the durable scheduler runs time-based workflows from a database
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Durable scheduler
 
 The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. This page explains what the durable scheduler changes, how to turn it on, and how it works. For the environment variables that configure it, see [Scheduler environment variables](basic-configuration/use-environment-variables/scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Preview status**
 
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+The durable scheduler is a Preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
 {% endhint %}
 
 {% hint style="info" %}
@@ -59,12 +63,25 @@ These terms make the environment variables easier to reason about:
 
 The scheduler moves each run through four stages, and each stage has its own [environment variables](basic-configuration/use-environment-variables/scheduler.md):
 
-1. **Materialization.** The scheduler scans your active schedules and records the runs coming up soon (within the *materialization window*). This commits runs to the database before they're due.
+1. **Materialization.** The scheduler scans your active schedules and records the runs coming up soon (within the *materialization window*). This commits runs to the database before they're due. If a run is already past its [misfire grace](#misfire-policy) when materialization catches it, the schedule's misfire policy handles it instead of the scheduler recording it as-is.
 2. **Execution.** The scheduler checks for recorded runs whose time has arrived, claims each one so no other instance takes it, and starts the workflow.
 3. **Recovery.** If an instance claims a run but stops before finishing (for example after a crash), the *reaper* releases the run so another instance can pick it up.
 4. **Retention.** The scheduler keeps finished runs for a while as recent history, then deletes them to keep its tables small.
 
 Across multiple instances, every main runs all four stages. Claiming keeps this safe: because only one instance claims each run, running the loops everywhere shares the load rather than duplicating work.
+
+## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
+
+A run counts as missed once it's more than `N8N_SCHEDULER_MISFIRE_GRACE` seconds late (one minute by default). What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy. n8n fixes the policy per trigger type. You can't configure it per workflow.
+
+- **Schedule Trigger nodes coalesce.** A backlog of missed runs collapses into a single catch-up run, at the most recent missed time, then resumes on schedule. n8n discards the rest of the backlog rather than queuing it to fire back to back.
+- **Trigger nodes with a Poll Times parameter (such as Google Sheets Trigger or Airtable Trigger) skip.** n8n discards a backlog of missed poll runs entirely, and polling resumes from the next scheduled run.
+
+Either way the schedule's clock advances past the backlog: neither policy replays it. A one-off schedule has no next occurrence to resume from, so coalesce still runs it late, while skip discards it for good.
+
+{% hint style="info" %}
+`N8N_SCHEDULER_MISFIRE_GRACE` must exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`. n8n warns at startup if it doesn't.
+{% endhint %}
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 

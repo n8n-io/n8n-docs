@@ -68,7 +68,7 @@ Across multiple instances, every main runs all four stages. Claiming keeps this 
 
 ## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
 
-A run counts as missed once it's later than its grace period. The grace period defaults to `N8N_SCHEDULER_MISFIRE_GRACE` (one minute by default); from n8n 2.36, a Schedule Trigger node can set its own with the **Missed Execution Grace Period (Seconds)** node option. n8n raises a node's grace period to an instance-derived minimum (based on `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`) when set below it, and caps it at 30 days.
+A run counts as missed once it's later than its grace period. The grace period defaults to `N8N_SCHEDULER_MISFIRE_GRACE` (one minute by default); from n8n 2.36, a Schedule Trigger node added from that version on can set its own with the **Missed Execution Grace Period (Seconds)** node option. n8n raises a node's grace period to an instance-derived minimum (based on `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`) when set below it, and caps it at 30 days.
 
 What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy:
 
@@ -76,12 +76,12 @@ What happens to a missed run, and to any backlog behind it, depends on the trigg
 - **Run the Most Recent Missed Execution.** The backlog collapses into a single catch-up run for the node, at the most recent missed time across all its trigger rules, then the schedule resumes.
 - **Run the Most Recent Missed Execution Per Rule.** Like the previous policy, but each trigger rule catches up on its own, so a node with several trigger rules can fire one catch-up run per rule.
 
-From n8n 2.36, Schedule Trigger nodes choose the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
+From n8n 2.36, a Schedule Trigger node added from that version on chooses the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
 
 Whatever the policy, the schedule's clock advances past the backlog: no policy replays it run by run. A one-off schedule has no next occurrence to resume from, so a catch-up policy still runs it late, while skipping discards it for good.
 
 {% hint style="info" %}
-To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE` above both `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW` (n8n warns at startup if it isn't). Above that floor, set it to the longest delay a run should tolerate before it counts as missed, such as the time a restart or a leadership change takes on your instance. With the defaults, that's anything above 60 seconds.
+To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE` above `N8N_SCHEDULER_EXECUTOR_INTERVAL` and at least `N8N_SCHEDULER_MATERIALIZATION_WINDOW` (n8n warns at startup if it isn't). Above that floor, set it to the longest delay a run should tolerate before it counts as missed, such as the time a restart or a leadership change takes on your instance. With the defaults, that's 60 seconds or more.
 {% endhint %}
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>

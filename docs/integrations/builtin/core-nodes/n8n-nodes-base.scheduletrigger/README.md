@@ -136,7 +136,7 @@ The node's **Settings** tab offers options controlling what happens when an exec
     * **Don't Run Missed Executions** (default): Discard missed executions and resume on schedule.
     * **Run the Most Recent Missed Execution**: Run a single catch-up execution at the most recent missed time, then resume on schedule.
     * **Run the Most Recent Missed Execution Per Rule**: Like the previous option, but each trigger rule runs its own catch-up execution.
-* **Missed Execution Grace Period (Seconds)**: How late an execution may start before it counts as missed. Set to `0` to use the instance setting (`N8N_SCHEDULER_MISFIRE_GRACE`, 60 seconds by default).
+* **Missed Execution Grace Period (Seconds)**: How late an execution may start before it counts as missed. Set to `0` to use the instance setting (`N8N_SCHEDULER_MISFIRE_GRACE`, 60 seconds by default). n8n raises values below the instance minimum (60 seconds with the defaults) to it, and caps values above 30 days.
 
 {% hint style="info" %}
 **Feature availability**

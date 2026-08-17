@@ -20,9 +20,9 @@ tags:
 
 # OpenTelemetry tracing <a href="#opentelemetry-tracing" id="opentelemetry-tracing"></a>
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-OpenTelemetry tracing is in preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows. n8n plans to add OpenTelemetry-formatted metrics in a later release.
+OpenTelemetry tracing is in Preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows. n8n plans to add OpenTelemetry-formatted metrics in a later release.
 {% endhint %}
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/) traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.

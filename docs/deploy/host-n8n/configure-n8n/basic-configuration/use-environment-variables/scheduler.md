@@ -26,7 +26,7 @@ Turn on Prometheus metrics for the durable scheduler with `N8N_METRICS_INCLUDE_S
 {% hint style="info" %}
 **Feature availability**
 
-The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a preview feature.
+The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>

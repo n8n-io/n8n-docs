@@ -14,9 +14,9 @@ tags:
 # Limits and permissions
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-n8n packages are in preview. These limits and requirements may change in future releases.
+n8n packages are in Preview. These limits and requirements may change in future releases.
 {% endhint %}
 
 Reference for what constrains [package](README.md) export and import: size caps, license features, API key scopes, and observability.

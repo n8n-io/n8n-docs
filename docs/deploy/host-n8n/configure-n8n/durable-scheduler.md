@@ -13,7 +13,7 @@ The durable scheduler runs time-based workflows, such as those that start with a
 {% hint style="info" %}
 **Feature availability**
 
-The durable scheduler is available from n8n 2.36. Earlier versions back to n8n 2.32 include it as a preview feature. It's off by default: existing instances keep using the in-memory scheduler and behave as before until you opt in.
+The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a preview feature. It's off by default: existing instances keep using the in-memory scheduler and behave as before until you opt in.
 {% endhint %}
 
 ## In-memory scheduler compared to the durable scheduler <a href="#in-memory-vs-durable" id="in-memory-vs-durable"></a>
@@ -44,7 +44,7 @@ Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
 {% endhint %}
 
-Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows.
+Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows.
 
 To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
 
@@ -68,7 +68,7 @@ Across multiple instances, every main runs all four stages. Claiming keeps this 
 
 ## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
 
-A run counts as missed once it's later than its grace period. The grace period defaults to `N8N_SCHEDULER_MISFIRE_GRACE` (one minute by default); from n8n 2.36, a Schedule Trigger node added from that version on can set its own with the **Missed Execution Grace Period (Seconds)** node option. n8n raises a node's grace period to an instance-derived minimum (based on `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`) when set below it, and caps it at 30 days.
+A run counts as missed once it's later than its grace period. The grace period defaults to `N8N_SCHEDULER_MISFIRE_GRACE` (one minute by default); from n8n 2.36.0, a Schedule Trigger node added from that version on can set its own with the **Missed Execution Grace Period (Seconds)** node option. n8n raises a node's grace period to an instance-derived minimum (based on `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`) when set below it, and caps it at 30 days.
 
 What happens to a missed run, and to any backlog behind it, depends on the trigger's misfire policy:
 
@@ -76,7 +76,7 @@ What happens to a missed run, and to any backlog behind it, depends on the trigg
 - **Run the Most Recent Missed Execution.** The backlog collapses into a single catch-up run for the node, at the most recent missed time across all its trigger rules, then the schedule resumes.
 - **Run the Most Recent Missed Execution Per Rule.** Like the previous policy, but each trigger rule catches up on its own, so a node with several trigger rules can fire one catch-up run per rule.
 
-From n8n 2.36, a Schedule Trigger node added from that version on chooses the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
+From n8n 2.36.0, a Schedule Trigger node added from that version on chooses the policy with the **If Execution Is Missed** node option; see the [Schedule Trigger node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger#node-options). Trigger nodes that poll (such as Google Sheets Trigger or Airtable Trigger) always skip missed runs, and polling resumes from the next scheduled run.
 
 Whatever the policy, the schedule's clock advances past the backlog: no policy replays it run by run. A one-off schedule has no next occurrence to resume from, so a catch-up policy still runs it late, while skipping discards it for good.
 
@@ -123,7 +123,7 @@ These four gauges are a snapshot of the queue, read fresh on each scrape. They d
 | :----- | :---------------- |
 | `n8n_scheduler_tasks_pending` | How many recorded runs are waiting. This tracks how many schedules you have, so watch the trend rather than the number. |
 | `n8n_scheduler_tasks_due` | How many recorded runs are already past their time and still haven't started. Should sit near zero. |
-| `n8n_scheduler_tasks_running` | How many runs an instance has claimed and is running right now. |
+| `n8n_scheduler_tasks_running` | How many runs instances across the cluster have claimed and are running right now. |
 | `n8n_scheduler_oldest_pending_age_seconds` | How far behind the oldest due run is. The clearest backlog signal: `0` means nothing is due and waiting, and a climbing value means the scheduler can't keep up. |
 
 Each scrape queries the database once for all four gauges. `N8N_METRICS_SCHEDULER_INTERVAL` (20 seconds by default) caches that query, so a tight scrape interval doesn't hammer the tables the scheduler reads.

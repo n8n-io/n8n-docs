@@ -26,7 +26,7 @@ Turn on Prometheus metrics for the durable scheduler with `N8N_METRICS_INCLUDE_S
 {% hint style="info" %}
 **Feature availability**
 
-The durable scheduler is available from n8n 2.36. Earlier versions back to n8n 2.32 include it as a preview feature.
+The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a preview feature.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
@@ -99,4 +99,4 @@ Controls how the scheduler overlaps its background passes and spreads database l
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | The smallest gap, in seconds, allowed between consecutive runs of the same schedule. n8n slows a schedule set to run more often down to this gap. Defaults to `0`, which disables the limit and honors whatever interval each schedule specifies. Set it to stop a runaway every-second schedule from overloading the instance. |
 | `N8N_SCHEDULER_TRIGGER_NODE_MODE` | Enum (`legacy`, `new`) | `legacy` | How a Schedule Trigger node's "every N seconds" and "every N minutes" schedules fire. `legacy` keeps clock-aligned timing matching the in-memory scheduler; `new` spaces runs a steady N apart from activation time. Only affects second and minute intervals. See [Schedule Trigger timing](../../durable-scheduler.md#trigger-node-mode). |
-| `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger's misfire policy decides what happens to it and to any backlog behind it. This is the default a schedule inherits; from n8n 2.36, a Schedule Trigger node can set its own grace period instead. Should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and be at least `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |
+| `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger's misfire policy decides what happens to it and to any backlog behind it. This is the default a schedule inherits; from n8n 2.36.0, a Schedule Trigger node can set its own grace period instead. Should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and be at least `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |

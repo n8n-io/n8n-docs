@@ -21,6 +21,8 @@ layout:
 
 These environment variables configure the durable scheduler, which runs time-based workflows from a database-backed queue instead of from each instance's memory. For what the durable scheduler changes, how to turn it on, and how it works, see [Durable scheduler](../../durable-scheduler.md).
 
+Turn on Prometheus metrics for the durable scheduler with `N8N_METRICS_INCLUDE_SCHEDULER_METRICS` and `N8N_METRICS_SCHEDULER_INTERVAL`, which live with the other metrics variables on the [Endpoints](endpoints.md) page. For what each metric means, see [Durable scheduler observability](../../durable-scheduler.md#observability).
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -36,7 +38,7 @@ The durable scheduler is available from n8n 2.36. Earlier versions back to n8n 2
 | `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` | Boolean | `false` | Whether Schedule Trigger nodes show a **Skip Durable Scheduler** setting that keeps an individual trigger on the in-memory scheduler while the durable scheduler is on. A temporary escape hatch for migrating gradually; a future release will remove it. |
 
 {% hint style="warning" %}
-Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics with [`N8N_METRICS_INCLUDE_SCHEDULER_METRICS`](endpoints.md) to watch scheduling lag, retries, and dead-letters. This doesn't affect Schedule Trigger support, which is stable.
+Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics to watch scheduling lag, retries, and dead-letters (see [Durable scheduler observability](../../durable-scheduler.md#observability)). This doesn't affect Schedule Trigger support, which is stable.
 {% endhint %}
 
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>

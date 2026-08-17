@@ -32,7 +32,7 @@ The durable scheduler addresses both by moving scheduling into the database:
 
 When you turn the durable scheduler on, keep these behavior changes in mind:
 
-- **Timing stays precise.** The scheduler claims each run up to one check interval (`N8N_SCHEDULER_EXECUTOR_INTERVAL`, five seconds by default) ahead of its scheduled time and holds it on a precise timer, so it fires at the scheduled instant rather than on a polling cadence. The interval caps how long the scheduler takes to pick up a newly activated or edited schedule; it doesn't affect steady-state timing.
+- **Timing stays precise.** Runs still fire at their scheduled instant, as they do on the in-memory scheduler.
 - **Clock-aligned timing is the default.** For "every N seconds" and "every N minutes" schedules, the durable scheduler keeps the same clock-aligned timing as the in-memory scheduler unless you change `N8N_SCHEDULER_TRIGGER_NODE_MODE`. See [Schedule Trigger timing](#trigger-node-mode).
 - **Missed runs follow a misfire policy.** Because the scheduler records runs in advance, a run missed during downtime stays on record. Within its grace period it still fires, late; beyond that, the trigger's [misfire policy](#misfire-policy) decides whether n8n discards it or runs a catch-up run.
 
@@ -101,3 +101,57 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 {% hint style="info" %}
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
 {% endhint %}
+
+## Observability
+
+The durable scheduler exposes Prometheus metrics on the `/metrics` endpoint, so you can tell whether runs start on time, whether they succeed, and whether the queue is draining. Turn them on with two environment variables:
+
+```bash
+export N8N_METRICS=true
+export N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true
+```
+
+Only main instances emit scheduler metrics. To set up the endpoint itself, see [Enable Prometheus metrics](basic-configuration/configuration-examples/enable-prometheus-metrics.md). To chart the metrics, see [Visualize metrics with Grafana](../keep-n8n-running/visualize-metrics-with-grafana.md); n8n publishes a [ready-made durable scheduler dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-scheduler) with a suggested action for each panel.
+
+Two words in the metric names need translating. A *task* is a run the scheduler recorded in the database. An *occurrence* is a run it computed from a schedule, which becomes a task once materialization records it. Most series carry a `task_type` label, either `workflow:schedule-trigger` or `workflow:poll-trigger`, so you can tell Schedule Trigger nodes and poll triggers apart.
+
+### Queue health
+
+These four gauges are a snapshot of the queue, read fresh on each scrape. They describe the whole cluster, so every main reports the same values: aggregate them with `max` or `avg`, never `sum`.
+
+| Metric | What it tells you |
+| :----- | :---------------- |
+| `n8n_scheduler_tasks_pending` | How many recorded runs are waiting. This tracks how many schedules you have, so watch the trend rather than the number. |
+| `n8n_scheduler_tasks_due` | How many recorded runs are already past their time and still haven't started. Should sit near zero. |
+| `n8n_scheduler_tasks_running` | How many runs an instance has claimed and is running right now. |
+| `n8n_scheduler_oldest_pending_age_seconds` | How far behind the oldest due run is. The clearest backlog signal: `0` means nothing is due and waiting, and a climbing value means the scheduler can't keep up. |
+
+Each scrape queries the database once for all four gauges. `N8N_METRICS_SCHEDULER_INTERVAL` (20 seconds by default) caches that query, so a tight scrape interval doesn't hammer the tables the scheduler reads.
+
+### Run throughput and failures
+
+Counters and the histogram record each main's own work, so sum them across your mains for cluster totals.
+
+| Metric | Type | What it tells you |
+| :----- | :--- | :---------------- |
+| `n8n_scheduler_tasks_dispatched_total` | Counter | How many runs the scheduler handed to a handler to start. Your scheduling throughput. |
+| `n8n_scheduler_tasks_completed_total` | Counter | How many runs reached a final outcome, split by a `result` label of `success` or `failure`. A rising failure share points at the workflow or the database, not at the scheduler. |
+| `n8n_scheduler_task_retries_total` | Counter | How many failed runs the scheduler queued for another attempt. |
+| `n8n_scheduler_tasks_reclaimed_total` | Counter | How many runs the reaper took back from an instance that claimed one and stopped. A rising count means instances are crashing or losing their claim mid-run. |
+| `n8n_scheduler_tasks_dead_lettered_total` | Counter | How many runs n8n gave up on after `N8N_SCHEDULER_MAX_ATTEMPTS` attempts. Every one is a run that never happened, so treat any increase as an alert. |
+| `n8n_scheduler_dispatch_lag_seconds` | Histogram | How long each run waited between falling due and starting. Watch the high percentiles: a p99 pulling away from the p50 means a subset of runs stalls rather than the whole queue slowing down. |
+
+### Background passes
+
+These counters cover the [four stages](#how-it-works) that keep the queue moving. They're most useful when a stage stops doing its job.
+
+| Metric | Type | What it tells you |
+| :----- | :--- | :---------------- |
+| `n8n_scheduler_occurrences_materialized_total` | Counter | How many upcoming runs the scheduler wrote to the database. Flat at zero while you have published schedules means materialization stopped. |
+| `n8n_scheduler_jobs_deferred_total` | Counter | How many schedules materialization couldn't plan and will retry, such as one with an expression it can't read. |
+| `n8n_scheduler_occurrences_misfired_total` | Counter | How many due runs a [misfire policy](#misfire-policy) discarded instead of recording, split by `task_type` and by the `policy` that discarded them. Expect a spike after downtime; steady growth means runs routinely arrive late. |
+| `n8n_scheduler_occurrences_retired_total` | Counter | How many recorded runs the scheduler dropped because a catch-up run superseded them. |
+| `n8n_scheduler_occurrences_missed_total` | Counter | How many recorded runs went past their deadline unclaimed and the reaper marked missed. |
+| `n8n_scheduler_tasks_pruned_total` | Counter | How many finished runs retention deleted. If it never rises, the scheduler tables keep growing. |
+
+All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.

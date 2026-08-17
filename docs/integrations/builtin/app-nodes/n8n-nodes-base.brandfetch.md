@@ -36,7 +36,7 @@ Refer to [Brandfetch credentials](../credentials/brandfetch.md) for guidance on 
 
 ## Identifier types
 
-Both operations require you to identify the brand using a **Type** and an **Identifier**.
+All operations require you to identify the brand using a **Type** and an **Identifier**.
 
 Select a **Type** from the following options:
 

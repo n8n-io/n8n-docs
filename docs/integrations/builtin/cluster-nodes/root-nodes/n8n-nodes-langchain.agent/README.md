@@ -39,6 +39,15 @@ Prior to version 1.82.0, the AI Agent had a setting for working as different age
 The version of this node (v1) that has this agent type setting will be removed in version 3 of n8n. If you're using an older version of the AI Agent node, n8n recommends updating to the latest version. If you need to use an SQL Agent, for example, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
 {% endhint %}
 
+{% hint style="warning" %}
+Feature availability
+
+The agent type setting is deprecated from n8n 1.82.0. All AI Agent nodes now work as a Tools Agent, which was the recommended and most frequently used setting. Workflows or templates using an older AI Agent node set to 'Tools Agent' continue to work as expected.
+
+The version of the node (v1), which has the agent type setting, is removed from n8n 3.0. If you're version 1 of the AI Agent node, update to the latest version. For use cases like an SQL Agent, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
+
+{% endhint %}
+
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

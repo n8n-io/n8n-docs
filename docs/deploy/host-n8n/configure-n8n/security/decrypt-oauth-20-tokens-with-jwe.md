@@ -19,7 +19,7 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available from n8n v2.21.0.
+* JWE token decryption is available from n8n 2.21.0.
 * Available on any n8n instance with the `N8N_ENV_FEAT_OAUTH2_JWE` environment variable set to `true`. Self-hosted instances can set it directly. On Cloud, contact n8n support to request it.
 * Requires an identity provider (IdP) that can encrypt tokens as JWE.
 {% endhint %}

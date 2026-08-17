@@ -12,14 +12,17 @@ url: >-
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # OpenTelemetry tracing <a href="#opentelemetry-tracing" id="opentelemetry-tracing"></a>
-{% hint style="warning" %}
-**This feature is still under development**
+{% hint style="info" %}
+**Feature availability**
 
-- Initially available from 2.19.0
-- Open telemetry formatted metrics will be coming soon
+OpenTelemetry tracing is in preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows. n8n plans to add OpenTelemetry-formatted metrics in a later release.
 {% endhint %}
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/) traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
@@ -52,9 +55,9 @@ n8n also handles trace context propagation:
 ## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-You need to be an instance owner or admin to configure OpenTelemetry in the UI.
+Configuring OpenTelemetry tracing from the UI is available from n8n 2.27.0. You need to be an instance owner or admin to configure OpenTelemetry in the UI.
 {% endhint %}
 
 Instead of setting environment variables, you can configure tracing from **Settings > OpenTelemetry**. n8n applies your changes without a restart, and reloads them across workers and webhook processors in [queue mode](../configure-n8n/scaling/enable-queue-mode.md).
@@ -139,7 +142,9 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ## Agent tracing <a href="#agent-tracing" id="agent-tracing"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.33.0**
+**Feature availability**
+
+Agent tracing is available from n8n 2.33.0.
 {% endhint %}
 
 n8n can also emit spans for AI agent runs, using the same tracer as workflow tracing. This covers agent runs started from a workflow (for example, the AI Agent node), from chat integrations, and from scheduled tasks.
@@ -174,7 +179,13 @@ You can add custom attributes to project, workflow, and node spans. n8n exports 
 {% hint style="info" %}
 **Feature availability**
 
-Custom span attributes are available on Enterprise plans.
+Custom span attributes are available on:
+
+- **Self-hosted:** Enterprise
+
+They aren't available on n8n Cloud.
+
+Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 {% endhint %}
 
 Don't include secrets, personal data, or other sensitive values in attribute values.
@@ -186,8 +197,6 @@ n8n supports the following custom attribute levels:
 | Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
-
-Project and workflow custom span attributes are available from n8n `2.24.0`. Node custom span attributes are available from n8n `2.22.0`.
 
 ### Add project span attributes <a href="#add-project-span-attributes" id="add-project-span-attributes"></a>
 
@@ -289,7 +298,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.name` | Workflow name. |
 | `n8n.workflow.version_id` | Workflow version ID. |
 | `n8n.workflow.node_count` | Number of nodes in the workflow. |
-| `n8n.project.id` | Project ID. Available from n8n `2.23.0`. |
+| `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
 | `n8n.execution.status` | Final execution status. |

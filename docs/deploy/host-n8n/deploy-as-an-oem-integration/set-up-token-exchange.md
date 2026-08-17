@@ -12,9 +12,14 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Enterprise plans.
-* Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true`. Self-hosted instances can set it directly. On Cloud, contact n8n support to request it.
-* Intended for embedding partners who run an external identity provider (IdP) or backend that mints signed JWTs.
+Token exchange is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true`. Self-hosted instances can set it directly. On n8n Cloud, contact n8n support to request it.
+
+Intended for embedding partners who run an external identity provider (IdP) or backend that mints signed JWTs.
 {% endhint %}
 
 {% hint style="warning" %}

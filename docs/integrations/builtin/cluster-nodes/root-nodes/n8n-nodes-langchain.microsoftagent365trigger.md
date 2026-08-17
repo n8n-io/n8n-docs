@@ -62,7 +62,11 @@ When enabled, select one of:
 
 ## Webhook authentication <a href="#webhook-authentication" id="webhook-authentication"></a>
 
-From n8n version 2.25.7 and 2.26.2, the Microsoft Agent 365 Trigger node validates every incoming request before it runs your workflow. The node checks the Bot Framework token that Microsoft sends with each request and confirms Microsoft issued it for your agent. The node rejects any request without a valid token, so others can't inject forged activities even if they know your webhook URL.
+{% hint style="info" %}
+**Feature availability**
+
+From n8n 2.25.7 and n8n 2.26.2, the Microsoft Agent 365 Trigger node validates every incoming request before it runs your workflow. The node checks the Bot Framework token that Microsoft sends with each request and confirms Microsoft issued it for your agent. The node rejects any request without a valid token, so others can't inject forged activities even if they know your webhook URL.
+{% endhint %}
 
 This validation uses the **Client ID** from your [Microsoft Agent 365 credential](../../credentials/microsoftagent365.md). The Client ID must match the application (client) ID of your agent's app registration. If it doesn't, the node rejects legitimate requests from Microsoft.
 

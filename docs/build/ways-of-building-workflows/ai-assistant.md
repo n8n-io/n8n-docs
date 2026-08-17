@@ -23,7 +23,9 @@ The result is a normal n8n workflow. You can open it, inspect it, edit it, test 
 {% hint style="info" %}
 **Feature availability**
 
-The AI Assistant is available on n8n Cloud only.
+The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
 
 {% hint style="info" %}

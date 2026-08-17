@@ -34,7 +34,7 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available on n8n Cloud and self-hosted n8n. Knowledge bases are available on n8n Cloud, and on self-hosted with a Daytona sandbox.
+Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
 {% endhint %}
 
 {% hint style="info" %}

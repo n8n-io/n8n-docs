@@ -26,21 +26,25 @@ layout:
 
 # Set up AI Assistant
 
+{% endhint %}
+
+{% hint style="info" %}
+**Feature availability**
+
+The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
+
 {% hint style="info" %}
 **Preview status**
 
-AI Assistant is a Preview feature.
-{% endhint %}
-
-{% hint style="warning" %}
-AI Assistant isn't yet available for self-hosted Enterprise. Support for self-hosted Enterprise is coming soon.
-
-If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
+The AI Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
 
 ## What AI Assistant needs
 
-Every setup needs three things:
+Every self-hosted AI Assistant setup needs three things:
 
 * **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
 * **A sandbox:** An isolated environment where AI Assistant runs code. This is required.

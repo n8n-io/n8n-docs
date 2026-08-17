@@ -3,6 +3,10 @@ description: Let each user connect their own account to a credential, so a workf
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # End-user credentials
@@ -21,9 +25,9 @@ End-user credentials are available on:
 {% endhint %}
 
 {% hint style="info" %}
-**This feature is in preview**
+**Preview status**
 
-Preview features may change in future releases. Don't rely on them in production workflows.
+End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}
 
 ## What are end-user credentials

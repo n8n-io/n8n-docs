@@ -127,7 +127,7 @@ Add the application permissions for every node you plan to use, then grant admin
 | Microsoft Excel (OneDrive) | `Files.ReadWrite.All` |
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
 | Microsoft Outlook Trigger | `Mail.Read` |
-| Microsoft SharePoint | `Sites.Read.All` for read operations, `Sites.ReadWrite.All` for write operations. To limit the app to chosen sites, grant `Sites.Selected` instead and refer to [Grant access per site](#grant-access-per-site). |
+| Microsoft SharePoint | `Sites.Read.All` for read operations, `Sites.ReadWrite.All` for write operations. For items in document libraries, `Files.Read.All` (Item: Get) or `Files.ReadWrite.All` (Item: Delete) also works. To limit the app to chosen sites, grant `Sites.Selected` instead and refer to [Grant access per site](#grant-access-per-site). |
 | Microsoft Teams and Microsoft Teams Trigger | `Team.ReadBasic.All`, plus the permissions for your operations in the table below |
 | Microsoft To Do | `Tasks.ReadWrite.All` |
 
@@ -183,6 +183,8 @@ Content-Type: application/json
 
 Use the `read` role for read-only access, or `write` for the node's write operations. You can send the request from [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) or any tool that can call Microsoft Graph. SharePoint administrators can use PnP PowerShell's [`Grant-PnPEntraIDAppSitePermission`](https://pnp.github.io/powershell/cmdlets/Grant-PnPEntraIDAppSitePermission.html) instead.
 
+Whoever sends the request needs permission to manage site permissions: in Graph Explorer, open **Modify permissions** and consent to `Sites.FullControl.All` before sending. A 403 `Access denied` response to this request means the account or tool sending it lacks that permission, not the app you're granting access to.
+
 To find a site's `<site-id>`, request it by hostname and path: `GET https://graph.microsoft.com/v1.0/sites/contoso.sharepoint.com:/sites/mysite`.
 
 With `Sites.Selected`, the nodes can't search or list sites, because Microsoft Graph doesn't support site discovery without a tenant-wide read permission. Choose the site by pasting its URL or ID instead. A missing per-site grant surfaces as a 403 error on the operation, naming the permission it needs.
@@ -224,7 +226,7 @@ n8n derives the matching sign-in endpoint automatically, for example `login.micr
 Here are common errors and issues with the Microsoft Entra Service Principal credentials:
 
 - **The credential test fails even though you granted the node permissions.** The connection test calls `GET /v1.0/organization`, which needs an admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission. Add it and grant admin consent.
-- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft Teams nodes show a clearer message instead: "The app registration is missing a consented application permission for this operation."
+- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft SharePoint (version 2) and Microsoft Excel (SharePoint) nodes show a clearer message instead, naming the permission the operation needs: "The app registration is missing a consented application permission for this operation."
 - **Authentication fails with "Microsoft Entra authentication did not return an access token".** Microsoft rejected the token exchange, for example AADSTS7000215 (invalid client secret), AADSTS7000222 (expired client secret), or AADSTS700027 (rejected certificate assertion). Check that you pasted the client secret's **Value** rather than its Secret ID, that the secret hasn't expired, and, for certificate authentication, that the private key matches the certificate uploaded to the app registration.
 - **Permission or secret changes don't take effect right away.** n8n caches the access token. Retest the credential after granting consent or rotating a secret, and recreate it if the cached token keeps failing.
 - **"Microsoft Entra tenant ID is not a valid GUID or domain."** Enter the Directory (tenant) ID GUID from the app registration's **Overview** page, or a verified domain such as `contoso.onmicrosoft.com`. Don't enter a URL.

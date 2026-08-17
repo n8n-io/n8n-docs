@@ -206,6 +206,8 @@ The general Microsoft OAuth2 also requires you to provide a space-separated list
 
 Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc) for a list of possible scopes.
 
+The n8n node documentation lists the exact scopes each node needs. For example, the [Microsoft SharePoint node](../app-nodes/n8n-nodes-base.microsoftsharepoint.md) (from version 2) gives full scope strings such as `openid offline_access Sites.ReadWrite.All`, including the `openid offline_access` scopes the credential needs to refresh its tokens.
+
 #### Outlook <a href="#outlook" id="outlook"></a>
 
 Outlook OAuth2 supports the credential accessing a user's primary email inbox or a shared inbox. By default, the credential will access a user's primary email inbox. To change this behavior:

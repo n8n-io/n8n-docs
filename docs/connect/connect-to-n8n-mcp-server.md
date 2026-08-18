@@ -327,7 +327,7 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 {% hint style="info" %}
 **Feature availability**
 
-n8n allows the routing headers below in its CORS policy from n8n 2.36.0.
+n8n allows these routing headers in its CORS policy from n8n 2.36.0.
 {% endhint %}
 
 MCP clients send the following headers to the n8n MCP endpoint:

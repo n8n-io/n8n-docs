@@ -1,0 +1,33 @@
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_c85fc1c1065441::t_1a0b9e00104a57 104,131
+  s_877dc3f2280de7::t_4b98a23f796e5c 105,109-110,112,114,121
+  s_877dc3f2280de7::t_defe9a13dcf5f4 106,108,111,113,115-117,120,122-124,126,128-130
+  s_877dc3f2280de7::t_03167ea9cb7aaa 125
+  s_877dc3f2280de7::t_c521c5c9a83575 127
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_877dc3f2280de7::t_2af9f0bcc6452f 44-45,47-49,51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "4d0351d3c1687226e35d95953f6b8738d61ee4b7",
+  "prompts": {},
+  "sessions": {
+    "s_877dc3f2280de7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ed231576-b666-4034-b503-46e9af9e9f9c",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    },
+    "s_c85fc1c1065441": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10a824b0-1024-4275-ae1a-17c8694f2771",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

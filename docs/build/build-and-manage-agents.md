@@ -221,7 +221,7 @@ Open the **Channels** section on the agent and follow the setup for the channel 
 
 ### Manage agents through MCP
 
-You can also manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](../connect/connect-to-n8n-mcp-server.md). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
+You can also manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server.md). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
 
 {% hint style="info" %}
 **Reconnect existing MCP clients**

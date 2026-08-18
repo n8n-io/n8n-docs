@@ -68,7 +68,7 @@ Both sign-in methods support every operation. Pick based on how the workflow run
 
 ## Choosing a site
 
-Every operation starts from a **Site**. There are three ways to set it:
+Every operation starts from a **Site**. Set it in one of three ways:
 
 * **From List**: search your organization's sites by name. Site search needs a tenant-wide read permission (`Sites.Read.All` or `Sites.ReadWrite.All`); it's not available with per-site access.
 * **By URL**: paste the full site address, for example `https://contoso.sharepoint.com/sites/mysite`.

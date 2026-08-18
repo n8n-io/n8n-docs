@@ -1,8 +1,8 @@
 ---
-title: v2.0 Migration Tool
-description: Tool to help you migrate to v2.0
+title: n8n 2.0 Migration Tool
+description: Tool to help you migrate to n8n 2.0
 contentType: reference
-nodeTitle: v2.0 Migration tool
+nodeTitle: n8n 2.0 Migration tool
 originalFilePath: migration-tool-v2.md
 originalUrl: 'https://docs.n8n.io/migration-tool-v2'
 url: 'https://docs.n8n.io/release-notes/v20-migration-tool'
@@ -11,13 +11,13 @@ layout:
     visible: false
 ---
 
-# n8n v2.0 migration tool <a href="#n8n-v20-migration-tool" id="n8n-v20-migration-tool"></a>
+# n8n 2.0 migration tool <a href="#n8n-v20-migration-tool" id="n8n-v20-migration-tool"></a>
 
-The migration tool helps you prepare your n8n instance for upgrading to version 2.0 by identifying workflows and configurations that need attention before the upgrade.
+The migration tool helps you prepare your n8n instance for upgrading to n8n 2.0 by identifying workflows and configurations that need attention before the upgrade.
 
 ![Migration tool](.gitbook/assets/migration-tool.png)
 
-You can see all breaking changes for v2 [on this page](v20-breaking-changes.md).
+You can see all breaking changes for n8n 2.0 [on this page](v20-breaking-changes.md).
 
 ## Accessing the Tool <a href="#accessing-the-tool" id="accessing-the-tool"></a>
 Navigate to **Settings > Migration Report** to view your compatibility status.
@@ -73,19 +73,19 @@ What you'll see for each issue:
 * Same information as workflow issues (title, severity, description, docs)
 * **No workflow count:** These are global settings that apply instance-wide
 
-The v2.0 migration tool scans your n8n instance to identify potential compatibility issues and configuration changes required for upgrading to v2.0. This reference details each check the tool performs, explains the impact of detected issues, and provides recommendations to prepare your instance for migration.
+The n8n 2.0 migration tool scans your n8n instance to identify potential compatibility issues and configuration changes required for upgrading to n8n 2.0. This reference details each check the tool performs, explains the impact of detected issues, and provides recommendations to prepare your instance for migration.
 
 ## Understanding Empty States <a href="#understanding-empty-states" id="understanding-empty-states"></a>
 
 ### No Workflow Issues Found <a href="#no-workflow-issues-found" id="no-workflow-issues-found"></a>
-All your workflows are compatible with v2.0. Check the **Instance Issues** tab to ensure your server configuration is also ready.
+All your workflows are compatible with n8n 2.0. Check the **Instance Issues** tab to ensure your server configuration is also ready.
 
 ### No Instance Issues Found <a href="#no-instance-issues-found" id="no-instance-issues-found"></a>
 
-Your instance configuration is compatible with v2.0. Check the **Workflow Issues** tab to ensure all workflows are also ready.
+Your instance configuration is compatible with n8n 2.0. Check the **Workflow Issues** tab to ensure all workflows are also ready.
 
 ### Both Tabs Empty <a href="#both-tabs-empty" id="both-tabs-empty"></a>
-Your n8n instance is fully ready to upgrade to version 2.0.
+Your n8n instance is fully ready to upgrade to n8n 2.0.
 
 ## Recommended Workflow <a href="#recommended-workflow" id="recommended-workflow"></a>
 

@@ -17,10 +17,15 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Project roles are available on all plans except the Community edition.
-* Custom roles (instance and project) require an Enterprise plan.
+Project roles are available on:
 
-Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+- **n8n Cloud:** All plans
+- **Self-hosted:** Registered Community, Business, Enterprise
+
+Custom roles (instance and project) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 RBAC in n8n lets you control access at two levels:

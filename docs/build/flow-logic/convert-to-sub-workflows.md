@@ -16,7 +16,7 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Available on all plans from n8n 1.97.0.
+Sub-workflow conversion is available from n8n 1.97.0.
 {% endhint %}
 
 Use sub-workflow conversion to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.

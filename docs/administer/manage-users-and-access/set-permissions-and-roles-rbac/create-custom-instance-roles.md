@@ -15,9 +15,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Custom instance roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+Custom instance roles are available on:
 
-**Available from:** n8n 2.30.0 (released July 7, 2026)
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.30.0 (released July 7, 2026)
 {% endhint %}
 
 {% hint style="info" %}
@@ -131,6 +134,7 @@ Certain permission combinations create a privilege escalation risk:
 
 * A user with **Roles: Manage all roles** can edit their own custom role to add permissions they weren't originally granted.
 * A user with **Members: Manage** can invite a user they control, then grant that user Admin-level access.
+* A user with **Roles: Manage project roles** can edit a custom project role they hold themselves to grant themselves permissions they weren't originally granted in that project.
 
 Only assign these permissions to fully trusted users, and avoid combining them unless necessary.
 {% endhint %}

@@ -147,7 +147,7 @@ docs assistant) chunk on `##`/`###` headings.
 
 ## Feature availability
 
-Reference plan/platform limits, n8n versions, and preview status consistently.
+Reference plan/platform limits, n8n versions, and Preview status consistently.
 See [reference.md](reference.md) for full examples and rules.
 
 - **Two version types:** instance version (the n8n release, three-part semver
@@ -175,12 +175,19 @@ See [reference.md](reference.md) for full examples and rules.
   both platforms. Add an absence line ("It isn't available on n8n Cloud.") or
   caveat line if it's on one only. Skip the bullets entirely for a version-only,
   deprecation, or removal hint.
-- **Preview:** an `info` hint, same `**Feature availability**` title as an
-  availability hint. Name the feature or node in the sentence below it, not
+- **Preview:** an `info` hint titled `**Preview status**` — never
+  `**Feature availability**`, and never folded into the same hint as one.
+  Preview answers a different question (how stable is this?) than
+  availability (where/when does this exist?), so it always gets its own
+  title and box, even when it sits right next to an availability hint for the
+  same feature. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. Use "preview", not "beta", for a feature's status. Whole page →
-  also set `status: preview` plus a primary `preview` tag (see Frontmatter's
-  `tags` field, below).
+  production. Use "Preview", not "beta", for a feature's status — capitalize
+  it wherever it names the status ("is in Preview", "a Preview feature"), same
+  as "Deprecated"/"Archived". Frontmatter and tag values stay lowercase
+  (`status: preview`, `tag: preview`) since they're literal identifiers, not
+  prose. Whole page → also set `status: preview` plus a primary `preview` tag
+  (see Frontmatter's `tags` field, below).
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

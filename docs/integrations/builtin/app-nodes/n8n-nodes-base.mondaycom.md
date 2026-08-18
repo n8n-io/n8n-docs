@@ -22,10 +22,10 @@ Use the monday.com node to automate work in monday.com, and integrate monday.com
 
 On this page, you'll find a list of operations the monday.com node supports and links to more resources.
 
-{% hint style="warning" %}
-**Minimum required version**
+{% hint style="info" %}
+**Feature availability**
 
-This node requires n8n 1.22.6 or above.
+The monday.com node is available from n8n 1.22.6.
 {% endhint %}
 
 {% hint style="info" %}

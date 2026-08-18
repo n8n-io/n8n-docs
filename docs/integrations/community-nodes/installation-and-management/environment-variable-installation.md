@@ -13,9 +13,9 @@ layout:
 # Manage community packages from environment variables <a href="#manage-community-packages-from-environment-variables" id="manage-community-packages-from-environment-variables"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.21.0**
+**Feature availability**
 
-
+Managing community packages from environment variables is available from n8n 2.21.0.
 {% endhint %}
 
 On self-hosted n8n, you can manage the set of installed community packages from environment variables. n8n reconciles the installed packages against the list on every startup, installing missing packages, correcting versions, and uninstalling packages not in the list. Use this method to bootstrap an instance with a fixed set of packages, for example through a deployment pipeline.

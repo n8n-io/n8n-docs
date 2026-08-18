@@ -54,9 +54,9 @@ This page lists the environment variables configuration options for managing nod
 ## Manage installed community packages <a href="#manage-installed-community-packages" id="manage-installed-community-packages"></a>
 
 {% hint style="info" %}
-**Available from n8n 2.21.0**
+**Feature availability**
 
-
+Managing installed community packages from environment variables is available from n8n 2.21.0.
 {% endhint %}
 
 Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for the `*_MANAGED_BY_ENV` pattern.

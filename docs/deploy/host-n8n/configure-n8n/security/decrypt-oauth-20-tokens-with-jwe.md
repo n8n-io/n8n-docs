@@ -12,6 +12,10 @@ url: >-
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # JWE token decryption for OAuth 2.0 credentials <a href="#jwe-token-decryption-for-oauth-20-credentials" id="jwe-token-decryption-for-oauth-20-credentials"></a>
@@ -19,15 +23,15 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available from n8n 2.21.0.
+* JWE token decryption is available from n8n 2.21.0.
 * Available on any n8n instance with the `N8N_ENV_FEAT_OAUTH2_JWE` environment variable set to `true`. Self-hosted instances can set it directly. On Cloud, contact n8n support to request it.
 * Requires an identity provider (IdP) that can encrypt tokens as JWE.
 {% endhint %}
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Preview status**
 
-JWE token decryption is in preview and gated by an environment flag. Field names, the environment variable, the JWKS endpoint path, and the supported algorithms can change before the feature reaches general availability. Pin your n8n version and retest your OAuth 2.0 credentials after each upgrade.
+JWE token decryption is in Preview and gated by an environment flag. Field names, the environment variable, the JWKS endpoint path, and the supported algorithms can change before the feature reaches general availability. Pin your n8n version and retest your OAuth 2.0 credentials after each upgrade.
 {% endhint %}
 
 JWE token decryption lets your identity provider return OAuth 2.0 access and ID tokens encrypted as [JWE](https://datatracker.ietf.org/doc/html/rfc7516). Your n8n instance decrypts the tokens on the OAuth callback using a private key that never leaves the instance. This protects token contents from anything that sits between your IdP and n8n, including reverse proxies, browsers, and logs.

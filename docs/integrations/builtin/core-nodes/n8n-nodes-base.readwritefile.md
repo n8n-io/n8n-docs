@@ -114,7 +114,7 @@ For persistent file handling on Cloud, use a cloud storage node such as [AWS S3]
 On self-hosted n8n, by default the node can access any path the n8n process can reach. To restrict access, set the [`N8N_RESTRICT_FILE_ACCESS_TO`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/security) environment variable to one or more allowed directories (semicolon-separated).
 
 {% hint style="info" %}
-**Default changes in n8n 2.0**
+**Feature availability**
 
 Starting in n8n 2.0, `N8N_RESTRICT_FILE_ACCESS_TO` defaults to `~/.n8n-files`. To allow file operations elsewhere, set the variable explicitly. Refer to [n8n 2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#set-default-value-for-n8n_restrict_file_access_to) for details.
 {% endhint %}

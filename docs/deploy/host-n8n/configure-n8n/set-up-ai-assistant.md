@@ -1,5 +1,6 @@
 ---
 description: Set up the AI Assistant on self-hosted n8n using environment variables.
+status: preview
 tags:
   - tag: preview
     primary: true
@@ -25,19 +26,25 @@ layout:
 
 # Set up AI Assistant
 
-{% hint style="info" %}
-AI Assistant is a preview feature.
 {% endhint %}
 
-{% hint style="warning" %}
-AI Assistant isn't yet available for self-hosted Enterprise. Support for self-hosted Enterprise is coming soon.
+{% hint style="info" %}
+**Feature availability**
 
-If you're an Enterprise customer and want to try AI Assistant before then, contact your Customer Success Manager (CSM) about preview access.
+The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+The AI Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
 
 ## What AI Assistant needs
 
-Every setup needs three things:
+Every self-hosted AI Assistant setup needs three things:
 
 * **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
 * **A sandbox:** An isolated environment where AI Assistant runs code. This is required.
@@ -308,7 +315,15 @@ WEBHOOK_URL=https://your-public-url
 | `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 {% hint style="info" %}
-The knowledge base is a preview feature on self-hosted and needs the Daytona sandbox. Without it, the rest of the agent still works.
+**Feature availability**
+
+The knowledge base needs the Daytona sandbox on self-hosted. Without it, the rest of the agent still works.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+On self-hosted, the knowledge base is in Preview.
 {% endhint %}
 
 For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).

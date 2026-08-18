@@ -109,7 +109,7 @@ To enable workflow reviews:
 1. Navigate to **Settings** > **Security & policies**.
 2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
 
-When the setting is off, users can't create or manage reviews. For how submit, approve, and publish work after you enable the feature, refer to [Workflow reviews](../../../../build/manage-workflows/workflow-reviews.md).
+When the setting is off, users can't create or manage reviews. For how submit, approve, and publish work after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
 
 ## Enforce execution data redaction <a href="#enforce-execution-data-redaction" id="enforce-execution-data-redaction"></a>
 

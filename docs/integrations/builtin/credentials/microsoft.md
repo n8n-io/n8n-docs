@@ -184,7 +184,45 @@ If you're using a government cloud tenant, you may also need to update the **Aut
 Define granular permissions for interacting with the following Microsoft services:
 
 * Microsoft Teams
-* Microsoft Excel (OneDrive)
+* Microsoft Excel
+* Microsoft Outlook
+* Microsoft SharePoint
+* Microsoft OneDrive
+
+To select different scopes for one of these credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Keep in mind that some features may not work as expected with more restrictive scopes.
+
+#### Default scopes for Microsoft Outlook
+
+Microsoft Outlook credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Contacts.Read`
+* `Contacts.ReadWrite`
+* `Calendars.Read`
+* `Calendars.Read.Shared`
+* `Calendars.ReadWrite`
+* `Mail.ReadWrite`
+* `Mail.ReadWrite.Shared`
+* `Mail.Send`
+* `Mail.Send.Shared`
+* `MailboxSettings.Read`
+
+#### Default scopes for Microsoft SharePoint
+
+Microsoft SharePoint credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `https://<subdomain>.sharepoint.com/.default`, where `{subdomain}` is replaced with the credential's **Subdomain** value
+
+#### Default scopes for Microsoft OneDrive
+
+Microsoft OneDrive credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Files.ReadWrite.All`
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 

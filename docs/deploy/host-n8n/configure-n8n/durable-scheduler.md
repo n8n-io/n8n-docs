@@ -126,6 +126,8 @@ From n8n 2.36.0, setting `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` closes t
 
 The first poll after you turn the setting on moves that node's cursor to the new table, starting from the node's current position, so the switch doesn't fetch anything twice or skip anything. A node whose cursor has moved keeps using the new storage even if you later set `N8N_POLLER_DURABLE_CURSORS_ENABLED` back to `false`: turning it off only makes the cursor and the execution save as two separate writes again, it doesn't move cursors back to static data.
 
+To watch cursor commits, turn on the poll trigger metrics with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
+
 {% hint style="warning" %}
 Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` before, or together with, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. When the durable scheduler dispatches polls across instances while cursors still live in workflow static data, overlapping poll rounds can save the cursor out of order, which risks dropped or duplicated items.
 {% endhint %}
@@ -166,6 +168,7 @@ Counters and the histogram record each main's own work, so sum them across your 
 | `n8n_scheduler_tasks_completed_total` | Counter | How many runs reached a final outcome, split by a `result` label of `success` or `failure`. A rising failure share points at the workflow or the database, not at the scheduler. |
 | `n8n_scheduler_task_retries_total` | Counter | How many failed runs the scheduler queued for another attempt. |
 | `n8n_scheduler_tasks_reclaimed_total` | Counter | How many runs the reaper took back from an instance that claimed one and stopped. A rising count means instances are crashing or losing their claim mid-run. |
+| `n8n_scheduler_tasks_lease_lost_total` | Counter | How many runs finished after another instance had already reclaimed their claim, so the same run may have executed twice. Split by `task_type`. For poll triggers this is the cross-instance overlap signal, and [durable poll cursors](#durable-poll-cursors) keep the cursor correct when it happens. |
 | `n8n_scheduler_tasks_dead_lettered_total` | Counter | How many runs n8n gave up on after `N8N_SCHEDULER_MAX_ATTEMPTS` attempts. Every one is a run that never happened, so treat any increase as an alert. |
 | `n8n_scheduler_dispatch_lag_seconds` | Histogram | How long each run waited between falling due and starting. Watch the high percentiles: a p99 pulling away from the p50 means a subset of runs stalls rather than the whole queue slowing down. |
 

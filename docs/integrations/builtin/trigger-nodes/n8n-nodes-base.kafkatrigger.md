@@ -37,7 +37,7 @@ To decode messages with an authenticated Confluent Schema Registry (for example,
 {% hint style="warning" %}
 **Message compression**
 
-The Kafka Trigger can consume uncompressed messages and messages compressed with **GZIP**. It can't decode messages compressed with **LZ4**, **Snappy**, or **ZSTD** (a common default for Confluent and JVM producers): consuming such a topic fails with an unsupported-compression-format error. To consume the topic, configure the producer to use gzip or no compression.
+The Kafka Trigger can consume uncompressed messages and messages compressed with **GZIP**. It can't decode messages compressed with **LZ4**, **Snappy**, or **Zstd** (a common default for Confluent and JVM producers): consuming such a topic fails with an unsupported-compression-format error. To consume the topic, configure the producer to use gzip or no compression.
 {% endhint %}
 
 {% hint style="info" %}

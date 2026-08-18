@@ -200,7 +200,7 @@ This will toggle MCP access for all workflows that are **currently** in the sele
 {% hint style="info" %}
 **Feature availability**
 
-Auto-exposing new workflows is rolling out gradually from n8n 2.36.0, so the setting isn't visible on every instance yet.
+Auto-exposing new workflows is rolling out gradually from n8n 2.36.0. The setting may not be immediately visible on every instance.
 {% endhint %}
 
 Instead of enabling MCP access for each workflow individually, you can expose every newly created workflow automatically:
@@ -215,7 +215,7 @@ Only instance owners and admins can change this setting. It's read-only on insta
 {% hint style="info" %}
 **Note**
 
-Workflows still need to meet the eligibility rules to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
+Workflows still need to meet the [eligibility rules](#exposing-workflows-to-mcp-clients) to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>

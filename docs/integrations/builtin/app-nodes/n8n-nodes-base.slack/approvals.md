@@ -5,6 +5,9 @@ description: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Approvals in Slack

@@ -32,6 +32,9 @@ layout:
     visible: true
   actions:
     visible: true
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Message operations

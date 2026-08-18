@@ -209,7 +209,7 @@ Instead of enabling MCP access for each workflow individually, you can expose ev
 1. Navigate to **Settings > Instance-level MCP**.
 2. Turn on **Auto-expose new workflows**.
 
-This setting is off by default. Turning it on only affects workflows created afterwards. Workflows that already exist keep their current setting, so use one of the options above to expose those.
+This setting is off by default. Turning it on only affects workflows created afterwards. Workflows that already exist keep their current setting, so use [Enabling access for individual workflows](#enabling-access-for-individual-workflows) or [Enabling access for projects/folders](#enabling-access-for-projectsfolders) to expose those.
 
 Only instance owners and admins can change this setting. It's read-only on instances where MCP access is managed through environment variables.
 

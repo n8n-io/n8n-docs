@@ -1,0 +1,20 @@
+docs/build/manage-workflows/n8n-packages/package-format.md
+  s_9103d662b67efd::t_741c05f098fa31 176
+  s_9103d662b67efd::t_9a679095e1aeb8 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "746e6d5b4c2e25c8f9c60c594173532814ed5ac2",
+  "prompts": {},
+  "sessions": {
+    "s_9103d662b67efd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6adb89d5-a0d0-4661-bb53-78d474a4e8db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

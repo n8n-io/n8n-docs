@@ -18,16 +18,19 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # OpenAI Assistant operations <a href="#openai-assistant-operations" id="openai-assistant-operations"></a>
 
 Use this operation to create, delete, list, message, or update an assistant in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
-{% hint style="info" %}
-**Assistant operations deprecated in OpenAI node V2**
+{% hint style="warning" %}
+**Feature availability**
 
-n8n 1.117.0 introduces V2 of the OpenAI node that supports the OpenAI Responses API and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
+Assistant operations are deprecated in OpenAI node V2, introduced in n8n 1.117.0. OpenAI node V2 supports the OpenAI Responses API, and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
 {% endhint %}
 
 ## Create an Assistant <a href="#create-an-assistant" id="create-an-assistant"></a>

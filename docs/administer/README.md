@@ -30,6 +30,8 @@ This section helps you run n8n securely and reliably as usage grows.
 Enterprise teams often spend more time in this section. SSO, directory integration, change control, and centralized logging become more important at scale. Many features covered here are also useful outside Enterprise, including user management basics, credential security, and operational monitoring.
 {% endhint %}
 
+Before you plan an upgrade or check whether a feature applies to your instance, see [Understand feature availability](understand-feature-availability.md) for what Preview, GA, deprecated, and removed mean, how n8n versioning works, and how plan and platform limits apply.
+
 ### A typical administration workflow
 
 {% stepper %}

@@ -1,6 +1,7 @@
 # Summary
 
 * [Administer](README.md)
+* [Understand feature availability](understand-feature-availability.md)
 * [Manage users and access](manage-users-and-access/README.md)
   * [Set up for Cloud](manage-users-and-access/set-up-for-cloud.md)
   * [Add and remove users](manage-users-and-access/add-and-remove-users.md)

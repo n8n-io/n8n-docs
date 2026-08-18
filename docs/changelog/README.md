@@ -12,6 +12,8 @@ Use this page alongside n8n's other release resources depending on what you need
 Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-notes-1.x.md), and [0.x](release-notes-0.x.md) remain archived. Everything in the 2.x archive is covered by this changelog and the Release notes.
 {% endhint %}
 
+For what Preview, GA, deprecated, and removed mean, and how n8n's version numbers work, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Return webhook responses of any size from your workers

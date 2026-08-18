@@ -75,7 +75,7 @@ To get your Client ID and Client Secret, register a new Typeform app:
 {% hint style="info" %}
 **Custom scopes**
 
-By default, n8n requests these scopes: `forms:read`, `webhooks:read`, and `webhooks:write`. To request different or additional Typeform API permissions, turn on **Custom Scopes** in the credential and edit the **Enabled Scopes** field. Take care when removing a default scope, as this may stop the Typeform Trigger node from working.
+By default, n8n requests these scopes: `forms:read`, `webhooks:read`, and `webhooks:write`. To request different Typeform API permissions, turn on **Custom Scopes** in the credential and edit the **Enabled Scopes** field. Take care when removing a default scope, as this may stop the Typeform Trigger node from working.
 {% endhint %}
 
 Refer to [Create applications that integrate with Typeform's APIs](https://www.typeform.com/developers/get-started/applications/#1-create-an-application-in-the-typeform-admin-panel) for more information.

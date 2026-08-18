@@ -128,6 +128,22 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |(second)|minute|hour|day of month|month|day of week(Sun-Sat)|
 
+## Node options <a href="#node-options" id="node-options"></a>
+
+The node's **Settings** tab offers options controlling what happens when an execution misses its scheduled time, for example because the instance was down:
+
+* **If Execution Is Missed**: What to do with missed executions. Choose from:
+    * **Don't Run Missed Executions** (default): Discard missed executions and resume on schedule.
+    * **Run the Most Recent Missed Execution**: Run a single catch-up execution at the most recent missed time, then resume on schedule.
+    * **Run the Most Recent Missed Execution Per Rule**: Like the previous option, but each trigger rule runs its own catch-up execution.
+* **Missed Execution Grace Period (Seconds)**: How late an execution may start before it counts as missed. Set to `0` to use the instance setting (`N8N_SCHEDULER_MISFIRE_GRACE`, 60 seconds by default). n8n raises values below the instance minimum (60 seconds with the defaults) to it, and caps values above 30 days.
+
+{% hint style="info" %}
+**Feature availability**
+
+These options are available from n8n 2.36, on Schedule Trigger nodes added from that version on. They take effect only when the instance runs the [durable scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler); the default in-memory scheduler never runs missed executions.
+{% endhint %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

@@ -22,7 +22,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise plans
+External storage is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
+
 {% endhint %}
 
 n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
@@ -32,7 +37,13 @@ n8n can store binary data and execution data produced by workflow executions ext
 n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
 
 {% hint style="info" %}
-**Enterprise-tier feature**
+**Feature availability**
+
+S3 binary data storage is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
 
 You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
 {% endhint %}
@@ -73,7 +84,7 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
 {% endhint %}
 
-## Validate and update your S3 bucket region format (n8n 2.6.4 onward) <a href="#validate-and-update-your-s3-bucket-region-format-v264-onward" id="validate-and-update-your-s3-bucket-region-format-v264-onward"></a>
+## Validate and update your S3 bucket region format (from n8n 2.6.4) <a href="#validate-and-update-your-s3-bucket-region-format-v264-onward" id="validate-and-update-your-s3-bucket-region-format-v264-onward"></a>
 
 Starting from n8n 2.6.4, the value of the environment variable `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` must meet these conditions:
 
@@ -129,7 +140,13 @@ Newer n8n versions have stricter validation and protocol handling. Older configu
 n8n supports [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) as an external store for binary data produced by workflow executions. This uses the same Azure Blob configuration as [external execution data storage](../basic-configuration/use-environment-variables/external-data-storage.md#azure-blob-storage), so a single container can hold both binary data and execution data.
 
 {% hint style="info" %}
-**Enterprise-tier feature**
+**Feature availability**
+
+Azure Blob Storage for binary data is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
 
 You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `azure` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
 {% endhint %}

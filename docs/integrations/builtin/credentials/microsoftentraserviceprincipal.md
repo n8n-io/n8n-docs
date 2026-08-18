@@ -32,7 +32,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Node version requirements**
 
-The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from version 1. n8n plans to support the Microsoft SharePoint node.
+The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from node version 1. n8n plans to support the Microsoft SharePoint node.
 {% endhint %}
 
 ## Prerequisites

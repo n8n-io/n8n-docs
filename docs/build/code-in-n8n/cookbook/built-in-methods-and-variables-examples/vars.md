@@ -16,8 +16,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise and Pro and Enterprise Cloud plans.
-* You need access to the n8n instance owner account to create variables.
+`vars` is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+You need access to the n8n instance owner account to create variables.
 {% endhint %}
 
 `vars` contains all [Variables](../../define-custom-variables.md) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.

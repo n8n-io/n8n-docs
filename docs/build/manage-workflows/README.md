@@ -13,6 +13,10 @@ layout:
 [tag-workflows.md](tag-workflows.md)
 {% endcontent-ref %}
 
+{% content-ref url="favorite-items.md" %}
+[favorite-items.md](favorite-items.md)
+{% endcontent-ref %}
+
 {% content-ref url="view-change-history.md" %}
 [view-change-history.md](view-change-history.md)
 {% endcontent-ref %}
@@ -23,6 +27,10 @@ layout:
 
 {% content-ref url="export-and-import.md" %}
 [export-and-import.md](export-and-import.md)
+{% endcontent-ref %}
+
+{% content-ref url="n8n-packages/README.md" %}
+[README.md](n8n-packages/README.md)
 {% endcontent-ref %}
 
 {% content-ref url="share-with-others.md" %}

@@ -16,8 +16,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise and Pro Cloud plans.
-* Only instance owners and admins can create variables.
+Custom variables are available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+Only instance owners and admins can create variables.
 {% endhint %}
 
 Custom variables are read-only variables that you can use to store and reuse values in n8n workflows.
@@ -27,7 +31,7 @@ Custom variables are read-only variables that you can use to store and reuse val
 
 * **Global variables** are available to everyone on your n8n instance, across all projects.
 * **Project-scoped variables** are available only within the specific project they're created in.
-* Project-scoped variables are available in 1.118.0 and above. Previous versions only support global variables accessible from the left side menu.
+* Project-scoped variables are available from n8n 1.118.0. Previous versions only support global variables accessible from the left side menu.
 {% endhint %}
 
 ## Create variables <a href="#create-variables" id="create-variables"></a>

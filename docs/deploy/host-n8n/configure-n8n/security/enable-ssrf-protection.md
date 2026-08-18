@@ -17,9 +17,9 @@ layout:
 # SSRF protection <a href="#ssrf-protection" id="ssrf-protection"></a>
 
 {% hint style="info" %}
-**Available since 2.12.0**
+**Feature availability**
 
-
+SSRF protection is available from n8n 2.12.0.
 {% endhint %}
 
 Server-Side Request Forgery (SSRF) attacks abuse workflow nodes to make requests to internal network resources, cloud metadata endpoints, or localhost services that shouldn't be accessible.

@@ -79,6 +79,12 @@ Select **Add Option** to view and set the options.
 
 ## How n8n secures HTML responses <a href="#how-n8n-secures-html-responses" id="how-n8n-secures-html-responses"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
+Automatic wrapping of HTML responses to webhooks in `<iframe>` tags was introduced in n8n 1.103.0.
+{% endhint %}
+
 Starting with n8n 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
 
 This has the following implications:
@@ -114,10 +120,10 @@ The node will now have two outputs:
 
 ## Return more than one data item (deprecated) <a href="#return-more-than-one-data-item-deprecated" id="return-more-than-one-data-item-deprecated"></a>
 
-{% hint style="info" %}
-**Deprecated in 1.22.0**
+{% hint style="warning" %}
+**Feature availability**
 
-n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
+Returning more than one data item via the workarounds in this section is deprecated from n8n 1.22.0. In later versions, n8n added support for returning all data items using the **All Incoming Items** option.
 {% endhint %}
 
 The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution.

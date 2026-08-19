@@ -31,21 +31,12 @@ An [AI agent](#user-content-fn-1)[^1] is an autonomous system that receives data
 You must connect at least one tool [sub-node](../../sub-nodes/README.md) to an AI Agent node.
 {% endhint %}
 
-{% hint style="info" %}
-**Agent type**
-
-Prior to version 1.82.0, the AI Agent had a setting for working as different agent types. This has now been removed and all AI Agent nodes work as a `Tools Agent` which was the recommended and most frequently used setting. If you're working with older versions of the AI Agent in workflows or templates, as long as they were set to 'Tools Agent', they should continue to behave as intended with the updated node.
-
-The version of this node (v1) that has this agent type setting will be removed in version 3 of n8n. If you're using an older version of the AI Agent node, n8n recommends updating to the latest version. If you need to use an SQL Agent, for example, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
-{% endhint %}
-
 {% hint style="warning" %}
-Feature availability
+**Feature availability**
 
-The agent type setting is deprecated from n8n 1.82.0. All AI Agent nodes now work as a Tools Agent, which was the recommended and most frequently used setting. Workflows or templates using an older AI Agent node set to 'Tools Agent' continue to work as expected.
+The agent type setting is deprecated from n8n 1.82.0. All AI Agent nodes now work as a `Tools Agent`, which was the recommended and most frequently used setting. Workflows or templates using an older AI Agent node set to `Tools Agent` continue to work as expected.
 
-The version of the node (v1), which has the agent type setting, is removed from n8n 3.0. If you're version 1 of the AI Agent node, update to the latest version. For use cases like an SQL Agent, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
-
+The version of the node (v1) that has the agent type setting **will be removed from n8n 3.0**. If you're using v1 of the AI Agent node, update to the latest version. For use cases like an SQL Agent, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
 {% endhint %}
 
 

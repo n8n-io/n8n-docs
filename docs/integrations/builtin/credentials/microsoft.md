@@ -189,7 +189,7 @@ Define granular permissions for interacting with the following Microsoft service
 * Microsoft SharePoint
 * Microsoft OneDrive
 
-To select different scopes for one of these credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Keep in mind that some features may not work as expected with more restrictive scopes.
+To select different scopes for one of these credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Some features may not work as expected with more restrictive scopes.
 
 #### Default scopes for Microsoft Outlook
 

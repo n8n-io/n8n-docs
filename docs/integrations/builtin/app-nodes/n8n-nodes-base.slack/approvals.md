@@ -5,6 +5,7 @@ description: >-
 layout:
   description:
     visible: false
+status: preview
 tags:
   - tag: preview
     primary: true

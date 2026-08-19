@@ -32,6 +32,7 @@ layout:
     visible: true
   actions:
     visible: true
+status: preview
 tags:
   - tag: preview
     primary: true

@@ -34,7 +34,7 @@ You must connect at least one tool [sub-node](../../sub-nodes/README.md) to an A
 {% hint style="warning" %}
 **Feature availability**
 
-The agent type setting is deprecated from n8n 1.82.0. All AI Agent nodes now work as a `Tools Agent`, which was the recommended and most frequently used setting. Workflows or templates using an older AI Agent node set to `Tools Agent` continue to work as expected.
+The AI Agent node's agent type setting is deprecated from n8n 1.82.0. All AI Agent nodes now work as a `Tools Agent`, which was the recommended and most frequently used setting. Workflows or templates using an older AI Agent node set to `Tools Agent` continue to work as expected.
 
 The version of the node (v1) that has the agent type setting **will be removed from n8n 3.0**. If you're using v1 of the AI Agent node, update to the latest version. For use cases like an SQL Agent, use a Postgres/MySQL tool sub-node with a recent Agent node instead.
 {% endhint %}

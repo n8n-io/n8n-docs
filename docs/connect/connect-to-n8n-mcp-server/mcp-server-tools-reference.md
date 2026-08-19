@@ -384,10 +384,10 @@ Search for projects accessible to the current user. Use this to resolve a projec
 {% hint style="info" %}
 **Feature availability**
 
-`search_folders` is available from n8n 2.14.0.
+`search_folders` is available from n8n 2.14.0. n8n only exposes this tool when the instance is licensed for folders.
 {% endhint %}
 
-Search for folders within a project.
+Search for folders within a project. Use it to resolve a folder name to an ID before creating a workflow in a folder, creating or updating a folder, or moving workflows into a folder.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
@@ -405,12 +405,132 @@ Search for folders within a project.
 | `data[].id` | `string` | The unique identifier of the folder |
 | `data[].name` | `string` | The name of the folder |
 | `data[].parentFolderId` | `string | null` | The ID of the parent folder, or null if at project root |
+| `data[].path` | `string[]` | The folder's full name path from the project root, ending with the folder's own name |
 | `count` | `integer` | Total number of matching folders |
+| `error` | `string` | Error message explaining why the search failed. Present only on failure. |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Maximum result limit is 100.
 - This tool enables MCP clients to create workflows in a specific folder.
+- Use `path` to tell folders with the same name apart, and to present folders to the user by name. When several folders match a name, ask the user which one they meant.
+
+---
+
+### create_folder <a href="#createfolder" id="createfolder"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n only exposes `create_folder` when the instance is licensed for folders.
+{% endhint %}
+
+Create a folder in a project, optionally nested under an existing folder.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | Yes | The ID of the project to create the folder in. Use `search_projects` to resolve a project name to an ID. |
+| `name` | `string` | Yes | The name of the folder to create |
+| `parentFolderId` | `string` | No | Parent folder ID to nest the new folder under. It must belong to the same project. Use `search_folders` to find it. Omit it or pass `"0"` to create the folder at the project root. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | `string` | The ID of the folder |
+| `name` | `string` | The name of the folder |
+| `parentFolderId` | `string | null` | The ID of the parent folder, or null if the folder is at the project root |
+| `error` | `string` | Error message explaining why the operation failed. Present only on failure. |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- The call fails with `Project not found or access denied` if you lack the `folder:create` permission on the project.
+- If n8n can't find a folder ID, the error points you at `search_folders` to look up a valid one.
+- If the user named a parent folder, resolve it with `search_folders` first. When several folders match the name, ask the user which one they meant before creating.
+- After creating the folder, confirm it to the user by name, not ID.
+
+---
+
+### update_folder <a href="#updatefolder" id="updatefolder"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n only exposes `update_folder` when the instance is licensed for folders.
+{% endhint %}
+
+Rename a folder, move it under another folder in the same project, or both.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | Yes | The ID of the project the folder belongs to. Use `search_projects` to resolve a project name to an ID. |
+| `folderId` | `string` | Yes | The ID of the folder to update. Use `search_folders` to find it by name. |
+| `name` | `string` | No | New name for the folder |
+| `parentFolderId` | `string` | No | New parent folder ID to move the folder under. It must belong to the same project, and must not be a descendant of the folder you're moving. Pass `"0"` to move the folder to the project root. Omit it to leave the folder in place. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | `string` | The ID of the folder |
+| `name` | `string` | The name of the folder |
+| `parentFolderId` | `string | null` | The ID of the parent folder, or null if the folder is at the project root |
+| `error` | `string` | Error message explaining why the operation failed. Present only on failure. |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Pass at least one of `name` or `parentFolderId`, otherwise the call fails with `Provide at least one of name or parentFolderId`.
+- The call fails with `Project not found or access denied` if you lack the `folder:update` permission on the project.
+- If n8n can't find a folder ID, the error points you at `search_folders` to look up a valid one.
+- Resolve folders by name with `search_folders` first. When several folders match a name, ask the user which one they meant before updating.
+- After the update, confirm the result to the user using folder names, not IDs.
+
+---
+
+### move_workflows_to_folder <a href="#moveworkflowstofolder" id="moveworkflowstofolder"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n only exposes `move_workflows_to_folder` when the instance is licensed for folders.
+{% endhint %}
+
+Move one or more existing workflows into a folder, or to the project root. The destination folder must be in the same project as the workflows.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowIds` | `string[]` | Yes (min 1, max 20) | The IDs of the workflows to move |
+| `folderId` | `string` | Yes | The ID of the destination folder. It must belong to the project that owns the workflows. Use `search_folders` to find it by name. Pass `"0"` to move the workflows to the project root. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `folder` | `object` | The destination folder. Omitted when moving to the project root. |
+| `folder.id` | `string` | The ID of the destination folder |
+| `folder.name` | `string` | The name of the destination folder |
+| `moved` | `array` | Workflows the tool moved |
+| `moved[].workflowId` | `string` | The ID of the moved workflow |
+| `moved[].name` | `string` | The name of the moved workflow |
+| `failed` | `array` | Workflows the tool couldn't move, with the reason for each |
+| `failed[].workflowId` | `string` | The ID of the workflow the tool couldn't move |
+| `failed[].error` | `string` | Why the tool couldn't move the workflow |
+| `error` | `string` | Error message explaining why the move failed. Present only on failure. |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Move up to 20 workflows per call.
+- Moves can partially succeed. Report any entries in `failed` to the user.
+- If the tool moves none of the workflows, it returns the error `None of the workflows could be moved`.
+- If n8n can't find the destination folder, the error points you at `search_folders` to look up a valid folder ID.
+- Resolve the folder by name with `search_folders` first. When several folders match the name, ask the user which one they meant before moving.
+- After moving, confirm the destination to the user by folder name, not ID.
 
 ---
 
@@ -877,7 +997,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `name` | `string` | No | Optional workflow name (max 128 chars). If not provided, uses the name from the code. |
 | `description` | `string` | No | Workflow description. Text longer than 255 characters is shortened to 255 before saving. |
 | `projectId` | `string` | No | Project ID to create the workflow in. Defaults to the user's personal project. Use `search_projects` first if the user names a project. |
-| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. Use `search_folders` to find a folder by name within a project. |
+| `folderId` | `string` | No | Folder ID to create the workflow in. Requires `projectId` to be set. Use `search_folders` to find a folder by name within a project. When several folders match the name, ask the user which one they meant before creating. |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -895,6 +1015,9 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
 | `targetProject.type` | `"personal" | "team"` | Whether the workflow was created in a personal or team project |
+| `targetFolder` | `object` | The folder the workflow was created in. Absent when the workflow lands at the project root. |
+| `targetFolder.id` | `string` | The ID of the folder the workflow was created in |
+| `targetFolder.name` | `string` | The name of the folder the workflow was created in |
 | `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
 
@@ -907,7 +1030,8 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - Resolves webhook node IDs automatically.
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
-- After creation, tell the user which project the workflow was created in using the `targetProject` field.
+- If the user names a target folder, resolve it with `search_folders` first.
+- After creation, tell the user which project, and folder if any, the workflow was created in using the `targetProject` and `targetFolder` fields.
 - From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
 
 ---

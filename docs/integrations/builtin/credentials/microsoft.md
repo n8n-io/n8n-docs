@@ -214,7 +214,7 @@ Microsoft SharePoint credentials use the following scopes by default:
 
 * `openid`
 * `offline_access`
-* `https://<subdomain>.sharepoint.com/.default`, where `{subdomain}` is replaced with the credential's **Subdomain** value
+* `https://<subdomain>.sharepoint.com/.default`, where `<subdomain>` is replaced with the credential's **Subdomain** value
 
 #### Default scopes for Microsoft OneDrive
 

@@ -21,8 +21,8 @@ layout:
 
 # Microsoft Agent 365 Trigger node <a href="#microsoft-agent-365-trigger-node" id="microsoft-agent-365-trigger-node"></a>
 
-{% hint style="warning" %}
-**Early preview**
+{% hint style="info" %}
+**Preview status**
 
 This is an early preview for building agents with Microsoft Agent 365 and n8n. You need to be part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access to Microsoft Agent 365.
 {% endhint %}

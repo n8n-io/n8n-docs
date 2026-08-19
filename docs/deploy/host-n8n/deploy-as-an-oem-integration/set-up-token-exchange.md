@@ -5,6 +5,10 @@ contentType: howto
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Token exchange for embedding partners
@@ -22,10 +26,10 @@ Enabled with the `N8N_ENV_FEAT_TOKEN_EXCHANGE` environment variable set to `true
 Intended for embedding partners who run an external identity provider (IdP) or backend that mints signed JWTs.
 {% endhint %}
 
-{% hint style="warning" %}
-**Preview feature**
+{% hint style="info" %}
+**Preview status**
 
-Token exchange is a preview feature behind an environment flag. The environment variables, endpoint paths, and JWT claim contract can change before the feature reaches general availability. Pin your n8n version and retest your integration after each upgrade.
+Token exchange is a Preview feature behind an environment flag. The environment variables, endpoint paths, and JWT claim contract can change before the feature reaches general availability. Pin your n8n version and retest your integration after each upgrade.
 {% endhint %}
 
 OAuth 2.0 Token Exchange ([RFC 8693](https://datatracker.ietf.org/doc/html/rfc8693)) lets embedding partners authenticate users and act on their behalf within an embedded n8n instance. Token exchange supports two use cases:

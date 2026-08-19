@@ -946,6 +946,8 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
 | `setNodeSettings` | `nodeName`, `settings` |  | Updates node-level execution settings. `settings` must include at least one supported setting. |
 | `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
+| `addTags` | `names` |  | Attaches tags to the workflow by name. Provide 1-50 names, each 1-24 characters. Unknown names are auto-created. Idempotent. |
+| `removeTags` | `names` |  | Detaches tags from the workflow by name. Provide 1-50 names, each 1-24 characters. Unknown names are ignored. |
 
 #### `setNodeSettings` fields <a href="#setnodesettings-fields" id="setnodesettings-fields"></a>
 
@@ -985,7 +987,9 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 - Credential auto-assignment runs only for nodes added in the current call.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
-- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
+- Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`, unless the batch contains only tag operations.
+- `addTags` and `removeTags` fail if workflow tags are disabled on the instance.
+- `addTags` only auto-creates unknown tag names when the user has the `tag:create` global permission. Otherwise the update fails and the error lists the tag names that don't exist.
 
 ---
 

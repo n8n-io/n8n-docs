@@ -60,6 +60,7 @@ Version 2 of the Kafka Trigger runs on [`@confluentinc/kafka-javascript`](https:
 - It checks the connection when you publish the workflow. If the topic is missing or the consumer can't join its group, publishing fails with a clear error instead of the trigger consuming nothing.
 
 Version 2 is disabled by default during the preview. Triggers added from the nodes panel stay on version 1.3, and there's no version picker in the editor. To opt in, import a workflow JSON where the Kafka Trigger node has `"typeVersion": 2`. n8n has verified the preview on the official n8n Docker images, on both amd64 and arm64. Version 2 includes a native compiled component, so other install methods, such as npm or custom images, aren't verified during the preview.
+
 The version 1 and version 2 client libraries can't form a consumer group together, so choose the consumer group ID to match your goal:
 
 - **To run version 1 and version 2 side by side**, give the version 2 trigger its own consumer group ID. The two triggers are then independent, and each receives every message on the topic.

@@ -14,9 +14,9 @@ tags:
 # Import a package
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-n8n packages are in preview. The import options may change in future releases.
+n8n packages are in Preview. The import options may change in future releases.
 {% endhint %}
 
 Import reads an [n8n package](README.md), a [.n8np archive](package-format.md), and writes its contents to the target instance. n8n checks the whole package first: if anything would block the import, it writes nothing and returns every problem at once. See [How import works](how-import-works.md) for the detail.

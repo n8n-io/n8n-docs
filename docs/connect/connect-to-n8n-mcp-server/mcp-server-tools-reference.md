@@ -301,6 +301,62 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 
 ---
 
+### get_workflow_versions_diff <a href="#getworkflowversionsdiff" id="getworkflowversionsdiff"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_versions_diff` is available from n8n 2.36.0.
+{% endhint %}
+
+Compare two saved versions of a workflow and return what changed between them.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the versions belong to |
+| `fromVersionId` | `string` | Yes | The base (older) version ID |
+| `toVersionId` | `string` | Yes | The target (newer) version ID |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the comparison succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `fromVersionId` | `string` | The base version ID |
+| `toVersionId` | `string` | The target version ID |
+| `nodesAdded` | `array` | Full content of nodes present in the target version but not the base version. Credential references are reduced to `id` and `name` |
+| `nodesRemoved` | `array` | Nodes present in the base version but not the target version, each with `id`, `name`, and `type` |
+| `nodesModified` | `array` | Nodes present in both versions whose content changed, each with `id`, `name`, `type`, and `changes` |
+| `nodesModified[].changes` | `object` | Field-level delta. Changed values appear as `{ __old, __new }`, added keys as `<key>__added`, removed keys as `<key>__deleted`, and array changes as `[op, value]` tuples |
+| `connectionsAdded` | `array` | Connections present in the target version but not the base version |
+| `connectionsRemoved` | `array` | Connections present in the base version but not the target version |
+| `error` | `string` | Error message if the comparison failed |
+
+Each entry in `connectionsAdded` and `connectionsRemoved` has the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `from` | `string` | Source node name |
+| `to` | `string` | Target node name |
+| `type` | `string` | Connection type, such as `main` or `ai_tool` |
+| `fromOutput` | `number` | Index of the source node output. For example, on an **If** node, `0` is the true branch and `1` is the false branch |
+| `toInput` | `number` | Index of the target node input. For example, `1` is the second input of a **Merge** node |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the version IDs from `get_workflow_history`.
+- Pass the older version as `fromVersionId` and the newer one as `toVersionId`.
+- `nodesAdded` contains the full node content, so you can read added nodes without a second call. For the content of removed nodes, fetch the base version with `get_workflow_version`.
+- Nodes that only moved on the canvas aren't reported as modified.
+- Renaming a node doesn't by itself produce connection changes, because connection endpoints are matched by node ID.
+- Modified nodes list the name they have in the target version.
+
+
+---
+
 ### search_projects <a href="#searchprojects" id="searchprojects"></a>
 
 {% hint style="info" %}
@@ -989,9 +1045,9 @@ Agent management tools are available from n8n 2.34.0, when the workflow builder 
 {% endhint %}
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 These tools create, configure, publish, and manage n8n agents: persisted, first-class conversational assistants with their own model, tools, skills, tasks, and channel integrations. An agent is a separate resource from a workflow, even though a workflow can contain an AI Agent node.

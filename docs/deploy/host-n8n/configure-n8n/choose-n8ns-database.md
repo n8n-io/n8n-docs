@@ -24,7 +24,7 @@ By default, self-hosted installations use **SQLite**. You can optionally configu
 
 n8n Cloud installations use different databases depending on your plan tier:
 
-- **SQLite**: Trial, Starter, and Pro plans, as well as legacy Enterprise plans
+- **SQLite**: Starter, Pro, and legacy Enterprise plans
 - **PostgreSQL**: Enterprise Scaling plans only
 
 ## Shared settings <a href="#shared-settings" id="shared-settings"></a>

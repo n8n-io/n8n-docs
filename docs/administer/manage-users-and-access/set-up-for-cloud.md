@@ -12,7 +12,11 @@ layout:
 
 # Set up user management on n8n Cloud <a href="#set-up-user-management-on-n8n-cloud" id="set-up-user-management-on-n8n-cloud"></a>
 
-To access user management, upgrade to version 0.195.0 or newer.
+{% hint style="info" %}
+**Feature availability**
+
+User management is available from n8n 0.195.0.
+{% endhint %}
 
 {% hint style="warning" %}
 **Irreversible upgrade**

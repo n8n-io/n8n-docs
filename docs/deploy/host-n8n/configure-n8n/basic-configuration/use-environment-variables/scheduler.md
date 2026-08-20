@@ -43,7 +43,7 @@ Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_EN
 
 ## Poll triggers <a href="#poll-trigger-vars" id="poll-trigger-vars"></a>
 
-Controls how trigger nodes with a **Poll Times** parameter (such as Gmail Trigger or Airtable Trigger) store their cursor, the node's record of how far it has already read. To route these nodes through the durable scheduler, use `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` above. See [Poll triggers](../../durable-scheduler.md#poll-triggers).
+Controls how trigger nodes with a **Poll Times** parameter (such as Gmail Trigger or Airtable Trigger) store their cursor, the node's record of how far it has already read. To route these nodes through the durable scheduler, turn on `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` (in the Enable the scheduler table). See [Poll triggers](../../durable-scheduler.md#poll-triggers).
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

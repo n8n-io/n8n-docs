@@ -32,9 +32,15 @@ tags:
 An agent is an autonomous assistant you build in n8n. Each agent has a language model, instructions, and capabilities you configure, like tools, skills, and access to your knowledge base. Agents live alongside your workflows as first-class artifacts in your project. Use an agent when work is too open-ended for a fixed workflow, and you need an assistant that can reason about requests, pick the right tools, and adapt to responses.
 
 {% hint style="info" %}
-Agents are available on n8n Cloud and self-hosted n8n. Knowledge bases are available on n8n Cloud, and on self-hosted as a preview feature that needs a Daytona sandbox.
+**Feature availability**
 
-Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development.
+Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
 {% endhint %}
 
 ### What you can build with agents
@@ -121,7 +127,15 @@ The agent picks the right skill based on the description and the current request
 Add files the agent can search and read from the **Knowledge** tab. Supported file types: csv, pdf, markdown, txt.
 
 {% hint style="info" %}
-Knowledge bases are available on n8n Cloud. On self-hosted, they're a preview feature that needs a Daytona sandbox. See [Self-hosted](build-and-manage-agents.md#self-hosted).
+**Feature availability**
+
+Knowledge bases are available on n8n Cloud. On self-hosted, they need a Daytona sandbox. See [Self-hosted](build-and-manage-agents.md#self-hosted).
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+On self-hosted, knowledge bases are in Preview and may change in future releases.
 {% endhint %}
 
 Once you upload a file, the agent can search your knowledge base to answer questions and pull in context.
@@ -205,6 +219,16 @@ Available channels:
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
 
+### Manage agents through MCP
+
+You can also build and manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
+
+{% hint style="info" %}
+**Reconnect existing MCP clients**
+
+If you connected an MCP client to your n8n instance before agents were available, you'll need to reconnect the client to access the agent management tools. Go to **Settings > Instance-level MCP** and reconnect your client to get the new permissions for managing agents through MCP.
+{% endhint %}
+
 ### Run agents on a schedule
 
 Schedules let agents run on their own on a recurring basis. Add a schedule from the **Schedules** section, describe the task the agent should complete, and pick a frequency:
@@ -226,7 +250,7 @@ You can use agents within your workflows in two ways:
 
 ### Self-hosted
 
-Agents run on self-hosted n8n from version `2.32.3` (Beta). There are two ways to set them up:
+Agents run on self-hosted n8n from 2.32.3 (Beta). There are two ways to set them up:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
 * **Full experience**: also set up [AI Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.

@@ -1,16 +1,16 @@
 ---
-title: n8n v3.0 breaking changes
-description: Breaking changes coming in version 3.0
+title: n8n 3.0 breaking changes
+description: Breaking changes coming in n8n 3.0
 contentType: reference
-nodeTitle: v3.0 breaking changes
+nodeTitle: n8n 3.0 breaking changes
 layout:
   description:
     visible: false
 ---
 
-# n8n v3.0 breaking changes <a href="#n8n-v30-breaking-changes" id="n8n-v30-breaking-changes"></a>
+# n8n 3.0 breaking changes <a href="#n8n-v30-breaking-changes" id="n8n-v30-breaking-changes"></a>
 
-This document highlights breaking changes and actions to prepare for the upcoming transition to n8n v3.0, scheduled for October 2026. These updates improve security, simplify configuration, and remove legacy features.
+This document highlights breaking changes and actions to prepare for the upcoming transition to n8n 3.0, scheduled for October 2026. These updates improve security, simplify configuration, and remove legacy features.
 
 The release of n8n 3.0 continues n8n's commitment to providing a secure, reliable, and production-ready automation platform. This major version includes important security enhancements and cleanup of deprecated features.
 
@@ -19,12 +19,12 @@ The release of n8n 3.0 continues n8n's commitment to providing a secure, reliabl
 ### Docker-based deployment required for self-hosted n8n <a href="#docker-based-deployment-required-for-self-hosted-n8n" id="docker-based-deployment-required-for-self-hosted-n8n"></a>
 
 - Self-hosted n8n will require a Docker-based deployment. Installations run via `npm` / `npx n8n` will no longer be supported.
-- **What to do:** If you currently run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to v3. For local installations, Docker Compose is expected to be the easiest path.
+- **What to do:** If you currently run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
 - *Step-by-step migration guidance will be coming soon*
 
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>
 
-Older nodes, modes, and helpers that have been replaced by newer patterns are being removed in v3.
+Older nodes, modes, and helpers that have been replaced by newer patterns are being removed in n8n 3.0.
 
 ### Removed nodes <a href="#removed-nodes" id="removed-nodes"></a>
 
@@ -38,6 +38,11 @@ Older nodes, modes, and helpers that have been replaced by newer patterns are be
 ### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
 
 - **Execute Workflow** node: older behavior is being removed.
+
+### AI Agent node: older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
+
+- Version 1 of the **AI Agent** node supported several agent type modes, including **SQL Agent**, **Conversational Agent**, **OpenAI Functions Agent**, **Plan and Execute Agent**, and **ReAct Agent**. n8n 3.0 removes version 1 of the node, along with these modes.
+- **What to do:** Update any workflows and templates that use version 1 of the [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) node to the latest version. Workflows already set to **Tools Agent** continue to behave the same after you update. For **SQL Agent** use cases, replace it with a [Postgres](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) or [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) tool sub-node paired with a recent **AI Agent** node.
 
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
@@ -54,7 +59,7 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 
-Some legacy or lower-usage product capabilities are being retired in v3. Guidance will be provided where a migration path or alternative exists.
+Some legacy or lower-usage product capabilities are being retired in n8n 3.0. Guidance will be provided where a migration path or alternative exists.
 
 - **Chat hub** — being retired.
 - **Workflow import from URL in the editor** — being removed. Other [import methods](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the Public API.
@@ -62,6 +67,6 @@ Some legacy or lower-usage product capabilities are being retired in v3. Guidanc
 
 ---
 
-_This page will be updated with full details, migration guides, and links as v3 approaches its release._
+_This page will be updated with full details, migration guides, and links as n8n 3.0 approaches its release._
 
 

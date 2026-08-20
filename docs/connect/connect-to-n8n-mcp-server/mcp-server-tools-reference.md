@@ -2,7 +2,8 @@
 title: n8n MCP server tools reference
 description: >-
   Complete reference for all tools exposed by the n8n MCP server, including
-  workflow management, workflow builder, and data table tools.
+  workflow management, workflow builder, agent management, and data table
+  tools.
 nodeTitle: MCP server tools reference
 originalFilePath: advanced-ai/mcp/mcp_tools_reference.md
 originalUrl: 'https://docs.n8n.io/advanced-ai/mcp/mcp_tools_reference'
@@ -58,7 +59,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
 - Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
-- Filtering by `tags`, and the `tags` field in results, are available from n8n v2.27.0. Use `list_tags` to discover the available tag names.
+- Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>
@@ -117,7 +118,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `workflowId` | `string` | Yes | | The ID of the workflow to execute |
-| `executionMode` | `"manual" | "production"` | No | `"production"` | `"manual"` tests the current version, `"production"` executes the published (active) version |
+| `executionMode` | `"manual" \| "production"` | Yes | | `"manual"` tests the current version, `"production"` executes the published (active) version |
 | `inputs` | `object` | No | | Inputs to provide to the workflow (discriminated union, see below) |
 
 **`inputs` variants (discriminated by `type`):**
@@ -147,7 +148,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- This tool starts the workflow and returns immediately. Use `get_execution` with the returned `executionId` to check the final execution status or fetch execution data.
+- This tool starts the workflow and returns immediately. Use `get_workflow_execution` with the returned `executionId` to check the final execution status or fetch execution data.
 - Production mode supports workflows with Webhook, Chat Trigger, Form Trigger, and Schedule Trigger nodes.
 - Manual mode also supports Manual Trigger nodes.
 - When `executionMode` is `"production"`, the workflow must have a published (active) version.
@@ -159,9 +160,9 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 ### test_workflow <a href="#testworkflow" id="testworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.15.0**
+**Feature availability**
 
-
+`test_workflow` is available from n8n 2.15.0.
 {% endhint %}
 
 Test a workflow using pin data to bypass external services. Trigger nodes, nodes with credentials, and HTTP Request nodes are pinned (use simulated data). Other nodes (Set, If, Code, etc.) execute normally, including credential-free I/O nodes like Execute Command or file read/write nodes.
@@ -190,12 +191,12 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 ---
 
-### prepare_test_pin_data <a href="#preparetestpindata" id="preparetestpindata"></a>
+### prepare_workflow_pin_data <a href="#preparetestpindata" id="preparetestpindata"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.15.0**
+**Feature availability**
 
-
+`prepare_workflow_pin_data` is available from n8n 2.15.0.
 {% endhint %}
 
 Prepare test pin data for a workflow. Trigger nodes, nodes with credentials, and HTTP Request nodes need pin data. Logic nodes (Set, If, Code, etc.) and credential-free I/O nodes (Execute Command, file read/write) execute normally without pin data. Returns JSON Schemas describing the expected output shape for each node that needs pin data.
@@ -223,15 +224,16 @@ Prepare test pin data for a workflow. Trigger nodes, nodes with credentials, and
 #### Notes <a href="#notes" id="notes"></a>
 
 - Schemas should be used to generate realistic sample data for `test_workflow`.
+- Renamed from `prepare_test_pin_data` in n8n 2.34.0.
 
 ---
 
 ### publish_workflow <a href="#publishworkflow" id="publishworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`publish_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Publish (activate) a workflow to make it available for production execution. This creates an active version from the current draft.
@@ -258,9 +260,9 @@ Publish (activate) a workflow to make it available for production execution. Thi
 ### unpublish_workflow <a href="#unpublishworkflow" id="unpublishworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`unpublish_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Unpublish (deactivate) a workflow to stop it from being available for production execution.
@@ -282,12 +284,68 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 
 ---
 
+### get_workflow_versions_diff <a href="#getworkflowversionsdiff" id="getworkflowversionsdiff"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_versions_diff` is available from n8n 2.36.0.
+{% endhint %}
+
+Compare two saved versions of a workflow and return what changed between them.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the versions belong to |
+| `fromVersionId` | `string` | Yes | The base (older) version ID |
+| `toVersionId` | `string` | Yes | The target (newer) version ID |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the comparison succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `fromVersionId` | `string` | The base version ID |
+| `toVersionId` | `string` | The target version ID |
+| `nodesAdded` | `array` | Full content of nodes present in the target version but not the base version. Credential references are reduced to `id` and `name` |
+| `nodesRemoved` | `array` | Nodes present in the base version but not the target version, each with `id`, `name`, and `type` |
+| `nodesModified` | `array` | Nodes present in both versions whose content changed, each with `id`, `name`, `type`, and `changes` |
+| `nodesModified[].changes` | `object` | Field-level delta. Changed values appear as `{ __old, __new }`, added keys as `<key>__added`, removed keys as `<key>__deleted`, and array changes as `[op, value]` tuples |
+| `connectionsAdded` | `array` | Connections present in the target version but not the base version |
+| `connectionsRemoved` | `array` | Connections present in the base version but not the target version |
+| `error` | `string` | Error message if the comparison failed |
+
+Each entry in `connectionsAdded` and `connectionsRemoved` has the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `from` | `string` | Source node name |
+| `to` | `string` | Target node name |
+| `type` | `string` | Connection type, such as `main` or `ai_tool` |
+| `fromOutput` | `number` | Index of the source node output. For example, on an **If** node, `0` is the true branch and `1` is the false branch |
+| `toInput` | `number` | Index of the target node input. For example, `1` is the second input of a **Merge** node |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the version IDs from `get_workflow_history`.
+- Pass the older version as `fromVersionId` and the newer one as `toVersionId`.
+- `nodesAdded` contains the full node content, so you can read added nodes without a second call. For the content of removed nodes, fetch the base version with `get_workflow_version`.
+- Nodes that only moved on the canvas aren't reported as modified.
+- Renaming a node doesn't by itself produce connection changes, because connection endpoints are matched by node ID.
+- Modified nodes list the name they have in the target version.
+
+
+---
+
 ### search_projects <a href="#searchprojects" id="searchprojects"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.14.0**
+**Feature availability**
 
-
+`search_projects` is available from n8n 2.14.0.
 {% endhint %}
 
 Search for projects accessible to the current user. Use this to resolve a project ID before creating workflows or data tables in a specific project.
@@ -310,7 +368,7 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | `data[].type` | `"personal" | "team"` | The project type |
 | `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
-| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n v2.26.0. |
+| `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n 2.26.0. |
 | `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous (for example, no exact match but multiple partial matches), or when team projects aren't licensed on this instance |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -324,9 +382,9 @@ Search for projects accessible to the current user. Use this to resolve a projec
 ### search_folders <a href="#searchfolders" id="searchfolders"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.14.0**
+**Feature availability**
 
-
+`search_folders` is available from n8n 2.14.0.
 {% endhint %}
 
 Search for folders within a project.
@@ -356,12 +414,12 @@ Search for folders within a project.
 
 ---
 
-### list_tags <a href="#listtags" id="listtags"></a>
+### list_workflow_tags <a href="#listtags" id="listtags"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-
+`list_workflow_tags` is available from n8n 2.27.0.
 {% endhint %}
 
 List all workflow tags in the instance. Tags are global (not project-scoped) and can be used with `search_workflows` to filter results.
@@ -392,17 +450,18 @@ List all workflow tags in the instance. Tags are global (not project-scoped) and
 - `usageCount` only counts non-archived workflows.
 - Requires the `tag:list` global permission.
 - Only available when workflow tags are enabled on the instance. If tags are disabled in the instance settings, this tool isn't exposed.
+- Renamed from `list_tags` in n8n 2.34.0.
 
 ---
 
 ## Execution management <a href="#execution-management" id="execution-management"></a>
 
-### get_execution <a href="#getexecution" id="getexecution"></a>
+### get_workflow_execution <a href="#getexecution" id="getexecution"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_workflow_execution` is available from n8n 2.12.0.
 {% endhint %}
 
 Get execution details by execution ID and workflow ID. By default returns metadata only.
@@ -438,15 +497,16 @@ Get execution details by execution ID and workflow ID. By default returns metada
 
 - Use lightweight metadata queries (default) when full execution data isn't needed.
 - Filtering by `nodeNames` and truncating via `truncateData` helps manage large result sets.
+- Renamed from `get_execution` in n8n 2.34.0.
 
 ---
 
-### search_executions <a href="#searchexecutions" id="searchexecutions"></a>
+### search_workflow_executions <a href="#searchexecutions" id="searchexecutions"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.20.0**
+**Feature availability**
 
-
+`search_workflow_executions` is available from n8n 2.20.0.
 {% endhint %}
 
 Search for workflow executions with optional filters. Returns execution metadata including status, timing, and workflow ID.
@@ -478,6 +538,10 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `estimated` | `boolean` | Whether the count is an estimate for large datasets |
 | `error` | `string` | Error message if the query failed |
 
+#### Notes <a href="#notes" id="notes"></a>
+
+- Renamed from `search_executions` in n8n 2.34.0.
+
 ---
 
 ## Credential management <a href="#credential-management" id="credential-management"></a>
@@ -485,9 +549,9 @@ Search for workflow executions with optional filters. Returns execution metadata
 ### list_credentials <a href="#listcredentials" id="listcredentials"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Feature availability**
 
-
+`list_credentials` is available from n8n 2.21.0.
 {% endhint %}
 
 List credentials the current user can access. Use this to find a credential ID before referencing it from a workflow node. Never returns credential secret data.
@@ -530,12 +594,12 @@ List credentials the current user can access. Use this to find a credential ID b
 
 ## Workflow builder <a href="#workflow-builder" id="workflow-builder"></a>
 
-### get_sdk_reference <a href="#getsdkreference" id="getsdkreference"></a>
+### get_workflow_sdk_reference <a href="#getsdkreference" id="getsdkreference"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_workflow_sdk_reference` is available from n8n 2.12.0.
 {% endhint %}
 
 Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance.
@@ -557,24 +621,26 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 - Should be called first before building any workflows.
 - Omit `section`, or set it to `"all"`, to retrieve the full reference.
 - Use `"patterns_detailed"` for expanded workflow pattern examples.
+- Renamed from `get_sdk_reference` in n8n 2.34.0.
 
 ---
 
 ### search_nodes <a href="#searchnodes" id="searchnodes"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`search_nodes` is available from n8n 2.12.0.
 {% endhint %}
 
-Search for n8n nodes by service name, trigger type, or utility function. Returns node IDs, discriminators (resource/operation/mode), and related nodes needed for `get_node_types` tool.
+Search for n8n nodes by service name, trigger type, or utility function. Set `usage` to `"agentTool"` to return only agent-compatible tool nodes. Returns node IDs, discriminators (resource/operation/mode), and related nodes needed for `get_node_types` tool.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `queries` | `string[]` | Yes (min 1) | Search queries -- service names (for example `"gmail"`, `"slack"`), trigger types (for example `"schedule trigger"`, `"webhook"`), or utility nodes (for example `"set"`, `"if"`, `"merge"`, `"code"`) |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `queries` | `string[]` | Yes (min 1) | | Search queries -- service names (for example `"gmail"`, `"slack"`), trigger types (for example `"schedule trigger"`, `"webhook"`), or utility nodes (for example `"set"`, `"if"`, `"merge"`, `"code"`) |
+| `usage` | `"workflow" | "agentTool"` | No | `"workflow"` | Set to `"agentTool"` to return only nodes that can be configured as agent tools |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -582,15 +648,19 @@ Search for n8n nodes by service name, trigger type, or utility function. Returns
 |-------|------|-------------|
 | `results` | `string` | Search results with matching node IDs, discriminators, and related nodes |
 
+#### Notes <a href="#notes" id="notes"></a>
+
+- `usage` is available from n8n 2.34.0.
+- Use `usage="agentTool"` when searching for nodes to attach to an agent as a tool, for example with `mutate_agent` or `create_agent`. This excludes nodes that can't run as an agent tool, such as human-in-the-loop and MCP client nodes.
 
 ---
 
 ### get_node_types <a href="#getnodetypes" id="getnodetypes"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`get_node_types` is available from n8n 2.12.0.
 {% endhint %}
 
 Get TypeScript type definitions for n8n nodes. Returns exact parameter names and structures.
@@ -620,7 +690,7 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 #### Notes <a href="#notes" id="notes"></a>
 
 - Critical for correct node configuration - MCP clients should always call before writing workflow code.
-- From n8n v2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
+- From n8n 2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
 - Use the `resource`, `operation`, and `mode` discriminators for multi-variant nodes.
 
 ---
@@ -628,9 +698,9 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 ### get_workflow_best_practices <a href="#getworkflowbestpractices" id="getworkflowbestpractices"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.26.0**
+**Feature availability**
 
-
+`get_workflow_best_practices` is available from n8n 2.26.0.
 {% endhint %}
 
 Get best-practices guidance for a workflow technique. Useful this before searching for nodes or writing workflow code.
@@ -664,9 +734,9 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 ### explore_node_resources <a href="#explorenoderesources" id="explorenoderesources"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-
+`explore_node_resources` is available from n8n 2.27.0.
 {% endhint %}
 
 Resolve the real values behind a node's resource locator or load-options dropdown (for example Slack channels, Google Sheets tabs, or available AI models). Requires a credential to be set for the desired service.
@@ -708,9 +778,9 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 ### validate_workflow <a href="#validateworkflow" id="validateworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`validate_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Validate n8n Workflow SDK code. Parses the code into a workflow and checks for errors. Always validate before creating or updating a workflow.
@@ -746,9 +816,9 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 ### validate_node_config <a href="#validatenodeconfig" id="validatenodeconfig"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.25.1**
+**Feature availability**
 
-
+`validate_node_config` is available from n8n 2.25.1.
 {% endhint %}
 
 Validate one or more node configurations independently against their generated node schemas. Useful while composing nodes, before assembling workflow code or calling `update_workflow`.
@@ -791,9 +861,9 @@ Validate one or more node configurations independently against their generated n
 ### create_workflow_from_code <a href="#createworkflowfromcode" id="createworkflowfromcode"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`create_workflow_from_code` is available from n8n 2.12.0.
 {% endhint %}
 
 Create a workflow in n8n from validated SDK code. Parses the code into a workflow and saves it.
@@ -838,16 +908,16 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
-- From n8n v2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
 
 ---
 
 ### update_workflow <a href="#updateworkflow" id="updateworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0. Starting from v2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.**
+**Feature availability**
 
-
+`update_workflow` is available from n8n 2.12.0. From n8n 2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 {% endhint %}
 
 Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
@@ -922,9 +992,9 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 ### archive_workflow <a href="#archiveworkflow" id="archiveworkflow"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.12.0**
+**Feature availability**
 
-
+`archive_workflow` is available from n8n 2.12.0.
 {% endhint %}
 
 Archive a workflow in n8n by its ID.
@@ -949,14 +1019,510 @@ Archive a workflow in n8n by its ID.
 
 ---
 
+## Agent management <a href="#agent-management" id="agent-management"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Agent management tools are available from n8n 2.34.0, when the workflow builder and the agents module are both enabled on the instance. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
+{% endhint %}
+
+These tools create, configure, publish, and manage n8n agents: persisted, first-class conversational assistants with their own model, tools, skills, tasks, and channel integrations. An agent is a separate resource from a workflow, even though a workflow can contain an AI Agent node.
+
+Tools that take an `agentId` resolve the project from the agent, so callers don't need to pass a project ID separately. Every tool other than `search_agents` only operates on agents with `availableInMCP` set to true; `search_agents` still returns every agent the current user can access, so a client can tell the user what exists and prompt them to enable MCP access if needed.
+
+### search_agents <a href="#searchagents" id="searchagents"></a>
+
+Search agents the current user can access. Use `publishedOnly` and `excludeAgentId` to discover candidate sub-agents.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `projectId` | `string` | No | | Restrict results to one project |
+| `query` | `string` | No | | Filter by agent name |
+| `publishedOnly` | `boolean` | No | `false` | Only return agents that have a published (active) version |
+| `excludeAgentId` | `string` | No | | Agent ID to omit, useful for sub-agent search |
+| `limit` | `integer` | No | `50` | Limit the number of results (max 100) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `array` | List of matching agents |
+| `data[].id` | `string` | The unique identifier of the agent |
+| `data[].name` | `string` | The name of the agent |
+| `data[].projectId` | `string` | The project the agent belongs to |
+| `data[].published` | `boolean` | Whether the agent has a published (active) version |
+| `data[].availableInMCP` | `boolean` | Whether the agent is available to MCP tools |
+| `data[].updatedAt` | `string` | ISO timestamp when the agent was last updated |
+| `count` | `integer` | Number of agents returned |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Maximum result limit is 100.
+- Unlike other agent tools, `search_agents` returns agents regardless of their `availableInMCP` setting.
+- To find candidate sub-agents for the `subAgents` config field, call with `publishedOnly: true` and pass the current agent's ID as `excludeAgentId`.
+
+---
+
+### get_agent <a href="#getagent" id="getagent"></a>
+
+Read an agent draft, its skills, tasks, custom tools, runnable state, and `configHash`. Call before `mutate_agent`. Pass `versionId` to inspect a published version snapshot instead of the draft.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to retrieve |
+| `versionId` | `string` | No | Read a published version snapshot instead of the draft, for example the agent's `activeVersionId`. Snapshots are read-only, so the response has no `configHash`. |
+
+#### Output <a href="#output" id="output"></a>
+
+When `versionId` is omitted, the response describes the current draft:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agent` | `object` | Agent metadata |
+| `agent.id` | `string` | Agent ID |
+| `agent.name` | `string` | Agent name |
+| `agent.projectId` | `string` | The project the agent belongs to |
+| `agent.published` | `boolean` | Whether the agent has a published (active) version |
+| `agent.versionId` | `string` | The draft's internal version pointer |
+| `agent.activeVersionId` | `string | null` | The published version ID, or null if unpublished |
+| `agent.createdAt` | `string` | ISO timestamp when the agent was created |
+| `agent.updatedAt` | `string` | ISO timestamp when the agent was last updated |
+| `config` | `object` | The editable agent configuration (model, credential, instructions, tools, and so on). Excludes `integrations`, which is reported separately below. |
+| `configHash` | `string` | Hash of the full persisted configuration. Pass this as `baseConfigHash` to `mutate_agent`. |
+| `isRunnable` | `boolean` | Whether the agent has everything it needs to run |
+| `missing` | `string[]` | Config paths still needed before the agent is runnable |
+| `skills` | `object` | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`) |
+| `tasks` | `array` | Scheduled tasks, each with `id`, `name`, `objective`, `cronExpression`, and `enabled` |
+| `customTools` | `array` | Custom tools, each with `id` and `descriptor` (`name`, `description`, `inputSchema`, `outputSchema`, and related metadata) |
+| `integrations` | `array` | Configured Slack, Telegram, or Linear integrations. Read-only here; manage with `update_agent_integration`. |
+
+When `versionId` is provided, the response describes that published snapshot instead:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agent` | `object` | Agent metadata, same shape as above |
+| `version` | `object` | Version metadata |
+| `version.versionId` | `string` | The version ID |
+| `version.author` | `string` | Who published this version |
+| `version.createdAt` | `string` | ISO timestamp when this version was published |
+| `version.isActive` | `boolean` | Whether this version is the currently published one |
+| `config` | `object` | The editable agent configuration at that version |
+| `skills` | `object` | Skills at that version |
+| `tasks` | `array` | Tasks at that version, each with `id`, `name`, `objective`, `cronExpression`, `enabled` |
+| `customTools` | `array` | Custom tools at that version |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- A version snapshot response has no `configHash` and can't be used as a `mutate_agent` baseline; mutations only ever apply to the draft.
+- Use `list_agent_versions` to find a `versionId` to inspect.
+
+---
+
+### get_agent_builder_reference <a href="#getagentbuilderreference" id="getagentbuilderreference"></a>
+
+Return the required reference for agent configuration and `mutate_agent` operations, including the canonical agent configuration JSON Schema. Read before building an agent.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+This tool takes no parameters.
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `uri` | `string` | The `n8n://agents/reference` resource URI carrying the same content |
+| `guide` | `string` | Markdown guide covering the build sequence, `mutate_agent` operations, custom tool authoring, integrations, and MCP server verification |
+| `configSchema` | `object` | The canonical agent configuration JSON Schema |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- MCP clients that support resources can read the same content from the `n8n://agents/reference` resource instead. See [Agent builder reference resource](#agent-builder-reference-resource).
+- Call this before `create_agent` or `mutate_agent` so configuration matches the current schema instead of being guessed.
+
+---
+
+### discover_agent_assets <a href="#discoveragentassets" id="discoveragentassets"></a>
+
+Discover model catalogs, chat integrations, attachable workflows, published sub-agents, or MCP registry servers to ground an agent's configuration.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | Yes | The project to discover assets in |
+| `kind` | `"models" | "integrations" | "workflows" | "subagents" | "mcpServers"` | Yes | The kind of asset to discover |
+| `query` | `string` | No | Filter for `workflows`, `subagents`, or `mcpServers` |
+| `provider` | `string` | No | Model provider for `kind=models` (for example `"openai"`, `"anthropic"`). Omit to get a provider summary without model lists. |
+| `credentialId` | `string` | No | Accessible credential used to verify live models for the selected provider |
+| `excludeAgentId` | `string` | No | Agent to omit when `kind=subagents` |
+
+#### Output <a href="#output" id="output"></a>
+
+The `data` field's shape depends on `kind`:
+
+| `kind` | `data` shape |
+|--------|--------------|
+| `models` (no `provider`) | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models. |
+| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }] }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. |
+| `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. |
+| `workflows` | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool |
+| `subagents` | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId` |
+| `mcpServers` | Array of MCP registry servers, each with `name`, `title`, `description`, `url`, `transport`, `authentication`, `credentialType`, `tools`, `metadata` |
+
+Top-level response: `{ ok, kind, data }`.
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Omitting `provider` for `kind=models` returns a summary only; the full model catalog is too large for most MCP clients' token limits.
+- For `kind=mcpServers`, omit `query` to list up to 20 registry servers; pass `query` to search by name.
+- Attaching a discovered asset (a workflow, sub-agent, or MCP server) still requires adding it to the agent's config with `mutate_agent`.
+
+---
+
+### create_agent <a href="#createagent" id="createagent"></a>
+
+Create an agent draft, optionally with its initial model, credential, instructions, and ordinary tool configuration. Use `mutate_agent` afterward for skills, tasks, and custom tools.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | Yes | The project to create the agent in |
+| `name` | `string` | Yes | The agent's name (max 128 chars) |
+| `config` | `object` | No | Optional initial agent configuration. Must omit `name`, `skills`, `tasks`, `integrations`, and any `tools` entry with `type: "custom"`; the top-level `name` is injected automatically. A `credential` requires a `model` to also be set. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agent` | `object` | `{ id, name, projectId, published: false, versionId, activeVersionId }` |
+| `configHash` | `string` | Hash of the created configuration. Pass as `baseConfigHash` to the first `mutate_agent` call. |
+| `url` | `string` | The URL to open the agent in the n8n editor |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Agents created through MCP are automatically made available to MCP tools (`availableInMCP: true`).
+- Fetch [get_agent_builder_reference](#getagentbuilderreference) first to confirm the current configuration schema.
+- Skills, tasks, and custom tools need server-generated IDs, so add them with `mutate_agent` after creation.
+- If the initial `config` fails validation or references a credential the user can't access, the agent isn't created.
+
+---
+
+### mutate_agent <a href="#mutateagent" id="mutateagent"></a>
+
+Apply one config, skill, task, or custom-tool mutation to an agent draft. Returns the next `configHash` for subsequent mutations.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to mutate |
+| `baseConfigHash` | `string` | Yes | The latest `configHash` returned by `get_agent` or a previous successful mutation |
+| `operation` | `object` | Yes | The mutation to apply. Its fields sit directly on the object (no `value` wrapper) alongside `type`. |
+
+**`operation` variants (discriminated by `type`):**
+
+| `type` | Fields | Description |
+|--------|--------|-------------|
+| `config.replace` | `config: object` | Replace the full editable agent configuration. Can't include `integrations`. |
+| `config.patch` | `patch: array` (min 1) | Apply an array of RFC 6902 JSON Patch operations (`add`, `remove`, `replace`, `move`, `copy`, `test`). Paths under `/integrations` are rejected. |
+| `skill.upsert` | `skill: object`, `skillId?: string` | Omit `skillId` to create and attach a new skill; pass it to replace an existing skill body |
+| `skill.delete` | `skillId: string` | Delete a skill and remove its config reference |
+| `task.upsert` | `task: object`, `taskId?: string`, `enabled?: boolean` | Omit `taskId` to create a new scheduled task; pass it to replace an existing one. `task` has `name`, `objective`, and `cronExpression` (a standard five-field cron expression). |
+| `task.delete` | `taskId: string` | Delete a task and remove its config reference |
+| `customTool.upsert` | `code: string` | Compile, validate, store, and attach a custom tool from source code |
+| `customTool.delete` | `toolId: string` | Delete a custom tool and remove its config reference |
+
+#### Output <a href="#output" id="output"></a>
+
+On success:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agentId` | `string` | The agent ID |
+| `operation` | `string` | The applied operation's `type` |
+| `configHash` | `string` | The configuration hash after this mutation. Pass to the next `mutate_agent` call. |
+| `resource` | `object` | Present for skill, task, and custom-tool operations: `{ type: "skill" | "task" | "customTool", id }` |
+
+On a stale configuration:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | `false` |
+| `code` | `string` | `"stale_config"` |
+| `agentId` | `string` | The agent ID |
+| `configHash` | `string` | The current, correct configuration hash |
+| `message` | `string` | `"Call get_agent before retrying the mutation."` |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Every mutation requires `baseConfigHash` from `get_agent` or the previous successful mutation. If the agent changed since that hash was read, the call returns `stale_config` instead of applying the mutation; call `get_agent` and retry against the returned `configHash`.
+- Integrations (Slack, Telegram, Linear) can't be changed through `config.replace` or `config.patch`; use [update_agent_integration](#updateagentintegration).
+- Custom tool code may only import `@n8n/agents` and `zod`. Its default export must be a `Tool` builder chain with `description`, `input` (a Zod schema), and `handler`; `output` is optional.
+- Fetch [get_agent_builder_reference](#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.
+
+---
+
+### validate_agent <a href="#validateagent" id="validateagent"></a>
+
+Validate an agent draft, its sidecar references, and user-accessible credentials.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to validate |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `valid` | `boolean` | Whether the agent is valid and runnable |
+| `errors` | `string[]` | Configuration schema errors |
+| `missing` | `string[]` | Config paths still needed before the agent is runnable |
+| `url` | `string` | The URL to open the agent in the n8n editor |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Runs the same validation pass `publish_agent` enforces, so a passing result won't drift from what publishing accepts.
+- Doesn't perform a live MCP server handshake; use `verify_agent_mcp_server` for that.
+- A valid agent is a completed draft. Validating doesn't imply the agent should be published.
+
+---
+
+### verify_agent_mcp_server <a href="#verifyagentmcpserver" id="verifyagentmcpserver"></a>
+
+Test an MCP server with a user-accessible credential and return its available tools. Call before writing an `mcpServers` config entry.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `projectId` | `string` | Yes | | The project the agent belongs to |
+| `name` | `string` | Yes | | Server name (max 64 chars, letters, numbers, `_` and `-` only) |
+| `url` | `string` | Yes | | The HTTP(S) MCP server endpoint |
+| `transport` | `"sse" | "streamableHttp"` | No | `"streamableHttp"` | The MCP transport to use |
+| `authentication` | `string` | No | `"none"` | Authentication method: `"none"`, `"bearerAuth"`, `"headerAuth"`, `"multipleHeadersAuth"`, `"mcpOAuth2Api"`, or any credential type name ending in `McpOAuth2Api`. Every value other than `"none"` requires `credential`. |
+| `credential` | `string` | No | | Accessible credential ID; required when `authentication` isn't `"none"` |
+| `connectionTimeoutMs` | `integer` | No | | Connection timeout in milliseconds (1–120,000) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `tools` | `array` | Tools the server exposes, each with `name` and `description` |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Opens a temporary connection to verify the server; it doesn't need to be attached to the agent first.
+- `validate_agent` doesn't perform this live check, so an unverified `mcpServers` entry can pass validation and still fail at runtime.
+- Use the returned tool names to populate `toolFilter` in the agent's `mcpServers` config entry instead of guessing.
+
+---
+
+### publish_agent <a href="#publishagent" id="publishagent"></a>
+
+Publish a valid agent draft and activate its tasks and integrations. Pass `versionId` to republish a previously published version instead.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to publish |
+| `versionId` | `string` | No | Republish a previously published version instead of the current draft. The draft is left untouched. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agentId` | `string` | The agent ID |
+| `published` | `boolean` | `true` |
+| `versionId` | `string` | The published version's ID |
+| `activeVersionId` | `string` | The active (published) version ID |
+| `url` | `string` | The URL to open the agent in the n8n editor |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Publishing the draft (no `versionId`) validates it first and fails if it isn't runnable. Republishing a version (`versionId` set) skips draft validation, since the draft isn't what goes live.
+- Only call this after the user explicitly requests or confirms publication, activation, or deployment. Completing a build doesn't imply approval to publish.
+- Activates the agent's scheduled tasks and any configured integrations.
+
+---
+
+### unpublish_agent <a href="#unpublishagent" id="unpublishagent"></a>
+
+Unpublish an agent and stop its live tasks and integrations.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to unpublish |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agentId` | `string` | The agent ID |
+| `published` | `boolean` | `false` |
+| `versionId` | `string` | The draft's internal version pointer |
+| `activeVersionId` | `string | null` | `null` after unpublishing |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Stops scheduled tasks and channel integrations from running until the agent is published again.
+- The draft is left untouched and remains editable.
+
+---
+
+### revert_agent <a href="#revertagent" id="revertagent"></a>
+
+Restore an agent draft from a published version, overwriting the draft's config, skills, tasks, and custom tools. Doesn't publish.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to revert |
+| `versionId` | `string` | No | The published version to restore the draft from. Defaults to the currently published version. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agentId` | `string` | The agent ID |
+| `versionId` | `string` | The draft's internal version pointer after reverting |
+| `activeVersionId` | `string | null` | The currently published version ID, unchanged by this call |
+| `configHash` | `string` | The configuration hash after reverting. Pass as `baseConfigHash` to the next `mutate_agent` call. |
+| `url` | `string` | The URL to open the agent in the n8n editor |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Overwrites the current draft; unpublished changes made since the last publish are lost.
+- Doesn't publish the restored draft. Call `publish_agent` separately if needed.
+- Inspect the version with `get_agent` (passing `versionId`) before reverting to it.
+
+---
+
+### list_agent_versions <a href="#listagentversions" id="listagentversions"></a>
+
+List the publish history of an agent, newest first.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `agentId` | `string` | Yes | | The ID of the agent |
+| `limit` | `integer` | No | `20` | Limit the number of results (max 100) |
+| `offset` | `integer` | No | `0` | Number of versions to skip, for pagination |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `array` | Publish history, newest first |
+| `data[].versionId` | `string` | The version ID |
+| `data[].agentId` | `string` | The agent ID |
+| `data[].createdAt` | `string` | ISO timestamp when this version was published |
+| `data[].updatedAt` | `string` | ISO timestamp when this version was last updated |
+| `data[].author` | `string` | Who published this version |
+| `data[].isActive` | `boolean` | Whether this version is the currently published one |
+| `count` | `integer` | Number of versions returned |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Pass a `versionId` from this list to `get_agent` to inspect a version before `revert_agent` or `publish_agent`.
+
+---
+
+### update_agent_integration <a href="#updateagentintegration" id="updateagentintegration"></a>
+
+Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent |
+| `action` | `"connect" | "disconnect"` | Yes | Whether to connect or disconnect the integration |
+| `type` | `string` | Yes | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, or `"linear"`) |
+| `credentialId` | `string` | Yes | Accessible credential for this integration |
+| `settings` | `object` | No | Integration settings. Required for Telegram `connect` operations (`accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user). |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `agentId` | `string` | The agent ID |
+| `integration` | `object` | `{ type, credentialId }` |
+| `configured` | `boolean` | Present on `connect`: `true` |
+| `connected` | `boolean` | Whether the channel is live right now |
+| `published` | `boolean` | Whether the agent has a published (active) version |
+| `activeVersionId` | `string | null` | The published version ID, or null if unpublished |
+| `configHash` | `string` | The configuration hash after this change |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Configuring an integration never publishes the agent. If the agent is already published, connecting starts the channel immediately; otherwise the channel stays inactive until `publish_agent` is called.
+- Disconnecting tears down the live channel immediately, whether or not the agent is published.
+- Confirm with the user before connecting a channel on an already-published agent, since it connects immediately.
+
+---
+
+### delete_agent <a href="#deleteagent" id="deleteagent"></a>
+
+Permanently delete an agent and its associated resources.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to delete |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `deleted` | `boolean` | `true` |
+| `agentId` | `string` | The deleted agent's ID |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- This action can't be undone.
+
+---
+
+### Agent builder reference resource <a href="#agent-builder-reference-resource" id="agent-builder-reference-resource"></a>
+
+For MCP clients that support resources, n8n also exposes the agent builder reference as a resource, alongside the [get_agent_builder_reference](#getagentbuilderreference) tool for clients that don't.
+
+| Property | Value |
+|----------|-------|
+| URI | `n8n://agents/reference` |
+| MIME type | `text/markdown` |
+| Content | The same build-sequence guide, `mutate_agent` operation catalog, and canonical agent configuration JSON Schema returned by `get_agent_builder_reference` |
+
+---
+
 ## Data tables <a href="#data-tables" id="data-tables"></a>
 
 ### search_data_tables <a href="#searchdatatables" id="searchdatatables"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`search_data_tables` is available from n8n 2.16.0.
 {% endhint %}
 
 Search for data tables accessible to the current user. Use this to find a data table ID before modifying or adding data to it.
@@ -995,9 +1561,9 @@ Search for data tables accessible to the current user. Use this to find a data t
 ### create_data_table <a href="#createdatatable" id="createdatatable"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`create_data_table` is available from n8n 2.16.0.
 {% endhint %}
 
 Create a new data table with the specified columns.
@@ -1031,9 +1597,9 @@ Create a new data table with the specified columns.
 ### add_data_table_column <a href="#adddatatablecolumn" id="adddatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`add_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Add a new column to an existing data table.
@@ -1068,9 +1634,9 @@ Add a new column to an existing data table.
 ### rename_data_table_column <a href="#renamedatatablecolumn" id="renamedatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`rename_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Rename a column in a data table.
@@ -1104,9 +1670,9 @@ Rename a column in a data table.
 ### delete_data_table_column <a href="#deletedatatablecolumn" id="deletedatatablecolumn"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`delete_data_table_column` is available from n8n 2.16.0.
 {% endhint %}
 
 Delete a column from a data table. This permanently removes the column and all its data.
@@ -1135,9 +1701,9 @@ Delete a column from a data table. This permanently removes the column and all i
 ### rename_data_table <a href="#renamedatatable" id="renamedatatable"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`rename_data_table` is available from n8n 2.16.0.
 {% endhint %}
 
 Rename an existing data table.
@@ -1166,9 +1732,9 @@ Rename an existing data table.
 ### add_data_table_rows <a href="#adddatatablerows" id="adddatatablerows"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.16.0**
+**Feature availability**
 
-
+`add_data_table_rows` is available from n8n 2.16.0.
 {% endhint %}
 
 Insert rows into an existing data table. Each row is an object mapping column names to values.

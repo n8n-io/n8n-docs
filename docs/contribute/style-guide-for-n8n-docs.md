@@ -81,7 +81,7 @@ See the [Terminology and naming](terminology.md) word list for the full set of t
 
 * Headings: sentence case ([more info](https://docs.microsoft.com/en-us/style-guide/scannable-content/headings#formatting-headings))
 * UI elements: bold ([more info](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/formatting-text-in-instructions))
-* User input: code formatted. Placeholders as hyphenated words in angle brackets. For example `<your-root-directory>`.
+* User input: code formatted. Placeholders as hyphenated words in angle brackets, lowercase by default or uppercase to match a convention such as environment variables. For example `<your-root-directory>` or `<YOUR-API-KEY>`.
 * File names, directory names, and paths: code formatted.
 * Make sure you match brand names precisely. For example: "GitHub", not "Github".
 
@@ -350,22 +350,23 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8
 * **Use the product name and numerals**: n8n 2.30.0.
 * **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
 * **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
+* **Don't put the version number in inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Only use code formatting when the version appears inside an actual code snippet, command, or file path, for example `n8n@2.30.0`, a Docker tag, or a `package.json` value.
 
 ### Preview status
 
-A preview feature is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label. Use it, not "beta", to describe a feature's status.
+A feature in Preview is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label, capitalized wherever it names that status: "is in Preview", "a Preview feature", "In Preview from n8n 2.20.0". Use "Preview", not "beta". This capitalization only applies to the maturity label — leave unrelated senses of the word (a link preview, a UI preview action) in lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`); they're literal identifiers, not prose.
 
-**Page or section:** use the same `**Feature availability**` title as an availability hint. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
+**Page or section:** use a `**Preview status**` title, not `**Feature availability**`. Preview status is a different question from availability (how stable is this? vs. where/when does this exist?), so it gets its own title, not a second hint with the same label as the availability hint next to it. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
 
 ```
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-The Data table node is in preview and may change in future releases. Avoid relying on it in production workflows.
+The Data table node is in Preview and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 ```
 
-If the entire page is about a feature in preview, also set `status: preview` and add a primary `preview` tag (see [Tags](#tags), under Frontmatter, for how tags work):
+If the entire page is about a feature in Preview, also set `status: preview` and add a primary `preview` tag (see [Tags](#tags), under Frontmatter, for how tags work):
 
 ```
 ---
@@ -381,16 +382,16 @@ See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/bui
 **Inline or passing mention:** for a small control, or a whole feature or node named in prose with no heading of its own:
 
 ```
-The **Streaming response** option is in preview and may change in future releases.
+The **Streaming response** option is in Preview and may change in future releases.
 ```
 
 ```
-The Data table node is in preview and may change in future releases.
+The Data table node is in Preview and may change in future releases.
 ```
 
-* **Tie it to a version when it helps**: "In preview from n8n 2.20.0".
-* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a preview hint alongside an availability hint, or a preview sentence alongside an availability sentence, rather than folding the preview wording into the other one.
-* **If an inline preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
+* **Tie it to a version when it helps**: "In Preview from n8n 2.20.0".
+* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a Preview status hint alongside a Feature availability hint, or a Preview sentence alongside an availability sentence, rather than folding the Preview wording into the other one.
+* **If an inline Preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
 
 ## Vale linting
 
@@ -450,7 +451,7 @@ In this example, only `tag: preview` is a visual tag. `release` is a plain strin
 
 * A visual tag must already be defined in the space's `.gitbook/tags.yaml` before you can apply it: check it exists, and add it if it's missing.
 * A visual tag is a label only. It doesn't replace the explanatory hint on the page. The hint is where you explain what the status means; the tag just flags it in the UI.
-* The current set of visual tags allowed in docs is: **Deprecated** (a whole page about a deprecated feature), **Preview** (a whole page about a feature in [preview](#preview-status)), and **Archived** (a page no longer updated). Don't create or use any visual tag other than these three.
+* The current set of visual tags allowed in docs is: **Deprecated** (a whole page about a deprecated feature), **Preview** (a whole page about a feature in [Preview](#preview-status)), and **Archived** (a page no longer updated). Don't create or use any visual tag other than these three.
 
 ## Page navigation
 
@@ -699,7 +700,7 @@ For anything with a code, expression, or configuration surface, include a worked
 * **Cover the common case, then the ones that break.** Show the straightforward path, then edge cases (empty input, pagination, rate limits) and failures (the error the reader sees, and the fix).
 * **Favour diversity over volume.** Three examples that each show something different beat six near-identical ones. Don't pad; vary.
 * **Comment the intent inline.** Say what each example does and why, so it isn't mistaken for another instruction.
-* **Label every placeholder.** Use hyphenated words in angle brackets, matching [Text formatting](#text-formatting): `<your-api-key>`, not `YOUR_KEY` or a real value.
+* **Label every placeholder.** Use hyphenated words in angle brackets, matching [Text formatting](#text-formatting): `<your-api-key>` or `<YOUR-API-KEY>`, not `YOUR_KEY` or a real value.
 * **Structure constraints, don't narrate them.** Put parameters, defaults, and limits in a table or schema block, not a paragraph.
 
 If you show a wrong example, pair it with the correct one beside it. A broken snippet left alone gets copied.

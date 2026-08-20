@@ -154,8 +154,11 @@ You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
+Viewing running workers is available on:
+
+- **Self-hosted:** Enterprise
+
+On n8n Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa) to enable it.
 {% endhint %}
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
@@ -291,7 +294,11 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise plans.
+Multi-main setup is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
 {% endhint %}
 
 In queue mode you can run more than one `main` process for high availability.

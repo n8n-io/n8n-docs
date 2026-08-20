@@ -119,7 +119,7 @@ What to expect when you turn it on:
 
 - **The switch is safe.** The node's next poll carries its current cursor over to the new table, so nothing is fetched twice or skipped.
 - **Turning it back off doesn't undo it.** Cursors stay in their table; they just stop saving together with the execution.
-- **You can watch cursor saves.** Turn on the poll trigger metrics with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
+- **You can watch cursor saves.** Turn on the [poll trigger metrics](#poll-trigger-metrics) with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
 
 {% hint style="warning" %}
 Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` before, or together with, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. Running poll triggers on the durable scheduler while cursors still live in workflow static data risks dropped or duplicated items.
@@ -177,5 +177,26 @@ These counters cover the [four stages](#how-it-works) that keep the queue moving
 | `n8n_scheduler_occurrences_retired_total` | Counter | How many recorded runs the scheduler dropped because a catch-up run superseded them. |
 | `n8n_scheduler_occurrences_missed_total` | Counter | How many recorded runs went past their deadline unclaimed and the reaper marked missed. |
 | `n8n_scheduler_tasks_pruned_total` | Counter | How many finished runs retention deleted. If it never rises, the scheduler tables keep growing. |
+
+### Poll trigger metrics
+
+Poll triggers have their own metric set behind a separate switch, `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`, independent of the scheduler metrics above:
+
+```bash
+export N8N_METRICS=true
+export N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS=true
+```
+
+Only main instances emit them. They come from the poll engine itself, not the scheduler, so they work even when the durable scheduler doesn't dispatch your polls. Like the scheduler counters, they record each main's own polls: sum across mains for cluster totals. n8n publishes a [ready-made poll triggers dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-poll-triggers) for them.
+
+| Metric | Type | What it tells you |
+| :----- | :--- | :---------------- |
+| `n8n_poll_trigger_duration_seconds` | Histogram | How long each poll takes, split by `node_type` and `status`. A poll that grows slower over time is drifting toward its own interval; once it crosses it, polls start overlapping. |
+| `n8n_poll_trigger_errors_total` | Counter | How many polls threw, split by `node_type` and a `kind` label of `auth`, `rate_limited`, or `thrown`. `auth` points at a broken credential, `rate_limited` at polling faster than the service allows. |
+| `n8n_poll_trigger_overlapping_ticks_total` | Counter | How many polls started while the previous poll for the same node was still running in the same process. Overlap across instances shows up in `n8n_scheduler_tasks_lease_lost_total` instead. |
+| `n8n_poll_trigger_cursor_commits_total` | Counter | How many cursor saves settled, split by `operation` (`with_execution` or `cursor_only`) and `result`. A `result` of `fence_rejected` means a stale poll lost its claim and wasn't allowed to advance the cursor, which is the protection doing its job; `failure` means the save itself failed. |
+| `n8n_poll_trigger_cursor_commit_duration_seconds` | Histogram | How long each cursor save takes, with the same `operation` and `result` labels. |
+
+The two cursor metrics only move when [durable poll cursors](#durable-poll-cursors) are on.
 
 All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.

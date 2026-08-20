@@ -23,7 +23,7 @@ layout:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ASsLuMLGKMy2O0q7awMF/" %}
 
-By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [deprecated support for MySQL and MariaDB](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v10-migration-guide#mysql-and-mariadb) in v1.0.
+By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [deprecated support for MySQL and MariaDB](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v10-migration-guide#mysql-and-mariadb) from n8n 1.0.
 
 This page outlines environment variables to configure your chosen database for your self-hosted n8n instance.
 
@@ -54,7 +54,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_POSTGRESDB_KEEP_ALIVE`<br>/`_FILE` | Boolean | `true` | Whether to enable TCP keep-alive on connections. Keep-alive lets n8n notice a dead connection without having to run a query first. |
 | `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`<br>/`_FILE` | Number | `10000` | How long, in milliseconds, n8n waits before sending the first TCP keep-alive probe on a connection. |
 | `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | The PostgreSQL schema. |
-| `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is defined. |
+| `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is set to a non-empty value, or if `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` is set to `false`. |
 | `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate authority. |
 | `DB_POSTGRESDB_SSL_CERT`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate. |
 | `DB_POSTGRESDB_SSL_KEY`<br>/`_FILE` | String | - | The PostgreSQL SSL key. |

@@ -3,6 +3,10 @@ description: Let each user connect their own account to a credential, so a workf
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # End-user credentials
@@ -12,13 +16,18 @@ End-user credentials let workflows run with the credentials of the person who tr
 With fixed credentials, everyone who runs a workflow uses the same account, which can expose one person's access and data to everyone else. End-user credentials give each user their own connection and isolate their execution data.
 
 {% hint style="info" %}
-**Available on Enterprise plans**
+**Feature availability**
+
+End-user credentials are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 {% hint style="info" %}
-**This feature is in preview**
+**Preview status**
 
-Preview features may change in future releases. Don't rely on them in production workflows.
+End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}
 
 ## What are end-user credentials
@@ -60,8 +69,11 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 3. Configure the connection. For OAuth credentials, include the **Client ID**, **Client Secret**, and **OAuth Redirect URL** to register with the service.
 4. Select **Save**.
 
-Users with access to the project can now connect their own account to this credential.
+Users with project access can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. They can also connect from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
 
+{% hint style="info" %}
+Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
+{% endhint %}
 ## Connect your account
 
 Before you can use an end-user credential in a workflow, connect your account to the template. You can do this from:

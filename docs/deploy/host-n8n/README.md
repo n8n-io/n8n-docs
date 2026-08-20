@@ -19,33 +19,33 @@ layout:
 
 # Self-hosting n8n <a href="#self-hosting-n8n" id="self-hosting-n8n"></a>
 
-You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker, Kubernetes, or npm.
+You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker Compose, one-line setup, or other deployment methods.
 
-All self-hosted installations use the same core product. Without a license key, n8n runs as the free [Community edition](community-edition-features.md). Adding a Business or Enterprise license key enables those editions.
+All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions. See [Compare editions](community-edition-features.md) for the differences between the self-hosted editions.
 
 ## Choose your installation method <a href="#choose-your-installation-method" id="choose-your-installation-method"></a>
 
 Select the installation method that best fits your technical requirements and infrastructure:
 
-- __npm__
+- __One-line setup__
 
-	**Best for:** Local development, testing, or simple single-server deployments.
+	**Best for:** Quick setup with minimal configuration.
 	
-	**Requirements:** Node.js installed on your system.
+	**Requirements:** Linux or macOS system with curl installed.
 	
-	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
+	Automated installation script that handles all dependencies and configuration for you.
 
-	[npm installation guide](install-options/install-with-npm.md)
+	[One-line setup guide](install-options/one-line-setup.md)
 
-- __Docker__
+- __Docker Compose__
 
-	**Best for:** Isolated environments, easy updates, and consistent deployments.
+	**Best for:** Production deployments with databases and additional services.
 	
-	**Requirements:** Docker installed on your system.
+	**Requirements:** Docker and Docker Compose installed on your system.
 	
-	Runs n8n in a container with all dependencies included. Simplifies installation and updates.
+	Multi-container setup ideal for robust deployments with persistent data and scalability.
 
-	[Docker installation guide](install-options/install-with-docker.md)
+	[Docker Compose guide](install-options/install-using-docker-compose.md)
 
 - __AWS__
 
@@ -89,8 +89,14 @@ Select the installation method that best fits your technical requirements and in
 
 	[OpenShift setup guide](install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
 
-- __Docker Compose__
+- __npm__
 
-	Multi-container setup ideal for production deployments with databases and additional services.
+	**Best for:** Local development or testing.
+	
+	**Requirements:** Node.js installed on your system.
+	
+	**Note:** This installation method is being deprecated in n8n 3.0. Consider using Docker Compose or one-line setup instead.
+	
+	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 
-	[Docker Compose guide](install-options/use-a-cloud-provider/use-docker-compose.md)
+	[npm installation guide](install-options/install-with-npm.md)

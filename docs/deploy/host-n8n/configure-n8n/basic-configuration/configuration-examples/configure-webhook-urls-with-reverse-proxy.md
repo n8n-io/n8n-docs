@@ -18,7 +18,7 @@ n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_POR
 
 When running n8n behind a reverse proxy, it's important to do the following:
 
-* set the webhook URL manually with the `WEBHOOK_URL` environment variable so that n8n can  display it in the editor UI and register the correct webhook URLs with external services.
+* set the webhook URL manually with the `N8N_WEBHOOK_URL` environment variable so that n8n can display it in the editor UI and register the correct webhook URLs with external services. (`N8N_WEBHOOK_URL` replaces the deprecated `WEBHOOK_URL`; n8n logs a deprecation warning if you still use `WEBHOOK_URL`.)
 * Set the `N8N_PROXY_HOPS` environment variable to `1`.
 * On the last proxy on the request path, set the following headers to pass on information about the initial request:
     * [`X-Forwarded-For`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For)
@@ -26,7 +26,9 @@ When running n8n behind a reverse proxy, it's important to do the following:
     * [`X-Forwarded-Proto`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-Proto)
 
 ```bash
-export WEBHOOK_URL=https://n8n.example.com/
+export N8N_WEBHOOK_URL=https://n8n.example.com/
 export N8N_PROXY_HOPS=1
 ```
 Refer to [Environment variables reference](../use-environment-variables/endpoints.md) for more information on this variable.
+
+If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) behind the same reverse proxy, make sure it forwards the [MCP request headers](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#mcp-request-headers) too.

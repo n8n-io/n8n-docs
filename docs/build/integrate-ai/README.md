@@ -11,6 +11,10 @@ n8n lets you build AI workflows that connect different LLM providers such as Ope
 [understand-ai-components/README.md](understand-ai-components/README.md)
 {% endcontent-ref %}
 
+{% content-ref url="langchain-in-n8n.md" %}
+[langchain-in-n8n.md](langchain-in-n8n.md)
+{% endcontent-ref %}
+
 {% content-ref url="test-and-improve-ai-workflows/README.md" %}
 [test-and-improve-ai-workflows/README.md](test-and-improve-ai-workflows/README.md)
 {% endcontent-ref %}

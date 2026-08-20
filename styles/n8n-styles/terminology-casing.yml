@@ -1,0 +1,11 @@
+extends: substitution
+message: "Use '%s', not '%s'."
+link: https://docs.n8n.io/contribute/terminology
+level: warning
+ignorecase: false
+action:
+  name: replace
+# n8n casing (N8n, N8N, n8N) is already enforced by the reject.txt vocabulary.
+swap:
+  Github: GitHub
+  Javascript: JavaScript

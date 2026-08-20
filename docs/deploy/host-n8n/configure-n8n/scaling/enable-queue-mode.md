@@ -67,8 +67,9 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 
 {% hint style="info" %}
 **Database considerations**
+Refer to [Supported PostgreSQL versions](../choose-n8ns-database.md#supported-postgresql-versions) for n8n's supported PostgreSQL versions.
 
-n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
+Running n8n with execution mode set to `queue` with an SQLite database isn't recommended. 
 {% endhint %}
 
 Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
@@ -153,8 +154,11 @@ You can customize the health check endpoint path using the [`N8N_ENDPOINT_HEALTH
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
+Viewing running workers is available on:
+
+- **Self-hosted:** Enterprise
+
+On n8n Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa) to enable it.
 {% endhint %}
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
@@ -232,6 +236,47 @@ export N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 
 When disabling the webhook process in the main process, run the main process and don't add it to the load balancer's webhook pool.
 
+## Large webhook responses
+
+In queue mode, a worker runs the execution, but the client that sent the webhook request stays connected to the main or webhook instance. A response from a **Respond to Webhook** node travels from the worker back to that instance inside a queue message, so Redis holds the whole response while the message is in flight.
+
+`N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` sets how large that message can be, in MiB. It defaults to `64`. Redis holds several copies of a response in flight, so budget about 1.5 times this value in Redis memory for each response in flight. Without offloading, a response above the limit fails the node.
+
+The same limit applies to a tool result an MCP Trigger workflow returns from a worker. You can't offload a tool result, so an oversized one reaches the MCP client as a tool error naming the limit.
+
+### Offload a large response body to storage
+
+{% hint style="info" %}
+**Available from n8n 2.34.0**
+{% endhint %}
+
+Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers to store a response body above the limit in [binary data storage](../basic-configuration/use-environment-variables/binary-data.md) instead of failing the node. The queue message then carries a reference, the main instance streams the body from storage to the client, and n8n deletes the stored body once it delivers the response.
+
+Offloading needs storage that every instance can read. Every mode except `default` stores, so set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`:
+
+```bash
+export N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX=64
+export N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true
+export N8N_DEFAULT_BINARY_DATA_MODE=s3
+```
+
+n8n recommends `s3` or `azure` for large responses. Both stream the body, so the main instance holds one chunk at a time. Refer to [External storage](use-external-storage.md) for how to configure them. In `database` mode, the main instance loads the whole body into memory before sending it, and the response passes through your primary database. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend. The `default` mode keeps binary data in memory, so there's nothing for the main instance to read, and a response above the limit still fails the node.
+
+n8n only offloads the response body. It measures the rest of the response, its headers and status code, against the same limit, so a response whose headers alone exceed the limit fails either way.
+
+### Turn on offloading during an upgrade
+
+Only a main instance running n8n 2.34.0 or later reads an offloaded body. An older one returns the storage reference to the client instead of the response body. Upgrade every main and webhook instance first, then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. A worker with the variable unset sends every response inline and fails one above the limit.
+
+### Troubleshoot large webhook responses
+
+| Error | Cause | Fix |
+| :---- | :---- | :-- |
+| `The response is too large to be sent back from the worker`, naming `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Offloading is off on the worker. | Set the variable on your workers, or raise `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`. |
+| `The response is too large to be sent back from the worker`, naming `N8N_DEFAULT_BINARY_DATA_MODE` | Binary data storage keeps data in memory, so there's nowhere to offload to. | Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`. |
+| `The response is too large for the binary-data store to hold` | `database` mode refused the body for its own size limit. | Raise `N8N_BINARY_DATA_DATABASE_MAX_FILE_SIZE`, up to the 1 GB a database column holds, or switch to `filesystem`, `s3`, or `azure`, which apply no limit of their own. |
+| `The stored webhook response body could not be read` | The main instance can't read the storage the worker wrote to. | Point every instance at the same storage. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend. |
+
 ## Configure worker concurrency <a href="#configure-worker-concurrency" id="configure-worker-concurrency"></a>
 
 You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10`. To change it:
@@ -249,7 +294,11 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Enterprise plans.
+Multi-main setup is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud.
 {% endhint %}
 
 In queue mode you can run more than one `main` process for high availability.

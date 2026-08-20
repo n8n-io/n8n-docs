@@ -118,7 +118,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `workflowId` | `string` | Yes | | The ID of the workflow to execute |
-| `executionMode` | `"manual" | "production"` | Yes | | `"manual"` tests the current version, `"production"` executes the published (active) version |
+| `executionMode` | `"manual" \| "production"` | Yes | | `"manual"` tests the current version, `"production"` executes the published (active) version |
 | `inputs` | `object` | No | | Inputs to provide to the workflow (discriminated union, see below) |
 
 **`inputs` variants (discriminated by `type`):**

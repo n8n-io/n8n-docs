@@ -319,4 +319,21 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 * Verify that the MCP access is enabled in n8n settings.
 * Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 * Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
+* If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 * Review n8n server logs for any error messages related to MCP connections.
+
+### MCP request headers <a href="#mcp-request-headers" id="mcp-request-headers"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n allows these routing headers in its CORS policy from n8n 2.36.0.
+{% endhint %}
+
+MCP clients send the following headers to the n8n MCP endpoint:
+
+* `MCP-Protocol-Version`
+* `Mcp-Method`
+* `Mcp-Name`
+
+If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.

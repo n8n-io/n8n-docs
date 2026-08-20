@@ -53,10 +53,12 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+codecs?
 Cognito('s)?
 commenters?
 Cohere
 Combinator
+Confluent('s)?
 Contentful
 ConvertKit
 CPU
@@ -143,8 +145,10 @@ Kibana
 Kitemaker
 kubectl
 Kafka
+kafkajs
 Lemlist
 Lenovo
+librdkafka
 [Ll]inter
 LLMs?
 [Ll]oopback

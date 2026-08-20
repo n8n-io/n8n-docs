@@ -30,3 +30,5 @@ export N8N_WEBHOOK_URL=https://n8n.example.com/
 export N8N_PROXY_HOPS=1
 ```
 Refer to [Environment variables reference](../use-environment-variables/endpoints.md) for more information on this variable.
+
+If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) behind the same reverse proxy, make sure it forwards the [MCP request headers](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#mcp-request-headers) too.

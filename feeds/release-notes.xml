@@ -6,7 +6,79 @@
 <atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
 <description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
 <language>en</language>
-<lastBuildDate>Wed, 12 Aug 2026 13:01:01 GMT</lastBuildDate>
+<lastBuildDate>Wed, 19 Aug 2026 13:00:57 GMT</lastBuildDate>
+<item>
+<title>Simplify user flow for Browser Use connection</title>
+<link>https://github.com/n8n-io/n8n/pull/36316</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36316</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>Connecting your browser to n8n's Browser Use AI Assistant is now simpler: clicking connect automatically opens the extension's connect view in a popup, which closes itself once connected. If the popup is closed or times out after 15 seconds, a Try again button lets you refocus it. The manual Open Browser Use extension button now also opens a popup instead of a new tab.</description>
+</item>
+<item>
+<title>Add snapshot option to every browser use interaction tool</title>
+<link>https://github.com/n8n-io/n8n/pull/36111</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36111</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>Browser Use interaction tools (click, type, select, drag, hover, press, scroll, upload, dialog) now accept an optional snapshot parameter to return an accessibility snapshot directly in the response, either interactive or non-interactive. This removes the need for a separate snapshot call after each action, roughly halving the number of tool calls needed for browser automation.</description>
+</item>
+<item>
+<title>Let users update review descriptions</title>
+<link>https://github.com/n8n-io/n8n/pull/36069</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36069</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>When updating a workflow review with a newly pinned version, users can now edit the review description as part of the update flow. Review descriptions are preserved through the update, and are only visible to users with publish permission. The update dialog is more resilient to stale review state and description prefill failures.</description>
+</item>
+<item>
+<title>MCP Server Trigger Node: Add server instructions option</title>
+<link>https://github.com/n8n-io/n8n/pull/35945</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35945</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>The MCP Server Trigger node now has an optional Instructions field. Text entered here is sent to connecting MCP clients as part of the initialize response, letting you provide cross-tool guidance such as tool-choice rules or multi-step workflows that don't belong in any single tool's description. Clients that support this MCP feature (e.g. Claude Code) surface it in their system prompt automatically; others ignore it. The field defaults to empty, so existing workflows are unaffected.</description>
+</item>
+<item>
+<title>MiniMax Node: Add M3 and H3 model support</title>
+<link>https://github.com/n8n-io/n8n/pull/35935</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35935</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>The MiniMax node now supports the MiniMax-M3 language model, set as the new default, alongside the existing model lineup. It also adds MiniMax-H3 support for text-to-video and image-to-video generation via MiniMax's V2 video API, with dedicated H3 parameters like duration, resolution, and aspect ratio, while previous models and workflows using the V1 API continue to work unchanged.</description>
+</item>
+<item>
+<title>Schedule Trigger Node: Add a per-node missed execution grace period</title>
+<link>https://github.com/n8n-io/n8n/pull/35771</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35771</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>Schedule Trigger nodes now have their own 'Missed Execution Grace Period (Seconds)' setting, letting you configure how late a run can start before it's considered missed on a per-node basis, instead of relying only on the instance-wide N8N_SCHEDULER_MISFIRE_GRACE setting. Leaving it at 0 keeps the instance default. Invalid values fall back to the instance setting with a logged warning. Available on Schedule Trigger nodes at version 1.4 and above.</description>
+</item>
+<item>
+<title>Schedule Trigger Node: Add &quot;If Execution Is Missed&quot; option</title>
+<link>https://github.com/n8n-io/n8n/pull/35626</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35626</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>The Schedule Trigger node now has an &quot;If Execution Is Missed&quot; option (node version 1.4, in the Settings tab) letting you choose whether an occurrence that comes due while the instance is down is skipped or run once instance comes back up. Existing workflows default to skipping missed runs unless coalesce is explicitly chosen. Also fixed a bug where increasing the grace period could incorrectly revive already-expired occurrences.</description>
+</item>
+<item>
+<title>Discord Node: Add member moderation actions</title>
+<link>https://github.com/n8n-io/n8n/pull/33486</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33486</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>The Discord node's Member resource now supports four moderation actions: Ban, Unban, Kick, and Timeout. Ban includes an optional message-cleanup window, and Timeout offers duration presets up to Discord's 28-day maximum or removal. All actions support a preset or custom reason, recorded in the server's audit log, enabling workflows to moderate flagged accounts directly, e.g. trigger → AI scorer → ban/kick/timeout.</description>
+</item>
+<item>
+<title>lmChatOpenRouter Node: Add provider routing options</title>
+<link>https://github.com/n8n-io/n8n/pull/24822</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/24822</guid>
+<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.36</category>
+<description>The OpenRouter Chat Model node now supports provider routing options, letting you control which sub-providers handle requests. New settings under Options &gt; Provider Routing include order, allowFallbacks, requireParameters, dataCollection, zdr, only, ignore, and sort, giving finer control over provider selection, fallback behavior, data retention requirements, and cost/performance sorting.</description>
+</item>
 <item>
 <title>GitHub Node: Add timeout option to Dispatch and Wait for Completion</title>
 <link>https://github.com/n8n-io/n8n/pull/35837</link>
@@ -32,6 +104,38 @@
 <description>You can now find the Merge node in the nodes panel by searching for &quot;Append&quot; or &quot;Combine&quot;, in addition to its existing search terms. This makes the node easier to discover when you're looking for ways to combine or append data streams.</description>
 </item>
 <item>
+<title>Allow adding a workflow version description when submitting for review</title>
+<link>https://github.com/n8n-io/n8n/pull/35640</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35640</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>You can now add a version description when submitting a workflow for review, matching the existing publish flow. Submit for review is now a two-step dialog for naming and describing the version before adding review details, and updating an existing review request now includes a description field. Empty values clear the description; omitting it leaves it unchanged.</description>
+</item>
+<item>
+<title>Add review detail metadata</title>
+<link>https://github.com/n8n-io/n8n/pull/35638</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35638</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>Workflow Reviews inbox now shows a metadata sidebar on the review detail view, with cards for status, reviewers (avatar and name), and workflow changes. A status dot appears next to the review title, and clicking a workflow in the Changes card jumps to its diff section. Long names truncate gracefully, and empty reviewer or workflow lists show fallback messaging.</description>
+</item>
+<item>
+<title>Name the pinned workflow version when submitting for review</title>
+<link>https://github.com/n8n-io/n8n/pull/35566</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35566</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>When submitting a workflow for review (or re-pinning an updated version), you now provide a required version name, prefilled from the version's existing name or a generated default. This prevents the pinned review version from being silently pruned from workflow history, which previously could null out the review's pinned version and break auto-publish on approval.</description>
+</item>
+<item>
+<title>Disable command bar in canvas-only mode</title>
+<link>https://github.com/n8n-io/n8n/pull/35542</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35542</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>When running n8n in canvas-only mode (via the N8N_CANVAS_ONLY environment variable), the command bar is now disabled. The Cmd/Ctrl+K shortcut no longer opens it, and its buttons are hidden from both the sidebar header and the canvas node-creation rail, since navigation actions like jumping to executions, credentials, or settings don't apply in embedded, chrome-less deployments.</description>
+</item>
+<item>
 <title>Improve agent file upload visibility</title>
 <link>https://github.com/n8n-io/n8n/pull/35513</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35513</guid>
@@ -46,6 +150,14 @@
 <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.35</category>
 <description>The Kafka node adds version 2, which sends messages using the modern @confluentinc/kafka-javascript library instead of the unmaintained kafkajs. It keeps the same UI and options as v1 (minus Compression, coming later) and fixes the 'Acks' option so 'all replicas' actually maps to all in-sync replicas rather than leader-only. Existing workflows default to v1; new nodes can opt into v2.</description>
+</item>
+<item>
+<title>Add Changes diff tab to workflow review detail pane</title>
+<link>https://github.com/n8n-io/n8n/pull/35431</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35431</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>The workflow review inbox detail pane now includes an Activity and Changes tab. Activity shows the review description, while Changes displays a side-by-side diff between each workflow's published version and the version submitted for review, handling cases like first publish, no changes, or closed reviews. Tabs are deep-linkable via a URL query parameter, and the inbox layout was widened to fit the diff view.</description>
 </item>
 <item>
 <title>Enable enhanced HITL Slack/Telegram</title>
@@ -64,36 +176,20 @@
 <description>When connecting the ChatGPT MCP client from Settings &gt; MCP &gt; Connect a client, a one-click 'Add to ChatGPT' button now appears again. It links directly to ChatGPT's create-connector form, so users just need to paste the server URL instead of navigating ChatGPT's connectors settings page (which previously required developer mode).</description>
 </item>
 <item>
+<title>Form Trigger Node: Add credential connect UI for end-user credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/35347</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35347</guid>
+<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.35</category>
+<description>Form Trigger forms can now prompt submitters to connect their own credentials (e.g. Gmail via OAuth2) before running a workflow. When required credentials aren't connected, n8n shows a secure Required credentials panel around the form with Connect and Disconnect controls, disabling Submit until all are connected; the server also rejects submissions with missing credentials. This requires n8n User Auth and a license with dynamic credentials.</description>
+</item>
+<item>
 <title>Slack Node: Use Real-time Search API for message search</title>
 <link>https://github.com/n8n-io/n8n/pull/35291</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35291</guid>
 <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.35</category>
 <description>The Slack node's Message Search now uses Slack's new Real-time Search API (node version 2.7), replacing the deprecated search.messages endpoint. New options include Channel Types, After/Before date filters, and Keyword Search Only (to disable semantic matching). Return All is removed in favor of a capped Limit (max 50) due to Slack's rate limits. Existing workflows on node version 2.6 or earlier are unaffected, but users must reconnect their Slack credential to grant new search scopes before using search on 2.7.</description>
-</item>
-<item>
-<title>Salesforce Trigger Node: Add OAuth2 JWT authentication support</title>
-<link>https://github.com/n8n-io/n8n/pull/32257</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32257</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The Salesforce Trigger node now supports OAuth2 JWT authentication, in addition to OAuth2. A new Authentication dropdown lets you choose between OAuth2 and OAuth2 JWT and select the corresponding credential, matching the regular Salesforce node. Existing trigger workflows are unaffected since OAuth2 remains the default.</description>
-</item>
-<item>
-<title>Disable command bar in canvas-only mode</title>
-<link>https://github.com/n8n-io/n8n/pull/35542</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35542</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>When running n8n in canvas-only mode (via the N8N_CANVAS_ONLY environment variable), the command bar is now disabled. The Cmd/Ctrl+K shortcut no longer opens it, and its buttons are hidden from both the sidebar header and the canvas node-creation rail, since navigation actions like jumping to executions, credentials, or settings don't apply in embedded, chrome-less deployments.</description>
-</item>
-<item>
-<title>Name the pinned workflow version when submitting for review</title>
-<link>https://github.com/n8n-io/n8n/pull/35566</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35566</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>When submitting a workflow for review (or re-pinning an updated version), you now provide a required version name, prefilled from the version's existing name or a generated default. This prevents the pinned review version from being silently pruned from workflow history, which previously could null out the review's pinned version and break auto-publish on approval.</description>
 </item>
 <item>
 <title>Add Simplified Custom Auth credential with recipe-guided setup in the AI Assistant</title>
@@ -104,36 +200,12 @@
 <description>Added a new Simplified Custom Auth credential for the HTTP Request node, letting users authenticate to services without a dedicated n8n credential by pasting an API key into a simple, auto-generated form. The AI Assistant can now research a provider's auth scheme and pre-fill this credential (icon, docs link, key fields) during workflow setup, and verifies the key against the provider's API before saving, showing a clear error if it's rejected.</description>
 </item>
 <item>
-<title>Allow adding a workflow version description when submitting for review</title>
-<link>https://github.com/n8n-io/n8n/pull/35640</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35640</guid>
+<title>Salesforce Trigger Node: Add OAuth2 JWT authentication support</title>
+<link>https://github.com/n8n-io/n8n/pull/32257</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32257</guid>
 <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.35</category>
-<description>You can now add a version description when submitting a workflow for review, matching the existing publish flow. Submit for review is now a two-step dialog for naming and describing the version before adding review details, and updating an existing review request now includes a description field. Empty values clear the description; omitting it leaves it unchanged.</description>
-</item>
-<item>
-<title>Add review detail metadata</title>
-<link>https://github.com/n8n-io/n8n/pull/35638</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35638</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Workflow Reviews inbox now shows a metadata sidebar on the review detail view, with cards for status, reviewers (avatar and name), and workflow changes. A status dot appears next to the review title, and clicking a workflow in the Changes card jumps to its diff section. Long names truncate gracefully, and empty reviewer or workflow lists show fallback messaging.</description>
-</item>
-<item>
-<title>Form Trigger Node: Add credential connect UI for end-user credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/35347</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35347</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Form Trigger forms can now prompt submitters to connect their own credentials (e.g. Gmail via OAuth2) before running a workflow. When required credentials aren't connected, n8n shows a secure Required credentials panel around the form with Connect and Disconnect controls, disabling Submit until all are connected; the server also rejects submissions with missing credentials. This requires n8n User Auth and a license with dynamic credentials.</description>
-</item>
-<item>
-<title>Add Changes diff tab to workflow review detail pane</title>
-<link>https://github.com/n8n-io/n8n/pull/35431</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35431</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The workflow review inbox detail pane now includes an Activity and Changes tab. Activity shows the review description, while Changes displays a side-by-side diff between each workflow's published version and the version submitted for review, handling cases like first publish, no changes, or closed reviews. Tabs are deep-linkable via a URL query parameter, and the inbox layout was widened to fit the diff view.</description>
+<description>The Salesforce Trigger node now supports OAuth2 JWT authentication, in addition to OAuth2. A new Authentication dropdown lets you choose between OAuth2 and OAuth2 JWT and select the corresponding credential, matching the regular Salesforce node. Existing trigger workflows are unaffected since OAuth2 remains the default.</description>
 </item>
 <item>
 <title>Add a guided setup view for Simplified Custom Auth credentials</title>
@@ -334,78 +406,6 @@
 <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.33</category>
 <description>In the admin Users list, the Projects column for members with access to specific projects is now clickable, opening a modal listing all their projects with each project's role (e.g. admin, editor) and an icon. The modal includes a search field to filter by project name. This doesn't apply to Owners/Admins ('All projects') or users with only a personal project.</description>
-</item>
-<item>
-<title>Allow custom OAuth scopes for Microsoft Azure Monitor, Dynamics, Graph Security and Azure Storage</title>
-<link>https://github.com/n8n-io/n8n/pull/34612</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34612</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>You can now customize OAuth scopes for the Microsoft Azure Monitor, Microsoft Dynamics, Microsoft Graph Security, and Azure Storage credentials. A new Custom Scopes toggle reveals an Enabled Scopes field, prefilled with defaults for Graph Security and Azure Storage, or a placeholder example for Dynamics and Azure Monitor where scopes depend on other fields. Default behavior is unchanged when the toggle stays off.</description>
-</item>
-<item>
-<title>Gmail Node: Add warning notice when Simplify is disabled</title>
-<link>https://github.com/n8n-io/n8n/pull/34611</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34611</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>The Gmail Trigger and Gmail node (Message Get/Get Many, Thread Get) now show a warning notice when Simplify is turned off, explaining that fetching the full raw email uses much more memory and can cause crashes. The notice appears directly below the Simplify toggle. AI Builder guidance was also updated to keep Simplify enabled unless the full email content is actually needed.</description>
-</item>
-<item>
-<title>Show confirmation modal when updating a custom instance role with assigned users</title>
-<link>https://github.com/n8n-io/n8n/pull/34544</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34544</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>When editing a custom instance role (Settings → Roles → Instance) that is assigned to one or more users, saving changes now shows a confirmation modal warning that permissions for those users will be updated immediately. Cancelling discards the change; confirming applies it. Roles with no assigned users save as before, without a modal. This mirrors the existing confirmation shown for project roles. Requires an enterprise license with custom roles enabled.</description>
-</item>
-<item>
-<title>Configure the AI Assistant through a redesigned instance settings page</title>
-<link>https://github.com/n8n-io/n8n/pull/34493</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34493</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>Owners and admins on self-hosted instances can now configure AI Assistant model, sandbox, and search provider connections inline from a redesigned settings page. Connections are stored as instance-scoped credentials, kept separate from workflow credentials, and validated on save. Environment variable configuration remains as a fallback, with clear indicators for environment-managed versus manually configured settings, plus a guided model-to-sandbox setup flow.</description>
-</item>
-<item>
-<title>Revamp MCP settings view with instance settings components</title>
-<link>https://github.com/n8n-io/n8n/pull/34041</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34041</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>The Instance-level MCP settings page has been redesigned with n8n's updated settings components. Tabs are replaced by a single page showing MCP status, a guided &quot;Connect a client&quot; dialog with tailored setup steps for popular AI assistants, IDEs, and CLIs, a workflows-exposed summary, an allowed-callback-URLs dialog, and a connected-clients preview with links to full sub-views. Underlying functionality and permissions are unchanged; this is a frontend-only redesign.</description>
-</item>
-<item>
-<title>Add `showOnDeployment` option, show warning for read file node on cloud</title>
-<link>https://github.com/n8n-io/n8n/pull/34417</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34417</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>The Read/Write File node now shows a notice on n8n Cloud explaining that it can only access paths under /home/node/, clarifying why other paths like /tmp/ or /data/ fail with access errors. Internally, this introduces a new showOnDeployment option to control whether fields or notices display based on cloud vs. hosted deployment, replacing the older hideOnCloud flag across several credentials and nodes.</description>
-</item>
-<item>
-<title>Rename N8nActionBox to N8nEmptyState and add icon-cards variant</title>
-<link>https://github.com/n8n-io/n8n/pull/34407</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34407</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>The design system's empty-state component, formerly called ActionBox, has been renamed to N8nEmptyState to better reflect its purpose, with an updated test id and CSS class. It also gains a new 'icon-cards' variant showing a fanned trio of icon cards, optionally animated, used for pages like the instance MCP settings. Spacing within the component has also been refined for better visual rhythm. Internal use only; no direct end-user facing feature change beyond visual polish on affected pages.</description>
-</item>
-<item>
-<title>Add sticky support for canvas groups</title>
-<link>https://github.com/n8n-io/n8n/pull/34317</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34317</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>Sticky notes can now be full members of canvas groups, moving, saving, and displaying alongside regular nodes instead of being excluded or breaking group validity. Groups must now contain at least two connectable (non-sticky) nodes to be created, preventing pointless one-node groups, though existing groups can still degenerate to fewer members without being deleted.</description>
-</item>
-<item>
-<title>Save canvas group description pinned state in local storage</title>
-<link>https://github.com/n8n-io/n8n/pull/34220</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34220</guid>
-<pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.32</category>
-<description>When you pin a collapsed canvas group's description so it stays visible, that pinned state now persists per workflow in local storage, surviving page reloads. Unpinning also persists. Additionally, new context menu items let you show or hide a single group's description, or all group descriptions at once, from the canvas or empty-canvas menu.</description>
 </item>
 </channel>
 </rss>

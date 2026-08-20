@@ -191,7 +191,7 @@ Only main instances emit them. They come from the poll engine itself, not the sc
 
 | Metric | Type | What it tells you |
 | :----- | :--- | :---------------- |
-| `n8n_poll_trigger_duration_seconds` | Histogram | How long each poll takes, split by `node_type` and `status`. A poll that grows slower over time is drifting toward its own interval; once it crosses it, polls start overlapping. |
+| `n8n_poll_trigger_duration_seconds` | Histogram | How long each poll takes, split by `node_type` and `status`. A poll that grows slower over time is drifting toward its own interval. Once the duration crosses that interval, polls start overlapping. |
 | `n8n_poll_trigger_errors_total` | Counter | How many polls threw, split by `node_type` and a `kind` label of `auth`, `rate_limited`, or `thrown`. `auth` points at a broken credential, `rate_limited` at polling faster than the service allows. |
 | `n8n_poll_trigger_overlapping_ticks_total` | Counter | How many polls started while the previous poll for the same node was still running in the same process. Overlap across instances shows up in `n8n_scheduler_tasks_lease_lost_total` instead. |
 | `n8n_poll_trigger_cursor_commits_total` | Counter | How many cursor saves settled, split by `operation` (`with_execution` or `cursor_only`) and `result`. A `result` of `fence_rejected` means a stale poll lost its claim and wasn't allowed to advance the cursor, which is the protection doing its job; `failure` means the save itself failed. |

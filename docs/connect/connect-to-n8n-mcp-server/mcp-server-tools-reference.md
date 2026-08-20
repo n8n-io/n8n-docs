@@ -119,7 +119,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 |------|------|----------|---------|-------------|
 | `workflowId` | `string` | Yes | | The ID of the workflow to execute |
 | `executionMode` | `"manual" | "production"` | No | `"production"` | `"manual"` tests the current version, `"production"` executes the published (active) version |
-| `triggerNodeName` | `string` | No | | Name of the trigger node to execute. Required when providing `inputs`. If omitted, the workflow must have exactly one eligible trigger that doesn't require inputs, such as a Schedule Trigger, or a Manual Trigger in manual mode. Use `get_workflow_details` to see available trigger names |
+| `triggerNodeName` | `string` | No | | Name of the trigger node to execute. Required when providing `inputs`. If omitted, the workflow must have exactly one eligible trigger that doesn't require inputs, such as a **Schedule Trigger** or a **Manual Trigger** in manual mode. Use `get_workflow_details` to see available trigger names |
 | `inputs` | `object` | No | | Inputs to provide to the workflow (discriminated union, see below) |
 
 **`inputs` variants (discriminated by `type`):**
@@ -154,8 +154,8 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 - Manual mode also supports Manual Trigger nodes.
 - When `executionMode` is `"production"`, the workflow must have a published (active) version.
 - If a workflow has more than one eligible trigger, or its only eligible trigger requires input data (Webhook, Chat Trigger, or Form Trigger), `execute_workflow` returns an error listing the available trigger names instead of picking one. Pass `triggerNodeName` to specify which trigger to use.
-- `execute_workflow` only picks a trigger automatically when the workflow has exactly one eligible trigger that doesn't require inputs, such as a Schedule Trigger, or a Manual Trigger in manual mode.
-- `triggerNodeName` and the error-on-multiple-triggers behavior above are available from n8n 2.36.0. Earlier versions execute a trigger without letting you specify which one, when a workflow has more than one.
+- `execute_workflow` only picks a trigger automatically when the workflow has exactly one eligible trigger that doesn't require inputs, such as a Schedule Trigger or a Manual Trigger in manual mode.
+- `triggerNodeName` and the error-on-multiple-triggers behavior are available from n8n 2.36.0. Earlier versions execute a trigger without letting you specify which one when a workflow has more than one.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
 
 ---

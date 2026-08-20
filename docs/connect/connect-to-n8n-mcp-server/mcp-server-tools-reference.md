@@ -48,8 +48,6 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].createdAt` | `string | null` | ISO timestamp when the workflow was created |
 | `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `data[].triggerCount` | `number | null` | The number of triggers associated with the workflow |
-| `data[].scopes` | `string[]` | User permissions for this workflow |
-| `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `data[].availableInMCP` | `boolean` | Whether the workflow is visible to MCP tools |
 | `data[].tags` | `array` | Tags assigned to the workflow, each with `id` and `name` |
 | `count` | `integer` | Total number of workflows that match the filters |
@@ -58,8 +56,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
-- Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
 - Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
+- Results no longer include `scopes` or `canExecute` from n8n 2.35.0. Use `get_workflow_details` to check permissions for a single workflow.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>
@@ -68,9 +66,16 @@ Get detailed information about a specific workflow, including trigger details.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to retrieve |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `workflowId` | `string` | Yes | | The ID of the workflow to retrieve |
+| `detailLevel` | `"full" | "execution"` | No | `"full"` | How much of the workflow to return. `"full"` returns the complete workflow. `"execution"` returns only the metadata and trigger information needed to run it |
+
+{% hint style="info" %}
+**Feature availability**
+
+`detailLevel` is available from n8n 2.35.0. Earlier versions always return the full workflow.
+{% endhint %}
 
 #### Output <a href="#output" id="output"></a>
 
@@ -84,16 +89,20 @@ Get detailed information about a specific workflow, including trigger details.
 | `workflow.versionId` | `string` | The current workflow version ID |
 | `workflow.activeVersionId` | `string | null` | The active workflow version ID, if available |
 | `workflow.triggerCount` | `number` | Number of triggers |
+| `workflow.nodeCount` | `number` | Number of nodes in the workflow. Returned at both detail levels |
 | `workflow.createdAt` | `string | null` | ISO timestamp when the workflow was created |
 | `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
 | `workflow.settings` | `object | null` | Workflow settings |
-| `workflow.connections` | `object` | Workflow connections graph |
-| `workflow.nodes` | `array` | List of workflow nodes. Credential references are stripped |
-| `workflow.activeVersion` | `object | null` | Active workflow graph, if available |
-| `workflow.activeVersion.nodes` | `array` | Nodes from the active workflow version. Credential references are stripped |
-| `workflow.activeVersion.connections` | `object` | Connections from the active workflow version |
+| `workflow.connections` | `object` | Workflow connections graph. Only returned when `detailLevel` is `"full"` |
+| `workflow.nodes` | `array` | List of workflow nodes. Credential references are reduced to `id` and `name`. Only returned when `detailLevel` is `"full"` |
+| `workflow.nodeGroups` | `array` | Node groups in the workflow. Only returned when `detailLevel` is `"full"` |
+| `workflow.activeVersion` | `object | null` | Published (active) workflow graph. `null` when the workflow has no published version. Only returned when `detailLevel` is `"full"` |
+| `workflow.activeVersion.sameAsDraft` | `boolean` | When `true`, the published version matches the current draft, so use the top-level `nodes`, `connections`, and `nodeGroups`. When `false`, the published graph is returned in the fields below |
+| `workflow.activeVersion.nodes` | `array` | Nodes from the published version. Present only when `sameAsDraft` is `false` |
+| `workflow.activeVersion.connections` | `object` | Connections from the published version. Present only when `sameAsDraft` is `false` |
+| `workflow.activeVersion.nodeGroups` | `array` | Node groups in the published version. Present only when `sameAsDraft` is `false` |
 | `workflow.tags` | `array` | Tags with `id` and `name` |
-| `workflow.meta` | `object | null` | Workflow metadata |
+| `workflow.meta` | `object | null` | Workflow metadata. Only returned when `detailLevel` is `"full"` |
 | `workflow.parentFolderId` | `string | null` | Parent folder ID |
 | `workflow.description` | `string` | Workflow description, if set |
 | `workflow.scopes` | `string[]` | User permissions for this workflow |
@@ -102,10 +111,11 @@ Get detailed information about a specific workflow, including trigger details.
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- Sensitive credential data is stripped from returned nodes.
+- Sensitive credential data is stripped from returned nodes. Each credential reference keeps only its `id` and `name`, so you can reuse an existing credential without creating a duplicate.
 - Includes active version details if the workflow is published.
 - Includes user permission scopes and whether the workflow can be executed by the current user.
 - Use `triggerInfo` to understand how supported trigger nodes can be invoked.
+- Use `detailLevel: "execution"` when you only need to run the workflow with `execute_workflow`. It omits the node graph, which keeps the response small.
 
 ---
 
@@ -169,11 +179,18 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workflowId` | `string` | Yes | The ID of the workflow to test |
-| `pinData` | `Record<string, array>` | Yes | Pin data for all workflow nodes. |
-| `triggerNodeName` | `string` | No | Optional name of the trigger node to start execution from. Defaults to the first trigger node. |
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `workflowId` | `string` | Yes | | The ID of the workflow to test |
+| `pinData` | `Record<string, array>` | Yes | | Pin data for all workflow nodes. |
+| `triggerNodeName` | `string` | No | | Optional name of the trigger node to start execution from. Defaults to the first trigger node. |
+| `timeout` | `integer` | No | `300` | Timeout in seconds before the test execution is interrupted. Maximum 3600 (60 minutes). Increase it to test workflows that take longer to run |
+
+{% hint style="info" %}
+**Feature availability**
+
+`timeout` is available from n8n 2.33.0.
+{% endhint %}
 
 #### Output <a href="#output" id="output"></a>
 
@@ -187,7 +204,7 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 - Can be used to test workflow logic without setting up credentials or hitting external services.
 - This tool executes workflows synchronously (waits for execution to finish).
-- Has an enforced MCP execution timeout (5 minutes).
+- Has an enforced MCP execution timeout, five minutes by default. Use `timeout` to raise it, up to 60 minutes.
 
 ---
 
@@ -1298,6 +1315,74 @@ Validate an agent draft, its sidecar references, and user-accessible credentials
 - Runs the same validation pass `publish_agent` enforces, so a passing result won't drift from what publishing accepts.
 - Doesn't perform a live MCP server handshake; use `verify_agent_mcp_server` for that.
 - A valid agent is a completed draft. Validating doesn't imply the agent should be published.
+
+---
+
+### call_agent <a href="#callagent" id="callagent"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`call_agent` is available from n8n 2.35.0.
+{% endhint %}
+
+Test an agent draft through the built-in Preview chat. Start or continue a conversation with a message request, or resume a returned approval after a person decides.
+
+{% hint style="warning" %}
+**This tool has real side effects**
+
+`call_agent` runs the agent's real tools with real credentials, so it can change data in connected systems and send messages to real recipients. It isn't a dry run. Test on an agent draft you're willing to have act on the outside world.
+{% endhint %}
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `agentId` | `string` | Yes | The ID of the agent to test |
+| `request` | `object` | Yes | What to do, either a `message` request or an `approval` request. See below |
+
+To start or continue a conversation, pass a `message` request:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | `"message"` | Yes | Identifies the request type |
+| `message` | `string` | Yes | The message to send to the agent |
+| `sessionId` | `string` | No | Omit to start a new session. Pass the `sessionId` from a previous response to continue that conversation |
+
+To resume a pending approval, pass an `approval` request:
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `type` | `"approval"` | Yes | Identifies the request type |
+| `approved` | `boolean` | Yes | Whether the person approved the pending tool call |
+| `continuation` | `object` | Yes | Identifies the approval to resume. Build it from the previous response: `runId` and `toolCallId` come from the entry in `suspensions`, and `sessionId` and `response` come from the top level of that same response |
+
+#### Output <a href="#output" id="output"></a>
+
+The response varies with `status`. Not every field appears in every response.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | Whether the call succeeded |
+| `status` | `string` | One of `"completed"`, `"suspended"`, `"approval_required"`, or `"error"` |
+| `response` | `string` | The agent's reply |
+| `sessionId` | `string` | The session ID. Pass it back to continue the conversation |
+| `executionId` | `string` | The execution ID, when one is available |
+| `suspensions` | `array` | Pending approvals, each with `runId`, `toolCallId`, and `toolName`. Returned when `status` is `"approval_required"` |
+| `approvals` | `array` | Approvals the agent is waiting on. Returned when `status` is `"suspended"` |
+| `previewUrl` | `string` | URL to open the agent's Preview chat |
+| `previewAccessNote` | `string` | Explains what to do when you can run the agent but can't open Preview |
+| `code` | `string` | Error code when `status` is `"error"`, such as `session_not_found` or `agent_misconfigured` |
+| `message` | `string` | Error message when `status` is `"error"` |
+| `missing` | `string[]` | Config paths still needed, when `code` is `agent_misconfigured` |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Requires the `agent:execute` scope on the agent's project.
+- Available only when the agents feature is enabled and the agent is exposed to MCP.
+- Every returned approval needs a person to decide. Don't approve them automatically.
+- This tests agent behavior, not chat integrations.
+- Testing doesn't publish the agent. A tested draft is still a draft.
 
 ---
 

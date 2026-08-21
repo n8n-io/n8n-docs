@@ -120,7 +120,7 @@ From n8n 2.37.0, the setting only takes effect when `N8N_SCHEDULER_ENABLED`, `N8
 What to expect when you turn it on:
 
 - **The switch is safe.** The node's next poll carries its current cursor over to the new table, so nothing is fetched twice or skipped.
-- **n8n checks your workflows first (n8n 2.36 only).** At startup, n8n scans every active workflow's published version for duplicate or missing trigger node ids. If it finds any, or can't scan a workflow, it turns durable pollers off for the whole instance and logs an error naming the affected workflows and how to fix them.
+- **n8n checks your workflows first (n8n 2.36 only).** At startup, n8n scans every active workflow's published version for duplicate or missing trigger node ids. If it finds any, or can't scan a workflow, it turns durable poll cursors and durable-scheduler poll triggers off for the whole instance and logs an error naming the affected workflows and how to fix them.
 - **Turning it back off doesn't undo it.** Cursors stay in their table; they just stop saving together with the execution.
 - **You can watch cursor saves.** Turn on the [poll trigger metrics](#poll-trigger-metrics) with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
 

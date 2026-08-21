@@ -88,6 +88,34 @@ When you disable publishing:
 - Currently published workflows remain published. The setting only affects new publish actions.
 - The number of currently published personal workflows is displayed below the toggle.
 
+## Workflow reviews <a href="#workflow-reviews" id="workflow-reviews"></a>
+
+{% hint style="warning" %}
+**Preview**
+
+Workflow reviews are an upcoming Enterprise feature. Availability and UI details may change before general availability.
+{% endhint %}
+
+{% hint style="info" %}
+**Feature availability**
+
+Workflow reviews are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Workflow reviews are available from n8n 2.36.6.
+{% endhint %}
+
+With workflow reviews, teams can submit a workflow version for approval before publishing. Instance admins enable the feature for the whole instance.
+
+To enable workflow reviews:
+
+1. Navigate to **Settings** > **Security & policies**.
+2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
+
+When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
+
 ## Enforce execution data redaction <a href="#enforce-execution-data-redaction" id="enforce-execution-data-redaction"></a>
 
 You can enforce [execution data redaction](redact-execution-data.md) for all workflows on the instance. Enforcement sets an instance-wide minimum redaction policy that individual workflow settings can't weaken.

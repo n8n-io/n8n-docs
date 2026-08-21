@@ -28,9 +28,7 @@ tags:
 {% hint style="warning" %}
 **Feature availability**
 
-The Plan and Execute Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the Plan and Execute Agent.
-
-Node version 1 of the AI Agent node is removed from n8n 3.0, so the Plan and Execute Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
+The Plan and Execute Agent is deprecated from n8n 1.82.0 and removed from n8n 3.0; use the [Tools Agent](tools-agent.md) instead. See [AI Agent node](./README.md) for the full agent-type version history.
 {% endhint %}
 
 The Plan and Execute Agent is like the [ReAct agent](react-agent.md) but with a focus on planning. It first creates a high-level plan to solve the given task and then executes the plan step by step. This agent is most useful for tasks that require a structured approach and careful planning.

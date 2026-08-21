@@ -31,6 +31,9 @@ layout:
     visible: true
   actions:
     visible: true
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # LangChain Code
@@ -40,9 +43,9 @@ Use the LangChain Code node to import LangChain. This means if there is function
 On this page, you'll find the node parameters, guidance on configuring the node, and links to more resources.
 
 {% hint style="warning" %}
-**Deprecated due to security issues**
+**Feature availability**
 
-This node has critical security issues and isn't safe to use. It's deprecated and hidden from the nodes panel. Avoid using it in your workflows.
+The LangChain Code node has critical security issues and isn't safe to use. It's deprecated from n8n 2.35.0 and hidden from the nodes panel. Avoid using it in your workflows. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 {% hint style="info" %}

@@ -41,7 +41,7 @@ For Postgres, the database must already exist on the DB-instance. The database u
 
 * SSD storage.
 * In containerized cloud environments, ensure that the volume is persisted and mounted when stopping/starting a container. If not, all data is lost.
-* If using Postgres, don't use the `tablePrefix` configuration option. It will be deprecated in the near future.
+* If using Postgres, don't use the `tablePrefix` configuration option. n8n plans to remove support for it in a future release.
 * Pay attention to the changelog of new versions and consider reverting migrations before downgrading.
 * Set up at least the basic database security and stability mechanisms such as IP allow lists and backups.
 

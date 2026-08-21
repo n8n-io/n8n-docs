@@ -64,7 +64,7 @@ The n8n CLI is the method n8n recommends for moving workflows between instances 
 {% hint style="warning" %}
 **Feature availability**
 
-n8n plans to deprecate the Server CLI export and import commands. No deprecation or removal version is scheduled yet. Use the [n8n CLI](#using-the-n8n-cli) for new work.
+n8n recommends against using the Server CLI export and import commands for new work. Use the [n8n CLI](#using-the-n8n-cli) instead.
 {% endhint %}
 
 ## From the n8n API

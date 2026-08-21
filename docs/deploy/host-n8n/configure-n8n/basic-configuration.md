@@ -48,7 +48,7 @@ docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
  -e N8N_TEMPLATES_ENABLED="false" \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 

@@ -67,7 +67,7 @@ docker run -it --rm \
  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
  -e N8N_RUNNERS_ENABLED=true \
  -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 This command creates a volume to store persistent data, downloads the required n8n image, and starts the container with the following settings:
@@ -118,7 +118,7 @@ docker run -it --rm \
  -e DB_POSTGRESDB_SCHEMA=<POSTGRES_SCHEMA> \
  -e DB_POSTGRESDB_PASSWORD=<POSTGRES_PASSWORD> \
  -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
@@ -133,13 +133,13 @@ You can also use the command line to pull the latest, or a specific version:
 
 ```shell
 # Pull latest (stable) version <a href="#pull-latest-stable-version" id="pull-latest-stable-version"></a>
-docker pull docker.n8n.io/n8nio/n8n
+docker pull n8nio/n8n
 
 # Pull specific version <a href="#pull-specific-version" id="pull-specific-version"></a>
-docker pull docker.n8n.io/n8nio/n8n:1.81.0
+docker pull n8nio/n8n:1.81.0
 
 # Pull next (unstable) version <a href="#pull-next-unstable-version" id="pull-next-unstable-version"></a>
-docker pull docker.n8n.io/n8nio/n8n:next
+docker pull n8nio/n8n:next
 ```
 
 After pulling the updated image, stop your n8n container and start it again. You can also use the command line. Replace `<container_id>` in the commands below with the container ID you find in the first command:
@@ -155,7 +155,7 @@ docker stop <container_id>
 docker rm <container_id>
 
 # Start the container <a href="#start-the-container" id="start-the-container"></a>
-docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
+docker run --name=<container_name> [options] -d n8nio/n8n
 ```
 
 #### Updating Docker Compose <a href="#updating-docker-compose" id="updating-docker-compose"></a>

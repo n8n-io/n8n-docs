@@ -1,0 +1,25 @@
+docs/deploy/host-n8n/install-options/install-using-docker-compose.md
+  s_0dab2f835c1bbc::t_734fa29fe1b3af 243,249,259-261
+docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md
+  s_0dab2f835c1bbc::t_15629f255c9360 135-142
+docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md
+  s_0dab2f835c1bbc::t_419180f5d571ae 132-139
+docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md
+  s_0dab2f835c1bbc::t_d0f6780ae97a3e 139-146
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "56ab8c4c46bffb60c79057da7e1b2485ca455190",
+  "prompts": {},
+  "sessions": {
+    "s_0dab2f835c1bbc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "410e1778-4444-468d-911c-3b1b95235e6d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

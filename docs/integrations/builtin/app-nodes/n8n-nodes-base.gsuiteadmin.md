@@ -42,6 +42,7 @@ Refer to [Google credentials](../credentials/google/README.md) for guidance on s
     * Get a group
     * Get many groups
     * Update a group
+    * Get many members of a group
 * User
 	* Add an existing user to a group
     * Create a user

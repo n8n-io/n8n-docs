@@ -43,6 +43,14 @@ On this page, you'll find the node parameters for the PGVector node, and links t
 You can find authentication information for this node [here](../../credentials/postgres.md).
 {% endhint %}
 
+{% hint style="info" %}
+**Create Extension permissions**
+
+The **Create Extension** option is turned off by default. Leave it turned off when using a non-superuser database role.
+
+If the `vector` extension isn't installed yet, ask a database administrator to install it before using the node. Enable **Create Extension** only when your database user has permission to run `CREATE EXTENSION IF NOT EXISTS vector`.
+{% endhint %}
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
@@ -120,6 +128,12 @@ The following options specify the names of the columns to store the vectors and 
 * **Vector Column Name**
 * **Content Column Name**
 * **Metadata Column Name**
+
+### Create Extension <a href="#create-extension" id="create-extension"></a>
+
+Whether to create the Postgres `vector` extension if it doesn't already exist. This option is turned off by default.
+
+Enable this option only if your database user has permission to create extensions. If the extension is already installed by a database administrator, leave this option turned off.
 
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 

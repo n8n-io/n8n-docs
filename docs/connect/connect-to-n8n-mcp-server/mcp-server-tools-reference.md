@@ -35,6 +35,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `tags` | `string[]` | No | | Filter by tag names. Uses AND semantics — a workflow must have all the listed tags to match. |
 | `limit` | `integer` | No | `200` | Limit the number of results (max 200) |
 | `sortBy` | `string` | No | `"updatedAt:desc"` | Sort order for results. One of: `"updatedAt:desc"`, `"updatedAt:asc"`, `"createdAt:desc"`, `"createdAt:asc"`, `"name:asc"`, `"name:desc"` |
+| `folderId` | `string` | No | | Filter by folder. Pass `"0"` to match only workflows that sit at the project root rather than in a folder. |
+| `includeSubfolders` | `boolean` | No | `true` | Whether a `folderId` search also covers that folder's subfolders. Set to `false` to match only workflows directly inside the folder. Ignored when `folderId` is `"0"`. |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -48,9 +50,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].createdAt` | `string \| null` | ISO timestamp when the workflow was created |
 | `data[].updatedAt` | `string \| null` | ISO timestamp when the workflow was last saved |
 | `data[].triggerCount` | `number \| null` | The number of triggers associated with the workflow |
-| `data[].scopes` | `string[]` | User permissions for this workflow |
-| `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `data[].availableInMCP` | `boolean` | Whether the workflow is visible to MCP tools |
+| `data[].parentFolderId` | `string \| null` | The ID of the folder holding the workflow, or null if at the project root |
 | `data[].tags` | `array` | Tags assigned to the workflow, each with `id` and `name` |
 | `count` | `integer` | Total number of workflows that match the filters |
 
@@ -58,8 +59,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
-- Includes user permission scopes for each workflow so MCP clients can see what actions are available for the workflow.
 - Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
+- Filtering by `folderId`, and the `parentFolderId` field in results, are available from n8n 2.37.0. Use `search_folders` to resolve a folder name to an ID, or pass the `parentFolderId` of a workflow you already found to list its siblings.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>
@@ -410,7 +411,7 @@ Search for folders within a project.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows in a specific folder.
+- This tool enables MCP clients to create workflows in a specific folder, and to resolve a folder name to the `folderId` that `search_workflows` filters by.
 
 ---
 

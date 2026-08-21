@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/install-options/install-using-docker-compose.md
+  s_0dab2f835c1bbc::t_86415705afc762 262
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "8bf9e26979a1f18935968af3f6298ecac077b91b",
+  "prompts": {},
+  "sessions": {
+    "s_0dab2f835c1bbc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "410e1778-4444-468d-911c-3b1b95235e6d",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

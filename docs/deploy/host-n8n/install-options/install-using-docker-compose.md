@@ -259,6 +259,9 @@ SQLite is fine for trying things out, but for a production instance that must ha
    {% hint style="warning" %} Postgres 18 changed where it stores data by default. Setting `PGDATA` keeps it in the same folder as earlier versions, so the volume mount stays the same. Don't remove that line: without it, Postgres 18 writes somewhere the volume doesn't cover and your database starts empty.
    {% endhint %}
 
+   {% hint style="warning" %} Already running an older Postgres? Moving straight to 18 is a major version upgrade, and Postgres can't open a data directory written by an older major. Bumping the image tag on an existing setup fails with `database files are incompatible with server`, but your data stays intact, so back up first with `pg_dumpall`, then follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html).
+   {% endhint %}
+
 3. Point n8n at it by adding these to the n8n service's environment block, and making it wait on Postgres too:
 
    ``` yaml

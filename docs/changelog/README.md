@@ -14,6 +14,38 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## AI Assistant on self-hosted n8n: set up in minutes
+
+**Released:** 2026-08-18 in [n8n 2.35](release-notes.md#n8n235)
+
+The AI Assistant [arrived on n8n Cloud in July](#ai-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
+
+Self-hosted setup needs two things, plus one worth adding:
+
+* **A model provider.** Bring an API key for Anthropic, OpenAI, or OpenRouter, or point n8n at any OpenAI-compatible endpoint, including a local one. You pay the provider directly, and your prompts, workflow content, and the execution data the assistant reads go to that provider.
+* **A sandbox.** The assistant runs code to build and test what you ask for, and that code executes in an isolated sandbox, never on your n8n server. n8n's bundled sandbox runs on your own Docker host and suits local development and testing. For production, we recommend you use Daytona's managed sandbox with an API key.
+* **Web search, optional but worth adding.** With it the assistant reads current docs and APIs instead of relying on what its model remembers, through a bundled SearXNG instance or a Brave Search API key.
+
+On a brand-new instance, one command sets up everything except the model key:
+
+```bash
+curl -fsSL https://get.n8n.io | sh
+```
+
+It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [AI Assistant setup guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
+
+AI Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/one-line-setup) or [Docker Compose](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-using-docker-compose).
+
+{% hint style="warning" %}
+This feature is in preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
+
+{% hint style="info" %}
+**Availability:** Self-hosted Enterprise support is coming. Enterprise customers who want to try AI Assistant before then can contact their Customer Success Manager about preview access.
+{% endhint %}
+
 ## Return webhook responses of any size from your workers
 
 **Released:** 2026-08-04 in [n8n 2.34](release-notes.md#n8n234)
@@ -85,7 +117,7 @@ This feature is in Preview. It can make mistakes, and its behavior may change wh
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
 
 {% hint style="info" %}
-**Availability:** n8n Cloud only. Self-hosted support is coming.
+**Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [AI Assistant on self-hosted n8n](#ai-assistant-on-self-hosted-n8n-set-up-in-minutes).
 {% endhint %}
 
 ## MCP server updates

@@ -18,9 +18,36 @@ layout:
 ### Error message: 'Credentials of type "*" aren't known' <a href="#error-message-credentials-of-type-arent-known" id="error-message-credentials-of-type-arent-known"></a>
 
 
-Check that the name in the credentials array matches the name used in the property name of the credentials' class.
+Check that the name in the credentials array matches the name used in the property name of the credentials' class. For example, this credential class sets `name` to `friendGridApi`:
 
-![Troubleshooting credentials](../../.gitbook/assets/troubleshooting-credentials-1.png)
+```typescript
+export class FriendGridApi implements ICredentialType {
+	name = 'friendGridApi';
+	displayName = 'FriendGrid API';
+	documentationUrl = 'friendGrid';
+	properties = [
+		{
+			displayName: 'API Key',
+			name: 'apiKey',
+			type: 'string' as NodePropertyTypes,
+			default: '',
+		},
+	];
+}
+```
+
+The node's `credentials` array must reference that same `name` value:
+
+```typescript
+credentials: [
+	{
+		name: 'friendGridApi',
+		required: true,
+	},
+],
+```
+
+![Arrow linking the credential class's name property to the matching name field in the node's credentials array](../../.gitbook/assets/troubleshooting-credentials-1.png)
 
 
 ## Editor UI <a href="#editor-ui" id="editor-ui"></a>

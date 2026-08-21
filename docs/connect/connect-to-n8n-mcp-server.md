@@ -188,7 +188,7 @@ You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-men
 2. Select the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![mcp\_bulk\_toggle.png](<.gitbook/assets/mcp_bulk_toggle (1).png>)
+![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](<.gitbook/assets/mcp_bulk_toggle (1).png>)
 
 {% hint style="info" %}
 **Note**
@@ -220,7 +220,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
     2. Click the main workflow menu (`...`) in the top-right corner.
     3. Select **Edit description**.
 
-    ![mcp\_workflow\_description.png](<.gitbook/assets/mcp_workflow_description (1).png>)
+    ![Workflow's main menu open, with Edit description highlighted](<.gitbook/assets/mcp_workflow_description (1).png>)
 
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 

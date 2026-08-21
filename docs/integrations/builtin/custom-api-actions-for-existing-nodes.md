@@ -28,7 +28,7 @@ For example: you create an Asana credential, for use with the Asana node. Later,
 
 Some existing credential types have specific scopes: endpoints that they work with. n8n warns you about this when you select the credential type.
 
-For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two endpoints you can use this credential type with:
+For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two endpoints you can use this credential type with: `calendar` and `calendar.events`.
 
-![The scopes box](../.gitbook/assets/scopes.png)
+![Scopes notice listing the calendar and calendar.events endpoints for the Google Calendar OAuth2 API credential type](../.gitbook/assets/scopes.png)
 

@@ -28,7 +28,7 @@ You can use this pattern for environments. For example, create two n8n instances
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
 
-![Diagram](../.gitbook/assets/vc-multi-multi.png)
+![Development and production n8n instances, each connected to its own Git branch, with a pull request moving work between the branches](../.gitbook/assets/vc-multi-multi.png)
 
 ## Multiple instances, one branch <a href="#multiple-instances-one-branch" id="multiple-instances-one-branch"></a>
 
@@ -40,7 +40,7 @@ This pattern is also useful when testing a new version of n8n: you can create a 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
 
-![Diagram](../.gitbook/assets/vc-multi-one.png)
+![Development and production n8n instances both connected to the same single Git branch](../.gitbook/assets/vc-multi-one.png)
 
 ## One instance, multiple branches <a href="#one-instance-multiple-branches" id="one-instance-multiple-branches"></a>
 
@@ -53,10 +53,10 @@ This is useful to review work. For example, different users could work on their 
 
 n8n doesn't clean up the existing contents of an instance when changing branches. Switching branches in this pattern results in all the workflows from each branch being in your instance.
 {% endhint %}
-![Diagram](../.gitbook/assets/vc-one-multi.png)
+![One n8n instance switching between several Git branches to review work pushed by different users](../.gitbook/assets/vc-one-multi.png)
 
 ## One instance, one branch <a href="#one-instance-one-branch" id="one-instance-one-branch"></a>
 
 This is the simplest pattern.
 
-![Diagram](../.gitbook/assets/vc-one-one.png)
+![Single n8n instance connected to a single Git branch](../.gitbook/assets/vc-one-one.png)

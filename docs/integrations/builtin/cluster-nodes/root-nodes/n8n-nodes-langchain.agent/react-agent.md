@@ -27,7 +27,9 @@ tags:
 {% hint style="warning" %}
 **Feature availability**
 
-The ReAct Agent is deprecated from n8n 1.82.0 and removed from n8n 3.0; use the [Tools Agent](tools-agent.md) instead. See [AI Agent node](./README.md) for the full agent-type version history.
+The ReAct Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the ReAct Agent.
+
+Node version 1 of the AI Agent node is removed from n8n 3.0, so the ReAct Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
 {% endhint %}
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/) logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.

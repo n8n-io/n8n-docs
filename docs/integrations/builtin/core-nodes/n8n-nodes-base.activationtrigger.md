@@ -27,7 +27,7 @@ The Activation Trigger node gets triggered when an event gets fired by n8n or a 
 {% hint style="warning" %}
 **Feature availability**
 
-The Activation Trigger node is deprecated from n8n 0.117.0 and has been replaced with two new nodes: the [n8n Trigger node](n8n-nodes-base.n8ntrigger.md) and the [Workflow Trigger node](n8n-nodes-base.workflowtrigger.md). For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page, and see [Deprecated and versioned nodes](../deprecated-nodes.md) for more information.
+The Activation Trigger node is deprecated from n8n 0.117.0 and has been replaced with two new nodes: the [n8n Trigger node](n8n-nodes-base.n8ntrigger.md) and the [Workflow Trigger node](n8n-nodes-base.workflowtrigger.md). For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page, and see [Deprecated and versioned nodes](../deprecated-nodes.md).
 {% endhint %}
 
 {% hint style="info" %}

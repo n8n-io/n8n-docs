@@ -25,9 +25,13 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token (recommended)
-- User auth token<br>
+- User auth token
 
-    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>Feature availability</strong></p><p>NocoDB deprecated user auth tokens in v0.205.1. Use <a href="#using-api-token">API tokens</a> instead.</p></div>
+{% hint style="warning" %}
+**Feature availability**
+
+NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+{% endhint %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

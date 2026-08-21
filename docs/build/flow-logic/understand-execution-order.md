@@ -13,6 +13,8 @@ layout:
 
 # Execution order in multi-branch workflows <a href="#execution-order-in-multi-branch-workflows" id="execution-order-in-multi-branch-workflows"></a>
 
+Execution order is part of your workflow's [flow logic](./), and matters most in workflows that [split into multiple branches](split-with-conditionals.md).
+
 n8n's node execution order depends on the version of n8n you're using:
 
 * For workflows created before n8n 1.0: n8n executes the first node of each branch, then the second node of each branch, and so on.

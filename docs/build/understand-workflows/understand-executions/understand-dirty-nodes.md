@@ -20,11 +20,11 @@ A **dirty node** is a node that executed successfully in the past, but whose out
 
 In the canvas of the workflow editor, you can identify dirty notes by their different-colored border and a yellow triangle in place of the previous green tick symbol. For example:
 
-!["A node on the canvas with a yellow border and a yellow triangle icon instead of the usual green success tick"](../../.gitbook/assets/dirty-node-canvas.png)
+![A node on the canvas with a yellow border and a yellow triangle icon instead of the usual green success tick](../../.gitbook/assets/dirty-node-canvas.png)
 
 In the node editor view, the output panel also displays a yellow triangle on the output panel. If you hover over the triangle, a tooltip appears with more information about why n8n considers the data stale:
 
-!["Node editor's output panel showing a yellow triangle icon with a tooltip explaining why the data is stale"](../../.gitbook/assets/dirty-node-editor.png)
+![Node editor's output panel showing a yellow triangle icon with a tooltip explaining why the data is stale](../../.gitbook/assets/dirty-node-editor.png)
 
 ## Why n8n marks nodes dirty <a href="#why-n8n-marks-nodes-dirty" id="why-n8n-marks-nodes-dirty"></a>
 
@@ -57,17 +57,17 @@ For sub-nodes, also labels any executed parent nodes (up to and including the ro
 
 -   When deleting a connected node in a workflow:
 
-    !["Workflow canvas before a connected node is deleted, with all nodes showing green success ticks"](../../.gitbook/assets/dirty-before.png)
+    ![Workflow canvas before you delete a connected node, with all nodes showing green success ticks](../../.gitbook/assets/dirty-before.png)
 
 -   The next node in the sequence becomes dirty:
 
-    !["Workflow canvas after the node is deleted, with the next node in the sequence now marked dirty with a yellow border"](../../.gitbook/assets/dirty-after.png)
+    ![Workflow canvas after you delete the node, with the next node in the sequence now marked dirty with a yellow border](../../.gitbook/assets/dirty-after.png)
 
 </div>
 
 When using loops (with the [Loop over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node), when any node within the loop is dirty, the initial node of the loop is also considered dirty:
 
-!["Loop Over Items node marked dirty because a node inside its loop is dirty"](../../.gitbook/assets/dirty-loop.png)
+![Loop Over Items node marked dirty because a node inside its loop is dirty](../../.gitbook/assets/dirty-loop.png)
 
 ## Resolving dirty nodes <a href="#resolving-dirty-nodes" id="resolving-dirty-nodes"></a>
 

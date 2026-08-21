@@ -111,5 +111,5 @@ Given the following data:
 
 n8n displays it in table form like this, showing the `nested` field in bold to show that it contains nested data:
 
-!["Table view of the example data, with the nested field shown in bold."](../.gitbook/assets/nested-data.png)
+![Table view of the example data, with the nested field shown in bold](../.gitbook/assets/nested-data.png)
 

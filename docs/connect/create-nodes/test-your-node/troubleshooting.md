@@ -47,7 +47,7 @@ credentials: [
 ],
 ```
 
-![Arrow linking the credential class's name property to the matching name field in the node's credentials array](../../.gitbook/assets/troubleshooting-credentials-1.png)
+![Code examples with arrows linking the credential class's name property to the matching name field in the node's credentials array](../../.gitbook/assets/troubleshooting-credentials-1.png)
 
 
 ## Editor UI <a href="#editor-ui" id="editor-ui"></a>

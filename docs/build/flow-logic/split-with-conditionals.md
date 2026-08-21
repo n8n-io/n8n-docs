@@ -16,7 +16,7 @@ Splitting uses the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/c
 
 Compare these workflows:
 
-!["Diagram comparing a linear bug-report workflow with one that branches by urgency and support plan."](../.gitbook/assets/single-multi-branch-workflow.png)
+![Diagram comparing a linear bug-report workflow with one that branches by urgency and support plan](../.gitbook/assets/single-multi-branch-workflow.png)
 
 The first workflow is linear: a user submits a bug and the workflow emails support. The second workflow starts the same way but splits depending on whether the user marked the issue urgent, then splits again by the user's support plan.
 

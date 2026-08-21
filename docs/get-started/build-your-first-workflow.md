@@ -37,7 +37,7 @@ This guide will show you how to construct a workflow[^1] in n8n, explaining key 
   * Representing logic in an n8n workflow
   * Using expressions[^3]
 
-!["The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes"](.gitbook/assets/tutorial-first.png)
+![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](.gitbook/assets/tutorial-first.png)
 
 This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
 

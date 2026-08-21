@@ -60,7 +60,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Maximum result limit is 200.
 - Results are sorted by most recently updated workflows first by default.
 - Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
-- Filtering by `folderId`, and the `parentFolderId` field in results, are available from n8n 2.37.0. Use `search_folders` to resolve a folder name to an ID, or pass the `parentFolderId` of a workflow you already found to list its siblings.
+- Filtering by `folderId`, and the `parentFolderId` field in results, require a release newer than n8n 2.36. Use `search_folders` to resolve a folder name to an ID, or pass the `parentFolderId` of a workflow you already found to list its siblings.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>

@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data.md
+  s_b7f8624a8cc176::t_17584f37aa928c 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "a91fb4977d16d00d7a4d0cd4c486af82568055fe",
+  "prompts": {},
+  "sessions": {
+    "s_b7f8624a8cc176": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b70cda39-1209-4f69-a18a-f98ed26ae3c9",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

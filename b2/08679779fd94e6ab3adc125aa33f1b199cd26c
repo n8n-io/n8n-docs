@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners.md
+  s_1fbd4faba95160::t_39df550b8be746 64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b208679779fd94e6ab3adc125aa33f1b199cd26c",
+  "prompts": {},
+  "sessions": {
+    "s_1fbd4faba95160": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d46b6286-8dec-407e-ab2d-e6f17d94e472",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

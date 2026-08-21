@@ -42,12 +42,12 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 |-------|------|-------------|
 | `data` | `array` | List of workflow previews |
 | `data[].id` | `string` | The unique identifier of the workflow |
-| `data[].name` | `string | null` | The name of the workflow |
-| `data[].description` | `string | null` | The description of the workflow |
-| `data[].active` | `boolean | null` | Whether the workflow is active |
-| `data[].createdAt` | `string | null` | ISO timestamp when the workflow was created |
-| `data[].updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
-| `data[].triggerCount` | `number | null` | The number of triggers associated with the workflow |
+| `data[].name` | `string \| null` | The name of the workflow |
+| `data[].description` | `string \| null` | The description of the workflow |
+| `data[].active` | `boolean \| null` | Whether the workflow is active |
+| `data[].createdAt` | `string \| null` | ISO timestamp when the workflow was created |
+| `data[].updatedAt` | `string \| null` | ISO timestamp when the workflow was last saved |
+| `data[].triggerCount` | `number \| null` | The number of triggers associated with the workflow |
 | `data[].scopes` | `string[]` | User permissions for this workflow |
 | `data[].canExecute` | `boolean` | Whether the user has permission to execute this workflow |
 | `data[].availableInMCP` | `boolean` | Whether the workflow is visible to MCP tools |
@@ -78,23 +78,23 @@ Get detailed information about a specific workflow, including trigger details.
 |-------|------|-------------|
 | `workflow` | `object` | Sanitized workflow data safe for MCP consumption |
 | `workflow.id` | `string` | Workflow ID |
-| `workflow.name` | `string | null` | Workflow name |
+| `workflow.name` | `string \| null` | Workflow name |
 | `workflow.active` | `boolean` | Whether the workflow has a published active version |
 | `workflow.isArchived` | `boolean` | Whether the workflow is archived |
 | `workflow.versionId` | `string` | The current workflow version ID |
-| `workflow.activeVersionId` | `string | null` | The active workflow version ID, if available |
+| `workflow.activeVersionId` | `string \| null` | The active workflow version ID, if available |
 | `workflow.triggerCount` | `number` | Number of triggers |
-| `workflow.createdAt` | `string | null` | ISO timestamp when the workflow was created |
-| `workflow.updatedAt` | `string | null` | ISO timestamp when the workflow was last saved |
-| `workflow.settings` | `object | null` | Workflow settings |
+| `workflow.createdAt` | `string \| null` | ISO timestamp when the workflow was created |
+| `workflow.updatedAt` | `string \| null` | ISO timestamp when the workflow was last saved |
+| `workflow.settings` | `object \| null` | Workflow settings |
 | `workflow.connections` | `object` | Workflow connections graph |
 | `workflow.nodes` | `array` | List of workflow nodes. Credential references are stripped |
-| `workflow.activeVersion` | `object | null` | Active workflow graph, if available |
+| `workflow.activeVersion` | `object \| null` | Active workflow graph, if available |
 | `workflow.activeVersion.nodes` | `array` | Nodes from the active workflow version. Credential references are stripped |
 | `workflow.activeVersion.connections` | `object` | Connections from the active workflow version |
 | `workflow.tags` | `array` | Tags with `id` and `name` |
-| `workflow.meta` | `object | null` | Workflow metadata |
-| `workflow.parentFolderId` | `string | null` | Parent folder ID |
+| `workflow.meta` | `object \| null` | Workflow metadata |
+| `workflow.parentFolderId` | `string \| null` | Parent folder ID |
 | `workflow.description` | `string` | Workflow description, if set |
 | `workflow.scopes` | `string[]` | User permissions for this workflow |
 | `workflow.canExecute` | `boolean` | Whether the user has permission to execute this workflow |
@@ -133,7 +133,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 
 | Field | Type | Required | Default | Description |
 |-------|------|----------|---------|-------------|
-| `method` | `"GET" | "POST" | "PUT" | "DELETE" | "PATCH" | "HEAD" | "OPTIONS"` | No | `"GET"` | HTTP method |
+| `method` | `"GET" \| "POST" \| "PUT" \| "DELETE" \| "PATCH" \| "HEAD" \| "OPTIONS"` | No | `"GET"` | HTTP method |
 | `query` | `Record<string, string>` | No | | Query string parameters |
 | `body` | `Record<string, unknown>` | No | | Request body data |
 | `headers` | `Record<string, string>` | No | | HTTP headers |
@@ -142,8 +142,8 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `executionId` | `string | null` | The execution ID, or `null` if execution couldn't be started |
-| `status` | `"started" | "error"` | Whether the workflow execution was started successfully |
+| `executionId` | `string \| null` | The execution ID, or `null` if execution couldn't be started |
+| `status` | `"started" \| "error"` | Whether the workflow execution was started successfully |
 | `error` | `string` | Error message if the execution couldn't be started |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -179,7 +179,7 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `executionId` | `string | null` | The test execution ID |
+| `executionId` | `string \| null` | The test execution ID |
 | `status` | `string` | The status of the test execution. One of: `"success"`, `"error"`, `"running"`, `"waiting"`, `"canceled"`, `"crashed"`, `"new"`, `"unknown"` |
 | `error` | `string` | Error message if the execution failed |
 
@@ -251,7 +251,7 @@ Publish (activate) a workflow to make it available for production execution. Thi
 |-------|------|-------------|
 | `success` | `boolean` | Whether publishing succeeded |
 | `workflowId` | `string` | The workflow ID |
-| `activeVersionId` | `string | null` | The active version ID after publishing |
+| `activeVersionId` | `string \| null` | The active version ID after publishing |
 | `error` | `string` | Error message if publishing failed |
 
 
@@ -355,7 +355,7 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `query` | `string` | No | Filter projects by name. Results are ranked with exact case-insensitive matches first, then partial matches. |
-| `type` | `"personal" | "team"` | No | Filter by project type |
+| `type` | `"personal" \| "team"` | No | Filter by project type |
 | `limit` | `integer` | No | Limit the number of results (max 100) |
 
 #### Output <a href="#output" id="output"></a>
@@ -365,8 +365,8 @@ Search for projects accessible to the current user. Use this to resolve a projec
 | `data` | `array` | List of matching projects, sorted with exact case-insensitive matches first |
 | `data[].id` | `string` | The unique identifier of the project |
 | `data[].name` | `string` | The name of the project |
-| `data[].type` | `"personal" | "team"` | The project type |
-| `data[].matchType` | `"exact" | "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
+| `data[].type` | `"personal" \| "team"` | The project type |
+| `data[].matchType` | `"exact" \| "partial"` | Whether the project name matches the query exactly or partially. Only present when `query` is provided |
 | `count` | `integer` | Total number of matching projects |
 | `teamProjectsEnabled` | `boolean` | Whether team projects are licensed on this instance. When `false`, `projectId` is omitted by default on `create_workflow_from_code`, so the workflow is created in the caller's personal project, unless the user explicitly selects one of the returned accessible projects. Omitted on error responses. Available from n8n 2.26.0. |
 | `hint` | `string` | Guidance for picking a result. Present when the match is ambiguous (for example, no exact match but multiple partial matches), or when team projects aren't licensed on this instance |
@@ -404,7 +404,7 @@ Search for folders within a project.
 | `data` | `array` | List of matching folders |
 | `data[].id` | `string` | The unique identifier of the folder |
 | `data[].name` | `string` | The name of the folder |
-| `data[].parentFolderId` | `string | null` | The ID of the parent folder, or null if at project root |
+| `data[].parentFolderId` | `string \| null` | The ID of the parent folder, or null if at project root |
 | `count` | `integer` | Total number of matching folders |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -480,16 +480,16 @@ Get execution details by execution ID and workflow ID. By default returns metada
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `execution` | `object | null` | Execution metadata, or null if an error occurred |
+| `execution` | `object \| null` | Execution metadata, or null if an error occurred |
 | `execution.id` | `string` | Execution ID |
 | `execution.workflowId` | `string` | Workflow ID |
 | `execution.mode` | `string` | Execution mode |
 | `execution.status` | `string` | Execution status |
-| `execution.startedAt` | `string | null` | ISO timestamp when the execution started |
-| `execution.stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
-| `execution.retryOf` | `string | null` | ID of the execution this is a retry of |
-| `execution.retrySuccessId` | `string | null` | ID of the successful retry execution |
-| `execution.waitTill` | `string | null` | ISO timestamp the execution is waiting until |
+| `execution.startedAt` | `string \| null` | ISO timestamp when the execution started |
+| `execution.stoppedAt` | `string \| null` | ISO timestamp when the execution stopped |
+| `execution.retryOf` | `string \| null` | ID of the execution this is a retry of |
+| `execution.retrySuccessId` | `string \| null` | ID of the successful retry execution |
+| `execution.waitTill` | `string \| null` | ISO timestamp the execution is waiting until |
 | `data` | `unknown` | Execution result data (only present when `includeData` is true) |
 | `error` | `string` | Error message if the request failed |
 
@@ -531,9 +531,9 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `data[].workflowId` | `string` | The workflow this execution belongs to |
 | `data[].status` | `string` | The execution status |
 | `data[].mode` | `string` | How the execution was triggered. One of: `"cli"`, `"error"`, `"integrated"`, `"internal"`, `"manual"`, `"retry"`, `"trigger"`, `"webhook"`, `"evaluation"`, `"chat"` |
-| `data[].startedAt` | `string | null` | ISO timestamp when the execution started |
-| `data[].stoppedAt` | `string | null` | ISO timestamp when the execution stopped |
-| `data[].waitTill` | `string | null` | ISO timestamp until when the execution is waiting |
+| `data[].startedAt` | `string \| null` | ISO timestamp when the execution started |
+| `data[].stoppedAt` | `string \| null` | ISO timestamp when the execution stopped |
+| `data[].waitTill` | `string \| null` | ISO timestamp until when the execution is waiting |
 | `count` | `integer` | Total matching executions, or `-1` if the count is unavailable |
 | `estimated` | `boolean` | Whether the count is an estimate for large datasets |
 | `error` | `string` | Error message if the query failed |
@@ -577,7 +577,7 @@ List credentials the current user can access. Use this to find a credential ID b
 | `data[].scopes` | `string[]` | User permissions for this credential, for example `"credential:read"` |
 | `data[].isManaged` | `boolean` | Whether the credential is managed by n8n and can't be edited by the user |
 | `data[].isGlobal` | `boolean` | Whether the credential is available to all users |
-| `data[].homeProject` | `object | null` | The project that owns the credential, if available |
+| `data[].homeProject` | `object \| null` | The project that owns the credential, if available |
 | `data[].homeProject.id` | `string` | The unique identifier of the project |
 | `data[].homeProject.name` | `string` | The name of the project |
 | `data[].homeProject.type` | `string` | The project type. `"personal"` is a user's private project; `"team"` is a shared project accessible to multiple users. |
@@ -640,7 +640,7 @@ Search for n8n nodes by service name, trigger type, or utility function. Set `us
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `queries` | `string[]` | Yes (min 1) | | Search queries -- service names (for example `"gmail"`, `"slack"`), trigger types (for example `"schedule trigger"`, `"webhook"`), or utility nodes (for example `"set"`, `"if"`, `"merge"`, `"code"`) |
-| `usage` | `"workflow" | "agentTool"` | No | `"workflow"` | Set to `"agentTool"` to return only nodes that can be configured as agent tools |
+| `usage` | `"workflow" \| "agentTool"` | No | `"workflow"` | Set to `"agentTool"` to return only nodes that can be configured as agent tools |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -748,7 +748,7 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 | `nodeType` | `string` | Yes | Fully-qualified node type ID from `search_nodes` / `get_node_types`, for example `"n8n-nodes-base.slack"` |
 | `version` | `number` | Yes | Node version, for example `4.7`. Must match a version returned by `search_nodes`. |
 | `methodName` | `string` | Yes | The exact method name from the node's `@searchListMethod` or `@loadOptionsMethod` annotation in the type definition. Call `get_node_types` first to read the real method name — don't guess. |
-| `methodType` | `"listSearch" | "loadOptions"` | Yes | `"listSearch"` for `@searchListMethod` annotations (supports filter and pagination); `"loadOptions"` for `@loadOptionsMethod` annotations. |
+| `methodType` | `"listSearch" \| "loadOptions"` | Yes | `"listSearch"` for `@searchListMethod` annotations (supports filter and pagination); `"loadOptions"` for `@loadOptionsMethod` annotations. |
 | `credentialType` | `string` | Yes | Credential type key for the node, for example `"slackApi"` or `"googleSheetsOAuth2Api"` |
 | `credentialId` | `string` | Yes | ID of a credential the user can access, obtained from `list_credentials` |
 | `filter` | `string` | No | Optional search/filter text to narrow results |
@@ -761,7 +761,7 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 |-------|------|-------------|
 | `results` | `array` | Resources returned by the node method |
 | `results[].name` | `string` | The display label of the resource |
-| `results[].value` | `string | number | boolean` | The ID to use in workflow code |
+| `results[].value` | `string \| number \| boolean` | The ID to use in workflow code |
 | `results[].url` | `string` | URL for the resource, when available |
 | `results[].description` | `string` | Description of the resource, when available |
 | `paginationToken` | `string` | Pass back as `paginationToken` to fetch the next page. Absent when there are no more results. |
@@ -894,7 +894,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `targetProject` | `object` | The project the workflow was created in |
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
-| `targetProject.type` | `"personal" | "team"` | Whether the workflow was created in a personal or team project |
+| `targetProject.type` | `"personal" \| "team"` | Whether the workflow was created in a personal or team project |
 | `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
 
@@ -951,7 +951,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `onError` | `"stopWorkflow" | "continueRegularOutput" | "continueErrorOutput"` | No | How the node behaves on error |
+| `onError` | `"stopWorkflow" \| "continueRegularOutput" \| "continueErrorOutput"` | No | How the node behaves on error |
 | `retryOnFail` | `boolean` | No | Whether to retry the node when it fails |
 | `maxTries` | `integer` | No | Number of attempts when `retryOnFail` is true. Must be 2-5 |
 | `waitBetweenTries` | `integer` | No | Milliseconds to wait between retry attempts. Must be 0-5000 |
@@ -1095,7 +1095,7 @@ When `versionId` is omitted, the response describes the current draft:
 | `agent.projectId` | `string` | The project the agent belongs to |
 | `agent.published` | `boolean` | Whether the agent has a published (active) version |
 | `agent.versionId` | `string` | The draft's internal version pointer |
-| `agent.activeVersionId` | `string | null` | The published version ID, or null if unpublished |
+| `agent.activeVersionId` | `string \| null` | The published version ID, or null if unpublished |
 | `agent.createdAt` | `string` | ISO timestamp when the agent was created |
 | `agent.updatedAt` | `string` | ISO timestamp when the agent was last updated |
 | `config` | `object` | The editable agent configuration (model, credential, instructions, tools, and so on). Excludes `integrations`, which is reported separately below. |
@@ -1161,7 +1161,7 @@ Discover model catalogs, chat integrations, attachable workflows, published sub-
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `projectId` | `string` | Yes | The project to discover assets in |
-| `kind` | `"models" | "integrations" | "workflows" | "subagents" | "mcpServers"` | Yes | The kind of asset to discover |
+| `kind` | `"models" \| "integrations" \| "workflows" \| "subagents" \| "mcpServers"` | Yes | The kind of asset to discover |
 | `query` | `string` | No | Filter for `workflows`, `subagents`, or `mcpServers` |
 | `provider` | `string` | No | Model provider for `kind=models` (for example `"openai"`, `"anthropic"`). Omit to get a provider summary without model lists. |
 | `credentialId` | `string` | No | Accessible credential used to verify live models for the selected provider |
@@ -1253,7 +1253,7 @@ On success:
 | `agentId` | `string` | The agent ID |
 | `operation` | `string` | The applied operation's `type` |
 | `configHash` | `string` | The configuration hash after this mutation. Pass to the next `mutate_agent` call. |
-| `resource` | `object` | Present for skill, task, and custom-tool operations: `{ type: "skill" | "task" | "customTool", id }` |
+| `resource` | `object` | Present for skill, task, and custom-tool operations: `{ type: "skill" \| "task" \| "customTool", id }` |
 
 On a stale configuration:
 
@@ -1312,7 +1312,7 @@ Test an MCP server with a user-accessible credential and return its available to
 | `projectId` | `string` | Yes | | The project the agent belongs to |
 | `name` | `string` | Yes | | Server name (max 64 chars, letters, numbers, `_` and `-` only) |
 | `url` | `string` | Yes | | The HTTP(S) MCP server endpoint |
-| `transport` | `"sse" | "streamableHttp"` | No | `"streamableHttp"` | The MCP transport to use |
+| `transport` | `"sse" \| "streamableHttp"` | No | `"streamableHttp"` | The MCP transport to use |
 | `authentication` | `string` | No | `"none"` | Authentication method: `"none"`, `"bearerAuth"`, `"headerAuth"`, `"multipleHeadersAuth"`, `"mcpOAuth2Api"`, or any credential type name ending in `McpOAuth2Api`. Every value other than `"none"` requires `credential`. |
 | `credential` | `string` | No | | Accessible credential ID; required when `authentication` isn't `"none"` |
 | `connectionTimeoutMs` | `integer` | No | | Connection timeout in milliseconds (1–120,000) |
@@ -1377,7 +1377,7 @@ Unpublish an agent and stop its live tasks and integrations.
 | `agentId` | `string` | The agent ID |
 | `published` | `boolean` | `false` |
 | `versionId` | `string` | The draft's internal version pointer |
-| `activeVersionId` | `string | null` | `null` after unpublishing |
+| `activeVersionId` | `string \| null` | `null` after unpublishing |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -1403,7 +1403,7 @@ Restore an agent draft from a published version, overwriting the draft's config,
 |-------|------|-------------|
 | `agentId` | `string` | The agent ID |
 | `versionId` | `string` | The draft's internal version pointer after reverting |
-| `activeVersionId` | `string | null` | The currently published version ID, unchanged by this call |
+| `activeVersionId` | `string \| null` | The currently published version ID, unchanged by this call |
 | `configHash` | `string` | The configuration hash after reverting. Pass as `baseConfigHash` to the next `mutate_agent` call. |
 | `url` | `string` | The URL to open the agent in the n8n editor |
 
@@ -1455,7 +1455,7 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | `agentId` | `string` | Yes | The ID of the agent |
-| `action` | `"connect" | "disconnect"` | Yes | Whether to connect or disconnect the integration |
+| `action` | `"connect" \| "disconnect"` | Yes | Whether to connect or disconnect the integration |
 | `type` | `string` | Yes | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, or `"linear"`) |
 | `credentialId` | `string` | Yes | Accessible credential for this integration |
 | `settings` | `object` | No | Integration settings. Required for Telegram `connect` operations (`accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user). |
@@ -1469,7 +1469,7 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | `configured` | `boolean` | Present on `connect`: `true` |
 | `connected` | `boolean` | Whether the channel is live right now |
 | `published` | `boolean` | Whether the agent has a published (active) version |
-| `activeVersionId` | `string | null` | The published version ID, or null if unpublished |
+| `activeVersionId` | `string \| null` | The published version ID, or null if unpublished |
 | `configHash` | `string` | The configuration hash after this change |
 
 #### Notes <a href="#notes" id="notes"></a>

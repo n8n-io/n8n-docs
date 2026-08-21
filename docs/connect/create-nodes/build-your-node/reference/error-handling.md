@@ -187,7 +187,7 @@ On `rate-limited`, `quota-exhausted`, and `temporarily-unavailable`, you can add
 | `retryAfterMs` | Minimum wait the service asked for, in milliseconds. |
 | `resetsAtEpochMs` | When the service says the operation works again, as Unix epoch milliseconds. |
 
-For example, a daily quota that resets at a known time declares when it comes back:
+For example, a quota that resets at a known time declares when it comes back:
 
 ```typescript
 throw new NodeApiError(this.getNode(), error as JsonObject, {

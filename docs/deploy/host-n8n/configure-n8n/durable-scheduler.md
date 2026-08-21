@@ -107,7 +107,7 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Two behaviors are specific to poll triggers:
 
 - **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
-- **A poll can occasionally run twice.** The scheduler guarantees each poll runs at least once, not that it runs only once. A poll can repeat, for example when an instance stalls and another takes over. Turn on [durable poll cursors](#durable-poll-cursors) so a repeated poll can't drop or duplicate items.
+- **A poll can occasionally run twice.** The scheduler guarantees each dispatched poll runs at least once, not that it runs only once. A poll can repeat, for example when an instance stalls and another takes over. Turn on [durable poll cursors](#durable-poll-cursors) so a repeated poll can't drop or duplicate items.
 
 ### Durable poll cursors
 

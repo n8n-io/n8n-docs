@@ -30,24 +30,24 @@ Workflow reviews are available from n8n 2.36.6. An instance admin must enable th
 {% hint style="info" %}
 **Preview status**
 
-Workflow reviews are in Preview. This page describes the first release so you can plan how your team will use it, and the details may change before general availability.
+Workflow reviews are in Preview and may change before general availability. Avoid relying on them in production workflows.
 {% endhint %}
 
 Workflow reviews let your team approve a specific [workflow version](view-change-history.md) before it's published. From **Publish**, choose **Submit for review** instead of publishing directly, and assign a reviewer. On approval, n8n publishes that version automatically.
 
 Reviews are optional after you enable the feature. You can still publish directly unless that workflow already has an open review.
 
-n8n doesn't send email or other external notifications when someone is assigned as reviewer or when changes are requested. Check **Reviews** in the left sidebar for requests that need your attention.
+n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left sidebar for requests that need your attention.
 
 ## How reviews work
 
-A review pins one workflow to one saved version. Each workflow can have at most one open review at a time. You can keep editing while a review is open. New saves create newer versions and don't change the pinned review until someone submits those changes to it.
+A review pins one workflow to one saved version. You can keep editing while a review is open. New saves create newer versions and don't change the pinned review until someone submits those changes to it.
 
 ### What a review covers
 
 A review covers the contents of one workflow: its nodes and connections, as captured in the pinned saved version. The visual diff and the approval only apply to those contents.
 
-A review doesn't cover the resources the workflow depends on. These aren't part of the diff, aren't gated by approval, and take effect immediately whether or not a review is open:
+A review doesn't cover the resources the workflow depends on. These aren't part of the diff, aren't gated by approval, and apply to the published workflow as soon as you change them, even while a review is open:
 
 * **Workflow settings**, such as the timezone, error workflow, and execution order.
 * **Credentials** the workflow uses.
@@ -55,22 +55,16 @@ A review doesn't cover the resources the workflow depends on. These aren't part 
 * **Data tables**.
 * **Sub-workflows** the workflow calls. Each sub-workflow is its own workflow with its own review, if any.
 
-{% hint style="warning" %}
-Changes to these resources apply to the published workflow without review, even while a review is open.
-{% endhint %}
-
 ### Review statuses
 
-* **Waiting for review**: the pinned version is waiting for a decision. Publishing is blocked.
-* **Changes requested**: the reviewer asked for updates. Publishing stays blocked until someone submits a newer version (the review returns to **Waiting for review**) and that version is approved.
-* **Approved**: the reviewer or an admin approved. The review closes, publishing isn't blocked, and n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. If auto-publish fails, the review stays approved and closed; publish again from the editor.
+* **Waiting for review**: the pinned version is waiting for a decision. n8n blocks publishing.
+* **Changes requested**: the reviewer asked for updates. n8n keeps publishing blocked until someone submits a newer version (the review returns to **Waiting for review**) and someone approves that version.
+* **Approved**: the reviewer or an admin approved. The review closes, publishing isn't blocked, and n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. If auto publish fails, the review stays approved and closed; publish again from the editor.
 * **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** → **Closed**, and Activity shows why the review closed.
 
 ### Publishing while a review is open
 
-While a review is open (`Waiting for review` or `Changes requested`), n8n blocks publishing that workflow from the editor, public API and MCP. You can still unpublish. Unpublishing doesn't close the review or unblock publishing a new version.
-
-You can't cancel or withdraw an open review in this release. To unblock publishing without an approval, an instance admin can turn off workflow reviews for the instance. That removes review UI and APIs and lifts the publish gate. Otherwise the assigned reviewer, or a project or instance admin, must approve (or request changes, then approve after you resubmit).
+While a review is open (`Waiting for review` or `Changes requested`), n8n blocks publishing that workflow from the editor, the public API, and MCP. You can still unpublish a workflow. That doesn't close the review or unblock publishing a new version.
 
 A workflow can have only one open review at a time. While that review is open, choosing **Publish** or **Submit for review** again doesn't start a new review. Submit your newer saved version to the existing review instead (see [Submit later changes to an open review](#submit-later-changes-to-an-open-review)).
 
@@ -84,8 +78,9 @@ For more about instance security policies, refer to [Manage security policies](h
 
 1. Open the workflow and select **Publish** (or press `Shift` + `P`).
 2. Choose **Submit for review** instead of publishing directly.
-3. Enter a **Review title** and assign a **Reviewer** (both required). Optionally add a **Description**.
-4. Select **Submit**.
+3. On the first step, enter a **Version name** (required). Optionally describe the version changes.
+4. On the next step, enter a **Review title** and assign a **Reviewer** (both required). Optionally add a **Review description**.
+5. Select **Submit**.
 
 The reviewer needs `workflow:read` on that workflow. They don't need `workflow:publish`.
 
@@ -95,7 +90,8 @@ n8n creates a review for the current saved version. Open it from **Reviews** in 
 
 1. Open the workflow.
 2. Select **Submit changes** from the review status in the editor header.
-3. Select **Submit**.
+3. Enter a **Version name** for the newer version (required). Optionally describe the version changes.
+4. Optionally update the **Review description**, then select **Submit**.
 
 n8n updates the open review to that newer version. If the review was in **Changes requested**, it returns to **Waiting for review**.
 
@@ -109,10 +105,10 @@ Your browser stores this preference for that workflow. It isn't saved on the wor
 
 A review detail has two tabs:
 
-* **Activity**: description, activity feed, and comments. People who can open the review can comment. Comments stay visible after the review closes. Comments aren't anchored to a specific node in this release.
+* **Activity**: description, activity feed, and comments. Comments stay visible after the review closes. Comments aren't anchored to a specific node in this release.
 * **Changes**: a visual workflow diff between the currently **Published** version and the version **In review**. The diff works like [workflow diffs for source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/compare-versions).
 
-Then the assigned reviewer, or a project admin or instance admin, can choose:
+People who can open the review can comment on **Activity** without deciding. To decide, the assigned reviewer, or a project admin or instance admin, can choose:
 
 * **Approve**: closes the review and publishes the pinned version as the requester.
 * **Request changes**: keeps the review open so editors can update the workflow and resubmit.
@@ -130,6 +126,12 @@ Then the assigned reviewer, or a project admin or instance admin, can choose:
 | Approve or request changes | The assigned reviewer, or a project admin or instance admin. Authors can't decide unless they also have one of those roles. |
 
 The **requester** is the user who submitted the review. **Authors** are the requester and anyone who later submitted a newer version to the same open review.
+
+{% hint style="info" %}
+**No cancel in this release**
+
+You can't cancel or withdraw an open review in this release.
+{% endhint %}
 
 ## Related resources
 

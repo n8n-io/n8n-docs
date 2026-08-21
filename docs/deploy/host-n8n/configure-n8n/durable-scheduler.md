@@ -113,7 +113,9 @@ When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll tri
 
 Each poll trigger node keeps a cursor: its record of how far it has already read, so each poll only fetches what's new. By default, n8n stores the cursor in the workflow's static data and saves it separately from the execution the poll produced. If the instance crashes between the two saves, or two instances poll the same node at once, the cursor and the execution fall out of step, and the workflow either skips items or processes them twice.
 
-From n8n 2.36.0, set `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` to prevent this. n8n then keeps each node's cursor in its own database table and saves it together with the execution, so a poll round either fully happened or didn't happen at all. n8n recommends turning it on for any instance running poll triggers.
+From n8n 2.36.0, set `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` to prevent this. n8n then keeps each node's cursor in its own database table and saves it together with the execution, so a poll round either fully happened or didn't happen at all. n8n recommends turning it on whenever poll triggers run on the durable scheduler.
+
+From n8n 2.37.0, the setting only takes effect when `N8N_SCHEDULER_ENABLED`, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` are all on. If any of them is off, n8n logs a warning at startup and cursors stay in workflow static data.
 
 What to expect when you turn it on:
 
@@ -123,7 +125,7 @@ What to expect when you turn it on:
 - **You can watch cursor saves.** Turn on the [poll trigger metrics](#poll-trigger-metrics) with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
 
 {% hint style="warning" %}
-Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` before, or together with, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. Running poll triggers on the durable scheduler while cursors still live in workflow static data risks dropped or duplicated items.
+Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. Running poll triggers on the durable scheduler while cursors still live in workflow static data risks dropped or duplicated items.
 {% endhint %}
 
 ## Observability

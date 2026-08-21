@@ -45,7 +45,7 @@ On this page, you'll find the node parameters, guidance on configuring the node,
 {% hint style="warning" %}
 **Feature availability**
 
-The LangChain Code node has critical security issues and isn't safe to use. It's deprecated from n8n 2.35.0 and hidden from the nodes panel. Avoid using it in your workflows. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
+The LangChain Code node has critical security issues and isn't safe to use. It's deprecated from n8n 2.35.0 and hidden from the nodes panel. Avoid using it in your workflows.
 {% endhint %}
 
 {% hint style="info" %}

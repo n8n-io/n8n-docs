@@ -58,7 +58,7 @@ Follow these instructions if you're using [Zep Cloud](https://app.getzep.com):
 {% hint style="warning" %}
 **Feature availability**
 
-The Zep team [deprecated the open source Zep Community Edition](https://blog.getzep.com/announcing-a-new-direction-for-zeps-open-source-strategy/) in April, 2025. These instructions may not work after that date.
+The Zep team [deprecated the open source Zep Community Edition](https://blog.getzep.com/announcing-a-new-direction-for-zeps-open-source-strategy/) in April 2025. These instructions may not work after that date.
 {% endhint %}
 
 Follow these instructions if you're self-hosting Zep Open Source:

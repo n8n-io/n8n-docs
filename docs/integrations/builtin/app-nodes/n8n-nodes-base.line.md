@@ -25,7 +25,7 @@ tags:
 {% hint style="warning" %}
 **Feature availability**
 
-The Line node is deprecated from n8n 1.64.0. LINE Notify ends its own service on April 1, 2025, after which the node stops working. View LINE Notify's [end of service announcement](https://notify-bot.line.me/closing-announce) for more information, and see [Deprecated and versioned nodes](../deprecated-nodes.md) for details.
+The Line node is deprecated from n8n 1.64.0. LINE Notify ends its own service on April 1, 2025, after which the node stops working. View LINE Notify's [end of service announcement](https://notify-bot.line.me/closing-announce) for more information.
 {% endhint %}
 
 

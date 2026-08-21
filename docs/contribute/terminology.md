@@ -7,9 +7,9 @@ layout:
 
 # Terminology and naming
 
-Use the same term for the same concept on every page, and prefer the official product term over a plausible synonym. Consistent terminology helps readers, and it directly improves how AI tools (search, the docs assistant, and coding agents) find and use the docs.
+This page is a companion to the [style guide](style-guide-for-n8n-docs.md): the style guide covers writing style, formatting, and structure, and this page is the source of truth for product terminology.
 
-This page is the source of truth for product terminology. Vale checks some pairs automatically. The rest rely on author and reviewer judgement.
+n8n Docs aims to use the same term for the same concept on every page, and to prefer the official product term over a plausible synonym. Consistent terminology helps our readers, and  directly improves how AI tools (search, the docs assistant, and coding agents) find and use the docs.
 
 ## Casing
 
@@ -42,6 +42,15 @@ This page is the source of truth for product terminology. Vale checks some pairs
 | cluster node; root node; sub-node | parent node, child node, super node |
 | community node (installable, community-published) | custom node, third-party node, plugin, add-on |
 
+## Credentials and connections
+
+| Do use | Don't use |
+| --- | --- |
+| credential (stores authentication details for a service) | connection (as a synonym for a credential) |
+| connection (a link between two nodes on the canvas) | wire, link |
+
+n8n's own interface sometimes labels a credential's authentication link as a "connection" (for example, a private credential's sharing message). In docs, keep the two separate: a **credential** authenticates with a service; a **connection** joins nodes on the canvas.
+
 ## Canvas and editor
 
 | Do use | Don't use |
@@ -49,6 +58,12 @@ This page is the source of truth for product terminology. Vale checks some pairs
 | canvas | editor board, diagram, workspace, graph |
 | sticky note | comment, annotation, label, memo |
 | sub-workflow | subworkflow, sub workflow, subflow, child workflow, nested workflow |
+
+## AI and agents
+
+| Do use | Don't use |
+| --- | --- |
+| sub-agent | subagent, child agent |
 
 ## Platform and deployment
 
@@ -58,6 +73,10 @@ This page is the source of truth for product terminology. Vale checks some pairs
 | n8n Cloud; Cloud | hosted version, SaaS, the cloud, managed n8n |
 | instance | server, deployment, box |
 | Enterprise (plan) | enterprise edition, premium, paid tier |
+
+## Source control and environments
+
+**Source control** is n8n's own feature name for its Git-based workflow syncing; **version control** is the general term for what Git itself provides. Use "source control" to name the n8n feature, and reserve "version control" for describing Git as a concept (for example, "Git, a version control system"). Don't use them interchangeably as two names for the same n8n feature.
 
 ## Features
 

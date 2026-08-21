@@ -146,3 +146,79 @@ for (let i = 0; i < items.length; i++) {
 	}
 }
 ```
+
+## Declaring why an operation failed
+
+{% hint style="info" %}
+**Feature availability**
+
+Failure declarations are available from n8n 3.37.
+{% endhint %}
+
+Both `NodeApiError` and `NodeOperationError` accept a `failure` option that states why the operation failed. Use it when the node can tell from the response what went wrong, such as a used-up quota or a credential that no longer works. The declaration lands on the error's `failure` property as plain data. The node states the cause, never what to do about it: n8n owns any behavior derived from the declaration, such as how a polling trigger backs off after a failed poll.
+
+Pass the declaration when you construct the error:
+
+```typescript
+throw new NodeApiError(this.getNode(), error as JsonObject, {
+	failure: { cause: 'rate-limited' },
+});
+```
+
+### Failure causes
+
+The `cause` field takes one of six values. The first three describe failures that resolve on their own. The other three need someone to act before the operation can succeed.
+
+| `cause` | Meaning |
+|---------|---------|
+| `rate-limited` | The service is throttling requests. |
+| `quota-exhausted` | A usage quota ran out and the operation fails until the quota resets. |
+| `temporarily-unavailable` | The service is down or degraded right now. |
+| `credential-invalid` | The credential no longer works. The user has to reconnect it. |
+| `configuration-invalid` | The node points at something that no longer exists or is no longer allowed. |
+| `node-defect` | A bug in the node itself. Neither the credential nor the configuration is to blame. |
+
+### Wait hints
+
+On `rate-limited`, `quota-exhausted`, and `temporarily-unavailable`, you can add optional hints about when the operation may work again. The other causes don't accept them, since there's nothing to wait for.
+
+| Field | Meaning |
+|-------|---------|
+| `retryAfterMs` | Minimum wait the service asked for, in milliseconds. |
+| `resetsAtEpochMs` | When the service says the operation works again, as Unix epoch milliseconds. |
+
+For example, a daily quota that resets at a known time declares when it comes back:
+
+```typescript
+throw new NodeApiError(this.getNode(), error as JsonObject, {
+	failure: { cause: 'quota-exhausted', resetsAtEpochMs: nextQuotaReset() },
+});
+```
+
+### Classifying API errors
+
+Only declare a cause the response proves. If you can't classify an error with confidence, throw it unchanged: an error without a declaration is still valid.
+
+```typescript
+try {
+	return await this.helpers.httpRequestWithAuthentication.call(
+		this,
+		credentialType,
+		options
+	);
+} catch (error) {
+	if (error.httpCode === "401") {
+		throw new NodeApiError(this.getNode(), error as JsonObject, {
+			failure: { cause: "credential-invalid" },
+		});
+	}
+
+	if (error.httpCode === "429") {
+		throw new NodeApiError(this.getNode(), error as JsonObject, {
+			failure: { cause: "rate-limited" },
+		});
+	}
+
+	throw new NodeApiError(this.getNode(), error as JsonObject);
+}
+```

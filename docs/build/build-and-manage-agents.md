@@ -219,6 +219,16 @@ Available channels:
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
 
+### Manage agents through MCP
+
+You can also build and manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.
+
+{% hint style="info" %}
+**Reconnect existing MCP clients**
+
+If you connected an MCP client to your n8n instance before agents were available, you'll need to reconnect the client to access the agent management tools. Go to **Settings > Instance-level MCP** and reconnect your client to get the new permissions for managing agents through MCP.
+{% endhint %}
+
 ### Run agents on a schedule
 
 Schedules let agents run on their own on a recurring basis. Add a schedule from the **Schedules** section, describe the task the agent should complete, and pick a frequency:

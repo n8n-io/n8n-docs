@@ -53,6 +53,7 @@ This is useful to review work. For example, different users could work on their 
 
 n8n doesn't clean up the existing contents of an instance when changing branches. Switching branches in this pattern results in all the workflows from each branch being in your instance.
 {% endhint %}
+
 ![One n8n instance switching between several Git branches to review work pushed by different users](../.gitbook/assets/vc-one-multi.png)
 
 ## One instance, one branch <a href="#one-instance-one-branch" id="one-instance-one-branch"></a>

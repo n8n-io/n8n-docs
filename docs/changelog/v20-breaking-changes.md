@@ -26,10 +26,10 @@ Previously, when an execution (parent) called a sub-execution (child) that conta
 Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 65 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
 Parent-Workflow:
-![Parent-Workflow](.gitbook/assets/parentworkflow1.png)
+![Parent workflow with a Manual Trigger connected to an Execute Workflow node](.gitbook/assets/parentworkflow1.png)
 
 Sub-Workflow:
-![Sub-Workflow](.gitbook/assets/subworkflow.png)
+![Sub-workflow triggered by Execute Workflow Trigger, running a Wait node followed by an Edit Fields node](.gitbook/assets/subworkflow.png)
 
 n8n 1.0: The parent-execution reproduces the sub-execution's input as its output.:
 ![n8n 1.0: Parent execution won't receive the result of the child execution](.gitbook/assets/before1.png)

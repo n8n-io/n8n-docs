@@ -49,7 +49,7 @@ n8n Cloud users can use **Managed OAuth2** for the following nodes:
 
 To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
 
-![Managed OAuth2 credentials screen](../../../.gitbook/assets/managed-oauth.png)
+![n8n credential screen with a Sign in with Google button and a dropdown to switch to Custom OAuth2](../../../.gitbook/assets/managed-oauth.png)
 
 If you prefer to use Custom OAuth2, use the dropdown to change the authentication type.
 

@@ -41,7 +41,7 @@ n8n doesn't send email or other external notifications when you assign a reviewe
 
 ## How reviews work
 
-A review pins one workflow to one saved version. You can keep editing while a review is open. New saves create newer versions and don't change the pinned review until someone submits those changes to it.
+A review is tied to one saved version of a workflow, the *pinned version*. You can keep editing while a review is open. New saves create newer versions and don't change the pinned version until someone submits those changes to the review.
 
 ### What a review covers
 
@@ -59,12 +59,12 @@ A review doesn't cover the resources the workflow depends on. These aren't part 
 
 * **Waiting for review**: the pinned version is waiting for a decision. n8n blocks publishing.
 * **Changes requested**: the reviewer asked for updates. n8n keeps publishing blocked until someone submits a newer version (the review returns to **Waiting for review**) and someone approves that version.
-* **Approved**: the reviewer or an admin approved. The review closes, publishing isn't blocked, and n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. If auto publish fails, the review stays approved and closed; publish again from the editor.
+* **Approved**: the reviewer or an admin approved. The review closes, publishing isn't blocked, and n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases n8n can't publish the version automatically. The review stays approved and closed, so publish the version yourself with **Publish** in the editor.
 * **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** → **Closed**, and Activity shows why the review closed.
 
 ### Publishing while a review is open
 
-While a review is open (`Waiting for review` or `Changes requested`), n8n blocks publishing that workflow from the editor, the public API, and MCP. You can still unpublish a workflow. That doesn't close the review or unblock publishing a new version.
+While a review is open (`Waiting for review` or `Changes requested`), n8n blocks publishing that workflow from the editor, the public API, and the n8n MCP server. You can still unpublish a workflow. That doesn't close the review or unblock publishing a new version.
 
 A workflow can have only one open review at a time. While that review is open, choosing **Publish** or **Submit for review** again doesn't start a new review. Submit your newer saved version to the existing review instead (see [Submit later changes to an open review](#submit-later-changes-to-an-open-review)).
 
@@ -76,9 +76,11 @@ For more about instance security policies, refer to [Manage security policies](h
 
 ## Submit or update a review
 
+A *version* is the snapshot of the workflow being reviewed and published. The *review* is the request and discussion around that version. You name each one separately, so the submit flow asks for both.
+
 1. Open the workflow and select **Publish** (or press `Shift` + `P`).
 2. Choose **Submit for review** instead of publishing directly.
-3. On the first step, enter a **Version name** (required). Optionally describe the version changes.
+3. On the first step, enter a **Version name** for the snapshot (required). Optionally describe the version changes.
 4. On the next step, enter a **Review title** and assign a **Reviewer** (both required). Optionally add a **Review description**.
 5. Select **Submit**.
 

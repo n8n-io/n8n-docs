@@ -48,7 +48,7 @@ As well as using the built-in nodes, you can also install community-built nodes.
 
 ## MCP servers <a href="#mcp-servers" id="mcp-servers"></a>
 
-n8n also includes a registry of MCP servers you can connect to an agent directly from the node panel, with OAuth sign-in and no manual credential setup. Refer to [MCP servers](mcp-servers.md) for more information.
+n8n also includes a registry of MCP servers you can connect to an agent directly from the node panel, with OAuth2 sign-in and no manual credential setup. Refer to [MCP servers](mcp-servers.md) for more information.
 
 ## Credential-only nodes and custom operations <a href="#credential-only-nodes-and-custom-operations" id="credential-only-nodes-and-custom-operations"></a>
 

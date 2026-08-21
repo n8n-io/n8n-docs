@@ -200,6 +200,6 @@ Only main instances emit them. They come from the poll engine itself, not the sc
 | `n8n_poll_trigger_cursor_commits_total` | Counter | How many cursor saves settled, split by `operation` (`with_execution` or `cursor_only`) and `result`. A `result` of `fence_rejected` means a stale poll lost its claim and wasn't allowed to advance the cursor, which is the protection doing its job. A `result` of `failure` means the save itself failed. |
 | `n8n_poll_trigger_cursor_commit_duration_seconds` | Histogram | How long each cursor save takes, with the same `operation` and `result` labels. |
 
-The two cursor metrics only move when [durable poll cursors](#durable-poll-cursors) are on.
+The two cursor metrics track the dedicated cursor table. A node starts reporting them with its first poll after you turn on [durable poll cursors](#durable-poll-cursors). It keeps reporting them after you turn the setting off, because its cursor stays in the table.
 
 All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.

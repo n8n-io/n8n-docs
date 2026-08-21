@@ -30,5 +30,5 @@ Some existing credential types have specific scopes: endpoints that they work wi
 
 For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two endpoints you can use this credential type with: `calendar` and `calendar.events`.
 
-![Scopes notice listing the calendar and calendar.events endpoints for the Google Calendar OAuth2 API credential type](../.gitbook/assets/scopes.png)
+![Scopes notice for the Google Calendar OAuth2 API credential type](../.gitbook/assets/scopes.png)
 

@@ -54,17 +54,17 @@ The steps differ by tool, but each one needs a server URL from above. The follow
 The Kapa.ai server requires authentication. Your AI tool opens a browser-based sign-in flow when you first connect to it, or the first time you use it. Follow the prompts to authorize the connection.
 {% endhint %}
 
-{% tabs %}
-{% tab title="Claude Code" %}
+### Claude Code
+
 Run these commands in your terminal:
 
 ```bash
 claude mcp add --transport http n8n-docs https://docs.n8n.io/~gitbook/mcp
 claude mcp add --transport http n8n-kapa https://n8n.mcp.kapa.ai
 ```
-{% endtab %}
 
-{% tab title="Cursor" %}
+### Cursor
+
 Add the servers to your `mcp.json` file:
 
 ```json
@@ -79,9 +79,9 @@ Add the servers to your `mcp.json` file:
 	}
 }
 ```
-{% endtab %}
 
-{% tab title="VS Code" %}
+### VS Code
+
 Add the servers to your `mcp.json` file:
 
 ```json
@@ -98,17 +98,15 @@ Add the servers to your `mcp.json` file:
 	}
 }
 ```
-{% endtab %}
 
-{% tab title="Other tools" %}
+### Other tools
+
 For any other MCP client, add a new remote (HTTP) server in its MCP settings and enter a server URL:
 
 ```
 https://docs.n8n.io/~gitbook/mcp
 https://n8n.mcp.kapa.ai
 ```
-{% endtab %}
-{% endtabs %}
 
 After you connect, your tool can search n8n's knowledge as you work.
 

@@ -19,7 +19,7 @@ layout:
 Sub-workflow conversion is available from n8n 1.97.0.
 {% endhint %}
 
-Use sub-workflow conversion to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
+Use sub-workflow conversion to refactor your workflows into reusable parts, as part of your workflow's [flow logic](./). Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
 
 See [sub-workflows](break-workflows-into-smaller-parts.md) for a general introduction to the concept.
 

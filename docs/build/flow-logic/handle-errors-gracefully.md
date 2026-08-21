@@ -12,7 +12,7 @@ layout:
 
 # Error handling <a href="#error-handling" id="error-handling"></a>
 
-When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
+When designing your [flow logic](./), it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
 
 {% hint style="info" %}
 **Investigating errors**

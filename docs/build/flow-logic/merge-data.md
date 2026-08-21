@@ -12,7 +12,7 @@ layout:
 
 # Merging data <a href="#merging-data" id="merging-data"></a>
 
-Merging brings multiple data streams together. You can achieve this using different nodes depending on your workflow requirements.
+Merging brings multiple data streams together, as part of n8n's [flow logic](./). You can achieve this using different nodes depending on your workflow requirements.
 
 - Merge data from different data streams or nodes: Use the [Merge](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.merge) node to combine data from various sources into one.
 - Merge data from multiple node executions: Use the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node for complex scenarios where you need to merge data from multiple executions of a node or multiple nodes. 

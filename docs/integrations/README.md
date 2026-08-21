@@ -46,6 +46,10 @@ n8n includes a collection of built-in integrations. Refer to [Built-in nodes](bu
 
 As well as using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](community-nodes/installation-and-management/README.md) for more information.
 
+## MCP servers <a href="#mcp-servers" id="mcp-servers"></a>
+
+n8n also includes a registry of MCP servers you can connect to an agent directly from the node panel, with OAuth sign-in and no manual credential setup. Refer to [MCP servers](mcp-servers.md) for more information.
+
 ## Credential-only nodes and custom operations <a href="#credential-only-nodes-and-custom-operations" id="credential-only-nodes-and-custom-operations"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/k23mQunNshTkLRuOqark/" %}

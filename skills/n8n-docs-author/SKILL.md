@@ -137,12 +137,21 @@ docs assistant) chunk on `##`/`###` headings.
   same long explanation belong under one heading).
 - **Cross-references:** link every page to its prerequisites and its next step,
   link parents and children both ways (an overview lists all its child pages;
-  each child links back with `./`), and aim for each page to sit in a cluster of
-  5+ interlinked pages on the same topic (AI search cites connected clusters far
-  more than standalone pages). Put
-  links in the body at the first meaningful mention, with descriptive anchor text
-  naming the target ([Configure the Schedule Trigger](...), never "click here").
-  Links point to separate topics; they don't replace context a section needs, so
+  each child links back with `./`), and link sideways to a couple of genuinely
+  related siblings too — parent-only links make a hub and spoke, not a cluster.
+  Aim for each page to sit in a cluster of 5+ interlinked pages on the same
+  topic (AI search cites connected clusters far more than standalone pages).
+  Skip sibling links for flat reference collections (one page per data type,
+  etc.) where every entry follows the same template.
+- **Listing children:** an overview with 2+ children lists them as a plain
+  bullet list under a heading like "In this section" (link plus a one-line
+  description) — not a GitBook content-ref card. With only one child, skip the
+  list and link it inline at first mention instead.
+- **Link placement:** put links in the body at the first meaningful mention,
+  with descriptive anchor text naming the target ([Configure the Schedule
+  Trigger](...), never "click here") — reuse an existing mention of the target
+  topic where one already exists, rather than adding a new sentence. Links
+  point to separate topics; they don't replace context a section needs, so
   restate that instead.
 
 ## Feature availability

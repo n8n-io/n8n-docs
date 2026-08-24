@@ -14,7 +14,7 @@ tags:
     primary: true
 ---
 
-# Workflow reviews
+# Review workflows
 
 {% hint style="info" %}
 **Feature availability**
@@ -24,7 +24,7 @@ Workflow reviews are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Workflow reviews are available from n8n 2.36.6. An instance admin must enable the feature in **Settings** > **Security & policies**.
+Workflow reviews are available from n8n 2.37.0. An instance admin must enable the feature in **Settings** > **Security & policies**.
 {% endhint %}
 
 {% hint style="info" %}
@@ -33,7 +33,7 @@ Workflow reviews are available from n8n 2.36.6. An instance admin must enable th
 Workflow reviews are in Preview and may change before general availability. Avoid relying on them in production workflows.
 {% endhint %}
 
-Workflow reviews let your team approve a specific [workflow version](view-change-history.md) before it's published. From **Publish**, choose **Submit for review** instead of publishing directly, and assign a reviewer. On approval, n8n publishes that version automatically.
+Workflow reviews let your team approve a specific [workflow version](view-change-history.md) before it's published. From the **Publish** menu, choose **Submit for review** instead of publishing directly, and assign a reviewer. On approval, n8n publishes that version automatically.
 
 Reviews are optional after you enable the feature. You can still publish directly unless that workflow already has an open review.
 
@@ -59,8 +59,8 @@ A review doesn't cover the resources the workflow depends on. These aren't part 
 
 * **Waiting for review**: the pinned version is waiting for a decision. n8n blocks publishing.
 * **Changes requested**: the reviewer asked for updates. n8n keeps publishing blocked until someone submits a newer version (the review returns to **Waiting for review**) and someone approves that version.
-* **Approved**: the reviewer or an admin approved. The review closes, publishing isn't blocked, and n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases n8n can't publish the version automatically. The review stays approved and closed, so publish the version yourself with **Publish** in the editor.
-* **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** → **Closed**, and Activity shows why the review closed.
+* **Approved**: the reviewer or an admin approved. The review closes, publishing is unblocked. n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases, n8n can't publish the version automatically: the review stays approved and closed. In these cases, publish the version yourself using the **Publish** button in the editor.
+* **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** > **Closed**, and **Activity** shows why the review closed.
 
 ### Publishing while a review is open
 
@@ -78,7 +78,7 @@ For more about instance security policies, refer to [Manage security policies](h
 
 A *version* is the snapshot of the workflow being reviewed and published. The *review* is the request and discussion around that version. You name each one separately, so the submit flow asks for both.
 
-1. Open the workflow and select **Publish** (or press `Shift` + `P`).
+1. Open the workflow and select **Publish** (or press `Shift`+`P`).
 2. Choose **Submit for review** instead of publishing directly.
 3. On the first step, enter a **Version name** for the snapshot (required). Optionally describe the version changes.
 4. On the next step, enter a **Review title** and assign a **Reviewer** (both required). Optionally add a **Review description**.
@@ -130,9 +130,9 @@ People who can open the review can comment on **Activity** without deciding. To 
 The **requester** is the user who submitted the review. **Authors** are the requester and anyone who later submitted a newer version to the same open review.
 
 {% hint style="info" %}
-**No cancel in this release**
+**Cancelling reviews**
 
-You can't cancel or withdraw an open review in this release.
+You can't currently cancel or withdraw an open review. n8n plans to add this functionality in a future release.
 {% endhint %}
 
 ## Related resources

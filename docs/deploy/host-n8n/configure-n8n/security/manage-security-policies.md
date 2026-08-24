@@ -90,10 +90,9 @@ When you disable publishing:
 
 ## Workflow reviews <a href="#workflow-reviews" id="workflow-reviews"></a>
 
-{% hint style="warning" %}
-**Preview**
-
-Workflow reviews are an upcoming Enterprise feature. Availability and UI details may change before general availability.
+{% hint style="info" %}
+**Preview status**
+Workflow reviews are in Preview and may change before general availability. Avoid relying on them in production workflows.
 {% endhint %}
 
 {% hint style="info" %}
@@ -104,7 +103,7 @@ Workflow reviews are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Workflow reviews are available from n8n 2.36.6.
+Workflow reviews are available from n8n 2.37.0.
 {% endhint %}
 
 With workflow reviews, teams can submit a workflow version for approval before publishing. Instance admins enable the feature for the whole instance.

@@ -96,7 +96,7 @@ Each time you make a change to a workflow, n8n autosaves those changes to a new 
 {% hint style="info" %}
 **Workflow reviews**
 
-On Enterprise instances with workflow reviews enabled, you can submit a version for review instead of publishing immediately. While a review is open, n8n blocks publishing that workflow. Refer to [Workflow reviews](../manage-workflows/workflow-reviews.md).
+If workflow reviews are enabled for your instance, you can submit a version for review instead of publishing immediately. While a review is open, n8n blocks publishing that workflow. Refer to [Workflow reviews](../manage-workflows/workflow-reviews.md) for plan availability and how reviews work.
 {% endhint %}
 
 ## Naming versions <a href="#naming-versions" id="naming-versions"></a>

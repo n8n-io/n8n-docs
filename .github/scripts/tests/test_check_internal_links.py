@@ -183,6 +183,15 @@ def main():
     check("an include shown inside inline code doesn't pull in its headings",
           category("docs/spacea/documents-markup.md", "#shared-heading") == "broken-anchor")
 
+    # An <a id> inside backticks on a heading line must not count as that
+    # heading's explicit id, or the heading gets neither an id nor a slug and
+    # its real anchor is falsely reported broken.
+    check("an <a id> in a heading's inline code doesn't suppress its slug",
+          category("docs/spacea/id-in-code-heading.md",
+                   "#write-to-pin-an-anchor") is None)
+    check("and that documented id isn't treated as a real anchor",
+          category("docs/spacea/id-in-code-heading.md", "#example") == "broken-anchor")
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 

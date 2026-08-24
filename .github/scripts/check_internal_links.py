@@ -418,9 +418,12 @@ def heading_ids(path: Path) -> tuple:
     headings = strip_code(raw, inline=False)
     explicit = set(EXPLICIT_ID_RE.findall(markup))
     slugs = set()
-    for line in headings.split("\n"):
+    # Walk both views in step: judge id-presence on the markup line (so an
+    # `<a id="...">` shown inside backticks doesn't count as a real anchor) while
+    # slugging the heading line (which keeps its code spans).
+    for line, line_markup in zip(headings.split("\n"), markup.split("\n")):
         m = HEADING_RE.match(line)
-        if m and not re.search(r'<a\b[^>]*\bid="', m.group(1)):
+        if m and not re.search(r'<a\b[^>]*\bid="', line_markup):
             s = anchor_slug(m.group(1))
             if s:
                 slugs.add(s)

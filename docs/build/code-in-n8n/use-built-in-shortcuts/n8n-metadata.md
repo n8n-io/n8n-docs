@@ -27,8 +27,9 @@ This includes:
 
 You can use Python in the Code node. It isn't available in expressions.
 {% endhint %}
-{% tabs %}
-{% tab title="JavaScript" %}
+
+## JavaScript
+
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). | ✅ |
@@ -50,16 +51,16 @@ You can use Python in the Code node. It isn't available in expressions.
 | `$workflow.active` | Whether the workflow is active (true) or not (false). | ✅ |
 | `$workflow.id` | The workflow ID. | ✅ |
 | `$workflow.name` | The workflow name. | ✅ |
-{% endtab %}
 
-{% tab title="Python (native)" %}
+## Python (native)
+
 | Method | Description |
 | ------ | ----------- |
 | `_items` | Contains incoming items in "Run once for all items" mode. |
 | `_item` | Contains the item being iterated on in "Run once for each item" mode. |
-{% endtab %}
 
-{% tab title="Python (Pyodide, deprecated)" %}
+## Python (Pyodide, deprecated)
+
 Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) instead.
 
 | Method | Description |
@@ -81,5 +82,3 @@ Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) ins
 | `_workflow.active` | Whether the workflow is active (true) or not (false). |
 | `_workflow.id` | The workflow ID. | 
 | `_workflow.name` | The workflow name. |
-{% endtab %}
-{% endtabs %}

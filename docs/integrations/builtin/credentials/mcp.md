@@ -13,8 +13,6 @@ You can use these credentials to authenticate the following nodes:
 
 * [MCP Client Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
 
-This is also the credential type n8n creates automatically when you connect a server from the [MCP servers](../../mcp-servers.md) registry in the node panel.
-
 ## Prerequisites
 
 You need an MCP server that supports OAuth2 authentication.

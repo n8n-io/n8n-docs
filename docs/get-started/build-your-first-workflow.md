@@ -37,7 +37,7 @@ This guide will show you how to construct a workflow[^1] in n8n, explaining key 
   * Representing logic in an n8n workflow
   * Using expressions[^3]
 
-!["Screenshot of the completed workflow"](.gitbook/assets/tutorial-first.png)
+![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](.gitbook/assets/tutorial-first.png)
 
 This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
 
@@ -101,7 +101,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
     This generates a date in the correct format, seven days before the current date.
 
-    ![image showing the expression above generating a date](.gitbook/assets/tutorial-date.png)
+    ![Start Date expression editor, with the Result panel showing a resolved date one week before today](.gitbook/assets/tutorial-date.png)
 7. Close the **Edit Expression** modal to return to the NASA node.
 8. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
 9. Close the NASA node to return to the workflow canvas.
@@ -145,7 +145,7 @@ The last step of the workflow is to send the two reports about solar flares. For
     There was a solar flare of class {{$json["classType"]}}
     ```
 
-    ![image showing the expression above generating output](.gitbook/assets/tutorial-expression.png)
+    ![Expression editor for Bin Content, with the Result panel showing the rendered message text](.gitbook/assets/tutorial-expression.png)
 11. Close the expressions editor to return to the node.
 12. Close the Postbin node to return to the canvas.
 13. Add another Postbin node, to handle the **false** output path from the If node:

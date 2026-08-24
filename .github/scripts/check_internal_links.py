@@ -16,6 +16,13 @@ GitBook rules enforced (see docs/contribute + the internal-linking guide):
      page path is checked against a `.md` file in the target space, EXCEPT for
      GitBook-generated subtrees (see GENERATED_PATH_PREFIXES) that have no `.md`
      source to resolve against, e.g. the OpenAPI-rendered API reference.
+  4. The inverse of rule 3: an app.gitbook.com URL must NOT target the space the
+     linking page already lives in. Such a link renders fine (GitBook rewrites it
+     to an in-site href on the published site), but it opts out of GitBook's
+     rename tracking -- relative `.md` links are kept up to date when a page
+     moves, a hardcoded space-ID URL isn't -- so it rots silently. It's also
+     unverifiable in a GitBook preview, since it resolves against published
+     content instead of the revision under review.
 
 External URLs (http/https), mailto:, in-page anchors (#...), and links inside
 code blocks are ignored. See EXCLUDE_FILES for intentional example links.
@@ -194,8 +201,11 @@ def iter_targets(text: str):
             yield i, m.group(1).strip()
 
 
-def classify_cross_space(target: str):
+def classify_cross_space(target: str, src_rel: str):
     """Validate an app.gitbook.com/s/<id>/<path> cross-space link.
+
+    `src_rel` is the repo-relative path of the file holding the link, used to
+    reject a URL pointing back into that file's own space (rule 4).
 
     Returns (category, message) if broken, "unknown" if the space ID isn't in
     the table (can't verify — e.g. the reusable-content utility space), or None
@@ -213,6 +223,15 @@ def classify_cross_space(target: str):
         _STATS["unknown_space_ids"].add(space_id)
         _STATS["unknown_space_links"] += 1
         return "unknown"
+    # Rule 4: the cross-space form aimed at the linking page's own space. Checked
+    # before the path lookups below so the message names the wrong link form
+    # rather than reporting a (possibly valid) target as missing.
+    if space_of(src_rel) == folder:
+        return (
+            "same-space-absolute",
+            f"app.gitbook.com URL targets this page's own space '{folder}'; "
+            f"use a relative .md link so GitBook keeps it updated on rename: {target}",
+        )
     page_path = page_path.strip("/")
     base = DOCS_ROOT / folder
     if page_path == "":
@@ -234,12 +253,15 @@ def classify_cross_space(target: str):
     return broken
 
 
-def classify(md_file: Path, line: int, target: str):
-    """Return (category, message) for a broken link, or None if the link is fine."""
+def classify(md_file: Path, src_rel: str, target: str):
+    """Return (category, message) for a broken link, or None if the link is fine.
+
+    `src_rel` is md_file as a repo-relative posix path (the caller already has it).
+    """
     # Cross-space app.gitbook.com links: validate against the space-ID table
     # before the generic http scheme is skipped below.
     if APP_GITBOOK_RE.match(target):
-        result = classify_cross_space(target)
+        result = classify_cross_space(target, src_rel)
         return None if result == "unknown" else result
 
     # Strip anchor and query.
@@ -294,7 +316,6 @@ def classify(md_file: Path, line: int, target: str):
         resolved_rel = resolved.relative_to(REPO_ROOT).as_posix()
     except ValueError:
         return None
-    src_rel = md_file.relative_to(REPO_ROOT).as_posix()
     src_space, dst_space = space_of(src_rel), space_of(resolved_rel)
     if src_space and dst_space and src_space != dst_space:
         return (
@@ -345,7 +366,7 @@ def main() -> int:
         raw = md_file.read_text(encoding="utf-8", errors="replace")
         text = strip_code(blank_gitbook_native(raw))
         for line, target in iter_targets(text):
-            result = classify(md_file, line, target)
+            result = classify(md_file, rel, target)
             if result is None:
                 continue
             category, message = result

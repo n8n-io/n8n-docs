@@ -127,7 +127,7 @@ People who can open the review can comment on **Activity** without deciding. To 
 | Appear as a reviewer | Users with at least `workflow:read` on that workflow |
 | Approve or request changes | The assigned reviewer, or a project admin or instance admin. Authors can't decide unless they also have one of those roles. |
 
-The **requester** is the user who submitted the review. **Authors** are the requester and anyone who later submitted a newer version to the same open review.
+The **requester** is the user who submitted the workflow for review. **Authors** are the requester and anyone who later submitted a newer version to the same open review.
 
 {% hint style="info" %}
 **Cancelling reviews**

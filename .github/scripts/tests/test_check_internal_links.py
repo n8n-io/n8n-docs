@@ -102,8 +102,106 @@ def main():
     # --- Non-links ------------------------------------------------------------
     check("external URL is ignored", category(A, "https://example.com/page") is None)
     check("mailto is ignored", category(A, "mailto:help@n8n.io") is None)
-    check("pure anchor is ignored", category(A, "#a-heading") is None)
     check("templating is ignored", category(A, "{{ variable }}") is None)
+
+    # --- Rule 5: anchor validation ------------------------------------------
+    cil._REUSABLE_BLOCKS = None   # rebuild the block map against the fixtures
+    cil._HEADING_IDS = {}
+
+    check("in-page anchor matching an explicit id passes",
+          category(A, "#section-one") is None)
+    check("in-page anchor matching nothing is flagged",
+          category(A, "#no-such-heading") == "broken-anchor")
+    check("cross-file anchor matching an explicit id passes",
+          category(A, "sub/page-two.md#target-section") is None)
+    check("cross-file anchor matching nothing is flagged",
+          category(A, "sub/page-two.md#no-such-heading") == "broken-anchor")
+    check("bare '#' with no anchor is its own category",
+          category(A, "sub/page-two.md#") == "empty-anchor")
+    check("footnote anchors are always accepted",
+          category(A, "#user-content-fn-1") is None)
+    broken = classify(A, "#no-such-heading")
+    check("broken-anchor message names the missing id",
+          broken is not None and "no heading with id 'no-such-heading'" in broken[1])
+
+    # Suppression: never assert on what we can't verify.
+    check("anchor on a heading with no explicit id is left unchecked",
+          category(A, "#plain-heading-with-no-explicit-id") is None)
+    check("headings from a resolvable include count",
+          category("docs/spacea/with-include.md", "#shared-heading") is None)
+    check("a page with an unresolvable include has anchors left unchecked",
+          category("docs/spacea/bad-include.md", "#anything-at-all") is None)
+
+    # A missing page is reported as missing, not as a broken anchor.
+    check("anchor on a missing target reports the target, not the anchor",
+          category(A, "gone.md#whatever") == "missing-target")
+    check("cross-space relative wins over anchor checking",
+          category(A, "../spaceb/other.md#nope") == "cross-space-relative")
+
+    # --- Include resolution -------------------------------------------------
+    check("reusable block index resolves BLOCK1 by name",
+          "BLOCK1" in cil.reusable_blocks())
+    check("unindexed block stays unresolved",
+          "NOTINDEXED" not in cil.reusable_blocks())
+    exp, slugs, resolved = cil.heading_ids(FIXTURE_REPO / "docs/spacea/bad-include.md")
+    check("unresolvable include sets resolved=False", resolved is False)
+    exp2, _, resolved2 = cil.heading_ids(FIXTURE_REPO / "docs/spacea/with-include.md")
+    check("resolvable include sets resolved=True and pulls in its ids",
+          resolved2 is True and "shared-heading" in exp2)
+
+    # --- Regressions caught in review (cubic on PR #5280) -------------------
+    # strip_code() used to delete inline code from heading lines too, so a
+    # heading's guessed slug lost its code span and stopped suppressing the
+    # matching anchor -- the exact false positive rule 5 exists to avoid.
+    check("heading extraction keeps inline code spans",
+          cil.strip_code("### Using `$if()` (advanced)", inline=False)
+          == "### Using `$if()` (advanced)")
+    check("strip_code still drops inline code by default",
+          cil.strip_code("text `code` more") == "text  more")
+    check("a heading with inline code slugs the same via the pipeline as raw",
+          cil.anchor_slug(cil.strip_code("Using `$if()` (advanced)", inline=False))
+          == cil.anchor_slug("Using `$if()` (advanced)"))
+    check("an anchor on an inline-code heading is suppressed, not flagged",
+          category("docs/spacea/code-heading.md", "#using-if-advanced") is None)
+
+    # An unreadable page must be treated as unverifiable, not as "verified with
+    # no ids" (which would flag every anchor on it).
+    _, _, missing_resolved = cil.heading_ids(FIXTURE_REPO / "docs/spacea/does-not-exist.md")
+    check("an unreadable page is marked unresolved", missing_resolved is False)
+
+    check("non-numeric user-content-fn anchors are not waved through",
+          category(A, "#user-content-fn-not-a-footnote") == "broken-anchor")
+    check("numeric footnote anchors still pass",
+          category(A, "#user-content-fn-12") is None)
+
+    # An id= or {% include %} shown as an example inside backticks must not be
+    # mistaken for real markup, or it would invent ids and suppress real warnings.
+    check("an id= documented inside inline code is not treated as a real anchor",
+          category("docs/spacea/documents-markup.md", "#example") == "broken-anchor")
+    check("a real heading id on the same page still resolves",
+          category("docs/spacea/documents-markup.md", "#real-heading") is None)
+    check("an include shown inside inline code doesn't pull in its headings",
+          category("docs/spacea/documents-markup.md", "#shared-heading") == "broken-anchor")
+
+    # An <a id> inside backticks on a heading line must not count as that
+    # heading's explicit id, or the heading gets neither an id nor a slug and
+    # its real anchor is falsely reported broken.
+    check("an <a id> in a heading's inline code doesn't suppress its slug",
+          category("docs/spacea/id-in-code-heading.md",
+                   "#write-to-pin-an-anchor") is None)
+    check("and that documented id isn't treated as a real anchor",
+          category("docs/spacea/id-in-code-heading.md", "#example") == "broken-anchor")
+
+    check("a block whose index Name is only in frontmatter resolves",
+          cil.reusable_blocks().get("BLOCK2") is not None)
+
+    # --- anchor_slug --------------------------------------------------------
+    check("anchor_slug lowercases and hyphenates",
+          cil.anchor_slug("Section One") == "section-one")
+    check("anchor_slug drops backticks and parens",
+          cil.anchor_slug("Using `$if()` (advanced)") == "using-if-advanced")
+    check("anchor_slug keeps a link's text",
+          cil.anchor_slug("See [the guide](x.md)") == "see-the-guide")
 
     # --- Parsing helpers: what counts as a link -------------------------------
     fenced = "```\n[x](broken.md)\n```\n[y](page-one.md)\n"

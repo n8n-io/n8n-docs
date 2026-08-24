@@ -59,7 +59,7 @@ A review doesn't cover the resources the workflow depends on. These aren't part 
 
 * **Waiting for review**: the pinned version is waiting for a decision. n8n blocks publishing.
 * **Changes requested**: the reviewer asked for updates. n8n keeps publishing blocked until someone submits a newer version (the review returns to **Waiting for review**) and someone approves that version.
-* **Approved**: the reviewer or an admin approved. The review closes, publishing is unblocked. n8n publishes the pinned version as the **requester** (the user who submitted the review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases, n8n can't publish the version automatically: the review stays approved and closed. In these cases, publish the version yourself using the **Publish** button in the editor.
+* **Approved**: the reviewer or an admin approved. The review closes, publishing is unblocked. n8n publishes the pinned version as the **requester** (the user who submitted the workflow for review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases, n8n can't publish the version automatically: the review stays approved and closed. In these cases, publish the version yourself using the **Publish** button in the editor.
 * **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** > **Closed**, and **Activity** shows why the review closed.
 
 ### Publishing while a review is open

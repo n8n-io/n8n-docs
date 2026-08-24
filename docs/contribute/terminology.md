@@ -33,16 +33,6 @@ n8n Docs aims to use the same term for the same concept on every page, and to pr
 | run, execute a workflow (verb) | kick off, fire |
 | pin data; pinned data | mock data, freeze data, lock data, sample data |
 
-## Workflow versioning
-
-| Do use | Don't use |
-| --- | --- |
-| Version history (menu item in the workflow editor's overflow/three-dot menu; lists and restores past saves of a workflow) | Workflow history, history |
-| version; named version (a version given a name, protected from automatic pruning) | revision |
-| workflow diffs (n8n's source control feature for visually comparing two workflow versions between environments) | compare versions, version comparison |
-
-Confirmed against the live product: this menu item reads **Version history**, not "Workflow history" — despite several doc pages currently using the older name (see [view-change-history.md](../build/manage-workflows/view-change-history.md) and [save-and-publish-workflows.md](../build/understand-workflows/save-and-publish-workflows.md)).
-
 ## Nodes
 
 | Do use | Don't use |
@@ -120,10 +110,6 @@ Use these exact, capitalized plan names, low to high. Don't invent alternate nam
 * **Self-hosted:** Community, Registered Community, Business, Enterprise
 
 To refer to every tier at once, write "All plans" or "All editions" rather than listing them.
-
-## Roles
-
-n8n has four built-in instance roles: **Owner**, **Admin**, **Member**, and **Chat user** (a restricted role for interacting with agents through Chat Hub only). Name all four when documenting instance roles — don't describe the instance role system as having only three.
 
 ## Source control and environments
 

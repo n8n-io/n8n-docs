@@ -16,7 +16,7 @@ n8n's node panel includes a registry of MCP servers you can connect to an agent 
 1. Open the node panel on an [AI Agent](builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node, or in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#add-tools).
 2. Search for the service you want to connect with the search bar (such as Notion or Linear) or click the new "MCP Servers" section to view all available servers.
 3. Select the server, then sign in with OAuth2 when prompted.
-4. Choose which of the server's tools to expose to the agent: all of them, a selected list, or all except a selected list.
+4. Choose which of the server's tools to expose to the agent with "Tools to include": all, a selected list, or all except a selected list.
 
 n8n creates an [MCP credential](builtin/credentials/mcp.md) automatically when you sign in from the panel.
 

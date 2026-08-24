@@ -32,7 +32,6 @@ n8n provides tool sub-nodes[^1] that you can connect to your [AI agent](#user-co
 * [Call n8n Workflow Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow): use this to load any n8n workflow as a tool.
 * [Custom Code Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode): write code that your agent can run.
 * [HTTP Request Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest): make calls to fetch a website or data from an API.
-* [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/mcp-servers): connect a registry MCP server from the node panel, or use the [MCP Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp) for any other MCP endpoint.
 
 The next three examples highlight the Call n8n Workflow Tool:
 

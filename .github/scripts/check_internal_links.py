@@ -409,11 +409,16 @@ def heading_ids(path: Path) -> tuple:
         # than every one of them reported missing.
         _HEADING_IDS[key] = (set(), set(), False)
         return _HEADING_IDS[key]
-    # Keep inline code: GitBook slugifies a heading including its code spans.
-    text = strip_code(raw, inline=False)
-    explicit = set(EXPLICIT_ID_RE.findall(text))
+    # Two views of the page. `markup` drops inline code, so an `id="..."` or an
+    # `{% include %}` shown as an example inside backticks isn't mistaken for the
+    # real thing (which would invent ids and silently suppress real warnings).
+    # `headings` keeps inline code, because GitBook slugifies a heading including
+    # its code spans.
+    markup = strip_code(raw)
+    headings = strip_code(raw, inline=False)
+    explicit = set(EXPLICIT_ID_RE.findall(markup))
     slugs = set()
-    for line in text.split("\n"):
+    for line in headings.split("\n"):
         m = HEADING_RE.match(line)
         if m and not re.search(r'<a\b[^>]*\bid="', m.group(1)):
             s = anchor_slug(m.group(1))
@@ -421,7 +426,7 @@ def heading_ids(path: Path) -> tuple:
                 slugs.add(s)
     resolved = True
     blocks = reusable_blocks()
-    for bid in INCLUDE_URL_RE.findall(text):
+    for bid in INCLUDE_URL_RE.findall(markup):
         inc = blocks.get(bid)
         if inc is None:
             resolved = False
@@ -430,7 +435,7 @@ def heading_ids(path: Path) -> tuple:
         explicit |= e
         slugs |= s
         resolved = resolved and r
-    for rel in INCLUDE_REL_RE.findall(text):
+    for rel in INCLUDE_REL_RE.findall(markup):
         inc = DOCS_ROOT / "reusable-content" / rel
         if not inc.is_file():
             resolved = False

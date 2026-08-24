@@ -174,6 +174,15 @@ def main():
     check("numeric footnote anchors still pass",
           category(A, "#user-content-fn-12") is None)
 
+    # An id= or {% include %} shown as an example inside backticks must not be
+    # mistaken for real markup, or it would invent ids and suppress real warnings.
+    check("an id= documented inside inline code is not treated as a real anchor",
+          category("docs/spacea/documents-markup.md", "#example") == "broken-anchor")
+    check("a real heading id on the same page still resolves",
+          category("docs/spacea/documents-markup.md", "#real-heading") is None)
+    check("an include shown inside inline code doesn't pull in its headings",
+          category("docs/spacea/documents-markup.md", "#shared-heading") == "broken-anchor")
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 

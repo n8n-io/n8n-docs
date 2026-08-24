@@ -23,9 +23,17 @@ GitBook rules enforced (see docs/contribute + the internal-linking guide):
      moves, a hardcoded space-ID URL isn't -- so it rots silently. It's also
      unverifiable in a GitBook preview, since it resolves against published
      content instead of the revision under review.
+  5. A `#anchor` must match a heading on the target page. Checked against the
+     explicit `id="..."` markup that 93% of headings carry, following
+     `{% include %}` blocks so headings from reusable content count. Reported as
+     a WARNING, not an error: where the target heading has no explicit id, or an
+     include can't be resolved, the anchor is left unchecked rather than guessed
+     at, so a miss costs coverage instead of a false alarm. A bare `#` with no
+     anchor is reported separately as `empty-anchor`. Both warn until the repo's
+     existing broken anchors are fixed; `--strict-anchors` fails on them now.
 
-External URLs (http/https), mailto:, in-page anchors (#...), and links inside
-code blocks are ignored. See EXCLUDE_FILES for intentional example links.
+External URLs (http/https), mailto:, and links inside code blocks are ignored.
+See EXCLUDE_FILES for intentional example links.
 
 Usage:
     python3 .github/scripts/check_internal_links.py [files...]
@@ -253,6 +261,166 @@ def classify_cross_space(target: str, src_rel: str):
     return broken
 
 
+# --------------------------------------------------------------------------- #
+# Anchor validation (rule 5)
+# --------------------------------------------------------------------------- #
+
+# GitBook generates these from `[^1]` footnote markers; there's no heading to
+# match them against, so they're always accepted.
+FOOTNOTE_ANCHOR_RE = re.compile(r"^user-content-fn-")
+EXPLICIT_ID_RE = re.compile(r'id="([^"]+)"')
+HEADING_RE = re.compile(r"^#{1,6}\s+(.*?)\s*$")
+# `{% include %}` in both forms GitBook emits: a reusable block URL, and a path
+# relative to the reusable-content space root.
+INCLUDE_URL_RE = re.compile(
+    r'\{%\s*include\s+"https?://app\.gitbook\.com/s/[^/]+/~/reusable/([A-Za-z0-9]+)/?"\s*%\}'
+)
+INCLUDE_REL_RE = re.compile(r'\{%\s*include\s+"(\.gitbook/includes/[^"]+)"\s*%\}')
+
+
+def _norm(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def _first_heading(path: Path) -> str:
+    try:
+        for line in path.read_text(encoding="utf-8", errors="replace").split("\n"):
+            m = HEADING_RE.match(line)
+            if m:
+                return re.sub(r"<a\b[^>]*>.*?</a>", "", m.group(1)).strip()
+    except OSError:
+        pass
+    return ""
+
+
+_REUSABLE_BLOCKS: dict | None = None
+
+
+def reusable_blocks() -> dict:
+    """Map reusable block ID -> include file, parsed from REUSABLE_CONTENT_INDEX.md.
+
+    That index is generated externally and runs stale, so a block ID missing here
+    isn't an error: the page that includes it is simply treated as unverifiable
+    (see heading_ids). Matches the index's Name against include filenames three
+    ways -- exact stem, normalized stem, normalized first heading -- which
+    resolves all but one block today.
+    """
+    global _REUSABLE_BLOCKS
+    if _REUSABLE_BLOCKS is not None:
+        return _REUSABLE_BLOCKS
+    blocks: dict = {}
+    incl_root = DOCS_ROOT / "reusable-content" / ".gitbook" / "includes"
+    files = list(incl_root.rglob("*.md")) if incl_root.is_dir() else []
+    by_stem = {p.stem: p for p in files}
+    by_norm = {_norm(p.stem): p for p in files}
+    by_heading: dict = {}
+    for p in files:
+        h = _first_heading(p)
+        if h:
+            by_heading.setdefault(_norm(h), p)
+    row = re.compile(r"^\|\s*`([A-Za-z0-9]+)`\s*\|\s*([^|]+?)\s*\|")
+    try:
+        text = (REPO_ROOT / "REUSABLE_CONTENT_INDEX.md").read_text(encoding="utf-8")
+    except OSError:
+        text = ""
+    for line in text.split("\n"):
+        m = row.match(line)
+        if not m:
+            continue
+        bid, name = m.group(1), m.group(2)
+        hit = by_stem.get(name) or by_norm.get(_norm(name)) or by_heading.get(_norm(name))
+        if hit:
+            blocks[bid] = hit
+    _REUSABLE_BLOCKS = blocks
+    return blocks
+
+
+def anchor_slug(heading: str) -> str:
+    """Approximate GitBook's heading slug.
+
+    Used ONLY to suppress anchors that may point at a heading with no explicit
+    `id=`, never to assert one is broken. A wrong guess therefore costs a missed
+    detection, not a false positive.
+    """
+    h = re.sub(r"<a\b[^>]*>.*?</a>", "", heading)
+    h = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", h)  # link -> its text
+    h = h.strip().lower().replace("`", "")
+    h = re.sub(r"[*_]", "", h)
+    h = re.sub(r"[^a-z0-9\s.-]", "", h)
+    return re.sub(r"\s+", "-", h.strip())
+
+
+_HEADING_IDS: dict = {}
+
+
+def heading_ids(path: Path) -> tuple:
+    """Return (explicit_ids, slug_ids, resolved) for a page, following includes.
+
+    `explicit_ids` come from `id="..."` markup and are authoritative -- 93% of
+    headings carry it. `slug_ids` are guessed for headings that don't, and are
+    only used to stay quiet. `resolved` is False when an `{% include %}` couldn't
+    be resolved, in which case the page's anchors aren't checked at all.
+    """
+    key = str(path)
+    if key in _HEADING_IDS:
+        return _HEADING_IDS[key]
+    _HEADING_IDS[key] = (set(), set(), True)  # cycle guard
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return _HEADING_IDS[key]
+    text = strip_code(raw)
+    explicit = set(EXPLICIT_ID_RE.findall(text))
+    slugs = set()
+    for line in text.split("\n"):
+        m = HEADING_RE.match(line)
+        if m and not re.search(r'<a\b[^>]*\bid="', m.group(1)):
+            s = anchor_slug(m.group(1))
+            if s:
+                slugs.add(s)
+    resolved = True
+    blocks = reusable_blocks()
+    for bid in INCLUDE_URL_RE.findall(text):
+        inc = blocks.get(bid)
+        if inc is None:
+            resolved = False
+            continue
+        e, s, r = heading_ids(inc)
+        explicit |= e
+        slugs |= s
+        resolved = resolved and r
+    for rel in INCLUDE_REL_RE.findall(text):
+        inc = DOCS_ROOT / "reusable-content" / rel
+        if not inc.is_file():
+            resolved = False
+            continue
+        e, s, r = heading_ids(inc)
+        explicit |= e
+        slugs |= s
+        resolved = resolved and r
+    _HEADING_IDS[key] = (explicit, slugs, resolved)
+    return _HEADING_IDS[key]
+
+
+def classify_anchor(target_page: Path, anchor: str, target: str):
+    """Validate a `#fragment` against the target page's heading IDs."""
+    if anchor == "":
+        return ("empty-anchor", f"link ends in a bare '#' with no anchor: {target}")
+    if FOOTNOTE_ANCHOR_RE.match(anchor):
+        return None
+    explicit, slugs, resolved = heading_ids(target_page)
+    if anchor in explicit:
+        return None
+    if not resolved:
+        return None  # unresolvable include on the target page: can't verify
+    if anchor in slugs:
+        return None  # heading has no explicit id: unverifiable, stay quiet
+    return (
+        "broken-anchor",
+        f"no heading with id '{anchor}' on the target page: {target}",
+    )
+
+
 def classify(md_file: Path, src_rel: str, target: str):
     """Return (category, message) for a broken link, or None if the link is fine.
 
@@ -266,10 +434,14 @@ def classify(md_file: Path, src_rel: str, target: str):
 
     # Strip anchor and query.
     path_part = target.split("#", 1)[0].split("?", 1)[0].strip()
+    anchor = target.split("#", 1)[1].strip() if "#" in target else None
 
     # Skip: external, mailto/other schemes, protocol-relative, pure anchors,
     # templating/liquid, and empty (pure-anchor) targets.
     if not path_part:
+        # In-page anchor: validate against this file's own headings.
+        if anchor is not None:
+            return classify_anchor(md_file, anchor, target)
         return None
     if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", path_part):  # scheme: http:, mailto:, tel:
         return None
@@ -323,6 +495,10 @@ def classify(md_file: Path, src_rel: str, target: str):
             f"relative link crosses space {src_space} -> {dst_space} "
             f"(use an app.gitbook.com URL): {target}",
         )
+
+    # Rule 5: the target page exists, so check the anchor resolves on it.
+    if anchor is not None:
+        return classify_anchor(resolved, anchor, target)
     return None
 
 
@@ -338,6 +514,11 @@ def main() -> int:
         action="store_true",
         help="Treat cross-space relative links as warnings, not errors.",
     )
+    ap.add_argument(
+        "--strict-anchors",
+        action="store_true",
+        help="Fail on broken anchors instead of warning (see rule 5).",
+    )
     args = ap.parse_args()
 
     if args.files:
@@ -346,6 +527,10 @@ def main() -> int:
         files = discover_files()
 
     warn_categories = {"cross-space-relative"} if args.warn_cross_space else set()
+    if not args.strict_anchors:
+        # Phase 1: every rule-5 finding warns. Promote once the existing backlog
+        # of broken anchors is cleared, so the check starts from a clean repo.
+        warn_categories |= {"broken-anchor", "empty-anchor"}
 
     errors: list[str] = []
     warnings: list[str] = []

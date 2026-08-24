@@ -14,7 +14,7 @@ tags:
     primary: true
 ---
 
-# Review workflows
+# Workflow reviews
 
 {% hint style="info" %}
 **Feature availability**

@@ -32,7 +32,7 @@
   * [Tag workflows](manage-workflows/tag-workflows.md)
   * [Favorite items](manage-workflows/favorite-items.md)
   * [View change history](manage-workflows/view-change-history.md)
-  * [Workflow reviews](manage-workflows/workflow-reviews.md)
+  * [Review workflows](manage-workflows/workflow-reviews.md)
   * [Export and import](manage-workflows/export-and-import.md)
   * [n8n packages](manage-workflows/n8n-packages/README.md)
     * [Package format](manage-workflows/n8n-packages/package-format.md)

@@ -108,7 +108,7 @@ Enter the text for these elements in the chat interface.
 
 <summary>View screenshot</summary>
 
-![Customizable text elements](../../../.gitbook/assets/hosted-text-elements.png)
+![Chat widget preview showing the Input Placeholder, Title, and Subtitle text fields](../../../.gitbook/assets/hosted-text-elements.png)
 
 </details>
 

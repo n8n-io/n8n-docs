@@ -188,7 +188,7 @@ You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-men
 2. Select the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![mcp\_bulk\_toggle.png](<.gitbook/assets/mcp_bulk_toggle (1).png>)
+![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](<.gitbook/assets/mcp_bulk_toggle (1).png>)
 
 {% hint style="info" %}
 **Note**
@@ -243,7 +243,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
     2. Click the main workflow menu (`...`) in the top-right corner.
     3. Select **Edit description**.
 
-    ![mcp\_workflow\_description.png](<.gitbook/assets/mcp_workflow_description (1).png>)
+    ![Workflow's main menu open, with Edit description highlighted](<.gitbook/assets/mcp_workflow_description (1).png>)
 
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 
@@ -342,4 +342,21 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 * Verify that the MCP access is enabled in n8n settings.
 * Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 * Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
+* If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 * Review n8n server logs for any error messages related to MCP connections.
+
+### MCP request headers <a href="#mcp-request-headers" id="mcp-request-headers"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n allows these routing headers in its CORS policy from n8n 2.36.0.
+{% endhint %}
+
+MCP clients send the following headers to the n8n MCP endpoint:
+
+* `MCP-Protocol-Version`
+* `Mcp-Method`
+* `Mcp-Name`
+
+If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.

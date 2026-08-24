@@ -11,7 +11,7 @@ layout:
 
 n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) servers you can connect to an agent in one click. Select a server, sign in, and its tools are available to your agent.
 
-You can also connect MCP servers in the registry to the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/host-n8n/ways-of-building-workflows/ai-assistant/).
+You can also connect MCP servers in the registry to the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant/).
 
 ## Add a registry server to an agent
 

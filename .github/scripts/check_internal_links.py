@@ -154,9 +154,15 @@ def blank_gitbook_native(text: str) -> str:
     return text
 
 
-def strip_code(text: str) -> str:
+def strip_code(text: str, inline: bool = True) -> str:
     """Blank out fenced code blocks and inline code so their example links
-    aren't parsed, while preserving line numbers."""
+    aren't parsed, while preserving line numbers.
+
+    Pass inline=False to keep inline code spans. Heading extraction needs that:
+    GitBook slugifies a heading including its inline code, so dropping the span
+    would compute the wrong slug (`### Using `$if()` (advanced)` -> "using-advanced"
+    instead of "using-if-advanced").
+    """
     lines = text.split("\n")
     out = []
     fence = None  # active fence marker (``` or ~~~)
@@ -178,7 +184,7 @@ def strip_code(text: str) -> str:
             out.append("")
             continue
         # Drop inline code spans on the line.
-        out.append(re.sub(r"`[^`]*`", "", line))
+        out.append(re.sub(r"`[^`]*`", "", line) if inline else line)
     return "\n".join(out)
 
 
@@ -266,8 +272,10 @@ def classify_cross_space(target: str, src_rel: str):
 # --------------------------------------------------------------------------- #
 
 # GitBook generates these from `[^1]` footnote markers; there's no heading to
-# match them against, so they're always accepted.
-FOOTNOTE_ANCHOR_RE = re.compile(r"^user-content-fn-")
+# match them against, so they're always accepted. Anchored to the numeric form
+# GitBook actually emits, so a hand-written `#user-content-fn-something` isn't
+# waved through.
+FOOTNOTE_ANCHOR_RE = re.compile(r"^user-content-fn-\d+$")
 EXPLICIT_ID_RE = re.compile(r'id="([^"]+)"')
 HEADING_RE = re.compile(r"^#{1,6}\s+(.*?)\s*$")
 # `{% include %}` in both forms GitBook emits: a reusable block URL, and a path
@@ -293,6 +301,26 @@ def _first_heading(path: Path) -> str:
     return ""
 
 
+def _frontmatter_title(path: Path) -> str:
+    """The `title:` value from a file's YAML frontmatter, or "".
+
+    Some include files carry the index's Name here rather than in the filename
+    or first heading (for example vector-store-mode.md is "Operation Mode").
+    """
+    try:
+        lines = path.read_text(encoding="utf-8", errors="replace").split("\n")
+    except OSError:
+        return ""
+    if not lines or lines[0].strip() != "---":
+        return ""
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        if line.startswith("title:"):
+            return line[len("title:"):].strip().strip("'\"")
+    return ""
+
+
 _REUSABLE_BLOCKS: dict | None = None
 
 
@@ -301,9 +329,9 @@ def reusable_blocks() -> dict:
 
     That index is generated externally and runs stale, so a block ID missing here
     isn't an error: the page that includes it is simply treated as unverifiable
-    (see heading_ids). Matches the index's Name against include filenames three
-    ways -- exact stem, normalized stem, normalized first heading -- which
-    resolves all but one block today.
+    (see heading_ids). Matches the index's Name against include filenames four
+    ways -- exact stem, normalized stem, normalized first heading, normalized
+    frontmatter title -- which resolves every block in the index today.
     """
     global _REUSABLE_BLOCKS
     if _REUSABLE_BLOCKS is not None:
@@ -314,10 +342,14 @@ def reusable_blocks() -> dict:
     by_stem = {p.stem: p for p in files}
     by_norm = {_norm(p.stem): p for p in files}
     by_heading: dict = {}
+    by_title: dict = {}
     for p in files:
         h = _first_heading(p)
         if h:
             by_heading.setdefault(_norm(h), p)
+        t = _frontmatter_title(p)
+        if t:
+            by_title.setdefault(_norm(t), p)
     row = re.compile(r"^\|\s*`([A-Za-z0-9]+)`\s*\|\s*([^|]+?)\s*\|")
     try:
         text = (REPO_ROOT / "REUSABLE_CONTENT_INDEX.md").read_text(encoding="utf-8")
@@ -328,7 +360,12 @@ def reusable_blocks() -> dict:
         if not m:
             continue
         bid, name = m.group(1), m.group(2)
-        hit = by_stem.get(name) or by_norm.get(_norm(name)) or by_heading.get(_norm(name))
+        hit = (
+            by_stem.get(name)
+            or by_norm.get(_norm(name))
+            or by_heading.get(_norm(name))
+            or by_title.get(_norm(name))
+        )
         if hit:
             blocks[bid] = hit
     _REUSABLE_BLOCKS = blocks
@@ -368,8 +405,12 @@ def heading_ids(path: Path) -> tuple:
     try:
         raw = path.read_text(encoding="utf-8", errors="replace")
     except OSError:
+        # Unreadable: mark unresolved so the page's anchors are skipped rather
+        # than every one of them reported missing.
+        _HEADING_IDS[key] = (set(), set(), False)
         return _HEADING_IDS[key]
-    text = strip_code(raw)
+    # Keep inline code: GitBook slugifies a heading including its code spans.
+    text = strip_code(raw, inline=False)
     explicit = set(EXPLICIT_ID_RE.findall(text))
     slugs = set()
     for line in text.split("\n"):

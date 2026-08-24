@@ -149,6 +149,34 @@ def main():
     check("resolvable include sets resolved=True and pulls in its ids",
           resolved2 is True and "shared-heading" in exp2)
 
+    # --- Regressions caught in review (cubic on PR #5280) -------------------
+    # strip_code() used to delete inline code from heading lines too, so a
+    # heading's guessed slug lost its code span and stopped suppressing the
+    # matching anchor -- the exact false positive rule 5 exists to avoid.
+    check("heading extraction keeps inline code spans",
+          cil.strip_code("### Using `$if()` (advanced)", inline=False)
+          == "### Using `$if()` (advanced)")
+    check("strip_code still drops inline code by default",
+          cil.strip_code("text `code` more") == "text  more")
+    check("a heading with inline code slugs the same via the pipeline as raw",
+          cil.anchor_slug(cil.strip_code("Using `$if()` (advanced)", inline=False))
+          == cil.anchor_slug("Using `$if()` (advanced)"))
+    check("an anchor on an inline-code heading is suppressed, not flagged",
+          category("docs/spacea/code-heading.md", "#using-if-advanced") is None)
+
+    # An unreadable page must be treated as unverifiable, not as "verified with
+    # no ids" (which would flag every anchor on it).
+    _, _, missing_resolved = cil.heading_ids(FIXTURE_REPO / "docs/spacea/does-not-exist.md")
+    check("an unreadable page is marked unresolved", missing_resolved is False)
+
+    check("non-numeric user-content-fn anchors are not waved through",
+          category(A, "#user-content-fn-not-a-footnote") == "broken-anchor")
+    check("numeric footnote anchors still pass",
+          category(A, "#user-content-fn-12") is None)
+
+    check("a block whose index Name is only in frontmatter resolves",
+          cil.reusable_blocks().get("BLOCK2") is not None)
+
     # --- anchor_slug --------------------------------------------------------
     check("anchor_slug lowercases and hyphenates",
           cil.anchor_slug("Section One") == "section-one")

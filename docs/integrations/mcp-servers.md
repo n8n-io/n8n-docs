@@ -9,7 +9,7 @@ layout:
 
 # MCP servers
 
-n8n's node panel includes a registry of MCP servers you can connect to an agent in one click. Select a server, sign in, and its tools are available to your agent. You don't need to add an MCP Client Tool node or set up credentials by hand.
+n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) servers you can connect to an agent in one click. Select a server, sign in, and its tools are available to your agent.
 
 ## Add a registry server to an agent
 

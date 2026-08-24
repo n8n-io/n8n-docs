@@ -181,7 +181,23 @@ For **Custom**, provide the full **Vault URL** (for example, `https://my-vault.v
 
 ### GCP Secrets Manager <a href="#gcp-secrets-manager" id="gcp-secrets-manager"></a>
 
-Provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview) for more information.
+Enable the Secret Manager API in your Google Cloud project. The identity that accesses the secrets needs these permissions:
+
+- `secretmanager.secrets.list` on the project, to discover and filter secrets.
+- `secretmanager.versions.access` on each secret that n8n imports, to read its latest value.
+
+Refer to Google's [Secret Manager roles and permissions](https://cloud.google.com/iam/docs/roles-permissions/secretmanager) for predefined roles that include these permissions.
+
+Choose one of these authentication methods:
+
+- To use a [service account key](https://cloud.google.com/iam/docs/service-account-overview), leave **Use application default credentials** turned off. Enter the JSON key in **Service account key**.
+- To use [Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc), turn on **Use application default credentials**. n8n uses credentials from its runtime environment, such as an attached Cloud Run or GKE identity. This option hides **Service account key**.
+
+You can also configure these optional settings:
+
+- **Project ID**: Overrides the project ID from the service account key or automatic detection. Leave this empty to use the detected project ID.
+- **Impersonate service account**: Makes requests as another service account. The authenticated identity needs the [Service Account Token Creator role](https://cloud.google.com/iam/docs/service-account-impersonation) on the target service account. The target service account needs the Secret Manager permissions listed above.
+- **Secret filter**: Imports secrets that match [Google Cloud Secret Manager filter syntax](https://cloud.google.com/secret-manager/docs/filtering). For example, `labels.n8n-vault=finance` imports secrets with that label. IAM permissions still apply.
 
 ### HashiCorp Vault <a href="#hashicorp-vault" id="hashicorp-vault"></a>
 

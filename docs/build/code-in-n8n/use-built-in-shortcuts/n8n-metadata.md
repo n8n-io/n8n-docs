@@ -61,6 +61,8 @@ You can use Python in the Code node. It isn't available in expressions.
 
 ## Python (Pyodide, deprecated)
 
+Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) instead.
+
 | Method | Description |
 | ------ | ----------- |
 | `_env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). |

@@ -21,7 +21,7 @@ layout:
 # Outlook.com Send Email credentials <a href="#outlookcom-send-email-credentials" id="outlookcom-send-email-credentials"></a>
 
 {% hint style="warning" %}
-**Microsoft has removed Basic Auth and App Passwords for Outlook.com SMTP**
+**Feature availability**
 
 Microsoft deprecated Basic Authentication and app passwords for SMTP in Exchange Online and Outlook.com. As a result, the Send Email node **cannot connect to Outlook.com or Microsoft 365 accounts** using username/password or app password authentication.
 

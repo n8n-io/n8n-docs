@@ -66,7 +66,7 @@ For usage examples and templates to help you get started, refer to n8n's [WhatsA
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for WhatsApp. You can find the node docs [here](../app-nodes/n8n-nodes-base.whatsapp/).
+n8n provides an app node for WhatsApp. You can find the node docs [here](../app-nodes/n8n-nodes-base.whatsapp/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/whatsapp-trigger/) on n8n's website.
 
@@ -80,17 +80,17 @@ Here are some common errors and issues with the WhatsApp Trigger node and steps 
 
 WhatsApp only allows you to register a single webhook per app. This means that every time you switch from using the testing URL to the production URL (and vice versa), WhatsApp overwrites the registered webhook URL.
 
-You may have trouble with this if you try to test a workflow that's also active in production. WhatsApp will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+You may have trouble with this if you try to test a workflow that's also published. WhatsApp will only send events to one of the two webhook URLs, so the other will never receive event notifications.
 
 To work around this, you can disable your workflow when testing:
 
 {% hint style="warning" %}
 **Halts production traffic**
 
-This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's unpublished.
 {% endhint %}
 
 1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
+2. From the workflow settings dropdown, click **Unpublish** to disable the workflow temporarily.
 3. Test your workflow using the test webhook URL.
-4. When you finish testing, toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+4. When you finish testing, click **Publish**. The production webhook URL should resume working.

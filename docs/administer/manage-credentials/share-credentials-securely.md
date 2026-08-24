@@ -31,16 +31,25 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Available on all Cloud plans, and Business and Enterprise self-hosted plans.
+Credential sharing is available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 You can share a credential directly with other users to use in their own workflows. Or share a credential in a project[^1] for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
 
 Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
 
-Refer to [Account types](../manage-users-and-access/understand-account-types.md) for more information about owners and admins.
+Refer to [Instance roles](../manage-users-and-access/understand-instance-roles.md) for more information about owners and admins.
 
-In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
+In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
+
+{% hint style="info" %}
+**Sharing end-user credentials**
+
+Sharing an [end-user credential](end-user-credentials.md) shares the credential itself, not a connection. Users you share it with connect their own account, they don't use yours.
+{% endhint %}
 
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 

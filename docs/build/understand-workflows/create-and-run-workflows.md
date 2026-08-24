@@ -53,7 +53,7 @@ To run manually, select **Execute Workflow**.
 
 All new workflows are unpublished by default. See [Publishing and saving workflows](save-and-publish-workflows.md).
 
-You need to publish workflows that start with a trigger node or Webhook node so that they can run automatically. When a workflow is inactive, you must run it manually.
+You need to publish workflows that start with a trigger node or Webhook node so that they can run automatically. When a workflow isn't published, you must run it manually.
 
 To publish your workflow, open your workflow and click **Publish**. The option to unpublish is in the workflow settings menu.
 

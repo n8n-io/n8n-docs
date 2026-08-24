@@ -37,7 +37,7 @@ layout:
 
 # Calendar operations
 
-Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](./) for more information on the Google Calendar node itself.
+Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](./README.md) for more information on the Google Calendar node itself.
 
 ## Availability <a href="#availability" id="availability"></a>
 
@@ -45,7 +45,7 @@ Use this operation to check if a time-slot is available in a calendar.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Calendar credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Calendar credentials](../../credentials/google/README.md).
 * **Resource**: Select **Calendar**.
 * **Operation**: Select **Availability**.
 * **Calendar**: Choose a calendar you want to check against. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.

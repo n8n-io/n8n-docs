@@ -11,7 +11,7 @@ layout:
 
 # Supported databases <a href="#supported-databases" id="supported-databases"></a>
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB (only [actively maintained versions](https://www.postgresql.org/support/versioning/)).
+By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB. Refer to [Supported PostgreSQL versions](#supported-postgresql-versions) for n8n's PostgreSQL version policy.
 
 ## Database type by n8n installation <a href="#database-type-by-n8n-installation" id="database-type-by-n8n-installation"></a>
 
@@ -24,7 +24,7 @@ By default, self-hosted installations use **SQLite**. You can optionally configu
 
 n8n Cloud installations use different databases depending on your plan tier:
 
-- **SQLite**: Trial, Starter, and Pro plans, as well as legacy Enterprise plans
+- **SQLite**: Starter, Pro, and legacy Enterprise plans
 - **PostgreSQL**: Enterprise Scaling plans only
 
 ## Shared settings <a href="#shared-settings" id="shared-settings"></a>
@@ -34,6 +34,21 @@ The following environment variables get used by all databases:
  - `DB_TABLE_PREFIX` (default: -) - Prefix for table names
 
 ## PostgresDB <a href="#postgresdb" id="postgresdb"></a>
+
+### Supported PostgreSQL versions <a href="#supported-postgresql-versions" id="supported-postgresql-versions"></a>
+
+n8n supports:
+
+- The latest two actively maintained PostgreSQL major versions (**17** and **18**, as of July 2026).
+- One additional major version for compatibility (**16**).
+
+Run the latest minor release within your major version.
+
+Amazon Aurora PostgreSQL is **experimental**. n8n's hosting templates offer it for high-availability setups, where Aurora recovers faster when the primary database goes down. n8n doesn't test or certify Aurora, and n8n's PostgreSQL version support doesn't extend to it. Use upstream PostgreSQL unless you specifically need what Aurora offers.
+
+n8n doesn't support other PostgreSQL-compatible derivatives, such as AlloyDB, CockroachDB, or YugabyteDB.
+
+The PostgreSQL project retires its oldest maintained major version and releases a new one every November, so n8n's supported version range shifts each year. Check this page for the current supported versions, rather than relying on a specific version number you've seen elsewhere.
 
 To use PostgresDB as the database, you can provide the following environment variables:
 

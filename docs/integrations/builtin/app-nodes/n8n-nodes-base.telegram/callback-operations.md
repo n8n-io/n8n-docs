@@ -36,7 +36,7 @@ layout:
 
 # Callback operations
 
-Use these operations to respond to callback queries sent from the in-line keyboard or in-line queries. Refer to [Telegram](./) for more information on the Telegram node itself.
+Use these operations to respond to callback queries sent from the in-line keyboard or in-line queries. Refer to [Telegram](./README.md) for more information on the Telegram node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -50,7 +50,7 @@ Enter these parameters:
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
-  * To feed a Query ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node triggered on the **Callback Query**.
+  * To feed a Query ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node triggered on the **Callback Query**.
 * **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult) documentation for more information on formatting your array.
 
 Refer to the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery) documentation for more information.
@@ -74,7 +74,7 @@ Enter these parameters:
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Inline Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
-  * To feed a Query ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node triggered on the **Inline Query**.
+  * To feed a Query ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node triggered on the **Inline Query**.
 * **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult) documentation for more information on formatting your array.
 
 Telegram allows a maximum of 50 results per query.

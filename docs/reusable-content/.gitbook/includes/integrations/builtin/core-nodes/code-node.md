@@ -1,6 +1,7 @@
 ---
 title: code-node
 ---
+
 Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 {% hint style="info" %}
@@ -22,8 +23,9 @@ For usage examples and templates to help you get started, refer to n8n's [Code i
 {% hint style="info" %}
 **Function and Function Item nodes**
 
-The Code node replaces the Function and Function Item nodes from version 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
+The Code node replaces the Function and Function Item nodes from n8n 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
 {% endhint %}
+
 ## Usage <a href="#usage" id="usage"></a>
 
 How to use the Code node.
@@ -67,15 +69,16 @@ The Code node editing environment supports time-saving and useful keyboard short
 
 ## Python (Pyodide - legacy) <a href="#python-pyodide-legacy" id="python-pyodide-legacy"></a>
 
-Pyodide is a legacy feature. n8n v2 no longer supports this feature.
+Pyodide is a legacy feature. n8n 2 no longer supports this feature.
 
-n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
+n8n added Python support in n8n 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
 
 {% hint style="info" %}
 **Slower than JavaScript**
 
 The Code node takes longer to process Python than JavaScript. This is due to the extra compilation steps.
 {% endhint %}
+
 ### Built-in methods and variables <a href="#built-in-methods-and-variables" id="built-in-methods-and-variables"></a>
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/use-built-in-shortcuts) for more information.
@@ -95,17 +98,17 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 
 ## Python (Native) <a href="#python-native" id="python-native"></a>
 
-n8n added native Python support using task runners in version 1.111.0. This feature is stable as of n8n v2. 
+n8n added native Python support using task runners in n8n 1.111.0. This feature is stable as of n8n 2.
 
 Main differences from Pyodide:
 
-- Native Python supports only `_items` in all-items mode and `_item` in per-item mode. It doesn't support other n8n built-in methods and variables.
-- On self-hosted, native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#adding-extra-dependencies) for more details.
-- Native Python denies insecure built-ins by default. See [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for more details.
-- Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
-- On n8n cloud, the Python option for the Code node doesn't allow users to import any Python libraries — whether from the standard library or third-party packages. Self-hosting users can find setup instructions to include external libraries [here](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies). In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
+* Native Python supports only `_items` in all-items mode and `_item` in per-item mode. It doesn't support other n8n built-in methods and variables.
+* On self-hosted, native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#adding-extra-dependencies) for more details.
+* Native Python denies insecure built-ins by default. See [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for more details.
+* Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
+* On n8n cloud, the Python option for the Code node doesn't allow users to import any Python libraries — whether from the standard library or third-party packages. Self-hosting users can find setup instructions to include external libraries [here](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies). In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
 
-Upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
+Upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner.
 
 ## Coding in n8n <a href="#coding-in-n8n" id="coding-in-n8n"></a>
 
@@ -128,8 +131,4 @@ n8n includes built-in methods and variables. These provide support for:
 
 Refer to [Built-in methods and variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/use-built-in-shortcuts) for more information.
 
-
-
 ## Use AI in the Code node <a href="#use-ai-in-the-code-node" id="use-ai-in-the-code-node"></a>
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/gvo0l6HUfoQWSJcu8JMl/" %}

@@ -36,7 +36,7 @@ layout:
 
 # Common issues
 
-Here are some common issues and questions for the [Webhook node](./) and suggested solutions.
+Here are some common issues and questions for the [Webhook node](./README.md) and suggested solutions.
 
 ## Listen for multiple HTTP methods <a href="#listen-for-multiple-http-methods" id="listen-for-multiple-http-methods"></a>
 
@@ -50,7 +50,7 @@ The Webhook node has an output for each method, so you can perform different act
 
 ## Use the HTTP Request node to trigger the Webhook node <a href="#use-the-http-request-node-to-trigger-the-webhook-node" id="use-the-http-request-node-to-trigger-the-webhook-node"></a>
 
-The [HTTP Request](../n8n-nodes-base.httprequest/) node makes HTTP requests to the URL you specify.
+The [HTTP Request](../n8n-nodes-base.httprequest/README.md) node makes HTTP requests to the URL you specify.
 
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.

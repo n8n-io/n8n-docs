@@ -159,7 +159,7 @@ Always use the current version in new workflows to get the latest features and b
 | MCP Server Trigger | 2 | 1, 1.1 |
 | Merge | 3.2 | 1, 2, 2.1, 3, 3.1 |
 | Microsoft Agent 365 Trigger | 1.1 | 1 |
-| Microsoft Excel 365 | 2.2 | 1, 2, 2.1 |
+| Microsoft Excel (OneDrive) | 2.2 | 1, 2, 2.1 |
 | Microsoft OneDrive | 1.1 | 1 |
 | Microsoft Outlook | 2 | 1 |
 | Microsoft SQL | 1.1 | 1 |

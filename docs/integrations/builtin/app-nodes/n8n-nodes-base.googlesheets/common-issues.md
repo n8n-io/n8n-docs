@@ -36,7 +36,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [Google Sheets node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Append an array <a href="#append-an-array" id="append-an-array"></a>
 
@@ -50,7 +50,7 @@ To do so, consider using:
     ```
     Convert 'languages' array to JSON (key, value) pairs.
     ```
-3. The [Code node](../../core-nodes/n8n-nodes-base.code/).
+3. The [Code node](../../core-nodes/n8n-nodes-base.code/README.md).
 
 ## Column names were updated after the node's setup <a href="#column-names-were-updated-after-the-nodes-setup" id="column-names-were-updated-after-the-nodes-setup"></a>
 

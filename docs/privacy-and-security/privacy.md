@@ -145,7 +145,9 @@ To assist and improve user experience, n8n may send specific context data to LLM
 #### AI usage settings <a href="#ai-usage-settings" id="ai-usage-settings"></a>
 
 {% hint style="info" %}
-Available in n8n v2.7.0 and above.
+**Feature availability**
+
+AI usage settings are available from n8n 2.7.0.
 {% endhint %}
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance.

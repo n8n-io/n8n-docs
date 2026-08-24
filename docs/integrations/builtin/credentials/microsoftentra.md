@@ -80,6 +80,8 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
+You can also authenticate this credential with a certificate (`private_key_jwt`) instead of a client secret. Set **Authentication** to **Certificate** and provide a private key and certificate. Refer to [Authenticate with a certificate](microsoft.md#authenticate-with-a-certificate) for the full steps.
+
 ### Microsoft Graph API Base URL <a href="#microsoft-graph-api-base-url" id="microsoft-graph-api-base-url"></a>
 
 Microsoft Entra ID credentials extend the Microsoft OAuth2 API credentials and support different Microsoft cloud environments. Select the appropriate endpoint based on your tenant's cloud environment:
@@ -185,7 +187,7 @@ The following scopes are required for each Microsoft integration as of March 202
 | **Microsoft OneDrive** | `openid`, `offline_access`, `Files.ReadWrite.All` |
 | **Microsoft Outlook** | `openid`, `offline_access`, `Contacts.Read`, `Contacts.ReadWrite`, `Calendars.Read`, `Calendars.Read.Shared`, `Calendars.ReadWrite`, `Mail.ReadWrite`, `Mail.ReadWrite.Shared`, `Mail.Send`, `Mail.Send.Shared`, `MailboxSettings.Read` |
 | **Microsoft SharePoint** | `openid`, `offline_access` |
-| **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.ReadWrite.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All` |
+| **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.Read.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All` |
 | **Microsoft To Do** | `openid`, `offline_access`, `Tasks.ReadWrite` |
 | **Additional permissions for triggers** | `Chat.Read.All`, `Team.ReadBasic.All`, `Subscription.Read.All` |
 

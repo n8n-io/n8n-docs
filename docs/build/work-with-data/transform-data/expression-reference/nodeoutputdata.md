@@ -52,7 +52,7 @@ layout:
 
 ## `$()`.**`item`** <a href="#dollaritem" id="dollaritem"></a>
 
-**Description:** Returns the matching item, i.e. the one used to produce the current item in the current node. <a href="/data/data-mapping/data-item-linking/">More info</a>
+**Description:** Returns the matching item, i.e. the one used to produce the current item in the current node. <a href="../../reference-data/link-data-items/README.md">More info</a>
 
 **Syntax:** `$()`.`$()`.**`item`**
 
@@ -62,7 +62,7 @@ layout:
 
 ## `$()`.**`itemMatching()`** <a href="#dollaritemmatching" id="dollaritemmatching"></a>
 
-**Description:** Returns the matching item, i.e. the one used to produce the item in the current node at the specified index. <a href="/data/data-mapping/data-item-linking/">More info</a>
+**Description:** Returns the matching item, i.e. the one used to produce the item in the current node at the specified index. <a href="../../reference-data/link-data-items/README.md">More info</a>
 
 **Syntax:** `$()`.itemMatching(currentItemIndex?)
 

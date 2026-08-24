@@ -37,7 +37,7 @@ layout:
 
 # Workplace Security
 
-Use this object to receive updates when Workplace security events occur, like adding or removing admins, users joining or leaving a Workplace, and more. Refer to [Facebook Trigger](./) for more information on the trigger itself.
+Use this object to receive updates when Workplace security events occur, like adding or removing admins, users joining or leaving a Workplace, and more. Refer to [Facebook Trigger](./README.md) for more information on the trigger itself.
 
 {% hint style="info" %}
 **Credentials**

@@ -37,7 +37,7 @@ layout:
 
 # Document operations
 
-Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./) for more information on the Google Sheets node itself.
+Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./README.md) for more information on the Google Sheets node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -47,7 +47,7 @@ Use this operation to create a new spreadsheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Document**.
 * **Operation**: Select **Create**.
 * **Title**: Enter the title of the new spreadsheet you want to create.
@@ -70,7 +70,7 @@ Use this operation to delete an existing spreadsheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Document**.
 * **Operation**: Select **Delete**.
 * **Document**: Choose a spreadsheet you want to delete.

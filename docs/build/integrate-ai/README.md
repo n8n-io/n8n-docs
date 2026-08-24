@@ -5,8 +5,14 @@ layout:
 ---
 # Integrate AI <a href="#integrate-ai" id="integrate-ai"></a>
 
+n8n lets you build AI workflows that connect different LLM providers such as OpenAI, Anthropic, and Google, add tools and memory, and combine several models in one workflow.
+
 {% content-ref url="understand-ai-components/README.md" %}
 [understand-ai-components/README.md](understand-ai-components/README.md)
+{% endcontent-ref %}
+
+{% content-ref url="langchain-in-n8n.md" %}
+[langchain-in-n8n.md](langchain-in-n8n.md)
 {% endcontent-ref %}
 
 {% content-ref url="test-and-improve-ai-workflows/README.md" %}

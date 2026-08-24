@@ -18,7 +18,7 @@ layout:
 
 # Compression <a href="#compression" id="compression"></a>
 
-Use the Compression node to compress and decompress files. Supports Zip and Gzip formats.
+Use the Compression node to compress and decompress files. Supports Zip, Gzip, Tar, and Tar.gz formats.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
@@ -34,14 +34,29 @@ Refer to the sections below for parameters specific to each **Operation**.
 ### Compress <a href="#compress" id="compress"></a>
 
 - **Input Binary Field(s)**: Enter the name of the fields in the input data that contain the binary files you want to compress. To compress more than one file, use a comma-separated list.
-- **Output Format**: Choose whether to format the compressed output as **Zip** or **Gzip**.
-- **File Name**: Enter the name of the zip file the node creates.
+- **Output Format**: Choose whether to format the compressed output as **Zip**, **Gzip**, **Tar**, or **Tar (Gzip)**.
+- **File Name**: Enter the name of the compressed file the node creates.
 - **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
 
 ### Decompress <a href="#decompress" id="decompress"></a>
 
-- **Put Output File in Field**: Enter the name of the fields in the input data that contain the binary files you want to decompress. To decompress more than one file, use a comma-separated list.
-- **Output Prefix**: Enter a prefix to add to the output file name.
+The Decompress operation detects the archive format from the file extension and supports the following formats:
+
+- `.zip`
+- `.gz` and `.gzip`
+- `.tar`
+- `.tar.gz` and `.tgz`
+
+When you decompress a `.tar.gz` or `.tgz` archive, the node extracts all member files in a single step. You don't need to decompress the gzip layer separately.
+
+- **Input Binary Field(s)**: Enter the name of the fields in the input data that contain the binary files you want to decompress. To decompress more than one file, use a comma-separated list.
+- **Output Prefix**: Enter a prefix to add to the output file name. The node uses this prefix, followed by an incrementing index, to name each extracted file.
+
+{% hint style="warning" %}
+#### Unsupported formats
+
+If you pass a file with an unsupported extension, the node throws an error instead of silently producing empty output. Supported formats are `zip`, `gzip`, `tar`, `tar.gz`, and `tgz`.
+{% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

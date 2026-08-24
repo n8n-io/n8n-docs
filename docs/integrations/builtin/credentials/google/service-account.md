@@ -34,7 +34,7 @@ layout:
 
 Using service accounts is more complex than OAuth2. Before you begin:
 
-* Check if your node is [compatible](./#compatible-nodes) with Service Account.
+* Check if your node is [compatible](./README.md#compatible-nodes) with Service Account.
 * Make sure you need to use Service Account. For most use cases, [OAuth2](oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
@@ -90,7 +90,7 @@ With the Google project and credentials fully configured, finish the n8n credent
 4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority) (turned on).
    1. To use this option, you must [Enable domain-wide delegation](service-account.md#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
    2. Enter the **Email** of the user you want to impersonate.
-5. If you plan to use this credential with the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/) node, turn on **Set up for use in HTTP Request node**.
+5. If you plan to use this credential with the [HTTP Request](../../core-nodes/n8n-nodes-base.httprequest/README.md) node, turn on **Set up for use in HTTP Request node**.
    1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) for more information.
 6. **Save** your credentials.
 

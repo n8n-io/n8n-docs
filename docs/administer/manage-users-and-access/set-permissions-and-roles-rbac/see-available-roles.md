@@ -17,8 +17,15 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* The Project Editor role is available on Pro Cloud and Self-hosted Enterprise plans. 
-* The Project Viewer role is only available on Self-hosted Enterprise and Cloud Enterprise plans.
+The **Project Editor** role is available on:
+
+- **n8n Cloud:** Pro
+- **Self-hosted:** Enterprise
+
+The **Project Viewer** role is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 Within projects, there are three user roles: Admin, Editor, and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
@@ -30,10 +37,11 @@ A Project Admin role has the highest level of permissions. Project admins can:
 * Manage project settings: Change name, delete project.
 * Manage project members: Invite members and remove members, change members' roles.
 * View, create, update, and delete any workflows, credentials, or executions within a project. 
+* Create [end-user credentials](../../manage-credentials/end-user-credentials.md). By default, only project admins can create this credential type, but you can grant it to other users through custom roles.
 
 ## Project Editor <a href="#project-editor" id="project-editor"></a>
 
-A Project Editor can view, create, update, and delete any workflows, credentials, or executions within a project. 
+A Project Editor can view, create, update, and delete any workflows, credentials, or executions within a project. The **Project Editor** role is available on n8n Cloud Pro and self-hosted Enterprise.
 
 ## Project Viewer <a href="#project-viewer" id="project-viewer"></a>
 
@@ -41,10 +49,12 @@ A Project Viewer is effectively a `read-only` role with access to all workflows,
 
 Viewers aren't able to manually execute any workflows that exist in a project. 
 
-{% hint style="info" %}
-**Role types and account types**
+The **Project Viewer** role is available on n8n Cloud Enterprise and self-hosted Enterprise.
 
-Role types and [account types](../understand-account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](organize-work-in-projects.md).
+{% hint style="info" %}
+**Project roles and instance roles**
+
+n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) control what a user can do across the entire instance. Project roles control what a user can do within a specific [project](organize-work-in-projects.md), and a user can have different project roles in different projects.
 {% endhint %}
 
 | Permission | Admin | Editor | Viewer | 
@@ -60,6 +70,6 @@ Role types and [account types](../understand-account-types.md) are different thi
 | Use external secrets in credentials | ✅* | ✅* | ❌ |
 | Manage project secret vaults | ✅* | ❌ | ❌ |
 
-\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). This is available from n8n version `2.13.0`.
+\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). The **Enable external secrets for project roles** setting is available from n8n 2.13.0.
 
 [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.

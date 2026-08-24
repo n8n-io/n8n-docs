@@ -1,0 +1,31 @@
+name: Internal link check
+# Complements the external checker (lychee), which can't see internal links:
+# `base` rewrites relative .md links to docs.n8n.io URLs, which `exclude` drops.
+# This scans the Markdown files changed in the PR and fails if any of them
+# contain a broken internal link. See .github/scripts/check_internal_links.py.
+on:
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  internal-links:
+    name: runner / internal-links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Get changed markdown files
+        id: changed
+        uses: step-security/changed-files@3dbe17c78367e7d60f00d78ae6781a35be47b4a1 # v45.0.1
+        with:
+          files: |
+            docs/**/*.md
+      - name: Check internal links
+        if: steps.changed.outputs.any_changed == 'true'
+        run: |
+          python3 .github/scripts/check_internal_links.py ${{ steps.changed.outputs.all_changed_files }}
+      - name: Report status
+        if: failure()
+        run: echo "❌ Broken internal links detected. See the log above; run locally with python3 .github/scripts/check_internal_links.py <file>"

@@ -37,7 +37,7 @@ layout:
 
 # Common issues
 
-Here are some common errors and issues with the [Schedule Trigger node](./) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Schedule Trigger node](./README.md) and steps to resolve or troubleshoot them.
 
 ## Invalid cron expression <a href="#invalid-cron-expression" id="invalid-cron-expression"></a>
 
@@ -45,8 +45,8 @@ This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n
 
 To debug, check that the following:
 
-* That your cron expression follows the syntax used in the [cron examples](./#custom-cron-interval)
-* That your cron expression (after removing the [seconds column](./#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
+* That your cron expression follows the syntax used in the [cron examples](./README.md#custom-cron-interval)
+* That your cron expression (after removing the [seconds column](./README.md#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
 
 ## Scheduled workflows run at the wrong time <a href="#scheduled-workflows-run-at-the-wrong-time" id="scheduled-workflows-run-at-the-wrong-time"></a>
 
@@ -74,6 +74,6 @@ While variables can be used in the scheduled trigger, their values only get eval
 
 ### Changing the trigger interval <a href="#changing-the-trigger-interval" id="changing-the-trigger-interval"></a>
 
-You can update the scheduled trigger interval at any time but it only gets updated when the workflow is published. If you change the trigger interval after the workflow is active, the changes won't take effect until you stop and then publish a new version of the workflow.
+You can update the scheduled trigger interval at any time but it only gets updated when the workflow is published. If you change the trigger interval after the workflow is published, the changes won't take effect until you unpublish the workflow and then publish a new version of the workflow.
 
 Also, the schedule begins from the time when you publish the workflow. For example, if you had originally set a schedule of every 1 hour and it should execute at 12:00, if you changed it to a 2 hour schedule and publish a new version of the workflow at 11:30, the next execution will be at 13:30, 2 hours from when you published it.

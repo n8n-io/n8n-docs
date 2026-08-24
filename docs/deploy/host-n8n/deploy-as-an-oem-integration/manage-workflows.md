@@ -119,7 +119,7 @@ You can duplicate and customize your template workflow using either the Editor U
 
 1. Update all relevant nodes to use the credentials for this user (created above).
 
-1. **Save** this workflow and set it to **Active** using the toggle in the top-right corner.
+1. **Save** this workflow and publish it by clicking **Publish** in the top-right corner.
 
 #### Using the API <a href="#using-the-api" id="using-the-api"></a>
 

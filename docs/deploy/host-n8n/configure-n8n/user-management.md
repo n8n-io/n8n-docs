@@ -19,19 +19,19 @@ This document describes how to configure your n8n instance to support user manag
 Refer to the main [User management](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access) guide for more information about usage, including:
 
 * [Managing users](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/add-and-remove-users)
-* [Account types](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-account-types)
+* [Instance roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles)
 * [Best practices](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/follow-best-practices)
 
 For LDAP setup information, refer to [LDAP](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/connect-ldap).
 
 For SAML setup information, refer to [SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml).
 
-{% hint style="info" %}
-**Unsupported user management methods**
+{% hint style="warning" %}
+**Feature availability**
 
-In version 1.0, n8n:
-- Removed support for **basic auth** and **JWT** 
-- Removed the `N8N_USER_MANAGEMENT_DISABLED` environment variable. No supported way to disable the login screen exists in recent versions of n8n, including for local or development use. If you need to simplify login for local development, consider using a password manager, setting a simple local password, or scripting the standard login flow.
+Support for basic auth and JWT authentication was removed from n8n 1.0.
+
+The `N8N_USER_MANAGEMENT_DISABLED` environment variable was also removed from n8n 1.0. No supported way to disable the login screen exists in recent versions of n8n, including for local or development use. If you need to simplify login for local development, consider using a password manager, setting a simple local password, or scripting the standard login flow.
 {% endhint %}
 ## Setup <a href="#setup" id="setup"></a>
 
@@ -46,9 +46,9 @@ There are three stages to set up user management in n8n:
 n8n recommends setting up an SMTP server, for user invites and password resets. 
 
 {% hint style="info" %}
-**Optional from 0.210.1**
+**Feature availability**
 
-From version 0.210.1 onward, this step is optional. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
+Setting up SMTP is optional from n8n 0.210.1. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
 {% endhint %}
 Get the following information from your SMTP provider:
 
@@ -98,9 +98,9 @@ If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.
 #### Pre-provision the instance owner from environment variables <a href="#pre-provision-the-instance-owner-from-environment-variables" id="pre-provision-the-instance-owner-from-environment-variables"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.17.0**
+**Feature availability**
 
-
+Pre-provisioning the instance owner from environment variables is available from n8n 2.17.0.
 {% endhint %}
 
 You can pre-provision the instance owner from environment variables instead of going through the in-app setup. Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` and provide the owner details. See [Manage instance settings using environment variables](manage-settings-using-environment-variables.md) for how the activation pattern works.

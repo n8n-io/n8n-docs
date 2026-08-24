@@ -35,7 +35,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Notion](../app-nodes/n8n-nodes-base.notion/)
+* [Notion](../app-nodes/n8n-nodes-base.notion/README.md)
 * [Notion Trigger](../trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

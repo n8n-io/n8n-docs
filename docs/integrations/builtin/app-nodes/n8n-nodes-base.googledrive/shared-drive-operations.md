@@ -37,7 +37,7 @@ layout:
 
 # Shared Drive operations
 
-Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](./) for more information on the Google Drive node itself.
+Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](./README.md) for more information on the Google Drive node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -47,7 +47,7 @@ Use this operation to create a new shared drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Shared Drive**.
 * **Operation**: Select **Create**.
 * **Name**: The name to use for the new shared drive.
@@ -88,7 +88,7 @@ Use this operation to delete a shared drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Shared Drive**.
 * **Operation**: Select **Delete**.
 * **Shared Drive**: Choose the shared drive want to delete.
@@ -103,7 +103,7 @@ Use this operation to get a shared drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Shared Drive**.
 * **Operation**: Select **Get**.
 * **Shared Drive**: Choose the shared drive want to get.
@@ -122,7 +122,7 @@ Use this operation to get many shared drives.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Shared Drive**.
 * **Operation**: Select **Get Many**.
 * **Return All**: Choose whether to return all results or only up to a given limit.
@@ -144,7 +144,7 @@ Use this operation to update a shared drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **Shared Drive**.
 * **Operation**: Select **Update**.
 * **Shared Drive**: Choose the shared drive you want to update.

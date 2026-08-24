@@ -42,6 +42,7 @@ This page lists the environment variables configuration options for managing nod
 | `NODES_ERROR_TRIGGER_TYPE`               | String           | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger.                                                                                                                                                                                      |
 | `NODES_EXCLUDE`                          | Array of strings | `[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\"]`                             | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"@n8n/n8n-nodes-langchain.lmChatDeepSeek\"]"`.  To enable all nodes, specify `NODES_EXCLUDE: "[]"`.                       |
 | `NODES_INCLUDE`                          | Array of strings | -                             | Specify which nodes to load.                                                                                                                                                                                                          |
+| `NODES_MERGE_SQL_SANDBOX_MEMORY_LIMIT_MB` | Number           | `64`                          | Memory limit in MB for the Merge node's SQL sandbox. Increase this if Combine by SQL fails with large datasets and your instance has enough memory available.                                                                         |
 
 ## Compression node settings <a href="#compression-node-settings" id="compression-node-settings"></a>
 
@@ -53,9 +54,9 @@ This page lists the environment variables configuration options for managing nod
 ## Manage installed community packages <a href="#manage-installed-community-packages" id="manage-installed-community-packages"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Feature availability**
 
-
+Managing installed community packages from environment variables is available from n8n 2.21.0.
 {% endhint %}
 
 Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for the `*_MANAGED_BY_ENV` pattern.

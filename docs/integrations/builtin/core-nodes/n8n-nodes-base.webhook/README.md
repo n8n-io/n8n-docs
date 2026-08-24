@@ -107,7 +107,7 @@ Refer to [Webhook credentials](../../credentials/webhook.md) for more informatio
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](../n8n-nodes-base.respondtowebhook.md) node.
-* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node).
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node).
 
 ### Response Code <a href="#response-code" id="response-code"></a>
 
@@ -131,8 +131,9 @@ Select **Add Option** to view more configuration options. The available options 
 * **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use `*` (default) to allow all origins.
 * **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
 * **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
-* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
+* **IP(s) Allowlist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the allowlist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
 * **No Response Body**: Enable this to prevent n8n sending a body with the response.
+* **Only Run If**: An expression evaluated against the incoming request. The workflow only runs if the expression returns `true`. Use `$json` to access the request as `{ body, headers, params, query }`. For example, `{{ $json.body.campaign_id === 'user-research-invite' }}`. Requests that don't match receive a 200 response without creating an execution. If the expression fails to evaluate, n8n logs a warning and lets the request through rather than blocking it. This runs after IP allowlist and authentication checks, and applies to both test and production webhook URLs.
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.
 * **Response Data**: Send custom data with the response.
@@ -144,7 +145,8 @@ Select **Add Option** to view more configuration options. The available options 
 | Allowed Origins (CORS) | Any                                                                                   |
 | Binary Property        | <p>Either:<br>HTTP Method > POST<br>HTTP Method > PATCH<br>HTTP Method > PUT</p>      |
 | Ignore Bots            | Any                                                                                   |
-| IP(s) Whitelist        | Any                                                                                   |
+| IP(s) Allowlist        | Any                                                                                   |
+| Only Run If           | Any                                                                                   |
 | Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
 | No Response Body       | Respond > Immediately                                                                 |
 | Raw Body               | Any                                                                                   |
@@ -155,7 +157,13 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## How n8n secures HTML responses <a href="#how-n8n-secures-html-responses" id="how-n8n-secures-html-responses"></a>
 
-Starting with n8n version 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
+{% hint style="info" %}
+**Feature availability**
+
+Automatic wrapping of HTML responses to webhooks in `<iframe>` tags was introduced in n8n 1.103.0.
+{% endhint %}
+
+Starting with n8n 1.103.0, n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 
@@ -167,6 +175,20 @@ This has the following implications:
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 [Browse n8n-nodes-base.webhook integration templates](https://n8n.io/integrations/webhook) or [search all templates](https://n8n.io/workflows/)
+
+## FAQ
+
+### How do I trigger a workflow from an external event?
+
+Add the Webhook node as your trigger. It creates a [webhook URL](#webhook-urls) that receives data from apps and services when an event occurs, then starts your workflow with that data. It's useful for services that don't have a dedicated app trigger node.
+
+### What's the difference between the test and production webhook URLs?
+
+The node has two [webhook URLs](#webhook-urls). The **test** URL works when you select **Listen for Test Event**, and it shows the incoming data in the editor. The **production** URL registers when you publish the workflow, and it doesn't display data in the editor. You can view production runs in the workflow's **Executions** tab.
+
+### How do I secure a webhook?
+
+Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

@@ -15,7 +15,7 @@ layout:
 
 # Manual, partial, and production executions <a href="#manual-partial-and-production-executions" id="manual-partial-and-production-executions"></a>
 
-There are some important differences in how n8n executes workflows manually (by clicking the **Execute Workflow** button) and automatically (when the workflow is **Active** and triggered by an event or schedule).
+There are some important differences in how n8n executes workflows manually (by clicking the **Execute Workflow** button) and automatically (when the workflow is **published** and triggered by an event or schedule).
 
 ## Manual executions <a href="#manual-executions" id="manual-executions"></a>
 
@@ -61,7 +61,7 @@ To work around this, consider using the [limit node](https://app.gitbook.com/s/B
 
 Production executions occur when a triggering event or schedule automatically runs a workflow. On [paid plans](https://n8n.io/pricing/), production executions count towards your execution quota. For details on what does and doesn't count, refer to [How executions count towards quotas](README.md#how-executions-count-towards-quotas).
 
-To configure production executions, you must attach a [trigger node](#user-content-fn-2)[^2] (any trigger other than the [manual trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) works) and switch workflow's toggle to **Active**. Once published, the workflow automatically executes whenever the trigger condition occurs.
+To configure production executions, you must attach a [trigger node](#user-content-fn-2)[^2] (any trigger other than the [manual trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger) works) and [publish the workflow](../save-and-publish-workflows.md) using the **Publish** button. Once published, the workflow automatically executes whenever the trigger condition occurs.
 
 The execution flow for production executions doesn't display in the Editor tab of the workflow as with manual executions. Instead, you can see executions in the workflow's **Executions** tab according to your [workflow settings](../../manage-workflows/configure-workflow-settings.md). From there, you can explore and troubleshoot problems using the [debug in editor feature](debug-executions.md).
 

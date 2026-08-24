@@ -23,7 +23,7 @@ To investigate failed executions, you can:
 * Enable [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems).
 {% endhint %}
 
-## Create and set an error workflow <a href="#create-and-set-an-error-workflow" id="create-and-set-an-error-workflow"></a>
+## How do I set up an error workflow? <a href="#create-and-set-an-error-workflow" id="create-and-set-an-error-workflow"></a>
 
 For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.errortrigger).
 
@@ -31,11 +31,11 @@ You can use the same error workflow for multiple workflows.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/odStQfuU7M0KPowwye9k/" %}
 
-## Error data <a href="#error-data" id="error-data"></a>
+## What data does an error workflow receive? <a href="#error-data" id="error-data"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rAiMowL1bA7C4GcH8FyS/" %}
 
-## Cause a workflow execution failure using Stop And Error <a href="#cause-a-workflow-execution-failure-using-stop-and-error" id="cause-a-workflow-execution-failure-using-stop-and-error"></a>
+## How do I make a workflow fail on purpose with the Stop and Error node? <a href="#cause-a-workflow-execution-failure-using-stop-and-error" id="cause-a-workflow-execution-failure-using-stop-and-error"></a>
 
 When you create and set an error workflow, n8n runs it when an execution fails. Usually, this is due to things like errors in node settings, or the workflow running out of memory.
 

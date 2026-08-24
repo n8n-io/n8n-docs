@@ -40,7 +40,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/google/).
+You can find authentication information for this node [here](../../credentials/google/README.md).
 {% endhint %}
 
 {% hint style="info" %}
@@ -59,7 +59,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api) for more information about the service.
 
-n8n provides an app node for Google Sheets. You can find the node docs [here](../../app-nodes/n8n-nodes-base.googlesheets/).
+n8n provides an app node for Google Sheets. You can find the node docs [here](../../app-nodes/n8n-nodes-base.googlesheets/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/google-sheets-trigger/) on n8n's website.
 

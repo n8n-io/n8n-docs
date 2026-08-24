@@ -93,7 +93,11 @@ For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blo
 
 ## Deprecation of the previous helper <a href="#deprecation-of-the-previous-helper" id="deprecation-of-the-previous-helper"></a>
 
-The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. This was removed in version 1.
+{% hint style="warning" %}
+**Feature availability**
+
+The previous `this.helpers.request(options)` implementation, which used and exposed the `request-promise` library, was removed from n8n 1.0.
+{% endhint %}
 
 To minimize incompatibility, n8n made a transparent conversion to another library called `Axios`.
 

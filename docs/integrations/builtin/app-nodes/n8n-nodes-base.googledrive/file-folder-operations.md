@@ -37,7 +37,7 @@ layout:
 
 # File and Folder operations
 
-Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](./) for more information on the Google Drive node itself.
+Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](./README.md) for more information on the Google Drive node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -47,7 +47,7 @@ Use this operation to search for files and folders in a drive.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Drive credentials](../../credentials/google/README.md).
 * **Resource**: Select **File/Folder**.
 * **Operation**: Select **Search**.
 * **Search Method**: Choose how you want to search:

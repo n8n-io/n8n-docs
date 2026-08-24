@@ -25,6 +25,8 @@ layout:
 
 # Code node <a href="#code-node" id="code-node"></a>
 
+The Code node lets you run your own JavaScript or Python inside a workflow, so you can transform data or add logic the built-in nodes don't cover.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/A6AUEJWQnhjgrypgRNwY/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>

@@ -51,7 +51,7 @@ You can find authentication information for this node [here](../credentials/airt
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Airtable. You can find the node docs [here](../app-nodes/n8n-nodes-base.airtable/).
+n8n provides an app node for Airtable. You can find the node docs [here](../app-nodes/n8n-nodes-base.airtable/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/airtable-trigger/) on n8n's website.
 

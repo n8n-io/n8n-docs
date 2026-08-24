@@ -36,7 +36,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/)
+* [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md)
 * [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md)
 
 ## Requirements <a href="#requirements" id="requirements"></a>
@@ -92,7 +92,7 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-* API key: Use for the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/) node.
+* API key: Use for the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md) node.
 * OAuth2: Use for the [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -103,7 +103,7 @@ Meta classifies users who create WhatsApp business apps as Tech Providers; refer
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
-You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/) node.
+You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md) node.
 
 To configure this credential, you'll need:
 

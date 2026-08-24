@@ -23,7 +23,7 @@ Use the Crypto node to perform cryptographic operations in workflows.
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](/integrations/builtin/credentials/crypto.md).
+You can find authentication information for this node [here](../credentials/crypto.md).
 {% endhint %}
 
 ## Actions <a href="#actions" id="actions"></a>
@@ -41,7 +41,7 @@ You can find authentication information for this node [here](/integrations/built
 
 Node parameters depend on the action you select.
 
-The **Hmac**, **Sign**, **Encrypt**, and **Decrypt** actions need [Crypto credentials](/integrations/builtin/credentials/crypto.md). Each action uses the credential field it needs:
+The **Hmac**, **Sign**, **Encrypt**, and **Decrypt** actions need [Crypto credentials](../credentials/crypto.md). Each action uses the credential field it needs:
 
 * **Hmac** uses the **Hmac Secret**.
 * **Sign** uses the **Private Key**.
@@ -125,7 +125,7 @@ Asymmetric (RSA) mode can only encrypt small payloads, around 190 bytes with a 2
 	* **BASE64**
 	* **HEX**
 
-This action uses the **Hmac Secret** from your [Crypto credentials](/integrations/builtin/credentials/crypto.md).
+This action uses the **Hmac Secret** from your [Crypto credentials](../credentials/crypto.md).
 
 ### Sign parameters <a href="#sign-parameters" id="sign-parameters"></a>
 
@@ -136,7 +136,7 @@ This action uses the **Hmac Secret** from your [Crypto credentials](/integration
 	* **BASE64**
 	* **HEX**
 
-This action uses the **Private Key** from your [Crypto credentials](/integrations/builtin/credentials/crypto.md).
+This action uses the **Private Key** from your [Crypto credentials](../credentials/crypto.md).
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

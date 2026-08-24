@@ -46,7 +46,7 @@ To fix this issue, configure TLS/SSL termination in your reverse proxy. Afterwar
 
 Telegram only allows you to register a single webhook per app. This means that every time you switch from using the testing URL to the production URL (and vice versa), Telegram overwrites the registered webhook URL. 
 
-You may have trouble with this if you try to test a workflow that's also active in production. The Telegram bot will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+You may have trouble with this if you try to test a workflow that's also published. The Telegram bot will only send events to one of the two webhook URLs, so the other will never receive event notifications.
 
 To work around this, you can either disable your workflow when testing or create separate Telegram bots for testing and production.
 
@@ -57,10 +57,10 @@ To disable your workflow when testing, try the following:
 {% hint style="warning" %}
 **Halts production traffic**
 
-This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's unpublished.
 {% endhint %}
 
 1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
+2. From the workflow settings dropdown, click **Unpublish** to disable the workflow temporarily.
 3. Test your workflow using the test webhook URL.
-4. When you finish testing, toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+4. When you finish testing, click **Publish**. The production webhook URL should resume working.

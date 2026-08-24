@@ -102,14 +102,14 @@ You can make contributions in a variety of different ways:
 
 ### Edit a page in your browser
 
-This method is best for quick edits to a single page. Click **Edit this page** on any n8n Docs page and GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
+This method is best for quick edits to a single page. GitHub will guide you through making your changes and opening a pull request (aka PR - a formal proposal to add your changes to the docs).
 
 **Prerequisites:** A [GitHub](https://github.com/) account.
 
-1. On any n8n Docs page, click **Edit** from the dropdown menu at the top right. This takes you to the page in the [n8n Docs GitHub repository](https://github.com/n8n-io/n8n-docs).
+1. Open the **Copy** dropdown at the top of any n8n Docs page, and select **Edit on GitHub**. This takes you to the page in the [n8n Docs GitHub repository](https://github.com/n8n-io/n8n-docs).
 2. Click the pencil icon to edit the page.
 
-You may be prompted to fork the repository first. Click **Fork this repository** and GitHub automatically creates a fork for you.
+If you're an external contributor, GitHub will prompt you to fork the repository before making changes. Click **Fork this repository** and GitHub automatically creates a fork for you.
 
 3. Make your edits in the text editor, and click **Commit changes** > **Propose changes**.
 
@@ -143,7 +143,17 @@ Ensure you've followed the general checklist, and edit your PR as necessary if y
 
 **Preview your changes**
 
-When you open a pull request, GitBook automatically builds a preview of your changes and links it from the PR. Use this preview to check how your changes render on the live site. Both the browser and local methods above go through a pull request, so there's no need to build the site locally.
+When you open a pull request, GitBook automatically builds a preview of your changes and links it from the PR. On the PR's **Conversation** tab, find the checks section at the bottom and click **Check the live preview on your docs site** for the space you edited:
+
+![GitBook preview link on a pull request](.gitbook/assets/gitbook-preview-link.png)
+
+You can then check how your changes render on the docs site.
+
+Once the preview finishes building, a bot also posts a **GitBook page previews** comment on your PR with a direct link to each page you changed, so you don't have to find them in the navigation. The comment updates on every push.
+
+![GitBook page previews comment on a pull request](.gitbook/assets/gitbook-preview-links-comment.png)
+
+It's not possible to build the site locally.
 
 ### Open an issue
 
@@ -184,7 +194,7 @@ Once you open a pull request, the n8n Docs team will review it and either merge 
 | `action:needs-review`       | Your PR is in the queue and waiting for a technical writer to review it                                                                                 |
 | `action:needs-sme`          | Your PR requires review from a subject matter expert before it can be merged                                                                            |
 | `status:pending-dev`        | Your PR is linked to an unmerged code change and will be reviewed once that merges                                                                      |
-| `status:in-next-release`    | The linked code change has merged and your PR will be reviewed shortly                                                                                  |
+| `status:awaiting-release`    | The linked code change has merged, but not yet been released. Your PR will be reviewed shortly                                                                                  |
 | `status:dev-cancelled`      | The code change your PR was linked to has been cancelled — the docs PR will be closed                                                                   |
 | `status:duplicate`          | Your PR covers the same ground as an existing PR or issue - the PR will be closed                                                                       |
 | `status:outdated`           | Your PR has been overtaken by subsequent changes to the docs - the PR will be closed                                                                    |

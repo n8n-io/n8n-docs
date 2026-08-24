@@ -33,20 +33,31 @@ layout:
     visible: true
   actions:
     visible: true
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # OpenAI Functions Agent
 
+{% hint style="warning" %}
+**Feature availability**
+
+The OpenAI Functions Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the OpenAI Functions Agent.
+
+Node version 1 of the AI Agent node is removed from n8n 3.0, so the OpenAI Functions Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
+{% endhint %}
+
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling). These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
-Refer to [AI Agent](./) for more information on the AI Agent node itself.
+Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/cHtfs3gewkhPbGP31rjc/" %}
 
 {% hint style="info" %}
 **OpenAI Chat Model required**
 
-You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
+You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md) with this agent.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -83,7 +94,7 @@ Refine the OpenAI Functions Agent node's behavior using these options:
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-Refer to the main AI Agent node's [Templates and examples](./#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](./README.md#templates-and-examples) section.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

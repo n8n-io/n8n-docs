@@ -78,6 +78,8 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
+You can also authenticate this credential with a certificate (`private_key_jwt`) instead of a client secret. Set **Authentication** to **Certificate** and provide a private key and certificate. Refer to [Authenticate with a certificate](microsoft.md#authenticate-with-a-certificate) for the full steps.
+
 ## Using Shared Key <a href="#using-shared-key" id="using-shared-key"></a>
 
 To configure this credential, you'll need:

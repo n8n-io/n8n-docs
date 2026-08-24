@@ -91,7 +91,7 @@ When active or set, they do the following:
   * **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
   * **Continue**: Proceeds to the next node despite the error, using the last valid data.
   * **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
-* **Custom Span Attributes**: Add custom key-value attributes to a node's OpenTelemetry span. Keys are plain text, and values support expressions. This setting only appears if you enable OpenTelemetry tracing and have an Enterprise license. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
+* **Custom Span Attributes**: Add custom key-value attributes to a node's OpenTelemetry span. Keys are plain text, and values support expressions. This setting only appears if you enable OpenTelemetry tracing and have a self-hosted Enterprise license. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
 
 You can document your workflow using node notes:
 

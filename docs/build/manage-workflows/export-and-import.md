@@ -48,17 +48,27 @@ From the top navigation bar, select the three dots in the upper right <img src="
 
 ## From the command line <a href="#from-the-command-line" id="from-the-command-line"></a>
 
-### Using the new n8n package CLI
+### Using the n8n CLI
 
-See [n8n packages](n8n-packages.md) to understand how to import and export workflows.
-This feature is still under development (Beta).
+The `n8n-cli package` commands bundle workflows into a portable `.n8np` file you can import into another instance. See [n8n packages](n8n-packages/README.md), and [Export a package](n8n-packages/export-a-package.md) for the available options. n8n packages are in Preview and may change in future releases.
+
+{% hint style="info" %}
+The n8n CLI is the method n8n recommends for moving workflows between instances from the command line. It runs from any machine with network access, carries the folders, projects, and references a workflow needs, and checks an import before writing anything.
+{% endhint %}
 
 ### Using the Server CLI
 
-* Export: See the [export commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities)for exporting workflows or credentials.
-* Import: See the [import commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities)for importing workflows or credentials.
+* Export: See the [export commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities) for exporting workflows or credentials.
+* Import: See the [import commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities) for importing workflows or credentials.
 
-## From the Public API
+{% hint style="warning" %}
+**Feature availability**
 
-See [n8n packages](n8n-packages.md) to understand how to import and export workflows via our Public API.
-This feature is still under development (Beta).
+n8n plans to deprecate the Server CLI export and import commands. No deprecation or removal version is scheduled yet. Use the [n8n CLI](#using-the-n8n-cli) for new work.
+{% endhint %}
+
+## From the n8n API
+
+The n8n API can export and import [n8n packages](n8n-packages/README.md), which carry workflows along with the folders, projects, and references they need. n8n packages are in Preview and may change in future releases.
+
+To move a single workflow as JSON instead, use the workflow endpoints in the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).

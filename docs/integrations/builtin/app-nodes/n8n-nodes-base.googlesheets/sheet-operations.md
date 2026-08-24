@@ -36,7 +36,7 @@ layout:
 
 # Sheet Within Document operations
 
-Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./) for more information on the Google Sheets node itself.
+Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](./README.md) for more information on the Google Sheets node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -46,7 +46,7 @@ Use this operation to update an existing row or add a new row at the end of the 
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Append or Update Row**.
 * **Document**: Choose a spreadsheet that contains the sheet you want to append or update row(s) to.
@@ -72,7 +72,7 @@ Use this operation to append a new row at the end of the data in a sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Append Row**.
 * **Document**: Choose a spreadsheet with the sheet you want to append a row to.
@@ -98,7 +98,7 @@ Use this operation to clear all data from a sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Clear**.
 * **Document**: Choose a spreadsheet with the sheet you want to clear data from.
@@ -125,7 +125,7 @@ Use this operation to create a new sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Create**.
 * **Document**: Choose a spreadsheet in which you want to create a new sheet.
@@ -150,7 +150,7 @@ Use this operation to permanently delete a sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Delete**.
 * **Document**: Choose a spreadsheet that contains the sheet you want to delete.
@@ -168,7 +168,7 @@ Use this operation to delete rows or columns in a sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Delete Rows or Columns**.
 * **Document**: Choose a spreadsheet that contains the sheet you want to delete rows or columns from.
@@ -188,7 +188,7 @@ Use this operation to read one or more rows from a sheet.
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Get Row(s)**.
 * **Document**: Choose a spreadsheet that contains the sheet you want to get rows from.
@@ -230,7 +230,7 @@ Use this operation to update existing row in a sheet. This operation only update
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/).
+* **Credential to connect with**: Create or select an existing [Google Sheets credentials](../../credentials/google/README.md).
 * **Resource**: Select **Sheet Within Document**.
 * **Operation**: Select **Update Row**.
 * **Document**: Choose a spreadsheet with the sheet you want to update.

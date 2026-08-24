@@ -35,7 +35,7 @@ layout:
 
 # Chat operations
 
-Use these operations to get information about chats, members, administrators, leave chat, and set chat titles and descriptions. Refer to [Telegram](./) for more information on the Telegram node itself.
+Use these operations to get information about chats, members, administrators, leave chat, and set chat titles and descriptions. Refer to [Telegram](./README.md) for more information on the Telegram node itself.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
@@ -49,7 +49,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 
 Refer to the Telegram Bot API [getChat](https://core.telegram.org/bots/api#getchat) documentation for more information.
 
@@ -63,7 +63,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get Administrators**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 
 Refer to the Telegram Bot API [getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators) documentation for more information.
 
@@ -77,7 +77,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get Member**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **User ID**: Enter the unique identifier of the user whose information you want to get.
 
 Refer to the Telegram Bot API [getChatMember](https://core.telegram.org/bots/api#getchatmember) documentation for more information.
@@ -92,7 +92,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Leave**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 
 Refer to the Telegram Bot API [leaveChat](https://core.telegram.org/bots/api#leavechat) documentation for more information.
 
@@ -106,7 +106,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Set Description**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Description**: Enter the new description you'd like to set the chat to use, maximum of 255 characters.
 
 Refer to the Telegram Bot API [setChatDescription](https://core.telegram.org/bots/api#setchatdescription) documentation for more information.
@@ -121,7 +121,7 @@ Enter these parameters:
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Set Title**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
-  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
+  * To feed a Chat ID directly into this node, use the [Telegram Trigger](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) node. Refer to [Common Issues | Get the Chat ID](common-issues.md#get-the-chat-id) for more information.
 * **Title**: Enter the new title you'd like to set the chat to use, maximum of 255 characters.
 
 Refer to the Telegram Bot API [setChatTitle](https://core.telegram.org/bots/api#setchattitle) documentation for more information.

@@ -32,7 +32,7 @@ Sticky Notes allow you to annotate and comment on your workflows.
 
 n8n recommends using Sticky Notes heavily, especially on [template workflows](#user-content-fn-1)[^1], to help other users understand your workflow.
 
-![Screenshot of a basic workflow with an example sticky note](../../.gitbook/assets/example-sticky-note.png)
+![A basic workflow with a sticky note attached](../../.gitbook/assets/example-sticky-note.png)
 
 ## Create a Sticky Note <a href="#create-a-sticky-note" id="create-a-sticky-note"></a>
 

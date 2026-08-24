@@ -21,17 +21,11 @@ layout:
 Use the Merge node to combine data from multiple streams, once data of all streams is available.
 
 {% hint style="info" %}
-**Major changes in 0.194.0**
+**Feature availability**
 
-The n8n team overhauled this node in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md).
-{% endhint %}
+The Merge node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. Documentation for older versions of n8n is available in the [pre-overhaul Merge node docs](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md).
 
-{% hint style="info" %}
-**Minor changes in 1.49.0**
-
-n8n version 1.49.0 introduced the option to add more than two inputs. Older versions only support up to two inputs. If you're running an older version and want to combine multiple inputs in these versions, use the [Code node](https://deploy-preview-2225--n8n-docs.netlify.app/code/code-node/).
-
-The **Mode > SQL Query** feature was also added in n8n version 1.49.0 and isn't available in older versions.
+Using the Merge node with more than two inputs, and the **Mode > SQL Query** feature, are both available from n8n 1.49.0. Older versions only support up to two inputs and don't include **Mode > SQL Query**. If you're running an older version and want to combine multiple inputs, use the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
@@ -114,6 +108,37 @@ SELECT * FROM input1 LEFT JOIN input2 ON input1.name = input2.id
 ```
 
 Data from previous nodes are available as tables and you can use them in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements) for a full list of supported SQL statements. 
+
+#### Use query parameters <a href="#use-query-parameters" id="use-query-parameters"></a>
+
+When creating a SQL query in the Merge node, you can use the **Query Parameters** field in the **Options** section to load values into the query. n8n treats query parameter values as data, which helps avoid changing the SQL query structure with dynamic values.
+
+For example, you want to find a person by their name. Given the following data in `input1`:
+
+```js
+[
+    {
+        "name": "Alex",
+        "age": 21
+    },
+    {
+        "name": "Jamie",
+        "age": 33
+    }
+]
+```
+
+You can write a query with `?` placeholders:
+
+```sql
+SELECT * FROM input1 WHERE name = ? AND age > ?;
+```
+
+Then in **Query Parameters**, provide the values to use. You can provide comma-separated values or an expression that returns an array. For this example, use an array:
+
+```js
+{{ [ "Alex", 20 ] }}
+```
 
 ### Choose Branch <a href="#choose-branch" id="choose-branch"></a>
 

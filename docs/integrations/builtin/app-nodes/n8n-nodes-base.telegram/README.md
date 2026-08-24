@@ -87,7 +87,7 @@ Refer to [Telegram credentials](../../credentials/telegram.md) for guidance on s
 
 Refer to [Telegram's API documentation](https://core.telegram.org/bots/api) for more information about the service.
 
-n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.telegramtrigger/) for more information.
+n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md) for more information.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

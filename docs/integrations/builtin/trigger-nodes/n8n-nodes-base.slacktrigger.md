@@ -71,7 +71,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack.md).
+n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 
@@ -87,7 +87,13 @@ The node requires scopes for the [conversations.list](https://api.slack.com/meth
 
 ## Verify the webhook <a href="#verify-the-webhook" id="verify-the-webhook"></a>
 
-From version `1.106.0`, you can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](../credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
+{% hint style="info" %}
+**Feature availability**
+
+Verifying that incoming webhook requests come from Slack, using a Slack Signing Secret, is available from n8n 1.106.0.
+{% endhint %}
+
+You can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](../credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
@@ -97,22 +103,22 @@ Here are some common errors and issues with the Slack Trigger node and steps to 
 
 Slack only allows you to register a single webhook per app. This means that you can't switch from using the testing URL to the production URL (and vice versa) without reconfiguring the registered webhook URL. 
 
-You may have trouble with this if you try to test a workflow that's also active in production. Slack will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+You may have trouble with this if you try to test a workflow that's also published. Slack will only send events to one of the two webhook URLs, so the other will never receive event notifications.
 
 To work around this, you can disable your workflow when testing:
 
 {% hint style="warning" %}
 **Halts production traffic**
 
-This temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+This temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's unpublished.
 {% endhint %}
 
 1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
+2. From the workflow settings dropdown, click **Unpublish** to disable the workflow temporarily.
 3. Edit the **Request URL** in your the [Slack Trigger configuration](../credentials/slack.md#slack-trigger-configuration) to use the testing webhook URL instead of the production webhook URL.
 4. Test your workflow using the test webhook URL.
 5. When you finish testing, edit the **Request URL** in your the [Slack Trigger configuration](../credentials/slack.md#slack-trigger-configuration) to use the production webhook URL instead of the testing webhook URL.
-6. Toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+6. Click **Publish** to enable the workflow again. The production webhook URL should resume working.
 
 ### Token expired <a href="#token-expired" id="token-expired"></a>
 

@@ -35,8 +35,8 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-* [Telegram](../app-nodes/n8n-nodes-base.telegram/)
-* [Telegram Trigger](../trigger-nodes/n8n-nodes-base.telegramtrigger/)
+* [Telegram](../app-nodes/n8n-nodes-base.telegram/README.md)
+* [Telegram Trigger](../trigger-nodes/n8n-nodes-base.telegramtrigger/README.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

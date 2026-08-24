@@ -105,7 +105,7 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 
 #### Add tools
 
-In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools via [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/mcp-servers).
+In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/mcp-servers).
 
 The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](build-and-manage-agents.md#approve-tool-calls).
 

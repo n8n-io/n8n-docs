@@ -32,7 +32,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
 | `DB_PING_INTERVAL_SECONDS` | Number | `2` | How often, in seconds, n8n pings the database to check that the connection is still alive. |
-| `DB_PING_TIMEOUT_MS` | Number | `5000` | How long, in milliseconds, n8n waits for a single ping to respond before counting it as a failure. Falls back to the deprecated `N8N_DB_PING_TIMEOUT` if that's set. |
+| `DB_PING_TIMEOUT_MS` | Number | `5000` | How long, in milliseconds, n8n waits for a single ping to respond before counting it as a failure. Falls back to `N8N_DB_PING_TIMEOUT`, deprecated from n8n 2.35.0, if that's set. |
 | `DB_PING_MAX_FAILURES_BEFORE_RECOVERY` | Number | `3` | How many pings in a row must fail before n8n treats the connection as lost and starts recovery. |
 | `DB_RECOVERY_BACKOFF_MIN_MS` | Number | `1000` | How long, in milliseconds, n8n waits before its first recovery attempt. Each retry waits longer (exponential backoff). |
 | `DB_RECOVERY_BACKOFF_MAX_MS` | Number | `30000` | The longest, in milliseconds, n8n waits between recovery attempts. This caps the backoff. Must be greater than or equal to `DB_RECOVERY_BACKOFF_MIN_MS`. |

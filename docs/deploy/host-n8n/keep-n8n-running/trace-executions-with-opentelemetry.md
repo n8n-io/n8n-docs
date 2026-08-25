@@ -150,9 +150,9 @@ Agent tracing is available from n8n 2.33.0.
 n8n can also emit detailed spans for agent runs built with the Agents feature, using the same tracer as workflow tracing. This covers agent runs started from a workflow, from chat integrations, and from scheduled tasks.
 
 {% hint style="warning" %}
-Legacy AI Agent node
+**Legacy AI Agent node**
 
-This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard node.execute span like any other node. It doesn't emit the gen_ai.* agent-run or tool-call spans described below.
+This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard `node.execute` span like any other node. It doesn't emit the `gen_ai.*` agent-run or tool-call spans.
 {% endhint %}
 
 Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:

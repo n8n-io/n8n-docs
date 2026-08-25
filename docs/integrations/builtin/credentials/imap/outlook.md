@@ -17,10 +17,10 @@ layout:
 ---
 
 {% hint style="warning" %}
-**Microsoft has removed Basic Auth for Outlook.com IMAP**
+**Feature availability**
 
 Microsoft deprecated Basic Authentication for IMAP in Exchange Online and
-Outlook.com. As a result, the IMAP node **cannot connect to Outlook.com or
+Outlook.com from October 1, 2022. As a result, the IMAP node **can't connect to Outlook.com or
 Microsoft 365 accounts**. App passwords are not a workaround for this
 restriction.
 
@@ -34,7 +34,7 @@ for more information.
 
 # Outlook.com IMAP credentials <a href="#outlookcom-imap-credentials" id="outlookcom-imap-credentials"></a>
 
-IMAP access for Outlook.com and Microsoft 365 accounts is no longer supported in n8n due to Microsoft's deprecation of Basic Authentication. You cannot use IMAP (with a regular password or app password) to connect to Outlook.com or Microsoft 365 accounts.
+IMAP access for Outlook.com and Microsoft 365 accounts is no longer supported in n8n due to Microsoft's deprecation of Basic Authentication for Exchange Online and Outlook.com from October 1, 2022. You can't use IMAP (with a regular password or app password) to connect to Outlook.com or Microsoft 365 accounts.
 
 To replace IMAP triggers for incoming email, use the [Microsoft Outlook Trigger node](../../trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md), which supports the Message Received event.
 

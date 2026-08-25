@@ -95,7 +95,7 @@ Select the installation method that best fits your technical requirements and in
 	
 	**Requirements:** Node.js installed on your system.
 	
-	**Note:** This installation method is being deprecated in n8n 3.0. Consider using Docker Compose or one-line setup instead.
+	**Note:** npm installation is deprecated from n8n 3.0. Consider using Docker Compose or one-line setup instead.
 	
 	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 

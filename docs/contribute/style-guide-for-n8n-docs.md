@@ -653,6 +653,18 @@ Always write descriptive alt text. It supports accessibility and is displayed if
 * Keep file sizes reasonable — compress PNGs before committing. [Squoosh](https://squoosh.app/) is a free browser tool.
 * Use lowercase, hyphenated file names: `workflow-overview.png`, not `WorkflowOverview.PNG`.
 
+**Inline icons**
+
+When a UI element is only shown as an icon (for example, a menu with no visible text label), embed it inline with an HTML `<img>` tag and `data-size="line"`, so it renders at text height instead of as a block image:
+
+```
+select **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line">
+```
+
+* Bold the term; don't bold the `<img>` tag.
+* Set alt text to `"<Name> icon"`, matching the bolded term.
+* See [Terminology and naming](terminology.md) for which icon file maps to which named element.
+
 ### Videos
 
 Don't store video files in the n8n-docs repository. Host videos externally — for example on YouTube, Loom or another [supported domain](https://iframely.com/domains) — and embed them in the page.

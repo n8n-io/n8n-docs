@@ -23,7 +23,12 @@ Use the Microsoft SharePoint node to automate work in Microsoft SharePoint and i
 
 On this page, you'll find a list of operations the Microsoft SharePoint node supports, guidance on signing in and choosing a site, what changed in version 2 of the node, and links to more resources.
 
-From n8n 2.35.0, adding the Microsoft SharePoint node to a workflow creates version 2 of the node, which uses the Microsoft Graph API. Workflows built with version 1 stay on version 1 and keep working unchanged, with the credential they already use. Refer to [What changed from version 1](#what-changed-from-version-1).
+{% hint style="info" %}
+**Feature availability**
+
+From n8n 2.35.0, adding the Microsoft SharePoint node to a workflow creates version 2 of the node, which uses the Microsoft Graph API. Workflows built with version 1 stay on version 1 and keep working unchanged, with the credential they already use. Refer to [What changed from version 1](#what-changed-from-version-1)
+
+{% endhint %}
 
 {% hint style="info" %}
 **Credentials**

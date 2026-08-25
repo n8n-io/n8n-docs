@@ -44,7 +44,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `60000` | How long (in ms) is the lease period for a worker to work on a message. |
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `10000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
-| `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in 2.0. Setting this has no effect. See the v2 breaking changes page. Maximum amount of times a stalled job will be re-processed. |
+| `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in n8n 2.0. Setting this has no effect. See [Remove QUEUE_WORKER_MAX_STALLED_COUNT](../../../../../changelog/v20-breaking-changes.md#remove-queueworkermaxstalledcount) for migration details. |
 
 ## Webhook responses
 

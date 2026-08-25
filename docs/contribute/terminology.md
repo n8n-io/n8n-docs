@@ -50,18 +50,28 @@ n8n Docs aims to use the same term for the same concept on every page, and to pr
 | --- | --- |
 | credential (stores authentication details for a service) | connection (as a synonym for a credential) |
 | connection (a link between two nodes on the canvas) | wire, link |
-| External secrets (the feature) | external secret stores, secret store |
-| secrets vault (an individual external store; plural: secrets vaults) | secret vault, vault (bare) |
 
 n8n's own interface sometimes labels a credential's authentication link as a "connection" (for example, a private credential's sharing message). In docs, keep the two separate: a **credential** authenticates with a service; a **connection** joins nodes on the canvas.
 
 ## Canvas and editor
+
+Two casing rules for editor UI-chrome terms: **bold** a term only when it's the direct target of a select/click/open instruction, not when it's just naming a location. **Capitalize** only the head word of a defined element's name (for example "Workflow menu", never "Workflow Menu") — generic area terms stay lowercase everywhere, bold or not.
 
 | Do use | Don't use |
 | --- | --- |
 | canvas | editor board, diagram, workspace, graph |
 | sticky note | comment, annotation, label, memo |
 | sub-workflow | subworkflow, sub workflow, subflow, child workflow, nested workflow |
+| left menu (app-wide left nav: Overview, Projects, Favorites, Settings, etc.) | sidebar, left sidebar, navigation menu, main menu |
+| canvas header (top bar of the canvas: project/workflow name, Workflow menu, editor/executions/evaluations toggle, Publish) | top navigation bar, top menu |
+| Workflow menu (horizontal ⋯ icon) | three dots icon, the three dots, Options (reserved for the vertical icon) |
+| Options menu (vertical ⋮ icon; a per-row/per-item menu, not a canvas element) | three-dot menu (ambiguous orientation), three dots menu |
+| Nodes panel (opens from the canvas's **+** button) | Node Panel (capitalized singular), add node menu, "What happens next?" panel |
+| Node details view; NDV after first use (opens by double-clicking a node) | node editor view, NDV (without defining it first) |
+| input panel; output panel (the NDV's side panes) | Input panel/Output panel (capitalized), INPUT/OUTPUT pane |
+| Logs panel (bottom of canvas — confirm against the live product whether it's ever opened by name before treating it as a defined element) | bottom panel (already used for the source control diff view), bottom menu, canvas footer |
+
+The Workflow menu icon is `three-dots-horizontal.png`; the Options menu icon is `three-dot-options-menu.png`. Don't swap them or reuse one to illustrate the other. See the [style guide](style-guide-for-n8n-docs.md#images) for how to format an inline icon.
 
 ## AI and agents
 
@@ -76,14 +86,6 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 | AI Assistant (chat-based agent: creates, edits, tests, and publishes workflows and agents) | assistant, the AI, chatbot |
 | AI Workflow Builder (generates and refines a single workflow from a prompt) | workflow builder, builder |
 | Ask n8n AI (legacy help assistant, no longer actively developed — point readers to AI Assistant) | AI assistant (as a synonym for this), help assistant |
-
-n8n also has three distinct, easily-confused "chat" things — name the specific one, not "the chat interface":
-
-| Do use | Don't use |
-| --- | --- |
-| Chat Hub (n8n's centralized chat product: access multiple AI models, chat with agents) | chat interface, the chat |
-| Chat Trigger node (starts a workflow from an incoming chat message) | chat node (as a synonym for this) |
-| Chat node (n8n's built-in chat interface, used as an approval/notification channel inside a workflow) | chat interface (as a synonym for this) |
 
 ## Feature maturity
 

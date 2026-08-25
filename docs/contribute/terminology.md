@@ -9,7 +9,7 @@ layout:
 
 This page is a companion to the [style guide](style-guide-for-n8n-docs.md): the style guide covers writing style, formatting, and structure, and this page is the source of truth for product terminology.
 
-n8n Docs aims to use the same term for the same concept on every page, and to prefer the official product term over a plausible synonym. Consistent terminology helps our readers, and  directly improves how AI tools (search, the docs assistant, and coding agents) find and use the docs.
+n8n Docs aims to use the same term for the same concept on every page, and to prefer the official product term over a plausible synonym. Consistent terminology helps our readers, and directly improves how AI tools (search, the docs assistant, and coding agents) find and use the docs.
 
 ## Casing
 
@@ -68,10 +68,10 @@ Two casing rules: **bold** a term only when it's the direct target of a select/c
 | Options menu (vertical ⋮ icon; a per-row/per-item menu, not a canvas element) | three-dot menu (ambiguous orientation), three dots menu |
 | Nodes panel (opens from the canvas's **+** button) | Node Panel (capitalized singular), add node menu, "What happens next?" panel |
 | Node details view (opens by double-clicking a node) | node editor view, NDV (without defining it first) |
-| input panel; output panel (the NDV's side panes) | Input panel/Output panel (capitalized), INPUT/OUTPUT pane |
+| input panel; output panel (the Node details view's side panes) | Input panel/Output panel (capitalized), INPUT/OUTPUT pane |
 | Logs panel (bottom of canvas) | bottom panel, bottom menu, canvas footer |
 
-The Workflow menu icon is `three-dots-horizontal.png`; the Options menu icon is `three-dot-options-menu.png`. Use these inline when referring to these menus.  See the [style guide](style-guide-for-n8n-docs.md#images) for how to format an inline icon.
++The Workflow menu icon is `three-dots-horizontal.png`; the Options menu icon is `three-dot-options-menu.png`. Use these inline when referring to these menus. See the [style guide](style-guide-for-n8n-docs.md#images) for how to format an inline icon.
 
 ## AI and agents
 
@@ -85,7 +85,7 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 | --- | --- |
 | AI Assistant (chat-based agent: creates, edits, tests, and publishes workflows and agents) | assistant, the AI, chatbot |
 | AI Workflow Builder (legacy, generates and refines a single workflow from a prompt) | workflow builder, builder |
-| Ask n8n AI (legacy help assistant, no longer actively developed — point readers to AI Assistant) | AI assistant (as a synonym for this), help assistant |
+| Ask n8n AI (legacy help assistant, no longer actively developed, point readers to AI Assistant) | AI assistant (as a synonym for this), help assistant |
 
 ## Feature maturity
 

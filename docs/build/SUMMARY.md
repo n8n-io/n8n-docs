@@ -19,6 +19,7 @@
   * [Create and run workflows](understand-workflows/create-and-run-workflows.md)
   * [Save and publish workflows](understand-workflows/save-and-publish-workflows.md)
   * [Create and edit credentials](understand-workflows/create-and-edit-credentials.md)
+  * [Use Gateway credits](understand-workflows/use-gateway-credits.md)
 * [Build and manage agents](build-and-manage-agents.md)
 * [Ways of building workflows](ways-of-building-workflows/README.md)
   * [Use AI Assistant](ways-of-building-workflows/ai-assistant.md)

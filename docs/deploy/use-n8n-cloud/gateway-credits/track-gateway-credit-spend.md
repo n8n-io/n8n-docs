@@ -44,11 +44,11 @@ n8n emails the instance owner about balance changes:
 When your balance reaches zero, nodes using Gateway credits fail until you add credit. Executions that don't use Gateway credits keep running as normal.
 
 - On a paid plan, [top up your balance](top-up-gateway-credits.md) or set up automatic top-ups to avoid interruptions.
-- On a free trial, upgrade to a paid plan to keep using Gateway credits.
+- On a free trial, top-ups aren't available: upgrade to a paid plan to add more credit.
 - On any plan, you can switch the affected nodes to your own credentials. Refer to [Use Gateway credits](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/use-gateway-credits) for how to switch.
 
 ## Related resources
 
-- [Gateway credits](./): how Gateway credits work.
+- [Gateway credits](README.md): how Gateway credits work.
 - [Top up Gateway credits](top-up-gateway-credits.md): add credit manually or automatically.
 - [Service pricing page](https://app.n8n.cloud/service-pricing): current rates for all supported services and models.

@@ -19,7 +19,7 @@ layout:
 # Anthropic credentials <a href="#anthropic-credentials" id="anthropic-credentials"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can skip setting up Anthropic credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
+On n8n Cloud, you can skip setting up Anthropic credentials by selecting **Use n8n credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
 {% endhint %}
 
 You can use these credentials to authenticate the following nodes:

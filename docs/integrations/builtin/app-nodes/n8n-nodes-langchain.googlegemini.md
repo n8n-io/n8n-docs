@@ -20,7 +20,7 @@ layout:
 # Google Gemini node <a href="#google-gemini-node" id="google-gemini-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Google Gemini node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use Gateway credits** in the node's credential field to run the node without a Google account.
+On n8n Cloud, you can use the Google Gemini node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use n8n credits** in the node's credential field to run the node without a Google account.
 {% endhint %}
 
 Use the Google Gemini node to automate work in Google Gemini and integrate Google Gemini with other applications. n8n has built-in support for a wide range of Google Gemini features, including working with audio, videos, images, documents, and files to analyze, generate, and transcribe.

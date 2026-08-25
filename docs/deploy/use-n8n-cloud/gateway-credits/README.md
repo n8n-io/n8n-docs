@@ -23,7 +23,7 @@ They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credit
 
 ## How Gateway credits work
 
-When you select **Use Gateway credits** on a supported node, n8n routes the node's requests through an n8n-managed gateway to the service provider. The gateway authenticates with the provider on n8n's behalf, so you don't need a provider account. n8n deducts the cost of each request from your credit balance.
+When you select **Use n8n credits** on a supported node (the editor's label for Gateway credits), n8n routes the node's requests through an n8n-managed gateway to the service provider. The gateway authenticates with the provider on n8n's behalf, so you don't need a provider account. n8n deducts the cost of each request from your credit balance.
 
 n8n bills usage per request at the rates listed on the [service pricing page](https://app.n8n.cloud/service-pricing). Rates vary by model and service, and change as providers update their pricing, so the service pricing page is always the source of truth for current rates.
 
@@ -36,7 +36,7 @@ Gateway credits cover two categories of service:
 - **AI models**: large language model providers such as OpenAI, Anthropic, and Google Gemini.
 - **Tool services**: services for tasks like web search, web scraping, browser automation, and document parsing, such as Brave Search and Firecrawl.
 
-The catalogue grows over time, and individual models or operations can change without an n8n release. For the current list of supported services and models, check the [service pricing page](https://app.n8n.cloud/service-pricing). In the editor, the **Included in n8n** section of the nodes panel shows the nodes you can use with Gateway credits.
+The catalogue grows over time. For the current list of supported services and models, check the [service pricing page](https://app.n8n.cloud/service-pricing). In the editor, the **Included in n8n** section of the nodes panel shows the nodes you can use with Gateway credits.
 
 Services that aren't in the catalogue still work in n8n the usual way: create a credential with your own API key. Refer to [Create and edit credentials](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-edit-credentials) for details.
 
@@ -44,13 +44,13 @@ Services that aren't in the catalogue still work in n8n the usual way: create a 
 
 Each Cloud instance has one credit balance, shared by everyone who uses Gateway credits on that instance. You can see the balance in the editor next to the Gateway credits option on a node, and on the **Gateway credits** page in the [Cloud admin dashboard](../use-the-admin-dashboard.md), which also shows your spend over time. Refer to [Track Gateway credit spend](track-gateway-credit-spend.md) for details.
 
-New Cloud users receive a small amount of free credit at sign-up, so you can try supported services before you buy credits.
+New Cloud users receive a small amount of free credit at sign-up, so you can try supported services before you buy credits. Free trials include Gateway credits too: you can use them from your first workflow.
 
-When your balance reaches zero, nodes using Gateway credits stop working until you add credit. Nodes using your own credentials aren't affected. On a paid plan, you can [top up your balance](top-up-gateway-credits.md) manually or automatically. During a free trial, you can't top up: upgrade to a paid plan to keep using Gateway credits.
+When your balance reaches zero, nodes using Gateway credits stop working until you add credit. Nodes using your own credentials aren't affected. On a paid plan, you can [top up your balance](top-up-gateway-credits.md) manually or automatically. Topping up isn't available during a free trial, so if you use up your free credit while trialing, upgrade to a paid plan to add more.
 
 ### Credit expiry and forfeiture
 
-- n8n uses free credits before top-up credits.
+- n8n uses free credits before top-up credits, and uses the credits that expire soonest first.
 - Top-up credits expire 12 months after purchase.
 - Credits aren't cash and you can't transfer them to another account.
 - Top-ups are final. n8n doesn't refund unused credits except where required by law.

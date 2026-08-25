@@ -3143,7 +3143,7 @@ As of this release, **Tools Agent** is the only agent type available when adding
 * ReAct Agent
 * SQL Agent
 
-Existing workflows that use these agent types continue to run for now, but the underlying code will be removed in n8n 3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
+Existing workflows that use these agent types continue to run for now, but the underlying code will be removed from n8n 3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
 
 <br>
 

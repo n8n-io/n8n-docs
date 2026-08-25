@@ -578,6 +578,8 @@ For example, to link from a page in the `administer` space to `docs/deploy/host-
 [link to a page](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
 ```
 
+Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.
+
 Each top-level folder under `docs/` is a separate space:
 
 | Space folder | Space ID |

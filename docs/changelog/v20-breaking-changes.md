@@ -142,7 +142,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support <a href="#drop-mysqlmariadb-support" id="drop-mysqlmariadb-support"></a>
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in n8n 1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated from n8n 1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to n8n 2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
@@ -178,7 +178,7 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 ### Remove `n8n --tunnel` option <a href="#remove-n8n-tunnel-option" id="remove-n8n-tunnel-option"></a>
 
-The `n8n --tunnel` command-line option will be removed in n8n 2.0.
+The `n8n --tunnel` command-line option will be removed from n8n 2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 

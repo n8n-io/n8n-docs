@@ -55,23 +55,23 @@ n8n's own interface sometimes labels a credential's authentication link as a "co
 
 ## Canvas and editor
 
-Two casing rules for editor UI-chrome terms: **bold** a term only when it's the direct target of a select/click/open instruction, not when it's just naming a location. **Capitalize** only the head word of a defined element's name (for example "Workflow menu", never "Workflow Menu") — generic area terms stay lowercase everywhere, bold or not.
+Two casing rules: **bold** a term only when it's the direct target of a select/click/open instruction, not when it's just naming a location. **Capitalize** only the head word of a defined element's name (for example "Workflow menu", never "Workflow Menu").
 
 | Do use | Don't use |
 | --- | --- |
 | canvas | editor board, diagram, workspace, graph |
 | sticky note | comment, annotation, label, memo |
 | sub-workflow | subworkflow, sub workflow, subflow, child workflow, nested workflow |
-| left menu (app-wide left nav: Overview, Projects, Favorites, Settings, etc.) | sidebar, left sidebar, navigation menu, main menu |
-| canvas header (top bar of the canvas: project/workflow name, Workflow menu, editor/executions/evaluations toggle, Publish) | top navigation bar, top menu |
-| Workflow menu (horizontal ⋯ icon) | three dots icon, the three dots, Options (reserved for the vertical icon) |
+| left menu (app-wide left nav containing Overview, Projects, Favorites, etc.) | sidebar, left sidebar, navigation menu, main menu |
+| Canvas header (top bar of the canvas, containing project/workflow name, Workflow menu, editor/executions/evaluations toggle, Publish) | top navigation bar, top menu |
+| Workflow menu (horizontal ⋯ icon) situated in the Canvas header| three dots icon, the three dots, Options (reserved for the vertical icon) |
 | Options menu (vertical ⋮ icon; a per-row/per-item menu, not a canvas element) | three-dot menu (ambiguous orientation), three dots menu |
 | Nodes panel (opens from the canvas's **+** button) | Node Panel (capitalized singular), add node menu, "What happens next?" panel |
-| Node details view; NDV after first use (opens by double-clicking a node) | node editor view, NDV (without defining it first) |
+| Node details view (opens by double-clicking a node) | node editor view, NDV (without defining it first) |
 | input panel; output panel (the NDV's side panes) | Input panel/Output panel (capitalized), INPUT/OUTPUT pane |
-| Logs panel (bottom of canvas — confirm against the live product whether it's ever opened by name before treating it as a defined element) | bottom panel (already used for the source control diff view), bottom menu, canvas footer |
+| Logs panel (bottom of canvas) | bottom panel, bottom menu, canvas footer |
 
-The Workflow menu icon is `three-dots-horizontal.png`; the Options menu icon is `three-dot-options-menu.png`. Don't swap them or reuse one to illustrate the other. See the [style guide](style-guide-for-n8n-docs.md#images) for how to format an inline icon.
+The Workflow menu icon is `three-dots-horizontal.png`; the Options menu icon is `three-dot-options-menu.png`. Use these inline when referring to these menus.  See the [style guide](style-guide-for-n8n-docs.md#images) for how to format an inline icon.
 
 ## AI and agents
 
@@ -84,7 +84,7 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 | Do use | Don't use |
 | --- | --- |
 | AI Assistant (chat-based agent: creates, edits, tests, and publishes workflows and agents) | assistant, the AI, chatbot |
-| AI Workflow Builder (generates and refines a single workflow from a prompt) | workflow builder, builder |
+| AI Workflow Builder (legacy, generates and refines a single workflow from a prompt) | workflow builder, builder |
 | Ask n8n AI (legacy help assistant, no longer actively developed — point readers to AI Assistant) | AI assistant (as a synonym for this), help assistant |
 
 ## Feature maturity
@@ -98,7 +98,7 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 | Do use | Don't use |
 | --- | --- |
 | self-hosted | self hosted, on-premise, on-premises, on-prem |
-| n8n Cloud (never bare "Cloud" — it's ambiguous) | Cloud, hosted version, SaaS, the cloud, managed n8n |
+| n8n Cloud | Cloud, hosted version, SaaS, the cloud, managed n8n |
 | instance (a running n8n system) | server, box, deployment (as a noun for the running system) |
 | Enterprise (plan) | enterprise edition, premium, paid tier |
 
@@ -112,12 +112,6 @@ Use these exact, capitalized plan names, low to high. Don't invent alternate nam
 * **Self-hosted:** Community, Registered Community, Business, Enterprise
 
 To refer to every tier at once, write "All plans" or "All editions" rather than listing them.
-
-## Source control and environments
-
-**Source control** is n8n's own feature name for its Git-based workflow syncing; **version control** is the general term for what Git itself provides. Use "source control" to name the n8n feature, and reserve "version control" for describing Git as a concept (for example, "Git, a version control system"). Don't use them interchangeably as two names for the same n8n feature.
-
-The in-app setting for this feature is labeled **Settings > Environments**. When referencing the UI path, say so explicitly (for example, "go to **Settings > Environments**") rather than inventing a separate "Environments settings" feature — it's the same source control feature, not a different one.
 
 ## Features
 

@@ -16,7 +16,9 @@ Splitting uses the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/c
 
 Compare these workflows:
 
-!["Diagram representing two workflows. One has three steps and follows a linear process, with a user submitting a bug, and the workflow emailing a support team. The second workflow starts the same way, but then splits depending on whether the user marked the issue as urgent. It then splits again depending on the user's support plan"](../.gitbook/assets/single-multi-branch-workflow.png)
+![Diagram comparing a linear bug-report workflow with one that branches by urgency and support plan](../.gitbook/assets/single-multi-branch-workflow.png)
+
+The first workflow is linear: a user submits a bug and the workflow emails support. The second workflow starts the same way but splits depending on whether the user marked the issue urgent, then splits again by the user's support plan.
 
 This is the power of splitting and conditional nodes in n8n.
 

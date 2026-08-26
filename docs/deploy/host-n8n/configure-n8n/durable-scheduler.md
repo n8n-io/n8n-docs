@@ -44,7 +44,7 @@ Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
 {% endhint %}
 
-Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows.
+Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows. For how polls behave under the durable scheduler, and for the [durable poll cursors](#durable-poll-cursors) that n8n recommends turning on together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, see [Poll triggers](#poll-triggers).
 
 To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
 
@@ -102,6 +102,33 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.
 {% endhint %}
 
+## Poll triggers
+
+When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Three behaviors are specific to poll triggers:
+
+- **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
+- **A poll can occasionally run twice.** The scheduler guarantees each dispatched poll runs at least once, not that it runs only once. A poll can repeat, for example when an instance stalls and another takes over. Turn on [durable poll cursors](#durable-poll-cursors) so a repeated poll can't drop or duplicate items.
+- **A poll that runs too long is abandoned.** From n8n 2.37.0, a poll that runs longer than [`N8N_SCHEDULER_POLL_TIMEOUT`](basic-configuration/use-environment-variables/scheduler.md#poll-triggers) (45 seconds by default) is abandoned. n8n stops waiting for it and records nothing: the cursor stays put, so the next poll covers the same ground and no data goes missing. This guards against a poll stuck on a service that never answers. A poll that keeps timing out counts as failing. n8n re-polls it at a widening interval instead of hammering a service that can't keep up. Keep the timeout below `N8N_SCHEDULER_LEASE_DURATION`, so an abandoned poll can't still be running when another instance takes its run over. n8n warns at startup when the timeout reaches the lease duration.
+
+### Durable poll cursors
+
+Each poll trigger node keeps a cursor: its record of how far it has already read, so each poll only fetches what's new. By default, n8n stores the cursor in the workflow's static data and saves it separately from the execution the poll produced. If the instance crashes between the two saves, or two instances poll the same node at once, the cursor and the execution fall out of step, and the workflow either skips items or processes them twice.
+
+From n8n 2.36.0, set `N8N_POLLER_DURABLE_CURSORS_ENABLED` to `true` to prevent this. n8n then keeps each node's cursor in its own database table and saves it together with the execution, so a poll round either fully happened or didn't happen at all. n8n recommends turning it on whenever poll triggers run on the durable scheduler.
+
+From n8n 2.37.0, the setting only takes effect when `N8N_SCHEDULER_ENABLED`, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` are all on. If any of them is off, n8n logs a warning at startup and cursors stay in workflow static data.
+
+What to expect when you turn it on:
+
+- **The switch is safe.** The node's next poll carries its current cursor over to the new table, so nothing is fetched twice or skipped.
+- **n8n checks your workflows first (n8n 2.36 only).** At startup, n8n scans every active workflow's published version for duplicate or missing trigger node ids. If it finds any, or can't scan a workflow, it turns off durable poll cursors, keeps poll triggers on the in-memory scheduler for the whole instance, and logs an error naming the affected workflows and how to fix them.
+- **Turning it back off doesn't undo it.** Cursors stay in their table; they just stop saving together with the execution.
+- **You can watch cursor saves.** Turn on the [poll trigger metrics](#poll-trigger-metrics) with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`.
+
+{% hint style="warning" %}
+Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. Running poll triggers on the durable scheduler while cursors still live in workflow static data risks dropped or duplicated items.
+{% endhint %}
+
 ## Observability
 
 The durable scheduler exposes Prometheus metrics on the `/metrics` endpoint, so you can tell whether runs start on time, whether they succeed, and whether the queue is draining. Turn them on with two environment variables:
@@ -138,6 +165,7 @@ Counters and the histogram record each main's own work, so sum them across your 
 | `n8n_scheduler_tasks_completed_total` | Counter | How many runs reached a final outcome, split by a `result` label of `success` or `failure`. A rising failure share points at the workflow or the database, not at the scheduler. |
 | `n8n_scheduler_task_retries_total` | Counter | How many failed runs the scheduler queued for another attempt. |
 | `n8n_scheduler_tasks_reclaimed_total` | Counter | How many runs the reaper took back from an instance that claimed one and stopped. A rising count means instances are crashing or losing their claim mid-run. |
+| `n8n_scheduler_tasks_lease_lost_total` | Counter | How many runs finished after another instance had already reclaimed their claim, so the same run may have executed twice. Split by `task_type`. For poll triggers this is the cross-instance overlap signal, and [durable poll cursors](#durable-poll-cursors) keep the cursor correct when it happens. |
 | `n8n_scheduler_tasks_dead_lettered_total` | Counter | How many runs n8n gave up on after `N8N_SCHEDULER_MAX_ATTEMPTS` attempts. Every one is a run that never happened, so treat any increase as an alert. |
 | `n8n_scheduler_dispatch_lag_seconds` | Histogram | How long each run waited between falling due and starting. Watch the high percentiles: a p99 pulling away from the p50 means a subset of runs stalls rather than the whole queue slowing down. |
 
@@ -153,5 +181,27 @@ These counters cover the [four stages](#how-it-works) that keep the queue moving
 | `n8n_scheduler_occurrences_retired_total` | Counter | How many recorded runs the scheduler dropped because a catch-up run superseded them. |
 | `n8n_scheduler_occurrences_missed_total` | Counter | How many recorded runs went past their deadline unclaimed and the reaper marked missed. |
 | `n8n_scheduler_tasks_pruned_total` | Counter | How many finished runs retention deleted. If it never rises, the scheduler tables keep growing. |
+
+### Poll trigger metrics
+
+Poll triggers have their own metric set behind a separate switch, `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`, independent of the scheduler metrics above:
+
+```bash
+export N8N_METRICS=true
+export N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS=true
+```
+
+Only main instances emit them. They come from the poll engine itself, not the scheduler, so they work even when the durable scheduler doesn't dispatch your polls. Like the scheduler counters, they record each main's own polls: sum across mains for cluster totals. n8n publishes a [ready-made poll triggers dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-poll-triggers) for them.
+
+| Metric | Type | What it tells you |
+| :----- | :--- | :---------------- |
+| `n8n_poll_trigger_duration_seconds` | Histogram | How long each poll takes, split by `node_type` and `status`. A poll that grows slower over time is drifting toward its own interval. Once the duration crosses that interval, polls start overlapping. |
+| `n8n_poll_trigger_errors_total` | Counter | How many polls threw, split by `node_type` and a `kind` label of `auth`, `rate_limited`, or `thrown`. `auth` points at a broken credential, `rate_limited` at polling faster than the service allows. |
+| `n8n_poll_trigger_overlapping_ticks_total` | Counter | How many polls started while the previous poll for the same node was still running in the same process. Overlap across instances shows up in `n8n_scheduler_tasks_lease_lost_total` instead. |
+| `n8n_poll_trigger_timeouts_total` | Counter | How many polls the durable scheduler abandoned because they ran longer than `N8N_SCHEDULER_POLL_TIMEOUT`, split by `node_type`. An abandoned poll records nothing, and the next poll covers the same window. Steady growth means a polled service answers slower than the timeout. Only the durable scheduler abandons polls, so this stays at zero on the in-memory scheduler. Available from n8n 2.37.0. |
+| `n8n_poll_trigger_cursor_commits_total` | Counter | How many cursor saves settled, split by `operation` (`with_execution` or `cursor_only`) and `result`. A `result` of `fence_rejected` means a stale poll lost its claim and wasn't allowed to advance the cursor, which is the protection doing its job. A `result` of `failure` means the save itself failed. |
+| `n8n_poll_trigger_cursor_commit_duration_seconds` | Histogram | How long each cursor save takes, with the same `operation` and `result` labels. |
+
+The two cursor metrics track the dedicated cursor table. A node starts reporting them with its first poll after you turn on [durable poll cursors](#durable-poll-cursors). It keeps reporting them after you turn the setting off, because its cursor stays in the table.
 
 All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.

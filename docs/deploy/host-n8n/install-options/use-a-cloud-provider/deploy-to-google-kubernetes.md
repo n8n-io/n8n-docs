@@ -136,6 +136,14 @@ Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configu
 
 The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
 
+{% hint style="warning" %}
+The manifests run PostgreSQL 18. Setting up for the first time needs nothing extra.
+
+If you already have a database running an older PostgreSQL major version, don't apply this to it. PostgreSQL 18 can't open a data directory written by an older major version, and moving the folder doesn't help. The pod stays in `CrashLoopBackOff` with `database files are incompatible with server`. PostgreSQL leaves your data alone, and you can pin the image back to the version you were on.
+
+To move an existing database across, follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html) first.
+{% endhint %}
+
 The manifests define the following:
 
 - Send the environment variables defined to each application pod

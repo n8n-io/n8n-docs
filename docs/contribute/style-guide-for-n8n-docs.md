@@ -578,6 +578,8 @@ For example, to link from a page in the `administer` space to `docs/deploy/host-
 [link to a page](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management)
 ```
 
+Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.
+
 Each top-level folder under `docs/` is a separate space:
 
 | Space folder | Space ID |
@@ -650,6 +652,18 @@ Always write descriptive alt text. It supports accessibility and is displayed if
 * Use SVG for icons and simple illustrations where available.
 * Keep file sizes reasonable — compress PNGs before committing. [Squoosh](https://squoosh.app/) is a free browser tool.
 * Use lowercase, hyphenated file names: `workflow-overview.png`, not `WorkflowOverview.PNG`.
+
+**Inline icons**
+
+When a UI element is only shown as an icon (for example, a menu with no visible text label), embed it inline with an HTML `<img>` tag and `data-size="line"`, so it renders at text height instead of as a block image:
+
+```
+select **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal.png" alt="Workflow menu icon" data-size="line">
+```
+
+* Bold the term; don't bold the `<img>` tag.
+* Set alt text to `"<Name> icon"`, matching the bolded term.
+* See [Terminology and naming](terminology.md) for which icon file maps to which named element.
 
 ### Videos
 

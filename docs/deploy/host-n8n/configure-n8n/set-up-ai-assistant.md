@@ -184,7 +184,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    ```yaml
    services:
      n8n:
-       image: docker.io/n8nio/n8n
+       image: n8nio/n8n
        environment:
          N8N_ENABLED_MODULES: instance-ai
          N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8

@@ -140,7 +140,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   n8n:
-    image: docker.n8n.io/n8nio/n8n
+    image: n8nio/n8n
     restart: always
     ports:
       - "127.0.0.1:5678:5678"

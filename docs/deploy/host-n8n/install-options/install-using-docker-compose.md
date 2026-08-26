@@ -143,7 +143,7 @@ services:
     # Internal-only: n8n reaches it by service name. Never publish its port.
 
   n8n:
-    image: docker.io/n8nio/n8n
+    image: n8nio/n8n
     depends_on:
       sandbox-api:
         condition: service_healthy

@@ -39,7 +39,7 @@ docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
  -v ./pki:/opt/custom-certificates \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 ### Docker Compose <a href="#docker-compose" id="docker-compose"></a>
@@ -53,7 +53,7 @@ services:
         container_name: n8n
         ports:
             - 5678:5678
-        image: docker.n8n.io/n8nio/n8n
+        image: n8nio/n8n
 ```
 
 You should also give the right permissions to the imported certs. You can do this once the container is running (assuming n8n as the container name):

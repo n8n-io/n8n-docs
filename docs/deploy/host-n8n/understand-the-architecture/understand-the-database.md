@@ -61,7 +61,7 @@ Lists the [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/commu
 
 ### installed_packages <a href="#installedpackages" id="installedpackages"></a>
 
-Details of npm community nodes packages installed in your n8n instance. [installed_nodes](#installed_nodes) lists each individual node. `installed_packages` lists npm packages, which may contain more than one node.
+Details of npm community nodes packages installed in your n8n instance. [`installed_nodes`](#installednodes) lists each individual node. `installed_packages` lists npm packages, which may contain more than one node.
 
 ### migrations <a href="#migrations" id="migrations"></a>
 
@@ -98,7 +98,7 @@ Maps workflows to users.
 
 ### tag_entity <a href="#tagentity" id="tagentity"></a>
 
-All workflow tags created in the n8n instance. This table lists the tags. [workflows_tags](#workflows_tags) records which workflows have which tags.
+All workflow tags created in the n8n instance. This table lists the tags. [`workflows_tags`](#workflowstags) records which workflows have which tags.
 
 ### user <a href="#user" id="user"></a>
 
@@ -126,7 +126,7 @@ Counts workflow IDs and their status.
 
 ### workflows_tags <a href="#workflowstags" id="workflowstags"></a>
 
-Maps tags to workflows. [tag_entity](#tag_entity) contains tag details.
+Maps tags to workflows. [`tag_entity`](#tagentity) contains tag details.
 
 ## Entity Relationship Diagram (ERD) <a href="#entity-relationship-diagram-erd" id="entity-relationship-diagram-erd"></a>
 

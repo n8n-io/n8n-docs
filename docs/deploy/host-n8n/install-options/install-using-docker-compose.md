@@ -143,7 +143,7 @@ services:
     # Internal-only: n8n reaches it by service name. Never publish its port.
 
   n8n:
-    image: docker.io/n8nio/n8n
+    image: n8nio/n8n
     depends_on:
       sandbox-api:
         condition: service_healthy
@@ -240,12 +240,13 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
    services:
      postgres:
-       image: postgres:16
+       image: postgres:18
        restart: always
        environment:
          POSTGRES_USER: ${POSTGRES_USER}
          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
          POSTGRES_DB: ${POSTGRES_DB}
+         PGDATA: /var/lib/postgresql/data
        volumes:
          - db-storage:/var/lib/postgresql/data
        healthcheck:
@@ -254,6 +255,12 @@ SQLite is fine for trying things out, but for a production instance that must ha
          timeout: 5s
          retries: 10
    ```
+
+   {% hint style="warning" %} Postgres 18 changed where it stores data by default. Setting `PGDATA` keeps it in the same folder as earlier versions, so the volume mount stays the same. Don't remove that line: without it, Postgres 18 writes somewhere the volume doesn't cover and your database starts empty.
+   {% endhint %}
+
+   {% hint style="warning" %} Already running an older Postgres? Moving straight to 18 is a major version upgrade, and Postgres can't open a data directory written by an older major. Bumping the image tag on an existing setup fails with `database files are incompatible with server`. Your data stays intact. Back up first with `pg_dumpall`, then follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html).
+   {% endhint %}
 
 3. Point n8n at it by adding these to the n8n service's environment block, and making it wait on Postgres too:
 

@@ -70,7 +70,7 @@ Because the runner runs as the same user on the same host as n8n, code that esca
 
 ### External mode <a href="#external-mode" id="external-mode"></a>
 
-In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance.
+In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance. The launcher exposes a health-check endpoint that it uses to monitor the task runner processes.
 
 ![Task runner deployed as a side-car container](../../.gitbook/assets/task-runner-external-mode.png)
 

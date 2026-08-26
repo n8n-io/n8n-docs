@@ -56,6 +56,8 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 - **Tighter handling of risky resource names.**
 - **More secure credential behavior.**  
 - **Key rotation enabled by default.** 
+- **Lower Compression node decompression limits.** Default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
+  - **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

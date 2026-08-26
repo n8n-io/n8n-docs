@@ -188,12 +188,35 @@ You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-men
 2. Select the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![mcp\_bulk\_toggle.png](<.gitbook/assets/mcp_bulk_toggle (1).png>)
+![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](<.gitbook/assets/mcp_bulk_toggle (1).png>)
 
 {% hint style="info" %}
 **Note**
 
-This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). You will still need to toggle access for any workflows added in the future.
+This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). To expose workflows you create later without toggling each one, use [Auto-expose new workflows](#auto-exposing-new-workflows).
+{% endhint %}
+
+### Auto-exposing new workflows <a href="#auto-exposing-new-workflows" id="auto-exposing-new-workflows"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Auto-exposing new workflows is rolling out gradually from n8n 2.36.0. The setting may not be immediately visible on every instance.
+{% endhint %}
+
+Instead of enabling MCP access for each workflow individually, you can expose every newly created workflow automatically:
+
+1. Navigate to **Settings > Instance-level MCP**.
+2. Turn on **Auto-expose new workflows**.
+
+This setting is off by default. Turning it on only affects workflows created afterwards. Workflows that already exist keep their current setting, so use [Enabling access for individual workflows](#enabling-access-for-individual-workflows) or [Enabling access for projects/folders](#enabling-access-for-projectsfolders) to expose those.
+
+Only instance owners and admins can change this setting. It's read-only on instances where MCP access is managed through environment variables.
+
+{% hint style="info" %}
+**Note**
+
+Workflows still need to meet the [eligibility rules](#exposing-workflows-to-mcp-clients) to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>
@@ -220,7 +243,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
     2. Click the main workflow menu (`...`) in the top-right corner.
     3. Select **Edit description**.
 
-    ![mcp\_workflow\_description.png](<.gitbook/assets/mcp_workflow_description (1).png>)
+    ![Workflow's main menu open, with Edit description highlighted](<.gitbook/assets/mcp_workflow_description (1).png>)
 
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 

@@ -107,7 +107,7 @@ The embed login endpoint doesn't require `N8N_TOKEN_EXCHANGE_ENABLED`, and the t
 {% hint style="info" %}
 **File-based configuration**
 
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration#keeping-sensitive-data-in-separate-files) for more details.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](../configure-n8n/basic-configuration.md#keeping-sensitive-data-in-separate-files) for more details.
 {% endhint %}
 
 For example, for large or multi-line JSON, store the trusted keys in a file and set `N8N_TOKEN_EXCHANGE_TRUSTED_KEYS_FILE=/path/to/trusted-keys.json`.

@@ -26,10 +26,10 @@ Previously, when an execution (parent) called a sub-execution (child) that conta
 Entering the waiting state would happen for example if the sub-execution contains a Wait node with a timeout higher than 65 seconds or a webhook call or a form submission, or a human-in-the-loop node, like the slack node.
 
 Parent-Workflow:
-![Parent-Workflow](.gitbook/assets/parentworkflow1.png)
+![Parent workflow with a Manual Trigger connected to an Execute Workflow node](.gitbook/assets/parentworkflow1.png)
 
 Sub-Workflow:
-![Sub-Workflow](.gitbook/assets/subworkflow.png)
+![Sub-workflow triggered by Execute Workflow Trigger, running a Wait node followed by an Edit Fields node](.gitbook/assets/subworkflow.png)
 
 n8n 1.0: The parent-execution reproduces the sub-execution's input as its output.:
 ![n8n 1.0: Parent execution won't receive the result of the child execution](.gitbook/assets/before1.png)
@@ -142,7 +142,7 @@ By default, the Git node will now block bare repositories for security reasons. 
 
 ### Drop MySQL/MariaDB support <a href="#drop-mysqlmariadb-support" id="drop-mysqlmariadb-support"></a>
 
-n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated in n8n 1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
+n8n will no longer support MySQL and MariaDB as storage backends. This support was deprecated from n8n 1.0. For best compatibility and long-term support, use PostgreSQL. MySQL node will continue to be supported as before.
 
 **Migration path:** Before upgrading to n8n 2.0, use the database migration tool to move your data from MySQL or MariaDB to PostgreSQL or SQLite.
 
@@ -178,7 +178,7 @@ n8n loads environment configuration from a `.env` file using the `dotenv` librar
 
 ### Remove `n8n --tunnel` option <a href="#remove-n8n-tunnel-option" id="remove-n8n-tunnel-option"></a>
 
-The `n8n --tunnel` command-line option will be removed in n8n 2.0.
+The `n8n --tunnel` command-line option will be removed from n8n 2.0.
 
 **Migration path:** If you currently use the `--tunnel` option for development or testing, switch to an alternative tunneling solution such as ngrok, localtunnel, or Cloudflare Tunnel. Update your workflow and documentation to reflect this change.
 

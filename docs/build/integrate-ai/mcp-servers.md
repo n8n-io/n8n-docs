@@ -28,12 +28,13 @@ The list of registry servers changes often. Browse the current list in the node 
 
 If the server you want isn't in the registry yet, use the [MCP Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) node to connect to any MCP server manually with its connection URL and credentials.
 
-## Choose between a node, an agent tool, and an MCP server
+## How to choose between a built-in tool (node) and an MCP server as an agent tool
 
-| Option | When to use | Key characteristics |
-| ------ | ----------- | ------------------- |
-| Native node | You know the exact API call ahead of time | Deterministic step with the same result every time |
-| Agent tool | The agent should decide whether to call one fixed action | Single node connected to an AI Agent for one well-defined action |
-| MCP server | The agent needs access to a broader toolset from one connection | Agent picks whichever tool fits the request; requires more reasoning per call |
+Both give an agent access to a service. A built-in tool gives you tighter control, because you fix the operation and can pin parameters so the model only fills in the fields you leave open. An MCP server gives the agent more room, at the cost of control and more context per call.
 
-A single workflow can combine all three approaches.
+|  | Built-in tool (n8n integration) | MCP server |
+| --- | --- | --- |
+| **Use when** | You know which action the agent needs and want it tightly scoped | The agent needs a range of actions, or you don't know in advance which one |
+| **Scope** | One node operation, for example send a Slack message | Every tool the server exposes, from one single connection |
+| **You configure** | Any parameters you want fixed, e.g. which channel, message type or message text | The tools you want to allow or exclude |
+| **The agent supplies** | Only the fields you [leave open to the model](ai-examples/use-ai-for-parameters.md), you choose | Which tool call to make (out of the allowed tools) and all of its arguments |

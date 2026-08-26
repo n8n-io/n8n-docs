@@ -39,7 +39,7 @@ You can also use n8n in Docker with [Docker Compose](use-a-cloud-provider/use-do
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
 
-You can also follow along with the video guide below:
+You can also follow along with this video guide:
 
 {% embed url="https://www.youtube.com/embed/6ET3G7GiqZA?si=mwCKbtyLqNCRc2pa" %}
 
@@ -95,7 +95,7 @@ By default, n8n uses SQLite to save credentials[^1], past executions, and workfl
 {% hint style="info" %}
 **Persisting the `.n8n` directory still recommended**
 
-When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. The directory still contains other important data like encryption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](../configure-n8n/basic-configuration/use-environment-variables/deployment.md)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
+When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. However, the directory still contains other important data like encryption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](../configure-n8n/basic-configuration/use-environment-variables/deployment.md)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
 {% endhint %}
 
 To use n8n with PostgreSQL, execute the following commands, replacing the placeholders (depicted within angled brackets, for example `<POSTGRES_USER>`) with your actual values:

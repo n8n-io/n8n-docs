@@ -58,7 +58,7 @@ You can upgrade to a paid n8n account at any time. To upgrade:
 
 ## When your trial ends <a href="#trial-expiration" id="trial-expiration"></a>
 
-If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your data.
+If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your workspace.
 
 {% hint style="info" %}
 **Download your workflows**

@@ -1,5 +1,5 @@
 ---
-title: Basic configuration
+title: Configuration methods
 description: How to set environment variables for n8n.
 contentType: howto
 nodeTitle: Basic configuration
@@ -11,11 +11,11 @@ layout:
     visible: false
 ---
 
-# Basic configuration <a href="#configuration" id="configuration"></a>
-
-See [Configure n8n](./) for other configuration topics.
+# Configuration <a href="#configuration" id="configuration"></a>
 
 You can change n8n's settings using environment variables. For a full list of available configurations see [Environment variables](basic-configuration/use-environment-variables/README.md).
+
+See [Configure n8n](./) for other configuration topics.
 
 ## Set environment variables by command line <a href="#set-environment-variables-by-command-line" id="set-environment-variables-by-command-line"></a>
 

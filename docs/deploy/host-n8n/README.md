@@ -19,7 +19,7 @@ layout:
 
 # Self-hosting n8n <a href="#self-hosting-n8n" id="self-hosting-n8n"></a>
 
-You can self-host n8n on your own infrastructure or in a private cloud, using Docker Compose, one-line setup, or other deployment methods. Not sure if self-hosting is right for you? See [Choose how to use n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n).
+You can self-host n8n on your own infrastructure, on-premises, or in a private cloud, using Docker Compose, one-line setup, or other deployment methods. Not sure if self-hosting is right for you? See [Choose how to use n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n).
 
 All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions. See [Compare editions](community-edition-features.md) for the differences between the self-hosted editions.
 
@@ -39,7 +39,7 @@ Select the installation method that best fits your technical requirements and in
 
 - __Docker Compose__
 
-	**Best for:** Production deployments with databases and other services.
+	**Best for:** Production deployments with databases and additional services.
 	
 	**Requirements:** Docker and Docker Compose installed on your system.
 	

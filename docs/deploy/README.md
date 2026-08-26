@@ -40,7 +40,7 @@ Choose n8n Cloud if you want to:
 
 * Start fast with minimal setup
 * Reduce infrastructure and maintenance work
-* Use n8n Cloud-specific admin and configuration tools
+* Use Cloud-specific admin and configuration tools
 
 {% content-ref url="use-n8n-cloud/" %}
 [use-n8n-cloud](use-n8n-cloud/README.md)

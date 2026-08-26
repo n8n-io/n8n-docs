@@ -14,7 +14,7 @@ This guide sets up a brand-new n8n instance with a single command that replaces 
 It's meant for fresh installs, not for changing an existing setup:
 
 - **Already self-hosting with your own Docker Compose file?** You don't need to switch to this script, but feel free to take inspiration from [the Docker Compose setup process](./install-using-docker-compose.md).
-- **Installing n8n with npm?** From n8n 3.0, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
+- **Currently installing n8n with npm?** From n8n 3.0, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
 
 ## What you need before you start
 
@@ -84,11 +84,11 @@ Running the command sets up everything below automatically. There's nothing extr
 |---|---|
 | **n8n** | The workflow editor itself, running at `http://localhost:5678`. |
 | **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server. |
-| **AI Assistant support services** | A sandbox that isolates the code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
+| **AI Assistant support services** | A sandbox that safely runs the code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
 
 If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
 
-The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n recommends Daytona instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure it.
+The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure it.
 
 ## Optional: Turn on the AI Assistant
 
@@ -126,7 +126,7 @@ Adding these to the end of the install command changes what it does:
 | `--upgrade` | Upgrades an existing install to a newer n8n version. Only updates the version number. Your data, settings, and any customizations stay untouched. |
 | `--help` | Shows all available options. |
 
-## Review the script before running it
+## Prefer not to run a script from the internet?
 
 You can download and read it first, then run it yourself:
 

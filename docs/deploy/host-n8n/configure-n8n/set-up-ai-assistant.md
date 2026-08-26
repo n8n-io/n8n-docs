@@ -143,7 +143,7 @@ Expected response: `{"status":"ok"}`
 * Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
 * `N8N_INSTANCE_AI_SANDBOX_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
-* Hostnames matter. The certificates name `sandbox-api` and `sandbox-runner-<n>` specifically, so keep those service names or regenerate certificates with matching SANs.
+* Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
 ### Setup 3: Daytona (managed sandbox, recommended for production)
 
@@ -270,7 +270,7 @@ Some local servers don't require an API key.
 
 Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
 
-If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. You don't need to do anything unless you'd rather use Brave Search instead.
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running.  No setup is needed unless you'd rather use Brave Search instead.
 
 ```bash
 # Brave Search
@@ -281,7 +281,7 @@ N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 ```
 
 {% hint style="info" %}
-`INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable name as shown.
+`INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable exactly as shown.
 {% endhint %}
 
 If you configure both, Brave Search takes priority over SearXNG. Free or unauthenticated providers, including SearXNG, can hit rate limits, so use Brave Search for a more reliable setup.

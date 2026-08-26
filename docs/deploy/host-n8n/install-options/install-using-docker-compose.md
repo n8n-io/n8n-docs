@@ -12,7 +12,7 @@ layout:
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-If you just want n8n (and the AI Assistant) running without writing any files yourself, use the [one-line setup](../install-options/one-line-setup.md) instead. It sets up everything below automatically.
+If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-line setup](../install-options/one-line-setup.md) instead. It sets up everything below automatically.
 
 ## What you need before you start
 
@@ -63,7 +63,7 @@ search:
 
 ## Step 4: Create `compose.yml`
 
-This defines every service you're setting up: n8n itself, the sandbox stack that isolates AI Assistant code execution, and SearXNG for web search.
+This defines every service you're setting up: n8n itself, the sandbox stack that lets the AI Assistant safely run code, and SearXNG for web search.
 
 ```yaml
 volumes:
@@ -171,7 +171,7 @@ services:
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
 | **searxng** | Bundled web search backend for the AI Assistant. |
 
-This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure a Daytona sandbox.
+This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure a Daytona sandbox.
 
 There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](#optional-use-postgresql-instead-of-sqlite) below.
 
@@ -296,18 +296,18 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
 ## Troubleshooting
 
-| Symptom | Cause |
+| Symptom | Likely cause |
 |---|---|
 | `sandbox-api` or `sandbox-runner-1` fail to start, cert errors | `sandbox-certs` didn't complete. Check `docker compose logs sandbox-certs`. |
 | `sandbox-api` never becomes `healthy` | Check its logs; also confirm `wget` actually exists in that image. |
 | `sandbox-runner-1` crash-loops on startup with `... must be set` errors | It's missing required environment variables, most commonly `SANDBOX_RUNNER_API_KEYS` or `SANDBOX_RUNNER_REGISTRATION_TOKEN`. For the full list of environment variables the runner requires, run `strings /usr/local/bin/sandbox-runner \| grep -oE 'SANDBOX_[A-Z_]+ must be set'` inside the runner container. |
 | Runner never registers with the API | `SANDBOX_RUNNER_REGISTRATION_TOKEN` mismatch, or `SANDBOX_RUNNER_API_GRPC_ADDR` wrong. |
 | n8n's sandbox calls fail | Sandbox URL/key in `.env` doesn't match `sandbox-api`'s address or `SANDBOX_API_KEYS`. |
-| Works on Linux, fails on WSL | A bind-mount path issue. Keep the project inside the WSL filesystem, not `/mnt/c/...`. |
+| Works on Linux, fails on WSL | Usually a bind-mount path issue. Keep the project inside the WSL filesystem, not `/mnt/c/...`. |
 
 ## Security checklist
 
-- `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it the same as root on the host.
+- `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it as equivalent to root on the host.
 - Only n8n's port is open on your cloud firewall.
 - `SANDBOX_API_KEYS`, the registration token, and the runner key are unique, not left as `change-me-...`, and rotated periodically.
 - `sandbox-api` and `sandbox-runner-1` do **not** use `env_file: .env`. Each only receives the specific variables it needs, explicitly, in its `environment` block. The model API key, Brave key, Postgres password, and n8n encryption key never reach the sandbox containers.

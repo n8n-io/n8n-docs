@@ -1,5 +1,5 @@
 ---
-description: Manage your n8n Cloud trial, plan, and instance, including billing, the admin dashboard, and updates.
+description: Manage your n8n Cloud trial, plan, and instance, including the admin dashboard and updates.
 layout:
   description:
     visible: false

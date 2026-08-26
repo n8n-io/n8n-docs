@@ -1,5 +1,5 @@
 ---
-description: Deploy self-hosted n8n to a cloud provider, including Digital Ocean, AWS, Azure, and Google Cloud.
+description: Deploy self-hosted n8n to a cloud provider, including DigitalOcean, AWS, Azure, and Google Cloud.
 contentType: overview
 nodeTitle: Use a cloud provider
 originalFilePath: hosting/installation/server-setups/index.md

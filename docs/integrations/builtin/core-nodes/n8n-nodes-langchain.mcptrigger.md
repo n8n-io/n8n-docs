@@ -116,6 +116,12 @@ The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTT
 If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE and streamable HTTP connections will frequently break or fail to reliably deliver events.
 {% endhint %}
 
+### claude.ai asks users to sign in when Authentication is None <a href="#claudeai-asks-users-to-sign-in-when-authentication-is-none" id="claudeai-asks-users-to-sign-in-when-authentication-is-none"></a>
+
+claude.ai custom connectors ask users to sign in to n8n even when you set **Authentication** to **None**. claude.ai is the only client known to do this.
+
+Your instance offers n8n user authentication for other triggers, and claude.ai assumes every MCP endpoint on your domain uses it. n8n can't switch that off without breaking the triggers that rely on it. If your users can't sign in, connect from a different MCP client.
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 n8n also provides an [MCP Client Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect your n8n AI agents to external tools.

@@ -120,7 +120,7 @@ If you run an MCP Server Trigger node with multiple webhook replicas and don't r
 
 claude.ai custom connectors ask you to sign in to n8n even when you set **Authentication** to **None**. claude.ai is the only client known to do this.
 
-Your instance offers n8n user authentication for other triggers, and claude.ai assumes every MCP endpoint on your domain uses it.
+Your instance offers n8n user authentication for other triggers. claude.ai assumes every MCP endpoint on your domain uses it.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

@@ -15,8 +15,8 @@ You can also connect MCP servers in the registry to the [AI Assistant](../ways-o
 
 ## Add a registry server to an agent
 
-1. Open the node panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, or in [Build and manage agents](../build-and-manage-agents.md#add-tools).
-2. Search for the service you want to connect with the search bar (such as Notion or Linear) or click the new "MCP Servers" section to view all available servers.
+1. Open the tools panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node in the canvas (by clicking on "Tool +"), or in [Build and manage agents](../build-and-manage-agents.md#add-tools) by clicking on "Add Tool".
+2. Search for the service you want to connect with the search bar (such as Notion or Linear) or click the "MCP Servers" section to view all available servers.
 3. Select the server, then sign in when prompted.
 4. Choose which of the server's tools to expose to the agent with "Tools to include": all, a selected list, or all except a selected list.
 

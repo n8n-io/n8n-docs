@@ -14,5 +14,5 @@ swap:
   'child workflow': sub-workflow
   'nested workflow': sub-workflow
   subagent: sub-agent
-  'hosted version': n8n Cloud
+  '(?<![\w-])hosted version': n8n Cloud
   'sub node': sub-node

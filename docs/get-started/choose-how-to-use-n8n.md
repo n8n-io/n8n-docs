@@ -107,7 +107,7 @@ For how to start a trial and upgrade, see [Try free then choose a plan](https://
 
 ### Pick a plan or edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
 
-Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, register for free to unlock extra features, or subscribe to a paid plan for a license key that unlocks that plan's features.
+Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, or register for free to unlock extra features. For paid features, subscribe to a plan to get a license key that unlocks them.
 
 | Edition / Plan | Cost | Designed for |
 |---------|------|--------------|

@@ -28,6 +28,10 @@ You don't need to know Docker to use this guide; just have it installed and runn
 The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 {% endhint %}
 
+Watch a video guide covering this setup, from installing Docker to [turning on AI Assistant](#optional-turn-on-the-ai-assistant):
+
+{% embed url="https://www.youtube.com/embed/t5RBVTby9EU" %}
+
 ## Run the command
 
 Open a terminal and run:

@@ -35,7 +35,7 @@ You can contribute to n8n in several ways, depending on your skills and interest
 * Follow n8n on [Twitter](https://twitter.com/n8n_io), [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/).
 * Upvote n8n on [AlternativeTo](https://alternativeto.net/software/n8n-io/) and [Alternative.me](https://alternative.me/n8n-io).
 * Add n8n to your stack on [Stackshare](https://stackshare.io/n8n).
-* Write a review about n8n on [G2](https://www.g2.com/products/n8n/reviews), [Slant](https://www.slant.co/improve/options/37977/~n8n-review), and [Capterra](https://www.capterra.com/p/198028/n8n-io/).
+* Write a review about n8n on [G2](https://www.g2.com/products/n8n/reviews) and [Capterra](https://www.capterra.com/p/198028/n8n-io/).
 
 ## Help out the community <a href="#help-out-the-community" id="help-out-the-community"></a>
 

@@ -1,9 +1,12 @@
 ---
+description: Compare ways to install self-hosted n8n, including one-line setup, Docker, Docker Compose, npm, and cloud providers.
 layout:
   description:
     visible: false
 ---
 # Install options <a href="#install-options" id="install-options"></a>
+
+See [Host n8n](../README.md) for other self-hosting topics.
 
 {% content-ref url="one-line-setup.md" %}
 [one-line-setup.md](one-line-setup.md)

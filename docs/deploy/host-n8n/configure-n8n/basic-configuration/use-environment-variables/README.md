@@ -1,5 +1,5 @@
 ---
-title: Environment Variables Overview
+title: Use environment variables
 description: An overview of configuration environment variables for self-hosted n8n.
 contentType: overview
 tags:
@@ -17,7 +17,7 @@ layout:
     visible: false
 ---
 
-# Environment variables overview <a href="#environment-variables-overview" id="environment-variables-overview"></a>
+# Use environment variables <a href="#environment-variables-overview" id="environment-variables-overview"></a>
 
 This section lists the environment variables that you can use to change n8n's configuration settings when self-hosting n8n.
 

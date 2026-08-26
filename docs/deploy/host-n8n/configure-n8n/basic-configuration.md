@@ -1,5 +1,5 @@
 ---
-title: Configuration methods
+title: Basic configuration
 description: How to set environment variables for n8n.
 contentType: howto
 nodeTitle: Basic configuration
@@ -11,9 +11,11 @@ layout:
     visible: false
 ---
 
-# Configuration <a href="#configuration" id="configuration"></a>
+# Basic configuration <a href="#configuration" id="configuration"></a>
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](basic-configuration/use-environment-variables/README.md).
+See [Configure n8n](./) for other configuration topics.
+
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment variables](basic-configuration/use-environment-variables/README.md).
 
 ## Set environment variables by command line <a href="#set-environment-variables-by-command-line" id="set-environment-variables-by-command-line"></a>
 
@@ -66,7 +68,7 @@ n8n:
 
 ## Keeping sensitive data in separate files <a href="#keeping-sensitive-data-in-separate-files" id="keeping-sensitive-data-in-separate-files"></a>
 
-You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/) and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
+You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker secrets](https://docs.docker.com/engine/swarm/secrets/) and [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 Refer to [Environment variables](basic-configuration/use-environment-variables/README.md) for details on each variable.
 

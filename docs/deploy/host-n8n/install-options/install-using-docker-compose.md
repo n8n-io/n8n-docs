@@ -1,15 +1,18 @@
 ---
+description: Build a Docker Compose setup for self-hosted n8n, including the sandbox stack for the AI Assistant.
 nodeTitle: Install using Docker Compose
 layout:
   description:
     visible: false
 ---
 
+# Install using Docker Compose
+
 ## Who this is for
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers the AI Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-If you just want n8n (and the AI Assistant) running quickly without writing any files yourself, use the [one-line setup](../install-options/one-line-setup.md) instead; it sets up everything below automatically.
+If you just want n8n (and the AI Assistant) running without writing any files yourself, use the [one-line setup](../install-options/one-line-setup.md) instead. It sets up everything below automatically.
 
 ## What you need before you start
 
@@ -17,7 +20,7 @@ If you just want n8n (and the AI Assistant) running quickly without writing any 
 - At least 4 GB of RAM and 2 vCPUs. The sandbox that runs AI-generated code (`sandbox-runner-1`) uses Docker-in-Docker, which needs more headroom than a typical container.
 
 {% hint style="info" %}
-**Windows users:** Use WSL, with either Docker Desktop (WSL2 backend) or Docker Engine installed directly in your Linux distro. Keep your project folder inside the WSL filesystem (for example, `~/n8n`), not under `/mnt/c/...`. Bind mounts across that boundary are slow and can cause permission issues.
+**Windows users:** Use WSL, with either Docker Desktop (WSL2 backend) or Docker Engine installed directly in your Linux distribution. Keep your project folder inside the WSL filesystem (for example, `~/n8n`), not under `/mnt/c/...`. Bind mounts across that boundary are slow and can cause permission issues.
 {% endhint %}
 
 ## Step 1: Create a project folder
@@ -60,7 +63,7 @@ search:
 
 ## Step 4: Create `compose.yml`
 
-This defines every service you're setting up: n8n itself, the sandbox stack that lets the AI Assistant safely run code, and SearXNG for web search.
+This defines every service you're setting up: n8n itself, the sandbox stack that isolates AI Assistant code execution, and SearXNG for web search.
 
 ```yaml
 volumes:
@@ -168,7 +171,7 @@ services:
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
 | **searxng** | Bundled web search backend for the AI Assistant. |
 
-This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure a Daytona sandbox.
+This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n recommends Daytona as the sandbox provider instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure a Daytona sandbox.
 
 There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](#optional-use-postgresql-instead-of-sqlite) below.
 
@@ -198,7 +201,7 @@ Launch n8n by pointing your web browser to `http://localhost:5678`
 
 ## Optional: Turn on the AI Assistant
 
-Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or via `.env` if you'd rather configure it before first login:
+Everything above runs the full sandbox stack, but the AI Assistant itself stays off until you give it a model to use. You can do this from the n8n UI (in the instance's AI settings) once n8n is running, or using `.env` if you'd rather configure it before first login:
 
 1. Add your AI provider key to `.env`:
 
@@ -218,7 +221,7 @@ Web search runs through the bundled SearXNG service by default. If you'd rather 
 INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
 ```
 
-Full setup steps, including which model providers are supported, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
+Full setup steps, including the supported model providers, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
 
 ## Optional: Use PostgreSQL instead of SQLite
 
@@ -286,30 +289,30 @@ SQLite is fine for trying things out, but for a production instance that must ha
    docker compose up -d
    ```
 
-   n8n migrates itself to the new Postgres database on startup. Existing SQLite data doesn't carry over automatically. This is meant for a fresh instance, not an in-place migration.
+   n8n migrates itself to the new Postgres database on startup. Existing SQLite data doesn't carry over automatically. This setup is for a fresh instance, not an in-place migration.
 
    {% hint style="info" %} For a more hardened setup, such as a dedicated non-root Postgres user and an external task runner, see the [`withPostgres` example](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres) in the n8n hosting repository.
    {% endhint %}
 
 ## Troubleshooting
 
-| Symptom | Likely cause |
+| Symptom | Cause |
 |---|---|
 | `sandbox-api` or `sandbox-runner-1` fail to start, cert errors | `sandbox-certs` didn't complete. Check `docker compose logs sandbox-certs`. |
 | `sandbox-api` never becomes `healthy` | Check its logs; also confirm `wget` actually exists in that image. |
 | `sandbox-runner-1` crash-loops on startup with `... must be set` errors | It's missing required environment variables, most commonly `SANDBOX_RUNNER_API_KEYS` or `SANDBOX_RUNNER_REGISTRATION_TOKEN`. For the full list of environment variables the runner requires, run `strings /usr/local/bin/sandbox-runner \| grep -oE 'SANDBOX_[A-Z_]+ must be set'` inside the runner container. |
 | Runner never registers with the API | `SANDBOX_RUNNER_REGISTRATION_TOKEN` mismatch, or `SANDBOX_RUNNER_API_GRPC_ADDR` wrong. |
 | n8n's sandbox calls fail | Sandbox URL/key in `.env` doesn't match `sandbox-api`'s address or `SANDBOX_API_KEYS`. |
-| Works on Linux, fails on WSL | Usually a bind-mount path issue; keep the project inside the WSL filesystem, not `/mnt/c/...`. |
+| Works on Linux, fails on WSL | A bind-mount path issue. Keep the project inside the WSL filesystem, not `/mnt/c/...`. |
 
 ## Security checklist
 
-- `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it as equivalent to root on the host.
+- `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it the same as root on the host.
 - Only n8n's port is open on your cloud firewall.
 - `SANDBOX_API_KEYS`, the registration token, and the runner key are unique, not left as `change-me-...`, and rotated periodically.
 - `sandbox-api` and `sandbox-runner-1` do **not** use `env_file: .env`. Each only receives the specific variables it needs, explicitly, in its `environment` block. The model API key, Brave key, Postgres password, and n8n encryption key never reach the sandbox containers.
 - The mTLS keys under the `sandbox-tls` volume, including the root CA key, are locked down to `0600` and owned only by the service that needs them (`sandbox-api` for its own key; root for the runner's key and the CA key). None of them are world-readable.
-- You have a plan to regenerate the `sandbox-tls` volume. The certs `sandbox-certs` generates don't auto-renew.
+- You have a plan to regenerate the `sandbox-tls` volume. The certs `sandbox-certs` generates don't autorenew.
 
 ## Service architecture
 

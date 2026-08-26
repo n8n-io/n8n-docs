@@ -11,11 +11,13 @@ layout:
     visible: false
 ---
 
-# Docker-Compose <a href="#docker-compose" id="docker-compose"></a>
+# Use Docker Compose <a href="#docker-compose" id="docker-compose"></a>
+
+See [Use a cloud provider](README.md) for other cloud deployment options.
 
 These instructions cover how to run n8n on a Linux server using Docker Compose.
 
-If you have already installed Docker and Docker-Compose, then you can start with [step 3](#3-dns-setup).
+If you have already installed Docker and Docker Compose, then you can start with [step 3](#3-dns-setup).
 
 You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
@@ -41,7 +43,7 @@ docker compose version
 
 You can optionally grant access to run Docker without the `sudo` command.
 
-To grant access to the user that you're currently logged in with (assuming they have `sudo` access), run:
+To grant access to the user you're logged in as (assuming they have `sudo` access), run:
 
 ```shell
 sudo usermod -aG docker ${USER}
@@ -178,14 +180,14 @@ volumes:
   traefik_data:
 ```
 
-The Docker Compose file above configures two containers: one for n8n, and one to run [traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
+The Docker Compose file above configures two containers: one for n8n, and one to run [Traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
 
-It also creates and mounts two [Docker Volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:
+It also creates and mounts two [Docker volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:
 
 | Name            | Type                                                        | Container mount   | Description                                                                                                                         |
 |-----------------|-------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | Where n8n saves its SQLite database file and encryption key.                                                                        |
-| `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where traefik saves TLS/SSL certificate data.                                                                                       |
+| `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where Traefik saves TLS/SSL certificate data.                                                                                       |
 | `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | A local directory shared between the n8n instance and host. In n8n, use the `/files` path to read from and write to this directory. |
 
 ## 7. Start Docker Compose <a href="#7-start-docker-compose" id="7-start-docker-compose"></a>

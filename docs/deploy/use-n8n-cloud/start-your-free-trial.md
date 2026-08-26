@@ -24,7 +24,7 @@ When you create a new n8n Cloud trial, you have 14 days to try all the features 
 - Global variables
 - Insights dashboard
 - Execution search
-- 5 days of workflow history to roll back
+- Five days of workflow history to roll back
 
 The trial gives you Pro plan features with a limit of 1000 executions and the same computing power as the [Starter plan](https://n8n.io/pricing/).
 
@@ -56,9 +56,9 @@ You can upgrade to a paid n8n account at any time. To upgrade:
 3. Select your plan and whether to pay annually or by the month.
 4. Select a payment method.
 
-## Trial expiration <a href="#trial-expiration" id="trial-expiration"></a>
+## When your trial ends <a href="#trial-expiration" id="trial-expiration"></a>
 
-If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your workspace.
+If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your data.
 
 {% hint style="info" %}
 **Download your workflows**
@@ -74,9 +74,9 @@ You don't need to cancel your trial. Your trial automatically expires at the end
 
 To test the [Enterprise plan](https://n8n.io/pricing/), contact the sales team. The Enterprise plan includes features such as:
 
-- SSO SAML and LDAP
-- Different environments
-- External secret store integration
+- SSO (SAML and LDAP)
+- Environments
+- External secrets
 - Log streaming
 - Version control using Git
 

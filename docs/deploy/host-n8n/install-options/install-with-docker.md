@@ -31,7 +31,7 @@ layout:
 **This content is outdated.** Please refer to [Install using Docker Compose](install-using-docker-compose.md) for the recommended installation method.
 {% endhint %}
 
-## Docker Installation <a href="#docker-installation" id="docker-installation"></a>
+## Docker installation <a href="#docker-installation" id="docker-installation"></a>
 
 n8n recommends using [Docker](https://www.docker.com/) for most self-hosting needs. It provides a clean, isolated environment, avoids operating system and tooling incompatibilities, and makes database and environment management simpler.
 
@@ -39,7 +39,7 @@ You can also use n8n in Docker with [Docker Compose](use-a-cloud-provider/use-do
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
 
-You can also follow along with our video guide here:
+You can also follow along with the video guide below:
 
 {% embed url="https://www.youtube.com/embed/6ET3G7GiqZA?si=mwCKbtyLqNCRc2pa" %}
 
@@ -95,7 +95,7 @@ By default, n8n uses SQLite to save credentials[^1], past executions, and workfl
 {% hint style="info" %}
 **Persisting the `.n8n` directory still recommended**
 
-When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. However, the directory still contains other important data like encryption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](../configure-n8n/basic-configuration/use-environment-variables/deployment.md)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
+When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. The directory still contains other important data like encryption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](../configure-n8n/basic-configuration/use-environment-variables/deployment.md)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
 {% endhint %}
 
 To use n8n with PostgreSQL, execute the following commands, replacing the placeholders (depicted within angled brackets, for example `<POSTGRES_USER>`) with your actual values:
@@ -189,7 +189,7 @@ The `services` command:
 1. Starts cloudflared pointing at `host.docker.internal:5678` (your local n8n).
 2. Fetches the public tunnel URL from cloudflared's metrics endpoint.
 3. Writes a `.env` file to `packages/cli/bin/.env` with `WEBHOOK_URL` and `N8N_PROXY_HOPS=1`.
-4. `pnpm dev` and `pnpm start` pick up that `.env` automatically via dotenv.
+4. `pnpm dev` and `pnpm start` pick up that `.env` automatically using dotenv.
 
 Clean up when done:
 

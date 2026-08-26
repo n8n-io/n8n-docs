@@ -26,10 +26,15 @@ layout:
 
 # Set up AI Assistant
 
+See [Configure n8n](./) for other configuration topics.
+
 {% hint style="info" %}
 **Feature availability**
 
-The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+The AI Assistant is available on:
+
+- **n8n Cloud:** Starter, Pro
+- **Self-hosted:** Community, Registered Community, Business
 
 It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
@@ -45,7 +50,7 @@ The AI Assistant is in Preview. It can make mistakes, and behavior may change wh
 Every self-hosted AI Assistant setup needs three things:
 
 * **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
-* **A sandbox:** An isolated environment where AI Assistant runs code. This is required.
+* **A sandbox (required):** An isolated environment where AI Assistant runs code.
 * **A search provider (optional):** Lets AI Assistant look things up on the web.
 
 How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically. For production, use Daytona instead.
@@ -62,7 +67,7 @@ Make sure you have:
 
 ## Pick your setup
 
-| Setup | Use this if... | Sandbox hosted by | Best for |
+| Setup | When to use this | Sandbox hosted by | Best for |
 | --- | --- | --- | --- |
 | [1. Already running the sandbox](#setup-1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
 | [2. Self-host the sandbox manually](#setup-2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
@@ -70,7 +75,7 @@ Make sure you have:
 
 ### Setup 1: Already running the sandbox (recommended for local development)
 
-If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, via bundled SearXNG, are already running. All that's left is a model key.
+If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, using bundled SearXNG, are already running. All that's left is a model key.
 
 **What you need:** an LLM API key. Nothing else.
 
@@ -138,7 +143,7 @@ Expected response: `{"status":"ok"}`
 * Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
 * `N8N_INSTANCE_AI_SANDBOX_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
-* Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
+* Hostnames matter. The certificates name `sandbox-api` and `sandbox-runner-<n>` specifically, so keep those service names or regenerate certificates with matching SANs.
 
 ### Setup 3: Daytona (managed sandbox, recommended for production)
 
@@ -172,7 +177,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    | Variable | Description |
    | --- | --- |
    | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
-   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`), so setting it is optional. |
+   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`). Set it explicitly only if you want a different model. |
    | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
    | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. AI Assistant requires a sandbox. |
    | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
@@ -210,7 +215,7 @@ N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
 ```
 
 {% hint style="info" %}
-By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after 1 hour, and deletes it after 7 days. Change these settings with the variables above.
+By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after one hour, and deletes it after seven days. Change these settings with the variables above.
 {% endhint %}
 
 ## Choose a model provider
@@ -265,7 +270,7 @@ Some local servers don't require an API key.
 
 Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
 
-If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. You don't need to do anything unless you'd rather use Brave Search instead.
 
 ```bash
 # Brave Search
@@ -276,7 +281,7 @@ N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
 ```
 
 {% hint style="info" %}
-`INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable exactly as shown.
+`INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable name as shown.
 {% endhint %}
 
 If you configure both, Brave Search takes priority over SearXNG. Free or unauthenticated providers, including SearXNG, can hit rate limits, so use Brave Search for a more reliable setup.
@@ -285,10 +290,12 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ## Enable agents
 
-Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents need n8n 2.32.3 (Beta) or later.
+Agents run on the same self-hosted stack as AI Assistant. Once AI Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
 
-{% hint style="warning" %}
-Agents aren't ready for self-hosted Enterprise yet.
+{% hint style="info" %}
+**Feature availability**
+
+Agents aren't available on self-hosted Enterprise yet.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. AI Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.

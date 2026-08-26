@@ -1,4 +1,5 @@
 ---
+description: Deploy self-hosted n8n to a cloud provider, including Digital Ocean, AWS, Azure, and Google Cloud.
 contentType: overview
 nodeTitle: Use a cloud provider
 originalFilePath: hosting/installation/server-setups/index.md
@@ -9,7 +10,9 @@ layout:
     visible: false
 ---
 
-# Server setups <a href="#server-setups" id="server-setups"></a>
+# Use a cloud provider <a href="#server-setups" id="server-setups"></a>
+
+See [Install options](../README.md) for other ways to install n8n.
 
 Self-host with Docker Compose:
 
@@ -17,7 +20,7 @@ Self-host with Docker Compose:
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)
 
-Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, e.g. Gmail, Drive):
+Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, for example Gmail and Drive):
 
 * [Google Cloud Run](deploy-to-google-cloud-run.md)
 

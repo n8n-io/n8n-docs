@@ -1,9 +1,12 @@
 ---
+description: Keep a self-hosted n8n instance running, including logging, monitoring, updates, and tracing.
 layout:
   description:
     visible: false
 ---
 # Keep n8n running <a href="#keep-n8n-running" id="keep-n8n-running"></a>
+
+See [Host n8n](../README.md) for other self-hosting topics.
 
 {% content-ref url="set-up-logging.md" %}
 [set-up-logging.md](set-up-logging.md)

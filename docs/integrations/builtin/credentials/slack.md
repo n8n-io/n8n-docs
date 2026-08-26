@@ -44,8 +44,8 @@ To configure this credential, you'll need a [Slack](https://slack.com/) account 
 
 To generate an access token, create a Slack app. n8n recommends creating the app from a manifest, which configures all the scopes in one step:
 
-{% tabs %}
-{% tab title="From a manifest" %}
+### Create the app from a manifest for API access token
+
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From a manifest**.
 3. Select the **Workspace** where you'll be developing your app, then select **Next**.
@@ -93,9 +93,9 @@ To generate an access token, create a Slack app. n8n recommends creating the app
 	}
 }
 ```
-{% endtab %}
 
-{% tab title="From scratch" %}
+### Create the app from scratch for API access token
+
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From scratch**.
 3. Enter an **App Name**.
@@ -103,8 +103,6 @@ To generate an access token, create a Slack app. n8n recommends creating the app
 5. Select **Create App**. The app details open.
 6. In the left menu under **Features**, select **OAuth & Permissions**.
 7. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
-{% endtab %}
-{% endtabs %}
 
 Then install the app and copy the token:
 
@@ -156,8 +154,8 @@ If you're [self-hosting n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host
 
 To get both, create a Slack app. n8n recommends creating the app from a manifest, which configures the scopes and redirect URL in one step:
 
-{% tabs %}
-{% tab title="From a manifest" %}
+### Create the app from a manifest for OAuth2
+
 1. In n8n, copy the **OAuth Callback URL** from your Slack credential.
 2. Open your [Slack API Apps](https://api.slack.com/apps) page.
 3. Select **Create New App > From a manifest**.
@@ -278,9 +276,9 @@ Some Slack API endpoints, including Slack's MCP endpoints, only work with user t
 ```
 
 </details>
-{% endtab %}
 
-{% tab title="From scratch" %}
+### Create the app from scratch for OAuth2
+
 1. Open your [Slack API Apps](https://api.slack.com/apps) page.
 2. Select **Create New App > From scratch**.
 3. Enter an **App Name**.
@@ -292,8 +290,6 @@ Some Slack API endpoints, including Slack's MCP endpoints, only work with user t
 9. Select **Add**.
 10. Select **Save URLs**.
 11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
-{% endtab %}
-{% endtabs %}
 
 Then finish connecting the app to n8n:
 

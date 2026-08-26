@@ -128,14 +128,14 @@ Some features require certain paid plan subscriptions, including:
 - Environments
 - External secrets
 - External storage for binary data
-- Log streaming (n8n includes standard logging)
-- Multi-main mode (n8n includes queue mode)
+- Log streaming (standard logging is included)
+- Multi-main mode (queue mode is included)
 - Projects
 - SSO (SAML, LDAP)
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ.
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ.
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 

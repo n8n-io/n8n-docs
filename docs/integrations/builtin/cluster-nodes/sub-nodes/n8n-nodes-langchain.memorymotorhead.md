@@ -17,14 +17,17 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # Motorhead node <a href="#motorhead-node" id="motorhead-node"></a>
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-The Motorhead project is no longer maintained. This node is deprecated, and will be removed in a future version.
+The Motorhead project is no longer maintained. The Motorhead node is deprecated from n8n 2.8.0. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 Use the Motorhead node to use Motorhead as a memory[^1] server.

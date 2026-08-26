@@ -26,8 +26,6 @@ layout:
 
 # Set up AI Assistant
 
-{% endhint %}
-
 {% hint style="info" %}
 **Feature availability**
 
@@ -66,11 +64,11 @@ Make sure you have:
 
 | Setup | Use this if... | Sandbox hosted by | Best for |
 | --- | --- | --- | --- |
-| [1. Already running the sandbox](#1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
-| [2. Self-host the sandbox manually](#2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
-| [3. Daytona (managed sandbox)](#3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
+| [1. Already running the sandbox](#setup-1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
+| [2. Self-host the sandbox manually](#setup-2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
+| [3. Daytona (managed sandbox)](#setup-3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
 
-### 1. Already running the sandbox (recommended for local development)
+### Setup 1: Already running the sandbox (recommended for local development)
 
 If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, via bundled SearXNG, are already running. All that's left is a model key.
 
@@ -91,12 +89,12 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 
 `N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
 
-### 2. Self-host the sandbox manually (advanced)
+### Setup 2: Self-host the sandbox manually (advanced)
 
 Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
 
 {% hint style="warning" %}
-This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#3-daytona-managed-sandbox-recommended-for-production) instead.
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#setup-3-daytona-managed-sandbox-recommended-for-production) instead.
 {% endhint %}
 
 **What you need:**
@@ -140,7 +138,7 @@ Expected response: `{"status":"ok"}`
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
 * Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
-### 3. Daytona (managed sandbox, recommended for production)
+### Setup 3: Daytona (managed sandbox, recommended for production)
 
 Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the sandbox provider n8n recommends for production use.
 
@@ -186,7 +184,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    ```yaml
    services:
      n8n:
-       image: docker.io/n8nio/n8n
+       image: n8nio/n8n
        environment:
          N8N_ENABLED_MODULES: instance-ai
          N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8

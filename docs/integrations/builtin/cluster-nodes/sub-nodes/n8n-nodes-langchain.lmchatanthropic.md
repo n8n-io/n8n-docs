@@ -39,8 +39,6 @@ You can find authentication information for this node [here](../../credentials/a
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model).
-
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.

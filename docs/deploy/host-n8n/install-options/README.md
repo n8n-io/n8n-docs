@@ -6,8 +6,6 @@ layout:
 ---
 # Install options <a href="#install-options" id="install-options"></a>
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 {% content-ref url="one-line-setup.md" %}
 [one-line-setup.md](one-line-setup.md)
 {% endcontent-ref %}
@@ -27,3 +25,5 @@ See [Host n8n](../README.md) for other self-hosting topics.
 {% content-ref url="use-a-cloud-provider/README.md" %}
 [use-a-cloud-provider/README.md](use-a-cloud-provider/README.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

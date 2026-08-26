@@ -15,8 +15,6 @@ layout:
 
 You can change n8n's settings using environment variables. For a full list of available configurations see [Environment variables](basic-configuration/use-environment-variables/README.md).
 
-See [Configure n8n](./) for other configuration topics.
-
 ## Set environment variables by command line <a href="#set-environment-variables-by-command-line" id="set-environment-variables-by-command-line"></a>
 
 ### npm <a href="#npm" id="npm"></a>
@@ -90,3 +88,5 @@ DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE=/path/to/ssl_reject_unauth
 ```
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+
+See [Configure n8n](./) for other configuration topics.

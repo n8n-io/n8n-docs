@@ -26,8 +26,6 @@ layout:
 
 # Set up AI Assistant
 
-See [Configure n8n](./) for other configuration topics.
-
 {% hint style="info" %}
 **Feature availability**
 
@@ -270,7 +268,7 @@ Some local servers don't require an API key.
 
 Web search lets AI Assistant look things up on the web. It's optional, and the rest of AI Assistant works without it.
 
-If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running.  No setup is needed unless you'd rather use Brave Search instead.
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
 
 ```bash
 # Brave Search
@@ -371,3 +369,5 @@ If AI Assistant doesn't appear or doesn't work, check for these issues.
 
 * `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
 * If nothing is set, this is expected. Web search is optional and the rest of AI Assistant still works.
+
+See [Configure n8n](./) for other configuration topics.

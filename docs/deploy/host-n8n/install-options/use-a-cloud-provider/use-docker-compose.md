@@ -13,8 +13,6 @@ layout:
 
 # Docker-Compose <a href="#docker-compose" id="docker-compose"></a>
 
-See [Use a cloud provider](README.md) for other cloud deployment options.
-
 These instructions cover how to run n8n on a Linux server using Docker Compose.
 
 If you have already installed Docker and Docker-Compose, then you can start with [step 3](#3-dns-setup).
@@ -215,3 +213,5 @@ If you have trouble reaching your instance, check your server's firewall setting
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+
+See [Use a cloud provider](README.md) for other cloud deployment options.

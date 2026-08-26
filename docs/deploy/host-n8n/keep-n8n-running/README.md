@@ -6,8 +6,6 @@ layout:
 ---
 # Keep n8n running <a href="#keep-n8n-running" id="keep-n8n-running"></a>
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 {% content-ref url="set-up-logging.md" %}
 [set-up-logging.md](set-up-logging.md)
 {% endcontent-ref %}
@@ -27,3 +25,5 @@ See [Host n8n](../README.md) for other self-hosting topics.
 {% content-ref url="trace-executions-with-opentelemetry.md" %}
 [trace-executions-with-opentelemetry.md](trace-executions-with-opentelemetry.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

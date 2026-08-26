@@ -22,8 +22,6 @@ layout:
 
 # Configure n8n
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 {% content-ref url="basic-configuration.md" %}
 [basic-configuration.md](basic-configuration.md)
 {% endcontent-ref %}
@@ -75,3 +73,5 @@ See [Host n8n](../README.md) for other self-hosting topics.
 {% content-ref url="scaling.md" %}
 [scaling.md](scaling.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

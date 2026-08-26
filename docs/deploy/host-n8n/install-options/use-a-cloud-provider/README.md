@@ -12,8 +12,6 @@ layout:
 
 # Use a cloud provider <a href="#server-setups" id="server-setups"></a>
 
-See [Install options](../README.md) for other ways to install n8n.
-
 Self-host with Docker Compose:
 
 * [Digital Ocean](deploy-to-digital-ocean.md)
@@ -33,3 +31,5 @@ Starting points for a Kubernetes setup:
 Configuration guides to help you get started on other platforms:
 
 * [Docker Compose](use-docker-compose.md)
+
+See [Install options](../README.md) for other ways to install n8n.

@@ -93,6 +93,12 @@ Each time you make a change to a workflow, n8n autosaves those changes to a new 
 
 ![Publish modal with an editable version name (defaulting to a UUID) and description field](../.gitbook/assets/publish-modal.png)
 
+{% hint style="info" %}
+**Workflow reviews**
+
+If workflow reviews are enabled for your instance, you can submit a version for review instead of publishing immediately. While a review is open, n8n blocks publishing that workflow. Refer to [Workflow reviews](../manage-workflows/workflow-reviews.md) for plan availability and how reviews work.
+{% endhint %}
+
 ## Naming versions <a href="#naming-versions" id="naming-versions"></a>
 
 {% hint style="info" %}

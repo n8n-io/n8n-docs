@@ -104,10 +104,11 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 
 ## Poll triggers
 
-When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Two behaviors are specific to poll triggers:
+When [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](#turn-on) is on, each of a poll trigger's poll times runs as its own durable schedule: polls survive restarts and spread across instances like any other run. Three behaviors are specific to poll triggers:
 
 - **Missed polls are always skipped.** A poll fetches everything new since it last ran, so a catch-up poll would repeat the same fetch. See [Misfire policy](#misfire-policy).
 - **A poll can occasionally run twice.** The scheduler guarantees each dispatched poll runs at least once, not that it runs only once. A poll can repeat, for example when an instance stalls and another takes over. Turn on [durable poll cursors](#durable-poll-cursors) so a repeated poll can't drop or duplicate items.
+- **A poll that runs too long is abandoned.** From n8n 2.37.0, a poll that runs longer than [`N8N_SCHEDULER_POLL_TIMEOUT`](basic-configuration/use-environment-variables/scheduler.md#poll-triggers) (45 seconds by default) is abandoned. n8n stops waiting for it and records nothing: the cursor stays put, so the next poll covers the same ground and no data goes missing. This guards against a poll stuck on a service that never answers. A poll that keeps timing out counts as failing. n8n re-polls it at a widening interval instead of hammering a service that can't keep up. Keep the timeout below `N8N_SCHEDULER_LEASE_DURATION`, so an abandoned poll can't still be running when another instance takes its run over. n8n warns at startup when the timeout reaches the lease duration.
 
 ### Durable poll cursors
 
@@ -197,6 +198,7 @@ Only main instances emit them. They come from the poll engine itself, not the sc
 | `n8n_poll_trigger_duration_seconds` | Histogram | How long each poll takes, split by `node_type` and `status`. A poll that grows slower over time is drifting toward its own interval. Once the duration crosses that interval, polls start overlapping. |
 | `n8n_poll_trigger_errors_total` | Counter | How many polls threw, split by `node_type` and a `kind` label of `auth`, `rate_limited`, or `thrown`. `auth` points at a broken credential, `rate_limited` at polling faster than the service allows. |
 | `n8n_poll_trigger_overlapping_ticks_total` | Counter | How many polls started while the previous poll for the same node was still running in the same process. Overlap across instances shows up in `n8n_scheduler_tasks_lease_lost_total` instead. |
+| `n8n_poll_trigger_timeouts_total` | Counter | How many polls the durable scheduler abandoned because they ran longer than `N8N_SCHEDULER_POLL_TIMEOUT`, split by `node_type`. An abandoned poll records nothing, and the next poll covers the same window. Steady growth means a polled service answers slower than the timeout. Only the durable scheduler abandons polls, so this stays at zero on the in-memory scheduler. Available from n8n 2.37.0. |
 | `n8n_poll_trigger_cursor_commits_total` | Counter | How many cursor saves settled, split by `operation` (`with_execution` or `cursor_only`) and `result`. A `result` of `fence_rejected` means a stale poll lost its claim and wasn't allowed to advance the cursor, which is the protection doing its job. A `result` of `failure` means the save itself failed. |
 | `n8n_poll_trigger_cursor_commit_duration_seconds` | Histogram | How long each cursor save takes, with the same `operation` and `result` labels. |
 

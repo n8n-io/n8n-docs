@@ -15,6 +15,17 @@ layout:
 
 n8n allows you to represent complex logic in your workflows.
 
+## In this section <a href="#in-this-section" id="in-this-section"></a>
+
+* [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
+* [Merge data](merge-data.md): combine multiple data streams back into one.
+* [Loop](loop.md): repeat an action until a condition is met, or until all items are processed.
+* [Wait](wait.md): pause a workflow's execution and resume it later.
+* [Understand execution order](understand-execution-order.md): learn how n8n decides which branch runs first in a multi-branch workflow.
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md): call one workflow from another to build modular, microservice-like workflows.
+* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
+* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.
+
 ## Related sections <a href="#related-sections" id="related-sections"></a>
 
 You need some understanding of [Data](../work-with-data/overview.md) in n8n, including [Data structure](../work-with-data/understand-n8ns-data-structure.md) and [Data flow within nodes](../work-with-data/understand-n8ns-data-structure.md#how-data-flows-within-nodes).

@@ -13,6 +13,8 @@ layout:
 
 Looping is useful when you want to process multiple items or perform an action repeatedly, such as sending a message to every contact in your address book. n8n handles this repetitive processing automatically, meaning you don't need to specifically build loops into your workflows. There are [some nodes](#node-exceptions) where this isn't true.
 
+Looping is one part of n8n's [flow logic](./), alongside [splitting](split-with-conditionals.md) and [merging](merge-data.md) data streams, and [waiting](wait.md) between executions.
+
 ## Using loops in n8n <a href="#using-loops-in-n8n" id="using-loops-in-n8n"></a>
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
@@ -50,7 +52,7 @@ Here is an [example workflow](https://n8n.io/workflows/1130) that implements a l
 
 Use the [Loop Over Items](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitinbatches) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
 
-You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
+You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items. Combine batching with a [Wait](wait.md) node between batches to slow down processing further.
 
 The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 

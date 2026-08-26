@@ -146,9 +146,10 @@ Retrieved on its own, a section that leans on its neighbours arrives stripped of
 Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
 
 * **Always link the prerequisites and the next step**, at minimum.
-* **Link parents and children both ways.** An overview or section landing page lists and links to every child page; each child links back to its parent with `./`.
+* **Link parents and children both ways.** An overview or section landing page lists and links to every child page; each child links back to its parent with `./`. With two or more children, list them under a heading like "In this section" as a plain bullet list (link plus a short description) rather than a GitBook content-ref card. With only one child, skip the list and link it inline at its first mention instead.
+* **Link sideways too.** Link to one or two genuinely related sibling pages in the same section, not just the parent. Parent-only links make a hub and spoke, not a cluster. Skip this for flat reference collections where every page follows the same one-fact template (for example, one page per expression data type).
 * **Aim for a cluster of five or more interlinked pages** on the same topic. AI search cites connected clusters far more than standalone pages.
-* **Link in the body, at the first meaningful mention**, with descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". Link the first mention, not every mention.
+* **Link in the body, at the first meaningful mention**, with descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". Link the first mention, not every mention. If the page already names its section in passing ("this workflow's flow logic"), link that phrase instead of adding a new sentence.
 * **Link to separate topics; don't link for missing context.** A link can't stand in for context this section needs. If a section can't be understood without the linked page, restate the key fact instead (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Feature availability

@@ -61,7 +61,7 @@ Configure these parts of an agent in the Agent Builder:
 | ------------------ | --------------------------------------------------------------------------------------------------------------- |
 | **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent. |
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
-| **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/mcp-servers).                 |
+| **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/build/integrate-ai/mcp-servers).                 |
 | **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
@@ -105,7 +105,7 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 
 #### Add tools
 
-In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/mcp-servers).
+In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/build/integrate-ai/mcp-servers).
 
 The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](build-and-manage-agents.md#approve-tool-calls).
 

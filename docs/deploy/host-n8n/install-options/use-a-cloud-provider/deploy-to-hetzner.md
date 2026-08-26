@@ -135,8 +135,6 @@ The Docker Compose file uses the environment variables set in the `.env` file, s
 nano docker-compose.yml
 ```
 
-{% hint style="info" %} This repository currently pulls the n8n image via `docker.n8n.io/n8nio/n8n`, which can hit rate limits. n8n recommends `docker.io/n8nio/n8n` instead. If you hit pull issues, try changing the `image:` line to `docker.io/n8nio/n8n`. {% endhint %}
-
 ## Configure Caddy <a href="#configure-caddy" id="configure-caddy"></a>
 
 Caddy needs to know which domains it should serve, and which port to expose to the outside world. Edit the `Caddyfile` file in the `caddy_config` folder.

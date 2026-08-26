@@ -56,7 +56,7 @@ different thing, not a second visual tag.
   `status:`; `deprecated` doesn't (see Feature availability, in the style guide).
 - The current set of visual tags allowed in docs is: **Deprecated** (a whole
   page about a deprecated feature), **Preview** (a whole page about a feature
-  in preview), and **Archived** (a page no longer updated). Don't create or
+  in Preview), and **Archived** (a page no longer updated). Don't create or
   use any visual tag other than these three.
 
 ## Page navigation (SUMMARY.md)
@@ -366,7 +366,7 @@ to `https://api.n8n.io/workflows/templates/`):
 ## Feature availability
 
 A feature's availability can be limited by plan/platform, by n8n version
-(introduced, deprecated, removed), or by preview status. Reference all three
+(introduced, deprecated, removed), or by Preview status. Reference all three
 consistently so readers can tell whether their install supports a feature, and
 so automated tools (search, docs assistants, chunk-based retrieval) can extract
 the facts reliably even without the surrounding page for context.
@@ -509,24 +509,30 @@ automatically updated from the codebase, so don't edit it by hand.
 
 ### Preview status
 
-A preview feature works but isn't complete or stable, and may change. "Preview"
-is a feature's maturity label. Use it, not "beta", to describe a feature's status.
+A feature in Preview works but isn't complete or stable, and may change. "Preview"
+is a feature's maturity label, capitalized wherever it names that status ("is in
+Preview", "a Preview feature"), same as "Deprecated"/"Archived". Use "Preview",
+not "beta". Frontmatter and tag values stay lowercase (`status: preview`,
+`tag: preview`) since they're literal identifiers, not prose.
 
-**Page or section:** same `**Feature availability**` title as an availability
-hint, above. Name the node or feature in the sentence below it, not in the
-title. Hints get skimmed independently of the surrounding heading, so the
-sentence must carry the naming:
+**Page or section:** a `**Preview status**` title, not `**Feature
+availability**`. Preview answers a different question than availability (how
+stable is this? vs. where/when does this exist?), so it always gets its own
+title and box — never a second hint titled "Feature availability" sitting
+next to the availability one. Name the node or feature in the sentence below
+it, not in the title. Hints get skimmed independently of the surrounding
+heading, so the sentence must carry the naming:
 
 ```markdown
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-The Data table node is in preview and may change in future releases. Avoid
+The Data table node is in Preview and may change in future releases. Avoid
 relying on it in production workflows.
 {% endhint %}
 ```
 
-If the whole page is about the preview feature, also set `status: preview` and
+If the whole page is about the feature in Preview, also set `status: preview` and
 add a primary `preview` tag (see [Tags](#tags) for how tags work):
 
 ```yaml
@@ -541,13 +547,15 @@ tags:
 **Inline or passing mention:**
 
 ```markdown
-The **Streaming response** option is in preview and may change in future releases.
+The **Streaming response** option is in Preview and may change in future releases.
 ```
 
-- Tie it to a version when it helps: "In preview from n8n 2.20.0".
-- Keep it in a separate sentence (or a separate hint) from any plan/version
-  availability note — don't fold preview wording into the availability sentence.
-- If an inline preview note needs more than one sentence, promote it to a
+- Tie it to a version when it helps: "In Preview from n8n 2.20.0".
+- Keep it in a separate sentence (or a separate hint titled "Preview status")
+  from any plan/version availability note — don't fold Preview wording into
+  the availability sentence, and don't title a Preview-only hint "Feature
+  availability".
+- If an inline Preview note needs more than one sentence, promote it to a
   page- or section-level hint instead.
 
 ---

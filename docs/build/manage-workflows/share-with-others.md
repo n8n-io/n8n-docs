@@ -15,7 +15,10 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Available on all Cloud plans, and Enterprise self-hosted plans.
+Workflow sharing is available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 Workflow sharing allows you to share workflows between users of the same n8n instance.
@@ -31,7 +34,7 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 **Note:** This option is only available when sharing a workflow that is inside a **Personal** workspace. When trying to use the "Add users" option for a workflow that's **inside a project**, you'll get this pop-up instead:
 
-![Screenshot of the sharing option within projects](../.gitbook/assets/sharing-within-projects.png)
+![Pop-up explaining that the project shares this workflow with everyone in it](../.gitbook/assets/sharing-within-projects.png)
 
 This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. Instead of adding the user directly to the workflow, you need to add the user to the project in which the workflow is located.
 

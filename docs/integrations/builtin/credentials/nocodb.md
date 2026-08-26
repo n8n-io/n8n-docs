@@ -25,9 +25,13 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token (recommended)
-- User auth token<br>
+- User auth token
 
-    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>User auth token deprecation</strong></p><p>NocoDB deprecated user auth tokens in v0.205.1. Use <a href="#using-api-token">API tokens</a> instead.</p></div>
+{% hint style="warning" %}
+**Feature availability**
+
+NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+{% endhint %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -57,8 +61,8 @@ Refer to the NocoDB [API Tokens documentation](https://docs.nocodb.com/account-s
 
 Before NocoDB deprecated it, user auth token was a temporary token designed for quick experiments with the API, valid for a session until the user logs out or for 10 hours.
 
-{% hint style="info" %}
-**User auth token deprecation**
+{% hint style="warning" %}
+**Feature availability**
 
 NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
 {% endhint %}

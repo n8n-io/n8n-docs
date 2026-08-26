@@ -21,10 +21,12 @@ layout:
 
 These environment variables configure the durable scheduler, which runs time-based workflows from a database-backed queue instead of from each instance's memory. For what the durable scheduler changes, how to turn it on, and how it works, see [Durable scheduler](../../durable-scheduler.md).
 
-{% hint style="warning" %}
-**Preview feature**
+Turn on Prometheus metrics for the durable scheduler with `N8N_METRICS_INCLUDE_SCHEDULER_METRICS` and `N8N_METRICS_SCHEDULER_INTERVAL`, which live with the other metrics variables on the [Endpoints](endpoints.md) page. For what each metric means, see [Durable scheduler observability](../../durable-scheduler.md#observability).
 
-The durable scheduler is a preview feature behind an environment flag. The environment variables and default behavior can change before the feature reaches general availability.
+{% hint style="info" %}
+**Feature availability**
+
+The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature.
 {% endhint %}
 
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
@@ -32,6 +34,21 @@ The durable scheduler is a preview feature behind an environment flag. The envir
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_ENABLED` | Boolean | `false` | Whether to turn on the durable scheduler. When on, the scheduler stores scheduled runs in the database before they execute, so a restart doesn't drop them and, across multiple instances, each run executes once. Requires `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to take over Schedule Trigger nodes. |
+| `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` | Boolean | `false` | Whether the durable scheduler also takes over polling triggers (trigger nodes with a Poll Times parameter). Requires `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. Available from n8n 2.33.0. |
+| `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` | Boolean | `false` | Whether Schedule Trigger nodes show a **Skip Durable Scheduler** setting that keeps an individual trigger on the in-memory scheduler while the durable scheduler is on. A temporary escape hatch for migrating gradually; a future release will remove it. |
+
+{% hint style="warning" %}
+Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics to watch scheduling lag, retries, and dead-letters (see [Durable scheduler observability](../../durable-scheduler.md#observability)). This doesn't affect Schedule Trigger support, which is stable.
+{% endhint %}
+
+## Poll triggers
+
+Controls trigger nodes with a **Poll Times** parameter (such as Google Sheets Trigger or Airtable Trigger): how they store their cursor, the node's record of how far it has already read, and how long a single poll may run. To route these nodes through the durable scheduler, turn on `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` (in the Enable the scheduler table). See [Poll triggers](../../durable-scheduler.md#poll-triggers).
+
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_POLLER_DURABLE_CURSORS_ENABLED` | Boolean | `false` | Whether n8n stores a poll trigger node's cursor in a dedicated database table and commits it in the same transaction as the execution the poll produced, so a crash mid-poll can't drop or duplicate data. Available from n8n 2.36.0. From n8n 2.37.0, requires `N8N_SCHEDULER_ENABLED`, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. See [Durable poll cursors](../../durable-scheduler.md#durable-poll-cursors). |
+| `N8N_SCHEDULER_POLL_TIMEOUT` | Number | `45` | How long, in seconds, a single poll may run before n8n abandons it. An abandoned poll records nothing: the cursor stays put and the next poll covers the same ground, so no data goes missing. A poll that keeps timing out counts as failing, so n8n re-polls it at a widening interval. Keep the timeout below `N8N_SCHEDULER_LEASE_DURATION`: the timeout clock only starts once the poll itself does, so a poll allowed the full lease can still be running when another instance takes its run over. n8n warns at startup when the timeout reaches the lease duration. Must be greater than 0. Available from n8n 2.37.0. |
 
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
 
@@ -49,7 +66,7 @@ Controls how often the scheduler starts due runs and how it claims each one so o
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | How often, in seconds, the scheduler checks for recorded runs whose time has arrived and starts them. Sets the worst-case delay between a run's scheduled time and when it starts. Lower it for tighter timing at the cost of more frequent polling. Must be greater than 0. |
+| `N8N_SCHEDULER_EXECUTOR_INTERVAL` | Number | `5` | How often, in seconds, the scheduler checks for recorded runs coming due. Each check claims the runs due within the next interval and holds them on a precise timer, so a run starts at its scheduled instant rather than on the polling cadence. The interval caps how long the scheduler takes to pick up a newly activated or edited schedule. Must be greater than 0. |
 | `N8N_SCHEDULER_EXECUTOR_TIMEOUT` | Number | `60` | How long, in seconds, a single check for due runs may run before it's abandoned and retried on the next interval. Must be greater than 0. |
 | `N8N_SCHEDULER_LEASE_DURATION` | Number | `60` | How long, in seconds, an instance holds an exclusive claim on a run it picked up, so no other instance starts the same one. If the instance stops without finishing, the claim expires after this long and another instance may take over. Keep it comfortably above the time a run needs to get going: too short risks a double run, too long delays recovery after a crash. Must be greater than 0. |
 | `N8N_SCHEDULER_CLAIM_BATCH_SIZE` | Number | `100` | The most runs a single claim takes from the queue in one pass. Larger batches drain a backlog faster but hold more work on one instance per tick. Must be greater than 0. |
@@ -91,4 +108,4 @@ Controls how the scheduler overlaps its background passes and spreads database l
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | The smallest gap, in seconds, allowed between consecutive runs of the same schedule. n8n slows a schedule set to run more often down to this gap. Defaults to `0`, which disables the limit and honors whatever interval each schedule specifies. Set it to stop a runaway every-second schedule from overloading the instance. |
 | `N8N_SCHEDULER_TRIGGER_NODE_MODE` | Enum (`legacy`, `new`) | `legacy` | How a Schedule Trigger node's "every N seconds" and "every N minutes" schedules fire. `legacy` keeps clock-aligned timing matching the in-memory scheduler; `new` spaces runs a steady N apart from activation time. Only affects second and minute intervals. See [Schedule Trigger timing](../../durable-scheduler.md#trigger-node-mode). |
-| `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger type's misfire policy decides what happens to it and to any backlog behind it. Must exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |
+| `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger's misfire policy decides what happens to it and to any backlog behind it. This is the default a schedule inherits; from n8n 2.36.0, a Schedule Trigger node can set its own grace period instead. Should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and be at least `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |

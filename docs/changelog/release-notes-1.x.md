@@ -2831,7 +2831,7 @@ Max from our DevRel team created an official walkthrough for you to get started:
 
 <br>
 
-[![Studio](.gitbook/assets/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
+[![Thumbnail linking to a Studio video walkthrough of the new MCP Server Trigger and Client Tool nodes](.gitbook/assets/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
 
 ### MCP Server Trigger <a href="#mcp-server-trigger" id="mcp-server-trigger"></a>
 
@@ -3143,7 +3143,7 @@ As of this release, **Tools Agent** is the only agent type available when adding
 * ReAct Agent
 * SQL Agent
 
-Existing workflows that use these agent types continue to run for now, but the underlying code will be removed in n8n 3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
+Existing workflows that use these agent types continue to run for now, but the underlying code will be removed from n8n 3. When that happens, workflows still using a deprecated agent type will fail. To prepare, replace affected AI Agent nodes with a new [AI Agent](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, which uses Tools Agent.
 
 <br>
 
@@ -3583,7 +3583,7 @@ We build this on a web worker architecture so you won't have to suffer from perf
 \
 To get the full picture, check out our Studio update with Max and Elias, where they discuss and demo the new editing experience. 👇<br>
 
-[![Studio](.gitbook/assets/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
+[![Thumbnail linking to a Studio video demoing the overhauled Code node editing experience](.gitbook/assets/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
 {% endhint %}
 
 ### New node: Microsoft Entra ID <a href="#new-node-microsoft-entra-id" id="new-node-microsoft-entra-id"></a>

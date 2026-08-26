@@ -57,16 +57,18 @@ Ask n8n AI offers a range of tools to support you:
 ## AI usage settings <a href="#ai-usage-settings" id="ai-usage-settings"></a>
 
 {% hint style="info" %}
-Available in n8n 2.7.0 and above.
+**Feature availability**
+
+AI usage settings are available from n8n 2.7.0.
 {% endhint %}
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance. Here, you can control what data is shared with Ask n8n AI.
 
 These settings are only available to the instance owners and administrators, and will apply to all users on the instance.
 
-![ai\_usage\_settings.png](../.gitbook/assets/ai_usage_settings.png)
+![AI Usage settings page with the Send actual data values checkbox](../.gitbook/assets/ai_usage_settings.png)
 
-Toggle whether to share actual workflow data (like node names, parameters, and structure) with Ask n8n AI. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+Choose whether to share actual workflow data (like node names, parameters, and structure) with Ask n8n AI. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
 
 Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
 

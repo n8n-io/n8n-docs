@@ -3,6 +3,7 @@ title: Use AI Assistant
 description: >-
   Use the AI Assistant to create, edit, test, and troubleshoot n8n workflows from
   a chat.
+status: preview
 tags:
   - tag: preview
     primary: true
@@ -20,7 +21,15 @@ Describe what you want to automate. The AI Assistant can plan the workflow, buil
 The result is a normal n8n workflow. You can open it, inspect it, edit it, test it, and publish it like any other workflow.
 
 {% hint style="info" %}
-The AI Assistant is available on n8n Cloud only.
+**Feature availability**
+
+The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
 
 The AI Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
@@ -33,6 +42,7 @@ You can ask the AI Assistant to:
 
 - **Create workflows:** describe the automation you want, and the AI Assistant can generate a workflow.
 - **Build agents:** describe the agent you want, and the AI Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
+- **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
 - **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.

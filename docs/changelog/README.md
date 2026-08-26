@@ -108,8 +108,10 @@ AI Assistant supersedes the AI Workflow Builder, and the difference is autonomy.
 
 Every workflow it builds is a normal n8n workflow: a visible canvas you can open, inspect, edit, and publish, with step-by-step execution logs to audit, built on the 400+ integrations n8n already ships instead of rebuilt API connections. You stay in control throughout: high-impact actions such as publishing wait for your approval. This is an early first step, and we want your feedback on where to take it next.
 
-{% hint style="warning" %}
-This feature is in preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% hint style="info" %}
+**Preview status**
+
+This feature is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
 {% endhint %}
 
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
@@ -227,8 +229,10 @@ Imports are checked up front. If a conflict or an unresolved credential would bl
 
 This makes it easy to promote workflows from development to production, back up and restore an instance, hand a workflow to a teammate without sharing secrets, or migrate between instances.
 
-{% hint style="warning" %}
-This feature is in preview. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
+{% hint style="info" %}
+**Preview status**
+
+This feature is in Preview. The package format and APIs are still under development, and breaking changes may occur without a major version bump.
 {% endhint %}
 
 Learn more in the [n8n Packages documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages).

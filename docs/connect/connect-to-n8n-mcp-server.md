@@ -45,7 +45,7 @@ In comparison, you configure an MCP Server Trigger node inside a single workflow
 
 ### Key considerations when using instance-level MCP access <a href="#key-considerations-when-using-instance-level-mcp-access" id="key-considerations-when-using-instance-level-mcp-access"></a>
 
-* MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (n8n 2.13 onward).
+* MCP supports two types of workflow interactions: running existing workflows with the workflow execution tools, and building or editing workflows (available from n8n 2.13.0).
 * It doesn't provide blanket exposure to all workflows in your instance. You must enable MCP at the instance level and then enable each workflow individually. The only exception is `search_workflows`, which can access every workflow the current user has permission to view, but only returns previews, not full workflow data.
 * It's not scoped to each MCP client. All clients you connect (for example, Claude Desktop and ChatGPT) can see all workflows you've enabled for MCP access. You can't restrict specific workflows to specific clients. On a user level, visibility remains user-scoped: users can only see MCP-enabled workflows they have access to.
 * Most MCP tools work on unpublished workflows. The exception is `execute_workflow`, which defaults to production mode and runs the published version of a workflow. It also supports a `manual` execution mode to run the current (unpublished) version.
@@ -152,8 +152,9 @@ Only workflows that are published, and that contain a webhook, form, schedule, o
 
 ### Enabling access for individual workflows <a href="#enabling-access-for-individual-workflows" id="enabling-access-for-individual-workflows"></a>
 
-#### Option 1: From the Workflows exposed page (available from n8n 2.2.0) <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
+#### Option 1: From the Workflows exposed page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
+From the **Workflows exposed** page (available from n8n 2.2.0), you can enable access for individual workflows:
 1. Navigate to **Settings > Instance-level MCP**.
 2. Select **Workflows exposed**.
 3. Click the **Enable workflows** button (in the workflows table header or in the table's empty state).
@@ -187,12 +188,35 @@ You can use the **Options** menu <img src=".gitbook/assets/three-dot-options-men
 2. Select the **Options** menu <img src=".gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> next to the name of the project or folder.
 3. Select **Manage MCP access**, then either **Enable MCP** or **Disable MCP**.
 
-![mcp\_bulk\_toggle.png](<.gitbook/assets/mcp_bulk_toggle (1).png>)
+![Options menu with Manage MCP access expanded, showing Enable MCP access and Disable MCP access](<.gitbook/assets/mcp_bulk_toggle (1).png>)
 
 {% hint style="info" %}
 **Note**
 
-This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). You will still need to toggle access for any workflows added in the future.
+This will toggle MCP access for all workflows that are **currently** in the selected project or folder (skipping ones that are already in the selected state). To expose workflows you create later without toggling each one, use [Auto-expose new workflows](#auto-exposing-new-workflows).
+{% endhint %}
+
+### Auto-exposing new workflows <a href="#auto-exposing-new-workflows" id="auto-exposing-new-workflows"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Auto-exposing new workflows is rolling out gradually from n8n 2.36.0. The setting may not be immediately visible on every instance.
+{% endhint %}
+
+Instead of enabling MCP access for each workflow individually, you can expose every newly created workflow automatically:
+
+1. Navigate to **Settings > Instance-level MCP**.
+2. Turn on **Auto-expose new workflows**.
+
+This setting is off by default. Turning it on only affects workflows created afterwards. Workflows that already exist keep their current setting, so use [Enabling access for individual workflows](#enabling-access-for-individual-workflows) or [Enabling access for projects/folders](#enabling-access-for-projectsfolders) to expose those.
+
+Only instance owners and admins can change this setting. It's read-only on instances where MCP access is managed through environment variables.
+
+{% hint style="info" %}
+**Note**
+
+Workflows still need to meet the [eligibility rules](#exposing-workflows-to-mcp-clients) to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>
@@ -219,7 +243,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
     2. Click the main workflow menu (`...`) in the top-right corner.
     3. Select **Edit description**.
 
-    ![mcp\_workflow\_description.png](<.gitbook/assets/mcp_workflow_description (1).png>)
+    ![Workflow's main menu open, with Edit description highlighted](<.gitbook/assets/mcp_workflow_description (1).png>)
 
 ## Exposing agents to MCP clients <a href="#exposing-agents-to-mcp-clients" id="exposing-agents-to-mcp-clients"></a>
 
@@ -230,9 +254,9 @@ Agents are available from n8n 2.34.0 and are a separate feature from workflows. 
 {% endhint %}
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-Agents are in preview and may change in future releases. Avoid relying on them in production workflows.
+Agents are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 If your instance has the agents feature, the **Access** section also shows **Agents exposed**. As with workflows, MCP clients can't read or manage an agent unless you explicitly enable MCP access for it.
@@ -318,4 +342,21 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 * Verify that the MCP access is enabled in n8n settings.
 * Check that the workflows you want to execute or modify are marked as **Available in MCP**.
 * Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
+* If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 * Review n8n server logs for any error messages related to MCP connections.
+
+### MCP request headers <a href="#mcp-request-headers" id="mcp-request-headers"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n allows these routing headers in its CORS policy from n8n 2.36.0.
+{% endhint %}
+
+MCP clients send the following headers to the n8n MCP endpoint:
+
+* `MCP-Protocol-Version`
+* `Mcp-Method`
+* `Mcp-Name`
+
+If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.

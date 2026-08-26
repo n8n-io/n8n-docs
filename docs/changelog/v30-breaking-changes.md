@@ -39,6 +39,11 @@ Older nodes, modes, and helpers that have been replaced by newer patterns are be
 
 - **Execute Workflow** node: older behavior is being removed.
 
+### AI Agent node: older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
+
+- Version 1 of the **AI Agent** node supported several agent type modes, including **SQL Agent**, **Conversational Agent**, **OpenAI Functions Agent**, **Plan and Execute Agent**, and **ReAct Agent**. n8n 3.0 removes version 1 of the node, along with these modes.
+- **What to do:** Update any workflows and templates that use version 1 of the [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) node to the latest version. Workflows already set to **Tools Agent** continue to behave the same after you update. For **SQL Agent** use cases, replace it with a [Postgres](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) or [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) tool sub-node paired with a recent **AI Agent** node.
+
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
 - The deprecated `$getPairedItem` expression helper is being removed.
@@ -51,6 +56,8 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 - **Tighter handling of risky resource names.**
 - **More secure credential behavior.**  
 - **Key rotation enabled by default.** 
+- **Lower Compression node decompression limits.** Default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
+  - **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

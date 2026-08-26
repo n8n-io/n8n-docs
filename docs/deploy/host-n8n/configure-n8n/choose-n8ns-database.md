@@ -24,7 +24,7 @@ By default, self-hosted installations use **SQLite**. You can optionally configu
 
 n8n Cloud installations use different databases depending on your plan tier:
 
-- **SQLite**: Trial, Starter, and Pro plans, as well as legacy Enterprise plans
+- **SQLite**: Starter, Pro, and legacy Enterprise plans
 - **PostgreSQL**: Enterprise Scaling plans only
 
 ## Shared settings <a href="#shared-settings" id="shared-settings"></a>
@@ -44,7 +44,9 @@ n8n supports:
 
 Run the latest minor release within your major version.
 
-n8n doesn't officially support PostgreSQL-compatible derivatives, such as Amazon Aurora, AlloyDB, CockroachDB, or YugabyteDB.
+Amazon Aurora PostgreSQL is **experimental**. n8n's hosting templates offer it for high-availability setups, where Aurora recovers faster when the primary database goes down. n8n doesn't test or certify Aurora, and n8n's PostgreSQL version support doesn't extend to it. Use upstream PostgreSQL unless you specifically need what Aurora offers.
+
+n8n doesn't support other PostgreSQL-compatible derivatives, such as AlloyDB, CockroachDB, or YugabyteDB.
 
 The PostgreSQL project retires its oldest maintained major version and releases a new one every November, so n8n's supported version range shifts each year. Check this page for the current supported versions, rather than relying on a specific version number you've seen elsewhere.
 

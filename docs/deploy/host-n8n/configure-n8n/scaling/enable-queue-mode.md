@@ -39,7 +39,7 @@ This is the process flow:
 1. Redis notifies the main instance.
 
 
-!["Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database"](../../../.gitbook/assets/queue-mode-flow.png)
+![Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database](../../../.gitbook/assets/queue-mode-flow.png)
 
 ## Configuring workers <a href="#configuring-workers" id="configuring-workers"></a>
 

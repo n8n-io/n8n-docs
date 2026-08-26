@@ -43,27 +43,27 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 
 **Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 
-![](../.gitbook/assets/publish-initial.png)
+![Disabled, greyed-out Publish button because there are no unpublished changes](../.gitbook/assets/publish-initial.png)
 
 **Ready to publish** When the workflow is not yet published but has changes, the button becomes active.
 
-![](../.gitbook/assets/publish-ready.png)
+![Active Publish button for a workflow that has unpublished changes](../.gitbook/assets/publish-ready.png)
 
 **Published, up to date** The workflow is currently published and there are no new changes since the last publish.
 
-![](../.gitbook/assets/published.png)
+![Publish button showing the workflow is published and up to date, with no pending changes](../.gitbook/assets/published.png)
 
 **Published, has changes** The workflow is published, but you've made changes since the last publish that haven't gone live yet.
 
-![](../.gitbook/assets/published-changes.png)
+![Publish button showing the workflow is published but has changes not yet live](../.gitbook/assets/published-changes.png)
 
 **Published, invalid changes** The workflow is published, but it's not in a state to be republished (no trigger requires publishing).
 
-![](../.gitbook/assets/published-invalid.png)
+![Publish button showing the workflow can't be republished because no trigger requires publishing](../.gitbook/assets/published-invalid.png)
 
 **Published, error** The workflow is published, but there are errors in your recent changes that need to be fixed before you can publish again.
 
-![](../.gitbook/assets/published-error.png)
+![Publish button showing an error state because recent changes contain errors to fix](../.gitbook/assets/published-error.png)
 
 ## How collaboration works <a href="#how-collaboration-works" id="how-collaboration-works"></a>
 
@@ -77,7 +77,7 @@ Only one person can edit a workflow at a time. If someone else is currently edit
 
 On the **Workflows** page, if a workflow is published an indicator will be displayed on the card.
 
-![](../.gitbook/assets/published-indicator-wf-list.png)
+![Published indicator badge on a workflow card in the Workflows list](../.gitbook/assets/published-indicator-wf-list.png)
 
 ## Publishing a workflow <a href="#publishing-a-workflow" id="publishing-a-workflow"></a>
 
@@ -91,7 +91,13 @@ Each time you make a change to a workflow, n8n autosaves those changes to a new 
 
     If you only update workflow settings, n8n will re-publish the version without requiring you to take any action.
 
-![](../.gitbook/assets/publish-modal.png)
+![Publish modal with an editable version name (defaulting to a UUID) and description field](../.gitbook/assets/publish-modal.png)
+
+{% hint style="info" %}
+**Workflow reviews**
+
+If workflow reviews are enabled for your instance, you can submit a version for review instead of publishing immediately. While a review is open, n8n blocks publishing that workflow. Refer to [Workflow reviews](../manage-workflows/workflow-reviews.md) for plan availability and how reviews work.
+{% endhint %}
 
 ## Naming versions <a href="#naming-versions" id="naming-versions"></a>
 
@@ -113,7 +119,7 @@ To name a version from the canvas header:
 3. Enter a name and optional description.
 4. Select **Save**.
 
-![](../.gitbook/assets/publish-dropdown.png)
+![Publish button's dropdown menu with the Name version option](../.gitbook/assets/publish-dropdown.png)
 
 To name a version from the version history page:
 

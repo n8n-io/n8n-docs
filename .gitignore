@@ -12,3 +12,7 @@ yarn.lock
 ## Ignore ephemeral doc-tool output
 output.csv
 _doctools/*.csv
+
+## Python bytecode from running .github/scripts helpers and their tests
+__pycache__/
+*.pyc

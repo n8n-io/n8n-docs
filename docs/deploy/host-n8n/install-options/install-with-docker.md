@@ -127,7 +127,7 @@ You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting
 
 To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
 
-![Docker Desktop](../../.gitbook/assets/docker_desktop.png)
+![Docker Desktop Images tab with the row context menu open and Pull available](../../.gitbook/assets/docker_desktop.png)
 
 You can also use the command line to pull the latest, or a specific version:
 

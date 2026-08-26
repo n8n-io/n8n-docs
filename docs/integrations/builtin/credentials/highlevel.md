@@ -30,8 +30,8 @@ Create a [HighLevel developer](https://marketplace.gohighlevel.com/) account.
 - API key: Use with API v1
 - OAuth2: Use with API v2
 
-{% hint style="info" %}
-**API 1.0 deprecation**
+{% hint style="warning" %}
+**Feature availability**
 
 HighLevel deprecated API v1.0 and no longer maintains it. Use OAuth2 to set up new credentials.
 {% endhint %}

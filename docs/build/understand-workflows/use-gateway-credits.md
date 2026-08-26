@@ -48,7 +48,7 @@ Some nodes support Gateway credits for part of what they do. When you use Gatewa
 
 ## When your balance runs out
 
-Nodes using Gateway credits fail when your instance's balance reaches zero. The instance owner can [top up the balance](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/top-up-gateway-credits) or set up automatic top-ups, and can [track spend by model or workflow](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) in the Cloud admin dashboard. You can also switch the affected nodes to your own credentials at any time.
+Nodes using Gateway credits fail when your instance's balance reaches zero. The instance owner can [top up the balance](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/top-up-gateway-credits) or set up auto top-up, and can [track spend by model or workflow](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits/track-gateway-credit-spend) in the Cloud admin dashboard. You can also switch the affected nodes to your own credentials at any time.
 
 ## Gateway credits versus your own API keys
 
@@ -65,4 +65,10 @@ You can switch a node between the two at any time without rebuilding the workflo
 
 ## Control Gateway credits on your instance
 
-Instance owners can turn Gateway credits off for workspace members in the instance settings of the [Cloud admin dashboard](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-admin-dashboard). When it's off, the Gateway credits option doesn't appear on nodes for anyone on the instance.
+Instance owners can turn Gateway credits off for everyone on the instance:
+
+1. Open the [Cloud admin dashboard](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-admin-dashboard) and open **Workspace settings**.
+1. Turn off **Enable Gateway credits**.
+1. Save your workspace settings. The instance goes offline for one to two minutes while the new settings apply.
+
+When it's off, the Gateway credits option doesn't appear on nodes for anyone on the instance.

@@ -9,7 +9,7 @@ layout:
 
 # Track Gateway credit spend
 
-The **Gateway credits** page in the Cloud admin dashboard shows your balance, your spend over time, and your top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select **Manage** > **Gateway credits**.
+The **Gateway credits** tab in the Cloud admin dashboard shows your balance, your spend over time, and your top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Gateway credits** tab.
 
 You can also see your current balance in the editor, next to the Gateway credits option on supported nodes.
 
@@ -29,7 +29,9 @@ Grouping by workflow helps you find a workflow that's spending more than you exp
 
 ## Top-up history
 
-The top-up history table lists every credit added to your balance: your free sign-up credit, manual top-ups, and automatic top-ups. Each entry shows the amount and date. Refunded top-ups stay in the list, marked as refunded.
+The top-up history lists every credit added to your balance: your free sign-up credit, manual top-ups, and auto top-ups. Each entry shows the amount, the date, and when those credits expire. Refunded top-ups stay in the list, marked as refunded.
+
+If your balance dipped below zero because n8n let in-flight requests finish, the overspent amount is deducted from your next top-up and shown here. Refer to [Overspend](top-up-gateway-credits.md#overspend) for details.
 
 ## Notifications
 
@@ -37,13 +39,13 @@ n8n emails the instance owner about balance changes:
 
 - When your balance runs low, so you can top up before workflows stop.
 - When your balance is empty.
-- When an automatic top-up adds credit, fails to charge your payment method, or pauses because it reached your monthly limit.
+- When an auto top-up adds credit, fails to charge your payment method, or pauses because it reached your monthly limit.
 
 ## When your balance runs out
 
 When your balance reaches zero, nodes using Gateway credits fail until you add credit. Executions that don't use Gateway credits keep running as normal.
 
-- On a paid plan, [top up your balance](top-up-gateway-credits.md) or set up automatic top-ups to avoid interruptions.
+- On a paid plan, [top up your balance](top-up-gateway-credits.md) or set up auto top-up to avoid interruptions.
 - On a free trial, top-ups aren't available: upgrade to a paid plan to add more credit.
 - On any plan, you can switch the affected nodes to your own credentials. Refer to [Use Gateway credits](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/use-gateway-credits) for how to switch.
 

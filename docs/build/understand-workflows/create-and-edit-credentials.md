@@ -29,6 +29,10 @@ layout:
 
 Credentials are securely stored authentication information used to connect n8n workflows to external services such as APIs, or databases.
 
+{% hint style="info" %}
+On n8n Cloud, supported AI models and services don't need a credential at all: select **Use n8n credits** on the node to run it with [Gateway credits](use-gateway-credits.md) instead of your own API key.
+{% endhint %}
+
 ## Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
 
 1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.

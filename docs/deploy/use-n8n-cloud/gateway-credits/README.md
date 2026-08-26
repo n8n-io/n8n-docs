@@ -46,7 +46,7 @@ Each Cloud instance has one credit balance, shared by everyone who uses Gateway 
 
 New Cloud users receive a small amount of free credit at sign-up, so you can try supported services before you buy credits. Free trials include Gateway credits too: you can use them from your first workflow.
 
-When your balance reaches zero, nodes using Gateway credits stop working until you add credit. Nodes using your own credentials aren't affected. On a paid plan, you can [top up your balance](top-up-gateway-credits.md) manually or automatically. Topping up isn't available during a free trial, so if you use up your free credit while trialing, upgrade to a paid plan to add more.
+When your balance reaches zero, nodes using Gateway credits stop working until you add credit. Nodes using your own credentials aren't affected. If the balance runs out in the middle of an execution, n8n lets the in-flight requests finish rather than stopping them partway through, and deducts the difference from your next top-up. On a paid plan, you can [top up your balance](top-up-gateway-credits.md) manually or automatically. Topping up isn't available during a free trial, so if you use up your free credit while trialing, upgrade to a paid plan to add more.
 
 ### Credit expiry and forfeiture
 

@@ -11,22 +11,22 @@ layout:
 
 n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) servers you can connect to an agent in one click. Select a server, sign in, and its tools are available to your agent.
 
-You can also connect MCP servers in the registry to the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant/).
+You can also connect MCP servers in the registry to the [AI Assistant](../ways-of-building-workflows/ai-assistant.md).
 
 ## Add a registry server to an agent
 
-1. Open the node panel on an [AI Agent](builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node, or in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#add-tools).
+1. Open the node panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node, or in [Build and manage agents](../build-and-manage-agents.md#add-tools).
 2. Search for the service you want to connect with the search bar (such as Notion or Linear) or click the new "MCP Servers" section to view all available servers.
 3. Select the server, then sign in when prompted.
 4. Choose which of the server's tools to expose to the agent with "Tools to include": all, a selected list, or all except a selected list.
 
-n8n creates an [MCP credential](builtin/credentials/mcp.md) automatically when you sign in from the panel.
+n8n creates an [MCP credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/mcp/) automatically when you sign in from the panel.
 
 ## Find available servers
 
 The list of registry servers changes often. Browse the current list in the node panel instead of relying on a static list here.
 
-If the server you want isn't in the registry yet, use the [MCP Client Tool](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node to connect to any MCP server manually with its connection URL and credentials.
+If the server you want isn't in the registry yet, use the [MCP Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) node to connect to any MCP server manually with its connection URL and credentials.
 
 ## Choose between a node, an agent tool, and an MCP server
 

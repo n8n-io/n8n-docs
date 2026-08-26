@@ -945,4 +945,3 @@
   * [Using community nodes](community-nodes/using-community-nodes.md)
   * [Troubleshooting](community-nodes/troubleshooting.md)
   * [Building community nodes](community-nodes/building-community-nodes.md)
-* [MCP servers](mcp-servers.md)

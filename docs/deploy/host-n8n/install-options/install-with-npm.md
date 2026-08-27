@@ -18,7 +18,7 @@ npm-based installs are deprecated from n8n 3.0.
 {% hint style="info" %}
 **AI Assistant not available**
 
-The AI Assistant feature is not available when using the npm installation method.
+The AI Assistant feature isn't available when using the npm installation method.
 {% endhint %}
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
@@ -122,4 +122,4 @@ If the upgrade involved a database migration:
 
 ## Windows troubleshooting <a href="#windows-troubleshooting" id="windows-troubleshooting"></a>
 
-If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
+If you're experiencing issues running n8n on Windows, verify your Node.js environment setup. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).

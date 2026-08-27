@@ -301,7 +301,7 @@ When enabled, **Project Editors** can:
 {% hint style="info" %}
 **Global vault access**
 
-Global vaults created in **Settings** > **External Secrets** are visible in **Project** > **Settings** but are read-only for project roles. Only instance admins can change or delete global vaults.
+Global vaults created in **Settings** > **External Secrets** are visible in **Project** > **Settings** but are read-only for project roles. Only instance admins can modify or delete global vaults.
 {% endhint %}
 
 ### Custom roles <a href="#custom-roles" id="custom-roles"></a>

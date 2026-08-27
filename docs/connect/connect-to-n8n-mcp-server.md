@@ -141,7 +141,7 @@ If you lose your token or need to rotate it:
 
 ## Exposing workflows to MCP clients <a href="#exposing-workflows-to-mcp-clients" id="exposing-workflows-to-mcp-clients"></a>
 
-MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. Clients can't access full workflow data, execute, or change a workflow unless you explicitly enable MCP access for that workflow.
+MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. Clients can't access full workflow data, execute, or modify a workflow unless you explicitly enable MCP access for that workflow.
 
 {% hint style="info" %}
 **Workflow eligibility** <a href="#workflow-eligibility" id="workflow-eligibility"></a>

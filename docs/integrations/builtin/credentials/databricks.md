@@ -31,7 +31,7 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user.
-- [OAuth2 with user login](#using-oauth2-with-user-login): each n8n user signs in with their own Databricks account. Operations run with the user's own permissions and appear in Databricks audit logs under their identity. Databricks recommends this for attended, interactive use.
+- [OAuth2 with user login](#using-oauth2-with-user-login): the credential is connected by signing in to a Databricks account in the browser. Operations run with that user's permissions and appear in Databricks audit logs under their identity. Each user can create their own credential to run workflows under their own account. Databricks recommends this for attended, interactive use.
 - [OAuth2 with a service principal](#using-oauth2-service-principal): n8n authenticates as a service principal with a client ID and secret, without user interaction. Databricks recommends this for unattended scenarios, such as fully automated production workflows.
 
 ## Required Databricks privileges
@@ -85,7 +85,7 @@ Refer to [Databricks personal access token authentication](https://docs.databric
 
 ## Using OAuth2 with user login
 
-This method uses the Databricks OAuth user-to-machine (U2M) flow. Each n8n user connects the credential by signing in to Databricks in their browser, so operations run with their own permissions.
+This method uses the Databricks OAuth user-to-machine (U2M) flow. You connect the credential by signing in to Databricks in your browser, and operations run with your permissions. A shared credential runs as the user who connected it, so create separate credentials for separate identities.
 
 To configure this credential, you'll need:
 
@@ -117,7 +117,7 @@ A Databricks account admin needs to complete these steps:
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
-Share the client ID and secret with the n8n users who'll create credentials, or pre-configure them in a shared n8n credential.
+Share the client ID and secret with the n8n users who'll create credentials. All users reuse the same OAuth app connection, but each user creates and connects their own n8n credential to run with their own identity.
 
 Refer to [Enable or disable partner OAuth applications](https://docs.databricks.com/aws/en/integrations/enable-disable-oauth) for more information.
 

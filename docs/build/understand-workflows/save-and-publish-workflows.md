@@ -106,7 +106,7 @@ If workflow reviews are enabled for your instance, you can submit a version for 
 
 Named versions are available on:
 
-- **n8n Cloud:** Enterprise
+- **n8n Cloud:** Pro, Enterprise
 - **Self-hosted:** Business, Enterprise
 {% endhint %}
 

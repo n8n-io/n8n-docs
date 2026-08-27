@@ -545,7 +545,7 @@ Use the file name on its own:
 
 **Link to the current page's parent page**
 
-Use `./` only if the current folder's landing page is a `README.md` — it points there:
+Use `./` only if the current folder's landing page is a `README.md`, it points there:
 
 ```
 [link to a parent page](./)

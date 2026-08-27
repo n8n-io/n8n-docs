@@ -20,7 +20,7 @@ layout:
 # Anthropic node <a href="#anthropic-node" id="anthropic-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Anthropic node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Anthropic API key. Select **Use n8n credits** in the node's credential field to run the node without a Anthropic account.
+On n8n Cloud, you can use the Anthropic node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Anthropic API key. Select **Use n8n credits** in the node's credential field to run the node without an Anthropic account.
 {% endhint %}
 
 Use the Anthropic node to automate work in Anthropic and integrate Anthropic with other applications. n8n has built-in support for a wide range of Anthropic features, including analyzing, uploading, getting, and deleting documents, files, and images,  and generating, improving, or templatizing prompts.

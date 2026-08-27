@@ -42,7 +42,7 @@ Services that aren't in the catalogue still work in n8n the usual way: create a 
 
 ## Your credit balance
 
-Each Cloud instance has one credit balance, shared by everyone who uses Gateway credits on that instance. You can see the balance in the editor next to the Gateway credits option on a node, and on the **Gateway credits** page in the [Cloud admin dashboard](../use-the-admin-dashboard.md), which also shows your spend over time. Refer to [Track Gateway credit spend](track-gateway-credit-spend.md) for details.
+Each Cloud instance has one credit balance, shared by everyone who uses Gateway credits on that instance. You can see the balance in the editor next to the Gateway credits option on a node, and on the **Gateway credits** tab in the [Cloud admin dashboard](../use-the-admin-dashboard.md), which also shows your spend over time. Refer to [Track Gateway credit spend](track-gateway-credit-spend.md) for details.
 
 New Cloud users receive a small amount of free credit at sign-up, so you can try supported services before you buy credits. Free trials include Gateway credits too: you can use them from your first workflow.
 
@@ -62,7 +62,7 @@ n8n has more than one kind of credit. They have separate balances and pay for di
 
 | Credit type | What it pays for | Where you see it |
 |---|---|---|
-| Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** page in the Cloud admin dashboard |
+| Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** tab in the Cloud admin dashboard |
 | AI Assistant credits | Your usage of [n8n's AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) and AI Workflow Builder | In the AI Assistant panel in the editor |
 | Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users | Only on instances without Gateway credits |
 

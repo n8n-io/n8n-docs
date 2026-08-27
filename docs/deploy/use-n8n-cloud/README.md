@@ -21,6 +21,10 @@ layout:
 [configure-cloud/README.md](configure-cloud/README.md)
 {% endcontent-ref %}
 
+{% content-ref url="gateway-credits/README.md" %}
+[gateway-credits/README.md](gateway-credits/README.md)
+{% endcontent-ref %}
+
 {% content-ref url="understand-concurrency.md" %}
 [understand-concurrency.md](understand-concurrency.md)
 {% endcontent-ref %}

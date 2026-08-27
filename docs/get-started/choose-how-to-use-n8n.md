@@ -1,7 +1,6 @@
 ---
 description: >-
-  Choose between our n8n Cloud service, or self-hosting options. Learn more about
-  licenses and n8n payment plans.
+  Choose between n8n Cloud and self-hosting, and learn about licenses and plans.
 contentType: overview
 nodeTitle: Choose how to use n8n
 originalFilePath: choose-n8n.md
@@ -49,7 +48,7 @@ Use this guide to choose a deployment option:
 
 | Your situation | Recommended option | Reason |
 |----------------|-------------------|---------|
-| Want to start quickly | **n8n Cloud** | No installation needed |
+| Want to start right away | **n8n Cloud** | No installation needed |
 | Don't have technical expertise | **n8n Cloud** | Fully managed, no setup or maintenance required |
 | Need production-ready deployment | **Both options work** | Both n8n Cloud and self-hosted support production use |
 | Don't want to manage infrastructure | **n8n Cloud** | n8n handles hosting, updates, and scaling |
@@ -106,9 +105,9 @@ Every plan runs on the same underlying product with different features, usage li
 
 For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
-### Pick a plan/edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
+### Pick a plan or edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
 
-Every self-hosted installation runs on the same underlying product. You can stick with the basic Community edition for free, indefinitely. Alternatively, register to unlock extra features for free, or subscribe to a paid plan to get a license key that unlocks the features for that plan.
+Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, or register for free to unlock extra features. For paid features, subscribe to a plan to get a license key that unlocks them.
 
 | Edition / Plan | Cost | Designed for |
 |---------|------|--------------|

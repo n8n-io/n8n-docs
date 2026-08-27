@@ -27,7 +27,7 @@ Administer n8n by controlling access, securing credentials, managing changes, an
 This section helps you run n8n securely and reliably as usage grows.
 
 {% hint style="info" %}
-Enterprise teams often spend more time in this section. SSO, directory integration, change control, and centralized logging become more important at scale. Features covered here, including user management basics, credential security, and operational monitoring, are also useful outside Enterprise.
+Enterprise teams often spend more time in this section. SSO, directory integration, change control, and centralized logging become more important at scale. Many features covered here, including user management basics, credential security, and operational monitoring, are also useful outside Enterprise.
 {% endhint %}
 
 ### A typical administration workflow
@@ -42,11 +42,11 @@ Decide who can sign in, what they can do, and how you organize work. Start with 
 {% step %}
 ### Protect secrets
 
-Store and share credentials. Use [Manage credentials](manage-credentials/README.md) to reduce secret sprawl.
+Store and share credentials safely. Use [Manage credentials](manage-credentials/README.md) to reduce secret sprawl.
 {% endstep %}
 
 {% step %}
-### Move changes between environments
+### Move changes safely
 
 Use Git-backed workflows to promote changes between environments. See [Use source control and environments](use-source-control-and-environments/README.md).
 {% endstep %}

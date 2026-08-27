@@ -14,7 +14,7 @@ layout:
 
 n8n provides multiple ways to work with and transform data. Understanding when to use each approach helps you build efficient workflows.
 
-| Approach	| When to use | Examples | Available on |
+| Approach	| Use when you need to... | Examples | Available on |
 |---|---|---|---|
 | Expressions | Set a single parameter value using existing data | Pull `{{$json.city}}`, format dates, simple math | Cloud and Self-hosted |
 | Code node	| Write full JavaScript/Python for complex transformations | Restructure data, loop through items, use external libraries | Cloud and Self-hosted |
@@ -44,7 +44,7 @@ The [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-node
 **When to use the Code node:**
 
 * You need more complex logic or data transformation than an expression can provide, such as restructuring arrays and objects, aggregating or splitting items, and custom algorithms.
-* You want to transform a batch of items at once.
+* You want to transform many items at once.
 * You want to use promises, `console.log`, or, for self-hosted setups, external npm modules.
 
 ### AI Transform node <a href="#ai-transform-node" id="ai-transform-node"></a>

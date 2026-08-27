@@ -10,7 +10,7 @@ layout:
     visible: false
 ---
 
-# Understand workflows <a href="#workflows" id="workflows"></a>
+# Workflows <a href="#workflows" id="workflows"></a>
 
 A workflow[^1] is a collection of nodes connected together to automate a process.
 
@@ -21,6 +21,6 @@ A workflow[^1] is a collection of nodes connected together to automate a process
 * Debug using the [Executions](understand-executions/README.md) list.
 * [Share](../manage-workflows/share-with-others.md) workflows between users.
 
-If it's your first time building a workflow, you may want to use the [quickstart guides](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow) to try out n8n features.
+If it's your first time building a workflow, you may want to use the [quickstart guide](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow) to quickly try out n8n features.
 
 [^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.

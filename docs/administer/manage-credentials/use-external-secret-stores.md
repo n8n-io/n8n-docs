@@ -1,5 +1,5 @@
 ---
-title: Use external secret stores
+title: External secrets
 description: Use an external secrets vault with n8n.
 contentType: howto
 nodeTitle: Use external secret stores
@@ -11,7 +11,7 @@ layout:
     visible: false
 ---
 
-# Use external secret stores <a href="#external-secrets" id="external-secrets"></a>
+# External secrets <a href="#external-secrets" id="external-secrets"></a>
 
 {% hint style="info" %}
 **Feature availability**
@@ -24,7 +24,8 @@ External secrets are available on:
 
 n8n supports the following secret providers: 1Password (using [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical. n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 
-From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 
 Credentials stored in an external secrets store only resolve in credential fields, not in any other fields supporting expressions.
 

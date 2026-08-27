@@ -50,7 +50,7 @@ You can ask the AI Assistant to:
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.
 - **Use n8n resources:** create or update supporting resources such as [Data Tables](../work-with-data/data-tables.md) when needed.
-- **Research approved websites:** when you enable web access, the AI Assistant asks for permission before accessing a domain.
+- **Research approved websites:** when web access is enabled, the AI Assistant asks for permission before accessing a domain.
 
 ## Before you start
 
@@ -128,7 +128,7 @@ If you create a new credential, you enter the secret in the standard n8n credent
 
 ## Web access
 
-When you enable web research, the AI Assistant asks for permission before accessing an external domain.
+When you enable web access, the AI Assistant asks for permission before accessing an external domain.
 
 Review the requested domain before you approve access.
 
@@ -154,7 +154,7 @@ Depending on the task, this can include:
 - workflow structure and node configuration,
 - selected execution and error details used for troubleshooting,
 - credential names, credential types, or connection status,
-- approved web pages or domains, when you enable web research.
+- approved web pages or domains, when you enable web access.
 
 The AI Assistant doesn't require you to paste secrets into chat. Enter API keys, passwords, and tokens through the standard n8n credential screens.
 

@@ -1,5 +1,5 @@
 ---
-title: n8n API
+title: n8n public REST API Documentation and Guides
 description: >-
   Use n8n's public REST API to perform tasks programmatically instead of
   through the GUI.
@@ -18,7 +18,7 @@ layout:
     visible: false
 ---
 
-# n8n API <a href="#n8n-public-rest-api" id="n8n-public-rest-api"></a>
+# n8n public REST API <a href="#n8n-public-rest-api" id="n8n-public-rest-api"></a>
 
 {% hint style="info" %}
 **Feature availability**
@@ -26,7 +26,7 @@ layout:
 The n8n API isn't available during the free trial. Please upgrade to access this feature.
 {% endhint %}
 
-Using n8n's public API[^1], you can programmatically perform most of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
+Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
 * How to [authenticate](authentication.md)
 * [Paginating](pagination.md) results
@@ -62,7 +62,7 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 {% hint style="info" %}
 **Use the API playground**
 
-Trying out the API in the [playground](use-an-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore.
+Trying out the API in the [playground](use-an-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
 {% endhint %}
 
 [^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.

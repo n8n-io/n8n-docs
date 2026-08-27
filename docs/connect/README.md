@@ -1,7 +1,6 @@
 ---
 contentType: guide
-status: beta
-nodeTitle: Connect
+nodeTitle: n8n CLI
 originalFilePath: api/n8n-cli/index.md
 originalUrl: https://docs.n8n.io/api/n8n-cli
 url: https://docs.n8n.io/connect/

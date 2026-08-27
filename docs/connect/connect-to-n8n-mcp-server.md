@@ -1,6 +1,5 @@
 ---
 title: Set up and use n8n MCP server
-status: beta
 nodeTitle: Connect to n8n MCP server
 originalFilePath: advanced-ai/mcp/accessing-n8n-mcp-server.md
 originalUrl: https://docs.n8n.io/advanced-ai/mcp/accessing-n8n-mcp-server
@@ -236,7 +235,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
    1. Navigate to **Settings > Instance-level MCP**.
    2. Select **Workflows exposed**.
    3. Use the action menu in the desired workflow's row and select the **Edit description** action.
-   4. Or click the description text directly to open the edit dialog.
+   4. Alternatively, click the description text directly to open the edit dialog.
 2.  Option 2: From the workflow editor
 
     1. Open the workflow.
@@ -324,7 +323,7 @@ Skills load guidance at the moment the agent needs it, rather than relying on th
 * Avoid common mistakes, such as incorrect expression syntax or missing error handling.
 * Produce workflows that need less back-and-forth to fix.
 
-The skills are plain Markdown, so you can read, fork, and change them for your own conventions.
+The skills are plain Markdown, so you can read, fork, and modify them for your own conventions.
 
 ### Installing skills <a href="#installing-skills" id="installing-skills"></a>
 
@@ -340,8 +339,8 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 
 * Ensure that your n8n instance is publicly accessible if you are using cloud-based MCP clients.
 * Verify that the MCP access is enabled in n8n settings.
-* Check that the workflows you want to execute or change are marked as **Available in MCP**.
-* Confirm that the authentication method (OAuth or API key) is configured in your MCP client.
+* Check that the workflows you want to execute or modify are marked as **Available in MCP**.
+* Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
 * If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 * Review n8n server logs for any error messages related to MCP connections.
 

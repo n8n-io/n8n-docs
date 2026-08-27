@@ -112,16 +112,16 @@ This means hosting two extra containers yourself: the sandbox API and a privileg
    ```bash
    N8N_INSTANCE_AI_SANDBOX_ENABLED=true
    N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-   N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
-   N8N_INSTANCE_AI_SANDBOX_API_KEY=my-sandbox-api-key
+   N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
+   N8N_SANDBOX_SERVICE_API_KEY=my-sandbox-api-key
    ```
 
    | Variable | Description |
    | --- | --- |
    | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. |
    | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`. |
-   | `N8N_INSTANCE_AI_SANDBOX_API_URL` | URL of the sandbox API, reachable from n8n. |
-   | `N8N_INSTANCE_AI_SANDBOX_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
+   | `N8N_SANDBOX_SERVICE_URL` | URL of the sandbox API, reachable from n8n. |
+   | `N8N_SANDBOX_SERVICE_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
 
 3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
 
@@ -136,7 +136,7 @@ Expected response: `{"status":"ok"}`
 **Notes:**
 
 * Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
-* `N8N_INSTANCE_AI_SANDBOX_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
+* `N8N_SANDBOX_SERVICE_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
 * Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
@@ -351,9 +351,9 @@ If AI Assistant doesn't appear or doesn't work, check for these issues.
 
 **Self-hosted sandbox (setup 2)**
 
-* `N8N_INSTANCE_AI_SANDBOX_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
+* `N8N_SANDBOX_SERVICE_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
 * The sandbox health check returns `{"status":"ok"}`.
-* `N8N_INSTANCE_AI_SANDBOX_API_URL` is reachable from the n8n container.
+* `N8N_SANDBOX_SERVICE_URL` is reachable from the n8n container.
 
 **Daytona (setup 3)**
 

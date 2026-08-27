@@ -109,7 +109,7 @@ Creating a custom OAuth app connection requires the Databricks account console. 
 A Databricks account admin needs to complete these steps:
 
 1. In n8n, open the Databricks credential and copy the **OAuth Redirect URL** (it has the form `https://<your-n8n-instance>/rest/oauth2-credential/callback`).
-2. Log in to the [Databricks account console](https://accounts.cloud.databricks.com/) and select the **Settings** icon in the sidebar.
+2. Log in to the Databricks account console for your cloud ([AWS](https://accounts.cloud.databricks.com/), [Azure](https://accounts.azuredatabricks.net/), or [GCP](https://accounts.gcp.databricks.com/)) and select the **Settings** icon in the sidebar.
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
@@ -143,7 +143,7 @@ A short refresh token TTL or absolute session lifetime means users must periodic
 3. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection.
 4. Select **Connect my account** and sign in with your Databricks account.
 
-By default the credential requests the `all-apis` and `offline_access` scopes. If you enable **Custom Scopes**, keep `offline_access` in the list: without it the connection dies after about an hour. n8n re-adds it automatically if you remove it.
+By default the credential requests the `all-apis` and `offline_access` scopes. The `offline_access` scope keeps the connection alive past one hour, so it's always included: if you enable **Custom Scopes** and remove it from the list, n8n adds it back automatically.
 
 ## Using OAuth2 (service principal) <a href="#using-oauth2-service-principal" id="using-oauth2-service-principal"></a>
 

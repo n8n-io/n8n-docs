@@ -46,7 +46,7 @@ Storing execution data or binary data in Azure Blob Storage is available on:
 
 - **Self-hosted:** Business, Enterprise
 
-It isn't available on n8n Cloud. Add a Business or Enterprise [license key](../../manage-your-license.md) to unlock this feature.
+It isn't available on n8n Cloud. Add your [license key](../../manage-your-license.md) to unlock this feature.
 {% endhint %}
 
 To store execution data in Azure Blob Storage, set `N8N_EXECUTION_DATA_STORAGE_MODE` to `azure`. To store binary data in Azure Blob Storage, set `N8N_DEFAULT_BINARY_DATA_MODE` to `azure` (refer to [External storage](../../scaling/use-external-storage.md#storing-n8ns-binary-data-in-azure-blob-storage)). A single container can hold both. Configure the variables below; `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is always required.

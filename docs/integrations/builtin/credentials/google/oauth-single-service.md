@@ -12,7 +12,7 @@ url: >-
   https://docs.n8n.io/integrations/builtin/credentials/google/oauth-single-service
 description: >-
   Documentation for single service OAuth2 Google credentials. Use these
-  credentials to authenticate Google in n8n, a workflow automation platform.
+  credentials to authenticate with Google in n8n.
 layout:
   width: default
   title:
@@ -47,7 +47,7 @@ n8n Cloud users can use **Managed OAuth2** for the following nodes:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
 
-To use **Managed OAuth2**, just click **Sign in with Google** in the credentials screen. No more setup is required in the Google Cloud Console or elsewhere.
+To use **Managed OAuth2**, click **Sign in with Google** in the credentials screen. You don't need any more setup in the Google Cloud Console or elsewhere.
 
 ![n8n credential screen with a Sign in with Google button and a dropdown to switch to Custom OAuth2](../../../.gitbook/assets/managed-oauth.png)
 
@@ -61,7 +61,7 @@ The rest of this document covers the full process.
 
 ## Set up Custom OAuth2 <a href="#set-up-custom-oauth2" id="set-up-custom-oauth2"></a>
 
-There are five steps to connecting your n8n credential to Google services:
+Follow five steps to connect your n8n credential to Google services:
 
 1. [Create a Google Cloud Console project](oauth-single-service.md#create-a-google-cloud-console-project).
 2. [Enable APIs](oauth-single-service.md#enable-apis).
@@ -93,7 +93,7 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 4. Enter an **App name** and **User support email** to include on the Oauth screen. Select **Next** to continue.
 5.  For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types. Select **Next** to continue.<br>
 
-    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Testing mode and test users</strong></p><p>If you select <strong>External</strong>, your app will default to Testing mode. In this mode, only Google accounts you manually add as test users can complete the OAuth flow — everyone else will see an "access denied" screen. See <a href="oauth-single-service.md#google-hasnt-verified-this-app">Google hasn't verified this app</a> to learn how to add them.</p></div>
+    <div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p><strong>Testing mode and test users</strong></p><p>If you select <strong>External</strong>, your app will default to Testing mode. In this mode, only Google accounts you manually add as test users can complete the OAuth flow. Everyone else sees an "access denied" screen. See <a href="oauth-single-service.md#google-hasnt-verified-this-app">Google hasn't verified this app</a> to learn how to add them.</p></div>
 6. Select the **Email addresses** Google should use to contact you about changes to your project. Select **Next** to continue.
 7. Read and accept the Google's User Data Policy. Select **Continue** and then select **Create**.
 8. In the left-hand menu, select **Branding**.
@@ -147,7 +147,7 @@ This error means the redirect URI n8n is sending doesn't match any of the URIs r
 
 ### Access denied / "app not verified" <a href="#access-denied-app-not-verified" id="access-denied-app-not-verified"></a>
 
-This usually happens when your app is still in Testing mode and the Google account you're trying to authenticate with hasn't been added as a test user.
+This happens when your app is still in Testing mode and you haven't added the Google account you're trying to authenticate with as a test user.
 
 **Fix:** Go to **APIs & Services** > **OAuth consent screen** > **Test users** and add the account you're trying to use.
 

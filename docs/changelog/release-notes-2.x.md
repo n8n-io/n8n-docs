@@ -1,13 +1,13 @@
 ---
-title: Release notes
+title: Release notes 2.x
 hide:
   - tags
 contentType: reference
-nodeTitle: Release notes
+nodeTitle: Release notes 2.x
 originalFilePath: release-notes.md
 originalUrl: https://docs.n8n.io/release-notes
-url: https://docs.n8n.io/release-notes/release-notes
-description: Release notes detailing new features and bug fixes for n8n.
+url: https://docs.n8n.io/changelog/release-notes-2.x
+description: Archived release notes detailing new features and bug fixes for n8n 2.x.
 layout:
   width: default
   title:
@@ -39,7 +39,7 @@ tags:
 {% hint style="warning" %}
 **This page is no longer updated**
 
-These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
+These release notes are now archived and won't receive further updates. For current feature-level updates, see [Release notes](release-notes.md). For every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
 For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}

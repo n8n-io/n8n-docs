@@ -65,8 +65,9 @@ jobs:
     steps:
       # Defaults for the CLA endpoints, status context, comment marker and label
       # are already n8n's production values.
-      - uses: n8n-io/github-actions/cla-check@931777df53ace1bdb31d2bf5c63c9f2d27451c35 # cla-check/v1.0.0
+      - uses: n8n-io/github-actions/cla-check@ac16f4c5d147eaa226b9b5fd0effb137007d1bf1 # v1.0.1
         with:
           app-id: ${{ secrets.N8N_ASSISTANT_APP_ID }}
           private-key: ${{ secrets.N8N_ASSISTANT_PRIVATE_KEY }}
+          apply-label: false
 

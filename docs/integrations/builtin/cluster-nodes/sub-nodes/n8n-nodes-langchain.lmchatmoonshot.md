@@ -37,7 +37,7 @@ layout:
 # Moonshot Kimi Chat Model node
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Moonshot Kimi Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Moonshot API key. Select **Use n8n credits** in the node's credential field to run the node without a Moonshot account.
+On n8n Cloud, you can use the Moonshot Kimi Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Moonshot API key. Select **Use Gateway credits** in the node's credential field to run the node without a Moonshot account.
 {% endhint %}
 
 Use the Moonshot Kimi Chat Model node to send chat requests to the Kimi chat API and generate conversational responses. Use it when you need an AI chat model in a workflow. For example, you can power assistants, build multi-step AI chains, or produce model-driven content with tunable sampling and token settings.

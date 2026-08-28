@@ -23,7 +23,7 @@ They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credit
 
 ## How Gateway credits work
 
-When you select **Use n8n credits** on a supported node (the editor's label for Gateway credits), n8n routes the node's requests through an n8n-managed gateway to the service provider. The gateway authenticates with the provider on n8n's behalf, so you don't need a provider account. n8n deducts the cost of each request from your credit balance.
+When you select **Use Gateway credits** on a supported node, n8n routes the node's requests through an n8n-managed gateway to the service provider. The gateway authenticates with the provider on n8n's behalf, so you don't need a provider account. n8n deducts the cost of each request from your credit balance.
 
 n8n bills usage per request at the rates listed on the [service pricing page](https://app.n8n.cloud/service-pricing). Rates vary by model and service, and change as providers update their pricing, so the service pricing page is always the source of truth for current rates.
 

@@ -22,7 +22,7 @@ layout:
 # Anthropic Chat Model node <a href="#anthropic-chat-model-node" id="anthropic-chat-model-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Anthropic Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Anthropic API key. Select **Use n8n credits** in the node's credential field to run the node without an Anthropic account.
+On n8n Cloud, you can use the Anthropic Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Anthropic API key. Select **Use Gateway credits** in the node's credential field to run the node without an Anthropic account.
 {% endhint %}
 
 Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents[^1].

@@ -22,7 +22,7 @@ layout:
 # Google Gemini Chat Model node <a href="#google-gemini-chat-model-node" id="google-gemini-chat-model-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Google Gemini Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use n8n credits** in the node's credential field to run the node without a Google account.
+On n8n Cloud, you can use the Google Gemini Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Google API key. Select **Use Gateway credits** in the node's credential field to run the node without a Google account.
 {% endhint %}
 
 Use the Google Gemini Chat Model node to use Google's Gemini chat models with conversational agents.

@@ -22,7 +22,7 @@ layout:
 # MiniMax Chat Model node <a href="#minimax-chat-model-node" id="minimax-chat-model-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the MiniMax Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own MiniMax API key. Select **Use n8n credits** in the node's credential field to run the node without a MiniMax account.
+On n8n Cloud, you can use the MiniMax Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own MiniMax API key. Select **Use Gateway credits** in the node's credential field to run the node without a MiniMax account.
 {% endhint %}
 
 Use the MiniMax Chat Model node to use MiniMax's chat models with conversational agents[^1].

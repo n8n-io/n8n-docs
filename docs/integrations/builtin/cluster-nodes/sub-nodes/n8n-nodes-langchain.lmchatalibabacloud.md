@@ -37,7 +37,7 @@ layout:
 # Qwen Cloud Chat Model
 
 {% hint style="info" %}
-On n8n Cloud, you can use the Qwen Cloud Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Qwen Cloud API key. Select **Use n8n credits** in the node's credential field to run the node without a Qwen Cloud account.
+On n8n Cloud, you can use the Qwen Cloud Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Qwen Cloud API key. Select **Use Gateway credits** in the node's credential field to run the node without a Qwen Cloud account.
 {% endhint %}
 
 The Qwen Cloud Chat Model node sends chat prompts to conversational models available on Qwen Cloud, for advanced AI chains and LangChain integrations. Use it to generate conversational responses, integrate model outputs into workflows, or run prompts with custom sampling, retry, and timeout settings.

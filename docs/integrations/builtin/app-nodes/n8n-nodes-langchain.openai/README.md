@@ -21,7 +21,7 @@ layout:
 # OpenAI node <a href="#openai-node" id="openai-node"></a>
 
 {% hint style="info" %}
-On n8n Cloud, you can use the OpenAI node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own OpenAI API key. Select **Use n8n credits** in the node's credential field to run the node without an OpenAI account.
+On n8n Cloud, you can use the OpenAI node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own OpenAI API key. Select **Use Gateway credits** in the node's credential field to run the node without an OpenAI account.
 {% endhint %}
 
 Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 

@@ -26,7 +26,7 @@ They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credit
 On a supported node, the credential field offers Gateway credits alongside your own credentials:
 
 1. Open the node's settings.
-1. In the credential field, select **Use n8n credits**. This is the Gateway credits option, and it shows your remaining balance.
+1. In the credential field, select **Use Gateway credits**. The option shows your remaining balance.
 1. Configure the rest of the node as usual, then run it.
 
 That's the whole setup: no provider sign-up, no API key. n8n deducts the cost of each request from your balance at the rates on the [service pricing page](https://app.n8n.cloud/service-pricing).

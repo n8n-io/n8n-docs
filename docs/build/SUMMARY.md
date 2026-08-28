@@ -114,6 +114,7 @@
     * [HTTP Request node](code-in-n8n/cookbook/http-request-node/README.md)
       * [Pagination](code-in-n8n/cookbook/http-request-node/pagination.md)
 * [Integrate AI](integrate-ai/README.md)
+  * [MCP servers](integrate-ai/mcp-servers.md)
   * [Understand AI components](integrate-ai/understand-ai-components/README.md)
     * [What chains do](integrate-ai/understand-ai-components/what-chains-do.md)
     * [What agents do](integrate-ai/understand-ai-components/what-agents-do.md)

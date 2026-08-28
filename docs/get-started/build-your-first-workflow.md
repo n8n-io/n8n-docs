@@ -39,7 +39,7 @@ This guide will show you how to construct a workflow[^1] in n8n, explaining key 
 
 ![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](.gitbook/assets/tutorial-first.png)
 
-This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
+This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), which is recommended for new users. A free trial is available. If you haven't already, [sign up](https://app.n8n.cloud/register) for an account now.
 
 ## Step one: Create a new workflow <a href="#step-one-create-a-new-workflow" id="step-one-create-a-new-workflow"></a>
 
@@ -55,7 +55,7 @@ n8n provides two ways to start a workflow:
 * Manually, by selecting **Execute Workflow**.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, we'll use the [Schedule trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger). This allows you to run the workflow on a schedule:
+This tutorial uses the [Schedule trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger), which lets you run the workflow on a schedule:
 
 1. Select **Add first step**.
 2. Search for **Schedule**. n8n shows a list of nodes that match the search.
@@ -63,17 +63,17 @@ For this tutorial, we'll use the [Schedule trigger](https://app.gitbook.com/s/BK
 4. For **Trigger Interval**, select **Weeks**.
 5. For **Weeks Between Triggers**, enter `1`.
 6. Enter a time and day. For this example, select **Monday** in **Trigger on Weekdays**, select **9am** in **Trigger at Hour**, and enter `0` in **Trigger at Minute**.
-7. Close the node details view to return to the canvas.
+7. Close the **node details view** to return to the canvas.
 
 ## Step three: Add the NASA node and set up credentials <a href="#step-three-add-the-nasa-node-and-set-up-credentials" id="step-three-add-the-nasa-node-and-set-up-credentials"></a>
 
-The [NASA node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nasa) interacts with NASA's [public APIs](https://api.nasa.gov/) to fetch useful data. We will use the real-time data from the API to find solar events.
+The [NASA node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.nasa) interacts with NASA's [public APIs](https://api.nasa.gov/) to fetch useful data. This tutorial uses the real-time data from the API to find solar events.
 
 <details>
 
 <summary>Credentials</summary>
 
-Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
+Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The required information varies by app or service. You should be careful about sharing or revealing the credentials outside of n8n.
 
 </details>
 
@@ -108,7 +108,7 @@ Credentials are private pieces of information issued by apps and services to aut
 
 ## Step four: Add logic with the If node <a href="#step-four-add-logic-with-the-if-node" id="step-four-add-logic-with-the-if-node"></a>
 
-n8n supports complex logic in workflows. In this tutorial we will use the [If node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications; we will add logic that sends a report with the lower classifications to one output, and the higher classifications to another.
+n8n supports complex logic in workflows. This tutorial uses the [If node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. The If node sends a report with the lower classifications to one output, and the higher classifications to another.
 
 Add the If node:
 
@@ -135,10 +135,10 @@ The last step of the workflow is to send the two reports about solar flares. For
 3. Select **PostBin**.
 4. Select **Send a request**. n8n adds the node to the canvas and opens it.
 5. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
-6. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
+6. Copy the bin ID. It looks like `1651063625300-2016451240051`.
 7. In n8n, paste your Postbin ID into **Bin ID**.
 8. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <img src=".gitbook/assets/open-expression-editor.png" alt="Add node icon" data-size="line"> to open the full expressions editor.
-9. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for this label. In this case the input we want is 'classType'.
+9. You can now click and drag the correct field from the If node output into the expressions editor to automatically create a reference for this label. In this case, the field you want is `classType`.
 10. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
 
     ```js

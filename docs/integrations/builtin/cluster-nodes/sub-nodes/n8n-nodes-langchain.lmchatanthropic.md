@@ -43,14 +43,13 @@ You can find authentication information for this node [here](../../credentials/a
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.claude.com/en/docs/about-claude/models/overview).
-
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+* **Prompt Caching**: Cache the system prompt, tool definitions, and conversation history between requests using [Anthropic prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching). Choose **Disabled** (the default), **5 Minutes**, or **1 Hour**. The value sets how long cached content stays valid before it has to be written again.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

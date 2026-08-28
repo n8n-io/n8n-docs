@@ -23,7 +23,10 @@ The result is a normal n8n workflow. You can open it, inspect it, edit it, test 
 {% hint style="info" %}
 **Feature availability**
 
-The AI Assistant is available on **n8n Cloud** and **self-hosted**. 
+The AI Assistant is available on:
+
+- **n8n Cloud:** Starter, Pro
+- **Self-hosted:** Community, Registered Community, Business
 
 It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
@@ -42,6 +45,7 @@ You can ask the AI Assistant to:
 
 - **Create workflows:** describe the automation you want, and the AI Assistant can generate a workflow.
 - **Build agents:** describe the agent you want, and the AI Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
+- **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
 - **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.
@@ -50,7 +54,7 @@ You can ask the AI Assistant to:
 
 ## Before you start
 
-To use the AI Assistant, you need access to an n8n instance where the feature is enabled.
+To use the AI Assistant, you need access to an n8n instance with the feature enabled.
 
 Make sure that:
 
@@ -124,7 +128,7 @@ If you create a new credential, you enter the secret in the standard n8n credent
 
 ## Web access
 
-When web research is enabled, the AI Assistant asks for permission before accessing an external domain.
+When you enable web access, the AI Assistant asks for permission before accessing an external domain.
 
 Review the requested domain before you approve access.
 
@@ -150,7 +154,7 @@ Depending on the task, this can include:
 - workflow structure and node configuration,
 - selected execution and error details used for troubleshooting,
 - credential names, credential types, or connection status,
-- approved web pages or domains, when web research is enabled.
+- approved web pages or domains, when you enable web access.
 
 The AI Assistant doesn't require you to paste secrets into chat. Enter API keys, passwords, and tokens through the standard n8n credential screens.
 
@@ -173,4 +177,6 @@ To reduce unnecessary usage:
 
 To get more credits during Preview, upgrade your plan. More ways to top up are coming.
 
-For current plan details, see [n8n Plans and Pricing](https://n8n.io/pricing/).
+For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
+
+See [Ways of building workflows](README.md) for other approaches.

@@ -104,7 +104,7 @@ You can separate your data into isolated tenants for the same collection (for ex
 
 Whether to include document metadata.
 
-You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many) and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
+You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many-parameters) and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
 
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
@@ -114,7 +114,7 @@ You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#
 
 ### Search Filters <a href="#search-filters" id="search-filters"></a>
 
-Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent) operation modes.
+Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
 When searching for data, use this to match metadata associated with documents. You can learn more about the operators and query structure in [Weaviate's conditional filters documentation](https://docs.weaviate.io/weaviate/api/graphql/filters).
 
@@ -156,7 +156,7 @@ When inserting data, the document loader sets the metadata. Refer to [Default Da
 
 You can define which metadata keys you want Weaviate to return on your queries. This can reduce network load, as you will only get properties you have defined. Returns all properties from the server by default.
 
-Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent) operation modes.
+Available for the [Get Many](n8n-nodes-langchain.vectorstoreweaviate.md#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](n8n-nodes-langchain.vectorstoreweaviate.md#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
 ### Hybrid: Query Text <a href="#hybrid-query-text" id="hybrid-query-text"></a>
 
@@ -227,7 +227,7 @@ A proxy to use for gRPC requests.
 
 ### Clear Data <a href="#clear-data" id="clear-data"></a>
 
-Available for the [Insert Documents](n8n-nodes-langchain.vectorstoreweaviate.md#insert-documents) operation mode.
+Available for the [Insert Documents](n8n-nodes-langchain.vectorstoreweaviate.md#insert-documents-parameters) operation mode.
 
 Whether to clear the collection or tenant before inserting new data.
 

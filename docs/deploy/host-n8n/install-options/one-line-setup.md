@@ -9,12 +9,12 @@ layout:
 
 ## Who this is for
 
-This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0 onwards (launching October 2026). It's the fastest way to get n8n running, whether or not you've used Docker before.
+This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0 (launching October 2026). It's the fastest way to get n8n running, whether you've used Docker before or not.
 
 It's meant for fresh installs, not for changing an existing setup:
 
 - **Already self-hosting with your own Docker Compose file?** You don't need to switch to this script, but feel free to take inspiration from [the Docker Compose setup process](./install-using-docker-compose.md).
-- **Currently installing n8n via npm?** From v3, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
+- **Currently installing n8n with npm?** From n8n 3.0, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
 
 ## What you need before you start
 
@@ -27,6 +27,10 @@ You don't need to know Docker to use this guide; just have it installed and runn
 {% hint style="info" %}
 The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 {% endhint %}
+
+Watch a video guide covering this setup, from installing Docker to [turning on the AI Assistant](#optional-turn-on-the-ai-assistant):
+
+{% embed url="https://www.youtube.com/embed/t5RBVTby9EU" %}
 
 ## Run the command
 
@@ -69,7 +73,7 @@ To uninstall: docker compose -f ./n8n/compose.yml down -v   # -v DELETES all n8n
 ```
 
 {% hint style="warning" %}
-n8n takes a few moments to finish starting the first time. The command waits and only prints the URL once it's ready. If the page doesn't load right away, wait a bit and refresh.
+n8n takes a moment to finish starting the first time. The command waits and only prints the URL once it's ready. If the page doesn't load right away, wait a bit and refresh.
 {% endhint %}
 
 ## What's included by default
@@ -79,10 +83,10 @@ Running the command sets up everything below automatically. There's nothing extr
 | Component | What it's for |
 |---|---|
 | **n8n** | The workflow editor itself, running at `http://localhost:5678`. |
-| **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. There is no separate database server to install or manage. |
-| **AI Assistant support services** | A sandbox that safely runs code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
+| **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server. |
+| **AI Assistant support services** | A sandbox that safely runs the code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
 
-If you're setting n8n up for a team or a production environment, you'll likely want a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
+If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
 
 The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure it.
 
@@ -94,7 +98,7 @@ n8n works fully without the AI Assistant, which is an optional extra. Once n8n i
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.
 3. Restart n8n: `docker compose -f ./n8n/compose.yml up -d`
 
-Full setup steps, including which providers are supported, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
+Full setup steps, including the supported providers, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
 
 By default, the AI Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
 
@@ -119,7 +123,7 @@ Adding these to the end of the install command changes what it does:
 |---|---|
 | `--version` | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version. |
 | `--no-start` | Sets up the configuration files without starting n8n yet. |
-| `--upgrade` | Upgrades an existing install to a newer n8n version. Only updates the version number; your data, settings, and any customizations are left alone. |
+| `--upgrade` | Upgrades an existing install to a newer n8n version. Only updates the version number. Your data, settings, and any customizations stay untouched. |
 | `--help` | Shows all available options. |
 
 ## Prefer not to run a script from the internet?
@@ -137,7 +141,7 @@ sh get-n8n.sh
 The one-line setup command needs a terminal that understands shell scripts, which the standard Windows Command Prompt or PowerShell don't. Run it instead from:
 
 - **WSL** (Windows Subsystem for Linux), with Docker Desktop's WSL2 integration turned on.
-- **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)) with Docker Desktop running can also run POSIX shell scripts, but it hasn't been verified end-to-end for the one-line setup command. Stick with WSL unless you've confirmed Git Bash works for your setup.
+- **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)) with Docker Desktop running can also run POSIX shell scripts, but n8n hasn't verified it end-to-end for the one-line setup command. Stick with WSL unless you've confirmed Git Bash works for your setup.
 
 
 

@@ -20,15 +20,14 @@ External secrets are available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
-
-* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
-* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
-* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
-* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 {% endhint %}
 
-* Credentials stored in External secrets stores only resolve in Credentials fields, not in any other fields supporting expressions.
+n8n supports the following secret providers: 1Password (using [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical. n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 
+* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
+
+Credentials stored in an external secrets store only resolve in credential fields, not in any other fields supporting expressions.
 
 You can use an external secrets store to manage credentials[^1] for n8n.
 
@@ -68,7 +67,7 @@ n8n only supports plaintext values for secrets, not JSON objects.
 1. Enter the credentials for your provider. Refer to the provider-specific sections below for details.
 1. **Save** your configuration.
 
-As long as this store is connected, you can reference its secrets in credentials.
+As long as you keep this store connected, you can reference its secrets in credentials.
 
 ### 1Password <a href="#1password" id="1password"></a>
 
@@ -150,12 +149,12 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 {% hint style="info" %}
 **Feature availability**
 
-The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations are unaffected: they continue to use Azure Public Cloud.
+The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations continue to use Azure Public Cloud without changes.
 {% endhint %}
 
 Provide your **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
 
-Select the **Azure Cloud** environment your Key Vault is hosted in. This sets the vault URL and the Microsoft Entra authority host:
+Select the **Azure Cloud** environment that hosts your Key Vault. This sets the vault URL and the Microsoft Entra authority host:
 
 | Azure Cloud | Vault URL suffix | Entra authority host |
 |-------------|------------------|----------------------|
@@ -327,6 +326,8 @@ Using external secrets in your own credentials, as a project editor or admin wit
 In versions before n8n 2.13.0 (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
 
 In this case, only use external secrets in credentials owned by an instance owner or admin.
+
+See [Manage credentials](README.md) for other ways to secure and share credentials.
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

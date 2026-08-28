@@ -13,10 +13,10 @@ This page sets out what agent-friendly means to n8n Docs, and why it matters. Th
 
 ## Why this matters for n8n Docs
 
-Two overlapping audiences now read n8n Docs through an agent instead of a browser:
+Two overlapping audiences use n8n Docs through an agent instead of a browser:
 
-* **People ask an AI agent instead of searching.** A growing share of documentation traffic comes from AI assistants and search agents retrieving pages to answer a question, not from someone clicking through a site's navigation. 
-* **People build with n8n using a coding agent.** Someone writing a workflow, a node, or an integration increasingly does it with an AI coding tool. These tools retrieve n8n Docs directly to ground their answers in current, accurate information instead of outdated training data.
+* **People ask an AI agent instead of searching.** A growing share of documentation traffic comes from AI assistants and search agents retrieving pages to answer a question, not from a person clicking through the site's navigation to look at a page directly. 
+* **People build with n8n using a coding agent.** Someone writing a workflow, a node, or an integration increasingly does so with AI coding tools. These tools retrieve n8n Docs directly to ground their work in current, accurate information instead of outdated training data.
 
 ## What "agent-friendly" means
 
@@ -34,23 +34,21 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 
 ### Site-wide consistency
 
-An agent has no way to know that two different terms mean the same thing unless the docs are consistent about it.
-
-* n8n Docs uses the same term for the same concept everywhere. See [Terminology and naming](terminology.md).
+* n8n Docs uses the same term for the same concept everywhere. This reduces confusion for both human users and agents. See [Terminology and naming](terminology.md).
 * URLs stay stable across a page rename, with a redirect in place whenever a URL does change.
-* A fact that depends on an n8n version or plan says so at the point it applies, not only once at the top of the page. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
+* A fact that depends on an n8n version or plan says so at the point it applies, not only once at the top of the page. This increases the chance of both agents and humans seeing the correct information at the correct time. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
 * New pages and modifications are reviewed for consistency and technical accuracy before they're published, on n8n Docs' [open-access GitHub repository](https://github.com/n8n-io/n8n-docs), by both human reviewers and our AI-reviewer [cubic](https://www.cubic.dev/).
 
 ### Structure and navigation
 
 * n8n Docs splits content into focused pages that are short enough for an agent to retrieve without truncating them or losing them in a wall of unrelated content. See [Page length and granularity](style-guide-for-n8n-docs.md#page-length-and-granularity).
-* Each section stands on its own, without relying on information "as mentioned above". See [Keep each section self-contained](style-guide-for-n8n-docs.md#keep-each-section-self-contained).
+* Each section stands on its own, without relying on information "as mentioned above". Agents may retrieve only a chunk or section of a page, not the full content. See [Keep each section self-contained](style-guide-for-n8n-docs.md#keep-each-section-self-contained).
 * Pages link explicitly to prerequisites, next steps, and related topics, so an agent can follow a path instead of guessing a URL. See [Link to related pages, prerequisites, and next steps](style-guide-for-n8n-docs.md#link-to-related-pages-prerequisites-and-next-steps).
 
 ### Content and examples
 
-* Instructions live in text, not images. Screenshots confirm what the reader should already know from the words on the page, not the other way round. See [Images](style-guide-for-n8n-docs.md#images).
-* n8n Docs strives to ensure that features with code, expression, or configuration surfaces have worked examples, covering the common case and the ones that break. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
+* Instructions live in easily-parseable text, not images. Screenshots confirm what the reader should already know from the words on the page, not the other way round. See [Images](style-guide-for-n8n-docs.md#images).
+* n8n Docs strives to ensure that features with code, expression, or configuration surfaces have worked examples, covering the common case and the ones that break, since agents copy examples directly and have no way to infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
 * Tabbed content stays sparse and short, since a person sees one tab but an agent reads every one. See [Tabbed content](style-guide-for-n8n-docs.md#tabbed-content).
 
 ## How this relates to the style guide

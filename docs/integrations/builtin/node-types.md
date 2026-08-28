@@ -10,7 +10,7 @@ layout:
     visible: false
 ---
 
-# Node types <a href="#built-in-integrations" id="built-in-integrations"></a>
+# Built-in integrations <a href="#built-in-integrations" id="built-in-integrations"></a>
 
 This section contains the node[^1] library: reference documentation for every built-in node in n8n, and their credentials.
 

@@ -18,8 +18,8 @@ The release of n8n 3.0 continues n8n's commitment to providing a secure, reliabl
 
 ### Docker-based deployment required for self-hosted n8n <a href="#docker-based-deployment-required-for-self-hosted-n8n" id="docker-based-deployment-required-for-self-hosted-n8n"></a>
 
-- Self-hosted n8n will require a Docker-based deployment. n8n 3.0 no longer supports installations run using `npm` or `npx n8n`.
-- **What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is the easiest path.
+- Self-hosted n8n will require a Docker-based deployment. n8n 3.0 will no longer support installations run using `npm` or `npx n8n`.
+- **What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
 - *Step-by-step migration guidance will be coming soon*
 
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>

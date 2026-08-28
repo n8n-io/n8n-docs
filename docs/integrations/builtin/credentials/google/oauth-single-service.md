@@ -147,7 +147,7 @@ This error means the redirect URI n8n is sending doesn't match any of the URIs r
 
 ### Access denied / "app not verified" <a href="#access-denied-app-not-verified" id="access-denied-app-not-verified"></a>
 
-This happens when your app is still in Testing mode and you haven't added the Google account you're trying to authenticate with as a test user.
+This usually happens when your app is still in Testing mode and you haven't added the Google account you're trying to authenticate with as a test user.
 
 **Fix:** Go to **APIs & Services** > **OAuth consent screen** > **Test users** and add the account you're trying to use.
 

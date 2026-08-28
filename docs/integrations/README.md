@@ -4,7 +4,7 @@ contentType: overview
 hide:
   - feedback
   - kapaButton
-nodeTitle: Nodes
+nodeTitle: Integrations
 originalFilePath: integrations/index.md
 originalUrl: https://docs.n8n.io/integrations
 url: https://docs.n8n.io/integrations/

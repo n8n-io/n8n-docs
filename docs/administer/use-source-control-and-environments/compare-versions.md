@@ -22,7 +22,7 @@ Workflow diffs allow you to visually compare changes between the workflow you ha
 Workflow diffs are available on:
 
 - **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 Workflow diffs are only available when you [enable the environments features](set-up-source-control.md) on an instance.
 {% endhint %}

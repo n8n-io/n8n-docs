@@ -40,11 +40,13 @@ The nodes panel highlights what you can run with Gateway credits:
 - The **Included in n8n** section at the top of the AI model and tool lists shows supported nodes, with your remaining balance in the section header.
 - Supported nodes show a credits tag in search results.
 
+The tag and section header read either **Gateway credits** or **Free credits**, depending on whether you've already topped up.
+
 The catalogue of supported services and models grows over time. For the current list, check the [service pricing page](https://app.n8n.cloud/service-pricing).
 
 ## Unsupported operations
 
-Some nodes support Gateway credits for part of what they do. When you use Gateway credits on such a node, n8n hides the unsupported operations. If you need an operation that isn't supported, switch that node to **Use my own credential**.
+Some nodes support Gateway credits for part of what they do. When you use Gateway credits on such a node, n8n hides the unsupported operations. If a node already has an unsupported operation selected when you switch it to Gateway credits, n8n keeps the operation and shows a warning instead. If you need an operation that isn't supported, switch that node to **Use my own credential**.
 
 ## When your balance runs out
 

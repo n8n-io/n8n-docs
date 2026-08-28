@@ -222,7 +222,7 @@ This release contains bug fixes.
 [corazzione](https://github.com/corazzione)\
 [Wujerry](https://github.com/Wujerry)\
 [davidangularme](https://github.com/davidangularme)\
-[SAY-5](https://github.com/SAY-5)\
+SAY-5\
 [legendik](https://github.com/legendik)\
 [petrusdemelo](https://github.com/petrusdemelo)\
 [envy](https://github.com/envy)

@@ -186,7 +186,7 @@ The following scopes are required for each Microsoft integration as of March 202
 | **Microsoft Graph Security** | `SecurityEvents.ReadWrite.All`, `offline_access` |
 | **Microsoft OneDrive** | `openid`, `offline_access`, `Files.ReadWrite.All` |
 | **Microsoft Outlook** | `openid`, `offline_access`, `Contacts.Read`, `Contacts.ReadWrite`, `Calendars.Read`, `Calendars.Read.Shared`, `Calendars.ReadWrite`, `Mail.ReadWrite`, `Mail.ReadWrite.Shared`, `Mail.Send`, `Mail.Send.Shared`, `MailboxSettings.Read` |
-| **Microsoft SharePoint** | `openid`, `offline_access`, `Sites.ReadWrite.All` |
+| **Microsoft SharePoint** | `openid`, `offline_access`, `Sites.Read.All` or `Sites.ReadWrite.All` |
 | **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.Read.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All` |
 | **Microsoft To Do** | `openid`, `offline_access`, `Tasks.ReadWrite` |
 | **Additional permissions for triggers** | `Chat.Read.All`, `Team.ReadBasic.All`, `Subscription.Read.All` |

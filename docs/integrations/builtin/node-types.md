@@ -38,7 +38,7 @@ To learn more about creating, managing, and sharing credentials, refer to [Manag
 
 n8n supports community nodes. Refer to [Community nodes](../community-nodes/installation-and-management/README.md) for guidance on installing and using these nodes.
 
-For help building your own community nodes, and publish them to [npm](https://www.npmjs.com/), refer to [Create nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) for more information.
+For help building and publishing your own community nodes to [npm](https://www.npmjs.com/), refer to [Create nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) for more information.
 
 See [Built-in nodes](./) for other integration topics.
 

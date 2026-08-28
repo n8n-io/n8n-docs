@@ -63,7 +63,7 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 
 n8n 3.0 retires some legacy or lower-usage product capabilities. n8n will provide guidance where a migration path or alternative exists.
 
-- **Chat hub**: n8n 3.0 retires this feature.
+- **Chat Hub**: n8n 3.0 retires this feature.
 - **Workflow import from URL in the editor**: n8n 3.0 removes this. Other [import methods](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the n8n API.
 - **Non-functional nodes**: n8n 3.0 removes these.
 

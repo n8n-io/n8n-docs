@@ -728,4 +728,4 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-For releases before n8n 2.0, see the archived [Release notes 2.x](release-notes-2.x.md).
+For full per-release detail of earlier n8n 2.x releases, see the archived [Release notes 2.x](release-notes-2.x.md). For releases before n8n 2.0, see [Release notes 1.x](release-notes-1.x.md) and [Release notes 0.x](release-notes-0.x.md).

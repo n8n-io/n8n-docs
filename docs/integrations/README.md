@@ -1,5 +1,5 @@
 ---
-title: n8n Integrations Documentation and Guides
+title: Nodes
 contentType: overview
 hide:
   - feedback
@@ -9,9 +9,8 @@ originalFilePath: integrations/index.md
 originalUrl: https://docs.n8n.io/integrations
 url: https://docs.n8n.io/integrations/
 description: >-
-  Access n8n integrations documentation and guides. Find comprehensive resources
-  to help you master app integrations using different types of nodes to improve
-  your automation workflows.
+  Learn about n8n's built-in nodes, community nodes, MCP servers, and generic
+  integrations.
 layout:
   width: default
   title:
@@ -46,6 +45,10 @@ n8n includes a collection of built-in integrations. Refer to [Built-in nodes](bu
 
 As well as using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](community-nodes/installation-and-management/README.md) for more information.
 
+## MCP servers <a href="#mcp-servers" id="mcp-servers"></a>
+
+n8n also includes a registry of MCP servers you can connect to an agent directly from the node panel in one click. See [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers/) for more information.
+
 ## Credential-only nodes and custom operations <a href="#credential-only-nodes-and-custom-operations" id="credential-only-nodes-and-custom-operations"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/k23mQunNshTkLRuOqark/" %}
@@ -58,7 +61,7 @@ If you need to connect to a service where n8n doesn't have a node, or a credenti
 
 ## Where to go next <a href="#where-to-go-next" id="where-to-go-next"></a>
 
-* If you want to create your own node, head over to the [Creating Nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) section.
+* If you want to create your own node, head over to the [Create nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) section.
 * Check out [Community nodes](community-nodes/using-community-nodes.md) to learn about installing and managing community-built nodes.
 * If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](builtin/core-nodes/README.md), [Actions](builtin/app-nodes/README.md), and [Triggers](builtin/trigger-nodes/README.md).
 * If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](builtin/credentials/README.md) section.

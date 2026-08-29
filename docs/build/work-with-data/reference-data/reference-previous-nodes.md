@@ -23,6 +23,7 @@ The most frequently used methods for accessing data are:
 
 - **`$json`**: Access JSON data from the current input item
 - **`$('<node-name>').item.json`**: Access JSON data from a [linked item](link-data-items/README.md) in a previous node
+- **`$('<node-name>').item.binary`**: Access binary data (files, images) from a [linked item](link-data-items/README.md) in a previous node
 
 ## Other referencing methods <a href="#other-referencing-methods" id="other-referencing-methods"></a>
 
@@ -76,16 +77,27 @@ You can use Python in the Code node. It isn't available in expressions.
 
 Methods for working with the output of other nodes. Some methods and variables aren't available in the Code node.
 
-{% tabs %}
-{% tab title="JavaScript" %}
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | ✅ |
 | `$("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | ✅ |
 | `$("<node-name>").last(branchIndex?, runIndex?)` | The last item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | ✅ |
 | `$("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](link-data-items/README.md) for more information on item linking. | ✅ |
+| `$("<node-name>").item.binary` | Binary data from the linked item, keyed by binary property name (`data` by default). Refer to [`BinaryFile`](../transform-data/expression-reference/binaryfile.md) for the available properties. | ✅ |
 | `$("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | ✅ |
 | `$("<node-name>").context` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | ✅ |
 | `$("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `$("<node-name>").item` in the Code node if you need to trace back from an input item. | ✅ |
-{% endtab %}
-{% endtabs %}
+
+## Reference binary data from a previous node
+
+`$('<node-name>').item` returns the whole [linked item](link-data-items/README.md), so you can read its binary data the same way you read its JSON data: use `.item.json` for the item's JSON object and `.item.binary` for its binary data (files, images, and other attachments).
+
+An item can hold several binary properties, each under its own name, so `.item.binary` returns an object of those properties rather than a single value. Most nodes output binary data under the property name `data`, but the name depends on the upstream node. Each binary property is a `BinaryFile` with fields such as `fileName`, `mimeType`, and `fileExtension`.
+
+For example, to get the file name of the binary property `data` produced by an **HTTP Request** node:
+
+```js
+{{ $('HTTP Request').item.binary.data.fileName }}
+```
+
+For more about binary data and the nodes that produce it, refer to [Binary data](../handle-special-data-types/work-with-files-and-images.md).

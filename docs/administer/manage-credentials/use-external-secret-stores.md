@@ -16,15 +16,18 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports the following secret providers: 1Password (via [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical.
-* From n8n version 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
-* From version `2.13.0`, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
-* n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
+External secrets are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
-* Credentials stored in External secrets stores only resolve in Credentials fields, not in any other fields supporting expressions.
+n8n supports the following secret providers: 1Password (using [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical. n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 
+* From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
+* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
+
+Credentials stored in an external secrets store only resolve in credential fields, not in any other fields supporting expressions.
 
 You can use an external secrets store to manage credentials[^1] for n8n.
 
@@ -64,7 +67,7 @@ n8n only supports plaintext values for secrets, not JSON objects.
 1. Enter the credentials for your provider. Refer to the provider-specific sections below for details.
 1. **Save** your configuration.
 
-As long as this store is connected, you can reference its secrets in credentials.
+As long as you keep this store connected, you can reference its secrets in credentials.
 
 ### 1Password <a href="#1password" id="1password"></a>
 
@@ -143,7 +146,26 @@ For more IAM permission policy examples, consult the [AWS documentation](https:/
 
 ### Azure Key Vault <a href="#azure-key-vault" id="azure-key-vault"></a>
 
-Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
+{% hint style="info" %}
+**Feature availability**
+
+The **Azure Cloud** setting is available from n8n 2.35.0. Earlier versions connect to Azure Public Cloud only. Existing configurations continue to use Azure Public Cloud without changes.
+{% endhint %}
+
+Provide your **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). n8n supports only single-line values for secrets.
+
+Select the **Azure Cloud** environment that hosts your Key Vault. This sets the vault URL and the Microsoft Entra authority host:
+
+| Azure Cloud | Vault URL suffix | Entra authority host |
+|-------------|------------------|----------------------|
+| **Azure Public Cloud** (default) | `vault.azure.net` | `https://login.microsoftonline.com` |
+| **Azure US Government** | `vault.usgovcloudapi.net` | `https://login.microsoftonline.us` |
+| **Azure China** | `vault.azure.cn` | `https://login.partner.microsoftonline.cn` |
+| **Custom** | You provide the full URL | You provide the host |
+
+For **Azure Public Cloud**, **Azure US Government**, and **Azure China**, provide your **Vault Name**. n8n builds the vault URL from the name and the selected cloud's suffix.
+
+For **Custom**, provide the full **Vault URL** (for example, `https://my-vault.vault.usgovcloudapi.net`) instead of a vault name. You can also set an optional **Authority Host** (for example, `https://login.microsoftonline.us`) to authenticate against a different Microsoft Entra authority. Leave **Authority Host** empty to use the default (`https://login.microsoftonline.com`). Use **Custom** for setups such as Azure Stack or proxied environments.
 
 ### GCP Secrets Manager <a href="#gcp-secrets-manager" id="gcp-secrets-manager"></a>
 
@@ -190,9 +212,9 @@ path "kv/*" {
 ### Infisical <a href="#infisical" id="infisical"></a>
 
 {% hint style="info" %}
-**Version `2.26.0` and later**
+**Feature availability**
 
-Infisical secrets management support is only available from version `2.26.0`.
+Infisical secrets management support is available from n8n 2.26.0.
 {% endhint %}
 
 
@@ -249,17 +271,17 @@ For example, you have two n8n instances, one for development and one for product
 
 ## Using external secrets in projects <a href="#using-external-secrets-in-projects" id="using-external-secrets-in-projects"></a>
 
-You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from version `2.11.0`.
+You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from n8n 2.11.0.
 
 ### Access for project roles <a href="#access-for-project-roles" id="access-for-project-roles"></a>
 
 {% hint style="info" %}
-**Version `2.13.0` and later**
+**Feature availability**
 
-Before version `2.13.0`, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
-From version `2.13.0`, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
+From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
 
 To enable this:
 
@@ -296,14 +318,16 @@ Both permissions are independent. For example, a role may need only the **Secret
 ### Secrets don't resolve in production <a href="#secrets-dont-resolve-in-production" id="secrets-dont-resolve-in-production"></a>
 
 {% hint style="info" %}
-**Version `2.13.0` and later**
+**Feature availability**
 
-From version `2.13.0`, project editors and admins with [secrets access enabled](#access-for-project-roles) can use external secrets in their own credentials. The restriction below applies only to older versions or when the opt-in toggle is off.
+Using external secrets in your own credentials, as a project editor or admin with [secrets access enabled](#access-for-project-roles), is available from n8n 2.13.0. The restriction below applies only to older versions or when the opt-in toggle is off.
 {% endhint %}
 
-In versions before `2.13.0` (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
+In versions before n8n 2.13.0 (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
 
 In this case, only use external secrets in credentials owned by an instance owner or admin.
+
+See [Manage credentials](README.md) for other ways to secure and share credentials.
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

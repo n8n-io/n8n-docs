@@ -60,7 +60,7 @@ else:
 	return [
 		{
 			"json": {
-				"results": items.length,
+				"results": len(items),
 			}
 		}
 	]

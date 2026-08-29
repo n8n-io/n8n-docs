@@ -109,7 +109,7 @@ Given the following data:
 ]
 ```
 
-n8n displays it in table form like this:
+n8n displays it in table form like this, showing the `nested` field in bold to show that it contains nested data:
 
-!["Screenshot of a table in the INPUT panel. It includes a top level field named "nested." This field contains nested data, which is indicated in bold."](../.gitbook/assets/nested-data.png)
+![Table view of the example data, with the nested field shown in bold](../.gitbook/assets/nested-data.png)
 

@@ -12,14 +12,17 @@ url: >-
 layout:
   description:
     visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # OpenTelemetry tracing <a href="#opentelemetry-tracing" id="opentelemetry-tracing"></a>
-{% hint style="warning" %}
-**This feature is still under development**
+{% hint style="info" %}
+**Preview status**
 
-- Initially available from 2.19.0
-- Open telemetry formatted metrics will be coming soon
+OpenTelemetry tracing is in Preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows. n8n plans to add OpenTelemetry-formatted metrics in a later release.
 {% endhint %}
 
 n8n can emit [OpenTelemetry](https://opentelemetry.io/) traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
@@ -52,9 +55,9 @@ n8n also handles trace context propagation:
 ## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.27.0**
+**Feature availability**
 
-You need to be an instance owner or admin to configure OpenTelemetry in the UI.
+Configuring OpenTelemetry tracing from the UI is available from n8n 2.27.0. You need to be an instance owner or admin to configure OpenTelemetry in the UI.
 {% endhint %}
 
 Instead of setting environment variables, you can configure tracing from **Settings > OpenTelemetry**. n8n applies your changes without a restart, and reloads them across workers and webhook processors in [queue mode](../configure-n8n/scaling/enable-queue-mode.md).
@@ -136,6 +139,45 @@ To stop n8n from injecting `traceparent` headers into outbound HTTP requests, se
 export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ```
 
+## Agent tracing <a href="#agent-tracing" id="agent-tracing"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Agent tracing is available from n8n 2.33.0.
+{% endhint %}
+
+n8n can also emit detailed spans for agent runs built with the Agents feature, using the same tracer as workflow tracing. This covers agent runs started from a workflow, from chat integrations, and from scheduled tasks.
+
+{% hint style="warning" %}
+**Legacy AI Agent node**
+
+This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard `node.execute` span like any other node. It doesn't emit the `gen_ai.*` agent-run or tool-call spans.
+{% endhint %}
+
+Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:
+
+```bash
+export N8N_AGENTS_TRACING_ENABLED=true
+```
+
+Set it to `false` to keep workflow and node spans while dropping agent spans.
+
+By default, agent tracing records prompts, tool arguments, responses, and tool results. To exclude sensitive input or output data:
+
+```bash
+export N8N_AGENTS_TRACING_RECORD_INPUTS=false
+export N8N_AGENTS_TRACING_RECORD_OUTPUTS=false
+```
+
+For the full list of variables, refer to [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md).
+
+### What you get <a href="#what-you-get-agents" id="what-you-get-agents"></a>
+
+Each agent run produces one root span, named `<agent name>.generate` or `<agent name>.stream` depending on whether the run streams its response. Each tool call the agent makes produces a nested `execute_tool <tool name>` span.
+
+These spans use the OpenTelemetry [GenAI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/) (`gen_ai.*` attributes), so they're readable in any OTLP backend, not just tools built for LangSmith.
+
 ## Custom span attributes <a href="#custom-span-attributes" id="custom-span-attributes"></a>
 
 You can add custom attributes to project, workflow, and node spans. n8n exports each custom attribute as an OpenTelemetry span attribute to your configured observability backend.
@@ -143,7 +185,13 @@ You can add custom attributes to project, workflow, and node spans. n8n exports 
 {% hint style="info" %}
 **Feature availability**
 
-Custom span attributes are available on Enterprise plans.
+Custom span attributes are available on:
+
+- **Self-hosted:** Enterprise
+
+They aren't available on n8n Cloud.
+
+Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
 {% endhint %}
 
 Don't include secrets, personal data, or other sensitive values in attribute values.
@@ -155,8 +203,6 @@ n8n supports the following custom attribute levels:
 | Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
-
-Project and workflow custom span attributes are available from n8n `2.24.0`. Node custom span attributes are available from n8n `2.22.0`.
 
 ### Add project span attributes <a href="#add-project-span-attributes" id="add-project-span-attributes"></a>
 
@@ -258,7 +304,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.name` | Workflow name. |
 | `n8n.workflow.version_id` | Workflow version ID. |
 | `n8n.workflow.node_count` | Number of nodes in the workflow. |
-| `n8n.project.id` | Project ID. Available from n8n `2.23.0`. |
+| `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
 | `n8n.execution.status` | Final execution status. |
@@ -283,6 +329,36 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
+
+### Agent run span (`<agent name>.generate` or `<agent name>.stream`) <a href="#agent-run-span" id="agent-run-span"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `gen_ai.operation.name` | Always `invoke_agent`. |
+| `gen_ai.agent.name` | Agent name. |
+| `gen_ai.request.model` | Model ID, as `<provider>/<model name>`, when known. |
+| `gen_ai.conversation.id` | Thread ID. |
+| `gen_ai.prompt` | Serialized prompt, tool count, and tool catalog. Omitted when `N8N_AGENTS_TRACING_RECORD_INPUTS` is `false`. |
+| `agent_id` | Agent ID. |
+| `project_id` | Project ID. |
+| `thread_id` | Thread ID. |
+| `source` | Where the run started (for example, `workflow`, or a chat integration name). |
+| `user_id` | User ID, when known. |
+| `model_id` | Model ID, as `<provider>/<model name>`, when known. |
+| `execution_id` | Execution ID, for workflow-triggered runs. |
+| `workflow_id` | Workflow ID, for workflow-triggered runs. |
+| `node_id` | Node ID, for workflow-triggered runs. |
+
+### Tool call span (`execute_tool <tool name>`) <a href="#tool-call-span" id="tool-call-span"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `gen_ai.operation.name` | Always `execute_tool`. |
+| `gen_ai.tool.name` | Tool name. |
+| `gen_ai.tool.call.id` | Tool call ID. |
+| `gen_ai.agent.name` | Agent name. |
+| `gen_ai.tool.call.arguments` | Tool call arguments. Omitted when `N8N_AGENTS_TRACING_RECORD_INPUTS` is `false`. |
+| `gen_ai.tool.call.result` | Tool call result. Omitted when `N8N_AGENTS_TRACING_RECORD_OUTPUTS` is `false`. |
 
 ## Troubleshooting <a href="#troubleshooting" id="troubleshooting"></a>
 
@@ -314,6 +390,15 @@ Check that:
 ### Worker traces are missing parent context <a href="#worker-traces-are-missing-parent-context" id="worker-traces-are-missing-parent-context"></a>
 
 In queue mode, workers read the parent trace context from the database. If you only set the OpenTelemetry environment variables on the main instance, worker spans won't link to the parent workflow trace. Set the same variables on every instance type.
+
+### No agent spans appear <a href="#no-agent-spans-appear" id="no-agent-spans-appear"></a>
+
+Agent spans depend on the OTel module. Check that:
+
+- `N8N_OTEL_ENABLED` is set to `true`.
+- `N8N_AGENTS_TRACING_ENABLED` is set to `true`.
+
+With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n emits no spans for them, even with `N8N_AGENTS_TRACING_ENABLED` set to `true`.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

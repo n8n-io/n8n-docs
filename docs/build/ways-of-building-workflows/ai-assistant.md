@@ -1,15 +1,18 @@
 ---
-title: Use AI Assistant (Preview)
+title: Use AI Assistant
 description: >-
   Use the AI Assistant to create, edit, test, and troubleshoot n8n workflows from
   a chat.
 status: preview
+tags:
+  - tag: preview
+    primary: true
 layout:
   description:
     visible: false
 ---
 
-# Use AI Assistant (Preview)
+# Use AI Assistant
 
 The AI Assistant is a chat-based agent in n8n that helps you create, edit, test, and troubleshoot workflows from natural language. It can also build agents and help with instance tasks, such as renaming or publishing workflows.
 
@@ -18,7 +21,18 @@ Describe what you want to automate. The AI Assistant can plan the workflow, buil
 The result is a normal n8n workflow. You can open it, inspect it, edit it, test it, and publish it like any other workflow.
 
 {% hint style="info" %}
-The AI Assistant is available on n8n Cloud only.
+**Feature availability**
+
+The AI Assistant is available on:
+
+- **n8n Cloud:** Starter, Pro
+- **Self-hosted:** Community, Registered Community, Business
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
 
 The AI Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
@@ -30,8 +44,9 @@ You interact with the AI Assistant in a chat. It can use tools inside n8n to hel
 You can ask the AI Assistant to:
 
 - **Create workflows:** describe the automation you want, and the AI Assistant can generate a workflow.
-- **Build agents:** describe the agent you want, and the AI Assistant can suggest instructions, tools, and skills to add.
-- **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration. See [Build and manage agents](../build-and-manage-agents.md).
+- **Build agents:** describe the agent you want, and the AI Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
+- **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
+- **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.
 - **Use n8n resources:** create or update supporting resources such as [Data Tables](../work-with-data/data-tables.md) when needed.
@@ -39,7 +54,7 @@ You can ask the AI Assistant to:
 
 ## Before you start
 
-To use the AI Assistant, you need access to an n8n instance where the feature is enabled.
+To use the AI Assistant, you need access to an n8n instance with the feature enabled.
 
 Make sure that:
 
@@ -113,7 +128,7 @@ If you create a new credential, you enter the secret in the standard n8n credent
 
 ## Web access
 
-When web research is enabled, the AI Assistant asks for permission before accessing an external domain.
+When you enable web access, the AI Assistant asks for permission before accessing an external domain.
 
 Review the requested domain before you approve access.
 
@@ -139,7 +154,7 @@ Depending on the task, this can include:
 - workflow structure and node configuration,
 - selected execution and error details used for troubleshooting,
 - credential names, credential types, or connection status,
-- approved web pages or domains, when web research is enabled.
+- approved web pages or domains, when you enable web access.
 
 The AI Assistant doesn't require you to paste secrets into chat. Enter API keys, passwords, and tokens through the standard n8n credential screens.
 
@@ -162,4 +177,6 @@ To reduce unnecessary usage:
 
 To get more credits during Preview, upgrade your plan. More ways to top up are coming.
 
-For current plan details, see [n8n Plans and Pricing](https://n8n.io/pricing/).
+For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
+
+See [Ways of building workflows](README.md) for other approaches.

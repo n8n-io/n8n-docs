@@ -134,9 +134,9 @@ n8n unpublish:workflow --all
 ### update:workflow (deprecated) <a href="#updateworkflow-deprecated" id="updateworkflow-deprecated"></a>
 
 {% hint style="warning" %}
-**Deprecated in n8n 2.0**
+**Feature availability**
 
-The `update:workflow` command is deprecated and will be removed. Use [`publish:workflow`](use-the-command-line.md#publish-a-workflow) and [`unpublish:workflow`](use-the-command-line.md#unpublish-a-workflow) instead. See the [n8n v2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) for details.
+The `update:workflow` command is deprecated from n8n 2.0 and will be removed. Use [`publish:workflow`](use-the-command-line.md#publish-a-workflow) and [`unpublish:workflow`](use-the-command-line.md#unpublish-a-workflow) instead. See the [n8n 2.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) for details.
 {% endhint %}
 
 Set the active status of a workflow by its ID to false:

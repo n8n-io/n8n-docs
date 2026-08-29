@@ -31,6 +31,9 @@ layout:
     visible: true
   actions:
     visible: true
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # LangChain Code
@@ -40,9 +43,9 @@ Use the LangChain Code node to import LangChain. This means if there is function
 On this page, you'll find the node parameters, guidance on configuring the node, and links to more resources.
 
 {% hint style="warning" %}
-**Deprecated due to security issues**
+**Feature availability**
 
-This node has critical security issues and isn't safe to use. It's deprecated and hidden from the nodes panel. Avoid using it in your workflows.
+The LangChain Code node has critical security issues and isn't safe to use. It's deprecated from n8n 2.35.0 and hidden from the nodes panel. Avoid using it in your workflows.
 {% endhint %}
 
 {% hint style="info" %}
@@ -80,7 +83,7 @@ The main output is the normal connector found in all n8n workflows. If you have 
 
 By configuring the LangChain Code node connectors (inputs and outputs) you can use it as an app node, root node or sub-node.
 
-![Screenshot of a workflow with four LangChain nodes, configured as different node types](../../../.gitbook/assets/create-node-types.png)
+![Four LangChain Code nodes in one workflow, each set up as a different node type: app, root, sub-node, and sub-node with sub-nodes](../../../.gitbook/assets/create-node-types.png)
 
 | Node type                                                                    | Inputs                        | Outputs                                                                   | Code mode   |
 | ---------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------- | ----------- |

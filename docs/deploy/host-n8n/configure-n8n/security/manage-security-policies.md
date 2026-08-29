@@ -18,7 +18,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Security settings are available on Business and Enterprise plans. Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
+Security settings are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Some settings require specific license features. Settings that aren't available on your plan display an **Upgrade** badge.
 {% endhint %}
 
 Security settings let you manage instance-wide security policies. You can enforce two-factor authentication for all users and control what users can do in their personal spaces.
@@ -83,6 +88,34 @@ When you disable publishing:
 - Currently published workflows remain published. The setting only affects new publish actions.
 - The number of currently published personal workflows is displayed below the toggle.
 
+## Workflow reviews <a href="#workflow-reviews" id="workflow-reviews"></a>
+
+{% hint style="info" %}
+**Preview status**
+
+Workflow reviews are in Preview and may change before general availability. Avoid relying on them in production workflows.
+{% endhint %}
+
+{% hint style="info" %}
+**Feature availability**
+
+Workflow reviews are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Workflow reviews are available from n8n 2.37.0.
+{% endhint %}
+
+With workflow reviews, teams can submit a workflow version for approval before publishing. Instance admins enable the feature for the whole instance.
+
+To enable workflow reviews:
+
+1. Navigate to **Settings** > **Security & policies**.
+2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
+
+When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
+
 ## Enforce execution data redaction <a href="#enforce-execution-data-redaction" id="enforce-execution-data-redaction"></a>
 
 You can enforce [execution data redaction](redact-execution-data.md) for all workflows on the instance. Enforcement sets an instance-wide minimum redaction policy that individual workflow settings can't weaken.
@@ -90,9 +123,12 @@ You can enforce [execution data redaction](redact-execution-data.md) for all wor
 {% hint style="info" %}
 **Feature availability**
 
-Data redaction enforcement is available on Enterprise Self-hosted and Enterprise Cloud plans.
+Data redaction enforcement is available on:
 
-**Available from:** n8n version 2.26.0
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.26.0.
 {% endhint %}
 
 To enforce data redaction:
@@ -114,7 +150,7 @@ Redaction enforcement requires an Enterprise license with the data redaction fea
 
 ## Configure security policy with environment variables <a href="#configure-security-policy-with-environment-variables" id="configure-security-policy-with-environment-variables"></a>
 
-You can also manage security policy settings from environment variables instead of through the UI. Available from n8n v2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+You can also manage security policy settings from environment variables instead of through the UI. This option is available from n8n 2.18.0. Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` and provide the variables below. See [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
 When `N8N_SECURITY_POLICY_MANAGED_BY_ENV` is `true`, the **Enforce two-factor authentication** and **Personal Space** toggles on this page become read-only.
 

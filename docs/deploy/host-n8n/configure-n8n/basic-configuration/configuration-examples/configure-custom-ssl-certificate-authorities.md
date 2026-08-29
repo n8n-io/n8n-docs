@@ -20,9 +20,9 @@ layout:
 You can add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
 
 {% hint style="info" %}
-**Added in version 1.42.0**
+**Feature availability**
 
-This feature is available in version 1.42.0 and above.
+You can use your own certificate authority or self-signed certificate starting from n8n 1.42.0.
 {% endhint %}
 
 To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container. 
@@ -39,7 +39,7 @@ docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
  -v ./pki:/opt/custom-certificates \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 ### Docker Compose <a href="#docker-compose" id="docker-compose"></a>
@@ -53,7 +53,7 @@ services:
         container_name: n8n
         ports:
             - 5678:5678
-        image: docker.n8n.io/n8nio/n8n
+        image: n8nio/n8n
 ```
 
 You should also give the right permissions to the imported certs. You can do this once the container is running (assuming n8n as the container name):

@@ -47,9 +47,17 @@ concurrency:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    # Skip the noisy pending status pings (a status fires for every commit-status
-    # update in the repo); act on settled statuses and the other triggers.
-    if: ${{ github.event_name != 'status' || github.event.state != 'pending' }}
+    # A `status` fires for every commit-status update in the repo. Only act when a
+    # REQUIRED check just went green (the moment a marked PR might become CLEAN);
+    # the schedule is the backstop for everything else. Keeps unrelated status
+    # churn from queuing full runs.
+    if: >-
+      github.event_name != 'status' ||
+      (github.event.state == 'success' &&
+       (github.event.context == 'CLA Check' ||
+        github.event.context == 'link-check' ||
+        github.event.context == 'runner / vale' ||
+        github.event.context == 'cubic · AI code reviewer'))
     steps:
       # Trusted code: pin to main so we never run a PR-head copy of the scripts.
       - name: Checkout main (trusted)

@@ -55,7 +55,7 @@ Then:
 {% hint style="warning" %}
 **Enable every requested scope on your app**
 
-Atlassian rejects the authorization request if the credential requests a scope that isn't enabled on your OAuth app. Make sure you enable every scope in the **Scope** field in the Atlassian Developer Console. Include `offline_access` in the list, which Atlassian grants automatically when requested. It's needed to refresh tokens, so the connection keeps working without you signing in again.
+Atlassian rejects the authorization request if the credential requests a scope that isn't enabled on your OAuth app. You must enable every scope you enter in n8n's **Scope** field on the app too, under **Permissions** > **Edit Scopes** in the Atlassian Developer Console. `offline_access` is the exception: Atlassian grants it automatically when requested, so it only needs to go in the **Scope** field. It's needed to refresh tokens, so the connection keeps working without you signing in again.
 {% endhint %}
 
 Refer to [Jira scopes](https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/) and [Confluence scopes](https://developer.atlassian.com/cloud/confluence/scopes-for-oauth-2-3LO-and-forge-apps/) in Atlassian's documentation for the available scopes.

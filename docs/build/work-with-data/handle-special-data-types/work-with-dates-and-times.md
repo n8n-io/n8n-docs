@@ -275,32 +275,20 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 ```js
 {{"There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!"}}
 ```
-
-This outputs `"There are <number of days> days to Christmas!"`. For example, on 9th March, it outputs "There are 291 days to Christmas!".
-
-A detailed explanation of what the expression does:
-
-* `{{`: indicates the start of the expression.
-* `"There are "`: a string. 
-* `+`: used to join two strings.
-* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
-* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
-* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](query-json-data.md) documentation. This gives you the number of days to Christmas, as a negative number.
-* `.toString().substring(1)` turns the number into a string and removes the `-`.
-* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
-* `}}`: indicates the end of the expression.
 {% endtab %}
 
 {% tab title="Code node (JavaScript)" %}
 ```js
 let daysToChristmas = "There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!";
 ```
+{% endtab %}
+{% endtabs %}
 
 This outputs `"There are <number of days> days to Christmas!"`. For example, on 9th March, it outputs "There are 291 days to Christmas!".
 
 A detailed explanation of what the code does:
 
+* `{{` and `}}`: in the expressions version, these indicate the start and end of the expression. The Code node version doesn't need them.
 * `"There are "`: a string. 
 * `+`: used to join two strings.
 * `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
@@ -309,5 +297,3 @@ A detailed explanation of what the code does:
 * `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](query-json-data.md) documentation. This gives you the number of days to Christmas, as a negative number.
 * `.toString().substring(1)` turns the number into a string and removes the `-`.
 * `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
-{% endtab %}
-{% endtabs %}

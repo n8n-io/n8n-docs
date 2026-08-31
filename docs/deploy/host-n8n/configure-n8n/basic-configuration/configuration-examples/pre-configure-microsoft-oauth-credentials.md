@@ -71,7 +71,7 @@ Mount the credentials file as a read-only volume and set the environment variabl
 ```yaml
 services:
   n8n:
-    image: docker.n8n.io/n8nio/n8n:latest
+    image: n8nio/n8n:latest
     container_name: n8n
     restart: always
     ports:
@@ -138,7 +138,7 @@ stringData:
 spec:
   containers:
     - name: n8n
-      image: docker.n8n.io/n8nio/n8n:latest
+      image: n8nio/n8n:latest
       env:
         - name: CREDENTIALS_OVERWRITE_DATA_FILE
           value: /run/secrets/credentials-overwrite.json
@@ -264,7 +264,7 @@ spec:
       serviceAccountName: n8n-sa
       containers:
         - name: n8n
-          image: docker.n8n.io/n8nio/n8n:latest
+          image: n8nio/n8n:latest
           env:
             - name: CREDENTIALS_OVERWRITE_DATA_FILE
               value: /run/secrets/credentials-overwrite.json
@@ -413,7 +413,7 @@ spec:
       serviceAccountName: n8n-sa
       containers:
         - name: n8n
-          image: docker.n8n.io/n8nio/n8n:latest
+          image: n8nio/n8n:latest
           env:
             - name: CREDENTIALS_OVERWRITE_DATA_FILE
               value: /run/secrets/credentials-overwrite.json
@@ -543,7 +543,7 @@ spec:
       serviceAccountName: n8n-sa
       containers:
         - name: n8n
-          image: docker.n8n.io/n8nio/n8n:latest
+          image: n8nio/n8n:latest
           env:
             - name: CREDENTIALS_OVERWRITE_DATA_FILE
               value: /run/secrets/credentials-overwrite.json

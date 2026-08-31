@@ -153,7 +153,7 @@ Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/inte
 
 Your Pinecone index and namespace are available in your Pinecone account.
 
-![Screenshot of a Pinecone account, with the Pinecone index labelled](../../../.gitbook/assets/pinecone-index-namespace.png)
+![Pinecone console showing the index name and namespace location for a project](../../../.gitbook/assets/pinecone-index-namespace.png)
 
 [^1]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 [^2]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).

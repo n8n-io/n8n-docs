@@ -8,7 +8,7 @@ originalFilePath: hosting/community-edition-features.md
 originalUrl: https://docs.n8n.io/hosting/community-edition-features
 url: https://docs.n8n.io/deploy/host-n8n/community-edition-features
 description: >-
-  Compare the self-hosted n8n plans and editions: Community, registered
+  Compare the self-hosted n8n plans and editions: Community, Registered
   Community, Business, and Enterprise.
 layout:
   width: default
@@ -35,7 +35,7 @@ tags:
 
 # Compare plans and editions
 
-Every self-hosted installation runs on the same underlying product. You can stick with the basic Community edition for free, indefinitely. Alternatively, register to unlock extra features for free, or subscribe to a paid plan to get a license key that unlocks the features for that plan.
+Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, register for free to unlock extra features, or subscribe to a paid plan for a license key that unlocks that plan's features.
 
 - **Community edition**: the free edition. This is what n8n runs without a license key.
 - **Registered Community edition**: the free Community edition with extra features unlocked by registering your email. Still free.
@@ -44,7 +44,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 {% hint style="info" %}
 **Plan, edition, or license?**
 
-An **edition** is the variant of the self-hosted software you run: Community, registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. Registering a free Community edition also uses a license key. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
+An **edition** is the variant of the self-hosted software you run: Community, Registered Community, Business, or Enterprise. A **plan** is the paid subscription tier you buy, for self-hosted or [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md). When you subscribe to a paid plan, you get a **license** key that unlocks the features for that plan. Registering a free Community edition also uses a license key. See the [glossary](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#edition-n8n) for definitions.
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,7 +57,7 @@ Exact features per plan and edition can change. For the current breakdown, see t
 
 The Community edition includes almost the complete feature set of n8n. It doesn't include these features:
 
-* [Custom Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables)
+* [Custom variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables)
 * [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
 * [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores)
 * [External storage for binary data](configure-n8n/scaling/use-external-storage.md)
@@ -68,7 +68,7 @@ The Community edition includes almost the complete feature set of n8n. It doesn'
 * Sharing ([workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others), [credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely)) (Only the instance owner and the user who creates them can access workflows and credentials)
 * [Version control using Git](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
 
-These features are available on the Business and Enterprise plans. Some are also available on the Starter, Pro, and Enterprise n8n Cloud plans. See [pricing](https://n8n.io/pricing/) for the current breakdown.
+These features are available on self-hosted Business and Enterprise plans. Some are also available on n8n Cloud. See [pricing](https://n8n.io/pricing/) for the current breakdown.
 
 ## Registered Community edition <a href="#registered-community-edition" id="registered-community-edition"></a>
 

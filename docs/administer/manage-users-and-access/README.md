@@ -16,7 +16,7 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 * Login and password management
 * Adding and removing users
-* Three built-in [instance roles](understand-instance-roles.md): **Owner** and **Member** (and **Admin** for Pro & Enterprise plans), plus custom instance roles
+* Three built-in [instance roles](understand-instance-roles.md): **Owner**, **Admin**, and **Member** (**Admin** is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise), plus custom instance roles
 
 {% hint style="info" %}
 **Privacy**

@@ -36,38 +36,47 @@ import json
 import re
 import sys
 
-# One capture group for the "Current `stable`: " prefix, one for the value.
-STABLE_RE = re.compile(r"^Current `stable`:[ \t]*(.+?)[ \t]*$", re.MULTILINE)
-BETA_RE = re.compile(r"^Current `beta`:[ \t]*(.+?)[ \t]*$", re.MULTILINE)
-SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+$")
+# Three groups: prefix (kept), value (blanked for the structural compare),
+# trailing whitespace (kept). Keeping prefix + trailing exact means ANY change
+# beyond the number itself - including whitespace on these lines - is detected.
+STABLE_RE = re.compile(r"^(Current `stable`:[ \t]+)(.+?)([ \t]*)$", re.MULTILINE)
+BETA_RE = re.compile(r"^(Current `beta`:[ \t]+)(.+?)([ \t]*)$", re.MULTILINE)
+# ASCII-only, no leading zeros: a plain canonical X.Y.Z. `[0-9]` (not `\d`)
+# excludes Unicode digits.
+SEMVER_RE = re.compile(r"\A(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\Z")
 
 
 def _semver(v: str):
-    """('2.36.7') -> (2, 36, 7). None if not a plain X.Y.Z."""
+    """('2.36.7') -> (2, 36, 7). None if not a plain canonical X.Y.Z."""
     if not SEMVER_RE.match(v or ""):
         return None
-    return tuple(int(p) for p in v.split("."))
+    try:
+        return tuple(int(p) for p in v.split("."))
+    except ValueError:  # pathologically large component
+        return None
 
 
 def _parse_one(text: str, regex: re.Pattern, tag: str):
     """Return (value, error). Requires exactly one occurrence with a valid
     plain semver; otherwise (None, reason)."""
-    vals = regex.findall(text or "")
-    if len(vals) == 0:
+    matches = list(regex.finditer(text or ""))
+    if len(matches) == 0:
         return None, f"no `{tag}` version line found"
-    if len(vals) > 1:
-        return None, f"expected exactly one `{tag}` line, found {len(vals)}"
-    if _semver(vals[0]) is None:
-        return None, f"`{tag}` value {vals[0]!r} is not a plain X.Y.Z semver"
-    return vals[0], None
+    if len(matches) > 1:
+        return None, f"expected exactly one `{tag}` line, found {len(matches)}"
+    val = matches[0].group(2)
+    if _semver(val) is None:
+        return None, f"`{tag}` value {val!r} is not a plain X.Y.Z semver"
+    return val, None
 
 
 def _blanked(text: str) -> str:
-    """The file with both version values replaced by a sentinel, so two files
-    that differ only in the numbers compare byte-identical. Deliberately avoids
-    holding a second copy of the snippet template (nothing to drift)."""
-    text = STABLE_RE.sub("Current `stable`: <VER>", text)
-    text = BETA_RE.sub("Current `beta`: <VER>", text)
+    """The file with only the two version *values* replaced by a sentinel,
+    preserving all surrounding bytes, so two files that differ ONLY in the two
+    numbers compare identical - and any other change (prose, spacing) does not.
+    Deliberately avoids holding a second copy of the template (nothing to drift)."""
+    text = STABLE_RE.sub(r"\1<VER>\3", text)
+    text = BETA_RE.sub(r"\1<VER>\3", text)
     return text
 
 

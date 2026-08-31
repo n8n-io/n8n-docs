@@ -89,6 +89,16 @@ def main():
           verdict("2.36.7", "2.37.3", "2.36.8", "2.37.4", "2.36.8", "2.37.4",
                   head_prose="something else entirely") == "escalate")
 
+    # whitespace changed on a version line (not just the number) -> escalate
+    head_ws = snippet("2.36.8", "2.37.4").replace("Current `stable`: 2.36.8", "Current `stable`:  2.36.8")
+    check("extra whitespace on the stable line -> escalate",
+          cvs.evaluate(snippet("2.36.7", "2.37.3"), head_ws, "2.36.8", "2.37.4")["verdict"] == "escalate")
+
+    # non-canonical semver (leading zero) -> escalate
+    check("leading-zero head semver -> escalate",
+          cvs.evaluate(snippet("2.36.7", "2.37.3"), snippet("2.36.08", "2.37.4"),
+                       "2.36.8", "2.37.4")["verdict"] == "escalate")
+
     # missing beta line -> escalate (build a head with the beta line removed)
     head_no_beta = snippet("2.36.8", "2.37.4").replace("Current `beta`: 2.37.4\n", "")
     check("missing beta line -> escalate",

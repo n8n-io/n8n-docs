@@ -48,7 +48,7 @@ Operations that write page or comment content offer a **Body Format** choice:
 * **Storage**: enter Confluence storage-format XHTML, for example `<h2>Title</h2><p>Text</p>`.
 * **Atlas Doc Format**: enter a raw [Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/) JSON document.
 
-Operations that read content return the body in **Storage** (the default) or **Atlas Doc Format**, or as **Plain Text** extracted from the document — useful for feeding page content to AI and search workflows.
+Operations that read content return the body in **Storage** (the default) or **Atlas Doc Format**, or as **Plain Text** extracted from the document, which is useful for feeding page content to AI and search workflows.
 
 ## Operations
 
@@ -61,9 +61,9 @@ Operations that read content return the body in **Storage** (the default) or **A
   * Add Labels: add one or more labels to a page.
   * Append: append content to the bottom of an existing page.
   * Create: create a new page in a space, optionally as a draft, private, at the space root, or under a parent page.
-  * Delete: move a page to trash, or permanently delete it. Child pages aren't deleted — they move up to the deleted page's parent.
+  * Delete: move a page to trash, or permanently delete it. Child pages aren't deleted. They move up to the deleted page's parent.
   * Delete Comment: permanently delete a footer comment.
-  * Get: retrieve a page, optionally with its full sub-tree — one item per descendant page.
+  * Get: retrieve a page, optionally with its full sub-tree, returning one item per descendant page.
   * Get Comments: list the footer comments on a page.
   * Get Labels: list the labels on a page.
   * Get Many by Label: retrieve all pages carrying a label, optionally within one space.

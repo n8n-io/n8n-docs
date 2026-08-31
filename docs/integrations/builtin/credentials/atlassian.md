@@ -49,9 +49,8 @@ Then:
 10. Select **Settings** in the left sidebar.
 11. Copy the **Client ID** and paste it into n8n.
 12. Copy the **Secret** and paste it as the **Client Secret** in n8n.
-13. Enter the **Site URL** of your Atlassian site, for example `https://example.atlassian.net`. n8n ignores the scheme and any path such as `/wiki`, so pasting the site part of a full page URL also works.
-14. Enter the **Scope** as a space-separated list of scopes to request, for example `read:jira-work read:page:confluence offline_access`.
-15. Select **Connect my account** and follow the prompts to complete the OAuth2 flow.
+13. Enter the **Scope** as a space-separated list of scopes to request, for example `read:jira-work read:page:confluence offline_access`.
+14. Select **Connect my account** and follow the prompts to complete the OAuth2 flow.
 
 {% hint style="warning" %}
 **Enable every requested scope on your app**

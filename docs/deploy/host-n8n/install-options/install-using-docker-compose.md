@@ -40,7 +40,7 @@ SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
 SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
 
 # Must match a value in SANDBOX_API_KEYS above — this is how n8n authenticates to the sandbox
-N8N_INSTANCE_AI_SANDBOX_API_KEY=change-me-api-key
+N8N_SANDBOX_SERVICE_API_KEY=change-me-api-key
 
 # Web search: secret for the bundled SearXNG instance — pick your own value
 SEARXNG_SECRET=change-me-searxng-secret
@@ -158,7 +158,7 @@ services:
       N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
       N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
       N8N_INSTANCE_AI_SANDBOX_IMAGE: ghcr.io/n8n-io/n8n-sandbox-service-sandbox:latest
-      N8N_INSTANCE_AI_SANDBOX_API_URL: http://sandbox-api:8080
+      N8N_SANDBOX_SERVICE_URL: http://sandbox-api:8080
 ```
 
 ## What you've just set up

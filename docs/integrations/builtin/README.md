@@ -1,9 +1,10 @@
 ---
+description: Explore n8n's built-in core nodes, app nodes, trigger nodes, cluster nodes, and credentials.
 layout:
   description:
     visible: false
 ---
-# Builtin <a href="#builtin" id="builtin"></a>
+# Built-in nodes <a href="#builtin" id="builtin"></a>
 
 {% content-ref url="node-types.md" %}
 [node-types.md](node-types.md)
@@ -40,3 +41,5 @@ layout:
 {% content-ref url="deprecated-nodes.md" %}
 [deprecated-nodes.md](deprecated-nodes.md)
 {% endcontent-ref %}
+
+See [Nodes](../README.md) for other integration topics.

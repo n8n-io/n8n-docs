@@ -1,0 +1,97 @@
+name: DocOps auto-merge (version snippet)
+# Auto-merges the DocOps version-snippet PRs a human currently rubber-stamps.
+#
+# It acts ONLY on PRs carrying the body marker written by the DocOps engine
+# (<!-- docops:automation=version-snippet -->). Every other PR - including the
+# hand-merged v1 snippet PRs - is ignored, so there is no flag day: when the
+# engine starts writing the marker, these PRs begin merging themselves.
+#
+# It never merges via admin bypass: it supplies the one required review as
+# github-actions[bot] and merges only when GitHub reports the PR CLEAN (all
+# required checks green, approved, branch up to date). It never leaves a marked
+# PR open - every run reaches merge, close_outdated, or a do-not-merge escalation.
+#
+# Security (same posture as gitbook-preview-links.yml): this job holds a write
+# token, so it never checks out or executes PR-head code. It checks out the
+# trusted default branch for the verdict script/logic and pulls the PR's file
+# contents through the API as data. See .github/scripts/docops_auto_merge.sh
+# and .github/scripts/check_version_snippet_pr.py.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, unlabeled]
+  status:
+  check_suite:
+    types: [completed]
+  push:
+    branches: [main]          # rescue PRs that went BEHIND / newly-outdated
+  schedule:
+    - cron: "*/15 * * * *"    # drives checks_timeout + a fallback sweep
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: PR number to evaluate
+        required: false
+      dry_run:
+        description: "true = decide and report only, take no action"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: write
+
+concurrency:
+  group: docops-auto-merge
+  cancel-in-progress: false
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      # Trusted code: the verdict script + logic from the default branch, never PR head.
+      - name: Checkout default branch (trusted)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Evaluate and act
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SHA: ${{ github.event.sha }}
+          CS_SHA: ${{ github.event.check_suite.head_sha }}
+          INPUT_PR: ${{ github.event.inputs.pr }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          WEBHOOK_URL: ${{ secrets.DOCOPS_AUTOMERGE_WEBHOOK_URL }}
+          WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
+          WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
+          # Config consumed by docops_auto_merge.sh:
+          SNIPPET_PATH: docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
+          MARKER: "<!-- docops:automation=version-snippet -->"
+          BRANCH_RE: "^doc-[0-9]+-update-version-snippet$"
+          ALLOWED_AUTHORS: "its-imad"          # phase 2 adds: docops-automation[bot]
+          CHECKS_TIMEOUT_MIN: "60"
+        run: |
+          set -euo pipefail
+          prs=""
+          case "$EVENT_NAME" in
+            pull_request)      prs="${{ github.event.pull_request.number }}" ;;
+            workflow_dispatch) prs="$INPUT_PR" ;;
+            status)            prs=$(gh api "repos/$GH_REPO/commits/$EVENT_SHA/pulls" --jq '[.[]|select(.state=="open")][].number' 2>/dev/null || true) ;;
+            check_suite)       prs=$(gh api "repos/$GH_REPO/commits/$CS_SHA/pulls"    --jq '[.[]|select(.state=="open")][].number' 2>/dev/null || true) ;;
+            push|schedule)     prs=$(gh api "repos/$GH_REPO/pulls?state=open&per_page=100" --paginate --jq '.[].number' 2>/dev/null || true) ;;
+          esac
+          if [ -z "${prs// /}" ]; then echo "No candidate PRs for $EVENT_NAME."; exit 0; fi
+
+          rc=0
+          for PR in $prs; do
+            [ -z "$PR" ] && continue
+            echo "::group::PR #$PR"
+            code=0
+            bash .github/scripts/docops_auto_merge.sh "$PR" || code=$?
+            [ "$code" = "3" ] && rc=1     # an escalation makes the run visibly red
+            echo "::endgroup::"
+          done
+          exit $rc

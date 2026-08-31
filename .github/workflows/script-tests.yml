@@ -28,3 +28,12 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run check_internal_links tests
         run: python3 .github/scripts/tests/test_check_internal_links.py
+
+  check-version-snippet:
+    name: runner / check-version-snippet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run check_version_snippet_pr tests
+        run: python3 .github/scripts/tests/test_check_version_snippet_pr.py

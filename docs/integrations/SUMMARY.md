@@ -133,6 +133,7 @@
     * [Cockpit](builtin/app-nodes/n8n-nodes-base.cockpit.md)
     * [Coda](builtin/app-nodes/n8n-nodes-base.coda.md)
     * [CoinGecko](builtin/app-nodes/n8n-nodes-base.coingecko.md)
+    * [Confluence](builtin/app-nodes/n8n-nodes-base.confluence.md)
     * [Contentful](builtin/app-nodes/n8n-nodes-base.contentful.md)
     * [ConvertKit](builtin/app-nodes/n8n-nodes-base.convertkit.md)
     * [Copper](builtin/app-nodes/n8n-nodes-base.copper.md)

@@ -72,10 +72,16 @@ To get your Client ID and Client Secret, register a new Typeform app:
 10. The **Developer apps** panel displays your new app. Copy the **Client ID** and enter it in your n8n credential.
 11. Once you enter both the **Client ID** and **Client Secret** in n8n, select **Connect my account** and follow the on-screen prompts to finish authorizing the app.
 
-{% hint style="info" %}
-**Custom scopes**
-
-By default, n8n requests these scopes: `forms:read`, `webhooks:read`, and `webhooks:write`. To request different Typeform API permissions, turn on **Custom Scopes** in the credential and edit the **Enabled Scopes** field. Take care when removing a default scope, as this may stop the Typeform Trigger node from working.
-{% endhint %}
-
 Refer to [Create applications that integrate with Typeform's APIs](https://www.typeform.com/developers/get-started/applications/#1-create-an-application-in-the-typeform-admin-panel) for more information.
+
+## Setting custom scopes <a href="#setting-custom-scopes" id="setting-custom-scopes"></a>
+
+Typeform OAuth2 credentials use the following scopes by default:
+
+- `forms:read`
+- `webhooks:read`
+- `webhooks:write`
+
+To select different scopes for your credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Take care when removing a default scope, as this can stop the [Typeform Trigger](../trigger-nodes/n8n-nodes-base.typeformtrigger.md) node from working.
+
+Refer to Typeform's [Scopes documentation](https://www.typeform.com/developers/get-started/scopes/) for the full list of available scopes.

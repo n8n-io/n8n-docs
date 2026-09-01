@@ -82,14 +82,17 @@ do_escalate() { # verdict reason
   log "escalated ($1): $reason"
 }
 
-approve_if_needed() {
+approve_pr() {  # 0 = approved (or already approved); 1 = approval failed (surface it)
   [ "$DRY_RUN" = "true" ] && return 0
   local n
-  n="$(gh api "repos/$GH_REPO/pulls/$PR/reviews" --jq '[.[]|select(.state=="APPROVED")]|length')"
-  [ "$n" -gt 0 ] && return 0
+  n="$(gh api "repos/$GH_REPO/pulls/$PR/reviews" --jq '[.[]|select(.state=="APPROVED")]|length' 2>/dev/null || echo 0)"
+  [ "${n:-0}" -gt 0 ] && return 0
+  # No `|| true`: a failed approval must escalate, not silently time out. n8n-docs
+  # has "Allow GitHub Actions to approve pull requests" enabled (verified:
+  # can_approve_pull_request_reviews=true), so github-actions[bot] can approve;
+  # if that is ever revoked, this returns non-zero and the caller escalates.
   gh pr review "$PR" -R "$GH_REPO" --approve \
-    -b "Automated version-snippet update: numbers verified against npm dist-tags. Merges once CI is green." \
-    >/dev/null 2>&1 || true
+    -b "Automated version-snippet update: numbers verified against npm dist-tags. Merges once CI is green." >/dev/null 2>&1
 }
 
 # Name of the first REQUIRED check that concluded failure on head_sha, else empty.
@@ -111,10 +114,10 @@ required_failed() {
   return 0
 }
 
-head_age_min() {
+head_age_min() {  # echoes minutes since the head commit; returns 1 if unavailable
   local committed
-  committed="$(gh api "repos/$GH_REPO/commits/$head_sha" --jq '.commit.committer.date' 2>/dev/null || echo '')"
-  [ -z "$committed" ] && { echo 0; return 0; }
+  committed="$(gh api "repos/$GH_REPO/commits/$head_sha" --jq '.commit.committer.date' 2>/dev/null || true)"
+  [ -z "$committed" ] && return 1   # do NOT pretend age 0 (would silently wait)
   echo $(( ( $(date -u +%s) - $(date -u -d "$committed" +%s) ) / 60 ))
 }
 
@@ -165,17 +168,23 @@ log "verdict=$verdict ($reason) base=$base_stable/$base_beta head=$head_stable/$
 # ---------------------------------------------------------------- act
 case "$verdict" in
   merge)
+    # Required-check gate FIRST, so a dry-run reports the same verdict as a live run.
+    failing="$(required_failed || true)"
+    if [ -n "$failing" ]; then
+      reason="required check failed: $failing"
+      if [ "$DRY_RUN" = "true" ]; then log "[dry-run] would escalate: $reason"; post_outcome checks_failed; exit 0; fi
+      do_escalate checks_failed "$reason"; exit 3
+    fi
     if [ "$DRY_RUN" = "true" ]; then
       log "[dry-run] would merge once CLEAN (mergeStateStatus=$(merge_state))"
       post_outcome merge; exit 0
     fi
-    # A failed REQUIRED check outranks a merge verdict.
-    failing="$(required_failed || true)"
-    if [ -n "$failing" ]; then do_escalate checks_failed "required check failed: $failing"; exit 3; fi
 
     add_label docops:auto-merge
-    approve_if_needed              # supplying the review may flip BLOCKED -> CLEAN
-    mss="$(merge_state)"
+    if ! approve_pr; then
+      do_escalate escalate "bot approval failed - check repo Actions setting 'Allow GitHub Actions to approve pull requests'"; exit 3
+    fi
+    mss="$(merge_state)"              # supplying the review may flip BLOCKED -> CLEAN
     case "$mss" in
       CLEAN)
         # --match-head-commit: refuse to merge a commit we did not verify (PR raced).
@@ -189,12 +198,14 @@ case "$verdict" in
         gh api -X PUT "repos/$GH_REPO/pulls/$PR/update-branch" >/dev/null 2>&1 || true
         log "branch BEHIND; updated, will retry on next event" ; exit 0 ;;
       BLOCKED|UNSTABLE)
-        age="$(head_age_min)"
-        if [ "$age" -ge "$CHECKS_TIMEOUT_MIN" ]; then
-          do_escalate checks_timeout "a required check has not reported in ${CHECKS_TIMEOUT_MIN}m (mergeStateStatus=$mss)"
-          exit 3
-        fi
-        log "checks pending (mss=$mss, ${age}m); waiting" ; exit 0 ;;
+        if age="$(head_age_min)"; then
+          if [ "$age" -ge "$CHECKS_TIMEOUT_MIN" ]; then
+            do_escalate checks_timeout "a required check has not reported in ${CHECKS_TIMEOUT_MIN}m (mergeStateStatus=$mss)"; exit 3
+          fi
+          log "checks pending (mss=$mss, ${age}m); waiting" ; exit 0
+        else
+          do_escalate escalate "could not read head commit time to evaluate the timeout"; exit 3
+        fi ;;
       *)
         do_escalate escalate "unexpected mergeStateStatus=$mss" ; exit 3 ;;
     esac

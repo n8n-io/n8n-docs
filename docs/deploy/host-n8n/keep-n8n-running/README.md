@@ -1,4 +1,5 @@
 ---
+description: Keep a self-hosted n8n instance running, including logging, monitoring, updates, and tracing.
 layout:
   description:
     visible: false
@@ -24,3 +25,5 @@ layout:
 {% content-ref url="trace-executions-with-opentelemetry.md" %}
 [trace-executions-with-opentelemetry.md](trace-executions-with-opentelemetry.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

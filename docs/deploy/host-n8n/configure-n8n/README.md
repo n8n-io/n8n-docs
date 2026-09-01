@@ -1,4 +1,5 @@
 ---
+description: Configure a self-hosted n8n instance, including database, security, scaling, and license settings.
 layout:
   width: default
   title:
@@ -72,3 +73,5 @@ layout:
 {% content-ref url="scaling.md" %}
 [scaling.md](scaling.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

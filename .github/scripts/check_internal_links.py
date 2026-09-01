@@ -8,7 +8,10 @@ This script covers the gap by resolving each relative link as a local file.
 GitBook rules enforced (see docs/contribute + the internal-linking guide):
   1. An internal link must end in `.md` (a folder page ends in `/README.md`).
      A trailing slash or a bare path does NOT resolve — GitBook falls back to
-     the raw GitHub source URL and the link 404s on the live site.
+     the raw GitHub source URL and the link 404s on the live site. The sole
+     documented exception is a bare `./`, which GitBook resolves natively to
+     the current folder's own README.md (see the style guide's "Link to the
+     current page's parent page" section).
   2. A relative `.md` link must point at a file that exists.
   3. Relative `../` links can't cross GitBook spaces (top-level folders under
      docs/). Cross-space links must use an app.gitbook.com URL, so a relative
@@ -520,6 +523,20 @@ def classify(md_file: Path, src_rel: str, target: str):
         if not resolved.exists():
             rel = os.path.relpath(resolved, REPO_ROOT)
             return ("missing-asset", f"asset not found: {target} -> {rel}")
+        return None
+
+    # Rule 1 exception: `./` is the documented way to link to the current
+    # folder's own parent page (its README.md) -- see the style guide's
+    # "Link to the current page's parent page" section. GitBook resolves this
+    # bare directory-self-reference natively, unlike other trailing-slash
+    # folder links, so it doesn't 404 the way Rule 1 assumes.
+    if path_part == "./":
+        resolved = (src_dir / "README.md").resolve()
+        if not resolved.exists():
+            rel = os.path.relpath(resolved, REPO_ROOT)
+            return ("missing-target", f"target not found: {target} -> {rel}")
+        if anchor is not None:
+            return classify_anchor(resolved, anchor, target)
         return None
 
     # Rule 1: internal doc links must end in .md.

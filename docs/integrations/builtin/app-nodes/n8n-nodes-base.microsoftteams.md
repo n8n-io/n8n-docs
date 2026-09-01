@@ -50,7 +50,9 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Update
 * Channel Message
     * Create
+    * Get
     * Get Many
+    * Reply
 * Chat Message
 	* Create
 	* Get
@@ -62,6 +64,12 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Get
     * Get Many
     * Update
+
+{% hint style="info" %}
+**Channel messages with Service Principal credentials**
+
+The **Create** and **Reply** operations for channel messages are not available with the Microsoft Entra Service Principal credentials. App-only Microsoft Graph supports only migration import for channel messages. Use an OAuth2 credential to send channel messages.
+{% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 

@@ -82,6 +82,6 @@ Typeform OAuth2 credentials use the following scopes by default:
 - `webhooks:read`
 - `webhooks:write`
 
-To select different scopes for your credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Take care when removing a default scope, as this can stop the [Typeform Trigger](../trigger-nodes/n8n-nodes-base.typeformtrigger.md) node from working.
+To select different scopes for your credentials, enable the **Custom Scopes** toggle and edit the **Enabled Scopes** field. Take care when removing a default scope, as this can stop the [Typeform Trigger](../trigger-nodes/n8n-nodes-base.typeformtrigger.md) node from working.
 
 Refer to Typeform's [Scopes documentation](https://www.typeform.com/developers/get-started/scopes/) for the full list of available scopes.

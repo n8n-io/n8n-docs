@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_2d3546a1b982e7::t_70528b38861ce4 50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "296cdeb0ac3fdfe086aa83547c18a6e459e96185",
+  "prompts": {},
+  "sessions": {
+    "s_2d3546a1b982e7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a451fea3-8826-4cc0-b2ab-5ad7ec44bb86",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Danny Martini <danny@n8n.io>"
+    }
+  }
+}

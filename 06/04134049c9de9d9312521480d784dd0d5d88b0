@@ -1,0 +1,14 @@
+docs/build/manage-workflows/workflow-reviews.md
+  h_760178ed151f13 130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0604134049c9de9d9312521480d784dd0d5d88b0",
+  "prompts": {},
+  "humans": {
+    "h_760178ed151f13": {
+      "author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

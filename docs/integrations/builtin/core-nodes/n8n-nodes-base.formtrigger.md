@@ -95,7 +95,7 @@ Only users logged in to this n8n instance can view or submit the form.
 
 The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
-![Screenshot of the form URLs](../../.gitbook/assets/form-urls.png)
+![Form Trigger node panel showing the Test URL and Production URL fields with the toggle between them](../../.gitbook/assets/form-urls.png)
 
 - **Test URL**: n8n registers a test webhook when you select **Execute Step** or **Execute Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
 - **Production URL**: n8n registers a production webhook when you publish the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution. Select the **Executions** tab in the workflow, then select the workflow execution you want to view.

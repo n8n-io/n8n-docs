@@ -37,7 +37,7 @@ Hallucination in AI is when an LLM (large language model) mistakenly perceives p
 
 #### AI reranking <a href="#ai-reranking" id="ai-reranking"></a>
 
-Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to prioritize the most relevant information for generation or downstream tasks.
+Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to surface the most relevant information for generation or downstream tasks.
 
 #### AI memory <a href="#ai-memory" id="ai-memory"></a>
 
@@ -65,7 +65,7 @@ The canvas is the main interface for building workflows in n8n's editor UI. You 
 
 #### cluster node (n8n) <a href="#cluster-node-n8n" id="cluster-node-n8n"></a>
 
-In n8n, cluster nodes are groups of nodes that work together to provide functionality in a workflow. They consist of a root node and one or more sub nodes that extend the node's functionality.
+In n8n, cluster nodes are groups of nodes that work together to provide functionality in a workflow. They consist of a root node and one or more sub-nodes that extend the node's functionality.
 
 #### credential (n8n) <a href="#credential-n8n" id="credential-n8n"></a>
 
@@ -77,7 +77,7 @@ Data pinning allows you to temporarily freeze the output data of a node during w
 
 #### edition (n8n) <a href="#edition-n8n" id="edition-n8n"></a>
 
-When you self-host n8n, the edition is the variant of the software you run: Community, registered Community, Business, or Enterprise. All editions share the same underlying product. The free Community edition runs without a license key. When you subscribe to a paid Business or Enterprise plan, you get a license key that unlocks the features for that plan. See also [plan](#plan-n8n) and [license](#license-n8n).
+When you self-host n8n, the edition is the variant of the software you run: Community, Registered Community, Business, or Enterprise. All editions share the same underlying product. The free Community edition runs without a license key. When you subscribe to a paid Business or Enterprise plan, you get a license key that unlocks the features for that plan. See also [plan](#plan-n8n) and [license](#license-n8n).
 
 #### editor (n8n) <a href="#editor-n8n" id="editor-n8n"></a>
 
@@ -107,7 +107,7 @@ Large language models, or LLMs, are AI machine learning models designed to excel
 
 #### license (n8n) <a href="#license-n8n" id="license-n8n"></a>
 
-License has two senses in n8n. First, it's the legal terms the n8n source code is distributed under. Second, it's the license key that unlocks the features for a paid plan. When you self-host and subscribe to a paid Business or Enterprise plan, you add the license key to your instance to activate it. See also [entitlement](#entitlement-n8n) and [plan](#plan-n8n).
+License has two senses in n8n. First, it's the legal terms n8n uses to distribute its source code. Second, it's the license key that unlocks the features for a paid plan. When you self-host and subscribe to a paid Business or Enterprise plan, you add the license key to your instance to activate it. See also [entitlement](#entitlement-n8n) and [plan](#plan-n8n).
 
 #### node (n8n) <a href="#node-n8n" id="node-n8n"></a>
 
@@ -123,11 +123,11 @@ n8n projects allow you to separate workflows, variables, and credentials into se
 
 #### root node (n8n) <a href="#root-node-n8n" id="root-node-n8n"></a>
 
-Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub nodes attach to the root node to extend its functionality.
+Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.
 
-#### sub node (n8n) <a href="#sub-node-n8n" id="sub-node-n8n"></a>
+#### sub-node (n8n) <a href="#sub-node-n8n" id="sub-node-n8n"></a>
 
-n8n cluster nodes consist of one or more sub nodes connected to a root node. Sub nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
+n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
 
 #### template (n8n) <a href="#template-n8n" id="template-n8n"></a>
 

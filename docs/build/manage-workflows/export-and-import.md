@@ -61,10 +61,8 @@ The n8n CLI is the method n8n recommends for moving workflows between instances 
 * Export: See the [export commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#export-entities) for exporting workflows or credentials.
 * Import: See the [import commands](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line#import-entities) for importing workflows or credentials.
 
-{% hint style="warning" %}
-**Feature availability**
-
-n8n plans to deprecate the Server CLI export and import commands. No deprecation or removal version is scheduled yet. Use the [n8n CLI](#using-the-n8n-cli) for new work.
+{% hint style="info" %}
+n8n recommends the [n8n CLI](#using-the-n8n-cli) over the Server CLI export and import commands for new work. We plan to deprecated Server CLI export and import commands, though this is not yet scheduled.
 {% endhint %}
 
 ## From the n8n API

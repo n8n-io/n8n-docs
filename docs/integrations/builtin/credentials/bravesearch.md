@@ -11,6 +11,10 @@ layout:
 
 # Brave Search credentials
 
+{% hint style="info" %}
+On n8n Cloud, you can skip setting up Brave Search credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
+{% endhint %}
+
 ## Prerequisites
 
 Create a [Brave Search API](https://api.search.brave.com/) account.

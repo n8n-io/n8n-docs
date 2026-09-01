@@ -27,7 +27,7 @@ You can use these credentials to authenticate the following nodes with Shopify.
 
 - Access token (recommended): For private apps/single store use. Can be created by regular admins.
 - OAuth2: For public apps. Must be created by partner accounts.
-- API key: Deprecated.
+- API key: Deprecated. Use Access token instead.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -100,7 +100,7 @@ Shopify provides templates for creating new apps. The instructions below only co
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 {% hint style="warning" %}
-**Method deprecated**
+**Feature availability**
 
 Shopify no longer generates API keys with passwords. Use the [Access token](#using-access-token) method instead.
 {% endhint %}

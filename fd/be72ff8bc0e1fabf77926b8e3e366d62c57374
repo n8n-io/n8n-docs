@@ -1,0 +1,19 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+  s_256824001cf3ff::t_728efd7078ac49 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "fdbe72ff8bc0e1fabf77926b8e3e366d62c57374",
+  "prompts": {},
+  "sessions": {
+    "s_256824001cf3ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_256824001cf3ff",
+        "model": "unknown"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

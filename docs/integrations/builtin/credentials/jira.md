@@ -56,13 +56,18 @@ Then:
 	- `read:jira-work`
 	- `write:jira-work`
 	- `manage:jira-webhook`
-	- `manage:jira-user`
 	- `offline_access`
 10. Select **Settings** in the left sidebar.
 11. Copy the **Client ID** and paste it into n8n.
 12. Copy the **Secret** and paste it as the **Client Secret** in n8n.
-13. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+13. Enter the **Site URL** you access Jira on, for example `https://example.atlassian.net`.
 14. Select **Connect to Jira SW Cloud** and follow the prompts to complete the OAuth2 flow.
+
+{% hint style="info" %}
+**Creating and deleting users needs an extra scope**
+
+The Jira node's **User > Create** and **User > Delete** operations call endpoints that require the `manage:jira-configuration` scope, which isn't part of the default scopes. To use them, enable `manage:jira-configuration` on your OAuth app in the Atlassian Developer Console, turn on **Custom Scopes** in the credential, add the scope to the list, and reconnect. All other Jira node operations work with the default scopes.
+{% endhint %}
 
 Refer to [OAuth 2.0 (3LO) apps](https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/) in Atlassian's documentation for more information.
 

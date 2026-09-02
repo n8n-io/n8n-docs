@@ -3,37 +3,30 @@ name: DocOps auto-merge (version snippet)
 #
 # It acts ONLY on PRs carrying the body marker written by the DocOps engine
 # (<!-- docops:automation=version-snippet -->). Every other PR - including the
-# hand-merged v1 snippet PRs - is ignored, so there is no flag day: when the
-# engine starts writing the marker, these PRs begin merging themselves.
+# hand-merged v1 snippet PRs - is ignored, so there is no flag day.
 #
-# It never merges via admin bypass: it supplies the one required review as
-# github-actions[bot] and merges only when GitHub reports the PR CLEAN (all
-# required checks green, approved, branch up to date), pinned to the exact
-# verified head commit. It never leaves a marked PR open - every run reaches
-# merge, close_outdated, or a do-not-merge escalation.
+# It never merges via admin bypass. It approves and enables GitHub's NATIVE
+# auto-merge as the n8n-assistant GitHub App (not github-actions[bot]), so the
+# repo ruleset (1 approval + required checks + branch up to date) still gates
+# every merge; GitHub performs the merge itself once those are satisfied. The
+# async merge is reported back by the merged-sweep.
 #
-# Security: every trigger here fires the workflow from the DEFAULT branch (there
-# is deliberately no `pull_request` trigger, which would run the PR-head copy of
-# this file/scripts with a write token). The job also holds a write token, so it
-# checks out `main` explicitly (never the PR head) and pulls PR file contents
-# through the API as data. Mirrors gitbook-preview-links.yml. Actions SHA-pinned.
+# Security: every trigger fires the workflow from the DEFAULT branch (there is
+# deliberately no `pull_request` trigger, which would run the PR-head copy of this
+# file/scripts). Checkout is pinned to `main`; PR file contents are pulled through
+# the API as data; the verdict is a pure imported function. Actions are SHA-pinned.
 on:
-  status:
   check_suite:
     types: [completed]
   push:
-    branches: [main]          # rescue PRs that went BEHIND / newly-outdated
+    branches: [main]          # drives update-branch (strict ruleset) + merged-sweep
   schedule:
-    - cron: "*/15 * * * *"    # drives checks_timeout + a fallback sweep + re-eval after unlabel
+    - cron: "*/15 * * * *"    # backstop sweep
   workflow_dispatch:
     inputs:
       pr:
-        description: PR number to evaluate
+        description: PR number to evaluate (blank = sweep open PRs)
         required: false
-      dry_run:
-        description: "true = decide and report only, take no action"
-        required: false
-        default: "false"
 
 permissions:
   contents: write
@@ -47,18 +40,16 @@ concurrency:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    # A `status` fires for every commit-status update in the repo. Only act when a
-    # REQUIRED check just went green (the moment a marked PR might become CLEAN);
-    # the schedule is the backstop for everything else. Keeps unrelated status
-    # churn from queuing full runs.
-    if: >-
-      github.event_name != 'status' ||
-      (github.event.state == 'success' &&
-       (github.event.context == 'CLA Check' ||
-        github.event.context == 'link-check' ||
-        github.event.context == 'runner / vale' ||
-        github.event.context == 'cubic · AI code reviewer'))
     steps:
+      # Approve/merge must act as the App, not github-actions[bot] (per DevX review).
+      # Same identity + secrets the CLA workflow (ci-cla-check.yml) already uses.
+      - name: Generate n8n-assistant App token
+        id: app-token
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        with:
+          app-id: ${{ secrets.N8N_ASSISTANT_APP_ID }}
+          private-key: ${{ secrets.N8N_ASSISTANT_PRIVATE_KEY }}
+
       # Trusted code: pin to main so we never run a PR-head copy of the scripts.
       - name: Checkout main (trusted)
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -68,44 +59,23 @@ jobs:
       - name: Evaluate and act
         shell: bash
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           GH_REPO: ${{ github.repository }}
-          EVENT_NAME: ${{ github.event_name }}
-          EVENT_SHA: ${{ github.event.sha }}
-          CS_SHA: ${{ github.event.check_suite.head_sha }}
           INPUT_PR: ${{ github.event.inputs.pr }}
-          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           WEBHOOK_URL: ${{ secrets.DOCOPS_AUTOMERGE_WEBHOOK_URL }}
           WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
           WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
-          # Config consumed by docops_auto_merge.sh:
+          # Config consumed by docops_auto_merge.py:
           SNIPPET_PATH: docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
           MARKER: "<!-- docops:automation=version-snippet -->"
           BRANCH_RE: "^doc-[0-9]+-update-version-snippet$"
-          ALLOWED_AUTHORS: "its-imad"          # phase 2 adds: docops-automation[bot]
+          ALLOWED_AUTHORS: "its-imad"          # phase 2 may add a dedicated author bot
           REQUIRED_CHECKS: "runner / vale,link-check,cubic · AI code reviewer,CLA Check"
-          CHECKS_TIMEOUT_MIN: "60"
         run: |
           set -euo pipefail
-          # Discovery failures must surface (set -e aborts on a real gh error);
-          # an empty result is a valid "no candidate PRs", not an error.
-          prs=""
-          case "$EVENT_NAME" in
-            workflow_dispatch) prs="$INPUT_PR" ;;
-            status)            prs=$(gh api "repos/$GH_REPO/commits/$EVENT_SHA/pulls" --jq '[.[]|select(.state=="open")][].number') ;;
-            check_suite)       prs=$(gh api "repos/$GH_REPO/commits/$CS_SHA/pulls"    --jq '[.[]|select(.state=="open")][].number') ;;
-            push|schedule)     prs=$(gh api "repos/$GH_REPO/pulls?state=open&per_page=100" --paginate --jq '.[].number') ;;
-          esac
-          if [ -z "${prs// /}" ]; then echo "No candidate PRs for $EVENT_NAME."; exit 0; fi
-
-          rc=0
-          for PR in $prs; do
-            [ -z "$PR" ] && continue
-            echo "::group::PR #$PR"
-            code=0
-            bash .github/scripts/docops_auto_merge.sh "$PR" || code=$?
-            [ "$code" -ne 0 ] && rc=1     # any processing error (escalation or unexpected) makes the run visibly red
-            echo "::endgroup::"
-          done
-          exit $rc
+          if [ -n "${INPUT_PR:-}" ]; then
+            python3 .github/scripts/docops_auto_merge.py --pr "$INPUT_PR"
+          else
+            python3 .github/scripts/docops_auto_merge.py
+          fi

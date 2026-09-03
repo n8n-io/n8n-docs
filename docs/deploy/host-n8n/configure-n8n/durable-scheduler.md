@@ -57,14 +57,15 @@ These terms make the environment variables easier to reason about:
 - **Schedule**: a recurring rule, such as a Schedule Trigger node's "every 15 minutes" setting. The scheduler stores each schedule in the database.
 - **Run**: a single firing of a schedule at a specific time. The scheduler records upcoming runs ahead of time as individual rows.
 
-The scheduler moves each run through four stages, and each stage has its own [environment variables](basic-configuration/use-environment-variables/scheduler.md):
+The scheduler runs five stages, and each stage has its own [environment variables](basic-configuration/use-environment-variables/scheduler.md):
 
 1. **Materialization.** The scheduler scans your active schedules and records the runs coming up soon (within the *materialization window*). This commits runs to the database before they're due. If a run is already past its [misfire grace](#misfire-policy) when materialization catches it, the schedule's misfire policy handles it instead of the scheduler recording it as-is.
 2. **Execution.** The scheduler claims each recorded run up to one check interval before its time, so no other instance takes it, and starts the workflow at the scheduled instant.
 3. **Recovery.** If an instance claims a run but stops before finishing (for example after a crash), the *reaper* releases the run so another instance can pick it up.
 4. **Retention.** The scheduler keeps finished runs for a while as recent history, then deletes them to keep its tables small.
+5. **Owner reconciliation.** Every schedule has an owner, such as the workflow that created it. The scheduler periodically checks that each owner still exists and retires the schedules whose owner no longer exists. See the [owner reconciliation environment variables](basic-configuration/use-environment-variables/scheduler.md#owner-reconciliation).
 
-Across multiple instances, every main runs all four stages. Claiming keeps this safe: because only one instance claims each run, running the loops everywhere shares the load rather than duplicating work.
+Across multiple instances, every main runs all five stages. Claiming keeps this safe: because only one instance claims each run, running the loops everywhere shares the load rather than duplicating work.
 
 ## Misfire policy <a href="#misfire-policy" id="misfire-policy"></a>
 
@@ -171,7 +172,7 @@ Counters and the histogram record each main's own work, so sum them across your 
 
 ### Background passes
 
-These counters cover the [four stages](#how-it-works) that keep the queue moving. They're most useful when a stage stops doing its job.
+These counters cover the [five stages](#how-it-works) that keep the queue moving. They're most useful when a stage stops doing its job.
 
 | Metric | Type | What it tells you |
 | :----- | :--- | :---------------- |
@@ -181,6 +182,9 @@ These counters cover the [four stages](#how-it-works) that keep the queue moving
 | `n8n_scheduler_occurrences_retired_total` | Counter | How many recorded runs the scheduler dropped because a catch-up run superseded them. |
 | `n8n_scheduler_occurrences_missed_total` | Counter | How many recorded runs went past their deadline unclaimed and the reaper marked missed. |
 | `n8n_scheduler_tasks_pruned_total` | Counter | How many finished runs retention deleted. If it never rises, the scheduler tables keep growing. |
+| `n8n_scheduler_jobs_quarantined_total` | Counter | How many schedules owner reconciliation stopped because their owner no longer exists. Available from n8n 2.39.0. |
+| `n8n_scheduler_orphaned_jobs_deleted_total` | Counter | How many stopped schedules owner reconciliation deleted after their owner stayed missing past the quarantine grace. Available from n8n 2.39.0. |
+| `n8n_scheduler_jobs_revived_total` | Counter | How many stopped schedules owner reconciliation resumed because their owner turned out to exist after all. Available from n8n 2.39.0. |
 
 ### Poll trigger metrics
 

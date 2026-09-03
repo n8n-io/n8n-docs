@@ -25,7 +25,7 @@ The examples below are useful if interactive steps aren't shown in n8n for your 
    * Navigate to your workspace **Settings > Integrations**.
    * In the **MCP Servers** section, find **n8n** and click **Connect**.
    * Enter your n8n server URL: the **Server URL** value shown in the **Connect a client** dialog.
-   * Save the connection. If successful, n8n redirects you to authorize Lovable.
+   * Save the connection. If successful, n8n redirects you to approve access for Lovable.
 2. Verify connectivity.
    * Once connected, Lovable can query for workflows with MCP access enabled.
    * **Example:** Asking Lovable to build a workflow UI that lists users and allows deleting them.
@@ -40,7 +40,7 @@ The examples below are useful if interactive steps aren't shown in n8n for your 
    * **Name:** n8n MCP
    * **Remote MCP Server URL**: the **Server URL** value shown in the **Connect a client** dialog
 4. Save the connector.
-5. When prompted, authorize Claude Desktop to access your n8n instance.
+5. When prompted, approve access for Claude Desktop.
 
 **Using API key**
 
@@ -68,7 +68,7 @@ Here, replace:
 
 ## Connecting Claude Code to n8n MCP server <a href="#connecting-claude-code-to-n8n-mcp-server" id="connecting-claude-code-to-n8n-mcp-server"></a>
 
-**OPTION 1: Authenticate using OAuth (recommended)**
+**Option 1: Authenticate using OAuth (recommended)**
 
 Use the following CLI command:
 
@@ -76,7 +76,7 @@ Use the following CLI command:
 claude mcp add --transport http n8n https://<your-n8n-domain>/mcp-server/http
 ```
 
-Alternatively, add the following entry to your `claude.json` file:
+Or add the following entry to your `claude.json` file:
 
 ```json
 {
@@ -95,7 +95,7 @@ Here, replace:
 
 Run `/mcp` in Claude Code and select **n8n** to complete the OAuth authorization.
 
-**OPTION 2: Authenticate using API key**
+**Option 2: Authenticate using API key**
 
 Use the following CLI command:
 
@@ -104,7 +104,7 @@ claude mcp add --transport http n8n-mcp https://<your-n8n-domain>/mcp-server/htt
   --header "Authorization: Bearer <YOUR_N8N_MCP_TOKEN>"
 ```
 
-Alternatively, add the following entry to your `claude.json` file:
+Or add the following entry to your `claude.json` file:
 
 ```json
 {
@@ -127,7 +127,7 @@ Here, replace:
 
 ## Connecting Codex CLI to n8n MCP server <a href="#connecting-codex-cli-to-n8n-mcp-server" id="connecting-codex-cli-to-n8n-mcp-server"></a>
 
-**OPTION 1: Authenticate using OAuth (recommended)**
+**Option 1: Authenticate using OAuth (recommended)**
 
 Use the following CLI command:
 
@@ -135,7 +135,7 @@ Use the following CLI command:
 codex mcp add n8n --url "https://<your-n8n-domain>/mcp-server/http"
 ```
 
-Alternatively, add the following entry to your `~/.codex/config.toml` file:
+Or add the following entry to your `~/.codex/config.toml` file:
 
 ```toml
 [features]
@@ -155,7 +155,7 @@ Here, replace:
 
 Run `codex mcp login n8n` to complete the OAuth authorization.
 
-**OPTION 2: Authenticate using API key**
+**Option 2: Authenticate using API key**
 
 Add the following entry to your `~/.codex/config.toml` file:
 
@@ -181,7 +181,7 @@ Use the following CLI command:
 gemini mcp add --transport http n8n https://<your-n8n-domain>/mcp-server/http
 ```
 
-Alternatively, add the following entry to your `~/.gemini/settings.json` file:
+Or add the following entry to your `~/.gemini/settings.json` file:
 
 ```json
 {
@@ -203,7 +203,7 @@ Run `/mcp` in Gemini CLI and select **n8n** to complete the OAuth authorization.
 
 In the **Connect a client** dialog, select **Cursor** from **Your client**, then select **One-click setup** to open Cursor and add the n8n server automatically. Approve access when Cursor redirects you back to n8n.
 
-Alternatively, add the following entry to your `~/.cursor/mcp.json` file (or the project's `.cursor/mcp.json`):
+Or add the following entry to your `~/.cursor/mcp.json` file (or the project's `.cursor/mcp.json`):
 
 ```json
 {
@@ -224,7 +224,7 @@ Here, replace:
 
 In the **Connect a client** dialog, select **VS Code** from **Your client**, then select **One-click setup** to open VS Code and add the n8n server automatically. Approve access when VS Code redirects you back to n8n.
 
-Alternatively, add the following entry to your workspace's `.vscode/mcp.json` file:
+Or add the following entry to your workspace's `.vscode/mcp.json` file:
 
 ```json
 {

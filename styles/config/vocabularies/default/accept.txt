@@ -98,6 +98,7 @@ Fargate
 [Ff]avorit(e|es|ing|ed)
 Figma
 FileMaker
+Firecrawl
 Firestore
 Formhub
 Formstack
@@ -142,6 +143,7 @@ JumpCloud
 Keap
 Keycloak
 Kibana
+Kimi
 Kitemaker
 kubectl
 Kafka

@@ -1,3 +1,10 @@
+---
+description: A running log of feature-level updates from each n8n release, newest first.
+layout:
+  description:
+    visible: false
+---
+
 # Release notes
 
 This page is a running log of feature-level updates from each n8n release: what shipped in the editor and the integration nodes, one line per feature, newest first.
@@ -150,7 +157,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 * [Merge Node: Add queryParameters option](https://github.com/n8n-io/n8n/pull/33385): The Merge node's Combine by SQL mode now supports a Query Parameters option, letting you bind values separately from the SQL query text using ? placeholders, similar to the Postgres and MySQL nodes. This helps avoid injecting expression values directly into the query string, improving safety and readability. A notice was added explaining how to use query parameters, with a link to documentation.
 * [Notion Node: Migrate to new API and overhaul the node](https://github.com/n8n-io/n8n/pull/33749): The Notion node has been overhauled with a new v3, migrating to Notion API 2026-03-11, which replaces database queries with data sources. It adds a Data Source resource (Get, Search), markdown get/update operations for pages and blocks, JSON block support, file downloads for database pages, and a reorderable block builder. The Notion Trigger now also supports data sources. Database IDs are no longer accepted for database-page query/create; a data source must be selected instead.
 * [Add Group/Ungroup context menu actions](https://github.com/n8n-io/n8n/pull/33839): You can now group and ungroup nodes directly from the canvas context menu. Right-clicking a valid node selection shows a new Group option (disabled when the selection can't form a valid group), and right-clicking a group shows Rename group and Ungroup nodes options, making it easier to organize workflows without keyboard shortcuts.
-* [Rocketchat Node: Add Subscriptions & IM ops](https://github.com/n8n-io/n8n/pull/31432): The Rocket.Chat node now supports a Subscriptions resource, letting you retrieve all subscriptions or mark a room as read, and a Direct Message (IM) resource to fetch messages from a direct message room, with optional pagination via Return All/Limit. These additions extend the node's API coverage beyond the existing Chat operations.
+* [RocketChat Node: Add Subscriptions & IM ops](https://github.com/n8n-io/n8n/pull/31432): The RocketChat node now supports a Subscriptions resource, letting you retrieve all subscriptions or mark a room as read, and a Direct Message (IM) resource to fetch messages from a direct message room, with optional pagination via Return All/Limit. These additions extend the node's API coverage beyond the existing Chat operations.
 * [Rename private credentials to end-user credentials](https://github.com/n8n-io/n8n/pull/33629): Renamed "private credentials" to "end-user credentials" throughout the app for consistency. Tooltips, dialogs, credential-type cards, connect-screen text, node/workflow issue messages, and backend errors now use the new terminology. "Private" pills are replaced with an identity icon across the credentials list, node picker, credential header, and canvas badges. Deleting or switching a connected end-user credential to Fixed now shows a type-to-confirm dialog with a correctly pluralized count of affected people, and unsupported-trigger warnings now name the specific trigger.
 * [Improve node group selection UX](https://github.com/n8n-io/n8n/pull/33893): Node groups on the canvas now behave like nodes for selection and context menus. Selecting a title bar or all members selects the whole group with a single selection ring, and selection persists through collapse/expand. Group context menus mirror multi-selection actions worded for the group, with new Expand/Collapse all groups and Expand/Collapse selected options, plus keyboard shortcuts. Selection rectangles now fully wrap groups.
 
@@ -718,3 +725,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 * [Kitemaker node Remove Kitemaker node](https://github.com/n8n-io/n8n/pull/22470): The Kitemaker node and its credential have been removed from n8n, as the Kitemaker service has been retired by its provider. Workflows using the Kitemaker node will no longer function and should be migrated away from this integration.
 * [Spontit Node Remove Spontit node](https://github.com/n8n-io/n8n/pull/22467): The Spontit node and its credential type have been removed from n8n, as the Spontit service has been retired and the integration no longer functions. Workflows using the Spontit node will need to be updated to use an alternative notification service.
 * [Validate nodes before activating](https://github.com/n8n-io/n8n/pull/22916): Workflow activation now validates that a workflow contains at least one trigger-like node (trigger, poller, or webhook) before activating, fixing a bug where this check was unreliable in multi-main setups. Attempting to activate an invalid workflow returns a clear validation error and the workflow's previous active state is preserved. Additional validation checks currently done only on the frontend will be added in future updates.
+
+---
+
+For full per-release detail of earlier n8n 2.x releases, see the archived [Release notes 2.x](release-notes-2.x.md). For releases before n8n 2.0, see [Release notes 1.x](release-notes-1.x.md) and [Release notes 0.x](release-notes-0.x.md).

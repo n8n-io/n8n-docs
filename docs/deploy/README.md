@@ -1,4 +1,5 @@
 ---
+description: Deploy n8n on n8n Cloud or self-host it, and find guides for installing, configuring, and maintaining your instance.
 layout:
   width: default
   title:
@@ -25,17 +26,17 @@ n8n offers two different deployment methods. [n8n Cloud](use-n8n-cloud/README.md
 
 **Deploy** documentation helps you deploy, configure, secure, and maintain n8n in either model.
 
-<table data-view="cards"><thead><tr><th>Deployment option</th><th data-card-target data-type="content-ref">Go to section</th></tr></thead><tbody><tr><td><strong>Use n8n Cloud</strong><br>Managed by n8n. Get started quickly, with less operational work.</td><td><a href="use-n8n-cloud/">use-n8n-cloud</a></td></tr><tr><td><strong>Self-host n8n</strong><br>Run n8n yourself with Docker, npm, Docker Compose, or a supported platform.</td><td><a href="host-n8n/">host-n8n</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Deployment option</th><th data-card-target data-type="content-ref">Go to section</th></tr></thead><tbody><tr><td><strong>Use n8n Cloud</strong><br>Managed by n8n. Get started fast, with less operational work.</td><td><a href="use-n8n-cloud/">use-n8n-cloud</a></td></tr><tr><td><strong>Self-host n8n</strong><br>Run n8n yourself with Docker, npm, Docker Compose, or a supported platform.</td><td><a href="host-n8n/">host-n8n</a></td></tr></tbody></table>
 
 ### Compare deployment options
 
-Below is a high-level overview of each option. If you're still deciding, look at [Choose your n8n](https://n8n.gitbook.io/n8n-docs-next/fTXFsp54tRnnn2McXCeU/choose-how-to-use-n8n) for more guidance.
+Below is a high-level overview of each option. If you're still deciding, look at [Choose your n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n) for more guidance.
 
 #### Use n8n Cloud
 
 n8n Cloud is the managed option. n8n runs the instance for you.
 
-Choose Cloud if you want to:
+Choose n8n Cloud if you want to:
 
 * Start fast with minimal setup
 * Reduce infrastructure and maintenance work
@@ -47,7 +48,7 @@ Choose Cloud if you want to:
 
 #### Self-host n8n
 
-Self-hosting gives you control over how n8n runs and how your environment is managed.
+Self-hosting gives you control over how n8n runs and how you manage your environment.
 
 Choose self-hosting if you want to:
 

@@ -10,7 +10,7 @@ originalUrl: https://docs.n8n.io/integrations/builtin/credentials/httprequest
 url: https://docs.n8n.io/integrations/builtin/credentials/httprequest
 description: >-
   Documentation for HTTP Request credentials. Use these credentials to
-  authenticate HTTP Request in n8n, a workflow automation platform.
+  authenticate the HTTP Request node in n8n.
 layout:
   width: default
   title:
@@ -86,7 +86,7 @@ Use this generic authentication if your app or service supports OAuth1 authentic
 
 To configure this credential, enter:
 
-* An **Authorization URL**: Also known as the Resource Owner Authorization URI. This URL typically ends in `/oauth1/authorize`. The temporary credentials are sent here to prompt a user to complete authorization.
+* An **Authorization URL**: Also known as the Resource Owner Authorization URI. This URL typically ends in `/oauth1/authorize`. n8n sends the temporary credentials here to prompt a user to complete authorization.
 * An **Access Token URL**: This is the URI used for the initial request for temporary credentials. This URL typically ends in `/oauth1/request` or `/oauth1/token`.
 * A **Consumer Key**: Also known as the client key, like a username. This specifies the `oauth_consumer_key` to use for the call.
 * A **Consumer Secret**: Also known as the client secret, like a password.
@@ -229,16 +229,16 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 ## Using Simplified Custom Auth
 
 {% hint style="info" %}
-**Available from n8n 2.35.0**
+**Feature availability**
 
-In older versions, use [Custom auth](httprequest.md#using-custom-auth) instead.
+Simplified Custom Auth is available from n8n 2.35.0. In older versions, use [Custom auth](httprequest.md#using-custom-auth) instead.
 {% endhint %}
 
 Use this generic authentication if your app or service expects static authentication values in headers, query parameters, or the request body, and you want to keep the secret values separate from the request definition.
 
 Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. The credential form shows one field per placeholder, and n8n replaces each marker with the field's value when it sends a request.
 
-This split exists so that the setup part can be prepared for you. When the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
+This split exists so the AI Assistant can prepare the setup part for you. When the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
 
 You can also set up the credential yourself. Select **Edit setup** in the credential modal and enter:
 

@@ -186,10 +186,13 @@ def report_check(repo, head_sha, conclusion, title, summary):
 
 
 def post_outcome(ctx, verdict, reason="", failing=""):
-    """POST the outcome to the n8n webhook (optional; failures are non-fatal)."""
+    """POST the outcome to the n8n webhook. Failures are non-fatal to the run, but the
+    return value says whether it was delivered, so callers only record a dedupe marker
+    for outcomes that actually landed. True also when no webhook is configured (there is
+    nothing to deliver, so there is nothing to retry)."""
     url = os.environ.get("WEBHOOK_URL")
     if not url:
-        return
+        return True
     payload = {
         "pr": ctx["pr"], "head_sha": ctx.get("head_sha", ""), "verdict": verdict,
         "reason": reason, "branch": ctx.get("branch", ""),
@@ -208,8 +211,10 @@ def post_outcome(ctx, verdict, reason="", failing=""):
         req.add_header("Authorization", f"Basic {token}")
     try:
         urllib.request.urlopen(req, timeout=20).read()
+        return True
     except Exception as e:
-        log(ctx["pr"], f"outcome POST failed (non-fatal): {e}")
+        log(ctx["pr"], f"outcome POST failed (non-fatal, will retry next sweep): {e}")
+        return False
 
 
 def escalate(repo, ctx, verdict, reason, failing=""):
@@ -341,9 +346,11 @@ def announce_merged(repo, cfg):
     fires (Slack success + Supabase; Linear usually already closed via its own GitHub
     integration). Detection = fixed title + branch + body marker; dedupe = a hidden PR
     comment. No repo labels are used, created, or required."""
+    # The search is already narrowed to snippet PRs by their fixed title, so this window
+    # spans months of them at ~1/day; a merge is reported within one sweep (15 min) anyway.
     merged = gh_json(["pr", "list", "-R", repo, "--state", "merged",
                       "--search", "in:title Update latest and next version numbers",
-                      "--limit", "15",
+                      "--limit", "100",
                       "--json", "number,headRefName,body,mergeCommit"]) or []
     for p in merged:
         if not cfg["branch_re"].match(p.get("headRefName", "")):
@@ -361,8 +368,19 @@ def announce_merged(repo, cfg):
             "head": {"stable": value_from_snippet(head_main, STABLE_RE),
                      "beta": value_from_snippet(head_main, BETA_RE)},
         }
-        post_outcome(ctx, "merged", "auto-merged by GitHub once required checks passed")
-        comment(repo, p["number"], OUTCOME_MARKER + "\nDocOps: auto-merge outcome reported.")
+        if not post_outcome(ctx, "merged",
+                            "auto-merged by GitHub once required checks passed"):
+            # Not delivered: leave no marker so the next sweep retries this PR.
+            continue
+        # Delivered. Write the dedupe marker; if THIS fails we would repost next sweep,
+        # so make the failure visible rather than silent (worst case: a duplicate ping).
+        r = gh(["pr", "comment", str(p["number"]), "-R", repo,
+                "-b", OUTCOME_MARKER + "\nDocOps: auto-merge outcome reported."],
+               check=False)
+        if r.returncode != 0:
+            log(p["number"],
+                f"WARNING: outcome sent but dedupe marker failed to write ({r.stderr.strip()}); "
+                "a later sweep may repost this outcome")
         log(p["number"], "reported merged")
 
 

@@ -22,7 +22,7 @@ layout:
 You can self-host n8n on your own infrastructure, on-premises, or in a private cloud, using Docker Compose, one-line setup, or other deployment methods. Not sure if self-hosting is right for you? See [Choose how to use n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n).
 
 {% hint style="success" %}
-**Don't want to read the docs? Just run this:**
+**Don't want to read the docs? Run this:**
 
 ```bash
 curl -fsSL https://get.n8n.io | sh

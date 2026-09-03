@@ -346,11 +346,13 @@ def announce_merged(repo, cfg):
     fires (Slack success + Supabase; Linear usually already closed via its own GitHub
     integration). Detection = fixed title + branch + body marker; dedupe = a hidden PR
     comment. No repo labels are used, created, or required."""
-    # The search is already narrowed to snippet PRs by their fixed title, so this window
-    # spans months of them at ~1/day; a merge is reported within one sweep (15 min) anyway.
+    # The search is already narrowed to snippet PRs by their fixed title (~1/day), and
+    # `gh pr list --limit` paginates internally up to the cap. 500 keeps well over a year
+    # of them retryable, so an undelivered outcome cannot age out of the window in
+    # practice (that would need the webhook down for hundreds of snippet PRs).
     merged = gh_json(["pr", "list", "-R", repo, "--state", "merged",
                       "--search", "in:title Update latest and next version numbers",
-                      "--limit", "100",
+                      "--limit", "500",
                       "--json", "number,headRefName,body,mergeCommit"]) or []
     for p in merged:
         if not cfg["branch_re"].match(p.get("headRefName", "")):

@@ -56,7 +56,7 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ### Authentication <a href="#authentication" id="authentication"></a>
 
-You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
+You can require authentication for clients connecting to your MCP URL. Choose from:
 
 - None
 - Bearer auth

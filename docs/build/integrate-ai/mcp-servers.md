@@ -1,7 +1,5 @@
 ---
-description: >-
-  Connect an AI agent to an MCP registry server directly from the node panel,
-  with OAuth2 sign-in and no manual credential setup.
+description: Connect an AI agent to an MCP registry server in one click.
 layout:
   description:
     visible: false

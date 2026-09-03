@@ -18,7 +18,7 @@ layout:
 Workflow sharing is available on:
 
 - **n8n Cloud:** All plans
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 Workflow sharing allows you to share workflows between users of the same n8n instance.

@@ -10,8 +10,7 @@ originalUrl: https://docs.n8n.io/integrations/builtin/credentials/whatsapp
 url: https://docs.n8n.io/integrations/builtin/credentials/whatsapp
 description: >-
   Documentation for WhatsApp Business Cloud credentials. Use these credentials
-  to authenticate WhatsApp Business Cloud in n8n, a workflow automation
-  platform.
+  to authenticate with WhatsApp Business Cloud in n8n.
 layout:
   width: default
   title:
@@ -57,7 +56,7 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 </details>
 
-\- A Meta \[business portfolio]\(https://www.facebook.com/business/help/1710077379203657?id=180505742745347): WhatsApp messaging services require a Meta business portfolio, formerly called a Business Manager account. The UI may still show either option.
+* A Meta [business portfolio](https://www.facebook.com/business/help/1710077379203657?id=180505742745347): WhatsApp messaging services require a Meta business portfolio, formerly called a Business Manager account. The UI may still show either option.
 
 <details>
 
@@ -73,7 +72,7 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 </details>
 
-\- A Meta \[business app]\(https://developers.facebook.com/docs/development/create-an-app/) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
+* A Meta [business app](https://developers.facebook.com/docs/development/create-an-app/) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
 
 <details>
 
@@ -99,7 +98,7 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 Refer to [WhatsApp's API documentation](https://developers.facebook.com/docs/whatsapp/#platform-apis) for more information about the service.
 
-Meta classifies users who create WhatsApp business apps as Tech Providers; refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers) for more information.
+Meta classifies users who create WhatsApp business apps as Tech Providers. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers) for more information.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

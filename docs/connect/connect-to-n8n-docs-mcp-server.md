@@ -51,7 +51,7 @@ Use the endpoint for the server you want:
 The steps differ by tool, but each one needs a server URL from above. The following examples set up both servers. To connect only one, keep the entry you want and remove the other.
 
 {% hint style="info" %}
-The Kapa.ai server requires authentication. Your AI tool opens a browser-based sign-in flow when you first connect to it, or the first time you use it. Follow the prompts to authorize the connection.
+The Kapa.ai server requires authentication. Your AI tool opens a browser-based sign-in flow when you first connect to it, or the first time you use it. Follow the prompts to approve the connection.
 {% endhint %}
 
 ### Claude Code
@@ -113,3 +113,5 @@ After you connect, your tool can search n8n's knowledge as you work.
 {% hint style="info" %}
 The exact configuration steps and file locations vary between tools and versions. Check your tool's documentation for how it adds a remote MCP server. For more on the Kapa.ai server, see the [Kapa.ai MCP documentation](https://docs.kapa.ai/overview/build-with-ai).
 {% endhint %}
+
+See [Connect](README.md) for other ways to connect to n8n.

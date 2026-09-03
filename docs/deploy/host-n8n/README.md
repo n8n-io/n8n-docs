@@ -1,8 +1,8 @@
 ---
 title: n8n Hosting Documentation and Guides
 description: >-
-  Access n8n hosting documentation and guides. Find comprehensive resources to
-  help you set up and manage your self-hosted n8n instances.
+  Access n8n hosting documentation and guides for setting up and managing
+  self-hosted n8n instances.
 contentType: overview
 hide:
   - toc
@@ -19,7 +19,7 @@ layout:
 
 # Self-hosting n8n <a href="#self-hosting-n8n" id="self-hosting-n8n"></a>
 
-You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker Compose, one-line setup, or other deployment methods.
+You can self-host n8n on your own infrastructure, on-premises, or in a private cloud, using Docker Compose, one-line setup, or other deployment methods. Not sure if self-hosting is right for you? See [Choose how to use n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n).
 
 {% hint style="success" %}
 **Don't want to read the docs? Just run this:**
@@ -105,7 +105,7 @@ Select the installation method that best fits your technical requirements and in
 	
 	**Requirements:** Node.js installed on your system.
 	
-	**Note:** npm installation is deprecated from n8n 3.0. Consider using Docker Compose or one-line setup instead.
+	npm installation is deprecated from n8n 3.0. Consider using Docker Compose or one-line setup instead.
 	
 	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 

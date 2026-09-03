@@ -38,10 +38,11 @@ from check_version_snippet_pr import evaluate, STABLE_RE, BETA_RE  # noqa: E402
 
 NPM_DIST_TAGS = "https://registry.npmjs.org/-/package/n8n/dist-tags"
 
-LABEL_ARMED = "docops:auto-merge"
 LABEL_OUTDATED = "status:outdated"
 LABEL_BLOCKED = "status:do-not-merge"
-LABEL_SENT = "docops:outcome-sent"
+# Merged-sweep idempotency is a hidden PR comment, not a label, so we don't add any
+# DocOps-specific labels to the repo (only the pre-existing status:* ones are reused).
+OUTCOME_MARKER = "<!-- docops:outcome-sent -->"
 
 APPROVE_BODY = (
     "Automated version-snippet update: the two version numbers were verified against "
@@ -165,10 +166,6 @@ def failed_required_checks(repo, pr, required):
 def already_approved(repo, pr):
     revs = gh_json(["api", f"repos/{repo}/pulls/{pr}/reviews"]) or []
     return any(r.get("state") == "APPROVED" for r in revs)
-
-
-def has_label(pr_obj, name):
-    return any(l.get("name") == name for l in pr_obj.get("labels", []))
 
 
 # --------------------------------------------------------------------- mutating ops
@@ -297,9 +294,9 @@ def handle_pr(repo, cfg, pr):
 
 
 def arm_auto_merge(repo, ctx):
-    """Approve as the App and enable native auto-merge. Idempotent."""
+    """Approve as the App and enable native auto-merge. Idempotent.
+    No label is added: the merged-sweep finds these PRs by branch + marker, not a label."""
     pr = ctx["pr"]
-    add_label(repo, pr, LABEL_ARMED)
     if not already_approved(repo, pr):
         r = gh(["pr", "review", str(pr), "-R", repo, "--approve", "-b", APPROVE_BODY],
                check=False)
@@ -333,13 +330,27 @@ def open_candidates(repo, cfg):
     return out
 
 
+def outcome_already_sent(repo, pr):
+    """True if we've already reported this PR's merge (hidden comment marker)."""
+    view = gh_json(["pr", "view", str(pr), "-R", repo, "--json", "comments"]) or {}
+    return any(OUTCOME_MARKER in (c.get("body") or "") for c in view.get("comments", []))
+
+
 def announce_merged(repo, cfg):
-    """Report PRs that native auto-merge already merged. Idempotent via LABEL_SENT."""
+    """Report snippet PRs that native auto-merge already merged, so the outcome webhook
+    fires (Slack success + Supabase; Linear usually already closed via its own GitHub
+    integration). Detection = fixed title + branch + body marker; dedupe = a hidden PR
+    comment. No repo labels are used, created, or required."""
     merged = gh_json(["pr", "list", "-R", repo, "--state", "merged",
-                      "--label", LABEL_ARMED, "--limit", "20",
-                      "--json", "number,headRefName,body,labels,mergeCommit"]) or []
+                      "--search", "in:title Update latest and next version numbers",
+                      "--limit", "15",
+                      "--json", "number,headRefName,body,mergeCommit"]) or []
     for p in merged:
-        if has_label(p, LABEL_SENT):
+        if not cfg["branch_re"].match(p.get("headRefName", "")):
+            continue
+        if cfg["marker"] not in (p.get("body") or ""):
+            continue
+        if outcome_already_sent(repo, p["number"]):
             continue
         head_main = get_snippet(repo, cfg["snippet_path"], "main") or ""
         ctx = {
@@ -351,7 +362,7 @@ def announce_merged(repo, cfg):
                      "beta": value_from_snippet(head_main, BETA_RE)},
         }
         post_outcome(ctx, "merged", "auto-merged by GitHub once required checks passed")
-        add_label(repo, p["number"], LABEL_SENT)
+        comment(repo, p["number"], OUTCOME_MARKER + "\nDocOps: auto-merge outcome reported.")
         log(p["number"], "reported merged")
 
 

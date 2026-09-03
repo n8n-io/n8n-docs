@@ -21,8 +21,8 @@ layout:
 
 # Deploy
 
-n8n offers two different deployment methods. [n8n Cloud](use-n8n-cloud/README.md) gives fast, managed setup on an instance run by n8n. [Self-hosted n8n](host-n8n/README.md) lets you run n8n on your own machine or infrastructure.\
-\
+n8n offers two different deployment methods. [n8n Cloud](use-n8n-cloud/README.md) gives fast, managed setup on an instance run by n8n. [Self-hosted n8n](host-n8n/README.md) lets you run n8n on your own machine or infrastructure.
+
 **Deploy** documentation helps you deploy, configure, secure, and maintain n8n in either model.
 
 <table data-view="cards"><thead><tr><th>Deployment option</th><th data-card-target data-type="content-ref">Go to section</th></tr></thead><tbody><tr><td><strong>Use n8n Cloud</strong><br>Managed by n8n. Get started quickly, with less operational work.</td><td><a href="use-n8n-cloud/">use-n8n-cloud</a></td></tr><tr><td><strong>Self-host n8n</strong><br>Run n8n yourself with Docker, npm, Docker Compose, or a supported platform.</td><td><a href="host-n8n/">host-n8n</a></td></tr></tbody></table>
@@ -54,6 +54,16 @@ Choose self-hosting if you want to:
 * Run n8n on your own infrastructure
 * Finely control upgrades, configuration, and security
 * Design for custom scaling or platform requirements
+
+{% hint style="success" %}
+**Want to try self-hosting right now?**
+
+```bash
+curl -fsSL https://get.n8n.io | sh
+```
+
+Requires Docker. Sets up n8n locally in one step — see the [one-line setup guide](host-n8n/install-options/one-line-setup.md) for details.
+{% endhint %}
 
 <table data-view="cards"><thead><tr><th>Self-hosted topic</th><th data-card-target data-type="content-ref">Open</th></tr></thead><tbody><tr><td><strong>Host n8n overview</strong><br>Start with the main self-hosted landing page.</td><td><a href="host-n8n/">host-n8n</a></td></tr><tr><td><strong>Install options</strong><br>Set up n8n with Docker, npm, Docker Compose, or a cloud provider.</td><td><a href="host-n8n/install-options/">install-options</a></td></tr><tr><td><strong>Configure n8n</strong><br>Manage databases, environment variables, users, licenses, and security settings.</td><td><a href="host-n8n/configure-n8n/">configure-n8n</a></td></tr><tr><td><strong>Keep n8n running</strong><br>Monitor, log, trace, and update your instance.</td><td><a href="host-n8n/keep-n8n-running/">keep-n8n-running</a></td></tr><tr><td><strong>Understand the architecture</strong><br>Learn how n8n works and how the database is structured.</td><td><a href="host-n8n/understand-the-architecture/">understand-the-architecture</a></td></tr></tbody></table>
 

@@ -21,6 +21,16 @@ layout:
 
 You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker Compose, one-line setup, or other deployment methods.
 
+{% hint style="success" %}
+**Don't want to read the docs? Just run this:**
+
+```bash
+curl -fsSL https://get.n8n.io | sh
+```
+
+Requires Docker. Sets up n8n locally in one step. See the [one-line setup guide](install-options/one-line-setup.md) for what it does, or keep reading to compare every installation method.
+{% endhint %}
+
 All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions. See [Compare editions](community-edition-features.md) for the differences between the self-hosted editions.
 
 ## Choose your installation method <a href="#choose-your-installation-method" id="choose-your-installation-method"></a>

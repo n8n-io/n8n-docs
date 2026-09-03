@@ -58,6 +58,7 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
 
+- None
 - Bearer auth
 - Header auth
 

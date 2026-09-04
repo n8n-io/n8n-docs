@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   markdownlint:
-    name: runner / markdownlint
+    name: Run markdownlint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

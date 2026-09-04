@@ -212,7 +212,7 @@
 <link>https://github.com/n8n-io/n8n/pull/36397</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36397</guid>
 <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n stable</category>
+<category>n8n 2.35.4</category>
 <description>Added a new environment variable, N8N_MANAGED_OAUTH_SHOW_SCOPES, allowing admins to specify managed OAuth credential types (e.g. googleOAuth2Api) that should still expose the scope field for customization, even when credentials are overwritten via environment variables. Previously, scope fields were always hidden for managed credentials with overwrites, breaking workflows that relied on customizing scopes.</description>
 </item>
 <item>

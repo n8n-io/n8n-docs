@@ -99,6 +99,14 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
+## `n8n 2.35.4` Show scopes for managed OAuth credentials <a href="#n8n2354" id="n8n2354"></a>
+
+**Released:** 2026-08-19
+
+* [Show scopes for managed OAuth credentials with N8N_MANAGED_OAUTH_SHOW_SCOPES](https://github.com/n8n-io/n8n/pull/36397): Added a new environment variable, N8N_MANAGED_OAUTH_SHOW_SCOPES, allowing admins to specify managed OAuth credential types (e.g. googleOAuth2Api) that should still expose the scope field for customization, even when credentials are overwritten via environment variables. Previously, scope fields were always hidden for managed credentials with overwrites, breaking workflows that relied on customizing scopes.
+
+---
+
 ## `n8n 2.35` Enhanced HITL approval for Slack and Telegram, plus 15 other features <a href="#n8n235" id="n8n235"></a>
 
 **Released:** 2026-08-11
@@ -774,13 +782,6 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 * [Spontit Node Remove Spontit node](https://github.com/n8n-io/n8n/pull/22467): The Spontit node and its credential type have been removed from n8n, as the Spontit service has been retired and the integration no longer functions. Workflows using the Spontit node will need to be updated to use an alternative notification service.
 * [Validate nodes before activating](https://github.com/n8n-io/n8n/pull/22916): Workflow activation now validates that a workflow contains at least one trigger-like node (trigger, poller, or webhook) before activating, fixing a bug where this check was unreliable in multi-main setups. Attempting to activate an invalid workflow returns a clear validation error and the workflow's previous active state is preserved. Additional validation checks currently done only on the frontend will be added in future updates.
 
----
-
-## `n8n stable` Show scopes for managed OAuth credentials <a href="#n8nstable" id="n8nstable"></a>
-
-**Released:** 2026-08-19
-
-* [Show scopes for managed OAuth credentials with N8N_MANAGED_OAUTH_SHOW_SCOPES](https://github.com/n8n-io/n8n/pull/36397): Added a new environment variable, N8N_MANAGED_OAUTH_SHOW_SCOPES, allowing admins to specify managed OAuth credential types (e.g. googleOAuth2Api) that should still expose the scope field for customization, even when credentials are overwritten via environment variables. Previously, scope fields were always hidden for managed credentials with overwrites, breaking workflows that relied on customizing scopes.
 ---
 
 For full per-release detail of earlier n8n 2.x releases, see the archived [Release notes 2.x](release-notes-2.x.md). For releases before n8n 2.0, see [Release notes 1.x](release-notes-1.x.md) and [Release notes 0.x](release-notes-0.x.md).

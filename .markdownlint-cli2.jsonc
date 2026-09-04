@@ -1,7 +1,4 @@
 {
-  // Only our custom rule is enabled: it catches a heading glued directly
-  // to a preceding "{% endhint %}" tag, which can fail to render on the
-  // live site.
   "config": {
     "default": false,
     "heading-blank-line-after-endhint": true

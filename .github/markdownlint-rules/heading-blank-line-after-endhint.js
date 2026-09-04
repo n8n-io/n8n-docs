@@ -1,5 +1,3 @@
-// A heading glued directly to "{% endhint %}" with no blank line above it
-// can fail to render on the live site.
 const endhintPattern = /^\{%\s*endhint\s*%\}$/;
 
 module.exports = {

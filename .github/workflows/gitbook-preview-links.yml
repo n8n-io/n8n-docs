@@ -127,7 +127,7 @@ jobs:
           set -euo pipefail
           MARKER='<!-- gitbook-preview-links -->'
           CID=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
-                 --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
+                  --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
           if [ -n "$CID" ]; then
             gh api -X PATCH "repos/$GH_REPO/issues/comments/$CID" -F body=@/tmp/body.md >/dev/null
             echo "Updated comment $CID on PR #$PR"

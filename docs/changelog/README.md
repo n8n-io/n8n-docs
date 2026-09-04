@@ -1,8 +1,25 @@
 ---
-description: A curated, narrative summary of the most important new n8n features as they roll out.
+description: >-
+  A curated, narrative summary of the most important new n8n features as they
+  roll out.
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Changelog
@@ -23,11 +40,33 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Use AI models and tool services without setting up provider accounts or credentials
+
+**Released:** 2026-09-02 in [n8n 2.36](release-notes.md#n8n235)
+
+You can now use supported AI models and services in n8n Cloud without first creating an account with each provider, setting up billing, or adding an API key. [Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits) let you start building with a prepaid balance managed through n8n.
+
+Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
+
+![Agent using tool services available with Gateway credits](<.gitbook/assets/form hero 3.png>)
+
+On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
+
+![Select Gateway credits in the Credetial dropdown ](<.gitbook/assets/select credits.png>)
+
+Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
+
+Instance owners can add funds manually or configure automatic top-ups based on a balance threshold, target balance, and optional monthly limit. You can track your remaining balance and spend from **Cloud Admin Panel>Manage > Gateway credits**, including breakdowns by model and workflow.
+
+You can continue using your own provider credentials as before. Gateway credits give you another option when you want to get started without setting up and managing a separate provider account first.
+
+For more details, see the [Forum post](https://community.n8n.io/t/310859).
+
 ## AI Assistant on self-hosted n8n: set up in minutes
 
 **Released:** 2026-08-18 in [n8n 2.35](release-notes.md#n8n235)
 
-The AI Assistant [arrived on n8n Cloud in July](#ai-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
+The AI Assistant [arrived on n8n Cloud in July](./#ai-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
 
 Self-hosted setup needs two things, plus one worth adding:
 
@@ -130,7 +169,7 @@ This feature is in Preview. It can make mistakes, and its behavior may change wh
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
 
 {% hint style="info" %}
-**Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [AI Assistant on self-hosted n8n](#ai-assistant-on-self-hosted-n8n-set-up-in-minutes).
+**Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [AI Assistant on self-hosted n8n](./#ai-assistant-on-self-hosted-n8n-set-up-in-minutes).
 {% endhint %}
 
 ## MCP server updates
@@ -296,11 +335,11 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup

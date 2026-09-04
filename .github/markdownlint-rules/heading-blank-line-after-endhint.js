@@ -1,5 +1,7 @@
+// @ts-check
 const endhintPattern = /^\{%\s*endhint\s*%\}$/;
 
+/** @type {import("markdownlint").Rule} */
 module.exports = {
   names: ["heading-blank-line-after-endhint"],
   description: "A heading right after \"{% endhint %}\" needs a blank line above it",

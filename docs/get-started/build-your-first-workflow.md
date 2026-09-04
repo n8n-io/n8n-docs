@@ -39,7 +39,9 @@ This guide will show you how to construct a workflow[^1] in n8n, explaining key 
 
 ![The completed workflow: Schedule Trigger connected to NASA, then an If node branching into two PostBin nodes](.gitbook/assets/tutorial-first.png)
 
-This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud), which is recommended for new users. A free trial is available. If you haven't already, [sign up](https://app.n8n.cloud/register) for an account now.
+This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/), which is recommended for new users. A free trial is available. If you haven't already, [sign up](https://app.n8n.cloud/register) for an account now.
+
+Prefer to self-host? Run `curl -fsSL https://get.n8n.io | sh` to get n8n running locally in one step (see the [one-line setup guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/one-line-setup)), then come back and follow the steps below at `http://localhost:5678` instead of your Cloud instance.
 
 ## Step one: Create a new workflow <a href="#step-one-create-a-new-workflow" id="step-one-create-a-new-workflow"></a>
 

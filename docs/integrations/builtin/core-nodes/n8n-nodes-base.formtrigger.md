@@ -91,6 +91,8 @@ Only users logged in to this n8n instance can view or submit the form.
 * Unauthenticated form submissions receive a 401 response.
 * By default, n8n adds the submitting user's ID, email, first name, and last name to the output data. Turn off **Include User in Output** in [Node options](#node-options) to exclude this.
 
+When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't submit the form. This is useful with [end-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
+
 ### Form URLs <a href="#form-urls" id="form-urls"></a>
 
 The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.

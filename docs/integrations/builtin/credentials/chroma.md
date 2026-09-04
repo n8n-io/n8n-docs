@@ -52,6 +52,7 @@ To set it up:
 3. Click **Settings** for the database you want the access to.
 4. Click **Create API key and copy code**
 5. Enter your **API Key**, **Tenant ID** and **Database Name** to n8n credential
+
 ## Using Instance URL <a href="#using-instance-url" id="using-instance-url"></a>
 
 To configure this credential, you'll need:

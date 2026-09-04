@@ -41,6 +41,7 @@ When creating the server, Hetzner asks you to choose a plan. For most usage leve
 
 Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 {% endhint %}
+
 ## Log in to your server <a href="#log-in-to-your-server" id="log-in-to-your-server"></a>
 
 The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg) for more information. You can find the public IP in the listing of the servers in your project.

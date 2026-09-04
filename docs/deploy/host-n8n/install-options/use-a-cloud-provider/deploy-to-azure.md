@@ -73,6 +73,7 @@ To maintain data between pod restarts, the Postgres deployment needs a persisten
 
 If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes).
 {% endhint %}
+
 ### Postgres environment variables <a href="#postgres-environment-variables" id="postgres-environment-variables"></a>
 
 Postgres needs some environment variables set to pass to the application running in the containers.
@@ -177,6 +178,7 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 [Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip) for more details on how to use a static IP address with AKS.
 {% endhint %}
+
 ## Delete resources <a href="#delete-resources" id="delete-resources"></a>
 
 Remove the resources created by the manifests with the following command:

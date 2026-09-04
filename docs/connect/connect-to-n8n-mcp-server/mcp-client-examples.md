@@ -64,7 +64,7 @@ Add the following entry to your `claude_desktop_config.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 ## Connecting Claude Code to n8n MCP server <a href="#connecting-claude-code-to-n8n-mcp-server" id="connecting-claude-code-to-n8n-mcp-server"></a>
 
@@ -91,7 +91,7 @@ Or add the following entry to your `claude.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 Run `/mcp` in Claude Code and select **n8n** to complete the OAuth authorization.
 
@@ -122,7 +122,7 @@ Or add the following entry to your `claude.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 * `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Connecting Codex CLI to n8n MCP server <a href="#connecting-codex-cli-to-n8n-mcp-server" id="connecting-codex-cli-to-n8n-mcp-server"></a>
@@ -151,7 +151,7 @@ The `[features]` block enables Codex's HTTP MCP client. Older Codex builds requi
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 Run `codex mcp login n8n` to complete the OAuth authorization.
 
@@ -170,7 +170,7 @@ http_headers = { "authorization" = "Bearer <YOUR_N8N_MCP_TOKEN>" }
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 * `<YOUR_N8N_MCP_TOKEN>`: Your generated token
 
 ## Connecting Gemini CLI to n8n MCP server <a href="#connecting-gemini-cli-to-n8n-mcp-server" id="connecting-gemini-cli-to-n8n-mcp-server"></a>
@@ -195,7 +195,7 @@ Or add the following entry to your `~/.gemini/settings.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 Run `/mcp` in Gemini CLI and select **n8n** to complete the OAuth authorization.
 
@@ -218,7 +218,7 @@ Or add the following entry to your `~/.cursor/mcp.json` file (or the project's `
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 ## Connecting VS Code to n8n MCP server <a href="#connecting-vs-code-to-n8n-mcp-server" id="connecting-vs-code-to-n8n-mcp-server"></a>
 
@@ -239,7 +239,7 @@ Or add the following entry to your workspace's `.vscode/mcp.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 ## Connecting Windsurf to n8n MCP server <a href="#connecting-windsurf-to-n8n-mcp-server" id="connecting-windsurf-to-n8n-mcp-server"></a>
 
@@ -257,7 +257,7 @@ Add the following entry to your `~/.codeium/windsurf/mcp_config.json` file:
 
 Here, replace:
 
-* `<your-n8n-domain>`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `<your-n8n-domain>`: Your n8n domain, without the `https://` prefix. On n8n Cloud this is `your-instance.app.n8n.cloud`. When self-hosted, it's the domain that serves your n8n editor, for example `n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 
 Approve access when Windsurf redirects you to n8n on its first connection attempt.
 
@@ -292,7 +292,7 @@ root_agent = Agent(
 
 Here, replace:
 
-* `N8N_INSTANCE_URL`: Your n8n domain, for example `https://your-instance.app.n8n.cloud`, found in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
+* `N8N_INSTANCE_URL`: The base URL of your n8n instance. On n8n Cloud this is `https://your-instance.app.n8n.cloud`. When self-hosted, it's your own URL, for example `https://n8n.example.com`. You can find your full server URL in n8n under **Settings** > **Instance-level MCP > Connect a client > Server URL**.
 * `YOUR_N8N_MCP_TOKEN`: Your generated access token
 
 For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-docs/tools/third-party/n8n/).

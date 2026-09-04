@@ -34,28 +34,24 @@ Enterprise teams often spend more time in this section. SSO, directory integrati
 
 {% stepper %}
 {% step %}
-
 ### Control access
 
 Decide who can sign in, what they can do, and how you organize work. Start with [Manage users and access](manage-users-and-access/README.md).
 {% endstep %}
 
 {% step %}
-
 ### Protect secrets
 
 Store and share credentials safely. Use [Manage credentials](manage-credentials/README.md) to reduce secret sprawl.
 {% endstep %}
 
 {% step %}
-
 ### Move changes safely
 
 Use Git-backed workflows to promote changes between environments. See [Use source control and environments](use-source-control-and-environments/README.md).
 {% endstep %}
 
 {% step %}
-
 ### Monitor activity
 
 Track usage and send signals to your logging tools. Use [Observe and log](observe-and-log/README.md) to improve visibility.

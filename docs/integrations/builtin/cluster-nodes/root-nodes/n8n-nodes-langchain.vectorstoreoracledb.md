@@ -67,7 +67,6 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
 
 <!-- vale off -->
-
 ### Get Many parameters
 <!-- vale on -->
 

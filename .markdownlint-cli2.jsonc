@@ -1,15 +1,13 @@
 {
-  // Only our custom rule is enabled: it catches headings glued to a
-  // preceding line with no blank line in between, which can fail to
-  // render on the live site. It carves out the one legitimate case where
-  // that's expected: a heading as the first line inside a "{% hint %}"
-  // block, which GitBook renders as the hint's title.
+  // Only our custom rule is enabled: it catches a heading glued directly
+  // to a preceding "{% endhint %}" tag, which can fail to render on the
+  // live site.
   "config": {
     "default": false,
-    "heading-blank-line-above": true
+    "heading-blank-line-after-endhint": true
   },
   "customRules": [
-    "./.github/markdownlint-rules/heading-blank-line-above.js"
+    "./.github/markdownlint-rules/heading-blank-line-after-endhint.js"
   ],
   "globs": [
     "docs/**/*.md"

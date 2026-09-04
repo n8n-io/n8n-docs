@@ -1,0 +1,12 @@
+{
+  "config": {
+    "default": false,
+    "heading-blank-line-after-endhint": true
+  },
+  "customRules": [
+    "./.github/markdownlint-rules/heading-blank-line-after-endhint.js"
+  ],
+  "globs": [
+    "docs/**/*.md"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  // Only MD022 is enabled for now, restricted to the blank-line-above check:
+  // it catches headings glued to a preceding GitBook block tag (e.g.
+  // "{% endhint %}") with no blank line in between. That pattern can fail
+  // to render on the live site, showing raw "##" markdown syntax instead
+  // of a heading. The blank-line-below check is left off since we haven't
+  // confirmed that direction causes the same rendering issue.
+  "config": {
+    "default": false,
+    "MD022": {
+      "lines_below": 0
+    }
+  },
+  "globs": [
+    "docs/**/*.md"
+  ],
+  "ignores": [
+    "docs/changelog/**",
+    // These two files intentionally put a heading as the first line inside
+    // a hint block, which GitBook renders as the hint's title. That's a
+    // different, documented pattern from the bug MD022 is here to catch.
+    "docs/contribute/style-guide-for-n8n-docs.md",
+    "docs/integrations/builtin/core-nodes/n8n-nodes-base.compression.md"
+  ]
+}

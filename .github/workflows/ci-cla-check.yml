@@ -70,4 +70,3 @@ jobs:
           app-id: ${{ secrets.N8N_ASSISTANT_APP_ID }}
           private-key: ${{ secrets.N8N_ASSISTANT_PRIVATE_KEY }}
           apply-label: false
-

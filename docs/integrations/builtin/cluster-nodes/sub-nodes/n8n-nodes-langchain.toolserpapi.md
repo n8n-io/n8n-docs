@@ -17,14 +17,17 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # SerpApi (Google Search) node <a href="#serpapi-google-search-node" id="serpapi-google-search-node"></a>
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-This node is deprecated, and will be removed in a future version. Use the verified **SerpApi Official** community node instead.
+The SerpApi (Google Search) node is deprecated from n8n 2.35.0. Use the verified **SerpApi Official** community node instead. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 The SerpAPI node allows an agent[^1] in your workflow to call Google's Search API.

@@ -1,4 +1,5 @@
 ---
+description: Compare ways to install self-hosted n8n, including one-line setup, Docker, Docker Compose, npm, and cloud providers.
 layout:
   description:
     visible: false
@@ -24,3 +25,5 @@ layout:
 {% content-ref url="use-a-cloud-provider/README.md" %}
 [use-a-cloud-provider/README.md](use-a-cloud-provider/README.md)
 {% endcontent-ref %}
+
+See [Host n8n](../README.md) for other self-hosting topics.

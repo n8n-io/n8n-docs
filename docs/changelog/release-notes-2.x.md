@@ -1,13 +1,13 @@
 ---
-title: Release notes
+title: Release notes 2.x
 hide:
   - tags
 contentType: reference
-nodeTitle: Release notes
+nodeTitle: Release notes 2.x
 originalFilePath: release-notes.md
 originalUrl: https://docs.n8n.io/release-notes
-url: https://docs.n8n.io/release-notes/release-notes
-description: Release notes detailing new features and bug fixes for n8n.
+url: https://docs.n8n.io/changelog/release-notes-2.x
+description: Archived release notes detailing new features and bug fixes for n8n 2.x.
 layout:
   width: default
   title:
@@ -39,7 +39,7 @@ tags:
 {% hint style="warning" %}
 **This page is no longer updated**
 
-These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
+These release notes are now archived and won't receive further updates. For current feature-level updates, see [Release notes](release-notes.md). For every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
 For a curated summary of the changes that matter most, see the [Changelog](README.md).
 {% endhint %}
@@ -222,7 +222,7 @@ This release contains bug fixes.
 [corazzione](https://github.com/corazzione)\
 [Wujerry](https://github.com/Wujerry)\
 [davidangularme](https://github.com/davidangularme)\
-[SAY-5](https://github.com/SAY-5)\
+SAY-5\
 [legendik](https://github.com/legendik)\
 [petrusdemelo](https://github.com/petrusdemelo)\
 [envy](https://github.com/envy)
@@ -2071,11 +2071,11 @@ With this release you can now:
 
 The new Time Saved node provides increased accuracy for complex workflows where different execution paths save different amounts of time.
 
-![time saved node example](.gitbook/assets/time_saved_node_1.png)
+![Workflow branching by lead score, with a Time Saved node on each branch set to a different time-saved value](.gitbook/assets/time_saved_node_1.png)
 
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
-![insights dashboard](.gitbook/assets/time_saved_node_2.png)
+![Insights dashboard with the Time saved metric card highlighted alongside execution and run-time stats](.gitbook/assets/time_saved_node_2.png)
 
 ### Contributors <a href="#contributors" id="contributors"></a>
 

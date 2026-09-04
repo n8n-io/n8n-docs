@@ -78,6 +78,20 @@ The recommended approach is to load the data using a custom REST endpoint.
 Credentials can extend other credentials. For example, `googleSheetsOAuth2Api` extends `googleOAuth2Api`. You can set parameters on the parent (`googleOAuth2Api`) and all child credentials will use them.
 {% endhint %}
 
+## Show OAuth scope fields
+
+By default, n8n hides scope fields when managed OAuth is available. To let users configure scopes for specific managed OAuth credential types, set `N8N_MANAGED_OAUTH_SHOW_SCOPES` to a comma-separated list:
+
+```sh
+export N8N_MANAGED_OAUTH_SHOW_SCOPES=googleOAuth2Api
+```
+
+This setting applies only to the credential types you list. It doesn't apply to credential types that extend a listed type.
+
+{% hint style="warning" %}
+Letting users set their own scopes can break verified OAuth apps. Many providers, such as Google, require you to define and justify every scope your app requests during app verification. If a user adds a scope you didn't declare, the provider may suspend or ban your app. Only enable this setting for credential types where users adding scopes won't put your app's verification at risk.
+{% endhint %}
+
 ## Persistence <a href="#persistence" id="persistence"></a>
 
 To store credential overwrites in the database and propagate them to all workers in multi-instance or queue mode, enable:

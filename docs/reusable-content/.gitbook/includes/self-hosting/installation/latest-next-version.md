@@ -6,6 +6,6 @@ title: latest-next-version
 
 n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 
-Current `stable`: 2.34.6
-Current `beta`: 2.35.3
+Current `stable`: 2.37.9
+Current `beta`: 2.38.3
 {% endhint %}

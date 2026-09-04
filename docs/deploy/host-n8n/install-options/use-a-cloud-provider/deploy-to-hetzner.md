@@ -135,8 +135,6 @@ The Docker Compose file uses the environment variables set in the `.env` file, s
 nano docker-compose.yml
 ```
 
-{% hint style="info" %} This repository currently pulls the n8n image via `docker.n8n.io/n8nio/n8n`, which can hit rate limits. n8n recommends `docker.io/n8nio/n8n` instead. If you hit pull issues, try changing the `image:` line to `docker.io/n8nio/n8n`. {% endhint %}
-
 ## Configure Caddy <a href="#configure-caddy" id="configure-caddy"></a>
 
 Caddy needs to know which domains it should serve, and which port to expose to the outside world. Edit the `Caddyfile` file in the `caddy_config` folder.
@@ -297,8 +295,8 @@ The AI Assistant needs a sandbox to run code in. You can add the same sandbox st
     - N8N_ENABLED_MODULES=instance-ai
     - N8N_INSTANCE_AI_SANDBOX_ENABLED=true
     - N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-    - N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
-    - N8N_INSTANCE_AI_SANDBOX_API_KEY=${SANDBOX_API_KEYS}
+    - N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
+    - N8N_SANDBOX_SERVICE_API_KEY=${SANDBOX_API_KEYS}
     - N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
    depends_on:
     sandbox-api:

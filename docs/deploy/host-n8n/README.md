@@ -1,8 +1,8 @@
 ---
 title: n8n Hosting Documentation and Guides
 description: >-
-  Access n8n hosting documentation and guides. Find comprehensive resources to
-  help you set up and manage your self-hosted n8n instances.
+  Access n8n hosting documentation and guides for setting up and managing
+  self-hosted n8n instances.
 contentType: overview
 hide:
   - toc
@@ -19,7 +19,17 @@ layout:
 
 # Self-hosting n8n <a href="#self-hosting-n8n" id="self-hosting-n8n"></a>
 
-You can self-host n8n on your own infrastructure, on-premises or in a private cloud, using Docker Compose, one-line setup, or other deployment methods.
+You can self-host n8n on your own infrastructure, on-premises, or in a private cloud, using Docker Compose, one-line setup, or other deployment methods. Not sure if self-hosting is right for you? See [Choose how to use n8n](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n).
+
+{% hint style="success" %}
+**Don't want to read the docs? Run this:**
+
+```bash
+curl -fsSL https://get.n8n.io | sh
+```
+
+Requires Docker on Linux or macOS (or WSL on Windows). Sets up n8n locally in one step. See the [one-line setup guide](install-options/one-line-setup.md) for what it does, or keep reading to compare every installation method.
+{% endhint %}
 
 All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions. See [Compare editions](community-edition-features.md) for the differences between the self-hosted editions.
 
@@ -95,7 +105,7 @@ Select the installation method that best fits your technical requirements and in
 	
 	**Requirements:** Node.js installed on your system.
 	
-	**Note:** This installation method is being deprecated in n8n 3.0. Consider using Docker Compose or one-line setup instead.
+	npm installation is deprecated from n8n 3.0. Consider using Docker Compose or one-line setup instead.
 	
 	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 

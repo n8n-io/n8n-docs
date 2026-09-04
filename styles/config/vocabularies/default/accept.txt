@@ -53,10 +53,12 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+codecs?
 Cognito('s)?
 commenters?
 Cohere
 Combinator
+Confluent('s)?
 Contentful
 ConvertKit
 CPU
@@ -96,6 +98,7 @@ Fargate
 [Ff]avorit(e|es|ing|ed)
 Figma
 FileMaker
+Firecrawl
 Firestore
 Formhub
 Formstack
@@ -140,11 +143,14 @@ JumpCloud
 Keap
 Keycloak
 Kibana
+Kimi
 Kitemaker
 kubectl
 Kafka
+kafkajs
 Lemlist
 Lenovo
+librdkafka
 [Ll]inter
 LLMs?
 [Ll]oopback

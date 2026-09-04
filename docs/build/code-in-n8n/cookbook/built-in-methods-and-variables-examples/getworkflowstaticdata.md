@@ -112,6 +112,11 @@ delete nodeStaticData.lastExecution
 {% endtab %}
 {% endtabs %}
 
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
+
+
+{% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/2538" %}
+
 ## Use a data table instead <a href="#use-a-data-table-instead" id="use-a-data-table-instead"></a>
 
 [Data tables](../../../work-with-data/data-tables.md) store data inside n8n without a Code node, and they keep their data when you test a workflow.
@@ -123,10 +128,5 @@ To store a marker such as the last processed item in a data table:
 3. Add a second Data Table node at the end of your workflow, using the **Upsert row** operation to write the new value.
 
 Unlike static data, you can't read data table values directly in an expression or in the Code node. Read the row with a Data Table node first, then reference that node's output.
-
-## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
-
-
-{% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/2538" %}
 
 [^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.

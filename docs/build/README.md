@@ -30,7 +30,6 @@ Use this space to learn workflow basics, data handling, logic, code, and AI.
 
 {% columns %}
 {% column %}
-
 #### Foundations
 
 [**Understand workflows**](understand-workflows/README.md)
@@ -59,7 +58,6 @@ Use expressions, the Code node, and developer tools when low-code isn't enough.
 {% endcolumn %}
 
 {% column %}
-
 #### Build and optimize
 
 [**Manage workflows**](manage-workflows/README.md)

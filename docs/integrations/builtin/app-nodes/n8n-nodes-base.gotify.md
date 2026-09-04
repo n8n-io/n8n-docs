@@ -59,7 +59,6 @@ The **Options** fields (**Click URL**, **Big Image URL**, **Intent URL**) use Go
 ///
 
 ## Templates and examples
-
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

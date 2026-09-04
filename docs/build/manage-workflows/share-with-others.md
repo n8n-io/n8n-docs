@@ -60,6 +60,7 @@ You can't change the workflow owner, except when deleting the user.
 
 Workflow sharing allows editors to use all credentials[^1] used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely).
 {% endhint %}
+
 ### Permissions <a href="#permissions" id="permissions"></a>
 
 | Permissions | Creator | Editor | 

@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For the latest releases, including every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](README.md).
+For a curated summary of the changes that matter most, see the [Changelog](./).
 {% endhint %}
 
 Features and bug fixes for n8n before the release of 1.0.0.
@@ -3669,7 +3669,7 @@ This release changes n8n's license, from [Apache 2.0 with Commons Clause](https:
 
 This change aims to clarify n8n's license terms, and n8n's position as a fair-code project.
 
-Read more about the new license in [License](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/sustainable-use-license).
+Read more about the new license in [License](/broken/spaces/ukPPOMQ6NId4gpAIkPXa/pages/504ABciZlkjGL1YfV1Ic).
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 

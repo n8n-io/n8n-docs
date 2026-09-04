@@ -41,7 +41,7 @@ tags:
 
 These release notes are now archived and won't receive further updates. For current feature-level updates, see [Release notes](release-notes.md). For every patch version, see the [n8n releases on GitHub](https://github.com/n8n-io/n8n/releases).
 
-For a curated summary of the changes that matter most, see the [Changelog](README.md).
+For a curated summary of the changes that matter most, see the [Changelog](./).
 {% endhint %}
 
 New features and bug fixes for n8n.
@@ -521,7 +521,7 @@ This release contains bug fixes and features.
 {% hint style="info" %}
 ### Connect to MCP servers with less setup <a href="#connect-to-mcp-servers-with-less-setup" id="connect-to-mcp-servers-with-less-setup"></a>
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 <br>
 
@@ -529,7 +529,7 @@ Initial coverage includes some of the most used services in the official MCP reg
 
 <br>
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>

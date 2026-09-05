@@ -61,7 +61,24 @@ Refer to [OpenAI's API documentation](https://platform.openai.com/docs/introduct
 To configure this credential, you'll need:
 
 * An **API Key**
+* A **Base URL** (optional): Override the default `https://api.openai.com/v1` to point at any OpenAI-compatible endpoint. Leave the default for official OpenAI.
 * An **Organization ID**: Required if you belong to multiple organizations; otherwise, leave this blank.
+
+### Using an OpenAI-compatible base URL
+
+The OpenAI credential's **Base URL** field accepts any server that implements the OpenAI HTTP API (chat completions, embeddings, and so on). Common cases:
+
+* Self-hosted model runtimes on your own machine or network (for example `http://localhost:11434/v1`)
+* Cloud or self-hosted OpenAI-compatible gateways
+
+When you change the Base URL:
+
+1. Paste the endpoint's `/v1` root into **Base URL**.
+2. Use an API key issued by that endpoint (not necessarily an OpenAI platform key).
+3. Pick a **model name that the endpoint actually serves** — model IDs differ across providers. Call the endpoint's `/v1/models` (or check its docs) if you're unsure.
+4. Keep **Organization ID** blank unless the target service uses OpenAI-style org headers.
+
+Expect some variation. OpenAI-compatible endpoints don't all implement the same routes, parameters, and response fields, so a credential test can succeed while a node still fails at runtime or returns unexpected results. If that happens, check that your endpoint supports what the specific node needs.
 
 To generate your API Key:
 

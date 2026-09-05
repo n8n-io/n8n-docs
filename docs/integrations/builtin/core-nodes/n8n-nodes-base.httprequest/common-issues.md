@@ -130,3 +130,35 @@ Use this option to retry the node after a failed attempt.
 1. Set **Max Tries** to the maximum number of times n8n should retry the node.
 1. Set **Wait Between Tries (ms)** to the desired delay in milliseconds between retries. For example, to wait one second before retrying the request again, set **Wait Between Tries (ms)** to `1000`.
 
+## Your uploaded file arrives with the wrong file name
+
+When you send a file with **Body Content Type** set to **Form-Data**, n8n takes the file name of the `multipart/form-data` part from the binary data, not from the **Name** field. **Name** sets the form field name only. If the binary data has no file name, n8n sends `file`.
+
+This matters when the receiving API identifies uploads by file name instead of by form field name, or when it requires a particular name or extension. The request arrives, but the API rejects it, often with a 400 error saying the file is missing. For example, the **Convert to Text File** operation of the [Convert to File node](../n8n-nodes-base.converttofile.md) names its output `file.txt` by default, so an API that expects `index.html` doesn't find it.
+
+To resolve, set the file name on the binary data before the HTTP Request node:
+
+* In the Convert to File node, set the **File Name** option to the name the API expects.
+* In a [Code node](../n8n-nodes-base.code/README.md), set the file name on the binary property:
+
+```javascript
+for (const item of $input.all()) {
+	item.binary.data.fileName = 'index.html';
+}
+return $input.all();
+```
+
+n8n copies the MIME type stored on the binary data into the `Content-Type` of the part, so set that too if your API checks it.
+
+## Unsupported media type (415) when you send a file
+
+This error displays when the API expects `multipart/form-data` but the request body isn't multipart.
+
+**Body Content Type > n8n Binary File** sends the file as the whole request body. n8n sets `Content-Type` to the MIME type stored on the binary data, or to `application/octet-stream` when it has none, and doesn't add a multipart envelope or a boundary. An API that only accepts multipart uploads rejects this.
+
+To send the same file as a multipart upload:
+
+1. Set **Body Content Type** to **Form-Data**.
+1. Add a **Body Parameters** entry and set its **Type** to **n8n Binary File**.
+1. Set **Name** to the form field name from the API documentation.
+1. Set **Input Data Field Name** to the binary property that holds the file, such as `data`.

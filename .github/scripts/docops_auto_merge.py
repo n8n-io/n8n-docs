@@ -38,10 +38,11 @@ from check_version_snippet_pr import evaluate, STABLE_RE, BETA_RE  # noqa: E402
 
 NPM_DIST_TAGS = "https://registry.npmjs.org/-/package/n8n/dist-tags"
 
-LABEL_ARMED = "docops:auto-merge"
 LABEL_OUTDATED = "status:outdated"
 LABEL_BLOCKED = "status:do-not-merge"
-LABEL_SENT = "docops:outcome-sent"
+# Merged-sweep idempotency is a hidden PR comment, not a label, so we don't add any
+# DocOps-specific labels to the repo (only the pre-existing status:* ones are reused).
+OUTCOME_MARKER = "<!-- docops:outcome-sent -->"
 
 APPROVE_BODY = (
     "Automated version-snippet update: the two version numbers were verified against "
@@ -167,10 +168,6 @@ def already_approved(repo, pr):
     return any(r.get("state") == "APPROVED" for r in revs)
 
 
-def has_label(pr_obj, name):
-    return any(l.get("name") == name for l in pr_obj.get("labels", []))
-
-
 # --------------------------------------------------------------------- mutating ops
 
 def add_label(repo, pr, name):
@@ -189,10 +186,13 @@ def report_check(repo, head_sha, conclusion, title, summary):
 
 
 def post_outcome(ctx, verdict, reason="", failing=""):
-    """POST the outcome to the n8n webhook (optional; failures are non-fatal)."""
+    """POST the outcome to the n8n webhook. Failures are non-fatal to the run, but the
+    return value says whether it was delivered, so callers only record a dedupe marker
+    for outcomes that actually landed. True also when no webhook is configured (there is
+    nothing to deliver, so there is nothing to retry)."""
     url = os.environ.get("WEBHOOK_URL")
     if not url:
-        return
+        return True
     payload = {
         "pr": ctx["pr"], "head_sha": ctx.get("head_sha", ""), "verdict": verdict,
         "reason": reason, "branch": ctx.get("branch", ""),
@@ -211,8 +211,10 @@ def post_outcome(ctx, verdict, reason="", failing=""):
         req.add_header("Authorization", f"Basic {token}")
     try:
         urllib.request.urlopen(req, timeout=20).read()
+        return True
     except Exception as e:
-        log(ctx["pr"], f"outcome POST failed (non-fatal): {e}")
+        log(ctx["pr"], f"outcome POST failed (non-fatal, will retry next sweep): {e}")
+        return False
 
 
 def escalate(repo, ctx, verdict, reason, failing=""):
@@ -297,9 +299,9 @@ def handle_pr(repo, cfg, pr):
 
 
 def arm_auto_merge(repo, ctx):
-    """Approve as the App and enable native auto-merge. Idempotent."""
+    """Approve as the App and enable native auto-merge. Idempotent.
+    No label is added: the merged-sweep finds these PRs by branch + marker, not a label."""
     pr = ctx["pr"]
-    add_label(repo, pr, LABEL_ARMED)
     if not already_approved(repo, pr):
         r = gh(["pr", "review", str(pr), "-R", repo, "--approve", "-b", APPROVE_BODY],
                check=False)
@@ -333,13 +335,31 @@ def open_candidates(repo, cfg):
     return out
 
 
+def outcome_already_sent(repo, pr):
+    """True if we've already reported this PR's merge (hidden comment marker)."""
+    view = gh_json(["pr", "view", str(pr), "-R", repo, "--json", "comments"]) or {}
+    return any(OUTCOME_MARKER in (c.get("body") or "") for c in view.get("comments", []))
+
+
 def announce_merged(repo, cfg):
-    """Report PRs that native auto-merge already merged. Idempotent via LABEL_SENT."""
+    """Report snippet PRs that native auto-merge already merged, so the outcome webhook
+    fires (Slack success + Supabase; Linear usually already closed via its own GitHub
+    integration). Detection = fixed title + branch + body marker; dedupe = a hidden PR
+    comment. No repo labels are used, created, or required."""
+    # The search is already narrowed to snippet PRs by their fixed title (~1/day), and
+    # `gh pr list --limit` paginates internally up to the cap. 500 keeps well over a year
+    # of them retryable, so an undelivered outcome cannot age out of the window in
+    # practice (that would need the webhook down for hundreds of snippet PRs).
     merged = gh_json(["pr", "list", "-R", repo, "--state", "merged",
-                      "--label", LABEL_ARMED, "--limit", "20",
-                      "--json", "number,headRefName,body,labels,mergeCommit"]) or []
+                      "--search", "in:title Update latest and next version numbers",
+                      "--limit", "500",
+                      "--json", "number,headRefName,body,mergeCommit"]) or []
     for p in merged:
-        if has_label(p, LABEL_SENT):
+        if not cfg["branch_re"].match(p.get("headRefName", "")):
+            continue
+        if cfg["marker"] not in (p.get("body") or ""):
+            continue
+        if outcome_already_sent(repo, p["number"]):
             continue
         head_main = get_snippet(repo, cfg["snippet_path"], "main") or ""
         ctx = {
@@ -350,8 +370,19 @@ def announce_merged(repo, cfg):
             "head": {"stable": value_from_snippet(head_main, STABLE_RE),
                      "beta": value_from_snippet(head_main, BETA_RE)},
         }
-        post_outcome(ctx, "merged", "auto-merged by GitHub once required checks passed")
-        add_label(repo, p["number"], LABEL_SENT)
+        if not post_outcome(ctx, "merged",
+                            "auto-merged by GitHub once required checks passed"):
+            # Not delivered: leave no marker so the next sweep retries this PR.
+            continue
+        # Delivered. Write the dedupe marker; if THIS fails we would repost next sweep,
+        # so make the failure visible rather than silent (worst case: a duplicate ping).
+        r = gh(["pr", "comment", str(p["number"]), "-R", repo,
+                "-b", OUTCOME_MARKER + "\nDocOps: auto-merge outcome reported."],
+               check=False)
+        if r.returncode != 0:
+            log(p["number"],
+                f"WARNING: outcome sent but dedupe marker failed to write ({r.stderr.strip()}); "
+                "a later sweep may repost this outcome")
         log(p["number"], "reported merged")
 
 

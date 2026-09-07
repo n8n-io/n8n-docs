@@ -19,6 +19,8 @@ The **Connect a client** dialog (available from n8n 2.33.0) provides one-click s
 The examples below are useful if interactive steps aren't shown in n8n for your chosen client, for reference purposes, or for manual configuration.
 {% endhint %}
 
+The examples below all use `https://`. If your instance serves plain HTTP, such as a local install at `http://localhost:5678`, use `http://` instead. Copying the full **Server URL** from n8n gives you the right prefix either way.
+
 ## Connecting Lovable to n8n MCP server <a href="#connecting-lovable-to-n8n-mcp-server" id="connecting-lovable-to-n8n-mcp-server"></a>
 
 1. Configure MCP Server in Lovable (OAuth).

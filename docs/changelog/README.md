@@ -229,7 +229,7 @@ Learn more in the [insights retention documentation](https://app.gitbook.com/s/w
 
 Runs of your error workflows are now excluded from your execution quota, on every plan. An error workflow is the one n8n runs when another workflow fails. It receives the details of the failure (which workflow, which node, what went wrong) and does something useful with them: post to a Slack channel, send an email, open a ticket, or retry the run.
 
-Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so we stopped counting them.
+Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
 
 There is nothing to configure. Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like. Past counts stay as they are; the change applies to executions from the upgrade onwards, so the same workflows might register fewer executions per month than before.
 

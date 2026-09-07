@@ -50,6 +50,17 @@ Operations that write page or comment content offer a **Body Format** choice:
 
 Operations that read content return the body in **Storage** (the default) or **Atlas Doc Format**, or as **Plain Text** extracted from the document, which is useful for feeding page content to AI and search workflows.
 
+The **Append** operation writes the page in the format you select, whatever format the page was saved in. When the two formats differ, Confluence converts the whole page. The content and the macros survive, but Confluence rewrites the stored markup, so the page's version history shows a difference for the whole page and not only for the appended content. To keep the difference small, select the format the page already uses.
+
+## Drafts
+
+Confluence keeps a draft next to the published version of a page, so a draft never replaces what readers see:
+
+* **Create** with **Create as Draft** enabled makes an unpublished page. Its author sees it in the space tree with a **Draft** badge.
+* **Update** with **Status** set to **Draft** saves the changes as an unpublished draft. This does not unpublish the page. The live page keeps showing the last published version, and Confluence marks the page **Unpublished changes**.
+
+To publish a draft, run **Update** on it with **Status** set to **Published**.
+
 ## Operations
 
 * **Attachment**:

@@ -54,9 +54,9 @@ jobs:
           if [ -z "$PR" ]; then
             # A build for a commit already on the default branch (a merged PR,
             # or a change request GitBook pushed straight to it) has no open PR
-            # to comment on — expected, stay quiet. Anything else is a preview
-            # we failed to map to its PR: warn, so the next regression here is
-            # visible instead of a green no-op.
+            # to comment on. That is expected, so stay quiet. Anything else is
+            # a preview we failed to map to its PR, so warn: the next
+            # regression here should be visible, not a green no-op.
             CMP=$(gh api "repos/$GH_REPO/compare/$DEFAULT_BRANCH...$SHA" --jq '.status' 2>/dev/null) || CMP=unknown
             case "$CMP" in
               identical|behind) echo "No open PR for $SHA (already on $DEFAULT_BRANCH); nothing to do." ;;

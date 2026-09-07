@@ -40,10 +40,10 @@ has changed and saves it, if necessary.
 There are two types of static data, global and node. Global static data is the
 same in the whole workflow. Every node in the workflow can access it. The node static data is unique to the node. Only the node that set it can retrieve it again.
 
+You can only use static data in the JavaScript Code node. The Python Code node doesn't provide it.
+
 Example with global data:
 
-{% tabs %}
-{% tab title="JavaScript" %}
 ```javascript
 // Get the global workflow static data
 const workflowStaticData = $getWorkflowStaticData('global');
@@ -57,30 +57,10 @@ workflowStaticData.lastExecution = new Date().getTime();
 // Delete data
 delete workflowStaticData.lastExecution;
 ```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-# Get the global workflow static data
-workflowStaticData = _getWorkflowStaticData('global')
-
-# Access its data
-lastExecution = workflowStaticData.lastExecution
-
-# Update its data
-workflowStaticData.lastExecution = new Date().getTime()
-
-# Delete data
-delete workflowStaticData.lastExecution
-```
-{% endtab %}
-{% endtabs %}
 
 Example with node data:
 
-{% tabs %}
-{% tab title="JavaScript" %}
-```js
+```javascript
 // Get the static data of the node
 const nodeStaticData = $getWorkflowStaticData('node');
 
@@ -93,24 +73,6 @@ nodeStaticData.lastExecution = new Date().getTime();
 // Delete data
 delete nodeStaticData.lastExecution;
 ```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-# Get the static data of the node
-nodeStaticData = _getWorkflowStaticData('node')
-
-# Access its data
-lastExecution = nodeStaticData.lastExecution
-
-# Update its data
-nodeStaticData.lastExecution = new Date().getTime()
-
-# Delete data
-delete nodeStaticData.lastExecution
-```
-{% endtab %}
-{% endtabs %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

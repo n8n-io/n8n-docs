@@ -48,7 +48,7 @@ Runs of your error workflows are now excluded from your execution quota, on ever
 
 Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
 
-Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like. Past counts stay as they are; the change applies to executions from the upgrade onwards, so the same workflows might register fewer executions per month than before.
+Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
 
 On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
 

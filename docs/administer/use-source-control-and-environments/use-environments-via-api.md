@@ -7,7 +7,7 @@ layout:
 
 # Use environments programmatically with the public API
 
-You can drive n8n environments from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
+You can manage n8n environments from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
 
 This page explains how the source control API endpoints work together. It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
 

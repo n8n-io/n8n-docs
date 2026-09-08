@@ -14,7 +14,9 @@ This page explains how the source control API endpoints work together. It assume
 {% hint style="info" %}
 **Feature availability**
 
-Source control and environments is an Enterprise feature. The n8n API isn't available during the free trial. Refer to [API authentication](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication) to create a key.
+Available from n8n version `2.39.0`.
+
+Environments is an Enterprise feature.
 {% endhint %}
 
 ## The endpoints
@@ -226,4 +228,4 @@ The API commits and applies the same resources as the UI: workflows, credential 
 * [Push and pull](push-and-pull-changes.md): How push and pull behave, and what gets committed.
 * [Copy work between environments](move-work-between-environments.md): Branch patterns for moving work between instances.
 * [Source control](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/source-control): Request and response schemas for the source control endpoints.
-* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public REST API schemas.
+* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public API schemas.

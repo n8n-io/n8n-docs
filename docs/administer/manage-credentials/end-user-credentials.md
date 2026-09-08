@@ -75,6 +75,7 @@ Users with project access can now connect their own account to this credential. 
 {% hint style="info" %}
 Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
 {% endhint %}
+
 ## Connect your account
 
 Before you can use an end-user credential in a workflow, connect your account to the template. You can do this from:

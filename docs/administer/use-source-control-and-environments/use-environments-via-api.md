@@ -14,7 +14,9 @@ This page explains how the source control API endpoints work together. It assume
 {% hint style="info" %}
 **Feature availability**
 
-Available from n8n version `2.39.0`.
+The Source Control `status` and `push` endpoints are available from n8n version `2.39.0`.
+* `GET /api/v1/source-control/status`
+* `POST /api/v1/source-control/push`
 
 Environments is an Enterprise feature.
 {% endhint %}

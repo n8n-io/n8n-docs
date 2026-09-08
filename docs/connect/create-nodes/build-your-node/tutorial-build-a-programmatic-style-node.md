@@ -37,6 +37,7 @@ In this section, you'll clone n8n's node starter repository, and build a node th
 
 n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
 {% endhint %}
+
 ### Step 1: Set up the project <a href="#step-1-set-up-the-project" id="step-1-set-up-the-project"></a>
 
 n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 

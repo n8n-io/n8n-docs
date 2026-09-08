@@ -72,6 +72,8 @@ Choose whether and how to restrict access to the chat. Select from:
   * Select or create a **Credential for Basic Auth** with a username and password. All users must use the same username and password.
 * **n8n User Auth**: Only users logged in to an n8n account can use the chat.
 
+When you select **n8n User Auth**, a **Require Workflow Execute Permission** toggle appears. Turn it on to require that the triggering user also has permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't use the chat. This is useful with [end-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials), where each user runs the workflow with their own connected account.
+
 #### Initial Message(s) <a href="#initial-messages" id="initial-messages"></a>
 
 This parameter's only available if you're using **Hosted Chat**. Use it to configure the message the n8n chat interface displays when the user arrives on the page.

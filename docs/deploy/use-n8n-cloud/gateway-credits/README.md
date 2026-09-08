@@ -70,7 +70,7 @@ Topping up Gateway credits doesn't add n8n Assistant credits, and using the n8n 
 
 ## Data handling
 
-When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/privacy) and n8n's terms of service.
+When a node runs on Gateway credits, n8n sends the request through its gateway to the service provider under n8n's own provider account. The provider receives the content of the request, such as the prompt you send to a model or the text you send to a parser, but not your identity or n8n account details. For more on how n8n handles your data, refer to [Privacy](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa) and n8n's terms of service.
 
 ## Related resources
 

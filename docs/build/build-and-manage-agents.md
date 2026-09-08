@@ -43,6 +43,12 @@ Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for
 Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
 {% endhint %}
 
+### Video: how agents fit with workflows and AI
+
+Agents, fixed workflows, and workflows that use AI for specific steps each suit different kinds of work. Watch how the three compare, and how they work together in production-ready systems.
+
+{% embed url="https://www.youtube.com/embed/P5x0nsY8hCg" %}
+
 ### What you can build with agents
 
 Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](build-and-manage-agents.md#add-sub-agents) and [Schedules](build-and-manage-agents.md#run-agents-on-a-schedule) below.

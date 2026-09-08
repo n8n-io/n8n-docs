@@ -13,7 +13,7 @@ layout:
 
 # Configuration <a href="#configuration" id="configuration"></a>
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](basic-configuration/use-environment-variables/README.md).
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment variables](basic-configuration/use-environment-variables/README.md).
 
 ## Set environment variables by command line <a href="#set-environment-variables-by-command-line" id="set-environment-variables-by-command-line"></a>
 
@@ -48,7 +48,7 @@ docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
  -e N8N_TEMPLATES_ENABLED="false" \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 
@@ -66,7 +66,7 @@ n8n:
 
 ## Keeping sensitive data in separate files <a href="#keeping-sensitive-data-in-separate-files" id="keeping-sensitive-data-in-separate-files"></a>
 
-You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/) and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/). 
+You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker secrets](https://docs.docker.com/engine/swarm/secrets/) and [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 Refer to [Environment variables](basic-configuration/use-environment-variables/README.md) for details on each variable.
 
@@ -88,3 +88,5 @@ DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE=/path/to/ssl_reject_unauth
 ```
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+
+See [Configure n8n](./) for other configuration topics.

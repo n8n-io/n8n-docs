@@ -20,7 +20,10 @@ There are three built-in instance roles: Owner, Admin, and Member. If these don'
 {% hint style="info" %}
 **Feature availability**
 
-The Admin role is available on Pro and Enterprise plans.
+The **Admin** role is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
 {% endhint %}
 
 {% hint style="info" %}

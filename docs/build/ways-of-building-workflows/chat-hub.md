@@ -67,7 +67,14 @@ You can define which users can perform which actions through n8n's role system. 
 
 The Chat user is a role for people in your organization who want to use workflows without building them. Chat users only see the chat interface and can't add credentials or workflows by default.
 
-Chat users are only available on Starter, Pro, Business and Enterprise plans.
+{% hint style="info" %}
+**Feature availability**
+
+The Chat user role is available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
 
 ### Provider settings <a href="#provider-settings" id="provider-settings"></a>
 

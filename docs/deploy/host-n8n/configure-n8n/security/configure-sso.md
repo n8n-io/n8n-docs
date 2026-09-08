@@ -16,8 +16,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Business and Enterprise plans.
-* You need to be an instance owner or admin to enable and configure SAML or OIDC.
+Single sign-on is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+You need to be an instance owner or admin to enable and configure SAML or OIDC.
 {% endhint %}
 
 n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO). See [OIDC vs SAML](https://www.onelogin.com/learn/oidc-vs-saml) for more general information on the two protocols, the differences between them, and their respective benefits.
@@ -27,4 +31,10 @@ n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO)
 
 ## Configure SSO with environment variables <a href="#configure-sso-with-environment-variables" id="configure-sso-with-environment-variables"></a>
 
-You can also configure SSO from environment variables instead of through the UI. Available from n8n v2.18.0. See [SSO environment variables](../basic-configuration/use-environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+{% hint style="info" %}
+**Feature availability**
+
+Configuring SSO with environment variables is available from n8n 2.18.0.
+{% endhint %}
+
+You can also configure SSO from environment variables instead of through the UI. See [SSO environment variables](../basic-configuration/use-environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.

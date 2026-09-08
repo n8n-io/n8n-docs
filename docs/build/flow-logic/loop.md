@@ -44,7 +44,7 @@ To create a loop in an n8n workflow, connect the output of one node to the input
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
-![Editor UI view of sample workflow](../.gitbook/assets/example_workflow.png)
+![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](../.gitbook/assets/example_workflow.png)
 
 ### Loop until all items are processed <a href="#loop-until-all-items-are-processed" id="loop-until-all-items-are-processed"></a>
 

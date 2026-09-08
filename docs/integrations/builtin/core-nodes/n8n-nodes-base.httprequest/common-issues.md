@@ -55,7 +55,7 @@ To resolve, address the target by a name the container can route to:
     ```yaml
     services:
       n8n:
-        image: docker.n8n.io/n8nio/n8n
+        image: n8nio/n8n
         extra_hosts:
           - "host.docker.internal:host-gateway"
     ```

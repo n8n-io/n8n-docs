@@ -10,7 +10,7 @@ originalUrl: https://docs.n8n.io/integrations/builtin/credentials/openai
 url: https://docs.n8n.io/integrations/builtin/credentials/openai
 description: >-
   Documentation for OpenAI credentials. Use these credentials to authenticate
-  OpenAI in n8n, a workflow automation platform.
+  with OpenAI in n8n.
 layout:
   width: default
   title:
@@ -32,6 +32,10 @@ layout:
 ---
 
 # OpenAI credentials
+
+{% hint style="info" %}
+On n8n Cloud, you can skip setting up OpenAI credentials by selecting **Use Gateway credits** in the credential field of nodes that support it. Refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) for details.
+{% endhint %}
 
 You can use these credentials to authenticate the following nodes:
 
@@ -61,7 +65,7 @@ To configure this credential, you'll need:
 
 To generate your API Key:
 
-1. Login to your OpenAI account or [create](https://platform.openai.com/signup/) an account.
+1. Log in to your OpenAI account or [create](https://platform.openai.com/signup/) an account.
 2. Open your [API keys](https://platform.openai.com/api-keys) page.
 3. Select **Create new secret key** to create an API key, optionally naming the key.
 4. Copy your key and add it as the **API Key** in n8n.

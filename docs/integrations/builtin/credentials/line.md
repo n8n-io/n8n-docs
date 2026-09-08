@@ -20,9 +20,9 @@ layout:
 
 
 {% hint style="warning" %}
-**Deprecated: End of service**
+**Feature availability**
 
-LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce) for more information.
+The Line node is deprecated from n8n 1.64.0. LINE Notify ends its own service on April 1, 2025, after which the node stops working. View LINE Notify's [end of service announcement](https://notify-bot.line.me/closing-announce) for more information.
 {% endhint %}
 
 

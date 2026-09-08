@@ -35,6 +35,10 @@ layout:
 
 # Qwen Cloud
 
+{% hint style="info" %}
+On n8n Cloud, you can use the Qwen Cloud node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Qwen Cloud API key. Select **Use Gateway credits** in the node's credential field to run the node without a Qwen Cloud account.
+{% endhint %}
+
 The Qwen Cloud node lets you call models available on Qwen Cloud from n8n. Use it to generate completions, analyze or create images, and produce short videos from text or images.
 
 {% hint style="info" %}

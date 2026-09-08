@@ -17,7 +17,11 @@ Enable the Prometheus metrics endpoint in n8n, then connect Grafana through a Pr
 {% hint style="info" %}
 **Feature availability**
 
-The `/metrics` endpoint isn't available on n8n Cloud.
+The `/metrics` endpoint is available on:
+
+- **Self-hosted:** All editions
+
+It isn't available on n8n Cloud.
 {% endhint %}
 
 ## Reusable dashboard templates <a href="#reusable-dashboard-templates" id="reusable-dashboard-templates"></a>
@@ -58,7 +62,12 @@ Grafana confirms the connection with a success message.
 
 ## Webhook observability <a href="#webhook-observability" id="webhook-observability"></a>
 
-Available from n8n version 2.28.0.
+
+{% hint style="info" %}
+**Feature availability**
+
+Webhook observability is available from n8n 2.28.0.
+{% endhint %}
 
 n8n exposes a `n8n_webhook_request_duration_seconds` histogram for every webhook call. Enable these environment variables to collect it:
 
@@ -100,7 +109,11 @@ Each series carries these labels:
 
 ## Form submission observability <a href="#form-submission-observability" id="form-submission-observability"></a>
 
-Available from n8n version 2.28.0.
+{% hint style="info" %}
+**Feature availability**
+
+Form submission observability is available from n8n 2.28.0.
+{% endhint %}
 
 n8n exposes a `n8n_form_submission_duration_seconds` histogram for every form submission. Enable these environment variables to collect it:
 
@@ -145,9 +158,21 @@ Form submissions don't include a `method` label because n8n only accepts form da
 | Error rate (non-2xx) | `sum by (workflow_id) (rate(n8n_form_submission_duration_seconds_count{status_code!="2.."}[5m]))` |
 | Average processing duration | `rate(n8n_form_submission_duration_seconds_sum[5m]) / rate(n8n_form_submission_duration_seconds_count[5m])` |
 
+## Durable scheduler observability
+
+n8n exposes queue-depth, scheduling-lag, dispatch, retry, and dead-letter metrics for the [durable scheduler](../configure-n8n/durable-scheduler.md). Enable them with `N8N_METRICS_INCLUDE_SCHEDULER_METRICS`, then see [Durable scheduler observability](../configure-n8n/durable-scheduler.md#observability) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-scheduler) for them.
+
+## Poll trigger observability
+
+n8n exposes poll-duration, poll-error, overlap, and cursor-commit metrics for [poll triggers](../configure-n8n/durable-scheduler.md#poll-triggers). Enable them with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`, then see [Poll trigger metrics](../configure-n8n/durable-scheduler.md#poll-trigger-metrics) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-poll-triggers) for them.
+
 ## Workflow name lookup <a href="#workflow-name-lookup" id="workflow-name-lookup"></a>
 
-Available from n8n version 2.28.0.
+{% hint style="info" %}
+**Feature availability**
+
+Workflow name lookup is available from n8n 2.28.0.
+{% endhint %}
 
 When you enable `N8N_METRICS_INCLUDE_WORKFLOW_INFO`, n8n exposes one gauge per workflow:
 

@@ -43,7 +43,7 @@ Git is a complex topic. This section provides a brief introduction to the key te
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When they finish their work, their branch is merged back into the main branch.
 
-![Diagram](../.gitbook/assets/simple-git-branch.png)
+![Main branch with two separate branches forked from it, each merged back into main at a different point](../.gitbook/assets/simple-git-branch.png)
 
 ## Local and remote: Moving work between your machine and a Git provider <a href="#local-and-remote-moving-work-between-your-machine-and-a-git-provider" id="local-and-remote-moving-work-between-your-machine-and-a-git-provider"></a>
 

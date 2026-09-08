@@ -32,10 +32,10 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to [Salesforce's developer documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for more information about the service.
 
-{% hint style="info" %}
-**Salesforce External Client Apps**
+{% hint style="warning" %}
+**Feature availability**
 
-Salesforce is deprecating Connected Apps in favor of External Client Apps. Both methods work with n8n. If you're creating a new integration, use External Client Apps. Existing Connected Apps will continue to work.
+Salesforce is deprecating Connected Apps in favor of External Client Apps. Check Salesforce's own documentation for the retirement timeline. Both methods work with n8n. If you're creating a new integration, use External Client Apps. Existing Connected Apps will continue to work.
 {% endhint %}
 
 ## Using JWT <a href="#using-jwt" id="using-jwt"></a>
@@ -84,10 +84,10 @@ Refer to Salesforce's [External Client App Basics](https://help.salesforce.com/s
 
 ### Create a Connected App (legacy) <a href="#create-a-connected-app-legacy" id="create-a-connected-app-legacy"></a>
 
-{% hint style="info" %}
-**Legacy method**
+{% hint style="warning" %}
+**Feature availability**
 
-Salesforce is deprecating Connected Apps. Use External Client Apps instead for new integrations.
+Salesforce is deprecating Connected Apps in favor of External Client Apps. Check Salesforce's own documentation for the retirement timeline. Use External Client Apps instead for new integrations.
 {% endhint %}
 
 To set things up, first you'll create a private key and certificate, then a connected app:
@@ -167,10 +167,10 @@ Refer to Salesforce's [External Client App Basics](https://help.salesforce.com/s
 
 ### Create a Connected App (legacy) <a href="#create-a-connected-app-legacy" id="create-a-connected-app-legacy"></a>
 
-{% hint style="info" %}
-**Legacy method**
+{% hint style="warning" %}
+**Feature availability**
 
-Salesforce is deprecating Connected Apps. Use External Client Apps instead for new integrations.
+Salesforce is deprecating Connected Apps in favor of External Client Apps. Check Salesforce's own documentation for the retirement timeline. Use External Client Apps instead for new integrations.
 {% endhint %}
 
 If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, you can also configure OAuth2 by creating a connected app:

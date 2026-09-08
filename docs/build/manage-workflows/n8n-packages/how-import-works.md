@@ -14,9 +14,9 @@ tags:
 # How import works
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-n8n packages are in preview. Import behavior may change in future releases.
+n8n packages are in Preview. Import behavior may change in future releases.
 {% endhint %}
 
 This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity.

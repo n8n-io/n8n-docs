@@ -13,8 +13,16 @@ layout:
 [tag-workflows.md](tag-workflows.md)
 {% endcontent-ref %}
 
+{% content-ref url="favorite-items.md" %}
+[favorite-items.md](favorite-items.md)
+{% endcontent-ref %}
+
 {% content-ref url="view-change-history.md" %}
 [view-change-history.md](view-change-history.md)
+{% endcontent-ref %}
+
+{% content-ref url="workflow-reviews.md" %}
+[workflow-reviews.md](workflow-reviews.md)
 {% endcontent-ref %}
 
 {% content-ref url="export-and-import.md" %}

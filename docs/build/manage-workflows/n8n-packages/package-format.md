@@ -14,9 +14,9 @@ tags:
 # Package format
 
 {% hint style="info" %}
-**Feature availability**
+**Preview status**
 
-n8n packages are in preview. The package format may change in future releases.
+n8n packages are in Preview. The package format may change in future releases.
 {% endhint %}
 
 An [n8n package](README.md) is a gzip-compressed tar archive. Standard tools read it, so you can inspect one without n8n:

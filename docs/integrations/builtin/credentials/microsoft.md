@@ -2,7 +2,7 @@
 title: Microsoft credentials
 description: >-
   Documentation for Microsoft credentials. Use these credentials to authenticate
-  Microsoft in n8n, a workflow automation platform.
+  with Microsoft in n8n.
 contentType:
   - integration
   - reference
@@ -35,7 +35,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Choosing a credential type**
 
-Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials.
+Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. You can reuse the generic credential across multiple Microsoft nodes. When you use it, make sure you grant it the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -66,7 +66,7 @@ Refer to the linked Microsoft API documentation below for more information about
 
 Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
 
-For self-hosted users, there are two main steps to configure OAuth2 from scratch:
+Self-hosted users can configure OAuth2 from scratch in two main steps:
 
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
 2. Add a credential to that application, either by [generating a client secret](#generate-a-client-secret) or [registering a certificate](#authenticate-with-a-certificate).
@@ -184,7 +184,45 @@ If you're using a government cloud tenant, you may also need to update the **Aut
 Define granular permissions for interacting with the following Microsoft services:
 
 * Microsoft Teams
-* Microsoft Excel (OneDrive)
+* Microsoft Excel
+* Microsoft Outlook
+* Microsoft SharePoint
+* Microsoft OneDrive
+
+To select different scopes for one of these credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Some features may not work as expected with more restrictive scopes.
+
+#### Default scopes for Microsoft Outlook
+
+Microsoft Outlook credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Contacts.Read`
+* `Contacts.ReadWrite`
+* `Calendars.Read`
+* `Calendars.Read.Shared`
+* `Calendars.ReadWrite`
+* `Mail.ReadWrite`
+* `Mail.ReadWrite.Shared`
+* `Mail.Send`
+* `Mail.Send.Shared`
+* `MailboxSettings.Read`
+
+#### Default scopes for Microsoft SharePoint
+
+Microsoft SharePoint credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `https://<subdomain>.sharepoint.com/.default`, where you replace `<subdomain>` with the credential's **Subdomain** value
+
+#### Default scopes for Microsoft OneDrive
+
+Microsoft OneDrive credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Files.ReadWrite.All`
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 
@@ -232,6 +270,6 @@ Delegated permissions:
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
-Here are the known common errors and issues with Microsoft OAuth2 credentials.
+Common errors and issues with Microsoft OAuth2 credentials:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}

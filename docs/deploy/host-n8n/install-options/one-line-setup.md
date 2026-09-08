@@ -28,7 +28,7 @@ You don't need to know Docker to use this guide; just have it installed and runn
 The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 {% endhint %}
 
-Watch a video guide covering this setup, from installing Docker to [turning on n8n Assistant](#optional-turn-on-the-ai-assistant):
+Watch a video guide covering this setup, from installing Docker to [turning on n8n Assistant](#optional-turn-on-n8n-assistant):
 
 {% embed url="https://www.youtube.com/embed/t5RBVTby9EU" %}
 
@@ -84,11 +84,11 @@ Running the command sets up everything below automatically. There's nothing extr
 |---|---|
 | **n8n** | The workflow editor itself, running at `http://localhost:5678`. |
 | **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server. |
-| **n8n Assistant support services** | A sandbox that safely runs the code n8n Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on n8n Assistant](#optional-turn-on-the-ai-assistant) |
+| **n8n Assistant support services** | A sandbox that safely runs the code n8n Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on n8n Assistant](#optional-turn-on-n8n-assistant) |
 
 If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
 
-The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up n8n Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure it.
+The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure it.
 
 ## Optional: Turn on n8n Assistant
 
@@ -98,7 +98,7 @@ n8n works fully without n8n Assistant, which is an optional extra. Once n8n is r
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.
 3. Restart n8n: `docker compose -f ./n8n/compose.yml up -d`
 
-Full setup steps, including the supported providers, are in [Set up n8n Assistant](../configure-n8n/set-up-ai-assistant.md).
+Full setup steps, including the supported providers, are in [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
 
 By default, n8n Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
 

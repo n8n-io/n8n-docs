@@ -63,10 +63,10 @@ n8n has more than one kind of credit. They have separate balances and pay for di
 | Credit type | What it pays for | Where you see it |
 |---|---|---|
 | Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** tab in the Cloud admin dashboard |
-| AI Assistant credits | Your usage of [n8n's AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) and AI Workflow Builder | In the AI Assistant panel in the editor |
+| n8n Assistant credits | Your usage of [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) and AI Workflow Builder | In the n8n Assistant panel in the editor |
 | Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users | Only on instances without Gateway credits |
 
-Topping up Gateway credits doesn't add AI Assistant credits, and using the AI Assistant doesn't spend your Gateway credit balance.
+Topping up Gateway credits doesn't add n8n Assistant credits, and using the n8n Assistant doesn't spend your Gateway credit balance.
 
 ## Data handling
 

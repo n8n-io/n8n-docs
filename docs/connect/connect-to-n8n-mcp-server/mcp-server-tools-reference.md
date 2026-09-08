@@ -35,6 +35,8 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `tags` | `string[]` | No | | Filter by tag names. Uses AND semantics — a workflow must have all the listed tags to match. |
 | `limit` | `integer` | No | `200` | Limit the number of results (max 200) |
 | `sortBy` | `string` | No | `"updatedAt:desc"` | Sort order for results. One of: `"updatedAt:desc"`, `"updatedAt:asc"`, `"createdAt:desc"`, `"createdAt:asc"`, `"name:asc"`, `"name:desc"` |
+| `folderId` | `string` | No | | Filter by folder. Pass `"0"` to match only workflows that sit at the project root rather than in a folder. |
+| `includeSubfolders` | `boolean` | No | `true` | Whether a `folderId` search also covers that folder's subfolders. Set to `false` to match only workflows directly inside the folder. Ignored when `folderId` is `"0"`. |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -49,6 +51,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `data[].updatedAt` | `string \| null` | ISO timestamp when the workflow was last saved |
 | `data[].triggerCount` | `number \| null` | The number of triggers associated with the workflow |
 | `data[].availableInMCP` | `boolean` | Whether the workflow is visible to MCP tools |
+| `data[].parentFolderId` | `string \| null` | The ID of the folder holding the workflow, or null if at the project root |
 | `data[].tags` | `array` | Tags assigned to the workflow, each with `id` and `name` |
 | `count` | `integer` | Total number of workflows that match the filters |
 
@@ -58,6 +61,7 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 - Results are sorted by most recently updated workflows first by default.
 - Filtering by `tags`, and the `tags` field in results, are available from n8n 2.27.0. Use `list_workflow_tags` to discover the available tag names.
 - Results no longer include `scopes` or `canExecute` from n8n 2.35.0. Use `get_workflow_details` to check permissions for a single workflow.
+- Filtering by `folderId`, and the `parentFolderId` field in results, are available from n8n 2.37.0. Use `search_folders` to resolve a folder name to an ID, or pass the `parentFolderId` of a workflow you already found to list its siblings.
 - **IMPORTANT**: This tool can list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ### get_workflow_details <a href="#getworkflowdetails" id="getworkflowdetails"></a>
@@ -129,6 +133,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 |------|------|----------|---------|-------------|
 | `workflowId` | `string` | Yes | | The ID of the workflow to execute |
 | `executionMode` | `"manual" \| "production"` | Yes | | `"manual"` tests the current version, `"production"` executes the published (active) version |
+| `triggerNodeName` | `string` | No | | Name of the trigger node to execute. Required when providing `inputs`. If omitted, the workflow must have exactly one eligible trigger that doesn't require inputs, such as a **Schedule Trigger** or a **Manual Trigger** in manual mode. Use `get_workflow_details` to see available trigger names |
 | `inputs` | `object` | No | | Inputs to provide to the workflow (discriminated union, see below) |
 
 **`inputs` variants (discriminated by `type`):**
@@ -162,7 +167,9 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 - Production mode supports workflows with Webhook, Chat Trigger, Form Trigger, and Schedule Trigger nodes.
 - Manual mode also supports Manual Trigger nodes.
 - When `executionMode` is `"production"`, the workflow must have a published (active) version.
-- If there are multiple supported triggers in a workflow, MCP clients may only be able to use one (first one) of them to trigger the workflow when using workflow execution tools.
+- If a workflow has more than one eligible trigger, or its only eligible trigger requires input data (Webhook, Chat Trigger, or Form Trigger), `execute_workflow` returns an error listing the available trigger names instead of picking one. Pass `triggerNodeName` to specify which trigger to use.
+- `execute_workflow` only picks a trigger automatically when the workflow has exactly one eligible trigger that doesn't require inputs, such as a Schedule Trigger or a Manual Trigger in manual mode.
+- `triggerNodeName` and the error-on-multiple-triggers behavior are available from n8n 2.36.0. Earlier versions execute a trigger without letting you specify which one when a workflow has more than one.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
 
 ---
@@ -427,7 +434,7 @@ Search for folders within a project.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows in a specific folder.
+- This tool enables MCP clients to create workflows in a specific folder, and to resolve a folder name to the `folderId` that `search_workflows` filters by.
 
 ---
 

@@ -24,7 +24,7 @@ layout:
 
 External storage is available on:
 
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
 
@@ -41,11 +41,11 @@ n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welc
 
 S3 binary data storage is available on:
 
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
 
-You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
+Activate your [license key](../manage-your-license.md) before you enable external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your plan.
 {% endhint %}
 
 ### Setup <a href="#setup" id="setup"></a>
@@ -144,11 +144,11 @@ n8n supports [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storag
 
 Azure Blob Storage for binary data is available on:
 
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 It isn't available on n8n Cloud.
 
-You will need an [Enterprise license key](../manage-your-license.md) for external storage. n8n won't start in `azure` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your license.
+Activate your [license key](../manage-your-license.md) before you enable external storage. n8n won't start in `azure` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your plan.
 {% endhint %}
 
 ### Azure setup
@@ -201,7 +201,7 @@ In [queue mode](enable-queue-mode.md), set `N8N_EXECUTION_DATA_STORAGE_MODE` and
 {% hint style="warning" %}
 **License required to start**
 
-S3 execution data storage requires a valid [Enterprise license key](../manage-your-license.md). If you set `N8N_EXECUTION_DATA_STORAGE_MODE=s3` without a valid license, n8n won't start. To start n8n again, switch the mode back to `database` or `filesystem`, or restore a valid license.
+S3 execution data storage requires a Business or Enterprise plan with an active [license key](../manage-your-license.md). If you set `N8N_EXECUTION_DATA_STORAGE_MODE=s3` without a valid license, n8n won't start. To start n8n again, switch the mode back to `database` or `filesystem`, or restore a valid license.
 {% endhint %}
 
 After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:

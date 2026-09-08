@@ -33,7 +33,7 @@ layout:
 
 # Gmail
 
-Use the Gmail node to automate work in Gmail, and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, including creating, updating, deleting, and getting drafts, messages, labels, thread.
+Use the Gmail node to automate work in Gmail, and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, including creating, updating, deleting, and getting drafts, messages, labels, and threads.
 
 On this page, you'll find a list of operations the Gmail node supports and links to more resources.
 
@@ -79,13 +79,13 @@ Refer to [Google credentials](../../credentials/google/README.md) for guidance o
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-[Browse n8n-nodes-base.gmail integration templates](https://n8n.io/integrations/gmail) or [search all templates](https://n8n.io/workflows/)
+[Browse Gmail integration templates](https://n8n.io/integrations/gmail) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
 
-n8n provides a trigger node for Gmail. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.gmailtrigger/README.md).
+n8n provides a trigger node for Gmail. See the [Gmail Trigger node docs](../../trigger-nodes/n8n-nodes-base.gmailtrigger/README.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

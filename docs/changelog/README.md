@@ -1,3 +1,27 @@
+---
+description: >-
+  A curated, narrative summary of the most important new n8n features as they
+  roll out.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Changelog
 
 Every n8n release moves the platform forward. The changelog is where we call out the changes that matter most to the technical teams who build on n8n: new capabilities, more control over how your workflows run, and clearer visibility into what they're actually doing. Each entry is tied to the version it shipped in, newest first, and written to stand on its own, so it's easy to share the one update your team has been waiting for.
@@ -10,9 +34,81 @@ Use this page alongside n8n's other release resources depending on what you need
 * [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail of each release, linked to commits, including bug fixes and minor changes.
 
 Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-notes-1.x.md), and [0.x](release-notes-0.x.md) remain archived. Everything in the 2.x archive is covered by this changelog and the Release notes.
+
+For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+## Error workflow executions no longer count towards your quota
+
+**Released:** 2026-09-01 in [n8n 2.38](release-notes.md#n8n2381)
+
+Runs of your error workflows are now excluded from your execution quota, on every plan. An error workflow is the one n8n runs when another workflow fails. It receives the details of the failure (which workflow, which node, what went wrong) and does something useful with them: post to a Slack channel, send an email, open a ticket, or retry the run.
+
+Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
+
+Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
+
+On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
+
+## Use AI models and tool services without setting up provider accounts or credentials
+
+**Released:** 2026-09-02 in [n8n 2.36](release-notes.md#n8n235)
+
+You can now use supported AI models and services in n8n Cloud without first creating an account with each provider, setting up billing, or adding an API key. [Gateway credits](https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits) let you start building with a prepaid balance managed through n8n.
+
+Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Qwen, MiniMax, and Moonshot Kimi. You can also use credits with Brave Search, Firecrawl, Browserbase, LlamaParse, and PDF.co.
+
+![Agent using tool services available with Gateway credits](<.gitbook/assets/form hero 3.png>)
+
+On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
+
+![Select Gateway credits in the Credetial dropdown ](<.gitbook/assets/select credits.png>)
+
+Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
+
+Instance owners can add funds manually or configure automatic top-ups based on a balance threshold, target balance, and optional monthly limit. You can track your remaining balance and spend from **Cloud Admin Panel>Manage > Gateway credits**, including breakdowns by model and workflow.
+
+You can continue using your own provider credentials as before. Gateway credits give you another option when you want to get started without setting up and managing a separate provider account first.
+
+For more details, see the [Forum post](https://community.n8n.io/t/310859).
+
+## AI Assistant on self-hosted n8n: set up in minutes
+
+**Released:** 2026-08-18 in [n8n 2.35](release-notes.md#n8n235)
+
+The AI Assistant [arrived on n8n Cloud in July](./#ai-assistant-describe-a-goal-get-a-working-automation) and has worked on self-hosted n8n since then, but getting there meant enabling the `instance-ai` module and configuring a sandbox, a model, and web search through environment variables. n8n 2.35 enables the module by default, adds a one-line install that pre-configures the pieces you would otherwise assemble yourself, and allows you to choose your model provider, sandbox, and search directly in the UI.
+
+Self-hosted setup needs two things, plus one worth adding:
+
+* **A model provider.** Bring an API key for Anthropic, OpenAI, or OpenRouter, or point n8n at any OpenAI-compatible endpoint, including a local one. You pay the provider directly, and your prompts, workflow content, and the execution data the assistant reads go to that provider.
+* **A sandbox.** The assistant runs code to build and test what you ask for, and that code executes in an isolated sandbox, never on your n8n server. n8n's bundled sandbox runs on your own Docker host and suits local development and testing. For production, we recommend you use Daytona's managed sandbox with an API key.
+* **Web search, optional but worth adding.** With it the assistant reads current docs and APIs instead of relying on what its model remembers, through a bundled SearXNG instance or a Brave Search API key.
+
+On a brand-new instance, one command sets up everything except the model key:
+
+```bash
+curl -fsSL https://get.n8n.io | sh
+```
+
+It installs n8n with Docker Compose and pre-configures the sandbox and SearXNG web search, both free. Open the editor, add your model API key in the instance's AI settings, and start building. On an existing Docker install, the [AI Assistant setup guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) covers the sandbox and search options for each deployment shape, in environment variables or in the UI.
+
+AI Assistant requires Docker. npm installs will stop working with n8n 3.0 in October, so new installs should use the [one-line setup](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/one-line-setup) or [Docker Compose](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-using-docker-compose).
+
+{% hint style="warning" %}
+**Preview status**
+
+AI Assistant is in Preview. It can make mistakes, and its behavior may change while it's in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
+
+{% hint style="info" %}
+**Feature availability**
+
+Self-hosted Enterprise support is coming. Enterprise customers who want to try AI Assistant before then can contact their Customer Success Manager about preview access.
+{% endhint %}
 
 ## Return webhook responses of any size from your workers
 
@@ -85,7 +181,7 @@ This feature is in Preview. It can make mistakes, and its behavior may change wh
 Learn more in the [AI Assistant documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant).
 
 {% hint style="info" %}
-**Availability:** n8n Cloud only. Self-hosted support is coming.
+**Availability:** n8n Cloud at release. Self-hosted setup followed in n8n 2.35: refer to [AI Assistant on self-hosted n8n](./#ai-assistant-on-self-hosted-n8n-set-up-in-minutes).
 {% endhint %}
 
 ## MCP server updates

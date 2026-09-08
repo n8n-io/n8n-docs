@@ -107,7 +107,7 @@ If workflow reviews are enabled for your instance, you can submit a version for 
 Named versions are available on:
 
 - **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 Named versions let you give a meaningful name and description to any workflow version. This helps you identify important milestones in your workflow's development. Named versions are also protected from automatic [version history pruning](../manage-workflows/view-change-history.md), so they persist indefinitely.

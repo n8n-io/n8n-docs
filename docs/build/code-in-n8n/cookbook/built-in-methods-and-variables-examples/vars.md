@@ -19,7 +19,7 @@ layout:
 `vars` is available on:
 
 - **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 You need access to the n8n instance owner account to create variables.
 {% endhint %}

@@ -295,8 +295,8 @@ The AI Assistant needs a sandbox to run code in. You can add the same sandbox st
     - N8N_ENABLED_MODULES=instance-ai
     - N8N_INSTANCE_AI_SANDBOX_ENABLED=true
     - N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
-    - N8N_INSTANCE_AI_SANDBOX_API_URL=http://sandbox-api:8080
-    - N8N_INSTANCE_AI_SANDBOX_API_KEY=${SANDBOX_API_KEYS}
+    - N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
+    - N8N_SANDBOX_SERVICE_API_KEY=${SANDBOX_API_KEYS}
     - N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
    depends_on:
     sandbox-api:

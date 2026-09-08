@@ -1,4 +1,5 @@
 ---
+description: Build AI-powered workflows in n8n with LLM providers, agents, tools, memory, and MCP servers.
 layout:
   description:
     visible: false
@@ -6,6 +7,10 @@ layout:
 # Integrate AI <a href="#integrate-ai" id="integrate-ai"></a>
 
 n8n lets you build AI workflows that connect different LLM providers such as OpenAI, Anthropic, and Google, add tools and memory, and combine several models in one workflow.
+
+{% content-ref url="mcp-servers.md" %}
+[mcp-servers.md](mcp-servers.md)
+{% endcontent-ref %}
 
 {% content-ref url="understand-ai-components/README.md" %}
 [understand-ai-components/README.md](understand-ai-components/README.md)
@@ -22,3 +27,5 @@ n8n lets you build AI workflows that connect different LLM providers such as Ope
 {% content-ref url="ai-examples.md" %}
 [ai-examples.md](ai-examples.md)
 {% endcontent-ref %}
+
+See [Build](../README.md) for other workflow-building topics.

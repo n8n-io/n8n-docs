@@ -2,7 +2,7 @@
 title: HTTP Request node documentation
 description: >-
   Learn how to use the HTTP Request node in n8n. Follow technical documentation
-  to integrate HTTP Request node into your workflows.
+  to integrate the HTTP Request node into your workflows.
 contentType:
   - integration
   - reference
@@ -18,11 +18,11 @@ layout:
 
 # HTTP Request node <a href="#http-request-node" id="http-request-node"></a>
 
-The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API. You can use the HTTP Request node a regular node or attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) to use as a [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
+The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API. You can use the HTTP Request node as a regular node or attached to an [AI agent](../../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) to use as a [tool](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work){ data-preview }.
 
 When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
 
-There are two ways to create an HTTP request: configure the [node parameters](#node-parameters) or [import a curl command](#import-curl-command).
+You can create an HTTP request two ways: configure the [node parameters](#node-parameters) or [import a curl command](#import-curl-command).
 
 {% hint style="info" %}
 **Credentials**
@@ -306,7 +306,7 @@ Import a curl command:
 {% hint style="info" %}
 **Import format**
 
-This option always imports any parameter values as strings. If you wish to preserve the type of numbers and booleans in your request, switch **Using Fields Below** to **Using JSON** and paste your JSON object containing the parameters.
+This option always imports any parameter values as strings. To keep numbers and booleans in their original types, switch **Using Fields Below** to **Using JSON** and paste your JSON object containing the parameters.
 {% endhint %}
 
 1. From the HTTP Request node's **Parameters** tab, select **Import cURL**. The **Import cURL command** modal opens.
@@ -316,7 +316,7 @@ This option always imports any parameter values as strings. If you wish to prese
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse n8n-nodes-base.httprequest integration templates](https://n8n.io/integrations/http-request) or [search all templates](https://n8n.io/workflows/)
+[Browse HTTP Request integration templates](https://n8n.io/integrations/http-request) or [search all templates](https://n8n.io/workflows/)
 
 ## FAQ
 

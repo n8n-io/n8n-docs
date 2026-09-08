@@ -146,7 +146,7 @@ Retrieved on its own, a section that leans on its neighbours arrives stripped of
 Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
 
 * **Always link the prerequisites and the next step**, at minimum.
-* **Link parents and children both ways.** An overview or section landing page lists and links to every child page; each child links back to its parent with `./`.
+* **Link parents and children both ways.** An overview or section landing page lists and links to every child page; each child links back to its parent.
 * **Aim for a cluster of five or more interlinked pages** on the same topic. AI search cites connected clusters far more than standalone pages.
 * **Link in the body, at the first meaningful mention**, with descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". Link the first mention, not every mention.
 * **Link to separate topics; don't link for missing context.** A link can't stand in for context this section needs. If a section can't be understood without the linked page, restate the key fact instead (see [Keep each section self-contained](#keep-each-section-self-contained)).
@@ -545,11 +545,13 @@ Use the file name on its own:
 
 **Link to the current page's parent page**
 
-Use `./`, which points at the parent page — the `README.md` landing page of the current folder (`understand-workflows`):
+Use `./` only if the current folder's landing page is a `README.md`, it points there:
 
 ```
 [link to a parent page](./)
 ```
+
+If the parent is a named page instead (no `README.md` in this folder, e.g. `connect-to-n8n-mcp-server.md`), link to that file directly rather than using `./`.
 
 **Link to a page in a different subfolder in the same space**
 

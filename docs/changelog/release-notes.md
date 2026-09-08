@@ -156,7 +156,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 2.33` Redesigned instance settings for n8n assistant, plus 10 other features <a href="#n8n233" id="n8n233"></a>
+## `n8n 2.33` Redesigned instance settings for n8n Assistant, plus 10 other features <a href="#n8n233" id="n8n233"></a>
 
 **Released:** 2026-07-28
 

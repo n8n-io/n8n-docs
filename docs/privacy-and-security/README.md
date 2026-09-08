@@ -152,7 +152,7 @@ AI usage settings are available from n8n 2.7.0.
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance.
 
-More details can be found on the [n8n Assistant documentation page](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/use-n8n-assistant#ai-usage-settings).
+More details can be found on the [n8n Assistant documentation page](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
 
 #### When n8n shares data <a href="#when-n8n-shares-data" id="when-n8n-shares-data"></a>
 

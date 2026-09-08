@@ -24,7 +24,7 @@ layout:
     visible: true
 ---
 
-# Set n8n Assistant
+# Set up n8n Assistant
 
 {% hint style="info" %}
 **Feature availability**

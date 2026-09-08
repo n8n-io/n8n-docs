@@ -55,6 +55,7 @@ You must manage user details on the LDAP server, not in n8n. If you update or de
 
 If you remove a user from your LDAP server, they lose n8n access on the next sync.
 {% endhint %}
+
 ## Turn LDAP off <a href="#turn-ldap-off" id="turn-ldap-off"></a>
 
 To turn LDAP off:

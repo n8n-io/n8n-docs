@@ -40,7 +40,7 @@ The examples below all use `https://`. If your instance serves plain HTTP, such 
 2. Click on **Add custom connector**.
 3. Enter the following details:
    * **Name:** n8n MCP
-   * **Remote MCP Server URL**: the **Server URL** value shown in the **Connect a client** dialog
+   * **Remote MCP Server URL**: the **Server URL** value shown in the **Connect a client** dialog. It ends in `/mcp-server/http`, so it looks like `https://<your-n8n-domain>/mcp-server/http`. This isn't the address of your n8n editor. Don't paste the URL from your browser's address bar.
 4. Save the connector.
 5. When prompted, approve access for Claude Desktop.
 

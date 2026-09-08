@@ -40,6 +40,18 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Error workflow executions no longer count towards your quota
+
+**Released:** 2026-09-01 in [n8n 2.38](release-notes.md#n8n2381)
+
+Runs of your error workflows are now excluded from your execution quota, on every plan. An error workflow is the one n8n runs when another workflow fails. It receives the details of the failure (which workflow, which node, what went wrong) and does something useful with them: post to a Slack channel, send an email, open a ticket, or retry the run.
+
+Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
+
+Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like. Past counts stay as they are; the change applies to executions from the upgrade onwards, so the same workflows might register fewer executions per month than before.
+
+On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
+
 ## Use AI models and tool services without setting up provider accounts or credentials
 
 **Released:** 2026-09-02 in [n8n 2.36](release-notes.md#n8n235)
@@ -222,18 +234,6 @@ Learn more in the [insights retention documentation](https://app.gitbook.com/s/w
 {% hint style="info" %}
 **Availability:** Pro, Business, and Enterprise.
 {% endhint %}
-
-## Error workflow executions no longer count towards your quota
-
-**Released:** 2026-06-23 in [n8n 2.28](release-notes.md#n8n228)
-
-Runs of your error workflows are now excluded from your execution quota, on every plan. An error workflow is the one n8n runs when another workflow fails. It receives the details of the failure (which workflow, which node, what went wrong) and does something useful with them: post to a Slack channel, send an email, open a ticket, or retry the run.
-
-Until now each of those runs counted like any other execution. Handling a failure cost you an execution on top of the failure itself, and some people left error workflows out to protect their quota. Every production workflow should have one, so n8n stopped counting them.
-
-Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like. Past counts stay as they are; the change applies to executions from the upgrade onwards, so the same workflows might register fewer executions per month than before.
-
-On Cloud the change is already live. On self-hosted it applies from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
 
 ## Organize large workflows with Canvas Groups
 

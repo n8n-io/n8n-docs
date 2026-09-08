@@ -80,12 +80,12 @@
 <description>The Gotify node now supports additional message options based on Gotify's msgextras spec: Click URL (opens a link when the notification is clicked), Big Image URL (displays an image in the notification), and Intent URL (Android-only action after delivery). These are optional fields added to the message creation options and are only included in the request payload when set.</description>
 </item>
 <item>
-<title>Polish AI Assistant setup screen and connect modal</title>
+<title>Polish n8n Assistant setup screen and connect modal</title>
 <link>https://github.com/n8n-io/n8n/pull/36795</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36795</guid>
 <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.37</category>
-<description>Refined the self-hosted AI Assistant setup experience: the setup screen now has a clearer title and offers &quot;Get started&quot; or &quot;Set up later in Settings&quot; on first visit, switching to &quot;Turn off for this instance&quot; on return visits. The connect modal hides its step-indicator dots when only one setup step remains, and connection test failures now show an additional sanitized &quot;Error details&quot; line to aid troubleshooting.</description>
+<description>Refined the self-hosted n8n Assistant setup experience: the setup screen now has a clearer title and offers &quot;Get started&quot; or &quot;Set up later in Settings&quot; on first visit, switching to &quot;Turn off for this instance&quot; on return visits. The connect modal hides its step-indicator dots when only one setup step remains, and connection test failures now show an additional sanitized &quot;Error details&quot; line to aid troubleshooting.</description>
 </item>
 <item>
 <title>Add streaming to Message an Agent workflows</title>
@@ -96,12 +96,12 @@
 <description>Message an Agent workflows now support opt-in response streaming, with output streamed live through Chat and Webhook triggers. Active tool and skill calls made by the agent are shown as capability pills in the UI, giving users real-time visibility into what the agent is doing while it responds.</description>
 </item>
 <item>
-<title>Move AI Assistant connections from the sidebar to a &quot;+&quot; button in the text input</title>
+<title>Move n8n Assistant connections from the sidebar to a &quot;+&quot; button in the text input</title>
 <link>https://github.com/n8n-io/n8n/pull/36585</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36585</guid>
 <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.37</category>
-<description>AI Assistant connections (MCP servers, Computer Use, Browser Use) have moved from the sidebar Connections card into a new &quot;+&quot; button menu next to the chat input. The menu shows connected, connecting, and disconnected statuses, flags unexpected disconnects with a red indicator, and lets users reconnect Computer Use or Browser Use directly. Wording changed from &quot;Tools&quot; to &quot;Connectors&quot;/&quot;Services&quot;.</description>
+<description>n8n Assistant connections (MCP servers, Computer Use, Browser Use) have moved from the sidebar Connections card into a new &quot;+&quot; button menu next to the chat input. The menu shows connected, connecting, and disconnected statuses, flags unexpected disconnects with a red indicator, and lets users reconnect Computer Use or Browser Use directly. Wording changed from &quot;Tools&quot; to &quot;Connectors&quot;/&quot;Services&quot;.</description>
 </item>
 <item>
 <title>Show diff for closed review requests</title>
@@ -229,7 +229,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36316</guid>
 <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.36</category>
-<description>Connecting your browser to n8n's Browser Use AI Assistant is now simpler: clicking connect automatically opens the extension's connect view in a popup, which closes itself once connected. If the popup is closed or times out after 15 seconds, a Try again button lets you refocus it. The manual Open Browser Use extension button now also opens a popup instead of a new tab.</description>
+<description>Connecting your browser to n8n's Browser Use n8n Assistant is now simpler: clicking connect automatically opens the extension's connect view in a popup, which closes itself once connected. If the popup is closed or times out after 15 seconds, a Try again button lets you refocus it. The manual Open Browser Use extension button now also opens a popup instead of a new tab.</description>
 </item>
 <item>
 <title>Adapt the OAuth consent screen for first-party clients</title>
@@ -245,7 +245,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36215</guid>
 <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.36</category>
-<description>Browser Use setup in the AI Assistant now better handles unsupported environments. On mobile and tablet devices, where browser extensions aren't possible, Browser Use and automatic credential setup are hidden entirely. On non-mobile devices with non-Chromium browsers, the option still appears but the connect modal now clearly explains that only Chrome or Chromium-based browsers, like Edge or Brave, are supported. Telemetry now also records browser support status to help track success rates.</description>
+<description>Browser Use setup in the n8n Assistant now better handles unsupported environments. On mobile and tablet devices, where browser extensions aren't possible, Browser Use and automatic credential setup are hidden entirely. On non-mobile devices with non-Chromium browsers, the option still appears but the connect modal now clearly explains that only Chrome or Chromium-based browsers, like Edge or Brave, are supported. Telemetry now also records browser support status to help track success rates.</description>
 </item>
 <item>
 <title>Add preview chat to SessionTimeline view</title>

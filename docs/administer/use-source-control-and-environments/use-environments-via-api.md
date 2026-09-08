@@ -211,4 +211,4 @@ The API commits and applies the same resources as the UI: workflows, credential 
 
 * [Push and pull](push-and-pull-changes.md): How push and pull behave, and what gets committed.
 * [Copy work between environments](move-work-between-environments.md): Branch patterns for moving work between instances.
-* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The full source control API schemas.
+* [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public REST API schemas.

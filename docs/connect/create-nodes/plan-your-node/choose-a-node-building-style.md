@@ -27,6 +27,14 @@ The programmatic style is more verbose. You must use the programmatic style for:
 * Any node that needs to transform incoming data.
 * Full versioning. Refer to [Node versioning](../build-your-node/reference/versioning.md) for more information on types of versioning.
 
+{% hint style="info" %}
+**Trigger nodes must use the programmatic style**
+
+The declarative style doesn't support trigger nodes. Build every trigger node in the programmatic style, even when the action node for the same service is declarative.
+
+You can mix both styles in one node package. For example, a package submitted for [verification](../build-your-node/reference/verification-guidelines.md) can contain a declarative-style action node and a programmatic-style trigger node for the same service.
+{% endhint %}
+
 ## Data handling differences <a href="#data-handling-differences" id="data-handling-differences"></a>
 
 The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](../build-your-node/reference/base-files/README.md) for more information on node parameters and the `execute()` method.

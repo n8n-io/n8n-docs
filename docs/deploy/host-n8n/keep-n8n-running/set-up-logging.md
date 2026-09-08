@@ -18,6 +18,7 @@ Logging is an important feature for debugging. n8n uses the [winston](https://ww
 
 n8n Self-hosted Enterprise tier includes [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems), in addition to the logging options described in this document.
 {% endhint %}
+
 ## How do I set up logging in n8n? <a href="#setup" id="setup"></a>
 
 To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](../configure-n8n/basic-configuration/use-environment-variables/README.md))

@@ -4,15 +4,15 @@ name: Report readability
 on: pull_request
 
 jobs:
-    report-readability:
-        name: Report readability
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repo with history
-              uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-              with:
-                  fetch-depth: 0
-            - uses: Rebilly/lexi@5a517542b048ca8cb46e43f27736fed84dfb0e84 # v2.3.6
-              with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  glob: '**/*.md'
+  report-readability:
+    name: Report readability
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo with history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - uses: Rebilly/lexi@5a517542b048ca8cb46e43f27736fed84dfb0e84 # v2.3.6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          glob: '**/*.md'

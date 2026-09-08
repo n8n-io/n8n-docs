@@ -41,7 +41,7 @@ Every request needs an API key sent in the `X-N8N-API-KEY` header. On Enterprise
 | `sourceControl:push` | Push local changes to Git. |
 | `sourceControl:read` | Read the status of pending changes. |
 
-Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull` and nothing else. That key can't push, so production stays read-only by design.
+Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull`, so it can't push. Add `sourceControl:read` too if you also want that key to preview incoming changes with `status` before pulling them.
 
 ## Check the status, then act
 
@@ -85,7 +85,7 @@ This is a common setup: you make changes on a development instance, then promote
 Give each instance a scoped API key:
 
 * The development instance API key has `sourceControl:read` and `sourceControl:push`.
-* The production instance API key has `sourceControl:pull` only, which keeps it read-only.
+* The production instance API key has `sourceControl:read` and `sourceControl:pull`.
 
 **1. Preview the changes on development.** Call `status` with `direction=push` to see what n8n would commit:
 
@@ -113,7 +113,15 @@ curl --request POST \
 	}'
 ```
 
-**3. Pull into production.** The production instance reads the same branch and applies the changes. Use `force` to accept the incoming version, and set `autoPublish` to publish workflows as they arrive:
+**3. Preview the changes on production.** Call `status` with `direction=pull` to see what n8n would apply, before it touches anything:
+
+```curl
+curl --request GET \
+	--location '<PROD-INSTANCE-URL>/api/v1/source-control/status?direction=pull' \
+	--header 'X-N8N-API-KEY: <PROD-API-KEY>'
+```
+
+**4. Pull into production.** The production instance reads the same branch and applies the changes. Use `force` to accept the incoming version, and set `autoPublish` to publish workflows as they arrive:
 
 ```curl
 curl --request POST \

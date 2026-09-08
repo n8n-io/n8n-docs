@@ -17,20 +17,11 @@ layout:
 This is an n8n-provided method for working with the [JMESPath](../../work-with-data/handle-special-data-types/query-json-data.md) library.
 
 {% hint style="info" %}
-**Python support**
+**JavaScript only**
 
-You can use Python in the Code node. It isn't available in expressions.
+The Python Code node doesn't provide this method. To query JSON in Python, use standard Python instead. Refer to [Query JSON with JMESPath](../../work-with-data/handle-special-data-types/query-json-data.md) for a Python version of each example.
 {% endhint %}
-{% tabs %}
-{% tab title="JavaScript" %}
+
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | ✅ |
-{% endtab %}
-
-{% tab title="Python" %}
-| Method | Description | 
-| ------ | ----------- | 
-| `_jmespath()` | Perform a search on a JSON object using JMESPath. | 
-{% endtab %}
-{% endtabs %}

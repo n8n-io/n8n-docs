@@ -113,7 +113,7 @@ curl --request POST \
 	}'
 ```
 
-**3. Pull into production.** The Production instance reads the same branch and applies the changes. Use `force` to accept the incoming version, and set `autoPublish` to publish workflows as they arrive:
+**3. Pull into production.** The production instance reads the same branch and applies the changes. Use `force` to accept the incoming version, and set `autoPublish` to publish workflows as they arrive:
 
 ```curl
 curl --request POST \

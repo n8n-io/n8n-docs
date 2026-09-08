@@ -25,19 +25,15 @@ n8n provides a custom method, `jmespath()`. Use this method to perform a search 
 
 The basic syntax is: 
 
-{% tabs %}
-{% tab title="JavaScript" %}
 ```js
 $jmespath(object, searchString)
 ```
-{% endtab %}
 
-{% tab title="Python" %}
-```python
-_jmespath(object, searchString)
-```
-{% endtab %}
-{% endtabs %}
+{% hint style="info" %}
+**JavaScript only**
+
+The Python Code node doesn't provide `$jmespath()`. To get the same results in Python, use standard Python instead. Each example below includes a Python version.
+{% endhint %}
 
 To help understand what the method does, here is the equivalent longer JavaScript:
 
@@ -155,8 +151,9 @@ return {firstNames};
 
 {% tab title="Code node (Python)" %}
 ```python
-firstNames = _jmespath(_json.body.people, "[*].first" )
-return {"firstNames":firstNames}
+people = _item["json"]["body"]["people"]
+first_names = [person["first"] for person in people]
+return {"firstNames": first_names}
 """
 Returns:
 [
@@ -203,8 +200,9 @@ return {firstTwoNames};
 
 {% tab title="Code node (Python)" %}
 ```python
-firstTwoNames = _jmespath(_json.body.people, "[:2].first" )
-return {"firstTwoNames":firstTwoNames}
+people = _item["json"]["body"]["people"]
+first_two_names = [person["first"] for person in people[:2]]
+return {"firstTwoNames": first_two_names}
 """
 Returns:
 [
@@ -249,8 +247,9 @@ return {dogsAges};
 
 {% tab title="Code node (Python)" %}
 ```python
-dogsAges = _jmespath(_json.body.dogs, "*.age")
-return {"dogsAges": dogsAges}
+dogs = _item["json"]["body"]["dogs"]
+dogs_ages = [dog["age"] for dog in dogs.values()]
+return {"dogsAges": dogs_ages}
 """
 Returns:
 [
@@ -353,8 +352,9 @@ return {newList};
 
 {% tab title="Code node (Python)" %}
 ```python
-newList = _jmespath(_json.body.people, "[].[first, last]")
-return {"newList":newList}
+people = _item["json"]["body"]["people"]
+new_list = [[person["first"], person["last"]] for person in people]
+return {"newList": new_list}
 """
 Returns:
 [

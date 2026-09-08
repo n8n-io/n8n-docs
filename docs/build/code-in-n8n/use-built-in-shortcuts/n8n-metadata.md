@@ -58,6 +58,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | ------ | ----------- |
 | `_items` | Contains incoming items in "Run once for all items" mode. |
 | `_item` | Contains the item being iterated on in "Run once for each item" mode. |
+| `_query` | In the Code Tool, contains the input string the AI Agent passes when it calls the tool. Available in "Run once for all items" mode. |
 
 ## Python (Pyodide, deprecated)
 

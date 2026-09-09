@@ -86,6 +86,10 @@ To configure this credential, you'll need:
 
 * An **Account**: The name of your Azure Storage account.
 * A **Key**: A shared key for your Azure Storage account. Select **Security + networking** and then **Access keys**. You can use either of the two account keys for this purpose.
+* An **Azure Cloud**: The cloud that hosts your storage account. Select **Azure Public Cloud**, **Azure US Government**, or **Azure China**. Select **Custom** for a private endpoint or a custom domain.
+* An **Endpoint** (Custom only): The full URL with the account name in the hostname, for example `https://myaccount.privatelink.blob.core.windows.net`. Endpoints with the account name in the path, such as Azurite, don't work.
+
+Custom endpoints are off by default. To allow them, your n8n administrator must set the environment variable [`N8N_AZURE_STORAGE_CUSTOM_ENDPOINTS_ENABLED`](../../../deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/security.md) to `true`. Without it, a credential that uses a custom endpoint fails with an error that names this setting.
 
 Refer to [Manage storage account access keys | Microsoft](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage) for more detailed steps.
 

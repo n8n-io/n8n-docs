@@ -1,0 +1,21 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
+  s_60ce6e746ce9d3::t_9c85b7041260b4 346-347,349-362,364-377
+  s_60ce6e746ce9d3::t_aec2d34a1ef04a 348
+  s_60ce6e746ce9d3::t_e40396ddba4851 363
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "331cce799e81e9372c37d89ffe6187c24b421eec",
+  "prompts": {},
+  "sessions": {
+    "s_60ce6e746ce9d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84124d3-ce9c-4a73-9716-80eb657f790d",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+docs/integrations/builtin/credentials/microsoft.md
+  s_78f30b507db2b8::t_c91ac98ff04b75 22-25
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel.md
+  s_78f30b507db2b8::t_e496da5c0fc9bc 15-21
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md
+  s_78f30b507db2b8::t_08824a80781238 15-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "dbea18d43ef02aad00b12ebb74721a29ba14fa85",
+  "prompts": {},
+  "sessions": {
+    "s_78f30b507db2b8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9be3181b-0eae-4a2d-90d9-d20b72288f1e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

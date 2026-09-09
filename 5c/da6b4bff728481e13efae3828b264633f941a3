@@ -1,0 +1,19 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_3c8c407e7844ab::t_e07f3f6b779ad2 143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "5cda6b4bff728481e13efae3828b264633f941a3",
+  "prompts": {},
+  "sessions": {
+    "s_3c8c407e7844ab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2b5df97d-850e-40e3-9c46-ace0a372f45b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Sam Wooler <swooler592@gmail.com>"
+    }
+  }
+}

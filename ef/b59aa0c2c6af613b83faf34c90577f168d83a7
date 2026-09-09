@@ -1,0 +1,21 @@
+docs/integrations/builtin/credentials/confluence.md
+  s_8bb662604843d5::t_24a5c4f8fc19cc 60-66
+docs/integrations/builtin/credentials/atlassian.md
+  s_8bb662604843d5::t_ba8cccc931e0c4 52-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "efb59aa0c2c6af613b83faf34c90577f168d83a7",
+  "prompts": {},
+  "sessions": {
+    "s_8bb662604843d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a0a8c15-da55-41c2-864d-234796fec098",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

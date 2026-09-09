@@ -1,0 +1,24 @@
+docs/build/manage-workflows/workflow-reviews.md
+  s_fa466784108c87::t_2a3db1d2a4e4bb 79-80,83
+  s_fa466784108c87::t_9f33ade70254b4 62
+  s_fa466784108c87::t_8f95b0d4dbf7de 67
+  s_fa466784108c87::t_90d0c44fa2c050 44
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  s_fa466784108c87::t_ad2d34a168a57e 96,102-107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "dc9bf7bd3a967f02a8f21591ff749b9e656f532d",
+  "prompts": {},
+  "sessions": {
+    "s_fa466784108c87": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13074f32-185a-4904-ba0b-11fb70f570ef",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

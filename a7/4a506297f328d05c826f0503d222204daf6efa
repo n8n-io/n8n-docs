@@ -1,0 +1,14 @@
+docs/build/manage-workflows/export-and-import/n8n-packages.md
+  h_c63dce324dfc7b 107-113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "a74a506297f328d05c826f0503d222204daf6efa",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

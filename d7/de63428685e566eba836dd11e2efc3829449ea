@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  s_ec3b0c6e4c53f2::t_ce6985a0e11b07 95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "d7de63428685e566eba836dd11e2efc3829449ea",
+  "prompts": {},
+  "sessions": {
+    "s_ec3b0c6e4c53f2": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "72f64b09-99f8-4070-aaa6-a87465094010",
+        "model": "auto-smart"
+      },
+      "human_author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

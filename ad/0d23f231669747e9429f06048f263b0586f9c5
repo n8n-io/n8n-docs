@@ -1,0 +1,38 @@
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal.md
+  s_51910027fb74a7::t_3026275b5ce172 125
+  s_51910027fb74a7::t_605ee32fa42e53 162
+  s_51910027fb74a7::t_ea9be417b4c216 22
+  s_51910027fb74a7::t_7626e790ba0519 34
+  s_51910027fb74a7::t_059fb3289bc835 60
+docs/integrations/builtin/credentials/microsoft.md
+  s_51910027fb74a7::t_87a1571cd3e6f8 166
+  s_51910027fb74a7::t_2beb02263e4d04 37
+  s_51910027fb74a7::t_84f633b0cf1da9 24
+  s_51910027fb74a7::t_a34f7d23d30890 185
+docs/integrations/SUMMARY.md
+  s_51910027fb74a7::t_04eba1091f70d2 252
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel.md
+  s_51910027fb74a7::t_427bc71441f263 2,4-5,10
+  s_51910027fb74a7::t_8b12b18b988c2f 21,23,25
+  s_51910027fb74a7::t_0a2ce14d302468 64
+docs/integrations/builtin/deprecated-nodes.md
+  s_51910027fb74a7::t_4ff5012e930302 162
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+  s_51910027fb74a7::t_d73d060436c509 128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "ad0d23f231669747e9429f06048f263b0586f9c5",
+  "prompts": {},
+  "sessions": {
+    "s_51910027fb74a7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "17a67370-e024-44c0-9ddd-cf0b5c600b07",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

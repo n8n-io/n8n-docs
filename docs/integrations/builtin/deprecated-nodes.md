@@ -40,8 +40,9 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | In Memory Vector Store Load | 1 |
 | Interval | 1 |
 | JSON Input Loader | 1 |
+| LangChain Code | 1 |
 | Manual Chat Trigger | 1.1 |
-| MCP Registry Client (internal) | 1 |
+| MCP Registry Client (internal) | 1.1 |
 | Message an Agent | 1 |
 | Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
@@ -94,17 +95,17 @@ Always use the current version in new workflows to get the latest features and b
 | AI Agent Tool | 3 | 2.2 |
 | Airtable | 2.2 | 1, 2, 2.1 |
 | Airtop | 1.1 | 1 |
-| Anthropic Chat Model | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
-| AWS Bedrock Chat Model | 1.1 | 1 |
+| Anthropic Chat Model | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
+| AWS Bedrock Chat Model | 1.2 | 1, 1.1 |
 | AwsS3 | 2 | 1 |
 | Baserow | 1.1 | 1 |
 | Basic LLM Chain | 1.9 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 |
 | Bitbucket Trigger | 1.1 | 1 |
-| Cal.com Trigger | 2 | 1 |
+| Cal.com Trigger | 3 | 1, 2 |
 | Call n8n Sub-Workflow Tool | 2.2 | 1, 1.1, 1.2, 1.3, 2, 2.1 |
 | Chat | 1.3 | 1, 1.1, 1.2 |
 | Chat Memory Manager | 1.1 | 1 |
-| Chat Trigger | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Chat Trigger | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | Coda | 1.1 | 1 |
 | Code | 2 | 1 |
 | Code Tool | 1.3 | 1, 1.1, 1.2 |
@@ -116,10 +117,10 @@ Always use the current version in new workflows to get the latest features and b
 | Date & Time | 2 | 1 |
 | Default Data Loader | 1.1 | 1 |
 | Discord | 2 | 1 |
-| Email Trigger (IMAP) | 2.1 | 1, 2 |
+| Email Trigger (IMAP) | 2.2 | 1, 2, 2.1 |
 | Embeddings OpenAI | 1.2 | 1, 1.1 |
 | Execute Sub-workflow | 1.3 | 1, 1.1, 1.2 |
-| Execute Workflow Trigger | 1.1 | 1 |
+| Execute Workflow Trigger | 1.2 | 1, 1.1 |
 | Execution Data | 1.1 | 1 |
 | Extract from File | 1.1 | 1 |
 | Filter | 2.3 | 1, 2, 2.1, 2.2 |
@@ -142,7 +143,7 @@ Always use the current version in new workflows to get the latest features and b
 | Guardrails | 2 | 1 |
 | HighLevel | 2 | 1 |
 | HTML | 1.2 | 1, 1.1 |
-| HTTP Request | 4.4 | 1, 2, 3, 4, 4.1, 4.2, 4.3 |
+| HTTP Request | 4.5 | 1, 2, 3, 4, 4.1, 4.2, 4.3, 4.4 |
 | HubSpot | 2.2 | 1, 2, 2.1 |
 | If | 2.3 | 1, 2, 2.1, 2.2 |
 | Information Extractor | 1.2 | 1, 1.1 |
@@ -155,47 +156,47 @@ Always use the current version in new workflows to get the latest features and b
 | Linear | 1.1 | 1 |
 | MailerLite | 2 | 1 |
 | MailerLite Trigger | 2 | 1 |
-| MCP Client Tool | 1.2 | 1, 1.1 |
-| MCP Server Trigger | 2 | 1, 1.1 |
+| MCP Client Tool | 1.4 | 1, 1.1, 1.2, 1.3 |
+| MCP Server Trigger | 2.1 | 1, 1.1, 2 |
 | Merge | 3.2 | 1, 2, 2.1, 3, 3.1 |
 | Microsoft Agent 365 Trigger | 1.1 | 1 |
 | Microsoft Excel (OneDrive) | 2.2 | 1, 2, 2.1 |
 | Microsoft OneDrive | 1.1 | 1 |
 | Microsoft Outlook | 2 | 1 |
-| Microsoft SQL | 1.1 | 1 |
+| Microsoft SQL | 1.2 | 1, 1.1 |
 | Microsoft Teams | 2 | 1, 1.1 |
 | Mindee | 3 | 1, 2 |
-| MongoDB | 1.3 | 1, 1.1, 1.2 |
+| MongoDB | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | MongoDB Chat Memory | 1.1 | 1 |
 | Moonshot Kimi Chat Model | 1.1 | 1 |
 | MySQL | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
 | n8n Form | 2.5 | 1, 2.3, 2.4 |
-| n8n Form Trigger | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
+| n8n Form Trigger | 2.6 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5 |
 | NocoDB | 4 | 1, 2, 3 |
-| Notion | 2.2 | 1, 2, 2.1 |
+| Notion | 3 | 1, 2, 2.1, 2.2 |
 | OpenAI | 2.3 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2, 2.1, 2.2 |
 | OpenAI Chat Model | 1.3 | 1, 1.1, 1.2 |
-| Perplexity | 2 | 1 |
+| Perplexity | 3 | 1, 2 |
 | Pipedrive | 2 | 1 |
 | Pipedrive Trigger | 1.1 | 1 |
-| Postgres | 2.6 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5 |
+| Postgres | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
 | Postgres Chat Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Question and Answer Chain | 1.7 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 |
-| RabbitMQ | 1.1 | 1 |
+| RabbitMQ | 1.2 | 1, 1.1 |
 | Read/Write Files from Disk | 1.1 | 1 |
 | Redis Chat Memory | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
 | Remove Duplicates | 2 | 1, 1.1 |
 | Respond to Webhook | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | RSS Read | 1.2 | 1, 1.1 |
-| Schedule Trigger | 1.3 | 1, 1.1, 1.2 |
+| Schedule Trigger | 1.4 | 1, 1.1, 1.2, 1.3 |
 | SeaTable | 2 | 1 |
 | SeaTable Trigger | 2 | 1 |
 | Send Email | 2.1 | 1, 2 |
 | Sentiment Analysis | 1.1 | 1 |
-| Set | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
+| Set | 3.5 | 1, 2, 3, 3.1, 3.2, 3.3, 3.4 |
 | Simple Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
-| Slack | 2.4 | 1, 2, 2.1, 2.2, 2.3 |
-| Split In Batches | 3 | 2 |
+| Slack | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
+| Split In Batches | 3 | 1, 2 |
 | Splunk | 2 | 1 |
 | Spreadsheet File | 2 | 1 |
 | Strava | 1.1 | 1 |
@@ -204,7 +205,7 @@ Always use the current version in new workflows to get the latest features and b
 | Summarize | 1.1 | 1 |
 | Switch | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
 | Telegram | 1.2 | 1, 1.1 |
-| Telegram Trigger | 1.3 | 1, 1.1, 1.2 |
+| Telegram Trigger | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | Text Classifier | 1.1 | 1 |
 | TheHive Trigger | 2 | 1 |
 | Think Tool | 1.1 | 1 |

@@ -307,7 +307,7 @@ N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED=true
 
 Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry. With only `N8N_ACTIVITY_LOG_ENABLED`, n8n records the changes but n8n Assistant reads none of them.
 
-The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage, and it needs its own variable.
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own variable.
 
 Turning `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` off removes instance context and the tool that reads the activity log. n8n Assistant then reads no instance context.
 
@@ -421,7 +421,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 **Node type counting**
 
 * `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
-* The variable only turns the feature on. If it's unset and node type counting still doesn't work, the managed rollout hasn't reached your instance yet.
+* The variable only turns the feature on. If it isn't set to `true` and node type counting still doesn't work, the managed rollout hasn't reached your instance yet.
 * It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
 See [Configure n8n](./) for other configuration topics.

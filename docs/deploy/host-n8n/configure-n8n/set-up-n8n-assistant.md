@@ -307,7 +307,7 @@ N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED=true
 
 Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry. With only `N8N_ACTIVITY_LOG_ENABLED`, n8n records the changes but n8n Assistant reads none of them.
 
-The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now, which is what node type counting below answers.
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage, and it needs its own variable.
 
 Turning `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` off removes instance context and the tool that reads the activity log. n8n Assistant then reads no instance context.
 

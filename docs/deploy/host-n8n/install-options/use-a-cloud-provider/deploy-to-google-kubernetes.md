@@ -184,6 +184,7 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records) for more details on how reserved IP addresses work with GKE and Kubernetes resources.
 {% endhint %}
+
 ## Delete resources <a href="#delete-resources" id="delete-resources"></a>
 
 Remove the resources created by the manifests with the following command:

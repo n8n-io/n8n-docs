@@ -1,0 +1,31 @@
+name: GitBook syntax check
+# Catches GitBook block-syntax mistakes that pass a normal Markdown review but
+# break rendering on the live site (e.g. a heading glued directly below
+# `{% endhint %}`). Scans the Markdown files changed in the PR and fails if any
+# of them trip a rule. See .github/scripts/check_gitbook_syntax.py.
+on:
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  gitbook-syntax:
+    name: runner / gitbook-syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Get changed markdown files
+        id: changed
+        uses: step-security/changed-files@3dbe17c78367e7d60f00d78ae6781a35be47b4a1 # v45.0.1
+        with:
+          files: |
+            docs/**/*.md
+      - name: Check GitBook syntax
+        if: steps.changed.outputs.any_changed == 'true'
+        run: |
+          python3 .github/scripts/check_gitbook_syntax.py ${{ steps.changed.outputs.all_changed_files }}
+      - name: Report status
+        if: failure()
+        run: echo "❌ GitBook syntax issues detected. See the log above; run locally with python3 .github/scripts/check_gitbook_syntax.py <file>"

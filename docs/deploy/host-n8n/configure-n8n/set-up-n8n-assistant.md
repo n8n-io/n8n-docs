@@ -323,7 +323,7 @@ N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
 | --- | --- | --- |
 | `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to let n8n Assistant count the node types a project uses. |
 
-Setting it to `false` doesn't force the feature off. It falls back to the managed rollout, which decides whether your instance gets it.
+This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the managed rollout, so it isn't a way to keep the feature off.
 
 Node type counting reports counts of node types, never parameter values.
 
@@ -421,7 +421,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 **Node type counting**
 
 * `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
-* Setting it to `false` doesn't force the feature off. It falls back to the managed rollout, which may not have reached your instance.
+* The variable only turns the feature on. If it's unset and node type counting still doesn't work, the managed rollout hasn't reached your instance yet.
 * It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
 See [Configure n8n](./) for other configuration topics.

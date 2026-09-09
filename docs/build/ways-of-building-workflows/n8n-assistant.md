@@ -60,14 +60,14 @@ At the start of a conversation, n8n Assistant receives instance context: a short
 Instance context draws on three sources:
 
 | What instance context reports | Source |
-| :---------------------------- | :----- |
+| --- | --- |
 | Which workflows exist in the project, and which are published | Your workflows |
 | What changed recently, and who changed it | The instance activity log |
 | Which workflows ran, how many failed, and the last failure | Your execution history |
 
 n8n Assistant gets the full picture with your first message in a conversation. After that, each message carries only what changed since then. Start a new conversation for unrelated work, and n8n Assistant reads the project again from the start.
 
-Instance context is off by default on self-hosted instances. An instance admin turns it on. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
+On n8n Cloud, n8n manages instance context for you. On self-hosted instances it's off by default, and an instance admin turns it on. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
 
 ### What n8n Assistant can look up from instance context
 
@@ -91,7 +91,7 @@ The activity log records that a change happened, not what the change contained. 
 Instance context doesn't include:
 
 - **Parameter values.** A change entry names the node types you added or removed, and which settings you changed. It never records the values you set.
-- **Individual nodes.** Adding a second **Slack** node looks the same as having one. Entries track which node types are in use, not how many nodes of each type.
+- **Individual nodes.** Adding a second **Slack** node looks the same as adding the first. A change entry names the node types that changed, not how many nodes of each type you have.
 - **Every node type in a large change.** When one save adds many node types, the entry lists some of them and reports the total.
 - **Work in projects you didn't open.** See [Instance context stays inside one project](#instance-context-stays-inside-one-project).
 

@@ -39,9 +39,10 @@ from typing import Iterable
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DOCS_ROOT = REPO_ROOT / "docs"
 
-# A real ATX heading: 1-6 `#` followed by a space or end of line. (`#foo` with
-# no space is not a heading in CommonMark, so it isn't matched.)
-ATX_RE = re.compile(r"^#{1,6}(?:\s|$)")
+# A real ATX heading: up to 3 leading spaces (CommonMark allows 0-3; 4+ is an
+# indented code block), then 1-6 `#` followed by a space or end of line. (`#foo`
+# with no space is not a heading in CommonMark, so it isn't matched.)
+ATX_RE = re.compile(r"^ {0,3}#{1,6}(?:\s|$)")
 # The whole (trimmed) line is exactly the endhint tag, tolerant of inner spaces.
 ENDHINT_RE = re.compile(r"^\{%\s*endhint\s*%\}$")
 # Opening of a fenced code block: 3+ backticks or 3+ tildes.

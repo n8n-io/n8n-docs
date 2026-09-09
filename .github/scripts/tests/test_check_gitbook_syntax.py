@@ -66,6 +66,27 @@ def main():
     )
     check("glued heading inside a nested code fence is not flagged", endhint_findings(nested) == [])
 
+    # Tilde fences get the same masking as backtick fences.
+    tilde = (
+        "Example of the bug:\n\n"
+        "~~~md\n"
+        "{% endhint %}\n"
+        "## Heading\n"
+        "~~~\n"
+    )
+    check("glued heading inside a tilde code fence is not flagged", endhint_findings(tilde) == [])
+
+    # A backtick run inside a tilde fence doesn't close it (different char).
+    tilde_nested = (
+        "~~~md\n"
+        "```\n"
+        "{% endhint %}\n"
+        "## Heading\n"
+        "```\n"
+        "~~~\n"
+    )
+    check("glued heading inside a tilde fence wrapping backticks is not flagged", endhint_findings(tilde_nested) == [])
+
     # --- Guards ---------------------------------------------------------------
     # A heading glued to a `{% hint %}` OPENING tag renders as the hint title.
     hint_title = "{% hint style=\"info\" %}\n## This is the hint title\nBody.\n{% endhint %}\n"

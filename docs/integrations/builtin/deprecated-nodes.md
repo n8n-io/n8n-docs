@@ -29,7 +29,6 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Chat Messages Retriever | 1 |
 | Convert to/from binary data | 1.1 |
 | Cron | 1 |
-| Embedding Dimensions | 1 |
 | Function | 1 |
 | Function Item | 1 |
 | GitHub Document Loader | 1.1 |
@@ -39,15 +38,15 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | In Memory Vector Store Insert | 1 |
 | In Memory Vector Store Load | 1 |
 | Interval | 1 |
+| Item Lists | 3.1 |
 | JSON Input Loader | 1 |
 | LangChain Code | 1 |
+| Line | 1 |
 | Manual Chat Trigger | 1.1 |
 | MCP Registry Client (internal) | 1.1 |
-| Message an Agent | 1 |
 | Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
 | OpenAI Model | 1 |
-| Options | 1 |
 | Orbit | 1 |
 | Pinecone: Insert | 1 |
 | Pinecone: Load | 1 |
@@ -57,12 +56,14 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | SerpApi (Google Search) | 1 |
 | Simulate | 1 |
 | Simulate Trigger | 1 |
+| Spreadsheet File | 2 |
 | Supabase: Insert | 1 |
 | Supabase: Load | 1 |
 | Tool Executor | 1 |
 | Workflow Trigger | 1 |
 | Write Binary File | 1 |
 | Zep | 1.4 |
+| Zep Vector Store | 1 |
 | Zep Vector Store: Insert | 1 |
 | Zep Vector Store: Load | 1 |
 
@@ -149,7 +150,6 @@ Always use the current version in new workflows to get the latest features and b
 | Information Extractor | 1.2 | 1, 1.1 |
 | Invoice Ninja | 2 | 1 |
 | Invoice Ninja Trigger | 2 | 1 |
-| Item Lists | 3.1 | 1, 2, 2.1, 2.2, 3 |
 | Jira Trigger | 1.1 | 1 |
 | Kafka Trigger | 1.3 | 1, 1.1, 1.2 |
 | Lemlist | 2 | 1 |
@@ -198,7 +198,6 @@ Always use the current version in new workflows to get the latest features and b
 | Slack | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
 | Split In Batches | 3 | 1, 2 |
 | Splunk | 2 | 1 |
-| Spreadsheet File | 2 | 1 |
 | Strava | 1.1 | 1 |
 | Structured Output Parser | 1.3 | 1, 1.1, 1.2 |
 | Summarization Chain | 2.1 | 1, 2 |

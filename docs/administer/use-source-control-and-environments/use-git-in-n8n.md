@@ -35,6 +35,7 @@ This page introduces the Git concepts and terminology used in n8n. It doesn't co
 
 Git is a complex topic. This section provides a brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
 {% endhint %}
+
 ## Git overview <a href="#git-overview" id="git-overview"></a>
 
 [Git](https://git-scm.com/) is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/).
@@ -43,7 +44,7 @@ Git is a complex topic. This section provides a brief introduction to the key te
 
 Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When they finish their work, their branch is merged back into the main branch.
 
-![Diagram](../.gitbook/assets/simple-git-branch.png)
+![Main branch with two separate branches forked from it, each merged back into main at a different point](../.gitbook/assets/simple-git-branch.png)
 
 ## Local and remote: Moving work between your machine and a Git provider <a href="#local-and-remote-moving-work-between-your-machine-and-a-git-provider" id="local-and-remote-moving-work-between-your-machine-and-a-git-provider"></a>
 

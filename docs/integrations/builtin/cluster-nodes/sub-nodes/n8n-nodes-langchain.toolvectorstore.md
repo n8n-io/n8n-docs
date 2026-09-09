@@ -54,9 +54,15 @@ Spaces in the node name are converted to underscores in the tool description.
 {% hint style="warning" %}
 **Avoid special characters in node names**
 
-Using special characters in the node name will cause errors when the agent runs:
+Using special characters in the node name will cause errors when the agent runs, for example:
 
-![model errors from special characters](../../../.gitbook/assets/name-characters-error.png)
+```
+Error in sub-node 'OpenAI Chat Model'
+
+Invalid 'tools[0].function.name': string does not match pattern. Expected a string that matches the pattern '^[a-zA-Z0-9_-]+$'.
+```
+
+![Error message shown when a tool name contains special characters](../../../.gitbook/assets/name-characters-error.png)
 
 Use only alphanumeric characters, spaces, dashes, and underscores in node names.
 {% endhint %}

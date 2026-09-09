@@ -145,16 +145,18 @@ To assist and improve user experience, n8n may send specific context data to LLM
 #### AI usage settings <a href="#ai-usage-settings" id="ai-usage-settings"></a>
 
 {% hint style="info" %}
-Available in n8n v2.7.0 and above.
+**Feature availability**
+
+AI usage settings are available from n8n 2.7.0.
 {% endhint %}
 
 You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance.
 
-More details can be found on the [AI Assistant documentation page](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
+More details can be found on the [n8n Assistant documentation page](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
 
 #### When n8n shares data <a href="#when-n8n-shares-data" id="when-n8n-shares-data"></a>
 
-Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the AI assistant, ensuring no unnecessary data sharing occurs.
+Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the n8n Assistant, ensuring no unnecessary data sharing occurs.
 
 #### What n8n shares <a href="#what-n8n-shares" id="what-n8n-shares"></a>
 

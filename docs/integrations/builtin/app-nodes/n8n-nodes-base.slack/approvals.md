@@ -9,12 +9,6 @@ layout:
 
 # Approvals in Slack
 
-{% hint style="info" %}
-**This feature is in preview**
-
-Preview features may change in future releases. Avoid relying on them in production workflows. n8n is rolling this feature out gradually, so it may not be available on your instance yet.
-{% endhint %}
-
 With the **Message** > **Send and Wait for Response** operation, approvers can approve or decline directly inside Slack. No browser page opens: the workflow resumes as soon as someone responds, and the output records who responded.
 
 ## How it differs from link buttons
@@ -107,7 +101,6 @@ With link buttons, the output contains only `approved` and `respondedAt`.
 
 The node behaves as before, sending buttons that open an n8n confirmation page, when any of these apply:
 
-- The feature isn't enabled on your instance yet.
 - **Response Type** is **Free Text** or **Custom Form**.
 - **Capture Who Responded** is off.
 

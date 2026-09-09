@@ -18,9 +18,12 @@ layout:
 
 
 {% hint style="info" %}
-**Available on registered community and paid plans**
+**Feature availability**
 
-Light evaluations are available to registered community users and on all paid plans.
+Light evaluations are available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Registered Community, Business, Enterprise
 {% endhint %}
 
 ## What are light evaluations? <a href="#what-are-light-evaluations" id="what-are-light-evaluations"></a>

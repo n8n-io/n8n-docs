@@ -34,9 +34,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Data redaction is available on Enterprise Self-hosted and Enterprise Cloud plans.
+Data redaction is available on:
 
-**Available from:** n8n version 2.16.0 (per-workflow redaction), n8n version 2.26.0 (instance-level enforcement)
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Per-workflow execution data redaction is available from n8n 2.16.0. Instance-level enforcement of execution data redaction is available from n8n 2.26.0.
 {% endhint %}
 
 Execution data redaction lets you hide the input and output data of workflow executions. This helps protect sensitive information like personal data, authentication tokens, and financial records from users who can view the workflow but don't need to see the underlying data.

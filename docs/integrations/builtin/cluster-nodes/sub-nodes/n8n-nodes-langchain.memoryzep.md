@@ -16,14 +16,17 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # Zep node <a href="#zep-node" id="zep-node"></a>
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-This node is deprecated, and will be removed in a future version.
+The Zep node is deprecated from n8n 1.108.0. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 Use the Zep node to use Zep as a memory[^1] server.

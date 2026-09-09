@@ -52,6 +52,6 @@ Use these settings for your application:
 
 - Copy the **OAuth callback URL** from n8n and add it as a **Redirect URI** in your application.
 - Once you've created your application, copy the **Client ID** and **Client Secret** and enter them in your n8n credential.
-- If you are using the Webflow Data API V1 (deprecated), enable the **Legacy** toggle. Otherwise, leave this inactive.
+- The Webflow Data API V1 is deprecated. If you're using it, enable the **Legacy** toggle. Otherwise, leave this inactive.
 
 Refer to [OAuth](https://developers.webflow.com/data/reference/oauth-app) for more information on Webflow's OAuth web flow.

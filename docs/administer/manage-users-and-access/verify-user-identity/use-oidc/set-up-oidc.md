@@ -17,9 +17,9 @@ layout:
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
 
 {% hint style="info" %}
-**Configure using environment variables**
+**Feature availability**
 
-You can also configure OIDC from environment variables instead of the UI. Available from n8n v2.18.0. See [SSO environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
+Configuring OIDC using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
 {% endhint %}
 
 ## Setting up and enabling OIDC <a href="#setting-up-and-enabling-oidc" id="setting-up-and-enabling-oidc"></a>
@@ -50,7 +50,7 @@ You can also configure OIDC from environment variables instead of the UI. Availa
 
 n8n supports provisioning the instance role and project roles via SSO. When a user signs in via OIDC, n8n can assign their instance role and project access automatically based on claims in the IdP response.
 
-Role provisioning was introduced in version `1.122.2`.
+Role provisioning is available from n8n 1.122.2.
 
 #### Choose how roles are assigned <a href="#choose-how-roles-are-assigned" id="choose-how-roles-are-assigned"></a>
 
@@ -116,7 +116,7 @@ For new projects, get the project ID from the URL when viewing the project in yo
 
 #### Map rules inside n8n <a href="#map-rules-inside-n8n" id="map-rules-inside-n8n"></a>
 
-**Map rules inside n8n** is available from version `2.19.0` upwards.
+**Map rules inside n8n** is available from n8n 2.19.0.
 
 Use this option to define group-to-role mappings inside n8n rather than in your IdP. Each rule is an expression that n8n evaluates against the OIDC claims in the IdP response.
 

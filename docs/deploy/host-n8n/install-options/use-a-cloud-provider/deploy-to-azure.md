@@ -73,6 +73,7 @@ To maintain data between pod restarts, the Postgres deployment needs a persisten
 
 If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes).
 {% endhint %}
+
 ### Postgres environment variables <a href="#postgres-environment-variables" id="postgres-environment-variables"></a>
 
 Postgres needs some environment variables set to pass to the application running in the containers.
@@ -129,6 +130,14 @@ Create an `n8n-secret.yaml` file. Refer to [Environment variables](../../configu
 
 The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
 
+{% hint style="warning" %}
+The manifests run PostgreSQL 18. Setting up for the first time needs nothing extra.
+
+If you already have a database running an older PostgreSQL major version, don't apply this to it. PostgreSQL 18 can't open a data directory written by an older major version, and moving the folder doesn't help. The pod stays in `CrashLoopBackOff` with `database files are incompatible with server`. PostgreSQL leaves your data alone, and you can pin the image back to the version you were on.
+
+To move an existing database across, follow the official [PostgreSQL upgrade guide](https://www.postgresql.org/docs/18/upgrading.html) first.
+{% endhint %}
+
 The manifests define the following:
 
 - Send the environment variables defined to each application pod
@@ -169,6 +178,7 @@ n8n typically operates on a subdomain. Create a DNS record with your provider fo
 
 [Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip) for more details on how to use a static IP address with AKS.
 {% endhint %}
+
 ## Delete resources <a href="#delete-resources" id="delete-resources"></a>
 
 Remove the resources created by the manifests with the following command:

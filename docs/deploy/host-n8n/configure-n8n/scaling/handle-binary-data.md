@@ -15,6 +15,8 @@ layout:
 
 Binary data is any file-type data, such as image files or documents generated or processed during the execution of a workflow. 
 
+In queue mode, binary data storage also backs webhook responses too large to send through the queue. Refer to [Large webhook responses](enable-queue-mode.md#large-webhook-responses) for details.
+
 ## Enable filesystem mode <a href="#enable-filesystem-mode" id="enable-filesystem-mode"></a>
 
 When handling binary data, n8n keeps the data in memory by default. This can cause crashes when working with large files. 

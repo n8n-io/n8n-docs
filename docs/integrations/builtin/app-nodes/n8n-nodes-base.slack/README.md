@@ -82,6 +82,24 @@ Refer to [Slack credentials](../../credentials/slack.md) for guidance on setting
     * **Get Many**: Get a list of user groups.
     * **Update** a user group.
 
+## Message search and version-specific behavior <a href="#message-search-and-version-specific-behavior" id="message-search-and-version-specific-behavior"></a>
+
+### Search messages <a href="#search-messages" id="search-messages"></a>
+
+Node version 2.7 and above uses the [Real-time Search API](https://docs.slack.dev/apis/web-api/real-time-search-api/) (`assistant.search.context`) for the **Message > Search** operation. Node version 2.6 and below use the deprecated [`search.messages`](https://api.slack.com/methods/search.messages) endpoint. n8n gates this by node version, so the change doesn't affect existing workflows on node version 2.6 and below.
+
+On node version 2.7 and above:
+
+- **New options**: **Channel Types** (public, private, group DM, DM), **After** and **Before** (date filters), and **Keyword Search Only** (disables semantic search).
+- **Semantic search**: by default, Slack may apply semantic search to question-style queries (for example, queries that start with a question word or end with a question mark), so results aren't always strictly literal keyword matches. Enable **Keyword Search Only** to force literal matching. Semantic ranking requires Slack AI (a paid plan).
+- **Limit**: **Return All** is removed from node version 2.7 and above. Only **Limit** remains, capped at 50. The endpoint returns 20 results per request and rate limits aggressively (around 10 requests per minute per user), so it isn't built for exhaustive retrieval. Node version 2.6 and below keep **Return All**.
+- **Authentication**: the endpoint needs a user token, so use OAuth2 or supply a user token with Access Token authentication. A bot token can't call this endpoint, and the Slack app must have AI features enabled. If you use OAuth2, reconnect your existing credential so it picks up the new `search:read.*` scopes.
+- **Output fields**: results use `content`, `message_ts`, `channel_id`, `channel_name`, and `author_name`, instead of the previous `text`, `ts`, `channel`, and `username`.
+
+### Custom Bot Profile Photo <a href="#custom-bot-profile-photo" id="custom-bot-profile-photo"></a>
+
+From node version 2.6, the **Message > Send** option **Custom Bot Profile Photo** (custom icon or emoji) is only available with **Access Token** authentication, not OAuth2. It relies on the `chat:write.customize` scope, which is a bot-token-only scope that the OAuth2 user-token path can't use. Node version 2.5 and below still show the option with OAuth2, though Slack ignores it in that case.
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
@@ -123,7 +141,7 @@ If those aren't enough, use the table below to look up the resource and operatio
 | File         | Upload                     | [files.upload](https://api.slack.com/methods/files.upload)                         |
 | Message      | Delete                     | [chat.delete](https://api.slack.com/methods/chat.delete)                           |
 | Message      | Get Permalink              | [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)               |
-| Message      | Search                     | [search.messages](https://api.slack.com/methods/search.messages)                   |
+| Message      | Search                     | Node version 2.7 and above: [assistant.search.context](https://docs.slack.dev/reference/methods/assistant.search.context) (Real-time Search API). Node version 2.6 and below: [search.messages](https://api.slack.com/methods/search.messages) (deprecated). |
 | Message      | Send                       | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
 | Message      | Send and Wait for Response | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
 | Message      | Update                     | [chat.update](https://api.slack.com/methods/chat.update)                           |

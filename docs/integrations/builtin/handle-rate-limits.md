@@ -65,7 +65,7 @@ Use the Loop Over Items node to batch the input items, and the Wait node to intr
 
 For example, to handle rate limits when using OpenAI:
 
-!["Screenshot of a workflow using the Loop Over Items node and Wait node to handle API rate limits for the OpenAI APIs"](../.gitbook/assets/loop-wait.png)
+![Workflow using Loop Over Items and Wait nodes to pace requests to the OpenAI API](../.gitbook/assets/loop-wait.png)
 
 ## Handle rate limits in the HTTP Request node <a href="#handle-rate-limits-in-the-http-request-node" id="handle-rate-limits-in-the-http-request-node"></a>
 

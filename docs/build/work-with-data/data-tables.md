@@ -66,6 +66,7 @@ View and work with data tables directly in the UI through a visual interface. Th
     * Add and reorder columns to organize your data
     * Add, delete, and update rows
     * Edit existing data
+    * [Favorite the data table](../manage-workflows/favorite-items.md) for quick access
 
 ## Exporting and importing data <a href="#exporting-and-importing-data" id="exporting-and-importing-data"></a>
 

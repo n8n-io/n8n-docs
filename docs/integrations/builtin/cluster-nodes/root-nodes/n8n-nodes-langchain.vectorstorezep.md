@@ -31,14 +31,17 @@ layout:
     visible: true
   actions:
     visible: true
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # Zep Vector Store
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-This node is deprecated, and will be removed in a future version.
+The Zep Vector Store node is deprecated from n8n 1.108.0. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a chain[^1], or connect it directly to an agent[^2] to use as a tool[^3].

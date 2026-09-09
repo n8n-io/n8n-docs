@@ -52,7 +52,7 @@ docker run -it --rm \
  -e EXECUTIONS_DATA_SAVE_ON_SUCCESS=none \
  -e EXECUTIONS_DATA_SAVE_ON_PROGRESS=true \
  -e EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 ```yaml
@@ -98,7 +98,7 @@ docker run -it --rm \
  -p 5678:5678 \
  -e EXECUTIONS_DATA_PRUNE=true \
  -e EXECUTIONS_DATA_MAX_AGE=168 \
- docker.n8n.io/n8nio/n8n
+ n8nio/n8n
 ```
 
 ```yaml

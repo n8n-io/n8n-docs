@@ -24,7 +24,11 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Single sign-on is available on Business and Enterprise plans.
+Single sign-on is available on:
+
+- **Self-hosted:** Business, Enterprise
+
+n8n Cloud Enterprise also supports single sign-on, but not through the environment variables on this page.
 {% endhint %}
 
 Refer to [Set up SSO](../../security/configure-sso.md) for in-app setup steps and identity provider guides. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.

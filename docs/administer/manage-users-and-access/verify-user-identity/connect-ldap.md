@@ -16,8 +16,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on Self-hosted Business and Enterprise, and Cloud Enterprise plans.
-* You need access to the n8n instance owner account.
+LDAP is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+You need access to the n8n instance owner account.
 {% endhint %}
 
 This page tells you how to enable LDAP in n8n. It assumes you're familiar with LDAP, and have an existing LDAP server set up.
@@ -51,6 +55,7 @@ You must manage user details on the LDAP server, not in n8n. If you update or de
 
 If you remove a user from your LDAP server, they lose n8n access on the next sync.
 {% endhint %}
+
 ## Turn LDAP off <a href="#turn-ldap-off" id="turn-ldap-off"></a>
 
 To turn LDAP off:

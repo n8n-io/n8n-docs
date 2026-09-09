@@ -45,7 +45,7 @@ To do so:
 
 n8n's internal chat reads the output data of the last executed node in the workflow. After adding an evaluation node with the ['set outputs' operation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluation#set-outputs), this data may not be in the expected format, or even contain the chat response.
 
-![Add second output branch](../../.gitbook/assets/add-second-output-branch.png)
+![Agent node with a second output branch wired to a No-op node, positioned to execute last](../../.gitbook/assets/add-second-output-branch.png)
 
 The solution is to add an extra branch coming out of your agent. [Lower branches execute later](../../flow-logic/understand-execution-order.md) in n8n, which means any node you attach to this branch will execute last. You can use a no-op node here since it only needs to pass the agent output through.
 

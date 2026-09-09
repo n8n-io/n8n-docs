@@ -25,7 +25,7 @@ External secrets are available on:
 n8n supports the following secret providers: 1Password (using [Connect Server](https://developer.1password.com/docs/connect/get-started/)), AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, HashiCorp Vault, and Infisical. n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 
 * From n8n 2.10.0 you can connect multiple vaults per secret provider. Older versions only support one vault per provider.
-* From n8n 3.0, project editors can use external secrets within their projects, and project admins can also manage project vaults, by default. From n8n 2.13.0 to before n8n 3.0, this required an instance owner or admin to turn on a setting.
+* From n8n 2.13.0, if enabled, project editors can use external secrets within their projects, and project admins can also manage project vaults.
 
 Credentials stored in an external secrets store only resolve in credential fields, not in any other fields supporting expressions.
 
@@ -290,14 +290,17 @@ You can share a vault with a project so that only that project's credentials can
 {% hint style="info" %}
 **Feature availability**
 
-From n8n 3.0, project editors and project admins have access to external secrets in their projects by default. From n8n 2.13.0 to before n8n 3.0, an instance owner or admin had to turn on a setting to grant this access. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
-From n8n 3.0, [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) have access to external secrets in their projects by default. There's no setting to turn on.
+From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
 
-From n8n 2.13.0 to before n8n 3.0, an instance owner or admin had to turn on **Enable external secrets for project roles** in **Settings** > **External Secrets** to grant this access. n8n 3.0 removes that setting.
+To enable this:
 
-**Project Editors** can:
+1. Go to **Settings** > **External Secrets**.
+1. Turn on **Enable external secrets for project roles**.
+
+When enabled, **Project Editors** can:
 
 -   View available external secret vaults shared with the project (in **Project** > **Settings**).
 -   Use secrets from the project's vaults in credentials.
@@ -329,12 +332,12 @@ Both permissions are independent. For example, a role may need only the **Secret
 {% hint style="info" %}
 **Feature availability**
 
-From n8n 3.0, project editors and admins can resolve external secrets in their own credentials by default. Refer to [Access for project roles](#access-for-project-roles). The restriction below applies only to versions before n8n 2.13.0, and to n8n 2.13.0 through 2.x when the **Enable external secrets for project roles** setting was off. It no longer applies from n8n 3.0.
+Using external secrets in your own credentials, as a project editor or admin with [secrets access enabled](#access-for-project-roles), is available from n8n 2.13.0. The restriction below applies only to older versions or when the opt-in toggle is off.
 {% endhint %}
 
-In versions before n8n 2.13.0, and in n8n 2.13.0 through 2.x with **Enable external secrets for project roles** off, only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production. From n8n 3.0, project editors and admins can resolve secrets in their projects by default, so this restriction no longer applies.
+In versions before n8n 2.13.0 (or when **Enable external secrets for project roles** is off), only instance owners and admins can resolve secrets at runtime. If an owner or admin updates another user's credential with a secrets expression, it may appear to work in preview but fail in production.
 
-In those versions, only use external secrets in credentials owned by an instance owner or admin.
+In this case, only use external secrets in credentials owned by an instance owner or admin.
 
 See [Manage credentials](README.md) for other ways to secure and share credentials.
 

@@ -70,6 +70,6 @@ n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) c
 | Use external secrets in credentials | ✅* | ✅* | ❌ |
 | Manage project secret vaults | ✅* | ❌ | ❌ |
 
-\* From n8n 3.0, project admins and editors have this access by default. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). From n8n 2.13.0 to before n8n 3.0, an instance owner or admin had to turn on the **Enable external secrets for project roles** setting, which n8n 3.0 removes.
+\* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). The **Enable external secrets for project roles** setting is available from n8n 2.13.0.
 
 [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.

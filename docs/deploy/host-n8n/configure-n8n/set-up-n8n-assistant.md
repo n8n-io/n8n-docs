@@ -286,6 +286,47 @@ If you configure both, Brave Search takes priority over SearXNG. Free or unauthe
 
 If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
 
+## Enable instance context
+
+Instance context gives n8n Assistant a short summary of the project a conversation is opened in: which workflows exist, what changed recently, and what has run or failed. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+
+It needs two variables. One records the changes, and the other lets n8n Assistant read them:
+
+```bash
+# Record workflow and credential changes in the activity log
+N8N_ACTIVITY_LOG_ENABLED=true
+
+# Let n8n Assistant read instance context
+N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED=true
+```
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_ACTIVITY_LOG_ENABLED` | `false` | Set to `true` to record workflow and credential changes in the instance activity log. |
+| `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` | `false` | Set to `true` to let n8n Assistant read instance context. |
+
+Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry.
+
+The activity log records that a change happened and which node types moved. It never records parameter values, so it can tell n8n Assistant which nodes a project uses, never how they're configured.
+
+Turning `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` off removes instance context and the tool that reads the activity log. n8n Assistant then reads no instance context.
+
+## Enable node type counting
+
+Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and needs its own variable:
+
+```bash
+N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
+```
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to let n8n Assistant count the node types a project uses. |
+
+Setting it to `false` doesn't force the feature off. It falls back to the managed rollout, which decides whether your instance gets it.
+
+Node type counting reports counts of node types, never parameter values.
+
 ## Enable agents
 
 Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
@@ -369,5 +410,12 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 * `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
 * If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
+
+**Instance context**
+
+* Both `N8N_ACTIVITY_LOG_ENABLED` and `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` are set to `true`.
+* If only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` is set, n8n Assistant reports which workflows exist and which ran, but no recent changes. Set the activity log variable too.
+* Nothing changed in the project yet. The activity log only records changes made after you enabled it.
+* The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
 
 See [Configure n8n](./) for other configuration topics.

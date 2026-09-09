@@ -1,0 +1,21 @@
+docs/administer/manage-credentials/use-external-secret-stores.md
+  s_b732a613273884::t_391d2dc03a455d 28,293,296,298,300-303,335,338,340
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md
+  s_b732a613273884::t_391d2dc03a455d 73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e408261f249c329dcbe08d3f7639ffcf5377c795",
+  "prompts": {},
+  "sessions": {
+    "s_b732a613273884": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "027664de-916f-4884-9b53-953f083f47ab",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Irénée <irenee.ajeneza@n8n.io>"
+    }
+  }
+}

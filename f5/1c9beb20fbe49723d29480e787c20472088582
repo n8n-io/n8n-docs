@@ -1,0 +1,32 @@
+docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md
+  s_7da6ace9eda03f::t_8409a3c4fa80b0 422
+  s_7da6ace9eda03f::t_9c7f00320f52ec 418-419,423
+  s_7da6ace9eda03f::t_36aef998a710f3 134
+  s_7da6ace9eda03f::t_fe83ecd097fa5d 113-133,135-137,139-147,149-150
+  s_7da6ace9eda03f::t_3a2b176688b49e 92,94
+  s_7da6ace9eda03f::t_ee3bf59ada645c 424
+  s_7da6ace9eda03f::t_6c78c78620fbe0 138
+  s_7da6ace9eda03f::t_29b45101b4c8c3 148
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md
+  s_7da6ace9eda03f::t_e1144542a8cac0 34
+  s_7da6ace9eda03f::t_34a2f03df6f6bb 31-33
+styles/config/vocabularies/default/accept.txt
+  s_7da6ace9eda03f::t_cd28e65d9313c9 226
+  s_7da6ace9eda03f::t_cbf531ee871247 206
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f51c9beb20fbe49723d29480e787c20472088582",
+  "prompts": {},
+  "sessions": {
+    "s_7da6ace9eda03f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a715692e-bfe9-4fc0-87de-28f136b5a469",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Olivier de Jong <ocdejong@Oliviers-MacBook-Pro.local>"
+    }
+  }
+}

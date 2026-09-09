@@ -12,7 +12,7 @@ layout:
 
 # Node base file <a href="#node-base-file" id="node-base-file"></a>
 
-The node base file contains the core code of your node. All nodes must have a base file. The contents of this file are different depending on whether you're building a declarative-style or programmatic-style node. For guidance on which style to use, refer to [Choose your node building approach](../../../plan-your-node/choose-a-node-building-style.md).
+The node base file contains the core code of your node. All nodes must have a base file. The contents of this file are different depending on whether you're building a declarative-style or programmatic-style node. Build your node in the declarative style unless it needs the programmatic style. Refer to [Choose your node building approach](../../../plan-your-node/choose-a-node-building-style.md) for the cases that need the programmatic style.
 
 These documents give short code snippets to help understand the code structure and concepts. For full walk-throughs of building a node, including real-world code examples, refer to [Build a declarative-style node](../../tutorial-build-a-declarative-style-node.md) or [Build a programmatic-style node](../../tutorial-build-a-programmatic-style-node.md).
 

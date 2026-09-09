@@ -41,6 +41,12 @@ All verified community node authors should use the [`n8n-node` tool](../using-th
 * n8n isn't accepting Logic or Flow control nodes at the moment.
 * Each package should integrate exactly one third-party service. A trigger node for the same service may be included alongside the main node. Packages that wrap multiple unrelated APIs or act as a proxy layer for several services generally don't qualify for verification. Submit each service as its own separate package.
 
+## Node building style
+
+* Build your node in the **declarative** style. This is what n8n expects for a verified node.
+* Use the programmatic style only when your node genuinely needs it, for example a trigger node, a non-REST API, a node that transforms incoming data, or a node that needs full versioning. Refer to [Choose your node building approach](../../plan-your-node/choose-a-node-building-style.md) for the full list.
+* Keep the node close to the API it wraps. Reviewers check for unnecessary indirection, such as wrapper functions and generic request builders with a single caller, custom retry or pagination layers that duplicate what n8n provides, and a node split across modules that a single file would cover. Refer to [Code standards](code-standards.md) for more information.
+
 ## Package source verification <a href="#package-source-verification" id="package-source-verification"></a>
 
 * Verify that your npm package repository URL matches the expected GitHub repository.

@@ -16,6 +16,6 @@ This section provides guidance on designing your node, including key technical d
 When building a node, there are design choices you need to make before you start:
 
 * Which [node type](choose-a-node-type.md) you need to build.
-* Which [node building style](choose-a-node-building-style.md) to use.
+* Which [node building style](choose-a-node-building-style.md) to use. The declarative style is the default. Use the programmatic style only when your node needs it.
 * Your [UI design and UX principles](node-ui-design.md)
 * Your node's [file structure](choose-node-file-structure.md).

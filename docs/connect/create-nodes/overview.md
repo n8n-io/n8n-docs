@@ -15,7 +15,7 @@ Learn how to build your own custom nodes[^1].
 
 This section includes:
 
-* Guidance on planning your build, including [which style to use](plan-your-node/choose-a-node-building-style.md).
+* Guidance on planning your build, including [which node building style to use](plan-your-node/choose-a-node-building-style.md). Build your node in the declarative style unless it needs the programmatic style.
 * [Tutorials](build-your-node/README.md) for different node building styles.
 * Instructions for [testing your node](test-your-node/README.md), including how to use the n8n [node linter](test-your-node/node-linter.md) and [troubleshooting](test-your-node/troubleshooting.md) support.
 * How to [share your node](deploy-your-node/submit-community-nodes.md) with the community, submit it for [verification by n8n](deploy-your-node/submit-community-nodes.md), or use it as a [private node](deploy-your-node/install-private-nodes.md).

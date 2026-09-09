@@ -37,12 +37,13 @@ Your node must include:
 ## Modular structure <a href="#modular-structure" id="modular-structure"></a>
 
 
-You can choose whether to place all your node's functionality in one file, or split it out into a base file and other modules, which the base file then imports. Unless your node is very simple, it's a best practice to split it out.
+You can choose whether to place all your node's functionality in one file, or split it out into a base file and other modules, which the base file then imports.
 
+Start with a single file. Split it out once the file gets hard to navigate, for example when your node covers several resources that each have many operations. Splitting a small node across modules adds indirection without making it easier to maintain. Refer to [Don't add indirection you don't need](choose-a-node-building-style.md#dont-add-indirection-you-dont-need) for more information.
 
 A basic pattern is to separate out operations. Refer to the [GithubIssues starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/GithubIssues) for an example of this.
 
-For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook) as examples. 
+For nodes that are genuinely complex, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook) as examples. 
 
 * `actions`: a directory containing sub-directories that represent resources.
     * Each sub-directory should contain two types of files: 

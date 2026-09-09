@@ -305,9 +305,9 @@ N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED=true
 | `N8N_ACTIVITY_LOG_ENABLED` | `false` | Set to `true` to record workflow and credential changes in the instance activity log. |
 | `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` | `false` | Set to `true` to let n8n Assistant read instance context. |
 
-Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry.
+Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry. With only `N8N_ACTIVITY_LOG_ENABLED`, n8n records the changes but n8n Assistant reads none of them.
 
-The activity log records that a change happened and which node types moved. It never records parameter values, so it can tell n8n Assistant which nodes a project uses, never how they're configured.
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now, which is what node type counting below answers.
 
 Turning `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` off removes instance context and the tool that reads the activity log. n8n Assistant then reads no instance context.
 
@@ -417,5 +417,11 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 * If only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` is set, n8n Assistant reports which workflows exist and which ran, but no recent changes. Set the activity log variable too.
 * Nothing changed in the project yet. The activity log only records changes made after you enabled it.
 * The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
+
+**Node type counting**
+
+* `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
+* Setting it to `false` doesn't force the feature off. It falls back to the managed rollout, which may not have reached your instance.
+* It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
 See [Configure n8n](./) for other configuration topics.

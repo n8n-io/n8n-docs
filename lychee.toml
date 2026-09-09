@@ -134,6 +134,7 @@ exclude = [
   '^https://github\.com/(CxGarcia|miguel-mconf|yoky-devsavant|kirill-chertkov|bramknuever|bugagashenkj|FFTDB|jamesliupenn|nikozila|torbhai|manusjs)$',  # Deleted contributor accounts credited in historical release notes
   '^https://developers\.facebook\.com/docs/(certificate-transparency-api|graph-api/webhooks/getting-started/webhooks-for-certificate-transparency|graph-api/webhooks/reference/certificate-transparency)',  # Meta removed/moved these docs (404); needs content review
   '^https://docs\.openwebui\.com/getting-started/api-endpoints',  # OpenWebUI moved these docs (404); needs content review
+  '^https://(www\.)?youtube\.com/embed/.*',  # Lychee's YouTube ID check (via thumbnail lookup) doesn't reliably support /embed/ URLs, causing false-positive failures
   ]
 
 # Exclude these filesystem paths from getting checked.

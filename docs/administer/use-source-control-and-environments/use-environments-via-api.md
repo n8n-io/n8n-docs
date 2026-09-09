@@ -28,8 +28,8 @@ The public API exposes three source control operations:
 | Endpoint | Method | What it does |
 |----------|--------|--------------|
 | `/source-control/status` | `GET` | Previews the pending changes between your instance and Git, in either direction. |
-| `/source-control/push` | `POST` | Commits and pushes local changes to the connected Git branch. |
-| `/source-control/pull` | `POST` | Fetches changes from the connected Git branch into the instance. |
+| `/source-control/push` | `POST` | Commits and pushes local changes to the connected Git repository. |
+| `/source-control/pull` | `POST` | Fetches changes from the connected Git repository into the instance. |
 
 `push` and `pull` are the same actions as the **Push** and **Pull** buttons in the source control menu. `status` matches the file list the UI shows in the push and pull modals before you confirm. The API exposes it as its own endpoint so a script can do the same review the UI does inline.
 

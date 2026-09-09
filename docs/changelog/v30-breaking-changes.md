@@ -61,8 +61,8 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 
 ### External secrets access for project roles is on by default <a href="#external-secrets-access-for-project-roles-is-on-by-default" id="external-secrets-access-for-project-roles-is-on-by-default"></a>
 
-- n8n 3.0 removes the **Enable external secrets for project roles** toggle from **Settings** > **External Secrets**. Project editors and admins now get external-secrets access in their projects by default. Project editors can view the project's vaults and use their secrets in credentials. Project admins get the same access, plus they can create, update, and delete the project's vaults.
-- **What to do:** No action is required. If you previously left the toggle off to restrict project roles from external secrets, use [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) to control the **Secrets vaults** and **Secrets** scopes instead. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information. This change applies to n8n Enterprise, where external secrets are available.
+- n8n 3.0 removes the **Enable external secrets for project roles** toggle. Project editors and admins now get external-secrets access in their projects by default.
+- **What to do:** No action is required. To keep restricting project roles from external secrets, use [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) instead.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

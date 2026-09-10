@@ -224,6 +224,18 @@ Microsoft OneDrive credentials use the following scopes by default:
 * `offline_access`
 * `Files.ReadWrite.All`
 
+#### Default scopes for Microsoft Teams
+
+Microsoft Teams credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `User.Read.All`
+* `Group.ReadWrite.All`
+* `Chat.ReadWrite`
+* `ChannelMessage.Read.All`
+* `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
+
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 
 The following services require extra information for OAuth2:

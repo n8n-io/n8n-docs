@@ -58,7 +58,7 @@ Refer to Microsoft's documentation for more information:
 
 With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With the Service Principal credential, there's no signed-in user, which changes how you use the nodes:
 
-- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
+- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations hide the **Team** picker and replace the **Plan**, **Bucket**, and **Assigned To** pickers with plain ID fields.
 - **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
 - **Pickers see the whole tenant.** For example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
 - **Some operations aren't available.** The nodes hide anything that only exists for a signed-in user, such as drive search or Teams chats, or block it with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
@@ -139,19 +139,13 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 | Channel: Create | `Channel.Create` |
 | Channel: Update | `ChannelSettings.ReadWrite.All` |
 | Channel: Delete | `Channel.Delete.All` |
-| Channel Message: Get Many | `ChannelMessage.Read.All` |
+| Channel Message: Get, Get Many, Get Many Replies | `ChannelMessage.Read.All` |
 | Task: all operations | `Tasks.ReadWrite.All` |
 | Trigger: New Channel | `Channel.ReadBasic.All` |
 | Trigger: New Channel Message | `ChannelMessage.Read.All` |
 | Trigger: New Team Member | `TeamMember.Read.All` |
 
 <!-- vale on -->
-
-{% hint style="info" %}
-**Reading Teams channel messages uses a metered API**
-
-Reading channel messages with this credential uses Microsoft's metered Teams API. Your tenant may need billing or evaluation-model configuration, and Microsoft returns HTTP 402 if it's missing. Refer to [Payment models for Microsoft Teams APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) for details.
-{% endhint %}
 
 ## Operations not available with app-only access
 
@@ -161,7 +155,7 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 
 - **Microsoft OneDrive**: File: Search and Folder: Search. Microsoft Graph only offers drive search to signed-in users.
 - **Microsoft Excel (OneDrive)**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
-- **Microsoft Teams**: the whole Chat Message resource, Channel Message: Create, and Task: Get Many in Group Member mode.
+- **Microsoft Teams**: the whole Chat Member, Chat Message, and Online Meeting resources. Channel Message: Create and Reply. Task: Get Many in Group Member mode.
 - **Microsoft Teams Trigger**: the New Chat and New Chat Message events, and the watch-all options. Pick a specific team or channel instead.
 
 <!-- vale on -->

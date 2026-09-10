@@ -1,0 +1,19 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+  s_342fd6342f1217::t_2a1a15f4e40ab5 45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "05d7383e4c4d86aa4b5ecbc0f5158b957ca63bae",
+  "prompts": {},
+  "sessions": {
+    "s_342fd6342f1217": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8ffc5e98-ffae-4eb0-8a5a-be21b70c2f07",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

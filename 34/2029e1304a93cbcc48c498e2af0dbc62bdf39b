@@ -1,0 +1,19 @@
+docs/integrations/builtin/credentials/httprequest.md
+  s_c8f164081294e9::t_da49dfc37489a0 241,243
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.18",
+  "base_commit_sha": "342029e1304a93cbcc48c498e2af0dbc62bdf39b",
+  "prompts": {},
+  "sessions": {
+    "s_c8f164081294e9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "337ee2da-9216-4bd3-8e25-019e0d380bc8",
+        "model": "claude-fable-5"
+      },
+      "human_author": "r00gm <raul00gm@gmail.com>"
+    }
+  }
+}

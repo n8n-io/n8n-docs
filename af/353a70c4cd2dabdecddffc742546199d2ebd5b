@@ -1,0 +1,31 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_c85fc1c1065441::t_a58e00c8d44118 58
+  s_c85fc1c1065441::t_65067b33ba83a3 39
+  s_c85fc1c1065441::t_49053f34dabe89 27
+  s_c85fc1c1065441::t_b126db217192d4 36
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_c85fc1c1065441::t_0f16471401ab02 35
+  s_c85fc1c1065441::t_656651f03d8fb4 107
+  s_c85fc1c1065441::t_00cdefc658c4c2 49
+  s_c85fc1c1065441::t_ed701c39a307cb 16
+  s_c85fc1c1065441::t_322d40703cd168 37
+  s_c85fc1c1065441::t_dff998ac713da9 63
+  s_c85fc1c1065441::t_80ebafa1512fa5 110
+  s_c85fc1c1065441::t_c9b8d2d381ed63 116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "af353a70c4cd2dabdecddffc742546199d2ebd5b",
+  "prompts": {},
+  "sessions": {
+    "s_c85fc1c1065441": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10a824b0-1024-4275-ae1a-17c8694f2771",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+docs/administer/manage-users-and-access/understand-instance-roles.md
+  s_f8e5d3ae818f46::t_97873a3f81c63f 35
+  s_f8e5d3ae818f46::t_e54ee827245463 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "e786ccb048c45d5206bee6a34b4956253a84e2ed",
+  "prompts": {},
+  "sessions": {
+    "s_f8e5d3ae818f46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c5c9c1f5-dc10-4e82-a177-e343ef0056e5",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

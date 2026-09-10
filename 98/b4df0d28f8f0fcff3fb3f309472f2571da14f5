@@ -1,0 +1,32 @@
+docs/build/manage-workflows/workflow-reviews.md
+  s_fa466784108c87::t_c2fc6f6c606266 19-21,31,33
+  s_fa466784108c87::t_d3d4583efb2b1f 46-61
+  s_02342595835f9e::t_a800ba95f2e422 22,24-27
+  s_fa466784108c87::t_b42b4139a3558a 112-114,116
+  s_fa466784108c87::t_c4c7549150ca0b 8,12-14
+  s_fa466784108c87::t_8609e370d9bcc8 75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "98b4df0d28f8f0fcff3fb3f309472f2571da14f5",
+  "prompts": {},
+  "sessions": {
+    "s_02342595835f9e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "02eb2510-2d1d-474e-a33c-870a24fde270",
+        "model": "default"
+      },
+      "human_author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    },
+    "s_fa466784108c87": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13074f32-185a-4904-ba0b-11fb70f570ef",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

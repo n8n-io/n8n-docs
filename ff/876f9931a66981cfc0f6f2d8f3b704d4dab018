@@ -1,0 +1,23 @@
+docs/build/manage-workflows/workflow-reviews.md
+  s_9978df6e430bca::t_9e57329688aaa1 48
+  s_9978df6e430bca::t_6da644e0dbfe14 74
+  s_9978df6e430bca::t_239cb866a32565 100-102
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  s_9978df6e430bca::t_0ba96dccf47a65 112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "ff876f9931a66981cfc0f6f2d8f3b704d4dab018",
+  "prompts": {},
+  "sessions": {
+    "s_9978df6e430bca": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d8718cf8-2406-4405-a66d-4968fa866e08",
+        "model": "grok-4.6"
+      },
+      "human_author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

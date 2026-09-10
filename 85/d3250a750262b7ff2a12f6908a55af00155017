@@ -1,0 +1,25 @@
+docs/integrations/builtin/credentials/slack.md
+  s_4f46c8dd42276e::t_33ea2ec1922a2b 146-147
+docs/integrations/SUMMARY.md
+  s_4f46c8dd42276e::t_4b8cbb596600c6 341
+docs/integrations/builtin/app-nodes/n8n-nodes-base.slack/approvals.md
+  s_4f46c8dd42276e::t_72d0facf4ce259 1-110
+docs/integrations/builtin/app-nodes/n8n-nodes-base.slack/README.md
+  s_4f46c8dd42276e::t_72740190839a7e 33-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "85d3250a750262b7ff2a12f6908a55af00155017",
+  "prompts": {},
+  "sessions": {
+    "s_4f46c8dd42276e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51c2f211-ded9-4850-93a9-f427649d0cea",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

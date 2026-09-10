@@ -1,0 +1,26 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_3c8c407e7844ab::t_e34e9e96ff8758 1-7,9-43,45-75,77-84,86-145,147-177
+  s_3c8c407e7844ab::t_dbebcfcc2001cf 44
+  s_3c8c407e7844ab::t_1410de0cc3a3ca 8
+  s_3c8c407e7844ab::t_9293d70d083061 76
+  s_3c8c407e7844ab::t_4c036ac6b8ccd5 85
+  s_3c8c407e7844ab::t_4212c14ad8a403 146
+docs/administer/SUMMARY.md
+  s_3c8c407e7844ab::t_da7ad4196acb22 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "45cfad2a629539574bee1ff8124038c7f9b8bde6",
+  "prompts": {},
+  "sessions": {
+    "s_3c8c407e7844ab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2b5df97d-850e-40e3-9c46-ace0a372f45b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": null
+    }
+  }
+}

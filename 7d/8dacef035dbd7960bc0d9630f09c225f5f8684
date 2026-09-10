@@ -1,0 +1,14 @@
+docs/deploy/host-n8n/configure-n8n/deploy-n8n-in-canvas-only-mode.md
+  h_c63dce324dfc7b 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "7d8dacef035dbd7960bc0d9630f09c225f5f8684",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

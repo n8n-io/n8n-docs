@@ -1,0 +1,24 @@
+docs/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/README.md
+  s_c8f164081294e9::t_8365482b95c3da 72
+docs/integrations/builtin/credentials/httprequest.md
+  s_c8f164081294e9::t_f624328e05d6d2 57
+  s_c8f164081294e9::t_d28dc81e847b2b 241
+  s_c8f164081294e9::t_3856e29fe81c29 229-238,240,242-289
+  s_c8f164081294e9::t_86796a2b3e4057 239
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.18",
+  "base_commit_sha": "1da1b09f7df7b200ee41fe07a573bc10d13901d0",
+  "prompts": {},
+  "sessions": {
+    "s_c8f164081294e9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "337ee2da-9216-4bd3-8e25-019e0d380bc8",
+        "model": "claude-fable-5"
+      },
+      "human_author": "r00gm <raul00gm@gmail.com>"
+    }
+  }
+}

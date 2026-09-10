@@ -1,0 +1,19 @@
+docs/administer/manage-credentials/use-external-secret-stores.md
+  s_8f2b87f031cf8c::t_c8b29c9eaa9f3c 158-160
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "fa26c8a253b725e790f2f1430fe64cebab7bc7bb",
+  "prompts": {},
+  "sessions": {
+    "s_8f2b87f031cf8c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "39e47acd-6d69-424c-ade6-7a5c8f04b79e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marc Littlemore <marc@n8n.io>"
+    }
+  }
+}

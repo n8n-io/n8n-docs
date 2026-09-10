@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/external-hooks.md
+  s_4ee04864efb720::t_e3b3bc92caf1c0 134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "aa518d984396f23db73767e6e3bd97b3df5948fa",
+  "prompts": {},
+  "sessions": {
+    "s_4ee04864efb720": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3d45c561-eed2-42d6-b7d6-955c2855bfa7",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

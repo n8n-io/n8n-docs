@@ -1,0 +1,44 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/binary-data.md
+  s_25663cc1cff559::t_459df032cf2f90 33
+docs/deploy/host-n8n/configure-n8n/scaling/handle-binary-data.md
+  s_25663cc1cff559::t_dad3f39421e415 18-19
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/queue-mode.md
+  s_25663cc1cff559::t_400672ee1c3583 49-55,57
+  s_65523c29c1519a::t_5e125e8db89ec9 56
+docs/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md
+  s_65523c29c1519a::t_429b981cec6c33 259
+  s_25663cc1cff559::t_ca44a2bd8cb476 235-248,250,252-258,260,262-264,266-271,274-275
+  s_65523c29c1519a::t_734fd8a9f87a5f 251
+  s_65523c29c1519a::t_b20ad1d4d61847 273
+  s_25663cc1cff559::t_ba4c8df99c296d 261
+  s_65523c29c1519a::t_504d28192c7f97 272
+  s_25663cc1cff559::t_37140699175eb4 249
+  s_65523c29c1519a::t_4a97d390a49cb4 265
+docs/changelog/release-notes.md
+  s_65523c29c1519a::t_431be180a1157a 35
+  s_25663cc1cff559::t_5cf1f992a2cce2 31-34,36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e6d28f40e56e8bbb4ab7b4e7633b30bfeb98644b",
+  "prompts": {},
+  "sessions": {
+    "s_25663cc1cff559": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "da4dc808-c5ce-4f69-a4fa-4ef4ba615417",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    },
+    "s_65523c29c1519a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c5b60d0a-e764-4acd-9c4d-173824ae762f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

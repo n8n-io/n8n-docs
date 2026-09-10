@@ -50,7 +50,7 @@ Until now each of those runs counted like any other execution. Handling a failur
 
 Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
 
-On Cloud the change has been live since 2.38. On self-hosted it applies to Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
+The change applies on Cloud from 2.38, and on self-hosted Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
 
 ## Use AI models and tool services without setting up provider accounts or credentials
 

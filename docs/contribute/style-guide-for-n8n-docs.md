@@ -595,6 +595,7 @@ Each top-level folder under `docs/` is a separate space:
 | `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
 | `changelog`                    | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
+| `n8n-community-license`        | `WcrJOYW6B9JlV5aiivMA` |
 
 If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.
 

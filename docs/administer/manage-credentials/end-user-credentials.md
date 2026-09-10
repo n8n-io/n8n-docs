@@ -61,7 +61,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 * **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.
-* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), the MCP Server Trigger, and the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger).
+* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) with **Hosted Chat** only, not Embedded Chat/webhook mode. The Form Trigger and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account.
 
 ## Create an end-user credential
 
@@ -75,6 +75,7 @@ Users with project access can now connect their own account to this credential. 
 {% hint style="info" %}
 Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
 {% endhint %}
+
 ## Connect your account
 
 Before you can use an end-user credential in a workflow, connect your account to the template. You can do this from:

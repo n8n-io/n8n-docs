@@ -56,8 +56,9 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ### Authentication <a href="#authentication" id="authentication"></a>
 
-You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
+You can require authentication for clients connecting to your MCP URL. Choose from:
 
+- None
 - Bearer auth
 - Header auth
 
@@ -115,6 +116,12 @@ The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTT
 
 If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE and streamable HTTP connections will frequently break or fail to reliably deliver events.
 {% endhint %}
+
+### claude.ai asks users to sign in when Authentication is None <a href="#claudeai-asks-users-to-sign-in-when-authentication-is-none" id="claudeai-asks-users-to-sign-in-when-authentication-is-none"></a>
+
+claude.ai custom connectors ask you to sign in to n8n even when you set **Authentication** to **None**. claude.ai is the only client known to do this.
+
+Your instance offers n8n user authentication for other triggers. claude.ai assumes every MCP endpoint on your domain uses it.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

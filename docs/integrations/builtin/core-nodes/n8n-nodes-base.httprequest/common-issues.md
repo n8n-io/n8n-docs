@@ -130,7 +130,7 @@ Use this option to retry the node after a failed attempt.
 1. Set **Max Tries** to the maximum number of times n8n should retry the node.
 1. Set **Wait Between Tries (ms)** to the desired delay in milliseconds between retries. For example, to wait one second before retrying the request again, set **Wait Between Tries (ms)** to `1000`.
 
-## Your uploaded file arrives with the wrong file name
+## Your uploaded file arrives with the wrong file name <a href="#your-uploaded-file-arrives-with-the-wrong-file-name" id="your-uploaded-file-arrives-with-the-wrong-file-name"></a>
 
 When you send a file with **Body Content Type** set to **Form-Data**, n8n takes the file name of the `multipart/form-data` part from the binary data, not from the **Name** field. **Name** sets the form field name only. If the binary data has no file name, n8n sends `file`.
 
@@ -150,7 +150,7 @@ return $input.all();
 
 n8n copies the MIME type stored on the binary data into the `Content-Type` of the part, so set that too if your API checks it.
 
-## Unsupported media type (415) when you send a file
+## Unsupported media type (415) when you send a file <a href="#unsupported-media-type-415-when-you-send-a-file" id="unsupported-media-type-415-when-you-send-a-file"></a>
 
 This error displays when the API expects `multipart/form-data` but the request body isn't multipart.
 

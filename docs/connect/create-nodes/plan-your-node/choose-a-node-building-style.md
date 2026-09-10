@@ -12,7 +12,7 @@ layout:
 
 # Choose your node building approach <a href="#choose-your-node-building-approach" id="choose-your-node-building-approach"></a>
 
-n8n has two node-building styles, declarative and programmatic. Build your node in the declarative style. It's the default for new nodes, and it's the style n8n expects when you [submit a node for verification](../build-your-node/reference/verification-guidelines.md).
+n8n has two node-building styles, declarative and programmatic. Build your node in the declarative style. It's the default for new nodes.
 
 The declarative style:
 
@@ -29,8 +29,8 @@ The programmatic style is more verbose, and it puts your node's behavior in code
 
 * A trigger node.
 * A node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
-* A node that needs to transform data beyond what routing handles. The declarative style can shape the request body with `routing.request.send` and the API response with `routing.output.postReceive`. Use the programmatic style when your node needs to work on incoming items independently of a single API call.
-* A node that needs full versioning. Refer to [Node versioning](../build-your-node/reference/versioning.md) for more information on types of versioning.
+* A node that needs to transform data beyond what routing handles. The declarative style can change the request with `routing.request.preSend` and the API response with `routing.output.postReceive`. Use the programmatic style when your node needs to work on incoming items independently of a single API call.
+* A node that needs feature-based versioning to branch its behavior in code, using `this.isNodeFeatureEnabled()`. Declarative nodes can still use light versioning, and can read feature flags with `@feature` in `displayOptions`. Refer to [Node versioning](../build-your-node/reference/versioning.md) for more information on types of versioning.
 
 If your node isn't on this list, build it in the declarative style.
 

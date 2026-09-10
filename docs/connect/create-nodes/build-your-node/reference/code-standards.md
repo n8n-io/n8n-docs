@@ -26,7 +26,7 @@ n8n recommends using the [`n8n-node` CLI tool](../using-the-n8n-node-tool.md) to
 
 Build your node in the declarative style. It's the default, and it keeps your node shorter and easier to maintain by describing requests in the `routing` key instead of an `execute()` method.
 
-Use the programmatic style only when your node needs it, for example for trigger nodes, non-REST APIs, nodes that transform incoming data, or nodes that need full versioning. Refer to [Choose your node building approach](../../plan-your-node/choose-a-node-building-style.md) for the full list and for a side-by-side comparison of the two styles.
+Use the programmatic style only when your node needs it: trigger nodes, non-REST APIs, nodes that transform incoming data, or nodes that need feature-based versioning. Declarative nodes can still use light versioning. Refer to [Choose your node building approach](../../plan-your-node/choose-a-node-building-style.md) for the full list and for a side-by-side comparison of the two styles.
 
 ## Write in TypeScript <a href="#write-in-typescript" id="write-in-typescript"></a>
 

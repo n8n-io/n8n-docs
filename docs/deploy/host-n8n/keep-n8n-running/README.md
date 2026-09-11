@@ -18,6 +18,10 @@ layout:
 [visualize-metrics-with-grafana.md](visualize-metrics-with-grafana.md)
 {% endcontent-ref %}
 
+{% content-ref url="backup-and-restore.md" %}
+[backup-and-restore.md](backup-and-restore.md)
+{% endcontent-ref %}
+
 {% content-ref url="update-n8n.md" %}
 [update-n8n.md](update-n8n.md)
 {% endcontent-ref %}

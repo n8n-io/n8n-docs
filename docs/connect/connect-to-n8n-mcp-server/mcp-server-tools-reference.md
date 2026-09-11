@@ -919,8 +919,10 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
 | `targetProject.type` | `"personal" \| "team"` | Whether the workflow was created in a personal or team project |
-| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
+| `targetFolder` | `object` | The folder holding the workflow, with `id` and `name`. Omitted when the workflow sits at the project root |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment, a description that was shortened to 255 characters, or a post-save step that failed after n8n saved the workflow |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -933,6 +935,8 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
 - From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- If n8n saves the workflow but a later step fails, the tool confirms the saved workflow and explains the failed step in `note`, instead of reporting the call as an error.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 
@@ -1001,6 +1005,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
 | `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
 | `error` | `string` | Error message if the update failed |
+| `errorCode` | `string` | Machine-readable error code |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -1010,6 +1015,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 

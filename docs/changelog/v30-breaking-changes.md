@@ -31,6 +31,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Function** node (legacy)
 - **Function Item** node (legacy)
 - **Item Lists** node (legacy)
+- **LangChain Code** node (legacy)
 - **What to do:** Migrate affected workflows to the current recommended alternatives before upgrading:
   - Replace **Function** and **Function Item** nodes with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize).
@@ -66,9 +67,9 @@ n8n 3.0 retires some legacy or lower-usage product capabilities. n8n will provid
 - **Chat Hub**: n8n 3.0 retires this feature.
 - **Workflow import from URL in the editor**: n8n 3.0 removes this. Other [import methods](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the n8n API.
 - **Non-functional nodes**: n8n 3.0 removes these.
+- **Enable external secrets for project roles setting**: n8n 3.0 removes this. Project editors and admins now get external-secrets access in their projects by default. To keep restricting project roles, use [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) instead. This applies to n8n Enterprise, where external secrets are available.
 
 ---
 
 _n8n will update this page with full details, migration guides, and links as n8n 3.0 approaches its release._
-
 

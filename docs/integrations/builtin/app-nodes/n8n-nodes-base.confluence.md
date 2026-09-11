@@ -20,7 +20,12 @@ On this page, you'll find a list of operations the Confluence node supports, gui
 {% hint style="info" %}
 **Credentials**
 
-The node uses the [Confluence Cloud OAuth2 API credential](../credentials/confluence.md). The credential holds the OAuth app's client ID and secret; you choose the Confluence site in the node itself.
+The node offers two ways to sign in, chosen with the **Authentication** dropdown:
+
+* **Cloud OAuth2**: sign in as a person with the [Confluence Cloud OAuth2 API credential](../credentials/confluence.md). The credential holds the OAuth app's client ID and secret.
+* **Service Account**: sign in as an Atlassian service account with the **Atlassian Service Account** credential, for unattended workflows where no user is present. The credential's scopes are fixed when it's created, and space permissions apply on top, like for any other user.
+
+With either method, you choose the Confluence site in the node itself.
 {% endhint %}
 
 ## Choosing a site
@@ -74,8 +79,8 @@ To publish a draft, run **Update** on it with **Status** set to **Published**.
   * Create: create a new page in a space, optionally as a draft, private, at the space root, or under a parent page.
   * Delete: move a page to trash, or permanently delete it. Child pages aren't deleted. They move up to the deleted page's parent.
   * Delete Comment: permanently delete a footer comment.
-  * Get: retrieve a page, optionally with its full sub-tree, returning one item per descendant page.
-  * Get Comments: list the footer comments on a page.
+  * Get: retrieve a page, optionally with its full sub-tree, returning one item per page in tree order, the page itself first.
+  * Get Comments: list the top-level footer comments on a page.
   * Get Labels: list the labels on a page.
   * Get Many by Label: retrieve all pages carrying a label, optionally within one space.
   * Remove Label: remove a label from a page.

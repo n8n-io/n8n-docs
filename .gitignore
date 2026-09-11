@@ -13,6 +13,10 @@ yarn.lock
 output.csv
 _doctools/*.csv
 
+## lychee link-check reports written by the GitHub Actions workflows / local runs (repo root only)
+/lychee/
+/_lychee/
+
 ## Python bytecode from running .github/scripts helpers and their tests
 __pycache__/
 *.pyc

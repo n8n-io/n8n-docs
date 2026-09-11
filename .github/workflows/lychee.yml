@@ -1,8 +1,15 @@
 name: Lychee external linkcheck
+# Weekly sweep of every external link under docs/. The JSON report is POSTed to the
+# DocOps n8n webhook (secret DOCOPS_LYCHEE_WEBHOOK_URL), which alerts Slack, adds a dated
+# tab to the "DocOps - Outbound Links" Google Sheet and stores the rows in Supabase.
+# Broken links do not fail this job: the job is red only if lychee itself crashed or the
+# report could not be delivered (DOC-2307).
 on:
   schedule:
-    - cron: "18 7 * * 1"  
-  workflow_dispatch: 
+    - cron: "18 7 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   link-check:
     runs-on: ubuntu-latest
@@ -11,10 +18,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run Lychee Link Checker
-        uses: lycheeverse/lychee-action@f796c8b7d468feb9b8c0a46da3fac0af6874d374 # v2.2.0
+        id: lychee
+        uses: lycheeverse/lychee-action@a99389aeff3c193ffb6f0741178e519569d3f404 # v2.3.0
         with:
           args: --config lychee.toml ./docs
+          format: json
+          output: lychee/out.json
+          fail: false
+          jobSummary: false
 
-      - name: Report Status
-        if: failure()
-        run: echo "❌ Broken links detected. Please fix them!"
+      - name: Send report to n8n
+        if: always()
+        env:
+          REPORT: lychee/out.json
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          WEBHOOK_URL: ${{ secrets.DOCOPS_LYCHEE_WEBHOOK_URL }}
+          WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
+          WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
+        run: python3 .github/scripts/lychee_report.py

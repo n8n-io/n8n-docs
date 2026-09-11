@@ -222,4 +222,4 @@ If you have questions about contributing, there are a few places to get help:
 To get the attention of the docs team specifically, tag `@n8n-io/docs` in your pull request or issue.
 
 
-Temporary DOC-2307 test link, do not merge: [broken example](https://example.com/doc-2307-this-page-does-not-exist-404).
+Temporary DOC-2307 test link, do not merge: [broken example](https://github.com/n8n-io/n8n-docs/blob/main/DOC-2307-THIS-FILE-DOES-NOT-EXIST.md).

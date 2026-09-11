@@ -44,7 +44,9 @@ jobs:
           comment-tag: lychee
           mode: recreate
       - name: Remove stale broken-links comment
-        if: steps.changed-markdown-files.outputs.any_changed == 'true' && steps.lychee.outputs.exit_code == '0'
+        # Also runs when lychee was skipped (the PR no longer touches any markdown file),
+        # so an earlier failing comment never outlives the problem.
+        if: steps.changed-markdown-files.outputs.any_changed != 'true' || steps.lychee.outputs.exit_code == '0'
         continue-on-error: true
         uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
         with:

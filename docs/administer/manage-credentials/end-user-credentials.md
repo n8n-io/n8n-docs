@@ -73,7 +73,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 Users can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. Users with project access can also connect ahead of time from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
 
 {% hint style="info" %}
-Some trigger nodes, such as the **MCP Server Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
+Some trigger nodes, such as the **MCP Server Trigger**, **Chat Trigger**, and **Form Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
 {% endhint %}
 
 ## Connect your account

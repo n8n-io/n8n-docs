@@ -43,6 +43,12 @@ Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for
 Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
 {% endhint %}
 
+### Video: how agents fit with workflows and AI
+
+Agents, fixed workflows, and workflows that use AI for specific steps each suit different kinds of work. Watch how the three compare, and how they work together in production-ready systems.
+
+{% embed url="https://www.youtube.com/embed/P5x0nsY8hCg" %}
+
 ### What you can build with agents
 
 Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](build-and-manage-agents.md#add-sub-agents) and [Schedules](build-and-manage-agents.md#run-agents-on-a-schedule) below.
@@ -88,9 +94,9 @@ Build agents in the Agent Builder. Start with a name and a model, add instructio
 3. In the **Agent** tab, enter a name for the agent. Use the icon picker to change the icon.
 
 {% hint style="info" %}
-**Use the AI Assistant**
+**Use n8n Assistant**
 
-Describe what you want the agent to do to the [AI Assistant](ways-of-building-workflows/ai-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
+Describe what you want the agent to do to the [n8n Assistant](ways-of-building-workflows/n8n-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
 {% endhint %}
 
 #### Choose a model
@@ -253,7 +259,7 @@ You can use agents within your workflows in two ways:
 Agents run on self-hosted n8n from 2.32.3 (Beta). There are two ways to set them up:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
-* **Full experience**: also set up [AI Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
+* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
 {% hint style="warning" %}
 Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
@@ -263,7 +269,7 @@ Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Ente
 Queue mode isn't supported for agents yet, and connecting channels (such as Telegram) can fail. Run agents in regular mode for now.
 {% endhint %}
 
-For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
+For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 
 ### Agent executions and pricing
 

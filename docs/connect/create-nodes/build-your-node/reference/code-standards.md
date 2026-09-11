@@ -22,6 +22,12 @@ The n8n node linter provides automatic checking for many of the node-building st
 
 n8n recommends using the [`n8n-node` CLI tool](../using-the-n8n-node-tool.md) to build and test your node. In particular, this is important if you plan on [submitting your node for verification](../../deploy-your-node/submit-community-nodes.md#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
 
+## Use the declarative style
+
+Build your node in the declarative style. It's the default, and it keeps your node shorter and easier to maintain by describing requests in the `routing` key instead of an `execute()` method.
+
+Use the programmatic style only when your node needs it: trigger nodes, non-REST APIs, nodes that transform incoming data, or nodes that need feature-based versioning. Declarative nodes can still use light versioning. Refer to [Choose your node building approach](../../plan-your-node/choose-a-node-building-style.md) for the full list and for a side-by-side comparison of the two styles.
+
 ## Write in TypeScript <a href="#write-in-typescript" id="write-in-typescript"></a>
 
 All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.

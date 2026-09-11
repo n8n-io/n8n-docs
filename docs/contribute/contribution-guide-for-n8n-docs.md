@@ -220,6 +220,3 @@ If you have questions about contributing, there are a few places to get help:
 * [**Discord**](https://discord.gg/n8n)**:** Join the `#docs` channel for more informal questions or quick feedback.
 
 To get the attention of the docs team specifically, tag `@n8n-io/docs` in your pull request or issue.
-
-
-Temporary DOC-2307 test link, do not merge: [broken example](https://github.com/n8n-io/n8n-docs/blob/main/DOC-2307-THIS-FILE-DOES-NOT-EXIST.md).

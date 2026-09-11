@@ -1,10 +1,13 @@
 name: Lychee PR external linkcheck
+# Checks the external links in the markdown files a PR touches and posts the list of
+# broken ones as a PR comment. The comment is removed again once the links are fixed.
+# The job stays red while links are broken (it is a required check).
 on:
   pull_request:
     branches:
       - main
-permissions:  
-  contents: read 
+permissions:
+  contents: read
   pull-requests: write
 jobs:
   link-check:
@@ -25,13 +28,32 @@ jobs:
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
         uses: lycheeverse/lychee-action@a99389aeff3c193ffb6f0741178e519569d3f404 # v2.3.0
         with:
-          args: --config lychee.toml ${{  steps.changed-markdown-files.outputs.all_changed_files }}
-      - name: PR comment with file
+          args: --config lychee.toml ${{ steps.changed-markdown-files.outputs.all_changed_files }}
+          # lychee-action writes its report here; it ignores `output` in lychee.toml.
+          output: lychee/out.md
+          # Don't fail inside the action, or the comment steps below never run.
+          # The last step fails the job explicitly when links are broken.
+          fail: false
+      - name: Comment broken links on the PR
+        if: steps.changed-markdown-files.outputs.any_changed == 'true' && steps.lychee.outputs.exit_code != '0'
+        # PRs from forks get a read-only token and cannot comment; the check still fails below.
+        continue-on-error: true
         uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
         with:
-          file-path: _lychee/out.md
-          comment-tag: execution
+          file-path: lychee/out.md
+          comment-tag: lychee
           mode: recreate
-      - name: Report Status
-        if: failure()
-        run: echo "❌ Broken links detected. Please fix them!"
+      - name: Remove stale broken-links comment
+        if: steps.changed-markdown-files.outputs.any_changed == 'true' && steps.lychee.outputs.exit_code == '0'
+        continue-on-error: true
+        uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
+        with:
+          message: All external links resolve.
+          comment-tag: lychee
+          mode: delete
+          create-if-not-exists: false
+      - name: Fail on broken links
+        if: steps.changed-markdown-files.outputs.any_changed == 'true' && steps.lychee.outputs.exit_code != '0'
+        run: |
+          echo "❌ Broken external links detected. See the PR comment (or the lychee step above) for the list."
+          exit 1

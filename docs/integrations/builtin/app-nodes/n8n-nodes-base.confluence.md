@@ -57,7 +57,7 @@ Operations that read content return the body in **Storage** (the default) or **A
 
 The **Append** operation writes the page in the format you select, whatever format the page was saved in. When the two formats differ, Confluence converts the whole page. The content and the macros survive, but Confluence rewrites the stored markup, so the page's version history shows a difference for the whole page and not only for the appended content. To keep the difference small, select the format the page already uses.
 
-## Drafts
+## Create and publish Confluence page drafts
 
 Confluence keeps a draft next to the published version of a page, so a draft never replaces what readers see:
 

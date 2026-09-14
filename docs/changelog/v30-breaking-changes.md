@@ -40,6 +40,8 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 ### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
 
 - **Execute Workflow** node: n8n 3.0 removes the older behavior.
+- **Code** node: n8n 3.0 removes the `$evaluateExpression()` convenience method. A Code node that calls it fails with the error `The function "$evaluateExpression" is not supported in the Code Node`, on task runners in both secure and insecure mode. Since n8n 2.0, the call [already fails on secure-mode task runners](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#dollarevaluateexpression-no-longer-works-in-the-code-node), which are the default, so only instances that set `N8N_RUNNERS_INSECURE_MODE=true` see a change. `$evaluateExpression()` inside `{{ }}` expressions in regular node fields isn't affected.
+  - **What to do:** Move the expression evaluation out of the Code node. Write the logic directly in JavaScript, or evaluate the expression in an Edit Fields (Set) node before the Code node and read the result from the incoming item.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 
@@ -50,11 +52,6 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 
 - n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
 - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
-
-### `$evaluateExpression()` removed from the Code node <a href="#dollarevaluateexpression-removed-from-the-code-node" id="dollarevaluateexpression-removed-from-the-code-node"></a>
-
-- n8n 3.0 removes the `$evaluateExpression()` convenience method from the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. A Code node that calls it fails with the error `The function "$evaluateExpression" is not supported in the Code Node`. This applies to task runners in both secure and insecure mode. Since n8n 2.0, the call [already fails on secure-mode task runners](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#dollarevaluateexpression-no-longer-works-in-the-code-node), which are the default, so only instances that set `N8N_RUNNERS_INSECURE_MODE=true` see a change. `$evaluateExpression()` inside `{{ }}` expressions in regular node fields isn't affected.
-- **What to do:** Move the expression evaluation out of the Code node. Write the logic directly in JavaScript, or evaluate the expression in an Edit Fields (Set) node before the Code node and read the result from the incoming item.
 
 ## Security <a href="#security" id="security"></a>
 

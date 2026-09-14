@@ -17,7 +17,7 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 * [Caddy](https://caddyserver.com) (a reverse proxy) to allow access to the Server from the internet.
 * [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
 
-Once n8n is up and running, an optional last section covers adding the AI Assistant.
+Once n8n is up and running, an optional last section covers adding n8n Assistant.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
 
@@ -34,13 +34,14 @@ You can change most of the settings to suit your needs, but as this guide uses D
 {% hint style="info" %}
 **Type**
 
-When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough. If you plan to add the AI Assistant, choose a plan with at least 4 GB RAM / 2 vCPU instead. CPX11 doesn't have enough headroom once the sandbox is added.
+When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough. If you plan to add n8n Assistant, choose a plan with at least 4 GB RAM / 2 vCPU instead. CPX11 doesn't have enough headroom once the sandbox is added.
 {% endhint %}
 {% hint style="info" %}
 **SSH keys**
 
 Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
 {% endhint %}
+
 ## Log in to your server <a href="#log-in-to-your-server" id="log-in-to-your-server"></a>
 
 The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg) for more information. You can find the public IP in the listing of the servers in your project.
@@ -106,7 +107,7 @@ sudo ufw allow 80
 sudo ufw allow 443
 ```
 
-{% hint style="info" %} If you add the AI Assistant later, its sandbox services stay internal to the Compose network. You don't need to open any additional ports for them. {% endhint %}
+{% hint style="info" %} If you add n8n Assistant later, its sandbox services stay internal to the Compose network. You don't need to open any additional ports for them. {% endhint %}
 
 ## Configure n8n <a href="#configure-n8n" id="configure-n8n"></a>
 
@@ -175,9 +176,9 @@ You can stop n8n and Caddy with the following command:
 sudo docker compose stop
 ```
 
-## Optional: Add the AI Assistant <a href="#optional-add-the-ai-assistant" id="optional-add-the-ai-assistant"></a>
+## Optional: Add n8n Assistant <a href="#optional-add-n8n-assistant" id="optional-add-n8n-assistant"></a>
 
-The AI Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](../install-using-docker-compose.md) to this setup. A few things are worth knowing before you start:
+n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](../install-using-docker-compose.md) to this setup. A few things are worth knowing before you start:
 
 * This sandbox is suitable for local development and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
 * **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
@@ -309,7 +310,7 @@ The AI Assistant needs a sandbox to run code in. You can add the same sandbox st
    sudo docker compose up -d
    ```
 
-6. Add your model API key. See [Set up AI Assistant](../../configure-n8n/set-up-ai-assistant.md) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
+6. Add your model API key. See [Set up n8n Assistant](../../configure-n8n/set-up-n8n-assistant.md) for the full reference, including how to pick a model provider. Web search works out of the box via the bundled SearXNG service above; add a Brave Search key instead if you'd rather use that.
 
 {% hint style="warning" %}
 Replace the `change-me-...` placeholders in `.env` with your own unique secrets before exposing this Droplet to the internet. `sandbox-runner-1` runs privileged Docker-in-Docker. Never publish its ports, and don't route Caddy to it.

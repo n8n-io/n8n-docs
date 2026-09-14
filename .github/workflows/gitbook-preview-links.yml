@@ -40,12 +40,28 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           SHA: ${{ github.event.sha || github.event.inputs.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch || 'main' }}
         run: |
           set -euo pipefail
-          PR=$(gh api "repos/$GH_REPO/commits/$SHA/pulls" \
-                --jq '[.[] | select(.state=="open")][0].number // empty')
+          # Match the sha against open PRs' heads rather than asking
+          # `commits/$SHA/pulls`: that endpoint only indexes commits on the base
+          # repo's own branches, so it returns [] for a fork PR head (reachable
+          # only via refs/pull/N/head) and the job silently skipped every
+          # external contributor's PR. `pulls` carries `head.sha` verbatim, fork
+          # or not.
+          gh api "repos/$GH_REPO/pulls?state=open&per_page=100" --paginate --slurp > /tmp/open_prs.json
+          PR=$(jq -r --arg sha "$SHA" '[.[][] | select(.head.sha==$sha)][0].number // empty' /tmp/open_prs.json)
           if [ -z "$PR" ]; then
-            echo "No open PR for $SHA; nothing to do."
+            # A build for a commit already on the default branch (a merged PR,
+            # or a change request GitBook pushed straight to it) has no open PR
+            # to comment on. That is expected, so stay quiet. Anything else is
+            # a preview we failed to map to its PR, so warn: the next
+            # regression here should be visible, not a green no-op.
+            CMP=$(gh api "repos/$GH_REPO/compare/$DEFAULT_BRANCH...$SHA" --jq '.status' 2>/dev/null) || CMP=unknown
+            case "$CMP" in
+              identical|behind) echo "No open PR for $SHA (already on $DEFAULT_BRANCH); nothing to do." ;;
+              *) echo "::warning::GitBook built a preview for $SHA but no open PR has that head sha; no preview links posted." ;;
+            esac
             exit 0
           fi
           echo "pr=$PR" >> "$GITHUB_OUTPUT"
@@ -127,7 +143,7 @@ jobs:
           set -euo pipefail
           MARKER='<!-- gitbook-preview-links -->'
           CID=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
-                 --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
+                  --jq "[.[] | select(.body | startswith(\"$MARKER\"))][0].id // empty")
           if [ -n "$CID" ]; then
             gh api -X PATCH "repos/$GH_REPO/issues/comments/$CID" -F body=@/tmp/body.md >/dev/null
             echo "Updated comment $CID on PR #$PR"

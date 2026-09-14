@@ -24,6 +24,7 @@ Be aware of how n8n decides which node version to load:
 
 If you build a node using the declarative style, you can't use full versioning.
 {% endhint %}
+
 ## Light versioning <a href="#light-versioning" id="light-versioning"></a>
 
 This is available for all node types.

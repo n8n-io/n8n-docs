@@ -65,9 +65,8 @@ Version 1 of the **AI Agent** node supported several agent type modes, including
 
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
-n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
-
-**What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
+- n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
+  - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
 
 ## Security <a href="#security" id="security"></a>
 
@@ -105,29 +104,16 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
 
 **What to do:** Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `s3`, `azure`, or `database`, and check that your container's mounted disk has room for binary data.
 
-### Unverified community packages off by default <a href="#unverified-community-packages-off-by-default" id="unverified-community-packages-off-by-default"></a>
+Smaller changes to defaults and removed variables:
 
-The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
-
-**What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.
-
-### Shorter task runner timeout <a href="#shorter-task-runner-timeout" id="shorter-task-runner-timeout"></a>
-
-The default for `N8N_RUNNERS_TASK_TIMEOUT` drops from `300` (5 minutes) to `60` (1 minute). Code node tasks that run longer fail.
-
-**What to do:** Set `N8N_RUNNERS_TASK_TIMEOUT` explicitly if your tasks need more than a minute.
-
-### Manual executions always run on workers in queue mode <a href="#manual-executions-always-run-on-workers-in-queue-mode" id="manual-executions-always-run-on-workers-in-queue-mode"></a>
-
-`OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` is removed, and manual executions no longer run on the main instance.
-
-**What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
-
-### `N8N_DB_PING_TIMEOUT` removed <a href="#n8n-db-ping-timeout-removed" id="n8n-db-ping-timeout-removed"></a>
-
-n8n no longer falls back to this variable.
-
-**What to do:** Set `DB_PING_TIMEOUT_MS` instead.
+- **Unverified community packages off by default.** The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
+  - **What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.
+- **Shorter task runner timeout.** The default for `N8N_RUNNERS_TASK_TIMEOUT` drops from `300` (5 minutes) to `60` (1 minute). Code node tasks that run longer fail.
+  - **What to do:** Set `N8N_RUNNERS_TASK_TIMEOUT` explicitly if your tasks need more than a minute.
+- **Manual executions always run on workers in queue mode.** `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` is removed.
+  - **What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
+- **`N8N_DB_PING_TIMEOUT` removed.** n8n no longer falls back to this variable.
+  - **What to do:** Set `DB_PING_TIMEOUT_MS` instead.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

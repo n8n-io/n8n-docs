@@ -120,7 +120,7 @@ Enter the **Message-ID** of the email this message is replying to. The value sho
 
 ### References
 
-Enter a whitespace-separated list of **Message-IDs** to reference in the email headers. This field is used to maintain email threading context. If left empty, the value from **In Reply To** is automatically included. Example: `<msg-123@email.example.com> <msg-456@email.example.com>`
+Enter a whitespace-separated list of **Message-IDs** to reference in the email headers. This maintains email threading context. If left empty, the value from **In Reply To** is automatically included. Example: `<msg-123@email.example.com> <msg-456@email.example.com>`
 
 ### Reply To <a href="#reply-to" id="reply-to"></a>
 

@@ -52,6 +52,7 @@ After Heroku builds and deploys the app it provides links to **Manage App** or *
 
 Refer to the [Heroku documentation](https://devcenter.heroku.com/categories/networking-dns) to find out how to connect your domain to a Heroku application.
 {% endhint %}
+
 ## Changing the deployment template <a href="#changing-the-deployment-template" id="changing-the-deployment-template"></a>
 
 You can make changes to the deployment template by forking the [repository](https://github.com/n8n-io/n8n-heroku) and deploying from you fork.
@@ -69,6 +70,7 @@ Heroku doesn't allow Docker-based applications to define an exposed port with th
 
 [Read this guide](https://devcenter.heroku.com/articles/container-registry-and-runtime#unsupported-dockerfile-commands) for more details on the limitations of using Docker with Heroku.
 {% endhint %}
+
 ### Configuring Heroku <a href="#configuring-heroku" id="configuring-heroku"></a>
 
 The `heroku.yml` file defines the application you want to create on Heroku. It consists of two sections:

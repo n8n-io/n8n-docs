@@ -54,8 +54,8 @@ layout:
 [set-up-task-runners.md](set-up-task-runners.md)
 {% endcontent-ref %}
 
-{% content-ref url="set-up-ai-assistant.md" %}
-[set-up-ai-assistant.md](set-up-ai-assistant.md)
+{% content-ref url="set-up-n8n-assistant.md" %}
+[set-up-n8n-assistant.md](set-up-n8n-assistant.md)
 {% endcontent-ref %}
 
 {% content-ref url="deploy-n8n-in-canvas-only-mode.md" %}

@@ -109,6 +109,7 @@ You can convert date strings and other date formats to a Luxon DateTime object. 
 
 With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
 {% endhint %}
+
 #### If you have a date in a supported standard technical format: <a href="#if-you-have-a-date-in-a-supported-standard-technical-format" id="if-you-have-a-date-in-a-supported-standard-technical-format"></a>
 
 Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 string. For example:

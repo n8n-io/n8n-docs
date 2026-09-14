@@ -17,14 +17,19 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # SQL AI Agent node <a href="#sql-ai-agent-node" id="sql-ai-agent-node"></a>
 
-{% hint style="info" %}
-**Feature removed**
+{% hint style="warning" %}
+**Feature availability**
 
-n8n removed this functionality in February 2025.
+The SQL Agent is deprecated from n8n 1.82.0. New or updated AI Agent nodes use the [Tools Agent](tools-agent.md) instead. Only workflows still using node version 1 of the AI Agent node can select the SQL Agent.
+
+Node version 1 of the AI Agent node is removed from n8n 3.0, so the SQL Agent stops working for all workflows. See [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) for details.
 {% endhint %}
 
 The SQL Agent uses a SQL database as a data source. It can understand natural language questions, convert them into SQL queries, execute the queries, and present the results in a user-friendly format. This agent is valuable for building natural language interfaces to databases.

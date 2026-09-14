@@ -1,8 +1,8 @@
 ---
-title: n8n v1.0 migration guide
-description: What's new in version 1
+title: n8n 1.0 migration guide
+description: What's new in n8n 1.0
 contentType: reference
-nodeTitle: v1.0 migration guide
+nodeTitle: n8n 1.0 migration guide
 originalFilePath: 1-0-migration-checklist.md
 originalUrl: 'https://docs.n8n.io/1-0-migration-checklist'
 url: 'https://docs.n8n.io/release-notes/v10-migration-guide'
@@ -11,17 +11,17 @@ layout:
     visible: false
 ---
 
-# n8n v1.0 migration guide <a href="#n8n-v10-migration-guide" id="n8n-v10-migration-guide"></a>
+# n8n 1.0 migration guide <a href="#n8n-v10-migration-guide" id="n8n-v10-migration-guide"></a>
 
-This document provides a summary of what you should be aware of before updating to version 1.0 of n8n.
+This document provides a summary of what you should be aware of before updating to n8n 1.0.
 
-The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available for demanding production environments. Version 1.0 represents the hard work invested over the last four years to make n8n the most accessible, powerful, and versatile automation tool. n8n 1.0 is now ready for use in production.
+The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available for demanding production environments. n8n 1.0 represents the hard work invested over the last four years to make n8n the most accessible, powerful, and versatile automation tool. n8n 1.0 is now ready for use in production.
 
 ## New features <a href="#new-features" id="new-features"></a>
 
 ### Python support in the Code node <a href="#python-support-in-the-code-node" id="python-support-in-the-code-node"></a>
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/using-the-code-node) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before n8n 1.0.
 
 [PR #4295](https://github.com/n8n-io/n8n/pull/4295), [PR #6209](https://github.com/n8n-io/n8n/pull/6209)
 
@@ -33,7 +33,7 @@ In multi-branch workflows, n8n needs to determine the order in which to execute 
 
 n8n used to execute multi-input nodes as long as they received data on their first input. Nodes connected to the second input of multi-input nodes automatically executed regardless of whether they received data. The new execution order introduced in n8n 1.0 simplifies this behavior: Nodes are now executed only when they receive data, and multi-input nodes require data on at least one of their inputs to execute.
 
-Your existing workflows will use the legacy order, while new workflows will execute using the v1 order. You can configure the execution order for each workflow in [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
+Your existing workflows will use the legacy order, while new workflows will execute using the n8n 1.0 order. You can configure the execution order for each workflow in [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
 
 [PR #4238](https://github.com/n8n-io/n8n/pull/4238), [PR #6246](https://github.com/n8n-io/n8n/pull/6246), [PR #6507](https://github.com/n8n-io/n8n/pull/6507)
 
@@ -128,7 +128,7 @@ If you build custom nodes, refer to [HTTP request helpers](https://app.gitbook.c
 
 ### Removed WEBHOOK_TUNNEL_URL <a href="#removed-webhooktunnelurl" id="removed-webhooktunnelurl"></a>
 
-As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy).
+As of n8n 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy).
 
 [PR #1408](https://github.com/n8n-io/n8n/pull/1408)
 
@@ -152,4 +152,4 @@ If you encounter any issues during the process of updating to n8n 1.0, please se
 
 ## Thank you <a href="#thank-you" id="thank-you"></a>
 
-We would like to take a moment to express our gratitude to all of our users for their continued support and feedback. Your contributions are invaluable in helping us make n8n the best possible automation tool. We're excited to continue working with you as we move forward with the release of version 1.0 and beyond. Thank you for being a part of our journey!
+We would like to take a moment to express our gratitude to all of our users for their continued support and feedback. Your contributions are invaluable in helping us make n8n the best possible automation tool. We're excited to continue working with you as we move forward with the release of n8n 1.0 and beyond. Thank you for being a part of our journey!

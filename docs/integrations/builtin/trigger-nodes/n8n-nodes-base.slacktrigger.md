@@ -71,7 +71,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack.md).
+n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack/README.md).
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 
@@ -87,7 +87,13 @@ The node requires scopes for the [conversations.list](https://api.slack.com/meth
 
 ## Verify the webhook <a href="#verify-the-webhook" id="verify-the-webhook"></a>
 
-From version `1.106.0`, you can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](../credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
+{% hint style="info" %}
+**Feature availability**
+
+Verifying that incoming webhook requests come from Slack, using a Slack Signing Secret, is available from n8n 1.106.0.
+{% endhint %}
+
+You can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](../credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

@@ -17,11 +17,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Custom roles are available on Self-hosted Enterprise and Cloud Enterprise plans. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+Custom project roles are available on:
 
-**Available from:** n8n version 1.122.0 (released November 24, 2025)
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
-Secret vault scopes are available from n8n version `2.13.0`.
+Available from n8n 1.122.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -166,6 +167,13 @@ n8n pairs some scopes together, so they don't appear as separate checkboxes:
 * `execution:reveal` - Reveal redacted execution data (refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data))
 
 ### Secret vault scopes <a href="#secret-vault-scopes" id="secret-vault-scopes"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Secret vault scopes are available from n8n 2.13.0.
+{% endhint %}
+
 The scope codes use the `externalSecretsProvider` prefix. The role editor lists this section as **Secrets vaults**.
 
 * `externalSecretsProvider:create` - Create new secret vaults in a project

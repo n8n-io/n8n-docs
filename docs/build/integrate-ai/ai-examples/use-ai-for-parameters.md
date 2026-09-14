@@ -31,7 +31,7 @@ There are two ways to do this, and you can switch between them.
 
 Each appropriate parameter field in the tool's editing dialog has an extra button at the end:
 
-![image showing stars icon to the right of parameter field](../../.gitbook/assets/ai-stars.png)
+![A star icon button at the end of a parameter field, used to let the AI Agent fill in that value automatically](../../.gitbook/assets/ai-stars.png)
 
 On activating this button, the [AI Agent](#user-content-fn-2)[^2] will fill in the expression for you, with no need for any further user input.
 The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.

@@ -35,7 +35,7 @@ Create a [Zoom](https://zoom.us/) account. Your account must have one of the fol
 - OAuth2
 
 {% hint style="warning" %}
-**API JWT token deprecation**
+**Feature availability**
 
 Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
 {% endhint %}

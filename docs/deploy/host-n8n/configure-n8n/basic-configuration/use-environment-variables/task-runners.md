@@ -31,7 +31,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_RUNNERS_ENABLED` (**deprecated**) | Boolean | `false` | Are task runners enabled. **Deprecated** from v2.0. |
+| `N8N_RUNNERS_ENABLED` (**deprecated**) | Boolean | `false` | Are task runners enabled. **Deprecated** from n8n 2.0. |
 | `N8N_RUNNERS_MODE` | Enum string: `internal`, `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. `external` means an external orchestrator will launch the task runner. |
 | `N8N_RUNNERS_AUTH_TOKEN` | String | Random string | Shared secret used by a task runner to authenticate to n8n. Required when using `external` mode. |
 | `N8N_RUNNERS_BROKER_PORT` | Number | `5679` | Port the task broker listens on for task runner connections. |
@@ -61,6 +61,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_RUNNERS_GRANT_TOKEN` | String | Random string | Token the runner uses to authenticate with the task broker. This is automatically provided by the launcher. |
+| `N8N_RUNNERS_ID` | String | Random string | ID the runner identifies itself with to the task broker. In `internal` mode, n8n sets it for each runner it launches. In `external` mode, leave it unset unless you need stable IDs in the broker logs: every runner needs a unique value, and two runners sharing one keep evicting each other. Set it per runner type as an `env-override` in the [runners config file](../../set-up-task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`), not as a container environment variable. Available from n8n 2.35.0. |
 | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT` | Number | `15` | The number of seconds to wait before shutting down an idle runner. |
 | `N8N_RUNNERS_TASK_BROKER_URI` | String | `http://127.0.0.1:5679` | The URI of the task broker server (n8n instance). |
 | `N8N_RUNNERS_LAUNCHER_HEALTH_CHECK_PORT` | Number | `5680` | Port for the launcher's health check server. |

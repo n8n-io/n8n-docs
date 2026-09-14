@@ -122,7 +122,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 This release includes a [crowd.dev](https://www.crowd.dev/) node and crowd.dev Trigger node. crowd.dev is a tool to help you understand who is engaging with your open source project.
 
-[crowd.dev node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.crowddev).
+The crowd.dev node was later removed. See [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for details.
 {% endhint %}
 
 ### Contributors <a href="#contributors" id="contributors"></a>
@@ -420,7 +420,7 @@ This release deprecates the following:
 * The `EXECUTIONS_PROCESS` environment variable.
 * Running n8n in own mode. Main mode is now the default. Use [Queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) if you need full execution isolation.
 * The `WEBHOOK_TUNNEL_URL` flag. Replaced by `WEBHOOK_URL`.
-* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in version 1.0. n8n recommends using PostgreSQL instead.
+* Support for MySQL and MariaDB as n8n backend databases. n8n will remove support completely in n8n 1.0. n8n recommends using PostgreSQL instead.
 
 ## n8n@0.226.2 <a href="#n8n02262" id="n8n02262"></a>
 
@@ -3669,7 +3669,7 @@ This release changes n8n's license, from [Apache 2.0 with Commons Clause](https:
 
 This change aims to clarify n8n's license terms, and n8n's position as a fair-code project.
 
-Read more about the new license in [License](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/sustainable-use-license).
+Read more about the new license in [License](/broken/spaces/ukPPOMQ6NId4gpAIkPXa/pages/504ABciZlkjGL1YfV1Ic).
 
 ### New nodes <a href="#new-nodes" id="new-nodes"></a>
 

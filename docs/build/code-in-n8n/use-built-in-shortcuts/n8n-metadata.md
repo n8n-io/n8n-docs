@@ -27,8 +27,9 @@ This includes:
 
 You can use Python in the Code node. It isn't available in expressions.
 {% endhint %}
-{% tabs %}
-{% tab title="JavaScript" %}
+
+## JavaScript
+
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). | ✅ |
@@ -36,7 +37,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | `$execution.id` | The unique ID of the current workflow execution. | ✅ |
 | `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | ✅ |
 | `$execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). | ✅ |
-| `$getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be published and called by a trigger or webhook to save static data. This gives access to the static workflow data. | ✅ |
+| `$getWorkflowStaticData(type)` | This gives access to the static workflow data. Static data doesn't persist when testing workflows: publish the workflow and run it from a trigger or webhook to save static data. For persisting data between executions, consider [data tables](../../work-with-data/data-tables.md) instead. View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). | ✅ |
 | `$("<node-name>").isExecuted` | Check whether a node has already executed. | ✅ |
 | `$itemIndex` | The index of an item in a list of items. | ❌ |
 | `$nodeVersion` | Get the version of the current node. | ✅ |
@@ -50,16 +51,19 @@ You can use Python in the Code node. It isn't available in expressions.
 | `$workflow.active` | Whether the workflow is active (true) or not (false). | ✅ |
 | `$workflow.id` | The workflow ID. | ✅ |
 | `$workflow.name` | The workflow name. | ✅ |
-{% endtab %}
 
-{% tab title="Python (native)" %}
+## Python (native)
+
 | Method | Description |
 | ------ | ----------- |
 | `_items` | Contains incoming items in "Run once for all items" mode. |
 | `_item` | Contains the item being iterated on in "Run once for each item" mode. |
-{% endtab %}
+| `_query` | In the Code Tool, contains the input string the AI Agent passes when it calls the tool. Available in "Run once for all items" mode. |
 
-{% tab title="Python (Pyodide, deprecated)" %}
+## Python (Pyodide, deprecated)
+
+Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) instead.
+
 | Method | Description |
 | ------ | ----------- |
 | `_env` | Contains n8n instance configuration [environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables). |
@@ -67,7 +71,7 @@ You can use Python in the Code node. It isn't available in expressions.
 | `_execution.id` | The unique ID of the current workflow execution. | 
 | `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | 
 | `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.wait). |
-| `_getWorkflowStaticData(type)` | View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). Static data doesn't persist when testing workflows. The workflow must be published and called by a trigger or webhook to save static data. This gives access to the static workflow data. |
+| `_getWorkflowStaticData(type)` | This gives access to the static workflow data. Static data doesn't persist when testing workflows: publish the workflow and run it from a trigger or webhook to save static data. For persisting data between executions, consider [data tables](../../work-with-data/data-tables.md) instead. View an [example](../cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md). |
 | `_("<node-name>").isExecuted` | Check whether a node has already executed. |
 | `_nodeVersion` | Get the version of the current node. | ✅ |
 | `_prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `_prevNode` always uses the first input connector. | 
@@ -79,5 +83,3 @@ You can use Python in the Code node. It isn't available in expressions.
 | `_workflow.active` | Whether the workflow is active (true) or not (false). |
 | `_workflow.id` | The workflow ID. | 
 | `_workflow.name` | The workflow name. |
-{% endtab %}
-{% endtabs %}

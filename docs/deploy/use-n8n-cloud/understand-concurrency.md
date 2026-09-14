@@ -32,7 +32,7 @@ You can view the number of active executions and your plan's concurrency limit a
 Some other details about concurrency to keep in mind:
 
 - Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, or error executions.
-- [Test evaluations](#user-content-fn-1)[^1] don't count towards production concurrency limits. They use a separate per-plan limit for how many test cases can run in parallel within a single test run: Community and Pro 1 (sequential), Business 3, Enterprise 5. You can adjust the value for a given run from the **Run Test** popover. Refer to [Metric-based evaluations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) for details.
+- [Test evaluations](#user-content-fn-1)[^1] don't count towards production concurrency limits. They use a separate per-plan limit for how many test cases can run in parallel within a single test run: self-hosted Community and n8n Cloud Pro run 1 (sequential), self-hosted Business runs 3, and Enterprise (both n8n Cloud and self-hosted) runs 5. You can adjust the value for a given run from the **Run Test** popover. Refer to [Metric-based evaluations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) for details.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 
@@ -41,7 +41,7 @@ Some other details about concurrency to keep in mind:
 {% hint style="info" %}
 **Feature availability**
 
-Queue mode is available for Cloud Enterprise plans. To enable it, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
+Queue mode is available for n8n Cloud Enterprise plans. To enable it, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 {% endhint %}
 
 Concurrency in queue mode is a separate mechanism from concurrency in regular mode. In queue mode, the concurrency settings determine how many jobs each worker can run in parallel. In regular mode, concurrency limits apply to the entire instance.

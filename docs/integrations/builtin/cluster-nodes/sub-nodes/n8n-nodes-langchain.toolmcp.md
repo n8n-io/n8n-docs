@@ -22,17 +22,21 @@ layout:
 The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
 
 {% hint style="info" %}
-**Credentials**
+**Already in the registry?**
 
-The MCP Client Tool node supports [Bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/httprequest.md#using-oauth2) authentication methods.
+If the service you want is available in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers/) registry, you can connect it straight from the node panel without adding a credential. Use this node for MCP servers that aren't in the registry yet.
 {% endhint %}
+
+## Credentials
+
+The MCP Client Tool node supports [Bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/mcp.md#using-oauth2) authentication methods.
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the node with the following parameters.
 
 * **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
-* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/httprequest.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
+* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/mcp.md#using-oauth2) authentication. Select **None** to attempt to connect without authentication.
 	* **Multiple Headers Auth**: Use this when your MCP server requires more than one header, for example an API key and a username. Add each header as a **Name** and **Value** pair in the credential. You can add as many headers as you need.
 * **Tools to Include**: Choose which tools you want to expose to the AI Agent:
 	* **All**: Expose all the tools given by the MCP server.

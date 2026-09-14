@@ -343,7 +343,7 @@ The **Approval** response type adds these options:
 * **Type of Approval**: Whether to present only an approval button or both an approval and disapproval buttons.
 * **Button Label**: The label for the approval or disapproval button. The default choice is `✅ Approve` and `❌ Decline` for approval and disapproval actions respectively.
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
-* **Approve Within Chat**: Whether approvers respond with a single tap on the message's buttons, instead of opening a link in their browser. Refer to [Approve Within Chat](#approve-within-chat) below for more information.
+* **Approve Within Chat**: Whether approvers respond with a single tap on the message's buttons, instead of opening a link in their browser. You'll find it under the **Advanced Interactivity** section header. Refer to [Approve Within Chat](#approve-within-chat) below for more information.
 
 #### Approve within chat
 
@@ -373,9 +373,9 @@ If your instance isn't reachable over public HTTPS, or you turn **Approve Within
 Button taps behave the same way in private chats, groups, and channels. As with any other **Message** operation, your bot needs to be a member of the channel to post and edit messages there. Refer to [Common Issues | Add a bot to a Telegram channel](common-issues.md#add-a-bot-to-a-telegram-channel) for more information.
 {% endhint %}
 
-Turning on **Approve Within Chat** reveals a **Chat Approval Options** section with these fields:
+Turning on **Approve Within Chat** reveals these fields beneath it, in the same **Advanced Interactivity** section:
 
-* **Restrict to User IDs**: The Telegram user IDs allowed to approve or decline. Separate multiple IDs with a comma. If you leave this empty, anyone who can see the message can respond.
+* **Restrict Who Can Approve**: The Telegram user IDs allowed to approve or decline. Separate multiple IDs with a comma. If you leave this empty, anyone who can see the message can respond.
 * **Unauthorized Reply**: The message shown, as a Telegram popup, to someone who taps a button but isn't on the approver list.
 * **After Decision**: What happens to the message after someone responds:
     * **Show Outcome and Remove Buttons**: Removes the buttons and adds a line showing who approved or declined.

@@ -31,14 +31,14 @@ Before setting up source control and environments, you need to plan your environ
 
 ### Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>
 
-![Diagram](../.gitbook/assets/vc-multi-multi.png)
+![Development n8n instance linked to a development branch and production instance linked to a production branch](../.gitbook/assets/vc-multi-multi.png)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
 
 
 ### Multiple instances, one branch <a href="#multiple-instances-one-branch" id="multiple-instances-one-branch"></a>
 
-![Diagram](../.gitbook/assets/vc-multi-one.png)
+![Development and production n8n instances both connected to the same Git branch](../.gitbook/assets/vc-multi-one.png)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
 

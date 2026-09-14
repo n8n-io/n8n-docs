@@ -38,13 +38,22 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_BULL_REDIS_TLS` | Boolean | `false` | Enable TLS on Redis connections. |
 | `QUEUE_BULL_REDIS_DUALSTACK` | Boolean | `false` | Enable dual-stack support (IPv4 and IPv6) on Redis connections. |
-| `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | **Deprecated** Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead. How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
+| `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | Deprecated from n8n 1.22.0. Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead. How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | `5678` | The port to serve health checks on. If you experience a port conflict error when starting a worker server using its default port, change this. |
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `60000` | How long (in ms) is the lease period for a worker to work on a message. |
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `10000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
-| `QUEUE_WORKER_MAX_STALLED_COUNT` | Number | `1` | Maximum amount of times a stalled job will be re-processed. |
+| `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in n8n 2.0. Setting this has no effect. See [Remove QUEUE_WORKER_MAX_STALLED_COUNT](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#remove-queueworkermaxstalledcount) for migration details. |
+
+## Webhook responses
+
+In queue mode, a worker sends a webhook response back to the main instance inside a queue message. These variables set how large that message can be, and whether n8n stores a larger response body in binary data storage instead of failing the node. Refer to [Large webhook responses](../../scaling/enable-queue-mode.md#large-webhook-responses) for details.
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` | Number | `64` | Maximum size (in MiB) of a response a worker sends back to the main instance inside a queue message. Redis holds several copies of a response in flight, so budget about 1.5 times this value in Redis memory per response in flight. The same limit applies to a tool result an MCP Trigger workflow returns. |
+| `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Boolean | `false` | Whether a worker stores a response body above `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX` in binary data storage, so the main instance can stream it to the client, instead of failing the node. Needs a `N8N_DEFAULT_BINARY_DATA_MODE` that stores (`filesystem`, `database`, `s3`, or `azure`), and storage every instance can read. Set this on your workers only after every main and webhook instance runs n8n 2.34.0 or later. |
 
 ## Multi-main setup <a href="#multi-main-setup" id="multi-main-setup"></a>
 

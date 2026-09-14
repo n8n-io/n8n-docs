@@ -21,6 +21,10 @@ In the Editor UI, n8n hides all overwritten fields by default, so users can auth
 
 For the environment variables used to configure credential overwrites, refer to [Credentials environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/credentials).
 
+Watch a tutorial on credential overwrites, including how to set them up [using the REST API](#using-the-rest-api) with a [ready-made workflow template](https://n8n.io/workflows/17052-register-credential-overwrites-on-startup-with-the-n8n-api/):
+
+{% embed url="https://www.youtube.com/embed/VtCbCdKrqAE" %}
+
 ## Using environment variables <a href="#using-environment-variables" id="using-environment-variables"></a>
 
 Set `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
@@ -72,6 +76,20 @@ The recommended approach is to load the data using a custom REST endpoint.
 
 {% hint style="info" %}
 Credentials can extend other credentials. For example, `googleSheetsOAuth2Api` extends `googleOAuth2Api`. You can set parameters on the parent (`googleOAuth2Api`) and all child credentials will use them.
+{% endhint %}
+
+## Show OAuth scope fields
+
+By default, n8n hides scope fields when managed OAuth is available. To let users configure scopes for specific managed OAuth credential types, set `N8N_MANAGED_OAUTH_SHOW_SCOPES` to a comma-separated list:
+
+```sh
+export N8N_MANAGED_OAUTH_SHOW_SCOPES=googleOAuth2Api
+```
+
+This setting applies only to the credential types you list. It doesn't apply to credential types that extend a listed type.
+
+{% hint style="warning" %}
+Letting users set their own scopes can break verified OAuth apps. Many providers, such as Google, require you to define and justify every scope your app requests during app verification. If a user adds a scope you didn't declare, the provider may suspend or ban your app. Only enable this setting for credential types where users adding scopes won't put your app's verification at risk.
 {% endhint %}
 
 ## Persistence <a href="#persistence" id="persistence"></a>

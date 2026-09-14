@@ -1,9 +1,9 @@
 ---
 title: Google Sheets
 description: >-
-  Documentation for the Google Sheets node in n8n, a workflow automation
-  platform. Includes details of operations and configuration, and links to
-  examples and credentials information.
+  Documentation for the Google Sheets node in n8n. Includes details of
+  operations and configuration, and links to examples and credentials
+  information.
 contentType:
   - integration
   - reference
@@ -48,7 +48,7 @@ Refer to [Google Sheets credentials](../../credentials/google/README.md) for gui
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse n8n-nodes-base.googlesheets integration templates](https://n8n.io/integrations/google-sheets) or [search all templates](https://n8n.io/workflows/)
+[Browse Google Sheets integration templates](https://n8n.io/integrations/google-sheets) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

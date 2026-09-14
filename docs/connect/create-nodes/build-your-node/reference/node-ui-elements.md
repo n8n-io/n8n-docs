@@ -54,7 +54,7 @@ Basic configuration:
 }
 ```
 
-![String](../../../.gitbook/assets/string.png)
+![String field example: a Name input with Fixed/Expression toggle and the value n8n typed in](../../../.gitbook/assets/string.png)
 
 String field for inputting passwords:
 
@@ -82,7 +82,7 @@ String field for inputting passwords:
 }
 ```
 
-![Password](../../../.gitbook/assets/password.png)
+![Password field example: a Password input showing masked dots instead of the typed value](../../../.gitbook/assets/password.png)
 
 String field with more than one row:
 
@@ -110,7 +110,7 @@ String field with more than one row:
 }
 ```
 
-![Multiple rows](../../../.gitbook/assets/multiple-rows.png)
+![Multi-row string field example: a Description textarea spanning several lines of text](../../../.gitbook/assets/multiple-rows.png)
 
 ### Support drag and drop for data keys <a href="#support-drag-and-drop-for-data-keys" id="support-drag-and-drop-for-data-keys"></a>
 
@@ -153,7 +153,7 @@ Number field with decimal points:
 }
 ```
 
-![Decimal](../../../.gitbook/assets/decimal.png)
+![Decimal number field example: an Amount input showing the value 10.00](../../../.gitbook/assets/decimal.png)
 
 ## Collection <a href="#collection" id="collection"></a>
 
@@ -201,7 +201,7 @@ Use the `collection` type when you need to display optional fields.
 }
 ```
 
-![Collection](../../../.gitbook/assets/collection.png)
+![Collection field example: a Filters group with an optional Type dropdown open, listing Automated, Past, and Upcoming](../../../.gitbook/assets/collection.png)
 
 ## DateTime <a href="#datetime" id="datetime"></a>
 
@@ -227,7 +227,7 @@ The `dateTime` type provides a date picker.
 }
 ```
 
-![DateTime](../../../.gitbook/assets/datetime.png)
+![DateTime field example: a date input opening a calendar picker to choose a date and time](../../../.gitbook/assets/datetime.png)
 
 ## Boolean <a href="#boolean" id="boolean"></a>
 
@@ -253,7 +253,7 @@ The `boolean` type adds a toggle for entering true or false.
 }
 ```
 
-![Boolean](../../../.gitbook/assets/boolean.png)
+![Boolean field example: a Wait for Image toggle switched on](../../../.gitbook/assets/boolean.png)
 
 ## Color <a href="#color" id="color"></a>
 
@@ -278,7 +278,7 @@ The `color` type provides a color selector.
 }
 ```
 
-![Color](../../../.gitbook/assets/color.png)
+![Color field example: a Background Color input with its picker swatch expanded](../../../.gitbook/assets/color.png)
 
 ## Options <a href="#options" id="options"></a>
 
@@ -314,7 +314,7 @@ The `options` type adds an options list. Users can select a single value.
 }
 ```
 
-![Options](../../../.gitbook/assets/options.png)
+![Options field example: a Resource dropdown open showing single-select choices Image and Template](../../../.gitbook/assets/options.png)
 
 ## Multi-options <a href="#multi-options" id="multi-options"></a>
 
@@ -350,7 +350,7 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multi-options](../../../.gitbook/assets/multioptions.png)
+![Multi-options field example: an Events field with Plan Created and Plan Deleted both selected as removable tags](../../../.gitbook/assets/multioptions.png)
 
 ## Filter <a href="#filter" id="filter"></a>
 
@@ -398,7 +398,7 @@ options: [
 },
 ```
 
-![Filter](../../../.gitbook/assets/filter.png)
+![Filter field example: a Conditions builder with two rules joined by OR, using ends with and contains operators](../../../.gitbook/assets/filter.png)
 
 ## Assignment collection (drag and drop) <a href="#assignment-collection-drag-and-drop" id="assignment-collection-drag-and-drop"></a>
 
@@ -466,11 +466,11 @@ Use the `fixedCollection` type to group fields that are semantically related.
 }
 ```
 
-![Fixed collection](../../../.gitbook/assets/fixed-collection.png)
+![Fixed collection example: a Metadata group with two repeated Name/Value field pairs and an Add Metadata button](../../../.gitbook/assets/fixed-collection.png)
 
 ## Resource locator <a href="#resource-locator" id="resource-locator"></a>
 
-![Resource locator](../../../.gitbook/assets/resource-locator.png)
+![Resource locator field example: a Card field with its mode dropdown open, offering By ID, By URL, and From list](../../../.gitbook/assets/resource-locator.png)
 
 The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello.
 
@@ -711,7 +711,7 @@ Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/bl
 }
 ```
 
-![JSON](../../../.gitbook/assets/json.png)
+![JSON field example: a Content (JSON) code editor with syntax-highlighted keys and values](../../../.gitbook/assets/json.png)
 
 ## HTML <a href="#html" id="html"></a>
 
@@ -746,7 +746,7 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](../../
 },
 ```
 
-![Notice](../../../.gitbook/assets/notice.png)
+![Notice field example: a pale yellow info box displaying placeholder text](../../../.gitbook/assets/notice.png)
 
 ## Hints <a href="#hints" id="hints"></a>
 

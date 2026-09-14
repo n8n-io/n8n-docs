@@ -18,7 +18,7 @@ layout:
 
 # Update self-hosted n8n <a href="#update-self-hosted-n8n" id="update-self-hosted-n8n"></a>
 
-It's important to keep your n8n version up to date. This ensures you get the latest features and fixes.
+Keep your n8n version up to date to get the latest features and fixes.
 
 Some tips when updating:
 
@@ -27,4 +27,4 @@ Some tips when updating:
 For instructions on how to update, refer to the documentation for your installation method:
 
 * [Installed with npm](../install-options/install-with-npm.md#updating)
-* [Installed with Docker](../install-options/install-with-docker.md#updating)
+* [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)

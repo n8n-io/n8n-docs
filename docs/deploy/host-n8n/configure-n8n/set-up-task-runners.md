@@ -35,9 +35,11 @@ Task runners are a generic mechanism to execute tasks in a secure and performant
 This document describes how task runners work and how you can configure them.
 
 {% hint style="warning" %}
-**Internal mode not recommended for production**
+**Always use task runners in production**
 
-Using internal mode in production environments can pose a security risk. For production deployments, use [external mode](set-up-task-runners.md#external-mode) to ensure proper isolation between n8n and task runner processes. Refer to [Hardening task runners](security/harden-task-runners.md) for additional security measures.
+Task runners are the only isolation layer between user-provided code and n8n. Without them, or with [internal mode](set-up-task-runners.md#internal-mode), anyone who can edit a workflow could potentially read your database, [encryption key](basic-configuration/configuration-examples/set-a-custom-encryption-key.md), stored credentials, and environment variables.
+
+In production, and on any instance holding sensitive data, use [external mode](set-up-task-runners.md#external-mode) plus the measures in [Hardening task runners](security/harden-task-runners.md). Skipping external mode to save hosting costs is only a reasonable tradeoff on isolated instances that hold nothing but trusted or mock data.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
@@ -58,11 +60,17 @@ You can use task runners in two different modes: internal and external.
 
 ### Internal mode <a href="#internal-mode" id="internal-mode"></a>
 
-In internal mode, the n8n instance launches the task runner as a child process. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n. This is **not** recommended for production.
+In internal mode, the n8n instance launches the task runner as a child process, which is insecure by design. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
+
+{% hint style="warning" %}
+**Internal mode not recommended for production**
+
+Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
+{% endhint %}
 
 ### External mode <a href="#external-mode" id="external-mode"></a>
 
-In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance.
+In external mode, a [launcher application](https://github.com/n8n-io/task-runner-launcher) launches task runners on demand and manages their lifecycle. Typically, this means that next to n8n you add a sidecar container running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is independent from the n8n instance. The launcher exposes a health-check endpoint that it uses to monitor the task runner processes.
 
 ![Task runner deployed as a side-car container](../../.gitbook/assets/task-runner-external-mode.png)
 
@@ -111,15 +119,15 @@ There are three layers of configuration: the n8n container, the runners containe
 
 These are the main environment variables that you can set on the n8n container running in external mode:
 
-{% hint style="info" %}
-**`N8N_RUNNERS_ENABLED` is deprecated from version 2.0**
+{% hint style="warning" %}
+**Feature availability**
 
-From version 2.0 onwards, `N8N_RUNNERS_ENABLED` is deprecated and you no longer need to set it. It's still supported in version 1.x, where you must set it to `true` to enable task runners.
+`N8N_RUNNERS_ENABLED` is deprecated from n8n 2.0. You no longer need to set it. It's still supported in n8n 1.x, where you must set it to `true` to enable task runners. Leaving task runners disabled on 1.x runs Code node scripts inside the main n8n process with no isolation at all. Don't do this on any instance that holds sensitive credentials or data.
 {% endhint %}
 
 | Environment variables                                  | Description                                                                                                                                                                   |
 | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from version 2.0 onwards. Still supported in version 1.x.                                                                                    |
+| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners. Deprecated from n8n 2.0. Still supported in n8n 1.x.                                                                                    |
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
@@ -157,7 +165,7 @@ path/to/n8n-task-runners.json:/etc/n8n-task-runners.json
 
 ### 1. Extend the `n8nio/runners` image <a href="#id-1-extend-the-n8niorunners-image" id="id-1-extend-the-n8niorunners-image"></a>
 
-You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need `n8nio/runners:1.121.0` or later to do this.
+You can extend the `n8nio/runners` image to add extra dependencies to the runners. You'll need at least `n8nio/runners:1.121.0` to do this.
 
 ```dockerfile
 FROM n8nio/runners:1.121.0

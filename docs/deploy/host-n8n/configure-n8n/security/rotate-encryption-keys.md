@@ -19,8 +19,13 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-* Available on self-hosted n8n instances only.
-* You need to be the instance owner to enable the feature and rotate keys.
+Encryption key rotation is available on:
+
+- **Self-hosted:** All editions
+
+It isn't available on n8n Cloud.
+
+You need to be the instance owner to enable the feature and rotate keys.
 {% endhint %}
 
 Encryption key rotation lets you periodically replace the key that encrypts your n8n data, like credentials, OAuth tokens, and other sensitive content, without changing your instance's master encryption key.

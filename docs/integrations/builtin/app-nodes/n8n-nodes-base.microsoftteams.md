@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 {% hint style="info" %}
 **Credentials**
 
-Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication. From version 2, this node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Service Principal (App-Only)** in the **Authentication** dropdown.
+Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication. From version 2 of the node, this node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Service Principal (App-Only)** in the **Authentication** dropdown.
 {% endhint %}
 
 {% hint style="info" %}
@@ -50,7 +50,10 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Update
 * Channel Message
     * Create
+    * Get
     * Get Many
+    * Get Many Replies
+    * Reply
 * Chat Message
 	* Create
 	* Get
@@ -62,6 +65,14 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
     * Get
     * Get Many
     * Update
+
+{% hint style="info" %}
+**Channel messages with Service Principal credentials**
+
+The **Create** and **Reply** operations for channel messages are not available with the Microsoft Entra Service Principal credentials. App-only Microsoft Graph supports only migration import for channel messages. Use an OAuth2 credential to send channel messages.
+
+The read operations stay available with the Service Principal credentials: **Get**, **Get Many**, and **Get Many Replies**.
+{% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 

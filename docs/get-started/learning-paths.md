@@ -12,6 +12,8 @@ layout:
     visible: false
 ---
 
+# Learning paths
+
 Learn n8n through interactive courses at [n8n Academy](https://learn.n8n.io/). Build real workflows, earn badges, and get certificates of completion.
 
 All courses include:
@@ -21,6 +23,6 @@ All courses include:
 - Badges and certificates upon completion (70% passing grade)
 - Practice APIs (no external accounts needed for most courses)
 
-For a complete list of courses, see [n8n Academy courses](https://learn.n8n.io/courses).
+For a complete list of courses, see [n8n Academy courses](https://learn.n8n.io/courses). To start building right away instead, see [Build your first workflow](build-your-first-workflow.md).
 
 

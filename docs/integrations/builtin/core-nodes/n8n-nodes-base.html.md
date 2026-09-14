@@ -21,9 +21,9 @@ layout:
 The HTML node provides operations to help you work with HTML in n8n.
 
 {% hint style="info" %}
-**HTML Extract node**
+**Feature availability**
 
-The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md).
+The HTML node is available from n8n 0.213.0, replacing the HTML Extract node. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md).
 {% endhint %}
 {% hint style="warning" %}
 **Cross-site scripting**

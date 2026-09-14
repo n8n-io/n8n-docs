@@ -18,7 +18,7 @@ layout:
 
 # GitHub node <a href="#github-node" id="github-node"></a>
 
-Use the GitHub node to automate work in GitHub, and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, releases, and users. 
+Use the GitHub node to automate work in GitHub, and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, pull requests, releases, and users. 
 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
@@ -46,6 +46,17 @@ Refer to [GitHub credentials](../credentials/github.md) for guidance on setting 
 	* Lock
 * Organization
 	* Get Repositories
+* Pull Request
+	* Close
+	* Create
+	* Create Comment
+	* Edit Comment
+	* Get
+	* Get Diff
+	* Get Patch
+	* Merge
+	* Reopen
+	* Update
 * Release
 	* Create
 	* Delete

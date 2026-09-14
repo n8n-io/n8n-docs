@@ -4,7 +4,7 @@ nodeTitle: Manage your data
 originalFilePath: manage-cloud/cloud-data-management.md
 originalUrl: https://docs.n8n.io/manage-cloud/cloud-data-management
 url: https://docs.n8n.io/deploy/use-n8n-cloud/configure-cloud/manage-your-data
-description: How to manage your data on Cloud.
+description: How to manage your data on n8n Cloud.
 layout:
   width: default
   title:
@@ -27,14 +27,14 @@ layout:
 
 # Manage your data
 
-There are two concerns when managing data on Cloud:
+There are two concerns when managing data on n8n Cloud:
 
 * Memory usage: complex workflows processing large amounts of data can exceed n8n's memory limits. If this happens, the instance can crash and become inaccessible.
 * Data storage: depending on your execution settings and volume, your n8n database can grow in size and run out of storage.
 
 To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
 
-## Memory limits on each Cloud plan <a href="#memory-limits-on-each-cloud-plan" id="memory-limits-on-each-cloud-plan"></a>
+## Memory limits on each n8n Cloud plan <a href="#memory-limits-on-each-cloud-plan" id="memory-limits-on-each-cloud-plan"></a>
 
 Current plans:
 
@@ -61,7 +61,7 @@ Note that n8n itself consumes memory to run. On average, the software alone uses
 
 Interactions with the UI also consume memory. Playing around with the workflow UI while it performs heavy executions could also push the memory capacity over the limit.
 
-## How to manage execution data on Cloud <a href="#how-to-manage-execution-data-on-cloud" id="how-to-manage-execution-data-on-cloud"></a>
+## How to manage execution data on n8n Cloud <a href="#how-to-manage-execution-data-on-cloud" id="how-to-manage-execution-data-on-cloud"></a>
 
 Execution data includes node data, parameters, variables, execution context, and binary data references. It's text-based.
 
@@ -83,11 +83,11 @@ In your workflow settings:
 2. Select **Settings**. n8n opens the **Workflow settings** modal.
 3. Change **Save successful production executions** to **Do not save**.
 
-## Cloud data pruning and out of memory incident prevention <a href="#cloud-data-pruning-and-out-of-memory-incident-prevention" id="cloud-data-pruning-and-out-of-memory-incident-prevention"></a>
+## n8n Cloud data pruning and out of memory incident prevention <a href="#cloud-data-pruning-and-out-of-memory-incident-prevention" id="cloud-data-pruning-and-out-of-memory-incident-prevention"></a>
 
 ### Automatic data pruning <a href="#automatic-data-pruning" id="automatic-data-pruning"></a>
 
-n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your Could plan:
+n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your n8n Cloud plan:
 
 * Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
 * Pro plans: max 25000 executions saved and 30 days execution log retention;

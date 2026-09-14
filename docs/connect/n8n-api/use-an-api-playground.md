@@ -38,7 +38,11 @@ You have access to your live data. This is useful for trying out requests. Be aw
 {% hint style="info" %}
 **Feature availability**
 
-The API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
+The API playground is available on:
+
+- **Self-hosted:** All editions
+
+It isn't available on n8n Cloud.
 {% endhint %}
 
 The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, where you can try out requests. The path to access the playground depends on your hosting.

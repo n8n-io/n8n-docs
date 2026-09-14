@@ -25,7 +25,7 @@ The Local File Trigger node starts a workflow when it detects changes on the fil
 {% hint style="warning" %}
 **Security considerations**
 
-The Local File Trigger node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default starting from version 2.0.
+The Local File Trigger node can introduce significant security risks in environments that operate with untrusted users. Because of this, the node is [disabled](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes#exclude-nodes) by default from n8n 2.0.
 {% endhint %}
 
 {% hint style="info" %}

@@ -10,7 +10,7 @@ originalUrl: https://docs.n8n.io/integrations/builtin/credentials/telegram
 url: https://docs.n8n.io/integrations/builtin/credentials/telegram
 description: >-
   Documentation for Telegram credentials. Use these credentials to authenticate
-  Telegram in n8n, a workflow automation platform.
+  with Telegram in n8n.
 layout:
   width: default
   title:

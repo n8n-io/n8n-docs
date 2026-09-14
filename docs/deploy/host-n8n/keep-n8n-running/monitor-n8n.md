@@ -52,7 +52,11 @@ Access the endpoint:
 {% hint style="info" %}
 **Feature availability**
 
-The `/metrics` endpoint isn't available on n8n Cloud.
+The `/metrics` endpoint is available on:
+
+- **Self-hosted:** All editions
+
+It isn't available on n8n Cloud.
 {% endhint %}
 
 

@@ -34,7 +34,12 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
+RBAC is available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** Registered Community, Business, Enterprise
+
+Different plans have different numbers of projects and roles.
 {% endhint %}
 
 n8n uses projects to group workflows and credentials[^1], and assigns [roles](see-available-roles.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
@@ -79,6 +84,10 @@ To delete a project:
 4. Choose what to do with the workflows and credentials. You can select:
    * **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
    * **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
+
+### Favorite a project <a href="#favorite-a-project" id="favorite-a-project"></a>
+
+You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **three-dot menu** and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
 
 ### Move workflows and credentials between projects or users <a href="#move-workflows-and-credentials-between-projects-or-users" id="move-workflows-and-credentials-between-projects-or-users"></a>
 

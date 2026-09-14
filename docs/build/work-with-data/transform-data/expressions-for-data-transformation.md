@@ -24,7 +24,9 @@ This keeps your workflow organized by separating data transformation from busine
 
 **Best practice**: Instead of adding complex expressions to multiple parameters across different nodes, use Edit Fields to prepare your data first, then pass the transformed data to subsequent nodes.
 
-![Creating expressions in the UI](../../.gitbook/assets/expressionDot.gif)
+To build an expression in the UI, switch the field to expression mode, then drag a value from the **INPUT** pane into it, or type the expression directly.
+
+![Toggling a field to Expression mode, then dragging a value from the INPUT pane to build the expression](../../.gitbook/assets/expressionDot.gif)
 
 See [Expression reference](expression-reference/README.md) for more information and examples.
 

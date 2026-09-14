@@ -117,7 +117,7 @@ Run this command to create the Postgres DB instance (it will take a few minutes 
 
 ```sh
 gcloud sql instances create n8n-db \
-    --database-version=POSTGRES_13 \
+    --database-version=POSTGRES_17 \
     --tier=db-f1-micro \
     --region=$REGION \
     --root-password="change-this-password" \

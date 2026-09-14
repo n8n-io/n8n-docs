@@ -28,56 +28,56 @@ layout:
 
 # Add notes and documentation
 
-Sticky Notes allow you to annotate and comment on your workflows.
+Sticky notes let you annotate and comment on your workflows.
 
-n8n recommends using Sticky Notes heavily, especially on [template workflows](#user-content-fn-1)[^1], to help other users understand your workflow.
+n8n recommends using sticky notes on template workflows[^1] to help other users understand your workflow.
 
-![Screenshot of a basic workflow with an example sticky note](../../.gitbook/assets/example-sticky-note.png)
+![A basic workflow with a sticky note attached](../../.gitbook/assets/example-sticky-note.png)
 
-## Create a Sticky Note <a href="#create-a-sticky-note" id="create-a-sticky-note"></a>
+## Create a sticky note <a href="#create-a-sticky-note" id="create-a-sticky-note"></a>
 
-Sticky Notes are a core node. To add a new Sticky Note:
+Sticky notes are a core node. To add a new sticky note:
 
 1. Open the nodes panel.
 2. Search for `note`.
-3. Click the **Sticky Note** node. n8n adds a new Sticky Note to the canvas.
+3. Click the **Sticky Note** node. n8n adds a new sticky note to the canvas.
 
-## Edit a Sticky Note <a href="#edit-a-sticky-note" id="edit-a-sticky-note"></a>
+## Edit a sticky note <a href="#edit-a-sticky-note" id="edit-a-sticky-note"></a>
 
-1. Double click the Sticky Note you want to edit.
+1. Double-click the sticky note you want to edit.
 2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
 3. Click away from the note, or press `Esc`, to stop editing.
 
 ## Change the color <a href="#change-the-color" id="change-the-color"></a>
 
-To change the Sticky Note color:
+To change the sticky note color:
 
-1. Hover over the Sticky Note
-2. Select **Change color** <img src="../../.gitbook/assets/change-color.png" alt="Change Sticky Note color icon" data-size="line">
-3. Choose from seven preset colors, or click the rainbow gradient button to select a custom color
+1. Hover over the sticky note.
+2. Select **Change color** <img src="../../.gitbook/assets/change-color.png" alt="Change Sticky Note color icon" data-size="line">.
+3. Choose from seven preset colors, or click the rainbow gradient button to select a custom color.
 
 ![Color selector showing preset colors and custom color button](../../.gitbook/assets/color-picker-popover.png)
 
 ### Custom colors <a href="#custom-colors" id="custom-colors"></a>
 
-In addition to the seven preset colors, you can select any custom color for your sticky notes:
+Besides the seven preset colors, you can select any custom color for your sticky notes:
 
-1. Click the button with the rainbow gradient and plus icon
-2. Use the color picker to select your desired color, or enter a hex color code (for example, `#FF5733`)
-3. Click **Apply** to set the color
+1. Click the button with the rainbow gradient and plus icon.
+2. Use the color picker to select your desired color, or enter a hex color code (for example, `#FF5733`).
+3. Click **Apply** to set the color.
 
-Your recently used custom colors (up to 8) are automatically saved and displayed in the color picker for quick access.
+n8n automatically saves your last-used custom colors (up to eight) and displays them in the color picker for quick access.
 
 Custom colors feature theme-aware borders that automatically adjust for optimal visibility in both light and dark modes.
 
-## Sticky Note positioning <a href="#sticky-note-positioning" id="sticky-note-positioning"></a>
+## Sticky note positioning <a href="#sticky-note-positioning" id="sticky-note-positioning"></a>
 
 You can:
 
-* Drag a Sticky Note anywhere on the canvas.
-* Drag Sticky Notes behind nodes. You can use this to visually group nodes.
-* Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
-* Change the color: select **Options** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> to open the color selector.
+* Drag a sticky note anywhere on the canvas.
+* Drag sticky notes behind nodes. You can use this to visually group nodes.
+* Resize sticky notes by hovering over the edge of the note and dragging to resize.
+* Change the color: select the **Options** menu <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options icon" data-size="line"> to open the color selector.
 
 ## Writing in Markdown <a href="#writing-in-markdown" id="writing-in-markdown"></a>
 
@@ -128,5 +128,7 @@ For example:
 ```
 
 To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with your video ID. The YouTube video ID is the string that follows `v=` in the YouTube URL.
+
+See [Workflow components](README.md) for other elements you can add to a workflow.
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.

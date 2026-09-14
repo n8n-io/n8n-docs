@@ -475,6 +475,27 @@ The opposite of <code>split()</code>.
   
   ```
 
+## _`Array`_.**`mergeIntoObject()`** <a href="#arraymergeintoobject" id="arraymergeintoobject"></a>
+
+**Description:** Merges two arrays of Objects into a single Object, by merging the key-value pairs of each element. If the arrays are different lengths, keeps the elements from the longer array.
+
+**Syntax:** _`Array`_.mergeIntoObject(otherArray)
+
+**Returns:** Object
+
+**Source:**  Custom n8n functionality
+
+**Parameters:**
+
+  * `otherArray` (Array) - The array of Objects to merge with the base array
+
+**Examples:**
+
+  ```javascript
+  // arr = [{ name: 'Nathan' }, { age: 42 }]
+  arr.mergeIntoObject([{ city: 'Berlin' }]) //=> { name: 'Nathan', age: 42, city: 'Berlin' }
+  ```
+
 ## _`Array`_.**`min()`** <a href="#arraymin" id="arraymin"></a>
 
 **Description:** Returns the smallest number in the array. Throws an error if there are any non-numbers.

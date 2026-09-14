@@ -48,15 +48,15 @@ This page lists the environment variables configuration options for managing nod
 
 | Variable                                             | Type   | Default        | Description                                                                          |
 |:-----------------------------------------------------|:-------|:---------------|:-------------------------------------------------------------------------------------|
-| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `2147483648`   | Maximum total decompressed output size in bytes. Default is 2 GiB.                   |
-| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `5000`         | Maximum number of entries allowed in a ZIP archive.                                   |
+| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `268435456`    | Maximum total decompressed output size in bytes. Default is 256 MiB.                 |
+| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `1000`         | Maximum number of entries allowed in a ZIP archive.                                  |
 
 ## Manage installed community packages <a href="#manage-installed-community-packages" id="manage-installed-community-packages"></a>
 
 {% hint style="info" %}
-**Available from n8n v2.21.0**
+**Feature availability**
 
-
+Managing installed community packages from environment variables is available from n8n 2.21.0.
 {% endhint %}
 
 Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for the `*_MANAGED_BY_ENV` pattern.

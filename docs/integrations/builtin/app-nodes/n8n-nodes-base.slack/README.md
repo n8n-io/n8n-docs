@@ -1,0 +1,167 @@
+---
+title: Slack node documentation
+description: >-
+  Learn how to use the Slack node in n8n. Follow technical documentation to
+  integrate Slack node into your workflows.
+contentType:
+  - integration
+  - reference
+priority: high
+nodeTitle: Slack node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.slack.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack'
+layout:
+  description:
+    visible: false
+---
+
+# Slack node <a href="#slack-node" id="slack-node"></a>
+
+Use the Slack node to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archiving, and closing channels, getting users and files, as well as deleting messages.
+
+On this page, you'll find a list of operations the Slack node supports and links to more resources.
+
+{% hint style="info" %}
+**Credentials**
+
+Refer to [Slack credentials](../../credentials/slack.md) for guidance on setting up authentication.
+{% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
+
+## Operations <a href="#operations" id="operations"></a>
+
+* **Channel**
+    * **Archive** a channel.
+    * **Close** a direct message or multi-person direct message.
+    * **Create** a public or private channel-based conversation.
+    * **Get** information about a channel.
+    * **Get Many**: Get a list of channels in Slack.
+    * **History**: Get a channel's history of messages and events.
+    * **Invite** a user to a channel.
+    * **Join** an existing channel.
+    * **Kick**: Remove a user from a channel.
+    * **Leave** a channel.
+    * **Member**: List the members of a channel.
+    * **Open** or resume a direct message or multi-person direct message.
+    * **Rename** a channel.
+    * **Replies**: Get a thread of messages posted to a channel.
+    * **Sets purpose** of a channel.
+    * **Sets topic** of a channel.
+    * **Unarchive** a channel.
+* **File**
+    * **Get** a file.
+    * **Get Many**: Get and filter team files.
+    * **Upload**: Create or upload an existing file.
+* **Message**
+    * **Delete** a message
+    * **Get permalink**: Get a message's permalink.
+    * **Search** for messages
+    * **Send** a message
+    * **Send and Wait for Response**: Send a message and wait for a response from the recipient before continuing. Approvers can also respond directly inside Slack. Refer to [Approvals in Slack](approvals.md) for more information.
+    * **Update** a message
+* **Reaction**
+    * **Add** a reaction to a message.
+    * **Get** a message's reactions.
+    * **Remove** a reaction from a message.
+* **Star**
+    * **Add** a star to an item.
+    * **Delete** a star from an item.
+    * **Get Many**: Get a list of an authenticated user's stars.
+* **User**
+    * **Get** information about a user.
+	* **Get Many**: Get a list of users.
+    * **Get User's Profile**.
+    * **Get User's Status**.
+	* **Update User's Profile**.
+* **User Group**
+    * **Create** a user group.
+    * **Disable** a user group.
+    * **Enable** a user group.
+    * **Get Many**: Get a list of user groups.
+    * **Update** a user group.
+
+## Message search and version-specific behavior <a href="#message-search-and-version-specific-behavior" id="message-search-and-version-specific-behavior"></a>
+
+### Search messages <a href="#search-messages" id="search-messages"></a>
+
+Node version 2.7 and above uses the [Real-time Search API](https://docs.slack.dev/apis/web-api/real-time-search-api/) (`assistant.search.context`) for the **Message > Search** operation. Node version 2.6 and below use the deprecated [`search.messages`](https://api.slack.com/methods/search.messages) endpoint. n8n gates this by node version, so the change doesn't affect existing workflows on node version 2.6 and below.
+
+On node version 2.7 and above:
+
+- **New options**: **Channel Types** (public, private, group DM, DM), **After** and **Before** (date filters), and **Keyword Search Only** (disables semantic search).
+- **Semantic search**: by default, Slack may apply semantic search to question-style queries (for example, queries that start with a question word or end with a question mark), so results aren't always strictly literal keyword matches. Enable **Keyword Search Only** to force literal matching. Semantic ranking requires Slack AI (a paid plan).
+- **Limit**: **Return All** is removed from node version 2.7 and above. Only **Limit** remains, capped at 50. The endpoint returns 20 results per request and rate limits aggressively (around 10 requests per minute per user), so it isn't built for exhaustive retrieval. Node version 2.6 and below keep **Return All**.
+- **Authentication**: the endpoint needs a user token, so use OAuth2 or supply a user token with Access Token authentication. A bot token can't call this endpoint, and the Slack app must have AI features enabled. If you use OAuth2, reconnect your existing credential so it picks up the new `search:read.*` scopes.
+- **Output fields**: results use `content`, `message_ts`, `channel_id`, `channel_name`, and `author_name`, instead of the previous `text`, `ts`, `channel`, and `username`.
+
+### Custom Bot Profile Photo <a href="#custom-bot-profile-photo" id="custom-bot-profile-photo"></a>
+
+From node version 2.6, the **Message > Send** option **Custom Bot Profile Photo** (custom icon or emoji) is only available with **Access Token** authentication, not OAuth2. It relies on the `chat:write.customize` scope, which is a bot-token-only scope that the OAuth2 user-token path can't use. Node version 2.5 and below still show the option with OAuth2, though Slack ignores it in that case.
+
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
+
+
+[Browse Slack node documentation integration templates](https://n8n.io/integrations/slack) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
+
+Refer to [Slack's documentation](https://api.slack.com/) for more information about the service.
+
+## Required scopes <a href="#required-scopes" id="required-scopes"></a>
+
+Once you create a Slack app for your [Slack credentials](../../credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](../../credentials/slack.md#scopes) page.
+
+If those aren't enough, use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
+
+
+
+| **Resource** | **Operation**              | **Slack API method**                                                               |
+|--------------|----------------------------|------------------------------------------------------------------------------------|
+| Channel      | Archive                    | [conversations.archive](https://api.slack.com/methods/conversations.archive)       |
+| Channel      | Close                      | [conversations.close](https://api.slack.com/methods/conversations.close)           |
+| Channel      | Create                     | [conversations.create](https://api.slack.com/methods/conversations.create)         |
+| Channel      | Get                        | [conversations.info](https://api.slack.com/methods/conversations.info)             |
+| Channel      | Get Many                   | [conversations.list](https://api.slack.com/methods/conversations.list)             |
+| Channel      | History                    | [conversations.history](https://api.slack.com/methods/conversations.history)       |
+| Channel      | Invite                     | [conversations.invite](https://api.slack.com/methods/conversations.invite)         |
+| Channel      | Join                       | [conversations.join](https://api.slack.com/methods/conversations.join)             |
+| Channel      | Kick                       | [conversations.kick](https://api.slack.com/methods/conversations.kick)             |
+| Channel      | Leave                      | [conversations.leave](https://api.slack.com/methods/conversations.leave)           |
+| Channel      | Member                     | [conversations.members](https://api.slack.com/methods/conversations.members)       |
+| Channel      | Open                       | [conversations.open](https://api.slack.com/methods/conversations.open)             |
+| Channel      | Rename                     | [conversations.rename](https://api.slack.com/methods/conversations.rename)         |
+| Channel      | Replies                    | [conversations.replies](https://api.slack.com/methods/conversations.replies)       |
+| Channel      | Set Purpose                | [conversations.setPurpose](https://api.slack.com/methods/conversations.setPurpose) |
+| Channel      | Set Topic                  | [conversations.setTopic](https://api.slack.com/methods/conversations.setTopic)     |
+| Channel      | Unarchive                  | [conversations.unarchive](https://api.slack.com/methods/conversations.unarchive)   |
+| File         | Get                        | [files.info](https://api.slack.com/methods/files.info)                             |
+| File         | Get Many                   | [files.list](https://api.slack.com/methods/files.list)                             |
+| File         | Upload                     | [files.upload](https://api.slack.com/methods/files.upload)                         |
+| Message      | Delete                     | [chat.delete](https://api.slack.com/methods/chat.delete)                           |
+| Message      | Get Permalink              | [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink)               |
+| Message      | Search                     | Node version 2.7 and above: [assistant.search.context](https://docs.slack.dev/reference/methods/assistant.search.context) (Real-time Search API). Node version 2.6 and below: [search.messages](https://api.slack.com/methods/search.messages) (deprecated). |
+| Message      | Send                       | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
+| Message      | Send and Wait for Response | [chat.postMessage](https://api.slack.com/methods/chat.postMessage)                 |
+| Message      | Update                     | [chat.update](https://api.slack.com/methods/chat.update)                           |
+| Reaction     | Add                        | [reactions.add](https://api.slack.com/methods/reactions.add)                       |
+| Reaction     | Get                        | [reactions.get](https://api.slack.com/methods/reactions.get)                       |
+| Reaction     | Remove                     | [reactions.remove](https://api.slack.com/methods/reactions.remove)                 |
+| Star         | Add                        | [stars.add](https://api.slack.com/methods/stars.add)                               |
+| Star         | Delete                     | [stars.remove](https://api.slack.com/methods/stars.remove)                         |
+| Star         | Get Many                   | [stars.list](https://api.slack.com/methods/stars.list)                             |
+| User         | Get                        | [users.info](https://api.slack.com/methods/users.info)                             |
+| User         | Get Many                   | [users.list](https://api.slack.com/methods/users.list)                             |
+| User         | Get User's Profile         | [users.profile.get](https://api.slack.com/methods/users.profile.get)               |
+| User         | Get User's Status          | [users.getPresence](https://api.slack.com/methods/users.getPresence)               |
+| User         | Update User's Profile      | [users.profile.set](https://api.slack.com/methods/users.profile.set)               |
+| User Group   | Create                     | [usergroups.create](https://api.slack.com/methods/usergroups.create)               |
+| User Group   | Disable                    | [usergroups.disable](https://api.slack.com/methods/usergroups.disable)             |
+| User Group   | Enable                     | [usergroups.enable](https://api.slack.com/methods/usergroups.enable)               |
+| User Group   | Get Many                   | [usergroups.list](https://api.slack.com/methods/usergroups.list)                   |
+| User Group   | Update                     | [usergroups.update](https://api.slack.com/methods/usergroups.update)               |
+
+
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

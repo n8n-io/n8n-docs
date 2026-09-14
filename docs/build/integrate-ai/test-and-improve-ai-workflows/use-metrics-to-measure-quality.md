@@ -18,9 +18,14 @@ layout:
 
 
 {% hint style="info" %}
-**Available on Pro and Enterprise plans**
+**Feature availability**
 
-Metric-based evaluation is available on Pro and Enterprise plans. Registered community and Starter plan users can also use it for a single workflow.
+Metric-based evaluation is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Enterprise
+
+Registered Community and Starter plan users can also use it for a single workflow.
 {% endhint %}
 
 ### What are metric-based evaluations? <a href="#what-are-metric-based-evaluations" id="what-are-metric-based-evaluations"></a>
@@ -98,9 +103,9 @@ The default maximum depends on your plan:
 
 | Plan | Maximum parallel test cases |
 | :--- | :-------------------------- |
-| Community / Pro | 1 (sequential) |
-| Business | 3 |
-| Enterprise | 5 |
+| Self-hosted Community, n8n Cloud Pro | 1 (sequential) |
+| Self-hosted Business | 3 |
+| n8n Cloud Enterprise, self-hosted Enterprise | 5 |
 
 When the maximum is `1`, the caret and popover are hidden and **Run Test** is a plain button — runs are sequential, identical to earlier versions.
 

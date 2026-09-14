@@ -21,7 +21,15 @@ Insights gives instance owners and admins visibility into how workflows perform 
 {% hint style="info" %}
 **Feature availability**
 
-The insights summary banner displays activity from the last 7 days for all plans. The insights dashboard is only available on Pro, Business, and Enterprise plans.
+The insights summary banner, which displays activity from the last 7 days, is available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** All editions
+
+The insights dashboard is available on:
+
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Business, Enterprise
 {% endhint %}
 
 ## Insights summary banner <a href="#insights-summary-banner" id="insights-summary-banner"></a>
@@ -44,9 +52,9 @@ The insights dashboard also has a table showing individual insights from each wo
 
 By default, the insights summary banner and dashboard show a rolling 7 day window with a comparison to the previous period to identify increases or decreases for each metric. On the dashboard, paid plans also display data for other date ranges:
 
-- Pro: 7 and 14 days
-- Business: 24 hours, 7 days, 14 days, 30 days.
-- Enterprise: 24 hours, 7 days, 14 days, 30 days, 90 days, 6 months, 1 year
+- **n8n Cloud Pro:** 7 and 14 days
+- **Self-hosted Business:** 24 hours, 7 days, 14 days, and 30 days
+- **n8n Cloud Enterprise, self-hosted Enterprise:** 24 hours, 7 days, 14 days, 30 days, 90 days, 6 months, and 1 year
 
 ## Setting the time saved by a workflow <a href="#setting-the-time-saved-by-a-workflow" id="setting-the-time-saved-by-a-workflow"></a>
 
@@ -86,9 +94,9 @@ To configure dynamic time saved:
 When you use dynamic time saved, n8n adds up the time from all Time Saved nodes that execute during a workflow run to calculate the total time saved for that execution.
 
 {% hint style="info" %}
-**Subworkflow support**
+**Sub-workflow and error workflow support**
 
-Time saved tracking currently only works on parent workflows. Time saved from subworkflows isn't currently supported, with plans to support this in a future release.
+Time saved tracking currently only works on parent workflows. Time saved from sub-workflows isn't currently supported, with plans to support this in a future release. Error workflow executions don't contribute to Time saved, even though n8n includes them in the other insights metrics.
 {% endhint %}
 
 ## Disable or configure insights metrics collection <a href="#disable-or-configure-insights-metrics-collection" id="disable-or-configure-insights-metrics-collection"></a>
@@ -112,8 +120,10 @@ Raising those thresholds above the defaults keeps finer detail longer. That adds
 
 ### Which executions do n8n use to calculate the values in the insights banner and dashboard? <a href="#which-executions-do-n8n-use-to-calculate-the-values-in-the-insights-banner-and-dashboard" id="which-executions-do-n8n-use-to-calculate-the-values-in-the-insights-banner-and-dashboard"></a>
 
-n8n insights only collects data from production executions (for example, those from active workflows triggered on a schedule or a webhook) from the main (parent) workflow. This means that it doesn't count manual (test) executions or executions from sub-workflows or error workflows.
+Insights collects data from production executions, for example those from published workflows triggered on a schedule or a webhook. This includes error workflow executions. It doesn't include manual (test) executions or sub-workflow executions.
+
+n8n records an error workflow execution's own outcome and run time against the error workflow itself, not the workflow that failed. This affects total executions, failure metrics, and run time average. In n8n 2.23.0 and later, error workflow executions don't contribute to Time saved.
 
 ### Does n8n use historic execution data when upgrading to a version with insights? <a href="#does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights" id="does-n8n-use-historic-execution-data-when-upgrading-to-a-version-with-insights"></a>
 
-n8n only starts collecting data for insights once you update to the first supported version (1.89.0). This means it only reports on executions from that point forward and you won't see execution data in insights from prior periods.
+n8n only starts collecting data for insights once you update to n8n 1.89.0, the first supported version. This means it only reports on executions from that point forward and you won't see execution data in insights from prior periods.

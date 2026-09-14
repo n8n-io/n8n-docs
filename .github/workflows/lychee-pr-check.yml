@@ -34,6 +34,8 @@ jobs:
           # Don't fail inside the action, or the comment steps below never run.
           # The last step fails the job explicitly when links are broken.
           fail: false
+          # A changed page with no links at all must not turn the required check red.
+          failIfEmpty: false
       - name: Comment broken links on the PR
         if: steps.changed-markdown-files.outputs.any_changed == 'true' && steps.lychee.outputs.exit_code != '0'
         # PRs from forks get a read-only token and cannot comment; the check still fails below.

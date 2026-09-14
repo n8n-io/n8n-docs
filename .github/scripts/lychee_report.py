@@ -6,9 +6,9 @@ JSON report. lychee itself no longer fails that job (`fail: false`); this script
 report into one payload for n8n, which alerts Slack, adds a dated tab to the
 "DocOps - Outbound Links" Google Sheet and stores the rows in Supabase (DOC-2307).
 
-Exit codes: 0 = report delivered (or no webhook configured); 1 = the report file is
-missing (lychee crashed) or the POST failed. Broken links alone never fail the job: n8n
-owns the alerting.
+Exit codes: 0 = report delivered; 1 = the report file is missing (lychee crashed), the
+webhook URL is not configured, or the POST failed. Broken links alone never fail the job:
+n8n owns the alerting.
 
 Config comes from the environment (see the workflow):
   REPORT (path to lychee JSON, default lychee/out.json), EXIT_CODE (lychee-action
@@ -88,13 +88,16 @@ def build_payload(stats, ctx):
     lychee JSON (or {} when the report is missing); `ctx` carries run metadata."""
     stats = stats or {}
     failures = flatten_failures(stats)
-    errors = stats.get("errors")
+    # `errors` = the rows we actually deliver (errors AND timeouts), so counts shown in
+    # Slack/DocFather always match the sheet/Supabase rows. lychee's own counter, which
+    # excludes timeouts, is kept separately as `lychee_errors`.
     totals = {
         "total": _int(stats.get("total")),
         "successful": _int(stats.get("successful")),
         "excluded": _int(stats.get("excludes", stats.get("excluded"))),
         "timeouts": _int(stats.get("timeouts")),
-        "errors": _int(errors) if errors is not None else len(failures),
+        "errors": len(failures),
+        "lychee_errors": _int(stats.get("errors")),
     }
     return {
         "source": "lychee-weekly",
@@ -181,8 +184,11 @@ def main():
 
     url = os.environ.get("WEBHOOK_URL")
     if not url:
-        print("::warning::WEBHOOK_URL not set; report not sent to n8n.")
-        return 0 if stats is not None else 1
+        # Not delivering the report is a failure: the whole point of this job is the
+        # alert in n8n. A missing secret must go red, not quietly pass.
+        print("::error::WEBHOOK_URL is not set (secret DOCOPS_LYCHEE_WEBHOOK_URL); "
+              "report not sent to n8n.")
+        return 1
 
     try:
         post(url, payload, os.environ.get("WEBHOOK_USER"), os.environ.get("WEBHOOK_PASSWORD"))

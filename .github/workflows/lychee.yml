@@ -25,6 +25,7 @@ jobs:
           format: json
           output: lychee/out.json
           fail: false
+          failIfEmpty: false
           jobSummary: false
 
       - name: Send report to n8n

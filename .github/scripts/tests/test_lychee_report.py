@@ -54,8 +54,8 @@ check("parse_status: missing status", lr.parse_status({}) == (None, ""))
 payload = lr.build_payload(stats, ctx)
 check("payload: source and run metadata",
       payload["source"] == "lychee-weekly" and payload["run_id"] == "123" and payload["sha"] == "abc")
-check("payload: totals map lychee 'excludes' to 'excluded'",
-      payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1, "errors": 3})
+check("payload: totals map lychee 'excludes' to 'excluded'; errors = delivered rows (incl. timeouts), lychee's own counter kept",
+      payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1, "errors": 4, "lychee_errors": 3})
 check("payload: failures included and not truncated",
       len(payload["failures"]) == 4 and payload["failures_truncated"] is False)
 check("payload: exit code passed through", payload["lychee_exit_code"] == 2)
@@ -64,7 +64,8 @@ check("payload: exit code passed through", payload["lychee_exit_code"] == 2)
 old = {"total": 5, "fail_map": {"./docs/a.md": [{"url": "https://x/1", "status": "500 Internal Server Error"}]}}
 old_payload = lr.build_payload(old, ctx)
 check("payload: fail_map fallback is read", old_payload["failures"][0]["url"] == "https://x/1")
-check("payload: errors derived from failures when lychee has no counter", old_payload["totals"]["errors"] == 1)
+check("payload: errors equal delivered rows even when lychee has no counter",
+      old_payload["totals"]["errors"] == 1 and old_payload["totals"]["lychee_errors"] == 0)
 
 # missing report -> empty totals, still a valid payload
 missing = lr.build_payload(None, dict(ctx, report_found=False, exit_code=1))
@@ -79,7 +80,7 @@ check("payload: caps failures at MAX_FAILURES and flags truncation",
 
 # --- summary_markdown -------------------------------------------------------------
 summary = lr.summary_markdown(payload)
-check("summary: mentions counts", "Checked: 120" in summary and "Broken: 3" in summary)
+check("summary: mentions counts (Broken = rows in the table)", "Checked: 120" in summary and "Broken: 4" in summary)
 check("summary: lists pages with counts", "airtable.md` | 2" in summary)
 check("summary: missing report explained", "did not produce a report" in lr.summary_markdown(missing))
 

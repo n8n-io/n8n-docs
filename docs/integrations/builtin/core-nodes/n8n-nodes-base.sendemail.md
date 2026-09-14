@@ -114,6 +114,14 @@ Enter an email address for the `bcc:` field.
 
 Set whether n8n should ignore failures with TLS/SSL certificate validation (turned on) or enforce them (turned off).
 
+### In Reply To
+
+Enter the **Message-ID** of the email this message is replying to. The value should be in the format `<msg-123@email.example.com>`.
+
+### References
+
+Enter a whitespace-separated list of **Message-IDs** to reference in the email headers. This field is used to maintain email threading context. If left empty, the value from **In Reply To** is automatically included. Example: `<msg-123@email.example.com> <msg-456@email.example.com>`
+
 ### Reply To <a href="#reply-to" id="reply-to"></a>
 
 Enter an email address for the Reply To field.
@@ -170,12 +178,6 @@ The following options are also available:
 * **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
 * **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
 * **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
-
-## Limitations <a href="#limitations" id="limitations"></a>
-
-The Send Email (SMTP) node does not support setting headers like `In-Reply-To` and `References`, which are required for email threading. As a result, each email is treated as a new conversation instead of appearing in the same thread.
-
-* **Workaround**: Use the Gmail node’s **Reply to a message** operation, or a custom node that supports custom headers.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

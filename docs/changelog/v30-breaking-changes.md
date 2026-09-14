@@ -42,6 +42,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Execute Workflow** node: n8n 3.0 removes the **Run once for each item** mode. Workflows that use it fail until you update them. Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
 - **Always Output Data** on nodes with several outputs, for example **If** and **Switch**: n8n 3.0 adds an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they should not have. Review flagged nodes and adjust the setting to match your intent.
 - **Code** node (JavaScript): n8n 3.0 removes the `$evaluateExpression()` convenience method.
+  - **What to do:** Write the logic directly in JavaScript, or evaluate the expression in an Edit Fields (Set) node before the Code node and read the result from the incoming item.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 

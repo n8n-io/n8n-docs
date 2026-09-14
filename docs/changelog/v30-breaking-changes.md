@@ -39,6 +39,11 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
   - Replace **Function** and **Function Item** nodes with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize).
 
+### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
+
+- n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
+  - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
+
 ### Execute Workflow node: Run once for each item mode removed <a href="#execute-workflow-node-run-once-for-each-item-mode-removed" id="execute-workflow-node-run-once-for-each-item-mode-removed"></a>
 
 n8n 3.0 removes the **Run once for each item** mode from the **Execute Workflow** node. Workflows that use it fail until you update them.
@@ -62,11 +67,6 @@ n8n 3.0 removes the `$evaluateExpression()` convenience method from the **Code**
 Version 1 of the **AI Agent** node supported several agent type modes, including **SQL Agent**, **Conversational Agent**, **OpenAI Functions Agent**, **Plan and Execute Agent**, and **ReAct Agent**. n8n 3.0 removes version 1 of the node, along with these modes.
 
 **What to do:** Update any workflows and templates that use version 1 of the [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) node to the latest version. Workflows already set to **Tools Agent** continue to behave the same after you update. For **SQL Agent** use cases, replace it with a [Postgres](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) or [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) tool sub-node paired with a recent **AI Agent** node.
-
-### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
-
-- n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
-  - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
 
 ## Security <a href="#security" id="security"></a>
 

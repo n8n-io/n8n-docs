@@ -62,7 +62,7 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 - **More secure credential behavior.**  
 - **Key rotation enabled by default.** 
 - **Larger default SSRF block list.** When `N8N_SSRF_PROTECTION_ENABLED` is `true` and `N8N_SSRF_BLOCKED_IP_RANGES` contains `default`, n8n 3.0 also blocks the shared address space (`100.64.0.0/10`) and IPv6 transition ranges.
-  - **What to do:** If your workflows call hosts in these ranges, add them to `N8N_SSRF_ALLOWED_IP_RANGES`, or replace `default` in `N8N_SSRF_BLOCKED_IP_RANGES` with the literal ranges you want to block.
+  - **What to do:** If your workflows call hosts in these ranges, add those hosts to `N8N_SSRF_ALLOWED_IP_RANGES`. Keep `default` in `N8N_SSRF_BLOCKED_IP_RANGES`: it is the keyword for the whole built-in list, including localhost, private networks, and the cloud metadata endpoint. If you replace it with literal ranges, you must list every range from the current built-in list yourself.
 - **Lower Compression node decompression limits.** Default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
   - **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
 

@@ -39,7 +39,7 @@ To configure this credential, you'll need a [Todoist](https://todoist.com/) acco
 
 To get your **API Key**:
 
-1. In Todoist, open your [**Settings > Integrations**](https://app.todoist.com/app/settings/integrations/developer).
+1. In Todoist, open your [**Settings > Integrations**](https://app.todoist.com/app/settings/integrations).
 2. Select the **Developer** tab.
 3. Copy your **API token** and enter it as the **API Key** in your n8n credential.
 

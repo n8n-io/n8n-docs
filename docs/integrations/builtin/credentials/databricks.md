@@ -141,7 +141,9 @@ databricks account custom-app-integration update <integration-id> \
 
 Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
 
-If the app connection serves only the Genie MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then consent to a narrower grant. The client also can't reach other Databricks APIs.
+The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
+
+If the app connection serves only the Genie MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
 
 ### Configure token lifetimes
 

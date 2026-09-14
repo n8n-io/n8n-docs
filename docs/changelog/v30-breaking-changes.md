@@ -104,7 +104,7 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
 
 **What to do:** Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `s3`, `azure`, or `database`, and check that your container's mounted disk has room for binary data.
 
-Smaller changes to defaults and removed variables:
+### Changed defaults and removed variables <a href="#changed-defaults-and-removed-variables" id="changed-defaults-and-removed-variables"></a>
 
 - **Unverified community packages off by default.** The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
   - **What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.

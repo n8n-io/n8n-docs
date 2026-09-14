@@ -20,17 +20,19 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 - [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) (OAuth2 only)
+- [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - A [Databricks](https://www.databricks.com/) workspace on AWS, Azure, or GCP.
-- For OAuth2 with user login: a Databricks account admin who can create a custom OAuth app connection in the account console.
+- For OAuth2 with user login: a Databricks account admin who can create a custom OAuth app connection in the account console. For the Genie MCP server, the admin also needs the Databricks CLI to [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
 - For OAuth2 with a service principal: a Databricks admin who can create a service principal and generate an OAuth secret for it.
 - The [privileges](#required-databricks-privileges) the authenticating identity needs for the operations you want to run.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user.
+- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only.
 - [OAuth2 with user login](#using-oauth2-with-user-login): the credential is connected by signing in to a Databricks account in the browser. Operations run with that user's permissions and appear in Databricks audit logs under their identity. Each user can create their own credential to run workflows under their own account. Databricks recommends this for attended, interactive use.
 - [OAuth2 with a service principal](#using-oauth2-service-principal): n8n authenticates as a service principal with a client ID and secret, without user interaction. Databricks recommends this for unattended scenarios, such as fully automated production workflows.
 
@@ -43,8 +45,9 @@ The identity the credential authenticates as (the signed-in user or the service 
 | All | The **Workspace access** entitlement |
 | Databricks SQL (Execute Query) | The **Databricks SQL access** entitlement and **CAN USE** on the SQL warehouse |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
-| Genie | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
+| Genie (Databricks node operations and the Genie MCP server) | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
+| Unity AI Gateway model services (Databricks Chat Model) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
 
 {% hint style="info" %}
 **New service principals start with no privileges**
@@ -113,13 +116,32 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. For the access scopes, select **All APIs**. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected.
+6. For the access scopes, select **All APIs**. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. If users will connect the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), you also need to [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server) after saving.
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
 Share the client ID and secret with the n8n users who'll create credentials. All users reuse the same OAuth app connection, but each user creates and connects their own n8n credential to run with their own identity.
 
 Refer to [Enable or disable partner OAuth applications](https://docs.databricks.com/aws/en/integrations/enable-disable-oauth) for more information.
+
+### Add the genie scope for the Genie MCP server
+
+The [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. The account console offers only **All APIs**, which maps to `all-apis` and doesn't include `genie`. The console also can't change the scopes of an existing app connection. Without `genie`, users see this error when they select **Connect my account** on the tile:
+
+```text
+access_denied: Scopes 'genie' are not assigned to the client <client-id>
+```
+
+To add the scope, a Databricks account admin uses the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie MCP server needs all three:
+
+```bash
+databricks account custom-app-integration update <integration-id> \
+	--json '{"scopes": ["all-apis", "genie", "offline_access"]}'
+```
+
+Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
+
+If the app connection serves only the Genie MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then consent to a narrower grant. The client also can't reach other Databricks APIs.
 
 ### Configure token lifetimes
 

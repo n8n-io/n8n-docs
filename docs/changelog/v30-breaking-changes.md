@@ -40,7 +40,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 ### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
 
 - **Execute Workflow** node: n8n 3.0 removes the older behavior.
-- **Code** node (JavaScript): n8n 3.0 removes the `$evaluateExpression()` convenience method. Python code is not affected.
+- **Code** node (JavaScript): n8n 3.0 removes the `$evaluateExpression()` convenience method.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 

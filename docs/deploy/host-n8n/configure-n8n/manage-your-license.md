@@ -37,7 +37,7 @@ n8n uses Cloudflare to host the license server. As the specific IP addresses can
 
 ## Add a license certificate using an environment variable
 
-For certain use-cases (e.g. air-gapped environments) you may be issued a license certificate instead of a license key. A license certificate is a base64-encoded string that n8n provides.
+For certain use cases (for example air-gapped environments) n8n can issue a license certificate instead of a license key. A license certificate is a base64-encoded string that n8n provides.
 
 In your n8n configuration, set `N8N_LICENSE_CERT` to the string you received from n8n:
 

@@ -40,8 +40,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 ### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
 
 - **Execute Workflow** node: n8n 3.0 removes the older behavior.
-- **Code** node: n8n 3.0 removes the `$evaluateExpression()` convenience method. A Code node that calls it fails with the error `The function "$evaluateExpression" is not supported in the Code Node`, on task runners in both secure and insecure mode. Since n8n 2.0, the call [already fails on secure-mode task runners](v20-breaking-changes.md#dollarevaluateexpression-no-longer-works-in-the-code-node), which are the default, so only instances that set `N8N_RUNNERS_INSECURE_MODE=true` see a change. `$evaluateExpression()` inside `{{ }}` expressions in regular node fields isn't affected.
-  - **What to do:** Move the expression evaluation out of the Code node. Write the logic directly in JavaScript, or evaluate the expression in an Edit Fields (Set) node before the Code node and read the result from the incoming item.
+- **Code** node: n8n 3.0 removes the `$evaluateExpression()` convenience method.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 

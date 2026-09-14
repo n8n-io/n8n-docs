@@ -135,6 +135,13 @@ exclude = [
   '^https://developers\.facebook\.com/docs/(certificate-transparency-api|graph-api/webhooks/getting-started/webhooks-for-certificate-transparency|graph-api/webhooks/reference/certificate-transparency)',  # Meta removed/moved these docs (404); needs content review
   '^https://docs\.openwebui\.com/getting-started/api-endpoints',  # OpenWebUI moved these docs (404); needs content review
   '^https://(www\.)?youtube\.com/embed/.*',  # Lychee's YouTube ID check (via thumbnail lookup) doesn't reliably support /embed/ URLs, causing false-positive failures
+  # Verified by hand on 2026-09-14 (DOC-2308): these open fine in a browser but block or stall automated checks.
+  '^https://www\.eventbrite\.com/platform/',  # 401 for bots; /platform/api 301s to /platform/new/api
+  '^https://milvus\.io/',  # Redirect loop for bots (works in a browser)
+  '^https://posthog\.com/',  # Times out on automated checks
+  '^https://[a-z0-9-]+\.docs\.apiary\.io/',  # Times out on automated checks (autopilot, demio API docs)
+  '^https://twake\.app/',  # Times out on automated checks
+  '^https://app\.tapfiliate\.com/a/profile/',  # In-app page, redirects to login
   ]
 
 # Exclude these filesystem paths from getting checked.

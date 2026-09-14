@@ -35,9 +35,15 @@ You can find authentication information for this node [here](../../credentials/g
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-* **Model**: Select the model to use to generate the embedding.
+* **Model**: Select the model to use to generate the embedding. The default model, `gemini-embedding-001`, returns 3072-dimensional embeddings unless you set the **Output Dimensionality** option.
 
 Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini).
+
+## Node options <a href="#node-options" id="node-options"></a>
+
+* **Output Dimensionality**: Enter the number of dimensions the returned embeddings should have. Google recommends `768`, `1536`, or `3072` for `gemini-embedding-001`. Leave the option unset to use the model default. Make sure your vector store is configured for the same dimensionality.
+
+Refer to [Google's embeddings documentation](https://ai.google.dev/gemini-api/docs/embeddings) for the dimensions each model supports.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

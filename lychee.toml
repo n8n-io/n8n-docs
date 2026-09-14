@@ -143,6 +143,9 @@ exclude = [
   '^https://[a-z0-9-]+\.docs\.apiary\.io/',  # Times out on automated checks (autopilot, demio API docs)
   '^https://twake\.app/',  # Times out on automated checks
   '^https://app\.tapfiliate\.com/a/profile/',  # In-app page, redirects to login
+  '^https://wise-sandbox\.com/',  # In-app sandbox pages, redirect to login
+  '^https://app\.todoist\.com/app/',  # In-app settings pages, need login
+  '^https://www\.googleapis\.com/auth/',  # OAuth scope strings shown in code cells, not web pages
   ]
 
 # Exclude these filesystem paths from getting checked.

@@ -32,7 +32,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_RUNNERS_ENABLED` (**deprecated**) | Boolean | `false` | Are task runners enabled. **Deprecated** from n8n 2.0. |
-| `N8N_RUNNERS_MODE` | Enum string: `internal`, `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. `external` means an external orchestrator will launch the task runner. |
+| `N8N_RUNNERS_MODE` | Enum string: `internal` (**deprecated**), `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. **Deprecated**: internal mode will be removed in a future version. `external` means an external orchestrator will launch the task runner. See [external mode](../../set-up-task-runners.md#external-mode). |
 | `N8N_RUNNERS_AUTH_TOKEN` | String | Random string | Shared secret used by a task runner to authenticate to n8n. Required when using `external` mode. |
 | `N8N_RUNNERS_BROKER_PORT` | Number | `5679` | Port the task broker listens on for task runner connections. |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS` | String | `127.0.0.1` | Address the task broker listens on. |

@@ -18,9 +18,11 @@ The release of n8n 3.0 continues n8n's commitment to providing a secure, reliabl
 
 ### Docker-based deployment required for self-hosted n8n <a href="#docker-based-deployment-required-for-self-hosted-n8n" id="docker-based-deployment-required-for-self-hosted-n8n"></a>
 
-- Self-hosted n8n will require a Docker-based deployment. n8n 3.0 will no longer support installations run using `npm` or `npx n8n`.
-- **What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
-- *Step-by-step migration guidance will be coming soon*
+Self-hosted n8n will require a Docker-based deployment. n8n 3.0 will no longer support installations run using `npm` or `npx n8n`.
+
+**What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
+
+*Step-by-step migration guidance will be coming soon.*
 
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>
 
@@ -37,12 +39,23 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
   - Replace **Function** and **Function Item** nodes with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize).
 
-### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
+### Execute Workflow node: Run once for each item mode removed <a href="#execute-workflow-node-run-once-for-each-item-mode-removed" id="execute-workflow-node-run-once-for-each-item-mode-removed"></a>
 
-- **Execute Workflow** node: n8n 3.0 removes the **Run once for each item** mode. Workflows that use it fail until you update them. Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
-- **Always Output Data** on nodes with several outputs, for example **If** and **Switch**: n8n 3.0 adds an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they should not have. Review flagged nodes and adjust the setting to match your intent.
-- **Code** node (JavaScript): n8n 3.0 removes the `$evaluateExpression()` convenience method.
-  - **What to do:** Write the logic directly in JavaScript, or evaluate the expression in an Edit Fields (Set) node before the Code node and read the result from the incoming item.
+n8n 3.0 removes the **Run once for each item** mode from the **Execute Workflow** node. Workflows that use it fail until you update them.
+
+**What to do:** Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
+
+### Always Output Data on nodes with several outputs <a href="#always-output-data-on-nodes-with-several-outputs" id="always-output-data-on-nodes-with-several-outputs"></a>
+
+With **Always Output Data** on, nodes with several outputs, for example **If** and **Switch**, now add an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they should not have.
+
+**What to do:** Review flagged nodes and adjust the setting to match your intent.
+
+### `$evaluateExpression()` removed from the Code node <a href="#evaluateexpression-removed-from-the-code-node" id="evaluateexpression-removed-from-the-code-node"></a>
+
+n8n 3.0 removes the `$evaluateExpression()` convenience method from the **Code** node (JavaScript). Only task runners in insecure mode (`N8N_RUNNERS_INSECURE_MODE=true`) are affected. Secure-mode runners, the default since n8n 2.0, already fail on this call.
+
+**What to do:** Evaluate the expression in a node field instead, for example in an **Edit Fields (Set)** node before the **Code** node, and read the result from the input item. `$evaluateExpression()` keeps working in `{{ }}` expression fields.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 
@@ -51,8 +64,9 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
-- n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
-- **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
+n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
+
+**What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
 
 ## Security <a href="#security" id="security"></a>
 
@@ -61,27 +75,58 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 - **Tighter handling of risky resource names.**
 - **More secure credential behavior.**  
 - **Key rotation enabled by default.** 
-- **Larger default SSRF block list.** When `N8N_SSRF_PROTECTION_ENABLED` is `true` and `N8N_SSRF_BLOCKED_IP_RANGES` contains `default`, n8n 3.0 also blocks the shared address space (`100.64.0.0/10`) and IPv6 transition ranges.
-  - **What to do:** If your workflows call hosts in these ranges, add those hosts to `N8N_SSRF_ALLOWED_IP_RANGES`. Keep `default` in `N8N_SSRF_BLOCKED_IP_RANGES`: it is the keyword for the whole built-in list, including localhost, private networks, and the cloud metadata endpoint. If you replace it with literal ranges, you must list every range from the current built-in list yourself.
-- **Lower Compression node decompression limits.** Default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
-  - **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
+
+### Larger default SSRF block list <a href="#larger-default-ssrf-block-list" id="larger-default-ssrf-block-list"></a>
+
+When `N8N_SSRF_PROTECTION_ENABLED` is `true` and `N8N_SSRF_BLOCKED_IP_RANGES` contains `default`, n8n 3.0 also blocks the shared address space (`100.64.0.0/10`) and IPv6 transition ranges.
+
+**What to do:** If your workflows call hosts in these ranges, add those hosts to `N8N_SSRF_ALLOWED_IP_RANGES`. Keep `default` in `N8N_SSRF_BLOCKED_IP_RANGES`: it is the keyword for the whole built-in list, including localhost, private networks, and the cloud metadata endpoint. If you replace it with literal ranges, you must list every range from the current built-in list yourself.
+
+### Lower Compression node decompression limits <a href="#lower-compression-node-decompression-limits" id="lower-compression-node-decompression-limits"></a>
+
+The default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and the default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
+
+**What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
 
 ## Configuration <a href="#configuration" id="configuration"></a>
 
 n8n 3.0 changes some defaults and removes settings that only kept older behavior alive. n8n logs a deprecation warning at startup on 2.x for each of these when your instance is affected.
 
-- **Storage directory renamed.** On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and removes `N8N_MIGRATE_FS_STORAGE_PATH`.
-  - **What to do:** If you mount a volume at `~/.n8n/binaryData`, mount it at `~/.n8n/storage` instead, or set `N8N_STORAGE_PATH` to the old path to keep it. If both directories exist, n8n does not start: move the contents of `~/.n8n/binaryData` into `~/.n8n/storage`, remove `~/.n8n/binaryData`, then start n8n again. Nothing to do if you use the default paths without a volume mount.
-- **In-memory binary data mode removed.** `N8N_DEFAULT_BINARY_DATA_MODE=default` is no longer valid. Instances that still use it switch to `filesystem` on upgrade.
-  - **What to do:** Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `s3`, `azure`, or `database`, and check that your container's mounted disk has room for binary data.
-- **Unverified community packages off by default.** The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
-  - **What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.
-- **Shorter task runner timeout.** The default for `N8N_RUNNERS_TASK_TIMEOUT` drops from `300` (5 minutes) to `60` (1 minute). Code node tasks that run longer fail.
-  - **What to do:** Set `N8N_RUNNERS_TASK_TIMEOUT` explicitly if your tasks need more than a minute.
-- **Manual executions always run on workers in queue mode.** `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` is removed, and manual executions no longer run on the main instance.
-  - **What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
-- **`N8N_DB_PING_TIMEOUT` removed.** n8n no longer falls back to this variable.
-  - **What to do:** Set `DB_PING_TIMEOUT_MS` instead.
+### Storage directory renamed <a href="#storage-directory-renamed" id="storage-directory-renamed"></a>
+
+On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and removes `N8N_MIGRATE_FS_STORAGE_PATH`.
+
+**What to do:** If you mount a volume at `~/.n8n/binaryData`, mount it at `~/.n8n/storage` instead, or set `N8N_STORAGE_PATH` to the old path to keep it. If both directories exist, n8n does not start: move the contents of `~/.n8n/binaryData` into `~/.n8n/storage`, remove `~/.n8n/binaryData`, then start n8n again. Nothing to do if you use the default paths without a volume mount.
+
+### In-memory binary data mode removed <a href="#in-memory-binary-data-mode-removed" id="in-memory-binary-data-mode-removed"></a>
+
+`N8N_DEFAULT_BINARY_DATA_MODE=default` is no longer valid. Instances that still use it switch to `filesystem` on upgrade.
+
+**What to do:** Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `s3`, `azure`, or `database`, and check that your container's mounted disk has room for binary data.
+
+### Unverified community packages off by default <a href="#unverified-community-packages-off-by-default" id="unverified-community-packages-off-by-default"></a>
+
+The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
+
+**What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.
+
+### Shorter task runner timeout <a href="#shorter-task-runner-timeout" id="shorter-task-runner-timeout"></a>
+
+The default for `N8N_RUNNERS_TASK_TIMEOUT` drops from `300` (5 minutes) to `60` (1 minute). Code node tasks that run longer fail.
+
+**What to do:** Set `N8N_RUNNERS_TASK_TIMEOUT` explicitly if your tasks need more than a minute.
+
+### Manual executions always run on workers in queue mode <a href="#manual-executions-always-run-on-workers-in-queue-mode" id="manual-executions-always-run-on-workers-in-queue-mode"></a>
+
+`OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` is removed, and manual executions no longer run on the main instance.
+
+**What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
+
+### `N8N_DB_PING_TIMEOUT` removed <a href="#n8n-db-ping-timeout-removed" id="n8n-db-ping-timeout-removed"></a>
+
+n8n no longer falls back to this variable.
+
+**What to do:** Set `DB_PING_TIMEOUT_MS` instead.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

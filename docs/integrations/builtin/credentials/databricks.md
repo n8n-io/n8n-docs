@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - A [Databricks](https://www.databricks.com/) workspace on AWS, Azure, or GCP.
-- For OAuth2 with user login: a Databricks account admin who can create a custom OAuth app connection in the account console. For the Genie MCP server, the admin also needs the Databricks CLI to [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+- For OAuth2 with user login: a Databricks account admin who can create a custom OAuth app connection in the account console.
 - For OAuth2 with a service principal: a Databricks admin who can create a service principal and generate an OAuth secret for it.
 - The [privileges](#required-databricks-privileges) the authenticating identity needs for the operations you want to run.
 
@@ -116,7 +116,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. For the access scopes, select **All APIs**. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. If users will connect the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), you also need to [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server) after saving.
+6. For the access scopes, select **All APIs**. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope that the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) requests. If connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -126,13 +126,13 @@ Refer to [Enable or disable partner OAuth applications](https://docs.databricks.
 
 ### Add the genie scope for the Genie MCP server
 
-The [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. The account console offers only **All APIs**, which maps to `all-apis` and doesn't include `genie`. The console also can't change the scopes of an existing app connection. Without `genie`, users see this error when they select **Connect my account** on the tile:
+The [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
 
 ```text
 access_denied: Scopes 'genie' are not assigned to the client <client-id>
 ```
 
-To add the scope, a Databricks account admin uses the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie MCP server needs all three:
+To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie MCP server needs all three:
 
 ```bash
 databricks account custom-app-integration update <integration-id> \

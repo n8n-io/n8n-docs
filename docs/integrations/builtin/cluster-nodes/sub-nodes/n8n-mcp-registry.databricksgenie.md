@@ -21,7 +21,7 @@ The tile uses a [Databricks OAuth2 credential](../../credentials/databricks.md#u
 
 ## Prerequisites
 
-- A Databricks account admin has [created a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) and [added the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to it. The tile requests the `genie` and `offline_access` scopes, and the account console's **All APIs** option doesn't include `genie`.
+- A Databricks account admin has [created a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) with the **All APIs** scope. The tile requests the `genie` and `offline_access` scopes, and in n8n's testing **All APIs** covers them. If connecting fails with a `genie` scope error, the admin [adds the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to the app connection.
 - You have **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
 - A chat model that calls tools reliably. n8n recommends the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node with Llama 3.3 70B or Qwen 3.5. Refer to [Choose a model for agents](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents).
 
@@ -93,7 +93,7 @@ Selecting **Connect my account** fails with:
 access_denied: Scopes 'genie' are not assigned to the client <client-id>
 ```
 
-The custom OAuth app connection doesn't have the `genie` scope. This happens when you reuse an app created for the Databricks node with **All APIs**. A Databricks account admin needs to [add the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) with the Databricks CLI, because the account console can't change scopes on an existing app.
+The custom OAuth app connection doesn't have the `genie` scope, and on this Databricks account **All APIs** doesn't stand in for it. A Databricks account admin needs to [add the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to the app connection, in the account console's scope picker or with the Databricks CLI.
 
 ### Max iterations reached
 

@@ -7,8 +7,9 @@ verbose = "warn"
 # Don't show interactive progress bar while checking links.
 no_progress = true
 
-# Path to summary output file.
-output = "_lychee/output.md"
+# Path to summary output file. Note: lychee-action ignores this and writes to its own
+# `output` input (set in the workflows), so this only applies to local runs.
+output = "lychee/out.md"
 format = "markdown"
 
 #############################  Cache  ###############################
@@ -138,7 +139,7 @@ exclude = [
   ]
 
 # Exclude these filesystem paths from getting checked.
-exclude_path = ["file/path/to/Ignore", "./other/file/path/to/Ignore"]
+exclude_path = []
 
 # URLs to check (supports regex). Has preference over all excludes.
 # include = ['gist\.github\.com.*']

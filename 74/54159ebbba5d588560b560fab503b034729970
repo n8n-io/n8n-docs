@@ -1,0 +1,76 @@
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  s_9103d662b67efd::t_54a4e16fc30ed9 136
+  s_9103d662b67efd::t_2c008c3cd1f293 119
+  s_9103d662b67efd::t_1a9bb6f1836f33 1-21,23-27,29-32,34-106,110-118,120-135,137-167,169-207
+  s_9103d662b67efd::t_e4ecec420fb37b 33
+  s_9103d662b67efd::t_118d66eed1b57a 168
+  s_9103d662b67efd::t_fc6ad0fbd693b6 107-109
+  s_9103d662b67efd::t_74a367891a6682 22
+  s_9103d662b67efd::t_1be4fa0a631892 28
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_9103d662b67efd::t_77ddc58d3ba53a 40
+  s_9103d662b67efd::t_5daa8f60f7ae1a 64
+  s_9103d662b67efd::t_83ee48731662aa 173-175
+  s_9103d662b67efd::t_5ccf2463c39955 1-21,23,25-39,41-63,65-80,82-83,85-99,101,103-121,123,125-172,176-181
+  s_9103d662b67efd::t_74a367891a6682 22
+  s_9103d662b67efd::t_ea074bd9d375e0 24
+  s_9103d662b67efd::t_e1d847949f00c7 122,124
+  s_9103d662b67efd::t_cc50e042874290 81,84
+  s_9103d662b67efd::t_caea5237e14cfc 100,102
+docs/connect/n8n-cli.md
+  s_9103d662b67efd::t_b8672e6420fcdf 98
+  s_9103d662b67efd::t_9a1044e9d3be47 179-180,182,187-189,192
+docs/build/SUMMARY.md
+  s_9103d662b67efd::t_7bf49d32f617e4 35-40
+docs/build/manage-workflows/n8n-packages/import-a-package.md
+  s_9103d662b67efd::t_74a367891a6682 22
+  s_9103d662b67efd::t_c19d2bf46dbaa0 43
+  s_9103d662b67efd::t_ac1eb20a407a40 176,180
+  s_9103d662b67efd::t_4331dcd1a2ce37 81
+  s_9103d662b67efd::t_b117edc701a152 219
+  s_9103d662b67efd::t_a2ed20c62c41f2 196,199
+  s_9103d662b67efd::t_2d4f50129a93dc 1-21,23-39,41-42,44-80,82-175,177-179,181-195,197-198,200-218,220-264
+  s_9103d662b67efd::t_77ddc58d3ba53a 40
+docs/build/manage-workflows/n8n-packages/package-format.md
+  s_9103d662b67efd::t_30e41642796973 237
+  s_9103d662b67efd::t_fea6c43c0ca43a 150
+  s_9103d662b67efd::t_75c1da74b1afb9 255
+  s_9103d662b67efd::t_94f1473ba40372 242
+  s_9103d662b67efd::t_9fe6ba6cb8b8b6 167
+  s_9103d662b67efd::t_7eeec7cf1e3287 182
+  s_9103d662b67efd::t_913585da07daa4 1-21,23-149,151-166,168-181,183-236,238-241,243-254,256-273
+  s_9103d662b67efd::t_74a367891a6682 22
+docs/build/manage-workflows/README.md
+  s_9103d662b67efd::t_b779acc7f04839 24-27
+docs/build/manage-workflows/export-and-import.md
+  s_9103d662b67efd::t_6973dad501aaa1 51,53
+  s_9103d662b67efd::t_864329a2377565 60,62-64
+docs/build/manage-workflows/n8n-packages/limits-and-permissions.md
+  s_9103d662b67efd::t_8e35db31bde264 26
+  s_9103d662b67efd::t_74a367891a6682 22
+  s_9103d662b67efd::t_cbd6c11df46dce 72
+  s_9103d662b67efd::t_eaab1c62a8002e 101
+  s_9103d662b67efd::t_ae72fa728308be 1-21,23-25,27-71,73-100,102-108,110,112-133
+  s_9103d662b67efd::t_4000bebef9ae37 109,111
+styles/config/vocabularies/default/accept.txt
+  s_9103d662b67efd::t_913ac6b260d8be 45,116,119,142,169,182,246
+docs/build/manage-workflows/n8n-packages/README.md
+  s_9103d662b67efd::t_f6bbdfa56aada4 1-18,21-109
+  s_9103d662b67efd::t_0e54a0181471fd 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7454159ebbba5d588560b560fab503b034729970",
+  "prompts": {},
+  "sessions": {
+    "s_9103d662b67efd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6adb89d5-a0d0-4661-bb53-78d474a4e8db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

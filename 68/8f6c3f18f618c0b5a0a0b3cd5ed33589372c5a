@@ -1,0 +1,30 @@
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md
+  s_21d4eea2308e7e::t_4a556e86a8b408 7
+  s_21d4eea2308e7e::t_47403f44b91e39 4-6
+  s_21d4eea2308e7e::t_9277ea3fc6f821 8-10
+docs/administer/SUMMARY.md
+  s_21d4eea2308e7e::t_18858d536b6df5 11
+  s_21d4eea2308e7e::t_f41a01ac949756 12
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md
+  s_21d4eea2308e7e::t_81f85b4c0639a2 33
+  s_21d4eea2308e7e::t_00f3a463c35479 28,30,32
+docs/administer/manage-users-and-access/understand-account-types.md
+  s_21d4eea2308e7e::t_9bb57786be841f 53,55-56
+  s_21d4eea2308e7e::t_50dc2325dcd113 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "688f6c3f18f618c0b5a0a0b3cd5ed33589372c5a",
+  "prompts": {},
+  "sessions": {
+    "s_21d4eea2308e7e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfac7508-d4d7-4024-a01f-bdfef3d4290f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": null
+    }
+  }
+}

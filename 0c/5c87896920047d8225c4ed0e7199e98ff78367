@@ -1,0 +1,27 @@
+docs/build/manage-workflows/n8n-packages.md
+  s_f28bc9a68449dd::t_97320f9a73ac90 122,126-127,130-136,138-139
+  s_f28bc9a68449dd::t_9b6db9e95f1d79 146
+  s_f28bc9a68449dd::t_3fe14f9cb7156a 100-107,109
+  h_c63dce324dfc7b 39,108,137,140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "0c5c87896920047d8225c4ed0e7199e98ff78367",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_f28bc9a68449dd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3fba9c0e-9d5c-4a93-99e9-3b337dade7e6",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

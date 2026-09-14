@@ -1,0 +1,14 @@
+docs/build/manage-workflows/n8n-packages.md
+  h_c63dce324dfc7b 6,54,56-86,92,94-98,102,110,112,116-122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "1d85ad15b8be0775553e12fd476a609dba641868",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

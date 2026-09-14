@@ -1,0 +1,36 @@
+docs/administer/manage-credentials/use-external-secret-stores.md
+  s_f8e5d3ae818f46::t_dd366faab90973 259
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/README.md
+  s_f8e5d3ae818f46::t_573ac74c688863 28
+  s_f8e5d3ae818f46::t_628aaeac9aa78c 20-21,23,26,29
+  s_f8e5d3ae818f46::t_ccfe9dc8cc0a91 27
+docs/administer/SUMMARY.md
+  s_f8e5d3ae818f46::t_2dae5b99582582 7
+docs/deploy/host-n8n/configure-n8n/user-management.md
+  s_f8e5d3ae818f46::t_dfdb2e8e3c4dce 22
+docs/administer/manage-credentials/share-credentials-securely.md
+  s_f8e5d3ae818f46::t_cf48849905d496 41
+docs/build/manage-workflows/share-with-others.md
+  s_f8e5d3ae818f46::t_57da82b14de60c 23
+docs/administer/manage-users-and-access/README.md
+  s_f8e5d3ae818f46::t_655ff223681202 19
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md
+  s_f8e5d3ae818f46::t_07f386ba66cd2a 47
+  s_f8e5d3ae818f46::t_05c443c6319c3a 45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "f6e05c9739ee05bc796880fb13283300c32541f3",
+  "prompts": {},
+  "sessions": {
+    "s_f8e5d3ae818f46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c5c9c1f5-dc10-4e82-a177-e343ef0056e5",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": null
+    }
+  }
+}

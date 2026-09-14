@@ -1,0 +1,27 @@
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md
+  s_21d4eea2308e7e::t_2b2323fd9b31c2 80
+  s_21d4eea2308e7e::t_10e9421747ac2a 91
+  s_21d4eea2308e7e::t_08d67eeb7acf19 75
+  s_21d4eea2308e7e::t_4c25b700db8d7e 101
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md
+  s_21d4eea2308e7e::t_9d6f4e1aebbafa 70
+  s_21d4eea2308e7e::t_827eb83363ef0e 81
+  s_21d4eea2308e7e::t_21d4525d248e42 91
+  s_21d4eea2308e7e::t_14ace06460b387 106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b764b1f4c7a52226e33180dfdde323d36338ff75",
+  "prompts": {},
+  "sessions": {
+    "s_21d4eea2308e7e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfac7508-d4d7-4024-a01f-bdfef3d4290f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

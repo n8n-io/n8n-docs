@@ -1,0 +1,33 @@
+docs/administer/SUMMARY.md
+  s_21d4eea2308e7e::t_18858d536b6df5 11
+  s_21d4eea2308e7e::t_b20a105ac06872 12
+docs/administer/manage-users-and-access/understand-account-types.md
+  s_21d4eea2308e7e::t_9bb57786be841f 53,55-57
+docs/administer/manage-users-and-access/create-custom-instance-roles.md
+  s_21d4eea2308e7e::t_886fe8e0128f7d 20
+  s_21d4eea2308e7e::t_1220739f5a7ae5 43-49,51-55
+  s_21d4eea2308e7e::t_4222f2b969d795 120
+  s_21d4eea2308e7e::t_d4e3fd56794e4a 126-131
+  s_21d4eea2308e7e::t_a96d8896e75f65 1-19,21-42,56-64,67-108,125
+  s_21d4eea2308e7e::t_efe25acf1b82d1 50
+  s_21d4eea2308e7e::t_259d8ec6be045e 109-119,121-124
+  s_21d4eea2308e7e::t_7aa7511a2d37aa 65-66
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md
+  s_21d4eea2308e7e::t_00f3a463c35479 28,30,32-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d0aa42e2d39de17d27caac06220b9d5cf94476a9",
+  "prompts": {},
+  "sessions": {
+    "s_21d4eea2308e7e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfac7508-d4d7-4024-a01f-bdfef3d4290f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

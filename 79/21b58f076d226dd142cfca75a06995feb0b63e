@@ -1,0 +1,30 @@
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md
+  s_21d4eea2308e7e::t_a1d9d57a094bec 2-5,13,21,25,27,29,31
+docs/administer/SUMMARY.md
+  s_21d4eea2308e7e::t_52460c70bb585d 11-13
+docs/administer/manage-credentials/use-external-secret-stores.md
+  s_21d4eea2308e7e::t_18a072cf80bffa 290
+  s_21d4eea2308e7e::t_a053114fc21d20 285
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md
+  s_21d4eea2308e7e::t_63220b009e72b1 9
+  s_21d4eea2308e7e::t_0fe4d86ef70ea3 6-8
+  s_21d4eea2308e7e::t_0747c054a86d9d 10-12
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-instance-roles.md
+  s_21d4eea2308e7e::t_583d66071e47b2 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7921b58f076d226dd142cfca75a06995feb0b63e",
+  "prompts": {},
+  "sessions": {
+    "s_21d4eea2308e7e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfac7508-d4d7-4024-a01f-bdfef3d4290f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

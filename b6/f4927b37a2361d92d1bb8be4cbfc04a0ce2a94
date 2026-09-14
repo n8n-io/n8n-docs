@@ -1,0 +1,26 @@
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_9103d662b67efd::t_82c96697a98ff2 48,51,54,57,106,109,111
+  s_9103d662b67efd::t_b0e8945cc72e05 72,74-75
+docs/administer/observe-and-log/stream-logs-to-external-systems.md
+  s_9103d662b67efd::t_25c08a8caeb619 100
+  s_9103d662b67efd::t_99300c5599d8d3 101-103
+  s_9103d662b67efd::t_3910e2deb11827 171-172
+docs/build/manage-workflows/n8n-packages/import-a-package.md
+  s_9103d662b67efd::t_b0e8945cc72e05 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b6f4927b37a2361d92d1bb8be4cbfc04a0ce2a94",
+  "prompts": {},
+  "sessions": {
+    "s_9103d662b67efd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6adb89d5-a0d0-4661-bb53-78d474a4e8db",
+        "model": "claude-opus-5"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+docs/build/manage-workflows/export-and-import.md
+  s_3e21b0e5415260::t_bc43d64300b6aa 63
+  s_3e21b0e5415260::t_b7fcab5bad6664 53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "cd9ae564552c2514ed699c3724f89351d8a82381",
+  "prompts": {},
+  "sessions": {
+    "s_3e21b0e5415260": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9bacffef-ed6d-445b-b57f-63482cab0208",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

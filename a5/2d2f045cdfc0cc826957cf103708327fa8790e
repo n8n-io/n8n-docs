@@ -1,0 +1,22 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_63b18cc6b3efdb::t_06a564e4c749b7 2
+  s_63b18cc6b3efdb::t_bba6c4405d08eb 8
+  s_63b18cc6b3efdb::t_be908906442f25 10
+  s_63b18cc6b3efdb::t_9c14bcdb06fa86 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "a52d2f045cdfc0cc826957cf103708327fa8790e",
+  "prompts": {},
+  "sessions": {
+    "s_63b18cc6b3efdb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "81ec6e5e-f9f2-4d50-9261-b31839e69fff",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}

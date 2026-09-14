@@ -1,0 +1,22 @@
+docs/workflows/executions/execution-data-redaction.md
+  s_d5136a739107b1::t_ef9f4b62aa861c 45
+  s_d5136a739107b1::t_83c000a10ba9e6 114,145
+docs/security-settings.md
+  s_d5136a739107b1::t_3103cd05a15c4a 94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "1177b96b3140cf8ede45c9cd74b9e27ae8525aac",
+  "prompts": {},
+  "sessions": {
+    "s_d5136a739107b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b27f84b3-920d-475b-af38-7d099719656c",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

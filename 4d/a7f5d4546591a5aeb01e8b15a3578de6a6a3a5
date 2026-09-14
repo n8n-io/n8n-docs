@@ -1,0 +1,24 @@
+docs/integrations/builtin/credentials/slack.md
+  s_2e621683eaa4ad::t_7fa214cfd26300 304
+  s_2e621683eaa4ad::t_2b12280af65cbd 45,47-98,105-115
+  s_2e621683eaa4ad::t_c335fc6a5bb747 329
+  s_2e621683eaa4ad::t_a76681bfef2cb9 217-268
+  s_2e621683eaa4ad::t_0fd8d8baa1d47f 135-138
+  s_2e621683eaa4ad::t_96cc3d476b8d2e 155-216,269-271,283-293
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4da7f5d4546591a5aeb01e8b15a3578de6a6a3a5",
+  "prompts": {},
+  "sessions": {
+    "s_2e621683eaa4ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4708446f-4875-4eae-a46f-96508b6aa76a",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Dimitri Lavrenük <dimitri.lavrenuek@n8n.io>"
+    }
+  }
+}

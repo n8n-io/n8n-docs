@@ -1,0 +1,53 @@
+docs/changelog/release-notes.md
+  s_0dab2f835c1bbc::t_a9961913fcfbe4 44,50,171
+docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md
+  s_0dab2f835c1bbc::t_f445802f580e12 121
+docs/integrations/builtin/app-nodes/n8n-nodes-base.slack/README.md
+  s_0dab2f835c1bbc::t_c36d741b29006f 126
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/openai-functions-agent.md
+  s_0dab2f835c1bbc::t_e5097ba596e37f 40-41,43
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/plan-execute-agent.md
+  s_0dab2f835c1bbc::t_3a0507733eafe1 25-26,28
+docs/integrations/builtin/credentials/microsoft.md
+  s_0dab2f835c1bbc::t_6f1139656b87de 187
+docs/integrations/builtin/credentials/slack.md
+  s_0dab2f835c1bbc::t_097f2673b78882 258,331
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+  s_0dab2f835c1bbc::t_eafa835c653dab 40
+docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
+  s_0dab2f835c1bbc::t_c32fa9130496c8 9-10
+feeds/release-notes.xml
+  s_0dab2f835c1bbc::t_1fd3e1eec16883 9,75-98,107-109,112-136,338-409
+docs/deploy/host-n8n/configure-n8n/choose-n8ns-database.md
+  s_0dab2f835c1bbc::t_3c3c3ac09a5bef 47-49
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent.md
+  s_60ce6e746ce9d3::t_bb87d9161d821f 25-26,28
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md
+  s_60ce6e746ce9d3::t_edd06c24518f33 24-25,27
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/sql-agent.md
+  s_60ce6e746ce9d3::t_2a8d413502185d 24-25,27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "02488f092de53e210337b6084d323514ea056009",
+  "prompts": {},
+  "sessions": {
+    "s_0dab2f835c1bbc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "410e1778-4444-468d-911c-3b1b95235e6d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    },
+    "s_60ce6e746ce9d3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d84124d3-ce9c-4a73-9716-80eb657f790d",
+        "model": "unknown"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

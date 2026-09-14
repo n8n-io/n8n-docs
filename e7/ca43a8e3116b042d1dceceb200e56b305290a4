@@ -1,0 +1,24 @@
+docs/administer/use-source-control-and-environments/push-and-pull-changes.md
+  s_024f68613e7d77::t_aaaf690add4ef9 146-147
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e7ca43a8e3116b042d1dceceb200e56b305290a4",
+  "prompts": {},
+  "humans": {
+    "h_0ff5b37e8b04b1": {
+      "author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_024f68613e7d77": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8d5dfd84-dd02-4238-85e0-9ed9d1835946",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

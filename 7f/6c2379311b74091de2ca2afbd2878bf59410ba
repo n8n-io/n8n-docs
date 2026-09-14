@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/set-up-task-runners.md
+  s_a83d5c6b104674::t_77e4c4e3fe9428 40,42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.21",
+  "base_commit_sha": "7f6c2379311b74091de2ca2afbd2878bf59410ba",
+  "prompts": {},
+  "sessions": {
+    "s_a83d5c6b104674": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_a83d5c6b104674",
+        "model": "unknown"
+      },
+      "human_author": "Mike Repeć <mikerepec@pm.me>"
+    }
+  }
+}

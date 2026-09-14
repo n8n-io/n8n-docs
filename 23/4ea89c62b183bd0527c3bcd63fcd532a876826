@@ -1,0 +1,19 @@
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md
+  s_21d4eea2308e7e::t_a3becea5235ab9 44,82,98,108
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "234ea89c62b183bd0527c3bcd63fcd532a876826",
+  "prompts": {},
+  "sessions": {
+    "s_21d4eea2308e7e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfac7508-d4d7-4024-a01f-bdfef3d4290f",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

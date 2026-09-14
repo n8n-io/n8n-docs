@@ -1,0 +1,27 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/endpoints.md
+  s_8063d83e985536::t_8f12634a761782 48
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_8063d83e985536::t_8f12634a761782 130,171
+  h_32d8cd6a0d6aad 129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7eb003b3a33053c5c0b4a7158e6285fcb446a4bd",
+  "prompts": {},
+  "humans": {
+    "h_32d8cd6a0d6aad": {
+      "author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_8063d83e985536": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a65207c-ad1d-469d-92e1-5b169e9de95e",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

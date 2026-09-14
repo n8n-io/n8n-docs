@@ -1,0 +1,19 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.confluence.md
+  s_2ebe9c07d64221::t_beafe0eb6c28f8 53-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "22b4e7c9c983ef94100f8bbb37a3b77e4e022e57",
+  "prompts": {},
+  "sessions": {
+    "s_2ebe9c07d64221": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "97179d9b-4930-4bb9-a7e7-0b2c899a783f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

@@ -39,7 +39,8 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 
 ### Changed node behavior <a href="#changed-node-behavior" id="changed-node-behavior"></a>
 
-- **Execute Workflow** node: n8n 3.0 removes the older behavior.
+- **Execute Workflow** node: n8n 3.0 removes the **Run once for each item** mode. Workflows that use it fail until you update them. Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
+- **Always Output Data** on nodes with several outputs, for example **If** and **Switch**: n8n 3.0 adds an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they should not have. Review flagged nodes and adjust the setting to match your intent.
 - **Code** node (JavaScript): n8n 3.0 removes the `$evaluateExpression()` convenience method.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
@@ -59,8 +60,27 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 - **Tighter handling of risky resource names.**
 - **More secure credential behavior.**  
 - **Key rotation enabled by default.** 
+- **Larger default SSRF block list.** When `N8N_SSRF_PROTECTION_ENABLED` is `true` and `N8N_SSRF_BLOCKED_IP_RANGES` contains `default`, n8n 3.0 also blocks the shared address space (`100.64.0.0/10`) and IPv6 transition ranges.
+  - **What to do:** If your workflows call hosts in these ranges, add them to `N8N_SSRF_ALLOWED_IP_RANGES`, or replace `default` in `N8N_SSRF_BLOCKED_IP_RANGES` with the literal ranges you want to block.
 - **Lower Compression node decompression limits.** Default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB to 256 MiB, and default `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES` drops from 5,000 to 1,000.
   - **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0.
+
+## Configuration <a href="#configuration" id="configuration"></a>
+
+n8n 3.0 changes some defaults and removes settings that only kept older behavior alive. n8n logs a deprecation warning at startup on 2.x for each of these when your instance is affected.
+
+- **Storage directory renamed.** On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and removes `N8N_MIGRATE_FS_STORAGE_PATH`.
+  - **What to do:** If you mount a volume at `~/.n8n/binaryData`, mount it at `~/.n8n/storage` instead, or set `N8N_STORAGE_PATH` to the old path to keep it. If both directories exist, n8n does not start: move the contents of `~/.n8n/binaryData` into `~/.n8n/storage`, remove `~/.n8n/binaryData`, then start n8n again. Nothing to do if you use the default paths without a volume mount.
+- **In-memory binary data mode removed.** `N8N_DEFAULT_BINARY_DATA_MODE=default` is no longer valid. Instances that still use it switch to `filesystem` on upgrade.
+  - **What to do:** Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `s3`, `azure`, or `database`, and check that your container's mounted disk has room for binary data.
+- **Unverified community packages off by default.** The default for `N8N_UNVERIFIED_PACKAGES_ENABLED` changes from `true` to `false`.
+  - **What to do:** Set `N8N_UNVERIFIED_PACKAGES_ENABLED=true` to keep installing unverified community nodes from npm.
+- **Shorter task runner timeout.** The default for `N8N_RUNNERS_TASK_TIMEOUT` drops from `300` (5 minutes) to `60` (1 minute). Code node tasks that run longer fail.
+  - **What to do:** Set `N8N_RUNNERS_TASK_TIMEOUT` explicitly if your tasks need more than a minute.
+- **Manual executions always run on workers in queue mode.** `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` is removed, and manual executions no longer run on the main instance.
+  - **What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
+- **`N8N_DB_PING_TIMEOUT` removed.** n8n no longer falls back to this variable.
+  - **What to do:** Set `DB_PING_TIMEOUT_MS` instead.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

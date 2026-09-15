@@ -119,7 +119,8 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
 
 n8n 3.0 retires some legacy or lower-usage product capabilities. n8n will provide guidance where a migration path or alternative exists.
 
-- **Chat Hub**: n8n 3.0 retires this feature.
+- **Chat Hub**: n8n 3.0 turns off the Chat Hub module by default. The **Chat** section disappears from the navigation and the Chat Hub endpoints stop responding. Your chat sessions, agents, and messages stay in the database. n8n 4.0 removes the feature.
+  - **What to do:** If you still need Chat Hub, add `chat-hub` to the `N8N_ENABLED_MODULES` environment variable. The variable holds a comma-separated list, so keep the modules that you already enable, for example `N8N_ENABLED_MODULES=agents,chat-hub`. This keeps Chat Hub available for the n8n 3.x line only, and n8n prints a deprecation warning at startup. Before you update, **Settings > Migration Report** lists this change for every instance that uses Chat Hub.
 - **Workflow import from URL in the editor**: n8n 3.0 removes this. Other [import methods](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the n8n API.
 - **Non-functional nodes**: n8n 3.0 removes these.
 - **Enable external secrets for project roles setting**: n8n 3.0 removes this. Project editors and admins now get external-secrets access in their projects by default. To keep restricting project roles, use [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) instead. This applies to n8n Enterprise, where external secrets are available.

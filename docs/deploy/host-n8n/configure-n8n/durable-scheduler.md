@@ -146,7 +146,7 @@ At startup, each main writes one durable schedule for every job it runs on the d
 
 - **Set the same value on every main.** Also give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup.
 - **Upgrade every main before you turn it on.** Mains on a version without this feature don't check for durable schedules. During a rolling deploy, an older main that is the leader keeps running these jobs on its own timers, so the same job can run twice at the same time.
-- **Don't turn it off in the same step as a rollback.** When you roll back to an older version that has this feature, that version leaves a durable schedule that the newer version wrote in place. If the flag is also off, it skips its own timer runs of that job while the schedule stays, so the job doesn't run at all. Change the version and the flag in separate steps.
+- **Don't turn it off in the same step as a rollback.** When you roll back to an older version that has this feature, that version leaves a durable schedule that the newer version wrote in place. If the flag is also off, that main skips its own timer runs of that job while the schedule stays, so the job doesn't run at all. Change the version and the flag in separate steps.
 
 ## Observability
 

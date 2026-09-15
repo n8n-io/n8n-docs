@@ -9,7 +9,7 @@ layout:
 
 People and AI agents both read n8n Docs. What each user type needs from documentation overlaps more than it diverges. However, agents have some particular needs for effectively parsing and navigating the documentation. 
 
-This page sets out what agent-friendly means to n8n Docs, and why it matters. These guidelines are useful to contributors writing for the docs, or any user interested in our approach.
+This page sets out what agent-friendly means to n8n Docs, and why it matters. These guidelines are useful to contributors writing for the docs, or any user interested in n8n Docs' approach.
 
 ## Why this matters for n8n Docs
 
@@ -27,7 +27,7 @@ The standard breaks down into four layers.
 Agents need a way to fetch content without rendering a full web page. n8n Docs provides several routes in:
 
 * **Markdown:** Every page is available as clean Markdown, not just rendered HTML.
-* **llms.txt:** [llms.txt and llms-full.txt](https://docs.n8n.io/llms.txt) list every published page for agents that support the format.
+* **llms.txt:** [`llms.txt`](https://docs.n8n.io/llms.txt) and [`llms-full.txt`](https://docs.n8n.io/llms-full.txt) list every published page for agents that support the format.
 * **MCP server:** An MCP server exposes docs directly to MCP clients. See [Connect to the n8n docs MCP server](https://docs.n8n.io/connect/connect-to-n8n-docs-mcp-server).
 * **AI search:** AI-powered search (Kapa.ai) answers questions directly from docs, the blog, and the community forum.
 * **Context7:** [Context7](https://context7.com/) indexes n8n Docs so in-editor coding agents can retrieve current docs while someone builds.
@@ -36,8 +36,8 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 
 * **Terminology:** n8n Docs uses the same term for the same concept everywhere. This reduces confusion for both human users and agents. See [Terminology and naming](terminology.md).
 * **Stable URLs:** URLs stay stable across a page rename, with a redirect in place whenever a URL does change.
-* **Feature availability:** A fact that depends on an n8n version or plan says so at the point it applies, not only once at the top of the page. This increases the chance of both agents and humans seeing the correct information at the correct time. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
-* **Review process:** New pages and modifications are reviewed for consistency and technical accuracy before they're published, on n8n Docs' [open-access GitHub repository](https://github.com/n8n-io/n8n-docs), by both human reviewers and our AI-reviewer [cubic](https://www.cubic.dev/).
+* **Feature availability:** A fact that depends on an n8n version or plan is placed at the scope it applies to: a hint for a whole page or section, an inline mention in passing, or a table cell for a table row. This means an agent that retrieves only a fragment of a page still sees the correct context. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
+* **Review process:** New pages and modifications are reviewed for consistency and technical accuracy before they're published, on n8n Docs' [open-access GitHub repository](https://github.com/n8n-io/n8n-docs), by both human reviewers and n8n Docs' AI-reviewer [cubic](https://www.cubic.dev/).
 
 ### Structure and navigation
 
@@ -57,4 +57,4 @@ This page explains the reasoning. The [style guide](style-guide-for-n8n-docs.md)
 
 ## Where this is still evolving
 
-Not every guideline has a settled answer yet. n8n Docs is continuously testing and researching what makes agent-friendly documentation, and developing new systems to help ensure our docs meet these standards. Agent-friendliness is a fast-moving area of documentation practice, and this page will change as the practice matures.
+Not every guideline has a settled answer yet. n8n Docs is continuously testing and researching what makes agent-friendly documentation, and developing new systems to help meet these standards. Agent-friendliness is a fast-moving area of documentation practice, and this page will change as the practice matures.

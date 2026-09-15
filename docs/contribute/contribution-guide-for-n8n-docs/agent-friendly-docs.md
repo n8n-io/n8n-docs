@@ -48,12 +48,12 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 ### Content and examples
 
 * **Text over images:** Instructions live in easily-parseable text, not images. Screenshots confirm what the reader should already know from the words on the page, not the other way round. See [Images](style-guide-for-n8n-docs.md#images).
-* **Worked examples:** n8n Docs strives to ensure that features with code, expression, or configuration surfaces have worked examples, covering the common case and the ones that break, since agents copy examples directly and have no way to infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
+* **Worked examples:** n8n Docs strives to provide worked examples for features with code, expression, or configuration surfaces. Cover the common case and cases that break, because agents copy examples directly and can't infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
 * **Tabbed content:** Tabbed content stays sparse and short, since a person sees one tab but an agent reads every one. See [Tabbed content](style-guide-for-n8n-docs.md#tabbed-content).
 
 ## How this relates to the style guide
 
-This page explains the reasoning. The [style guide](style-guide-for-n8n-docs.md) has the specific rules to follow. Several of those rules, including page length, self-contained sections, internal linking, feature availability, images, and tabbed content, exist specifically because they make docs work for agents as well as people. If you're contributing, follow the style guide directly. Come back to this page when you want the reasoning behind a rule, or when you're weighing whether something new is worth adding as a rule at all.
+This page explains the reasoning. The [contribution guide](README.md) covers the contribution process, and the [style guide](style-guide-for-n8n-docs.md) has the specific rules to follow. Several of those rules, including page length, self-contained sections, internal linking, feature availability, images, and tabbed content, exist specifically because they make docs work for agents as well as people. If you're contributing, follow the style guide directly. Come back to this page when you want the reasoning behind a rule, or when you're weighing whether something new is worth adding as a rule at all.
 
 ## Where this is still evolving
 

@@ -90,7 +90,11 @@ layout:
 
 ## _`Number`_.**`isEmpty()`** <a href="#numberisempty" id="numberisempty"></a>
 
-**Description:** Returns <code>false</code> for all numbers. Returns <code>true</code> for <code>null</code>.
+**Description:** Returns <code>true</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> for every other number.
+
+{% hint style="warning" %}
+`isEmpty()` isn't a null check. On a number it treats `0` as empty, so `{{ $json.count.isEmpty() }}` returns `true` for both a missing field and a field set to `0`. To test only for a missing value, compare directly, for example `{{ $json.count === null }}`, or use the **exists** operator in the **If** node.
+{% endhint %}
 
 **Syntax:** _`Number`_.isEmpty()
 
@@ -107,7 +111,7 @@ layout:
 
   ```javascript
   // num = 0
-  num.isEmpty() // => false
+  num.isEmpty() // => true
   ```
 
   ```javascript

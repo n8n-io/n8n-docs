@@ -12,7 +12,11 @@ layout:
 
 ## _`Boolean`_.**`isEmpty()`** <a href="#booleanisempty" id="booleanisempty"></a>
 
-**Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+**Description:** Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
+
+{% hint style="warning" %}
+`isEmpty()` isn't a null check. On a boolean it treats `false` as empty, so `{{ $json.flag.isEmpty() }}` returns `true` for both a missing field and a field set to `false`. To test only for a missing value, compare directly, for example `{{ $json.flag === null }}`, or use the **exists** operator in the **If** node.
+{% endhint %}
 
 **Syntax:** _`Boolean`_.isEmpty()
 
@@ -29,7 +33,7 @@ layout:
 
   ```javascript
   // bool = false
-  bool.isEmpty() // => false
+  bool.isEmpty() // => true
   ```
 
   ```javascript

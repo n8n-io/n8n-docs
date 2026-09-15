@@ -92,7 +92,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 * [_`Array`_.**`isEmpty()`**](array.md#arrayisempty)
 
-    Returns <code>true</code> if the array has no elements or is <code>null</code>
+    Returns <code>true</code> if the array has no elements or is <code>null</code> or <code>undefined</code>
 
 * [_`Array`_.**`isNotEmpty()`**](array.md#arrayisnotempty)
 
@@ -223,7 +223,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 * [_`Boolean`_.**`isEmpty()`**](boolean.md#booleanisempty)
 
-    Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+    Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
 
 * [_`Boolean`_.**`toNumber()`**](boolean.md#booleantonumber)
 
@@ -302,9 +302,17 @@ See also <code>slice()</code> and <code>append()</code>.
 
     Returns <code>true</code> if the DateTime lies between the two moments specified
 
+* [_`DateTime`_.**`isEmpty()`**](datetime.md#datetimeisempty)
+
+    Returns <code>false</code> for all DateTimes. Returns <code>true</code> for <code>null</code> or <code>undefined</code>.
+
 * [_`DateTime`_.**`isInDST`**](datetime.md#datetimeisindst)
 
     Whether the DateTime is in daylight saving time
+
+* [_`DateTime`_.**`isNotEmpty()`**](datetime.md#datetimeisnotempty)
+
+    Returns <code>true</code> for all DateTimes. Returns <code>false</code> for <code>null</code> or <code>undefined</code>.
 
 * [_`DateTime`_.**`locale`**](datetime.md#datetimelocale)
 
@@ -546,7 +554,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 * [_`Number`_.**`isEmpty()`**](number.md#numberisempty)
 
-    Returns <code>false</code> for all numbers. Returns <code>true</code> for <code>null</code>.
+    Returns <code>true</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> for every other number.
 
 * [_`Number`_.**`isEven()`**](number.md#numberiseven)
 
@@ -593,7 +601,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 * [_`Object`_.**`isEmpty()`**](object.md#objectisempty)
 
-    Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code>
+    Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code> or <code>undefined</code>
 
 * [_`Object`_.**`isNotEmpty()`**](object.md#objectisnotempty)
 
@@ -814,7 +822,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`isEmpty()`**](string.md#stringisempty)
 
-    Returns <code>true</code> if the string has no characters or is <code>null</code>
+    Returns <code>true</code> if the string has no characters or is <code>null</code> or <code>undefined</code>
 
 * [_`String`_.**`isNotEmpty()`**](string.md#stringisnotempty)
 

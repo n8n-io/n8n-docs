@@ -46,6 +46,8 @@ The durable scheduler only takes over Schedule Trigger nodes when the workflow p
 
 Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows. For how polls behave under the durable scheduler, and for the [durable poll cursors](#durable-poll-cursors) that n8n recommends turning on together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, see [Poll triggers](#poll-triggers).
 
+n8n's internal maintenance jobs also stay on in-process timers unless you opt them in with `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED`. See [System tasks](#system-tasks).
+
 To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
 
 The [remaining variables](basic-configuration/use-environment-variables/scheduler.md) only take effect once the scheduler is on. The defaults suit most instances, so change them only to tune timing precision, storage, or load across instances. All durations are in seconds unless stated otherwise.
@@ -129,6 +131,16 @@ What to expect when you turn it on:
 {% hint style="warning" %}
 Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`. Running poll triggers on the durable scheduler while cursors still live in workflow static data risks dropped or duplicated items.
 {% endhint %}
+
+## System tasks
+
+n8n runs internal maintenance jobs, such as pruning old executions, compacting insights data, and renewing the license, on in-process timers in each main instance. From n8n 2.40.0, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` to `true` to run them on the durable scheduler instead. This requires `N8N_SCHEDULER_ENABLED`.
+
+At startup, each main writes one durable schedule for every job it runs on the durable scheduler, and removes the schedules for jobs it doesn't. While a durable schedule for a job exists, a main with the flag off skips its own timer runs of that job, so the job doesn't run twice. Three rules follow from this:
+
+- **Set the same value on every main.** Also give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup, including the ones another main created.
+- **Upgrade every main before you turn it on.** During a rolling deploy, mains on a version without this feature keep running these jobs on their own timers. The same job can then run twice at the same time.
+- **Don't turn it off in the same step as a rollback.** A main on an older version leaves a durable schedule that a newer version wrote in place, and skips its own timer runs of that job while the schedule stays. The job then doesn't run at all. Change the version and the flag in separate steps.
 
 ## Observability
 

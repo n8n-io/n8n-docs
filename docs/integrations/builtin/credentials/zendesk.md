@@ -48,6 +48,10 @@ To configure this credential, you'll need:
 
 To configure this credential, you'll need:
 
+- A **Grant Type**: Select the OAuth2 flow that matches your OAuth client's kind:
+  - **Authorization Code**: The default flow. Use it for OAuth clients marked as **Confidential**.
+  - **Client Credentials**: Authenticates without a user sign-in. Zendesk supports this flow for OAuth clients marked as **Confidential** only.
+  - **PKCE**: The authorization code flow with Proof Key for Code Exchange. Zendesk requires PKCE for OAuth clients marked as **Public**.
 - A **Client ID**: Generated when you create a new OAuth client.
 - A **Client Secret**: Generated when you create a new OAuth client.
 - Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.

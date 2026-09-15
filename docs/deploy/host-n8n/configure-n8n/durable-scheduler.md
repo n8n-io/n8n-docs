@@ -141,6 +141,8 @@ export N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true
 
 Only main instances emit scheduler metrics. To set up the endpoint itself, see [Enable Prometheus metrics](basic-configuration/configuration-examples/enable-prometheus-metrics.md). To chart the metrics, see [Visualize metrics with Grafana](../keep-n8n-running/visualize-metrics-with-grafana.md); n8n publishes a [ready-made durable scheduler dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-scheduler) with a suggested action for each panel.
 
+n8n's own maintenance tasks have their own metric set, behind `N8N_METRICS_INCLUDE_SYSTEM_TASK_METRICS`. It covers them whether they run on the durable scheduler or on an in-memory timer. See [System tasks](system-tasks.md).
+
 Two words in the metric names need translating. A *task* is a run the scheduler recorded in the database. An *occurrence* is a run it computed from a schedule, which becomes a task once materialization records it. Most series carry a `task_type` label, either `workflow:schedule-trigger` or `workflow:poll-trigger`, so you can tell Schedule Trigger nodes and poll triggers apart.
 
 ### Queue health

@@ -134,7 +134,13 @@ Turn on `N8N_POLLER_DURABLE_CURSORS_ENABLED` together with `N8N_SCHEDULER_POLL_T
 
 ## System tasks
 
-n8n runs internal maintenance jobs, such as pruning old executions, compacting insights data, and renewing the license, on in-process timers in each main instance. From n8n 2.40.0, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` to `true` to run them on the durable scheduler instead. This requires `N8N_SCHEDULER_ENABLED`.
+{% hint style="info" %}
+**Feature availability**
+
+Running system tasks on the durable scheduler is available from n8n 2.40.0.
+{% endhint %}
+
+n8n runs internal maintenance jobs, such as pruning old executions, compacting insights data, and renewing the license, on in-process timers in each main instance. Set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` to `true` to run them on the durable scheduler instead. This requires `N8N_SCHEDULER_ENABLED`.
 
 At startup, each main writes one durable schedule for every job it runs on the durable scheduler, and removes the schedules for jobs it doesn't. While a durable schedule for a job exists, a main with the flag off skips its own timer runs of that job, so the job doesn't run twice. Three rules follow from this:
 

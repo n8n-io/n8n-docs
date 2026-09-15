@@ -14,7 +14,7 @@ This page explains how system tasks run and which Prometheus metrics they expose
 
 ## How system tasks run
 
-Each system task declares its own cadence, either a fixed interval or a cron schedule, and runs in one of two modes. The `mode` label on every metric below tells you which one a task uses:
+Each system task declares its own cadence, either a fixed interval or a cron schedule, and runs in one of two modes. The `mode` label on the run and schedule series below tells you which one a task uses:
 
 - **In-memory mode**, `in_memory`: the task runs from a timer in the leader main instance's process. This is the default mode. Only the leader runs these timers: they stop when an instance steps down and start again on the instance that takes over. A run whose time passes while the instance is down doesn't happen. If the process runs but sleeps, a suspended container for example, the timer fires once for all the occurrences it slept through instead of replaying them one by one.
 - **Durable mode**, `durable`: the task runs from the [durable scheduler](durable-scheduler.md)'s database-backed queue, so any main instance can pick up the run and a restart doesn't drop it. Set both `N8N_SCHEDULER_ENABLED` and `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` to `true` to use this mode, and give every instance in your setup the same values. Only tasks that support durable mode move over; the rest stay on their in-memory timers.
@@ -69,11 +69,11 @@ Queries to start from:
 # How long since each task last succeeded anywhere in the cluster
 time() - max by (task) (n8n_system_task_last_success_timestamp_seconds)
 
-# Tasks running late: no success for more than three times their own cadence
+# Interval-scheduled tasks running late: no success for more than three times their cadence (cron tasks report no interval, so they don't appear)
 time() - max by (task) (n8n_system_task_last_success_timestamp_seconds) > 3 * max by (task) (n8n_system_task_interval_seconds)
 
 # Tasks that exist on this instance but have never succeeded on it
-n8n_system_task_info unless on (task) n8n_system_task_last_success_timestamp_seconds
+n8n_system_task_info unless on (task, instance, job) n8n_system_task_last_success_timestamp_seconds
 
 # Failures per second, by task
 sum by (task) (rate(n8n_system_task_run_duration_seconds_count{result="failure"}[15m]))
@@ -104,7 +104,7 @@ These series only cover in-memory runs. The durable path has its own equivalents
 
 | Metric | Type | What it tells you |
 | :----- | :--- | :---------------- |
-| `n8n_system_task_runs_skipped_total` | Counter | How many occurrences didn't run, split by `reason`. `overlap` means the previous run was still going. `provisioned_elsewhere` means the task has a durable job, so the in-memory timer stood down. `aborted` means the occurrence fired after the instance had already started stepping down. `coalesced` means the process slept through occurrences and the timer fired once for every one of them, and the counter grows by how many. |
+| `n8n_system_task_runs_skipped_total` | Counter | How many occurrences didn't run, split by `reason`. `overlap` means the previous run was still going. `provisioned_elsewhere` means the task has a durable job, so the in-memory timer stood down. `aborted` means the occurrence fired after the instance had already started stepping down. `coalesced` means the process slept through occurrences and the timer fired a single time for the whole batch, so the counter grows by the number of occurrences that fire stood in for. |
 | `n8n_system_task_retries_total` | Counter | How many retries n8n scheduled after a failed run. Only tasks that declare a retry delay retry at all, so a failing task with a flat count here isn't a bug. |
 | `n8n_system_task_fire_lag_seconds` | Histogram | How late each timer fires, in seconds. Small values mean a busy event loop. Large ones mean the process paused or slept, and its buckets reach a day because a coalesced fire is late by at least one full cadence. |
 
@@ -118,3 +118,5 @@ min by (task, mode) (n8n_system_task_scheduled) == 0
 # p99 timer lag, by task
 histogram_quantile(0.99, sum by (le, task) (rate(n8n_system_task_fire_lag_seconds_bucket[1h])))
 ```
+
+See [Configure n8n](./) for other configuration topics.

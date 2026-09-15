@@ -22,6 +22,25 @@ The release of n8n 3.0 continues n8n's commitment to providing a secure, reliabl
 - **What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
 - *Step-by-step migration guidance will be coming soon*
 
+## Community node development
+
+These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) test loop only. `n8n-node build`, `n8n-node lint`, `n8n-node release`, and `npm create @n8n/node` are unchanged.
+
+### n8n-node dev requires Docker or Podman
+
+- `n8n-node dev` started n8n with `npx n8n@latest`. n8n 3.0 doesn't publish a runnable `n8n` package to npm, so the command now runs the official image in a container.
+- **What to do:** Install Docker or Podman. To run n8n yourself instead, use `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`. To pin an n8n version, pass the tag: `n8n-node dev --n8n-image docker.n8n.io/n8nio/n8n:VERSION`. Hot reload only works on images that serve `POST /rest/dev/reload`, so older tags load your node but need a restart to pick up changes.
+
+### n8n-node dev test data moves to a per-image container volume
+
+- Workflows and credentials you create while testing your node now live in a `n8n-node-cli-data-<image>` container volume, not in `~/.n8n-node-cli/.n8n`. Data from earlier versions doesn't carry over. Each `--n8n-image` gets its own volume, because n8n only migrates a database forward: switching images gives you an empty instance rather than a database an older n8n can't read.
+- **What to do:** Export any test workflows you want to keep before you upgrade or change images. To list and reset the volumes, use `docker volume ls --filter name=n8n-node-cli-data` and `docker volume rm <volume>`, or the `podman` equivalents.
+
+### `--custom-user-folder` only applies with `--external-n8n`
+
+- The flag used to set where the CLI linked your node. It now names the `N8N_USER_FOLDER` of the instance you run yourself, and the CLI ignores it in container mode.
+- **What to do:** If you pass `--custom-user-folder`, add `--external-n8n` and start that instance with the same `N8N_USER_FOLDER`.
+
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>
 
 n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replaced.

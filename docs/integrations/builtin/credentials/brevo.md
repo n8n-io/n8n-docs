@@ -32,7 +32,7 @@ Create a [Brevo](https://www.brevo.com/) developer account.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
+Refer to [Brevo's API documentation](https://developers.brevo.com/docs/api-key-authentication) for more information about authenticating with the service.
 
 ## API key <a href="#api-key" id="api-key"></a>
 

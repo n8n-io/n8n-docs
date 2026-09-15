@@ -225,6 +225,10 @@ See also <code>slice()</code> and <code>append()</code>.
 
     Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
 
+* [_`Boolean`_.**`isNotEmpty()`**](boolean.md#booleanisnotempty)
+
+    Returns <code>true</code> if the boolean is <code>true</code>. Returns <code>false</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
 * [_`Boolean`_.**`toNumber()`**](boolean.md#booleantonumber)
 
     Converts <code>true</code> to 1 and <code>false</code> to 0
@@ -563,6 +567,10 @@ See also <code>slice()</code> and <code>append()</code>.
 * [_`Number`_.**`isInteger()`**](number.md#numberisinteger)
 
     Returns <code>true</code> if the number is a whole number
+
+* [_`Number`_.**`isNotEmpty()`**](number.md#numberisnotempty)
+
+    Returns <code>true</code> for every number except <code>0</code> and <code>NaN</code>. Returns <code>false</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
 
 * [_`Number`_.**`isOdd()`**](number.md#numberisodd)
 

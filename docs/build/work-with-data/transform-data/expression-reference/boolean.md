@@ -41,6 +41,33 @@ layout:
   bool.isEmpty() // => true
   ```
 
+## _`Boolean`_.**`isNotEmpty()`** <a href="#booleanisnotempty" id="booleanisnotempty"></a>
+
+**Description:** Returns <code>true</code> if the boolean is <code>true</code>. Returns <code>false</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
+**Syntax:** _`Boolean`_.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+  ```javascript
+  // bool = true
+  bool.isNotEmpty() // => true
+  ```
+
+  ```javascript
+  // bool = false
+  bool.isNotEmpty() // => false
+  ```
+
+  ```javascript
+  // bool = null
+  bool.isNotEmpty() // => false
+  ```
+
 ## _`Boolean`_.**`toNumber()`** <a href="#booleantonumber" id="booleantonumber"></a>
 
 **Description:** Converts <code>true</code> to 1 and <code>false</code> to 0

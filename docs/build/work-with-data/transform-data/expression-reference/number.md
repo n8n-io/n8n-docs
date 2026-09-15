@@ -158,6 +158,33 @@ layout:
   number.isInteger() //=> false
   ```
 
+## _`Number`_.**`isNotEmpty()`** <a href="#numberisnotempty" id="numberisnotempty"></a>
+
+**Description:** Returns <code>true</code> for every number except <code>0</code> and <code>NaN</code>. Returns <code>false</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
+**Syntax:** _`Number`_.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+  ```javascript
+  // num = 10
+  num.isNotEmpty() // => true
+  ```
+
+  ```javascript
+  // num = 0
+  num.isNotEmpty() // => false
+  ```
+
+  ```javascript
+  // num = null
+  num.isNotEmpty() // => false
+  ```
+
 ## _`Number`_.**`isOdd()`** <a href="#numberisodd" id="numberisodd"></a>
 
 **Description:** Returns <code>true</code> if the number is odd. Throws an error if the number isn’t a whole number.

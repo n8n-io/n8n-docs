@@ -1,0 +1,24 @@
+docs/deploy/host-n8n/configure-n8n/README.md
+  s_f9bc646976a403::t_1886ad4bb048d2 57-64
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_f9bc646976a403::t_1886ad4bb048d2 17,72,76,121-122
+  s_f9bc646976a403::t_4b003422f24e16 107
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_f9bc646976a403::t_6489776f564c7c 214-215
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0732aa1b0c79f1d7cee6bf97dc69e754ac377c66",
+  "prompts": {},
+  "sessions": {
+    "s_f9bc646976a403": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ea7e9e70-000e-4d90-8875-7061a6af6317",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

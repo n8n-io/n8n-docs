@@ -145,8 +145,8 @@ n8n runs internal maintenance jobs, such as pruning old executions, compacting i
 At startup, each main writes one durable schedule for every job it runs on the durable scheduler, and removes the schedules for jobs it doesn't. While a durable schedule for a job exists, a main with the flag off skips its own timer runs of that job, so the job doesn't run twice. Three rules follow from this:
 
 - **Set the same value on every main.** Also give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup, including the ones another main created.
-- **Upgrade every main before you turn it on.** During a rolling deploy, mains on a version without this feature keep running these jobs on their own timers. The same job can then run twice at the same time.
-- **Don't turn it off in the same step as a rollback.** A main on an older version leaves a durable schedule that a newer version wrote in place, and skips its own timer runs of that job while the schedule stays. The job then doesn't run at all. Change the version and the flag in separate steps.
+- **Upgrade every main before you turn it on.** Mains on a version without this feature don't check for durable schedules. During a rolling deploy, they keep running these jobs on their own timers, so the same job can run twice at the same time.
+- **Don't turn it off in the same step as a rollback.** When you roll back to an older version that has this feature, that version leaves a durable schedule that the newer version wrote in place. If the flag is also off, it skips its own timer runs of that job while the schedule stays, so the job doesn't run at all. Change the version and the flag in separate steps.
 
 ## Observability
 

@@ -80,7 +80,7 @@ Security defaults are getting stronger to make n8n safer by default. These chang
 
 When `N8N_SSRF_PROTECTION_ENABLED` is `true` and `N8N_SSRF_BLOCKED_IP_RANGES` contains `default`, n8n 3.0 also blocks the shared address space (`100.64.0.0/10`) and IPv6 transition ranges.
 
-**What to do:** If your workflows call hosts in these ranges, add their IP ranges to `N8N_SSRF_ALLOWED_IP_RANGES`, or their hostnames to `N8N_SSRF_ALLOWED_HOSTNAMES`. Keep `default` in `N8N_SSRF_BLOCKED_IP_RANGES`: it is the keyword for the whole built-in list, including localhost, private networks, and the cloud metadata endpoint. If you replace it with literal ranges, you must list every range from the current built-in list yourself.
+**What to do:** If your workflows call hosts in these ranges, add their IP ranges to `N8N_SSRF_ALLOWED_IP_RANGES`, or their hostnames to `N8N_SSRF_ALLOWED_HOSTNAMES`. Keep `default` in `N8N_SSRF_BLOCKED_IP_RANGES`: it's the keyword for the whole built-in list, including localhost, private networks, and the cloud metadata endpoint. If you replace it with literal ranges, you must list every range from the current built-in list yourself.
 
 ### Lower Compression node decompression limits
 

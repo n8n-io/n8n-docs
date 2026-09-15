@@ -9,11 +9,7 @@ layout:
 
 People and AI agents both read n8n Docs. What each user type needs from documentation overlaps more than it diverges. However, agents have some particular needs for effectively parsing and navigating the documentation. 
 
-<<<<<<< HEAD
 This page sets out what agent-friendly means to n8n Docs, and why it matters. These guidelines are useful to contributors writing for the docs, or any user interested in n8n Docs' approach.
-=======
-This page sets out what agent-friendly means to n8n Docs, and why it matters. These guidelines are useful to contributors writing for the docs, or any user interested in our approach.
->>>>>>> 31407a13b7 (fix(guidelines): move agent friendly guidelines)
 
 ## Why this matters for n8n Docs
 

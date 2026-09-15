@@ -82,7 +82,7 @@ search:
 
 This defines every service you're setting up: n8n itself, the sandbox stack that lets n8n Assistant safely run code, and SearXNG for web search.
 
-{% @github-files/github-code-block %}
+{% @github-files/github-code-block url="https://github.com/n8n-io/n8n/blob/master/docker/get-n8n-compose.yml" %}
 
 ## What you've just set up
 

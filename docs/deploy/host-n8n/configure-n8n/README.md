@@ -54,6 +54,14 @@ layout:
 [set-up-task-runners.md](set-up-task-runners.md)
 {% endcontent-ref %}
 
+{% content-ref url="durable-scheduler.md" %}
+[durable-scheduler.md](durable-scheduler.md)
+{% endcontent-ref %}
+
+{% content-ref url="system-tasks.md" %}
+[system-tasks.md](system-tasks.md)
+{% endcontent-ref %}
+
 {% content-ref url="set-up-n8n-assistant.md" %}
 [set-up-n8n-assistant.md](set-up-n8n-assistant.md)
 {% endcontent-ref %}

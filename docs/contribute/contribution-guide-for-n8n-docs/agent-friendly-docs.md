@@ -31,11 +31,7 @@ The standard breaks down into four layers.
 Agents need a way to fetch content without rendering a full web page. n8n Docs provides several routes in:
 
 * **Markdown:** Every page is available as clean Markdown, not just rendered HTML.
-<<<<<<< HEAD
 * **llms.txt:** [`llms.txt`](https://docs.n8n.io/llms.txt) and [`llms-full.txt`](https://docs.n8n.io/llms-full.txt) list every published page for agents that support the format.
-=======
-* **llms.txt:** [llms.txt and llms-full.txt](https://docs.n8n.io/llms.txt) list every published page for agents that support the format.
->>>>>>> 31407a13b7 (fix(guidelines): move agent friendly guidelines)
 * **MCP server:** An MCP server exposes docs directly to MCP clients. See [Connect to the n8n docs MCP server](https://docs.n8n.io/connect/connect-to-n8n-docs-mcp-server).
 * **AI search:** AI-powered search (Kapa.ai) answers questions directly from docs, the blog, and the community forum.
 * **Context7:** [Context7](https://context7.com/) indexes n8n Docs so in-editor coding agents can retrieve current docs while someone builds.
@@ -44,13 +40,8 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 
 * **Terminology:** n8n Docs uses the same term for the same concept everywhere. This reduces confusion for both human users and agents. See [Terminology and naming](terminology.md).
 * **Stable URLs:** URLs stay stable across a page rename, with a redirect in place whenever a URL does change.
-<<<<<<< HEAD
 * **Feature availability:** A fact that depends on an n8n version or plan is placed at the scope it applies to: a hint for a whole page or section, an inline mention in passing, or a table cell for a table row. This means an agent that retrieves only a fragment of a page still sees the correct context. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
 * **Review process:** New pages and modifications are reviewed for consistency and technical accuracy before they're published, on n8n Docs' [open-access GitHub repository](https://github.com/n8n-io/n8n-docs), by both human reviewers and n8n Docs' AI-reviewer [cubic](https://www.cubic.dev/).
-=======
-* **Feature availability:** A fact that depends on an n8n version or plan says so at the point it applies, not only once at the top of the page. This increases the chance of both agents and humans seeing the correct information at the correct time. See [Feature availability](style-guide-for-n8n-docs.md#feature-availability).
-* **Review process:** New pages and modifications are reviewed for consistency and technical accuracy before they're published, on n8n Docs' [open-access GitHub repository](https://github.com/n8n-io/n8n-docs), by both human reviewers and our AI-reviewer [cubic](https://www.cubic.dev/).
->>>>>>> 31407a13b7 (fix(guidelines): move agent friendly guidelines)
 
 ### Structure and navigation
 
@@ -61,25 +52,13 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 ### Content and examples
 
 * **Text over images:** Instructions live in easily-parseable text, not images. Screenshots confirm what the reader should already know from the words on the page, not the other way round. See [Images](style-guide-for-n8n-docs.md#images).
-<<<<<<< HEAD
 * **Worked examples:** n8n Docs strives to provide worked examples for features with code, expression, or configuration surfaces. Cover the common case and cases that break, because agents copy examples directly and can't infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
-=======
-* **Worked examples:** n8n Docs strives to ensure that features with code, expression, or configuration surfaces have worked examples, covering the common case and the ones that break, since agents copy examples directly and have no way to infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
->>>>>>> 31407a13b7 (fix(guidelines): move agent friendly guidelines)
 * **Tabbed content:** Tabbed content stays sparse and short, since a person sees one tab but an agent reads every one. See [Tabbed content](style-guide-for-n8n-docs.md#tabbed-content).
 
 ## How this relates to the style guide
 
-<<<<<<< HEAD
 This page explains the reasoning. The [contribution guide](README.md) covers the contribution process, and the [style guide](style-guide-for-n8n-docs.md) has the specific rules to follow. Several of those rules, including page length, self-contained sections, internal linking, feature availability, images, and tabbed content, exist specifically because they make docs work for agents as well as people. If you're contributing, follow the style guide directly. Come back to this page when you want the reasoning behind a rule, or when you're weighing whether something new is worth adding as a rule at all.
 
 ## Where this is still evolving
 
 Not every guideline has a settled answer yet. n8n Docs is continuously testing and researching what makes agent-friendly documentation, and developing new systems to help meet these standards. Agent-friendliness is a fast-moving area of documentation practice, and this page will change as the practice matures.
-=======
-This page explains the reasoning. The [style guide](style-guide-for-n8n-docs.md) has the specific rules to follow. Several of those rules, including page length, self-contained sections, internal linking, feature availability, images, and tabbed content, exist specifically because they make docs work for agents as well as people. If you're contributing, follow the style guide directly. Come back to this page when you want the reasoning behind a rule, or when you're weighing whether something new is worth adding as a rule at all.
-
-## Where this is still evolving
-
-Not every guideline has a settled answer yet. n8n Docs is continuously testing and researching what makes agent-friendly documentation, and developing new systems to help ensure our docs meet these standards. Agent-friendliness is a fast-moving area of documentation practice, and this page will change as the practice matures.
->>>>>>> 31407a13b7 (fix(guidelines): move agent friendly guidelines)

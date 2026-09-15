@@ -25,12 +25,26 @@ In your n8n instance:
 1. Paste in your license key.
 1. Select **Activate**.
 
-## Add a license key using an environment variables <a href="#add-a-license-key-using-an-environment-variables" id="add-a-license-key-using-an-environment-variables"></a>
+## Add a license key using an environment variable <a href="#add-a-license-key-using-an-environment-variables" id="add-a-license-key-using-an-environment-variables"></a>
 
 In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key. If the instance already has an activated license, this variable will have no effect.
 
 Refer to [Environment variables](basic-configuration.md) to learn more about configuring n8n.
 
-## Allowlist the license server IP addresses <a href="#allowlist-the-license-server-ip-addresses" id="allowlist-the-license-server-ip-addresses"></a>
+### Allowlist the license server IP addresses <a href="#allowlist-the-license-server-ip-addresses" id="allowlist-the-license-server-ip-addresses"></a>
 
 n8n uses Cloudflare to host the license server. As the specific IP addresses can change, you need to allowlist the [full range of Cloudflare IP addresses](https://www.cloudflare.com/ips/) to ensure n8n can always reach the license server.
+
+## Add a license certificate using an environment variable
+
+For certain use cases (for example air-gapped environments) n8n can issue a license certificate instead of a license key. A license certificate is a base64-encoded string that n8n provides.
+
+In your n8n configuration, set `N8N_LICENSE_CERT` to the string you received from n8n:
+
+```bash
+N8N_LICENSE_CERT=<base64-encoded-license-string>
+```
+
+Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
+
+

@@ -212,7 +212,7 @@ As with the `build` command, you can also run this through your package manager.
 npm run dev
 ```
 
-`n8n-node` will compile your project and then start up a local n8n instance through `npm` with your node loaded.
+`n8n-node` will compile your project and then start up a local n8n instance with your node loaded. From n8n 3.0, it runs that instance in a container, so you need Docker or Podman installed. To run n8n yourself instead, use `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`.
 
 Visit your `localhost:5678` to sign in to your n8n instance. If you open a workflow, your node appears in the nodes panel:
 

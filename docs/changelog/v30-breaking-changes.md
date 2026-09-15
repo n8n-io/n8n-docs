@@ -29,7 +29,7 @@ These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdB
 ### n8n-node dev requires Docker or Podman
 
 - `n8n-node dev` started n8n with `npx n8n@latest`. n8n 3.0 doesn't publish a runnable `n8n` package to npm, so the command now runs the official image in a container.
-- **What to do:** Install Docker or Podman. To run n8n yourself instead, use `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`. To pin an n8n version, pass the tag: `n8n-node dev --n8n-image docker.n8n.io/n8nio/n8n:VERSION`. Hot reload only works on images that serve `POST /rest/dev/reload`, so older tags load your node but need a restart to pick up changes.
+- **What to do:** Install Docker or Podman. To run n8n yourself instead, use `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`. To pin an n8n version, pass the tag: `n8n-node dev --n8n-image docker.n8n.io/n8nio/n8n:<n8n-version>`. Hot reload only works on images that serve `POST /rest/dev/reload`, so older tags load your node but need a restart to pick up changes.
 
 ### n8n-node dev test data moves to a per-image container volume
 
@@ -38,7 +38,7 @@ These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdB
 
 ### `--custom-user-folder` only applies with `--external-n8n`
 
-- The flag used to set where the CLI linked your node. It now names the `N8N_USER_FOLDER` of the instance you run yourself, and the CLI ignores it in container mode.
+- The flag used to set where the CLI linked your node. It now names the `N8N_USER_FOLDER` of the instance you run yourself, and has no effect in container mode.
 - **What to do:** If you pass `--custom-user-folder`, add `--external-n8n` and start that instance with the same `N8N_USER_FOLDER`.
 
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>

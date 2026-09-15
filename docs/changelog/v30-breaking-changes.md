@@ -22,6 +22,13 @@ The release of n8n 3.0 continues n8n's commitment to providing a secure, reliabl
 - **What to do:** If you run n8n with `npm` or `npx n8n`, plan a move to a Docker-based deployment before upgrading to n8n 3.0. For local installations, Docker Compose is expected to be the easiest path.
 - *Step-by-step migration guidance will be coming soon*
 
+## Configuration
+
+### Remove N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION
+
+- n8n 3.0 removes the `N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION` environment variable. If a `workflow.preExecute` [external hook](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/external-hooks) throws, n8n never creates an execution record. The run never starts, so it doesn't count toward Insights or license usage.
+- **What to do:** If you set `N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION=true` to still create a failed execution when the hook throws, remove the variable before you upgrade to n8n 3.0. After you upgrade, n8n ignores the variable. Check the n8n 3.0 migration report in **Settings** to see if this instance sets it.
+
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>
 
 n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replaced.

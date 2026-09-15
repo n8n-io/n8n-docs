@@ -1,0 +1,23 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_f132370d90443c::t_7a034dee00fcb6 162,166
+  s_f132370d90443c::t_4528bbea751bca 26
+  s_f132370d90443c::t_cbb35711d1bb44 173,175,177-193,202,206
+  s_f132370d90443c::t_04518b77e2903a 48,50,53-55,68-78
+  s_f132370d90443c::t_f7ca48f1add2b5 98,110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "bffadc02d6b755e9eeaaa998d1f5fe9a61b77e0d",
+  "prompts": {},
+  "sessions": {
+    "s_f132370d90443c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "25ed8c69-7f66-4eb4-b9c9-748477178fd8",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Sam Wooler <swooler592@gmail.com>"
+    }
+  }
+}

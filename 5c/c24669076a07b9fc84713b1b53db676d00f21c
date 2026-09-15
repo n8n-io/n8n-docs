@@ -1,0 +1,19 @@
+docs/changelog/v30-breaking-changes.md
+  s_b732a613273884::t_a97488fe8dd023 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "5cc24669076a07b9fc84713b1b53db676d00f21c",
+  "prompts": {},
+  "sessions": {
+    "s_b732a613273884": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "027664de-916f-4884-9b53-953f083f47ab",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Irénée <irenee.ajeneza@n8n.io>"
+    }
+  }
+}

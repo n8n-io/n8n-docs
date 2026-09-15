@@ -8,7 +8,7 @@ layout:
 # Understand feature availability
 
 Whether you have access to an n8n feature depends on your **plan**, **platform**, and **n8n version**. 
-Whether you can rely on it depends on its maturity status: **Preview**, **GA**, **deprecated**, or **removed**.
+To what extent you can rely on it depends on its maturity status: **Preview**, **GA**, **deprecated**, or **removed**.
 
 This page explains:
 
@@ -50,7 +50,7 @@ For such features, in n8n Docs, a plan-specific **Feature availability** hint li
 
 <!-- TODO: replace with a real screenshot of a plan-specific Feature availability hint, for example the one on the "Configure SSO" or "Share credentials securely" page. -->
 
-A feature that needs a higher plan or edition still shows up in the n8n interface, but greyed out with an **Upgrade** badge and a tooltip linking to the pricing or billing page.
+A feature that needs a higher plan or edition still shows up in the n8n interface, but grayed out with an **Upgrade** badge and a tooltip linking to the pricing or billing page.
 
 <TODO screenshot of interface>
 
@@ -89,7 +89,7 @@ This is a limit your own admin sets, not n8n. See [Understand instance roles](ma
 Every n8n feature has a maturity status:
 
 * **Preview**: The feature works, but isn't complete or stable yet, and may change. Avoid relying on a Preview feature in a production workflow. A page or section about a Preview feature carries a **Preview status** hint.
-* **Generally available (GA)**: The default, stable status. A GA feature is complete and supported, and n8n only changes its behavior through the deprecation process below rather than without warning. Docs don't call this out explicitly, since it's the default: if a page has neither a Preview status hint nor a Deprecated tag, the feature is GA.
+* **Generally available (GA)**: The default, stable status. A GA feature is complete and supported, and n8n only changes its behavior through the deprecation process below rather than without warning. Docs don't call this out explicitly, since it's the default: if a page has neither a Preview status hint nor a Deprecated or Removed tag, the feature is GA.
 * **Deprecated**: The feature still works, but n8n plans to remove it and recommends moving away from it. A deprecated feature, setting, or node names the n8n version it was deprecated from, and its replacement, where one exists.
 * **Removed**: The feature no longer exists in the current version. Removal always happens at a major version. Check that version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes), for what to do instead.
 

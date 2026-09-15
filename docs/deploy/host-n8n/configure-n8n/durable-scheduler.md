@@ -142,11 +142,11 @@ Running system tasks on the durable scheduler is available from n8n 2.40.0.
 
 n8n runs internal maintenance jobs, such as pruning old executions and renewing the license, on in-process timers in the leader main instance. `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` lets the durable scheduler run these jobs instead. This requires `N8N_SCHEDULER_ENABLED`.
 
-n8n moves these jobs to the durable scheduler one release at a time. In n8n 2.40.0, no job runs on the durable scheduler yet, so the flag has no effect. This page lists the jobs as releases move them.
+n8n moves these jobs to the durable scheduler one release at a time. In n8n 2.40.0, no job runs on the durable scheduler yet, so the flag has no effect.
 
 At startup, each main writes one durable schedule for every job it runs on the durable scheduler, and removes the schedules for jobs it doesn't, unless a newer n8n version wrote them. While a durable schedule for a job exists, a main with the flag off skips its own timer runs of that job, so the job doesn't run twice. Three rules follow from this:
 
-- **Set the same value on every main.** Also give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup.
+- **Set the same value on every main.** Also give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup, unless a newer n8n version wrote them.
 - **Upgrade every main before you turn it on.** Mains on a version without this feature don't check for durable schedules. During a rolling deploy, an older main that is the leader keeps running these jobs on its own timers, so the same job can run twice at the same time.
 - **Don't turn it off in the same step as a rollback.** When you roll back to an older version that has this feature, that version leaves a durable schedule that the newer version wrote in place. If the flag is also off, that main skips its own timer runs of that job while the schedule stays, so the job doesn't run at all. Change the version and the flag in separate steps.
 

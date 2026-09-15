@@ -35,7 +35,7 @@ We encourage anyone who wants to use the Sustainable Use License. If you are bui
 
 You must sign a separate commercial agreement with us. We actively encourage software creators to build with n8n in their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. [Contact us](mailto:license@n8n.io) to learn more.
 
-If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at the examples, and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
+If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, email us at [license@n8n.io](mailto:license@n8n.io).
 
 #### Why don't you use an open source license? <a href="#why-dont-you-use-an-open-source-license" id="why-dont-you-use-an-open-source-license"></a>
 
@@ -56,7 +56,7 @@ Our goals when we created the Sustainable Use License were:
 
 #### My company has a policy against using code that restricts commercial use – can I still use n8n? <a href="#my-company-has-a-policy-against-using-code-that-restricts-commercial-use-can-i-still-use-n8n" id="my-company-has-a-policy-against-using-code-that-restricts-commercial-use-can-i-still-use-n8n"></a>
 
-Provided you are using n8n for internal business purposes, and not making n8n available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at the examples, and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
+Provided you are using n8n for internal business purposes, and not making n8n available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, email us at [license@n8n.io](mailto:license@n8n.io).
 
 #### What happens to the code I contribute to n8n in light of the Sustainable Use License? <a href="#what-happens-to-the-code-i-contribute-to-n8n-in-light-of-the-sustainable-use-license" id="what-happens-to-the-code-i-contribute-to-n8n-in-light-of-the-sustainable-use-license"></a>
 

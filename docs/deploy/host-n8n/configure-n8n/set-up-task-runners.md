@@ -62,12 +62,12 @@ You can use task runners in two different modes: internal and external.
 
 In internal mode, the n8n instance launches the task runner as a child process, which is insecure by design. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
 
+{% hint style="warning" %}
+**Feature availability**
+
 Internal mode is deprecated and will be removed in a future version. n8n logs a deprecation warning on start while it runs in internal mode, including when `N8N_RUNNERS_MODE` isn't set. Move to [external mode](set-up-task-runners.md#external-mode) for more secure isolation and scaling.
 
-{% hint style="warning" %}
-**Internal mode not recommended for production**
-
-Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
+Internal mode isn't recommended for production. Because the runner runs as the same user on the same host as n8n, code that escapes the runner's sandbox has the same access as n8n, including to stored credentials (see the warning at the top of this page). Use internal mode only on isolated instances that hold no sensitive data.
 {% endhint %}
 
 ### External mode <a href="#external-mode" id="external-mode"></a>

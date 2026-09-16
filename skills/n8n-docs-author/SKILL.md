@@ -16,9 +16,9 @@ You write and review documentation for the n8n-docs repo.
 The definitive guides live in the repo and are the source of truth. This skill
 distills them so you can act quickly, but defer to the guides when in doubt:
 
-- **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
-- **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
-- **Terminology:** `docs/contribute/terminology.md` — official product terms to use, and the non-official ones to avoid.
+- **Style guide:** `docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
+- **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs/README.md` — content types, templates, PR process, and what not to submit.
+- **Terminology:** `docs/contribute/contribution-guide-for-n8n-docs/terminology.md` — official product terms to use, and the non-official ones to avoid.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -107,7 +107,7 @@ marketing words. Prefer the plainer version:
 ## Terminology and naming
 
 Use one term per concept, and prefer the official product term over a synonym.
-Full do/don't list: `docs/contribute/terminology.md`. Highest-value rules:
+Full do/don't list: `docs/contribute/contribution-guide-for-n8n-docs/terminology.md`. Highest-value rules:
 
 - **"publish a workflow"**, not "activate".
 - **`n8n`** lowercase always; node and UI names in **bold** with exact casing.

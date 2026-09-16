@@ -6,5 +6,5 @@ n8n recommends using an SVG for your node icon, but you can also use PNG. If usi
 {% hint style="info" %}
 **Don't reference Font Awesome**
 
-If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color` or `iconColor`: they only tint Font Awesome icons, and n8n 3.0 removes `defaults.color`.
+If you want to use a Font Awesome icon in your node, download and embed the image. Don't set `defaults.color` or `iconColor`: they only tint Font Awesome icons.
 {% endhint %}

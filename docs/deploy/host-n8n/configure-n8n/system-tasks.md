@@ -93,10 +93,11 @@ These series describe the schedule rather than a run, so they exist before the f
 | :----- | :--- | :---------------- |
 | `n8n_system_task_info` | Gauge | Always `1`, one series per task this instance can run, with its `mode`. Your inventory of system tasks: join against it to find a task that reports no runs. |
 | `n8n_system_task_interval_seconds` | Gauge | The task's declared cadence, for tasks on a fixed interval. This turns "late" into a query instead of a list of thresholds you maintain by hand. Tasks on a cron schedule don't report it. |
+| `n8n_system_task_next_run_timestamp_seconds` | Gauge | The Unix timestamp of the next occurrence the task is armed for. In-memory tasks only, but unlike the cadence it covers tasks on a cron schedule too. It moves forward each time the timer arms the following occurrence, so a timestamp that sits in the past means the timer stopped planning. |
 | `n8n_system_task_scheduled` | Gauge | `1` while n8n has the task scheduled, `0` once the task lost its schedule for good, because n8n couldn't plan its in-memory cadence or couldn't provision its durable job. A `0` here means the task stopped for good rather than running late: it takes an instance restart, or a leadership change for an in-memory task, to get it scheduled again. Alert on it. |
 | `n8n_system_task_provision_check_failures_total` | Counter | How many times n8n couldn't check whether a task's durable job exists and ran the task in memory instead. A rising count means database trouble, and a small risk of the same task running twice while both paths are live. |
 
-The series for a durable task appear as soon as n8n routes the task at startup, so a restart shows up as a reset rather than a gap. The `info`, `scheduled`, `runs_in_flight`, and `last_success` series of an in-memory task exist only while this instance leads, and n8n removes them when the instance steps down: a former leader doesn't keep exporting frozen values for runs it no longer makes. Only `interval_seconds` stays, because the cadence doesn't depend on who leads.
+The series for a durable task appear as soon as n8n routes the task at startup, so a restart shows up as a reset rather than a gap. The `info`, `scheduled`, `runs_in_flight`, `last_success`, and `next_run_timestamp_seconds` series of an in-memory task exist only while this instance leads, and n8n removes them when the instance steps down: a former leader doesn't keep exporting frozen values for runs it no longer makes. Only `interval_seconds` stays, because the cadence doesn't depend on who leads.
 
 ### In-memory scheduling
 
@@ -114,6 +115,9 @@ sum by (task, reason) (rate(n8n_system_task_runs_skipped_total[15m]))
 
 # Tasks that stopped being scheduled
 min by (task, mode) (n8n_system_task_scheduled) == 0
+
+# Timers that stopped planning: the next run is more than a cadence overdue
+time() - max by (task) (n8n_system_task_next_run_timestamp_seconds) > max by (task) (n8n_system_task_interval_seconds)
 
 # p99 timer lag, by task
 histogram_quantile(0.99, sum by (le, task) (rate(n8n_system_task_fire_lag_seconds_bucket[1h])))

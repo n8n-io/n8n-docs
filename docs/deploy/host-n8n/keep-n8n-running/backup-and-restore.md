@@ -13,7 +13,7 @@ Back up a self-hosted n8n instance so you can recover from data loss, roll back 
 
 A complete backup of a self-hosted n8n instance consists of two parts:
 
-* The `.n8n` user folder, `~/.n8n` by default. It contains the `config` file, which stores the encryption key n8n uses to encrypt credentials, and, with the default SQLite database, the database file itself. You can change the folder location with the `N8N_USER_FOLDER` environment variable.
+* The `.n8n` user folder, `~/.n8n` by default. It contains the `config` file, which stores the encryption key n8n uses to encrypt credentials, and, with the default SQLite database, the database file itself. It also holds binary data and execution data when their storage mode is set to filesystem (the default from version 3). You can change the folder location with the `N8N_USER_FOLDER` environment variable.
 * Your external database, if you use PostgreSQL instead of the default SQLite. Back it up with your database's own tooling. The `.n8n` folder is still part of the backup, because credentials in the database are encrypted with the key it holds.
 
 If you run n8n in Docker, the `.n8n` folder lives in the `n8n_data` volume, mounted at `/home/node/.n8n`. For more information about persistent data in Docker, see [Install with Docker](../install-options/install-with-docker.md).
@@ -83,7 +83,7 @@ To restore a complete instance:
 3. Restore your PostgreSQL database from its backup, if you use one.
 4. Start n8n.
 
-With the default SQLite database, the `.n8n` folder contains the database, the encryption key, users, executions, and settings, so restoring it recovers the instance. With PostgreSQL, the `.n8n` folder still holds the encryption key, and the database backup holds the rest.
+With the default SQLite database, the `.n8n` folder contains the database, the encryption key, users, executions, binary data, and settings, so restoring it recovers the instance. With PostgreSQL, the `.n8n` folder still holds the encryption key, and the database backup holds the rest.
 
 ## Related content
 

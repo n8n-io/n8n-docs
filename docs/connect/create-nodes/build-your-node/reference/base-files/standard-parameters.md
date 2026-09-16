@@ -79,8 +79,6 @@ The object can include:
 
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
 
-Older nodes also set `color` here to tint a Font Awesome icon. n8n 3.0 removes `defaults.color`. Its replacement, `iconColor`, only applies to Font Awesome icons, which community nodes shouldn't use. Use an SVG or PNG file icon instead; n8n never tints file icons.
-
 ## `forceInputNodeExecution` <a href="#forceinputnodeexecution" id="forceinputnodeexecution"></a>
 
 _Boolean_ | _Optional_

@@ -97,8 +97,6 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
   - Replace the **Insert** and **Load** vector store nodes with the single node for that store: [Simple Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory), [Pinecone Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone), or [Supabase Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase). Pick the operation (**Insert Documents**, **Get Many**, or **Retrieve Documents**) in the node.
   - **Orbit**, **SerpApi (Google Search)**, **Motorhead**, **Zep**, and the **Zep Vector Store** nodes have no direct replacement. Use another supported [memory](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes) or [vector store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes) node, or a verified community node.
 
-The [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) page lists the final version of each node.
-
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
 - n8n 3.0 removes the deprecated `$getPairedItem` expression helper.

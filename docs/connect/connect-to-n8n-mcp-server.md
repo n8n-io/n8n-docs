@@ -36,6 +36,16 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 * Trigger and test exposed workflows
 * Create and edit workflows and data tables
 
+{% hint style="info" %}
+**Connecting a chat client such as Claude Desktop?**
+
+1. [Enable MCP access](#enabling-mcp-access) on your instance.
+2. Copy the **Server URL** from **Settings > Instance-level MCP > Connect a client**. It ends in `/mcp-server/http`.
+3. Paste it into your client. For the exact steps per client, see [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md).
+
+The rest of this page covers the settings, permissions, and troubleshooting behind those steps.
+{% endhint %}
+
 ## Difference between instance-level MCP access and MCP Server Trigger node <a href="#difference-between-instance-level-mcp-access-and-mcp-server-trigger-node" id="difference-between-instance-level-mcp-access-and-mcp-server-trigger-node"></a>
 
 Instance-level MCP access lets you create one connection per n8n instance, use centralized authentication, and choose which workflows to enable for access. Enabled workflows are easy to find and run without extra setup for each workflow.
@@ -343,6 +353,14 @@ If you encounter issues connecting MCP clients to your n8n instance, consider th
 * Confirm that the authentication method (OAuth or API key) is configured correctly in your MCP client.
 * If your instance runs behind a reverse proxy, load balancer, or web application firewall, make sure it doesn't strip the MCP request headers. See [MCP request headers](#mcp-request-headers).
 * Review n8n server logs for any error messages related to MCP connections.
+
+### Insufficient permissions when authorizing a client <a href="#insufficient-permissions-when-authorizing-a-client" id="insufficient-permissions-when-authorizing-a-client"></a>
+
+Your client sends you to n8n to approve access, and you land on a page reading **You do not have sufficient permissions to authorize this request**.
+
+For the instance MCP server, this means MCP access isn't on for your instance. The message doesn't say so, but there's no other cause. While the server runs, any signed-in user can approve a client. While it's off, n8n refuses everyone.
+
+Ask an instance owner or admin to turn it on, see [Enabling MCP access](#enabling-mcp-access), then connect the client again.
 
 ### MCP request headers <a href="#mcp-request-headers" id="mcp-request-headers"></a>
 

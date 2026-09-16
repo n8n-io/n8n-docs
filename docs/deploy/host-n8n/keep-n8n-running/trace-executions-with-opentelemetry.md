@@ -89,9 +89,9 @@ export N8N_OTEL_ENABLED=true
 export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://<your-collector-host>:4318
 ```
 
-Restart n8n. The instance starts exporting spans over OTLP HTTP using the Protobuf encoding.
+Restart n8n. The instance starts exporting spans over OTLP HTTP using the Protobuf encoding. To export over gRPC instead, refer to [Choose the OTLP protocol](#choose-the-otlp-protocol).
 
-n8n appends `/v1/traces` to the endpoint by default. Point `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` at the base URL of your collector, not the traces path.
+n8n appends `/v1/traces` to the endpoint by default. Point `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` at the base URL of your collector, not the traces path. The endpoint must be an `http://` or `https://` URL. If you set another scheme, or no scheme, n8n logs a warning and uses the default endpoint.
 
 If your collector needs authentication, set `N8N_OTEL_EXPORTER_OTLP_HEADERS` to a comma-separated list of `key=value` pairs:
 
@@ -109,6 +109,44 @@ For the full list of supported variables, refer to [OpenTelemetry environment va
 
 In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), the OpenTelemetry variables must be set on all instances. Trace context is propagated between instances.
 {% endhint %}
+
+## Choose the OTLP protocol
+
+{% hint style="info" %}
+**Feature availability**
+
+The OTLP gRPC protocol, with the **Protocol** setting and the `N8N_OTEL_EXPORTER_OTLP_PROTOCOL` environment variable, is available from n8n 2.39.0.
+{% endhint %}
+
+n8n can export traces over two OTLP transports:
+
+- **`http/protobuf`** (default): OTLP over HTTP with Protobuf encoding. Collectors listen for it on port 4318 by convention. It works through proxies, ingresses, and firewalls that don't support HTTP/2, and it's simpler to debug.
+- **`grpc`**: OTLP over gRPC. Collectors listen for it on port 4317 by convention. HTTP/2 multiplexing and binary framing give it lower overhead per export. The difference matters most at high span volume. It needs HTTP/2 support end to end. Some proxies and load balancers require explicit configuration for HTTP/2.
+
+Keep the default `http/protobuf` unless your collector only accepts gRPC, or you export a high trace volume through infrastructure that supports HTTP/2.
+
+To select the protocol, set the **Protocol** field in **Settings > OpenTelemetry**, or set the environment variable:
+
+```bash
+export N8N_OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+```
+
+The variable name and its values (`http/protobuf` and `grpc`) match the upstream [`OTEL_EXPORTER_OTLP_PROTOCOL`](https://opentelemetry.io/docs/specs/otel/protocol/exporter/) specification. As with the other fields in **Settings > OpenTelemetry**, n8n disables the **Protocol** field when you set the environment variable.
+
+### TLS
+
+The endpoint scheme controls TLS for both protocols. `https://` turns TLS on and `http://` turns it off. n8n doesn't accept a `grpc://` scheme.
+
+To trust a custom certificate authority, or to present a client certificate for mutual TLS (mTLS), use the upstream OpenTelemetry variables `OTEL_EXPORTER_OTLP_CERTIFICATE`, `OTEL_EXPORTER_OTLP_CLIENT_KEY`, and `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE`. For the `http/protobuf` protocol, `NODE_EXTRA_CA_CERTS` also works. n8n has no setting of its own for certificates.
+
+### gRPC behavior
+
+The `grpc` protocol differs from `http/protobuf` in these ways:
+
+- **Include the port in the endpoint.** A gRPC endpoint without an explicit port connects to port 443, the gRPC default, not 4317. Write `http://<your-collector-host>:4317`.
+- **gRPC endpoints take no URL path.** n8n ignores the **Trace path** setting (`N8N_OTEL_EXPORTER_OTLP_TRACING_PATH`) and hides its row in the UI. n8n keeps the saved value and applies it again if you switch back to `http/protobuf`.
+- **Custom headers become gRPC metadata.** n8n converts the keys to lowercase. It skips entries that gRPC rejects, including `-bin`-suffixed keys with text values, and logs a warning instead of failing startup.
+- **The startup connectivity check waits for the gRPC channel to become ready.** A ready channel proves that n8n can open a TCP connection, complete the TLS handshake for `https://`, and establish an HTTP/2 connection. It doesn't prove that the endpoint serves OTLP. Use **Send test trace** in **Settings > OpenTelemetry** to confirm that the collector receives spans. The check doesn't block startup.
 
 ## Sampling <a href="#sampling" id="sampling"></a>
 
@@ -377,7 +415,13 @@ Check that:
 - The collector is reachable from the n8n container or host.
 - Any required `N8N_OTEL_EXPORTER_OTLP_HEADERS` (such as authentication tokens) are set.
 
+If you use the `grpc` protocol, also check that the endpoint includes an explicit port. Without one, n8n connects to port 443, not 4317.
+
 n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVEL=debug` to see more detail.
+
+### Startup connectivity error with gRPC and a private CA
+
+The startup connectivity check for the `grpc` protocol uses the default TLS trust store. It doesn't read `OTEL_EXPORTER_OTLP_CERTIFICATE`, `OTEL_EXPORTER_OTLP_CLIENT_KEY`, or `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE`, while the exporter honors them. A collector behind a private certificate authority, or one that requires mTLS, can fail the check and log `Failed to connect to OpenTelemetry OTLP endpoint during startup` while exporting works. The check doesn't block startup. Use **Send test trace** in **Settings > OpenTelemetry** to confirm that the collector receives spans.
 
 ### Custom span attributes are missing <a href="#custom-span-attributes-are-missing" id="custom-span-attributes-are-missing"></a>
 

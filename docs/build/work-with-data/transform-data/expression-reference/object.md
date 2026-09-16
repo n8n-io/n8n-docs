@@ -56,7 +56,7 @@ layout:
 
 ## _`Object`_.**`isEmpty()`** <a href="#objectisempty" id="objectisempty"></a>
 
-**Description:** Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code>
+**Description:** Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code> or <code>undefined</code>
 
 **Syntax:** _`Object`_.isEmpty()
 

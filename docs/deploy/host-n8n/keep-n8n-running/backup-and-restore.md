@@ -18,6 +18,8 @@ A complete backup of a self-hosted n8n instance consists of two parts:
 
 If you configured external storage for binary data or execution data, such as S3 or Azure Blob Storage, back that storage up as well. If binary data or execution data is stored on a custom filesystem path, include that location in your backup too.
 
+With the default SQLite database, stop n8n before copying the `.n8n` folder. Copying the database file while n8n is writing to it can produce an inconsistent backup. If you can't stop n8n, use a tool that takes a consistent snapshot of the SQLite file instead.
+
 If you run n8n in Docker, the `.n8n` folder lives in the `n8n_data` volume, mounted at `/home/node/.n8n`. For more information about persistent data in Docker, see [Install with Docker](../install-options/install-with-docker.md).
 
 {% hint style="info" %}
@@ -41,6 +43,8 @@ The `--backup` flag sets `--all --pretty --separate`, so each workflow and crede
 
 Use a different output directory for each command. `import:credentials --separate` currently fails when the input directory also contains workflow files. This is a [known issue](https://github.com/n8n-io/n8n/issues/37814).
 
+If you run n8n in Docker, a `backups/` directory inside the container isn't persisted: only the `.n8n` folder is in a volume. Bind-mount a host directory for your backups, or copy the exported files out of the container before recreating it.
+
 ### What a CLI backup doesn't contain
 
 The `--backup` exports contain workflows and credentials only. They don't include:
@@ -56,14 +60,14 @@ This means a CLI backup is enough to move workflows between instances, but not e
 
 ### Restore workflows and credentials
 
-Import the files from your CLI backup:
+Import the files from your CLI backup. On a fresh instance, complete the owner setup first: the import commands need an existing user, and imported credentials need an owner. If your instance has multiple users or projects, use `--userId` or `--projectId` to assign the imported credentials.
 
 ```bash
 n8n import:workflow --separate --input=backups/workflows/
 n8n import:credentials --separate --input=backups/credentials/
 ```
 
-Exports include the original workflow and credential IDs. If the target instance already has items with the same IDs, they're overwritten. For the full list of flags and caveats, see [Use the command line](../configure-n8n/use-the-command-line.md).
+Exports include the original workflow and credential IDs. If the target instance already has items with the same IDs, they're overwritten. Imported workflows are deactivated by default. Activate them in the UI after importing, or pass `--activeState=fromJson` to restore each workflow's exported active state, which only works in queue or multi-main mode. For the full list of flags and caveats, see [Use the command line](../configure-n8n/use-the-command-line.md).
 
 To restore credentials, the importing instance must be able to decrypt them. You have two options:
 

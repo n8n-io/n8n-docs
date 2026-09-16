@@ -544,7 +544,7 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `startedAfter` | `string` | No | ISO 8601 timestamp. Only return executions that started after this time. |
 | `startedBefore` | `string` | No | ISO 8601 timestamp. Only return executions that started before this time. |
 | `limit` | `integer` | No | Limit the number of results (max 200) |
-| `lastId` | `string` | No | Cursor for pagination. Pass the last execution ID from the previous page. |
+| `cursor` | `string` | No | Cursor for pagination. Pass the `nextCursor` from the previous page. Treat it as opaque. |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -560,11 +560,13 @@ Search for workflow executions with optional filters. Returns execution metadata
 | `data[].waitTill` | `string \| null` | ISO timestamp until when the execution is waiting |
 | `count` | `integer` | Total matching executions, or `-1` if the count is unavailable |
 | `estimated` | `boolean` | Whether the count is an estimate for large datasets |
+| `nextCursor` | `string \| null` | Cursor for the next page, or `null` when no next page exists |
 | `error` | `string` | Error message if the query failed |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Renamed from `search_executions` in n8n 2.34.0.
+- `cursor` replaces the earlier `lastId` parameter. Pass the `nextCursor` value from the previous response and treat it as an opaque string.
 
 ---
 

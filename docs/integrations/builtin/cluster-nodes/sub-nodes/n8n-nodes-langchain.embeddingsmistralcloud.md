@@ -36,7 +36,7 @@ You can find authentication information for this node [here](../../credentials/m
 
 * **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/).
+Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/models/).
 
 ## Node options <a href="#node-options" id="node-options"></a>
 

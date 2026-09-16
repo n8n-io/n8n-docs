@@ -59,13 +59,13 @@ DOCS_ROOT = REPO_ROOT / "docs"
 
 # Files whose links are intentional examples, not real navigation.
 EXCLUDE_FILES = {
-    "docs/contribute/style-guide-for-n8n-docs.md",
+    "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
 }
 
 # The style guide holds the canonical `space folder -> space ID` table used for
 # cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
 # single source of truth the team already maintains.
-SPACE_ID_TABLE_FILE = REPO_ROOT / "docs" / "contribute" / "style-guide-for-n8n-docs.md"
+SPACE_ID_TABLE_FILE = REPO_ROOT / "docs" / "contribute" / "contribution-guide-for-n8n-docs" / "style-guide-for-n8n-docs.md"
 # Row form: | `space-folder` | `SpaceId` |
 SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
 APP_GITBOOK_RE = re.compile(

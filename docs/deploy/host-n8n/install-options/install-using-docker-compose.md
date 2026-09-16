@@ -53,6 +53,12 @@ mkdir n8n && cd n8n
 This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
+# n8n version
+N8N_VERSION=stable
+
+# n8n task runner authentication. Use a random secret you generate.
+N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
+
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
 SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token

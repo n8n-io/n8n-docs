@@ -43,6 +43,13 @@ These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdB
 - The flag used to set where the CLI linked your node. It now names the `N8N_USER_FOLDER` of the instance you run yourself, and has no effect in container mode.
 - **What to do:** If you pass `--custom-user-folder`, add `--external-n8n` and start that instance with the same `N8N_USER_FOLDER`.
 
+## Configuration
+
+### Remove N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION
+
+- n8n 3.0 removes the `N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION` environment variable. If a `workflow.preExecute` [external hook](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/external-hooks) throws, n8n never creates an execution record. The run never starts, so it doesn't count toward Insights or license usage.
+- **What to do:** If you set `N8N_PRE_EXECUTE_ERROR_CREATES_EXECUTION=true` to still create a failed execution when the hook throws, remove the variable before you upgrade to n8n 3.0. After you upgrade, n8n ignores the variable. Check the n8n 3.0 migration report in **Settings** to see if this instance sets it.
+
 ## Removed nodes and helpers <a href="#removed-nodes-and-helpers" id="removed-nodes-and-helpers"></a>
 
 n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replaced.

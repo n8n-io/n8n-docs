@@ -13,15 +13,17 @@ Back up a self-hosted n8n instance so you can recover from data loss, roll back 
 
 A complete backup of a self-hosted n8n instance consists of two parts:
 
-* The `.n8n` user folder, `~/.n8n` by default. It contains the `config` file, which stores the encryption key n8n uses to encrypt credentials, and, with the default SQLite database, the database file itself. It also holds binary data and execution data when their storage mode is set to filesystem (the default from version 3). You can change the folder location with the `N8N_USER_FOLDER` environment variable.
+* The `.n8n` user folder, `~/.n8n` by default. It contains the `config` file, which stores the encryption key n8n uses to encrypt credentials, and, with the default SQLite database, the database file itself. It also holds binary data and execution data when their storage mode is set to filesystem. You can change the directory n8n stores data in with the `N8N_USER_FOLDER` environment variable: n8n uses the `.n8n` subfolder of the path you set.
 * Your external database, if you use PostgreSQL instead of the default SQLite. Back it up with your database's own tooling. The `.n8n` folder is still part of the backup, because credentials in the database are encrypted with the key it holds.
+
+If you configured external storage for binary data or execution data, such as S3 or Azure Blob Storage, back that storage up as well. If binary data or execution data is stored on a custom filesystem path, include that location in your backup too.
 
 If you run n8n in Docker, the `.n8n` folder lives in the `n8n_data` volume, mounted at `/home/node/.n8n`. For more information about persistent data in Docker, see [Install with Docker](../install-options/install-with-docker.md).
 
 {% hint style="info" %}
 **The encryption key is required to restore credentials**
 
-n8n saves credentials to the database in encrypted form. Without the encryption key from the `config` file, or a custom `N8N_ENCRYPTION_KEY`, a restored database or credential export can't be decrypted. For more information, see [Set a custom encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md).
+n8n saves credentials to the database in encrypted form. Without the encryption key from the `config` file, or a custom `N8N_ENCRYPTION_KEY`, a restored database or encrypted credential export can't be decrypted. For more information, see [Set a custom encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md).
 {% endhint %}
 
 n8n recommends taking a full backup before updating. For update procedures, see [Update n8n](update-n8n.md).
@@ -81,12 +83,14 @@ To restore a complete instance:
 1. Stop n8n.
 2. Restore the `.n8n` folder to its original location.
 3. Restore your PostgreSQL database from its backup, if you use one.
-4. Start n8n.
+4. Restore your deployment configuration: the environment variables for your database connection, a custom `N8N_ENCRYPTION_KEY` if you use one, and any external storage settings. Without them, a restored instance can't reach its database or decrypt its data.
+5. Start n8n.
 
 With the default SQLite database, the `.n8n` folder contains the database, the encryption key, users, executions, binary data, and settings, so restoring it recovers the instance. With PostgreSQL, the `.n8n` folder still holds the encryption key, and the database backup holds the rest.
 
 ## Related content
 
+* [Keep n8n running](README.md): guides for operating a self-hosted n8n instance.
 * [Use the command line](../configure-n8n/use-the-command-line.md): the full Server CLI reference, including all export and import flags.
 * [Set a custom encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md): how to provide `N8N_ENCRYPTION_KEY` explicitly.
 * [Choose n8n's database](../configure-n8n/choose-n8ns-database.md): SQLite and PostgreSQL configuration.

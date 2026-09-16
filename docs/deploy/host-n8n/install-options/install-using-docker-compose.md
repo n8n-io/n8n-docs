@@ -53,8 +53,8 @@ mkdir n8n && cd n8n
 This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
-# n8n version
-N8N_VERSION=stable
+# n8n version - get the version number of the latest stable release from https://github.com/n8n-io/n8n/releases
+N8N_VERSION=change-me-version-number
 
 # n8n task runner authentication. Use a random secret you generate.
 N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token

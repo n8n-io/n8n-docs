@@ -68,7 +68,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Read PDF** node
 - **Workflow Trigger** node
 - **Orbit** node
-- **OpenAI** node (`n8n-nodes-base.openAi`), the older node that predates the AI nodes
+- **OpenAI** node from the base package (`n8n-nodes-base.openAi`)
 - **OpenAI Assistant** and **OpenAI Model** nodes
 - **HTTP Request Tool** node from the LangChain package (`@n8n/n8n-nodes-langchain.toolHttpRequest`)
 - **SerpApi (Google Search)** node
@@ -88,7 +88,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
   - Replace **Read Binary File**, **Read Binary Files**, and **Write Binary File** with the [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) node.
   - Replace **Read PDF** with the [Extract from File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.extractfromfile) node's **Extract From PDF** operation.
   - Replace **Workflow Trigger** with the [n8n Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8ntrigger) node.
-  - Replace the older **OpenAI** node and the **OpenAI Assistant** node with the [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) node. For assistants, use its **Assistant** resource.
+  - Replace the base-package **OpenAI** node and the **OpenAI Assistant** node with the [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) node. For assistants, use its **Assistant** resource.
   - Replace **OpenAI Model** with the [OpenAI Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai) node.
   - Replace the LangChain **HTTP Request Tool** with the **HTTP Request** node attached as a tool (`n8n-nodes-base.httpRequestTool`).
   - Replace **Manual Chat Trigger** with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node.
@@ -142,9 +142,9 @@ The **Legacy** toggle on the **Webflow OAuth2 API** credential defaults to off. 
 
 The chat WebSocket endpoint that the **Chat Trigger** node uses in the **Using Response Nodes** response mode, where the **Chat** node sends replies, now sends every frame as a JSON object with a `type` field: `heartbeat`, `continue`, `error`, `message`, or `with-buttons`. Before, control frames and plain text replies were raw strings. A text reply is now `{ "type": "message", "text": "..." }`. The client acknowledges heartbeats with `{ "type": "heartbeat-ack" }`, and n8n ignores incoming frames that aren't JSON.
 
-The n8n chat widget (`@n8n/chat`) and the editor chat understand both formats.
+The n8n chat widget (`@n8n/chat`) understands both formats, and the hosted chat page always loads a current widget.
 
-**What to do:** If you built a custom chat client that talks to the chat WebSocket directly, parse every frame as JSON and switch on `type`. If you embed the hosted chat or `@n8n/chat`, update to a version that supports the JSON frames before you upgrade.
+**What to do:** If you built a custom chat client that talks to the chat WebSocket directly, parse every frame as JSON and switch on `type`. If you embed `@n8n/chat` yourself, update it to the latest version before you upgrade n8n.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 
@@ -205,7 +205,7 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
 
 n8n 3.0 removes the deprecated `defaults.color` property from the node description type. Community nodes that still set `defaults.color` without `iconColor` keep working, but the editor shows their icon in a neutral color until you migrate. Nodes that use an SVG icon (`icon: 'file:...svg'`) aren't affected, because n8n never tints SVG icons.
 
-**What to do:** Replace `defaults.color` with `iconColor` in your node description. `iconColor` accepts a named design-system color that adapts to dark mode. See the [node UI elements](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/node-ui-elements) reference.
+**What to do:** Replace `defaults.color` with `iconColor` in your node description. `iconColor` takes a named color from the n8n design system, for example `'amber'` or `'dark-blue'`, that adapts to dark mode. See the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters) reference.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

@@ -56,7 +56,7 @@ This file holds the secrets the sandbox services use to talk to each other. Crea
 # n8n version
 N8N_VERSION=stable
 
-# n8n task runner authentication — pick your own values
+# n8n task runner authentication. Use a random secret you generate.
 N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
 
 # Sandbox service secrets — pick your own values

@@ -213,11 +213,11 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
 
 ## Community nodes
 
-### `defaults.color` replaced by `iconColor`
+### `defaults.color` removed from the node description
 
-n8n 3.0 removes the deprecated `defaults.color` property from the node description type. Community nodes that still set `defaults.color` without `iconColor` keep working, but the editor shows their icon in a neutral color until you migrate. Nodes that use an SVG icon (`icon: 'file:...svg'`) aren't affected, because n8n never tints SVG icons.
+n8n 3.0 removes the deprecated `defaults.color` property from the node description type. It only tinted Font Awesome icons (`icon: 'fa:...'`). Community nodes that still set it keep working, but the editor shows a Font Awesome icon in a neutral color. Nodes with a file icon (`icon: 'file:...'`) aren't affected, because n8n never tints file icons.
 
-**What to do:** Replace `defaults.color` with `iconColor` in your node description. `iconColor` takes a named color from the n8n design system, for example `'amber'` or `'dark-blue'`, that adapts to dark mode. See the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters) reference.
+**What to do:** Remove `defaults.color`. If your node uses a Font Awesome icon, replace it with an SVG or PNG file icon, as the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters#icon) reference recommends.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

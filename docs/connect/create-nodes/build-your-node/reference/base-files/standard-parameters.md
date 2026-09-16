@@ -52,27 +52,6 @@ icon: {
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dGOXJYk0OQgOLlRpyJnn/" %}
 
-## `iconColor`
-
-_String_ | _Optional_
-
-Sets the color of a Font Awesome icon (`icon: 'fa:...'`). n8n ignores it for file icons. Use one of the named colors from the n8n design system, which adapt to dark mode:
-
-`neutral`, `gray`, `black`, `blue`, `light-blue`, `dark-blue`, `sky-blue`, `orange`, `orange-red`, `amber`, `rust`, `pink-red`, `magenta`, `red`, `light-green`, `green`, `dark-green`, `emerald`, `forest-green`, `lime`, `azure`, `teal`, `purple`, `violet`, `lavender`, `crimson`
-
-For example:
-
-```
-icon: 'fa:calendar',
-iconColor: 'amber'
-```
-
-{% hint style="warning" %}
-**Feature availability**
-
-`iconColor` replaces `defaults.color`, deprecated from n8n 1.52.0 and removed from n8n 3.0. A node that still sets `defaults.color` without `iconColor` shows its icon in a neutral color.
-{% endhint %}
-
 ## `group` <a href="#group" id="group"></a>
 
 _Array of strings_ | _Required_
@@ -100,7 +79,7 @@ The object can include:
 
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
 
-Older nodes also set `color` here. Use [`iconColor`](#iconcolor) instead: n8n 3.0 removes `defaults.color`.
+Older nodes also set `color` here to tint a Font Awesome icon. n8n 3.0 removes `defaults.color`. Its replacement, `iconColor`, only applies to Font Awesome icons, which community nodes shouldn't use. Use an SVG or PNG file icon instead; n8n never tints file icons.
 
 ## `forceInputNodeExecution` <a href="#forceinputnodeexecution" id="forceinputnodeexecution"></a>
 

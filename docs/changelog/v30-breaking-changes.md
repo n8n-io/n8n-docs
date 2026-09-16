@@ -68,9 +68,9 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Read PDF** node
 - **Workflow Trigger** node
 - **Orbit** node
-- **OpenAI** node from the base package (`n8n-nodes-base.openAi`)
+- **OpenAI** node (legacy). The current **OpenAI** node in the AI section stays.
 - **OpenAI Assistant** and **OpenAI Model** nodes
-- **HTTP Request Tool** node from the LangChain package (`@n8n/n8n-nodes-langchain.toolHttpRequest`)
+- **HTTP Request Tool** node (legacy). Using the **HTTP Request** node as a tool stays.
 - **SerpApi (Google Search)** node
 - **Manual Chat Trigger** node
 - **Chat Messages Retriever** node
@@ -88,9 +88,9 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
   - Replace **Read Binary File**, **Read Binary Files**, and **Write Binary File** with the [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) node.
   - Replace **Read PDF** with the [Extract from File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.extractfromfile) node's **Extract From PDF** operation.
   - Replace **Workflow Trigger** with the [n8n Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8ntrigger) node.
-  - Replace the base-package **OpenAI** node and the **OpenAI Assistant** node with the [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) node. For assistants, use its **Assistant** resource.
+  - Replace the legacy **OpenAI** node and the **OpenAI Assistant** node with the [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) node. For assistants, use its **Assistant** resource.
   - Replace **OpenAI Model** with the [OpenAI Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai) node.
-  - Replace the LangChain **HTTP Request Tool** with the **HTTP Request** node attached as a tool (`n8n-nodes-base.httpRequestTool`).
+  - Replace the legacy **HTTP Request Tool** with the **HTTP Request** node connected to the **Tool** input of the **AI Agent** node.
   - Replace **Manual Chat Trigger** with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node.
   - Replace **Chat Messages Retriever** with the [Chat Memory Manager](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node, or load previous sessions in the **Chat Trigger** node.
   - Replace **Binary Input Loader**, **JSON Input Loader**, and **GitHub Document Loader** with the [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) node. For GitHub content, fetch it with the **GitHub** node first.
@@ -103,6 +103,18 @@ The [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDc
 
 - n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
   - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
+
+### Execute Sub-workflow node: Local File and URL sources removed
+
+n8n 3.0 removes the **Local File** and **URL** options from the **Source** parameter of the [Execute Sub-workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node. Only node versions 1.1 and older offered them. Nodes that still use one of these sources fail with an error.
+
+**What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source. Before you update, **Settings > Migration Report** lists the affected nodes.
+
+### Any workflow caller policy removed
+
+n8n 3.0 removes the **Any workflow** option from the **This workflow can be called by** setting in the [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings). This option let any project on the instance call the sub-workflow, which bypassed project permissions. Sub-workflows that still store this policy reject every call, including calls from the same project, until you save a supported policy. `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any` logs a warning at startup and falls back to the default, the same-project option.
+
+**What to do:** Open the settings of each affected sub-workflow and select **Selected workflows** or the same-project option, then save. Before you update, **Settings > Migration Report** lists the affected workflows. If you set `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any`, change or remove the variable.
 
 ### Execute Workflow node: Run once for each item mode removed
 
@@ -142,9 +154,9 @@ The **Legacy** toggle on the **Webflow OAuth2 API** credential defaults to off. 
 
 The chat WebSocket endpoint that the **Chat Trigger** node uses in the **Using Response Nodes** response mode, where the **Chat** node sends replies, now sends every frame as a JSON object with a `type` field: `heartbeat`, `continue`, `error`, `message`, or `with-buttons`. Before, control frames and plain text replies were raw strings. A text reply is now `{ "type": "message", "text": "..." }`. The client acknowledges heartbeats with `{ "type": "heartbeat-ack" }`, and n8n ignores incoming frames that aren't JSON.
 
-The n8n chat widget (`@n8n/chat`) understands both formats, and the hosted chat page always loads a current widget.
+The n8n chat widget (`@n8n/chat`) understands both formats from version 1.31.0, and the hosted chat page always loads a current widget.
 
-**What to do:** If you built a custom chat client that talks to the chat WebSocket directly, parse every frame as JSON and switch on `type`. If you embed `@n8n/chat` yourself, update it to the latest version before you upgrade n8n.
+**What to do:** If you built a custom chat client that talks to the chat WebSocket directly, parse every frame as JSON and switch on `type`. If you embed `@n8n/chat` yourself, update it to version 1.31.0 or later before you upgrade n8n.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 

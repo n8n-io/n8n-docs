@@ -2,7 +2,7 @@
 nodeTitle: Style guide for n8n Docs
 originalFilePath: dummy1.md
 originalUrl: https://docs.n8n.io/dummy1
-url: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
+url: https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs
 layout:
   width: default
   title:

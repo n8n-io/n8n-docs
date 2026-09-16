@@ -2,7 +2,7 @@
 title: Microsoft credentials
 description: >-
   Documentation for Microsoft credentials. Use these credentials to authenticate
-  Microsoft in n8n, a workflow automation platform.
+  with Microsoft in n8n.
 contentType:
   - integration
   - reference
@@ -35,7 +35,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Choosing a credential type**
 
-Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. The generic credential can be reused across multiple Microsoft nodes; when you use it, make sure it's granted the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials.
+Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. You can reuse the generic credential across multiple Microsoft nodes. When you use it, make sure you grant it the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials. The Microsoft SharePoint node works the same way from version 2 of the node, while version 1 keeps using the node-specific Microsoft SharePoint credential.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -66,7 +66,7 @@ Refer to the linked Microsoft API documentation below for more information about
 
 Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
 
-For self-hosted users, there are two main steps to configure OAuth2 from scratch:
+Self-hosted users can configure OAuth2 from scratch in two main steps:
 
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
 2. Add a credential to that application, either by [generating a client secret](#generate-a-client-secret) or [registering a certificate](#authenticate-with-a-certificate).
@@ -168,6 +168,7 @@ This setting applies to all Microsoft Graph API nodes that use Microsoft credent
 - Microsoft Excel (SharePoint)
 - Microsoft OneDrive
 - Microsoft Graph Security
+- Microsoft SharePoint (from version 2 of the node)
 - Microsoft To Do
 
 {% hint style="warning" %}
@@ -184,7 +185,57 @@ If you're using a government cloud tenant, you may also need to update the **Aut
 Define granular permissions for interacting with the following Microsoft services:
 
 * Microsoft Teams
-* Microsoft Excel (OneDrive)
+* Microsoft Excel
+* Microsoft Outlook
+* Microsoft SharePoint
+* Microsoft OneDrive
+
+To select different scopes for one of these credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Some features may not work as expected with more restrictive scopes.
+
+#### Default scopes for Microsoft Outlook
+
+Microsoft Outlook credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Contacts.Read`
+* `Contacts.ReadWrite`
+* `Calendars.Read`
+* `Calendars.Read.Shared`
+* `Calendars.ReadWrite`
+* `Mail.ReadWrite`
+* `Mail.ReadWrite.Shared`
+* `Mail.Send`
+* `Mail.Send.Shared`
+* `MailboxSettings.Read`
+
+#### Default scopes for Microsoft SharePoint
+
+Microsoft SharePoint credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `https://<subdomain>.sharepoint.com/.default`, where you replace `<subdomain>` with the credential's **Subdomain** value
+
+#### Default scopes for Microsoft OneDrive
+
+Microsoft OneDrive credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `Files.ReadWrite.All`
+
+#### Default scopes for Microsoft Teams
+
+Microsoft Teams credentials use the following scopes by default:
+
+* `openid`
+* `offline_access`
+* `User.Read.All`
+* `Group.ReadWrite.All`
+* `Chat.ReadWrite`
+* `ChannelMessage.Read.All`
+* `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 
@@ -205,6 +256,8 @@ The general Microsoft OAuth2 also requires you to provide a space-separated list
 
 Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc) for a list of possible scopes.
 
+The n8n node documentation lists the exact scopes each node needs. For example, the [Microsoft SharePoint node](../app-nodes/n8n-nodes-base.microsoftsharepoint.md) (from version 2) gives full scope strings such as `openid offline_access Sites.ReadWrite.All`, including the `openid offline_access` scopes the credential needs to refresh its tokens.
+
 #### Outlook <a href="#outlook" id="outlook"></a>
 
 Outlook OAuth2 supports the credential accessing a user's primary email inbox or a shared inbox. By default, the credential will access a user's primary email inbox. To change this behavior:
@@ -213,6 +266,8 @@ Outlook OAuth2 supports the credential accessing a user's primary email inbox or
 2. Enter the target user's UPN or ID as the **User Principal Name**.
 
 #### SharePoint <a href="#sharepoint" id="sharepoint"></a>
+
+These settings apply to the node-specific Microsoft SharePoint credential, which version 1 of the Microsoft SharePoint node uses. Version 2 of the node uses the generic Microsoft OAuth2 credential (no subdomain needed) or the [Microsoft Entra Service Principal credential](microsoftentraserviceprincipal.md); refer to the [Microsoft SharePoint node documentation](../app-nodes/n8n-nodes-base.microsoftsharepoint.md) for the scopes to enter.
 
 SharePoint OAuth2 requires information about your SharePoint **Subdomain**.
 
@@ -232,6 +287,6 @@ Delegated permissions:
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
-Here are the known common errors and issues with Microsoft OAuth2 credentials.
+Common errors and issues with Microsoft OAuth2 credentials:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/fXYywkPyzPTxeGOEnYgb/" %}

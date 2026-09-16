@@ -43,7 +43,7 @@ For details of pricing and availability of AI Workflow Builder, see [n8n Plans a
 2. **Monitor the build:** The builder provides real-time feedback through several phases.
 3.  **Review and refine the generated workflow:** Review required credentials and other parameters. Refine the workflow using prompts.
 
-    ![ai-workflow-builder.png](../.gitbook/assets/ai-workflow-builder.png)
+    ![AI Workflow Builder panel showing a generated workflow with a chat box for refining it](../.gitbook/assets/ai-workflow-builder.png)
 
 ### Commands you can run in the builder <a href="#commands-you-can-run-in-the-builder" id="commands-you-can-run-in-the-builder"></a>
 

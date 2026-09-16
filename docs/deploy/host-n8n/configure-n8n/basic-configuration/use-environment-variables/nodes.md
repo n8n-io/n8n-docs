@@ -48,8 +48,8 @@ This page lists the environment variables configuration options for managing nod
 
 | Variable                                             | Type   | Default        | Description                                                                          |
 |:-----------------------------------------------------|:-------|:---------------|:-------------------------------------------------------------------------------------|
-| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `2147483648`   | Maximum total decompressed output size in bytes. Default is 2 GiB.                   |
-| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `5000`         | Maximum number of entries allowed in a ZIP archive.                                   |
+| `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES`   | Number | `268435456`    | Maximum total decompressed output size in bytes. Default is 256 MiB.                 |
+| `N8N_COMPRESSION_NODE_MAX_ZIP_ENTRIES`               | Number | `1000`         | Maximum number of entries allowed in a ZIP archive.                                  |
 
 ## Manage installed community packages <a href="#manage-installed-community-packages" id="manage-installed-community-packages"></a>
 

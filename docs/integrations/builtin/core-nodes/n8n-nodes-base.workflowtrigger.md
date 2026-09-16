@@ -16,6 +16,9 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # Workflow Trigger node <a href="#workflow-trigger-node" id="workflow-trigger-node"></a>
@@ -23,9 +26,9 @@ layout:
 The Workflow Trigger node gets triggered when a workflow is updated or activated.
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](n8n-nodes-base.n8ntrigger.md).
+The Workflow Trigger node is deprecated from n8n 1.64.0. n8n moved its functionality to the [n8n Trigger node](n8n-nodes-base.n8ntrigger.md). Refer to [Deprecated and versioned nodes](../deprecated-nodes.md) for more information.
 {% endhint %}
 
 {% hint style="info" %}

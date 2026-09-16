@@ -1,4 +1,5 @@
 ---
+description: Build workflows in n8n, from first draft to production.
 layout:
   width: default
   title:
@@ -51,7 +52,7 @@ Reference, transform, structure, and test the data moving through workflows.
 
 [**Code in n8n**](code-in-n8n/README.md)
 
-Use expressions, the Code node, and developer tools when low-code is not enough.
+Use expressions, the Code node, and developer tools when low-code isn't enough.
 
 <a href="code-in-n8n/" class="button secondary">Open</a>
 {% endcolumn %}

@@ -45,7 +45,7 @@ To fix this error, review the following:
 		```sh
 		# Start up a new container that runs the command instead of n8n
 		# Use the same image and tag that you use to run n8n normally
-		docker run -it --rm --entrypoint /bin/sh docker.n8n.io/n8nio/n8n -c <command_to_run>
+		docker run -it --rm --entrypoint /bin/sh n8nio/n8n -c <command_to_run>
 		```
 
 

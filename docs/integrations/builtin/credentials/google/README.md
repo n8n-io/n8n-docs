@@ -7,7 +7,7 @@ originalUrl: https://docs.n8n.io/integrations/builtin/credentials/google
 url: https://docs.n8n.io/integrations/builtin/credentials/google
 description: >-
   Documentation for Google credentials. Use these credentials to authenticate
-  Google in n8n, a workflow automation platform.
+  with Google in n8n.
 layout:
   width: default
   title:
@@ -41,7 +41,7 @@ This section contains:
 
 ## OAuth2 and Service Account <a href="#oauth2-and-service-account" id="oauth2-and-service-account"></a>
 
-There are two authentication methods available for Google services nodes:
+Google service nodes support two authentication methods:
 
 * [OAuth2](https://developers.google.com/identity/protocols/oauth2): Recommended because it's more widely available and easier to set up.
 * [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts): Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts) for guidance on when you need a service account.
@@ -54,7 +54,7 @@ There are two authentication methods available for Google services nodes:
 
 ## Compatible nodes <a href="#compatible-nodes" id="compatible-nodes"></a>
 
-Once configured, you can use your credentials to authenticate the following nodes. Most nodes are compatible with OAuth2 authentication. Support for Service Account authentication is limited.
+Once configured, you can use your credentials to authenticate the following nodes. Most nodes are compatible with OAuth2 authentication. n8n has limited support for Service Account authentication.
 
 | Node                                                                                            | OAuth | Service Account |
 | ----------------------------------------------------------------------------------------------- | :---: | :-------------: |

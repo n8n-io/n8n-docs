@@ -21,8 +21,8 @@ layout:
 
 # Ways of building workflows
 
-{% content-ref url="ai-assistant.md" %}
-[ai-assistant.md](ai-assistant.md)
+{% content-ref url="n8n-assistant.md" %}
+[n8n-assistant.md](n8n-assistant.md)
 {% endcontent-ref %}
 
 {% content-ref url="connect-to-n8n-mcp-server.md" %}

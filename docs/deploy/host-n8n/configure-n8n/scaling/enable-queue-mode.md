@@ -39,7 +39,7 @@ This is the process flow:
 1. Redis notifies the main instance.
 
 
-!["Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database"](../../../.gitbook/assets/queue-mode-flow.png)
+![Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database](../../../.gitbook/assets/queue-mode-flow.png)
 
 ## Configuring workers <a href="#configuring-workers" id="configuring-workers"></a>
 
@@ -129,7 +129,7 @@ Start worker processes by running the following command from the root directory:
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n worker
+docker run --name n8n-queue -p 5679:5678 n8nio/n8n worker
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
@@ -198,7 +198,7 @@ You can start the webhook processor by executing the following command from the 
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n webhook
+docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" n8nio/n8n webhook
 ```
 
 ### Configure webhook URL <a href="#configure-webhook-url" id="configure-webhook-url"></a>

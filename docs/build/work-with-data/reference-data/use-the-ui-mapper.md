@@ -20,7 +20,7 @@ You can map data in the following ways:
 * Using the expressions editor.
 * By dragging and dropping data from the **INPUT** pane into node parameters. This generates the expression for you.
 
-![Creating expressions in the UI](../../.gitbook/assets/expressionEditor.gif)
+![Dragging a field from the INPUT pane into a node parameter to generate an expression](../../.gitbook/assets/expressionEditor.gif)
 
 For information on errors with mapping and linking items, refer to [Item linking errors](link-data-items/item-linking-errors.md).
 

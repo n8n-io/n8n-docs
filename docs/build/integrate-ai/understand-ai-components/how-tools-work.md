@@ -27,7 +27,8 @@ Here are a couple of other ways of expressing it:
 
 ## AI tools in n8n <a href="#ai-tools-in-n8n" id="ai-tools-in-n8n"></a>
 
-n8n provides tool sub-nodes[^1] that you can connect to your [AI agent](#user-content-fn-2)[^2]. As well as providing some popular tools, such as [Wikipedia](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia) and [SerpAPI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi), n8n provides three especially powerful tools:
+n8n provides built in nodes[^1] and a registry of [MCP servers](../mcp-servers.md) that you can connect to your [AI agent](#user-content-fn-2)[^2] as tools. Built-in nodes include popular services such as [Wikipedia](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia) and [SerpAPI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi).
+Apart from these, n8n provides three especially powerful tools:
 
 * [Call n8n Workflow Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow): use this to load any n8n workflow as a tool.
 * [Custom Code Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode): write code that your agent can run.

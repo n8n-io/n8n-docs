@@ -35,7 +35,7 @@ tags:
 
 # Compare plans and editions
 
-Every self-hosted installation runs on the same underlying product. You can stick with the basic Community edition for free, indefinitely. Alternatively, register to unlock extra features for free, or subscribe to a paid plan to get a license key that unlocks the features for that plan.
+Every self-hosted installation runs on the same underlying product. You can stick with the free Community edition indefinitely, register for free to unlock extra features, or subscribe to a paid plan for a license key that unlocks that plan's features.
 
 - **Community edition**: the free edition. This is what n8n runs without a license key.
 - **Registered Community edition**: the free Community edition with extra features unlocked by registering your email. Still free.
@@ -57,7 +57,7 @@ Exact features per plan and edition can change. For the current breakdown, see t
 
 The Community edition includes almost the complete feature set of n8n. It doesn't include these features:
 
-* [Custom Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables)
+* [Custom variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables)
 * [Environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)
 * [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores)
 * [External storage for binary data](configure-n8n/scaling/use-external-storage.md)

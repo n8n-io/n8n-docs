@@ -21,6 +21,10 @@ layout:
 
 # Anthropic Chat Model node <a href="#anthropic-chat-model-node" id="anthropic-chat-model-node"></a>
 
+{% hint style="info" %}
+On n8n Cloud, you can use the Anthropic Chat Model node with [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits) instead of your own Anthropic API key. Select **Use Gateway credits** in the node's credential field to run the node without an Anthropic account.
+{% endhint %}
+
 Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents[^1].
 
 On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
@@ -39,14 +43,13 @@ You can find authentication information for this node [here](../../credentials/a
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model).
-
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+* **Prompt Caching**: Cache the system prompt, tool definitions, and conversation history between requests using [Anthropic prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching). Choose **Disabled** (the default), **5 Minutes**, or **1 Hour**. The value sets how long cached content stays valid before it has to be written again.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

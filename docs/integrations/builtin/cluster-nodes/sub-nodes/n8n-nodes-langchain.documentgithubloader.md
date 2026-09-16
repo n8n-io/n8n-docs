@@ -16,14 +16,17 @@ url: >-
 layout:
   description:
     visible: false
+tags:
+  - tag: deprecated
+    primary: true
 ---
 
 # GitHub Document Loader node <a href="#github-document-loader-node" id="github-document-loader-node"></a>
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-This node is deprecated, and will be removed in a future version.
+The GitHub Document Loader node is deprecated from n8n 1.122.0. Refer to [Deprecated and versioned nodes](../../deprecated-nodes.md) for more information.
 {% endhint %}
 
 Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](#user-content-fn-1)[^1] or summarization.

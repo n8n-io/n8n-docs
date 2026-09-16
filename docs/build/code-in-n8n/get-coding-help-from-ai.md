@@ -181,7 +181,7 @@ return [{ json: { slackMessage } }];
 
 If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
 
-!["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](../.gitbook/assets/reference-data-dot-notation.png)
+![Code node with an AI prompt referencing nested data using dot notation, such as personal_info.first_name](../.gitbook/assets/reference-data-dot-notation.png)
 
 To try the example yourself, download the example workflow and import it into n8n:
 

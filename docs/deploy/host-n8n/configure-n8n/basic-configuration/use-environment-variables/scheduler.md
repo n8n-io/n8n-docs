@@ -41,6 +41,15 @@ The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n
 Poll trigger support isn't 100% stable yet. Keep `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` off in production unless you're prepared to keep a close watch on your polling workflows: check their execution lists for gaps or duplicate runs, and turn on scheduler metrics to watch scheduling lag, retries, and dead-letters (see [Durable scheduler observability](../../durable-scheduler.md#observability)). This doesn't affect Schedule Trigger support, which is stable.
 {% endhint %}
 
+## Poll triggers
+
+Controls trigger nodes with a **Poll Times** parameter (such as Google Sheets Trigger or Airtable Trigger): how they store their cursor, the node's record of how far it has already read, and how long a single poll may run. To route these nodes through the durable scheduler, turn on `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` (in the Enable the scheduler table). See [Poll triggers](../../durable-scheduler.md#poll-triggers).
+
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_POLLER_DURABLE_CURSORS_ENABLED` | Boolean | `false` | Whether n8n stores a poll trigger node's cursor in a dedicated database table and commits it in the same transaction as the execution the poll produced, so a crash mid-poll can't drop or duplicate data. Available from n8n 2.36.0. From n8n 2.37.0, requires `N8N_SCHEDULER_ENABLED`, `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. See [Durable poll cursors](../../durable-scheduler.md#durable-poll-cursors). |
+| `N8N_SCHEDULER_POLL_TIMEOUT` | Number | `45` | How long, in seconds, a single poll may run before n8n abandons it. An abandoned poll records nothing: the cursor stays put and the next poll covers the same ground, so no data goes missing. A poll that keeps timing out counts as failing, so n8n re-polls it at a widening interval. Keep the timeout below `N8N_SCHEDULER_LEASE_DURATION`: the timeout clock only starts once the poll itself does, so a poll allowed the full lease can still be running when another instance takes its run over. n8n warns at startup when the timeout reaches the lease duration. Must be greater than 0. Available from n8n 2.37.0. |
+
 ## Materialization <a href="#materialization-vars" id="materialization-vars"></a>
 
 Controls how far ahead and how often the scheduler records upcoming runs to the database.
@@ -83,6 +92,25 @@ Controls how long the scheduler keeps finished runs as history and how often it 
 | `N8N_SCHEDULER_FAILED_RETENTION` | Number | `604800` | How long, in seconds, the scheduler keeps runs that went wrong (a failure, or a missed run) before deleting them. Defaults to seven days. Keep it longer than `N8N_SCHEDULER_RETENTION` so there's time to debug; the scheduler warns if you set it lower. Must be greater than 0. |
 | `N8N_SCHEDULER_RETENTION_INTERVAL` | Number | `3600` | How often, in seconds, the scheduler deletes finished runs older than the retention windows. Defaults to one hour. Must be greater than 0. |
 | `N8N_SCHEDULER_RETENTION_TIMEOUT` | Number | `300` | How long, in seconds, a single cleanup pass may run before it's abandoned and retried on the next interval. Defaults to five minutes. Must be greater than 0. |
+
+## Owner reconciliation
+
+Controls the sweep that retires schedules whose owner no longer exists, such as a workflow that's no longer published. The sweep stops them right away and deletes them after a grace period. See [How the durable scheduler works](../../durable-scheduler.md#how-it-works).
+
+{% hint style="info" %}
+**Feature availability**
+
+Owner reconciliation is available from n8n 2.39.0.
+{% endhint %}
+
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_ENABLED` | Boolean | `true` | Whether the scheduler periodically checks that every schedule's owner still exists and retires the schedules whose owner is missing. Turning it off leaves those schedules in place. |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_INTERVAL` | Number | `900` | How often, in seconds, the sweep runs. Defaults to 15 minutes. It's a safety net rather than the usual cleanup path, so a long interval is fine. Must be greater than 0. |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_TIMEOUT` | Number | `300` | How long, in seconds, a single sweep may run before it's abandoned and retried on the next interval. Defaults to five minutes. Must be greater than 0. |
+| `N8N_SCHEDULER_OWNER_RECONCILIATION_BATCH_SIZE` | Number | `500` | How many owners the sweep checks per database query. Larger batches finish a sweep in fewer queries; smaller ones keep each query light. Must be between 1 and 1000. |
+| `N8N_SCHEDULER_OWNER_QUARANTINE_GRACE` | Number | `86400` | How long, in seconds, the sweep keeps a stopped schedule before deleting it. Defaults to one day. The schedule stops firing as soon as the sweep finds it, so this only delays the delete. Must be greater than 0. |
+| `N8N_SCHEDULER_OWNER_SETTLE_PERIOD` | Number | `300` | How old, in seconds, a schedule must be before the sweep considers it. Defaults to five minutes. n8n can write a schedule a moment before its owner, so this stops the sweep from mistaking a brand-new schedule for an abandoned one. Must be greater than 0. |
 
 ## Coordination across instances <a href="#coordination-vars" id="coordination-vars"></a>
 

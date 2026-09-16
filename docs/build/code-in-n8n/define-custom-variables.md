@@ -19,7 +19,7 @@ layout:
 Custom variables are available on:
 
 - **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 Only instance owners and admins can create variables.
 {% endhint %}

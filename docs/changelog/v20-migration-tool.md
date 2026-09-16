@@ -15,7 +15,7 @@ layout:
 
 The migration tool helps you prepare your n8n instance for upgrading to n8n 2.0 by identifying workflows and configurations that need attention before the upgrade.
 
-![Migration tool](.gitbook/assets/migration-tool.png)
+![Migration compatibility report showing a workflow-compatible count and Workflow issues / Instance issues tabs](.gitbook/assets/migration-tool.png)
 
 You can see all breaking changes for n8n 2.0 [on this page](v20-breaking-changes.md).
 

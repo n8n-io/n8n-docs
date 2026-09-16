@@ -1,4 +1,5 @@
 ---
+description: Plan, build, test, and deploy a custom n8n node.
 layout:
   description:
     visible: false
@@ -24,3 +25,5 @@ layout:
 {% content-ref url="deploy-your-node/README.md" %}
 [deploy-your-node/README.md](deploy-your-node/README.md)
 {% endcontent-ref %}
+
+See [Connect](../README.md) for other ways to connect to n8n.

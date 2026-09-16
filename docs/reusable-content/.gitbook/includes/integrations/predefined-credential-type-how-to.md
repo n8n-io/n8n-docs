@@ -3,7 +3,7 @@ title: predefined-credential-type-how-to
 ---
 To use a predefined credential type:
 
-1. Open your HTTP Request node, or add a new one to your workflow.
+1. Open your HTTP Request or GraphQL node, or add a new one to your workflow.
 2. In **Authentication**, select **Predefined Credential Type**.
 3. In **Credential Type**, select the API you want to use. 
 4. In **Credential for `<API name>`**, you can:

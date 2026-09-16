@@ -1,4 +1,5 @@
 ---
+description: Manage your n8n Cloud trial, plan, and instance, including the admin dashboard and updates.
 layout:
   description:
     visible: false
@@ -19,6 +20,10 @@ layout:
 
 {% content-ref url="configure-cloud/README.md" %}
 [configure-cloud/README.md](configure-cloud/README.md)
+{% endcontent-ref %}
+
+{% content-ref url="gateway-credits/README.md" %}
+[gateway-credits/README.md](gateway-credits/README.md)
 {% endcontent-ref %}
 
 {% content-ref url="understand-concurrency.md" %}

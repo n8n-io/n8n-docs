@@ -113,7 +113,7 @@ This will start an interactive prompt where you can define the details of your p
 * **What is your node called?** The name of your node. This impacts the name of your project directory, package name, and the n8n node itself. The name must use one of the following formats:
     * `n8n-nodes-<YOUR_NODE_NAME>`
     * `@<YOUR_ORG>/n8n-nodes-<YOUR_NODE_NAME>`
-* **What kind of node are you building?** The [node type](../plan-your-node/choose-a-node-building-style.md) you want to build:
+* **What kind of node are you building?** The [node building style](../plan-your-node/choose-a-node-building-style.md) you want to use:
     * **HTTP API**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud.
     * **Other**: A programmatic style node with full flexibility.
 * **What template do you want to use?** When using the HTTP API, you can choose the template to start from:
@@ -212,11 +212,11 @@ As with the `build` command, you can also run this through your package manager.
 npm run dev
 ```
 
-`n8n-node` will compile your project and then start up a local n8n instance through `npm` with your node loaded.
+`n8n-node` will compile your project and then start up a local n8n instance with your node loaded. From n8n 3.0, it starts that instance in a container, so you need Docker or Podman installed. If you'd rather the command didn't start one, use `n8n-node dev --external-n8n` to point it at an n8n instance you run yourself, started with `N8N_DEV_RELOAD=true`. Docker and Podman aren't required on that path.
 
 Visit your `localhost:5678` to sign in to your n8n instance. If you open a workflow, your node appears in the nodes panel:
 
-![node in nodes panel](../../.gitbook/assets/node_in_nodes_panel.png)
+![Trigger search panel in the workflow editor, listing a matching node in the results](../../.gitbook/assets/node_in_nodes_panel.png)
 
 From there, you can add it to your workflow and test the node's functionality as you develop.
 

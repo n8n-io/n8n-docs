@@ -18,7 +18,7 @@ n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_POR
 
 When running n8n behind a reverse proxy, it's important to do the following:
 
-* set the webhook URL manually with the `N8N_WEBHOOK_URL` environment variable so that n8n can display it in the editor UI and register the correct webhook URLs with external services. (`N8N_WEBHOOK_URL` replaces the deprecated `WEBHOOK_URL`; n8n logs a deprecation warning if you still use `WEBHOOK_URL`.)
+* set the webhook URL manually with the `N8N_WEBHOOK_URL` environment variable so that n8n can display it in the editor UI and register the correct webhook URLs with external services. (`N8N_WEBHOOK_URL` replaces `WEBHOOK_URL`, which is deprecated from n8n 2.35.0; n8n logs a deprecation warning if you still use `WEBHOOK_URL`.)
 * Set the `N8N_PROXY_HOPS` environment variable to `1`.
 * On the last proxy on the request path, set the following headers to pass on information about the initial request:
     * [`X-Forwarded-For`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Forwarded-For)

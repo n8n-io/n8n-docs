@@ -42,6 +42,10 @@ Tell n8n which workflow to call. You can choose either:
 * **Database** to select the workflow from a list or enter a workflow ID.
 * **Define Below** and copy in a complete [workflow JSON](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import).
 
+{% hint style="warning" %}
+When using **Database** as the workflow source and running the agent in production (not the manual/chat test panel), the sub-workflow must be published. If it isn't, the tool call fails with the error `Workflow is not active and cannot be executed`. The error text is returned to the agent as the tool result. This can be easy to miss inside a longer agent response. If the agent reports it couldn't retrieve data, check that the sub-workflow has been published and that its execution list shows a run.
+{% endhint %}
+
 ### Workflow Inputs <a href="#workflow-inputs" id="workflow-inputs"></a>
 
 When using **Database** as workflow source, once you choose a sub-workflow (and define the **Workflow Input Schema** in the sub-workflow), you can define the **Workflow Inputs**.

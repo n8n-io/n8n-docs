@@ -26,9 +26,11 @@ layout:
 
 ### Authentication <a href="#authentication" id="authentication"></a>
 
-Select the type of authentication to use.
+Select the type of authentication to use. n8n recommends using **Predefined Credential Type** when it's available for the service you want to connect to. It offers an easier way to set up and manage credentials, compared to configuring generic credentials manually.
 
-If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
+If you select **Predefined Credential Type**, a **Credential Type** parameter appears. Select the app or service you want to use, then select an existing credential for it or create a new one. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) for more information.
+
+If you select any other authentication method except **None**, a **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
 
 ### HTTP Request Method <a href="#http-request-method" id="http-request-method"></a>
 

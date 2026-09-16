@@ -162,6 +162,10 @@ Form submissions don't include a `method` label because n8n only accepts form da
 
 n8n exposes queue-depth, scheduling-lag, dispatch, retry, and dead-letter metrics for the [durable scheduler](../configure-n8n/durable-scheduler.md). Enable them with `N8N_METRICS_INCLUDE_SCHEDULER_METRICS`, then see [Durable scheduler observability](../configure-n8n/durable-scheduler.md#observability) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-scheduler) for them.
 
+## Poll trigger observability
+
+n8n exposes poll-duration, poll-error, overlap, and cursor-commit metrics for [poll triggers](../configure-n8n/durable-scheduler.md#poll-triggers). Enable them with `N8N_METRICS_INCLUDE_POLL_TRIGGER_METRICS`, then see [Poll trigger metrics](../configure-n8n/durable-scheduler.md#poll-trigger-metrics) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-poll-triggers) for them.
+
 ## Workflow name lookup <a href="#workflow-name-lookup" id="workflow-name-lookup"></a>
 
 {% hint style="info" %}

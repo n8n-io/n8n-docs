@@ -19,9 +19,9 @@ layout:
 # Motorhead credentials <a href="#motorhead-credentials" id="motorhead-credentials"></a>
 
 {% hint style="warning" %}
-**Deprecated**
+**Feature availability**
 
-The Motorhead project is no longer maintained. The [Motorhead node](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
+The Motorhead project is no longer maintained. The [Motorhead node](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated from n8n 2.8.0, and will be removed in a future version. See [Deprecated and versioned nodes](../deprecated-nodes.md) for details.
 {% endhint %}
 
 You can use these credentials to authenticate the following nodes:

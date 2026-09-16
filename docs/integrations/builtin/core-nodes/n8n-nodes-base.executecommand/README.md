@@ -103,7 +103,7 @@ The `apk` package manager was removed from the official n8n Docker image. To ins
 2. Add the below code snippet to the Dockerfile.
 
 ```shell
-   FROM docker.n8n.io/n8nio/n8n
+   FROM n8nio/n8n
    USER root
 
    # Restore the apk package manager (removed from the base image)
@@ -119,7 +119,7 @@ The `apk` package manager was removed from the official n8n Docker image. To ins
 ```shell
    docker build -t n8n-curl .
 ```
-4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
+4. Replace the Docker image you used before. For example, replace `n8nio/n8n` with `n8n-curl`.
 5. Run the newly created Docker image. You'll now be able to execute curl using the Execute Command Node.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>

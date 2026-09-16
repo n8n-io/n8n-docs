@@ -25,6 +25,7 @@ You can use these credentials to authenticate the following nodes:
 * [Microsoft OneDrive Trigger](../trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md)
 * [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
 * [Microsoft Outlook Trigger](../trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
+* [Microsoft SharePoint](../app-nodes/n8n-nodes-base.microsoftsharepoint.md)
 * [Microsoft Teams](../app-nodes/n8n-nodes-base.microsoftteams.md)
 * [Microsoft Teams Trigger](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 * [Microsoft To Do](../app-nodes/n8n-nodes-base.microsofttodo.md)
@@ -32,7 +33,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Node version requirements**
 
-The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from node version 1. n8n plans to support the Microsoft SharePoint node.
+The Microsoft Excel (OneDrive), Microsoft Outlook, Microsoft SharePoint, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from version 1.
 {% endhint %}
 
 ## Prerequisites
@@ -42,9 +43,7 @@ The Microsoft Excel (OneDrive), Microsoft Outlook, and Microsoft Teams nodes sup
 
 ## Supported authentication methods
 
-- OAuth2 client credentials, using a client secret
-
-Certificate authentication is coming in a future release.
+- OAuth2 client credentials, using a client secret or a certificate (signed client assertion)
 
 ## Related resources
 
@@ -58,7 +57,7 @@ Refer to Microsoft's documentation for more information:
 
 With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With the Service Principal credential, there's no signed-in user, which changes how you use the nodes:
 
-- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations replace the group, plan, bucket, and member pickers with plain ID fields.
+- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations hide the **Team** picker and replace the **Plan**, **Bucket**, and **Assigned To** pickers with plain ID fields.
 - **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
 - **Pickers see the whole tenant.** For example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
 - **Some operations aren't available.** The nodes hide anything that only exists for a signed-in user, such as drive search or Teams chats, or block it with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
@@ -113,6 +112,8 @@ In n8n, create a new **Microsoft Entra Service Principal** credential and fill i
 3. **Client Secret**: the client secret value you copied.
 4. **Microsoft Graph API Base URL**: keep **Global** unless your tenant is in a sovereign cloud. Refer to [Sovereign cloud environments](#sovereign-cloud-environments).
 
+To authenticate with a certificate instead of a client secret, set **Authentication** to **Certificate** and paste your private key and certificate. The certificate must be uploaded to the app registration under **Certificates & secrets**.
+
 Save and test the credential. The connection test calls Microsoft Graph's `/v1.0/organization` endpoint, so it needs the admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission to pass, even if you granted all the node permissions.
 
 ## Required application permissions by node
@@ -126,6 +127,7 @@ Add the application permissions for every node you plan to use, then grant admin
 | Microsoft Excel (OneDrive) | `Files.ReadWrite.All` |
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
 | Microsoft Outlook Trigger | `Mail.Read` |
+| Microsoft SharePoint | `Sites.Read.All` for read operations, `Sites.ReadWrite.All` for write operations. For items in document libraries, `Files.Read.All` (Item: Get) or `Files.ReadWrite.All` (Item: Delete) also works. To limit the app to chosen sites, grant `Sites.Selected` instead and refer to [Grant access per site](#grant-access-per-site). |
 | Microsoft Teams and Microsoft Teams Trigger | `Team.ReadBasic.All`, plus the permissions for your operations in the table below |
 | Microsoft To Do | `Tasks.ReadWrite.All` |
 
@@ -139,7 +141,7 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 | Channel: Create | `Channel.Create` |
 | Channel: Update | `ChannelSettings.ReadWrite.All` |
 | Channel: Delete | `Channel.Delete.All` |
-| Channel Message: Get Many | `ChannelMessage.Read.All` |
+| Channel Message: Get, Get Many, Get Many Replies | `ChannelMessage.Read.All` |
 | Task: all operations | `Tasks.ReadWrite.All` |
 | Trigger: New Channel | `Channel.ReadBasic.All` |
 | Trigger: New Channel Message | `ChannelMessage.Read.All` |
@@ -147,11 +149,39 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 
 <!-- vale on -->
 
-{% hint style="info" %}
-**Reading Teams channel messages uses a metered API**
+## Grant access per site
 
-Reading channel messages with this credential uses Microsoft's metered Teams API. Your tenant may need billing or evaluation-model configuration, and Microsoft returns HTTP 402 if it's missing. Refer to [Payment models for Microsoft Teams APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) for details.
-{% endhint %}
+Tenant-wide `Sites.Read.All` or `Sites.ReadWrite.All` gives the app access to every SharePoint site in your organization. If your security team prefers to grant access site by site, use the `Sites.Selected` permission instead. The Microsoft SharePoint node (from version 2) and the Microsoft Excel (SharePoint) node support it.
+
+Per-site access takes two steps. The second step has no page in the Entra admin center or the SharePoint admin center, which is why many setups miss it:
+
+1. **Add the permission and grant admin consent.** On the app registration, add the `Sites.Selected` application permission in place of the tenant-wide `Sites.*` permissions, and grant admin consent.
+2. **Grant the app access to each site.** An administrator calls Microsoft Graph's site permissions endpoint once per site the app should reach:
+
+```http
+POST https://graph.microsoft.com/v1.0/sites/<site-id>/permissions
+Content-Type: application/json
+
+{
+	"roles": ["write"],
+	"grantedToIdentities": [
+		{
+			"application": {
+				"id": "<application-client-id>",
+				"displayName": "<app-registration-name>"
+			}
+		}
+	]
+}
+```
+
+Use the `read` role for read-only access, or `write` for the node's write operations. You can send the request from [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) or any tool that can call Microsoft Graph. SharePoint administrators can use PnP PowerShell's [`Grant-PnPEntraIDAppSitePermission`](https://pnp.github.io/powershell/cmdlets/Grant-PnPEntraIDAppSitePermission.html) instead.
+
+Whoever sends the request needs permission to manage site permissions: in Graph Explorer, open **Modify permissions** and consent to `Sites.FullControl.All` before sending. A 403 `Access denied` response to this request means the account or tool sending it lacks that permission, not the app you're granting access to.
+
+To find a site's `<site-id>`, request it by hostname and path: `GET https://graph.microsoft.com/v1.0/sites/contoso.sharepoint.com:/sites/mysite`.
+
+With `Sites.Selected`, the nodes can't search or list sites, because Microsoft Graph doesn't support site discovery without a tenant-wide read permission. Choose the site by pasting its URL or ID instead. A missing per-site grant surfaces as a 403 error on the operation, naming the permission it needs.
 
 ## Operations not available with app-only access
 
@@ -161,12 +191,12 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 
 - **Microsoft OneDrive**: File: Search and Folder: Search. Microsoft Graph only offers drive search to signed-in users.
 - **Microsoft Excel (OneDrive)**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
-- **Microsoft Teams**: the whole Chat Message resource, Channel Message: Create, and Task: Get Many in Group Member mode.
+- **Microsoft Teams**: the whole Chat Member, Chat Message, and Online Meeting resources. Channel Message: Create and Reply. Task: Get Many in Group Member mode.
 - **Microsoft Teams Trigger**: the New Chat and New Chat Message events, and the watch-all options. Pick a specific team or channel instead.
 
 <!-- vale on -->
 
-The Microsoft Outlook, Microsoft Outlook Trigger, and Microsoft To Do nodes have no blocked operations.
+The Microsoft Outlook, Microsoft Outlook Trigger, Microsoft SharePoint, and Microsoft To Do nodes have no blocked operations. In the Microsoft SharePoint node, site search needs the `Sites.Read.All` application permission; with only `Sites.Selected`, choose the site by URL or ID instead.
 
 File: Share and Folder: Share in Microsoft OneDrive stay available, but creating sharing links app-only can need extra tenant or admin configuration. The node shows a notice on these operations.
 
@@ -190,6 +220,7 @@ n8n derives the matching sign-in endpoint automatically, for example `login.micr
 Here are common errors and issues with the Microsoft Entra Service Principal credentials:
 
 - **The credential test fails even though you granted the node permissions.** The connection test calls `GET /v1.0/organization`, which needs an admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission. Add it and grant admin consent.
-- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft Teams nodes show a clearer message instead: "The app registration is missing a consented application permission for this operation."
+- **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft SharePoint (version 2) and Microsoft Excel (SharePoint) nodes show a clearer message instead, naming the permission the operation needs: "The app registration is missing a consented application permission for this operation."
+- **Authentication fails with "Microsoft Entra authentication did not return an access token".** Microsoft rejected the token exchange, for example AADSTS7000215 (invalid client secret), AADSTS7000222 (expired client secret), or AADSTS700027 (rejected certificate assertion). Check that you pasted the client secret's **Value** rather than its Secret ID, that the secret hasn't expired, and, for certificate authentication, that the private key matches the certificate uploaded to the app registration.
 - **Permission or secret changes don't take effect right away.** n8n caches the access token. Retest the credential after granting consent or rotating a secret, and recreate it if the cached token keeps failing.
 - **"Microsoft Entra tenant ID is not a valid GUID or domain."** Enter the Directory (tenant) ID GUID from the app registration's **Overview** page, or a verified domain such as `contoso.onmicrosoft.com`. Don't enter a URL.

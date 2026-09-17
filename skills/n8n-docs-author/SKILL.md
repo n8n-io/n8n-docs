@@ -138,7 +138,7 @@ docs assistant) chunk on `##`/`###` headings.
 - **Cross-references:** link every page to its prerequisites and its next step.
   Every section landing page links down to all its child pages. Every child
   page links back up to its parent (`./`) and sideways to each direct sibling,
-  in a "Related pages" section at the end — a plain link list, structural
++  in a "Related pages" section at the end, a plain link list, structural
   rather than curated, bare links with no descriptions (unlike "In this
   section", the reader has already read a page from the cluster, so the
   descriptive anchor text alone is enough). Add other genuinely related pages

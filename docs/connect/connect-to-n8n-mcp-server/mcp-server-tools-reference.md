@@ -621,7 +621,7 @@ List credentials the current user can access. Use this to find a credential ID b
 ## Instance context <a href="#instance-context" id="instance-context"></a>
 
 {% hint style="info" %}
-**Feature availability**
+**Configuration**
 
 The instance-context read surface is off by default. Turn it on with `N8N_MCP_INSTANCE_CONTEXT_ENABLED`, or through its rollout flag.
 
@@ -702,7 +702,7 @@ Read the instance activity log: what someone recently created, changed, publishe
 #### Notes <a href="#notes" id="notes"></a>
 
 - Maximum result limit is 100.
-- Entries are log records, not live records. Fetch the live record with `search_workflows`, `get_workflow_details`, or `get_workflow_execution`. An entry can name a resource someone has since deleted.
+- Entries are log records, not live records. For a workflow entry, fetch the live record with `search_workflows` or `get_workflow_details`. For a credential entry, use `list_credentials`. An entry can name a resource someone has since deleted.
 - A short or empty page can still have more entries below it. Check `hasMore` before you conclude that nothing has happened, and page with `nextBeforeId`. A page can be short because the tool withheld entries about workflows that aren't **Available in MCP**.
 - When someone deletes a workflow, only its `deleted` entry stays readable. The rest of that workflow's history drops out, because there is no workflow left to check **Available in MCP** against.
 
@@ -765,7 +765,7 @@ Report which node types this instance already uses, and how widely. Call it befo
 
 - Maximum result limit is 100. Values outside 1 to 100 are clamped to that range.
 - Results come from the dependency index, so the tool counts node types only, never parameter values or credentials.
-- **IMPORTANT**: This tool counts all workflows a user has access to, regardless of their `Available in MCP` setting. The other tools in this section only report workflows that setting exposes.
+- **IMPORTANT**: This tool counts all indexed, non-archived workflows in your scope, regardless of their `Available in MCP` setting. The other tools in this section only report workflows that setting exposes.
 - When `truncated` is `true` on the histogram, a node type the response omits may still be in use. Don't report its absence as evidence.
 
 ---

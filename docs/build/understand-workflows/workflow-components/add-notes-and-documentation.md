@@ -132,3 +132,11 @@ To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with you
 See [Workflow components](README.md) for other elements you can add to a workflow.
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related pages
+
+* [Workflow components](./): the building blocks of a workflow, such as nodes and connections.
+* [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.
+* [Connect nodes together](connect-nodes-together.md): link nodes together to route data through your workflow.
+* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
+* [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.

@@ -135,14 +135,22 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
-- **Cross-references:** link every page to its prerequisites and its next step,
-  link parents and children both ways (an overview lists all its child pages;
-  each child links back with `./`), and link sideways to a couple of genuinely
-  related siblings too — parent-only links make a hub and spoke, not a cluster.
-  Aim for each page to sit in a cluster of 5+ interlinked pages on the same
-  topic (AI search cites connected clusters far more than standalone pages).
-  Skip sibling links for flat reference collections (one page per data type,
-  etc.) where every entry follows the same template.
+- **Cross-references:** link every page to its prerequisites and its next step.
+  Every section landing page links down to all its child pages. Every child
+  page links back up to its parent (`./`) and sideways to each direct sibling,
+  in a "Related pages" section at the end — a plain link list, structural
+  rather than curated, separate from whatever sibling links already appear in
+  the body. Aim for each page to sit in a cluster of 5+ interlinked pages on
+  the same topic (AI search cites connected clusters far more than standalone
+  pages). Skip sibling links for flat reference collections (one page per data
+  type, etc.) where every entry follows the same template — these still link
+  back to the parent, just without a sibling list.
+- **Nested sections:** a page that is itself a parent (for example, a
+  subsection README) gets both — its own "In this section" for its children,
+  and a "Related pages" footer relating it to its own parent and its own
+  siblings at its level. Only reach one level up and one level sideways; don't
+  chain up to a grandparent section, since that connectivity already exists
+  transitively through the parent's own links.
 - **Listing children:** an overview with 2+ children lists them as a plain
   bullet list under a heading like "In this section" (link plus a one-line
   description) — not a GitBook content-ref card. With only one child, skip the

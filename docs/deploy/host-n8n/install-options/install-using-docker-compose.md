@@ -57,7 +57,7 @@ This file holds the versions to run and the secrets the sandbox services use to 
 N8N_VERSION=change-me-version-number
 
 # Sandbox service version - the API, runner, and sandbox images share one release.
-# Get the number of the latest "service" release from https://github.com/n8n-io/n8n-sandbox-service/releases
+# Get the number of the latest stable "service" release (not a staging prerelease) from https://github.com/n8n-io/n8n-sandbox-service/releases
 N8N_SANDBOX_VERSION=change-me-sandbox-version-number
 
 # n8n task runner authentication. Use a random secret you generate.

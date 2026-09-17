@@ -119,7 +119,7 @@ You don't need to open any extra ports or configure anything for these services.
 
 The upgrade command moves both n8n and the bundled sandbox services to newer versions. It edits two lines in `.env`: `N8N_VERSION` and `N8N_SANDBOX_VERSION`. Your data, secrets, and other settings stay as they are.
 
-If you installed before the sandbox version moved into `.env`, your `compose.yml` still names fixed sandbox image tags. The first upgrade rewrites those image lines to use `N8N_SANDBOX_VERSION` and prints a note that says so. Nothing else in `compose.yml` changes, so any edits you made stay in place.
+If you installed before the sandbox version moved into `.env`, your `compose.yml` still names fixed sandbox image tags. The first upgrade rewrites those image lines to use `N8N_SANDBOX_VERSION`, switches the sandbox runner address (`SANDBOX_RUNNER_HTTP_BASE_URL`) from `http://` to `https://`, and prints a note that says so. Nothing else in `compose.yml` changes, so any edits you made stay in place.
 
 ## Flags (for more control)
 
@@ -129,7 +129,7 @@ Adding these to the end of the install command changes what it does:
 |---|---|
 | `--version` | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version. |
 | `--no-start` | Sets up the configuration files without starting n8n yet. |
-| `--upgrade` | Upgrades an existing install to a newer n8n version and the matching sandbox service version. Only updates the version lines in `.env` and, on older installs, the sandbox image lines in `compose.yml`. See [What an upgrade changes](#what-an-upgrade-changes). Your data, settings, and any other customizations stay untouched. |
+| `--upgrade` | Upgrades an existing install to a newer n8n version and the matching sandbox service version. Only updates the version lines in `.env` and, on older installs, the sandbox image lines and runner address in `compose.yml`. See [What an upgrade changes](#what-an-upgrade-changes). Your data, settings, and any other customizations stay untouched. |
 | `--help` | Shows all available options. |
 
 ## Prefer not to run a script from the internet?

@@ -623,10 +623,49 @@ List credentials the current user can access. Use this to find a credential ID b
 {% hint style="info" %}
 **Feature availability**
 
-The instance-context read tools (`get_instance_activity`, `expand_instance_activity`, and `get_node_usage`) only appear when the instance-context read surface is on, through `N8N_MCP_INSTANCE_CONTEXT_ENABLED` or its rollout flag. `get_instance_activity` and `expand_instance_activity` also need the `instance-ai` module active and the activity log enabled with `N8N_ACTIVITY_LOG_ENABLED`, which is off by default.
+The instance-context read surface is off by default. Turn it on with `N8N_MCP_INSTANCE_CONTEXT_ENABLED`, or through its rollout flag.
+
+`get_node_usage` needs only that setting. `get_instance_context`, `get_instance_activity`, `expand_instance_activity`, and the [instance context resource](#instance-context-resource) also need the `instance-ai` module active and the activity log enabled with `N8N_ACTIVITY_LOG_ENABLED`, which is off by default.
 {% endhint %}
 
-These tools read what this instance already contains: what people recently changed, and which node types the workflows here use. All three sit under the `workflow:read` scope. The two activity tools drop credential entries when your grant lacks `credential:read`, or when you can't access the credential.
+These tools read what this instance already contains: which workflows exist, what people recently changed, which node types the workflows here use, and what has run. All four sit under the `workflow:read` scope.
+
+Two access rules apply across the whole section:
+
+- **`Available in MCP`**. `get_instance_context` and the two activity tools report only workflows marked **Available in MCP**, and treat an archived workflow as not available. `get_node_usage` counts every workflow you can read, like `search_workflows`, regardless of that setting.
+- **The scope of your grant**. The two activity tools drop credential entries when your grant lacks `credential:read`, or when you can't access the credential. `get_instance_context` never names a credential, and it drops run data when your grant lacks `execution:read`.
+
+By default each tool reads every project you can read workflows in. Pass `projectId` to narrow it to one. These tools are read-only, so `projectId` narrows what you can already see rather than widening it.
+
+### get_instance_context <a href="#getinstancecontext" id="getinstancecontext"></a>
+
+Read the opening picture of this instance: which workflows exist, what someone recently created, changed, or deleted, and what has run and failed. Call it once at the start of a session, before you ask the user what they want to do. When the user is vague, for example "fix it" or "carry on", the answer is usually the most recent thing here.
+
+MCP clients that support resources can read the same content from the [instance context resource](#instance-context-resource).
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
+| `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- The tool returns prose, not records. It names workflows as `"Name" (workflow:<id>)`, executions as `execution:<id>`, and activity entries with a bracketed ID. Pass a workflow ID to `search_workflows` or `get_workflow_details`, an execution ID to `get_workflow_execution`, and a bracketed activity ID to `expand_instance_activity`.
+- The prose holds up to three parts: the workflows that exist and the ones most recently worked on, the runs of the last 24 hours with their success and failure counts, and what changed recently. A part the instance has nothing for is left out.
+- Use `get_instance_activity` to page further back than this window.
+- Check `nothingExposed` before you act on an empty answer. `Available in MCP` is off by default, so an instance that predates the setting reports empty while holding a full estate. Treating that as a fresh instance sends you off to rebuild work the user already has.
+- Every call returns a full snapshot. The MCP server keeps no session state, so there is nothing to carry forward between calls.
+
+---
 
 ### get_instance_activity <a href="#getinstanceactivity" id="getinstanceactivity"></a>
 
@@ -639,7 +678,7 @@ Read the instance activity log: what someone recently created, changed, publishe
 | `category` | `"workflow" \| "credential"` | No | Restrict results to one kind of entry |
 | `resourceId` | `string` | No | Restrict results to one resource, for example a single workflow ID |
 | `beforeId` | `integer` | No | Page backwards: only return entries older than this entry ID |
-| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects`. This tool is read-only, so `projectId` narrows what you can already see rather than widening it |
+| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects` |
 | `limit` | `integer` | No | Limit the number of results (max 100) |
 
 #### Output <a href="#output" id="output"></a>
@@ -664,7 +703,8 @@ Read the instance activity log: what someone recently created, changed, publishe
 
 - Maximum result limit is 100.
 - Entries are log records, not live records. Fetch the live record with `search_workflows`, `get_workflow_details`, or `get_workflow_execution`. An entry can name a resource someone has since deleted.
-- A short or empty page can still have more entries below it. Check `hasMore` before you conclude that nothing has happened, and page with `nextBeforeId`.
+- A short or empty page can still have more entries below it. Check `hasMore` before you conclude that nothing has happened, and page with `nextBeforeId`. A page can be short because the tool withheld entries about workflows that aren't **Available in MCP**.
+- When someone deletes a workflow, only its `deleted` entry stays readable. The rest of that workflow's history drops out, because there is no workflow left to check **Available in MCP** against.
 
 ---
 
@@ -690,7 +730,8 @@ Read one activity log entry, together with everything else the log holds about t
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- n8n prunes entries on a retention window, so `notFound` is an ordinary outcome rather than an error. Carry on without the entry.
+- `notFound` is an ordinary outcome rather than an error. Carry on without the entry.
+- An entry reports as not found for three reasons: n8n pruned it on the retention window, it belongs to a project you can't read, or it names a workflow that isn't **Available in MCP**. All three give the same answer on purpose, so the response never confirms that a resource you can't see exists.
 
 ---
 
@@ -724,7 +765,26 @@ Report which node types this instance already uses, and how widely. Call it befo
 
 - Maximum result limit is 100. Values outside 1 to 100 are clamped to that range.
 - Results come from the dependency index, so the tool counts node types only, never parameter values or credentials.
+- **IMPORTANT**: This tool counts all workflows a user has access to, regardless of their `Available in MCP` setting. The other tools in this section only report workflows that setting exposes.
 - When `truncated` is `true` on the histogram, a node type the response omits may still be in use. Don't report its absence as evidence.
+
+---
+
+### Instance context resource <a href="#instance-context-resource" id="instance-context-resource"></a>
+
+For MCP clients that support resources, n8n also exposes the instance context as a resource, alongside the [get_instance_context](#getinstancecontext) tool for clients that don't.
+
+| Property | Value |
+|----------|-------|
+| URI | `n8n://instance/context` |
+| MIME type | `text/plain` |
+| Content | The same prose returned by `get_instance_context`, for every project you can read |
+
+The server instructions name both, so a client that reads the instructions knows to read the resource, or to call the tool if it doesn't read resources.
+
+Read the resource without parameters. To read one project, call `get_instance_context` with `projectId`.
+
+The response holds per-user data and n8n serves it uncached. Two users who read the same URI get different content.
 
 ---
 

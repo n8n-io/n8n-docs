@@ -123,7 +123,7 @@ Use these fields in an [If](../core-nodes/n8n-nodes-base.if.md) node to branch o
 |-------|-------|
 | `run_id` | The run you asked for. |
 | `job_id` | The job the run belongs to. |
-| `task_key` | The key of the task in the job definition. |
+| `task_key` | The key of the task in the job definition. Absent when you pass a task run ID. |
 | `task_run_id` | The run ID of this task. |
 | `truncated` | `true` when Databricks cut the notebook output or the logs. |
 | `notebook_output`, `sql_output`, `dbt_output`, `run_job_output`, `clean_rooms_notebook_output`, `logs`, `logs_truncated`, `error`, `error_trace`, `info`, `metadata` | The task output as Databricks returns it. Which fields appear depends on the task type. `notebook_output.result` holds the value a notebook returns with `dbutils.notebook.exit()`. `error` explains why a task failed or why its output isn't available. |
@@ -171,7 +171,7 @@ The identity the credential authenticates as needs the **Workspace access** enti
 | **Get**, **Get Run**, **Get Run Output** | **CAN VIEW** |
 | **Run** | **CAN MANAGE RUN** |
 
-**CAN MANAGE** and **IS OWNER** include both permissions. The **Job** and **Run** lists show only jobs and runs the identity has **CAN VIEW** on. A run started with **Run** executes as the job's run-as identity, not as the credential. **Get** returns this identity as `run_as_user_name`. By default, this is the job owner. Refer to [Required Databricks privileges](../credentials/databricks.md#required-databricks-privileges) for the other resources of the node.
+**CAN MANAGE** and **IS OWNER** include both permissions. Databricks returns only the jobs and runs the identity has **CAN VIEW** on, so the **Job** and **Run** lists offer only those. A run started with **Run** executes as the job's run-as identity, not as the credential. **Get** returns this identity as `run_as_user_name`. By default, this is the job owner. Refer to [Required Databricks privileges](../credentials/databricks.md#required-databricks-privileges) for the other resources of the node.
 
 When the permission is missing, Databricks rejects the request with `PERMISSION_DENIED`. n8n shows the Databricks message as the error. The message names the missing permission. n8n adds one of these hints as the error description:
 

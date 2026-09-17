@@ -100,9 +100,9 @@ You can use expressions[^2] to set credentials dynamically as your workflow runs
 
 ## Related pages
 
-* [Understand workflows](./): learn about the key components of a workflow in n8n.
-* [Create and run workflows](create-and-run-workflows.md): create, run, and publish workflows.
-* [Save and publish workflows](save-and-publish-workflows.md): save, publish, unpublish, and name workflow versions.
-* [Use Gateway credits](use-gateway-credits.md): run supported AI models and services without setting up your own credentials.
-* [Workflow components](workflow-components/README.md): the building blocks of a workflow, such as nodes and connections.
-* [Understand executions](understand-executions/README.md): what an execution is, and how to view, filter, and debug them.
+* [Understand workflows](./)
+* [Create and run workflows](create-and-run-workflows.md)
+* [Save and publish workflows](save-and-publish-workflows.md)
+* [Use Gateway credits](use-gateway-credits.md)
+* [Workflow components](workflow-components/README.md)
+* [Understand executions](understand-executions/README.md)

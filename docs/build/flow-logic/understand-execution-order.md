@@ -26,11 +26,11 @@ You can change the execution order in your [workflow settings](../manage-workflo
 
 ## Related pages
 
-* [Flow logic](./): how to represent logic in n8n workflows.
-* [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
-* [Merge data](merge-data.md): combine multiple data streams back into one.
-* [Loop](loop.md): repeat an action until a condition is met, or until all items are processed.
-* [Wait](wait.md): pause a workflow's execution and resume it later.
-* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md): call one workflow from another to build modular, microservice-like workflows.
-* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
-* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.
+* [Flow logic](./)
+* [Split with conditionals](split-with-conditionals.md)
+* [Merge data](merge-data.md)
+* [Loop](loop.md)
+* [Wait](wait.md)
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md)
+* [Convert to sub-workflows](convert-to-sub-workflows.md)
+* [Handle errors gracefully](handle-errors-gracefully.md)

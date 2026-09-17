@@ -104,8 +104,8 @@ You can document your workflow using node notes:
 
 ## Related pages
 
-* [Workflow components](./): the building blocks of a workflow, such as nodes and connections.
-* [Connect nodes together](connect-nodes-together.md): link nodes together to route data through your workflow.
-* [Add notes and documentation](add-notes-and-documentation.md): annotate your workflows using sticky notes.
-* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
-* [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.
+* [Workflow components](./)
+* [Connect nodes together](connect-nodes-together.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

@@ -135,8 +135,8 @@ See [Workflow components](README.md) for other elements you can add to a workflo
 
 ## Related pages
 
-* [Workflow components](./): the building blocks of a workflow, such as nodes and connections.
-* [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.
-* [Connect nodes together](connect-nodes-together.md): link nodes together to route data through your workflow.
-* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
-* [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Connect nodes together](connect-nodes-together.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

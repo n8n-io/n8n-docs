@@ -93,10 +93,10 @@ customData = _execution.customData.get("key");
 
 ## Related pages
 
-* [Understand executions](./): what an execution is, and how to view, filter, and debug them.
-* [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.
-* [View all executions](view-all-executions.md): view and filter all executions across all your workflows.
-* [View executions for a single workflow](view-executions-for-a-single-workflow.md): view and filter executions for the workflow currently open on the canvas.
-* [Debug and re-run past executions](debug-executions.md): copy data from a previous execution into your current workflow to debug it.
-* [Stream real-time responses](stream-real-time-responses.md): send data back to users as an AI Agent node generates it.
-* [Dirty nodes](understand-dirty-nodes.md): what dirty nodes are and how they affect workflow execution.
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View all executions](view-all-executions.md)
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Stream real-time responses](stream-real-time-responses.md)
+* [Dirty nodes](understand-dirty-nodes.md)

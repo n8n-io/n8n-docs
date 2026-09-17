@@ -139,13 +139,19 @@ docs assistant) chunk on `##`/`###` headings.
   Every section landing page links down to all its child pages. Every child
   page links back up to its parent (`./`) and sideways to each direct sibling,
   in a "Related pages" section at the end — a plain link list, structural
-  rather than curated. Add other genuinely related pages at your discretion,
-  even outside the current section. Aim for each page to sit in a cluster of
-  5+ interlinked pages on the same topic (AI search cites connected clusters
-  far more than standalone pages). Skip sibling links for flat reference
-  collections (one page per data type, etc.) where every entry follows the
-  same template — these still link back to the parent, just without a
-  sibling list.
+  rather than curated, bare links with no descriptions (unlike "In this
+  section", the reader has already read a page from the cluster, so the
+  descriptive anchor text alone is enough). Add other genuinely related pages
+  at your discretion,
+  even outside the current section. Past about 8-10 siblings, drop the
+  sibling list and link back to the parent only — beyond that size it's
+  mostly boilerplate, and an O(n²) maintenance job on top, since the parent's
+  "In this section" already carries the exhaustive list. Aim for each page to
+  sit in a cluster of 5+ interlinked pages on the same topic (AI search cites
+  connected clusters far more than standalone pages). Skip sibling links for
+  flat reference collections (one page per data type, etc.) where every entry
+  follows the same template — these still link back to the parent, just
+  without a sibling list.
 - **Nested sections:** a page that is itself a parent (for example, a
   subsection README) gets both — its own "In this section" for its children,
   and a "Related pages" footer relating it to its own parent and its own

@@ -77,9 +77,9 @@ When it's off, the Gateway credits option doesn't appear on nodes for anyone on 
 
 ## Related pages
 
-* [Understand workflows](./): learn about the key components of a workflow in n8n.
-* [Create and run workflows](create-and-run-workflows.md): create, run, and publish workflows.
-* [Save and publish workflows](save-and-publish-workflows.md): save, publish, unpublish, and name workflow versions.
-* [Create and edit credentials](create-and-edit-credentials.md): securely store the authentication details your workflows need.
-* [Workflow components](workflow-components/README.md): the building blocks of a workflow, such as nodes and connections.
-* [Understand executions](understand-executions/README.md): what an execution is, and how to view, filter, and debug them.
+* [Understand workflows](./)
+* [Create and run workflows](create-and-run-workflows.md)
+* [Save and publish workflows](save-and-publish-workflows.md)
+* [Create and edit credentials](create-and-edit-credentials.md)
+* [Workflow components](workflow-components/README.md)
+* [Understand executions](understand-executions/README.md)

@@ -20,8 +20,8 @@ Your workflow ID is available in:
 
 ## Related pages
 
-* [Workflow components](./): the building blocks of a workflow, such as nodes and connections.
-* [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.
-* [Connect nodes together](connect-nodes-together.md): link nodes together to route data through your workflow.
-* [Add notes and documentation](add-notes-and-documentation.md): annotate your workflows using sticky notes.
-* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Connect nodes together](connect-nodes-together.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)

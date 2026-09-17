@@ -44,8 +44,8 @@ Hover over the connection, then select **Delete** <img src="../../.gitbook/asset
 
 ## Related pages
 
-* [Workflow components](./): the building blocks of a workflow, such as nodes and connections.
-* [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.
-* [Add notes and documentation](add-notes-and-documentation.md): annotate your workflows using sticky notes.
-* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
-* [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

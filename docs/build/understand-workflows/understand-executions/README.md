@@ -68,9 +68,9 @@ You can redact execution data to protect sensitive information. Redaction hides 
 
 ## Related pages
 
-* [Understand workflows](../): learn about the key components of a workflow in n8n.
-* [Create and run workflows](../create-and-run-workflows.md): create, run, and publish workflows.
-* [Save and publish workflows](../save-and-publish-workflows.md): save, publish, unpublish, and name workflow versions.
-* [Create and edit credentials](../create-and-edit-credentials.md): securely store the authentication details your workflows need.
-* [Use Gateway credits](../use-gateway-credits.md): run supported AI models and services without setting up your own credentials.
-* [Workflow components](../workflow-components/README.md): the building blocks of a workflow, such as nodes and connections.
+* [Understand workflows](../)
+* [Create and run workflows](../create-and-run-workflows.md)
+* [Save and publish workflows](../save-and-publish-workflows.md)
+* [Create and edit credentials](../create-and-edit-credentials.md)
+* [Use Gateway credits](../use-gateway-credits.md)
+* [Workflow components](../workflow-components/README.md)

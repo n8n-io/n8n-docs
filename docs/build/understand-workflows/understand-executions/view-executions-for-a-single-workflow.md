@@ -66,10 +66,10 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 
 ## Related pages
 
-* [Understand executions](./): what an execution is, and how to view, filter, and debug them.
-* [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.
-* [View all executions](view-all-executions.md): view and filter all executions across all your workflows.
-* [Debug and re-run past executions](debug-executions.md): copy data from a previous execution into your current workflow to debug it.
-* [Customize executions data](customize-executions-data.md): add custom data to your workflow executions using the Code node.
-* [Stream real-time responses](stream-real-time-responses.md): send data back to users as an AI Agent node generates it.
-* [Dirty nodes](understand-dirty-nodes.md): what dirty nodes are and how they affect workflow execution.
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View all executions](view-all-executions.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Customize executions data](customize-executions-data.md)
+* [Stream real-time responses](stream-real-time-responses.md)
+* [Dirty nodes](understand-dirty-nodes.md)

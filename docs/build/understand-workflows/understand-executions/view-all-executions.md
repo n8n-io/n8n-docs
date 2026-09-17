@@ -67,10 +67,10 @@ You can load data from a previous workflow back into the canvas. Refer to [Debug
 
 ## Related pages
 
-* [Understand executions](./): what an execution is, and how to view, filter, and debug them.
-* [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.
-* [View executions for a single workflow](view-executions-for-a-single-workflow.md): view and filter executions for the workflow currently open on the canvas.
-* [Debug and re-run past executions](debug-executions.md): copy data from a previous execution into your current workflow to debug it.
-* [Customize executions data](customize-executions-data.md): add custom data to your workflow executions using the Code node.
-* [Stream real-time responses](stream-real-time-responses.md): send data back to users as an AI Agent node generates it.
-* [Dirty nodes](understand-dirty-nodes.md): what dirty nodes are and how they affect workflow execution.
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Customize executions data](customize-executions-data.md)
+* [Stream real-time responses](stream-real-time-responses.md)
+* [Dirty nodes](understand-dirty-nodes.md)

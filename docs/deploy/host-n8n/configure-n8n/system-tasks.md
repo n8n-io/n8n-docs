@@ -63,28 +63,6 @@ These three series cover the runs themselves, in both modes.
 | `n8n_system_task_last_success_timestamp_seconds` | Gauge | The Unix timestamp of the task's last successful run on this instance. The clearest "is this task dead" signal, because it answers for a task that never ran at all, which a rate over a counter can't. |
 | `n8n_system_task_runs_in_flight` | Gauge | How many runs of the task are going right now on this instance, `0` or `1` in the normal case. A value stuck at `1` is a hung run, which also blocks the instance from stepping down or shutting down. |
 
-Queries to start from:
-
-```promql
-# How long since each task last succeeded anywhere in the cluster
-time() - max by (task) (n8n_system_task_last_success_timestamp_seconds)
-
-# Interval-scheduled tasks running late: no success for more than three times their cadence (cron tasks report no interval, so they don't appear)
-time() - max by (task) (n8n_system_task_last_success_timestamp_seconds) > 3 * max by (task) (n8n_system_task_interval_seconds)
-
-# Tasks that exist on this instance but have never succeeded on it
-n8n_system_task_info unless on (task, instance, job) n8n_system_task_last_success_timestamp_seconds
-
-# Failures per second, by task
-sum by (task) (rate(n8n_system_task_run_duration_seconds_count{result="failure"}[15m]))
-
-# p95 run duration, by task
-histogram_quantile(0.95, sum by (le, task) (rate(n8n_system_task_run_duration_seconds_bucket[1h])))
-
-# Runs in flight right now, by task: sustained above zero means a hung run
-sum by (task) (n8n_system_task_runs_in_flight)
-```
-
 ### Schedule health
 
 These series describe the schedule rather than a run, so they exist before the first run happens.
@@ -108,19 +86,5 @@ These series only cover in-memory runs. The durable path has its own equivalents
 | `n8n_system_task_runs_skipped_total` | Counter | How many occurrences didn't run, split by `reason`. `overlap` means the previous run was still going. `provisioned_elsewhere` means the task has a durable job, so the in-memory timer stood down. `aborted` means the occurrence fired after the instance had already started stepping down. `coalesced` means the process slept through occurrences and the timer fired a single time for the whole batch, so the counter grows by the number of occurrences that fire stood in for. |
 | `n8n_system_task_retries_total` | Counter | How many retries n8n scheduled after a failed run. Only tasks that declare a retry delay retry at all, so a failing task with a flat count here isn't a bug. |
 | `n8n_system_task_fire_lag_seconds` | Histogram | How late each timer fires, in seconds. Small values mean a busy event loop. Large ones mean the process paused or slept, and its buckets reach a day because a coalesced fire is late by at least one full cadence. |
-
-```promql
-# Skipped occurrences per second, by task and reason
-sum by (task, reason) (rate(n8n_system_task_runs_skipped_total[15m]))
-
-# Tasks that stopped being scheduled
-min by (task, mode) (n8n_system_task_scheduled) == 0
-
-# Timers that stopped planning: the next run is more than a cadence overdue
-time() - max by (task) (n8n_system_task_next_run_timestamp_seconds) > max by (task) (n8n_system_task_interval_seconds)
-
-# p99 timer lag, by task
-histogram_quantile(0.99, sum by (le, task) (rate(n8n_system_task_fire_lag_seconds_bucket[1h])))
-```
 
 See [Configure n8n](./) for other configuration topics.

@@ -168,7 +168,7 @@ n8n exposes poll-duration, poll-error, overlap, and cursor-commit metrics for [p
 
 ## System task observability
 
-n8n exposes run-duration, last-success, in-flight, skip, and timer-lag metrics for its own [system tasks](../configure-n8n/system-tasks.md), the maintenance jobs that prune and compact your data. Enable them with `N8N_METRICS_INCLUDE_SYSTEM_TASK_METRICS`, then see [System task observability](../configure-n8n/system-tasks.md#observability) for what each metric means and for queries to start from. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-system-tasks) for them.
+n8n exposes run-duration, last-success, in-flight, skip, and timer-lag metrics for its own [system tasks](../configure-n8n/system-tasks.md), the maintenance jobs that prune and compact your data. Enable them with `N8N_METRICS_INCLUDE_SYSTEM_TASK_METRICS`, then see [System task observability](../configure-n8n/system-tasks.md#observability) for what each metric means. n8n publishes a [ready-to-use dashboard](https://github.com/n8n-io/n8n-observability/tree/main/dashboards/grafana/n8n-system-tasks) for them.
 
 ## Workflow name lookup <a href="#workflow-name-lookup" id="workflow-name-lookup"></a>
 

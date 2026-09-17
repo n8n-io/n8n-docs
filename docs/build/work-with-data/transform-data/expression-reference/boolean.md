@@ -12,7 +12,11 @@ layout:
 
 ## _`Boolean`_.**`isEmpty()`** <a href="#booleanisempty" id="booleanisempty"></a>
 
-**Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+**Description:** Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
+
+{% hint style="warning" %}
+`isEmpty()` isn't a null check. On a boolean it treats `false` as empty, so `{{ $json.flag.isEmpty() }}` returns `true` for both a missing field and a field set to `false`. To test only for a missing value, compare directly, for example `{{ $json.flag === null }}`, or use the **exists** operator in the **If** node.
+{% endhint %}
 
 **Syntax:** _`Boolean`_.isEmpty()
 
@@ -29,12 +33,39 @@ layout:
 
   ```javascript
   // bool = false
-  bool.isEmpty() // => false
+  bool.isEmpty() // => true
   ```
 
   ```javascript
   // bool = null
   bool.isEmpty() // => true
+  ```
+
+## _`Boolean`_.**`isNotEmpty()`** <a href="#booleanisnotempty" id="booleanisnotempty"></a>
+
+**Description:** Returns <code>true</code> if the boolean is <code>true</code>. Returns <code>false</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
+**Syntax:** _`Boolean`_.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+  ```javascript
+  // bool = true
+  bool.isNotEmpty() // => true
+  ```
+
+  ```javascript
+  // bool = false
+  bool.isNotEmpty() // => false
+  ```
+
+  ```javascript
+  // bool = null
+  bool.isNotEmpty() // => false
   ```
 
 ## _`Boolean`_.**`toNumber()`** <a href="#booleantonumber" id="booleantonumber"></a>

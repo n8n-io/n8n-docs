@@ -71,3 +71,14 @@ Nodes and operations where you need to design a loop into your workflow:
 	* Info: this operation executes only once, regardless of the number of items in the incoming data.
 * [RSS Read](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.rssfeedread) executes once for the requested URL.
 * [TimescaleDB](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.timescaledb) executes once for `insert` and `update`.
+
+## Related pages
+
+* [Flow logic](./): how to represent logic in n8n workflows.
+* [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
+* [Merge data](merge-data.md): combine multiple data streams back into one.
+* [Wait](wait.md): pause a workflow's execution and resume it later.
+* [Understand execution order](understand-execution-order.md): learn how n8n decides which branch runs first in a multi-branch workflow.
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md): call one workflow from another to build modular, microservice-like workflows.
+* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
+* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.

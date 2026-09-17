@@ -139,12 +139,13 @@ docs assistant) chunk on `##`/`###` headings.
   Every section landing page links down to all its child pages. Every child
   page links back up to its parent (`./`) and sideways to each direct sibling,
   in a "Related pages" section at the end — a plain link list, structural
-  rather than curated, separate from whatever sibling links already appear in
-  the body. Aim for each page to sit in a cluster of 5+ interlinked pages on
-  the same topic (AI search cites connected clusters far more than standalone
-  pages). Skip sibling links for flat reference collections (one page per data
-  type, etc.) where every entry follows the same template — these still link
-  back to the parent, just without a sibling list.
+  rather than curated. Add other genuinely related pages at your discretion,
+  even outside the current section. Aim for each page to sit in a cluster of
+  5+ interlinked pages on the same topic (AI search cites connected clusters
+  far more than standalone pages). Skip sibling links for flat reference
+  collections (one page per data type, etc.) where every entry follows the
+  same template — these still link back to the parent, just without a
+  sibling list.
 - **Nested sections:** a page that is itself a parent (for example, a
   subsection README) gets both — its own "In this section" for its children,
   and a "Related pages" footer relating it to its own parent and its own
@@ -152,15 +153,15 @@ docs assistant) chunk on `##`/`###` headings.
   chain up to a grandparent section, since that connectivity already exists
   transitively through the parent's own links.
 - **Listing children:** an overview with 2+ children lists them as a plain
-  bullet list under a heading like "In this section" (link plus a one-line
-  description) — not a GitBook content-ref card. With only one child, skip the
-  list and link it inline at first mention instead.
+  bullet list under an "In this section" heading (link plus a one-line
+  description). With only one child, skip the list and link it inline at
+  first mention instead.
 - **Link placement:** put links in the body at the first meaningful mention,
   with descriptive anchor text naming the target ([Configure the Schedule
   Trigger](...), never "click here") — reuse an existing mention of the target
-  topic where one already exists, rather than adding a new sentence. Links
-  point to separate topics; they don't replace context a section needs, so
-  restate that instead.
+  topic where one already exists, rather than adding a new sentence. A link
+  points to a separate topic; it can't stand in for context a section needs,
+  so restate that instead.
 
 ## Feature availability
 

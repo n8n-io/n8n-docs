@@ -31,3 +31,14 @@ This section walks through setting up both the parent workflow and sub-workflow.
 ## Sub-workflow conversion <a href="#sub-workflow-conversion" id="sub-workflow-conversion"></a>
 
 See [sub-workflow conversion](convert-to-sub-workflows.md) for how to divide your existing workflows into sub-workflows.
+
+## Related pages
+
+* [Flow logic](./): how to represent logic in n8n workflows.
+* [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
+* [Merge data](merge-data.md): combine multiple data streams back into one.
+* [Loop](loop.md): repeat an action until a condition is met, or until all items are processed.
+* [Wait](wait.md): pause a workflow's execution and resume it later.
+* [Understand execution order](understand-execution-order.md): learn how n8n decides which branch runs first in a multi-branch workflow.
+* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
+* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.

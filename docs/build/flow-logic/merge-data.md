@@ -57,3 +57,14 @@ The [Compare Datasets](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/co
 Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-with-the-compare-datasets-node/) for an example.
 
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1943" %}
+
+## Related pages
+
+* [Flow logic](./): how to represent logic in n8n workflows.
+* [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
+* [Loop](loop.md): repeat an action until a condition is met, or until all items are processed.
+* [Wait](wait.md): pause a workflow's execution and resume it later.
+* [Understand execution order](understand-execution-order.md): learn how n8n decides which branch runs first in a multi-branch workflow.
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md): call one workflow from another to build modular, microservice-like workflows.
+* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
+* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.

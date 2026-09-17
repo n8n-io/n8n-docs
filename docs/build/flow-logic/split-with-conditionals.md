@@ -25,3 +25,14 @@ This is the power of splitting and conditional nodes in n8n.
 Refer to the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) documentation for usage details.
 
 After splitting, you can [merge the branches back together](merge-data.md). The [execution order](understand-execution-order.md) of a multi-branch workflow depends on how you arrange the branches on the canvas.
+
+## Related pages
+
+* [Flow logic](./): how to represent logic in n8n workflows.
+* [Merge data](merge-data.md): combine multiple data streams back into one.
+* [Loop](loop.md): repeat an action until a condition is met, or until all items are processed.
+* [Wait](wait.md): pause a workflow's execution and resume it later.
+* [Understand execution order](understand-execution-order.md): learn how n8n decides which branch runs first in a multi-branch workflow.
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md): call one workflow from another to build modular, microservice-like workflows.
+* [Convert to sub-workflows](convert-to-sub-workflows.md): turn part of an existing workflow into a reusable sub-workflow.
+* [Handle errors gracefully](handle-errors-gracefully.md): set up an error workflow to respond to execution failures.

@@ -15,7 +15,7 @@ You can test your node as you build it by running it in a local n8n instance wit
 	`n8n-node dev` uses its own n8n user folder, `.n8n-node-cli`, so it doesn't touch an existing n8n installation. The default location depends on your operating system:
 	- For Windows: `C:\Users\<username>\.n8n-node-cli\.n8n\custom`
 	- For Linux: `/home/<username>/.n8n-node-cli/.n8n/custom`
-	- For MacOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
+	- For macOS: `/Users/<username>/.n8n-node-cli/.n8n/custom`
 
 	To test against an n8n instance you run yourself, pass `--external-n8n` and set `--custom-user-folder <path>` to that instance's user folder (the parent of its `.n8n` directory). Set `N8N_DEV_RELOAD=true` on that instance so it picks up your changes.
 

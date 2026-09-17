@@ -7,7 +7,7 @@ You can test your node as you build it by running it in a local n8n instance wit
 	```shell
 	npm run dev
 	```
-	This runs `n8n-node dev`, which builds your node, starts a local n8n instance with your node loaded, and rebuilds your node when you change a file.
+	This runs `n8n-node dev`, which builds your node, links it into `~/.n8n/custom` (the n8n custom nodes directory), starts a local n8n instance with your node loaded, and rebuilds your node when you change a file. To use a different n8n user folder, pass `--custom-user-folder <path>`.
 2. Open `http://localhost:5678` in your browser and sign in to your n8n instance.
 3. Open a workflow and search for your node in the nodes panel.
 

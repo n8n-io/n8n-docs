@@ -17,7 +17,7 @@ Binary data is any file-type data, such as image files or documents generated or
 
 In queue mode, binary data storage also backs webhook responses too large to send through the queue. Refer to [Large webhook responses](enable-queue-mode.md#large-webhook-responses) for details.
 
-## Enable filesystem mode <a href="#enable-filesystem-mode" id="enable-filesystem-mode"></a>
+## Binary data storage mode <a href="#binary-data-storage-mode" id="binary-data-storage-mode"></a>
 
 n8n saves binary data to disk by default. The `N8N_DEFAULT_BINARY_DATA_MODE` [environment variable](../basic-configuration/use-environment-variables/binary-data.md) is `filesystem` unless you set it.
 

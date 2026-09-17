@@ -618,6 +618,116 @@ List credentials the current user can access. Use this to find a credential ID b
 
 ---
 
+## Instance context <a href="#instance-context" id="instance-context"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+The instance-context read tools (`get_instance_activity`, `expand_instance_activity`, and `get_node_usage`) only appear when the instance-context read surface is on, through `N8N_MCP_INSTANCE_CONTEXT_ENABLED` or its rollout flag. `get_instance_activity` and `expand_instance_activity` also need the `instance-ai` module active and the activity log enabled with `N8N_ACTIVITY_LOG_ENABLED`, which is off by default.
+{% endhint %}
+
+These tools read what this instance already contains: what people recently changed, and which node types the workflows here use. All three sit under the `workflow:read` scope. The two activity tools drop credential entries when your grant lacks `credential:read`, or when you can't access the credential.
+
+### get_instance_activity <a href="#getinstanceactivity" id="getinstanceactivity"></a>
+
+Read the instance activity log: what someone recently created, changed, published, or deleted in this instance, and who did it. Use it to pick up work already in progress. When the user is vague, for example "fix it" or "what should I look at", the answer is usually the most recent entry here.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `category` | `"workflow" \| "credential"` | No | Restrict results to one kind of entry |
+| `resourceId` | `string` | No | Restrict results to one resource, for example a single workflow ID |
+| `beforeId` | `integer` | No | Page backwards: only return entries older than this entry ID |
+| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects`. This tool is read-only, so `projectId` narrows what you can already see rather than widening it |
+| `limit` | `integer` | No | Limit the number of results (max 100) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `entries` | `array` | Matching log entries, newest first |
+| `entries[].id` | `number` | Entry ID, which `expand_instance_activity` takes |
+| `entries[].at` | `string` | ISO timestamp of the entry |
+| `entries[].category` | `string` | What kind of resource the entry covers: `"workflow"` or `"credential"` |
+| `entries[].action` | `string` | What happened, such as created, saved, published, deleted, or archived |
+| `entries[].resourceType` | `string` | What `resourceId` points at |
+| `entries[].resourceId` | `string` | ID of the resource, to pass to tools such as `search_workflows` or `get_workflow_details` |
+| `entries[].resourceName` | `string` | Name the resource had at the time |
+| `entries[].byCurrentUser` | `boolean` | Whether the authenticated user did it |
+| `entries[].detail` | `object` | Extra fields the entry carried |
+| `count` | `integer` | Number of entries returned |
+| `hasMore` | `boolean` | Whether the log holds more entries below this page |
+| `nextBeforeId` | `number` | Pass this back as `beforeId` to read the next page. Present whenever `hasMore` is `true`, including when this page returned no entries |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Maximum result limit is 100.
+- Entries are log records, not live records. Fetch the live record with `search_workflows`, `get_workflow_details`, or `get_workflow_execution`. An entry can name a resource someone has since deleted.
+- A short or empty page can still have more entries below it. Check `hasMore` before you conclude that nothing has happened, and page with `nextBeforeId`.
+
+---
+
+### expand_instance_activity <a href="#expandinstanceactivity" id="expandinstanceactivity"></a>
+
+Read one activity log entry, together with everything else the log holds about the same resource.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `id` | `integer` | Yes | The entry ID, as returned by `get_instance_activity` |
+| `projectId` | `string` | No | Restrict the lookup to one project. Get it from `search_projects` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `entry` | `object` | The entry, using the same fields as `get_instance_activity`. Absent when the ID doesn't resolve |
+| `resourceHistory` | `array` | Everything else the log holds about the same resource, newest first |
+| `liveRecordHint` | `string` | The tool call that fetches the live record, when one applies |
+| `notFound` | `boolean` | Set when the ID no longer resolves |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- n8n prunes entries on a retention window, so `notFound` is an ordinary outcome rather than an error. Carry on without the entry.
+
+---
+
+### get_node_usage <a href="#getnodeusage" id="getnodeusage"></a>
+
+Report which node types this instance already uses, and how widely. Call it before choosing between equivalent nodes, so a new workflow matches how this instance already builds, for example whether an HTTP Request node or a dedicated integration node is the local habit. Without `nodeType` it returns the histogram of node types in use. With one, it returns the workflows using that node type.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodeType` | `string` | No | Fully qualified node type, for example `"n8n-nodes-base.httpRequest"`. Omit it to get the histogram of every node type in use |
+| `projectId` | `string` | No | Read one project instead of every workflow you can see. Get it from `search_projects` |
+| `limit` | `integer` | No | Limit the number of results (max 100) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `workflowsInScope` | `number` | Indexed, non-archived workflows the counts draw on: the denominator a count needs to mean anything |
+| `nodeTypes` | `array` | The histogram, returned when you name no `nodeType`. Most used first |
+| `nodeTypes[].nodeType` | `string` | Fully qualified node type |
+| `nodeTypes[].workflowCount` | `number` | Workflows in scope using it |
+| `workflows` | `array` | Workflows using the named `nodeType`, returned when you give one |
+| `workflows[].workflowId` | `string` | The workflow ID |
+| `workflows[].name` | `string` | The workflow name |
+| `workflows[].updatedAt` | `string` | ISO timestamp of the last change |
+| `truncated` | `boolean` | The limit cut the list short |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Maximum result limit is 100. Values outside 1 to 100 are clamped to that range.
+- Results come from the dependency index, so the tool counts node types only, never parameter values or credentials.
+- When `truncated` is `true` on the histogram, a node type the response omits may still be in use. Don't report its absence as evidence.
+
+---
+
 ## Workflow builder <a href="#workflow-builder" id="workflow-builder"></a>
 
 ### get_workflow_sdk_reference <a href="#getsdkreference" id="getsdkreference"></a>

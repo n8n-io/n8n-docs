@@ -252,7 +252,7 @@ The same limit applies to a tool result an MCP Trigger workflow returns from a w
 
 Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers to store a response body above the limit in [binary data storage](../basic-configuration/use-environment-variables/binary-data.md) instead of failing the node. The queue message then carries a reference, the main instance streams the body from storage to the client, and n8n deletes the stored body once it delivers the response.
 
-Offloading needs storage that every instance can read. Every mode except `default` stores, so set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`:
+Offloading needs storage that every instance can read. The default `filesystem` mode stores on the local disk of the instance that produced the response, so set `N8N_DEFAULT_BINARY_DATA_MODE` to `database`, `s3`, or `azure`, or mount the same disk on every instance:
 
 ```bash
 export N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX=64
@@ -273,7 +273,6 @@ Only a main instance running n8n 2.34.0 or later reads an offloaded body. An old
 | Error | Cause | Fix |
 | :---- | :---- | :-- |
 | `The response is too large to be sent back from the worker`, naming `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` | Offloading is off on the worker. | Set the variable on your workers, or raise `N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX`. |
-| `The response is too large to be sent back from the worker`, naming `N8N_DEFAULT_BINARY_DATA_MODE` | Binary data storage keeps data in memory, so there's nowhere to offload to. | Set `N8N_DEFAULT_BINARY_DATA_MODE` to `filesystem`, `database`, `s3`, or `azure`. |
 | `The response is too large for the binary-data store to hold` | `database` mode refused the body for its own size limit. | Raise `N8N_BINARY_DATA_DATABASE_MAX_FILE_SIZE`, up to the 1 GB a database column holds, or switch to `filesystem`, `s3`, or `azure`, which apply no limit of their own. |
 | `The stored webhook response body could not be read` | The main instance can't read the storage the worker wrote to. | Point every instance at the same storage. In `filesystem` mode, every instance needs to mount the same disk, which n8n doesn't recommend. |
 

@@ -12,7 +12,7 @@ layout:
 {% hint style="warning" %}
 **Feature availability**
 
-npm-based installs are deprecated from n8n 3.0.
+n8n 3.0 and later isn't published to npm. The `n8n` package on npm stays on the last 2.x release, so the commands on this page install n8n 2.x. To run n8n 3.0 or later, use the [one-line setup](one-line-setup.md) or another Docker-based install option.
 {% endhint %}
 
 {% hint style="info" %}

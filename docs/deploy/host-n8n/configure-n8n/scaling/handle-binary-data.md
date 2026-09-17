@@ -21,7 +21,7 @@ In queue mode, binary data storage also backs webhook responses too large to sen
 
 n8n saves binary data to disk by default. The `N8N_DEFAULT_BINARY_DATA_MODE` [environment variable](../basic-configuration/use-environment-variables/binary-data.md) is `filesystem` unless you set it.
 
-If you're using queue mode, switch this to `database`. n8n doesn't support `filesystem` mode with queue mode.
+In queue mode, the default is `database` instead, because every instance needs to read the same storage. n8n doesn't support `filesystem` mode with queue mode.
 
 ## Binary data pruning <a href="#binary-data-pruning" id="binary-data-pruning"></a>
 

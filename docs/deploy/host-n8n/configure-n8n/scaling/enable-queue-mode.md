@@ -252,7 +252,7 @@ The same limit applies to a tool result an MCP Trigger workflow returns from a w
 
 Set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED=true` on your workers to store a response body above the limit in [binary data storage](../basic-configuration/use-environment-variables/binary-data.md) instead of failing the node. The queue message then carries a reference, the main instance streams the body from storage to the client, and n8n deletes the stored body once it delivers the response.
 
-Offloading needs storage that every instance can read. The default `filesystem` mode stores on the local disk of the instance that produced the response, so set `N8N_DEFAULT_BINARY_DATA_MODE` to `database`, `s3`, or `azure`, or mount the same disk on every instance:
+Offloading needs storage that every instance can read. In queue mode, `N8N_DEFAULT_BINARY_DATA_MODE` defaults to `database`, which works. For large responses, set it to `s3` or `azure`:
 
 ```bash
 export N8N_WEBHOOK_RESPONSE_RELAY_SIZE_MAX=64

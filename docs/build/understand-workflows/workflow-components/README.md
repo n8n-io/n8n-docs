@@ -22,7 +22,7 @@ You build workflows from a small set of components that you connect together on 
 * [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
 * [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.
 
-## Related pages
+## Related resources
 
 * [Understand workflows](../)
 * [Create and run workflows](../create-and-run-workflows.md)

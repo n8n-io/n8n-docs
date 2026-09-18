@@ -66,7 +66,7 @@ n8n supports [adding custom data to executions](customize-executions-data.md).
 
 You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data) for details.
 
-## Related pages
+## Related resources
 
 * [Understand workflows](../)
 * [Create and run workflows](../create-and-run-workflows.md)

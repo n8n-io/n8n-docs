@@ -146,7 +146,7 @@ Unpublish a workflow from either:
 * In the workflow list
 * The version history page (unpublish action on published versions)
 
-## Related pages
+## Related resources
 
 * [Understand workflows](./)
 * [Create and run workflows](create-and-run-workflows.md)

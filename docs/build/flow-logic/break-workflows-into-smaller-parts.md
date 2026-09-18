@@ -32,7 +32,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
 
 See [sub-workflow conversion](convert-to-sub-workflows.md) for how to divide your existing workflows into sub-workflows.
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Split with conditionals](split-with-conditionals.md)

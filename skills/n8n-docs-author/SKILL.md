@@ -137,8 +137,9 @@ docs assistant) chunk on `##`/`###` headings.
   same long explanation belong under one heading).
 - **Cross-references:** link every page to its prerequisites and its next step.
   Every section landing page links down to all its child pages. Every child
-  page links back up to its parent (`./`) and sideways to each direct sibling,
-+  in a "Related pages" section at the end, a plain link list, structural
+  page links back up to its parent (`./`, or `../` if the current page is
+  itself a nested section README one level below its parent) and sideways to
+  each direct sibling, in a "Related resources" section at the end, a plain link list, structural
   rather than curated, bare links with no descriptions (unlike "In this
   section", the reader has already read a page from the cluster, so the
   descriptive anchor text alone is enough). Add other genuinely related pages
@@ -154,10 +155,11 @@ docs assistant) chunk on `##`/`###` headings.
   without a sibling list.
 - **Nested sections:** a page that is itself a parent (for example, a
   subsection README) gets both — its own "In this section" for its children,
-  and a "Related pages" footer relating it to its own parent and its own
-  siblings at its level. Only reach one level up and one level sideways; don't
-  chain up to a grandparent section, since that connectivity already exists
-  transitively through the parent's own links.
+  and a "Related resources" footer relating it to its own parent and its own
+  siblings at its level, linking to that parent with `../` (its own folder's
+  `./` would point at itself). Only reach one level up and one level sideways;
+  don't chain up to a grandparent section, since that connectivity already
+  exists transitively through the parent's own links.
 - **Listing children:** an overview with 2+ children lists them as a plain
   bullet list under an "In this section" heading (link plus a one-line
   description). With only one child, skip the list and link it inline at

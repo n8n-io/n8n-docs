@@ -72,7 +72,7 @@ Nodes and operations where you need to design a loop into your workflow:
 * [RSS Read](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.rssfeedread) executes once for the requested URL.
 * [TimescaleDB](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.timescaledb) executes once for `insert` and `update`.
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Split with conditionals](split-with-conditionals.md)

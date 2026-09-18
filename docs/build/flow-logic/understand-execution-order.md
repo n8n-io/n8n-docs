@@ -24,7 +24,7 @@ You can change the execution order in your [workflow settings](../manage-workflo
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Split with conditionals](split-with-conditionals.md)

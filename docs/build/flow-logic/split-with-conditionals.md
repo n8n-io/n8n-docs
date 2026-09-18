@@ -26,7 +26,7 @@ Refer to the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-no
 
 After splitting, you can [merge the branches back together](merge-data.md). The [execution order](understand-execution-order.md) of a multi-branch workflow depends on how you arrange the branches on the canvas.
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Merge data](merge-data.md)

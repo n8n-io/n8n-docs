@@ -133,7 +133,7 @@ See [Workflow components](README.md) for other elements you can add to a workflo
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
 
-## Related pages
+## Related resources
 
 * [Workflow components](./)
 * [Work with nodes](work-with-nodes.md)

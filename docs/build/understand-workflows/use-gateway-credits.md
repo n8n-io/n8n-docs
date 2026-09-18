@@ -75,7 +75,7 @@ Instance owners can turn Gateway credits off for everyone on the instance:
 
 When it's off, the Gateway credits option doesn't appear on nodes for anyone on the instance.
 
-## Related pages
+## Related resources
 
 * [Understand workflows](./)
 * [Create and run workflows](create-and-run-workflows.md)

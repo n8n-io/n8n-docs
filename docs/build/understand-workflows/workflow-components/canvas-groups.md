@@ -95,7 +95,7 @@ When a workflow is shown read-only, such as in workflow history or a shared view
 | Collapse Canvas Groups (selection, or all) | `Shift` + `Alt` + `G` |
 | Rename selected Canvas Group | `Space` |
 
-## Related pages
+## Related resources
 
 * [Workflow components](./)
 * [Work with nodes](work-with-nodes.md)

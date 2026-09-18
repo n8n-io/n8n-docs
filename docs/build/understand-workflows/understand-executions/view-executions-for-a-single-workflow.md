@@ -64,7 +64,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 2. For the workflow execution you want to retry, select **Refresh** <img src="../../.gitbook/assets/refresh.png" alt="Refresh icon" data-size="line">.
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yD2T5eTeZvZaPRV8P7MJ/" %}
 
-## Related pages
+## Related resources
 
 * [Understand executions](./)
 * [Manual, partial, and production executions](types-of-executions.md)

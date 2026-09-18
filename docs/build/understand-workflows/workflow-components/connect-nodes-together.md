@@ -42,7 +42,7 @@ To create a connection between two nodes, select the grey dot or **Add node** <i
 
 Hover over the connection, then select **Delete** <img src="../../.gitbook/assets/delete-connector.png" alt="Delete connector icon" data-size="line">.
 
-## Related pages
+## Related resources
 
 * [Workflow components](./)
 * [Work with nodes](work-with-nodes.md)

@@ -43,7 +43,7 @@ To load data from a previous execution:
 The executions available on the **Executions** list depends on your [Workflow settings](../../manage-workflows/configure-workflow-settings.md).
 {% endhint %}
 
-## Related pages
+## Related resources
 
 * [Understand executions](./)
 * [Manual, partial, and production executions](types-of-executions.md)

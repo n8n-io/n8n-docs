@@ -18,7 +18,7 @@ Your workflow ID is available in:
 * The URL of the open workflow.
 * The workflow settings title.
 
-## Related pages
+## Related resources
 
 * [Workflow components](./)
 * [Work with nodes](work-with-nodes.md)

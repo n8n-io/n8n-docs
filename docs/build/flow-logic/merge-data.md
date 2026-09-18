@@ -58,7 +58,7 @@ Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-wi
 
 {% @n8n-blocks/n8n-workflow-demo content="" url="https://api.n8n.io/workflows/templates/1943" %}
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Split with conditionals](split-with-conditionals.md)

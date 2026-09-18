@@ -73,7 +73,7 @@ When using loops (with the [Loop over Items](https://app.gitbook.com/s/BKcbOzIWj
 
 Executing a node again clears its dirty status. You can do this manually by triggering the whole workflow, or by running a [partial execution](types-of-executions.md#partial-executions) with **Execute step** on the individual node or any node which follows it.
 
-## Related pages
+## Related resources
 
 * [Understand executions](./)
 * [Manual, partial, and production executions](types-of-executions.md)

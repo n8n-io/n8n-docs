@@ -65,7 +65,7 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 
 You can load data from a previous workflow back into the canvas. Refer to [Debug executions](debug-executions.md) for more information.
 
-## Related pages
+## Related resources
 
 * [Understand executions](./)
 * [Manual, partial, and production executions](types-of-executions.md)

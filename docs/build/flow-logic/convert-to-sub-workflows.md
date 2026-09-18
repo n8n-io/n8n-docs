@@ -56,7 +56,7 @@ Most sub-workflow conversions work without issues, but there are some caveats an
 
 * **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](../work-with-data/reference-data/reference-previous-nodes.md). You must pass it a fixed number.
 
-## Related pages
+## Related resources
 
 * [Flow logic](./)
 * [Split with conditionals](split-with-conditionals.md)

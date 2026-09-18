@@ -102,7 +102,7 @@ You can document your workflow using node notes:
 [^2]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
 [^3]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
 
-## Related pages
+## Related resources
 
 * [Workflow components](./)
 * [Connect nodes together](connect-nodes-together.md)

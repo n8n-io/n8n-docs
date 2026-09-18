@@ -91,7 +91,7 @@ customData = _execution.customData.get("key");
 {% endtab %}
 {% endtabs %}
 
-## Related pages
+## Related resources
 
 * [Understand executions](./)
 * [Manual, partial, and production executions](types-of-executions.md)

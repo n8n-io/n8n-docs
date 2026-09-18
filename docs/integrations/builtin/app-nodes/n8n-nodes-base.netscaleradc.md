@@ -40,7 +40,7 @@ Refer to [Netscaler ADC credentials](../credentials/netscaleradc.md) for guidanc
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse Netscaler ADC node documentation integration templates](https://n8n.io/integrations/netscaler-adc) or [search all templates](https://n8n.io/workflows/)
+[Browse Netscaler ADC node documentation integration templates](https://n8n.io/integrations/citrix-adc/) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

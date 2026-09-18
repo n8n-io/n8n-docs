@@ -6,406 +6,406 @@
 <atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
 <description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
 <language>en</language>
-<lastBuildDate>Wed, 19 Aug 2026 13:00:57 GMT</lastBuildDate>
+<lastBuildDate>Wed, 16 Sep 2026 13:00:57 GMT</lastBuildDate>
 <item>
-<title>Simplify user flow for Browser Use connection</title>
-<link>https://github.com/n8n-io/n8n/pull/36316</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36316</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>Connecting your browser to n8n's Browser Use AI Assistant is now simpler: clicking connect automatically opens the extension's connect view in a popup, which closes itself once connected. If the popup is closed or times out after 15 seconds, a Try again button lets you refocus it. The manual Open Browser Use extension button now also opens a popup instead of a new tab.</description>
+<title>Mark required agent fields</title>
+<link>https://github.com/n8n-io/n8n/pull/38624</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38624</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The agent editor now marks the Model and Instructions fields with a red asterisk to indicate they are required, matching the convention used elsewhere in n8n forms. This is a copy-only UI update to improve clarity; no functional or validation changes were made.</description>
 </item>
 <item>
-<title>Add snapshot option to every browser use interaction tool</title>
-<link>https://github.com/n8n-io/n8n/pull/36111</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36111</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>Browser Use interaction tools (click, type, select, drag, hover, press, scroll, upload, dialog) now accept an optional snapshot parameter to return an accessibility snapshot directly in the response, either interactive or non-interactive. This removes the need for a separate snapshot call after each action, roughly halving the number of tool calls needed for browser automation.</description>
+<title>Split workflows into a separate capability row</title>
+<link>https://github.com/n8n-io/n8n/pull/38588</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38588</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>In the agent builder, workflow tools now appear in their own Workflows row, separate from other tools. The Add tool and Add workflow buttons open dedicated pickers scoped to the relevant item types, so tool search shows only tools and workflow search shows only workflows. The workflow picker also includes a search placeholder and the ability to create a new workflow directly from the picker.</description>
 </item>
 <item>
-<title>Let users update review descriptions</title>
-<link>https://github.com/n8n-io/n8n/pull/36069</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36069</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>When updating a workflow review with a newly pinned version, users can now edit the review description as part of the update flow. Review descriptions are preserved through the update, and are only visible to users with publish permission. The update dialog is more resilient to stale review state and description prefill failures.</description>
+<title>Microsoft Teams Node: Add the channel message undo delete operation</title>
+<link>https://github.com/n8n-io/n8n/pull/38429</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38429</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports an Undo Delete operation for channel messages and replies, letting you restore a previously deleted message via the Graph undoSoftDelete action. It returns { success: true } on completion. This operation is unavailable when using the Service Principal credential, where the related fields are hidden and a notice is shown.</description>
 </item>
 <item>
-<title>MCP Server Trigger Node: Add server instructions option</title>
-<link>https://github.com/n8n-io/n8n/pull/35945</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35945</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>The MCP Server Trigger node now has an optional Instructions field. Text entered here is sent to connecting MCP clients as part of the initialize response, letting you provide cross-tool guidance such as tool-choice rules or multi-step workflows that don't belong in any single tool's description. Clients that support this MCP feature (e.g. Claude Code) surface it in their system prompt automatically; others ignore it. The field defaults to empty, so existing workflows are unaffected.</description>
+<title>Microsoft Teams Node: Add the channel message delete operation</title>
+<link>https://github.com/n8n-io/n8n/pull/38428</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38428</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports a Delete operation for channel messages and replies, calling Microsoft Graph's soft delete endpoint. This requires the ChannelMessage.ReadWrite OAuth2 scope; existing credentials keep their original scopes, so users must create a new credential or enable Custom Scopes and add ChannelMessage.ReadWrite to use it. Delete is not available with Service Principal credentials.</description>
 </item>
 <item>
-<title>MiniMax Node: Add M3 and H3 model support</title>
-<link>https://github.com/n8n-io/n8n/pull/35935</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35935</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>The MiniMax node now supports the MiniMax-M3 language model, set as the new default, alongside the existing model lineup. It also adds MiniMax-H3 support for text-to-video and image-to-video generation via MiniMax's V2 video API, with dedicated H3 parameters like duration, resolution, and aspect ratio, while previous models and workflows using the V1 API continue to work unchanged.</description>
+<title>Microsoft Teams Node: Add the chat message undo delete operation</title>
+<link>https://github.com/n8n-io/n8n/pull/38427</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38427</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node (v2) now supports an Undo Delete operation for chat messages, letting you restore a message previously removed with the Delete operation by providing the same chat and message ID. This operation is available with OAuth2 credentials but is not supported when using a Service Principal credential.</description>
 </item>
 <item>
-<title>Schedule Trigger Node: Add a per-node missed execution grace period</title>
-<link>https://github.com/n8n-io/n8n/pull/35771</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35771</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>Schedule Trigger nodes now have their own 'Missed Execution Grace Period (Seconds)' setting, letting you configure how late a run can start before it's considered missed on a per-node basis, instead of relying only on the instance-wide N8N_SCHEDULER_MISFIRE_GRACE setting. Leaving it at 0 keeps the instance default. Invalid values fall back to the instance setting with a logged warning. Available on Schedule Trigger nodes at version 1.4 and above.</description>
+<title>Microsoft Teams Node: Add the chat message delete operation</title>
+<link>https://github.com/n8n-io/n8n/pull/38426</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38426</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Chat Message resource now supports a Delete operation. Provide a chat and message ID to soft-delete a message you sent; n8n resolves the signed-in user and calls the Microsoft Graph softDelete action, returning a success confirmation. Deleted messages remain recoverable via a future undo operation. This operation is not available when using the Service Principal credential.</description>
 </item>
 <item>
-<title>Schedule Trigger Node: Add &quot;If Execution Is Missed&quot; option</title>
-<link>https://github.com/n8n-io/n8n/pull/35626</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35626</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>The Schedule Trigger node now has an &quot;If Execution Is Missed&quot; option (node version 1.4, in the Settings tab) letting you choose whether an occurrence that comes due while the instance is down is skipped or run once instance comes back up. Existing workflows default to skipping missed runs unless coalesce is explicitly chosen. Also fixed a bug where increasing the grace period could incorrectly revive already-expired occurrences.</description>
+<title>Confluence Node: Unhide the node and enable AI tool usage</title>
+<link>https://github.com/n8n-io/n8n/pull/38416</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38416</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Confluence node is now publicly available in the nodes panel and search, no longer hidden behind a feature flag. It can also be used as a tool by AI Agents, allowing agents to create, read, and manage Confluence pages directly within workflows.</description>
 </item>
 <item>
-<title>Discord Node: Add member moderation actions</title>
-<link>https://github.com/n8n-io/n8n/pull/33486</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/33486</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>The Discord node's Member resource now supports four moderation actions: Ban, Unban, Kick, and Timeout. Ban includes an optional message-cleanup window, and Timeout offers duration presets up to Discord's 28-day maximum or removal. All actions support a preset or custom reason, recorded in the server's audit log, enabling workflows to moderate flagged accounts directly, e.g. trigger → AI scorer → ban/kick/timeout.</description>
+<title>Show background tasks in the agent preview</title>
+<link>https://github.com/n8n-io/n8n/pull/38360</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38360</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The agent preview now shows a live panel of background tasks (sub-agents and workflow jobs) above the composer, with running and recently finished jobs grouped together. The panel stays visible until results reach chat, supports keyboard-accessible expansion, and shows a persistent 'Background task results received' entry in the conversation when background work resumes a parent turn. Requires enabling the agents module and background tasks setting.</description>
 </item>
 <item>
-<title>lmChatOpenRouter Node: Add provider routing options</title>
-<link>https://github.com/n8n-io/n8n/pull/24822</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/24822</guid>
-<pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.36</category>
-<description>The OpenRouter Chat Model node now supports provider routing options, letting you control which sub-providers handle requests. New settings under Options &gt; Provider Routing include order, allowFallbacks, requireParameters, dataCollection, zdr, only, ignore, and sort, giving finer control over provider selection, fallback behavior, data retention requirements, and cost/performance sorting.</description>
+<title>AI Agent Node: Add option to force a tool call on the first iteration</title>
+<link>https://github.com/n8n-io/n8n/pull/38342</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38342</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The AI Agent node (v3) and Agent Tool (v3) now include an opt-in 'Force Tool Call on First Iteration' option. When enabled, the model must call a tool on its first response of a run, helping smaller or less compliant models (e.g. Mistral-Small on IONOS, vLLM, Ollama) that otherwise reply in prose and skip wired tools. Later iterations remain unrestricted so the agent can still give a final answer. Default is off, so existing behavior is unchanged unless enabled.</description>
 </item>
 <item>
-<title>GitHub Node: Add timeout option to Dispatch and Wait for Completion</title>
-<link>https://github.com/n8n-io/n8n/pull/35837</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35837</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The GitHub node's Dispatch and Wait for Completion operation now supports a Limit Wait Time option, letting you cap how long the execution waits for the dispatched GitHub Actions workflow to call back, either after a time interval or until a specified date and time. Previously the execution waited indefinitely if the callback never arrived. If the limit is not set, existing behavior is unchanged; on timeout the node resumes silently with its input data instead of the callback payload.</description>
+<title>Microsoft Teams Node: Add the Service Principal path for Online Meeting Update</title>
+<link>https://github.com/n8n-io/n8n/pull/38324</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38324</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports the Update operation for online meetings when using a Service Principal (app-only) credential, letting you update a meeting's subject and other fields by ID or join URL while specifying the organizer. All five online meeting operations are now available for both OAuth2 and Service Principal credentials, and the credential description no longer states that online meetings are unavailable.</description>
 </item>
 <item>
-<title>Kafka Node: Add compression options to version 2</title>
-<link>https://github.com/n8n-io/n8n/pull/35727</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35727</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The Kafka node (version 2) now includes a Compression option supporting None, GZIP, Snappy, LZ4, and Zstd, letting users choose how messages are compressed before sending. Previously, only GZIP was available via a toggle in version 1, since the older library lacked native support for other codecs. Version 1 behavior is unchanged. Note that version 1 of the Kafka Trigger cannot decode Snappy, LZ4, or Zstd, so use GZIP or None if version 1 triggers consume the topic.</description>
+<title>Microsoft Teams Node: Add the Service Principal path for Online Meeting Delete</title>
+<link>https://github.com/n8n-io/n8n/pull/38323</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38323</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports deleting online meetings when using a Service Principal credential, identifying the meeting by ID or by join URL. Previously, this operation was only available with delegated (user) credentials. The createOrGet operation is also now available under Service Principal credentials.</description>
 </item>
 <item>
-<title>Merge Node: Add &quot;Append&quot; and &quot;Combine&quot; search aliases</title>
-<link>https://github.com/n8n-io/n8n/pull/35709</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35709</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>You can now find the Merge node in the nodes panel by searching for &quot;Append&quot; or &quot;Combine&quot;, in addition to its existing search terms. This makes the node easier to discover when you're looking for ways to combine or append data streams.</description>
+<title>Microsoft Teams Node: Add the Service Principal path for Online Meeting Create or Get</title>
+<link>https://github.com/n8n-io/n8n/pull/38322</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38322</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Online Meeting 'Create or Get' operation now works with Service Principal credentials, in addition to delegated auth. Using the same External ID for the same organizer returns the existing meeting instead of creating a duplicate; a different organizer creates a new meeting. The field description has been updated to clarify this behavior.</description>
 </item>
 <item>
-<title>Allow adding a workflow version description when submitting for review</title>
-<link>https://github.com/n8n-io/n8n/pull/35640</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35640</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>You can now add a version description when submitting a workflow for review, matching the existing publish flow. Submit for review is now a two-step dialog for naming and describing the version before adding review details, and updating an existing review request now includes a description field. Empty values clear the description; omitting it leaves it unchanged.</description>
+<title>Microsoft Teams Node: Add the Service Principal path for Online Meeting Get</title>
+<link>https://github.com/n8n-io/n8n/pull/38321</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38321</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports the Get operation for Online Meetings when using a Service Principal (Entra) credential, retrieving a meeting by its ID or join URL from the organizer's meetings. Error messages when a meeting isn't found now reference both the Meeting and Organizer fields to help troubleshoot.</description>
 </item>
 <item>
-<title>Add review detail metadata</title>
-<link>https://github.com/n8n-io/n8n/pull/35638</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35638</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Workflow Reviews inbox now shows a metadata sidebar on the review detail view, with cards for status, reviewers (avatar and name), and workflow changes. A status dot appears next to the review title, and clicking a workflow in the Changes card jumps to its diff section. Long names truncate gracefully, and empty reviewer or workflow lists show fallback messaging.</description>
+<title>Microsoft Teams Node: Add the Service Principal path for Online Meeting Create</title>
+<link>https://github.com/n8n-io/n8n/pull/38320</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38320</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports creating online meetings using the Service Principal (app-only) credential. A new Organizer field lets you pick or enter the user on whose behalf the meeting is created, and the Operation list under this credential only shows supported actions, currently Create. Error messages now clarify required permissions (OnlineMeetings.ReadWrite.All, User.Read.All) and the Teams application access policy commands needed when Graph returns a 403.</description>
 </item>
 <item>
-<title>Name the pinned workflow version when submitting for review</title>
-<link>https://github.com/n8n-io/n8n/pull/35566</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35566</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>When submitting a workflow for review (or re-pinning an updated version), you now provide a required version name, prefilled from the version's existing name or a generated default. This prevents the pinned review version from being silently pruned from workflow history, which previously could null out the review's pinned version and break auto-publish on approval.</description>
+<title>Hand agent change requests in the preview chat to the n8n Assistant</title>
+<link>https://github.com/n8n-io/n8n/pull/38283</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38283</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>In the agent preview chat, the agent now recognizes it cannot change its own setup (instructions, model, tools, skills, knowledge, channels, integrations, schedules, or name) and tells users to use the n8n Assistant instead. When a message asks for such a change, the chat displays a note with a button that opens the n8n Assistant with the request pre-filled and the session attached. This behavior is limited to the preview chat and does not affect published channels, evals, MCP, or other test surfaces.</description>
 </item>
 <item>
-<title>Disable command bar in canvas-only mode</title>
-<link>https://github.com/n8n-io/n8n/pull/35542</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35542</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>When running n8n in canvas-only mode (via the N8N_CANVAS_ONLY environment variable), the command bar is now disabled. The Cmd/Ctrl+K shortcut no longer opens it, and its buttons are hidden from both the sidebar header and the canvas node-creation rail, since navigation actions like jumping to executions, credentials, or settings don't apply in embedded, chrome-less deployments.</description>
+<title>Add preview chat utilities to the more options menu</title>
+<link>https://github.com/n8n-io/n8n/pull/38210</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38210</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The agent preview chat panel now has a clearer close button plus a new more-options menu, replacing the confusing layout icon. The menu offers copy link, copy conversation, open in new tab, full width toggle, session deletion, optional LangSmith export, and session details like source, token usage, cost, duration, and last message time.</description>
 </item>
 <item>
-<title>Improve agent file upload visibility</title>
-<link>https://github.com/n8n-io/n8n/pull/35513</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35513</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The AI agent builder's file upload area now shows a clear empty state with a labeled Upload file button and text describing supported formats (CSV, PDF, Markdown, TXT) when no files exist, replacing a plain empty table row. When files are present, a labeled upload button appears in the toolbar. Headings and spacing for the files and vector stores panels are also aligned for consistency.</description>
+<title>Azure Storage Node: Add Azure cloud selection and custom endpoints to the Shared Key credential</title>
+<link>https://github.com/n8n-io/n8n/pull/38181</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38181</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Azure Storage Shared Key credential now has an Azure Cloud dropdown to select Azure Public Cloud, Azure US Government, Azure China, or Custom. Custom reveals an Endpoint field for private endpoints or custom domains, letting each credential target a different endpoint instead of relying on a single instance-wide override. Custom endpoints must be enabled by an administrator via the new N8N_AZURE_STORAGE_CUSTOM_ENDPOINTS_ENABLED setting (default off); otherwise custom credentials fail with a clear error. Existing credentials keep working unchanged, defaulting to the public cloud. Only host-style endpoints are supported; path-style endpoints are a future improvement.</description>
 </item>
 <item>
-<title>Kafka Node: Add version 2 to send messages via the new Kafka library</title>
-<link>https://github.com/n8n-io/n8n/pull/35450</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35450</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The Kafka node adds version 2, which sends messages using the modern @confluentinc/kafka-javascript library instead of the unmaintained kafkajs. It keeps the same UI and options as v1 (minus Compression, coming later) and fixes the 'Acks' option so 'all replicas' actually maps to all in-sync replicas rather than leader-only. Existing workflows default to v1; new nodes can opt into v2.</description>
+<title>Databricks Node: Send partner User-Agent on Genie MCP traffic</title>
+<link>https://github.com/n8n-io/n8n/pull/38068</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38068</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>Databricks Genie MCP requests, along with other Databricks node traffic, now include a dedicated 'n8n_DatabricksNode' User-Agent header, letting Databricks correctly attribute activity to n8n in their audit logs. MCP registry remotes can now define custom headers that are sent on every request, and these now correctly survive OAuth token refreshes rather than being dropped.</description>
 </item>
 <item>
-<title>Add Changes diff tab to workflow review detail pane</title>
-<link>https://github.com/n8n-io/n8n/pull/35431</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35431</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The workflow review inbox detail pane now includes an Activity and Changes tab. Activity shows the review description, while Changes displays a side-by-side diff between each workflow's published version and the version submitted for review, handling cases like first publish, no changes, or closed reviews. Tabs are deep-linkable via a URL query parameter, and the inbox layout was widened to fit the diff view.</description>
+<title>Rename AI Assistant to n8n Assistant</title>
+<link>https://github.com/n8n-io/n8n/pull/38065</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38065</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The AI Assistant feature is now called &quot;n8n Assistant&quot; throughout the product, including UI labels, settings pages, error and log messages, agent panel text, and telemetry event descriptions. New model, web search, and sandbox connections created in Settings are named accordingly (e.g. &quot;n8n Assistant model&quot;); existing connections keep their current names. This is a naming-only change with no functional impact.</description>
 </item>
 <item>
-<title>Enable enhanced HITL Slack/Telegram</title>
-<link>https://github.com/n8n-io/n8n/pull/35411</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35411</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Enhanced human-in-the-loop (HITL) approval options are now enabled for everyone using the Slack and Telegram nodes. Advanced parameters like restricting who can respond, capturing who approved, and post-decision behavior are now always visible in these nodes, rather than being hidden behind an experimental feature flag.</description>
+<title>Replace Git connection CLI commands with Promotions</title>
+<link>https://github.com/n8n-io/n8n/pull/38027</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/38027</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The CLI's git-connections commands are replaced by new promotion-provider and promotion-connection command groups, supporting provider and connection setup, directional (apply/promote) configuration, project links, clone, disconnect, and Promote/Apply operations, with JSON input via --stdin or --file. Additionally, single-object table output (e.g. workflow get, credential get) now displays long strings in full instead of truncating them, so values like SSH public keys can be copied completely.</description>
 </item>
 <item>
-<title>Restore one-click connector for ChatGPT MCP client</title>
-<link>https://github.com/n8n-io/n8n/pull/35396</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35396</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>When connecting the ChatGPT MCP client from Settings &gt; MCP &gt; Connect a client, a one-click 'Add to ChatGPT' button now appears again. It links directly to ChatGPT's create-connector form, so users just need to paste the server URL instead of navigating ChatGPT's connectors settings page (which previously required developer mode).</description>
+<title>Add workflow dependencies submenu to the workflow menu</title>
+<link>https://github.com/n8n-io/n8n/pull/37981</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37981</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The workflow menu now includes a Dependencies entry when a workflow uses credentials, sub-workflows, or other linked resources. Its submenu lists dependencies grouped by type; selecting a credential opens it in the credential modal, while sub-workflows and other workflow dependencies open in a new tab. The entry is hidden for workflows without dependencies or unsaved new workflows.</description>
 </item>
 <item>
-<title>Form Trigger Node: Add credential connect UI for end-user credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/35347</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35347</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Form Trigger forms can now prompt submitters to connect their own credentials (e.g. Gmail via OAuth2) before running a workflow. When required credentials aren't connected, n8n shows a secure Required credentials panel around the form with Connect and Disconnect controls, disabling Submit until all are connected; the server also rejects submissions with missing credentials. This requires n8n User Auth and a license with dynamic credentials.</description>
+<title>Databricks Node: Refresh user-login tokens in the chat model during long executions</title>
+<link>https://github.com/n8n-io/n8n/pull/37854</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37854</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Databricks node's chat model now supports OAuth2 User-Login (Authorization Code) credentials, in addition to service-principal credentials. Previously, long-running executions using a user-login credential would fail once the access token expired mid-run. The node now checks token expiry before each request and refreshes it automatically, retrying failed requests after a refresh. If the session truly can't be renewed, users get a clear message telling them to reconnect their credential instead of a raw 403 error.</description>
 </item>
 <item>
-<title>Slack Node: Use Real-time Search API for message search</title>
-<link>https://github.com/n8n-io/n8n/pull/35291</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35291</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The Slack node's Message Search now uses Slack's new Real-time Search API (node version 2.7), replacing the deprecated search.messages endpoint. New options include Channel Types, After/Before date filters, and Keyword Search Only (to disable semantic matching). Return All is removed in favor of a capped Limit (max 50) due to Slack's rate limits. Existing workflows on node version 2.6 or earlier are unaffected, but users must reconnect their Slack credential to grant new search scopes before using search on 2.7.</description>
+<title>Microsoft Teams Node: Add the chat member remove operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37747</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37747</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Chat Member resource now supports a Remove operation, letting you remove a member from a group chat. A member picker lets you select the person to remove without needing to know their membership ID. Attempts to remove a member from a one-on-one chat or the last owner of a group chat return a clear error explaining why.</description>
 </item>
 <item>
-<title>Add Simplified Custom Auth credential with recipe-guided setup in the AI Assistant</title>
-<link>https://github.com/n8n-io/n8n/pull/35056</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35056</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>Added a new Simplified Custom Auth credential for the HTTP Request node, letting users authenticate to services without a dedicated n8n credential by pasting an API key into a simple, auto-generated form. The AI Assistant can now research a provider's auth scheme and pre-fill this credential (icon, docs link, key fields) during workflow setup, and verifies the key against the provider's API before saving, showing a clear error if it's rejected.</description>
+<title>Microsoft Teams Node: Add the chat member add operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37746</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37746</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node now supports adding a member to a group chat via a new Chat Member 'Add' operation. Users are selected from an org-wide picker or entered by ID, with options to set the member's role and how much chat history they can see. The chat and user pickers used across Chat Member, Chat Message, and the Teams trigger also now return more results.</description>
 </item>
 <item>
-<title>Salesforce Trigger Node: Add OAuth2 JWT authentication support</title>
-<link>https://github.com/n8n-io/n8n/pull/32257</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32257</guid>
-<pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.35</category>
-<description>The Salesforce Trigger node now supports OAuth2 JWT authentication, in addition to OAuth2. A new Authentication dropdown lets you choose between OAuth2 and OAuth2 JWT and select the corresponding credential, matching the regular Salesforce node. Existing trigger workflows are unaffected since OAuth2 remains the default.</description>
+<title>Microsoft Teams Node: Add Online Meeting Create or Get operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37708</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37708</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Online Meeting resource now supports a Create or Get operation. Given an External ID, it creates a new meeting on first run and returns the existing meeting on subsequent runs, preventing duplicates when workflows re-execute. Subject, Start Time and End Time are optional; invalid combinations (like an End Time without a Start Time) or a blank External ID are caught before any request is sent.</description>
 </item>
 <item>
-<title>Add a guided setup view for Simplified Custom Auth credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/35324</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35324</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Simplified Custom Auth credentials now offer a guided setup experience in the credential modal. Instead of raw JSON, a form shows one labeled input per template placeholder, with values masked and prefilled like native credential fields. An in-place &quot;Edit setup&quot; view exposes the auth template, field definitions, test URL, and status codes. Connection testing now probes the saved credential and reports that the service accepted it, rather than claiming full verification.</description>
+<title>Microsoft Teams Node: Add Online Meeting Update operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37707</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37707</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Online Meeting resource now supports an Update operation, letting you change subject, start/end time, and meeting settings (camera, mic, chat mode, reactions, presenters, entry announcement, lobby bypass scope, auto-recording) by meeting ID or join URL. Start and end times must be updated together, and Lobby Bypass Scope gains Invited and Organization Excluding Guests options, also now available on Create. Require Passcode remains unavailable on Update since Graph disallows changing it after creation.</description>
 </item>
 <item>
-<title>Inconsistent spacing of buttons on canvas (in top-right vs bottom-left)</title>
-<link>https://github.com/n8n-io/n8n/pull/35319</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35319</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Fixed inconsistent spacing between button groups on the canvas controls (top-right and bottom-left) by introducing a shared ButtonList layout component that applies uniform gaps to grouped buttons, both horizontally and vertically.</description>
+<title>Add manual agent creation entry point on the agents pages</title>
+<link>https://github.com/n8n-io/n8n/pull/37702</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37702</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>On the agents pages, when Instance AI is set up, the create-agent dropdown now includes a 'Create agent manually' option that opens the standalone agent builder directly on an unsaved draft, bypassing the Instance AI assisted creation flow. The main Create agent button still launches Instance AI when available, or falls back to the manual builder when it isn't.</description>
 </item>
 <item>
-<title>Slack Node: Show user real names and handles in user pickers</title>
-<link>https://github.com/n8n-io/n8n/pull/35279</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35279</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Slack node (V2) user pickers now show real names alongside handles, e.g. &quot;John Doe (@john.doe)&quot;, making it easier to find colleagues. Handles remain in the label since real names aren't unique in Slack. Users without a real name (bots, unconfigured accounts) still show just their handle. Search works by real name or handle, and dropdown sorting is now case-insensitive. Stored values are unchanged, so existing workflows continue targeting the same users. Slack V1 is unaffected.</description>
+<title>Microsoft Teams Node: Add Online Meeting Delete operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37502</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37502</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Microsoft Teams node's Online Meeting resource now supports a Delete operation. Meetings can be selected by ID or by join URL, and the node calls Microsoft Graph to delete the meeting, returning a simple success response. A clear error message is shown if the meeting no longer exists, completing create, get, and delete support for online meetings.</description>
 </item>
 <item>
-<title>Add ap-east-2 and ap-southeast-6 AWS regions</title>
-<link>https://github.com/n8n-io/n8n/pull/35278</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35278</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>AWS credentials in n8n now support two additional regions, ap-east-2 (Taipei) and ap-southeast-6 (New Zealand). Users can select these regions when configuring AWS credentials without triggering an 'Unsupported AWS region' error.</description>
+<title>Add N8nChatActions to @n8n/design-system</title>
+<link>https://github.com/n8n-io/n8n/pull/36588</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/36588</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>Assistant chat messages in Agents and Instance AI now share a common action bar offering copy-to-clipboard and read-aloud (text-to-speech) controls, with visual feedback and localized labels. Product-specific actions like send-to-assistant, message rating, and debug controls remain available alongside these. This gives users a consistent, accessible way to copy or listen to AI responses across n8n's chat surfaces.</description>
 </item>
 <item>
-<title>Show the latest workflow review state in the canvas header</title>
-<link>https://github.com/n8n-io/n8n/pull/35233</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35233</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The canvas header now shows a compact pill indicating the latest workflow review status: in progress, needs action, or approved. Clicking it opens a popover explaining the state and offering the relevant action, such as retrying publish for an approved but unpublished version. The banner disappears once the approved version, or a newer one, is published. Requires an enterprise license with workflow reviews enabled.</description>
+<title>Grist Node: Add OAuth2 as an authentication option</title>
+<link>https://github.com/n8n-io/n8n/pull/34798</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34798</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The Grist node now supports OAuth2 as an alternative to API key authentication. Add a Grist OAuth2 API credential with Client ID, Secret, and Grist URL, then connect via Grist's consent screen for scoped, revocable access (read, write, and offline access by default, customizable). API key authentication remains the default and unchanged, and existing workflows continue to work without modification.</description>
 </item>
 <item>
-<title>Make the review inbox URL-addressable with deep-linkable reviews</title>
-<link>https://github.com/n8n-io/n8n/pull/35201</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35201</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The workflow reviews inbox is now URL-addressable: selecting a review updates the URL, and the Open/Closed tab state is stored in the query string, so reloading a page keeps the same review and tab selected. Reviews can now be deep-linked, including from the submit-for-review and update-review confirmation dialogs, which link directly to the relevant review. Unknown or inaccessible review links show an inline not-found message instead of redirecting.</description>
+<title>Add Microsoft Dataverse core node</title>
+<link>https://github.com/n8n-io/n8n/pull/34286</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34286</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>Added a new Microsoft Dataverse core node, supporting Create, Update, Upsert, Delete, Get, and List Rows operations against a Dataverse environment. It uses a new Microsoft Dataverse OAuth2 API credential built on Microsoft Entra ID, supporting Authorization Code or Client Credentials grant types, with automatic token handling, pagination for large result sets, and built-in retry logic for transient errors.</description>
 </item>
 <item>
-<title>Add Require Workflow Execute Permission toggle for n8n User Auth (Webhook trigger)</title>
-<link>https://github.com/n8n-io/n8n/pull/35195</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35195</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The Webhook node now shows a &quot;Require Workflow Execute Permission&quot; toggle when using n8n User Auth (OAuth2) authentication. Enabled by default, it requires an authenticated caller to also hold workflow:execute permission before the webhook can run; disabling it allows any authenticated caller through. This mirrors the existing MCP Server Trigger behavior. The toggle is only visible behind the N8N_ENV_FEAT_WEBHOOK_PRIVATE_CREDENTIALS environment flag.</description>
+<title>HTTP Request Node: Add support for PROPFIND, MKCOL, MOVE, COPY and REPORT methods</title>
+<link>https://github.com/n8n-io/n8n/pull/24151</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/24151</guid>
+<pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.40</category>
+<description>The HTTP Request node (and HTTP Request Tool node) now support WebDAV methods PROPFIND, MKCOL, MOVE, COPY and REPORT, available via a new 'Enable WebDAV Methods' option in the node's Options. When enabled, these methods appear in the Method dropdown and correctly send a request body when Send Body is on, fixing previous silent body-dropping for non-standard methods. Useful for connecting to WebDAV servers and similar services.</description>
 </item>
 <item>
-<title>Make OIDC RP-initiated logout an opt-in setting</title>
-<link>https://github.com/n8n-io/n8n/pull/35146</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35146</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>OIDC RP-Initiated Logout is now opt-in and disabled by default. A new 'Log out from identity provider' toggle in SSO settings (also available via the public API) controls whether signing out of n8n also ends the session at the identity provider. Local n8n sign-out always happens regardless. This also fixes a rare case where a token encryption error during login could leave users on an error page.</description>
+<title>Add agent card chat preview action</title>
+<link>https://github.com/n8n-io/n8n/pull/37812</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37812</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>Agent cards in the Agents list now include a dedicated New Chat icon button, replacing the option previously buried in the card's overflow menu. Clicking it opens the agent builder with the preview panel already visible and immediately starts a new chat session, making it faster to test an agent.</description>
 </item>
 <item>
-<title>HTTP Request Node: Add Simplified Custom Auth generic credential</title>
-<link>https://github.com/n8n-io/n8n/pull/35068</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35068</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Added a new generic credential type, Simplified Custom Auth, for the HTTP Request node. It lets users define a JSON auth template with placeholder values (headers, query, or body) to authenticate against custom APIs, with sensitive values redacted in previews. A new backend probe endpoint lets the credential test itself against its own saved test URL, reporting whether the service accepted it. This is the first of three planned PRs; a guided setup UI and AI Assistant integration will follow.</description>
+<title>Microsoft Teams Node: Add the chat member get many operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37745</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37745</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Microsoft Teams node now supports a new Chat Member resource with a Get Many operation, letting users list the members of an existing chat via a chat picker, with optional limits or return-all pagination. This works with delegated OAuth2 credentials; since the chat picker cannot list chats under a Service Principal (app-only) credential, the resource's operation and fields are hidden with an explanatory notice in that case.</description>
 </item>
 <item>
-<title>Cal.com Trigger Node: Fully migrate to API v2</title>
-<link>https://github.com/n8n-io/n8n/pull/35055</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35055</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The Cal.com Trigger node now has a new version that fully uses Cal.com's API v2, fixing incorrect endpoints and response handling that previously caused errors since API v1 was deprecated. Credentials authentication and testing were also updated to work with API v2. Existing workflows using older node versions are unaffected, as previous versions remain unchanged.</description>
+<title>GraphQL Node: Add support for predefined credential types</title>
+<link>https://github.com/n8n-io/n8n/pull/37671</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37671</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The GraphQL node's Authentication dropdown now includes a &quot;Predefined Credential Type&quot; option, matching the HTTP Request node. Users can select from n8n's built-in credential types (such as GitHub API or Slack API) instead of manually re-entering auth details, making it easier to connect GraphQL endpoints for services n8n already supports.</description>
 </item>
 <item>
-<title>Close directly opened MCP settings after saving</title>
-<link>https://github.com/n8n-io/n8n/pull/35018</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35018</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>When opening an MCP server's settings directly from the Connections card, the settings modal now closes automatically after tools are saved successfully. If settings are instead opened from the tools list, the modal stays open so the Back button remains available, and failed saves keep the modal open in both cases so users can retry.</description>
+<title>Deprecate and hide the Ask AI tab in the Code node</title>
+<link>https://github.com/n8n-io/n8n/pull/37641</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37641</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Code node's &quot;Ask AI&quot; tab has been removed from the editor UI as part of deprecating AI code generation ahead of a future full removal. The underlying settings, API endpoint, and component remain in place for now, but the tab is no longer shown to users. The AI Transform node is unaffected and continues to work as before.</description>
 </item>
 <item>
-<title>Embeddings AWS Bedrock Node: Add inference profile models and node options</title>
-<link>https://github.com/n8n-io/n8n/pull/34991</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34991</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The Embeddings AWS Bedrock node now lists inference profile models alongside on-demand foundation models in its model picker, and adds a new Options collection for Timeout, Max Retries, and Additional Model Request Fields (JSON pass-through, supporting Titan and Cohere-specific parameters). Cohere embedding models are now supported. Existing workflows and stored vectors are unaffected.</description>
+<title>Add progress feedback to the artifact panel while the n8n Assistant builds</title>
+<link>https://github.com/n8n-io/n8n/pull/37562</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37562</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The n8n Assistant's artifact panel now shows live progress while the assistant is building or editing an agent or workflow. A floating 'n8n Assistant is making changes…' indicator appears over the agent preview, and spinners replace the icon on the affected artifact tab and sidebar row, so the panel feels connected to the chat instead of appearing idle mid-build. Indicators clear automatically once the change completes.</description>
 </item>
 <item>
-<title>Execute Workflow Node: Deprecate Local File and URL sources</title>
-<link>https://github.com/n8n-io/n8n/pull/34959</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34959</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The Execute Workflow node now shows a deprecation notice when its Source is set to 'Local File' or 'URL' (versions 1.1 and earlier), advising users to switch to the 'Database' source or paste workflow JSON into the 'Parameter' source instead. These sources are planned for removal in a future major version. This change only adds warnings and a migration report rule; no runtime behavior changes, and the removal itself is not part of this release.</description>
+<title>Microsoft Teams Node: Add get and reply operations for channel messages</title>
+<link>https://github.com/n8n-io/n8n/pull/37542</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37542</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Microsoft Teams node's Channel Message resource now supports three new operations: Get (fetch a single message by ID), Reply (post a threaded reply to an existing message), and Get Many Replies (list replies with pagination support). Replying is now a discoverable, dedicated action usable by AI agents, rather than a hidden option inside Create. Existing workflows using the old Reply to ID field continue to work unchanged. Create and Reply remain unavailable with Service Principal credentials, since app-only Graph access can't post channel messages.</description>
 </item>
 <item>
-<title>Migrate API keys settings page to new instance settings UI</title>
-<link>https://github.com/n8n-io/n8n/pull/34925</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34925</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The API keys settings page has been redesigned with the new instance-settings layout. The keys table now has clearer owner filtering, Mine and All tabs, a working scopes dialog, and improved create and edit flows showing expiration states including Never, which explains keys stay active until manually revoked. Generated keys use a copy field with truncated display and copy-to-check feedback, and Revoke now uses a clearer danger-styled action.</description>
+<title>Confluence Node: Add Atlassian Service Account (2LO) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/37536</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37536</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Confluence node now supports authenticating via an Atlassian Service Account (2LO) credential, alongside the existing Cloud OAuth2 option. A new Authentication selector lets you choose which credential to use, with all API calls, binary downloads, uploads, site selection, and caching routed accordingly. Existing workflows without the selector default to Cloud OAuth2, so behavior is unchanged.</description>
 </item>
 <item>
-<title>Auto-select credentials for pasted and imported nodes</title>
-<link>https://github.com/n8n-io/n8n/pull/34687</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34687</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Nodes pasted or imported into a workflow now have matching credentials auto-selected immediately, instead of only when the node editor is opened. This removes the brief credential error that used to flash on pasted or imported nodes. A toast notifies you when credentials were auto-selected, naming the credential for a single node or showing a generic message for multiple nodes. HTTP Request nodes are excluded since their credentials are generic.</description>
+<title>Jira Node: Add Atlassian Service Account (2LO) authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/37513</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37513</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Jira node now supports Atlassian Service Account authentication (OAuth 2.0 client credentials, 2LO) as a new 'Cloud (Service Account)' option alongside existing Cloud, Cloud OAuth2, Server, and Server PAT modes. Service accounts don't consume a Jira license seat and remain usable after employee offboarding. Existing credentials and workflows are unaffected. A related core fix prevents corrupted file uploads by avoiding replay of already-sent stream/form-data bodies after a token refresh.</description>
 </item>
 <item>
-<title>Show restricted API keys and instance roles sections with a reason instead of hiding them</title>
-<link>https://github.com/n8n-io/n8n/pull/34644</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34644</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>Users with a custom instance role lacking certain permissions no longer have entire sections hidden. The Roles page now shows both tabs, with Instance roles disabled and tooltipped when unauthorized. The API keys page is visible to everyone, letting users view and revoke their own keys regardless of role; creating, editing, or rotating keys remains restricted by role scopes, with disabled buttons and read-only views explaining why.</description>
+<title>Microsoft Teams Node: Add Online Meeting Get operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37501</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37501</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Microsoft Teams node's Online Meeting resource now supports a Get operation. Users can retrieve a meeting by its ID or by its join URL, using a single Meeting resource locator parameter. Lookups by URL query Microsoft Graph's onlineMeetings filter, while ID lookups fetch the meeting directly, with clearer error messages when a meeting can't be found.</description>
 </item>
 <item>
-<title>Add OIDC logout support</title>
-<link>https://github.com/n8n-io/n8n/pull/32756</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/32756</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>n8n now supports OIDC RP-Initiated Logout. When a user signs out and their session was established via an OIDC provider, n8n also invalidates the session at the identity provider, not just locally. The provider's ID token is stored encrypted in a cookie during login and used to build the logout URL; if the provider doesn't support this or the token is unavailable, sign-out still completes locally.</description>
+<title>Microsoft Teams Node: Add Online Meeting resource with Create operation</title>
+<link>https://github.com/n8n-io/n8n/pull/37500</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37500</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Microsoft Teams node now supports a new Online Meeting resource with a Create operation, letting you schedule Teams meetings with subject, start/end times, and optional settings like lobby bypass, meeting chat mode, presenter permissions, recording, and passcode. This requires an OAuth2 credential (reconnect existing ones to grant the new OnlineMeetings.ReadWrite scope); the feature is unavailable with Service Principal credentials.</description>
 </item>
 <item>
-<title>Brandfetch Node: Use explicit route types and simplify operations</title>
-<link>https://github.com/n8n-io/n8n/pull/28846</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/28846</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The Brandfetch node now has a new v2 version using Brandfetch's explicit typed routes such as Domain, Stock or ETF Ticker, Crypto Symbol, and ISIN instead of a single generic endpoint, avoiding identifier collisions. It adds a Type selector and Identifier field, plus simplified operations: Return Logos or Symbols or Icon, Return Colors, Return All Brand Data, and Return Brand Context. The previous version remains available as v1.</description>
+<title>Update node creator empty state and add a link to suggest an MCP service</title>
+<link>https://github.com/n8n-io/n8n/pull/37339</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37339</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>Update node creator empty state. Updated the node creator's empty state when a search returns no results, restoring suggestions to use HTTP Request or Webhook nodes where relevant.</description>
 </item>
 <item>
-<title>OpenAI Chat Model Node: Add optional extraBody option</title>
-<link>https://github.com/n8n-io/n8n/pull/13992</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/13992</guid>
-<pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.34</category>
-<description>The OpenAI Chat Model node now supports an optional Extra Body field, letting you add custom JSON properties to the request body sent to OpenAI-compatible APIs such as Qwen-Max or vLLM. This enables use of provider-specific parameters not otherwise exposed by the node. Invalid or non-object JSON input is rejected with a clear error.</description>
+<title>Gmail Trigger Node: Finish each poll within its time budget</title>
+<link>https://github.com/n8n-io/n8n/pull/37319</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37319</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Gmail Trigger node (v1.4+) now respects the polling engine's time budget, stopping scanning, queue draining, and retries before the tick is forcibly cut off, so no work is lost. It also waits for three consecutive no-progress polls before giving up on a stuck backlog window (instead of one), and no longer mistakes an empty page for the end of a scan. Older versions and manual runs are unaffected.</description>
 </item>
 <item>
-<title>AWS Bedrock Chat Model Node: Surface inference-profile models in the default model picker</title>
-<link>https://github.com/n8n-io/n8n/pull/34983</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34983</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>The AWS Bedrock Chat Model node's Model dropdown now shows both on-demand foundation models and cross-region inference profiles together, so newer models like Claude Sonnet 4.x and Nova are visible without switching a separate Model Source toggle. This works with IAM and Assume Role credentials, and respects custom Bedrock Endpoint overrides. Existing workflows on older node versions keep their previous Model Source toggle and settings unchanged.</description>
+<title>Databricks Node: Send a partner User-Agent on every API call</title>
+<link>https://github.com/n8n-io/n8n/pull/37279</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37279</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Databricks node now sends a partner User-Agent (n8n_DatabricksNode/1.0) on every API call and credential test, so Databricks can attribute traffic from n8n in its audit logs and Query History. This required routing all API calls through a shared request helper. No functional changes to requests or node behavior; this is purely for traffic attribution.</description>
 </item>
 <item>
-<title>Migrate OpenTelemetry settings page to new instance settings UI</title>
-<link>https://github.com/n8n-io/n8n/pull/34965</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34965</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>The OpenTelemetry settings page has been redesigned with n8n's updated instance settings UI. Enabling or disabling tracing now applies instantly via a single control, with a floating save bar for other changes like endpoint, sample rate, and headers. Sample rate and timeout fields now format values consistently, and configuration errors and environment-managed fields are shown more clearly.</description>
+<title>Allow users to resize the review inbox sidebar</title>
+<link>https://github.com/n8n-io/n8n/pull/37196</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37196</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The workflow review inbox sidebar can now be resized by dragging its right edge, with a visible handle indicator while hovering or dragging. It defaults to 25% of the inbox width (clamped between 240–400px), can be resized between 240px and min(640px, 50%) of the available width, and remembers your chosen width proportionally across window resizes and navigation.</description>
 </item>
 <item>
-<title>Microsoft Excel (SharePoint) Node: Add node for Excel workbooks in SharePoint document libraries</title>
-<link>https://github.com/n8n-io/n8n/pull/34847</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34847</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>The Microsoft Excel (SharePoint) node is now visible in the nodes panel. Previously registered but hidden while operations were built out to match the OneDrive Excel node, it has now reached full parity and been verified against a real Microsoft 365 tenant with both OAuth2 and Entra Service Principal credentials. Existing workflows using it are unaffected, as the node was always functional.</description>
+<title>Airtop Node: Support running an agent with a specific browser profile</title>
+<link>https://github.com/n8n-io/n8n/pull/34933</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34933</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Airtop node's Run an agent operation now supports selecting a specific Browser Profile ID, so agents can run against a saved browser profile instead of only the default. When set, the profile ID is sent to the agent; leaving it empty preserves the previous default behaviour. The existing session/extraction profile field has also been relabelled 'Browser Profile ID' for clarity, with no change to underlying parameters or API requests.</description>
 </item>
 <item>
-<title>Polish end-user credential setup modal and NDV states</title>
-<link>https://github.com/n8n-io/n8n/pull/34766</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34766</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>Improved the end-user credential setup experience for OAuth credentials. The credential type selector is now a dropdown, disabled with a tooltip for users without permission to change it. Connection banners are clearer: a neutral disconnected state, and a connected state showing it's private to you with Switch account and Disconnect options. The NDV credential picker also gains a simplified connect placeholder with Switch account/Disconnect actions.</description>
+<title>Edit Image Node: Add horizontal and vertical text alignment options</title>
+<link>https://github.com/n8n-io/n8n/pull/34505</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34505</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Edit Image node's Add Image Text operation now includes Horizontal Alignment (Left/Center/Right) and Vertical Alignment (Top/Middle/Bottom) options, letting you reliably position text without manual trial-and-error on Position X/Y. Multiline text is centered per-line. Position X/Y now act as offsets relative to the chosen alignment. Available on node version 1.1+; existing workflows on version 1 keep the previous default (top-left) behavior.</description>
 </item>
 <item>
-<title>Allow custom OAuth scopes for the remaining Google credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/34631</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34631</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>Google OAuth2 credentials for Gmail, Google Ads, Analytics, Books, Business Profile, Chat, Cloud Natural Language, Contacts, Docs, Drive, Firebase (Firestore and Realtime Database), Perspective, Sheets Trigger, Slides, Tasks, Translate, YouTube, and Workspace Admin now support custom OAuth scopes. A Custom Scopes toggle reveals a warning and an editable Enabled Scopes field prefilled with each credential's defaults, letting users request additional Google API permissions during authorization while default behavior remains unchanged when the toggle is off.</description>
+<title>G Suite Admin Node: Add &quot;orgUnitPath&quot; option to User create and update operations</title>
+<link>https://github.com/n8n-io/n8n/pull/20108</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/20108</guid>
+<pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.39</category>
+<description>The Google Workspace Admin node now supports an Organizational Unit field (orgUnitPath) on the User Create and Update operations, letting you assign an existing organizational unit to a user directly when creating or updating them. The organizational unit selector also now includes the root unit as an option.</description>
 </item>
 <item>
-<title>Adds modal to see all projects a user can access in a list</title>
-<link>https://github.com/n8n-io/n8n/pull/34619</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/34619</guid>
-<pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.33</category>
-<description>In the admin Users list, the Projects column for members with access to specific projects is now clickable, opening a modal listing all their projects with each project's role (e.g. admin, editor) and an icon. The modal includes a search field to filter by project name. This doesn't apply to Owners/Admins ('All projects') or users with only a personal project.</description>
+<title>Add Contact Support link to Help menu for Cloud instances</title>
+<link>https://github.com/n8n-io/n8n/pull/37414</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37414</guid>
+<pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.38.1</category>
+<description>n8n Cloud instances now show a &quot;Contact Support&quot; item in the editor's Help menu, linking to support.n8n.io in a new tab. It appears between &quot;Course&quot; and &quot;Report a bug&quot; and is only visible on Cloud deployments, giving Cloud users quicker access to support resources. Self-hosted instances are unaffected.</description>
 </item>
 </channel>
 </rss>

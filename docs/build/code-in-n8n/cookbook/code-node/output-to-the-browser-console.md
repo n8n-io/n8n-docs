@@ -39,30 +39,19 @@ a = "apple"
 print(a)
 ```
 
-### Handling an output of `[object Object]` <a href="#handling-an-output-of-object-object" id="handling-an-output-of-object-object"></a>
+### Printing node data <a href="#printing-node-data" id="printing-node-data"></a>
 
-If the console displays `[object Object]` when you print, check the data type, then convert it as needed.
-
-To check the data type:
+`_items` and `_item` are standard Python objects, so you can print them directly:
 
 ```python
-print(type(myData))
+print(_items)
 ```
 
-#### JsProxy <a href="#jsproxy" id="jsproxy"></a>
+{% hint style="info" %}
+**`type()` isn't available**
 
-If `type()` outputs `<class 'pyodide.ffi.JsProxy'>`, you need to convert the JsProxy to a native Python object using `to_py()`. This occurs when working with data in the n8n node data structure, such as node inputs and outputs. For example, if you want to print the data from a previous node in the workflow:
-
-```python
-previousNodeData = _("<node-name>").all();
-for item in previousNodeData:
-	# item is of type <class 'pyodide.ffi.JsProxy'>
-	# You need to convert it to a Dict
-	itemDict = item.json.to_py()
-	print(itemDict)
-```
-
-Refer to the Pyodide documentation on [JsProxy](https://pyodide.org/en/stable/usage/api/python-api/ffi.html#pyodide.ffi.JsProxy) for more information on this class.
+The Python Code node denies some built-in functions by default, including `type()`. Refer to [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for the full list and how to change it when self-hosting.
+{% endhint %}
 
 
 

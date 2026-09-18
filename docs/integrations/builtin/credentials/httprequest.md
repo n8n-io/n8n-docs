@@ -238,7 +238,7 @@ Use this generic authentication if your app or service expects static authentica
 
 Simplified Custom Auth works like [Custom auth](httprequest.md#using-custom-auth): JSON that n8n merges into every request that uses the credential. The difference is that the JSON is a template containing `{{placeholder}}` markers instead of the secrets themselves. The credential form shows one field per placeholder, and n8n replaces each marker with the field's value when it sends a request.
 
-This split exists so the AI Assistant can prepare the setup part for you. When the [AI Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/ai-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
+This split exists so n8n Assistant can prepare the setup part for you. When [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant) builds a workflow for a service that has no dedicated n8n credential, it creates this credential type: it prepares the template, the fields, and the test URL from the service's API documentation, and you only paste the secret values into the form. It also records the service's API host so that n8n only offers the credential to nodes calling the same service.
 
 You can also set up the credential yourself. Select **Edit setup** in the credential modal and enter:
 
@@ -246,7 +246,7 @@ You can also set up the credential yourself. Select **Edit setup** in the creden
 * The **Fields** settings for each placeholder: a **Label**, whether the value is **Secret** (masked) or **Plain text**, whether it's **Required**, and an optional **Hint** clarifying the expected value, such as its format.
 * _Optional:_ A **Test URL**: A GET endpoint n8n calls with the authentication applied to check that the credential works when you save it. Pick a side-effect-free endpoint that never triggers billable work, such as an account or profile endpoint.
 * _Optional:_ **Accepted status codes**: Status codes to treat as success alongside 2xx responses when testing the credential, such as `403` for services that return 403 for a valid key with limited scopes.
-* _Optional:_ A **Documentation URL**: The provider page where you create or copy the secret. It doesn't appear in the credential form; the AI Assistant uses it to point you to the exact page.
+* _Optional:_ A **Documentation URL**: The provider page where you create or copy the secret. It doesn't appear in the credential form; n8n Assistant uses it to point you to the exact page.
 
 Then go back to the form and enter a value for each field. n8n redacts the values after saving.
 

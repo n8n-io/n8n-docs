@@ -28,7 +28,7 @@ You don't need to know Docker to use this guide; just have it installed and runn
 The one-line setup command requires the `docker compose` v2 plugin specifically (not the older standalone `docker-compose` binary), and checks that the Docker daemon is running. If you're using Podman, Colima, or other Docker-compatible engines, install the `docker` CLI with the compose plugin and point `DOCKER_HOST` at their socket.
 {% endhint %}
 
-Watch a video guide covering this setup, from installing Docker to [turning on the AI Assistant](#optional-turn-on-the-ai-assistant):
+Watch a video guide covering this setup, from installing Docker to [turning on n8n Assistant](#optional-turn-on-n8n-assistant):
 
 {% embed url="https://www.youtube.com/embed/t5RBVTby9EU" %}
 
@@ -84,23 +84,23 @@ Running the command sets up everything below automatically. There's nothing extr
 |---|---|
 | **n8n** | The workflow editor itself, running at `http://localhost:5678`. |
 | **A built-in database** | Stores your workflows, credentials, and execution history. This is [SQLite](https://www.sqlite.org/), a lightweight database that lives in a file. You don't need to install or manage a separate database server. |
-| **AI Assistant support services** | A sandbox that safely runs the code the AI Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on the AI Assistant](#optional-turn-on-the-ai-assistant) |
+| **n8n Assistant support services** | A sandbox that safely runs the code n8n Assistant writes, and a bundled search tool so it can look things up on the web. These start automatically alongside n8n, but the assistant itself stays switched off until you add an AI provider key. See [Turn on n8n Assistant](#optional-turn-on-n8n-assistant) |
 
 If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
 
-The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md) for how to configure it.
+The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure it.
 
-## Optional: Turn on the AI Assistant
+## Optional: Turn on n8n Assistant
 
-n8n works fully without the AI Assistant, which is an optional extra. Once n8n is running, the easiest way to turn it on is from the UI in the instance's AI settings. Add your model API key there. Prefer to configure it before you ever log in? Edit `.env` instead:
+n8n works fully without n8n Assistant, which is an optional extra. Once n8n is running, the easiest way to turn it on is from the UI in the instance's AI settings. Add your model API key there. Prefer to configure it before you ever log in? Edit `.env` instead:
 
 1. Open the `.env` file the command created (in `./n8n/.env` by default).
 2. Add your AI provider key to the `N8N_INSTANCE_AI_MODEL_API_KEY` line.
 3. Restart n8n: `docker compose -f ./n8n/compose.yml up -d`
 
-Full setup steps, including the supported providers, are in [Set up the AI Assistant](../configure-n8n/set-up-ai-assistant.md).
+Full setup steps, including the supported providers, are in [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
 
-By default, the AI Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
+By default, n8n Assistant's web search runs through a bundled search tool with no setup needed. If you'd rather use Brave Search, add your Brave API key to `INSTANCE_AI_BRAVE_SEARCH_API_KEY` in the same `.env` file. It's used automatically once it's set.
 
 {% hint style="info" %}
 You don't need to open any extra ports or configure anything for these services. Only n8n itself (port `5678`) is ever reachable from outside your machine. Everything else stays private by default.
@@ -115,6 +115,12 @@ You don't need to open any extra ports or configure anything for these services.
 | Upgrade to the latest version | `curl -fsSL https://get.n8n.io \| sh -s -- --upgrade` |
 | Remove n8n and delete its data | `docker compose -f ./n8n/compose.yml down -v` then `rm -rf ./n8n` |
 
+### What an upgrade changes
+
+The upgrade command moves both n8n and the bundled sandbox services to newer versions. It edits two lines in `.env`: `N8N_VERSION` and `N8N_SANDBOX_VERSION`. Your data, secrets, and other settings stay as they are.
+
+If you installed before the sandbox version moved into `.env`, your `compose.yml` still names fixed sandbox image tags. The first upgrade rewrites those image lines to use `N8N_SANDBOX_VERSION`, switches the sandbox runner address (`SANDBOX_RUNNER_HTTP_BASE_URL`) from `http://` to `https://`, and prints a note that says so. Nothing else in `compose.yml` changes, so any edits you made stay in place.
+
 ## Flags (for more control)
 
 Adding these to the end of the install command changes what it does:
@@ -123,7 +129,7 @@ Adding these to the end of the install command changes what it does:
 |---|---|
 | `--version` | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version. |
 | `--no-start` | Sets up the configuration files without starting n8n yet. |
-| `--upgrade` | Upgrades an existing install to a newer n8n version. Only updates the version number. Your data, settings, and any customizations stay untouched. |
+| `--upgrade` | Upgrades an existing install to a newer n8n version and the matching sandbox service version. Only updates the version lines in `.env` and, on older installs, the sandbox image lines and runner address in `compose.yml`. See [What an upgrade changes](#what-an-upgrade-changes). Your data, settings, and any other customizations stay untouched. |
 | `--help` | Shows all available options. |
 
 ## Prefer not to run a script from the internet?

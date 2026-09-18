@@ -43,6 +43,12 @@ Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for
 Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
 {% endhint %}
 
+### Video: how agents fit with workflows and AI
+
+Agents, fixed workflows, and workflows that use AI for specific steps each suit different kinds of work. Watch how the three compare, and how they work together in production-ready systems.
+
+{% embed url="https://www.youtube.com/embed/P5x0nsY8hCg" %}
+
 ### What you can build with agents
 
 Use agents to answer questions using your uploaded files and connected services, take actions in tools like Slack, Google Sheets, or Linear, and trigger or coordinate workflows to complete larger tasks. Agents can also delegate to other agents and run on a schedule. See [Sub-agents](build-and-manage-agents.md#add-sub-agents) and [Schedules](build-and-manage-agents.md#run-agents-on-a-schedule) below.
@@ -62,6 +68,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent. |
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
 | **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](integrate-ai/mcp-servers.md).                 |
+| **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service. |
 | **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
@@ -88,9 +95,9 @@ Build agents in the Agent Builder. Start with a name and a model, add instructio
 3. In the **Agent** tab, enter a name for the agent. Use the icon picker to change the icon.
 
 {% hint style="info" %}
-**Use the AI Assistant**
+**Use n8n Assistant**
 
-Describe what you want the agent to do to the [AI Assistant](ways-of-building-workflows/ai-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
+Describe what you want the agent to do to the [n8n Assistant](ways-of-building-workflows/n8n-assistant.md). It suggests instructions, tools, and skills to add. Refine the suggestions in the Agent Builder as you go.
 {% endhint %}
 
 #### Choose a model
@@ -108,6 +115,13 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](integrate-ai/mcp-servers.md).
 
 The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](build-and-manage-agents.md#approve-tool-calls).
+
+#### Enable web search
+
+In the **Capabilities** section enable **Web search** to let the agent look up current information such as prices, docs, and news without adding a tool yourself.
+
+* If the model you chose offers its own native web search tool, the agent uses it directly.
+* If it doesn't, choose [Brave Search](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/bravesearch) or a self-hosted [SearXNG](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/searxng) instance as the fallback, and add credentials for whichever one you pick.
 
 #### Bundle capabilities with skills
 
@@ -253,7 +267,7 @@ You can use agents within your workflows in two ways:
 Agents run on self-hosted n8n from 2.32.3 (Beta). There are two ways to set them up:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
-* **Full experience**: also set up [AI Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
+* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
 {% hint style="warning" %}
 Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
@@ -263,7 +277,7 @@ Agents aren't ready for self-hosted Enterprise yet. Support for self-hosted Ente
 Queue mode isn't supported for agents yet, and connecting channels (such as Telegram) can fail. Run agents in regular mode for now.
 {% endhint %}
 
-For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-ai-assistant#enable-agents).
+For the environment variables and setup steps, see [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 
 ### Agent executions and pricing
 

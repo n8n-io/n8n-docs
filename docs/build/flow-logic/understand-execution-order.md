@@ -13,6 +13,8 @@ layout:
 
 # Execution order in multi-branch workflows <a href="#execution-order-in-multi-branch-workflows" id="execution-order-in-multi-branch-workflows"></a>
 
+Execution order is part of your workflow's [flow logic](./), and matters most in workflows that [split into multiple branches](split-with-conditionals.md).
+
 n8n's node execution order depends on the version of n8n you're using:
 
 * For workflows created before n8n 1.0: n8n executes the first node of each branch, then the second node of each branch, and so on.
@@ -21,3 +23,14 @@ n8n's node execution order depends on the version of n8n you're using:
 You can change the execution order in your [workflow settings](../manage-workflows/configure-workflow-settings.md).
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
+
+## Related resources
+
+* [Flow logic](./)
+* [Split with conditionals](split-with-conditionals.md)
+* [Merge data](merge-data.md)
+* [Loop](loop.md)
+* [Wait](wait.md)
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md)
+* [Convert to sub-workflows](convert-to-sub-workflows.md)
+* [Handle errors gracefully](handle-errors-gracefully.md)

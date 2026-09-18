@@ -29,6 +29,7 @@ Create a [Snowflake](https://www.snowflake.com/en/) account.
 
 - [Password](#using-password-authentication)
 - [Key-pair](#using-key-pair-authentication)
+- [OAuth2](#using-oauth2-authentication)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -65,3 +66,43 @@ In addition to the [common configuration fields](#common-configuration-fields), 
 - A **Passphrase** (optional): If your private key is encrypted, enter the passphrase used to encrypt it. Leave this field empty if you're using an unencrypted private key.
 
 Refer to [Snowflake's key-pair authentication documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth) for more information about generating and configuring key pairs.
+
+## Using OAuth2 authentication <a href="#using-oauth2-authentication" id="using-oauth2-authentication"></a>
+
+OAuth2 authentication uses a separate **Snowflake OAuth2 API** credential, and needs an OAuth security integration set up in Snowflake first.
+
+Using the `ACCOUNTADMIN` role, or a role with the `CREATE INTEGRATION` privilege, run the following in Snowflake:
+
+```sql
+CREATE SECURITY INTEGRATION n8n_oauth_integration
+  TYPE = OAUTH
+  ENABLED = TRUE
+  OAUTH_CLIENT = CUSTOM
+  OAUTH_CLIENT_TYPE = 'CONFIDENTIAL'
+  OAUTH_REDIRECT_URI = '<YOUR_REDIRECT_URL>'
+  OAUTH_ALLOW_NON_TLS_REDIRECT_URI = TRUE
+  OAUTH_ISSUE_REFRESH_TOKENS = TRUE
+  OAUTH_REFRESH_TOKEN_VALIDITY = 7776000
+  OAUTH_USE_SECONDARY_ROLES = IMPLICIT
+  OAUTH_ENFORCE_PKCE = TRUE;
+```
+
+Replace `<YOUR_REDIRECT_URL>` with the **OAuth Redirect URL** shown on the n8n credential. If you're connecting over HTTPS, you can remove the `OAUTH_ALLOW_NON_TLS_REDIRECT_URI` line.
+
+Then retrieve the client ID and secret:
+
+```sql
+SELECT SYSTEM$SHOW_OAUTH_CLIENT_SECRETS('N8N_OAUTH_INTEGRATION');
+```
+
+Refer to Snowflake's [OAuth for custom clients](https://docs.snowflake.com/en/user-guide/oauth-custom) documentation for more information.
+
+In addition to the [common configuration fields](#common-configuration-fields), OAuth2 authentication requires:
+
+- A **Client ID** and **Client Secret**: from the security integration you created above.
+
+To quickly find your Account, Warehouse, and Schema values, select your username in Snowflake, go to **Account**, then select **View Account Details** for the account you want to use. Select **Config File** and pick your **Warehouse** and **Schema** to see the connection details you need.
+
+Select **Connect my account** in n8n to start the OAuth2 flow. n8n redirects you to Snowflake to sign in and authorize the app, then redirects back with a token.
+
+The OAuth2 credential doesn't have a separate **Role** field. Instead, n8n requests the role as part of the OAuth scope: the default scope is `refresh_token session:role:SYSADMIN`, which requests the `SYSADMIN` role. To use a different role, or request additional scopes, turn on **Custom Scopes** and edit **Enabled Scopes**, replacing `session:role:SYSADMIN` with `session:role:<YOUR_ROLE>`. Keep in mind that removing the default scopes may cause the node to stop working correctly.

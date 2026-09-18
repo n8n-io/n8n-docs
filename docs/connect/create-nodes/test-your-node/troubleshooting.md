@@ -81,7 +81,7 @@ Check that you registered the node in the `package.json` file in your project.
 ### Changes to the description properties don't show in the UI on refreshing <a href="#changes-to-the-description-properties-dont-show-in-the-ui-on-refreshing" id="changes-to-the-description-properties-dont-show-in-the-ui-on-refreshing"></a>
 
 
-Every time you change the description properties, you have to stop the current n8n process (`ctrl` + `c`) and run it again. You may also need to re-run `npm link`.
+Every time you change the description properties, you have to stop the current `n8n-node dev` process (`ctrl` + `c`) and run it again.
 
 ### Linter incorrectly warning about file name case <a href="#linter-incorrectly-warning-about-file-name-case" id="linter-incorrectly-warning-about-file-name-case"></a>
 

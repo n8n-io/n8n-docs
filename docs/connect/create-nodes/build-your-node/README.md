@@ -13,7 +13,10 @@ layout:
 
 This section provides tutorials on building nodes. It covers:
 
+* [Set up your development environment](set-up-your-development-environment.md)
+* [Using the `n8n-node` tool](using-the-n8n-node-tool.md) to create, build, and test your node
 * [Tutorial: Build a declarative-style node](tutorial-build-a-declarative-style-node.md)
+* [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
 * [Reference](reference/README.md) material on [file structure](../plan-your-node/choose-node-file-structure.md), parameter definitions for [base](reference/base-files/README.md), [codex](reference/codex-files.md), and [credentials](reference/credentials-files.md) files, [node UI elements](reference/node-ui-elements.md), and more.
 
 Coming soon:

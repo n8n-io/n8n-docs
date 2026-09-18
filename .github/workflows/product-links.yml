@@ -1,0 +1,55 @@
+name: Product links to docs
+# Weekly check of the docs.n8n.io links hardcoded in the n8n product repo
+# (node notices, credential hints, error messages). Resolves each URL's path
+# AND #anchor against this repo's markdown, then POSTs the findings to the
+# DocOps n8n webhook (secret DOCOPS_PRODUCT_LINKS_WEBHOOK_URL), which live-checks
+# the unresolved paths, alerts Slack, adds a dated tab to the "DocOps - Product
+# Links" Google Sheet and stores the rows in Supabase.
+# Broken links do not fail this job: the job is red only if the scan could not
+# run or the report could not be delivered (DOC-2318).
+on:
+  schedule:
+    - cron: "48 7 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  product-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Deliberately no `ref: main`. This checkout supplies BOTH the docs the
+      # links resolve against AND the scanner itself, so pinning it to main
+      # would make a workflow_dispatch from a branch run main's scanner and
+      # silently ignore the change being tested. Scheduled runs are always on
+      # main; a dispatch from a branch resolves against that branch's docs,
+      # which is what you want when testing one. The run URL in the Slack
+      # message identifies which ref produced a report.
+      - name: Checkout docs repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Checkout n8n product repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: n8n-io/n8n
+          path: n8n-src
+          fetch-depth: 1
+          # Product source only: everything the scanner reads lives here, and
+          # skipping the rest keeps the clone small.
+          sparse-checkout: packages
+
+      - name: Record scanned commit
+        id: n8n
+        working-directory: n8n-src
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Check product links and send report to n8n
+        env:
+          N8N_SRC: n8n-src
+          N8N_REPO: n8n-io/n8n
+          N8N_SHA: ${{ steps.n8n.outputs.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          WEBHOOK_URL: ${{ secrets.DOCOPS_PRODUCT_LINKS_WEBHOOK_URL }}
+          WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
+          WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
+        run: python3 .github/scripts/product_links_report.py

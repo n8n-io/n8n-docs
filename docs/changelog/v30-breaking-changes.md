@@ -26,7 +26,13 @@ Self-hosted n8n will require a Docker-based deployment. n8n 3.0 will no longer s
 
 ## Community node development
 
-These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) test loop only. `n8n-node build`, `n8n-node lint`, `n8n-node release`, and `npm create @n8n/node` are unchanged.
+### `defaults.color` removed from the node description
+
+n8n 3.0 removes the deprecated `defaults.color` property from the node description type. It only tinted Font Awesome icons (`icon: 'fa:...'`). Community nodes that still set it keep working, but the editor shows a Font Awesome icon in a neutral color. Nodes with a file icon (`icon: 'file:...'`) aren't affected, because n8n never tints file icons.
+
+**What to do:** Remove `defaults.color`. If your node uses a Font Awesome icon, replace it with an SVG or PNG file icon, as the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters#icon) reference recommends.
+
+The remaining changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) test loop only. `n8n-node build`, `n8n-node lint`, `n8n-node release`, and `npm create @n8n/node` are unchanged.
 
 ### n8n-node dev requires Docker or Podman
 
@@ -60,21 +66,67 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Function Item** node (legacy)
 - **Item Lists** node (legacy)
 - **LangChain Code** node (legacy)
+- **Cron** and **Interval** nodes
+- **HTML Extract** node
+- **iCalendar** node
+- **Convert to/from binary data** node
+- **Read Binary File**, **Read Binary Files**, and **Write Binary File** nodes
+- **Read PDF** node
+- **Workflow Trigger** node
+- **Orbit** node
+- **OpenAI** node (legacy). The current **OpenAI** node in the AI section stays.
+- **OpenAI Assistant** and **OpenAI Model** nodes
+- **HTTP Request Tool** node (legacy). Using the **HTTP Request** node as a tool stays.
+- **SerpApi (Google Search)** node
+- **Manual Chat Trigger** node
+- **Chat Messages Retriever** node
+- **Motorhead** and **Zep** memory nodes
+- **Binary Input Loader**, **JSON Input Loader**, and **GitHub Document Loader** nodes
+- **In Memory Vector Store Insert**, **In Memory Vector Store Load**, **Pinecone: Insert**, **Pinecone: Load**, **Supabase: Insert**, **Supabase: Load**, **Zep Vector Store**, **Zep Vector Store: Insert**, and **Zep Vector Store: Load** nodes
 - **AI Transform** node: n8n automatically migrates existing nodes to [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) nodes on upgrade, keeping the same generated JavaScript, so existing workflows keep working without changes. You can no longer add an **AI Transform** node. Write JavaScript directly in the **Code** node instead.
 - **What to do:** Migrate affected workflows to the current recommended alternatives before upgrading:
   - Replace **Function** and **Function Item** nodes with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize).
+  - Replace **Cron** and **Interval** with the [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) node.
+  - Replace **HTML Extract** with the [HTML](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.html) node's **Extract HTML Content** operation.
+  - Replace **iCalendar** with the [Convert to File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) node's **Convert to ICS** operation.
+  - Replace **Convert to/from binary data** with the [Convert to File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.converttofile) or [Extract from File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.extractfromfile) node.
+  - Replace **Read Binary File**, **Read Binary Files**, and **Write Binary File** with the [Read/Write Files from Disk](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.readwritefile) node.
+  - Replace **Read PDF** with the [Extract from File](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.extractfromfile) node's **Extract From PDF** operation.
+  - Replace **Workflow Trigger** with the [n8n Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8ntrigger) node.
+  - Replace the legacy **OpenAI** node and the **OpenAI Assistant** node with the [OpenAI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-langchain.openai) node. For assistants, use its **Assistant** resource.
+  - Replace **OpenAI Model** with the [OpenAI Chat Model](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai) node.
+  - Replace the legacy **HTTP Request Tool** with the **HTTP Request** node connected to the **Tool** input of the **AI Agent** node.
+  - Replace **Manual Chat Trigger** with the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) node.
+  - Replace **Chat Messages Retriever** with the [Chat Memory Manager](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node, or load previous sessions in the **Chat Trigger** node.
+  - Replace **Binary Input Loader**, **JSON Input Loader**, and **GitHub Document Loader** with the [Default Data Loader](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader) node. For GitHub content, fetch it with the **GitHub** node first.
+  - Replace the **Insert** and **Load** vector store nodes with the single node for that store: [Simple Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory), [Pinecone Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone), or [Supabase Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase). Pick the operation (**Insert Documents**, **Get Many**, or **Retrieve Documents**) in the node.
+  - **Motorhead**, **Zep**, and the **Zep Vector Store** nodes have no direct replacement. Use another supported [memory](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes) or [vector store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes) node.
+  - **SerpApi (Google Search)** has no direct replacement. Call the SerpApi REST API with the **HTTP Request** node connected as a tool, or use a verified community node.
+  - **Orbit** has no replacement. The Orbit service shut down.
 
 ### Removed expression helpers <a href="#removed-expression-helpers" id="removed-expression-helpers"></a>
 
 - n8n 3.0 removes the deprecated `$getPairedItem` expression helper.
   - **What to do:** Use n8n's standard [item linking](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/reference-data/link-data-items/how-items-link-through-workflows) instead, for example the `pairedItem` property or `$("<node-name>").item`.
 
-### Execute Workflow node: Run once for each item mode removed
+### Execute Sub-workflow node: Local File and URL sources removed
 
-n8n 3.0 removes the **Run once for each item** mode from the **Execute Workflow** node. Workflows that use it fail until you update them.
+n8n 3.0 removes the **Local File** and **URL** options from the **Source** parameter of the [Execute Sub-workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node. Only node versions 1.1 and older offered them. Nodes that still use one of these sources fail with an error.
 
-**What to do:** Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
+**What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source (**Parameter** on node versions 1.1 and older). Before you update, **Settings > Migration Report** lists the affected nodes.
+
+### Any workflow caller policy removed
+
+n8n 3.0 removes the **Any workflow** option from the **This workflow can be called by** setting in the [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings). This option let any project on the instance call the sub-workflow, which bypassed project permissions. Sub-workflows that still store this policy reject every call, including calls from the same project, until you save a supported policy. `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any` logs a warning at startup and falls back to the default, the same-project option.
+
+**What to do:** Open the settings of each affected sub-workflow and select **Selected workflows** or the same-project option, then save. Before you update, **Settings > Migration Report** lists the affected workflows. If you set `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any`, change or remove the variable.
+
+### Execute Sub-workflow node: Run once for each item mode removed
+
+n8n 3.0 removes the **Run once for each item** mode from the **Execute Sub-workflow** node. Workflows that use it fail until you update them.
+
+**What to do:** Use a **Loop Over Items** node before an **Execute Sub-workflow** node in **Run once with all items** mode instead.
 
 ### Always Output Data on nodes with several outputs
 
@@ -87,6 +139,30 @@ With **Always Output Data** on, nodes with several outputs, for example **If** a
 n8n 3.0 removes the `$evaluateExpression()` convenience method from the **Code** node (JavaScript). Only task runners in insecure mode (`N8N_RUNNERS_INSECURE_MODE=true`) are affected. Secure-mode runners, the default since n8n 2.0, already fail on this call.
 
 **What to do:** Evaluate the expression in a node field instead, for example in an **Edit Fields (Set)** node before the **Code** node, and read the result from the input item. `$evaluateExpression()` keeps working in `{{ }}` expression fields.
+
+### Gmail Trigger node: Older versions run as version 1.4
+
+n8n 3.0 removes the separate behavior of **Gmail Trigger** node versions 1 to 1.3. Workflows that use these versions keep loading, but the node runs with the version 1.4 behavior:
+
+- **Max Emails per Poll** applies to every poll. The default is 10 emails, and you can set up to 50. The node picks up the remaining emails in later polls.
+- The node skips drafts unless you turn on the **Include Drafts** filter. Versions 1 and 1.1 included drafts by default.
+- Sent emails that aren't in the inbox, and scheduled emails, no longer trigger the workflow.
+
+**What to do:** Review workflows with a **Gmail Trigger** node below version 1.4. If a workflow relies on drafts, turn on **Include Drafts**. If a workflow relies on sent or scheduled emails, replace the trigger with a **Schedule Trigger** node followed by the [Gmail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) node's **Get Many** messages operation.
+
+### Webflow OAuth2 credential: Legacy toggle off by default
+
+The **Legacy** toggle on the **Webflow OAuth2 API** credential defaults to off. New credentials request the Webflow v2 API scopes (`cms:read cms:write sites:read forms:read`). Existing credentials that never saved an explicit **Legacy** value request these scopes the next time you reconnect them. Connected credentials keep working: n8n doesn't touch stored tokens, and token refresh doesn't send scopes.
+
+**What to do:** If you still use the deprecated Webflow v1 Data API, for example with a legacy Webflow OAuth app or the **Webflow** node at version 1, turn on **Legacy** on the credential before you reconnect it. Webflow rejects the connection if the requested scopes aren't configured on your app.
+
+### Chat Trigger node: WebSocket messages are JSON frames
+
+The chat WebSocket endpoint that the **Chat Trigger** node uses in the **Using Response Nodes** response mode, where the **Chat** node sends replies, now sends every frame as a JSON object with a `type` field: `heartbeat`, `continue`, `error`, `message`, or `with-buttons`. Before, control frames and plain text replies were raw strings. A text reply is now `{ "type": "message", "text": "..." }`. The client acknowledges heartbeats with `{ "type": "heartbeat-ack" }`, and n8n ignores incoming frames that aren't JSON.
+
+The n8n chat widget (`@n8n/chat`) understands both formats from version 1.31.0, and the hosted chat page always loads a current widget.
+
+**What to do:** If you built a custom chat client that talks to the chat WebSocket directly, parse every frame as JSON and switch on `type`. If you embed `@n8n/chat` yourself, update it to version 1.31.0 or later before you upgrade n8n.
 
 ### AI Agent node: Older agent modes removed <a href="#ai-agent-node-older-agent-modes-removed" id="ai-agent-node-older-agent-modes-removed"></a>
 
@@ -148,7 +224,6 @@ n8n 3.0 retires some legacy or lower-usage product capabilities. n8n will provid
 - **Chat Hub**: n8n 3.0 turns off the Chat Hub module by default. The **Chat** section disappears from the navigation and the Chat Hub endpoints stop responding. Your chat sessions, agents, and messages stay in the database. n8n 4.0 removes the feature.
   - **What to do:** If you still need Chat Hub, add `chat-hub` to the `N8N_ENABLED_MODULES` environment variable. The variable holds a comma-separated list, so keep the modules that you already enable, for example `N8N_ENABLED_MODULES=agents,chat-hub`. This keeps Chat Hub available for the n8n 3.x line only, and n8n prints a deprecation warning at startup. Before you update, **Settings > Migration Report** lists this change for every instance that uses Chat Hub.
 - **Workflow import from URL in the editor**: n8n 3.0 removes this. Other [import methods](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the n8n API.
-- **Non-functional nodes**: n8n 3.0 removes these.
 - **Enable external secrets for project roles setting**: n8n 3.0 removes this. Project editors and admins now get external-secrets access in their projects by default. To keep restricting project roles, use [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) instead. This applies to n8n Enterprise, where external secrets are available.
 - **Ask AI tab in the Code node**: n8n 3.0 removes this.
 

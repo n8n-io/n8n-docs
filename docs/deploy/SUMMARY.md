@@ -112,6 +112,7 @@
     * [Set up logging](host-n8n/keep-n8n-running/set-up-logging.md)
     * [Monitor n8n](host-n8n/keep-n8n-running/monitor-n8n.md)
     * [Visualize metrics with Grafana](host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md)
+    * [Back up and restore](host-n8n/keep-n8n-running/backup-and-restore.md)
     * [Update n8n](host-n8n/keep-n8n-running/update-n8n.md)
     * [Trace executions with OpenTelemetry](host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md)
   * [Understand the architecture](host-n8n/understand-the-architecture/README.md)

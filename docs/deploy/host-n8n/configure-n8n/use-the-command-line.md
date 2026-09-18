@@ -183,6 +183,12 @@ n8n export:entities --outputDir=./outputs --includeExecutionHistoryDataTables=tr
 
 You can export your workflows and credentials from n8n using the CLI.
 
+{% hint style="info" %}
+**Planning a full backup**
+
+The `--backup` flag exports workflows and credentials only. For what a complete backup of a self-hosted instance includes, and how to restore it, see [Back up and restore](../keep-n8n-running/backup-and-restore.md).
+{% endhint %}
+
 Command flags:
 
 | Flag         | Description                                                                                                                                                                                         |

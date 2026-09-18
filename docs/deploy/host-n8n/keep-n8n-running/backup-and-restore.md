@@ -13,10 +13,12 @@ Back up a self-hosted n8n instance so you can recover from data loss, roll back 
 
 A complete backup of a self-hosted n8n instance consists of two parts:
 
-* The `.n8n` user folder, `~/.n8n` by default. It contains the `config` file, which stores the encryption key n8n uses to encrypt credentials, and, with the default SQLite database, the database file itself. It also holds binary data and execution data when their storage mode is set to filesystem. You can change the directory n8n stores data in with the `N8N_USER_FOLDER` environment variable: n8n uses the `.n8n` subfolder of the path you set.
+* The `.n8n` user folder, `~/.n8n` by default. It holds the `config` file, which stores the credential encryption key. With the default SQLite database, it also holds the database file itself. If binary data or execution data uses the `filesystem` storage mode, it holds that data too.
+
+You can change the folder's location with the `N8N_USER_FOLDER` environment variable: n8n uses the `.n8n` subfolder of the path you set.
 * Your external database, if you use PostgreSQL instead of the default SQLite. Back it up with your database's own tooling. The `.n8n` folder is still part of the backup, because credentials in the database are encrypted with the key it holds.
 
-If you configured external storage for binary data or execution data, such as S3 or Azure Blob Storage, back that storage up as well. If binary data or execution data is stored on a custom filesystem path, include that location in your backup too.
+If you configured external storage for binary data or execution data, such as S3 or Azure Blob Storage, back that storage up as well. If binary data or execution data is stored on a custom filesystem path, include that location in your backup too. If you load custom nodes from directories set in the `N8N_CUSTOM_EXTENSIONS` environment variable, back those directories up as well: a restored instance without them is missing the nodes its workflows reference.
 
 With the default SQLite database, stop n8n before copying the `.n8n` folder. Copying the database file while n8n is writing to it can produce an inconsistent backup. If you can't stop n8n, use a tool that takes a consistent snapshot of the SQLite file instead.
 
@@ -85,12 +87,12 @@ A `--decrypted` export contains all credential data in plain text. Store it with
 To restore a complete instance:
 
 1. Stop n8n.
-2. Restore the `.n8n` folder to its original location.
+2. Restore the `.n8n` folder to its original location, plus any custom-node directories you configured with `N8N_CUSTOM_EXTENSIONS`.
 3. Restore your PostgreSQL database from its backup, if you use one.
 4. Restore your deployment configuration: the environment variables for your database connection, a custom `N8N_ENCRYPTION_KEY` if you use one, and any external storage settings. Without them, a restored instance can't reach its database or decrypt its data.
 5. Start n8n.
 
-With the default SQLite database, the `.n8n` folder contains the database, the encryption key, users, executions, binary data, and settings, so restoring it recovers the instance. With PostgreSQL, the `.n8n` folder still holds the encryption key, and the database backup holds the rest.
+With the default SQLite database, the `.n8n` folder holds everything needed to recover the instance: the SQLite database file, which contains users, settings, and execution data, the encryption key, and, on filesystem storage modes, binary and execution data. With PostgreSQL, the `.n8n` folder still holds the encryption key, and the database backup holds the rest.
 
 ## Related content
 

@@ -26,7 +26,13 @@ Self-hosted n8n will require a Docker-based deployment. n8n 3.0 will no longer s
 
 ## Community node development
 
-These changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) test loop only. `n8n-node build`, `n8n-node lint`, `n8n-node release`, and `npm create @n8n/node` are unchanged.
+### `defaults.color` removed from the node description
+
+n8n 3.0 removes the deprecated `defaults.color` property from the node description type. It only tinted Font Awesome icons (`icon: 'fa:...'`). Community nodes that still set it keep working, but the editor shows a Font Awesome icon in a neutral color. Nodes with a file icon (`icon: 'file:...'`) aren't affected, because n8n never tints file icons.
+
+**What to do:** Remove `defaults.color`. If your node uses a Font Awesome icon, replace it with an SVG or PNG file icon, as the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters#icon) reference recommends.
+
+The remaining changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/using-the-n8n-node-tool) test loop only. `n8n-node build`, `n8n-node lint`, `n8n-node release`, and `npm create @n8n/node` are unchanged.
 
 ### n8n-node dev requires Docker or Podman
 
@@ -108,7 +114,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 
 n8n 3.0 removes the **Local File** and **URL** options from the **Source** parameter of the [Execute Sub-workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) node. Only node versions 1.1 and older offered them. Nodes that still use one of these sources fail with an error.
 
-**What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source. Before you update, **Settings > Migration Report** lists the affected nodes.
+**What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source (**Parameter** on node versions 1.1 and older). Before you update, **Settings > Migration Report** lists the affected nodes.
 
 ### Any workflow caller policy removed
 
@@ -116,11 +122,11 @@ n8n 3.0 removes the **Any workflow** option from the **This workflow can be call
 
 **What to do:** Open the settings of each affected sub-workflow and select **Selected workflows** or the same-project option, then save. Before you update, **Settings > Migration Report** lists the affected workflows. If you set `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any`, change or remove the variable.
 
-### Execute Workflow node: Run once for each item mode removed
+### Execute Sub-workflow node: Run once for each item mode removed
 
-n8n 3.0 removes the **Run once for each item** mode from the **Execute Workflow** node. Workflows that use it fail until you update them.
+n8n 3.0 removes the **Run once for each item** mode from the **Execute Sub-workflow** node. Workflows that use it fail until you update them.
 
-**What to do:** Use a **Loop Over Items** node before an **Execute Workflow** node in **Run once with all items** mode instead.
+**What to do:** Use a **Loop Over Items** node before an **Execute Sub-workflow** node in **Run once with all items** mode instead.
 
 ### Always Output Data on nodes with several outputs
 
@@ -210,14 +216,6 @@ On first start, n8n 3.0 renames `~/.n8n/binaryData` to `~/.n8n/storage` and remo
   - **What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions.
 - **`N8N_DB_PING_TIMEOUT` removed.** n8n no longer falls back to this variable.
   - **What to do:** Set `DB_PING_TIMEOUT_MS` instead.
-
-## Community nodes
-
-### `defaults.color` removed from the node description
-
-n8n 3.0 removes the deprecated `defaults.color` property from the node description type. It only tinted Font Awesome icons (`icon: 'fa:...'`). Community nodes that still set it keep working, but the editor shows a Font Awesome icon in a neutral color. Nodes with a file icon (`icon: 'file:...'`) aren't affected, because n8n never tints file icons.
-
-**What to do:** Remove `defaults.color`. If your node uses a Font Awesome icon, replace it with an SVG or PNG file icon, as the [standard parameters](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/build-your-node/reference/base-files/standard-parameters#icon) reference recommends.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

@@ -27,7 +27,7 @@ The Sustainable Use License is a fair-code software license created by n8n in 20
 * You may distribute the software or provide it to others only if you do so free of charge for non-commercial purposes.
 * You may not alter, remove, or obscure any licensing, copyright, or other notices of the licensor in the software. Any use of the licensor's trademarks is subject to applicable law.
 
-For practical guidance on what you can do with n8n community version, please check our [License FAQs](./license-faq.md). 
+For practical guidance on what you can do with n8n community version, please check our [License FAQs](./license-faq.md).
 
 We encourage anyone who wants to use the Sustainable Use License. If you are building something out in the open, it makes sense to think about licensing earlier in order to avoid problems later. Contact us at [license@n8n.io](mailto:license@n8n.io) if you would like to ask any questions about it.
 

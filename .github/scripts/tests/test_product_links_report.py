@@ -4,6 +4,7 @@
 Run: python3 .github/scripts/tests/test_product_links_report.py
 """
 
+import os
 import sys
 import tempfile
 import unittest
@@ -145,6 +146,16 @@ class TestClassify(unittest.TestCase):
         kind, _ = plr.classify("https://docs.n8n.io/guide/page/#python-native", self.docs)
         self.assertEqual(kind, "ok")
 
+    def test_anchor_matching_a_plain_heading_slug_is_ok(self):
+        # Most headings carry an explicit id, but not all. When only the
+        # derived slug matches we stay quiet rather than guess, so a
+        # regression in heading_ids slug handling must not pass unnoticed.
+        (self.docs / "guide" / "plain.md").write_text(
+            "# Title\n\n## Set up queue mode\n\nBody\n")
+        kind, _ = plr.classify(
+            "https://docs.n8n.io/guide/plain/#set-up-queue-mode", self.docs)
+        self.assertEqual(kind, "ok")
+
     def test_broken_anchor_is_reported_with_a_hint(self):
         # The real bug this checker exists for: the page is fine, the anchor is not.
         kind, detail = plr.classify(
@@ -189,6 +200,13 @@ class TestCheckAnchorEdgeCases(unittest.TestCase):
         page = self.docs / "guide" / "page.md"
         kind, _ = plr.check_anchor(page, "id-1.-create-an-app")
         self.assertEqual(kind, "ok")
+
+    def test_id_prefix_is_not_a_blanket_escape_hatch(self):
+        # `#id-usingOAuth2` is broken even though `#usingOAuth2` exists:
+        # GitBook only prefixes slugs that would start with a digit.
+        page = self.docs / "guide" / "page.md"
+        kind, _ = plr.check_anchor(page, "id-usingOAuth2")
+        self.assertEqual(kind, "broken-anchor")
 
     def test_case_mismatch_is_its_own_verdict(self):
         page = self.docs / "guide" / "page.md"
@@ -274,6 +292,44 @@ class TestScan(unittest.TestCase):
         self.assertEqual(findings[0]["occurrences"], 2)
         self.assertEqual(findings[0]["locations"][0], "packages/cli/src/a.ts:1")
 
+    def test_extracts_the_fragment_and_cleans_the_url(self):
+        # Guards URL_RE and clean_url end to end: a regression there could
+        # drop every anchor while the helper tests still pass.
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "throw new Error('see https://docs.n8n.io/old/page/#some-anchor.');\n")
+            findings, totals = plr.scan(src, live=False)
+        self.assertEqual(totals["unique_urls"], 1)
+        self.assertEqual(findings[0]["url"],
+                         "https://docs.n8n.io/old/page/#some-anchor")
+        self.assertEqual(findings[0]["anchor"], "some-anchor")
+
+    def test_query_string_variants_are_one_finding(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "const a = 'https://docs.n8n.io/old/page/';\n"
+                "const b = 'https://docs.n8n.io/old/page/?utm_source=app';\n")
+            findings, totals = plr.scan(src, live=False)
+        self.assertEqual(totals["unique_urls"], 1)
+        self.assertEqual(findings[0]["occurrences"], 2)
+
+    def test_generated_pages_are_live_checked_not_assumed_fine(self):
+        # A GitBook-generated page has no markdown to resolve against, so the
+        # live status is the only verdict it can ever get.
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "const a = 'https://docs.n8n.io/connect/n8n-api/users/';\n")
+            findings, totals = plr.scan(src, live=True,
+                                        resolver=lambda u: (404, u))
+        self.assertEqual(totals["dead"], 1)
+        self.assertEqual(findings[0]["kind"], "dead")
+
     def test_live_pass_upgrades_unresolved_paths(self):
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp)
@@ -312,6 +368,67 @@ class TestBuildPayload(unittest.TestCase):
         payload = plr.build_payload(findings, totals, {})
         self.assertEqual(len(payload["findings"]), plr.MAX_FINDINGS)
         self.assertTrue(payload["findings_truncated"])
+
+
+class TestDeliveryContract(unittest.TestCase):
+    """A run that does not deliver its report must go red.
+
+    The whole point of the job is the alert in n8n. If a missing secret or a
+    failed POST could exit 0, the weekly check would look healthy while
+    reporting to nobody -- the one failure mode that hides every other one.
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        src = Path(self.tmp.name)
+        (src / "pkg").mkdir(parents=True)
+        (src / "pkg" / "a.ts").write_text("// no links here\n")
+        self.saved = dict(os.environ)
+        # Isolate: a real WEBHOOK_URL in the caller's environment must not
+        # make this pass.
+        for k in ("WEBHOOK_URL", "WEBHOOK_USER", "WEBHOOK_PASSWORD",
+                  "GITHUB_STEP_SUMMARY"):
+            os.environ.pop(k, None)
+        os.environ["N8N_SRC"] = str(src)
+        os.environ["SKIP_LIVE"] = "1"
+
+    def tearDown(self):
+        os.environ.clear()
+        os.environ.update(self.saved)
+        self.tmp.cleanup()
+
+    def test_missing_webhook_url_exits_nonzero(self):
+        self.assertEqual(plr.main(), 1)
+
+    def test_failed_post_exits_nonzero(self):
+        os.environ["WEBHOOK_URL"] = "https://example.invalid/hook"
+        original = plr.post
+
+        def boom(*a, **kw):
+            raise OSError("connection refused")
+
+        plr.post = boom
+        try:
+            self.assertEqual(plr.main(), 1)
+        finally:
+            plr.post = original
+
+    def test_successful_delivery_exits_zero(self):
+        os.environ["WEBHOOK_URL"] = "https://example.invalid/hook"
+        original = plr.post
+        sent = []
+        plr.post = lambda url, payload, user, password: sent.append(payload)
+        try:
+            self.assertEqual(plr.main(), 0)
+        finally:
+            plr.post = original
+        self.assertEqual(len(sent), 1)
+        self.assertEqual(sent[0]["source"], "product-links-weekly")
+
+    def test_missing_checkout_exits_nonzero(self):
+        os.environ["N8N_SRC"] = str(Path(self.tmp.name) / "does-not-exist")
+        os.environ["WEBHOOK_URL"] = "https://example.invalid/hook"
+        self.assertEqual(plr.main(), 1)
 
 
 class TestSummary(unittest.TestCase):

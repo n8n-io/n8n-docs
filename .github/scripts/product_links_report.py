@@ -91,6 +91,8 @@ SKIP_DIRS = frozenset({
     "node_modules", "dist", "build", "coverage", ".git", ".turbo", ".nx",
     "__tests__", "__mocks__", "__snapshots__", "test", "tests", "e2e",
     "cypress", "fixtures", "__fixtures__",
+    # n8n's Playwright/E2E tooling package; dev-only, never on a user's screen.
+    "testing",
 })
 SKIP_FILE_RE = re.compile(r"(\.test\.|\.spec\.|\.snap$|-lock\.json$|^package-lock\.json$)")
 
@@ -198,7 +200,11 @@ def check_anchor(page, anchor):
     known = explicit | slugs
     if anchor in known or not resolved:
         return "ok", ""
-    if anchor.startswith("id-") and anchor[len("id-"):] in known:
+    # GitBook only adds the `id-` prefix when the slug would otherwise start
+    # with a digit, so accepting it for any suffix would swallow a genuinely
+    # broken `#id-foo` on a page that has `#foo`.
+    suffix = anchor[len("id-"):]
+    if anchor.startswith("id-") and suffix[:1].isdigit() and suffix in known:
         return "ok", ""
     lowered = {i.lower(): i for i in known}
     if anchor.lower() in lowered:
@@ -253,6 +259,13 @@ def classify_live(url, resolver=None, docs_root=None):
     final_path, _, _ = split_url(final_url)
     page = resolve_path(final_path, docs_root)
     if page is None:
+        # A GitBook-generated subtree has no markdown by design, so the live
+        # status is the only verdict available -- and the only one it can get,
+        # which is why generated URLs are live-checked rather than assumed fine.
+        head, _, rest = final_path.partition("/")
+        if is_generated_page(head, rest):
+            return ("generated", "GitBook-generated page; live, anchor not verifiable",
+                    status, final_url)
         return ("no-source-file",
                 f"live at /{final_path} but no markdown backs it; anchor not verified",
                 status, final_url)
@@ -357,7 +370,12 @@ def scan(src_root, live=True, resolver=None):
                 if not url:
                     continue
                 occurrences += 1
-                entry = seen.setdefault(url, {"url": url, "occurrences": 0, "locations": []})
+                # Key on the normalized page+anchor, not the raw string, so
+                # variants that resolve identically (a query string, the `.md`
+                # twin) are one finding instead of several with the same verdict.
+                kpath, kanchor, _ = split_url(url)
+                key = f"{kpath}#{kanchor}"
+                entry = seen.setdefault(key, {"url": url, "occurrences": 0, "locations": []})
                 entry["occurrences"] += 1
                 if len(entry["locations"]) < MAX_LOCATIONS:
                     entry["locations"].append(f"{rel}:{lineno}")
@@ -372,7 +390,9 @@ def scan(src_root, live=True, resolver=None):
         url = entry["url"]
         kind, detail = classify(url)
         status, final_url = None, None
-        if kind == "unresolved-path" and live:
+        # `generated` goes to the live pass too: it has no markdown to resolve
+        # against, so without a live status it would be silently assumed fine.
+        if kind in ("unresolved-path", "generated") and live:
             kind, detail, status, final_url = classify_live(url, resolver)
         totals[kind.replace("-", "_")] += 1
         if kind in ("ok", "templated", "generated"):

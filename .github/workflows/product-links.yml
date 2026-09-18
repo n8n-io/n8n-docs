@@ -18,6 +18,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Deliberately no `ref: main`. This checkout supplies BOTH the docs the
+      # links resolve against AND the scanner itself, so pinning it to main
+      # would make a workflow_dispatch from a branch run main's scanner and
+      # silently ignore the change being tested. Scheduled runs are always on
+      # main; a dispatch from a branch resolves against that branch's docs,
+      # which is what you want when testing one. The run URL in the Slack
+      # message identifies which ref produced a report.
       - name: Checkout docs repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 

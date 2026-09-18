@@ -170,6 +170,93 @@ class TestClassify(unittest.TestCase):
         self.assertEqual(kind, "generated")
 
 
+class TestCheckAnchorEdgeCases(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.docs = Path(self.tmp.name)
+        (self.docs / "guide").mkdir(parents=True)
+        (self.docs / "guide" / "page.md").write_text(
+            '# Title\n\n'
+            '## Step one <a id="1.-create-an-app"></a>\n\n'
+            '## Scopes <a id="usingOAuth2"></a>\n')
+        (self.docs / plr.ROOT_SPACE).mkdir()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_gitbook_id_prefix_on_numeric_heading(self):
+        # GitBook prefixes an id that would otherwise start with a digit.
+        page = self.docs / "guide" / "page.md"
+        kind, _ = plr.check_anchor(page, "id-1.-create-an-app")
+        self.assertEqual(kind, "ok")
+
+    def test_case_mismatch_is_its_own_verdict(self):
+        page = self.docs / "guide" / "page.md"
+        kind, detail = plr.check_anchor(page, "usingoauth2")
+        self.assertEqual(kind, "case-mismatch")
+        self.assertIn("usingOAuth2", detail)
+
+
+class TestClassifyLive(unittest.TestCase):
+    """Pass 2 with a stub resolver: no network in the tests."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.docs = Path(self.tmp.name)
+        (self.docs / "changelog").mkdir(parents=True)
+        (self.docs / "changelog" / "v20-breaking-changes.md").write_text(
+            '# Breaking changes\n\n## Remove the thing <a id="remove-the-thing"></a>\n')
+        (self.docs / plr.ROOT_SPACE).mkdir()
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def stub(self, status, final):
+        return lambda url: (status, final)
+
+    def test_404_is_dead(self):
+        kind, _, status, _ = plr.classify_live(
+            "https://docs.n8n.io/gone/",
+            self.stub(404, "https://docs.n8n.io/gone/"), self.docs)
+        self.assertEqual(kind, "dead")
+        self.assertEqual(status, 404)
+
+    def test_redirect_to_a_live_page_with_a_good_anchor(self):
+        kind, detail, _, _ = plr.classify_live(
+            "https://docs.n8n.io/2-0-breaking-changes/#remove-the-thing",
+            self.stub(200, "https://docs.n8n.io/changelog/v20-breaking-changes"),
+            self.docs)
+        self.assertEqual(kind, "redirect-reliant")
+        self.assertIn("changelog/v20-breaking-changes", detail)
+
+    def test_dead_anchor_behind_a_200_redirect(self):
+        # The case a status check cannot see: page 200s, fragment is dead.
+        kind, _, status, _ = plr.classify_live(
+            "https://docs.n8n.io/2-0-breaking-changes/#remove-queue_worker_max_stalled_count",
+            self.stub(200, "https://docs.n8n.io/changelog/v20-breaking-changes"),
+            self.docs)
+        self.assertEqual(kind, "broken-anchor")
+        self.assertEqual(status, 200)
+
+    def test_live_page_with_no_markdown_is_unverifiable(self):
+        kind, _, _, _ = plr.classify_live(
+            "https://docs.n8n.io/ui-authored/#x",
+            self.stub(200, "https://docs.n8n.io/ui-authored"), self.docs)
+        self.assertEqual(kind, "no-source-file")
+
+    def test_403_is_blocked_not_dead(self):
+        kind, _, _, _ = plr.classify_live(
+            "https://docs.n8n.io/x/", self.stub(403, "https://docs.n8n.io/x/"),
+            self.docs)
+        self.assertEqual(kind, "blocked")
+
+    def test_unreachable_is_error(self):
+        kind, _, _, _ = plr.classify_live(
+            "https://docs.n8n.io/x/", self.stub(None, "https://docs.n8n.io/x/"),
+            self.docs)
+        self.assertEqual(kind, "error")
+
+
 class TestScan(unittest.TestCase):
     def test_collects_occurrences_and_skips_tests(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -181,11 +268,24 @@ class TestScan(unittest.TestCase):
             (src / "packages" / "cli" / "__tests__").mkdir(parents=True)
             (src / "packages" / "cli" / "__tests__" / "b.ts").write_text(
                 "const c = 'https://docs.n8n.io/fixture-only/';\n")
-            findings, totals = plr.scan(src)
+            findings, totals = plr.scan(src, live=False)
         self.assertEqual(totals["unique_urls"], 1)
         self.assertEqual(totals["occurrences"], 2)
         self.assertEqual(findings[0]["occurrences"], 2)
         self.assertEqual(findings[0]["locations"][0], "packages/cli/src/a.ts:1")
+
+    def test_live_pass_upgrades_unresolved_paths(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "const a = 'https://docs.n8n.io/gone/';\n")
+            findings, totals = plr.scan(src, live=True,
+                                        resolver=lambda u: (404, u))
+        self.assertEqual(totals["dead"], 1)
+        self.assertEqual(totals["unresolved_path"], 0)
+        self.assertEqual(findings[0]["kind"], "dead")
+        self.assertEqual(findings[0]["http_status"], 404)
 
 
 class TestBuildPayload(unittest.TestCase):

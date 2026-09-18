@@ -13,23 +13,36 @@ each one against the n8n-docs working tree, and POSTs the findings to the
 DocOps n8n webhook, which live-checks the unresolved paths, stores the rows in
 Supabase, adds a dated Google Sheet tab and alerts Slack.
 
-Resolution is offline and therefore exact on anchors, which is the point: the
-bug that raised this (n8n-io/n8n#38992, a Slack credential notice pointing at
-`#using-oauth` when the heading id is `using-oauth2`) is invisible to any
-checker that only looks at HTTP status. Anchors are resolved with
-`check_internal_links.heading_ids`, so this checker and the in-repo one agree
-on slugs by construction.
+Anchors are resolved against the markdown, never against the rendered page:
+GitBook serves React-generated ids (`id="_R_1al39bsnqj6iv5ubsnpfivb_"`) next to
+the real ones, so scraping HTML is a trap. The explicit `id="..."` that git-sync
+writes into the `.md` on main is authoritative. Heading ids come from
+`check_internal_links.heading_ids`, so this checker and the in-repo one agree on
+slugs by construction.
+
+Two passes, because neither alone is enough:
+
+  1. Offline. Resolve the URL path to a docs file and check the anchor against
+     it. Exact, and free.
+  2. Live, only for paths with no file behind them. A moved page still answers
+     200 through a GitBook redirect, so a status check alone finds nothing --
+     the fragment is what died. Follow the redirects, map the FINAL url back to
+     a docs file, and check the anchor there. This is the only way to see a dead
+     anchor on a page whose old path is redirect-served.
 
 Each URL lands in one of these buckets:
-  ok              path resolves to a docs file, and the anchor (if any) matches.
-  broken-anchor   page exists, no heading carries that id. Actionable now.
-  empty-anchor    link ends in a bare '#'.
-  unresolved-path no file backs the path. Either genuinely dead or alive only
-                  because a GitBook redirect catches it -- this script cannot
-                  tell which, so n8n live-checks these and splits them into
-                  `dead` and `redirect-reliant`.
-  templated       URL is built at runtime (`${...}`); not checkable. Counted
-                  only, never reported as a finding.
+  ok               path resolves and the anchor (if any) matches.
+  broken-anchor    page exists, no heading carries that id. Actionable now.
+  case-mismatch    the id exists but differs in case.
+  empty-anchor     link ends in a bare '#'.
+  redirect-reliant only resolves because a GitBook redirect catches it. Works
+                   today, 404s the day someone prunes the redirect.
+  dead             404/410 after following redirects.
+  no-source-file   live, but no markdown backs the final url (a page authored in
+                   the GitBook UI); the anchor can't be verified.
+  blocked / error  the live check could not reach a verdict.
+  templated        URL is built at runtime (`${...}`); not checkable.
+  generated        GitBook-generated subtree (the OpenAPI API reference).
 
 Exit codes: 0 = report delivered; 1 = the n8n checkout is missing, the webhook
 URL is not configured, or the POST failed. Broken links alone never fail the
@@ -37,17 +50,23 @@ job: n8n owns the alerting, same contract as lychee_report.py.
 
 Config comes from the environment (see the workflow):
   N8N_SRC (path to the n8n checkout, default `n8n-src`), N8N_SHA, RUN_URL,
-  WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD, plus GITHUB_REPOSITORY /
-  GITHUB_RUN_ID / GITHUB_STEP_SUMMARY set by Actions.
+  WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD, SKIP_LIVE (set to skip pass 2),
+  plus GITHUB_REPOSITORY / GITHUB_RUN_ID / GITHUB_STEP_SUMMARY set by Actions.
+
+The reference implementation this is derived from, with its first-run numbers
+and the gotchas above, is in n8n-io/DocOps under
+prototypes/doc-2318-code-link-checker/.
 """
 
 from __future__ import annotations
 
 import base64
+import difflib
 import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -85,6 +104,15 @@ TEMPLATE_RE = re.compile(r"\$\{|\{\{|<%|%s|\{[0-9]+\}")
 
 MAX_FINDINGS = 500
 MAX_LOCATIONS = 5
+
+# Report order. Dead first, then the anchors someone can fix today. The
+# redirect-reliant pile is last: it is the biggest and the least urgent, but it
+# is every link that 404s the day a redirect is pruned.
+SEVERITY = {
+    "dead": 0, "broken-anchor": 1, "case-mismatch": 2, "empty-anchor": 3,
+    "no-source-file": 4, "error": 5, "blocked": 6, "unresolved-path": 7,
+    "redirect-reliant": 8,
+}
 
 # --------------------------------------------------------------------- pure helpers
 # No I/O except the docs tree lookups, so the tests can cover them.
@@ -153,8 +181,39 @@ def should_scan(rel_path):
     return name.endswith(SOURCE_SUFFIXES)
 
 
+def rel_to_repo(page):
+    return (page.relative_to(REPO_ROOT).as_posix()
+            if page.is_relative_to(REPO_ROOT) else str(page))
+
+
+def check_anchor(page, anchor):
+    """Match an anchor against a page's heading ids.
+
+    Returns (kind, detail). `ok` covers three quiet cases beyond an exact hit:
+    a heading with no explicit `id=` (we only guessed its slug), an include we
+    couldn't resolve, and GitBook's `id-` prefix on headings that start with a
+    digit (`## 1. Create an app` -> `#id-1.-create-an-app`).
+    """
+    explicit, slugs, resolved = heading_ids(page)
+    known = explicit | slugs
+    if anchor in known or not resolved:
+        return "ok", ""
+    if anchor.startswith("id-") and anchor[len("id-"):] in known:
+        return "ok", ""
+    lowered = {i.lower(): i for i in known}
+    if anchor.lower() in lowered:
+        return ("case-mismatch",
+                f"id on {rel_to_repo(page)} is '{lowered[anchor.lower()]}', link says '{anchor}'")
+    # Fuzzy, not prefix: the real fixes are things like
+    # `remove-queue_worker_max_stalled_count` -> `remove-queueworkermaxstalledcount`,
+    # where a prefix match just returns whichever id sorts first.
+    near = difflib.get_close_matches(anchor, sorted(explicit), n=1, cutoff=0.6)
+    hint = f"; did you mean #{near[0]}?" if near else ""
+    return "broken-anchor", f"no heading with id '{anchor}' on {rel_to_repo(page)}{hint}"
+
+
 def classify(url, docs_root=None):
-    """Return (kind, detail) for one extracted URL."""
+    """Pass 1: resolve a URL offline. Returns (kind, detail)."""
     if is_templated(url):
         return "templated", "URL is built at runtime; not checkable"
     path, anchor, has_fragment = split_url(url)
@@ -167,29 +226,52 @@ def classify(url, docs_root=None):
         if is_generated_page(head, rest):
             return "generated", "GitBook-generated page with no markdown source"
         return ("unresolved-path",
-                f"no page in n8n-docs backs /{path}; live check decides dead vs redirect")
+                f"no page in n8n-docs backs /{path}; needs a live check")
     if not has_fragment:
         return "ok", ""
     if anchor == "":
         return "empty-anchor", "link ends in a bare '#' with no anchor"
-    explicit, slugs, resolved = heading_ids(page)
-    if anchor in explicit or anchor in slugs or not resolved:
-        # Unresolved includes or a heading with no explicit id: stay quiet
-        # rather than guess, same policy as check_internal_links.
-        return "ok", ""
-    rel = page.relative_to(REPO_ROOT).as_posix() if page.is_relative_to(REPO_ROOT) else str(page)
-    near = sorted(a for a in explicit if anchor.split("-")[0] and a.startswith(anchor.split("-")[0]))
-    hint = f"; did you mean #{near[0]}?" if near else ""
-    return "broken-anchor", f"no heading with id '{anchor}' on {rel}{hint}"
+    return check_anchor(page, anchor)
+
+
+def classify_live(url, resolver=None, docs_root=None):
+    """Pass 2: follow the redirects and judge the URL at its destination.
+
+    Only called for `unresolved-path` URLs. A moved page answers 200 via a
+    GitBook redirect, so the status alone proves nothing -- what matters is
+    whether the final page still carries the anchor.
+    """
+    resolve_live = resolver or http_resolve
+    _, anchor, has_fragment = split_url(url)
+    status, final_url = resolve_live(url.split("#", 1)[0])
+    if status in (404, 410):
+        return "dead", f"returns {status} after following redirects", status, final_url
+    if status in (401, 403, 429):
+        return "blocked", f"returns {status} to automated checks", status, final_url
+    if status is None or not (200 <= status < 400):
+        return "error", f"live check returned {status}", status, final_url
+    final_path, _, _ = split_url(final_url)
+    page = resolve_path(final_path, docs_root)
+    if page is None:
+        return ("no-source-file",
+                f"live at /{final_path} but no markdown backs it; anchor not verified",
+                status, final_url)
+    detail_suffix = f"; redirects to /{final_path}"
+    if not has_fragment or anchor == "":
+        return ("redirect-reliant",
+                f"only resolves via a redirect{detail_suffix}", status, final_url)
+    kind, detail = check_anchor(page, anchor)
+    if kind == "ok":
+        return ("redirect-reliant",
+                f"only resolves via a redirect{detail_suffix}", status, final_url)
+    # A dead anchor on a redirect-served page: the case a status check misses.
+    return kind, f"{detail}{detail_suffix}", status, final_url
 
 
 def build_payload(findings, totals, ctx):
     """The contract between this Action and the n8n webhook."""
-    ordered = sorted(
-        findings,
-        key=lambda f: ({"broken-anchor": 0, "empty-anchor": 1, "unresolved-path": 2}.get(f["kind"], 9),
-                       -f["occurrences"], f["url"]),
-    )
+    ordered = sorted(findings, key=lambda f: (SEVERITY.get(f["kind"], 9),
+                                              -f["occurrences"], f["url"]))
     return {
         "source": "product-links-weekly",
         "repo": ctx.get("repo", ""),
@@ -211,8 +293,14 @@ def summary_markdown(payload):
     lines.append(f"- Scanned: {t['files_scanned']} files, {t['occurrences']} link occurrences")
     lines.append(f"- Unique URLs: {t['unique_urls']} ({t['ok']} resolve cleanly, "
                  f"{t['templated']} built at runtime, {t.get('generated', 0)} generated)")
-    lines.append(f"- Broken anchors: {t['broken_anchor']}")
-    lines.append(f"- Unresolved paths (n8n decides dead vs redirect-reliant): {t['unresolved_path']}")
+    lines.append(f"- **Dead: {t.get('dead', 0)}** | "
+                 f"**broken anchors: {t['broken_anchor']}** | "
+                 f"case mismatches: {t.get('case_mismatch', 0)}")
+    lines.append(f"- Redirect-reliant: {t.get('redirect_reliant', 0)} "
+                 f"(work today, 404 the day the redirect is pruned)")
+    unverified = t.get("no_source_file", 0) + t.get("blocked", 0) + t.get("error", 0)
+    if unverified:
+        lines.append(f"- Could not verify: {unverified}")
     reportable = [f for f in payload["findings"] if f["kind"] != "templated"]
     if reportable:
         lines += ["", "| Kind | URL | Uses | Detail |", "|---|---|---|---|"]
@@ -226,8 +314,26 @@ def summary_markdown(payload):
 
 # ---------------------------------------------------------------------------- I/O
 
-def scan(src_root):
-    """Walk the n8n checkout and return (findings, totals)."""
+def http_resolve(url, timeout=30):
+    """Follow redirects. Returns (status or None, final url)."""
+    # HEAD is enough: the anchor is read from markdown, never from the page.
+    req = urllib.request.Request(url, method="HEAD", headers={
+        "User-Agent": "Mozilla/5.0 (compatible; DocOps-ProductLinks/1.0)"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.status, resp.geturl()
+    except urllib.error.HTTPError as e:
+        return e.code, e.geturl()
+    except Exception:  # noqa: BLE001 - DNS, TLS, timeout: all "no verdict"
+        return None, url
+
+
+def scan(src_root, live=True, resolver=None):
+    """Walk the n8n checkout and return (findings, totals).
+
+    `live=False` skips pass 2 (the network), which keeps the unit tests and any
+    offline run honest: unresolved paths simply stay `unresolved-path`.
+    """
     src_root = Path(src_root)
     seen = {}
     files_scanned = 0
@@ -258,17 +364,23 @@ def scan(src_root):
 
     totals = {"files_scanned": files_scanned, "occurrences": occurrences,
               "unique_urls": len(seen), "ok": 0, "broken_anchor": 0,
-              "unresolved_path": 0, "empty_anchor": 0, "templated": 0,
-              "generated": 0}
+              "case_mismatch": 0, "unresolved_path": 0, "empty_anchor": 0,
+              "templated": 0, "generated": 0, "dead": 0, "redirect_reliant": 0,
+              "no_source_file": 0, "blocked": 0, "error": 0}
     findings = []
     for entry in seen.values():
-        kind, detail = classify(entry["url"])
+        url = entry["url"]
+        kind, detail = classify(url)
+        status, final_url = None, None
+        if kind == "unresolved-path" and live:
+            kind, detail, status, final_url = classify_live(url, resolver)
         totals[kind.replace("-", "_")] += 1
         if kind in ("ok", "templated", "generated"):
             continue
-        path, anchor, _ = split_url(entry["url"])
-        findings.append({**entry, "path": path, "anchor": anchor,
-                         "kind": kind, "detail": detail})
+        path, anchor, _ = split_url(url)
+        findings.append({**entry, "path": path, "anchor": anchor, "kind": kind,
+                         "detail": detail, "http_status": status,
+                         "final_url": final_url})
     return findings, totals
 
 
@@ -288,7 +400,7 @@ def main():
         print(f"::error::n8n checkout not found at {src}")
         return 1
 
-    findings, totals = scan(src)
+    findings, totals = scan(src, live=not os.environ.get("SKIP_LIVE"))
     ctx = {
         "repo": os.environ.get("GITHUB_REPOSITORY", ""),
         "scanned_repo": os.environ.get("N8N_REPO", "n8n-io/n8n"),
@@ -318,8 +430,10 @@ def main():
     except Exception as e:  # noqa: BLE001 - any delivery failure must go red
         print(f"::error::POST to the DocOps webhook failed: {e}")
         return 1
-    print(f"Report sent to n8n: {totals['broken_anchor']} broken anchor(s), "
-          f"{totals['unresolved_path']} unresolved path(s), {len(payload['findings'])} rows.")
+    print(f"Report sent to n8n: {totals.get('dead', 0)} dead, "
+          f"{totals['broken_anchor']} broken anchor(s), "
+          f"{totals.get('redirect_reliant', 0)} redirect-reliant, "
+          f"{len(payload['findings'])} rows.")
     return 0
 
 

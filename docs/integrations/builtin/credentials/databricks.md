@@ -42,6 +42,8 @@ The identity the credential authenticates as (the signed-in user or the service 
 |------------|--------------------|
 | All | The **Workspace access** entitlement |
 | Databricks SQL (Execute Query) | The **Databricks SQL access** entitlement and **CAN USE** on the SQL warehouse |
+| Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
+| Job (Run) | **CAN MANAGE RUN** on the job |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
 | Genie | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |

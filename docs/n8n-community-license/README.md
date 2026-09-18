@@ -6,7 +6,7 @@
 Proprietary licenses are available for enterprise customers. [Get in touch](mailto:license@n8n.io) for more information.
 {% endhint %}
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model. More guidance available in our [License FAQs](./license-faq.md).
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model. More guidance is available in our [License FAQs](./license-faq.md).
 
 ## What license do you use? <a href="#what-license-do-you-use" id="what-license-do-you-use"></a>
 

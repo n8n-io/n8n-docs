@@ -143,6 +143,9 @@ The following events are available. You can choose which events to stream in **S
 	* Role mapping rule updated
 	* Role mapping rule deleted
 	* Role mapping rules bulk deleted
+	* MCP OAuth completed
+	* MCP tool called
+	* MCP access updated
 * Worker
 	* Started
 	* Stopped
@@ -172,6 +175,36 @@ The following events are available. You can choose which events to stream in **S
 	* Job stalled
 
 Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+
+### MCP events
+
+The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **MCP**. They don't cover workflows that use the **MCP Server Trigger** node. These events are available from n8n 2.34.0.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.mcp.oauth.completed` | A user finishes authorizing an MCP client through OAuth. Carries `userId`, `clientId`, and `clientName`. |
+| `n8n.audit.mcp.tool.called` | An MCP client calls a tool. See the fields below. |
+| `n8n.audit.mcp.access.updated` | Someone turns instance MCP access on or off. Carries the acting user and the new `enabled` value. |
+
+To stream all three, subscribe your destination to `n8n.audit.mcp`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+
+`n8n.audit.mcp.tool.called` carries these fields:
+
+| Field | Description |
+| --- | --- |
+| `userId` | The user whose credentials the client authenticated with. |
+| `_email`, `_firstName`, `_lastName`, `globalRole` | That user's details. |
+| `toolName` | The tool that was called, for example `execute_workflow`. |
+| `workflowId` | The workflow the tool acted on, when it acts on one. |
+| `status` | `success` or `error`. |
+| `errorMessage` | Why the call failed. Only present when `status` is `error`. |
+| `authType` | `oauth` or `api_key`. `api_key` covers every bearer token that isn't an OAuth access token. |
+| `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. |
+| `clientName` | The name the client reports for itself. |
+
+To measure usage per client, group by `clientId`. It identifies one client registration, so it stays the same across every call that client makes, including after its token refreshes. Two installations of the same product register separately and get different values, so `clientId` counts registrations rather than products. `clientName` isn't verified and isn't unique, so don't use it as a key.
+
+Setting `anonymizeAuditMessages` on a destination masks the user's email and name. It doesn't mask `userId`, `authType`, or `clientId`, so you can still group and count by them.
 
 ## Destinations <a href="#destinations" id="destinations"></a>
 

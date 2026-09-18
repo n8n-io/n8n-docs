@@ -81,6 +81,13 @@ You must be an instance owner, instance admin, or project admin to push changes 
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jlwygEO1bOtH6HDbN3We/" %}
+### Choose a branch when pushing
+
+When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is enabled, you can choose the target branch when pushing changes. You can push to an existing branch or create a new branch from the latest default branch.
+
+Pull, reset, and status operations continue to use the **Default branch** configured in **Settings > Source Control**.
+
+When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is disabled or unset, n8n uses the configured branch and doesn't display the branch picker.
 
 ## What gets committed <a href="#what-gets-committed" id="what-gets-committed"></a>
 

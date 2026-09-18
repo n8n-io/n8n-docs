@@ -145,3 +145,12 @@ Unpublish a workflow from either:
 * The dropdown arrow next to the **Publish** button in the canvas header (or use hotkey `Cmd/Ctrl` + `u`).
 * In the workflow list
 * The version history page (unpublish action on published versions)
+
+## Related resources
+
+* [Understand workflows](./)
+* [Create and run workflows](create-and-run-workflows.md)
+* [Create and edit credentials](create-and-edit-credentials.md)
+* [Use Gateway credits](use-gateway-credits.md)
+* [Workflow components](workflow-components/README.md)
+* [Understand executions](understand-executions/README.md)

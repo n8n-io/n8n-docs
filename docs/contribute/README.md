@@ -65,7 +65,7 @@ There are different ways in which you can contribute to the n8n code base:
 
 ## Contribute to the docs <a href="#contribute-to-the-docs" id="contribute-to-the-docs"></a>
 
-You can contribute to the n8n documentation, for example by documenting nodes or fixing issues. See the [contribution guide for n8n Docs](contribution-guide-for-n8n-docs.md) for content types and the PR process, and the [style guide for n8n Docs](style-guide-for-n8n-docs.md) for writing conventions.
+You can contribute to the n8n documentation, for example by documenting nodes or fixing issues. See the [contribution guide for n8n Docs](contribution-guide-for-n8n-docs/README.md) for content types and the PR process, and the [style guide for n8n Docs](contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md) for writing conventions.
 
 The [n8n-docs repository](https://github.com/n8n-io/n8n-docs) hosts the source, with additional [contribution guidelines](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md) for the pull request process.
 

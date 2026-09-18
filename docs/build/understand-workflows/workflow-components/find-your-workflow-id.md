@@ -17,3 +17,11 @@ Your workflow ID is available in:
 
 * The URL of the open workflow.
 * The workflow settings title.
+
+## Related resources
+
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Connect nodes together](connect-nodes-together.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)

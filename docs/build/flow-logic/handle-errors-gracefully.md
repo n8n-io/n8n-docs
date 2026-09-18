@@ -12,7 +12,7 @@ layout:
 
 # Error handling <a href="#error-handling" id="error-handling"></a>
 
-When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
+When designing your [flow logic](./), it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
 
 {% hint style="info" %}
 **Investigating errors**
@@ -40,3 +40,14 @@ You can use the same error workflow for multiple workflows.
 When you create and set an error workflow, n8n runs it when an execution fails. Usually, this is due to things like errors in node settings, or the workflow running out of memory.
 
 You can add the [Stop And Error](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.stopanderror) node to your workflow to force executions to fail under your chosen circumstances, and trigger the error workflow.
+
+## Related resources
+
+* [Flow logic](./)
+* [Split with conditionals](split-with-conditionals.md)
+* [Merge data](merge-data.md)
+* [Loop](loop.md)
+* [Wait](wait.md)
+* [Understand execution order](understand-execution-order.md)
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md)
+* [Convert to sub-workflows](convert-to-sub-workflows.md)

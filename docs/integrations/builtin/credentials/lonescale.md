@@ -32,7 +32,7 @@ Create a [LoneScale](https://www.lonescale.com/) account.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LoneScale's API documentation](https://public-api.lonescale.com/api) for more information about the service.
+Refer to [LoneScale's API documentation](https://docs.lonescale.com/authentication) for more information about the service.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 

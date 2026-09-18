@@ -91,9 +91,20 @@ def main():
     check("same-space relative link passes", category(A, "sub/page-two.md") is None)
     check("relative link up and back down passes", category(A_SUB, "../page-one.md") is None)
     check("link without .md is flagged", category(A, "sub/page-two") == "no-md-extension")
-    check("trailing-slash link is flagged", category(A, "sub/") == "no-md-extension")
     check("missing .md target is flagged", category(A, "gone.md") == "missing-target")
     check("absolute path is flagged", category(A, "/spacea/page-one.md") == "absolute-path")
+
+    # --- Rule 1 exception: bare directory references resolve to README.md ----
+    check("current-folder bare directory reference resolves",
+          category(A, "./") is None)
+    check("parent-folder bare directory reference resolves",
+          category(A_SUB, "../") is None)
+    check("sibling-folder bare directory reference resolves",
+          category(A, "sub/") is None)
+    check("bare directory reference to a folder with no README is flagged",
+          category(A, "nope/") == "missing-target")
+    check("cross-space bare directory reference is flagged",
+          category(A, "../spaceb/") == "cross-space-relative")
 
     # --- Assets ---------------------------------------------------------------
     check("existing asset passes", category(A, ".gitbook/assets/img.png") is None)

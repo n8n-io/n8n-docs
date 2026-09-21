@@ -56,6 +56,18 @@ Refer to [GitLab credentials](../credentials/gitlab.md) for guidance on setting 
 * User
     * Returns the repositories of a user
 
+## Working with Subgroups and Nested Repositories
+
+If your repository is located within nested GitLab groups or subgroups (e.g., `https://gitlab.com/org/subgroup1/subgroup2/my-repo`), GitLab's API requires the namespace path to be URL-encoded.
+
+To configure the node for nested subgroups:
+
+1. **Repository Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`.
+   * *Example Owner Path*: `org%2Fsubgroup1%2Fsubgroup2`
+2. **Repository Name**: Enter the project's repository slug.
+   * *Example Name*: `my-repo`
+
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

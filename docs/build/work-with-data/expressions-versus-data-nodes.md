@@ -78,7 +78,6 @@ See [Work with data](README.md) for other ways to reference, transform, and stru
 ## Related resources
 
 * [Work with data](./)
-* [Overview](overview.md)
 * [Understand n8n's data structure](understand-n8ns-data-structure.md)
 * [Reference data](reference-data/README.md)
 * [Transform data](transform-data/README.md)

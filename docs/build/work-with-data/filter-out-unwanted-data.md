@@ -64,7 +64,6 @@ To remove items that have been seen in previous executions of a workflow, use th
 ## Related resources
 
 * [Work with data](./)
-* [Overview](overview.md)
 * [Understand n8n's data structure](understand-n8ns-data-structure.md)
 * [Expressions versus data nodes](expressions-versus-data-nodes.md)
 * [Reference data](reference-data/README.md)

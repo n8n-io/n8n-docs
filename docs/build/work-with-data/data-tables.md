@@ -99,7 +99,6 @@ From the **Data tables** tab, you can:
 ## Related resources
 
 * [Work with data](./)
-* [Overview](overview.md)
 * [Understand n8n's data structure](understand-n8ns-data-structure.md)
 * [Expressions versus data nodes](expressions-versus-data-nodes.md)
 * [Reference data](reference-data/README.md)

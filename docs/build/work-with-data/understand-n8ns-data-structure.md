@@ -116,7 +116,6 @@ n8n displays it in table form like this, showing the `nested` field in bold to s
 ## Related resources
 
 * [Work with data](./)
-* [Overview](overview.md)
 * [Expressions versus data nodes](expressions-versus-data-nodes.md)
 * [Reference data](reference-data/README.md)
 * [Transform data](transform-data/README.md)

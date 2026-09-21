@@ -16,7 +16,6 @@ n8n gives you several ways to modify, restructure, or enrich data as it moves th
 ## Related resources
 
 * [Work with data](../)
-* [Overview](../overview.md)
 * [Understand n8n's data structure](../understand-n8ns-data-structure.md)
 * [Expressions versus data nodes](../expressions-versus-data-nodes.md)
 * [Reference data](../reference-data/README.md)

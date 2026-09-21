@@ -28,7 +28,7 @@ n8n allows you to represent complex logic in your workflows.
 
 ## Related sections <a href="#related-sections" id="related-sections"></a>
 
-You need some understanding of [Data](../work-with-data/overview.md) in n8n, including [Data structure](../work-with-data/understand-n8ns-data-structure.md) and [Data flow within nodes](../work-with-data/understand-n8ns-data-structure.md#how-data-flows-within-nodes).
+You need some understanding of [Data](../work-with-data/README.md) in n8n, including [Data structure](../work-with-data/understand-n8ns-data-structure.md) and [Data flow within nodes](../work-with-data/understand-n8ns-data-structure.md#how-data-flows-within-nodes).
 
 When building your logic, you'll use n8n's [Core nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes), including:
 

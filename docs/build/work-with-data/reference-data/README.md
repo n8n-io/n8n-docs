@@ -30,7 +30,6 @@ The main way to reference data is using [expressions](../expressions-versus-data
 ## Related resources
 
 * [Work with data](../)
-* [Overview](../overview.md)
 * [Understand n8n's data structure](../understand-n8ns-data-structure.md)
 * [Expressions versus data nodes](../expressions-versus-data-nodes.md)
 * [Transform data](../transform-data/README.md)

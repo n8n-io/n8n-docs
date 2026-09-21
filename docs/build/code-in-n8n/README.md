@@ -36,7 +36,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions[^1] to transform [data](../work-with-data/overview.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
+	Use expressions[^1] to transform [data](../work-with-data/README.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
 
 	[→ Expressions](../work-with-data/expressions-versus-data-nodes.md)
 

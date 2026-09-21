@@ -93,3 +93,11 @@ The underlying logic of the assistant is build with the advanced AI capabilities
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
 [^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
 [^3]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use templates](use-templates.md)
+* [Use Chat Hub](chat-hub.md)

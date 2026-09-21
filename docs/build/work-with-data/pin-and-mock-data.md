@@ -129,3 +129,15 @@ For the most realistic testing experience, you can combine mocking and pinning a
 4. Continue developing with this edited, pinned dataset
 
 This approach gives you complete control over your test data while ensuring consistent testing across multiple runs.
+
+## Related resources
+
+* [Work with data](./)
+* [Overview](overview.md)
+* [Understand n8n's data structure](understand-n8ns-data-structure.md)
+* [Expressions versus data nodes](expressions-versus-data-nodes.md)
+* [Reference data](reference-data/README.md)
+* [Transform data](transform-data/README.md)
+* [Filter out unwanted data](filter-out-unwanted-data.md)
+* [Handle special data types](handle-special-data-types/README.md)
+* [Data tables](data-tables.md)

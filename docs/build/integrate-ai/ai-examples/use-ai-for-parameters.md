@@ -114,3 +114,12 @@ You can see the `$fromAI()` function in action in the following templates[^3]:
 [^1]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
 [^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
 [^3]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+* [AI examples](../ai-examples.md)
+* [Use Google Sheets as a data source](use-google-sheets-as-a-data-source.md)
+* [Call APIs](call-apis.md)
+* [Use website content](use-website-content.md)
+* [Human-in-the-loop for tools](human-in-the-loop-for-tools.md)
+* [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)

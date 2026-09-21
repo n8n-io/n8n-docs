@@ -20,6 +20,14 @@ layout:
 
 n8n is a low-code tool. This means you can do a lot without code, then add code when needed.
 
+## In this section
+
+* [Using the Code node](using-the-code-node.md): add JavaScript or Python code to your workflow.
+* [Get coding help from AI](get-coding-help-from-ai.md): use GPT to generate code in the Code node.
+* [Use built-in shortcuts](use-built-in-shortcuts.md): reference for n8n's built-in methods and variables for use in expressions and code.
+* [Define custom variables](define-custom-variables.md): store and reuse values across your workflows.
+* [Cookbook](cookbook/README.md): examples and recipes for common coding tasks.
+
 ## Code in your workflows <a href="#code-in-your-workflows" id="code-in-your-workflows"></a>
 
 There are two places in your workflows where you can use code:

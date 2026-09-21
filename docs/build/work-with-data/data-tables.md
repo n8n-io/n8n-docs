@@ -95,3 +95,15 @@ From the **Data tables** tab, you can:
 | Structured data | ✓ | ✗ |
 | Scoped to projects | ✓ | ✗ |
 | Use values as expressions | ✗ | ✓ |
+
+## Related resources
+
+* [Work with data](./)
+* [Overview](overview.md)
+* [Understand n8n's data structure](understand-n8ns-data-structure.md)
+* [Expressions versus data nodes](expressions-versus-data-nodes.md)
+* [Reference data](reference-data/README.md)
+* [Transform data](transform-data/README.md)
+* [Filter out unwanted data](filter-out-unwanted-data.md)
+* [Pin and mock data](pin-and-mock-data.md)
+* [Handle special data types](handle-special-data-types/README.md)

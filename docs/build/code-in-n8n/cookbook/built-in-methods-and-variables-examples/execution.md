@@ -80,4 +80,8 @@ Refer to [Custom executions data](../../../understand-workflows/understand-execu
 
 ---
 
+## Related resources
+
+* [Built-in methods and variables examples](./)
+
 

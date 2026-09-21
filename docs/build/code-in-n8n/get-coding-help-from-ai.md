@@ -212,6 +212,12 @@ return newItems;
 
 ### Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Code in n8n](./)
+* [Using the Code node](using-the-code-node.md)
+* [Use built-in shortcuts](use-built-in-shortcuts.md)
+* [Define custom variables](define-custom-variables.md)
+* [Cookbook](cookbook/README.md)
+
 Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding), which includes example prompts.
 
 ## Fixing the code <a href="#fixing-the-code" id="fixing-the-code"></a>

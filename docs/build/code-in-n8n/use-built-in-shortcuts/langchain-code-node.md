@@ -25,3 +25,10 @@ The built-in methods and variables on this page are for use in expressions in th
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iIcw3xaOoa9HryGmR8dX/" %}
+
+## Related resources
+
+* [Use built-in shortcuts](../use-built-in-shortcuts.md)
+* [JMESPath](jmespath.md)
+* [HTTP node](http-node.md)
+* [n8n metadata](n8n-metadata.md)

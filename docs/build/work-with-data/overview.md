@@ -45,3 +45,15 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 * [Pinning, mocking, and editing data](pin-and-mock-data.md) during workflow development
 * [Referencing data](reference-data/README.md) and [item linking](reference-data/link-data-items/README.md): how data items link to each other
 
+## Related resources
+
+* [Work with data](./)
+* [Understand n8n's data structure](understand-n8ns-data-structure.md)
+* [Expressions versus data nodes](expressions-versus-data-nodes.md)
+* [Reference data](reference-data/README.md)
+* [Transform data](transform-data/README.md)
+* [Filter out unwanted data](filter-out-unwanted-data.md)
+* [Pin and mock data](pin-and-mock-data.md)
+* [Handle special data types](handle-special-data-types/README.md)
+* [Data tables](data-tables.md)
+

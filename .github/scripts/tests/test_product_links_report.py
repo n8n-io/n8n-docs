@@ -314,6 +314,31 @@ class TestScan(unittest.TestCase):
         self.assertEqual(totals["unresolved_path"], 0)
         self.assertEqual(findings, [])
 
+    def test_docs_root_is_forwarded_to_the_live_leg_too(self):
+        """Same pin, for classify_live().
+
+        The offline pin above runs live=False, and the other live tests get a
+        404 from their stub and return "dead" before resolve_path is reached.
+        So nothing catches docs_root being dropped from the classify_live
+        call. Here the stub reports a redirect to a page that exists ONLY in
+        the fixture: with docs_root the final page is found and the verdict is
+        "redirect-reliant"; without it the lookup hits the real docs tree,
+        finds nothing, and the verdict degrades to "no-source-file".
+        """
+        (self.docs / "fixture-only").mkdir()
+        (self.docs / "fixture-only" / "final.md").write_text("# Final\n")
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "const a = 'https://docs.n8n.io/old/moved/';\n")
+            findings, totals = plr.scan(
+                src, live=True,
+                resolver=lambda u: (200, "https://docs.n8n.io/fixture-only/final"),
+                docs_root=self.docs)
+        self.assertEqual(findings[0]["kind"], "redirect-reliant")
+        self.assertEqual(totals["no_source_file"], 0)
+
     def test_collects_occurrences_and_skips_tests(self):
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp)

@@ -6,30 +6,14 @@ layout:
 ---
 # Use n8n Cloud <a href="#use-n8n-cloud" id="use-n8n-cloud"></a>
 
-{% content-ref url="start-your-free-trial.md" %}
-[start-your-free-trial.md](start-your-free-trial.md)
-{% endcontent-ref %}
+Manage your n8n Cloud trial, plan, and instance.
 
-{% content-ref url="use-the-admin-dashboard.md" %}
-[use-the-admin-dashboard.md](use-the-admin-dashboard.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="update-your-version.md" %}
-[update-your-version.md](update-your-version.md)
-{% endcontent-ref %}
-
-{% content-ref url="configure-cloud/README.md" %}
-[configure-cloud/README.md](configure-cloud/README.md)
-{% endcontent-ref %}
-
-{% content-ref url="gateway-credits/README.md" %}
-[gateway-credits/README.md](gateway-credits/README.md)
-{% endcontent-ref %}
-
-{% content-ref url="understand-concurrency.md" %}
-[understand-concurrency.md](understand-concurrency.md)
-{% endcontent-ref %}
-
-{% content-ref url="download-workflows.md" %}
-[download-workflows.md](download-workflows.md)
-{% endcontent-ref %}
+* [Try free then choose a plan](start-your-free-trial.md): start a free trial, then compare the Starter, Pro, and Enterprise plans.
+* [Use the admin dashboard](use-the-admin-dashboard.md): access the Cloud admin dashboard.
+* [Update your version](update-your-version.md): update your n8n version on Cloud.
+* [Configure Cloud](configure-cloud/README.md): set your timezone, find your IP addresses, and manage your data.
+* [Gateway credits](gateway-credits/README.md): use AI models and third-party services without provider accounts or API keys.
+* [Understand concurrency](understand-concurrency.md): how n8n Cloud handles concurrent executions.
+* [Download workflows](download-workflows.md): download workflows from n8n Cloud with the admin dashboard.

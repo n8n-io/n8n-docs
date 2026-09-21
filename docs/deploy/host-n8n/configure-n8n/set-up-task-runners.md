@@ -230,3 +230,7 @@ docker run --rm -it \
   -p 5680:5680 \
   n8nio/runners:custom
 ```
+
+## Related resources
+
+* [Configure n8n](./)

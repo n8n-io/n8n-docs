@@ -215,3 +215,7 @@ The two cursor metrics track the dedicated cursor table. A node starts reporting
 All names above assume the default `n8n_` metrics prefix. If you set `N8N_METRICS_PREFIX`, substitute your own.
 
 See [Configure n8n](./) for other configuration topics.
+
+## Related resources
+
+* [Configure n8n](./)

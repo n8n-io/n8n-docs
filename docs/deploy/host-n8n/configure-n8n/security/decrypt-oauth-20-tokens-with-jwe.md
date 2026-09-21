@@ -130,6 +130,7 @@ The JWKS schema reserves elliptic-curve algorithms (`ECDH-ES` and variants), but
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Security](../security.md)
 * [HTTP Request credentials: Using OAuth2](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/httprequest#using-oauth2): set up the generic OAuth 2.0 credential.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENV_FEAT_OAUTH2_JWE` and `N8N_OAUTH_JWE_JWKS_PER_MINUTE`.
 * [Encryption key rotation](rotate-encryption-keys.md): rotate the data encryption key that protects the JWE private key at rest.

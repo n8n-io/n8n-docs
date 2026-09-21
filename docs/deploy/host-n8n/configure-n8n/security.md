@@ -16,8 +16,11 @@ You can secure a self-hosted n8n instance to protect credentials and workflow da
 
 Securing your n8n instance can take several forms.
 
+## In this section
+
 At a high level, you can:
 
+* [Manage security policies](security/manage-security-policies.md) to control instance-wide settings including MFA enforcement and personal space controls.
 * Conduct a [security audit](security/run-security-audits.md) to identify security risks.
 * [Set up SSL](security/set-up-ssl.md) to enforce secure connections.
 * [Set up Single Sign-On](security/configure-sso.md) for user account management.
@@ -25,6 +28,7 @@ At a high level, you can:
 * Use [two-factor authentication (2FA)](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth) for your users.
 * Enable [encryption key rotation](security/rotate-encryption-keys.md) to periodically replace the key that encrypts credentials and other sensitive data.
 * Enable [JWE token decryption for OAuth 2.0 credentials](security/decrypt-oauth-20-tokens-with-jwe.md) so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
+* [Harden task runners](security/harden-task-runners.md) for better isolation of Code node executions.
 
 You can also protect sensitive data processed by your workflows:
 
@@ -37,3 +41,7 @@ More granularly, consider blocking or opting out of features or data collection 
 * [Block certain nodes](security/block-specific-nodes.md) from being available to your users.
 * [Protect against SSRF attacks](security/enable-ssrf-protection.md) to control which hosts and IP ranges workflow nodes can connect to.
 * [Restrict account registration](security/verify-user-emails.md) to email-verified users.
+
+## Related resources
+
+* [Configure n8n](./)

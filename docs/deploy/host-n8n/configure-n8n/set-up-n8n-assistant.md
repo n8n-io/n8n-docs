@@ -371,3 +371,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 * If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
 
 See [Configure n8n](./) for other configuration topics.
+
+## Related resources
+
+* [Configure n8n](./)

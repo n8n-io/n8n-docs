@@ -34,6 +34,8 @@ export N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Security](../security.md)
+
 Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these environment variables.
 
 Refer to [Configuration](../basic-configuration.md) for more information on setting environment variables.

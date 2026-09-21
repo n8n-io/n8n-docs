@@ -106,3 +106,7 @@ This is the default database that gets used if nothing is defined.
 
 The database file is located at:
 `~/.n8n/database.sqlite`
+
+## Related resources
+
+* [Configure n8n](./)

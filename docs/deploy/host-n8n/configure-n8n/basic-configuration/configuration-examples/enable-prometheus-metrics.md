@@ -57,3 +57,7 @@ n8n_scaling_mode_queue_jobs_failed 0
 # TYPE n8n_scaling_mode_queue_jobs_waiting gauge <a href="#type-n8nscalingmodequeuejobswaiting-gauge" id="type-n8nscalingmodequeuejobswaiting-gauge"></a>
 n8n_scaling_mode_queue_jobs_waiting 0
 ```
+
+## Related resources
+
+* [Configuration examples](./)

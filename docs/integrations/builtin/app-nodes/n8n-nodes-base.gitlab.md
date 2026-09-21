@@ -62,9 +62,9 @@ If your repository is located within nested GitLab groups or subgroups (e.g., `h
 
 To configure the node for nested subgroups:
 
-1. **Repository Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`.
+1. **Project Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`.
    * *Example Owner Path*: `org%2Fsubgroup1%2Fsubgroup2`
-2. **Repository Name**: Enter the project's repository slug.
+2. **Project Name**: Enter the project's repository slug.
    * *Example Name*: `my-repo`
 
 

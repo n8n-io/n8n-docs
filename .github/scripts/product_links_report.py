@@ -341,11 +341,15 @@ def http_resolve(url, timeout=30):
         return None, url
 
 
-def scan(src_root, live=True, resolver=None):
+def scan(src_root, live=True, resolver=None, docs_root=None):
     """Walk the n8n checkout and return (findings, totals).
 
     `live=False` skips pass 2 (the network), which keeps the unit tests and any
     offline run honest: unresolved paths simply stay `unresolved-path`.
+
+    `docs_root` overrides the docs tree the URLs resolve against. Production
+    leaves it None and gets this repo's `docs/`; the tests pass a fixture so a
+    verdict never depends on which real pages happen to exist today.
     """
     src_root = Path(src_root)
     seen = {}
@@ -388,12 +392,12 @@ def scan(src_root, live=True, resolver=None):
     findings = []
     for entry in seen.values():
         url = entry["url"]
-        kind, detail = classify(url)
+        kind, detail = classify(url, docs_root)
         status, final_url = None, None
         # `generated` goes to the live pass too: it has no markdown to resolve
         # against, so without a live status it would be silently assumed fine.
         if kind in ("unresolved-path", "generated") and live:
-            kind, detail, status, final_url = classify_live(url, resolver)
+            kind, detail, status, final_url = classify_live(url, resolver, docs_root)
         totals[kind.replace("-", "_")] += 1
         if kind in ("ok", "templated", "generated"):
             continue

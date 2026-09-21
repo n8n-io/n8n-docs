@@ -276,6 +276,22 @@ class TestClassifyLive(unittest.TestCase):
 
 
 class TestScan(unittest.TestCase):
+    """scan() resolves against a fixture, never the live docs tree.
+
+    scan() passes its docs_root down to classify(); without one it would fall
+    back to this repo's real `docs/`, and these verdicts would silently depend
+    on which pages exist today. A docs PR adding `old/page.md` would then break
+    an unrelated test here for no obvious reason.
+    """
+
+    def setUp(self):
+        self.docs_tmp = tempfile.TemporaryDirectory()
+        self.docs = Path(self.docs_tmp.name)
+        (self.docs / plr.ROOT_SPACE).mkdir()
+
+    def tearDown(self):
+        self.docs_tmp.cleanup()
+
     def test_collects_occurrences_and_skips_tests(self):
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp)
@@ -286,7 +302,7 @@ class TestScan(unittest.TestCase):
             (src / "packages" / "cli" / "__tests__").mkdir(parents=True)
             (src / "packages" / "cli" / "__tests__" / "b.ts").write_text(
                 "const c = 'https://docs.n8n.io/fixture-only/';\n")
-            findings, totals = plr.scan(src, live=False)
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
         self.assertEqual(totals["unique_urls"], 1)
         self.assertEqual(totals["occurrences"], 2)
         self.assertEqual(findings[0]["occurrences"], 2)
@@ -300,7 +316,7 @@ class TestScan(unittest.TestCase):
             (src / "pkg").mkdir(parents=True)
             (src / "pkg" / "a.ts").write_text(
                 "throw new Error('see https://docs.n8n.io/old/page/#some-anchor.');\n")
-            findings, totals = plr.scan(src, live=False)
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
         self.assertEqual(totals["unique_urls"], 1)
         self.assertEqual(findings[0]["url"],
                          "https://docs.n8n.io/old/page/#some-anchor")
@@ -313,7 +329,7 @@ class TestScan(unittest.TestCase):
             (src / "pkg" / "a.ts").write_text(
                 "const a = 'https://docs.n8n.io/old/page/';\n"
                 "const b = 'https://docs.n8n.io/old/page/?utm_source=app';\n")
-            findings, totals = plr.scan(src, live=False)
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
         self.assertEqual(totals["unique_urls"], 1)
         self.assertEqual(findings[0]["occurrences"], 2)
 
@@ -326,7 +342,8 @@ class TestScan(unittest.TestCase):
             (src / "pkg" / "a.ts").write_text(
                 "const a = 'https://docs.n8n.io/connect/n8n-api/users/';\n")
             findings, totals = plr.scan(src, live=True,
-                                        resolver=lambda u: (404, u))
+                                        resolver=lambda u: (404, u),
+                                        docs_root=self.docs)
         self.assertEqual(totals["dead"], 1)
         self.assertEqual(findings[0]["kind"], "dead")
 
@@ -337,7 +354,8 @@ class TestScan(unittest.TestCase):
             (src / "pkg" / "a.ts").write_text(
                 "const a = 'https://docs.n8n.io/gone/';\n")
             findings, totals = plr.scan(src, live=True,
-                                        resolver=lambda u: (404, u))
+                                        resolver=lambda u: (404, u),
+                                        docs_root=self.docs)
         self.assertEqual(totals["dead"], 1)
         self.assertEqual(totals["unresolved_path"], 0)
         self.assertEqual(findings[0]["kind"], "dead")

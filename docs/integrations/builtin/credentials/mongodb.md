@@ -1,8 +1,8 @@
 ---
 title: MongoDB credentials
 description: >-
-  Use MongoDB credentials to authenticate MongoDB Atlas, MongoDB, or DocumentDB
-  in n8n.
+  Documentation for MongoDB credentials. Use these credentials to authenticate
+  MongoDB in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
@@ -26,12 +26,10 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a database user with the permissions required by the node you want to use.
-
-For MongoDB Atlas:
-
-- Create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for setup instructions.
+- Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/) server.
 - As a Project Owner, add all the [n8n IP addresses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/find-your-ip-addresses) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
+
+If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
 
 For DocumentDB, create a DocumentDB deployment and note its MongoDB-compatible connection string and database name. Refer to the [DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for setup instructions.
 
@@ -42,10 +40,9 @@ For DocumentDB, create a DocumentDB deployment and note its MongoDB-compatible c
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to:
+Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
 
-- [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/)
-- [DocumentDB documentation](https://github.com/documentdb/documentdb#readme)
+Refer to the [DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
 
 ## Using database connection - Connection string <a href="#using-database-connection-connection-string" id="using-database-connection-connection-string"></a>
 

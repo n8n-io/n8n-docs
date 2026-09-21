@@ -12,8 +12,9 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas
 description: >-
-  Learn how to use the MongoDB Atlas Vector Store node with MongoDB Atlas or
-  DocumentDB in your n8n workflows.
+  Learn how to use the MongoDB Atlas Vector Store node in n8n. Follow technical
+  documentation to integrate MongoDB Atlas Vector Store node into your
+  workflows.
 layout:
   width: default
   title:
@@ -36,9 +37,9 @@ layout:
 
 # MongoDB Atlas Vector Store
 
-Use this node to store and query vector embeddings in MongoDB Atlas or DocumentDB collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
 
-The node detects DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
+The node also supports DocumentDB. It detects DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
 
 On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
 
@@ -162,21 +163,21 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
+* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
+* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool) <a href="#retrieve-documents-parameters-as-vector-store-for-chaintool" id="retrieve-documents-parameters-as-vector-store-for-chaintool"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
+* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
@@ -185,7 +186,7 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
+* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Node options <a href="#node-options" id="node-options"></a>

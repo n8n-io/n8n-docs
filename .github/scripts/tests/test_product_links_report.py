@@ -292,6 +292,28 @@ class TestScan(unittest.TestCase):
     def tearDown(self):
         self.docs_tmp.cleanup()
 
+    def test_docs_root_is_actually_forwarded_to_classify(self):
+        """Pins the forwarding positively, not just by absence.
+
+        Every other TestScan URL is unresolved in both the fixture and the
+        real docs tree, so dropping docs_root would not fail any of them.
+        This page exists ONLY in the fixture, so the link resolves to "ok"
+        and is excluded from findings only while scan() keeps threading
+        docs_root into classify().
+        """
+        (self.docs / "fixture-only").mkdir()
+        (self.docs / "fixture-only" / "page.md").write_text(
+            '# Fixture\n\n## Heading <a id="heading"></a>\n')
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "a.ts").write_text(
+                "const a = 'https://docs.n8n.io/fixture-only/page/#heading';\n")
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
+        self.assertEqual(totals["ok"], 1)
+        self.assertEqual(totals["unresolved_path"], 0)
+        self.assertEqual(findings, [])
+
     def test_collects_occurrences_and_skips_tests(self):
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp)

@@ -39,7 +39,7 @@ layout:
 
 MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
 
-The node also supports DocumentDB. It detects DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
+The node also supports the [open-source DocumentDB project](https://github.com/documentdb/documentdb#readme). This support doesn't apply to Amazon DocumentDB. The node detects supported DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
 
 On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
 
@@ -85,9 +85,9 @@ Make sure to note the following values which are required when configuring the n
 * Vector index name
 * Field names for embeddings and metadata
 
-### DocumentDB
+### Open-source DocumentDB
 
-Before using this node with DocumentDB, create a native `cosmosSearch` vector index on the embedding field. The index dimensions must match the output dimensions of your embedding model.
+Before using this node with the open-source DocumentDB project, create a native `cosmosSearch` vector index on the embedding field. The index dimensions must match the output dimensions of your embedding model.
 
 For example, run this command to create an HNSW index for a three-dimensional `embedding` field:
 
@@ -205,7 +205,7 @@ Refer to:
 
 * [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas) for more information about the service.
 * [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
-* [DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
+* [Open-source DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

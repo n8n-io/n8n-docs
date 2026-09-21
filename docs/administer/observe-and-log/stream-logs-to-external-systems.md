@@ -338,3 +338,8 @@ N8N_LOG_STREAMING_DESTINATIONS='[
   }
 ]'
 ```
+
+## Related resources
+
+* [Observe and log](./)
+* [Track usage with Insights](track-usage-with-insights.md)

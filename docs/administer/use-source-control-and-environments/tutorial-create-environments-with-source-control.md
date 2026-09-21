@@ -129,3 +129,13 @@ Learn more about:
 
 * [Environments in n8n](work-with-environments.md) and [Git and n8n](use-git-in-n8n.md)
 * [Source control patterns](choose-branching-patterns.md)
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Set up source control](set-up-source-control.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)

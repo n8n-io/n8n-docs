@@ -5,18 +5,11 @@ layout:
 ---
 # Manage credentials <a href="#manage-credentials" id="manage-credentials"></a>
 
-{% content-ref url="share-credentials-securely.md" %}
-[share-credentials-securely.md](share-credentials-securely.md)
-{% endcontent-ref %}
+Store and share the authentication details your workflows need, without spreading secrets across your instance.
 
-{% content-ref url="end-user-credentials.md" %}
-[end-user-credentials.md](end-user-credentials.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="credential-overwrites.md" %}
-[credential-overwrites.md](credential-overwrites.md)
-{% endcontent-ref %}
-
-{% content-ref url="use-external-secret-stores.md" %}
-[use-external-secret-stores.md](use-external-secret-stores.md)
-{% endcontent-ref %}
+* [Share credentials securely](share-credentials-securely.md): share credentials within an organization.
+* [End-user credentials](end-user-credentials.md): let each user connect their own account to a credential.
+* [Credential overwrites](credential-overwrites.md): set credential data globally on a self-hosted instance.
+* [Use external secret stores](use-external-secret-stores.md): use an external secrets vault with n8n.

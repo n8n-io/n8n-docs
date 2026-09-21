@@ -5,10 +5,9 @@ layout:
 ---
 # Observe and log <a href="#observe-and-log" id="observe-and-log"></a>
 
-{% content-ref url="track-usage-with-insights.md" %}
-[track-usage-with-insights.md](track-usage-with-insights.md)
-{% endcontent-ref %}
+Track usage across your instance, and send execution signals to your own logging tools.
 
-{% content-ref url="stream-logs-to-external-systems.md" %}
-[stream-logs-to-external-systems.md](stream-logs-to-external-systems.md)
-{% endcontent-ref %}
+## In this section
+
+* [Track usage with Insights](track-usage-with-insights.md): understand workflow execution volume and performance.
+* [Stream logs to external systems](stream-logs-to-external-systems.md): stream events from n8n to your logging tools.

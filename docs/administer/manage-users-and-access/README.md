@@ -29,3 +29,12 @@ The user management feature doesn't send personal information, such as email or 
 This section contains most usage information for user management, and the [Cloud setup guide](set-up-for-cloud.md). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/user-management).
 
 This section includes guides to configuring [LDAP](verify-user-identity/connect-ldap.md) and [SAML](verify-user-identity/use-saml/README.md) in n8n.
+
+## In this section
+
+* [Set up for Cloud](set-up-for-cloud.md): set up user management on n8n Cloud.
+* [Add and remove users](add-and-remove-users.md): invite, remove, and manage users on your instance.
+* [Understand instance roles](understand-instance-roles.md): the built-in Owner, Admin, and Member roles.
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access at the instance and project level.
+* [Verify user identity](verify-user-identity/README.md): require two-factor auth, or connect LDAP, SAML, or OIDC.
+* [Follow best practices](follow-best-practices.md): user management best practices.

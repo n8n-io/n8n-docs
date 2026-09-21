@@ -19,19 +19,20 @@ layout:
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
-In this section:
+## In this section
 
-* [Understand](understand-source-control.md):
-	* [Environments in n8n](work-with-environments.md): The purpose of environments, and how they work in n8n.
-	* [Git and n8n](use-git-in-n8n.md): How n8n uses Git. 
-	* [Branch patterns](choose-branching-patterns.md): The possible relationships between n8n instances and Git branches.
-* [Set up source control for environments](set-up-source-control.md): How to connect your n8n instance to Git.
-* Using:
-	* [Push and pull](push-and-pull-changes.md): Send work to Git, and fetch work from Git to your instance.
-	* [Copy work between environments](move-work-between-environments.md): How to copy work between different n8n instances.
-* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md): An end-to-end tutorial, setting up environments using n8n's recommended configurations.
+* [Understand source control](understand-source-control.md): how source control and environments work in n8n.
+* [Work with environments](work-with-environments.md): the purpose of environments, and how they work in n8n.
+* [Use Git in n8n](use-git-in-n8n.md): how n8n uses Git.
+* [Choose branching patterns](choose-branching-patterns.md): the possible relationships between n8n instances and Git branches.
+* [Set up source control](set-up-source-control.md): how to connect your n8n instance to Git.
+* [Push and pull changes](push-and-pull-changes.md): send work to Git, and fetch work from Git to your instance.
+* [Compare versions](compare-versions.md): use workflow diffs to compare local and remote changes.
+* [Move work between environments](move-work-between-environments.md): how to copy work between different n8n instances.
+* [Use environments programmatically with the public API](use-environments-via-api.md): preview, push, and pull source control changes using the n8n public API.
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md): an end-to-end tutorial, setting up environments using n8n's recommended configurations.
 
-Related sections:
+## Related sections
 
 * [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables): reusable values.
 * [External secrets](../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.

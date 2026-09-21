@@ -29,7 +29,7 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 
 From version 2 of the node, the **Authentication** dropdown offers three options:
 
-- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages and, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings.
+- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, `TeamworkTag.Read` for team tag mentions, and, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings.
 - **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, grant the credential the scopes this node needs. Refer to [Default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) for the full list.
 - **Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Some resources need a signed-in user and aren't available with this credential. Refer to [Service Principal credential support](#service-principal-credential-support) on this page, and to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and the required application permissions.
 
@@ -90,6 +90,46 @@ The Chat Member and Online Meeting resources are available from n8n 2.39.0, toge
     * Update
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
+
+## Mentions
+
+The Channel Message **Create** and **Reply** operations and the Chat Message **Create** operation have a **Mentions** field. Each row in the field @mentions one person or one team tag, and n8n adds the mention to the message for you. On a channel message, set **Mention Type** to **User** or **Team Tag** first. A chat message mentions users only, because a team tag belongs to a team. Refer to Microsoft's [chatMessageMention resource type](https://learn.microsoft.com/en-us/graph/api/resources/chatmessagemention) for how Microsoft Teams stores a mention.
+
+Don't type the name into **Message** as well, or it shows up twice.
+
+**Mention Placement**, an option in the operation's **Options** collection, sets where the mentions go. **Start of Message**, the default, gives `@Jane please review this`. **End of Message** gives `please review this @Jane`.
+
+{% hint style="warning" %}
+**Mentions make the message HTML**
+
+A mention makes Microsoft Teams render the message as HTML, even when **Content Type** is **Text**. Line breaks you type into **Message** stop showing as line breaks, so use `<br>` instead.
+{% endhint %}
+
+### Mention a user
+
+In a **Mentions** row on Channel Message **Create** or **Reply**, set **Mention Type** to **User**. Chat Message **Create** has no **Mention Type**, because its rows are users already. Then fill in the **User** field:
+
+* **From List**: search your Microsoft Entra directory and pick the user. Entries pair the display name with the user principal name (UPN), such as `Jane Smith (jane@contoso.com)`, because display names aren't unique in a tenant. Guest users work here too.
+* **By ID**: enter the user's object ID, such as `7e2f1174-e8ee-4859-b8b1-a8d1cc63d276`, or their UPN or email address, such as `jacob@contoso.com`. For a guest user, use the object ID: a guest's UPN contains `#EXT#`, which this field rejects.
+
+n8n looks the user up in Microsoft Entra before it sends the message, so the mention shows their directory display name rather than the text you entered.
+
+### Mention a team tag
+
+A team tag belongs to a team, so tag mentions work on channel messages only. Set the operation's **Team** to the team that owns the tag, then add a **Mentions** row, set **Mention Type** to **Team Tag**, and fill in the **Team Tag** field:
+
+* **From List**: pick one of the team's tags. Each entry shows how many members carry it, such as `Engineering (4 members)`.
+* **By ID**: enter the tag ID that `GET /v1.0/teams/<team-id>/tags` returns. The tag must belong to the team you selected, or the node fails when it looks the tag up.
+
+Mentioning a tag notifies everyone who carries it. The Microsoft Teams node mentions a team's existing tags and can't create new ones.
+
+### Mention permissions
+
+User mentions need the `User.Read.All` permission and team tag mentions need `TeamworkTag.Read`. The **Teams OAuth2** credential requests both by default. Add them by hand if the credential uses **Custom Scopes**, or if you authenticate with **Microsoft OAuth2 (Graph)**. A Microsoft Entra admin must consent to them.
+
+If a team tag mention fails with a permission error, open the credential and select **Reconnect** so it picks up `TeamworkTag.Read`.
+
+Mentions aren't available with the **Service Principal (App-Only)** credential, which can't run any of the three operations that support them. Refer to [Service Principal credential support](#service-principal-credential-support).
 
 ## Service Principal credential support
 

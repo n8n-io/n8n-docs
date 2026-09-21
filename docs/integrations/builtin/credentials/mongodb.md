@@ -1,8 +1,8 @@
 ---
 title: MongoDB credentials
 description: >-
-  Documentation for MongoDB credentials. Use these credentials to authenticate
-  MongoDB in n8n, a workflow automation platform.
+  Use MongoDB credentials to authenticate MongoDB Atlas, MongoDB, or DocumentDB
+  in n8n.
 contentType:
   - integration
   - reference
@@ -26,10 +26,14 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-- Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/) server.
+Create a database user with the permissions required by the node you want to use.
+
+For MongoDB Atlas:
+
+- Create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for setup instructions.
 - As a Project Owner, add all the [n8n IP addresses](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/find-your-ip-addresses) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries) for detailed instructions.
 
-If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
+For DocumentDB, create a DocumentDB deployment and note its MongoDB-compatible connection string and database name. Refer to the [DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for setup instructions.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -38,7 +42,10 @@ If you are setting up MongoDB from scratch, create a cluster and a database. Ref
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
+Refer to:
+
+- [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/)
+- [DocumentDB documentation](https://github.com/documentdb/documentdb#readme)
 
 ## Using database connection - Connection string <a href="#using-database-connection-connection-string" id="using-database-connection-connection-string"></a>
 
@@ -59,6 +66,22 @@ To configure this credential, you'll need the [Prerequisites](#prerequisites) li
     - **Passphrase**
 
 Refer to [MongoDB's x.509 documentation](https://www.mongodb.com/docs/manual/core/security-x.509/#std-label-client-x509-certificates-requirements) for more information on working with x.509 certificates.
+
+### Connect to DocumentDB
+
+Use the **Connection String** configuration type for DocumentDB. Include the TLS options required by your deployment in the connection string. For example:
+
+```text
+mongodb://<username>:<password>@<host>:<port>/?tls=true
+```
+
+The local DocumentDB container uses a self-signed certificate. For local testing, add `tlsAllowInvalidCertificates=true`:
+
+```text
+mongodb://<username>:<password>@localhost:10260/?tls=true&tlsAllowInvalidCertificates=true
+```
+
+Don't disable certificate validation for production connections.
 
 ## Using database connection - Values <a href="#using-database-connection-values" id="using-database-connection-values"></a>
 

@@ -12,9 +12,8 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas
 description: >-
-  Learn how to use the MongoDB Atlas Vector Store node in n8n. Follow technical
-  documentation to integrate MongoDB Atlas Vector Store node into your
-  workflows.
+  Learn how to use the MongoDB Atlas Vector Store node with MongoDB Atlas or
+  DocumentDB in your n8n workflows.
 layout:
   width: default
   title:
@@ -37,7 +36,9 @@ layout:
 
 # MongoDB Atlas Vector Store
 
-MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+Use this node to store and query vector embeddings in MongoDB Atlas or DocumentDB collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+
+The node detects DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
 
 On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
 
@@ -50,6 +51,8 @@ You can find authentication information for this node [here](../../credentials/m
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
+
+### MongoDB Atlas
 
 Before using this node, create a [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) in your MongoDB Atlas collection. Follow these steps to create one:
 
@@ -76,6 +79,45 @@ Before using this node, create a [Vector Search index](https://www.mongodb.com/d
 8. Name your index and create.
 
 Make sure to note the following values which are required when configuring the node:
+
+* Collection name
+* Vector index name
+* Field names for embeddings and metadata
+
+### DocumentDB
+
+Before using this node with DocumentDB, create a native `cosmosSearch` vector index on the embedding field. The index dimensions must match the output dimensions of your embedding model.
+
+For example, run this command to create an HNSW index for a three-dimensional `embedding` field:
+
+```javascript
+db.runCommand({
+	createIndexes: "documents",
+	indexes: [
+		{
+			name: "documentdb-vector-index",
+			key: { embedding: "cosmosSearch" },
+			cosmosSearchOptions: {
+				kind: "vector-hnsw",
+				similarity: "COS",
+				dimensions: 3,
+				m: 16,
+				efConstruction: 64
+			}
+		}
+	]
+})
+```
+
+Change `documents`, `embedding`, and `dimensions` to match your collection and embedding model.
+
+DocumentDB requires an index for every field used in a vector search pre-filter. For example, create this index before filtering on `metadata.category`:
+
+```javascript
+db.documents.createIndex({ "metadata.category": 1 })
+```
+
+Make sure to note the following values when configuring the node:
 
 * Collection name
 * Vector index name
@@ -120,21 +162,21 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ### Get Many parameters <a href="#get-many-parameters" id="get-many-parameters"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Insert Documents parameters <a href="#insert-documents-parameters" id="insert-documents-parameters"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool) <a href="#retrieve-documents-parameters-as-vector-store-for-chaintool" id="retrieve-documents-parameters-as-vector-store-for-chaintool"></a>
 
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
 * **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
 * **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
@@ -143,7 +185,7 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
 * **Mongo Collection**: Enter the name of the MongoDB collection to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+* **Vector Index Name**: Enter the name of the vector index in your MongoDB Atlas or DocumentDB collection.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Node options <a href="#node-options" id="node-options"></a>
@@ -162,6 +204,7 @@ Refer to:
 
 * [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas) for more information about the service.
 * [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
+* [DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

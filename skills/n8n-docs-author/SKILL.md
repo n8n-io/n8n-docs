@@ -16,9 +16,9 @@ You write and review documentation for the n8n-docs repo.
 The definitive guides live in the repo and are the source of truth. This skill
 distills them so you can act quickly, but defer to the guides when in doubt:
 
-- **Style guide:** `docs/contribute/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
-- **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs.md` — content types, templates, PR process, and what not to submit.
-- **Terminology:** `docs/contribute/terminology.md` — official product terms to use, and the non-official ones to avoid.
+- **Style guide:** `docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md` — writing style, frontmatter, and GitBook formatting.
+- **Contribution guide:** `docs/contribute/contribution-guide-for-n8n-docs/README.md` — content types, templates, PR process, and what not to submit.
+- **Terminology:** `docs/contribute/contribution-guide-for-n8n-docs/terminology.md` — official product terms to use, and the non-official ones to avoid.
 
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
@@ -107,7 +107,7 @@ marketing words. Prefer the plainer version:
 ## Terminology and naming
 
 Use one term per concept, and prefer the official product term over a synonym.
-Full do/don't list: `docs/contribute/terminology.md`. Highest-value rules:
+Full do/don't list: `docs/contribute/contribution-guide-for-n8n-docs/terminology.md`. Highest-value rules:
 
 - **"publish a workflow"**, not "activate".
 - **`n8n`** lowercase always; node and UI names in **bold** with exact casing.
@@ -135,15 +135,41 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
-- **Cross-references:** link every page to its prerequisites and its next step,
-  link parents and children both ways (an overview lists all its child pages;
-  each child links back with `./`), and aim for each page to sit in a cluster of
-  5+ interlinked pages on the same topic (AI search cites connected clusters far
-  more than standalone pages). Put
-  links in the body at the first meaningful mention, with descriptive anchor text
-  naming the target ([Configure the Schedule Trigger](...), never "click here").
-  Links point to separate topics; they don't replace context a section needs, so
-  restate that instead.
+- **Cross-references:** link every page to its prerequisites and its next step.
+  Every section landing page links down to all its child pages. Every child
+  page links back up to its parent (`./`, or `../` if the current page is
+  itself a nested section README one level below its parent) and sideways to
+  each direct sibling, in a "Related resources" section at the end, a plain link list, structural
+  rather than curated, bare links with no descriptions (unlike "In this
+  section", the reader has already read a page from the cluster, so the
+  descriptive anchor text alone is enough). Add other genuinely related pages
+  at your discretion,
+  even outside the current section. Past about 8-10 siblings, drop the
+  sibling list and link back to the parent only — beyond that size it's
+  mostly boilerplate, and an O(n²) maintenance job on top, since the parent's
+  "In this section" already carries the exhaustive list. Aim for each page to
+  sit in a cluster of 5+ interlinked pages on the same topic (AI search cites
+  connected clusters far more than standalone pages). Skip sibling links for
+  flat reference collections (one page per data type, etc.) where every entry
+  follows the same template — these still link back to the parent, just
+  without a sibling list.
+- **Nested sections:** a page that is itself a parent (for example, a
+  subsection README) gets both — its own "In this section" for its children,
+  and a "Related resources" footer relating it to its own parent and its own
+  siblings at its level, linking to that parent with `../` (its own folder's
+  `./` would point at itself). Only reach one level up and one level sideways;
+  don't chain up to a grandparent section, since that connectivity already
+  exists transitively through the parent's own links.
+- **Listing children:** an overview with 2+ children lists them as a plain
+  bullet list under an "In this section" heading (link plus a one-line
+  description). With only one child, skip the list and link it inline at
+  first mention instead.
+- **Link placement:** put links in the body at the first meaningful mention,
+  with descriptive anchor text naming the target ([Configure the Schedule
+  Trigger](...), never "click here") — reuse an existing mention of the target
+  topic where one already exists, rather than adding a new sentence. A link
+  points to a separate topic; it can't stand in for context a section needs,
+  so restate that instead.
 
 ## Feature availability
 

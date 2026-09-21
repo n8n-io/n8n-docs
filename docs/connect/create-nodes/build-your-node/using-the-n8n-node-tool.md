@@ -115,7 +115,7 @@ This will start an interactive prompt where you can define the details of your p
     * `@<YOUR_ORG>/n8n-nodes-<YOUR_NODE_NAME>`
 * **What kind of node are you building?** The [node building style](../plan-your-node/choose-a-node-building-style.md) you want to use:
     * **HTTP API**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud.
-    * **Other**: A programmatic style node with full flexibility.
+    * **Other**: A programmatic style node with full flexibility. Choose this for trigger nodes: the declarative style doesn't support triggers. To add a trigger node to a package that already has a declarative-style node, write the trigger node in the programmatic style in the same package.
 * **What template do you want to use?** When using the HTTP API, you can choose the template to start from:
     * **GitHub Issues API**: A demo node that includes multiple operations and credentials. This can help you get familiar with the node structure and conventions.
     * **Start from scratch**: A blank template that will guide you through your custom setup with some further prompts.

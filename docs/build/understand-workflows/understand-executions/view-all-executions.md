@@ -64,3 +64,13 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 ## Load data from previous executions into your current workflow <a href="#load-data-from-previous-executions-into-your-current-workflow" id="load-data-from-previous-executions-into-your-current-workflow"></a>
 
 You can load data from a previous workflow back into the canvas. Refer to [Debug executions](debug-executions.md) for more information.
+
+## Related resources
+
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Customize executions data](customize-executions-data.md)
+* [Stream real-time responses](stream-real-time-responses.md)
+* [Dirty nodes](understand-dirty-nodes.md)

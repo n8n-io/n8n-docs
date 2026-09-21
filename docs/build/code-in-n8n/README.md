@@ -100,3 +100,15 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 </div>
 
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

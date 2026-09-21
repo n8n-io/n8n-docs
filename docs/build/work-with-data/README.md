@@ -41,3 +41,15 @@ In n8n, data flows through your workflow from node to node. Each node receives d
 * [Pin and mock data](pin-and-mock-data.md): pin and mock data in your workflow during development.
 * [Handle special data types](handle-special-data-types/README.md): work with binary files, dates and times, and nested JSON.
 * [Data tables](data-tables.md): store and manage structured tabular data within project boundaries.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

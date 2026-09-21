@@ -17,3 +17,15 @@ n8n lets you build AI workflows that connect different LLM providers such as Ope
 * [AI examples](ai-examples.md): example workflows and use cases for building AI functionality.
 
 See [Build](../README.md) for other workflow-building topics.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

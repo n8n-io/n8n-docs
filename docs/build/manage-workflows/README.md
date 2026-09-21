@@ -17,3 +17,15 @@ Configure, tag, share, and maintain your workflows as they grow.
 * [Export and import](export-and-import.md): move workflows in and out of n8n.
 * [n8n packages](n8n-packages/README.md): bundle workflows and their structure into a portable file to move between instances.
 * [Share with others](share-with-others.md): share workflows between users.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

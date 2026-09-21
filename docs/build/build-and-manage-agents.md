@@ -284,3 +284,15 @@ For the environment variables and setup steps, see [Enable agents](https://app.g
 One turn with an agent counts as one execution. A turn is a single exchange, where you send the agent a message and it produces a response.
 
 Agents share the same execution quota as workflows. Executions from your agents and workflows count toward the same total on your plan.
+
+## Related resources
+
+* [Build](./)
+* [Understand workflows](understand-workflows/README.md)
+* [Ways of building workflows](ways-of-building-workflows/README.md)
+* [Manage workflows](manage-workflows/README.md)
+* [Flow logic](flow-logic/README.md)
+* [Work with data](work-with-data/README.md)
+* [Code in n8n](code-in-n8n/README.md)
+* [Integrate AI](integrate-ai/README.md)
+* [Keyboard shortcuts](keyboard-shortcuts.md)

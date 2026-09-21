@@ -30,3 +30,15 @@ n8n gives you several ways to build a workflow, from typing a request in natural
 * [Use templates](use-templates.md): start from a pre-built workflow instead of an empty canvas.
 * [Use Ask n8n AI](use-the-ai-assistant.md): get in-editor help building, debugging, and optimizing workflows.
 * [Use Chat Hub](chat-hub.md): chat with multiple AI models and n8n agents from one interface.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

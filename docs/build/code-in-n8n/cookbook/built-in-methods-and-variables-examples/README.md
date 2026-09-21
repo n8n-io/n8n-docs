@@ -18,7 +18,7 @@ n8n provides built-in methods and variables for working with data and accessing 
 
 * [execution](execution.md): set and get custom execution data.
 * [getWorkflowStaticData](getworkflowstaticdata.md): access the static workflow data.
-* [("<node-name>").all]((node-name).all.md): access all the items of the current or parent nodes.
+* [("node-name").all]((node-name).all.md): access all the items of the current or parent nodes.
 * [vars](vars.md): access your environment's custom variables.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>

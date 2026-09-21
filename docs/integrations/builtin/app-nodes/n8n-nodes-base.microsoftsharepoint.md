@@ -85,7 +85,7 @@ Some organizations don't grant apps tenant-wide access to SharePoint. Instead, t
 
 To set up per-site access:
 
-* **Signing in as an app**: grant the app registration the `Sites.Selected` application permission with admin consent, then grant the app `read` or `write` access on each site. Refer to [Grant access per site](../credentials/microsoftentraserviceprincipal.md#grant-access-per-site).
+* **Signing in as an app**: grant the app registration the `Sites.Selected` application permission with admin consent, then grant the app `read` or `write` access on each site. Refer to [Grant access per site](../credentials/microsoftentraserviceprincipal.md#grant-access-per-site), or to [Provision a SharePoint app registration with the Azure CLI](../credentials/microsoftentraserviceprincipal-sharepoint.md) for a copy-paste setup including the permission manifest.
 * **Signing in as a person**: set the credential's **Scope** field to `openid offline_access Sites.Selected`. The same per-site grants apply to the app registration, and the signed-in account also needs access to the site.
 
 ## What changed from version 1
@@ -100,7 +100,7 @@ Version 2 is a rebuild of the node on the Microsoft Graph API. Existing workflow
 
 * **Site search fails with per-site permissions.** Microsoft Graph can't list sites for a credential that only has per-site access. Switch the **Site** field to **By URL** or **By ID** mode, or grant a tenant-wide read permission (`Sites.Read.All` or `Sites.ReadWrite.All`) if you need search.
 * **A 403 error names a missing permission.** The node's permission errors name the Microsoft Graph permission the operation needs, for example `Sites.ReadWrite.All (or Sites.Selected granted with write access for this site)`. Grant it, with admin consent for application permissions, then retry. With per-site access, also check that the app has been granted access to the site you're using.
-* **The Service Principal credential test fails even though operations work.** The connection test reads your organization from Microsoft Graph, so the app registration needs `Organization.Read.All` (or `Directory.Read.All`) in addition to its SharePoint permissions. Refer to the [Microsoft Entra Service Principal credential documentation](../credentials/microsoftentraserviceprincipal.md).
+* **The Service Principal credential test passes but operations fail.** The connection test only checks that the app registration can sign in, not which permissions it holds. Check that the SharePoint application permission has admin consent and, with per-site access, that the app has been granted access to the site. Refer to the [Microsoft Entra Service Principal credential documentation](../credentials/microsoftentraserviceprincipal.md).
 * **Connecting a credential fails with an AADSTS error code.** Microsoft rejected the sign-in or token exchange, for example AADSTS7000215 (invalid client secret), AADSTS7000222 (expired client secret), or AADSTS700027 (rejected certificate assertion). Refer to [Common issues in the Microsoft Entra Service Principal credential documentation](../credentials/microsoftentraserviceprincipal.md#common-issues).
 * **Uploads over 250 MB fail.** **File: Upload** and **File: Update** send the contents in a single request, which is capped at 250 MB. Uploading larger files in pieces isn't supported yet.
 * **Filtering a large list fails.** SharePoint only filters lists with more than 5,000 items on indexed columns. Add an index in SharePoint (**List settings** > **Indexed columns**) or filter on an indexed column.

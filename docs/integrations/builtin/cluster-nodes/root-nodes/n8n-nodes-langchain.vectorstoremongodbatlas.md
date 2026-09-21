@@ -12,9 +12,8 @@ originalUrl: >-
 url: >-
   https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas
 description: >-
-  Learn how to use the MongoDB Atlas Vector Store node in n8n. Follow technical
-  documentation to integrate MongoDB Atlas Vector Store node into your
-  workflows.
+  Learn how to use the MongoDB Atlas Vector Store node with MongoDB Atlas,
+  Azure DocumentDB, or the open-source DocumentDB project.
 layout:
   width: default
   title:
@@ -39,7 +38,7 @@ layout:
 
 MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
 
-The node also supports the [open-source DocumentDB project](https://github.com/documentdb/documentdb#readme). This support doesn't apply to Amazon DocumentDB. The node detects supported DocumentDB endpoints automatically and uses DocumentDB's native `$vectorSearch` support. You don't need to select a database type.
+The node also supports [Azure DocumentDB](https://learn.microsoft.com/en-us/azure/documentdb/overview) and the [open-source DocumentDB project](https://github.com/documentdb/documentdb#readme). This support doesn't apply to Amazon DocumentDB. The node detects supported DocumentDB endpoints automatically and uses the native vector search syntax for each service. You don't need to select a database type.
 
 On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
 
@@ -85,9 +84,9 @@ Make sure to note the following values which are required when configuring the n
 * Vector index name
 * Field names for embeddings and metadata
 
-### Open-source DocumentDB
+### Azure DocumentDB and open-source DocumentDB
 
-Before using this node with the open-source DocumentDB project, create a native `cosmosSearch` vector index on the embedding field. The index dimensions must match the output dimensions of your embedding model.
+Before using this node with Azure DocumentDB or the open-source DocumentDB project, create a native `cosmosSearch` vector index on the embedding field. The index dimensions must match the output dimensions of your embedding model.
 
 For example, run this command to create an HNSW index for a three-dimensional `embedding` field:
 
@@ -156,6 +155,8 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/eiIkcF23uZ2A8BkFVQM5/" %}
 
+For Azure DocumentDB or open-source DocumentDB, **Vector Index Name** is the name of the `cosmosSearch` index in your DocumentDB collection.
+
 ### Rerank Results <a href="#rerank-results" id="rerank-results"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KcxcfJWhy81cjCSzO4vQ/" %}
@@ -205,6 +206,7 @@ Refer to:
 
 * [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas) for more information about the service.
 * [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
+* [Azure DocumentDB vector search documentation](https://learn.microsoft.com/en-us/azure/documentdb/vector-search) for more information about vector search in the managed service.
 * [Open-source DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

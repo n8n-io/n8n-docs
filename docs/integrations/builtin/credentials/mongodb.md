@@ -1,8 +1,8 @@
 ---
 title: MongoDB credentials
 description: >-
-  Documentation for MongoDB credentials. Use these credentials to authenticate
-  MongoDB in n8n, a workflow automation platform.
+  Use MongoDB credentials to authenticate MongoDB, MongoDB Atlas, Azure
+  DocumentDB, or open-source DocumentDB in n8n.
 contentType:
   - integration
   - reference
@@ -31,7 +31,7 @@ You can use these credentials to authenticate the following nodes:
 
 If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more detailed instructions on these steps.
 
-For the open-source DocumentDB project, create a deployment and note its MongoDB-compatible connection string and database name. This support doesn't apply to Amazon DocumentDB. Refer to the [open-source DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for setup instructions.
+For Azure DocumentDB or the open-source DocumentDB project, create a deployment and note its MongoDB-compatible connection string and database name. This support doesn't apply to Amazon DocumentDB. Refer to the [Azure DocumentDB documentation](https://learn.microsoft.com/en-us/azure/documentdb/overview) or [open-source DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for setup instructions.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -40,7 +40,9 @@ For the open-source DocumentDB project, create a deployment and note its MongoDB
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
+Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/) for more information about the service.
+
+Refer to the [Azure DocumentDB documentation](https://learn.microsoft.com/en-us/azure/documentdb/overview) for more information about the managed service.
 
 Refer to the [open-source DocumentDB documentation](https://github.com/documentdb/documentdb#readme) for more information about DocumentDB.
 
@@ -64,9 +66,9 @@ To configure this credential, you'll need the [Prerequisites](#prerequisites) li
 
 Refer to [MongoDB's x.509 documentation](https://www.mongodb.com/docs/manual/core/security-x.509/#std-label-client-x509-certificates-requirements) for more information on working with x.509 certificates.
 
-### Connect to open-source DocumentDB
+### Connect to Azure DocumentDB or open-source DocumentDB
 
-Use the **Connection String** configuration type for the open-source DocumentDB project. Leave **Use TLS** off and don't fill in the x.509 certificate fields from step 4. Configure TLS in the connection string only. For example:
+Use the **Connection String** configuration type for Azure DocumentDB or the open-source DocumentDB project. Leave **Use TLS** off and don't fill in the x.509 certificate fields from step 4. Configure TLS in the connection string only. For example:
 
 ```text
 mongodb://<username>:<password>@<host>:<port>/?tls=true

@@ -56,7 +56,7 @@ Refer to [GitLab credentials](../credentials/gitlab.md) for guidance on setting 
 * User
     * Returns the repositories of a user
 
-## Working with Subgroups and Nested Repositories
+## Working with subgroups and nested repositories
 
 If your repository is located within nested GitLab groups or subgroups (e.g., `https://gitlab.com/org/subgroup1/subgroup2/my-repo`), GitLab's API requires the namespace path to be URL-encoded.
 

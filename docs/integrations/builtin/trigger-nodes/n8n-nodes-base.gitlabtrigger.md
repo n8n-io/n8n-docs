@@ -49,7 +49,7 @@ For usage examples and templates to help you get started, refer to n8n's [GitLab
 * Tag
 * Wiki page
 
-## Working with Subgroups and Nested Repositories
+## Working with subgroups and nested repositories
 
 If your repository is located within nested GitLab groups or subgroups (e.g., `https://gitlab.com/org/subgroup1/subgroup2/my-repo`), GitLab's API requires the namespace path to be URL-encoded.
 

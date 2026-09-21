@@ -29,7 +29,7 @@ layout:
 Ask n8n AI helps you build, debug, and optimize your workflows. From answering questions about n8n to providing help with coding and expressions[^1], Ask n8n AI supports you as you navigate n8n's capabilities.
 
 {% hint style="info" %}
-Ask n8n AI is n8n's built-in help assistant and is no longer actively developed. To build, edit, and run workflows from a chat, see [Use AI Assistant](ai-assistant.md).
+Ask n8n AI is n8n's built-in help assistant and is no longer actively developed. To build, edit, and run workflows from a chat, see [Use n8n Assistant](n8n-assistant.md).
 {% endhint %}
 
 ## Current capabilities <a href="#current-capabilities" id="current-capabilities"></a>

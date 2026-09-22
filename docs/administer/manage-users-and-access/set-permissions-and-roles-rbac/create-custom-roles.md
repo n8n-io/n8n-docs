@@ -27,9 +27,9 @@ n8n has two types of custom roles:
 
 ## In this section
 
-* **[Create custom project roles](create-custom-project-roles.md)**: Define permissions within a specific project, including access to workflows, credentials, folders, and other project resources. Assign them to project members to control what they can do inside that project.
+* [Create custom project roles](create-custom-project-roles.md): Define permissions within a specific project, including access to workflows, credentials, folders, and other project resources. Assign them to project members to control what they can do inside that project.
 
-* **[Create custom instance roles](create-custom-instance-roles.md)**: Define permissions that apply across the entire n8n instance, such as managing users, tags, API keys, or custom roles themselves. Assign them to users who need specific instance-level capabilities without full Admin access.
+* [Create custom instance roles](create-custom-instance-roles.md): Define permissions that apply across the entire n8n instance, such as managing users, tags, API keys, or custom roles themselves. Assign them to users who need specific instance-level capabilities without full Admin access.
 
 ## Related resources
 

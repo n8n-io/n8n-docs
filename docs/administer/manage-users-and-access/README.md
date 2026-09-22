@@ -33,7 +33,7 @@ This section includes guides to configuring [LDAP](verify-user-identity/connect-
 ## In this section
 
 * [Set up for Cloud](set-up-for-cloud.md): set up user management on n8n Cloud.
-* [Add and remove users](add-and-remove-users.md): invite, remove, and manage users on your instance.
+* [Add and remove users](add-and-remove-users.md): delete users and resend pending invitations.
 * [Understand instance roles](understand-instance-roles.md): the built-in Owner, Admin, and Member roles.
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access at the instance and project level.
 * [Verify user identity](verify-user-identity/README.md): require two-factor auth, or connect LDAP, SAML, or OIDC.

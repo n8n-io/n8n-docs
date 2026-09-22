@@ -5,7 +5,7 @@ layout:
 ---
 # Observe and log <a href="#observe-and-log" id="observe-and-log"></a>
 
-Track usage across your instance, and send execution signals to your own logging tools.
+Track usage across your instance, and send events from n8n to your own logging tools.
 
 ## In this section
 

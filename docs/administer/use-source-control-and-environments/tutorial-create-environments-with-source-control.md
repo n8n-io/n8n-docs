@@ -134,6 +134,9 @@ Learn more about:
 
 * [Use source control and environments](./)
 * [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)
 * [Push and pull changes](push-and-pull-changes.md)
 * [Compare versions](compare-versions.md)

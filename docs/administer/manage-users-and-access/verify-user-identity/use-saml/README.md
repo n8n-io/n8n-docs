@@ -16,9 +16,18 @@ layout:
 
 This section tells you how to enable SAML SSO (single sign-on) in n8n. It assumes you're familiar with SAML. If you're not, [SAML Explained in Plain English](https://www.onelogin.com/learn/saml) can help you understand how SAML works, and its benefits.
 
+## In this section
+
 * [Set up SAML](set-up-saml.md): a general guide to setting up SAML in n8n, and links to resources for common IdPs.
 * [Okta Workforce Identity SAML setup](set-up-okta-workforce-identity-saml.md): step-by-step guidance to configuring Okta.
 * [Azure AD SAML setup](set-up-azure-ad-saml.md): step-by-step guidance to configuring with Azure AD.
 * [Troubleshooting](troubleshoot-saml.md): a list of things to check if you encounter issues.
 * [Managing users with SAML](manage-users-with-saml.md): performing user management tasks with SAML enabled.
+
+## Related resources
+
+* [Verify user identity](../)
+* [Require two-factor auth](../require-two-factor-auth.md)
+* [Connect LDAP](../connect-ldap.md)
+* [Use OIDC](../use-oidc/README.md)
 

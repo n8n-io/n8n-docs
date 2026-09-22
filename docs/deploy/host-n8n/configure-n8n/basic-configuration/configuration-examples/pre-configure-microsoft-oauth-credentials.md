@@ -573,3 +573,7 @@ echo -n '{"microsoftOutlookOAuth2Api":{"clientId":"NEW_CLIENT_ID","clientSecret"
 ```
 
 Because the SecretProviderClass references `versions/latest`, the CSI driver picks up the new version on its next sync. Restart the n8n pod for n8n to read the updated file.
+
+## Related resources
+
+* [Configuration examples](./)

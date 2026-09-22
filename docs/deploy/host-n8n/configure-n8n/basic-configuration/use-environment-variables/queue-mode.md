@@ -64,3 +64,7 @@ Refer to [Configuring multi-main setup](../../scaling/enable-queue-mode.md#confi
 | `N8N_MULTI_MAIN_SETUP_ENABLED` | Boolean | `false` | Whether to enable multi-main setup for queue mode (license required). |
 | `N8N_MULTI_MAIN_SETUP_KEY_TTL` | Number | `10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL` | Number | `3` | Interval (in seconds) for leader check in multi-main setup. |
+
+## Related resources
+
+* [Environment variables](./)

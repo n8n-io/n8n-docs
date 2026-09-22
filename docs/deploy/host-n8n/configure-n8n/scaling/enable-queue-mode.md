@@ -334,3 +334,13 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
 
+
+## Related resources
+
+* [Scaling](../scaling.md)
+* [Measure performance](measure-performance.md)
+* [Control concurrency](control-concurrency.md)
+* [Manage execution data](manage-execution-data.md)
+* [Handle binary data](handle-binary-data.md)
+* [Use external storage](use-external-storage.md)
+* [Fix memory issues](fix-memory-issues.md)

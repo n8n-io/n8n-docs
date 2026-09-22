@@ -101,3 +101,10 @@ Heavier executions and use cases can exceed database capacity despite the automa
 2. n8n prunes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
 
 Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to prune the data before the remaining disk space fills up.
+
+## Related resources
+
+* [Configure Cloud](./)
+* [Set your timezone](set-your-timezone.md)
+* [Find your IP addresses](find-your-ip-addresses.md)
+* [Change instance ownership or username](change-instance-ownership-or-username.md)

@@ -101,3 +101,10 @@ export CREDENTIALS_OVERWRITE_PERSISTENCE=true
 ```
 
 When enabled, n8n stores the encrypted overwrites in the `settings` table and broadcasts a `reload-overwrite-credentials` event so workers reload the latest values. When disabled, overwrites remain in memory on the process that loaded them and n8n doesn't propagate them to workers or preserve them across restarts.
+
+## Related resources
+
+* [Manage credentials](./)
+* [Share credentials securely](share-credentials-securely.md)
+* [End-user credentials](end-user-credentials.md)
+* [Use external secret stores](use-external-secret-stores.md)

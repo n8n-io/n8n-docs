@@ -30,3 +30,13 @@ If you're using queue mode, switch this to `database`. n8n doesn't support `file
 n8n executes binary data pruning as part of execution data pruning. Refer to [Execution data | Enable executions pruning](manage-execution-data.md#enable-executions-pruning) for details. 
 
 If you configure multiple binary data modes, binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. Refer to [External storage](use-external-storage.md#usage) for details. 
+
+## Related resources
+
+* [Scaling](../scaling.md)
+* [Measure performance](measure-performance.md)
+* [Enable queue mode](enable-queue-mode.md)
+* [Control concurrency](control-concurrency.md)
+* [Manage execution data](manage-execution-data.md)
+* [Use external storage](use-external-storage.md)
+* [Fix memory issues](fix-memory-issues.md)

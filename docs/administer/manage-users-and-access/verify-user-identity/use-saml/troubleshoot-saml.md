@@ -21,3 +21,11 @@ If you get an error when testing your SAML setup, check the following:
 * Is the metadata XML correct? Check that the metadata you copied into n8n is formatted correctly.
 
 For more support, use the [forum](https://community.n8n.io/), or contact your support representative if you have a paid support plan.
+
+## Related resources
+
+* [Use SAML](./)
+* [Set up SAML](set-up-saml.md)
+* [Okta Workforce Identity SAML setup](set-up-okta-workforce-identity-saml.md)
+* [Azure AD SAML setup](set-up-azure-ad-saml.md)
+* [Manage users with SAML](manage-users-with-saml.md)

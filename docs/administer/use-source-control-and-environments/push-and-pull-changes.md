@@ -157,3 +157,16 @@ If a pulled data table has columns removed compared to your local version, n8n d
 
 If you need different credentials on different n8n environments, use [external secrets](../manage-credentials/use-external-secret-stores.md).
 {% endhint %}
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Set up source control](set-up-source-control.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)

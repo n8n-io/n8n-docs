@@ -226,7 +226,7 @@ If a different instance detects the crash, for example after the main instance r
 
 Its workflow custom attributes come from the workflow's current settings, not the version that ran.
 
-### Caveats
+### Crashed execution caveats
 
 - **Duration is detection lag, not run time.** A crashed span ends when n8n detected the crash, not when the instance died. That's one to two minutes for `stall`, the next periodic check for `queue-recovery`, and the next restart for `startup-recovery`. Exclude spans with `n8n.execution.status=crashed` from latency metrics. Count them in error-rate metrics only.
 - **Rebuilt spans show a missing parent.** The stored trace context is the original span's ID, and OpenTelemetry can't reuse a span ID. The rebuilt span is a child of the span that never ended, so Jaeger and similar backends flag a missing parent. Expect the warning.
@@ -490,13 +490,13 @@ Check that:
 
 ### A crashed execution has no span
 
-Enable OpenTelemetry on the main instance. In queue mode, the main instance detects the crash and emits the span, not the worker.
+Enable OpenTelemetry on the main instance. In queue mode, the main instance detects the crash and emits the span, so enabling it on the workers alone produces no crash spans. Set the same variables on every instance type so worker spans keep their parent context.
 
 The node that was running when the instance died has no span. Node spans exported before the crash stay in the trace. See [Crashed executions](#crashed-executions).
 
 ### A rebuilt span shows a missing-parent warning
 
-n8n rebuilds the span from the trace context stored on the execution. That context is the ID of the original span, which never ended, and OpenTelemetry can't reuse a span ID. That makes the rebuilt span a child of a span the backend never received. Expect the warning. The span carries `n8n.execution.reconstructed=true`. See [Caveats](#caveats).
+n8n rebuilds the span from the trace context stored on the execution. That context is the ID of the original span, which never ended, and OpenTelemetry can't reuse a span ID. That makes the rebuilt span a child of a span the backend never received. Expect the warning. The span carries `n8n.execution.reconstructed=true`. See [Caveats](#crashed-execution-caveats).
 
 ### Worker traces are missing parent context <a href="#worker-traces-are-missing-parent-context" id="worker-traces-are-missing-parent-context"></a>
 

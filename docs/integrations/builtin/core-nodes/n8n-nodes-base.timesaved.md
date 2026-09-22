@@ -26,7 +26,7 @@ This node only counts if the workflow's **Estimated time saved** setting is set 
   * **Per Item**: Multiplies **Minutes Saved** by the number of input items.
 * **Minutes Saved**: The number of minutes this step saves. Whole minutes, zero or more. Defaults to `0`.
 
-The node passes every input item through unchanged. It records the time saved as execution metadata and doesn't alter your data.
+The node passes every input item through unchanged, recording the time saved as execution metadata.
 
 ## How n8n calculates the total
 
@@ -36,7 +36,7 @@ You can place more than one Track Time Saved node in the same workflow. n8n sums
 
 ## When n8n counts an execution
 
-n8n only records time saved for **successful production executions**. These runs never contribute, whatever values the node holds:
+n8n only records time saved for **successful production executions**. The following runs never contribute, whatever values the node holds:
 
 * **Manual executions.** Running the workflow from the editor doesn't count. Only production runs do.
 * **Failed executions.** If the run ends in an error, n8n records no time saved for it, even for the Track Time Saved nodes that already ran.

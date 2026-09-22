@@ -103,3 +103,7 @@ A request blocked by IP fails with the error "The request was blocked because it
 
 Protection is off by default so it doesn't break existing self-hosted setups that call internal services. Before you turn it on, list the internal hosts your workflows need and add them to the allow lists. Prefer narrow allow entries, such as a single host or hostname, over turning protection off.
 {% endhint %}
+
+## Related resources
+
+* [Environment variables](./)

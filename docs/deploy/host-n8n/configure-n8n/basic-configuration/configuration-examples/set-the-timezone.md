@@ -23,3 +23,7 @@ export GENERIC_TIMEZONE=Europe/Berlin
 You can find the name of your timezone [here](https://momentjs.com/timezone/).
 
 Refer to [Environment variables reference](../use-environment-variables/timezone-and-localization.md) for more information on this variable.
+
+## Related resources
+
+* [Configuration examples](./)

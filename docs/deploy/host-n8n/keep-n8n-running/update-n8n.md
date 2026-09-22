@@ -28,3 +28,12 @@ For instructions on how to update, refer to the documentation for your installat
 
 * [Installed with npm](../install-options/install-with-npm.md#updating)
 * [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Set up logging](set-up-logging.md)
+* [Monitor n8n](monitor-n8n.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Back up and restore](backup-and-restore.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

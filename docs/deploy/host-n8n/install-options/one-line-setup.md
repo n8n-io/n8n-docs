@@ -149,5 +149,13 @@ The one-line setup command needs a terminal that understands shell scripts, whic
 - **WSL** (Windows Subsystem for Linux), with Docker Desktop's WSL2 integration turned on.
 - **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)) with Docker Desktop running can also run POSIX shell scripts, but n8n hasn't verified it end-to-end for the one-line setup command. Stick with WSL unless you've confirmed Git Bash works for your setup.
 
+## Related resources
+
+* [Install options](./)
+* [Install using Docker Compose](install-using-docker-compose.md)
+* [Install with npm](install-with-npm.md)
+* [Install with Docker](install-with-docker.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)
+
 
 

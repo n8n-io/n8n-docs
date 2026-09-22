@@ -22,3 +22,13 @@ Instance owners can access the admin dashboard to manage their Cloud instance. T
 ## Access the dashboard if the app is offline <a href="#access-the-dashboard-if-the-app-is-offline" id="access-the-dashboard-if-the-app-is-offline"></a>
 
 If your instance is down, you can still access the admin dashboard. When you log in to the app, n8n will ask you if you want a magic link to access your dashboard. Select **Send magic link**, then check your email for the link.
+
+## Related resources
+
+* [Use n8n Cloud](./)
+* [Try free then choose a plan](start-your-free-trial.md)
+* [Update your version](update-your-version.md)
+* [Configure Cloud](configure-cloud/README.md)
+* [Gateway credits](gateway-credits/README.md)
+* [Understand concurrency](understand-concurrency.md)
+* [Download workflows](download-workflows.md)

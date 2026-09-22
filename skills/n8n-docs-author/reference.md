@@ -159,6 +159,7 @@ Each top-level folder under `docs/` is a separate space:
 | `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
 | `changelog`            | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`           | `6OmLnmci5kZDzdkzKREn` |
+| `n8n-community-license`| `WcrJOYW6B9JlV5aiivMA` |
 
 Alternatively, copy the page's link in GitBook, or use its published
 `https://docs.n8n.io/...` address if you don't have GitBook access.

@@ -74,3 +74,11 @@ You don't need to know LangChain to use n8n, but these resources can help if you
 * [What's LangChain?](https://www.ibm.com/think/topics/langchain) explains LangChain terminology in plain language, for a general audience.
 * This [YouTube series by Greg Kamradt](https://youtu.be/_v_fgW2SkkQ?si=8Z2tfAoXnN3lXU9s) works through the LangChain documentation with code examples.
 * Join the n8n [Discord](https://discord.gg/bAt54txhHg) to discuss LangChain and share your projects with the n8n community.
+
+## Related resources
+
+* [Integrate AI](./)
+* [MCP servers](mcp-servers.md)
+* [Understand AI components](understand-ai-components/README.md)
+* [Test and improve AI workflows](test-and-improve-ai-workflows/README.md)
+* [AI examples](ai-examples.md)

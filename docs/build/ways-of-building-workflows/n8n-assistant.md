@@ -179,4 +179,10 @@ To get more credits during Preview, upgrade your plan. More ways to top up are c
 
 For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-See [Ways of building workflows](README.md) for other approaches.
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use templates](use-templates.md)
+* [Use Ask n8n AI](use-the-ai-assistant.md)
+* [Use Chat Hub](chat-hub.md)

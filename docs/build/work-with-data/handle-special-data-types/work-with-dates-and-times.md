@@ -298,3 +298,9 @@ A detailed explanation of what the code does:
 * `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](query-json-data.md) documentation. This gives you the number of days to Christmas, as a negative number.
 * `.toString().substring(1)` turns the number into a string and removes the `-`.
 * `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
+
+## Related resources
+
+* [Handle special data types](./)
+* [Work with files and images](work-with-files-and-images.md)
+* [Query JSON data](query-json-data.md)

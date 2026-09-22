@@ -17,8 +17,6 @@ Monitor, log, trace, and update your self-hosted n8n instance.
 * [Update n8n](update-n8n.md): best practices for updating your self-hosted n8n.
 * [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md): send workflow and node execution traces to an OpenTelemetry collector.
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 ## Related resources
 
 * [Host n8n](../)

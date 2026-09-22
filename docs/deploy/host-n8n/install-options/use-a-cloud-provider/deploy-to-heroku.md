@@ -85,7 +85,7 @@ The `heroku.yml` file defines the application you want to create on Heroku. It c
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Digital Ocean](deploy-to-digital-ocean.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)
 * [AWS](deploy-to-aws.md)
 * [Azure](deploy-to-azure.md)

@@ -1079,7 +1079,7 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Digital Ocean](deploy-to-digital-ocean.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)
 * [AWS](deploy-to-aws.md)

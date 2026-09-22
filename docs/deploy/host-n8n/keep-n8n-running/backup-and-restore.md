@@ -108,4 +108,5 @@ With the default SQLite database, the `.n8n` folder holds everything needed to r
 * [Set up logging](set-up-logging.md)
 * [Monitor n8n](monitor-n8n.md)
 * [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Update n8n](update-n8n.md)
 * [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

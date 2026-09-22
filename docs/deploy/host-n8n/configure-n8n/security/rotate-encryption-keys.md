@@ -101,7 +101,7 @@ There's no automated tool to convert data encrypted in the new format back to th
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md)
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
 * [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md): set the instance-level `N8N_ENCRYPTION_KEY` value.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENCRYPTION_KEY` and `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION`.
 * [Configuring queue mode](../scaling/enable-queue-mode.md): make sure all workers share the same instance encryption key.

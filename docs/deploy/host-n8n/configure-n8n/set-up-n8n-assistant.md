@@ -370,8 +370,6 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 * `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
 * If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
 
-See [Configure n8n](./) for other configuration topics.
-
 ## Related resources
 
 * [Configure n8n](./)

@@ -327,7 +327,7 @@ Replace the `change-me-...` placeholders in `.env` with your own unique secrets 
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Digital Ocean](deploy-to-digital-ocean.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [AWS](deploy-to-aws.md)
 * [Azure](deploy-to-azure.md)

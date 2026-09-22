@@ -260,7 +260,7 @@ Lastly, you must setup OAuth for these services. Visit `https://console.cloud.go
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Digital Ocean](deploy-to-digital-ocean.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)
 * [AWS](deploy-to-aws.md)

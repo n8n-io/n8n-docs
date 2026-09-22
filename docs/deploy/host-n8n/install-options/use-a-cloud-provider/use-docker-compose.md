@@ -214,12 +214,10 @@ If you have trouble reaching your instance, check your server's firewall setting
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
 
-See [Use a cloud provider](README.md) for other cloud deployment options.
-
 ## Related resources
 
 * [Use a cloud provider](./)
-* [Digital Ocean](deploy-to-digital-ocean.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)
 * [AWS](deploy-to-aws.md)

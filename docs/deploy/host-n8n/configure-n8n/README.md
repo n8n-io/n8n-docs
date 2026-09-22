@@ -42,8 +42,6 @@ Configure a self-hosted n8n instance, including database, security, scaling, and
 * [Security](security.md): audit, harden, and restrict a self-hosted instance.
 * [Scaling](scaling.md): configure n8n for a large number of users, workflows, or executions.
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 ## Related resources
 
 * [Host n8n](../)

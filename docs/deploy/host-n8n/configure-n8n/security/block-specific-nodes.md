@@ -49,8 +49,6 @@ NODES_EXCLUDE: "[]"
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-* [Security](../security.md)
-
-Refer to [Nodes environment variables](../basic-configuration/use-environment-variables/nodes.md) for more information on this environment variable.
-
-Refer to [Configuration](../basic-configuration.md) for more information on setting environment variables.
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Nodes environment variables](../basic-configuration/use-environment-variables/nodes.md): more information on this environment variable.
+* [Configuration](../basic-configuration.md): how to set environment variables.

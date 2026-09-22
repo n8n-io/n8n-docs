@@ -16,8 +16,6 @@ Compare ways to install self-hosted n8n.
 * [Install with Docker](install-with-docker.md): install and run n8n using Docker.
 * [Use a cloud provider](use-a-cloud-provider/README.md): deploy self-hosted n8n to DigitalOcean, AWS, Azure, Google Cloud, and more.
 
-See [Host n8n](../README.md) for other self-hosting topics.
-
 ## Related resources
 
 * [Host n8n](../)

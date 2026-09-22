@@ -87,8 +87,6 @@ These series only cover in-memory runs. The durable path has its own equivalents
 | `n8n_system_task_retries_total` | Counter | How many retries n8n scheduled after a failed run. Only tasks that declare a retry delay retry at all, so a failing task with a flat count here isn't a bug. |
 | `n8n_system_task_fire_lag_seconds` | Histogram | How late each timer fires, in seconds. Small values mean a busy event loop. Large ones mean the process paused or slept, and its buckets reach a day because a coalesced fire is late by at least one full cadence. |
 
-See [Configure n8n](./) for other configuration topics.
-
 ## Related resources
 
 * [Configure n8n](./)

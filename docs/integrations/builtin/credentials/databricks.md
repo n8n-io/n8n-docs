@@ -120,7 +120,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The Databricks node and the Databricks Chat Model node need **All APIs**. If the connection serves only the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 

@@ -38,3 +38,10 @@ This section includes guides to configuring [LDAP](verify-user-identity/connect-
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access at the instance and project level.
 * [Verify user identity](verify-user-identity/README.md): require two-factor auth, or connect LDAP, SAML, or OIDC.
 * [Follow best practices](follow-best-practices.md): user management best practices.
+
+## Related resources
+
+* [Administer](../)
+* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Manage credentials](../manage-credentials/README.md)
+* [Observe and log](../observe-and-log/README.md)

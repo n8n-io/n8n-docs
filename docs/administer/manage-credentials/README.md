@@ -13,3 +13,10 @@ Store and share the authentication details your workflows need, without spreadin
 * [End-user credentials](end-user-credentials.md): let each user connect their own account to a credential.
 * [Credential overwrites](credential-overwrites.md): set credential data globally on a self-hosted instance.
 * [Use external secret stores](use-external-secret-stores.md): use an external secrets vault with n8n.
+
+## Related resources
+
+* [Administer](../)
+* [Manage users and access](../manage-users-and-access/README.md)
+* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Observe and log](../observe-and-log/README.md)

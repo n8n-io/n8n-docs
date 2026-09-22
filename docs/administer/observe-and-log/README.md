@@ -11,3 +11,10 @@ Track usage across your instance, and send execution signals to your own logging
 
 * [Track usage with Insights](track-usage-with-insights.md): understand workflow execution volume and performance.
 * [Stream logs to external systems](stream-logs-to-external-systems.md): stream events from n8n to your logging tools.
+
+## Related resources
+
+* [Administer](../)
+* [Manage users and access](../manage-users-and-access/README.md)
+* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Manage credentials](../manage-credentials/README.md)

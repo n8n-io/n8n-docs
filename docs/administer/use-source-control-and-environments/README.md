@@ -37,4 +37,11 @@ n8n uses Git-based source control to support environments. Linking your n8n inst
 * [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables): reusable values.
 * [External secrets](../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.
 
+## Related resources
+
+* [Administer](../)
+* [Manage users and access](../manage-users-and-access/README.md)
+* [Manage credentials](../manage-credentials/README.md)
+* [Observe and log](../observe-and-log/README.md)
+
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

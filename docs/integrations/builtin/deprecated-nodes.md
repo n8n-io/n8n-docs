@@ -98,12 +98,12 @@ Always use the current version in new workflows to get the latest features and b
 | Airtop | 1.1 | 1 |
 | Anthropic Chat Model | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
 | AWS Bedrock Chat Model | 1.2 | 1, 1.1 |
-| AwsS3 | 2 | 1 |
+| AWS S3 | 2 | 1 |
 | Baserow | 1.1 | 1 |
 | Basic LLM Chain | 1.9 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 |
 | Bitbucket Trigger | 1.1 | 1 |
 | Cal.com Trigger | 3 | 1, 2 |
-| Call n8n Sub-Workflow Tool | 2.2 | 1, 1.1, 1.2, 1.3, 2, 2.1 |
+| Call n8n Workflow Tool | 2.2 | 1, 1.1, 1.2, 1.3, 2, 2.1 |
 | Chat | 1.3 | 1, 1.1, 1.2 |
 | Chat Memory Manager | 1.1 | 1 |
 | Chat Trigger | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
@@ -118,6 +118,7 @@ Always use the current version in new workflows to get the latest features and b
 | Date & Time | 2 | 1 |
 | Default Data Loader | 1.1 | 1 |
 | Discord | 2 | 1 |
+| Edit Fields (Set) | 3.5 | 1, 2, 3, 3.1, 3.2, 3.3, 3.4 |
 | Email Trigger (IMAP) | 2.2 | 1, 2, 2.1 |
 | Embeddings OpenAI | 1.2 | 1, 1.1 |
 | Execute Sub-workflow | 1.4 | 1, 1.1, 1.2, 1.3 |
@@ -154,6 +155,7 @@ Always use the current version in new workflows to get the latest features and b
 | Kafka Trigger | 1.3 | 1, 1.1, 1.2 |
 | Lemlist | 2 | 1 |
 | Linear | 1.1 | 1 |
+| Loop Over Items (Split in Batches) | 3 | 1, 2 |
 | MailerLite | 2 | 1 |
 | MailerLite Trigger | 2 | 1 |
 | MCP Client Tool | 1.4 | 1, 1.1, 1.2, 1.3 |
@@ -193,10 +195,8 @@ Always use the current version in new workflows to get the latest features and b
 | SeaTable Trigger | 2 | 1 |
 | Send Email | 2.1 | 1, 2 |
 | Sentiment Analysis | 1.1 | 1 |
-| Set | 3.5 | 1, 2, 3, 3.1, 3.2, 3.3, 3.4 |
 | Simple Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Slack | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
-| Split In Batches | 3 | 1, 2 |
 | Splunk | 2 | 1 |
 | Strava | 1.1 | 1 |
 | Structured Output Parser | 1.3 | 1, 1.1, 1.2 |

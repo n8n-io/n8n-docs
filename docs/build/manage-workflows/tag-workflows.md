@@ -51,4 +51,11 @@ Tags are global. If you edit or delete a tag, this affects all users of your n8n
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Manage workflows](./)
+* [Configure workflow settings](configure-workflow-settings.md)
 * [Favorite items](favorite-items.md): Pin workflows, folders, projects, and data tables for quick access.
+* [View change history](view-change-history.md)
+* [Review workflows](workflow-reviews.md)
+* [Export and import](export-and-import.md)
+* [n8n packages](n8n-packages/README.md)
+* [Share with others](share-with-others.md)

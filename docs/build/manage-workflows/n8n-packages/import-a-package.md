@@ -279,3 +279,11 @@ A refused import emits no success event. Log streaming events carry IDs but no c
 * [How import works](how-import-works.md) for the order n8n writes things in and how it resolves each entity type.
 * [Export a package](export-a-package.md) for the options that shape the package in the first place.
 * [Limits and permissions](limits-and-permissions.md) for upload caps and the full scope matrix.
+
+## Related resources
+
+* [n8n packages](./)
+* [Package format](package-format.md)
+* [Export a package](export-a-package.md)
+* [How import works](how-import-works.md)
+* [Limits and permissions](limits-and-permissions.md)

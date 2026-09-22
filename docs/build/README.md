@@ -38,6 +38,12 @@ Learn the core building blocks, editor concepts, and workflow anatomy.
 
 <a href="understand-workflows/" class="button secondary">Open</a>
 
+[**Build and manage agents**](build-and-manage-agents.md)
+
+Build agents alongside your workflows, then publish them for people to reach through chat, channels, and schedules.
+
+<a href="build-and-manage-agents.md" class="button secondary">Open</a>
+
 [**Ways of building workflows**](ways-of-building-workflows/README.md)
 
 Choose the fastest path with templates, AI, MCP, or manual building.

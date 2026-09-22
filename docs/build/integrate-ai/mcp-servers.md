@@ -24,6 +24,8 @@ n8n creates an [MCP credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/b
 
 The list of registry servers changes often. Browse the current list in the node panel instead of relying on a static list here.
 
+Some servers need setup on the provider's side before you can connect, and have their own page. Refer to [Databricks Genie MCP server](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie) for the OAuth scope an admin must add and the agent settings Genie needs.
+
 If the server you want isn't in the registry yet, use the [MCP Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) node to connect to any MCP server manually with its connection URL and credentials.
 
 ## How to choose between a built-in tool (node) and an MCP server as an agent tool

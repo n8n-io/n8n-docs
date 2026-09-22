@@ -191,7 +191,7 @@ n8n deletes most internal application logs and logs tied to sub-processors withi
 
 #### PID deletion <a href="#pid-deletion" id="pid-deletion"></a>
 
-If you delete your n8n account from the Cloud dashboard, n8n deletes the workflow, credential, user and execution data associated with your account on the same day, and removes it from backups within 90 days.
+If you delete your n8n account from the Cloud dashboard, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
 
 If your account is closed without a deletion request, n8n deletes your customer data within 100 days of closure, with backups deleted within 90 days.
 

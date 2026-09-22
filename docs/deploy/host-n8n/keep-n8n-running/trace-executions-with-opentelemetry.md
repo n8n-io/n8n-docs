@@ -37,6 +37,7 @@ When you turn on tracing, n8n exports two kinds of spans for each execution:
 
 - **`workflow.execute`**: One span per workflow execution. It records the workflow ID, name, version, node count, execution mode, status, and any error type.
 - **`node.execute`**: One span per node execution, nested inside its workflow span. It records the node ID, name, type, version, and the number of input and output items.
+- **Crashed executions**: One `workflow.execute` span with status `crashed`. The process that detected the crash ends the original span or rebuilds one. See [Crashed executions](#crashed-executions).
 
 Each span includes resource attributes that identify the n8n instance:
 
@@ -176,6 +177,71 @@ To stop n8n from injecting `traceparent` headers into outbound HTTP requests, se
 ```bash
 export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ```
+
+## Crashed executions <a href="#crashed-executions" id="crashed-executions"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Spans for crashed executions are available from n8n 2.42.0.
+{% endhint %}
+
+An execution ends as `crashed` when the process that ran it never wrote an outcome, and another process later concluded that it never will. Before n8n 2.42.0, a crashed execution never ended its span, so it was invisible in your trace backend. Now every crash produces one `workflow.execute` span. On that span, `n8n.execution.status` is `crashed` and `n8n.execution.error_type` is `WorkflowCrashedError`. The span status is error, and the span carries an `exception` event.
+
+The process that detects the crash emits the span. OpenTelemetry must be enabled on that process. In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), that's the main instance, not only the worker.
+
+{% hint style="warning" %}
+**Behaviour change in queue mode**
+
+Before n8n 2.42.0, a job whose worker died ended with status `error`. It now ends with status `crashed` and detector `stall`. If you alert on `n8n.execution.status=error`, include `crashed` as well.
+{% endhint %}
+
+### How n8n detects a crash <a href="#how-n8n-detects-a-crash" id="how-n8n-detects-a-crash"></a>
+
+The `n8n.execution.crash.detector` attribute records which check found the crash:
+
+| Value | Meaning |
+| :---- | :------ |
+| `stall` | In queue mode, the worker stopped renewing its job lock. |
+| `queue-recovery` | The periodic sweep found a running execution with no job in the queue. |
+| `startup-recovery` | n8n restarted and found an execution left in progress. |
+| `start-failure` | The execution couldn't start. |
+| `workflow-deactivation` | The workflow was unpublished while executions were in progress. |
+
+### Tracked and rebuilt spans <a href="#tracked-and-rebuilt-spans" id="tracked-and-rebuilt-spans"></a>
+
+Which process ends the span depends on which process detected the crash. The `n8n.execution.reconstructed` attribute tells you which case you're looking at:
+
+- **Tracked span** (`n8n.execution.reconstructed=false`): The detecting process still holds the span it opened when the execution started. It ends that span in place. The span keeps every attribute it had from the start.
+- **Rebuilt span** (`n8n.execution.reconstructed=true`): The detecting process holds no span for the execution, for example a restarted main instance or a sweep on another main instance. It rebuilds a `workflow.execute` span in the same trace from the trace context stored on the execution.
+
+### What a rebuilt span carries <a href="#what-a-rebuilt-span-carries" id="what-a-rebuilt-span-carries"></a>
+
+A rebuilt span carries the same dimensions as a normal workflow span: workflow ID, name, and version ID, project ID, project and workflow [custom span attributes](#custom-span-attributes) (licence-gated as usual), execution ID, mode, `n8n.execution.is_retry`, and `n8n.execution.retry_of`.
+
+A rebuilt span differs from the original in these ways:
+
+- It doesn't carry `n8n.workflow.node_count`.
+- Its workflow custom attributes come from the workflow's current settings, not from the version that ran.
+- It has no node spans of its own. Node spans the worker exported before it died stay in the same trace. The node that was running when the process died has no span.
+
+Node spans still open on the detecting process when it reports a crash end with `n8n.node.termination_reason=workflow_crashed`.
+
+### Read the duration <a href="#read-the-duration" id="read-the-duration"></a>
+
+A rebuilt span starts at the execution's recorded start time. It ends when n8n detected the crash, not when the process died. The gap depends on the detector:
+
+| Detector | Detection lag |
+| :------- | :------------ |
+| `stall` | About a minute. |
+| `queue-recovery` | Up to the next sweep. The sweep runs every 3 hours by default. |
+| `startup-recovery` | Until the next restart. |
+
+Exclude spans with `n8n.execution.status=crashed`, or with `n8n.execution.reconstructed=true`, from latency metrics. Keep them in error-rate metrics only.
+
+### Missing-parent warning <a href="#missing-parent-warning" id="missing-parent-warning"></a>
+
+The trace context stored on the execution is the ID of the original span. OpenTelemetry can't reuse a span ID, so the rebuilt span becomes a child of the span that never ended. Backends such as Jaeger show a warning for the missing parent. This is expected, and the rebuilt span still sits in the same trace as the node spans the worker exported.
 
 ## Agent tracing <a href="#agent-tracing" id="agent-tracing"></a>
 
@@ -341,14 +407,16 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.id` | Workflow ID. |
 | `n8n.workflow.name` | Workflow name. |
 | `n8n.workflow.version_id` | Workflow version ID. |
-| `n8n.workflow.node_count` | Number of nodes in the workflow. |
+| `n8n.workflow.node_count` | Number of nodes in the workflow. Absent on a [rebuilt span](#tracked-and-rebuilt-spans) for a crashed execution. |
 | `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
-| `n8n.execution.status` | Final execution status. |
+| `n8n.execution.status` | Final execution status, including `crashed` for a [crashed execution](#crashed-executions). |
 | `n8n.execution.is_retry` | `true` if the execution is a retry. |
 | `n8n.execution.retry_of` | The original execution ID, when the execution is a retry. |
-| `n8n.execution.error_type` | Error class name, set when the execution fails. |
+| `n8n.execution.error_type` | Error class name, set when the execution fails. `WorkflowCrashedError` on a crash. |
+| `n8n.execution.crash.detector` | Which check found the crash: `stall`, `queue-recovery`, `startup-recovery`, `start-failure`, or `workflow-deactivation`. See [How n8n detects a crash](#how-n8n-detects-a-crash). Available from n8n 2.42.0. |
+| `n8n.execution.reconstructed` | `true` when n8n rebuilt the span after a crash, `false` when it ended the original span. See [Tracked and rebuilt spans](#tracked-and-rebuilt-spans). Available from n8n 2.42.0. |
 | `n8n.continuation.reason` | Set on a span link when the workflow resumes after a wait. |
 | `n8n.project.custom.<key>` | Custom attributes set through [project-level custom span attributes](#custom-span-attributes). |
 | `n8n.workflow.custom.<key>` | Custom attributes set through [workflow-level custom span attributes](#custom-span-attributes). |
@@ -363,7 +431,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.type_version` | Node type version. |
 | `n8n.node.items.input` | Number of input items the node received. |
 | `n8n.node.items.output` | Number of output items the node produced. |
-| `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled`). |
+| `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled` or `workflow_crashed`). |
 | `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
@@ -430,6 +498,18 @@ Check that:
 - You have an Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
+
+### A crashed execution has no span <a href="#a-crashed-execution-has-no-span" id="a-crashed-execution-has-no-span"></a>
+
+The process that detects the crash emits the span, so OpenTelemetry must be enabled on that process. In queue mode, the main instance detects most crashes. If you only enabled OpenTelemetry on the workers, crashed executions produce no span. Set the same variables on every instance type.
+
+There is a known gap. When a worker or main instance restarts quickly and recovers the execution from its own event log, n8n writes the `crashed` status directly and produces no span.
+
+The node that was running when the process died never got to end its span, so it has no span. Node spans the process exported before it died are still in the trace. See [Crashed executions](#crashed-executions).
+
+### A rebuilt span shows a missing-parent warning <a href="#a-rebuilt-span-shows-a-missing-parent-warning" id="a-rebuilt-span-shows-a-missing-parent-warning"></a>
+
+When n8n rebuilds a span for a crashed execution, it uses the trace context stored on the execution. That context is the ID of the original span, which never ended. OpenTelemetry can't reuse a span ID, so the rebuilt span becomes a child of the missing original, and backends such as Jaeger flag the parent as missing. This is expected. The rebuilt span carries `n8n.execution.reconstructed=true` so you can tell it apart. See [Missing-parent warning](#missing-parent-warning).
 
 ### Worker traces are missing parent context <a href="#worker-traces-are-missing-parent-context" id="worker-traces-are-missing-parent-context"></a>
 

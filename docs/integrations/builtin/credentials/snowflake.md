@@ -67,7 +67,7 @@ In addition to the [common configuration fields](#common-configuration-fields), 
 
 Refer to [Snowflake's key-pair authentication documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth) for more information about generating and configuring key pairs.
 
-## Using OAuth2 authentication <a href="#using-oauth2-authentication" id="using-oauth2-authentication"></a>
+## Using OAuth2 authentication
 
 OAuth2 authentication uses a separate **Snowflake OAuth2 API** credential, and needs an OAuth security integration set up in Snowflake first.
 

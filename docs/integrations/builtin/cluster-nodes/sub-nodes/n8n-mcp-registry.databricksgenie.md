@@ -43,7 +43,7 @@ Send the agent a question about your data, for example "How many trips are in th
 
 ## Tools
 
-Genie exposes four tools. Databricks picks the Genie space, so there's no space parameter.
+Genie exposes four tools. Databricks picks the Genie space, so there's no space parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the server name, for example `Databricks_Genie_MCP_genie_ask`, so don't reference the short names in prompts.
 
 | Tool | What it does |
 |------|--------------|
@@ -61,10 +61,12 @@ Genie answers asynchronously. The agent calls `genie_ask`, then calls `genie_pol
 - **Guide the model.** A system message like the following keeps the loop tight and preserves the attribution link:
 
 	```text
-	To answer data questions, call genie_ask, then call genie_poll_response until the status is completed.
-	Call genie_get_query_result only if you need the full result rows.
+	To answer data questions, ask Genie the question, then poll until the status is completed.
+	Fetch the full result rows only if you need them.
 	Include any [Explore in Databricks](url) link from the tool result in your reply, verbatim.
 	```
+
+	Don't name the tools in the system message. A model that follows the prompt literally then calls the short names, which don't match the names n8n registers, and no tool runs.
 
 - **Watch chat model rate limits.** Genie itself didn't throttle in n8n's tests, but pay-per-token model endpoints do. Three concurrent agent runs are enough to fail the execution with a rate limit error from the chat model. Use a provisioned throughput endpoint or keep concurrency low.
 
@@ -101,7 +103,10 @@ The execution fails with `Max iterations (10) reached` or the agent replies `Age
 
 ### The agent never calls Genie
 
-The agent uses all its iterations without a single tool call. The chat model isn't returning tool calls the agent can execute. Switch to a model that calls tools reliably, such as Llama 3.3 70B or Qwen 3.5 through the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents) node.
+The agent uses all its iterations without a single tool call. Two causes look the same in the execution log:
+
+- Your system message names the tools, for example `genie_ask`. The model calls the short names, which don't match the prefixed names n8n registers, and no tool runs. Describe the flow without tool names, as in [Configure the agent for Genie](#configure-the-agent-for-genie).
+- The chat model isn't returning tool calls the agent can execute. Switch to a model that calls tools reliably, such as Llama 3.3 70B or Qwen 3.5 through the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents) node.
 
 ### Genie reports a SQL or permission error
 

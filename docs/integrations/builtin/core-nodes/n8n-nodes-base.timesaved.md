@@ -24,18 +24,26 @@ This node only counts if the workflow's **Estimated time saved** setting is set 
 * **Calculation Mode**: Choose how n8n counts the minutes:
   * **Once For All Items**: Counts **Minutes Saved** once, no matter how many items reach the node.
   * **Per Item**: Multiplies **Minutes Saved** by the number of input items.
-* **Minutes Saved**: The number of minutes this step saves. Whole minutes, zero or more.
+* **Minutes Saved**: The number of minutes this step saves. Whole minutes, zero or more. Defaults to `0`.
+
+The node passes every input item through unchanged. It records the time saved as execution metadata and doesn't alter your data.
 
 ## How n8n calculates the total
 
-n8n adds up every Track Time Saved node that executes during a production run. Nodes on a branch that doesn't execute don't count, which is what makes the total reflect the path taken.
+n8n adds up every Track Time Saved node that runs during an execution. Nodes on a branch that doesn't run don't count, which is what makes the total reflect the path taken.
 
 You can place more than one Track Time Saved node in the same workflow. n8n sums their values for that execution.
 
-## Limitations
+## When n8n counts an execution
 
-* Time saved is only tracked on parent workflows. Time saved inside a sub-workflow isn't counted.
-* Error workflow executions don't contribute to time saved, even though n8n includes them in the other Insights metrics.
+n8n only records time saved for **successful production executions**. These runs never contribute, whatever values the node holds:
+
+* **Manual executions.** Running the workflow from the editor doesn't count. Only production runs do.
+* **Failed executions.** If the run ends in an error, n8n records no time saved for it, even for the Track Time Saved nodes that already ran.
+* **Sub-workflow executions.** Insights skips them, so a Track Time Saved node inside a sub-workflow adds nothing, either to the sub-workflow or to the parent that called it.
+* **Error workflow executions.** n8n treats these as operational rather than productive work.
+
+If the workflow uses **Fixed** rather than **Dynamic** for **Estimated time saved**, n8n ignores these nodes entirely and uses the fixed value instead.
 
 ## Related resources
 

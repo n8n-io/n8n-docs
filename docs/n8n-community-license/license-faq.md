@@ -10,7 +10,7 @@ layout:
 You may be wondering if you can use n8n's Sustainable Use License for your own project. Use this page for more guidance. In doubt, contact us at [license@n8n.io](mailto:license@n8n.io). 
 
 {% hint style="info" %}
-If workflows are only created or modified by you or people in your organization, you can use n8n under the Community license for free.
+**If workflows are only created or modified by you or people in your organization, you can use n8n under the Community license for free.**
 {% endhint %}
 
 

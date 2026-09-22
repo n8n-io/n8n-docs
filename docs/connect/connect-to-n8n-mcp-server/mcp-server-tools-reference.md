@@ -618,6 +618,55 @@ List credentials the current user can access. Use this to find a credential ID b
 
 ---
 
+## Instance context <a href="#instance-context" id="instance-context"></a>
+
+### get_instance_context <a href="#getinstancecontext" id="getinstancecontext"></a>
+
+Read the opening picture of an n8n instance: which workflows exist, what n8n recently created, changed, or deleted, and what has run and failed.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | No | Read one project instead of every project you can see. Obtain it from `search_projects`. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `context` | `string` | The instance context, as prose. Absent when there's nothing to report |
+| `empty` | `boolean` | Set when there's nothing to report. Read `nothingExposed` for the reason |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and simply out of reach. Don't treat it as a fresh instance. `false` means the instance genuinely holds nothing yet |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Call it once at the start of a session, before asking the user what they want to do. When a request is vague, such as "fix it" or "carry on", the answer is usually the most recent item here.
+- Returns prose, not records. Pass the workflow IDs it names to `search_workflows` or `get_workflow_details`, and a bracketed activity ID to `expand_instance_activity`. `get_instance_activity` pages further back.
+- Requires the `workflow:read` scope.
+- The context never names a credential.
+- Run counts and the ID of the last failure only appear when the grant also covers `get_workflow_execution`.
+- Every call returns a fresh snapshot. The MCP server keeps no state between calls, so it repeats anything you've already read.
+- When `empty` and `nothingExposed` are both `true`, ask the user to expose a workflow in **Settings**, under **MCP**. `availableInMCP` defaults to withheld, so this is what an instance that predates that setting reports.
+- If the read fails, the tool returns an error rather than reporting an empty instance.
+- Only available when the instance-context surface and the instance AI module are enabled on the instance.
+
+---
+
+### Instance context resource <a href="#instance-context-resource" id="instance-context-resource"></a>
+
+For MCP clients that support resources, n8n also exposes the instance context as a resource, alongside the [get_instance_context](#getinstancecontext) tool for clients that don't.
+
+| Property | Value |
+|----------|-------|
+| URI | `n8n://instance/context` |
+| MIME type | `text/plain` |
+| Content | The same instance context `get_instance_context` returns, for every project you can see |
+| Caching | The content is per-user, so n8n never caches it across callers |
+
+n8n exposes the resource under the same scope gate as the tool: a grant that can't reach `get_instance_context` doesn't get the resource either.
+
+---
+
 ## Workflow builder <a href="#workflow-builder" id="workflow-builder"></a>
 
 ### get_workflow_sdk_reference <a href="#getsdkreference" id="getsdkreference"></a>

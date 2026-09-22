@@ -23,7 +23,7 @@ Custom roles are available on:
 
 Custom roles let you define granular permissions beyond the built-in roles. Instead of giving users full Admin access, you can create a role with only the capabilities they need.
 
-n8n has two types of custom roles:
+n8n has two types of custom roles: project roles, scoped to a single project, and instance roles, which apply across your whole n8n instance.
 
 ## In this section
 

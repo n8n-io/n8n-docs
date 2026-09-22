@@ -10,11 +10,7 @@ layout:
 You may be wondering if you can use n8n's Sustainable Use License for your own project. Use this page for more guidance. In doubt, contact us at [license@n8n.io](mailto:license@n8n.io). 
 
 {% hint style="info" %}
-**Options (pick one before finalizing)**
-
-1. If n8n’s workflow editor is used only by people in your organization, you can use n8n Community license for free.
-2. If workflows are only created or modified by you or people in your organization, you can use n8n under the Community license for free.
-
+If workflows are only created or modified by you or people in your organization, you can use n8n under the Community license for free.
 {% endhint %}
 
 
@@ -59,7 +55,7 @@ If your use case isn't clearly covered by the examples above:
 
 #### Under the Community license
 
-You can use n8n as a backend processing engine in your own product under the Community license, as long as only your backend communicates with n8n, and end users do not access n8n UI or configure n8n workflows. 
+You can use n8n as a backend processing engine in your own product under the Community license, as long as only your backend communicates with n8n, and end users do not access n8n UI or configure n8n workflows.
 
 #### Example: SaaS application using n8n for background data processing
 
@@ -131,9 +127,9 @@ A company sells a subscription product called “AutoOps” that lets customers:
 <details>
 <summary>Workflow building, credentials and control</summary>
 
-There have been many questions around the use of third party credentials with n8n community edition. The key question is not whose credentials are used, but **who controls the workflow logic**. End users may connect their own accounts and credentials to automations you have built for them, as long as they cannot access the n8n workflow builder or configure workflow logic themselves. 
+There have been many questions around the use of third party credentials with n8n community edition. The key question is not whose credentials are used, but who controls the workflow logic. End users may connect their own accounts and credentials to automations you have built for them, as long as they cannot access the n8n workflow builder or configure workflow logic themselves.  
 
-Whether credentials are end-user-owned or operator-owned is secondary; what matters is whether the end user can build or modify workflows. The test is also medium-neutral: what matters is whether the end user determines the workflow logic, not the interface used (UI, n8n API, MCP, or an AI agent acting for the user). Triggering or executing pre-built workflows via API or webhooks is fine. 
+Whether credentials are end-user-owned or operator-owned is secondary; what matters is whether the end user can build or modify workflows. The test is also medium-neutral: what matters is whether the end user determines the workflow logic, not the interface used (UI, n8n API, MCP, or an AI agent acting for the user). Triggering or executing pre-built workflows via API or webhooks is fine.  
 
 #### Example: Document processing tool with customer-hosted n8n and customer credentials
 
@@ -143,7 +139,7 @@ This is permissible, but it may sit in gray territory. Shipping n8n to your cust
 
 #### Example: Freelance consultant using client-owned credentials in shared n8n instance
 
-A freelance automation consultant runs a single self-hosted n8n instance and builds custom workflows for clients. Each client generates their own OAuth credentials or API keys, and opens n8n to authenticate to the service via OAuth. 
+A freelance automation consultant runs a single self-hosted n8n instance and builds custom workflows for clients. Each client generates their own OAuth credentials or API keys, and opens n8n to authenticate to the service via OAuth.  
 
 This is allowed. The clients have no access to the n8n interface or workflow logic. What makes this permissible is not that the consultant enters the credentials, it is that clients cannot build or modify workflows.
 </details>
@@ -191,5 +187,3 @@ Forks and derivative works are permitted for personal, non-commercial, or intern
 
 Enterprise-only features are identifiable by the `.ee.` string in their source file names. Using these features without a valid Enterprise license is a breach of the license terms regardless of whether you are self-hosting or using n8n Cloud. If you are unsure whether a feature you are using is enterprise-only, contact [license@n8n.io](mailto:license@n8n.io).
 </details>
-
-

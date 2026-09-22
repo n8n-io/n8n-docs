@@ -20,7 +20,7 @@ The Community license, officially the [Sustainable Use License](https://github.c
 
 
 {% hint style="info" %}
-Sustainable Use License “**`Internal business purpose`**” refers to the use n8n within your organization or product where people outside of your business can receive or see what your workflows produce. 
+Sustainable Use License “**Internal business purpose**” refers to the use n8n within your organization or product where people outside of your business can receive or see what your workflows produce. 
 {% endhint %}
 
 ## What you can do under the community license

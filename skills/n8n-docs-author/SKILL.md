@@ -135,7 +135,7 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
-- **Cross-references:** doesn't apply to node/integration reference pages
+- **Cross-references:** the linking rule doesn't apply to node/integration reference pages
   (`docs/integrations/`) — fixed one-page-per-node template, often
   automation-managed, no natural parent/child or sibling relationship to link.
   Don't add "In this section" or "Related resources" there; link to/from an

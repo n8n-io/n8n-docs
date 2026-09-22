@@ -13,8 +13,6 @@ layout:
 
 This section contains details on how to deploy and share your node.
 
-You can choose to:
-
 ## In this section
 
 * [Submit community nodes](submit-community-nodes.md): submit your node to the community node repository, so anyone can install and use it like any other community node. This is the only way to use custom nodes on Cloud.

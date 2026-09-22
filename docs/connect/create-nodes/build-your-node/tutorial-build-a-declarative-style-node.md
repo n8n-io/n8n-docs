@@ -493,4 +493,3 @@ You need to update the `package.json` to include your own information, such as y
 * [Using the n8n-node tool](using-the-n8n-node-tool.md)
 * [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
 * [Reference](reference/README.md)
-

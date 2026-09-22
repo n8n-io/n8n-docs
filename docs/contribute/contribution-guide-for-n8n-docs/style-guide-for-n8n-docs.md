@@ -145,7 +145,7 @@ Retrieved on its own, a section that leans on its neighbours arrives stripped of
 
 Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
 
-**The specific guidelines below don't apply to pages in the `docs/integrations/` ("Nodes") space**. The structure and hierarchy of pages in this section is different to the rest of the site.
+**The specific guidelines below don't apply to pages in the `docs/integrations/` ("Nodes") space**. The structure and hierarchy of pages in this section are different to the rest of the site.
 
 * **Always link the prerequisites and the next step**, at minimum.
 * **Every section landing page links down to its children.** With two or more children, list them under an "In this section" heading as a plain bullet list (link plus a short description). With only one child, skip the list and link it inline at its first mention instead.

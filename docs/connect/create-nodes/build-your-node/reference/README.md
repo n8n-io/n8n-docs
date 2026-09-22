@@ -11,7 +11,7 @@ layout:
 
 # Node building reference <a href="#node-building-reference" id="node-building-reference"></a>
 
-This section contains reference information, including details about node UI elements, key parameters in your node's base and credentials files, and the guidelines for submitting your node for [verification by n8n](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/install-verified-community-nodes).
+This section contains reference information for node builders. It covers node UI elements, key parameters in your node's base and credentials files, and the guidelines for submitting your node for [verification by n8n](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/install-verified-community-nodes).
 
 ## In this section
 

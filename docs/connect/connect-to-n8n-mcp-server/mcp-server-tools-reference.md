@@ -631,7 +631,10 @@ On a self-hosted instance, use `N8N_FEATURE_FLAG_OVERRIDES` to override the Post
 |------|------|
 | `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
 | `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
-| No override for this flag | On only when PostHog returns `true`. Off if the flag is missing or unreadable |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
+
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
 
 `get_instance_context`, `get_instance_activity`, `expand_instance_activity`, and the [instance context resource](#instance-context-resource) also require the `instance-ai` module to be active. `get_node_usage` requires the flag but not that module.
 {% endhint %}

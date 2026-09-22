@@ -305,6 +305,19 @@ Instance owners and admins can restrict which URLs an OAuth client can redirect 
    * **Only trusted URLs**: only the URLs you list can complete an OAuth sign-in.
 4. If you chose **Only trusted URLs**, add each URL you trust, then select **Save**.
 
+## Installing community nodes from MCP <a href="#installing-community-nodes-from-mcp" id="installing-community-nodes-from-mcp"></a>
+
+With community node discovery on, the workflow building tools also report verified community nodes that your instance hasn't installed, and the `install_community_node` tool installs one on request. n8n installs only packages it verifies, at the version the registry publishes, so the tool can't install an arbitrary npm package.
+
+Installing a community node from an MCP client requires all of the following:
+
+* Community node discovery stays on. The environment variable `N8N_MCP_COMMUNITY_NODE_DISCOVERY_ENABLED` defaults to `true`. Set it to `false` to limit the node search and node type tools to installed nodes and remove the `install_community_node` tool.
+* The community packages module runs on your instance, with verified community nodes enabled, and community packages aren't managed through environment variables.
+* Your user holds the `communityPackage:install` permission, which instance owners and admins have.
+* The MCP client holds the `communityPackage:install` scope. n8n offers that scope on the consent screen only when installing is possible on the instance. Clients that authenticate with an API key or a legacy token can't install community nodes, because the tool requires this scope from an OAuth grant.
+
+When any of these conditions fails, n8n doesn't register the tool, so the client never lists it. If a client builds a workflow that uses a verified community node your instance hasn't installed, n8n saves the workflow and returns a warning: the workflow can't run, and you can't create its credentials, until someone installs the package.
+
 ## Tools and resources <a href="#tools-and-resources" id="tools-and-resources"></a>
 
 {% hint style="info" %}

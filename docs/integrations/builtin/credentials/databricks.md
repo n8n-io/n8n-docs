@@ -20,6 +20,7 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 - [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks Trigger](../trigger-nodes/n8n-nodes-base.databrickstrigger.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -45,6 +46,7 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
 | Genie | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
+| Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |
 
 {% hint style="info" %}
 **New service principals start with no privileges**

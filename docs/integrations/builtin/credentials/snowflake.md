@@ -97,7 +97,7 @@ SELECT SYSTEM$SHOW_OAUTH_CLIENT_SECRETS('N8N_OAUTH_INTEGRATION');
 
 Refer to Snowflake's [OAuth for custom clients](https://docs.snowflake.com/en/user-guide/oauth-custom) documentation for more information.
 
-In addition to the [common configuration fields](#common-configuration-fields), OAuth2 authentication requires:
+In addition to the common configuration fields, except for **Role**, OAuth2 authentication requires:
 
 - A **Client ID** and **Client Secret**: from the security integration you created above.
 

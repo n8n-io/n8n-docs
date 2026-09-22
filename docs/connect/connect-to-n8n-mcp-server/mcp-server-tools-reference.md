@@ -678,6 +678,8 @@ Search for n8n nodes by service name, trigger type, or utility function. Set `us
 
 - `usage` is available from n8n 2.34.0.
 - Use `usage="agentTool"` when searching for nodes to attach to an agent as a tool, for example with `mutate_agent` or `create_agent`. This excludes nodes that can't run as an agent tool, such as human-in-the-loop and MCP client nodes.
+- When community node discovery is on, results can include a second, labelled section of verified community nodes the instance hasn't installed. Install one with `install_community_node` before using it in a workflow.
+- The `N8N_MCP_COMMUNITY_NODE_DISCOVERY_ENABLED` environment variable controls this second section, and defaults to `true`. Set it to `false` to report installed nodes only.
 
 ---
 
@@ -718,6 +720,37 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 - Critical for correct node configuration - MCP clients should always call before writing workflow code.
 - From n8n 2.27.0, every `nodeIds` entry must be an object. Plain string node IDs are no longer accepted - wrap them as `{ "nodeId": "..." }`.
 - Use the `resource`, `operation`, and `mode` discriminators for multi-variant nodes.
+- When community node discovery is on, this tool also resolves definitions for verified community nodes the instance hasn't installed. The `N8N_MCP_COMMUNITY_NODE_DISCOVERY_ENABLED` environment variable controls this, and defaults to `true`.
+
+---
+
+### install_community_node <a href="#installcommunitynode" id="installcommunitynode"></a>
+
+Install a verified community node package that `search_nodes` reported as not installed on this instance. This installs code onto the n8n instance, so confirm with the user before calling it. Only packages verified by n8n can be installed, at the version the registry publishes. After installing, call `get_node_types` for the returned node types before writing workflow code.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodeType` | `string` | Yes | Full node type of a verified community node that `search_nodes` reported as not installed, for example `"@mendable/n8n-nodes-firecrawl.firecrawl"`. n8n installs the package that ships it. |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `installed` | `boolean` | Whether this call installed the package |
+| `alreadyInstalled` | `boolean` | `true` when the node was already available, so n8n installed nothing. This isn't an error: carry on and use the node |
+| `packageName` | `string` | The npm package n8n installed |
+| `nodeTypes` | `string[]` | Node types the package registered, now usable in workflow code. Call `get_node_types` on these before writing the workflow, because the installed definition is authoritative |
+| `version` | `string` | The exact version installed |
+| `credentialTypes` | `string[]` | Credential types the installed nodes require. These only exist now that the package is installed, so the user must create one in n8n before the workflow can run. Tell them which one |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Installing an already-installed package reports it as `alreadyInstalled` instead of installing again.
+- The MCP client grant must carry the `communityPackage:install` scope, and the user must hold the `communityPackage:install` global scope. Callers that authenticate with an API key or a legacy token can't use this tool.
+- n8n only registers this tool when the workflow builder is enabled, `N8N_MCP_COMMUNITY_NODE_DISCOVERY_ENABLED` is `true` (the default), the community packages module is active, community packages and verified packages are both enabled, and packages aren't managed from the environment.
+- If the user loses the `communityPackage:install` global scope during a session, the call returns a permission error.
 
 ---
 
@@ -935,6 +968,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
 - From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- When community node discovery is on and the workflow uses a verified community node the instance hasn't installed, the response carries a `warnings` entry with the code `UNINSTALLED_COMMUNITY_NODE`. The workflow still saves, but it can't run, and its credentials can't be created, until someone installs the package.
 
 ---
 
@@ -1012,6 +1046,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
+- When community node discovery is on and the update adds a verified community node the instance hasn't installed, `validationWarnings` carries an entry with the code `UNINSTALLED_COMMUNITY_NODE`. The update still saves, but the workflow can't run, and its credentials can't be created, until someone installs the package.
 
 ---
 

@@ -623,9 +623,17 @@ List credentials the current user can access. Use this to find a credential ID b
 {% hint style="info" %}
 **Configuration**
 
-The instance-context read surface is off by default. Turn it on with `N8N_MCP_INSTANCE_CONTEXT_ENABLED`, or through its rollout flag.
+The `114_instance_activity_context` PostHog flag controls all four tools and the instance context resource. n8n evaluates it per instance, not per user. The same flag controls activity recording and instance context in n8n Assistant.
 
-`get_node_usage` needs only that setting. `get_instance_context`, `get_instance_activity`, `expand_instance_activity`, and the [instance context resource](#instance-context-resource) also need the `instance-ai` module active and the activity log enabled with `N8N_ACTIVITY_LOG_ENABLED`, which is off by default.
+On a self-hosted instance, use `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. Preserve any other entries in the JSON object.
+
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+|------|------|
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off if the flag is missing or unreadable |
+
+`get_instance_context`, `get_instance_activity`, `expand_instance_activity`, and the [instance context resource](#instance-context-resource) also require the `instance-ai` module to be active. `get_node_usage` requires the flag but not that module.
 {% endhint %}
 
 These tools read what this instance already contains: which workflows exist, what people recently changed, which node types the workflows here use, and what has run. All four sit under the `workflow:read` scope.

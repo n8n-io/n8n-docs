@@ -120,7 +120,7 @@ Always use the current version in new workflows to get the latest features and b
 | Discord | 2 | 1 |
 | Email Trigger (IMAP) | 2.2 | 1, 2, 2.1 |
 | Embeddings OpenAI | 1.2 | 1, 1.1 |
-| Execute Sub-workflow | 1.3 | 1, 1.1, 1.2 |
+| Execute Sub-workflow | 1.4 | 1, 1.1, 1.2, 1.3 |
 | Execute Workflow Trigger | 1.2 | 1, 1.1 |
 | Execution Data | 1.1 | 1 |
 | Extract from File | 1.1 | 1 |
@@ -136,7 +136,7 @@ Always use the current version in new workflows to get the latest features and b
 | Google Cloud Firestore | 1.1 | 1 |
 | Google Docs | 2 | 1 |
 | Google Drive | 3 | 1, 2 |
-| Google Gemini Chat Model | 1.1 | 1 |
+| Google Gemini Chat Model | 1.2 | 1, 1.1 |
 | Google Sheets | 4.7 | 1, 2, 3, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 |
 | Google Slides | 2 | 1 |
 | Google Translate | 2 | 1 |

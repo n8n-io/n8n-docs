@@ -21,6 +21,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Install using Docker Compose
@@ -48,9 +50,19 @@ mkdir n8n && cd n8n
 
 ## Step 2: Create `.env`
 
-This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
+This file holds the versions to run and the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
+# n8n version - get the version number of the latest stable release from https://github.com/n8n-io/n8n/releases
+N8N_VERSION=change-me-version-number
+
+# Sandbox service version - the API, runner, and sandbox images share one release.
+# Get the number of the latest stable "service" release (not a staging prerelease) from https://github.com/n8n-io/n8n-sandbox-service/releases
+N8N_SANDBOX_VERSION=change-me-sandbox-version-number
+
+# n8n task runner authentication. Use a random secret you generate.
+N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
+
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
 SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
@@ -82,7 +94,7 @@ search:
 
 This defines every service you're setting up: n8n itself, the sandbox stack that lets n8n Assistant safely run code, and SearXNG for web search.
 
-{% @github-files/github-code-block %}
+{% @github-files/github-code-block url="https://github.com/n8n-io/n8n/blob/master/docker/get-n8n-compose.yml" %}
 
 ## What you've just set up
 
@@ -90,9 +102,9 @@ This defines every service you're setting up: n8n itself, the sandbox stack that
 | -------------------- | -------------------------------------------------------------------------------------------------- |
 | **n8n**              | The workflow editor itself, available at `http://localhost:5678`.                                  |
 | **sandbox-certs**    | Runs once to generate the TLS certificates the other sandbox services need, then exits.            |
-| **sandbox-api**      | The control plane n8n talks to when n8n Assistant needs to run code.                            |
+| **sandbox-api**      | The control plane n8n talks to when n8n Assistant needs to run code.                               |
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
-| **searxng**          | Bundled web search backend for n8n Assistant.                                                   |
+| **searxng**          | Bundled web search backend for n8n Assistant.                                                      |
 
 This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure a Daytona sandbox.
 

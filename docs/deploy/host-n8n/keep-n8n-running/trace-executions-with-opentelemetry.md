@@ -185,13 +185,11 @@ export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 Spans for crashed executions are available from n8n 2.42.0.
 {% endhint %}
 
-An execution is `crashed` when the n8n instance running it stopped without recording a result, for example after an out-of-memory kill or a container eviction. n8n marks the execution `crashed` later, once it notices the execution can't finish. Before n8n 2.42.0, these executions produced no span, so the error rate in your trace backend missed every platform failure. From n8n 2.42.0, a crashed execution produces one `workflow.execute` span, with one exception described below.
+An execution is `crashed` when the n8n instance running it stopped without recording a result, for example after an out-of-memory kill or a container eviction. n8n marks the execution `crashed` later, once it notices the execution can't finish. Before n8n 2.42.0, these executions produced no span, so the error rate in your trace backend missed every platform failure. From n8n 2.42.0, a crashed execution produces one `workflow.execute` span.
 
 ### Receive crashed spans
 
 The instance that notices the crash emits the span, not the instance that ran the execution. In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), that's the main instance, so enable OpenTelemetry on the main instance, not only on the workers. In regular mode, the single main instance runs and checks its own executions, so the normal setup covers it.
-
-One case produces no span. A worker or main instance that restarts with its event log intact recovers the execution from that log and marks it `crashed` without a span. This is a known gap.
 
 ### Read a crashed span
 
@@ -492,10 +490,7 @@ Check that:
 
 ### A crashed execution has no span
 
-Check that:
-
-- You enabled OpenTelemetry on the main instance. In queue mode, the main instance detects the crash and emits the span, not the worker.
-- The instance didn't recover the execution from its own event log. A worker or main instance that restarts with its event log intact marks the execution `crashed` without a span. This is a known gap.
+Enable OpenTelemetry on the main instance. In queue mode, the main instance detects the crash and emits the span, not the worker.
 
 The node that was running when the instance died has no span. Node spans exported before the crash stay in the trace. See [Crashed executions](#crashed-executions).
 

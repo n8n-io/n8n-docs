@@ -28,9 +28,3 @@ n8n is a fair-code licensed workflow automation tool that combines AI features w
 </code></pre></td><td><a href="https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-client-examples#connecting-claude-code-to-n8n-mcp-server">Connecting Claude Code to n8n MCP server</a></td><td><a href=".gitbook/assets/Claude_code_logo.jpeg">Claude_code_logo.jpeg</a></td></tr><tr><td><strong>OpenAI</strong> <strong>Codex CLI</strong></td><td><pre data-overflow="wrap"><code>codex mcp add n8n-mcp --url https:///mcp-server/http
 </code></pre></td><td><a href="https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-client-examples#connecting-codex-cli-to-n8n-mcp-server">Connecting Codex CLI to n8n MCP server</a></td><td><a href=".gitbook/assets/codex_logo.jpeg">codex_logo.jpeg</a></td></tr></tbody></table>
 
-## In this section
-
-* [Choose how to use n8n](choose-how-to-use-n8n.md): choose between n8n Cloud and self-hosting, and learn about licenses and plans.
-* [Build your first workflow](build-your-first-workflow.md): create your first workflow in n8n and learn some key concepts.
-* [Learning paths](learning-paths.md): interactive courses to learn n8n through hands-on exercises, quizzes, and real workflow building.
-* [Key concept glossary](key-concept-glossary.md): a glossary of terms commonly used when working with n8n and related software.

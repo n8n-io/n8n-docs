@@ -11,9 +11,8 @@ layout:
 
 # Test a node <a href="#test-a-node" id="test-a-node"></a>
 
-This section contains information about testing your node.
+This section contains information about testing your node. You can test nodes manually and automatically. You should use both testing methods before publishing your node.
 
-There are two ways to test your node:
 
 ## In this section
 
@@ -21,7 +20,6 @@ There are two ways to test your node:
 * [Node linter](node-linter.md): automatically test your node against n8n's linting rules.
 * [Troubleshooting](troubleshooting.md): common issues you might encounter, and how to fix them.
 
-You should use both testing methods before publishing your node.
 
 ## Related resources
 

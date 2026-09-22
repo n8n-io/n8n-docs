@@ -15,7 +15,7 @@ This section contains details on how to deploy and share your node.
 
 ## In this section
 
-* [Submit community nodes](submit-community-nodes.md): submit your node to the community node repository, so anyone can install and use it like any other community node. This is the only way to use custom nodes on Cloud.
+* [Submit community nodes](submit-community-nodes.md): submit your node to the community node repository, so anyone can [install and use it](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) like any other community node. This is the only way to use custom nodes on Cloud.
 * [Install private nodes](install-private-nodes.md): install the node into your own n8n instance as a private node.
 
 ## Related resources

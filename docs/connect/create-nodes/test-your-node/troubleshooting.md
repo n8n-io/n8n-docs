@@ -86,3 +86,9 @@ Every time you change the description properties, you have to stop the current `
 ### Linter incorrectly warning about file name case <a href="#linter-incorrectly-warning-about-file-name-case" id="linter-incorrectly-warning-about-file-name-case"></a>
 
 The node linter has rules for file names, including what case they should be. Windows users may encounter an issue when renaming files that causes the linter to continue giving warnings, even after you rename the files. This is due to a [known Windows issue](https://answers.microsoft.com/en-us/windows/forum/all/file-renaming-when-changing-case-doesnt-work/aa15ff7c-dd2d-4ed3-bcce-799ca90d4e58) with changing case when renaming files.
+
+## Related resources
+
+* [Test your node](./)
+* [Run your node locally](run-your-node-locally.md)
+* [Node linter](node-linter.md)

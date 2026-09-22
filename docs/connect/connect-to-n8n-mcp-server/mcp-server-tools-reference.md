@@ -1853,3 +1853,8 @@ Insert rows into an existing data table. Each row is an object mapping column na
 - Maximum 1000 rows per call.
 - Row values must be `string`, `number`, `boolean`, or `null`.
 - Column names in row objects must match existing column names in the data table.
+
+## Related resources
+
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [MCP client connection examples](mcp-client-examples.md)

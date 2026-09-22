@@ -61,3 +61,10 @@ curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'
 ```
+
+## Related resources
+
+* [n8n API](./)
+* [Authentication](authentication.md)
+* [Use an API playground](use-an-api-playground.md)
+* [Endpoint reference](api-reference.md)

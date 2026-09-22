@@ -486,3 +486,11 @@ You need to update the `package.json` to include your own information, such as y
 * View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](reference/versioning.md).
 
+## Related resources
+
+* [Build your node](./)
+* [Set up your development environment](set-up-your-development-environment.md)
+* [Using the n8n-node tool](using-the-n8n-node-tool.md)
+* [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
+* [Reference](reference/README.md)
+

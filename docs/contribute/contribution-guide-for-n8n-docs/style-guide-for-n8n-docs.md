@@ -843,3 +843,9 @@ You can embed an n8n workflow in a page so readers can view and interact with it
 ```
 
 Find the template API URL by taking a published template's ID and adding it to `https://api.n8n.io/workflows/templates/`.
+
+## Related resources
+
+* [Contribution guide for n8n Docs](./)
+* [Terminology and naming](terminology.md)
+* [Agent-friendly docs](agent-friendly-docs.md)

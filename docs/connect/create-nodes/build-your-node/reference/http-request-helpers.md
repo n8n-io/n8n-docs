@@ -115,3 +115,7 @@ New nodes should all use the new helper. You should strongly consider migrating 
 - `rejectUnauthorized: false` is now `skipSslCertificateValidation: true`
 - Use `body` according to `content-type` headers to clarify the payload.
 - `resolveWithFullResponse` is now `returnFullResponse` and has similar behavior
+
+## Related resources
+
+* [Node building reference](./)

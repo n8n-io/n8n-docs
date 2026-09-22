@@ -35,3 +35,11 @@ Install these extensions:
 * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 By using VS Code and these extensions, you get access to the n8n node linter's warnings as you code.
+
+## Related resources
+
+* [Build your node](./)
+* [Using the n8n-node tool](using-the-n8n-node-tool.md)
+* [Tutorial: Build a declarative-style node](tutorial-build-a-declarative-style-node.md)
+* [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
+* [Reference](reference/README.md)

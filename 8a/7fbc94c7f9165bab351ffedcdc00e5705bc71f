@@ -1,0 +1,38 @@
+docs/integrations/builtin/credentials/atlassian.md
+  s_2dd11acf1bf19d::t_a9210200c60991 1-17,19-51,54-57,59-61
+  s_2dd11acf1bf19d::t_3f07b1909ba0fe 18
+  s_8bb662604843d5::t_ba8cccc931e0c4 52-53
+  s_915c6acb601f31::t_8da8e13455d4c6 58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8a7fbc94c7f9165bab351ffedcdc00e5705bc71f",
+  "prompts": {},
+  "sessions": {
+    "s_2dd11acf1bf19d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e4031ed-9151-4cc4-abed-6d95597b73f9",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    },
+    "s_8bb662604843d5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3a0a8c15-da55-41c2-864d-234796fec098",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    },
+    "s_915c6acb601f31": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4e1106dc-465b-4af2-89fb-1cc10b9c7c79",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

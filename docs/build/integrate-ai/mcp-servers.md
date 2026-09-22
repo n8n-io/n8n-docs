@@ -36,3 +36,11 @@ Both give an agent access to a service. A built-in tool gives you tighter contro
 | **Scope** | One node operation, for example send a Slack message | Every tool the server exposes, from one single connection |
 | **You configure** | Any parameters you want fixed, e.g. which channel, message type or message text | The tools you want to allow or exclude |
 | **The agent supplies** | Only the fields you [leave open to the model](ai-examples/use-ai-for-parameters.md), you choose | Which tool call to make (out of the allowed tools) and all of its arguments |
+
+## Related resources
+
+* [Integrate AI](./)
+* [Understand AI components](understand-ai-components/README.md)
+* [LangChain in n8n](langchain-in-n8n.md)
+* [Test and improve AI workflows](test-and-improve-ai-workflows/README.md)
+* [AI examples](ai-examples.md)

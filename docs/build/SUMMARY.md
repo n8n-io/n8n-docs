@@ -52,7 +52,6 @@
   * [Handle errors gracefully](flow-logic/handle-errors-gracefully.md)
   * [Understand execution order](flow-logic/understand-execution-order.md)
 * [Work with data](work-with-data/README.md)
-  * [Overview](work-with-data/overview.md)
   * [Understand n8n's data structure](work-with-data/understand-n8ns-data-structure.md)
   * [Expressions versus data nodes](work-with-data/expressions-versus-data-nodes.md)
   * [Reference data](work-with-data/reference-data/README.md)

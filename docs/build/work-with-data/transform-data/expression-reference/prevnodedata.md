@@ -46,3 +46,7 @@ Always uses the current node’s first input connector if there is more than one
 
 **Source:**  Custom n8n functionality
 
+
+## Related resources
+
+* [Expression reference](./)

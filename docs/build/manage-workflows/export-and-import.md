@@ -70,3 +70,14 @@ n8n recommends the [n8n CLI](#using-the-n8n-cli) over the Server CLI export and 
 The n8n API can export and import [n8n packages](n8n-packages/README.md), which carry workflows along with the folders, projects, and references they need. n8n packages are in Preview and may change in future releases.
 
 To move a single workflow as JSON instead, use the workflow endpoints in the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
+
+## Related resources
+
+* [Manage workflows](./)
+* [Configure workflow settings](configure-workflow-settings.md)
+* [Tag workflows](tag-workflows.md)
+* [Favorite items](favorite-items.md)
+* [View change history](view-change-history.md)
+* [Review workflows](workflow-reviews.md)
+* [n8n packages](n8n-packages/README.md)
+* [Share with others](share-with-others.md)

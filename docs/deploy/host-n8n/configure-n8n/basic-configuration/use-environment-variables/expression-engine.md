@@ -40,3 +40,7 @@ The `vm` engine is experimental. n8n runs the `legacy` engine by default. The va
 | `N8N_EXPRESSION_ENGINE_TIMEOUT` | Number | `5000` | Execution timeout in milliseconds for each expression evaluation. |
 | `N8N_EXPRESSION_ENGINE_MEMORY_LIMIT` | Number | `128` | Memory limit in MiB for each V8 isolate. |
 | `N8N_EXPRESSION_ENGINE_IDLE_TIMEOUT` | Number | - | If set, scales the isolate pool to zero warm isolates after this many seconds with no activity. |
+
+## Related resources
+
+* [Environment variables](./)

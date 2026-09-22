@@ -101,3 +101,7 @@ To learn more about proxy environment variables, check the [environment variable
 | `N8N_PROXY_HOPS`                       | Number                       | 0                                                                | Number of reverse-proxies n8n is running behind.                                                                                                                                                                                                                                                                                         |
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+* [Environment variables](./)

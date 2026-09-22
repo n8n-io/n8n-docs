@@ -71,3 +71,7 @@ This report shows:
 * Unprotected webhooks in the instance.
 * Missing security settings
 * If your instance is outdated.
+
+## Related resources
+
+* [Security](../security.md)

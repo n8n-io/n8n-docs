@@ -16,7 +16,7 @@ You may be wondering if you can use n8n's Sustainable Use License for your own p
 
 The Community license, officially the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) (”**SUL**”), is free and applies to the self-hosted version of n8n only. n8n Cloud is a paid subscription with its own terms; this page doesn't apply to it.
 
-**Sustainable Use License “Internal business purpose” refers to the use n8n within your organization or product where people outside of your business can receive or see what your workflows produce.**
+**Sustainable Use License “Internal business purpose” refers to the use of n8n within your organization or product where people outside of your business can receive or see what your workflows produce.**
 
 ## What you can do under the community license
 

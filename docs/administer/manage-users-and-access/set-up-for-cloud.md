@@ -31,3 +31,12 @@ Once you upgrade your Cloud instance to an n8n version with user management, you
 ## Step two: Invite users <a href="#step-two-invite-users" id="step-two-invite-users"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}
+
+## Related resources
+
+* [Manage users and access](./)
+* [Add and remove users](add-and-remove-users.md)
+* [Understand instance roles](understand-instance-roles.md)
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
+* [Verify user identity](verify-user-identity/README.md)
+* [Follow best practices](follow-best-practices.md)

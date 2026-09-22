@@ -58,3 +58,12 @@ n8n recommends that owners create a second account with the **Member** role for 
 If the built-in roles don't match your access needs, you can create custom instance roles with granular permissions. Custom instance roles let you grant specific instance-level capabilities (such as managing users, tags, or API keys) without giving full Admin access.
 
 Refer to [Create custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) for instructions on creating and managing them.
+
+## Related resources
+
+* [Manage users and access](./)
+* [Set up for Cloud](set-up-for-cloud.md)
+* [Add and remove users](add-and-remove-users.md)
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
+* [Verify user identity](verify-user-identity/README.md)
+* [Follow best practices](follow-best-practices.md)

@@ -192,3 +192,11 @@ Documentation links for common IdPs.
 | Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started) guide depending on your hosting. |
 | Okta | n8n provides a [Workforce Identity setup guide](set-up-okta-workforce-identity-saml.md), which includes a step-by-step PDF guide |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/pingone/getting_started_with_pingone/p1_p1sso_start.html) |
+
+## Related resources
+
+* [Use SAML](./)
+* [Okta Workforce Identity SAML setup](set-up-okta-workforce-identity-saml.md)
+* [Azure AD SAML setup](set-up-azure-ad-saml.md)
+* [Troubleshoot SAML](troubleshoot-saml.md)
+* [Manage users with SAML](manage-users-with-saml.md)

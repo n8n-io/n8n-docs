@@ -48,10 +48,11 @@ Input items won't appear if the sub-workflow's Workflow Input Trigger node uses 
 
 ### Mode <a href="#mode" id="mode"></a>
 
-Use this parameter to control the execution mode for the node. Choose from these options:
+The node passes all input items into a single execution of the sub-workflow. To run the sub-workflow once per item, add a [Loop Over Items](n8n-nodes-base.splitinbatches.md) node before this node.
 
-- **Run once with all items**: Pass all input items into a single execution of the node.
-- **Run once for each item**: Execute the node once for each input item in turn.
+{% hint style="info" %}
+The **Run once for each item** mode was removed in n8n 3.0. A node still set to that mode fails, so replace it with a new Execute Sub-workflow node.
+{% endhint %}
 
 ## Node options <a href="#node-options" id="node-options"></a>
 

@@ -43,8 +43,11 @@ To select all nodes or a group of nodes, click and drag: ![Select a group of nod
 From the top navigation bar, select the three dots in the upper right <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> to see the following options:
 
 * **Download**: Downloads your current workflow as a JSON file to your computer.
-* **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/refs/heads/main/n8n/demo-data/workflows/srOnR8PAY3u4RSwb.json).
 * **Import from File**: Imports a workflow as a JSON file from your computer.
+
+{% hint style="info" %}
+The **Import from URL** option was removed in n8n 3.0. To import a workflow that's hosted online, download the JSON file and use **Import from File**, or copy the JSON and paste it onto the canvas.
+{% endhint %}
 
 ## From the command line <a href="#from-the-command-line" id="from-the-command-line"></a>
 

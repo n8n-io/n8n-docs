@@ -937,3 +937,6 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
   ```javascript
   $now.zone //=> {"zoneName": "Europe/Berlin", "valid": true}
   ```
+## Related resources
+
+* [Expression reference](./)

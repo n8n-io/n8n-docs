@@ -37,7 +37,6 @@ When you turn on tracing, n8n exports two kinds of spans for each execution:
 
 - **`workflow.execute`**: One span per workflow execution. It records the workflow ID, name, version, node count, execution mode, status, and any error type.
 - **`node.execute`**: One span per node execution, nested inside its workflow span. It records the node ID, name, type, version, and the number of input and output items.
-- **Crashed executions**: One `workflow.execute` span with status `crashed`. The process that detects the crash ends the original span or rebuilds one. See [Crashed executions](#crashed-executions).
 
 Each span includes resource attributes that identify the n8n instance:
 

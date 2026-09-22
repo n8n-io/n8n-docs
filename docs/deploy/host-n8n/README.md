@@ -120,3 +120,8 @@ Select the installation method that best fits your technical requirements and in
 	Installs n8n directly using Node Package Manager. Quick to set up but requires managing Node.js versions and dependencies yourself.
 
 	[npm installation guide](install-options/install-with-npm.md)
+
+## Related resources
+
+* [Deploy](../)
+* [Use n8n Cloud](../use-n8n-cloud/README.md)

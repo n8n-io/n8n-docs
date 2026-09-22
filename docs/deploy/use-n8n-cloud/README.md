@@ -17,3 +17,8 @@ Manage your n8n Cloud trial, plan, and instance.
 * [Gateway credits](gateway-credits/README.md): use AI models and third-party services without provider accounts or API keys.
 * [Understand concurrency](understand-concurrency.md): how n8n Cloud handles concurrent executions.
 * [Download workflows](download-workflows.md): download workflows from n8n Cloud with the admin dashboard.
+
+## Related resources
+
+* [Deploy](../)
+* [Host n8n](../host-n8n/README.md)

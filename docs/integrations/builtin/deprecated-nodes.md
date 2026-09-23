@@ -63,7 +63,7 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Workflow Trigger | 1 |
 | Write Binary File | 1 |
 | Zep | 1.4 |
-| Zep Vector Store | 1 |
+| Zep Vector Store | 1.3 |
 | Zep Vector Store: Insert | 1 |
 | Zep Vector Store: Load | 1 |
 

@@ -36,6 +36,11 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 * Trigger and test exposed workflows
 * Create and edit workflows and data tables
 
+## In this section
+
+* [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md): exact commands and configuration for specific MCP clients.
+* [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md): the complete list of available tools and their parameters.
+
 {% hint style="info" %}
 **Connecting a chat client such as Claude Desktop?**
 
@@ -377,3 +382,11 @@ MCP clients send the following headers to the n8n MCP endpoint:
 * `Mcp-Name`
 
 If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.
+
+## Related resources
+
+* [Connect](./)
+* [n8n API](n8n-api/README.md)
+* [n8n CLI](n8n-cli.md)
+* [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
+* [Create nodes](create-nodes/README.md)

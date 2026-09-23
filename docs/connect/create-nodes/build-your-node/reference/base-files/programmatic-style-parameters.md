@@ -88,3 +88,10 @@ Define named feature flags evaluated against the node version. Use features to c
 
 Refer to [Feature-based versioning](../versioning.md#feature-based-versioning) for more information.
 
+## Related resources
+
+* [Base files](./)
+* [Structure](structure.md)
+* [Standard parameters](standard-parameters.md)
+* [Declarative-style parameters](declarative-style-parameters.md)
+* [Programmatic-style execute method](programmatic-style-execute-method.md)

@@ -190,3 +190,11 @@ displayOptions: {
 ```
 
 For more information about UI element types, refer to [UI elements](../node-ui-elements.md).
+
+## Related resources
+
+* [Base files](./)
+* [Structure](structure.md)
+* [Declarative-style parameters](declarative-style-parameters.md)
+* [Programmatic-style parameters](programmatic-style-parameters.md)
+* [Programmatic-style execute method](programmatic-style-execute-method.md)

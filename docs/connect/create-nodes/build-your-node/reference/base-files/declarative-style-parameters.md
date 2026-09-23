@@ -128,3 +128,11 @@ _Object_ | _Optional_
 Define named feature flags evaluated against the node version. Use features to control parameter visibility with `@feature` in `displayOptions`.
 
 Refer to [Feature-based versioning](../versioning.md#feature-based-versioning) for more information.
+
+## Related resources
+
+* [Base files](./)
+* [Structure](structure.md)
+* [Standard parameters](standard-parameters.md)
+* [Programmatic-style parameters](programmatic-style-parameters.md)
+* [Programmatic-style execute method](programmatic-style-execute-method.md)

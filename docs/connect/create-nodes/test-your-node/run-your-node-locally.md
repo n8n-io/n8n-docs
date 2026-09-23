@@ -12,3 +12,9 @@ layout:
 # Run your node locally <a href="#run-your-node-locally" id="run-your-node-locally"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/WlCAEDxY4EZLDV85eB8C/" %}
+
+## Related resources
+
+* [Test your node](./)
+* [Node linter](node-linter.md)
+* [Troubleshooting](troubleshooting.md)

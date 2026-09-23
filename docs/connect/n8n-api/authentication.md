@@ -233,3 +233,10 @@ The following tables list the scopes available when you create a scoped API key,
 | `workflowTags:list` | Read the tags assigned to a workflow. |
 | `workflowTags:update` | Update the tags assigned to a workflow. |
 
+## Related resources
+
+* [n8n API](./)
+* [Pagination](pagination.md)
+* [Use an API playground](use-an-api-playground.md)
+* [Endpoint reference](api-reference.md)
+

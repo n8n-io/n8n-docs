@@ -190,3 +190,11 @@ n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-c
 ```
 
 See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages/import-a-package) for every available flag.
+
+## Related resources
+
+* [Connect](./)
+* [n8n API](n8n-api/README.md)
+* [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
+* [Create nodes](create-nodes/README.md)

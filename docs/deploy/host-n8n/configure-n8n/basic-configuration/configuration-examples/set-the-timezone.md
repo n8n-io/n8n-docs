@@ -20,7 +20,7 @@ The default timezone is America/New_York. For instance, the Schedule node uses i
 export GENERIC_TIMEZONE=Europe/Berlin
 ```
 
-Refer to [the list of time zone names](https://momentjs.com/timezone/) to find your timezone.
+Refer to [the list of timezone names](https://momentjs.com/timezone/) to find your timezone.
 
 Refer to [Environment variables reference](../use-environment-variables/timezone-and-localization.md) for more information on this variable.
 

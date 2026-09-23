@@ -30,7 +30,7 @@ On this page, you'll find a list of operations the Google Gemini node supports, 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/googleai.md).
+Refer to the [Google Gemini(PaLM) credentials documentation](../credentials/googleai.md) for authentication information for this node.
 {% endhint %}
 
 

@@ -27,7 +27,7 @@ Use this object to receive updates on certain ads changes in an Ad Account. Refe
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/facebookapp.md).
+Refer to the [Facebook App credentials documentation](../../credentials/facebookapp.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

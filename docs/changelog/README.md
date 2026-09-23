@@ -132,6 +132,22 @@ The node supports two authentication methods: sign in as a person using a Micros
 
 Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
 
+## Configure instance settings programmatically via REST API
+
+**Released:** 2026-07-14 in [n8n 2.31](release-notes.md#n8n231)
+
+You can now read and update instance-level settings through the n8n public REST API, starting with the security policy. Instead of clicking through the settings panel on every instance, you can drive configuration from a CI/CD pipeline, an infrastructure-as-code tool, or any HTTP client. Every write goes through the same validation as the UI, so an API-driven change takes effect exactly as it would if you clicked Save.
+
+`GET /api/v1/settings/security-policy` and `PUT /api/v1/settings/security-policy` read and update personal-space publishing and sharing, plus the execution-data redaction enforcement floor. The PUT takes the full configuration object: partial bodies are rejected with a 400, so you always know exactly what you're writing. The read-only usage counts that GET returns are ignored on write, so you can send a GET response straight back as a PUT body. If the policy is managed through environment variables, the API returns a 409 Conflict and leaves the values untouched, so declarative config is never silently overwritten.
+
+To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
+
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/security-policy).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## Capture who approved and when in human-in-the-loop steps
 
 **Released:** 2026-07-07 in [n8n 2.30](release-notes.md#n8n230)

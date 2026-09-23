@@ -40,7 +40,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/notion.md).
+Refer to the [Notion credentials documentation](../credentials/notion.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -56,7 +56,7 @@ For usage examples and templates to help you get started, refer to n8n's [Notion
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Notion. You can find the node docs [here](../app-nodes/n8n-nodes-base.notion/README.md).
+n8n provides an app node for Notion. Refer to the [Notion node documentation](../app-nodes/n8n-nodes-base.notion/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/notion-trigger-beta/) on n8n's website.
 

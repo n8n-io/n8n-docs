@@ -47,7 +47,7 @@ On this page, you'll find the node parameters for the OpenAI Chat Model node and
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../../credentials/openai.md).
+Refer to the [OpenAI credentials documentation](../../../credentials/openai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

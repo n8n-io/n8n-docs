@@ -77,7 +77,7 @@ To configure the node for nested subgroups:
 
 Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/) for more information about the service.
 
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
+n8n provides a trigger node for GitLab. Refer to the [GitLab Trigger node documentation](../trigger-nodes/n8n-nodes-base.gitlabtrigger.md) for more information.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

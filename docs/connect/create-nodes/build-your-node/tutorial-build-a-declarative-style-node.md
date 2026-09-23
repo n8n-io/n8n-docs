@@ -74,7 +74,7 @@ npm i
 
 ### Step 2: Add an icon <a href="#step-2-add-an-icon" id="step-2-add-an-icon"></a>
 
-Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
+Save [the NASA SVG logo](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/dGOXJYk0OQgOLlRpyJnn/" %}

@@ -26,7 +26,7 @@ On this page, you'll find a list of events the Microsoft Teams Trigger node can 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/microsoft.md). This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Service Principal (App-Only)** in the **Authentication** dropdown.
+Refer to the [Microsoft credentials documentation](../credentials/microsoft.md) for authentication information for this node. This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Service Principal (App-Only)** in the **Authentication** dropdown.
 {% endhint %}
 
 {% hint style="info" %}
@@ -45,7 +45,7 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Microsoft Teams. You can find the node docs [here](../app-nodes/n8n-nodes-base.microsoftteams.md).
+n8n provides an app node for Microsoft Teams. Refer to the [Microsoft Teams node documentation](../app-nodes/n8n-nodes-base.microsoftteams.md) for more information.
 
 
 View [example workflows and related content](https://n8n.io/integrations/microsoft-teams-trigger/) on n8n's website.

@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/gitlab.md).
+Refer to the [GitLab credentials documentation](../credentials/gitlab.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -62,7 +62,7 @@ To configure the node for nested subgroups:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for GitLab. You can find the node docs [here](../app-nodes/n8n-nodes-base.gitlab.md).
+n8n provides an app node for GitLab. Refer to the [GitLab node documentation](../app-nodes/n8n-nodes-base.gitlab.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/gitlab-trigger/) on n8n's website.
 

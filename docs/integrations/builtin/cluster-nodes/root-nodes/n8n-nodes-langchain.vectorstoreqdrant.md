@@ -43,7 +43,7 @@ On this page, you'll find the node parameters for the Qdrant node, and links to 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/qdrant.md).
+Refer to the [Qdrant credentials documentation](../../credentials/qdrant.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

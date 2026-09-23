@@ -43,7 +43,7 @@ n8n only records time saved for **successful production executions**. The follow
 * **Sub-workflow executions.** Insights skips them, so a Track Time Saved node inside a sub-workflow adds nothing, either to the sub-workflow or to the parent that called it. n8n records the minutes against the sub-workflow's own execution, and the parent's total never picks them up. To count time a sub-workflow saves, put the Track Time Saved node in the parent, after the Execute Sub-workflow node.
 * **Error workflow executions.** n8n treats these as operational rather than productive work.
 * **Chat executions.** Messages sent through n8n Chat hub don't count, even when the run succeeds.
-* **Agent executions.** Runs an n8n Agent starts don't count, even when the run succeeds.
+* **Agent executions.** Executions started by an n8n Agent don't count, even when they succeed.
 
 If the workflow uses **Fixed** rather than **Dynamic** for **Estimated time saved**, n8n ignores these nodes entirely and uses the fixed value instead.
 

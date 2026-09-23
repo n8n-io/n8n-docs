@@ -204,8 +204,8 @@ To stream all three, subscribe your destination to `n8n.audit.mcp`. In **Setting
 | `workflowId` | The workflow the tool acted on, when it acts on one. |
 | `status` | `success` or `error`. |
 | `errorMessage` | Why the call failed. Only present when `status` is `error`. |
-| `authType` | `oauth` or `api_key`. `api_key` covers every bearer token that isn't an OAuth access token. |
-| `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. |
+| `authType` | `oauth` or `api_key`. `api_key` covers every bearer token that isn't an OAuth access token. `authType` is available from n8n 2.34.0.|
+| `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. `clientId` is available from n8n 2.34.0. |
 | `clientName` | The name the client reports for itself. |
 
 To measure usage per client, group by `clientId`. It identifies one client registration, so it stays the same across every call that client makes, including after its token refreshes. Two installations of the same product register separately and get different values, so `clientId` counts registrations rather than products. `clientName` isn't verified and isn't unique, so don't use it as a key.

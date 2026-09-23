@@ -636,17 +636,17 @@ Read the opening picture of an n8n instance: which workflows exist, what n8n rec
 |-------|------|-------------|
 | `context` | `string` | The instance context, as prose. Absent when there's nothing to report |
 | `empty` | `boolean` | Set when there's nothing to report. Read `nothingExposed` for the reason |
-| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and simply out of reach. Don't treat it as a fresh instance. `false` means the instance genuinely holds nothing yet |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the instance is populated but out of reach. Don't treat it as a fresh instance. `false` means the instance genuinely holds nothing yet |
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- Call it once at the start of a session, before asking the user what they want to do. When a request is vague, such as "fix it" or "carry on", the answer is usually the most recent item here.
+- Call it once at the start of a session, before asking the user what they want to do. When a request is vague, such as "fix it" or "carry on," the answer is usually the most recent item here.
 - Returns prose, not records. Pass the workflow IDs it names to `search_workflows` or `get_workflow_details`, and a bracketed activity ID to `expand_instance_activity`. `get_instance_activity` pages further back.
 - Requires the `workflow:read` scope.
 - The context never names a credential.
 - Run counts and the ID of the last failure only appear when the grant also covers `get_workflow_execution`.
 - Every call returns a fresh snapshot. The MCP server keeps no state between calls, so it repeats anything you've already read.
-- When `empty` and `nothingExposed` are both `true`, ask the user to expose a workflow in **Settings**, under **MCP**. `availableInMCP` defaults to withheld, so this is what an instance that predates that setting reports.
+- When `empty` and `nothingExposed` are both `true`, ask the user to toggle **Available in MCP** in the workflow's **Settings**. `availableInMCP` defaults to withheld, so this is the state that instances predating that setting report.
 - If the read fails, the tool returns an error rather than reporting an empty instance.
 - Only available when the instance-context surface and the instance AI module are enabled on the instance.
 

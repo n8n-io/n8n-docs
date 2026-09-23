@@ -84,7 +84,7 @@ Complete these steps in the Microsoft Entra admin center before you create the c
 
 ### Grant admin consent
 
-1. On the **API permissions** page, select **Grant admin consent for \<your tenant\>** and confirm.
+1. On the **API permissions** page, select **Grant admin consent for `<your-tenant>`** and confirm.
 2. Check that the **Status** column shows **Granted** for every permission.
 
 {% hint style="warning" %}

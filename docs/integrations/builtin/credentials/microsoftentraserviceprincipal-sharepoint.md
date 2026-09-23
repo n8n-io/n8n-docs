@@ -110,7 +110,7 @@ A few things to watch:
 
 - **On an existing app registration, add `--append` to `az ad app credential reset`.** Without it, the command removes the secrets and certificates already on the app, and any service using them stops working.
 - **Admin consent can fail right after the service principal is created.** Microsoft Entra needs a few seconds to replicate it. If the last command reports that it can't find the app, wait and run it again.
-- **If admin consent fails with an endpoint or sign-in error, grant it in the portal instead.** `az ad app permission admin-consent` calls a legacy Azure endpoint that doesn't work for every account. Open the app registration's **API permissions** page in the Microsoft Entra admin center and select **Grant admin consent for \<your tenant\>**.
+- **If admin consent fails with an endpoint or sign-in error, grant it in the portal instead.** `az ad app permission admin-consent` calls a legacy Azure endpoint that doesn't work for every account. Open the app registration's **API permissions** page in the Microsoft Entra admin center and select **Grant admin consent for `<your-tenant>`**.
 
 ## Grant the app access to a site
 

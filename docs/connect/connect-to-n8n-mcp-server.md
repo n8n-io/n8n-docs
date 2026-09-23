@@ -259,7 +259,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available from n8n 2.34.0 and are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. This section only applies if you've enabled agents on your instance.
+Agents are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. MCP clients can manage agents from n8n 2.34.0. On n8n Cloud, agents are on by default. On self-hosted, this section only applies if you've enabled the `agents` module.
 {% endhint %}
 
 {% hint style="info" %}

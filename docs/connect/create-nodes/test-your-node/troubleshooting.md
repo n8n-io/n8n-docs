@@ -70,7 +70,7 @@ credentials: [
 
 ### Node icon doesn't fit <a href="#node-icon-doesnt-fit" id="node-icon-doesnt-fit"></a>
 
-- If you use an SVG file, make sure the canvas size is square. You can find [instructions to change the canvas size of an SVG file using GIMP](https://docs.gimp.org/2.10/en/gimp-image-resize.html).
+- If you use an SVG file, make sure the canvas size is square. Refer to [GIMP's guide to resizing the canvas](https://docs.gimp.org/2.10/en/gimp-image-resize.html) to change the canvas size of an SVG file.
 - If you use a PNG file, make sure that it's 60x60 pixels.
 
 ### Node doesn't show up in the Add Node menu <a href="#node-doesnt-show-up-in-the-add-node-menu" id="node-doesnt-show-up-in-the-add-node-menu"></a>

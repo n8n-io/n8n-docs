@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/invoiceninja.md).
+Refer to the [Invoice Ninja credentials documentation](../credentials/invoiceninja.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

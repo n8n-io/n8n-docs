@@ -44,7 +44,7 @@ The Moonshot Kimi node connects n8n workflows to Moonshot Kimi AI models. Use it
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/moonshot.md).
+Refer to the [Moonshot credentials documentation](../credentials/moonshot.md) for authentication information for this node.
 {% endhint %}
 
 ## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>

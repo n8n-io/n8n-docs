@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/mailjet.md).
+Refer to the [Mailjet credentials documentation](../credentials/mailjet.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

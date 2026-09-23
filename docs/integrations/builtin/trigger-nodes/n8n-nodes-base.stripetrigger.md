@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/stripe.md).
+Refer to the [Stripe credentials documentation](../credentials/stripe.md) for authentication information for this node.
 {% endhint %}
 
 ## Webhook authentication <a href="#webhook-authentication" id="webhook-authentication"></a>

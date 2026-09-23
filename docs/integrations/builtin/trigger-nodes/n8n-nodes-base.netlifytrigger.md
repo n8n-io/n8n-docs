@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/netlify.md).
+Refer to the [Netlify credentials documentation](../credentials/netlify.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -35,7 +35,7 @@ For usage examples and templates to help you get started, refer to n8n's [Netlif
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Netlify. You can find the node docs [here](../app-nodes/n8n-nodes-base.netlify.md).
+n8n provides an app node for Netlify. Refer to the [Netlify node documentation](../app-nodes/n8n-nodes-base.netlify.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/netlify/) on n8n's website.
 

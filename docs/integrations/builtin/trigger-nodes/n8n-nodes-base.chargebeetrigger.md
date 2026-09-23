@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/chargebee.md).
+Refer to the [Chargebee credentials documentation](../credentials/chargebee.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

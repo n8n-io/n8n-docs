@@ -38,7 +38,7 @@ The FTP node is useful to access and upload files to an FTP or SFTP server.
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/ftp.md).
+Refer to the [FTP credentials documentation](../credentials/ftp.md) for authentication information for this node.
 {% endhint %}
 
 To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials](../credentials/ftp.md) for more information.

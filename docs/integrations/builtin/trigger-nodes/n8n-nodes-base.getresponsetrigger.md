@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/getresponse.md).
+Refer to the [GetResponse credentials documentation](../credentials/getresponse.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

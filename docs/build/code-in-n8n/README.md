@@ -20,6 +20,14 @@ layout:
 
 n8n is a low-code tool. This means you can do a lot without code, then add code when needed.
 
+## In this section
+
+* [Using the Code node](using-the-code-node.md): add JavaScript or Python code to your workflow.
+* [Get coding help from AI](get-coding-help-from-ai.md): use GPT to generate code in the Code node.
+* [Use built-in shortcuts](use-built-in-shortcuts.md): reference for n8n's built-in methods and variables for use in expressions and code.
+* [Define custom variables](define-custom-variables.md): store and reuse values across your workflows.
+* [Cookbook](cookbook/README.md): examples and recipes for common coding tasks.
+
 ## Code in your workflows <a href="#code-in-your-workflows" id="code-in-your-workflows"></a>
 
 There are two places in your workflows where you can use code:
@@ -28,7 +36,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions[^1] to transform [data](../work-with-data/overview.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
+	Use expressions[^1] to transform [data](../work-with-data/README.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](use-built-in-shortcuts.md).
 
 	[→ Expressions](../work-with-data/expressions-versus-data-nodes.md)
 
@@ -92,3 +100,15 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 </div>
 
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

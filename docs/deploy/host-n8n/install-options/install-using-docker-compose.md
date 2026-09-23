@@ -50,9 +50,19 @@ mkdir n8n && cd n8n
 
 ## Step 2: Create `.env`
 
-This file holds the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
+This file holds the versions to run and the secrets the sandbox services use to talk to each other. Create a file named `.env` with your own values in place of the placeholders and keep this file out of version control.
 
 ```
+# n8n version - get the version number of the latest stable release from https://github.com/n8n-io/n8n/releases
+N8N_VERSION=change-me-version-number
+
+# Sandbox service version - the API, runner, and sandbox images share one release.
+# Get the number of the latest stable "service" release (not a staging prerelease) from https://github.com/n8n-io/n8n-sandbox-service/releases
+N8N_SANDBOX_VERSION=change-me-sandbox-version-number
+
+# n8n task runner authentication. Use a random secret you generate.
+N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
+
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
 SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
@@ -255,3 +265,11 @@ flowchart LR
 ```
 
 n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox-runner-1`, which creates and runs the actual sandbox containers. `sandbox-certs` runs once at startup to generate the TLS certificates the other two need and then exits; everything else waits on it.
+
+## Related resources
+
+* [Install options](./)
+* [One-line setup](one-line-setup.md)
+* [Install with npm](install-with-npm.md)
+* [Install with Docker](install-with-docker.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)

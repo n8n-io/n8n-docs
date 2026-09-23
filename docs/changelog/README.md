@@ -50,7 +50,7 @@ Until now each of those runs counted like any other execution. Handling a failur
 
 Attach an error workflow to a workflow in its **Workflow Settings** and its runs are excluded from the count. One error workflow can serve as many workflows as you like.
 
-On Cloud the change is already live. On self-hosted it applies from 2.38.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
+The change applies on Cloud from 2.38, and on self-hosted Business and Enterprise instances from 2.28.0, or 1.123.60 if you're still on v1. If some of your workflows still run without an error workflow, refer to [Handle errors gracefully](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) to set one up.
 
 ## Use AI models and tool services without setting up provider accounts or credentials
 
@@ -131,6 +131,22 @@ You can now read and write Excel workbooks stored in SharePoint document librari
 The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
 
 Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+
+## Configure instance settings programmatically via REST API
+
+**Released:** 2026-07-14 in [n8n 2.31](release-notes.md#n8n231)
+
+You can now read and update instance-level settings through the n8n public REST API, starting with the security policy. Instead of clicking through the settings panel on every instance, you can drive configuration from a CI/CD pipeline, an infrastructure-as-code tool, or any HTTP client. Every write goes through the same validation as the UI, so an API-driven change takes effect exactly as it would if you clicked Save.
+
+`GET /api/v1/settings/security-policy` and `PUT /api/v1/settings/security-policy` read and update personal-space publishing and sharing, plus the execution-data redaction enforcement floor. The PUT takes the full configuration object: partial bodies are rejected with a 400, so you always know exactly what you're writing. The read-only usage counts that GET returns are ignored on write, so you can send a GET response straight back as a PUT body. If the policy is managed through environment variables, the API returns a 409 Conflict and leaves the values untouched, so declarative config is never silently overwritten.
+
+To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
+
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/security-policy).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
 
 ## Capture who approved and when in human-in-the-loop steps
 

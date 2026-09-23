@@ -61,3 +61,9 @@ You can configure how your self-hosted n8n instance handles binary data using th
 Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/handle-binary-data).
 
 Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes) for more information.
+
+## Related resources
+
+* [Handle special data types](./)
+* [Work with dates and times](work-with-dates-and-times.md)
+* [Query JSON data](query-json-data.md)

@@ -25,3 +25,9 @@ You can map data in the following ways:
 For information on errors with mapping and linking items, refer to [Item linking errors](link-data-items/item-linking-errors.md).
 
 See [Common ways of referencing](reference-previous-nodes.md#common-ways-of-referencing).
+
+## Related resources
+
+* [Reference data](./)
+* [Reference previous nodes](reference-previous-nodes.md)
+* [Link data items](link-data-items/README.md)

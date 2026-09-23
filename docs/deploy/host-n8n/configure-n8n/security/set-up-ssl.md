@@ -28,3 +28,7 @@ You can also choose to pass certificates into n8n directly. To do so, set the `N
 You'll need to make sure the certificate stays renewed and up to date.
 
 Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these variables and [Configuration](../basic-configuration.md) for more information on setting environment variables.
+
+## Related resources
+
+* [Security](../security.md)

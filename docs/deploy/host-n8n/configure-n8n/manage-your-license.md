@@ -48,3 +48,7 @@ N8N_LICENSE_CERT=<base64-encoded-license-string>
 Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
 
 
+
+## Related resources
+
+* [Configure n8n](./)

@@ -69,6 +69,18 @@ Required permissions for your token:
 - Contents read/write (for GitHub)
 - Source code pull/push (for GitLab)
 
+#### Git hosts with a private certificate authority
+
+{% hint style="info" %}
+**Feature availability**
+
+Private certificate authorities for Git connections are available from n8n 2.40.0.
+{% endhint %}
+
+If your Git host uses a certificate from a private certificate authority (CA), set the `GIT_SSL_CAINFO` environment variable on the n8n instance to the path of a PEM file that contains the CA certificate. Git uses its own trust store, so the [custom certificate authority](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) configuration for n8n doesn't apply to Git connections. If you keep the certificates in a directory indexed with `c_rehash`, set `GIT_SSL_CAPATH` to the directory instead.
+
+The file or directory replaces the default trust store for Git. If the instance also connects to public Git hosts, include their root certificates.
+
 ## Step 4: Connect n8n and configure your instance <a href="#step-4-connect-n8n-and-configure-your-instance" id="step-4-connect-n8n-and-configure-your-instance"></a>
 
 1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
@@ -76,4 +88,17 @@ Required permissions for your token:
 1. **Optional**: select **Protected instance** to prevent users editing source-controlled resources in this instance. This is useful for protecting production instances.
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
 

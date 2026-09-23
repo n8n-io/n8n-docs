@@ -210,10 +210,16 @@ const newItems = items.map((item) => {
 return newItems;
 ```
 
-### Related resources <a href="#related-resources" id="related-resources"></a>
-
-Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding), which includes example prompts.
-
 ## Fixing the code <a href="#fixing-the-code" id="fixing-the-code"></a>
 
 The AI-generated code may work without any changes, but you may have to edit it. You need to be aware of n8n's [Data structure](../work-with-data/understand-n8ns-data-structure.md). You may also find n8n's built-in methods and variables useful.
+
+### Related resources <a href="#related-resources" id="related-resources"></a>
+
+* [Code in n8n](./)
+* [Using the Code node](using-the-code-node.md)
+* [Use built-in shortcuts](use-built-in-shortcuts.md)
+* [Define custom variables](define-custom-variables.md)
+* [Cookbook](cookbook/README.md)
+
+Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding), which includes example prompts.

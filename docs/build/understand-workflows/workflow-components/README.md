@@ -12,9 +12,21 @@ layout:
 
 # Workflow components <a href="#workflow-components" id="workflow-components"></a>
 
-This section contains:
+You build workflows from a small set of components that you connect together on the canvas.
 
-* [Nodes](work-with-nodes.md): integrations and operations.
-* [Connections](connect-nodes-together.md): node connectors.
-* [Sticky notes](add-notes-and-documentation.md): document your workflows.
-* [Canvas Groups](canvas-groups.md): organize related nodes.
+## In this section
+
+* [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.
+* [Connect nodes together](connect-nodes-together.md): link nodes together to route data through your workflow.
+* [Add notes and documentation](add-notes-and-documentation.md): annotate your workflows using sticky notes.
+* [Canvas Groups](canvas-groups.md): group related nodes together to keep large workflows readable.
+* [Find your workflow ID](find-your-workflow-id.md): locate your workflow's ID.
+
+## Related resources
+
+* [Understand workflows](../)
+* [Create and run workflows](../create-and-run-workflows.md)
+* [Save and publish workflows](../save-and-publish-workflows.md)
+* [Create and edit credentials](../create-and-edit-credentials.md)
+* [Use Gateway credits](../use-gateway-credits.md)
+* [Understand executions](../understand-executions/README.md)

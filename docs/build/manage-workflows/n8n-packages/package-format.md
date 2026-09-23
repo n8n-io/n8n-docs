@@ -249,3 +249,11 @@ The one exception is `manifest.json`, which carries a fresh `exportedAt` on ever
 * [Export a package](export-a-package.md) for how to produce each of the three shapes.
 * [Import a package](import-a-package.md) for the options that control where the contents land.
 * [How import works](how-import-works.md) for what n8n does with each entity file.
+
+## Related resources
+
+* [n8n packages](./)
+* [Export a package](export-a-package.md)
+* [Import a package](import-a-package.md)
+* [How import works](how-import-works.md)
+* [Limits and permissions](limits-and-permissions.md)

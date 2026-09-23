@@ -57,3 +57,11 @@ When you use `.item` and there are multiple possible matches, n8n doesn't know w
 
 - Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.
+
+## Related resources
+
+* [Link data items](./)
+* [How items link through workflows](how-items-link-through-workflows.md)
+* [Accessing linked items in the Code node](accessing-linked-items-in-the-code-node.md)
+* [Preserving linking in the Code node](preserving-linking-in-the-code-node.md)
+* [Item linking for node creators](item-linking-for-node-creators.md)

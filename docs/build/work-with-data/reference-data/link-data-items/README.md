@@ -25,4 +25,18 @@ This section provides:
 * Support for end users who need to [work with the data path](preserving-linking-in-the-code-node.md) to retrieve item data from previous nodes and link items when using the Code node.
 * Guidance on troubleshooting [errors](item-linking-errors.md).
 
+## In this section
+
+* [How items link through workflows](how-items-link-through-workflows.md): a conceptual overview of item linking.
+* [Accessing linked items in the Code node](accessing-linked-items-in-the-code-node.md): use `itemMatching()` to retrieve linked item data.
+* [Preserving linking in the Code node](preserving-linking-in-the-code-node.md): keep item links intact when you write custom code.
+* [Item linking errors](item-linking-errors.md): troubleshoot common item linking errors.
+* [Item linking for node creators](item-linking-for-node-creators.md): what node creators need to know about item linking.
+
+## Related resources
+
+* [Reference data](../)
+* [Use the UI mapper](../use-the-ui-mapper.md)
+* [Reference previous nodes](../reference-previous-nodes.md)
+
 

@@ -104,3 +104,12 @@ When creating new loggers, some useful standards to keep in mind are:
 ## Are front-end logs available? <a href="#front-end-logs" id="front-end-logs"></a>
 
 As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Monitor n8n](monitor-n8n.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Back up and restore](backup-and-restore.md)
+* [Update n8n](update-n8n.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

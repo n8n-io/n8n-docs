@@ -41,3 +41,11 @@ To create a connection between two nodes, select the grey dot or **Add node** <i
 ## Delete a connection <a href="#delete-a-connection" id="delete-a-connection"></a>
 
 Hover over the connection, then select **Delete** <img src="../../.gitbook/assets/delete-connector.png" alt="Delete connector icon" data-size="line">.
+
+## Related resources
+
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

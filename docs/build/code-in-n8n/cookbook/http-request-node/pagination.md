@@ -65,3 +65,7 @@ If the API you're using supports choosing the page size in the query:
 1. In **Value**, enter your page size.
 
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [HTTP Request node](./)

@@ -113,7 +113,7 @@ In n8n, create a new **Microsoft Entra Service Principal** credential and fill i
 
 To authenticate with a certificate instead of a client secret, set **Authentication** to **Certificate** and paste your private key and certificate. The certificate must be uploaded to the app registration under **Certificates & secrets**.
 
-Save and test the credential. The connection test only checks that the app can sign in, so it needs no application permission of its own. A missing permission or missing admin consent passes the test and fails when a node runs.
+Save and test the credential. From n8n 2.40.0, the connection test only checks that the app can sign in, so it needs no application permission of its own. A missing permission or missing admin consent passes the test and fails when a node runs instead. Before n8n 2.40.0, the test read your organization from Microsoft Graph, so it also needed the `Organization.Read.All` (or `Directory.Read.All`) application permission.
 
 ## Required application permissions by node
 
@@ -121,6 +121,7 @@ Add the application permissions for every node you plan to use, then grant admin
 
 | Node | Required application permissions |
 |---|---|
+| All nodes, before n8n 2.40.0 (credential test) | `Organization.Read.All` or `Directory.Read.All`. From n8n 2.40.0, the credential test needs no application permission. |
 | Microsoft OneDrive and Microsoft OneDrive Trigger | `Files.ReadWrite.All` (`Files.Read.All` is enough for read-only operations and the trigger) |
 | Microsoft Excel (OneDrive) | `Files.ReadWrite.All` |
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
@@ -217,7 +218,7 @@ n8n derives the matching sign-in endpoint automatically, for example `login.micr
 
 Here are common errors and issues with the Microsoft Entra Service Principal credentials:
 
-- **The credential test passes but every operation fails.** The connection test only checks that the app can sign in, not which permissions it holds. A missing application permission, missing admin consent, or a missing per-site grant only surfaces when a node runs.
+- **The credential test passes but every operation fails.** From n8n 2.40.0, the connection test only checks that the app can sign in, not which permissions it holds. A missing application permission, missing admin consent, or a missing per-site grant only surfaces when a node runs.
 - **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft SharePoint (version 2) and Microsoft Excel (SharePoint) nodes show a clearer message instead, naming the permission the operation needs: "The app registration is missing a consented application permission for this operation."
 - **Authentication fails with "Microsoft Entra authentication did not return an access token".** Microsoft rejected the token exchange, for example AADSTS7000215 (invalid client secret), AADSTS7000222 (expired client secret), or AADSTS700027 (rejected certificate assertion). Check that you pasted the client secret's **Value** rather than its Secret ID, that the secret hasn't expired, and, for certificate authentication, that the private key matches the certificate uploaded to the app registration.
 - **Permission or secret changes don't take effect right away.** n8n caches the access token. Retest the credential after granting consent or rotating a secret, and recreate it if the cached token keeps failing.

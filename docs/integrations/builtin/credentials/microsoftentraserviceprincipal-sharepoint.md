@@ -106,10 +106,11 @@ echo "Directory (tenant) ID: $(az account show --query tenantId --output tsv)"
 
 Copy the secret from the output of the third command. Microsoft only shows it once.
 
-Two things to watch:
+A few things to watch:
 
 - **On an existing app registration, add `--append` to `az ad app credential reset`.** Without it, the command removes the secrets and certificates already on the app, and any service using them stops working.
 - **Admin consent can fail right after the service principal is created.** Microsoft Entra needs a few seconds to replicate it. If the last command reports that it can't find the app, wait and run it again.
+- **If admin consent fails with an endpoint or sign-in error, grant it in the portal instead.** `az ad app permission admin-consent` calls a legacy Azure endpoint that doesn't work for every account. Open the app registration's **API permissions** page in the Microsoft Entra admin center and select **Grant admin consent for \<your tenant\>**.
 
 ## Grant the app access to a site
 
@@ -171,7 +172,7 @@ Content-Type: application/json
 3. Set the **Site** field to **By URL** and paste a site address you granted the app access to.
 4. Run the node.
 
-The credential's connection test only checks that the app can sign in. A missing permission, missing admin consent, or a missing per-site grant passes the test and fails when the node runs, with a 403 error naming the permission the operation needs.
+From n8n 2.40.0, the credential's connection test only checks that the app can sign in. A missing permission, missing admin consent, or a missing per-site grant passes the test and fails when the node runs, with a 403 error naming the permission the operation needs.
 
 ## Related resources
 

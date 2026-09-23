@@ -51,3 +51,9 @@ Instead of fixing a rule violation, you can also make an exception for it, so th
 To make a lint exception from VS Code: hover over the issue and click on `Quick fix` (or `cmd+.` in macOS) and select **Disable {rule} for this line**. Only disable rules for a line where you have good reason to. If you think the linter is incorrectly reporting an issue, please [report it in the n8n repository](https://github.com/n8n-io/n8n/issues).
 
 To add a lint exception to a single file, add a code comment. Refer to the [ESLint documentation](https://eslint.org/docs/latest/use/configure/rules#disabling-rules) for more guidance.
+
+## Related resources
+
+* [Test your node](./)
+* [Run your node locally](run-your-node-locally.md)
+* [Troubleshooting](troubleshooting.md)

@@ -165,3 +165,7 @@ test: ICredentialTestRequest = {
 		},
 	};
 ```
+
+## Related resources
+
+* [Node building reference](./)

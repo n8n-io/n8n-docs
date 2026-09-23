@@ -55,3 +55,8 @@ To help resolve your issues more efficiently, here are some things you can inclu
 * 📂 **Workflow or Configuration files**: Sharing relevant workflows or configuration files can be a huge help.
 
 It may also be helpful to include a [HAR (HTTP Archive) file](https://en.wikipedia.org/wiki/HAR_(file_format)) in your message. You can learn how to generate a HAR file in your browser and how to redact sensitive details before posting using the [Har Analizer](https://toolbox.googleapps.com/apps/har_analyzer/).
+
+## Related resources
+
+* [Contribute to n8n](./)
+* [Contribution guide for n8n Docs](contribution-guide-for-n8n-docs/README.md)

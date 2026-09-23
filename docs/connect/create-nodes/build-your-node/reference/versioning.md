@@ -144,3 +144,7 @@ Full versioning summary:
 - n8n recommends using `v1`, `v2`, and so on, for version folder names.
 
 
+
+## Related resources
+
+* [Node building reference](./)

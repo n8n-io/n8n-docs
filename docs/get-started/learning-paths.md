@@ -25,4 +25,11 @@ All courses include:
 
 For a complete list of courses, see [n8n Academy courses](https://learn.n8n.io/courses). To start building right away instead, see [Build your first workflow](build-your-first-workflow.md).
 
+## Related resources
+
+* [n8n Docs](./)
+* [Choose how to use n8n](choose-how-to-use-n8n.md)
+* [Build your first workflow](build-your-first-workflow.md)
+* [Key concept glossary](key-concept-glossary.md)
+
 

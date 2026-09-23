@@ -145,3 +145,10 @@ Ready to begin?
 - **[Get started with self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)** — installation and deployment guides, then [choose a plan or edition](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features)
 
 For the current plans, editions, licenses, and prices, always check the [pricing page](https://n8n.io/pricing/).
+
+## Related resources
+
+* [n8n Docs](./)
+* [Build your first workflow](build-your-first-workflow.md)
+* [Learning paths](learning-paths.md)
+* [Key concept glossary](key-concept-glossary.md)

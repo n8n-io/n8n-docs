@@ -361,7 +361,7 @@ Each entry in `versions` has the following fields:
 {% hint style="info" %}
 **Feature availability**
 
-`get_workflow_version` is available from n8n 2.29.0. From n8n 2.34.0, node credentials are included in the response, reduced to `id` and `name` per slot; earlier versions strip credentials entirely.
+`get_workflow_version` is available from n8n 2.29.0. From n8n 2.34.0, node credentials are included in the response, reduced to `id` and `name` per slot. Earlier versions strip credentials entirely.
 {% endhint %}
 
 Retrieve the full content (nodes, connections, node groups) of a specific workflow version from its history. Use the `versionId` from `get_workflow_history`.

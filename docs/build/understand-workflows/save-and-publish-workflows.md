@@ -41,7 +41,7 @@ Publishing makes your workflow live and locks it to a specific version. Producti
 * Schedules will run at the times you've defined
 * Events from connected apps will trigger this workflow
 
-Publishing is asynchronous. When you publish, n8n works out which triggers changed between your last published version and the new one, then applies only those changes in the background. Triggers that haven't changed keep running without interruption. The new version goes live as part of this process. The **Publish** button shows a **Publishing** state until n8n confirms the result, which it does even if you reload the page.
+Publishing is asynchronous. When you publish, n8n works out which triggers changed between your last published version and the new one, then applies only those changes in the background. Triggers that haven't changed keep running without interruption. The new version goes live as part of this process. The **Publish** button shows **Publishing** until n8n confirms the result. n8n stores this state on the server, so if you reload the page during a publish, the button still shows **Publishing** and updates when the result arrives.
 
 **Initial state** When you open a workflow with no publishable changes, the Publish button is disabled.
 

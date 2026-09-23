@@ -76,7 +76,7 @@ Use the file in two ways:
 
 ## Provision the app registration with the Azure CLI
 
-Run these commands from the folder holding `n8n-sharepoint-permissions.json`. They create the app registration, its service principal, and a client secret, then grant admin consent:
+Run these commands from the folder holding `n8n-sharepoint-permissions.json`. They create the app registration and a client secret, then grant admin consent, which also creates the app's service principal:
 
 ```bash
 # Create the app registration for this tenant only, with the permission already requested
@@ -86,9 +86,6 @@ APP_ID=$(az ad app create \
 	--required-resource-accesses @n8n-sharepoint-permissions.json \
 	--query appId --output tsv)
 
-# Create the service principal. Without it, the app registration can't sign in
-az ad sp create --id "$APP_ID"
-
 # Create a client secret valid for one year, and print it once
 az ad app credential reset \
 	--id "$APP_ID" \
@@ -96,7 +93,7 @@ az ad app credential reset \
 	--years 1 \
 	--query password --output tsv
 
-# Grant admin consent for the requested permission
+# Grant admin consent. This also creates the app's service principal in the tenant
 az ad app permission admin-consent --id "$APP_ID"
 
 # Print the two IDs you enter in n8n
@@ -104,13 +101,14 @@ echo "Application (client) ID: $APP_ID"
 echo "Directory (tenant) ID: $(az account show --query tenantId --output tsv)"
 ```
 
-Copy the secret from the output of the third command. Microsoft only shows it once.
+Copy the secret from the output of the second command. Microsoft only shows it once.
 
 A few things to watch:
 
 - **On an existing app registration, add `--append` to `az ad app credential reset`.** Without it, the command removes the secrets and certificates already on the app, and any service using them stops working.
-- **Admin consent can fail right after the service principal is created.** Microsoft Entra needs a few seconds to replicate it. If the last command reports that it can't find the app, wait and run it again.
-- **If admin consent fails with an endpoint or sign-in error, grant it in the portal instead.** `az ad app permission admin-consent` calls a legacy Azure endpoint that doesn't work for every account. Open the app registration's **API permissions** page in the Microsoft Entra admin center and select **Grant admin consent for `<your-tenant>`**.
+- **Don't run `az ad sp create` before granting consent.** `az ad app permission admin-consent` creates the service principal itself. If one already exists, consent fails with `Request_BadRequest` and the message "The `<application-client-id>` service principal name is already present for the tenant".
+- **Admin consent can fail the first time you run it.** Microsoft Entra needs a few seconds to replicate the new app registration. The command reports `Directory_ObjectNotFound` with "Unable to read the company information from the directory". Wait and run it again.
+- **If admin consent keeps failing, grant it in the portal instead.** `az ad app permission admin-consent` calls a legacy Azure endpoint that doesn't work for every account. Open the app registration's **API permissions** page in the Microsoft Entra admin center and select **Grant admin consent for `<your-tenant>`**.
 
 ## Grant the app access to a site
 

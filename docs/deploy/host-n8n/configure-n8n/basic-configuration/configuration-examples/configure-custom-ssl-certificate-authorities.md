@@ -91,3 +91,7 @@ The system doesn't accept:
 - PKCS#12 (.pfx, .p12) files
 - Private key files
 - Convert these formats to PEM before use.
+
+## Related resources
+
+* [Configuration examples](./)

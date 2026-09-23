@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/toggl.md).
+Refer to the [Toggl credentials documentation](../credentials/toggl.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -36,7 +36,7 @@ Use the _Name_ Trigger node to respond to events in [_Name_](_service-url.com_) 
 On this page, you'll find a list of events the _Name_ Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
+Refer to the [_Name_ credentials documentation](/integrations/builtin/credentials/_Name_.md) for authentication information for this node.
 ///
 
 ## Events
@@ -47,7 +47,7 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- provide a link to the app node docs, if there is an app node for this service -->
-n8n provides an app node for _Name_. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base._Name_.md).
+n8n provides an app node for _Name_. Refer to the [_Name_ node documentation](/integrations/builtin/app-nodes/n8n-nodes-base._Name_.md) for more information.
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
 View [example workflows and related content](https://n8n.io/integrations/_Name_/) on n8n's website.

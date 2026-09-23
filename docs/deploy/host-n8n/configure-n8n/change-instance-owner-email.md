@@ -50,3 +50,7 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 {% endhint %}
 
 For more information, see [Manage instance settings using environment variables](manage-settings-using-environment-variables.md#instance-owner).
+
+## Related resources
+
+* [Configure n8n](./)

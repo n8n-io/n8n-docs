@@ -45,7 +45,7 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/supabase.md).
+Refer to the [Supabase credentials documentation](../../credentials/supabase.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

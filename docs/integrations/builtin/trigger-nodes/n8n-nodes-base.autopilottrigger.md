@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/autopilot.md).
+Refer to the [Autopilot credentials documentation](../credentials/autopilot.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

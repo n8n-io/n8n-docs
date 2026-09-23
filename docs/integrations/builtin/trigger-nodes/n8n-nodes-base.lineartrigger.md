@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/linear.md).
+Refer to the [Linear credentials documentation](../credentials/linear.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

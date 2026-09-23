@@ -101,3 +101,12 @@ With the default SQLite database, the `.n8n` folder holds everything needed to r
 * [Set a custom encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md): how to provide `N8N_ENCRYPTION_KEY` explicitly.
 * [Choose n8n's database](../configure-n8n/choose-n8ns-database.md): SQLite and PostgreSQL configuration.
 * [Update n8n](update-n8n.md): update procedures for npm and Docker installations.
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Set up logging](set-up-logging.md)
+* [Monitor n8n](monitor-n8n.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Update n8n](update-n8n.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

@@ -323,3 +323,15 @@ Replace the `change-me-...` placeholders in `.env` with your own unique secrets 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+
+## Related resources
+
+* [Use a cloud provider](./)
+* [DigitalOcean](deploy-to-digital-ocean.md)
+* [Heroku](deploy-to-heroku.md)
+* [AWS](deploy-to-aws.md)
+* [Azure](deploy-to-azure.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md)
+* [Use Docker Compose](use-docker-compose.md)

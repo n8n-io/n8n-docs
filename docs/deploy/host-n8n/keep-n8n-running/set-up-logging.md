@@ -25,7 +25,7 @@ To set up logging in n8n, you need to set the following environment variables (y
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
-| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
+| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. Refer to [Log levels](#log-levels) for more about these options. |
 | n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
 | n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
 | n8n.log.file.fileSizeMax | N8N_LOG_FILE_SIZE_MAX | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
@@ -104,3 +104,12 @@ When creating new loggers, some useful standards to keep in mind are:
 ## Are front-end logs available? <a href="#front-end-logs" id="front-end-logs"></a>
 
 As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Monitor n8n](monitor-n8n.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Back up and restore](backup-and-restore.md)
+* [Update n8n](update-n8n.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

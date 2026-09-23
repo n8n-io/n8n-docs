@@ -215,7 +215,7 @@ Enter these parameters:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for Postgres. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.postgrestrigger.md).
+n8n provides a trigger node for Postgres. Refer to the [Postgres Trigger node documentation](../../trigger-nodes/n8n-nodes-base.postgrestrigger.md) for more information.
 
 ## Use query parameters <a href="#use-query-parameters" id="use-query-parameters"></a>
 

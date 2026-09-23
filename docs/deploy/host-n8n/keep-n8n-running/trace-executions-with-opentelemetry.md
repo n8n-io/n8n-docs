@@ -446,8 +446,12 @@ With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n em
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+- [Keep n8n running](./)
+- [Logging in n8n](set-up-logging.md)
+- [Monitoring](monitor-n8n.md)
+- [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+- [Back up and restore](backup-and-restore.md)
+- [Update n8n](update-n8n.md)
 - [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
 - [W3C Trace Context specification](https://www.w3.org/TR/trace-context/)
 - [OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/)
-- [Logging in n8n](set-up-logging.md)
-- [Monitoring](monitor-n8n.md)

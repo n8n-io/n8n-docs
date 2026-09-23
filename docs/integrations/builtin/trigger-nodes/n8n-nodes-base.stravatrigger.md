@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/strava.md).
+Refer to the [Strava credentials documentation](../credentials/strava.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

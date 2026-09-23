@@ -27,7 +27,7 @@ On this page, you'll find the node options for the SearXNG Tool node, and links 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/searxng.md).
+Refer to the [SearXNG credentials documentation](../../credentials/searxng.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

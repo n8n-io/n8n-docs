@@ -308,6 +308,98 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 
 ---
 
+### get_workflow_history <a href="#getworkflowhistory" id="getworkflowhistory"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_history` is available from n8n 2.29.0.
+{% endhint %}
+
+List the saved version history of a workflow, newest first, so you can inspect how it changed over time and pick a version to retrieve or restore.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `workflowId` | `string` | Yes | | The ID of the workflow to read version history for |
+| `limit` | `integer` | No | `50` | Limit the number of results (max 50) |
+| `offset` | `integer` | No | `0` | Number of versions to skip for pagination |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the request succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `versions` | `array` | Versions ordered newest first. Older versions may be pruned by retention settings |
+| `count` | `number` | Number of versions returned in this page |
+| `error` | `string` | Error message if the request failed |
+
+Each entry in `versions` has the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `versionId` | `string` | The version ID, usable with `get_workflow_version` |
+| `authors` | `string` | Who authored this version |
+| `name` | `string \| null` | Optional named-version label |
+| `description` | `string \| null` | Optional named-version description |
+| `autosaved` | `boolean` | Whether this version was autosaved |
+| `createdAt` | `string` | ISO timestamp when the version was created |
+| `updatedAt` | `string` | ISO timestamp when the version metadata was last updated |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Use `limit` and `offset` to page through history on workflows with many saved versions.
+- Pass a `versionId` from the results to `get_workflow_version` to read a version's full content, or to `restore_workflow_version` to roll the workflow back to it.
+
+
+---
+
+### get_workflow_version <a href="#getworkflowversion" id="getworkflowversion"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_version` is available from n8n 2.29.0. From n8n 2.34.0, node credentials are included in the response, reduced to `id` and `name` per slot; earlier versions strip credentials entirely.
+{% endhint %}
+
+Retrieve the full content (nodes, connections, node groups) of a specific workflow version from its history. Use the `versionId` from `get_workflow_history`.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the version belongs to |
+| `versionId` | `string` | Yes | The version ID to retrieve, as returned by `get_workflow_history` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the request succeeded |
+| `versionId` | `string` | The version ID |
+| `workflowId` | `string` | The workflow ID |
+| `authors` | `string \| null` | Who authored this version |
+| `name` | `string \| null` | Optional named-version label |
+| `description` | `string \| null` | Optional named-version description |
+| `createdAt` | `string \| null` | ISO timestamp when the version was created |
+| `updatedAt` | `string \| null` | ISO timestamp when the version metadata was last updated |
+| `nodes` | `array` | The workflow nodes captured in this version |
+| `connections` | `object` | The node connections captured in this version, keyed by source node name |
+| `nodeGroups` | `array` | The node groups captured in this version |
+| `error` | `string` | Error message if the request failed |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the `versionId` from `get_workflow_history`.
+- Each credential reference keeps only its `id` and `name`, matching `get_workflow_details`, so you can reuse an existing credential without exposing secret values.
+- To make this version the current draft, pass its `versionId` to `restore_workflow_version`.
+- For a summary of what changed between two versions instead of the full content, use `get_workflow_versions_diff`.
+
+
+---
+
 ### get_workflow_versions_diff <a href="#getworkflowversionsdiff" id="getworkflowversionsdiff"></a>
 
 {% hint style="info" %}
@@ -1223,6 +1315,42 @@ Archive a workflow in n8n by its ID.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Idempotent - skips already-archived workflows.
+
+---
+
+### restore_workflow_version <a href="#restoreworkflowversion" id="restoreworkflowversion"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`restore_workflow_version` is available from n8n 2.29.0. From n8n 2.31.0, the resulting history entry is automatically named and described based on what was restored.
+{% endhint %}
+
+Restore a workflow to a previous version from its history. Re-applies that version as the current draft and records a new history entry. Use `get_workflow_history` to find the `versionId`.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow to restore |
+| `versionId` | `string` | Yes | The version ID to restore, as returned by `get_workflow_history` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the restore succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `restoredFromVersionId` | `string` | The version ID that was restored |
+| `newVersionId` | `string \| null` | The new current version ID created by the restore, if successful |
+| `error` | `string` | Error message if the restore failed |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the `versionId` from `get_workflow_history`.
+- Restoring re-applies the version's nodes, connections, and node groups as the current draft. It doesn't change the version being restored from.
+- The restore itself is saved as a new history entry, not an overwrite of the current draft's history.
+- Uses the same update path as restoring a version from the n8n editor, so the same permission and sharing checks apply.
 
 ---
 

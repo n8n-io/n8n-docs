@@ -184,7 +184,7 @@ Two sets of audit events mention packages, and they're unrelated. **Package inst
 MCP audit events are available from n8n 2.34.0.
 {% endhint %}
 
-The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://github.com/n8n-io/n8n-docs/connect/connect-to-n8n-mcp-server.md) for the difference between the two.
+The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) for the difference between the two.
 
 | Event name | Sent when |
 | --- | --- |

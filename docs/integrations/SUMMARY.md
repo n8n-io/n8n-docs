@@ -76,6 +76,7 @@
     * [Summarize](builtin/core-nodes/n8n-nodes-base.summarize.md)
     * [Switch](builtin/core-nodes/n8n-nodes-base.switch.md)
     * [TOTP](builtin/core-nodes/n8n-nodes-base.totp.md)
+    * [Track Time Saved](builtin/core-nodes/n8n-nodes-base.timesaved.md)
     * [Wait](builtin/core-nodes/n8n-nodes-base.wait.md)
     * [Webhook](builtin/core-nodes/n8n-nodes-base.webhook/README.md)
       * [Workflow development](builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md)

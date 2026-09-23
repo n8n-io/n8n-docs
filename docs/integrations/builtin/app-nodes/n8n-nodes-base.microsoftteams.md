@@ -29,7 +29,7 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 
 From version 2 of the node, the **Authentication** dropdown offers three options:
 
-- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, `TeamworkTag.Read` for team tag mentions, and, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings.
+- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, from n8n 2.39.0 `OnlineMeetings.ReadWrite` for online meetings, and from n8n 2.41.0 `TeamworkTag.Read` for team tag mentions.
 - **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, grant the credential the scopes this node needs. Refer to [Default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) for the full list.
 - **Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Some resources need a signed-in user and aren't available with this credential. Refer to [Service Principal credential support](#service-principal-credential-support) on this page, and to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and the required application permissions.
 
@@ -93,7 +93,13 @@ The Chat Member and Online Meeting resources are available from n8n 2.39.0, toge
 
 ## Mentions
 
-The Channel Message **Create** and **Reply** operations and the Chat Message **Create** operation have a **Mentions** field. Each row in the field @mentions one person or one team tag, and n8n adds the mention to the message for you. On a channel message, set **Mention Type** to **User** or **Team Tag** first. A chat message mentions users only, because a team tag belongs to a team. Refer to Microsoft's [chatMessageMention resource type](https://learn.microsoft.com/en-us/graph/api/resources/chatmessagemention) for how Microsoft Teams stores a mention.
+{% hint style="info" %}
+**Feature availability**
+
+Mentions on the Microsoft Teams node are available from n8n 2.41.0.
+{% endhint %}
+
+The Channel Message **Create** and **Reply** operations and the Chat Message **Create** operation have a **Mentions** field. Each row in the field @mentions one person or one team tag, and n8n adds the mention to the message for you. On a channel message, set **Mention Type** to **User** or **Team Tag** first. A chat message mentions users only, because a team tag belongs to a team. Refer to Microsoft's [`chatMessageMention` resource type](https://learn.microsoft.com/en-us/graph/api/resources/chatmessagemention) for how Microsoft Teams stores a mention.
 
 Don't type the name into **Message** as well, or it shows up twice.
 
@@ -127,7 +133,7 @@ Mentioning a tag notifies everyone who carries it. The Microsoft Teams node ment
 
 User mentions need the `User.Read.All` permission and team tag mentions need `TeamworkTag.Read`. The **Teams OAuth2** credential requests both by default. Add them by hand if the credential uses **Custom Scopes**, or if you authenticate with **Microsoft OAuth2 (Graph)**. A Microsoft Entra admin must consent to them.
 
-If a team tag mention fails with a permission error, open the credential and select **Reconnect** so it picks up `TeamworkTag.Read`.
+If you connected a Teams OAuth2 credential before n8n 2.41.0, reconnect it so it picks up `TeamworkTag.Read`. Without the scope, a team tag mention fails with a permission error.
 
 Mentions aren't available with the **Service Principal (App-Only)** credential, which can't run any of the three operations that support them. Refer to [Service Principal credential support](#service-principal-credential-support).
 

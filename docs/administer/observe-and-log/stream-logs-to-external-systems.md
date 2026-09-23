@@ -208,6 +208,12 @@ To stream all three, subscribe your destination to `n8n.audit.mcp`. In **Setting
 | `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. |
 | `clientName` | The name the client reports for itself. |
 
+{% hint style="info" %}
+**Feature availability**
+
+`authType` and `clientId` are not yet available. They'll ship in a future n8n release, after 2.34.0.
+{% endhint %}
+
 To measure usage per client, group by `clientId`. It identifies one client registration, so it stays the same across every call that client makes, including after its token refreshes. Two installations of the same product register separately and get different values, so `clientId` counts registrations rather than products. `clientName` isn't verified and isn't unique, so don't use it as a key.
 
 Setting `anonymizeAuditMessages` on a destination masks the user's email and name. It doesn't mask `userId`, `authType`, or `clientId`, so you can still group and count by them.

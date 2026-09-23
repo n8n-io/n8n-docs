@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/woocommerce.md).
+Refer to the [WooCommerce credentials documentation](../credentials/woocommerce.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

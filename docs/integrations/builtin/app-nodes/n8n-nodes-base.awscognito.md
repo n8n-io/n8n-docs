@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the AWS Cognito node supports, an
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/aws.md).
+Refer to the [AWS credentials documentation](../credentials/aws.md) for authentication information for this node.
 {% endhint %}
 
 

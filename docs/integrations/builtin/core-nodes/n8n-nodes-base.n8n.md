@@ -40,7 +40,7 @@ Refer to the [n8n REST API documentation](https://app.gitbook.com/s/r7wKI4I1BgdB
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node in the [API authentication](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication) documentation.
+Refer to the [API authentication documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication) for authentication information for this node documentation.
 {% endhint %}
 
 {% hint style="warning" %}

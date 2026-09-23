@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the Azure Cosmos DB node supports
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/azurecosmosdb.md).
+Refer to the [Azure Cosmos DB credentials documentation](../credentials/azurecosmosdb.md) for authentication information for this node.
 {% endhint %}
 
 

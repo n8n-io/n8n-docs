@@ -32,7 +32,7 @@ By comparing against data from previous executions, the Remove Duplicates node c
 {% hint style="info" %}
 **Major changes in 1.64.0**
 
-The n8n team overhauled this node in n8n 1.64.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md).
+The n8n team overhauled this node in n8n 1.64.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find [the previous version of this document](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md).
 {% endhint %}
 
 ## Operation modes <a href="#operation-modes" id="operation-modes"></a>

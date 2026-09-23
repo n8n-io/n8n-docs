@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/lonescale.md).
+Refer to the [LoneScale credentials documentation](../credentials/lonescale.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -43,6 +43,6 @@ You can find authentication information for this node [here](../credentials/lone
 
 Refer to [LoneScales documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api) for more information about the service.
 
-n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.lonescaletrigger.md).
+n8n provides a trigger node for LoneScale. Refer to the [LoneScale Trigger node documentation](../trigger-nodes/n8n-nodes-base.lonescaletrigger.md) for more information.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

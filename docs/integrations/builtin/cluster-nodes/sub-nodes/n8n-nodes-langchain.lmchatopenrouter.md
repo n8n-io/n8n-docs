@@ -28,7 +28,7 @@ On this page, you'll find the node parameters for the OpenRouter Chat Model node
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/openrouter.md).
+Refer to the [OpenRouter credentials documentation](../../credentials/openrouter.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

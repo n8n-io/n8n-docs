@@ -32,7 +32,7 @@ On this page, you'll find the node parameters for the Google Gemini Chat Model n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/googleai.md).
+Refer to the [Google Gemini(PaLM) credentials documentation](../../credentials/googleai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

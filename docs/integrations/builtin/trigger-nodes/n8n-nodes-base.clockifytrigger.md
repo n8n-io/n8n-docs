@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/clockify.md).
+Refer to the [Clockify credentials documentation](../credentials/clockify.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

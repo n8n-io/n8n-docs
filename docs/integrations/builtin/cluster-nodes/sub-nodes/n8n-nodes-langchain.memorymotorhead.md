@@ -37,7 +37,7 @@ On this page, you'll find a list of operations the Motorhead node supports, and 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/motorhead.md).
+Refer to the [Motorhead credentials documentation](../../credentials/motorhead.md) for authentication information for this node.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>

@@ -781,6 +781,7 @@
     * [Microsoft Dataverse credentials](builtin/credentials/microsoftdataverse.md)
     * [Microsoft Entra ID credentials](builtin/credentials/microsoftentra.md)
     * [Microsoft Entra Service Principal credentials](builtin/credentials/microsoftentraserviceprincipal.md)
+    * [Provision a SharePoint app registration with the Azure CLI](builtin/credentials/microsoftentraserviceprincipal-sharepoint.md)
     * [Microsoft SQL credentials](builtin/credentials/microsoftsql.md)
     * [Microsoft Agent 365 credentials](builtin/credentials/microsoftagent365.md)
     * [Milvus credentials](builtin/credentials/milvus.md)

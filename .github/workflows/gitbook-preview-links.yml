@@ -28,7 +28,11 @@ concurrency:
 
 jobs:
   preview-links:
-    # Only for a successful GitBook status, or a manual dry-run.
+    # Only for a successful GitBook status, or a manual dry-run. Note the
+    # asymmetry: a build that later fails or never finishes fires nothing, so
+    # an existing comment is never corrected or withdrawn. Fixing that needs
+    # this `if:` widened AND a body for the all-failed case, since the upsert
+    # below is gated on non-empty output.
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.state == 'success' && startsWith(github.event.context, 'GitBook ('))

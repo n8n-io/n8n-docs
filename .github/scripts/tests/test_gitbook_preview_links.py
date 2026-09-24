@@ -244,6 +244,16 @@ def main():
     ]
     check("later failure supersedes an earlier success", gb.load_spaces(succ_then_fail) == {})
 
+    # `error` is terminal too, not just success/failure.
+    succ_then_error = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "error",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("later error supersedes an earlier success", gb.load_spaces(succ_then_error) == {})
+    check("errored build not counted as pending", gb.gitbook_spaces(succ_then_error) == set())
+
     # Two successful builds of the same sha: the newest revision wins.
     two_success = [
         {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",

@@ -132,6 +132,14 @@ def collapse_statuses(status_json) -> list:
     when every row carries one (ids are monotonic, and same-second rows tie on
     created_at); otherwise input order is trusted as newest-first.
 
+    "Newest terminal wins" drops a space whose rebuild later failed, but only
+    on a render that actually happens: the workflow fires on `success` events
+    only, so a failure arriving after a success re-renders nothing and the
+    sticky comment keeps its now-superseded links until the next success on
+    that sha. Self-correcting that needs a failure trigger *and* a body for the
+    all-failed case (the upsert is skipped on empty output) — deliberately out
+    of scope here, see the workflow's `if:`.
+
     Accepts the `/commits/:sha/statuses` history (a list) or a `/status`
     response (a dict with `.statuses`); collapsing the latter is a no-op since
     it holds one row per context already.

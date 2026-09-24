@@ -29,7 +29,7 @@ On this page, you'll find a list of operations the Microsoft Teams node supports
 
 From version 2 of the node, the **Authentication** dropdown offers three options:
 
-- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, from n8n 2.39.0 `OnlineMeetings.ReadWrite` for online meetings, and from n8n 2.41.0 `TeamworkTag.Read` for team tag mentions.
+- **Teams OAuth2**: the Microsoft Teams-specific OAuth2 credential (default). Its default scopes cover every resource on this page, including `Chat.ReadWrite` for chat members and chat messages, from n8n 2.39.0, `OnlineMeetings.ReadWrite` for online meetings, and, from n8n 2.41.0, `TeamworkTag.Read` for team tag mentions.
 - **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, grant the credential the scopes this node needs. Refer to [Default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) for the full list.
 - **Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Some resources need a signed-in user and aren't available with this credential. Refer to [Service Principal credential support](#service-principal-credential-support) on this page, and to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and the required application permissions.
 

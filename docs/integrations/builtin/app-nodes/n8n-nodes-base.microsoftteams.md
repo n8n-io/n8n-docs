@@ -162,7 +162,7 @@ The **Delete** and **Undo Delete** operations aren't available with the **Servic
 
 ## Chats and chat members
 
-The Chat resource works with the signed-in user's chats. **Get Many** lists them, **Get** returns one chat that you pick from the list or give by ID (the part after `conversations/` in the chat's link), and **Create** starts a new one. n8n adds you to a new chat automatically, so list only the other people under **Other Participants**. **Chat Type** sets what you create:
+The Chat resource works with the signed-in user's chats. **Get Many** lists them, **Get** returns one chat that you pick from the list or give by ID, and **Create** starts a new one. A chat ID starts with `19:`. You find it after `conversations/` in the address bar of the Teams web app, or in the `id` field of a Chat **Get Many** result. n8n adds you to a new chat automatically, so list only the other people under **Other Participants**. **Chat Type** sets what you create:
 
 * **One-on-One**: a chat between you and one other person. If you already have a chat with that person, Microsoft Teams returns the existing chat instead of creating a new one.
 * **Group**: a chat with one or more other people. You can give it a **Topic**, and add or remove members later with the Chat Member operations.

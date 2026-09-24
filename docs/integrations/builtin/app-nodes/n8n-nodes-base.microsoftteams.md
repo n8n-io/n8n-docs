@@ -20,7 +20,7 @@ layout:
 
 # Microsoft Teams node <a href="#microsoft-teams-node" id="microsoft-teams-node"></a>
 
-Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including channels, channel and chat messages, chat members, online meetings, and tasks.
+Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including channels, chats, channel and chat messages, chat members, online meetings, and tasks.
 
 On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
 
@@ -53,7 +53,9 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 {% hint style="info" %}
 **Feature availability**
 
-The Chat Member and Online Meeting resources are available from n8n 2.39.0, together with the Channel Message **Get**, **Get Many Replies**, and **Reply** operations. The Chat Member **Add** operation and the Online Meeting **Create or Get**, **Delete**, and **Update** operations are available from n8n 2.40.0.
+- The Chat Member and Online Meeting resources, and the Channel Message **Get**, **Get Many Replies**, and **Reply** operations, are available from n8n 2.39.0.
+- The Chat Member **Add** and **Remove** operations, the Channel Message and Chat Message **Delete** and **Undo Delete** operations, the Online Meeting **Create or Get**, **Delete**, and **Update** operations, and Online Meeting support for the **Service Principal (App-Only)** credential are available from n8n 2.40.0.
+- The Chat resource is available from n8n 2.41.0.
 {% endhint %}
 
 * Channel
@@ -64,18 +66,27 @@ The Chat Member and Online Meeting resources are available from n8n 2.39.0, toge
     * Update
 * Channel Message
     * Create
+    * Delete
     * Get
     * Get Many
     * Get Many Replies
     * Reply
+    * Undo Delete
+* Chat
+    * Create
+    * Get
+    * Get Many
 * Chat Member
     * Add
     * Get Many
+    * Remove
 * Chat Message
 	* Create
+	* Delete
 	* Get
 	* Get Many
 	* Send and Wait for Response
+	* Undo Delete
 * Online Meeting
     * Create
     * Create or Get
@@ -137,15 +148,41 @@ If you connected a Teams OAuth2 credential before n8n 2.41.0, reconnect it so it
 
 Mentions aren't available with the **Service Principal (App-Only)** credential, which can't run any of the three operations that support them. Refer to [Service Principal credential support](#service-principal-credential-support).
 
+## Delete and restore messages
+
+The Channel Message and Chat Message **Delete** operations soft delete a message: Microsoft Teams hides it from the channel or chat but keeps it, so the **Undo Delete** operation of the same resource can restore it. Both operations run as the signed-in user. You can delete and restore your own messages. Whether you can delete other people's messages depends on your role in the team and on your organization's Microsoft Teams messaging policies. When Microsoft Teams doesn't allow it, the operation fails with a permission error.
+
+Both operations take a **Message ID**. To find it, copy the message link in Microsoft Teams: the message ID is the number at the end of the link's path, before the `?`. A chat message also needs the **Chat**. A channel message also needs the **Team** and **Channel**. To delete or restore a reply in a channel, add the **Parent Message ID** option and enter the ID of the message the reply belongs to, which is the `parentMessageId` parameter in the reply's link.
+
+Deleting and restoring channel messages needs the `ChannelMessage.ReadWrite` scope, which the **Teams OAuth2** credential requests by default from n8n 2.40.0. If you connected the credential before n8n 2.40.0, reconnect it so it picks up the scope. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** instead.
+
+Chat messages use the `Chat.ReadWrite` scope, which the credential already includes. With the **Microsoft OAuth2 (Graph)** credential, add the scopes yourself.
+
+The **Delete** and **Undo Delete** operations aren't available with the **Service Principal (App-Only)** credential, because Microsoft Graph offers them only for a signed-in user. Refer to [Service Principal credential support](#service-principal-credential-support).
+
+## Chats and chat members
+
+The Chat resource works with the signed-in user's chats. **Get Many** lists them, **Get** returns one chat that you pick from the list or give by ID (the part after `conversations/` in the chat's link), and **Create** starts a new one. n8n adds you to a new chat automatically, so list only the other people under **Other Participants**. **Chat Type** sets what you create:
+
+* **One-on-One**: a chat between you and one other person. If you already have a chat with that person, Microsoft Teams returns the existing chat instead of creating a new one.
+* **Group**: a chat with one or more other people. You can give it a **Topic**, and add or remove members later with the Chat Member operations.
+
+For each participant, pick the user from the list or enter their user principal name or object ID. Set **Role** to **Guest** for a guest account in your tenant, because Microsoft Teams rejects a guest as an owner. For a person from another organization, enter their object ID and their organization's **Tenant ID**.
+
+The Chat Member **Remove** operation takes the member's membership ID, not their user ID. Pick the member from the list, or use the `id` field from a Chat Member **Get Many** result. Microsoft Teams refuses to remove a member from a one-on-one chat, and refuses to remove the last owner of a group chat.
+
+The Chat and Chat Member resources aren't available with the **Service Principal (App-Only)** credential. Refer to [Service Principal credential support](#service-principal-credential-support).
+
 ## Service Principal credential support
 
 The **Service Principal (App-Only)** credential has no signed-in user, so the Microsoft Teams node can't run operations that act as one. The list below states what's available for each resource. For the unavailable resources and operations, the node hides their fields and shows a notice when you select this credential. A workflow that still uses one of them fails with an error before the node sends any request.
 
 - **Channel**: all operations.
-- **Channel Message**: Get, Get Many, and Get Many Replies. Create and Reply aren't available, because app-only Microsoft Graph only supports migration import for channel messages. Use an OAuth2 credential to send channel messages.
+- **Channel Message**: Get, Get Many, and Get Many Replies. Create and Reply aren't available, because app-only Microsoft Graph only supports migration import for channel messages. Delete and Undo Delete aren't available either, because Microsoft Graph offers them only for a signed-in user. Use an OAuth2 credential for these four operations.
+- **Chat**: not available. App-only Microsoft Graph has no signed-in user whose chats it could list, get, or create.
 - **Chat Member**: not available. The node's chat picker lists the signed-in user's chats, which app-only access can't do, so the node blocks the whole resource, including chats given by ID.
 - **Chat Message**: not available. The node sends and reads chat messages as the signed-in user.
-- **Online Meeting**: not available. The node creates and manages online meetings as the signed-in user.
+- **Online Meeting**: all operations, run on behalf of the user you select in the **Organizer** field, which the node shows when you select this credential. Pick the organizer from the list, or enter their user principal name or object ID. The app registration needs the `OnlineMeetings.ReadWrite.All` application permission (`OnlineMeetings.Read.All` is enough for Get), `User.Read.All` to pick the organizer from the list or by user principal name, and a Microsoft Teams application access policy that lets the app act on the organizer's meetings. Without the policy, the operations fail with a 403 error. Refer to [Allow app-only online meetings](../credentials/microsoftentraserviceprincipal.md#allow-app-only-online-meetings) for the setup.
 - **Task**: all operations. Get Many always lists the tasks of a plan: the node hides the **Tasks For** option, so **Group Member** isn't available. The node also hides the **Team** picker, and the **Plan**, **Bucket**, and **Assigned To** fields accept an ID only.
 
 Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for the application permissions each operation needs.

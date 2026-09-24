@@ -8,12 +8,14 @@ PR's changed files plus those statuses and produces per-page deep links, so
 reviewers land on the exact page. See .github/workflows/gitbook-preview-links.yml.
 
 Usage:
-    gitbook_preview_links.py <changed_files.json> <combined_status.json>
+    gitbook_preview_links.py <changed_files.json> <statuses.json>
 
 - changed_files.json: output of `gh api repos/:repo/pulls/:n/files --paginate`
   (a JSON array of {filename, status, previous_filename?}).
-- combined_status.json: output of `gh api repos/:repo/commits/:sha/status`
-  (one latest entry per context under `.statuses`).
+- statuses.json: output of `gh api repos/:repo/commits/:sha/statuses`
+  (the full status *history*, newest first, as a JSON array). A `.statuses`
+  dict (the collapsed `/status` endpoint) is still accepted, but the history
+  is what callers should pass: see collapse_statuses for why.
 
 Reads the checked-out repo (CWD = repo root) for SUMMARY.md membership, page
 frontmatter/titles, and REUSABLE_CONTENT_INDEX.md. Stdlib only. Prints the
@@ -112,9 +114,44 @@ LIVE_RE = re.compile(r"^GitBook \(\./docs/([^)]+)\) - ")
 EDIT_RE = re.compile(r"^GitBook \(\./docs/([^)]+)\)$")
 
 
+# A build that reported success/failure/error is finished; `pending` is not a
+# verdict. GitBook has been seen posting a revision's `success` and `pending`
+# within the same second, `success` first (n8n-io/n8n-docs#5461), which the
+# collapsed `/commits/:sha/status` endpoint renders as a build stuck pending
+# forever: it keeps only the newest row per context, and no further status
+# event arrives to correct it.
+TERMINAL_STATES = ("success", "failure", "error")
+
+
+def collapse_statuses(status_json) -> list:
+    """One effective status row per context, newest first in, latest out.
+
+    Rule: pending can't undo a finished build, and among finished results the
+    newest wins. So a context resolves to its newest terminal row if it has
+    one, else to its newest row (pending). Ordering comes from the status id
+    when every row carries one (ids are monotonic, and same-second rows tie on
+    created_at); otherwise input order is trusted as newest-first.
+
+    Accepts the `/commits/:sha/statuses` history (a list) or a `/status`
+    response (a dict with `.statuses`); collapsing the latter is a no-op since
+    it holds one row per context already.
+    """
+    rows = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    if rows and all(isinstance(r.get("id"), int) for r in rows):
+        rows = sorted(rows, key=lambda r: r["id"], reverse=True)
+    out: dict = {}
+    for r in rows:
+        ctx = r.get("context", "")
+        keep = out.get(ctx)
+        if keep is None or (keep.get("state") not in TERMINAL_STATES
+                            and r.get("state") in TERMINAL_STATES):
+            out[ctx] = r
+    return list(out.values())
+
+
 def load_spaces(status_json) -> dict:
     """space -> {live_base, site_prefix, editor_url}. Only successful builds."""
-    statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    statuses = collapse_statuses(status_json)
     spaces: dict = {}
     for s in statuses:
         if s.get("state") != "success":
@@ -137,7 +174,7 @@ def gitbook_spaces(status_json) -> set:
     tell 'this space's preview is still building' apart from 'not a page'. Failed
     builds are excluded — a page there shouldn't promise an update that never
     lands (it falls through to the non-page footnote instead)."""
-    statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    statuses = collapse_statuses(status_json)
     out = set()
     for s in statuses:
         if s.get("state") not in ("success", "pending"):

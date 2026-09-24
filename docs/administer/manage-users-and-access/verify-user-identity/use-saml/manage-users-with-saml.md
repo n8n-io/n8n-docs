@@ -29,3 +29,11 @@ You can allow users to log in without using SAML. To do this:
 ## Deleting users <a href="#deleting-users" id="deleting-users"></a>
 
 If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](../../add-and-remove-users.md) for guidance on deleting users.
+
+## Related resources
+
+* [Use SAML](./)
+* [Set up SAML](set-up-saml.md)
+* [Okta Workforce Identity SAML setup](set-up-okta-workforce-identity-saml.md)
+* [Azure AD SAML setup](set-up-azure-ad-saml.md)
+* [Troubleshoot SAML](troubleshoot-saml.md)

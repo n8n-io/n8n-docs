@@ -36,6 +36,11 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 * Trigger and test exposed workflows
 * Create and edit workflows and data tables
 
+## In this section
+
+* [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md): exact commands and configuration for specific MCP clients.
+* [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md): the complete list of available tools and their parameters.
+
 {% hint style="info" %}
 **Connecting a chat client such as Claude Desktop?**
 
@@ -113,7 +118,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 1. Navigate to **Settings > Instance-level MCP**.
 2. In **Connection details**, select **Connect** to open the **Connect a client** dialog.
 3. Confirm you're on the **OAuth (recommended)** tab.
-4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
+4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT, Mistral Vibe), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
 5. Follow the steps shown for your client type:
    * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client's own connector settings yourself.
    * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-claude-code-to-n8n-mcp-server) and [Codex](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-codex-cli-to-n8n-mcp-server) examples for the exact commands).
@@ -259,7 +264,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available from n8n 2.34.0 and are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. This section only applies if you've enabled agents on your instance.
+Agents are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. MCP clients can manage agents from n8n 2.34.0. On n8n Cloud, agents are on by default for accounts on the latest stable version. On self-hosted, this section only applies if you've enabled the `agents` module.
 {% endhint %}
 
 {% hint style="info" %}
@@ -377,3 +382,11 @@ MCP clients send the following headers to the n8n MCP endpoint:
 * `Mcp-Name`
 
 If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.
+
+## Related resources
+
+* [Connect](./)
+* [n8n API](n8n-api/README.md)
+* [n8n CLI](n8n-cli.md)
+* [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
+* [Create nodes](create-nodes/README.md)

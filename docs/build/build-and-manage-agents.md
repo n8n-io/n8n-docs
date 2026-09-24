@@ -34,7 +34,7 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+Agents are available to everyone on **n8n Cloud** running the latest stable version. They also run on **self-hosted**, with some extra setup. See [Self-hosted](build-and-manage-agents.md#self-hosted). They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
 {% endhint %}
 
 {% hint style="info" %}
@@ -264,7 +264,7 @@ You can use agents within your workflows in two ways:
 
 ### Self-hosted
 
-Agents run on self-hosted n8n from 2.32.3 (Beta). There are two ways to set them up:
+Agents run on self-hosted n8n from 2.32.3. There are two ways to set them up:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
 * **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
@@ -284,3 +284,15 @@ For the environment variables and setup steps, see [Enable agents](https://app.g
 One turn with an agent counts as one execution. A turn is a single exchange, where you send the agent a message and it produces a response.
 
 Agents share the same execution quota as workflows. Executions from your agents and workflows count toward the same total on your plan.
+
+## Related resources
+
+* [Build](./)
+* [Understand workflows](understand-workflows/README.md)
+* [Ways of building workflows](ways-of-building-workflows/README.md)
+* [Manage workflows](manage-workflows/README.md)
+* [Flow logic](flow-logic/README.md)
+* [Work with data](work-with-data/README.md)
+* [Code in n8n](code-in-n8n/README.md)
+* [Integrate AI](integrate-ai/README.md)
+* [Keyboard shortcuts](keyboard-shortcuts.md)

@@ -30,7 +30,7 @@ Figma doesn't support webhooks on the free "Starter" plan. Your team needs to be
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/figma.md).
+Refer to the [Figma credentials documentation](../credentials/figma.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

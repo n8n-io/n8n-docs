@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/box.md).
+Refer to the [Box credentials documentation](../credentials/box.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

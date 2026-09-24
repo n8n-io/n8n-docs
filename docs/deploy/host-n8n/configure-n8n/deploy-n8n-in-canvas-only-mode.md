@@ -42,3 +42,7 @@ n8n keeps the following visible:
 - **The tab bar** for switching between the editor, executions, and evaluations. It floats near the top of the screen instead of sitting inside the header.
 - **The logs panel** to display execution logs of individual nodes.
 - **The node creator panel.** The "Add a node" panel still opens from the canvas, repositioned to the top of the screen instead of below the header.
+
+## Related resources
+
+* [Configure n8n](./)

@@ -29,7 +29,7 @@ On this page, you'll find the node parameters for the Reranker Cohere node, and 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/cohere.md).
+Refer to the [Cohere credentials documentation](../../credentials/cohere.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

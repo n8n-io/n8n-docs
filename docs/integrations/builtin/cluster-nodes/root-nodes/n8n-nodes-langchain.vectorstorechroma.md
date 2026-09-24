@@ -43,7 +43,7 @@ On this page, you'll find the node parameters for the Chroma node, and links to 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/chroma.md).
+Refer to the [Chroma credentials documentation](../../credentials/chroma.md) for authentication information for this node.
 {% endhint %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>

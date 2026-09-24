@@ -308,6 +308,98 @@ Unpublish (deactivate) a workflow to stop it from being available for production
 
 ---
 
+### get_workflow_history <a href="#getworkflowhistory" id="getworkflowhistory"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_history` is available from n8n 2.29.0.
+{% endhint %}
+
+List the saved version history of a workflow, newest first, so you can inspect how it changed over time and pick a version to retrieve or restore.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `workflowId` | `string` | Yes | | The ID of the workflow to read version history for |
+| `limit` | `integer` | No | `50` | Limit the number of results (max 50) |
+| `offset` | `integer` | No | `0` | Number of versions to skip for pagination |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the request succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `versions` | `array` | Versions ordered newest first. Older versions may be pruned by retention settings |
+| `count` | `number` | Number of versions returned in this page |
+| `error` | `string` | Error message if the request failed |
+
+Each entry in `versions` has the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `versionId` | `string` | The version ID, usable with `get_workflow_version` |
+| `authors` | `string` | Who authored this version |
+| `name` | `string \| null` | Optional named-version label |
+| `description` | `string \| null` | Optional named-version description |
+| `autosaved` | `boolean` | Whether this version was autosaved |
+| `createdAt` | `string` | ISO timestamp when the version was created |
+| `updatedAt` | `string` | ISO timestamp when the version metadata was last updated |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Use `limit` and `offset` to page through history on workflows with many saved versions.
+- Pass a `versionId` from the results to `get_workflow_version` to read a version's full content, or to `restore_workflow_version` to roll the workflow back to it.
+
+
+---
+
+### get_workflow_version <a href="#getworkflowversion" id="getworkflowversion"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_workflow_version` is available from n8n 2.29.0. From n8n 2.34.0, node credentials are included in the response, reduced to `id` and `name` per slot. Earlier versions strip credentials entirely.
+{% endhint %}
+
+Retrieve the full content (nodes, connections, node groups) of a specific workflow version from its history. Use the `versionId` from `get_workflow_history`.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow the version belongs to |
+| `versionId` | `string` | Yes | The version ID to retrieve, as returned by `get_workflow_history` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the request succeeded |
+| `versionId` | `string` | The version ID |
+| `workflowId` | `string` | The workflow ID |
+| `authors` | `string \| null` | Who authored this version |
+| `name` | `string \| null` | Optional named-version label |
+| `description` | `string \| null` | Optional named-version description |
+| `createdAt` | `string \| null` | ISO timestamp when the version was created |
+| `updatedAt` | `string \| null` | ISO timestamp when the version metadata was last updated |
+| `nodes` | `array` | The workflow nodes captured in this version |
+| `connections` | `object` | The node connections captured in this version, keyed by source node name |
+| `nodeGroups` | `array` | The node groups captured in this version |
+| `error` | `string` | Error message if the request failed |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the `versionId` from `get_workflow_history`.
+- Each credential reference keeps only its `id` and `name`, matching `get_workflow_details`, so you can reuse an existing credential without exposing secret values.
+- To make this version the current draft, pass its `versionId` to `restore_workflow_version`.
+- For a summary of what changed between two versions instead of the full content, use `get_workflow_versions_diff`.
+
+
+---
+
 ### get_workflow_versions_diff <a href="#getworkflowversionsdiff" id="getworkflowversionsdiff"></a>
 
 {% hint style="info" %}
@@ -615,6 +707,187 @@ List credentials the current user can access. Use this to find a credential ID b
 - Maximum result limit is 200.
 - Credential secret data is never returned.
 - By default, global credentials are included. Set `onlySharedWithMe` to true to exclude global credentials and only return credentials shared directly with the current user.
+
+---
+
+## Instance context <a href="#instance-context" id="instance-context"></a>
+
+{% hint style="info" %}
+**Configuration**
+
+The `114_instance_activity_context` PostHog flag controls all four tools and the instance context resource. n8n evaluates it per instance, not per user. The same flag controls activity recording and instance context in n8n Assistant.
+
+On a self-hosted instance, use `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. Preserve any other entries in the JSON object.
+
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+|------|------|
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
+
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
+
+`get_instance_context`, `get_instance_activity`, `expand_instance_activity`, and the [instance context resource](#instance-context-resource) also require the `instance-ai` module to be active. `get_node_usage` requires the flag but not that module.
+{% endhint %}
+
+These tools read what this instance already contains: which workflows exist, what people recently changed, which node types the workflows here use, and what has run. All four sit under the `workflow:read` scope.
+
+Two access rules apply across the whole section:
+
+- **`Available in MCP`**. `get_instance_context` and the two activity tools report only workflows marked **Available in MCP**, and treat an archived workflow as not available. `get_node_usage` counts every workflow you can read, like `search_workflows`, regardless of that setting.
+- **The scope of your grant**. The two activity tools drop credential entries when your grant lacks `credential:read`, or when you can't access the credential. `get_instance_context` never names a credential, and it drops run data when your grant lacks `execution:read`.
+
+By default each tool reads every project you can read workflows in. Pass `projectId` to narrow it to one. These tools are read-only, so `projectId` narrows what you can already see rather than widening it.
+
+### get_instance_context <a href="#getinstancecontext" id="getinstancecontext"></a>
+
+Read the opening picture of this instance: which workflows exist, what someone recently created, changed, or deleted, and what has run and failed. Call it once at the start of a session, before you ask the user what they want to do. When the user is vague, for example "fix it" or "carry on", the answer is usually the most recent thing here.
+
+MCP clients that support resources can read the same content from the [instance context resource](#instance-context-resource).
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
+| `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- The tool returns prose, not records. It names workflows as `"Name" (workflow:<id>)`, executions as `execution:<id>`, and activity entries with a bracketed ID. Pass a workflow ID to `search_workflows` or `get_workflow_details`, an execution ID to `get_workflow_execution`, and a bracketed activity ID to `expand_instance_activity`.
+- The prose holds up to three parts: the workflows that exist and the ones most recently worked on, the runs of the last 24 hours with their success and failure counts, and what changed recently. A part the instance has nothing for is left out.
+- Use `get_instance_activity` to page further back than this window.
+- Check `nothingExposed` before you act on an empty answer. `Available in MCP` is off by default, so an instance that predates the setting reports empty while holding a full estate. Treating that as a fresh instance sends you off to rebuild work the user already has.
+- Every call returns a full snapshot. The MCP server keeps no session state, so there is nothing to carry forward between calls.
+
+---
+
+### get_instance_activity <a href="#getinstanceactivity" id="getinstanceactivity"></a>
+
+Read the instance activity log: what someone recently created, changed, published, or deleted in this instance, and who did it. Use it to pick up work already in progress. When the user is vague, for example "fix it" or "what should I look at", the answer is usually the most recent entry here.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `category` | `"workflow" \| "credential"` | No | Restrict results to one kind of entry |
+| `resourceId` | `string` | No | Restrict results to one resource, for example a single workflow ID |
+| `beforeId` | `integer` | No | Page backwards: only return entries older than this entry ID |
+| `projectId` | `string` | No | Read one project instead of every project you can see. Get it from `search_projects` |
+| `limit` | `integer` | No | Limit the number of results (max 100) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `entries` | `array` | Matching log entries, newest first |
+| `entries[].id` | `number` | Entry ID, which `expand_instance_activity` takes |
+| `entries[].at` | `string` | ISO timestamp of the entry |
+| `entries[].category` | `string` | What kind of resource the entry covers: `"workflow"` or `"credential"` |
+| `entries[].action` | `string` | What happened, such as created, saved, published, deleted, or archived |
+| `entries[].resourceType` | `string` | What `resourceId` points at |
+| `entries[].resourceId` | `string` | ID of the resource, to pass to tools such as `search_workflows` or `get_workflow_details` |
+| `entries[].resourceName` | `string` | Name the resource had at the time |
+| `entries[].byCurrentUser` | `boolean` | Whether the authenticated user did it |
+| `entries[].detail` | `object` | Extra fields the entry carried |
+| `count` | `integer` | Number of entries returned |
+| `hasMore` | `boolean` | Whether the log holds more entries below this page |
+| `nextBeforeId` | `number` | Pass this back as `beforeId` to read the next page. Present whenever `hasMore` is `true`, including when this page returned no entries |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Maximum result limit is 100.
+- Entries are log records, not live records. For a workflow entry, fetch the live record with `search_workflows` or `get_workflow_details`. For a credential entry, use `list_credentials`. An entry can name a resource someone has since deleted.
+- A short or empty page can still have more entries below it. Check `hasMore` before you conclude that nothing has happened, and page with `nextBeforeId`. A page can be short because the tool withheld entries about workflows that aren't **Available in MCP**.
+- When someone deletes a workflow, only its `deleted` entry stays readable. The rest of that workflow's history drops out, because there is no workflow left to check **Available in MCP** against.
+
+---
+
+### expand_instance_activity <a href="#expandinstanceactivity" id="expandinstanceactivity"></a>
+
+Read one activity log entry, together with everything else the log holds about the same resource.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `id` | `integer` | Yes | The entry ID, as returned by `get_instance_activity` |
+| `projectId` | `string` | No | Restrict the lookup to one project. Get it from `search_projects` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `entry` | `object` | The entry, using the same fields as `get_instance_activity`. Absent when the ID doesn't resolve |
+| `resourceHistory` | `array` | Everything else the log holds about the same resource, newest first |
+| `liveRecordHint` | `string` | The tool call that fetches the live record, when one applies |
+| `notFound` | `boolean` | Set when the ID no longer resolves |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- `notFound` is an ordinary outcome rather than an error. Carry on without the entry.
+- An entry reports as not found for three reasons: n8n pruned it on the retention window, it belongs to a project you can't read, or it names a workflow that isn't **Available in MCP**. All three give the same answer on purpose, so the response never confirms that a resource you can't see exists.
+
+---
+
+### get_node_usage <a href="#getnodeusage" id="getnodeusage"></a>
+
+Report which node types this instance already uses, and how widely. Call it before choosing between equivalent nodes, so a new workflow matches how this instance already builds, for example whether an HTTP Request node or a dedicated integration node is the local habit. Without `nodeType` it returns the histogram of node types in use. With one, it returns the workflows using that node type.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `nodeType` | `string` | No | Fully qualified node type, for example `"n8n-nodes-base.httpRequest"`. Omit it to get the histogram of every node type in use |
+| `projectId` | `string` | No | Read one project instead of every workflow you can see. Get it from `search_projects` |
+| `limit` | `integer` | No | Limit the number of results (max 100) |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `workflowsInScope` | `number` | Indexed, non-archived workflows the counts draw on: the denominator a count needs to mean anything |
+| `nodeTypes` | `array` | The histogram, returned when you name no `nodeType`. Most used first |
+| `nodeTypes[].nodeType` | `string` | Fully qualified node type |
+| `nodeTypes[].workflowCount` | `number` | Workflows in scope using it |
+| `workflows` | `array` | Workflows using the named `nodeType`, returned when you give one |
+| `workflows[].workflowId` | `string` | The workflow ID |
+| `workflows[].name` | `string` | The workflow name |
+| `workflows[].updatedAt` | `string` | ISO timestamp of the last change |
+| `truncated` | `boolean` | The limit cut the list short |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Maximum result limit is 100. Values outside 1 to 100 are clamped to that range.
+- Results come from the dependency index, so the tool counts node types only, never parameter values or credentials.
+- **IMPORTANT**: This tool counts all indexed, non-archived workflows in your scope, regardless of their `Available in MCP` setting. The other tools in this section only report workflows that setting exposes.
+- When `truncated` is `true` on the histogram, a node type the response omits may still be in use. Don't report its absence as evidence.
+
+---
+
+### Instance context resource <a href="#instance-context-resource" id="instance-context-resource"></a>
+
+For MCP clients that support resources, n8n also exposes the instance context as a resource, alongside the [get_instance_context](#getinstancecontext) tool for clients that don't.
+
+| Property | Value |
+|----------|-------|
+| URI | `n8n://instance/context` |
+| MIME type | `text/plain` |
+| Content | The same prose returned by `get_instance_context`, for every project you can read |
+
+The server instructions name both, so a client that reads the instructions knows to read the resource, or to call the tool if it doesn't read resources.
+
+Read the resource without parameters. To read one project, call `get_instance_context` with `projectId`.
+
+The response holds per-user data and n8n serves it uncached. Two users who read the same URI get different content.
 
 ---
 
@@ -1042,6 +1315,42 @@ Archive a workflow in n8n by its ID.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Idempotent - skips already-archived workflows.
+
+---
+
+### restore_workflow_version <a href="#restoreworkflowversion" id="restoreworkflowversion"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`restore_workflow_version` is available from n8n 2.29.0. From n8n 2.31.0, the resulting history entry is automatically named and described based on what was restored.
+{% endhint %}
+
+Restore a workflow to a previous version from its history. Re-applies that version as the current draft and records a new history entry. Use `get_workflow_history` to find the `versionId`.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `workflowId` | `string` | Yes | The ID of the workflow to restore |
+| `versionId` | `string` | Yes | The version ID to restore, as returned by `get_workflow_history` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `success` | `boolean` | Whether the restore succeeded |
+| `workflowId` | `string` | The workflow ID |
+| `restoredFromVersionId` | `string` | The version ID that was restored |
+| `newVersionId` | `string \| null` | The new current version ID created by the restore, if successful |
+| `error` | `string` | Error message if the restore failed |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Get the `versionId` from `get_workflow_history`.
+- Restoring re-applies the version's nodes, connections, and node groups as the current draft. It doesn't change the version being restored from.
+- The restore itself is saved as a new history entry, not an overwrite of the current draft's history.
+- Uses the same update path as restoring a version from the n8n editor, so the same permission and sharing checks apply.
 
 ---
 
@@ -1853,3 +2162,8 @@ Insert rows into an existing data table. Each row is an object mapping column na
 - Maximum 1000 rows per call.
 - Row values must be `string`, `number`, `boolean`, or `null`.
 - Column names in row objects must match existing column names in the data table.
+
+## Related resources
+
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [MCP client connection examples](mcp-client-examples.md)

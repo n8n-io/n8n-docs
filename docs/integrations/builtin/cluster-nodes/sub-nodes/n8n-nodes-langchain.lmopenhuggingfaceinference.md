@@ -46,7 +46,7 @@ This node lacks tools support, so it won't work with the [AI Agent](../root-node
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/huggingface.md).
+Refer to the [Hugging Face credentials documentation](../../credentials/huggingface.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

@@ -26,14 +26,16 @@ layout:
 The n8n API isn't available during the free trial. Please upgrade to access this feature.
 {% endhint %}
 
-Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
-
-* How to [authenticate](authentication.md)
-* [Paginating](pagination.md) results
-* Using the [built-in API playground](use-an-api-playground.md) (self-hosted n8n only)
-* The [endpoint reference](api-reference.md)
+Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI.
 
 n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
+
+## In this section
+
+* [Authentication](authentication.md): how to authenticate requests to the n8n API.
+* [Pagination](pagination.md): paginate large result sets.
+* [Use an API playground](use-an-api-playground.md): try out the API in a built-in playground (self-hosted n8n only).
+* [Endpoint reference](api-reference.md): the complete endpoint reference, generated from the OpenAPI specification.
 
 ## Choose your interaction method <a href="#choose-your-interaction-method" id="choose-your-interaction-method"></a>
 
@@ -66,3 +68,11 @@ Trying out the API in the [playground](use-an-api-playground.md) can help you un
 {% endhint %}
 
 [^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.
+
+## Related resources
+
+* [Connect](../)
+* [n8n CLI](../n8n-cli.md)
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md)
+* [Create nodes](../create-nodes/README.md)

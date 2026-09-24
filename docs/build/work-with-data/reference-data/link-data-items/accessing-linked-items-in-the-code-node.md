@@ -92,3 +92,11 @@ return _input.all();
 {% endtabs %}
 
 You can view and download the example workflow from [n8n website | itemMatching usage example](https://n8n.io/workflows/1966-itemmatching-usage-example/).
+
+## Related resources
+
+* [Link data items](./)
+* [How items link through workflows](how-items-link-through-workflows.md)
+* [Preserving linking in the Code node](preserving-linking-in-the-code-node.md)
+* [Item linking errors](item-linking-errors.md)
+* [Item linking for node creators](item-linking-for-node-creators.md)

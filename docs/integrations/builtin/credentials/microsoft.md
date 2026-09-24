@@ -235,7 +235,9 @@ Microsoft Teams credentials use the following scopes by default:
 * `Group.ReadWrite.All`
 * `Chat.ReadWrite`
 * `ChannelMessage.Read.All`
+* `ChannelMessage.ReadWrite` (available from n8n 2.40.0)
 * `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
+* `TeamworkTag.Read` (available from n8n 2.41.0)
 * `TeamsActivity.Send` (available from n8n 2.42.0)
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>

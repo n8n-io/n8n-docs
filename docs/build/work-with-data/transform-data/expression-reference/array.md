@@ -887,3 +887,7 @@ See also <code>slice()</code> and <code>append()</code>.
   arr.unique() //=> ['quick', 'brown']
   ```
 
+
+## Related resources
+
+* [Expression reference](./)

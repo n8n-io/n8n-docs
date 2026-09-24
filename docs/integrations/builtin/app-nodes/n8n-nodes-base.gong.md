@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the Gong node supports, and links
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/gong.md).
+Refer to the [Gong credentials documentation](../credentials/gong.md) for authentication information for this node.
 {% endhint %}
 
 

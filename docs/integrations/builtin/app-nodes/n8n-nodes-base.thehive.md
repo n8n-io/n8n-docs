@@ -51,7 +51,7 @@ The available operations depend on your API version. To see the operations list,
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for TheHive. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.thehivetrigger.md).
+n8n provides a trigger node for TheHive. Refer to the [TheHive Trigger node documentation](../trigger-nodes/n8n-nodes-base.thehivetrigger.md) for more information.
 
 Refer to TheHive's documentation for more information about the service:
 

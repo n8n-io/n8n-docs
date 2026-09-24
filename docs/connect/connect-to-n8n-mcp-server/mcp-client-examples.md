@@ -302,3 +302,8 @@ For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-do
 ## Troubleshooting
 
 If a client doesn't connect using the steps above, see [Troubleshooting](../connect-to-n8n-mcp-server.md#troubleshooting) on the main MCP server page.
+
+## Related resources
+
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [MCP server tools reference](mcp-server-tools-reference.md)

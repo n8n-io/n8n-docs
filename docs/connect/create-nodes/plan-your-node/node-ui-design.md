@@ -202,6 +202,13 @@ For example, you have a field called **Must match** to test if values match. Inc
 
 Binary data is file data, such as spreadsheets or images. In n8n, you need a named key to reference the data. Don't use the terms "binary data" or "binary property" for this field. Instead, use a more descriptive name: **Input data field name** / **Output data field name**.
 
+## Related resources
+
+* [Plan your node](./)
+* [Choose a node type](choose-a-node-type.md)
+* [Choose a node building style](choose-a-node-building-style.md)
+* [Choose node file structure](choose-node-file-structure.md)
+
 
 
 

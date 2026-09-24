@@ -26,3 +26,10 @@ If the workspace is deactivated, there will be no **Settings** page and no possi
 It's not currently possible to change usernames.
 
 If you want your instance to have a different name you will need to create a new account and transfer your work into it. [The import/export documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import) explains how you can transfer your work to a new n8n instance.
+
+## Related resources
+
+* [Configure Cloud](./)
+* [Set your timezone](set-your-timezone.md)
+* [Find your IP addresses](find-your-ip-addresses.md)
+* [Manage your data](manage-your-data.md)

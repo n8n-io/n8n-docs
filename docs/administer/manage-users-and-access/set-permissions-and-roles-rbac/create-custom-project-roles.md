@@ -238,3 +238,8 @@ A role for users who can publish workflows without full edit access:
 
 You can combine any scopes to create roles that match your specific needs. Consider the principle of least privilege: grant only the permissions users need to perform their tasks.
 {% endhint %}
+
+## Related resources
+
+* [Custom roles](create-custom-roles.md)
+* [Create custom instance roles](create-custom-instance-roles.md)

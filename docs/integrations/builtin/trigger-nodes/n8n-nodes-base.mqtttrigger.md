@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/mqtt.md).
+Refer to the [MQTT credentials documentation](../credentials/mqtt.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

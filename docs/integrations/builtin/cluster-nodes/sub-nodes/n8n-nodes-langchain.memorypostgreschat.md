@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the Postgres Chat Memory node sup
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/postgres.md).
+Refer to the [Postgres credentials documentation](../../credentials/postgres.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

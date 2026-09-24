@@ -222,3 +222,7 @@ try {
 	throw new NodeApiError(this.getNode(), error as JsonObject);
 }
 ```
+
+## Related resources
+
+* [Node building reference](./)

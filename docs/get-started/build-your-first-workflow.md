@@ -192,3 +192,10 @@ There are plenty of things you could add to this (perhaps add some more credenti
 [^2]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 
 [^3]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [n8n Docs](./)
+* [Choose how to use n8n](choose-how-to-use-n8n.md)
+* [Learning paths](learning-paths.md)
+* [Key concept glossary](key-concept-glossary.md)

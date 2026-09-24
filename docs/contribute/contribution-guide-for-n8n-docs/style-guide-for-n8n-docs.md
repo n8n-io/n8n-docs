@@ -145,6 +145,8 @@ Retrieved on its own, a section that leans on its neighbours arrives stripped of
 
 Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
 
+**The specific guidelines below don't apply to pages in the `docs/integrations/` ("Nodes") space**. The structure and hierarchy of pages in this section are different to the rest of the site.
+
 * **Always link the prerequisites and the next step**, at minimum.
 * **Every section landing page links down to its children.** With two or more children, list them under an "In this section" heading as a plain bullet list (link plus a short description). With only one child, skip the list and link it inline at its first mention instead.
 * **Every child page links back up and sideways, in a "Related resources" section at the end.** List a link back to the parent, plus a link to each direct sibling in the same section. Link to the parent with `./` if the current page sits in the same folder as the parent's `README.md`, or `../` if the current page is itself a section landing page one level below its parent (see [Link to the current page's parent page](#link-to-the-current-pages-parent-page)). This is a plain link list, structural rather than curated — bare links, no descriptions. Unlike "In this section", the reader has already read a page from this cluster, so the descriptive anchor text alone carries enough signal; a repeated one-line description would just restate the title. Add other genuinely related pages at your discretion, even outside the current section.
@@ -604,6 +606,7 @@ Each top-level folder under `docs/` is a separate space:
 | `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
 | `changelog`                    | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
+| `n8n-community-license`        | `WcrJOYW6B9JlV5aiivMA` |
 
 If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.
 
@@ -843,3 +846,9 @@ You can embed an n8n workflow in a page so readers can view and interact with it
 ```
 
 Find the template API URL by taking a published template's ID and adding it to `https://api.n8n.io/workflows/templates/`.
+
+## Related resources
+
+* [Contribution guide for n8n Docs](./)
+* [Terminology and naming](terminology.md)
+* [Agent-friendly docs](agent-friendly-docs.md)

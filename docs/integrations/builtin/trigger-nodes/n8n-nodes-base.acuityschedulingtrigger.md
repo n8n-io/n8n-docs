@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/acuityscheduling.md).
+Refer to the [Acuity Scheduling credentials documentation](../credentials/acuityscheduling.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

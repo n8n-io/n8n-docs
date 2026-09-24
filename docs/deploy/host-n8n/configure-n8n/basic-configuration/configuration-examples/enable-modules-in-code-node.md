@@ -40,3 +40,7 @@ If n8n instance is setup with [Task Runners](../../set-up-task-runners.md), add 
 {% endhint %}
 
 Refer to [Environment variables reference](../use-environment-variables/nodes.md) for more information on these variables.
+
+## Related resources
+
+* [Configuration examples](./)

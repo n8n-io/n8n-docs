@@ -139,3 +139,8 @@ Certain permission combinations create a privilege escalation risk:
 Only assign these permissions to fully trusted users, and avoid combining them unless necessary.
 {% endhint %}
 
+## Related resources
+
+* [Custom roles](create-custom-roles.md)
+* [Create custom project roles](create-custom-project-roles.md)
+

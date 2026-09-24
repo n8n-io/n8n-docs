@@ -83,3 +83,7 @@ Here's how this works:
 2. **Referral**: Once you've identified a potential candidate, send an email to [Jobs at n8n](mailto:jobs@n8n.io) with the subject line _Employee referral - \[job title]_ and a short description of the person you're referring (and the reason why). Also, tell your referral to apply for the job through the careers page.
 3. **Evaluation**: n8n screens the application and informs you about the next steps in the hiring process.
 4. **Reward**: As soon as your referral finishes the probationary period, n8n transfers the €1,000 to your bank account.
+
+## Get help
+
+If you run into a problem while using n8n, see [Where to get help](where-to-get-help.md) for the support options available for your plan.

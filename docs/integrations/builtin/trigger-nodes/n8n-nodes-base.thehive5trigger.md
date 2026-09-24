@@ -68,7 +68,7 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for TheHive 5. You can find the node docs [here](../app-nodes/n8n-nodes-base.thehive5.md).
+n8n provides an app node for TheHive 5. Refer to the [TheHive 5 node documentation](../app-nodes/n8n-nodes-base.thehive5.md) for more information.
 
 Refer to TheHive's [documentation](https://docs.strangebee.com/) for more information about the service.
 

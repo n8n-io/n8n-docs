@@ -5,18 +5,20 @@ layout:
 ---
 # Verify user identity <a href="#verify-user-identity" id="verify-user-identity"></a>
 
-{% content-ref url="require-two-factor-auth.md" %}
-[require-two-factor-auth.md](require-two-factor-auth.md)
-{% endcontent-ref %}
+Confirm who's signing in to your n8n instance, from two-factor auth to directory-backed single sign-on.
 
-{% content-ref url="connect-ldap.md" %}
-[connect-ldap.md](connect-ldap.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="use-saml/README.md" %}
-[use-saml/README.md](use-saml/README.md)
-{% endcontent-ref %}
+* [Require two-factor auth](require-two-factor-auth.md): enable 2FA for your n8n account.
+* [Connect LDAP](connect-ldap.md): use LDAP with n8n.
+* [Use SAML](use-saml/README.md): enable SAML SSO (single sign-on) in n8n.
+* [Use OIDC](use-oidc/README.md): enable OpenID Connect (OIDC) for single sign-on.
 
-{% content-ref url="use-oidc/README.md" %}
-[use-oidc/README.md](use-oidc/README.md)
-{% endcontent-ref %}
+## Related resources
+
+* [Manage users and access](../)
+* [Set up for Cloud](../set-up-for-cloud.md)
+* [Add and remove users](../add-and-remove-users.md)
+* [Understand instance roles](../understand-instance-roles.md)
+* [Set permissions and roles (RBAC)](../set-permissions-and-roles-rbac/README.md)
+* [Follow best practices](../follow-best-practices.md)

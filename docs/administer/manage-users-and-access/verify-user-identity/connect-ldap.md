@@ -65,3 +65,10 @@ To turn LDAP off:
 3. Toggle off **Enable LDAP Login**.
 
 If you turn LDAP off, n8n converts existing LDAP users to email users on their next login. The users must reset their password.
+
+## Related resources
+
+* [Verify user identity](./)
+* [Require two-factor auth](require-two-factor-auth.md)
+* [Use SAML](use-saml/README.md)
+* [Use OIDC](use-oidc/README.md)

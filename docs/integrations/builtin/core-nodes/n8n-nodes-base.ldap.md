@@ -22,7 +22,7 @@ This node allows you to interact with your LDAP servers to create, find, and upd
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/ldap.md).
+Refer to the [LDAP credentials documentation](../credentials/ldap.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

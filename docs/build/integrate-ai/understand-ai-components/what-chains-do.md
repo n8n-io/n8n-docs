@@ -29,3 +29,13 @@ There's an important difference between chains in n8n and in other tools such as
 [^1]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
 [^2]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
 [^3]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
+
+## Related resources
+
+* [Understand AI components](./)
+* [What agents do](what-agents-do.md)
+* [How memory works](how-memory-works.md)
+* [How tools work](how-tools-work.md)
+* [Store and search data with vectors](store-and-search-data-with-vectors.md)
+* [Retrieve relevant context](retrieve-relevant-context.md)
+* [Agents vs chains](agents-vs-chains.md)

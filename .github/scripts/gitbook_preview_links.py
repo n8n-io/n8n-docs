@@ -193,9 +193,22 @@ def gitbook_spaces(status_json) -> set:
     return out
 
 
+def linkable_spaces(spaces: dict) -> set:
+    """Spaces we can actually deep-link into, i.e. whose *live* context built.
+
+    GitBook posts two contexts per space and load_spaces records whichever
+    succeeded, so an editor-only success yields a record with no `live_base`.
+    deep_link() indexes that key directly, so treating such a space as built
+    crashes the whole run with KeyError instead of reporting the failure."""
+    return {name for name, info in spaces.items() if "live_base" in info}
+
+
 def failed_spaces(status_json, spaces, pending) -> set:
     """Spaces whose GitBook build ended badly (failure/error) and that aren't
     covered by a successful or in-progress build of another of their contexts.
+
+    Pass `linkable_spaces(spaces)` rather than `spaces`: a space whose live
+    build failed is a failed space even though its editor context succeeded.
 
     Without this a page in a failed space falls through render()'s last `else`
     and is reported as "not in the nav" — telling the author to fix a SUMMARY
@@ -359,7 +372,7 @@ def render(changed, spaces, index, pending_spaces=frozenset(),
             # A real content .md that isn't in the space's SUMMARY.md — the one
             # actionable case: GitBook won't publish it until it's added to nav.
             non_pages.append(filename)
-        elif space in spaces:
+        elif space in spaces and "live_base" in spaces[space]:
             direct.setdefault(space, []).append(filename)
         elif space in pending_spaces:
             # It IS a page; its space's GitBook build just hasn't finished yet.
@@ -400,9 +413,16 @@ def render(changed, spaces, index, pending_spaces=frozenset(),
     if reusable_blocks:
         diff = spaces.get("reusable-content", {}).get("editor_url")
         out.append("### ♻️ Reusable content")
-        out.append("GitBook previews the reusable block itself, not the pages that "
-                   "embed it. Links below are the block diff plus the **live** pages "
-                   "it renders on.")
+        if "reusable-content" in failed_build_spaces:
+            # No diff to link: say so rather than printing the usual blurb about
+            # a block diff that this comment can't actually point at.
+            out.append("⚠️ **GitBook couldn't build the `reusable-content` preview**, "
+                       "so there's no block diff to link. The **live** pages each "
+                       "block renders on are listed below.")
+        else:
+            out.append("GitBook previews the reusable block itself, not the pages that "
+                       "embed it. Links below are the block diff plus the **live** pages "
+                       "it renders on.")
         out.append("")
         for name, pages, total in reusable_blocks:
             diff_md = f" · [view diff]({diff})" if diff else ""
@@ -434,7 +454,7 @@ def render(changed, spaces, index, pending_spaces=frozenset(),
     if failed:
         total_failed = sum(len(v) for v in failed.values())
         spaces_list = ", ".join(f"`{s}`" for s in sorted(failed))
-        out.append(f"> ⚠️ **GitBook couldn't build the preview for {spaces_list}** — "
+        out.append(f"> ⚠️ **GitBook couldn't build the preview for {spaces_list}**. "
                    f"{total_failed} changed page(s) have no preview to link. Check the "
                    f"failed GitBook check on this PR; pushing a fix rebuilds it.")
         out.append("")
@@ -469,7 +489,7 @@ def main() -> int:
     status_json = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
     spaces = load_spaces(status_json)
     pending_spaces = gitbook_spaces(status_json) - set(spaces)
-    failed = failed_spaces(status_json, spaces, pending_spaces)
+    failed = failed_spaces(status_json, linkable_spaces(spaces), pending_spaces)
     if not spaces and not pending_spaces and not failed:
         # No GitBook build in progress, done, or failed: emit nothing so the
         # workflow skips (nothing to preview or promise).

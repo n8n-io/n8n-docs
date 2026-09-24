@@ -1,8 +1,9 @@
 name: GitBook preview links
 # GitBook's own PR checks link to the space landing page, not the page a PR
-# changed. When a GitBook preview build succeeds, this posts (and keeps updated)
-# a single PR comment with a deep link to each changed page. See
-# .github/scripts/gitbook_preview_links.py.
+# changed. On any settled GitBook build, this posts (and keeps updated) a single
+# PR comment: a deep link to each changed page when the build succeeded, or a
+# "couldn't build" note when it failed, so the comment is never left pointing at
+# a revision that no longer builds. See .github/scripts/gitbook_preview_links.py.
 #
 # Security: triggered by `status`, this job has a write token, so it must never
 # execute code from the (possibly forked) PR head. It checks out the trusted

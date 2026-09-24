@@ -79,7 +79,7 @@ CREATE SECURITY INTEGRATION n8n_oauth_integration
   ENABLED = TRUE
   OAUTH_CLIENT = CUSTOM
   OAUTH_CLIENT_TYPE = 'CONFIDENTIAL'
-  OAUTH_REDIRECT_URI = '<YOUR_REDIRECT_URL>'
+  OAUTH_REDIRECT_URI = '<your-redirect-url>'
   OAUTH_ALLOW_NON_TLS_REDIRECT_URI = TRUE
   OAUTH_ISSUE_REFRESH_TOKENS = TRUE
   OAUTH_REFRESH_TOKEN_VALIDITY = 7776000
@@ -87,7 +87,7 @@ CREATE SECURITY INTEGRATION n8n_oauth_integration
   OAUTH_ENFORCE_PKCE = TRUE;
 ```
 
-Replace `<YOUR_REDIRECT_URL>` with the **OAuth Redirect URL** shown on the n8n credential. If you're connecting over HTTPS, you can remove the `OAUTH_ALLOW_NON_TLS_REDIRECT_URI` line.
+Replace `<your-redirect-url>` with the **OAuth Redirect URL** shown on the n8n credential. If you're connecting over HTTPS, you can remove the `OAUTH_ALLOW_NON_TLS_REDIRECT_URI` line.
 
 Then retrieve the client ID and secret:
 

@@ -193,6 +193,77 @@ def main():
     check("a real docs page alongside it still renders",
           "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_nondocs)
 
+    # Regression (DOC-2350): the workflow now feeds the full status HISTORY
+    # (`/commits/:sha/statuses`, newest first) instead of the collapsed
+    # `/status`. GitBook posted #5461's `success` and `pending` in the same
+    # second with `success` FIRST, so latest-row-wins read a finished build as
+    # pending forever. Collapsing must treat pending as a non-verdict.
+    ooo_status = [
+        {"id": 884, "context": "GitBook (./docs/spacea)", "state": "pending",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+        {"id": 797, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 428, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 167, "context": "GitBook (./docs/spacea)", "state": "success",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    ooo_spaces = gb.load_spaces(ooo_status)
+    check("success posted before pending still counts as built",
+          set(ooo_spaces) == {"spacea"})
+    check("out-of-order build isn't reported as still pending",
+          gb.gitbook_spaces(ooo_status) - set(ooo_spaces) == set())
+    out_ooo = gb.render([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                        ooo_spaces, gb.load_reusable_index())
+    check("out-of-order build renders a real link, not the building note",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_ooo
+          and "still building" not in out_ooo)
+
+    # Ordering comes from the status id, not the position in the array.
+    shuffled = list(reversed(ooo_status))
+    check("id ordering beats array order", gb.load_spaces(shuffled) == ooo_spaces)
+
+    # History keeps every row, so pending->failure now arrives with the pending
+    # row still present. Failure is terminal, so the space must not look pending.
+    pend_then_fail = [
+        {"id": 20, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "pending",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+    ]
+    check("pending in history doesn't resurrect a failed build",
+          gb.gitbook_spaces(pend_then_fail) == set())
+
+    # A rebuild that regressed: the newest terminal row wins, so we don't link a
+    # revision GitBook has since failed on.
+    succ_then_fail = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("later failure supersedes an earlier success", gb.load_spaces(succ_then_fail) == {})
+
+    # `error` is terminal too, not just success/failure.
+    succ_then_error = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "error",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("later error supersedes an earlier success", gb.load_spaces(succ_then_error) == {})
+    check("errored build not counted as pending", gb.gitbook_spaces(succ_then_error) == set())
+
+    # Two successful builds of the same sha: the newest revision wins.
+    two_success = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("newest success revision wins over an older one",
+          "NEW" in gb.load_spaces(two_success)["spacea"]["live_base"])
+
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:
         print(f"  {'PASS' if ok else 'FAIL'}  {n}")

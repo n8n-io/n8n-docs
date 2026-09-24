@@ -28,7 +28,11 @@ concurrency:
 
 jobs:
   preview-links:
-    # Only for a successful GitBook status, or a manual dry-run.
+    # Only for a successful GitBook status, or a manual dry-run. Note the
+    # asymmetry: a build that later fails or never finishes fires nothing, so
+    # an existing comment is never corrected or withdrawn. Fixing that needs
+    # this `if:` widened AND a body for the all-failed case, since the upsert
+    # below is gated on non-empty output.
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.state == 'success' && startsWith(github.event.context, 'GitBook ('))
@@ -86,7 +90,14 @@ jobs:
           # --slurp + `add`: a multi-page PR paginates into several JSON arrays;
           # merge them into one array the script can parse.
           gh api "repos/$GH_REPO/pulls/$PR/files" --paginate --slurp | jq 'add' > /tmp/files.json
-          gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
+          # The *history* (`/statuses`), not the collapsed `/status`: GitBook
+          # can post a revision's `success` and `pending` in the same second
+          # with `success` first, and `/status` keeps only the newest row per
+          # context — so a finished build reads as pending forever and the
+          # comment freezes on the "still building" placeholder (#5461). The
+          # script re-collapses the history itself, treating pending as a
+          # non-verdict. --paginate: a re-synced sha can outgrow one page.
+          gh api "repos/$GH_REPO/commits/$SHA/statuses" --paginate --slurp | jq 'add' > /tmp/status.json
 
           # Reflect the PR precisely on the trusted checkout before running the
           # script: overlay changed files' PR-head *content* (data, never code),

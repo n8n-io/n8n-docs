@@ -45,7 +45,11 @@ def main():
     # Run before the fixture overrides below, while the module still points at
     # the real repo.
     real_spaces = cil.load_space_ids()
-    check("space-ID table parses out of the real style guide", len(real_spaces) == 9)
+    # Bump this when a space is added to the style guide's table. Note the
+    # table lives in docs/, which script-tests.yml doesn't watch, so a docs-only
+    # PR can move this number without ever running this test (#5373 added
+    # n8n-community-license and left the count at 9).
+    check("space-ID table parses out of the real style guide", len(real_spaces) == 10)
     check("space table maps integrations", real_spaces.get("BKcbOzIWja8NfqKDcqHc") == "integrations")
     check("space table maps deploy", real_spaces.get("jm0ZYRpZIPWge2ZSiDYO") == "deploy")
 

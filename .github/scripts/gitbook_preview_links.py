@@ -193,6 +193,23 @@ def gitbook_spaces(status_json) -> set:
     return out
 
 
+def failed_spaces(status_json, spaces, pending) -> set:
+    """Spaces whose GitBook build ended badly (failure/error) and that aren't
+    covered by a successful or in-progress build of another of their contexts.
+
+    Without this a page in a failed space falls through render()'s last `else`
+    and is reported as "not in the nav" — telling the author to fix a SUMMARY
+    entry that was never broken, and hiding the real cause."""
+    out = set()
+    for s in collapse_statuses(status_json):
+        if s.get("state") not in ("failure", "error"):
+            continue
+        m = LIVE_RE.match(s.get("context", "")) or EDIT_RE.match(s.get("context", ""))
+        if m:
+            out.add(m.group(1))
+    return out - set(spaces) - set(pending)
+
+
 # --------------------------------------------------------------------------- #
 # Path -> URL mapping
 # --------------------------------------------------------------------------- #
@@ -303,9 +320,11 @@ def page_line(space_info: dict, filename: str) -> str:
     return f"- **[{safe_title}]({url})** — `{shown}`{edit_md}"
 
 
-def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
+def render(changed, spaces, index, pending_spaces=frozenset(),
+           failed_build_spaces=frozenset()) -> str:
     direct: dict = {}          # space -> [file]  (pages with a real preview)
     pending: dict = {}         # space -> [file]  (page whose space is still building)
+    failed: dict = {}          # space -> [file]  (page whose space's build failed)
     reusable_blocks = []       # (name, [affected page paths], total)
     non_pages = []             # files that aren't pages
     unresolved_reusable = []   # include files we couldn't map
@@ -345,12 +364,15 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
         elif space in pending_spaces:
             # It IS a page; its space's GitBook build just hasn't finished yet.
             pending.setdefault(space, []).append(filename)
+        elif space in failed_build_spaces:
+            # It IS a page and it IS in the nav; GitBook's build is what broke.
+            failed.setdefault(space, []).append(filename)
         else:
             non_pages.append(filename)
 
     out = [MARKER, "## 🔗 GitBook page previews", ""]
 
-    if not direct and not reusable_blocks and not pending:
+    if not direct and not reusable_blocks and not pending and not failed:
         out.append("No page previews to show for this PR's changes yet.")
         _append_extras(out, spaces, non_pages, unresolved_reusable)
         return "\n".join(out).rstrip() + "\n"
@@ -406,6 +428,17 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
                    f"build finishes.")
         out.append("")
 
+    # Pages whose space FAILED to build. Stated plainly so the note replaces any
+    # earlier deep links or "still building" promise for that space, instead of
+    # leaving a comment that points at a revision GitBook has since failed on.
+    if failed:
+        total_failed = sum(len(v) for v in failed.values())
+        spaces_list = ", ".join(f"`{s}`" for s in sorted(failed))
+        out.append(f"> ⚠️ **GitBook couldn't build the preview for {spaces_list}** — "
+                   f"{total_failed} changed page(s) have no preview to link. Check the "
+                   f"failed GitBook check on this PR; pushing a fix rebuilds it.")
+        out.append("")
+
     _append_extras(out, spaces, non_pages, unresolved_reusable)
     return "\n".join(out).rstrip() + "\n"
 
@@ -436,12 +469,16 @@ def main() -> int:
     status_json = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
     spaces = load_spaces(status_json)
     pending_spaces = gitbook_spaces(status_json) - set(spaces)
-    if not spaces and not pending_spaces:
-        # No GitBook build in progress or done yet: emit nothing so the
+    failed = failed_spaces(status_json, spaces, pending_spaces)
+    if not spaces and not pending_spaces and not failed:
+        # No GitBook build in progress, done, or failed: emit nothing so the
         # workflow skips (nothing to preview or promise).
         return 0
     index = load_reusable_index()
-    sys.stdout.write(render(changed, spaces, index, pending_spaces))
+    # `failed` must reach render: without it an all-failed PR produces no body,
+    # the workflow's has_body check skips the upsert, and a stale comment from
+    # an earlier successful build survives untouched.
+    sys.stdout.write(render(changed, spaces, index, pending_spaces, failed))
     return 0
 
 

@@ -169,6 +169,48 @@ def main():
     ]}
     check("failed build not counted as pending", gb.gitbook_spaces(fail_status) == set())
 
+    # Regression (DOC-2352): a page in a FAILED space used to fall through to
+    # the "aren't in the nav" footnote, blaming the author for a SUMMARY entry
+    # that was never broken. It must be reported as a failed build instead.
+    fail_spaces = gb.failed_spaces(fail_status, gb.load_spaces(fail_status), set())
+    check("failed space detected", fail_spaces == {"spacea"})
+    out_fail = gb.render([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                         {}, gb.load_reusable_index(), set(), fail_spaces)
+    check("page in a failed space blames the build, not the nav",
+          "couldn't build the preview for `spacea`" in out_fail
+          and "aren't in the nav" not in out_fail)
+
+    # The all-failed case must still produce a BODY. Empty output would leave
+    # has_body unset, the upsert skipped, and an earlier comment's stale deep
+    # links in place — the whole point of triggering on failure.
+    check("all-failed still yields a non-empty body", out_fail.strip() != "")
+    check("failed note doesn't promise an update that isn't coming",
+          "still building" not in out_fail)
+
+    # A space that failed but ALSO has a successful context isn't "failed":
+    # the successful build is what we link, so it must not be double-reported.
+    mixed = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    mixed_spaces = gb.load_spaces(mixed)
+    check("a space with one good context isn't reported as failed",
+          gb.failed_spaces(mixed, mixed_spaces, set()) == set())
+
+    # Likewise a space still building somewhere else shouldn't be called failed.
+    building = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    b_spaces = gb.load_spaces(building)
+    b_pending = gb.gitbook_spaces(building) - set(b_spaces)
+    check("pending beats failed for the same space",
+          gb.failed_spaces(building, b_spaces, b_pending) == set())
+
     # All-pending (no space succeeded yet): main() must still be able to render a
     # building note rather than exit empty. Exercise via render with empty spaces.
     out_allpend = gb.render(

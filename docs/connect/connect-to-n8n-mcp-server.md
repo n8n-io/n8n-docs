@@ -83,7 +83,7 @@ Once enabled, the page groups settings into three sections:
 
 * **Connection details**: shows the **MCP status** and a **Connect** button that opens setup steps for your MCP client.
 * **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients, see [Exposing workflows to MCP clients](#exposing-workflows-to-mcp-clients) and [Exposing agents to MCP clients](#exposing-agents-to-mcp-clients). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
-* **Connected clients**: shows how many clients currently have access, each with its own granted permissions. Select **View all** to review or revoke access for individual clients, see [Reviewing and revoking client access](#revoking-client-access).
+* **Connected clients**: previews up to three of your own connected clients, each with the permissions you granted it, and shows how many clients currently have access. Select a client to open its details, or select **Revoke access** on its row to disconnect it. Select **View all** to review or revoke access for individual clients, see [Reviewing and revoking client access](#revoking-client-access).
 
 ![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](.gitbook/assets/mcp-enabled-screen.png)
 
@@ -130,7 +130,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 Each connected client only has the permissions you granted it when it connected, for example reading workflows without being able to create or run them. To review or revoke a client's access:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. In **Connected clients**, select **View all**. You should see a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
+2. In **Connected clients**, select a previewed client to open its details, or select **Revoke access** on its row. For a client that isn't in the preview, select **View all**. You should see a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
 3. Select a client's row to open its details and see every permission you granted it, or select **Revoke access** directly on the row to skip straight to revoking.
 4. Confirm the revocation. n8n disconnects the client at once; it must reconnect and sign in again to regain access.
 

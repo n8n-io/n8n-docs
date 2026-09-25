@@ -7,6 +7,7 @@ membership, per-space revisions, title extraction, reusable resolution
 Run: python3 .github/scripts/tests/test_gitbook_preview_links.py
 """
 import importlib.util
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -168,6 +169,96 @@ def main():
          "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
     ]}
     check("failed build not counted as pending", gb.gitbook_spaces(fail_status) == set())
+
+    # Regression (DOC-2352): a page in a FAILED space used to fall through to
+    # the "aren't in the nav" footnote, blaming the author for a SUMMARY entry
+    # that was never broken. It must be reported as a failed build instead.
+    fail_spaces = gb.failed_spaces(fail_status, gb.load_spaces(fail_status), set())
+    check("failed space detected", fail_spaces == {"spacea"})
+    out_fail = gb.render([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                         {}, gb.load_reusable_index(), set(), fail_spaces)
+    check("page in a failed space blames the build, not the nav",
+          "couldn't build the preview for `spacea`" in out_fail
+          and "aren't in the nav" not in out_fail)
+
+    check("failed note doesn't promise an update that isn't coming",
+          "still building" not in out_fail)
+
+    # The all-failed emission decision lives in main()'s guard, not in render(),
+    # so exercise the real entry point: drop `not failed` from that guard and
+    # main() prints nothing, has_body stays unset, the upsert is skipped, and a
+    # stale comment survives. A render()-only check can't catch that.
+    def run_main(changed, statuses):
+        import contextlib, io, json, tempfile
+        with tempfile.TemporaryDirectory() as d:
+            cf, sf = Path(d) / "c.json", Path(d) / "s.json"
+            cf.write_text(json.dumps(changed), encoding="utf-8")
+            sf.write_text(json.dumps(statuses), encoding="utf-8")
+            buf = io.StringIO()
+            argv = sys.argv
+            sys.argv = ["gitbook_preview_links.py", str(cf), str(sf)]
+            try:
+                with contextlib.redirect_stdout(buf):
+                    rc = gb.main()
+            finally:
+                sys.argv = argv
+            return rc, buf.getvalue()
+
+    rc, body = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                        fail_status["statuses"])
+    check("main() exits 0 on an all-failed build", rc == 0)
+    check("main() emits a body for an all-failed build so the upsert runs",
+          body.strip() != "" and "couldn't build the preview" in body)
+
+    # And the opposite: no GitBook statuses at all must stay silent, or we'd
+    # post preview comments on PRs that have no preview.
+    rc_q, body_q = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                            [{"id": 1, "context": "cubic", "state": "failure"}])
+    check("main() stays silent when there's no GitBook build at all",
+          rc_q == 0 and body_q == "")
+
+    # Regression: an editor-only success (live context FAILED) left a space
+    # record with no `live_base`. render() treated it as linkable and
+    # deep_link() blew up with KeyError, taking the whole run down instead of
+    # reporting the failed build.
+    editor_only = [
+        {"id": 20, "context": "GitBook (./docs/spacea)", "state": "success",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+    ]
+    eo_spaces = gb.load_spaces(editor_only)
+    check("editor-only success isn't linkable", gb.linkable_spaces(eo_spaces) == set())
+    eo_failed = gb.failed_spaces(editor_only, gb.linkable_spaces(eo_spaces), set())
+    check("editor-only success counts as a failed space", eo_failed == {"spacea"})
+    rc_eo, body_eo = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                              editor_only)
+    check("editor-only success renders the failure note instead of crashing",
+          rc_eo == 0 and "couldn't build the preview" in body_eo)
+
+    # A space that failed but ALSO has a successful context isn't "failed":
+    # the successful build is what we link, so it must not be double-reported.
+    mixed = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    mixed_spaces = gb.load_spaces(mixed)
+    check("a space with one good context isn't reported as failed",
+          gb.failed_spaces(mixed, mixed_spaces, set()) == set())
+
+    # Likewise a space still building somewhere else shouldn't be called failed.
+    building = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    b_spaces = gb.load_spaces(building)
+    b_pending = gb.gitbook_spaces(building) - set(b_spaces)
+    check("pending beats failed for the same space",
+          gb.failed_spaces(building, b_spaces, b_pending) == set())
 
     # All-pending (no space succeeded yet): main() must still be able to render a
     # building note rather than exit empty. Exercise via render with empty spaces.

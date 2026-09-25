@@ -116,12 +116,6 @@ n8n 3.0 removes the **Local File** and **URL** options from the **Source** param
 
 **What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source (**Parameter** on node versions 1.1 and older). Before you update, **Settings > Migration Report** lists the affected nodes.
 
-### Any workflow caller policy removed
-
-n8n 3.0 removes the **Any workflow** option from the **This workflow can be called by** setting in the [workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings). This option let any project on the instance call the sub-workflow, which bypassed project permissions. Sub-workflows that still store this policy reject every call, including calls from the same project, until you save a supported policy. `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any` logs a warning at startup and falls back to the default, the same-project option.
-
-**What to do:** Open the settings of each affected sub-workflow and select **Selected workflows** or the same-project option, then save. Before you update, **Settings > Migration Report** lists the affected workflows. If you set `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any`, change or remove the variable.
-
 ### Execute Sub-workflow node: Run once for each item mode removed
 
 n8n 3.0 removes the **Run once for each item** mode from the **Execute Sub-workflow** node. Workflows that use it fail until you update them.

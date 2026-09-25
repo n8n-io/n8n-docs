@@ -1,0 +1,13 @@
+name: 'Sec: Zizmor Scan'
+
+on:
+  pull_request: ~
+
+permissions: {}
+
+jobs:
+  zizmor_scan:
+    name: Zizmor Security Scan
+    permissions:
+      security-events: write
+    uses: n8n-io/n8n/.github/workflows/sec-zizmor-reusable.yml@master

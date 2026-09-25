@@ -118,7 +118,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 1. Navigate to **Settings > Instance-level MCP**.
 2. In **Connection details**, select **Connect** to open the **Connect a client** dialog.
 3. Confirm you're on the **OAuth (recommended)** tab.
-4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
+4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT, Mistral Vibe), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
 5. Follow the steps shown for your client type:
    * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client's own connector settings yourself.
    * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-claude-code-to-n8n-mcp-server) and [Codex](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-codex-cli-to-n8n-mcp-server) examples for the exact commands).

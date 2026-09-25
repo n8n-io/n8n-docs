@@ -1,13 +1,13 @@
 ---
-title: Azure OpenAI Chat Model node documentation
+title: Azure AI Foundry Chat Model node documentation
 description: >-
-  Learn how to use the Azure OpenAI Chat Model node in n8n. Follow technical
-  documentation to integrate Azure OpenAI Chat Model node into your workflows.
+  Learn how to use the Azure AI Foundry Chat Model node in n8n. Follow technical
+  documentation to integrate Azure AI Foundry Chat Model node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
-nodeTitle: Azure OpenAI Chat Model node documentation
+nodeTitle: Azure AI Foundry Chat Model node documentation
 originalFilePath: >-
   integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
 originalUrl: >-
@@ -19,11 +19,11 @@ layout:
     visible: false
 ---
 
-# Azure OpenAI Chat Model node <a href="#azure-openai-chat-model-node" id="azure-openai-chat-model-node"></a>
+# Azure AI Foundry Chat Model node <a href="#azure-openai-chat-model-node" id="azure-openai-chat-model-node"></a>
 
-Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational agents[^1].
+Use the Azure AI Foundry Chat Model node to use the chat models available on your Azure AI Foundry or Azure OpenAI resource with conversational agents[^1].
 
-On this page, you'll find the node parameters for the Azure OpenAI Chat Model node, and links to more resources.
+On this page, you'll find the node parameters for the Azure AI Foundry Chat Model node, and links to more resources.
 
 {% hint style="info" %}
 **Credentials**
@@ -55,7 +55,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse Azure OpenAI Chat Model node documentation integration templates](https://n8n.io/integrations/azure-openai-chat-model) or [search all templates](https://n8n.io/workflows/)
+[Browse Azure AI Foundry Chat Model node documentation integration templates](https://n8n.io/integrations/azure-openai-chat-model) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

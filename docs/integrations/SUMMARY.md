@@ -552,7 +552,7 @@
       * [Qwen Cloud Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatalibabacloud.md)
       * [Anthropic Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
       * [AWS Bedrock Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
-      * [Azure OpenAI Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+      * [Azure AI Foundry Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
       * [Cohere Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md)
       * [Databricks Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md)
       * [DeepSeek Chat Model](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md)

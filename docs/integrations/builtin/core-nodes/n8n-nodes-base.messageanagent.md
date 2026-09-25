@@ -10,6 +10,9 @@ nodeTitle: Message an Agent
 layout:
   description:
     visible: false
+tags:
+  - tag: preview
+    primary: true
 ---
 
 # Message an Agent node

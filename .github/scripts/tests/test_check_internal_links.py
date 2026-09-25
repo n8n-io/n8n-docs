@@ -13,6 +13,7 @@ job still exits 0 -- the one failure mode this checker can't self-report.
 Run: python3 .github/scripts/tests/test_check_internal_links.py
 """
 import importlib.util
+import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -22,6 +23,39 @@ FIXTURE_REPO = HERE / "fixtures" / "links"
 spec = importlib.util.spec_from_file_location("cil", SCRIPT)
 cil = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cil)
+
+# Deliberately looser than check_internal_links' SPACE_ID_ROW_RE: any row of two
+# backticked cells. Sharing that regex would make the count check tautological —
+# tighten it wrongly and both sides would drop the same rows in lockstep.
+_ANY_BACKTICK_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|")
+
+
+STYLE_GUIDE = cil.REPO_ROOT / "docs" / "contribute" / "contribution-guide-for-n8n-docs" / "style-guide-for-n8n-docs.md"
+
+
+def space_table_rows(path, header):
+    """(folder, space_id) rows from one Markdown space table, read straight from
+    the file. Scoped to the table starting with `header` so another two-column
+    table on the same page can't inflate it."""
+    rows = []
+    in_table = False
+    for line in path.read_text(encoding="utf-8").split("\n"):
+        if line.strip().startswith(header):
+            in_table = True
+            continue
+        if not in_table:
+            continue
+        if not line.strip().startswith("|"):
+            break                      # table ended
+        m = _ANY_BACKTICK_ROW.match(line)
+        if m:                          # the |---|---| separator just won't match
+            rows.append((m.group(1), m.group(2)))
+    return rows
+
+
+def space_table_folders():
+    """Folder names in the generated index — the file the checker actually parses."""
+    return [f for f, _ in space_table_rows(cil.SPACE_ID_TABLE_FILE, "| Folder")]
 
 checks = []
 
@@ -45,11 +79,32 @@ def main():
     # Run before the fixture overrides below, while the module still points at
     # the real repo.
     real_spaces = cil.load_space_ids()
-    # Bump this when a space is added to the style guide's table. Note the
-    # table lives in docs/, which script-tests.yml doesn't watch, so a docs-only
-    # PR can move this number without ever running this test (#5373 added
-    # n8n-community-license and left the count at 9).
-    check("space-ID table parses out of the real style guide", len(real_spaces) == 10)
+    # Derived from the table, not hardcoded (DOC-2353): the point is "the parser
+    # still picks up every row", not "there are exactly N spaces". A hardcoded
+    # count turned every new space into a CI break (DOC-2351). load_space_ids
+    # also drops rows whose folder is missing, so mirror that filter here.
+    expected_folders = [f for f in space_table_folders() if (cil.DOCS_ROOT / f).is_dir()]
+    check("style guide still has a parseable space table", len(expected_folders) > 0)
+    check("space-ID table parses out of the real style guide",
+          len(real_spaces) == len(expected_folders))
+    check("every table folder made it into the map",
+          sorted(real_spaces.values()) == sorted(expected_folders))
+
+    # The checker now reads the generated SPACE_INDEX.md, but the style guide
+    # keeps a human-readable copy for people on docs.n8n.io (the generated file
+    # sits at the repo root and isn't published). Two copies drift — that is
+    # what DOC-2351 and DOC-2353 were — so assert the hand-kept one agrees.
+    # Subset, not equality: the guide deliberately omits internal utility spaces
+    # such as reusable-content that writers never link to. What it must never do
+    # is state a folder/ID pair the generated index contradicts.
+    generated = dict(space_table_rows(cil.SPACE_ID_TABLE_FILE, "| Folder"))
+    guide = dict(space_table_rows(STYLE_GUIDE, "| Space folder"))
+    check("style guide still documents some spaces", len(guide) > 0)
+    disagree = {f: {"style_guide": sid, "generated": generated.get(f)}
+                for f, sid in guide.items() if generated.get(f) != sid}
+    check("style-guide space table agrees with the generated index", not disagree)
+    if disagree:
+        print(f"    disagreement: {disagree}")
     check("space table maps integrations", real_spaces.get("BKcbOzIWja8NfqKDcqHc") == "integrations")
     check("space table maps deploy", real_spaces.get("jm0ZYRpZIPWge2ZSiDYO") == "deploy")
 

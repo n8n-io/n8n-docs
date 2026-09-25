@@ -10,6 +10,9 @@ on:
       # break lands on main unseen and fails the next PR to touch a script,
       # which is exactly how DOC-2351 happened. It changes a few times a year.
       - docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md
+      # check_internal_links now resolves space IDs from this generated file, and
+      # the tests assert the style-guide copy above still agrees with it.
+      - SPACE_INDEX.md
   workflow_dispatch: {}
 
 permissions:

@@ -10,4 +10,4 @@ jobs:
     name: Zizmor Security Scan
     permissions:
       security-events: write
-    uses: n8n-io/n8n/.github/workflows/sec-zizmor-reusable.yml@main
+    uses: n8n-io/n8n/.github/workflows/sec-zizmor-reusable.yml@master

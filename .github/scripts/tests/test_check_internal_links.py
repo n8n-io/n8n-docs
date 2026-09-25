@@ -13,6 +13,7 @@ job still exits 0 -- the one failure mode this checker can't self-report.
 Run: python3 .github/scripts/tests/test_check_internal_links.py
 """
 import importlib.util
+import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -22,6 +23,31 @@ FIXTURE_REPO = HERE / "fixtures" / "links"
 spec = importlib.util.spec_from_file_location("cil", SCRIPT)
 cil = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cil)
+
+# Deliberately looser than check_internal_links' SPACE_ID_ROW_RE: any row of two
+# backticked cells. Sharing that regex would make the count check tautological —
+# tighten it wrongly and both sides would drop the same rows in lockstep.
+_ANY_BACKTICK_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|")
+
+
+def space_table_folders():
+    """Folder names in the style guide's space-ID table, read straight from the
+    Markdown. Scoped to that one table so other two-column tables in the guide
+    can't inflate the count."""
+    folders = []
+    in_table = False
+    for line in cil.SPACE_ID_TABLE_FILE.read_text(encoding="utf-8").split("\n"):
+        if line.strip().startswith("| Space folder"):
+            in_table = True
+            continue
+        if not in_table:
+            continue
+        if not line.strip().startswith("|"):
+            break                      # table ended
+        m = _ANY_BACKTICK_ROW.match(line)
+        if m:                          # the |---|---| separator just won't match
+            folders.append(m.group(1))
+    return folders
 
 checks = []
 
@@ -45,11 +71,16 @@ def main():
     # Run before the fixture overrides below, while the module still points at
     # the real repo.
     real_spaces = cil.load_space_ids()
-    # Bump this when a space is added to the style guide's table. Note the
-    # table lives in docs/, which script-tests.yml doesn't watch, so a docs-only
-    # PR can move this number without ever running this test (#5373 added
-    # n8n-community-license and left the count at 9).
-    check("space-ID table parses out of the real style guide", len(real_spaces) == 10)
+    # Derived from the table, not hardcoded (DOC-2353): the point is "the parser
+    # still picks up every row", not "there are exactly N spaces". A hardcoded
+    # count turned every new space into a CI break (DOC-2351). load_space_ids
+    # also drops rows whose folder is missing, so mirror that filter here.
+    expected_folders = [f for f in space_table_folders() if (cil.DOCS_ROOT / f).is_dir()]
+    check("style guide still has a parseable space table", len(expected_folders) > 0)
+    check("space-ID table parses out of the real style guide",
+          len(real_spaces) == len(expected_folders))
+    check("every table folder made it into the map",
+          sorted(real_spaces.values()) == sorted(expected_folders))
     check("space table maps integrations", real_spaces.get("BKcbOzIWja8NfqKDcqHc") == "integrations")
     check("space table maps deploy", real_spaces.get("jm0ZYRpZIPWge2ZSiDYO") == "deploy")
 

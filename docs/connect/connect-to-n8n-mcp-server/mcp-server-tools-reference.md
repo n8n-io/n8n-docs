@@ -923,7 +923,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `skippedGroups` | `array` | Node groups the tool dropped because they break the node group rules. Absent when the tool kept every group |
 | `skippedGroups[].groupName` | `string` | The name of the dropped group |
 | `skippedGroups[].reason` | `string` | Why the tool dropped the group |
-| `warnings` | `array` | Warnings about the created workflow. Holds the warnings from parsing the SDK code, a `TOP_LEVEL_ITEMS_OVER_CEILING` warning when the canvas holds too many top-level items, and an `UNINSTALLED_COMMUNITY_NODE` warning for each node type that the instance doesn't have installed. Absent when there are no warnings |
+| `warnings` | `array` | Warnings about the created workflow. Holds the warnings from parsing the SDK code, a `TOP_LEVEL_ITEMS_OVER_CEILING` warning when the canvas holds too many top-level items, and an `UNINSTALLED_COMMUNITY_NODE` warning for each node whose type ships in a verified community package that the instance doesn't have installed. Absent when there are no warnings |
 | `warnings[].code` | `string` | The warning code that identifies the type of warning |
 | `warnings[].message` | `string` | The warning message |
 | `warnings[].nodeName` | `string` | Optional node associated with the warning |
@@ -1013,6 +1013,9 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `skippedOperations[].opIndex` | `number` | Position of the skipped operation in the `operations` array |
 | `skippedOperations[].type` | `string` | The type of the skipped operation |
 | `skippedOperations[].reason` | `string` | Why n8n skipped the operation |
+| `removedGroups` | `array` | Existing node groups that this update made invalid, so n8n removed them. Absent when the update removed no group |
+| `removedGroups[].groupName` | `string` | The name of the removed group |
+| `removedGroups[].reason` | `string` | Why n8n removed the group |
 | `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update |
 | `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned |
@@ -1028,7 +1031,8 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 
 - Operations are applied in order and saved atomically, apart from node group operations, which n8n skips and reports in `skippedOperations`.
 - The node group operations must produce a valid, connected, trigger-free section of the graph. n8n checks this on save. A group `description` has a maximum length of 145 characters.
-- Read `skippedOperations` after the call and repair any node group that the update skipped.
+- Other operations in the batch can make an existing node group invalid. n8n removes that group and reports it in `removedGroups`. The rest of the batch still saves.
+- Read `skippedOperations` and `removedGroups` after the call and repair any node group that the update skipped or removed.
 - Existing credentials are preserved unless explicitly changed.
 - Credential auto-assignment runs only for nodes added in the current call.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.

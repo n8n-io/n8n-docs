@@ -122,12 +122,6 @@ n8n 3.0 removes the **Any workflow** option from the **This workflow can be call
 
 **What to do:** Open the settings of each affected sub-workflow and select **Selected workflows** or the same-project option, then save. Before you update, **Settings > Migration Report** lists the affected workflows. If you set `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION=any`, change or remove the variable.
 
-### Execute Sub-workflow node: Run once for each item mode removed
-
-n8n 3.0 removes the **Run once for each item** mode from the **Execute Sub-workflow** node. Workflows that use it fail until you update them.
-
-**What to do:** Use a **Loop Over Items** node before an **Execute Sub-workflow** node in **Run once with all items** mode instead.
-
 ### Always Output Data on nodes with several outputs
 
 With **Always Output Data** on, nodes with several outputs, for example **If** and **Switch**, now add an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they shouldn't have.

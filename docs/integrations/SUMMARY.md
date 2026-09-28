@@ -52,6 +52,7 @@
     * [MCP Client](builtin/core-nodes/n8n-nodes-langchain.mcpClient.md)
     * [MCP Server Trigger](builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
     * [Merge](builtin/core-nodes/n8n-nodes-base.merge.md)
+    * [Message an Agent](builtin/core-nodes/n8n-nodes-base.messageanagent.md)
     * [n8n](builtin/core-nodes/n8n-nodes-base.n8n.md)
     * [n8n Form](builtin/core-nodes/n8n-nodes-base.form.md)
     * [n8n Form](builtin/core-nodes/n8n-nodes-base.formtrigger.md)

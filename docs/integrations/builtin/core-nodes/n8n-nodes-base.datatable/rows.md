@@ -68,6 +68,8 @@ Enter these parameters:
 
 **Get** reads large result sets in pages. The read continues if the number of matching rows changes. Changes during the read can cause missing or repeated rows. The output can also contain values read at different times. For a consistent result, prevent inserts, updates, and deletes until the read finishes.
 
+If the number of matching rows keeps increasing, **Return All** might not finish. Cancel the execution to stop further page requests after the current request finishes.
+
 ## If row exists <a href="#if-row-exists" id="if-row-exists"></a>
 
 Use this operation to check whether a row matching the defined condition(s) exists in a data table. If a matching row is found, the node outputs the same input item it received, unchanged. If no matching rows exist, it outputs nothing.

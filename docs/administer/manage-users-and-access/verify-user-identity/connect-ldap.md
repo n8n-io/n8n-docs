@@ -58,7 +58,9 @@ These fields appear once you turn on **Enable LDAP Login**.
 | **User Filter** | An LDAP query that limits who can sign in, for example `(ObjectClass=user)`. Only the users this query returns can sign in. |
 | **Enforce Email Uniqueness** | Blocks sign in when more than one LDAP account uses the same email address. |
 
-The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The synchronization fields come last, and they only appear when you turn on **Enable periodic LDAP synchronization**.
+The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The right values depend on your directory, and the examples n8n shows in these fields don't suit every server. Query your LDAP server with a tool such as `ldapsearch` to see which attributes your setup has.
+
+The synchronization fields come last. They only appear when you turn on **Enable periodic LDAP synchronization**.
 
 ## Bind methods
 

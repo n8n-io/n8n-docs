@@ -37,7 +37,7 @@ This page describes version 3.1. Some controls aren't available on earlier versi
 * **Require Specific Output Format** was added in version 3.
 * **Session** settings were added in version 3.1.
 
-The node version is shown at the bottom of the node's settings panel.
+You can find the node version at the bottom of the node's settings panel.
 {% endhint %}
 
 ## Node parameters

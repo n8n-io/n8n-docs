@@ -27,3 +27,13 @@ You can do this with the [Cloud admin dashboard](use-the-admin-dashboard.md).
 ## Accessing workflows after your free trial <a href="#accessing-workflows-after-your-free-trial" id="accessing-workflows-after-your-free-trial"></a>
 
 You have **90 days** to download your workflows after your free trial ends. After that, all workflows will be **permanently deleted** and are unrecoverable.
+
+## Related resources
+
+* [Use n8n Cloud](./)
+* [Try free then choose a plan](start-your-free-trial.md)
+* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Update your version](update-your-version.md)
+* [Configure Cloud](configure-cloud/README.md)
+* [Gateway credits](gateway-credits/README.md)
+* [Understand concurrency](understand-concurrency.md)

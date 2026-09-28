@@ -38,7 +38,7 @@ The SSH node is useful for executing commands using the Secure Shell Protocol.
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/ssh.md).
+Refer to the [SSH credentials documentation](../credentials/ssh.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

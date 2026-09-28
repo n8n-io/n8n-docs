@@ -23,3 +23,7 @@ layout:
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_WORKFLOW_HISTORY_PRUNE_TIME` | Number | `-1` | How long to keep workflow history versions before automatically deleting them (in hours). Set to `-1` to keep all versions indefinitely. |
+
+## Related resources
+
+* [Environment variables](./)

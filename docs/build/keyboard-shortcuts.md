@@ -105,4 +105,16 @@ The Command Bar provides quick access to actions and navigation throughout n8n. 
 * **Execution actions:** Debug, copy, retry, stop, or delete executions
 * **General navigation:** Access Templates, Variables, Insights, Settings, Help resources, and Documentation
 
+## Related resources
+
+* [Build](./)
+* [Understand workflows](understand-workflows/README.md)
+* [Build and manage agents](build-and-manage-agents.md)
+* [Ways of building workflows](ways-of-building-workflows/README.md)
+* [Manage workflows](manage-workflows/README.md)
+* [Flow logic](flow-logic/README.md)
+* [Work with data](work-with-data/README.md)
+* [Code in n8n](code-in-n8n/README.md)
+* [Integrate AI](integrate-ai/README.md)
+
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

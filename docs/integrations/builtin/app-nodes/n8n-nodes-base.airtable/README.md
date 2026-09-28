@@ -43,7 +43,7 @@ Refer to [Airtable credentials](../../credentials/airtable.md) for guidance on s
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for Airtable. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.airtabletrigger.md).
+n8n provides a trigger node for Airtable. Refer to the [Airtable Trigger node documentation](../../trigger-nodes/n8n-nodes-base.airtabletrigger.md) for more information.
 
 Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for more information about the service.
 
@@ -75,7 +75,7 @@ To filter records from your Airtable base, use the **Filter By Formula** option.
 
 Similarly, if you want to return all the users that don't belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
 
-Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
+Refer to the Airtable [documentation](https://support.airtable.com/docs/formula-field-reference) to learn more about the formulas.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

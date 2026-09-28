@@ -26,7 +26,7 @@ Use this object to receive updates when someone comments on the Media objects of
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/facebookapp.md).
+Refer to the [Facebook App credentials documentation](../../credentials/facebookapp.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

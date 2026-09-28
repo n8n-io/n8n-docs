@@ -37,4 +37,4 @@ Refer to [Peekalink's API documentation](https://docs.peekalink.io/) for more in
 
 To configure this credential, you'll need:
 
-- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key) for more information.
+- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/quickstart#1-get-your-api-key) for more information.

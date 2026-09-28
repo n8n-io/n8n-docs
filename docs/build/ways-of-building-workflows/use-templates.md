@@ -36,3 +36,11 @@ If you use n8n's template library, this takes you to browse [Workflows on the n8
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8iCj3lLPJNp281ko0uOE/" %}
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use Ask n8n AI](use-the-ai-assistant.md)
+* [Use Chat Hub](chat-hub.md)

@@ -63,7 +63,7 @@ Refer to [Notion credentials](../../credentials/notion.md) for guidance on setti
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Notion. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.notiontrigger.md).
+n8n provides an app node for Notion. Refer to the [Notion Trigger node documentation](../../trigger-nodes/n8n-nodes-base.notiontrigger.md) for more information.
 
 Refer to [Notion's documentation](https://developers.notion.com/) for details about their API.
 

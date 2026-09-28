@@ -36,6 +36,11 @@ n8n's built-in MCP server lets supported clients, such as Lovable or Claude Desk
 * Trigger and test exposed workflows
 * Create and edit workflows and data tables
 
+## In this section
+
+* [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md): exact commands and configuration for specific MCP clients.
+* [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md): the complete list of available tools and their parameters.
+
 {% hint style="info" %}
 **Connecting a chat client such as Claude Desktop?**
 
@@ -78,7 +83,7 @@ Once enabled, the page groups settings into three sections:
 
 * **Connection details**: shows the **MCP status** and a **Connect** button that opens setup steps for your MCP client.
 * **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients, see [Exposing workflows to MCP clients](#exposing-workflows-to-mcp-clients) and [Exposing agents to MCP clients](#exposing-agents-to-mcp-clients). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
-* **Connected clients**: shows how many clients currently have access, each with its own granted permissions. Select **View all** to review or revoke access for individual clients, see [Reviewing and revoking client access](#revoking-client-access).
+* **Connected clients**: previews up to three of your own connected clients and their permissions, and shows how many clients currently have access. Select a client to open its details, or **Revoke access** to disconnect it. Select **View all** to [review or revoke access for individual clients](#revoking-client-access).
 
 ![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](.gitbook/assets/mcp-enabled-screen.png)
 
@@ -113,7 +118,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 1. Navigate to **Settings > Instance-level MCP**.
 2. In **Connection details**, select **Connect** to open the **Connect a client** dialog.
 3. Confirm you're on the **OAuth (recommended)** tab.
-4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
+4. In the **Your client** dropdown, pick your AI assistant, IDE, or CLI. n8n groups clients into **CLI** (Claude Code, Codex, Gemini CLI), **Web** (Claude.ai, ChatGPT, Mistral Vibe), and **IDE** (Cursor, VS Code, Windsurf), and shows setup steps tailored to your choice.
 5. Follow the steps shown for your client type:
    * **Web clients**: select **One-click setup** to add n8n to the client directly, or copy the **Server URL** and paste it into the client's own connector settings yourself.
    * **CLI clients**: run the install command shown, or add the manual configuration snippet to the client's configuration file instead. Either way, finish with the **Authenticate** step to complete the OAuth sign-in (see the [Claude Code](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-claude-code-to-n8n-mcp-server) and [Codex](connect-to-n8n-mcp-server/mcp-client-examples.md#connecting-codex-cli-to-n8n-mcp-server) examples for the exact commands).
@@ -125,7 +130,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 Each connected client only has the permissions you granted it when it connected, for example reading workflows without being able to create or run them. To review or revoke a client's access:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. In **Connected clients**, select **View all**. You should see a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
+2. In **Connected clients**, select a previewed client to open its details, or **Revoke access** to disconnect it. Select **View all** for clients not previewed. Switch to the all-users view for other users' clients. This shows a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
 3. Select a client's row to open its details and see every permission you granted it, or select **Revoke access** directly on the row to skip straight to revoking.
 4. Confirm the revocation. n8n disconnects the client at once; it must reconnect and sign in again to regain access.
 
@@ -259,7 +264,7 @@ To help MCP clients identify workflows, you can add free-text descriptions as fo
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available from n8n 2.34.0 and are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. This section only applies if you've enabled agents on your instance.
+Agents are a separate feature from workflows. See [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) for details. MCP clients can manage agents from n8n 2.34.0. On n8n Cloud, agents are on by default for accounts on the latest stable version. On self-hosted, this section only applies if you've enabled the `agents` module.
 {% endhint %}
 
 {% hint style="info" %}
@@ -377,3 +382,11 @@ MCP clients send the following headers to the n8n MCP endpoint:
 * `Mcp-Name`
 
 If you place n8n behind a reverse proxy, load balancer, or web application firewall that removes unknown headers or only forwards an allowlist, add these three headers to that allowlist. Otherwise clients may fail to connect or fall back to an older protocol version.
+
+## Related resources
+
+* [Connect](./)
+* [n8n API](n8n-api/README.md)
+* [n8n CLI](n8n-cli.md)
+* [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
+* [Create nodes](create-nodes/README.md)

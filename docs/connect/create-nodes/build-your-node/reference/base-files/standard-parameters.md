@@ -78,7 +78,7 @@ Contains essential brand and name settings.
 The object can include:
 
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
-* `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
+* `color`: String. Deprecated since n8n 1.52.0 and removed in n8n 3.0. It only tinted Font Awesome icons. Use a file [icon](#icon) instead.
 
 ## `forceInputNodeExecution` <a href="#forceinputnodeexecution" id="forceinputnodeexecution"></a>
 
@@ -190,3 +190,11 @@ displayOptions: {
 ```
 
 For more information about UI element types, refer to [UI elements](../node-ui-elements.md).
+
+## Related resources
+
+* [Base files](./)
+* [Structure](structure.md)
+* [Declarative-style parameters](declarative-style-parameters.md)
+* [Programmatic-style parameters](programmatic-style-parameters.md)
+* [Programmatic-style execute method](programmatic-style-execute-method.md)

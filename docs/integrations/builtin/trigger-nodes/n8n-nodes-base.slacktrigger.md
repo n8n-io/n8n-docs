@@ -27,7 +27,7 @@ On this page, you'll find a list of events the Slack Trigger node can respond to
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/slack.md).
+Refer to the [Slack credentials documentation](../credentials/slack.md) for authentication information for this node.
 {% endhint %}
 {% hint style="info" %}
 **Examples and templates**
@@ -71,7 +71,7 @@ You can further refine the node's behavior when you **Add Option**s:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Slack. You can find the node docs [here](../app-nodes/n8n-nodes-base.slack/README.md).
+n8n provides an app node for Slack. Refer to the [Slack node documentation](../app-nodes/n8n-nodes-base.slack/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 

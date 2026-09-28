@@ -37,6 +37,6 @@ Refer to [Cal.com's API documentation](https://cal.com/docs/enterprise-features/
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Cal API Quick Start documentation](https://cal.com/docs/enterprise-features/api/quick-start) for information on how to generate a new API key.
+- An **API Key**: Refer to the [Cal.com API documentation](https://cal.com/docs/api-reference/v2/introduction) for information on how to generate a new API key.
 - A **Host**: If you're using the cloud version of Cal.com, leave the Host as `https://api.cal.com`. If you're self-hosting Cal.com, enter the **Host** for your Cal.com instance.
 

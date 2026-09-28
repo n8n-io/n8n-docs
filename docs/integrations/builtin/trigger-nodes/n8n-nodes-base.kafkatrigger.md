@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/kafka.md).
+Refer to the [Kafka credentials documentation](../credentials/kafka.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

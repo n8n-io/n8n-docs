@@ -276,7 +276,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ## _`String`_.**`isEmpty()`** <a href="#stringisempty" id="stringisempty"></a>
 
-**Description:** Returns <code>true</code> if the string has no characters or is <code>null</code>
+**Description:** Returns <code>true</code> if the string has no characters or is <code>null</code> or <code>undefined</code>
 
 **Syntax:** _`String`_.isEmpty()
 
@@ -951,3 +951,7 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
   "name=Nathan Automat".urlEncode(true) //=> "name=Nathan%20Automat"
   ```
 
+
+## Related resources
+
+* [Expression reference](./)

@@ -68,3 +68,13 @@ The maintenance window sets when n8n can apply upgrades, so you can reduce disru
 * **Upgrade anytime**: n8n applies upgrades as soon as they're available.
 * **Pick a window**: n8n only applies upgrades during the time range you set.
 
+## Related resources
+
+* [Use n8n Cloud](./)
+* [Try free then choose a plan](start-your-free-trial.md)
+* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Configure Cloud](configure-cloud/README.md)
+* [Gateway credits](gateway-credits/README.md)
+* [Understand concurrency](understand-concurrency.md)
+* [Download workflows](download-workflows.md)
+

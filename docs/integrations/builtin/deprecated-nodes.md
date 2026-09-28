@@ -29,7 +29,6 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Chat Messages Retriever | 1 |
 | Convert to/from binary data | 1.1 |
 | Cron | 1 |
-| Embedding Dimensions | 1 |
 | Function | 1 |
 | Function Item | 1 |
 | GitHub Document Loader | 1.1 |
@@ -39,14 +38,15 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | In Memory Vector Store Insert | 1 |
 | In Memory Vector Store Load | 1 |
 | Interval | 1 |
+| Item Lists | 3.1 |
 | JSON Input Loader | 1 |
+| LangChain Code | 1 |
+| Line | 1 |
 | Manual Chat Trigger | 1.1 |
-| MCP Registry Client (internal) | 1 |
-| Message an Agent | 1 |
+| MCP Registry Client (internal) | 1.1 |
 | Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
 | OpenAI Model | 1 |
-| Options | 1 |
 | Orbit | 1 |
 | Pinecone: Insert | 1 |
 | Pinecone: Load | 1 |
@@ -56,12 +56,14 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | SerpApi (Google Search) | 1 |
 | Simulate | 1 |
 | Simulate Trigger | 1 |
+| Spreadsheet File | 2 |
 | Supabase: Insert | 1 |
 | Supabase: Load | 1 |
 | Tool Executor | 1 |
 | Workflow Trigger | 1 |
 | Write Binary File | 1 |
 | Zep | 1.4 |
+| Zep Vector Store | 1.3 |
 | Zep Vector Store: Insert | 1 |
 | Zep Vector Store: Load | 1 |
 
@@ -94,35 +96,44 @@ Always use the current version in new workflows to get the latest features and b
 | AI Agent Tool | 3 | 2.2 |
 | Airtable | 2.2 | 1, 2, 2.1 |
 | Airtop | 1.1 | 1 |
-| Anthropic Chat Model | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
-| AWS Bedrock Chat Model | 1.1 | 1 |
-| AwsS3 | 2 | 1 |
+| Anthropic Chat Model | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
+| AWS Bedrock Chat Model | 1.2 | 1, 1.1 |
+| AWS S3 | 2 | 1 |
+| Azure AI Search Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Baserow | 1.1 | 1 |
 | Basic LLM Chain | 1.9 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 |
 | Bitbucket Trigger | 1.1 | 1 |
-| Cal.com Trigger | 2 | 1 |
-| Call n8n Sub-Workflow Tool | 2.2 | 1, 1.1, 1.2, 1.3, 2, 2.1 |
+| Brandfetch | 2 | 1 |
+| Cal.com Trigger | 3 | 1, 2 |
+| Calendly Trigger | 2 | 1 |
+| Call n8n Workflow Tool | 2.2 | 1, 1.1, 1.2, 1.3, 2, 2.1 |
 | Chat | 1.3 | 1, 1.1, 1.2 |
 | Chat Memory Manager | 1.1 | 1 |
-| Chat Trigger | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Chat Trigger | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | Coda | 1.1 | 1 |
 | Code | 2 | 1 |
 | Code Tool | 1.3 | 1, 1.1, 1.2 |
 | Compare Datasets | 2.3 | 1, 2, 2.1, 2.2 |
 | Compression | 1.1 | 1 |
 | Convert to File | 1.1 | 1 |
+| CrateDB | 1.1 | 1 |
 | Crypto | 2 | 1 |
 | Data table | 1.1 | 1 |
 | Date & Time | 2 | 1 |
 | Default Data Loader | 1.1 | 1 |
 | Discord | 2 | 1 |
-| Email Trigger (IMAP) | 2.1 | 1, 2 |
+| Edit Fields (Set) | 3.5 | 1, 2, 3, 3.1, 3.2, 3.3, 3.4 |
+| Edit Image | 1.1 | 1 |
+| Email Trigger (IMAP) | 2.2 | 1, 2, 2.1 |
 | Embeddings OpenAI | 1.2 | 1, 1.1 |
-| Execute Sub-workflow | 1.3 | 1, 1.1, 1.2 |
-| Execute Workflow Trigger | 1.1 | 1 |
+| Evaluation | 4.8 | 4.6, 4.7 |
+| Evaluation Trigger | 4.7 | 4.6 |
+| Execute Sub-workflow | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Execute Workflow Trigger | 1.2 | 1, 1.1 |
 | Execution Data | 1.1 | 1 |
 | Extract from File | 1.1 | 1 |
 | Filter | 2.3 | 1, 2, 2.1, 2.2 |
+| FTP | 1.1 | 1 |
 | Git | 1.1 | 1 |
 | GitHub | 1.1 | 1 |
 | Gmail | 2.2 | 1, 2, 2.1 |
@@ -132,9 +143,11 @@ Always use the current version in new workflows to get the latest features and b
 | Google Books | 2 | 1 |
 | Google Calendar | 1.3 | 1, 1.1, 1.2 |
 | Google Cloud Firestore | 1.1 | 1 |
+| Google Cloud Storage | 1.1 | 1 |
 | Google Docs | 2 | 1 |
 | Google Drive | 3 | 1, 2 |
-| Google Gemini Chat Model | 1.1 | 1 |
+| Google Gemini | 1.2 | 1, 1.1 |
+| Google Gemini Chat Model | 1.2 | 1, 1.1 |
 | Google Sheets | 4.7 | 1, 2, 3, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 |
 | Google Slides | 2 | 1 |
 | Google Translate | 2 | 1 |
@@ -142,76 +155,96 @@ Always use the current version in new workflows to get the latest features and b
 | Guardrails | 2 | 1 |
 | HighLevel | 2 | 1 |
 | HTML | 1.2 | 1, 1.1 |
-| HTTP Request | 4.4 | 1, 2, 3, 4, 4.1, 4.2, 4.3 |
+| HTTP Request | 4.5 | 1, 2, 3, 4, 4.1, 4.2, 4.3, 4.4 |
 | HubSpot | 2.2 | 1, 2, 2.1 |
 | If | 2.3 | 1, 2, 2.1, 2.2 |
 | Information Extractor | 1.2 | 1, 1.1 |
 | Invoice Ninja | 2 | 1 |
 | Invoice Ninja Trigger | 2 | 1 |
-| Item Lists | 3.1 | 1, 2, 2.1, 2.2, 3 |
 | Jira Trigger | 1.1 | 1 |
 | Kafka Trigger | 1.3 | 1, 1.1, 1.2 |
 | Lemlist | 2 | 1 |
 | Linear | 1.1 | 1 |
+| Loop Over Items (Split in Batches) | 3 | 1, 2 |
 | MailerLite | 2 | 1 |
 | MailerLite Trigger | 2 | 1 |
-| MCP Client Tool | 1.2 | 1, 1.1 |
-| MCP Server Trigger | 2 | 1, 1.1 |
+| MCP Client | 1.1 | 1 |
+| MCP Client Tool | 1.4 | 1, 1.1, 1.2, 1.3 |
+| MCP Server Trigger | 2.1 | 1, 1.1, 2 |
 | Merge | 3.2 | 1, 2, 2.1, 3, 3.1 |
 | Microsoft Agent 365 Trigger | 1.1 | 1 |
 | Microsoft Excel (OneDrive) | 2.2 | 1, 2, 2.1 |
 | Microsoft OneDrive | 1.1 | 1 |
 | Microsoft Outlook | 2 | 1 |
-| Microsoft SQL | 1.1 | 1 |
+| Microsoft SharePoint | 2 | 1 |
+| Microsoft SQL | 1.2 | 1, 1.1 |
 | Microsoft Teams | 2 | 1, 1.1 |
+| Milvus Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Mindee | 3 | 1, 2 |
-| MongoDB | 1.3 | 1, 1.1, 1.2 |
+| MiniMax | 1.1 | 1 |
+| MiniMax Chat Model | 1.1 | 1 |
+| MongoDB | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
+| MongoDB Atlas Vector Store | 1.3 | 1, 1.1, 1.2 |
 | MongoDB Chat Memory | 1.1 | 1 |
 | Moonshot Kimi Chat Model | 1.1 | 1 |
 | MySQL | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
 | n8n Form | 2.5 | 1, 2.3, 2.4 |
-| n8n Form Trigger | 2.5 | 1, 2, 2.1, 2.2, 2.3, 2.4 |
+| n8n Form Trigger | 2.6 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5 |
 | NocoDB | 4 | 1, 2, 3 |
-| Notion | 2.2 | 1, 2, 2.1 |
+| Notion | 3 | 1, 2, 2.1, 2.2 |
+| Notion Trigger | 1.1 | 1 |
+| Odoo | 2 | 1 |
 | OpenAI | 2.3 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2, 2.1, 2.2 |
 | OpenAI Chat Model | 1.3 | 1, 1.1, 1.2 |
-| Perplexity | 2 | 1 |
+| Perplexity | 3 | 1, 2 |
+| Pinecone Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Pipedrive | 2 | 1 |
 | Pipedrive Trigger | 1.1 | 1 |
-| Postgres | 2.6 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5 |
+| Postgres | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
 | Postgres Chat Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
+| Postgres PGVector Store | 1.3 | 1, 1.1, 1.2 |
+| Qdrant Vector Store | 1.3 | 1, 1.1, 1.2 |
+| QuestDB | 1.1 | 1 |
 | Question and Answer Chain | 1.7 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 |
-| RabbitMQ | 1.1 | 1 |
+| Qwen Cloud | 1.1 | 1 |
+| RabbitMQ | 1.2 | 1, 1.1 |
 | Read/Write Files from Disk | 1.1 | 1 |
 | Redis Chat Memory | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
+| Redis Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Remove Duplicates | 2 | 1, 1.1 |
 | Respond to Webhook | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | RSS Read | 1.2 | 1, 1.1 |
-| Schedule Trigger | 1.3 | 1, 1.1, 1.2 |
+| Rundeck | 1.1 | 1 |
+| Salesforce | 1.1 | 1 |
+| Salesforce Trigger | 1.1 | 1 |
+| Schedule Trigger | 1.4 | 1, 1.1, 1.2, 1.3 |
 | SeaTable | 2 | 1 |
 | SeaTable Trigger | 2 | 1 |
 | Send Email | 2.1 | 1, 2 |
 | Sentiment Analysis | 1.1 | 1 |
-| Set | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
 | Simple Memory | 1.4 | 1, 1.1, 1.2, 1.3 |
-| Slack | 2.4 | 1, 2, 2.1, 2.2, 2.3 |
-| Split In Batches | 3 | 2 |
+| Simple Vector Store | 1.3 | 1, 1.1, 1.2 |
+| Slack | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
+| Snowflake | 1.1 | 1 |
 | Splunk | 2 | 1 |
-| Spreadsheet File | 2 | 1 |
 | Strava | 1.1 | 1 |
 | Structured Output Parser | 1.3 | 1, 1.1, 1.2 |
 | Summarization Chain | 2.1 | 1, 2 |
 | Summarize | 1.1 | 1 |
+| Supabase Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Switch | 3.4 | 1, 2, 3, 3.1, 3.2, 3.3 |
 | Telegram | 1.2 | 1, 1.1 |
-| Telegram Trigger | 1.3 | 1, 1.1, 1.2 |
+| Telegram Trigger | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | Text Classifier | 1.1 | 1 |
 | TheHive Trigger | 2 | 1 |
 | Think Tool | 1.1 | 1 |
+| TimescaleDB | 1.1 | 1 |
 | Todoist | 2.2 | 1, 2, 2.1 |
 | Typeform Trigger | 1.1 | 1 |
+| Unleashed Software | 1.1 | 1 |
 | Vector Store Question Answer Tool | 1.1 | 1 |
 | Wait | 1.1 | 1 |
+| Weaviate Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Webflow | 2 | 1 |
 | Webflow Trigger | 2 | 1 |
 | Webhook | 2.1 | 1, 1.1, 2 |

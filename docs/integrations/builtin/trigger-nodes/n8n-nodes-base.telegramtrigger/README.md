@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/telegram.md).
+Refer to the [Telegram credentials documentation](../../credentials/telegram.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -72,7 +72,7 @@ Some **events may require additional permissions**, see [Telegram's API document
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Telegram. You can find the node docs [here](../../credentials/telegram.md).
+n8n provides an app node for Telegram. Refer to the [Telegram node documentation](../../app-nodes/n8n-nodes-base.telegram/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/telegram-trigger/) on n8n's website.
 

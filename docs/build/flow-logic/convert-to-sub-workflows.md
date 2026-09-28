@@ -19,7 +19,7 @@ layout:
 Sub-workflow conversion is available from n8n 1.97.0.
 {% endhint %}
 
-Use sub-workflow conversion to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
+Use sub-workflow conversion to refactor your workflows into reusable parts, as part of your workflow's [flow logic](./). Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) node.
 
 See [sub-workflows](break-workflows-into-smaller-parts.md) for a general introduction to the concept.
 
@@ -55,4 +55,15 @@ Most sub-workflow conversions work without issues, but there are some caveats an
 
 
 * **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](../work-with-data/reference-data/reference-previous-nodes.md). You must pass it a fixed number.
+
+## Related resources
+
+* [Flow logic](./)
+* [Split with conditionals](split-with-conditionals.md)
+* [Merge data](merge-data.md)
+* [Loop](loop.md)
+* [Wait](wait.md)
+* [Understand execution order](understand-execution-order.md)
+* [Break workflows into smaller parts](break-workflows-into-smaller-parts.md)
+* [Handle errors gracefully](handle-errors-gracefully.md)
 

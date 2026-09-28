@@ -101,3 +101,9 @@ For example, to get the file name of the binary property `data` produced by an *
 ```
 
 For more about binary data and the nodes that produce it, refer to [Binary data](../handle-special-data-types/work-with-files-and-images.md).
+
+## Related resources
+
+* [Reference data](./)
+* [Use the UI mapper](use-the-ui-mapper.md)
+* [Link data items](link-data-items/README.md)

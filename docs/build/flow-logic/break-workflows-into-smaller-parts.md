@@ -14,7 +14,7 @@ layout:
 
 # Sub-workflows <a href="#sub-workflows" id="sub-workflows"></a>
 
-You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows. It can also help if your workflow grows large enough to encounter [memory issues](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/fix-memory-issues). Creating sub-workflows uses the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) and [Execute Sub-workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) nodes.
+You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows, as part of your workflow's [flow logic](./). It can also help if your workflow grows large enough to encounter [memory issues](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/fix-memory-issues). Creating sub-workflows uses the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) and [Execute Sub-workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) nodes.
 
 Sub-wokflow executions don't count towards your plan's monthly execution or active workflow limits.
 
@@ -31,3 +31,14 @@ This section walks through setting up both the parent workflow and sub-workflow.
 ## Sub-workflow conversion <a href="#sub-workflow-conversion" id="sub-workflow-conversion"></a>
 
 See [sub-workflow conversion](convert-to-sub-workflows.md) for how to divide your existing workflows into sub-workflows.
+
+## Related resources
+
+* [Flow logic](./)
+* [Split with conditionals](split-with-conditionals.md)
+* [Merge data](merge-data.md)
+* [Loop](loop.md)
+* [Wait](wait.md)
+* [Understand execution order](understand-execution-order.md)
+* [Convert to sub-workflows](convert-to-sub-workflows.md)
+* [Handle errors gracefully](handle-errors-gracefully.md)

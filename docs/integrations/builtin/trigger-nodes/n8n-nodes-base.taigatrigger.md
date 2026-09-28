@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/taiga.md).
+Refer to the [Taiga credentials documentation](../credentials/taiga.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

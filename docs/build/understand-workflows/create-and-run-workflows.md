@@ -61,3 +61,12 @@ Published workflows run whenever its trigger conditions are met.
 
 [^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
 [^2]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
+
+## Related resources
+
+* [Understand workflows](./)
+* [Save and publish workflows](save-and-publish-workflows.md)
+* [Create and edit credentials](create-and-edit-credentials.md)
+* [Use Gateway credits](use-gateway-credits.md)
+* [Workflow components](workflow-components/README.md)
+* [Understand executions](understand-executions/README.md)

@@ -193,3 +193,11 @@ Telemetry events emit counts to keep the data anonymized.
 * [Import a package](import-a-package.md) to move the file onto another instance.
 * [Package format](package-format.md) for what you'll find inside the archive.
 * [Limits and permissions](limits-and-permissions.md) for the size caps and the full scope matrix.
+
+## Related resources
+
+* [n8n packages](./)
+* [Package format](package-format.md)
+* [Import a package](import-a-package.md)
+* [How import works](how-import-works.md)
+* [Limits and permissions](limits-and-permissions.md)

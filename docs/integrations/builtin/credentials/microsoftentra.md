@@ -186,10 +186,12 @@ The following scopes are required for each Microsoft integration as of March 202
 | **Microsoft Graph Security** | `SecurityEvents.ReadWrite.All`, `offline_access` |
 | **Microsoft OneDrive** | `openid`, `offline_access`, `Files.ReadWrite.All` |
 | **Microsoft Outlook** | `openid`, `offline_access`, `Contacts.Read`, `Contacts.ReadWrite`, `Calendars.Read`, `Calendars.Read.Shared`, `Calendars.ReadWrite`, `Mail.ReadWrite`, `Mail.ReadWrite.Shared`, `Mail.Send`, `Mail.Send.Shared`, `MailboxSettings.Read` |
-| **Microsoft SharePoint** | `openid`, `offline_access` |
+| **Microsoft SharePoint** | `openid`, `offline_access`, `Sites.Read.All` or `Sites.ReadWrite.All` |
 | **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.Read.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All` |
 | **Microsoft To Do** | `openid`, `offline_access`, `Tasks.ReadWrite` |
 | **Additional permissions for triggers** | `Chat.Read.All`, `Team.ReadBasic.All`, `Subscription.Read.All` |
+
+The **Microsoft SharePoint** scopes apply to version 2 of the node. For read-only workflows, `Sites.Read.All` is enough. To limit the app to chosen sites, use the delegated `Sites.Selected` scope instead: the app registration needs the per-site grants described in [Grant access per site](microsoftentraserviceprincipal.md#grant-access-per-site), and the signed-in user also needs access to each site. Version 1 of the node uses the node-specific Microsoft SharePoint credential; refer to [SharePoint](microsoft.md#sharepoint) in the Microsoft credentials documentation for its permissions.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

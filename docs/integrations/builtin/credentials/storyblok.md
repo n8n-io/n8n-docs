@@ -38,7 +38,7 @@ n8n supports Content API v1 only.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1) and [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction) for more information about the services.
+Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1) and [Management API documentation](https://www.storyblok.com/docs/api/management) for more information about the services.
 
 ## Using Content API key <a href="#using-content-api-key" id="using-content-api-key"></a>
 

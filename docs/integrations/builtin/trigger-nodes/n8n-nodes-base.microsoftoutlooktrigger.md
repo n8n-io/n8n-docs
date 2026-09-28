@@ -33,7 +33,7 @@ This node's **Authentication** dropdown offers three options:
 - **Microsoft OAuth2 (Graph)**: a generic Microsoft Graph credential that you can reuse across other Microsoft nodes. When you select this option, make sure you grant the credential the scopes this node needs (for example, `Mail.ReadWrite`).
 - **Microsoft Entra Service Principal (App-Only)**: app-only access through a Microsoft Entra app registration, with no signed-in user. Refer to [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for setup and required application permissions.
 
-You can find authentication information for this node [here](../credentials/microsoft.md).
+Refer to the [Microsoft credentials documentation](../credentials/microsoft.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -54,7 +54,7 @@ For usage examples and templates to help you get started, refer to n8n's [Micros
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Microsoft Outlook. You can find the node docs [here](../app-nodes/n8n-nodes-base.microsoftoutlook.md).
+n8n provides an app node for Microsoft Outlook. Refer to the [Microsoft Outlook node documentation](../app-nodes/n8n-nodes-base.microsoftoutlook.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/microsoft-outlook-trigger/) on n8n's website.
 

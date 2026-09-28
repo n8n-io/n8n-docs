@@ -16,3 +16,10 @@ You can change the timezone for your n8n instance. This affects the [Schedule Tr
 
 1. On your dashboard, select **Manage**.
 1. Change the **Timezone** dropdown to the timezone you want.
+
+## Related resources
+
+* [Configure Cloud](./)
+* [Find your IP addresses](find-your-ip-addresses.md)
+* [Manage your data](manage-your-data.md)
+* [Change instance ownership or username](change-instance-ownership-or-username.md)

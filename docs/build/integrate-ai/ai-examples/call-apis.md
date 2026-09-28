@@ -48,3 +48,12 @@ This workflow uses:
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vKIIq31qrlay3ovXTvUj/" %}
 
 [^1]: APIs, or application programming interfaces, offer programmatic access to a service's data and functionality. APIs make it easier for software to interact with external systems. They're often offered as an alternative to traditional user-focused interfaces accessed through web browsers or UI.
+
+## Related resources
+
+* [AI examples](../ai-examples.md)
+* [Use Google Sheets as a data source](use-google-sheets-as-a-data-source.md)
+* [Use website content](use-website-content.md)
+* [Human-in-the-loop for tools](human-in-the-loop-for-tools.md)
+* [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
+* [Use AI for parameters](use-ai-for-parameters.md)

@@ -2,7 +2,7 @@
 nodeTitle: Style guide for n8n Docs
 originalFilePath: dummy1.md
 originalUrl: https://docs.n8n.io/dummy1
-url: https://docs.n8n.io/contribute/style-guide-for-n8n-docs
+url: https://docs.n8n.io/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs
 layout:
   width: default
   title:
@@ -145,11 +145,16 @@ Retrieved on its own, a section that leans on its neighbours arrives stripped of
 
 Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
 
+**The specific guidelines below don't apply to pages in the `docs/integrations/` ("Nodes") space**. The structure and hierarchy of pages in this section are different to the rest of the site.
+
 * **Always link the prerequisites and the next step**, at minimum.
-* **Link parents and children both ways.** An overview or section landing page lists and links to every child page; each child links back to its parent.
+* **Every section landing page links down to its children.** With two or more children, list them under an "In this section" heading as a plain bullet list (link plus a short description). With only one child, skip the list and link it inline at its first mention instead.
+* **Every child page links back up and sideways, in a "Related resources" section at the end.** List a link back to the parent, plus a link to each direct sibling in the same section. Link to the parent with `./` if the current page sits in the same folder as the parent's `README.md`, or `../` if the current page is itself a section landing page one level below its parent (see [Link to the current page's parent page](#link-to-the-current-pages-parent-page)). This is a plain link list, structural rather than curated — bare links, no descriptions. Unlike "In this section", the reader has already read a page from this cluster, so the descriptive anchor text alone carries enough signal; a repeated one-line description would just restate the title. Add other genuinely related pages at your discretion, even outside the current section.
+* **Past about eight to 10 siblings, drop the sibling list.** Beyond that size, a full sibling list is mostly boilerplate for the reader and turns into an O(n²) maintenance job (add, rename, or remove one page, and every other page in the section needs an edit). Link back to the parent only; the parent's "In this section" already carries the exhaustive list.
+* **A page that is itself a parent does both.** A section landing page one level down (for example, a subsection README) gets its own "In this section" for its children, plus a "Related resources" footer relating it to its own parent and its own siblings at its level. Reach only one level up and one level sideways — don't chain further up to a grandparent section; that connectivity already exists transitively through the parent's own links.
+* **Skip sibling links for flat reference collections** where every page follows the same one-fact template (for example, one page per expression data type). These pages still link back to the parent in "Related resources", just without a sibling list.
 * **Aim for a cluster of five or more interlinked pages** on the same topic. AI search cites connected clusters far more than standalone pages.
-* **Link in the body, at the first meaningful mention**, with descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". Link the first mention, not every mention.
-* **Link to separate topics; don't link for missing context.** A link can't stand in for context this section needs. If a section can't be understood without the linked page, restate the key fact instead (see [Keep each section self-contained](#keep-each-section-self-contained)).
+* **When you reference another page in prose, link it at its first meaningful mention** — not every mention. Use descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". If the page already names its topic in passing ("this workflow's flow logic"), link that phrase instead of adding a new sentence. A link points to a separate topic; it can't stand in for context this section needs, so if a section can't be understood without the linked page, restate the key fact instead (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Feature availability
 
@@ -553,6 +558,12 @@ Use `./` only if the current folder's landing page is a `README.md`, it points t
 
 If the parent is a named page instead (no `README.md` in this folder, e.g. `connect-to-n8n-mcp-server.md`), link to that file directly rather than using `./`.
 
+If the current page is itself a section landing page (a `README.md`), `./` points at itself, not its parent — its actual parent is one level up. Step up with `../` instead, the same bare-directory reference one level higher:
+
+```
+[link to a parent page](../)
+```
+
 **Link to a page in a different subfolder in the same space**
 
 Step up out of the current folder with `../` for each level, then down into the target folder:
@@ -582,7 +593,10 @@ For example, to link from a page in the `administer` space to `docs/deploy/host-
 
 Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.
 
-Each top-level folder under `docs/` is a separate space:
+Each top-level folder under `docs/` is a separate space. The table below is a copy kept for
+convenience. The authoritative list is [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md)
+in the repository root, generated daily from each space's GitBook Git Sync settings and
+checked against this table in CI. If the two ever disagree, the generated file is right.
 
 | Space folder | Space ID |
 | ------------------------------ | ---------------------- |
@@ -595,6 +609,7 @@ Each top-level folder under `docs/` is a separate space:
 | `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
 | `changelog`                    | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
+| `n8n-community-license`        | `WcrJOYW6B9JlV5aiivMA` |
 
 If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.
 
@@ -834,3 +849,9 @@ You can embed an n8n workflow in a page so readers can view and interact with it
 ```
 
 Find the template API URL by taking a published template's ID and adding it to `https://api.n8n.io/workflows/templates/`.
+
+## Related resources
+
+* [Contribution guide for n8n Docs](./)
+* [Terminology and naming](terminology.md)
+* [Agent-friendly docs](agent-friendly-docs.md)

@@ -88,26 +88,23 @@ n8n-cli package import --file=triage.n8np --project-id=<target-project-id>
 
 n8n checks the whole package before it writes anything. If something would block the import, such as a workflow that uses a node type the target instance doesn't have, the command exits with a non-zero status and lists every problem it found at once.
 
-## Read next
+## In this section
 
-{% content-ref url="package-format.md" %}
-[package-format.md](package-format.md)
-{% endcontent-ref %}
-
-{% content-ref url="export-a-package.md" %}
-[export-a-package.md](export-a-package.md)
-{% endcontent-ref %}
-
-{% content-ref url="import-a-package.md" %}
-[import-a-package.md](import-a-package.md)
-{% endcontent-ref %}
-
-{% content-ref url="how-import-works.md" %}
-[how-import-works.md](how-import-works.md)
-{% endcontent-ref %}
-
-{% content-ref url="limits-and-permissions.md" %}
-[limits-and-permissions.md](limits-and-permissions.md)
-{% endcontent-ref %}
+* [Package format](package-format.md): what's inside a `.n8np` file, the three package shapes, and the manifest.
+* [Export a package](export-a-package.md): export workflows, folders, or whole projects into a package.
+* [Import a package](import-a-package.md): import a package and control where its contents land.
+* [How import works](how-import-works.md): how n8n checks a package and resolves its dependencies before writing it.
+* [Limits and permissions](limits-and-permissions.md): size limits, license features, and API key scopes.
 
 For other ways to move a workflow, including copy and paste and the editor's download and import options, see [Export and import](../export-and-import.md).
+
+## Related resources
+
+* [Manage workflows](../)
+* [Configure workflow settings](../configure-workflow-settings.md)
+* [Tag workflows](../tag-workflows.md)
+* [Favorite items](../favorite-items.md)
+* [View change history](../view-change-history.md)
+* [Review workflows](../workflow-reviews.md)
+* [Export and import](../export-and-import.md)
+* [Share with others](../share-with-others.md)

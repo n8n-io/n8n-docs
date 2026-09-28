@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/eventbrite.md).
+Refer to the [Eventbrite credentials documentation](../credentials/eventbrite.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -159,12 +159,13 @@ Each top-level folder under `docs/` is a separate space:
 | `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` |
 | `changelog`            | `hhM8Cox90Piiv0u0EgHM` |
 | `contribute`           | `6OmLnmci5kZDzdkzKREn` |
+| `n8n-community-license`| `WcrJOYW6B9JlV5aiivMA` |
 
 Alternatively, copy the page's link in GitBook, or use its published
 `https://docs.n8n.io/...` address if you don't have GitBook access.
 
 <!-- Keep this table in sync with the one in
-docs/contribute/style-guide-for-n8n-docs.md (the canonical source). Update it if a
+docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md (the canonical source). Update it if a
 space is added, removed, or recreated. IDs are stable while a space exists; a
 recreated space gets a new ID. -->
 

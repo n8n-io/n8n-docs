@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the Google Business Profile node 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/google/README.md).
+Refer to the [Google credentials documentation](../credentials/google/README.md) for authentication information for this node.
 {% endhint %}
 
 
@@ -51,7 +51,7 @@ You can find authentication information for this node [here](../credentials/goog
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for Google Business Profile. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md).
+n8n provides a trigger node for Google Business Profile. Refer to the [Google Business Profile Trigger node documentation](../trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md) for more information.
 
 Refer to [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest) for more information about the service.
 

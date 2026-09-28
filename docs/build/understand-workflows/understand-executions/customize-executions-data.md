@@ -90,3 +90,13 @@ customData = _execution.customData.get("key");
 ```
 {% endtab %}
 {% endtabs %}
+
+## Related resources
+
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View all executions](view-all-executions.md)
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Stream real-time responses](stream-real-time-responses.md)
+* [Dirty nodes](understand-dirty-nodes.md)

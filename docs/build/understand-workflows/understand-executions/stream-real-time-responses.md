@@ -59,3 +59,13 @@ Keep in mind the following details when configuring streaming responses:
 
 * **Trigger**: Your trigger node must support streaming and have streaming configured. Without this, the workflow behaves according to your response mode settings.
 * **Node configuration**: Even with streaming enabled on the trigger, you need at least one node configured to stream data. Otherwise, your workflow will send no data.
+
+## Related resources
+
+* [Understand executions](./)
+* [Manual, partial, and production executions](types-of-executions.md)
+* [View all executions](view-all-executions.md)
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md)
+* [Debug and re-run past executions](debug-executions.md)
+* [Customize executions data](customize-executions-data.md)
+* [Dirty nodes](understand-dirty-nodes.md)

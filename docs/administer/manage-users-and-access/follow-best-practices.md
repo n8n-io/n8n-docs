@@ -34,3 +34,12 @@ If you run n8n behind a reverse proxy, set the following environment variables s
 
 More information on these variables is available in [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
 
+## Related resources
+
+* [Manage users and access](./)
+* [Set up for Cloud](set-up-for-cloud.md)
+* [Add and remove users](add-and-remove-users.md)
+* [Understand instance roles](understand-instance-roles.md)
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
+* [Verify user identity](verify-user-identity/README.md)
+

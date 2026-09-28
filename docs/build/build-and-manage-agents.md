@@ -34,7 +34,7 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 {% hint style="info" %}
 **Feature availability**
 
-Agents are available on **n8n Cloud** and **self-hosted**. They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
+Agents are available to everyone on **n8n Cloud** running the latest stable version. They also run on **self-hosted**, with some extra setup. See [Self-hosted](build-and-manage-agents.md#self-hosted). They aren't ready for self-hosted Enterprise yet. Support for self-hosted Enterprise is coming soon.
 {% endhint %}
 
 {% hint style="info" %}
@@ -68,6 +68,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Model**          | The language model that reasons and generates responses. Choose a provider and model when you set up the agent. |
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
 | **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](integrate-ai/mcp-servers.md).                 |
+| **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service. |
 | **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
@@ -114,6 +115,13 @@ Keep instructions specific; if the agent doesn't behave as expected, refine the 
 In the **Tools** section, select **Add tool** and pick from built-in tools (n8n integrations like Slack or Google Sheets), workflows in the same project, custom tools defined by a JSON schema, or external tools using [MCP servers](integrate-ai/mcp-servers.md).
 
 The agent decides which tool to use based on your instructions and the task, using the credentials you attach when you add the tool. For sensitive tools, you can require approval before the agent runs them. See [Approve tool calls](build-and-manage-agents.md#approve-tool-calls).
+
+#### Enable web search
+
+In the **Capabilities** section enable **Web search** to let the agent look up current information such as prices, docs, and news without adding a tool yourself.
+
+* If the model you chose offers its own native web search tool, the agent uses it directly.
+* If it doesn't, choose [Brave Search](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/bravesearch) or a self-hosted [SearXNG](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/searxng) instance as the fallback, and add credentials for whichever one you pick.
 
 #### Bundle capabilities with skills
 
@@ -254,9 +262,23 @@ You can use agents within your workflows in two ways:
 * **Create agents inline**: Add an agent as a node directly in a workflow. This lets you build and configure an agent without leaving the workflow editor.
 * **Message existing agents**: Send messages to already created agents from a workflow. This lets you access published agents and integrate their capabilities into your automation.
 
+#### Message an Agent node
+
+Both options use the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node. Choose the agent to message and write the message to send. The agent runs its own reasoning loop, calls its own tools and skills, and returns a reply that the nodes after it can use.
+
+The node can also:
+
+* Stream the reply as the agent generates it, through connected Chat and Webhook triggers.
+* Reuse a session, so the agent remembers earlier messages. Without one, each execution starts a fresh conversation.
+* Constrain the reply to a JSON schema, so later nodes receive predictable fields.
+
+Each message counts as one execution, the same as any other workflow execution.
+
+To let an agent hand work to another agent, connect **Message an Agent Tool** to the **Tool** input of the AI Agent node.
+
 ### Self-hosted
 
-Agents run on self-hosted n8n from 2.32.3 (Beta). There are two ways to set them up:
+Agents run on self-hosted n8n from 2.32.3. There are two ways to set them up:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
 * **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
@@ -276,3 +298,15 @@ For the environment variables and setup steps, see [Enable agents](https://app.g
 One turn with an agent counts as one execution. A turn is a single exchange, where you send the agent a message and it produces a response.
 
 Agents share the same execution quota as workflows. Executions from your agents and workflows count toward the same total on your plan.
+
+## Related resources
+
+* [Build](./)
+* [Understand workflows](understand-workflows/README.md)
+* [Ways of building workflows](ways-of-building-workflows/README.md)
+* [Manage workflows](manage-workflows/README.md)
+* [Flow logic](flow-logic/README.md)
+* [Work with data](work-with-data/README.md)
+* [Code in n8n](code-in-n8n/README.md)
+* [Integrate AI](integrate-ai/README.md)
+* [Keyboard shortcuts](keyboard-shortcuts.md)

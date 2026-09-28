@@ -32,7 +32,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_RUNNERS_ENABLED` (**deprecated**) | Boolean | `false` | Are task runners enabled. **Deprecated** from n8n 2.0. |
-| `N8N_RUNNERS_MODE` | Enum string: `internal`, `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. `external` means an external orchestrator will launch the task runner. |
+| `N8N_RUNNERS_MODE` | Enum string: `internal` (**deprecated**), `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. **Deprecated**: internal mode will be removed in a future version. `external` means an external orchestrator will launch the task runner. See [external mode](../../set-up-task-runners.md#external-mode). |
 | `N8N_RUNNERS_AUTH_TOKEN` | String | Random string | Shared secret used by a task runner to authenticate to n8n. Required when using `external` mode. |
 | `N8N_RUNNERS_BROKER_PORT` | Number | `5679` | Port the task broker listens on for task runner connections. |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS` | String | `127.0.0.1` | Address the task broker listens on. |
@@ -88,3 +88,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `N8N_RUNNERS_ALLOW_TRANSITIVE_IMPORTS` | Boolean | `false` | Whether imports performed by an allowlisted package's own code skip the import allowlist (both `N8N_RUNNERS_EXTERNAL_ALLOW` and `N8N_RUNNERS_STDLIB_ALLOW`). Set to `true` to let an allowlisted package load whatever it imports (its transitive dependencies and stdlib) without listing each module. This helps with packages whose internal imports pull in other modules (for example, `pandas` imports `pytz`, or `boto3` imports `dateutil`). Your own imports in the Code node are still checked against the allowlist. Enabling this trusts the import activity of all installed packages, not only the named ones: a compromised dependency could pull in modules the allowlist would otherwise block, so only enable it when the runner image's installed packages are trusted. In external mode, set this in the [runners config file](../../set-up-task-runners.md#configuring-launcher-in-runners-container-in-external-mode) (`/etc/n8n-task-runners.json`) as an `env-override`, not as a container environment variable. |
 | `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__,globals,locals` | Python built-ins that you can't use in the Code node. Set to an empty string to allow all built-ins. | 
 | `N8N_BLOCK_RUNNER_ENV_ACCESS` | Boolean | `true` | Whether to block access to the runner's environment from within Python code tasks. Set to `false` to enable all Python code node users access to the runner's environment via `os.environ`. For security reasons, environment variable access is blocked by default. | 
+
+## Related resources
+
+* [Environment variables](./)

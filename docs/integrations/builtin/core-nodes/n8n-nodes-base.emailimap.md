@@ -24,7 +24,7 @@ Use the IMAP Email node to receive emails using an IMAP email server. This node 
 {% hint style="info" %}
 **Credential**
 
-You can find authentication information for this node [here](../credentials/imap/README.md).
+Refer to the [IMAP credentials documentation](../credentials/imap/README.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

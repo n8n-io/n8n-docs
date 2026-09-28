@@ -75,3 +75,10 @@ To unshare a credential:
 6. Select **Save** to apply the changes.
 
 [^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
+
+## Related resources
+
+* [Manage credentials](./)
+* [End-user credentials](end-user-credentials.md)
+* [Credential overwrites](credential-overwrites.md)
+* [Use external secret stores](use-external-secret-stores.md)

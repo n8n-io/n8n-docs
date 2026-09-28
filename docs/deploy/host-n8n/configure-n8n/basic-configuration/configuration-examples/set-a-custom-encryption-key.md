@@ -27,3 +27,7 @@ In [queue mode](../../scaling/enable-queue-mode.md), you must specify the encryp
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on this variable.
+
+## Related resources
+
+* [Configuration examples](./)

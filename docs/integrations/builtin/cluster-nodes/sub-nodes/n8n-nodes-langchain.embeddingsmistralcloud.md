@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Embeddings Mistral Cloud n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/mistral.md).
+Refer to the [Mistral Cloud credentials documentation](../../credentials/mistral.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -36,7 +36,7 @@ You can find authentication information for this node [here](../../credentials/m
 
 * **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/).
+Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/models/).
 
 ## Node options <a href="#node-options" id="node-options"></a>
 

@@ -23,7 +23,7 @@ Work with JSON web tokens in your n8n workflows.
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/jwt.md).
+Refer to the [JWT credentials documentation](../credentials/jwt.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

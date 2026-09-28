@@ -16,24 +16,24 @@ You can secure a self-hosted n8n instance to protect credentials and workflow da
 
 Securing your n8n instance can take several forms.
 
-At a high level, you can:
+## In this section
 
-* Conduct a [security audit](security/run-security-audits.md) to identify security risks.
-* [Set up SSL](security/set-up-ssl.md) to enforce secure connections.
-* [Set up Single Sign-On](security/configure-sso.md) for user account management.
-* Use [token exchange](../deploy-as-an-oem-integration/set-up-token-exchange.md) to log users in from your own identity provider when embedding n8n, or to call n8n APIs on their behalf.
-* Use [two-factor authentication (2FA)](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth) for your users.
-* Enable [encryption key rotation](security/rotate-encryption-keys.md) to periodically replace the key that encrypts credentials and other sensitive data.
-* Enable [JWE token decryption for OAuth 2.0 credentials](security/decrypt-oauth-20-tokens-with-jwe.md) so your identity provider can encrypt access and ID tokens that only your instance can decrypt.
+* [Manage security policies](security/manage-security-policies.md): manage instance-wide security policies including MFA enforcement and personal space controls.
+* [Run security audits](security/run-security-audits.md): run a security audit to identify security risks.
+* [Set up SSL](security/set-up-ssl.md): enforce secure connections.
+* [Configure SSO](security/configure-sso.md): set up SAML or OIDC Single Sign-On.
+* [Rotate encryption keys](security/rotate-encryption-keys.md): periodically replace the key that encrypts credentials and other sensitive data.
+* [Decrypt OAuth 2.0 tokens with JWE](security/decrypt-oauth-20-tokens-with-jwe.md): let your identity provider encrypt access and ID tokens that only your instance can decrypt.
+* [Harden task runners](security/harden-task-runners.md): better isolation for Code node executions.
+* [Redact execution data](security/redact-execution-data.md): hide input and output data from workflow executions.
+* [Disable the public API](security/disable-the-public-api.md): prevent others from using the n8n public REST API.
+* [Control telemetry](security/control-telemetry.md): opt out of the anonymous data n8n collects automatically.
+* [Block specific nodes](security/block-specific-nodes.md): prevent your n8n users from accessing specific nodes.
+* [Enable SSRF protection](security/enable-ssrf-protection.md): control which hosts and IP ranges workflow nodes can connect to.
+* [Verify user emails](security/verify-user-emails.md): restrict account registration to email-verified users.
 
-You can also protect sensitive data processed by your workflows:
+## Related resources
 
-* [Redact execution data](security/redact-execution-data.md) to hide input and output data from workflow executions.
-
-More granularly, consider blocking or opting out of features or data collection you don't want:
-
-* [Disable the public API](security/disable-the-public-api.md) if you aren't using it.
-* [Opt out of data collection](security/control-telemetry.md) of the anonymous data n8n collects automatically.
-* [Block certain nodes](security/block-specific-nodes.md) from being available to your users.
-* [Protect against SSRF attacks](security/enable-ssrf-protection.md) to control which hosts and IP ranges workflow nodes can connect to.
-* [Restrict account registration](security/verify-user-emails.md) to email-verified users.
+* [Configure n8n](./)
+* [Set up token exchange](../deploy-as-an-oem-integration/set-up-token-exchange.md): authenticate users from your own identity provider when embedding n8n.
+* [Require two-factor auth](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/require-two-factor-auth): enable 2FA for your users.

@@ -14,6 +14,16 @@ layout:
 
 An execution is a single run of a workflow.
 
+## In this section
+
+* [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.
+* [View all executions](view-all-executions.md): view and filter all executions across all your workflows.
+* [View executions for a single workflow](view-executions-for-a-single-workflow.md): view and filter executions for the workflow currently open on the canvas.
+* [Debug and re-run past executions](debug-executions.md): copy data from a previous execution into your current workflow to debug it.
+* [Customize executions data](customize-executions-data.md): add custom data to your workflow executions using the Code node.
+* [Stream real-time responses](stream-real-time-responses.md): send data back to users as an AI Agent node generates it.
+* [Dirty nodes](understand-dirty-nodes.md): what dirty nodes are and how they affect workflow execution.
+
 ## Execution modes <a href="#execution-modes" id="execution-modes"></a>
 
 There are two execution modes:
@@ -55,3 +65,12 @@ n8n supports [adding custom data to executions](customize-executions-data.md).
 ## Execution data redaction <a href="#execution-data-redaction" id="execution-data-redaction"></a>
 
 You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data) for details.
+
+## Related resources
+
+* [Understand workflows](../)
+* [Create and run workflows](../create-and-run-workflows.md)
+* [Save and publish workflows](../save-and-publish-workflows.md)
+* [Create and edit credentials](../create-and-edit-credentials.md)
+* [Use Gateway credits](../use-gateway-credits.md)
+* [Workflow components](../workflow-components/README.md)

@@ -258,3 +258,8 @@ https://{your-domain}.okta.com/.well-known/openid-configuration
 ```
 https://cognito-idp.{region}.amazonaws.com/{user-pool-id}/.well-known/openid-configuration
 ```
+
+## Related resources
+
+* [Use OIDC](./)
+* [Troubleshoot OIDC](troubleshoot-oidc.md)

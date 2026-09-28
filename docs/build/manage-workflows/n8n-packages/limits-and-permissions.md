@@ -129,3 +129,11 @@ For what each event's payload holds, see [Events](export-a-package.md#events) on
 
 * [Export a package](export-a-package.md) and [Import a package](import-a-package.md) for the options these limits apply to.
 * [How import works](how-import-works.md) for how the license and scope checks fit into an import.
+
+## Related resources
+
+* [n8n packages](./)
+* [Package format](package-format.md)
+* [Export a package](export-a-package.md)
+* [Import a package](import-a-package.md)
+* [How import works](how-import-works.md)

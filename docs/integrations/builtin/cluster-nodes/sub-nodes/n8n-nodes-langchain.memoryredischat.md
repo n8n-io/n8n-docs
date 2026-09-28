@@ -28,7 +28,7 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/redis.md).
+Refer to the [Redis credentials documentation](../../credentials/redis.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/seatable.md).
+Refer to the [SeaTable credentials documentation](../credentials/seatable.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

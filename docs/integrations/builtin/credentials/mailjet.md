@@ -33,7 +33,7 @@ Create a [Mailjet](https://www.mailjet.com/) account.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/sms/reference/send-message/) for more information about each service.
+Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/guides-sms/) for more information about each service.
 
 ## Using Email API key <a href="#using-email-api-key" id="using-email-api-key"></a>
 

@@ -75,3 +75,7 @@ for item in previousNodeData:
 ```
 {% endtab %}
 {% endtabs %}
+
+## Related resources
+
+* [Built-in methods and variables examples](./)

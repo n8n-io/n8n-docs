@@ -11,6 +11,11 @@ layout:
 
 Gateway credits let you use supported AI models and third-party services in your workflows without creating provider accounts or managing API keys. Instead of setting up a credential, you select Gateway credits on a supported node, and n8n bills the usage from a prepaid credit balance.
 
+## In this section
+
+* [Top up Gateway credits](top-up-gateway-credits.md): add credit manually or automatically.
+* [Track Gateway credit spend](track-gateway-credit-spend.md): monitor your balance, spend, and top-up history.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -74,7 +79,12 @@ When a node runs on Gateway credits, n8n sends the request through its gateway t
 
 ## Related resources
 
+- [Use n8n Cloud](../)
+- [Try free then choose a plan](../start-your-free-trial.md)
+- [Use the admin dashboard](../use-the-admin-dashboard.md)
+- [Update your version](../update-your-version.md)
+- [Configure Cloud](../configure-cloud/README.md)
+- [Understand concurrency](../understand-concurrency.md)
+- [Download workflows](../download-workflows.md)
 - [Use Gateway credits](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/use-gateway-credits): select Gateway credits on a node and find supported nodes.
-- [Top up Gateway credits](top-up-gateway-credits.md): add credit manually or automatically.
-- [Track Gateway credit spend](track-gateway-credit-spend.md): monitor your balance, spend, and top-up history.
 - [Service pricing page](https://app.n8n.cloud/service-pricing): current rates for all supported services and models.

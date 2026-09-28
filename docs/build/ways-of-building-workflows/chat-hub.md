@@ -92,3 +92,11 @@ To manage these settings, go to **Settings > Chat** and edit the providers.
 1. You can't add file knowledge when creating simple personal agents.
 2. Tool selection is limited to a few options.
 3. Only workflows with [Chat Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) and streaming-enabled [AI Agent node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) work as workflow agents. Your workflows must meet specific requirements.
+
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use templates](use-templates.md)
+* [Use Ask n8n AI](use-the-ai-assistant.md)

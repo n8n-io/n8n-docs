@@ -28,7 +28,7 @@ The HTML node is available from n8n 0.213.0, replacing the HTML Extract node. If
 {% hint style="warning" %}
 **Cross-site scripting**
 
-When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
+When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://community.owasp.org/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

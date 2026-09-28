@@ -98,6 +98,6 @@ Refer to [TheHive credentials](../credentials/thehive5.md) for guidance on setti
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for TheHive. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.thehive5trigger.md).
+n8n provides a trigger node for TheHive. Refer to the [TheHive 5 Trigger node documentation](../trigger-nodes/n8n-nodes-base.thehive5trigger.md) for more information.
 
 Refer to TheHive's [documentation](https://docs.strangebee.com/) for more information about the service.

@@ -185,13 +185,15 @@ PID (personal identifiable data) is data that's personal to you and would identi
 
 n8n only retains data for as long as necessary to provide the core service. 
 
-For n8n Cloud, n8n stores your workflow code, credentials, and other data indefinitely, until you choose to delete it or close your account. The platform stores execution data according to the retention rules on your account.
+For n8n Cloud, n8n stores your workflow code, credentials, and other data for as long as your account is active, until you choose to delete it or close your account. The platform stores execution data according to the retention rules on your account.
 
-n8n deletes most internal application logs and logs tied to subprocessors within 90 days. The company retains a subset of logs for longer periods where required for security investigations.
+n8n deletes most internal application logs and logs tied to sub-processors within 90 days. The company retains a subset of security and audit logs for longer periods where required for security investigations, and billing records for the period required by tax and accounting law.
 
 #### PID deletion <a href="#pid-deletion" id="pid-deletion"></a>
 
-If you choose to delete your n8n account, n8n deletes all customer data and event data associated with your account. n8n deletes customer data in backups within 90 days.
+If you delete your n8n account from the Cloud dashboard, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
+
+If your account is closed without a deletion request, n8n deletes your customer data within 100 days of closure, with backups deleted within 90 days.
 
 ### Self-hosted <a href="#self-hosted" id="self-hosted"></a>
 

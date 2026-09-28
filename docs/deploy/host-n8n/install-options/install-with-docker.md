@@ -204,3 +204,11 @@ pnpm --filter n8n-containers services:clean
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+
+## Related resources
+
+* [Install options](./)
+* [One-line setup](one-line-setup.md)
+* [Install using Docker Compose](install-using-docker-compose.md)
+* [Install with npm](install-with-npm.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)

@@ -72,6 +72,6 @@ Only allowlist hostnames within your control (internal DNS zones). Hostname allo
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [SSRF protection environment variables](../basic-configuration/use-environment-variables/ssrf-protection.md) for the full list of configuration options.
-
-Refer to [Configuration methods](../basic-configuration.md) for more information on setting environment variables.
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [SSRF protection environment variables](../basic-configuration/use-environment-variables/ssrf-protection.md): the full list of configuration options.
+* [Configuration methods](../basic-configuration.md): more information on setting environment variables.

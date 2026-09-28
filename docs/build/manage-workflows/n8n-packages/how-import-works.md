@@ -205,3 +205,11 @@ Missing permission to create a tag or a data table isn't a `403`. It comes back 
 * [Import a package](import-a-package.md) for the options this page refers to.
 * [Limits and permissions](limits-and-permissions.md) for the license features, scopes, and quotas an import checks.
 * [Package format](package-format.md) for what's in the files n8n is reading.
+
+## Related resources
+
+* [n8n packages](./)
+* [Package format](package-format.md)
+* [Export a package](export-a-package.md)
+* [Import a package](import-a-package.md)
+* [Limits and permissions](limits-and-permissions.md)

@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the Jina AI node supports, and li
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/jinaai.md).
+Refer to the [Jina AI credentials documentation](../credentials/jinaai.md) for authentication information for this node.
 {% endhint %}
 
 

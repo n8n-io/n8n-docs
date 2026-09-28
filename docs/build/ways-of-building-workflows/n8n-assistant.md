@@ -67,7 +67,7 @@ Instance context draws on three sources:
 
 n8n Assistant gets the full picture with your first message in a conversation. After that, each message carries only what changed since then. Start a new conversation for unrelated work, and n8n Assistant reads the project again from the start.
 
-On n8n Cloud, n8n manages instance context for you. On self-hosted instances it's off by default, and an instance admin turns it on. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
+On n8n Cloud, n8n manages instance context for you. On self-hosted instances n8n turns it on through a managed rollout, and an instance admin can force it on. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
 
 ### What n8n Assistant can look up from instance context
 
@@ -233,4 +233,10 @@ To get more credits during Preview, upgrade your plan. More ways to top up are c
 
 For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-See [Ways of building workflows](README.md) for other approaches.
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use templates](use-templates.md)
+* [Use Ask n8n AI](use-the-ai-assistant.md)
+* [Use Chat Hub](chat-hub.md)

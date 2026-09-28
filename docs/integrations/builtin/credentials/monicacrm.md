@@ -31,7 +31,7 @@ Sign up for a [Monica CRM](https://www.monicahq.com/) account or self-host an in
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Monica's API documentation](https://www.monicahq.com/api) for more information about the service.
+Refer to [Monica's documentation](https://docs.monicahq.com/) for more information about the service.
 
 ## Using API token <a href="#using-api-token" id="using-api-token"></a>
 

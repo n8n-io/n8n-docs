@@ -34,3 +34,9 @@ n8n provides several approaches for data transformation:
    * [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize): aggregate data like Excel pivot tables
 
 For a comparison of these approaches, see [Expressions versus data nodes](../expressions-versus-data-nodes.md).
+
+## Related resources
+
+* [Transform data](./)
+* [Expressions for data transformation](expressions-for-data-transformation.md)
+* [Expression reference](expression-reference/README.md)

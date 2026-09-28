@@ -5,6 +5,14 @@ on:
     paths:
       - .github/scripts/**
       - .github/workflows/script-tests.yml
+      # test_check_internal_links reads the space-ID table out of this docs
+      # page, so a docs-only PR can break these tests. Without this path the
+      # break lands on main unseen and fails the next PR to touch a script,
+      # which is exactly how DOC-2351 happened. It changes a few times a year.
+      - docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md
+      # check_internal_links now resolves space IDs from this generated file, and
+      # the tests assert the style-guide copy above still agrees with it.
+      - SPACE_INDEX.md
   workflow_dispatch: {}
 
 permissions:
@@ -48,3 +56,21 @@ jobs:
         run: python3 .github/scripts/tests/test_check_version_snippet_pr.py
       - name: Run docops_auto_merge tests
         run: python3 .github/scripts/tests/test_docops_auto_merge.py
+
+  lychee-report:
+    name: runner / lychee-report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run lychee_report tests
+        run: python3 .github/scripts/tests/test_lychee_report.py
+
+  product-links-report:
+    name: runner / product-links-report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run product_links_report tests
+        run: python3 .github/scripts/tests/test_product_links_report.py

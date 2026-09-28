@@ -141,6 +141,7 @@ JMESPath
 JumpCloud
 [Kk]ebab-case
 Keap
+Kerberos
 Keycloak
 Kibana
 Kimi
@@ -203,6 +204,7 @@ Ollama
 onboarding
 Onfleet
 [Oo]pen[Tt]elemetry
+OTel
 OTLP
 Ortto
 Oura
@@ -222,6 +224,7 @@ Postgres
 PostHog
 [Pp]refilled
 [Pp]repopulate
+Protobuf
 [Pp]roxying
 Pushbullet
 Pushcut

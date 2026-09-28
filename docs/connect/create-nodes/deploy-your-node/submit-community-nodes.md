@@ -13,3 +13,8 @@ layout:
 # Submit community nodes <a href="#submit-community-nodes" id="submit-community-nodes"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/E552YKHiixJuJvzEdrBI/" %}
+
+## Related resources
+
+* [Deploy your node](./)
+* [Install private nodes](install-private-nodes.md)

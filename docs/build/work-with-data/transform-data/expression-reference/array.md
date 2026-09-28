@@ -316,7 +316,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 ## _`Array`_.**`isEmpty()`** <a href="#arrayisempty" id="arrayisempty"></a>
 
-**Description:** Returns <code>true</code> if the array has no elements or is <code>null</code>
+**Description:** Returns <code>true</code> if the array has no elements or is <code>null</code> or <code>undefined</code>
 
 **Syntax:** _`Array`_.isEmpty()
 
@@ -887,3 +887,7 @@ See also <code>slice()</code> and <code>append()</code>.
   arr.unique() //=> ['quick', 'brown']
   ```
 
+
+## Related resources
+
+* [Expression reference](./)

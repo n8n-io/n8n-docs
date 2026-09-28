@@ -47,3 +47,13 @@ Queue mode is available for n8n Cloud Enterprise plans. To enable it, [contact n
 Concurrency in queue mode is a separate mechanism from concurrency in regular mode. In queue mode, the concurrency settings determine how many jobs each worker can run in parallel. In regular mode, concurrency limits apply to the entire instance.
 
 [^1]: In n8n, evaluation allows you to tag and organize execution history and compare it against new executions. You can use this to understand how your workflow performs over time as you make changes. In particular, this is useful while developing AI-centered workflows.
+
+## Related resources
+
+* [Use n8n Cloud](./)
+* [Try free then choose a plan](start-your-free-trial.md)
+* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Update your version](update-your-version.md)
+* [Configure Cloud](configure-cloud/README.md)
+* [Gateway credits](gateway-credits/README.md)
+* [Download workflows](download-workflows.md)

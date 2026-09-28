@@ -290,30 +290,34 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 Instance context gives n8n Assistant a short summary of the project a conversation is opened in: which workflows exist, what changed recently, and what has run or failed. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
 
-It needs two variables. One records the changes, and the other lets n8n Assistant read them:
+The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
+
+On a self-hosted instance, use `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. Preserve any other entries in the JSON object.
 
 ```bash
-# Record workflow and credential changes in the activity log
-N8N_ACTIVITY_LOG_ENABLED=true
-
-# Let n8n Assistant read instance context
-N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED=true
+N8N_FEATURE_FLAG_OVERRIDES={"114_instance_activity_context":true}
 ```
 
-| Variable | Default | Description |
-| --- | --- | --- |
-| `N8N_ACTIVITY_LOG_ENABLED` | `false` | Set to `true` to record workflow and credential changes in the instance activity log. |
-| `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` | `false` | Set to `true` to let n8n Assistant read instance context. |
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+| --- | --- |
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
 
-Set both. With only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED`, n8n Assistant still reports which workflows exist and what has run, because neither of those comes from the activity log. The recent-changes part stays empty, because nothing wrote an entry. With only `N8N_ACTIVITY_LOG_ENABLED`, n8n records the changes but n8n Assistant reads none of them.
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
 
-The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own variable.
+One flag controls both halves. With the flag off, n8n writes no activity entries and n8n Assistant reads no instance context.
 
-Turning `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` off removes instance context and the tool that reads the activity log. n8n Assistant then reads no instance context.
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own flag.
+
+Turning the flag off removes instance context and the tool that reads the activity log. Entries recorded earlier stay in the log, and n8n Assistant reads none of them.
 
 ## Enable node type counting
 
-Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and needs its own variable:
+Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and has its own flag.
+
+The `109_instance_ai_node_usage` PostHog flag controls it. On a self-hosted instance, `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` force-enables it:
 
 ```bash
 N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
@@ -321,9 +325,9 @@ N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to let n8n Assistant count the node types a project uses. |
+| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to turn node type counting on, whatever the PostHog flag returns. |
 
-This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the managed rollout, so it isn't a way to keep the feature off.
+This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the PostHog flag, so it isn't a way to keep the feature off.
 
 Node type counting reports counts of node types, never parameter values.
 
@@ -413,15 +417,16 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 **Instance context**
 
-* Both `N8N_ACTIVITY_LOG_ENABLED` and `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` are set to `true`.
-* If only `N8N_INSTANCE_AI_INSTANCE_CONTEXT_ENABLED` is set, n8n Assistant reports which workflows exist and which ran, but no recent changes. Set the activity log variable too.
-* Nothing changed in the project yet. The activity log only records changes made after you enabled it.
+* The `114_instance_activity_context` flag is on for your instance. Set `N8N_FEATURE_FLAG_OVERRIDES` to `{"114_instance_activity_context":true}` to force it on.
+* Nothing changed in the project yet. The activity log only records changes made after the flag went on.
 * The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
 
 **Node type counting**
 
-* `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
-* The variable only turns the feature on. If it isn't set to `true` and node type counting still doesn't work, the managed rollout hasn't reached your instance yet.
+* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
+* Setting the variable to `false` doesn't keep the feature off. It hands the decision back to the flag.
 * It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
-See [Configure n8n](./) for other configuration topics.
+## Related resources
+
+* [Configure n8n](./)

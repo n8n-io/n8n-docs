@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the MongoDB Chat Memory node supp
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/mongodb.md).
+Refer to the [MongoDB credentials documentation](../../credentials/mongodb.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

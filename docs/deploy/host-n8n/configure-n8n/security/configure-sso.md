@@ -38,3 +38,7 @@ Configuring SSO with environment variables is available from n8n 2.18.0.
 {% endhint %}
 
 You can also configure SSO from environment variables instead of through the UI. See [SSO environment variables](../basic-configuration/use-environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+
+## Related resources
+
+* [Security](../security.md)

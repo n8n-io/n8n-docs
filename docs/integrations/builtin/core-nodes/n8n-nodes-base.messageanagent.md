@@ -33,7 +33,7 @@ Each message you send counts as one execution, the same as any other workflow ex
 
 This page describes version 3.1. Some controls aren't available on earlier versions:
 
-* Version 1 uses a list-and-ID agent picker. Version 2 introduced the agent selector described below.
+* Version 1 uses a list-and-ID agent picker. Version 2 introduced the agent selector.
 * **Require Specific Output Format** was added in version 3.
 * **Session** settings were added in version 3.1.
 

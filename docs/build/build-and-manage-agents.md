@@ -262,6 +262,20 @@ You can use agents within your workflows in two ways:
 * **Create agents inline**: Add an agent as a node directly in a workflow. This lets you build and configure an agent without leaving the workflow editor.
 * **Message existing agents**: Send messages to already created agents from a workflow. This lets you access published agents and integrate their capabilities into your automation.
 
+#### Message an Agent node
+
+Both options use the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node. Choose the agent to message and write the message to send. The agent runs its own reasoning loop, calls its own tools and skills, and returns a reply that the nodes after it can use.
+
+The node can also:
+
+* Stream the reply as the agent generates it, through connected Chat and Webhook triggers.
+* Reuse a session, so the agent remembers earlier messages. Without one, each execution starts a fresh conversation.
+* Constrain the reply to a JSON schema, so later nodes receive predictable fields.
+
+Each message counts as one execution, the same as any other workflow execution.
+
+To let an agent hand work to another agent, connect **Message an Agent Tool** to the **Tool** input of the AI Agent node.
+
 ### Self-hosted
 
 Agents run on self-hosted n8n from 2.32.3. There are two ways to set them up:

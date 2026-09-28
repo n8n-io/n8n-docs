@@ -116,12 +116,6 @@ n8n 3.0 removes the **Local File** and **URL** options from the **Source** param
 
 **What to do:** Import the sub-workflow into your instance and select it with the **Database** source, or paste its JSON with the **Define Below** source (**Parameter** on node versions 1.1 and older). Before you update, **Settings > Migration Report** lists the affected nodes.
 
-### Execute Sub-workflow node: Run once for each item mode removed
-
-n8n 3.0 removes the **Run once for each item** mode from the **Execute Sub-workflow** node. Workflows that use it fail until you update them.
-
-**What to do:** Use a **Loop Over Items** node before an **Execute Sub-workflow** node in **Run once with all items** mode instead.
-
 ### Always Output Data on nodes with several outputs
 
 With **Always Output Data** on, nodes with several outputs, for example **If** and **Switch**, now add an empty item only when every output is empty. Before, each empty output got an empty item, so branches ran when they shouldn't have.

@@ -10,6 +10,7 @@ nodeTitle: Message an Agent
 layout:
   description:
     visible: false
+status: preview
 tags:
   - tag: preview
     primary: true

@@ -69,6 +69,80 @@ n8n only supports plaintext values for secrets, not JSON objects.
 
 As long as you keep this store connected, you can reference its secrets in credentials.
 
+## Connect n8n to your secrets store from a config file <a href="#connect-n8n-to-your-secrets-store-from-a-config-file" id="connect-n8n-to-your-secrets-store-from-a-config-file"></a>
+
+<!--
+TODO before merging: add a "Feature availability" hint here once this ships,
+following the style guide's version convention:
+
+{% hint style="info" %}
+**Feature availability**
+
+Configuring external secrets vaults from a config file is available from n8n X.Y.Z.
+{% endhint %}
+
+Fill in the real n8n version number the feature ships in. Don't merge this
+page with the placeholder still in place.
+-->
+
+Instead of adding a vault through **Settings** > **External Secrets**, you can declare one or more vaults in a JSON file and have n8n create, update, or remove them automatically at startup. This is useful for infrastructure-as-code deployments, where you want your vault configuration to live alongside the rest of your n8n deployment config instead of being a manual setup step.
+
+Set [`N8N_EXTERNAL_SECRETS_CONFIG_FILE`](../../deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-secrets.md) to the path of a JSON file. On startup, n8n reads the file and applies it:
+
+```json
+{
+  "connections": [
+    {
+      "key": "vault-prod",
+      "type": "vault",
+      "isEnabled": true,
+      "projectIds": [],
+      "settings": {
+        "url": "https://vault.example.com",
+        "authMethod": "appRole",
+        "roleId": "59d6d1ca-47bb-4e7e-a40b-8be3bc5a0ba8",
+        "secretId": { "fromEnv": "VAULT_PROD_SECRET_ID" }
+      }
+    }
+  ]
+}
+```
+
+Each entry in `connections` has:
+
+- **`key`**: A unique name for the vault. This is the same name you'd otherwise enter when adding a vault through the UI, and it's the first segment in a `{{ $secrets.<vault-name>... }}` expression.
+- **`type`**: One of `awsSecretsManager`, `azureKeyVault`, `gcpSecretsManager`, `vault`, `infisical`, or `onePassword`.
+- **`isEnabled`** (optional, defaults to `true`): Whether n8n should connect to this vault.
+- **`projectIds`** (optional, defaults to `[]`): A list of [project](../manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md) IDs to share this vault with. Leave empty to keep the vault global.
+- **`settings`**: The provider-specific fields, using the same field names as the API. Refer to the provider sections below for the exact fields each provider needs.
+
+Any `settings` value can be a literal string, or an object that tells n8n where to read the value from instead of storing it directly in the file:
+
+- **`{ "fromEnv": "VARIABLE_NAME" }`**: Read the value from an environment variable at startup.
+- **`{ "fromFile": "/path/to/file" }`**: Read the value from a file at startup. n8n trims leading and trailing whitespace from the file's contents.
+
+Use `fromEnv` or `fromFile` for any secret value (for example, a Vault AppRole `secretId`, or an AWS `secretAccessKey`), so the raw secret never appears in the config file itself. This also means you can safely check the config file into version control.
+
+### Vaults created from a config file are read-only <a href="#vaults-created-from-a-config-file-are-read-only" id="vaults-created-from-a-config-file-are-read-only"></a>
+
+A vault that n8n creates from a config file shows a **Managed by config file** badge in **Settings** > **External Secrets**. You can't edit, delete, activate, or share it from the UI or the internal API. To change it, edit the config file and restart n8n.
+
+You can still test the connection or manually reload its secrets from the UI, since those don't change the vault's configuration.
+
+If you remove an entry from the config file and restart n8n, n8n deletes that vault. If you edit an entry, n8n updates the vault to match on the next restart. n8n only ever creates, updates, or deletes vaults that came from the config file — it never touches a vault you created through the UI or the internal API, even if it shares the same name as an entry in your file. If a config file entry's `key` matches an existing UI-created vault's name, n8n refuses to start and reports the conflict, rather than overwriting it.
+
+If the config file is invalid (for example, an unknown `type`, or a `projectIds` entry that doesn't exist), n8n refuses to start. The startup error lists every problem in the file, not just the first one it finds.
+
+### Multi-main deployments <a href="#multi-main-deployments" id="multi-main-deployments"></a>
+
+In a [multi-main setup](../../deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md#multi-main-setup), every `main` instance applies the config file at startup, not only the leader. n8n uses a database lock so that only one instance applies it at a time, and every instance still refuses to start if the config file is invalid.
+
+### Verify a config file vault through the Public API <a href="#verify-a-config-file-vault-through-the-public-api" id="verify-a-config-file-vault-through-the-public-api"></a>
+
+You can use the [Public API](../../connect/n8n-api/README.md) to list vaults, get a vault's details, test a vault's connection, or trigger a secrets reload. Refer to the [Endpoint reference](../../connect/n8n-api/api-reference.md) for the External Secrets resource.
+
+The Public API doesn't support creating, updating, or deleting vaults. The config file is the only way to manage config-file vaults; the UI and internal API remain the way to manage vaults you create there.
+
 ### 1Password <a href="#1password" id="1password"></a>
 
 {% hint style="info" %}

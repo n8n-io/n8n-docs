@@ -82,7 +82,9 @@ The secret goes straight from the page into the n8n credential. n8n Assistant ne
 - **Tabs:** n8n Assistant can only use tabs it opens itself and tabs you share when you connect. Shared tabs apply to the current connection only.
 - **Sites:** before n8n Assistant uses a new site, it asks **Allow n8n Assistant to access `<domain>`?** Select **Allow once**, **Always allow `<domain>`**, **Allow all domains**, or **Deny**.
 - **Secrets on pages:** n8n hides API keys, passwords, and other secrets from n8n Assistant when it reads a page. It also blocks screenshots of pages that show secrets.
-- **Admin permissions:** in **Settings** > **Assistant**, instance admins can set **Fetch URLs** and **Create credentials from a browser session** to **Allow**, **Ask first**, or **Block**.
+- **Admin permissions:** instance admins can change these in **Settings** > **Assistant** > **Permissions**. Each can be **Allow**, **Ask first** (default), or **Block**:
+  - **Fetch URLs** (in **Web**): controls the site prompt above. **Allow** skips it, and **Block** stops n8n Assistant from opening sites. This setting also applies to n8n Assistant's web access outside Browser Use.
+  - **Create credentials from a browser session** (in **Credentials**): controls whether n8n Assistant asks before it saves a credential it set up in your browser.
 
 {% hint style="warning" %}
 Browser Use acts with your signed-in sessions. Check which site and action n8n Assistant is asking about before you approve a request.

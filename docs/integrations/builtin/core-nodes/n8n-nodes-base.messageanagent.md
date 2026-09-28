@@ -27,6 +27,18 @@ Agents are in preview. To learn how to build, publish, and manage them, refer to
 
 Each message you send counts as one execution, the same as any other workflow execution.
 
+{% hint style="info" %}
+**Node versions**
+
+This page describes version 3.1. Some controls aren't available on earlier versions:
+
+* Version 1 uses a list-and-ID agent picker. Version 2 introduced the agent selector described below.
+* **Require Specific Output Format** was added in version 3.
+* **Session** settings were added in version 3.1.
+
+The node version is shown at the bottom of the node's settings panel.
+{% endhint %}
+
 ## Node parameters
 
 ### Agent
@@ -71,7 +83,9 @@ Select **Add Option** under **Advanced** to add these options.
 
 ### Enable Streaming
 
-Whether to stream the agent's response as it generates text, instead of waiting for the complete reply. Enabled by default. Output streams through connected Chat and Webhook triggers.
+Whether to stream the agent's response as it generates text, instead of waiting for the complete reply. Enabled by default.
+
+Streaming only reaches the caller if the trigger is set up for it. Set **Response Mode** to **Streaming** on the connected [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) or [Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) node. With any other response mode the workflow waits for the full reply, and turning this option on makes no visible difference.
 
 ### Invoke Agent
 

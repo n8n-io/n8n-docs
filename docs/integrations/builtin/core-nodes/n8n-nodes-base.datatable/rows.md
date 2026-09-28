@@ -64,6 +64,10 @@ Enter these parameters:
 - **Return All:** Enable to return all matching rows. Or, disable and enter a **Limit** for the number of rows to return, for example `50`.
 - **Order By:** Enable to define the column to order results on, and the direction (ascending or descending). Or, disable for no ordering of results.
 
+### Reading rows while the table changes
+
+**Get** reads large result sets in pages. The read continues if the number of matching rows changes. Changes during the read can cause missing or repeated rows. The output can also contain values read at different times. For a consistent result, prevent inserts, updates, and deletes until the read finishes.
+
 ## If row exists <a href="#if-row-exists" id="if-row-exists"></a>
 
 Use this operation to check whether a row matching the defined condition(s) exists in a data table. If a matching row is found, the node outputs the same input item it received, unchanged. If no matching rows exist, it outputs nothing.

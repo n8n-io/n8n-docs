@@ -83,7 +83,7 @@ Once enabled, the page groups settings into three sections:
 
 * **Connection details**: shows the **MCP status** and a **Connect** button that opens setup steps for your MCP client.
 * **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients, see [Exposing workflows to MCP clients](#exposing-workflows-to-mcp-clients) and [Exposing agents to MCP clients](#exposing-agents-to-mcp-clients). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
-* **Connected clients**: previews up to three of your own connected clients, each with the permissions you granted it, and shows how many clients currently have access. Select a client to open its details, or select **Revoke access** on its row to disconnect it. Select **View all** to review or revoke access for individual clients, see [Reviewing and revoking client access](#revoking-client-access).
+* **Connected clients**: previews up to three of your own connected clients and their permissions, and shows how many clients currently have access. Select a client to open its details, or **Revoke access** to disconnect it. Select **View all** to [review or revoke access for individual clients](#revoking-client-access).
 
 ![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](.gitbook/assets/mcp-enabled-screen.png)
 

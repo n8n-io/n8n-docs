@@ -154,7 +154,9 @@ The Channel Message and Chat Message **Delete** operations soft delete a message
 
 Both operations take a **Message ID**. To find it, copy the message link in Microsoft Teams: the message ID is the number at the end of the link's path, before the `?`. A chat message also needs the **Chat**. A channel message also needs the **Team** and **Channel**. To delete or restore a reply in a channel, add the **Parent Message ID** option and enter the ID of the message the reply belongs to, which is the `parentMessageId` parameter in the reply's link.
 
-Deleting and restoring channel messages needs the `ChannelMessage.ReadWrite` scope, which the **Teams OAuth2** credential requests by default from n8n 2.40.0. If you connected the credential before n8n 2.40.0, reconnect it so it picks up the scope. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** instead.
+Deleting and restoring channel messages needs the `ChannelMessage.ReadWrite` scope, which the **Teams OAuth2** credential requests by default from n8n 2.40.0. A credential you connected before n8n 2.40.0 doesn't have it, so **Delete** and **Undo Delete** fail with a 403 error until you reconnect the credential. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** before you reconnect.
+
+`ChannelMessage.ReadWrite` needs admin consent. If you aren't a Microsoft Entra administrator, ask one to grant admin consent for the app's new permissions first, for example by reconnecting the credential themselves and selecting **Consent on behalf of your organization**. If you reconnect without that consent, Microsoft stops at **Approval required** and the credential is left without a token, so every operation fails, not only the delete.
 
 Chat messages use the `Chat.ReadWrite` scope, which the credential already includes. With the **Microsoft OAuth2 (Graph)** credential, add the scopes yourself.
 
@@ -162,7 +164,7 @@ The **Delete** and **Undo Delete** operations aren't available with the **Servic
 
 ## Chats and chat members
 
-The Chat resource works with the signed-in user's chats. **Get Many** lists them, **Get** returns one chat that you pick from the list or give by ID, and **Create** starts a new one. A chat ID starts with `19:`. You find it after `conversations/` in the address bar of the Teams web app, or in the `id` field of a Chat **Get Many** result. n8n adds you to a new chat automatically, so list only the other people under **Other Participants**. **Chat Type** sets what you create:
+The Chat resource (available from n8n 2.41.0) works with the signed-in user's chats. **Get Many** lists them, **Get** returns one chat that you pick from the list or give by ID, and **Create** starts a new one. A chat ID starts with `19:`. You find it after `conversations/` in the address bar of the Teams web app, or in the `id` field of a Chat **Get Many** result. n8n adds you to a new chat automatically, so list only the other people under **Other Participants**. **Chat Type** sets what you create:
 
 * **One-on-One**: a chat between you and one other person. If you already have a chat with that person, Microsoft Teams returns the existing chat instead of creating a new one.
 * **Group**: a chat with one or more other people. You can give it a **Topic**, and add or remove members later with the Chat Member operations.

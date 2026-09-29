@@ -37,11 +37,9 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 Agents are available on:
 
 - **n8n Cloud:** All plans
-- **Self-hosted:** available with extra setup, see [Self-hosted](build-and-manage-agents.md#self-hosted)
+- **Self-hosted:** Available from n8n 2.32.3 with extra setup, see [Self-hosted](build-and-manage-agents.md#self-hosted)
 
 They aren't available on self-hosted Enterprise yet.
-
-Available from n8n 2.32.3.
 {% endhint %}
 
 {% hint style="info" %}
@@ -289,6 +287,12 @@ There are two ways to set up agents on self-hosted n8n:
 
 * **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
 * **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
+
+{% hint style="warning" %}
+**Feature availability**
+
+Agents are available on all self-hosted plans except Enterprise from n8n 2.32.3. Support for self-hosted Enterprise is coming soon.
+{% endhint %}
 
 {% hint style="warning" %}
 Queue mode isn't supported for agents yet, and connecting channels (such as Telegram) can fail. Run agents in regular mode for now.

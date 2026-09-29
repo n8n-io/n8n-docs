@@ -78,7 +78,7 @@ You can restore a previous workflow version, or make a copy of it:
    * **Clone to new workflow**: create a new workflow based on the selected version.
    * **Open version in new tab**: open a second tab displaying the selected version. Use this to compare versions.
    * **Download**: download the version as JSON.
-   * **Name version**: give the version a name and description. n8n never prunes named versions automatically. Refer to [Naming versions](../understand-workflows/save-and-publish-workflows.md#naming-versions) for more details. Named versions are available on n8n Cloud Pro, Enterprise, and self-hosted Business, Enterprise.
+   * **Name version**: give the version a name and description. n8n never prunes named versions automatically. Refer to [Naming versions](../understand-workflows/save-and-publish-workflows.md#naming-versions) for more details. Named versions are available on n8n Cloud Pro and Enterprise, and self-hosted Business and Enterprise.
 
 ## Related resources
 

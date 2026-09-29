@@ -27,7 +27,7 @@ This page describes n8n's data privacy practices.
 
 ### Data processing agreement <a href="#data-processing-agreement" id="data-processing-agreement"></a>
 
-For n8n Cloud, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Agreement](https://n8n.io/legal/#data) as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms).
+For Cloud versions of n8n, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Agreement](https://n8n.io/legal/#data) as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms).
 
 The n8n Data Processing Agreement includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en). These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
 
@@ -36,7 +36,7 @@ You can find a list of n8n sub-processors [here](https://n8n.io/legal/sub-proces
 {% hint style="info" %}
 **Self-hosted n8n**
 
-For self-hosted, n8n is neither a Controller nor a Processor, as we don't manage your data
+For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
 {% endhint %}
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
@@ -156,7 +156,7 @@ More details can be found on the [n8n Assistant documentation page](https://app.
 
 #### When n8n shares data <a href="#when-n8n-shares-data" id="when-n8n-shares-data"></a>
 
-Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default on n8n Cloud. On self-hosted, it's disabled by default; you enable it by adding `instance-ai` to `N8N_ENABLED_MODULES`. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the n8n Assistant, ensuring no unnecessary data sharing occurs.
+Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the n8n Assistant, ensuring no unnecessary data sharing occurs.
 
 #### What n8n shares <a href="#what-n8n-shares" id="what-n8n-shares"></a>
 

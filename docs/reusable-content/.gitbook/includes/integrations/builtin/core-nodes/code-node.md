@@ -20,13 +20,11 @@ This page gives usage information about the Code node. For more guidance on codi
 For usage examples and templates to help you get started, refer to n8n's [Code integrations](https://n8n.io/integrations/code/) page.
 {% endhint %}
 
-{% hint style="warning" %}
-**Feature availability**
+{% hint style="info" %}
+**Function and Function Item nodes**
 
-The Function and Function Item nodes are deprecated from n8n 0.198.0, replaced by the Code node.
+The Code node replaces the Function and Function Item nodes from n8n 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
 {% endhint %}
-
-If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
 
 ## Usage <a href="#usage" id="usage"></a>
 
@@ -74,7 +72,7 @@ The Code node editing environment supports time-saving and useful keyboard short
 {% hint style="warning" %}
 **Feature availability**
 
-Pyodide is removed from n8n 2.0.
+Pyodide is removed from n8n 2.0. n8n no longer supports this feature.
 {% endhint %}
 
 n8n added Python support in n8n 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.

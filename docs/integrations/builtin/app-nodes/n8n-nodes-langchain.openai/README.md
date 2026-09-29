@@ -26,9 +26,15 @@ On n8n Cloud, you can use the OpenAI node with [Gateway credits](https://app.git
 
 Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
 
-The OpenAI node replaces the OpenAI Assistant node, available from n8n 1.29.0. The OpenAI node V2 (available from n8n 1.117.0) supports the Responses API and drops support for [the Assistants API, which OpenAI has announced plans to retire](https://platform.openai.com/docs/assistants/migration).
-
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
+
+{% hint style="warning" %}
+**Feature availability**
+
+The OpenAI node V2 is available from n8n 1.117.0. It supports the OpenAI Responses API, and removes support for [the Assistants API, which OpenAI has announced plans to retire](https://platform.openai.com/docs/assistants/migration).
+
+From n8n 1.29.0, the OpenAI node replaces the OpenAI assistant node.
+{% endhint %}
 
 {% hint style="info" %}
 **Credentials**

@@ -164,7 +164,9 @@ Don't paste sensitive data into chat unless it's necessary for the task. AI-gene
 
 ## Credit usage
 
-n8n Assistant uses credits based on the tokens processed by the underlying AI model.
+On n8n Cloud, n8n Assistant uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits), based on the tokens processed by the underlying AI model. Your plan includes a monthly allowance of Assistant credits that resets on the first day of every month. If you use it up, the instance owner can buy extra credits to keep using n8n Assistant until the next reset. Everyone on the instance shares one balance.
+
+Assistant credits and [Gateway credits](../understand-workflows/use-gateway-credits.md) are separate. Assistant credits pay for your conversations with n8n Assistant, not for the AI models your workflows or agents call when they run. Gateway credits pay for those model calls, not for n8n Assistant. Topping up one doesn't add to the other.
 
 Longer conversations, larger workflows, debugging sessions, and repeated iterations use more credits.
 
@@ -175,9 +177,9 @@ To reduce unnecessary usage:
 - Review n8n Assistant's plan before asking it to build.
 - Avoid asking it to regenerate the same workflow without adding new guidance.
 
-To get more credits during Preview, upgrade your plan. More ways to top up are coming.
+To check your balance, open the credits menu in the n8n Assistant panel. For your plan's monthly allowance, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
+Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n Assistant runs on your own AI provider account. Refer to [Set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant).
 
 ## Related resources
 

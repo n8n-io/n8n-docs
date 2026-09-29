@@ -28,7 +28,7 @@ On this page, you'll find the node parameters for the Embeddings Google Vertex n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/google/service-account.md).
+Refer to the [Google Service Account documentation](../../credentials/google/service-account.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

@@ -1,8 +1,9 @@
 name: GitBook preview links
 # GitBook's own PR checks link to the space landing page, not the page a PR
-# changed. When a GitBook preview build succeeds, this posts (and keeps updated)
-# a single PR comment with a deep link to each changed page. See
-# .github/scripts/gitbook_preview_links.py.
+# changed. On any settled GitBook build, this posts (and keeps updated) a single
+# PR comment: a deep link to each changed page when the build succeeded, or a
+# "couldn't build" note when it failed, so the comment is never left pointing at
+# a revision that no longer builds. See .github/scripts/gitbook_preview_links.py.
 #
 # Security: triggered by `status`, this job has a write token, so it must never
 # execute code from the (possibly forked) PR head. It checks out the trusted
@@ -28,10 +29,17 @@ concurrency:
 
 jobs:
   preview-links:
-    # Only for a successful GitBook status, or a manual dry-run.
+    # Any settled GitBook status, or a manual dry-run. `failure`/`error` matter
+    # as much as `success`: without them a build that broke after a good one
+    # fires nothing, and the comment keeps deep links into a revision GitBook
+    # has since failed on. The script renders a "couldn't build" note for those
+    # spaces, which also gives the upsert below a non-empty body to post —
+    # gating on success alone would leave the stale comment in place.
+    # Still unhandled: a `pending` that never settles fires nothing at all.
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (github.event.state == 'success' && startsWith(github.event.context, 'GitBook ('))
+      (contains(fromJSON('["success", "failure", "error"]'), github.event.state)
+      && startsWith(github.event.context, 'GitBook ('))
     runs-on: ubuntu-latest
     steps:
       - name: Resolve the open PR for this commit
@@ -86,7 +94,14 @@ jobs:
           # --slurp + `add`: a multi-page PR paginates into several JSON arrays;
           # merge them into one array the script can parse.
           gh api "repos/$GH_REPO/pulls/$PR/files" --paginate --slurp | jq 'add' > /tmp/files.json
-          gh api "repos/$GH_REPO/commits/$SHA/status" > /tmp/status.json
+          # The *history* (`/statuses`), not the collapsed `/status`: GitBook
+          # can post a revision's `success` and `pending` in the same second
+          # with `success` first, and `/status` keeps only the newest row per
+          # context — so a finished build reads as pending forever and the
+          # comment freezes on the "still building" placeholder (#5461). The
+          # script re-collapses the history itself, treating pending as a
+          # non-verdict. --paginate: a re-synced sha can outgrow one page.
+          gh api "repos/$GH_REPO/commits/$SHA/statuses" --paginate --slurp | jq 'add' > /tmp/status.json
 
           # Reflect the PR precisely on the trusted checkout before running the
           # script: overlay changed files' PR-head *content* (data, never code),

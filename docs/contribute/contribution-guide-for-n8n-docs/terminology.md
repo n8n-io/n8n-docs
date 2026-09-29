@@ -128,3 +128,9 @@ To refer to every tier at once, write "All plans" or "All editions" rather than 
 | --- | --- |
 | n8n (lowercase, always) | N8n, N8N, n8N |
 | GitHub, npm, JavaScript, OAuth2 | Github, NPM, Javascript, oAuth |
+
+## Related resources
+
+* [Contribution guide for n8n Docs](./)
+* [Style guide for n8n Docs](style-guide-for-n8n-docs.md)
+* [Agent-friendly docs](agent-friendly-docs.md)

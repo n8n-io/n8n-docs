@@ -7,6 +7,7 @@ membership, per-space revisions, title extraction, reusable resolution
 Run: python3 .github/scripts/tests/test_gitbook_preview_links.py
 """
 import importlib.util
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -169,6 +170,96 @@ def main():
     ]}
     check("failed build not counted as pending", gb.gitbook_spaces(fail_status) == set())
 
+    # Regression (DOC-2352): a page in a FAILED space used to fall through to
+    # the "aren't in the nav" footnote, blaming the author for a SUMMARY entry
+    # that was never broken. It must be reported as a failed build instead.
+    fail_spaces = gb.failed_spaces(fail_status, gb.load_spaces(fail_status), set())
+    check("failed space detected", fail_spaces == {"spacea"})
+    out_fail = gb.render([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                         {}, gb.load_reusable_index(), set(), fail_spaces)
+    check("page in a failed space blames the build, not the nav",
+          "couldn't build the preview for `spacea`" in out_fail
+          and "aren't in the nav" not in out_fail)
+
+    check("failed note doesn't promise an update that isn't coming",
+          "still building" not in out_fail)
+
+    # The all-failed emission decision lives in main()'s guard, not in render(),
+    # so exercise the real entry point: drop `not failed` from that guard and
+    # main() prints nothing, has_body stays unset, the upsert is skipped, and a
+    # stale comment survives. A render()-only check can't catch that.
+    def run_main(changed, statuses):
+        import contextlib, io, json, tempfile
+        with tempfile.TemporaryDirectory() as d:
+            cf, sf = Path(d) / "c.json", Path(d) / "s.json"
+            cf.write_text(json.dumps(changed), encoding="utf-8")
+            sf.write_text(json.dumps(statuses), encoding="utf-8")
+            buf = io.StringIO()
+            argv = sys.argv
+            sys.argv = ["gitbook_preview_links.py", str(cf), str(sf)]
+            try:
+                with contextlib.redirect_stdout(buf):
+                    rc = gb.main()
+            finally:
+                sys.argv = argv
+            return rc, buf.getvalue()
+
+    rc, body = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                        fail_status["statuses"])
+    check("main() exits 0 on an all-failed build", rc == 0)
+    check("main() emits a body for an all-failed build so the upsert runs",
+          body.strip() != "" and "couldn't build the preview" in body)
+
+    # And the opposite: no GitBook statuses at all must stay silent, or we'd
+    # post preview comments on PRs that have no preview.
+    rc_q, body_q = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                            [{"id": 1, "context": "cubic", "state": "failure"}])
+    check("main() stays silent when there's no GitBook build at all",
+          rc_q == 0 and body_q == "")
+
+    # Regression: an editor-only success (live context FAILED) left a space
+    # record with no `live_base`. render() treated it as linkable and
+    # deep_link() blew up with KeyError, taking the whole run down instead of
+    # reporting the failed build.
+    editor_only = [
+        {"id": 20, "context": "GitBook (./docs/spacea)", "state": "success",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+    ]
+    eo_spaces = gb.load_spaces(editor_only)
+    check("editor-only success isn't linkable", gb.linkable_spaces(eo_spaces) == set())
+    eo_failed = gb.failed_spaces(editor_only, gb.linkable_spaces(eo_spaces), set())
+    check("editor-only success counts as a failed space", eo_failed == {"spacea"})
+    rc_eo, body_eo = run_main([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                              editor_only)
+    check("editor-only success renders the failure note instead of crashing",
+          rc_eo == 0 and "couldn't build the preview" in body_eo)
+
+    # A space that failed but ALSO has a successful context isn't "failed":
+    # the successful build is what we link, so it must not be double-reported.
+    mixed = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    mixed_spaces = gb.load_spaces(mixed)
+    check("a space with one good context isn't reported as failed",
+          gb.failed_spaces(mixed, mixed_spaces, set()) == set())
+
+    # Likewise a space still building somewhere else shouldn't be called failed.
+    building = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    b_spaces = gb.load_spaces(building)
+    b_pending = gb.gitbook_spaces(building) - set(b_spaces)
+    check("pending beats failed for the same space",
+          gb.failed_spaces(building, b_spaces, b_pending) == set())
+
     # All-pending (no space succeeded yet): main() must still be able to render a
     # building note rather than exit empty. Exercise via render with empty spaces.
     out_allpend = gb.render(
@@ -192,6 +283,77 @@ def main():
           and "aren't in the nav" not in out_nondocs)
     check("a real docs page alongside it still renders",
           "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_nondocs)
+
+    # Regression (DOC-2350): the workflow now feeds the full status HISTORY
+    # (`/commits/:sha/statuses`, newest first) instead of the collapsed
+    # `/status`. GitBook posted #5461's `success` and `pending` in the same
+    # second with `success` FIRST, so latest-row-wins read a finished build as
+    # pending forever. Collapsing must treat pending as a non-verdict.
+    ooo_status = [
+        {"id": 884, "context": "GitBook (./docs/spacea)", "state": "pending",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+        {"id": 797, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "pending",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 428, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/REVA/"},
+        {"id": 167, "context": "GitBook (./docs/spacea)", "state": "success",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/REVA/"},
+    ]
+    ooo_spaces = gb.load_spaces(ooo_status)
+    check("success posted before pending still counts as built",
+          set(ooo_spaces) == {"spacea"})
+    check("out-of-order build isn't reported as still pending",
+          gb.gitbook_spaces(ooo_status) - set(ooo_spaces) == set())
+    out_ooo = gb.render([{"status": "modified", "filename": "docs/spacea/page-one.md"}],
+                        ooo_spaces, gb.load_reusable_index())
+    check("out-of-order build renders a real link, not the building note",
+          "https://docs.n8n.io/spacea/~/revisions/REVA/page-one" in out_ooo
+          and "still building" not in out_ooo)
+
+    # Ordering comes from the status id, not the position in the array.
+    shuffled = list(reversed(ooo_status))
+    check("id ordering beats array order", gb.load_spaces(shuffled) == ooo_spaces)
+
+    # History keeps every row, so pending->failure now arrives with the pending
+    # row still present. Failure is terminal, so the space must not look pending.
+    pend_then_fail = [
+        {"id": 20, "context": "GitBook (./docs/spacea)", "state": "failure",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+        {"id": 10, "context": "GitBook (./docs/spacea)", "state": "pending",
+         "target_url": "https://app.gitbook.com/s/SA/~/diff/~/revisions/X/"},
+    ]
+    check("pending in history doesn't resurrect a failed build",
+          gb.gitbook_spaces(pend_then_fail) == set())
+
+    # A rebuild that regressed: the newest terminal row wins, so we don't link a
+    # revision GitBook has since failed on.
+    succ_then_fail = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "failure",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("later failure supersedes an earlier success", gb.load_spaces(succ_then_fail) == {})
+
+    # `error` is terminal too, not just success/failure.
+    succ_then_error = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "error",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("later error supersedes an earlier success", gb.load_spaces(succ_then_error) == {})
+    check("errored build not counted as pending", gb.gitbook_spaces(succ_then_error) == set())
+
+    # Two successful builds of the same sha: the newest revision wins.
+    two_success = [
+        {"id": 20, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/NEW/"},
+        {"id": 10, "context": "GitBook (./docs/spacea) - docs.n8n.io/spacea/", "state": "success",
+         "target_url": "https://docs.n8n.io/spacea/~/revisions/OLD/"},
+    ]
+    check("newest success revision wins over an older one",
+          "NEW" in gb.load_spaces(two_success)["spacea"]["live_base"])
 
     failed = [n for n, ok in checks if not ok]
     for n, ok in checks:

@@ -26,7 +26,7 @@ On this page, you'll find a list of events the Twilio Trigger node can respond t
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/twilio.md).
+Refer to the [Twilio credentials documentation](../credentials/twilio.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -48,7 +48,7 @@ It can take Twilio up to thirty minutes to generate a summary for a completed ca
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Twilio. You can find the node docs [here](../app-nodes/n8n-nodes-base.twilio.md).
+n8n provides an app node for Twilio. Refer to the [Twilio node documentation](../app-nodes/n8n-nodes-base.twilio.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/twilio/) on n8n's website.
 

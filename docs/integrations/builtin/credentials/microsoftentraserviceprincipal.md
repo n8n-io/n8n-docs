@@ -57,14 +57,14 @@ Refer to Microsoft's documentation for more information:
 
 With the OAuth2 Microsoft credentials, nodes act as the user who signed in. With the Service Principal credential, there's no signed-in user, which changes how you use the nodes:
 
-- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, and the **Task** operations hide the **Team** picker and replace the **Plan**, **Bucket**, and **Assigned To** pickers with plain ID fields.
+- **You choose who or what to act on.** Each node shows an extra required parameter when you select this credential: **Access As** (a user or drive) in Microsoft OneDrive, Microsoft OneDrive Trigger, and Microsoft Excel (OneDrive), **Mailbox** in Microsoft Outlook and Microsoft Outlook Trigger, and **User** in Microsoft To Do. Enter a user principal name (UPN), for example `jane@contoso.com`, or a user object ID. In the **Access As** field you can instead select **Drive** and enter a drive ID. There's no list picker for these fields: paste the value directly. In the Microsoft Teams nodes, the **Authentication** option is labelled **Service Principal (App-Only)**, the **Task** operations hide the **Team** picker and replace the **Plan**, **Bucket**, and **Assigned To** pickers with plain ID fields, and the **Online Meeting** operations add an **Organizer** field for the user whose meetings the app manages.
 - **Permissions apply tenant-wide.** Application permissions aren't scoped to one user. For example, the `Mail.Send` application permission lets the app send as any mailbox in the tenant unless you restrict it with an [Exchange Online application access policy](https://learn.microsoft.com/en-us/graph/auth-limit-mailbox-access). n8n recommends scoping tenant-wide mail permissions with an application access policy.
 - **Pickers see the whole tenant.** For example, the Microsoft Teams **Team** picker lists every team in the organization, not just teams the app has joined.
 - **Some operations aren't available.** The nodes hide anything that only exists for a signed-in user, such as drive search or Teams chats, or block it with an explanatory error. Refer to [Operations not available with app-only access](#operations-not-available-with-app-only-access).
 
 ## Set up the app registration
 
-Complete these steps in the Microsoft Entra admin center before you create the credential in n8n.
+Complete these steps in the Microsoft Entra admin center before you create the credential in n8n. To set up an app registration for the Microsoft SharePoint node from the command line instead, refer to [Provision a SharePoint app registration with the Azure CLI](microsoftentraserviceprincipal-sharepoint.md).
 
 ### Register an app
 
@@ -80,12 +80,11 @@ Complete these steps in the Microsoft Entra admin center before you create the c
 1. In your app registration, select **API permissions** > **Add a permission** > **Microsoft Graph**.
 2. Select **Application permissions**. Don't select **Delegated permissions**: app-only access ignores delegated scopes, and the permission names differ between the two types.
 3. Add the permissions for the nodes you plan to use. Refer to [Required application permissions by node](#required-application-permissions-by-node).
-4. Add `Organization.Read.All` (or the broader `Directory.Read.All`). The n8n credential test reads your organization from Microsoft Graph, so it fails without one of these.
-5. Select **Add permissions**.
+4. Select **Add permissions**.
 
 ### Grant admin consent
 
-1. On the **API permissions** page, select **Grant admin consent for \<your tenant\>** and confirm.
+1. On the **API permissions** page, select **Grant admin consent for `<your-tenant>`** and confirm.
 2. Check that the **Status** column shows **Granted** for every permission.
 
 {% hint style="warning" %}
@@ -114,7 +113,7 @@ In n8n, create a new **Microsoft Entra Service Principal** credential and fill i
 
 To authenticate with a certificate instead of a client secret, set **Authentication** to **Certificate** and paste your private key and certificate. The certificate must be uploaded to the app registration under **Certificates & secrets**.
 
-Save and test the credential. The connection test calls Microsoft Graph's `/v1.0/organization` endpoint, so it needs the admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission to pass, even if you granted all the node permissions.
+Save and test the credential. From n8n 2.40.0, the connection test only checks that the app can sign in, so it needs no application permission of its own. A missing permission or missing admin consent passes the test and fails when a node runs instead. Before n8n 2.40.0, the test read your organization from Microsoft Graph, so it also needed the `Organization.Read.All` (or `Directory.Read.All`) application permission.
 
 ## Required application permissions by node
 
@@ -122,7 +121,7 @@ Add the application permissions for every node you plan to use, then grant admin
 
 | Node | Required application permissions |
 |---|---|
-| All nodes (credential test) | `Organization.Read.All` or `Directory.Read.All` |
+| All nodes, before n8n 2.40.0 (credential test) | `Organization.Read.All` or `Directory.Read.All`. From n8n 2.40.0, the credential test needs no application permission. |
 | Microsoft OneDrive and Microsoft OneDrive Trigger | `Files.ReadWrite.All` (`Files.Read.All` is enough for read-only operations and the trigger) |
 | Microsoft Excel (OneDrive) | `Files.ReadWrite.All` |
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
@@ -142,6 +141,9 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 | Channel: Update | `ChannelSettings.ReadWrite.All` |
 | Channel: Delete | `Channel.Delete.All` |
 | Channel Message: Get, Get Many, Get Many Replies | `ChannelMessage.Read.All` |
+| Online Meeting: Create, Create or Get, Update, Delete | `OnlineMeetings.ReadWrite.All`, plus an application access policy for the organizer. Refer to [Allow app-only online meetings](#allow-app-only-online-meetings). |
+| Online Meeting: Get | `OnlineMeetings.Read.All` (or `OnlineMeetings.ReadWrite.All`), plus an application access policy for the organizer |
+| Online Meeting: Organizer picked from the list or given by user principal name | `User.Read.All`. Not needed when you enter the organizer's object ID. |
 | Task: all operations | `Tasks.ReadWrite.All` |
 | Trigger: New Channel | `Channel.ReadBasic.All` |
 | Trigger: New Channel Message | `ChannelMessage.Read.All` |
@@ -175,13 +177,46 @@ Content-Type: application/json
 }
 ```
 
-Use the `read` role for read-only access, or `write` for the node's write operations. You can send the request from [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) or any tool that can call Microsoft Graph. SharePoint administrators can use PnP PowerShell's [`Grant-PnPEntraIDAppSitePermission`](https://pnp.github.io/powershell/cmdlets/Grant-PnPEntraIDAppSitePermission.html) instead.
+Use the `read` role for read-only access, or `write` for the node's write operations. You can send the request from [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) or any tool that can call Microsoft Graph. SharePoint administrators can use PnP PowerShell's [`Grant-PnPEntraIDAppSitePermission`](https://pnp.github.io/powershell/cmdlets/Grant-PnPEntraIDAppSitePermission.html) instead. For the whole path from an empty tenant to a granted site, refer to [Provision a SharePoint app registration with the Azure CLI](microsoftentraserviceprincipal-sharepoint.md).
 
 Whoever sends the request needs permission to manage site permissions: in Graph Explorer, open **Modify permissions** and consent to `Sites.FullControl.All` before sending. A 403 `Access denied` response to this request means the account or tool sending it lacks that permission, not the app you're granting access to.
 
 To find a site's `<site-id>`, request it by hostname and path: `GET https://graph.microsoft.com/v1.0/sites/contoso.sharepoint.com:/sites/mysite`.
 
 With `Sites.Selected`, the nodes can't search or list sites, because Microsoft Graph doesn't support site discovery without a tenant-wide read permission. Choose the site by pasting its URL or ID instead. A missing per-site grant surfaces as a 403 error on the operation, naming the permission it needs.
+
+## Allow app-only online meetings
+
+With this credential, the Microsoft Teams node's Online Meeting operations act on behalf of the user you select in the node's **Organizer** field. The Microsoft Teams node supports this from n8n 2.40.0. Microsoft Graph only allows it when a Teams administrator has granted the app an [application access policy](https://learn.microsoft.com/en-us/graph/cloud-communication-online-meeting-application-access-policy) for that user. Without one, every Online Meeting operation fails with a 403 error, and n8n reports that the request needs the `OnlineMeetings.ReadWrite.All` permission and an application access policy for the organizer.
+
+To set it up:
+
+1. On the app registration, add the `OnlineMeetings.ReadWrite.All` application permission and grant admin consent. `OnlineMeetings.Read.All` is enough if you only use the **Get** operation. Add `User.Read.All` too if you want to pick the organizer from the list or enter a user principal name instead of an object ID.
+2. Install the [Microsoft Teams PowerShell module](https://learn.microsoft.com/en-us/microsoftteams/teams-powershell-install) and sign in as a Teams administrator:
+
+	```powershell
+	Connect-MicrosoftTeams
+	```
+
+3. Create an application access policy that lists your app registration's Application (client) ID:
+
+	```powershell
+	New-CsApplicationAccessPolicy -Identity n8n-online-meetings -AppIds "<application-client-id>" -Description "Lets n8n manage online meetings"
+	```
+
+4. Grant the policy to each user the node should act for, by their user object ID:
+
+	```powershell
+	Grant-CsApplicationAccessPolicy -PolicyName n8n-online-meetings -Identity "<user-object-id>"
+	```
+
+	To cover every user in the tenant who doesn't have their own policy, grant it tenant-wide instead:
+
+	```powershell
+	Grant-CsApplicationAccessPolicy -PolicyName n8n-online-meetings -Global
+	```
+
+Policy changes can take up to 30 minutes to take effect. A user holds one application access policy at a time, so granting a new policy replaces the one they had. If several apps need access, list all their IDs in the same policy.
 
 ## Operations not available with app-only access
 
@@ -191,7 +226,7 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 
 - **Microsoft OneDrive**: File: Search and Folder: Search. Microsoft Graph only offers drive search to signed-in users.
 - **Microsoft Excel (OneDrive)**: Workbook: Get Many, and searching for a workbook by name in the **Workbook** field. Set the field to **By ID** instead.
-- **Microsoft Teams**: the whole Chat Member, Chat Message, and Online Meeting resources. Channel Message: Create and Reply. Task: Get Many in Group Member mode.
+- **Microsoft Teams**: the whole Chat, Chat Member, and Chat Message resources. Channel Message: Create, Reply, Delete, and Undo Delete. Task: Get Many in Group Member mode. Online Meeting operations are available, but need an application access policy. Refer to [Allow app-only online meetings](#allow-app-only-online-meetings).
 - **Microsoft Teams Trigger**: the New Chat and New Chat Message events, and the watch-all options. Pick a specific team or channel instead.
 
 <!-- vale on -->
@@ -219,8 +254,9 @@ n8n derives the matching sign-in endpoint automatically, for example `login.micr
 
 Here are common errors and issues with the Microsoft Entra Service Principal credentials:
 
-- **The credential test fails even though you granted the node permissions.** The connection test calls `GET /v1.0/organization`, which needs an admin-consented `Organization.Read.All` (or `Directory.Read.All`) application permission. Add it and grant admin consent.
+- **The credential test passes but every operation fails.** From n8n 2.40.0, the connection test only checks that the app can sign in, not which permissions it holds. A missing application permission, missing admin consent, or a missing per-site grant only surfaces when a node runs.
 - **Every operation fails with a generic permissions error.** This almost always means a missing application permission or missing admin consent. Refer to the warning in [Grant admin consent](#grant-admin-consent). The Microsoft SharePoint (version 2) and Microsoft Excel (SharePoint) nodes show a clearer message instead, naming the permission the operation needs: "The app registration is missing a consented application permission for this operation."
 - **Authentication fails with "Microsoft Entra authentication did not return an access token".** Microsoft rejected the token exchange, for example AADSTS7000215 (invalid client secret), AADSTS7000222 (expired client secret), or AADSTS700027 (rejected certificate assertion). Check that you pasted the client secret's **Value** rather than its Secret ID, that the secret hasn't expired, and, for certificate authentication, that the private key matches the certificate uploaded to the app registration.
 - **Permission or secret changes don't take effect right away.** n8n caches the access token. Retest the credential after granting consent or rotating a secret, and recreate it if the cached token keeps failing.
 - **"Microsoft Entra tenant ID is not a valid GUID or domain."** Enter the Directory (tenant) ID GUID from the app registration's **Overview** page, or a verified domain such as `contoso.onmicrosoft.com`. Don't enter a URL.
+- **Online Meeting operations in the Microsoft Teams node fail with a 403 error.** The app registration needs the `OnlineMeetings.ReadWrite.All` application permission and a Microsoft Teams application access policy for the organizer. Refer to [Allow app-only online meetings](#allow-app-only-online-meetings). Policy changes can take up to 30 minutes to take effect.

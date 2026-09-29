@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/bitbucket.md).
+Refer to the [Bitbucket credentials documentation](../credentials/bitbucket.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -20,7 +20,7 @@ layout:
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chat Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+- [Azure AI Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 - [Embeddings Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

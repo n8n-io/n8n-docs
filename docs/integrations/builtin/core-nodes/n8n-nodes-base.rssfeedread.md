@@ -35,5 +35,5 @@ Use the RSS Read node to read data from RSS feeds published on the internet.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](n8n-nodes-base.rssfeedreadtrigger.md).
+n8n provides a trigger node for RSS Read. Refer to the [RSS Feed Trigger node documentation](n8n-nodes-base.rssfeedreadtrigger.md) for more information.
 

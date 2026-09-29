@@ -11,11 +11,20 @@ layout:
 
 # Test a node <a href="#test-a-node" id="test-a-node"></a>
 
-This section contains information about testing your node.
+This section contains information about testing your node. You can test nodes manually and automatically. You should use both testing methods before publishing your node.
 
-There are two ways to test your node:
 
-* Manually, by [running it on your own machine](run-your-node-locally.md) within a local n8n instance.
-* Automatically, using the [linter](node-linter.md).
+## In this section
 
-You should use both methods before publishing your node.
+* [Run your node locally](run-your-node-locally.md): manually test your node on your own machine, within a local n8n instance.
+* [Node linter](node-linter.md): automatically test your node against n8n's linting rules.
+* [Troubleshooting](troubleshooting.md): common issues you might encounter, and how to fix them.
+
+
+## Related resources
+
+* [Create nodes](../)
+* [Overview](../overview.md)
+* [Plan your node](../plan-your-node/README.md)
+* [Build your node](../build-your-node/README.md)
+* [Deploy your node](../deploy-your-node/README.md)

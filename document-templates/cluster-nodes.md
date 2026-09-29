@@ -18,7 +18,7 @@ Use the _Name_ node to automate work in _Name_ and integrate _Name_ with other a
 On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
+Refer to the [_Name_ credentials documentation](/integrations/builtin/credentials/_Name_.md) for authentication information for this node.
 ///
 
 ## Node parameters

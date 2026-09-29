@@ -38,7 +38,7 @@ The Send Email node sends emails using an SMTP email server.
 {% hint style="info" %}
 **Credential**
 
-You can find authentication information for this node [here](../credentials/send-email/README.md).
+Refer to the [Send Email credentials documentation](../credentials/send-email/README.md) for authentication information for this node.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>

@@ -26,7 +26,7 @@ On this page, you'll find a list of events the MailerLite Trigger node can respo
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/mailerlite.md).
+Refer to the [MailerLite credentials documentation](../credentials/mailerlite.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

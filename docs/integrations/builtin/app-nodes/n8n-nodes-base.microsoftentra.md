@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the Microsoft Entra ID node suppo
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/microsoftentra.md).
+Refer to the [Microsoft Entra ID credentials documentation](../credentials/microsoftentra.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

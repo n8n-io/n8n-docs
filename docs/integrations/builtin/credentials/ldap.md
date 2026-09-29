@@ -33,7 +33,9 @@ Some common LDAP providers include:
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- LDAP server details
+- **LDAP server details**: Connect with a **Binding DN** and **Binding Password** using a simple bind.
+
+n8n supports simple bind only. It doesn't support SASL binds, including GSSAPI and Kerberos. If your LDAP server requires Kerberos-based binding, common in Active Directory environments, you can't use this credential to connect to it.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -53,5 +55,8 @@ To configure this credential, you'll need:
     - `None`
     - `TLS`
     - `STARTTLS`
-- _Optional:_ Enter a numeric value in seconds to set a **Connection Timeout**.
+- If you select `TLS` or `STARTTLS`, two more settings appear:
+    - **Ignore SSL/TLS Issues**: Turn this on to connect even when the SSL/TLS certificate check on your LDAP server fails.
+    - **CA Certificate**: Paste the certificate authority certificate for your LDAP server.
+- _Optional:_ Enter a numeric value in seconds to set the **Timeout**. The default is 300.
 

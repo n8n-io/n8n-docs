@@ -226,3 +226,10 @@ export class FriendGrid implements INodeType {
   }
 }
 ```
+
+## Related resources
+
+* [Plan your node](./)
+* [Choose a node type](choose-a-node-type.md)
+* [Node UI design](node-ui-design.md)
+* [Choose node file structure](choose-node-file-structure.md)

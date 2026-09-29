@@ -37,7 +37,7 @@ On this page, you'll find the node parameters for the SerpAPI node, and links to
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/serp.md).
+Refer to the [Serp credentials documentation](../../credentials/serp.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

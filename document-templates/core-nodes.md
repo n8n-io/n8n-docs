@@ -30,7 +30,7 @@ When you add this node to nav.yml in the navigation, prepend it with the `_Name_
 _Briefly summarize the functionality._
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
+Refer to the [_Name_ credentials documentation](/integrations/builtin/credentials/_Name_.md) for authentication information for this node.
 ///
 
 

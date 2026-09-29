@@ -43,7 +43,7 @@ Refer to [Airtable credentials](../../credentials/airtable.md) for guidance on s
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for Airtable. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.airtabletrigger.md).
+n8n provides a trigger node for Airtable. Refer to the [Airtable Trigger node documentation](../../trigger-nodes/n8n-nodes-base.airtabletrigger.md) for more information.
 
 Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for more information about the service.
 

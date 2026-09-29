@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/zendesk.md).
+Refer to the [Zendesk credentials documentation](../credentials/zendesk.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

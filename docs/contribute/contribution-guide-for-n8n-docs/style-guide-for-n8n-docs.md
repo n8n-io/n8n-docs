@@ -593,7 +593,10 @@ For example, to link from a page in the `administer` space to `docs/deploy/host-
 
 Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.
 
-Each top-level folder under `docs/` is a separate space:
+Each top-level folder under `docs/` is a separate space. The table below is a copy kept for
+convenience. The authoritative list is [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md)
+in the repository root, generated daily from each space's GitBook Git Sync settings and
+checked against this table in CI. If the two ever disagree, the generated file is right.
 
 | Space folder | Space ID |
 | ------------------------------ | ---------------------- |

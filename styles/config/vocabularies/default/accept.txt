@@ -141,6 +141,7 @@ JMESPath
 JumpCloud
 [Kk]ebab-case
 Keap
+Kerberos
 Keycloak
 Kibana
 Kimi

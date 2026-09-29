@@ -67,7 +67,11 @@ EXCLUDE_FILES = {
 # The style guide holds the canonical `space folder -> space ID` table used for
 # cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
 # single source of truth the team already maintains.
-SPACE_ID_TABLE_FILE = REPO_ROOT / "docs" / "contribute" / "contribution-guide-for-n8n-docs" / "style-guide-for-n8n-docs.md"
+# Generated from each space's GitBook Git Sync config by the DocFather "Space Index"
+# workflow, so it cannot drift the way a hand-kept table can. The style guide keeps a
+# copy for people reading the published docs (this file lives at the repo root and
+# isn't published); the test suite asserts that copy agrees with this one.
+SPACE_ID_TABLE_FILE = REPO_ROOT / "SPACE_INDEX.md"
 # Row form: | `space-folder` | `SpaceId` |
 SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
 APP_GITBOOK_RE = re.compile(

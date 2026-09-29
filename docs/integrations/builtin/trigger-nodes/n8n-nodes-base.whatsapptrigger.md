@@ -115,7 +115,7 @@ To check the subscription and fix it:
     Each subscribed app appears in the `data` array with its ID in `whatsapp_business_api_data.id`. Your app's ID is the **Client ID** in your n8n credential. If the response is `{"data": []}`, or none of the IDs match yours, your app isn't subscribed.
 
     If your app's entry also has an `override_callback_uri`, Meta sends message webhooks for this WABA to that URL instead of to your app's webhook URL. An override set on the business phone number takes precedence over both. Check that the URL is the one you expect.
-4. If your app is already subscribed, skip this step. A `POST` without a body removes any `override_callback_uri` from your app's subscription. If your app isn't subscribed, subscribe it. This request doesn't need a body:
+4. Send this request only if your app isn't subscribed, or if its entry has an `override_callback_uri` you want to remove. A `POST` without a body subscribes your app and removes any `override_callback_uri` from its subscription. If your app is already subscribed and you want to keep its override, skip this step. This request doesn't need a body:
 
     ```bash
     curl -X POST 'https://graph.facebook.com/<api-version>/<business-account-id>/subscribed_apps' \
@@ -123,7 +123,7 @@ To check the subscription and fix it:
     ```
 
     A successful request returns `{"success": true}`.
-5. If you subscribed your app in step 4, run the request from step 3 again and check that your app's ID is in the list.
+5. If you sent the request in step 4, run the request from step 3 again. Check that your app's ID is in the list and that its entry has no `override_callback_uri`. If messages still go to the wrong URL, check for an override on the business phone number.
 6. Send a message to your WhatsApp number to test the published workflow.
 
 {% hint style="warning" %}

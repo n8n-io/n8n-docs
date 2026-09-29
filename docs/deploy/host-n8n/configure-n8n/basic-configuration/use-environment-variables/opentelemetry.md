@@ -41,3 +41,7 @@ n8n can export workflow and node execution traces over OTLP to an OpenTelemetry 
 | `N8N_AGENTS_TRACING_ENABLED` | Boolean | `true` | Whether agent runs emit OpenTelemetry spans. Inherits the endpoint, headers, sampling, and transport settings from `N8N_OTEL_*`. Spans have nowhere to go until you configure an OTel provider, so set this to `false` to run workflow tracing without agent spans. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_INPUTS` | Boolean | `true` | Whether agent tracing records inputs, such as prompts and tool arguments. Set to `false` to exclude sensitive input data from traces. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_OUTPUTS` | Boolean | `true` | Whether agent tracing records outputs, such as responses and tool results. Set to `false` to exclude sensitive output data from traces. | 2.33.0 |
+
+## Related resources
+
+* [Environment variables](./)

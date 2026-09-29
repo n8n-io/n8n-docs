@@ -36,7 +36,7 @@ On this page, you'll find the node parameters for the GitHub Document Loader nod
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/github.md). This node doesn't support OAuth for authentication.
+Refer to the [GitHub credentials documentation](../../credentials/github.md) for authentication information for this node. This node doesn't support OAuth for authentication.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

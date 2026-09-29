@@ -30,3 +30,7 @@ layout:
 | `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION` | String | `workflowsFromSameOwner` | Which workflows can call a workflow. Options are: `any`, `none`, `workflowsFromAList`, `workflowsFromSameOwner`. This feature requires [Workflow sharing](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others). |
 | `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
 | `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
+
+## Related resources
+
+* [Environment variables](./)

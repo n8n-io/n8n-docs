@@ -13,3 +13,7 @@ layout:
 # Item linking <a href="#item-linking" id="item-linking"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kXGDlwgR3wBuMfOWaSGE/" %}
+
+## Related resources
+
+* [Node building reference](./)

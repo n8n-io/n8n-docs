@@ -25,3 +25,10 @@ The Python Code node doesn't provide this method. To query JSON in Python, use s
 | Method | Description | Available in Code node? |
 | ------ | ----------- | :-------------------------: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | ✅ |
+
+## Related resources
+
+* [Use built-in shortcuts](../use-built-in-shortcuts.md)
+* [HTTP node](http-node.md)
+* [LangChain Code node](langchain-code-node.md)
+* [n8n metadata](n8n-metadata.md)

@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/wufoo.md).
+Refer to the [Wufoo credentials documentation](../credentials/wufoo.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

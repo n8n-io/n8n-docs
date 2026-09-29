@@ -11,6 +11,26 @@ layout:
 
 These are some commonly used expressions. A more exhaustive list appears below.
 
+## In this section
+
+* [Array](array.md): methods for working with arrays.
+* [BinaryFile](binaryfile.md): properties of binary file data.
+* [Boolean](boolean.md): methods for working with booleans.
+* [CustomData](customdata.md): methods for getting and setting custom execution data.
+* [Date](date.md): methods for converting a JavaScript Date.
+* [DateTime](datetime.md): methods and properties for working with Luxon DateTimes.
+* [ExecData](execdata.md): properties of the current execution.
+* [HTTPResponse](httpresponse.md): properties of the last HTTP call's response.
+* [Item](item.md): properties of the current item.
+* [NodeInputData](nodeinputdata.md): methods for reading the current node's input.
+* [NodeOutputData](nodeoutputdata.md): methods for reading a node's output.
+* [Number](number.md): methods for working with numbers.
+* [Object](object.md): methods for working with objects.
+* [PrevNodeData](prevnodedata.md): properties describing the node an input came from.
+* [Root](root.md): top-level variables and helper functions such as `$json` and `$now`.
+* [String](string.md): methods for working with strings.
+* [WorkflowData](workflowdata.md): properties of the current workflow.
+
 | Category | Expression | Description |
 |---|---|---|
 | Access current input item data | `$json` | JSON data of the current item | 
@@ -972,3 +992,9 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 * [`$workflow`.**`name`**](workflowdata.md#dollarworkflowname)
 
     The name of the workflow, as shown at the top of the editor
+
+## Related resources
+
+* [Transform data](../)
+* [Approaches for transforming data](../approaches-for-transforming-data.md)
+* [Expressions for data transformation](../expressions-for-data-transformation.md)

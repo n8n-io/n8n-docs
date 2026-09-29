@@ -41,6 +41,6 @@ Use the MQTT node to send a message. You can set the message topic, and choose w
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for MQTT. You can find the trigger node docs [here](../trigger-nodes/n8n-nodes-base.mqtttrigger.md).
+n8n provides a trigger node for MQTT. Refer to the [MQTT Trigger node documentation](../trigger-nodes/n8n-nodes-base.mqtttrigger.md) for more information.
 
 Refer to [MQTT's documentation](https://mqtt.org/getting-started/) for more information about the service.

@@ -32,7 +32,7 @@ On this page, you'll find the node parameters for the MiniMax Chat Model node, a
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/minimax.md).
+Refer to the [MiniMax credentials documentation](../../credentials/minimax.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

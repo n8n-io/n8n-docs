@@ -23,7 +23,7 @@ Use the Crypto node to perform cryptographic operations in workflows.
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/crypto.md).
+Refer to the [Crypto credentials documentation](../credentials/crypto.md) for authentication information for this node.
 {% endhint %}
 
 ## Actions <a href="#actions" id="actions"></a>

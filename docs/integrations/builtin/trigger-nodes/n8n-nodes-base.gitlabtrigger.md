@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/gitlab.md).
+Refer to the [GitLab credentials documentation](../credentials/gitlab.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -49,9 +49,18 @@ For usage examples and templates to help you get started, refer to n8n's [GitLab
 * Tag
 * Wiki page
 
+## Working with subgroups and nested repositories
+
+If your repository is located within nested GitLab groups or subgroups (for example, `https://gitlab.com/org/subgroup1/subgroup2/my-repo`), GitLab's API requires you to URL-encode the namespace path.
+
+To configure the node for nested subgroups:
+
+1. **Repository Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`. Example: `org%2Fsubgroup1%2Fsubgroup2`
+2. **Repository Name**: Enter the project's repository slug. Example: `my-repo`
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for GitLab. You can find the node docs [here](../app-nodes/n8n-nodes-base.gitlab.md).
+n8n provides an app node for GitLab. Refer to the [GitLab node documentation](../app-nodes/n8n-nodes-base.gitlab.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/gitlab-trigger/) on n8n's website.
 

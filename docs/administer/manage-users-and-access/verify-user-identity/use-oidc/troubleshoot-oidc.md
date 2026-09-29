@@ -37,3 +37,8 @@ OIDC providers that require PKCE (Proof Key for Code Exchange) may fail authenti
 The only work around is to configure your OIDC provider to not require PKCE for the n8n client if this option is available in your providers settings. 
 
 n8n plans on adding PKCE support in a future release
+
+## Related resources
+
+* [Use OIDC](./)
+* [Set up OIDC](set-up-oidc.md)

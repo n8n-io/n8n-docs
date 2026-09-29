@@ -81,3 +81,13 @@ To test the [Enterprise plan](https://n8n.io/pricing/), contact the sales team. 
 - Version control using Git
 
 Select the **Contact** button on the [n8n website](https://n8n.io/pricing/).
+
+## Related resources
+
+* [Use n8n Cloud](./)
+* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Update your version](update-your-version.md)
+* [Configure Cloud](configure-cloud/README.md)
+* [Gateway credits](gateway-credits/README.md)
+* [Understand concurrency](understand-concurrency.md)
+* [Download workflows](download-workflows.md)

@@ -200,3 +200,7 @@ export N8N_COMMUNITY_PACKAGES='[{"name":"n8n-nodes-foo","version":"1.2.3"}]'
 ## Set environment variables <a href="#set-environment-variables" id="set-environment-variables"></a>
 
 For the supported ways to set environment variables, see [Configuration methods](basic-configuration.md).
+
+## Related resources
+
+* [Configure n8n](./)

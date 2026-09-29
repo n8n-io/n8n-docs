@@ -37,3 +37,10 @@ The endpoints are grouped by resource in the left sidebar under **n8n API**: Wor
 
 To experiment with live calls, use the [built-in API playground](use-an-api-playground.md) (self-hosted n8n only), or point requests at a test workflow or test instance.
 {% endhint %}
+
+## Related resources
+
+* [n8n API](./)
+* [Authentication](authentication.md)
+* [Pagination](pagination.md)
+* [Use an API playground](use-an-api-playground.md)

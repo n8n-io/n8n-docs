@@ -8,24 +8,24 @@ layout:
 
 n8n lets you build AI workflows that connect different LLM providers such as OpenAI, Anthropic, and Google, add tools and memory, and combine several models in one workflow.
 
-{% content-ref url="mcp-servers.md" %}
-[mcp-servers.md](mcp-servers.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="understand-ai-components/README.md" %}
-[understand-ai-components/README.md](understand-ai-components/README.md)
-{% endcontent-ref %}
-
-{% content-ref url="langchain-in-n8n.md" %}
-[langchain-in-n8n.md](langchain-in-n8n.md)
-{% endcontent-ref %}
-
-{% content-ref url="test-and-improve-ai-workflows/README.md" %}
-[test-and-improve-ai-workflows/README.md](test-and-improve-ai-workflows/README.md)
-{% endcontent-ref %}
-
-{% content-ref url="ai-examples.md" %}
-[ai-examples.md](ai-examples.md)
-{% endcontent-ref %}
+* [MCP servers](mcp-servers.md): connect an AI agent to an MCP registry server in one click.
+* [Understand AI components](understand-ai-components/README.md): learn about agents, chains, tools, memory, and vector databases.
+* [LangChain in n8n](langchain-in-n8n.md): understand how n8n implements LangChain concepts.
+* [Test and improve AI workflows](test-and-improve-ai-workflows/README.md): use evaluations to build reliable AI workflows.
+* [AI examples](ai-examples.md): example workflows and use cases for building AI functionality.
 
 See [Build](../README.md) for other workflow-building topics.
+
+## Related resources
+
+* [Build](../)
+* [Understand workflows](../understand-workflows/README.md)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)

@@ -63,6 +63,6 @@ The Evaluation Trigger node uses data tables or Google Sheets to store the test 
 
 To learn more about n8n evaluations, check out the [evaluations documentation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/understand-why-to-test)
 
-n8n provides an app node for evaluations. You can find the node docs [here](n8n-nodes-base.evaluation.md).
+n8n provides an app node for evaluations. Refer to the [Evaluation node documentation](n8n-nodes-base.evaluation.md) for more information.
 
 For common questions or issues and suggested solutions, refer to the evaluations [tips and common issues](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/fix-common-issues) page.

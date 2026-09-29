@@ -28,7 +28,7 @@ On this page, you'll find a list of events the Microsoft OneDrive Trigger node c
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/microsoft.md). This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Microsoft Entra Service Principal (App-Only)** in the **Authentication** dropdown.
+Refer to the [Microsoft credentials documentation](../credentials/microsoft.md) for authentication information for this node. This node also supports the [Microsoft Entra Service Principal credentials](../credentials/microsoftentraserviceprincipal.md) for app-only access with no signed-in user: select **Microsoft Entra Service Principal (App-Only)** in the **Authentication** dropdown.
 {% endhint %}
 
 {% hint style="info" %}
@@ -52,7 +52,7 @@ For usage examples and templates to help you get started, refer to n8n's [Micros
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Microsoft OneDrive. You can find the node docs [here](../app-nodes/n8n-nodes-base.microsoftonedrive.md).
+n8n provides an app node for Microsoft OneDrive. Refer to the [Microsoft OneDrive node documentation](../app-nodes/n8n-nodes-base.microsoftonedrive.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/microsoft-onedrive-trigger/) on n8n's website.
 

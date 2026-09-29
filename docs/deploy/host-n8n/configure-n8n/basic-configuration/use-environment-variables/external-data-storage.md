@@ -67,3 +67,7 @@ Set `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` only if you use a custom endpoint, suc
 | `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` | String | - | Name of the blob container to store execution data and/or binary data in. Required for Azure Blob Storage. |
 | `N8N_EXTERNAL_STORAGE_AZURE_ENDPOINT` | String | - | Custom blob endpoint, for example for Azurite or sovereign clouds. |
 | `N8N_EXTERNAL_STORAGE_AZURE_AUTH_AUTO_DETECT` | Boolean | `false` | Authenticate via `DefaultAzureCredential` (managed identity, environment, or Azure CLI) instead of an account key. Ignores the account key when enabled. |
+
+## Related resources
+
+* [Environment variables](./)

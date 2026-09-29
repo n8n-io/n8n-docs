@@ -58,7 +58,7 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for TheHive. You can find the node docs [here](../app-nodes/n8n-nodes-base.thehive.md).
+n8n provides an app node for TheHive. Refer to the [TheHive node documentation](../app-nodes/n8n-nodes-base.thehive.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/) on n8n's website.
 

@@ -102,3 +102,13 @@ When you subscribe to a paid plan, you get a license key that unlocks the featur
 - Subscribe to a **Business** or **Enterprise** plan when you need paid features like SSO, environments, projects, or external secrets. If you'd rather not manage infrastructure at all, consider [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md) instead.
 
 [^1]: Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.
+
+## Related resources
+
+* [Host n8n](./)
+* [Install options](install-options/README.md)
+* [Configure n8n](configure-n8n/README.md)
+* [Keep n8n running](keep-n8n-running/README.md)
+* [Understand the architecture](understand-the-architecture/README.md)
+* [Deploy as an OEM integration](deploy-as-an-oem-integration/README.md)
+* [Deploy with the AI starter kit](deploy-with-the-ai-starter-kit.md)

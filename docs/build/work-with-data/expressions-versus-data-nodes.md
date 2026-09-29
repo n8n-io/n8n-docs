@@ -75,3 +75,14 @@ n8n provides a collection of nodes to transform data:
 
 See [Work with data](README.md) for other ways to reference, transform, and structure data.
 
+## Related resources
+
+* [Work with data](./)
+* [Understand n8n's data structure](understand-n8ns-data-structure.md)
+* [Reference data](reference-data/README.md)
+* [Transform data](transform-data/README.md)
+* [Filter out unwanted data](filter-out-unwanted-data.md)
+* [Pin and mock data](pin-and-mock-data.md)
+* [Handle special data types](handle-special-data-types/README.md)
+* [Data tables](data-tables.md)
+

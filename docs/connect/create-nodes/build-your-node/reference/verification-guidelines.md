@@ -76,3 +76,7 @@ All verified community node authors should use the [`n8n-node` tool](../using-th
 
 * Both the node interface and all documentation must be in **English** only.
 * This includes parameter names, descriptions, help text, error messages and **README** content.
+
+## Related resources
+
+* [Node building reference](./)

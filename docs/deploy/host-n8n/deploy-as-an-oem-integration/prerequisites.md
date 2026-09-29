@@ -70,3 +70,9 @@ n8n recommends creating nightly backups by attaching another container, and copy
 If your instance is down or restarting, missed executions (for example, Cron or Webhook nodes) during this time aren't recoverable. If it's important for you to maintain 100% uptime, you need to build another proxy in front of it which caches the data.
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+
+## Related resources
+
+* [Deploy as an OEM integration](./)
+* [Manage workflows](manage-workflows.md)
+* [Set up token exchange](set-up-token-exchange.md)

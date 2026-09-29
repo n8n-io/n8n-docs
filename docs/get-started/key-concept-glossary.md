@@ -141,4 +141,11 @@ A trigger node is a special node responsible for executing the workflow in respo
 
 An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
 
+## Related resources
+
+* [n8n Docs](./)
+* [Choose how to use n8n](choose-how-to-use-n8n.md)
+* [Build your first workflow](build-your-first-workflow.md)
+* [Learning paths](learning-paths.md)
+
 

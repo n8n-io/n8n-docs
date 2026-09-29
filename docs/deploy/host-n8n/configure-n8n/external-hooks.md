@@ -283,3 +283,7 @@ You can define multiple hook functions per hook. n8n calls each hook function wi
 
 * `store`: The Vuex store object. You can use this to change or get data from the store.
 * `metadata`: The object that contains any data provided by the hook. To see what's passed, search for the hook in the `editor-ui` package.
+
+## Related resources
+
+* [Configure n8n](./)

@@ -44,7 +44,7 @@ The Qwen Cloud node lets you call models available on Qwen Cloud from n8n. Use i
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/alibaba.md).
+Refer to the [Qwen Cloud credentials documentation](../credentials/alibaba.md) for authentication information for this node.
 {% endhint %}
 
 ## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>

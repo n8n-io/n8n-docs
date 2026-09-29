@@ -22,64 +22,32 @@ layout:
 
 # Configure n8n
 
-{% content-ref url="basic-configuration.md" %}
-[basic-configuration.md](basic-configuration.md)
-{% endcontent-ref %}
+Configure a self-hosted n8n instance, including database, security, scaling, and license settings.
 
-{% content-ref url="choose-n8ns-database.md" %}
-[choose-n8ns-database.md](choose-n8ns-database.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="external-hooks.md" %}
-[external-hooks.md](external-hooks.md)
-{% endcontent-ref %}
+* [Basic configuration](basic-configuration.md): set environment variables, and browse configuration examples.
+* [Choose n8n's database](choose-n8ns-database.md): SQLite and PostgreSQL configuration.
+* [External hooks](external-hooks.md): run your own code at specific points in n8n's lifecycle.
+* [Use the command line](use-the-command-line.md): the n8n CLI reference.
+* [User management](user-management.md): manage users on a self-hosted instance.
+* [Change instance owner email](change-instance-owner-email.md): update the email address of the instance owner.
+* [Manage settings using environment variables](manage-settings-using-environment-variables.md): configure instance settings without the UI.
+* [Set up task runners](set-up-task-runners.md): run Code node executions in external processes.
+* [Durable scheduler](durable-scheduler.md): make scheduled triggers resilient to restarts.
+* [System tasks](system-tasks.md): the Prometheus metrics n8n's system tasks expose.
+* [Set up n8n Assistant](set-up-n8n-assistant.md): configure AI-assisted building for self-hosted n8n.
+* [Deploy n8n in canvas-only mode](deploy-n8n-in-canvas-only-mode.md): restrict an instance to the workflow canvas.
+* [Manage your license](manage-your-license.md): activate, renew, and manage your n8n license.
+* [Security](security.md): audit, harden, and restrict a self-hosted instance.
+* [Scaling](scaling.md): configure n8n for a large number of users, workflows, or executions.
 
-{% content-ref url="use-the-command-line.md" %}
-[use-the-command-line.md](use-the-command-line.md)
-{% endcontent-ref %}
+## Related resources
 
-{% content-ref url="user-management.md" %}
-[user-management.md](user-management.md)
-{% endcontent-ref %}
-
-{% content-ref url="change-instance-owner-email.md" %}
-[change-instance-owner-email.md](change-instance-owner-email.md)
-{% endcontent-ref %}
-
-{% content-ref url="manage-settings-using-environment-variables.md" %}
-[manage-settings-using-environment-variables.md](manage-settings-using-environment-variables.md)
-{% endcontent-ref %}
-
-{% content-ref url="set-up-task-runners.md" %}
-[set-up-task-runners.md](set-up-task-runners.md)
-{% endcontent-ref %}
-
-{% content-ref url="durable-scheduler.md" %}
-[durable-scheduler.md](durable-scheduler.md)
-{% endcontent-ref %}
-
-{% content-ref url="system-tasks.md" %}
-[system-tasks.md](system-tasks.md)
-{% endcontent-ref %}
-
-{% content-ref url="set-up-n8n-assistant.md" %}
-[set-up-n8n-assistant.md](set-up-n8n-assistant.md)
-{% endcontent-ref %}
-
-{% content-ref url="deploy-n8n-in-canvas-only-mode.md" %}
-[deploy-n8n-in-canvas-only-mode.md](deploy-n8n-in-canvas-only-mode.md)
-{% endcontent-ref %}
-
-{% content-ref url="manage-your-license.md" %}
-[manage-your-license.md](manage-your-license.md)
-{% endcontent-ref %}
-
-{% content-ref url="security.md" %}
-[security.md](security.md)
-{% endcontent-ref %}
-
-{% content-ref url="scaling.md" %}
-[scaling.md](scaling.md)
-{% endcontent-ref %}
-
-See [Host n8n](../README.md) for other self-hosting topics.
+* [Host n8n](../)
+* [Install options](../install-options/README.md)
+* [Keep n8n running](../keep-n8n-running/README.md)
+* [Understand the architecture](../understand-the-architecture/README.md)
+* [Deploy as an OEM integration](../deploy-as-an-oem-integration/README.md)
+* [Deploy with the AI starter kit](../deploy-with-the-ai-starter-kit.md)
+* [Compare editions](../community-edition-features.md)

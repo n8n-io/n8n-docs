@@ -493,3 +493,7 @@ n8n audit
 ```
 
 [^1]: In n8n, entitlements grant n8n instances access to plan-restricted features for a specific period of time.
+
+## Related resources
+
+* [Configure n8n](./)

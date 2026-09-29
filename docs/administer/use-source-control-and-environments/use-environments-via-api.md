@@ -225,9 +225,17 @@ curl --request POST \
 
 The API commits and applies the same resources as the UI: workflows, credential stubs, variable stubs, data table schemas, projects, folders, and tags. For the full list and the merge behavior for each resource type, refer to [Push and pull](push-and-pull-changes.md#what-gets-committed).
 
-## Related
+## Related resources
 
-* [Push and pull](push-and-pull-changes.md): How push and pull behave, and what gets committed.
-* [Copy work between environments](move-work-between-environments.md): Branch patterns for moving work between instances.
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Set up source control](set-up-source-control.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
 * [Source control](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/source-control): Request and response schemas for the source control endpoints.
 * [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public API schemas.

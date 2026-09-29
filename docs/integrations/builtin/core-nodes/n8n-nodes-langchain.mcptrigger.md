@@ -24,7 +24,7 @@ Use the MCP Server Trigger node to allow n8n to act as a [Model Context Protocol
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/httprequest.md).
+Refer to the [HTTP Request credentials documentation](../credentials/httprequest.md) for authentication information for this node.
 {% endhint %}
 
 ## How the MCP Server Trigger node works <a href="#how-the-mcp-server-trigger-node-works" id="how-the-mcp-server-trigger-node-works"></a>

@@ -265,3 +265,11 @@ flowchart LR
 ```
 
 n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox-runner-1`, which creates and runs the actual sandbox containers. `sandbox-certs` runs once at startup to generate the TLS certificates the other two need and then exits; everything else waits on it.
+
+## Related resources
+
+* [Install options](./)
+* [One-line setup](one-line-setup.md)
+* [Install with npm](install-with-npm.md)
+* [Install with Docker](install-with-docker.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)

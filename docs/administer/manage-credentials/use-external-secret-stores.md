@@ -343,3 +343,10 @@ See [Manage credentials](README.md) for other ways to secure and share credentia
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [Manage credentials](./)
+* [Share credentials securely](share-credentials-securely.md)
+* [End-user credentials](end-user-credentials.md)
+* [Credential overwrites](credential-overwrites.md)

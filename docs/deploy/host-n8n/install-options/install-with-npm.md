@@ -123,3 +123,11 @@ If the upgrade involved a database migration:
 ## Windows troubleshooting <a href="#windows-troubleshooting" id="windows-troubleshooting"></a>
 
 If you're experiencing issues running n8n on Windows, verify your Node.js environment setup. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
+
+## Related resources
+
+* [Install options](./)
+* [One-line setup](one-line-setup.md)
+* [Install using Docker Compose](install-using-docker-compose.md)
+* [Install with Docker](install-with-docker.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)

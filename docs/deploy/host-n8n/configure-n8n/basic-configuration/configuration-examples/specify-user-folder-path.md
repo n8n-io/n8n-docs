@@ -21,3 +21,7 @@ the ID of the tunnel (if used) in the subfolder `.n8n` of the user who started n
 export N8N_USER_FOLDER=/home/jim/n8n
 ```
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on this variable.
+
+## Related resources
+
+* [Configuration examples](./)

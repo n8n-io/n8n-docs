@@ -60,3 +60,13 @@ Vector databases require other tools to function:
 - Retrievers: retrievers fetch documents from vector databases. You need to pair them with an embedding to translate the vectors back into data.
 
 [^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
+
+## Related resources
+
+* [Understand AI components](./)
+* [What chains do](what-chains-do.md)
+* [What agents do](what-agents-do.md)
+* [How memory works](how-memory-works.md)
+* [How tools work](how-tools-work.md)
+* [Retrieve relevant context](retrieve-relevant-context.md)
+* [Agents vs chains](agents-vs-chains.md)

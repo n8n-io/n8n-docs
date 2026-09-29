@@ -46,3 +46,7 @@ This page lists environment variables to configure workflow execution settings.
 | `N8N_CONCURRENCY_EVALUATION_LIMIT` | Number | License-tier default | Max test cases that can run in parallel within a single [evaluation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/test-and-improve-ai-workflows/use-metrics-to-measure-quality#run-test-cases-in-parallel) test run. When unset, the limit follows the license tier: self-hosted Community: 1, n8n Cloud Pro: 1, self-hosted Business: 3, n8n Cloud Enterprise and self-hosted Enterprise: 5. Setting this overrides the tier default. |
 | `N8N_WORKFLOW_AUTODEACTIVATION_ENABLED` | Boolean | `false` | Whether workflows are automatically unpublished after repeated crashed executions. |
 | `N8N_WORKFLOW_AUTODEACTIVATION_MAX_LAST_EXECUTIONS` | Number | `3` | Number of crashed executions before unpublishing a workflow. |
+
+## Related resources
+
+* [Environment variables](./)

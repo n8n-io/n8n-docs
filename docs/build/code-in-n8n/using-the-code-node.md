@@ -19,3 +19,11 @@ layout:
 # Using the Code node <a href="#using-the-code-node" id="using-the-code-node"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/A6AUEJWQnhjgrypgRNwY/" %}
+
+## Related resources
+
+* [Code in n8n](./)
+* [Get coding help from AI](get-coding-help-from-ai.md)
+* [Use built-in shortcuts](use-built-in-shortcuts.md)
+* [Define custom variables](define-custom-variables.md)
+* [Cookbook](cookbook/README.md)

@@ -58,3 +58,9 @@ This page explains the reasoning. The [contribution guide](README.md) covers the
 ## Where this is still evolving
 
 Not every guideline has a settled answer yet. n8n Docs is continuously testing and researching what makes agent-friendly documentation, and developing new systems to help meet these standards. Agent-friendliness is a fast-moving area of documentation practice, and this page will change as the practice matures.
+
+## Related resources
+
+* [Contribution guide for n8n Docs](./)
+* [Style guide for n8n Docs](style-guide-for-n8n-docs.md)
+* [Terminology and naming](terminology.md)

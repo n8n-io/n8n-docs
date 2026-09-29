@@ -60,3 +60,7 @@ These settings only control compaction workload and scheduling. They don't chang
  | `N8N_INSIGHTS_PRUNE_CHECK_INTERVAL_HOURS`                | Number | 24      | How often (in hours) the instance checks for insights data older than the effective max age and deletes it. |
 
 
+
+## Related resources
+
+* [Environment variables](./)

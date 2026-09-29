@@ -68,3 +68,10 @@ Since there are too many test cases to check individually, evaluations measure t
 * [Light evaluations](run-quick-evaluations.md): Perfect for evaluating your AI workflows against hand-selected test cases during development.
 * [Metric-based evaluations](use-metrics-to-measure-quality.md): Advanced evaluations to maintain performance and correctness in production by using scoring and metrics with large datasets.
 * [Tips and common issues](fix-common-issues.md): Learn how to set up specific evaluation use cases and work around common issues.
+
+## Related resources
+
+* [Test and improve AI workflows](./)
+* [Run quick evaluations](run-quick-evaluations.md)
+* [Use metrics to measure quality](use-metrics-to-measure-quality.md)
+* [Fix common issues](fix-common-issues.md)

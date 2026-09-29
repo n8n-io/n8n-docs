@@ -123,3 +123,11 @@ When migrating from group-based claims to App Roles, adjust your role definition
 * [n8n SAML Setup](https://docs.n8n.io/user-management/saml/setup/)
 * [n8n Okta Guide (reference)](https://docs.n8n.io/user-management/saml/okta/)
 * [Azure AD Claims Customization](https://learn.microsoft.com/en-us/entra/identity-platform/saml-claims-customization)
+
+## Related resources
+
+* [Use SAML](./)
+* [Set up SAML](set-up-saml.md)
+* [Okta Workforce Identity SAML setup](set-up-okta-workforce-identity-saml.md)
+* [Troubleshoot SAML](troubleshoot-saml.md)
+* [Manage users with SAML](manage-users-with-saml.md)

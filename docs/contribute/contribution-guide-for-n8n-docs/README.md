@@ -35,6 +35,12 @@ All contributions must adhere to our [Code of Conduct](https://github.com/n8n-io
 
 n8n Docs content is managed on our [GitHub](https://github.com/n8n-io/n8n-docs) repository. The site is generated with [GitBook](https://www.gitbook.com/). Pages are written in [Markdown](https://commonmark.org/) with GitBook-specific components like callouts, tabs, and structured page elements.
 
+## In this section
+
+* [Style guide for n8n Docs](style-guide-for-n8n-docs.md): writing style, formatting, and structure rules to follow.
+* [Terminology and naming](terminology.md): the official n8n terms to use, and the non-official terms to avoid.
+* [Agent-friendly docs](agent-friendly-docs.md): what n8n Docs means by agent-friendly documentation, and how it relates to the style guide.
+
 ## Types of contribution
 
 Here are the main ways to get involved:
@@ -220,3 +226,8 @@ If you have questions about contributing, there are a few places to get help:
 * [**Discord**](https://discord.gg/n8n)**:** Join the `#docs` channel for more informal questions or quick feedback.
 
 To get the attention of the docs team specifically, tag `@n8n-io/docs` in your pull request or issue.
+
+## Related resources
+
+* [Contribute to n8n](../)
+* [Where to get help](../where-to-get-help.md)

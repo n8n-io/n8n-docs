@@ -264,3 +264,7 @@ layout:
   obj.values() //=> ['Mr Nathan', 42]
   ```
 
+
+## Related resources
+
+* [Expression reference](./)

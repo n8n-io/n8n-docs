@@ -193,3 +193,12 @@ sum by (workflow_name) (
   n8n_workflow_info
 )
 ```
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Set up logging](set-up-logging.md)
+* [Monitor n8n](monitor-n8n.md)
+* [Back up and restore](backup-and-restore.md)
+* [Update n8n](update-n8n.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

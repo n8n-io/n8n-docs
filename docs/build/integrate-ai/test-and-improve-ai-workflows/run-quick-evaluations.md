@@ -114,3 +114,10 @@ Click on the **Execute workflow** button to the left of the evaluation trigger. 
 Review the outputs of each execution in the data table or Google Sheet, and examine the execution details using the workflow's 'executions' tab if you need to.
 
 Once your dataset grows past a handful of examples, consider [metric-based evaluation](use-metrics-to-measure-quality.md) to get a numerical view of performance. See also [tips and common issues](fix-common-issues.md).
+
+## Related resources
+
+* [Test and improve AI workflows](./)
+* [Understand why to test](understand-why-to-test.md)
+* [Use metrics to measure quality](use-metrics-to-measure-quality.md)
+* [Fix common issues](fix-common-issues.md)

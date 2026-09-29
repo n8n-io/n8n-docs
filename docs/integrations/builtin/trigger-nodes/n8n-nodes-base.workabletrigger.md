@@ -26,7 +26,7 @@ On this page, you'll find a list of events the Workable Trigger node can respond
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/workable.md).
+Refer to the [Workable credentials documentation](../credentials/workable.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -18,6 +18,16 @@ layout:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
 
-* [Environments in n8n](work-with-environments.md): The purpose of environments, and how they work in n8n.
-* [Git in n8n](use-git-in-n8n.md): How n8n uses Git. 
-* [Branch patterns](choose-branching-patterns.md): The possible relationships between n8n instances and Git branches.
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Set up source control](set-up-source-control.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)

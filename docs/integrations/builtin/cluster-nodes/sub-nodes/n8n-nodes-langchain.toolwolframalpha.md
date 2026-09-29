@@ -26,7 +26,7 @@ Use the Wolfram|Alpha tool node to connect your agents[^1] and chains[^2] to Wol
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/wolframalpha.md).
+Refer to the [Wolfram|Alpha credentials documentation](../../credentials/wolframalpha.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

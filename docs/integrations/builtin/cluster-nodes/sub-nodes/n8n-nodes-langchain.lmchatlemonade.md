@@ -27,7 +27,7 @@ On this page, you'll find a list of the node parameters, and available options t
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/lemonade.md).
+Refer to the [Lemonade credentials documentation](../../credentials/lemonade.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

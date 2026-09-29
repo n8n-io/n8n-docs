@@ -72,3 +72,11 @@ Instance-level MCP isn't the only way n8n works with MCP:
 * [MCP client connection examples](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-client-examples) — exact commands and configuration for Lovable, Claude Desktop, Claude Code, Codex, Gemini CLI, Cursor, VS Code, Windsurf, and Google ADK agents.
 * [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference) — full list of available tools and their parameters.
 * [MCP Server Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger) — expose tools from a single workflow.
+
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n Assistant](n8n-assistant.md)
+* [Use templates](use-templates.md)
+* [Use Ask n8n AI](use-the-ai-assistant.md)
+* [Use Chat Hub](chat-hub.md)

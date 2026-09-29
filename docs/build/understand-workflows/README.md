@@ -25,4 +25,16 @@ If it's your first time building a workflow, you may want to use the [quickstart
 * [Workflow components](workflow-components/README.md): the building blocks of a workflow, such as nodes and connections.
 * [Understand executions](understand-executions/README.md): what an execution is, and how to view, filter, and debug them.
 
+## Related resources
+
+* [Build](../)
+* [Build and manage agents](../build-and-manage-agents.md)
+* [Ways of building workflows](../ways-of-building-workflows/README.md)
+* [Manage workflows](../manage-workflows/README.md)
+* [Flow logic](../flow-logic/README.md)
+* [Work with data](../work-with-data/README.md)
+* [Code in n8n](../code-in-n8n/README.md)
+* [Integrate AI](../integrate-ai/README.md)
+* [Keyboard shortcuts](../keyboard-shortcuts.md)
+
 [^1]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.

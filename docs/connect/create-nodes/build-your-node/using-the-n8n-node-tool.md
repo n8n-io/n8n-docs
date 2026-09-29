@@ -248,3 +248,11 @@ When you run the `release` command, `n8n-node` will perform the following action
 * create git tags
 * create a GitHub release
 * publish the package to npm
+
+## Related resources
+
+* [Build your node](./)
+* [Set up your development environment](set-up-your-development-environment.md)
+* [Tutorial: Build a declarative-style node](tutorial-build-a-declarative-style-node.md)
+* [Tutorial: Build a programmatic-style node](tutorial-build-a-programmatic-style-node.md)
+* [Reference](reference/README.md)

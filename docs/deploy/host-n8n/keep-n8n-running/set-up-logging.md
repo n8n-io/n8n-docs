@@ -14,9 +14,13 @@ layout:
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
 
 {% hint style="info" %}
-**Log streaming**
+**Feature availability**
 
-n8n Self-hosted Enterprise tier includes [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems), in addition to the logging options described in this document.
+[Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) is available on:
+
+- **Self-hosted:** Enterprise
+
+It isn't available on n8n Cloud. Log streaming is in addition to the logging options described in this document.
 {% endhint %}
 
 ## How do I set up logging in n8n? <a href="#setup" id="setup"></a>

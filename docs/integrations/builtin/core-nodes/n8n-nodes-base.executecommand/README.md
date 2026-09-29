@@ -54,9 +54,9 @@ If you're using [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host
 {% endhint %}
 
 {% hint style="info" %}
-**Not available on Cloud**
+**Feature availability**
 
-This node isn't available on n8n Cloud.
+The Execute Command node is available on self-hosted (All editions). It isn't available on n8n Cloud.
 {% endhint %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>

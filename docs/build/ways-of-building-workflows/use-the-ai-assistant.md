@@ -84,7 +84,7 @@ Ask n8n AI has access to all elements displayed on your n8n screen, excluding ac
 
 ### Who can use the Assistant? <a href="#who-can-use-the-assistant" id="who-can-use-the-assistant"></a>
 
-Any user on a Cloud plan can use the assistant.
+The AI Assistant is available on n8n Cloud (All plans). It isn't available on self-hosted.
 
 ### How does the Assistant work? <a href="#how-does-the-assistant-work" id="how-does-the-assistant-work"></a>
 

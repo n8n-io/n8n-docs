@@ -35,9 +35,9 @@ Full workflow history is available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
-
-Versions from the last five days are available for n8n Cloud Pro users. Versions from the last 24 hours are available for all users.
 {% endhint %}
+
+Versions from the last 24 hours are available for all users. Versions from the last five days are available on n8n Cloud Pro.
 
 Use workflow history to view and restore previous versions of your workflows.
 
@@ -78,7 +78,7 @@ You can restore a previous workflow version, or make a copy of it:
    * **Clone to new workflow**: create a new workflow based on the selected version.
    * **Open version in new tab**: open a second tab displaying the selected version. Use this to compare versions.
    * **Download**: download the version as JSON.
-   * **Name version**: give the version a name and description. n8n never prunes named versions automatically. Refer to [Naming versions](../understand-workflows/save-and-publish-workflows.md#naming-versions) for more details. Named versions are available on n8n Cloud Pro and Enterprise, and self-hosted Business and Enterprise.
+   * **Name version**: give the version a name and description. n8n never prunes named versions automatically. Refer to [Naming versions](../understand-workflows/save-and-publish-workflows.md#naming-versions) for more details. Named versions are available on n8n Cloud Pro, Enterprise, and self-hosted Business, Enterprise.
 
 ## Related resources
 

@@ -25,7 +25,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **API access**
 
-You need a Team or Business plan to use the Adalo APIs.
+Using this node requires an Adalo Team or Business plan, since Adalo's API isn't available on lower tiers.
 {% endhint %}
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>

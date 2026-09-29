@@ -119,9 +119,11 @@ n8n Assistant asks for confirmation before high-impact actions, such as publishi
 
 Your credential secrets are never sent to the AI, and the AI never sees them.
 
-n8n Assistant reads credential descriptions to help choose between credentials of the same type. For example, a description can identify a production account or a test account. If the choice remains unclear, n8n Assistant asks you which credential to use.
+n8n Assistant can read credential descriptions from n8n 2.41.0. From n8n 2.42.0, n8n Assistant only reads descriptions if your instance enables credential descriptions.
 
-The AI receives credential descriptions. Don't include API keys, passwords, or tokens in them.
+n8n Assistant uses available credential descriptions to help choose between credentials of the same type. For example, a description can identify a production account or a test account. If the choice remains unclear, n8n Assistant asks you which credential to use.
+
+The AI can receive credential descriptions. Don't include API keys, passwords, or tokens in them.
 
 When a workflow needs credentials, n8n Assistant prompts you with a credential card in the chat. From that card, you can:
 

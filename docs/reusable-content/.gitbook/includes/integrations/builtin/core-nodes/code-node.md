@@ -102,7 +102,11 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 
 ## Python (Native) <a href="#python-native" id="python-native"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
 Native Python support using task runners is available from n8n 1.111.0. This feature is stable as of n8n 2.
+{% endhint %}
 
 Main differences from Pyodide:
 

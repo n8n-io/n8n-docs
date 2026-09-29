@@ -16,9 +16,15 @@ Logging is an important feature for debugging. n8n uses the [winston](https://ww
 {% hint style="info" %}
 **Feature availability**
 
-The logging options described in this document are available on all plans and platforms, except where noted below.
+All logging options described in this document (except Log streaming) are available on:
 
-[Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) is available on self-hosted Enterprise only. It isn't available on n8n Cloud. 
+- **n8n Cloud:** All plans
+- **Self-hosted:** All editions
+
+[Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
 {% endhint %}
 

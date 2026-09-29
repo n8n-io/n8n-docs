@@ -48,7 +48,18 @@ Google service nodes support two authentication methods:
 
 ### Managed OAuth2 for n8n Cloud users <a href="#managed-oauth2-for-n8n-cloud-users" id="managed-oauth2-for-n8n-cloud-users"></a>
 
-[Managed OAuth2](oauth-single-service.md#managed-oauth2) for the following Google nodes is available on n8n Cloud (all plans). On self-hosted, configure your own OAuth2 credentials instead.
+{% hint style="info" %}
+**Feature availability**
+
+Managed OAuth2 for the Google nodes listed below is available on:
+
+- **n8n Cloud:** All plans
+
+It isn't available on self-hosted. For self-hosted, configure your own OAuth2 credentials instead.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
+
+{% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
 

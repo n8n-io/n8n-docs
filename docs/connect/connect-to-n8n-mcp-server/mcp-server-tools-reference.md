@@ -1526,6 +1526,7 @@ Top-level response: `{ ok, kind, data }`.
 - Omitting `provider` for `kind=models` returns a summary only; the full model catalog is too large for most MCP clients' token limits.
 - For `kind=mcpServers`, omit `query` to list up to 20 registry servers; pass `query` to search by name.
 - Attaching a discovered asset (a workflow, sub-agent, or MCP server) still requires adding it to the agent's config with `mutate_agent`.
+- The `setupGuidance` field for Slack entries is available from n8n 2.43.0.
 
 ---
 
@@ -1906,6 +1907,7 @@ Every call can also return `ok`, and a failed call returns `ok: false` with `cod
 - Configuring an integration never publishes the agent. If the agent is already published, connecting starts the channel immediately; otherwise the channel stays inactive until `publish_agent` is called.
 - Disconnecting tears down the live channel immediately, whether or not the agent is published.
 - Confirm with the user before connecting a channel on an already-published agent, since it connects immediately.
+- Slack managed setup is available from n8n 2.43.0. This covers the `managerCredentialId` and `workspaceId` parameters, and the `status`, `code`, `managerCredentials`, `appId`, `installUrl`, `agentUrl`, `nextStep`, and `slackApp` fields. From n8n 2.43.0, `credentialId` is optional for Slack `connect`. Earlier versions require `credentialId` on every call, and return `configured: true` for any accessible `slackApi` credential without checking the Slack app.
 - A Slack app sends events only to the request URL in its own configuration, so a Slack channel works only with a Slack app that points at this agent. A `slackApi` credential made for another use, such as a Slack Trigger or another agent, passes every credential check but the agent receives nothing.
 - To connect Slack, call with `action: "connect"`, `type: "slack"`, and no `credentialId` first. Nothing changes. n8n returns the workspaces where it can create a Slack app for the agent, or the steps the user must take in n8n.
 - When the first call returns `status: "workspace_selection_required"`, ask the user which workspace to use and confirm that n8n may create a Slack app there. Then call again with that `managerCredentialId` and `workspaceId`. n8n creates the Slack app, installs it, and connects the channel.

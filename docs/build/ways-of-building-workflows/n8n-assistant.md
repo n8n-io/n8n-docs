@@ -119,6 +119,12 @@ n8n Assistant asks for confirmation before high-impact actions, such as publishi
 
 Your credential secrets are never sent to the AI, and the AI never sees them.
 
+n8n Assistant can read credential descriptions from n8n 2.41.0. From n8n 2.42.0, n8n Assistant only reads descriptions if your instance enables credential descriptions.
+
+n8n Assistant uses available credential descriptions to help choose between credentials of the same type. For example, a description can identify a production account or a test account. If the choice remains unclear, n8n Assistant asks you which credential to use.
+
+The AI can receive credential descriptions. Don't include API keys, passwords, or tokens in them.
+
 When a workflow needs credentials, n8n Assistant prompts you with a credential card in the chat. From that card, you can:
 
 - Select an existing credential that you have access to in the project.
@@ -153,7 +159,7 @@ Depending on the task, this can include:
 - your prompts and chat messages,
 - workflow structure and node configuration,
 - selected execution and error details used for troubleshooting,
-- credential names, credential types, or connection status,
+- credential names, types, descriptions, or connection status,
 - approved web pages or domains, when you enable web access.
 
 n8n Assistant doesn't require you to paste secrets into chat. Enter API keys, passwords, and tokens through the standard n8n credential screens.
@@ -164,7 +170,9 @@ Don't paste sensitive data into chat unless it's necessary for the task. AI-gene
 
 ## Credit usage
 
-n8n Assistant uses credits based on the tokens processed by the underlying AI model.
+On n8n Cloud, n8n Assistant uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits), based on the tokens processed by the underlying AI model. Your plan includes a monthly allowance of Assistant credits that resets on the first day of every month. If you use it up, the instance owner can buy extra credits to keep using n8n Assistant until the next reset. Everyone on the instance shares one balance.
+
+Assistant credits and [Gateway credits](../understand-workflows/use-gateway-credits.md) are separate. Assistant credits pay for your conversations with n8n Assistant, not for the AI models your workflows or agents call when they run. Gateway credits pay for those model calls, not for n8n Assistant. Topping up one doesn't add to the other.
 
 Longer conversations, larger workflows, debugging sessions, and repeated iterations use more credits.
 
@@ -175,9 +183,9 @@ To reduce unnecessary usage:
 - Review n8n Assistant's plan before asking it to build.
 - Avoid asking it to regenerate the same workflow without adding new guidance.
 
-To get more credits during Preview, upgrade your plan. More ways to top up are coming.
+To check your balance, open the credits menu in the n8n Assistant panel. For your plan's monthly allowance, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
+Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n Assistant runs on your own AI provider account. Refer to [Set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant).
 
 ## Related resources
 

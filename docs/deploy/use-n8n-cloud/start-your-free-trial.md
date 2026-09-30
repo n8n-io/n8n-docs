@@ -89,5 +89,6 @@ Select the **Contact** button on the [n8n website](https://n8n.io/pricing/).
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Understand concurrency](understand-concurrency.md)
 * [Download workflows](download-workflows.md)

@@ -55,7 +55,7 @@ Agents suit jobs where the next step depends on the last answer: a question in S
 
 Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
 
-Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to wait for approval, and review each session's tool calls, inputs, and outputs.
+Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to require approval before the agent runs them, and review each session's tool calls, inputs, and outputs.
 
 One turn with an agent counts as one execution. Calls to workflow tools and sub-agents don't count separately. The AI Agent node hasn't changed, and everything you've built with it keeps working.
 

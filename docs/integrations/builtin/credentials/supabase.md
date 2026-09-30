@@ -77,7 +77,7 @@ Existing credentials that use a legacy `service_role` secret keep working, but S
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-Managed OAuth2 uses the permissions in the **Supabase node and MCP server** column below. For custom OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
+Managed OAuth2 uses the **Supabase node and MCP server** permissions shown in the permissions table. For custom OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
 
 ### OAuth2 prerequisites
 

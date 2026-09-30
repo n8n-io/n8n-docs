@@ -9,7 +9,7 @@ layout:
 
 # Track Assistant credit spend
 
-The **Assistant credits** tab in the Cloud admin dashboard shows your [Assistant credit](README.md) balance, your spend over time, who on your instance uses the most credits, and your top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Assistant credits** tab.
+The **Assistant credits** tab in the Cloud admin dashboard shows your [Assistant credit](README.md) balance, spend over time, top users, and top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Assistant credits** tab.
 
 You can also check your balance in the editor, from the n8n Assistant panel.
 
@@ -53,7 +53,7 @@ In the editor, open the credits menu in the n8n Assistant panel to see:
 
 When your balance drops to 10% or less, a banner above the chat input warns you that you're running low. You can dismiss the banner. It appears again the next time your balance crosses the threshold.
 
-When your balance runs out, n8n Assistant shows **You've run out of AI credits**, and you can't send new messages until you top up or your included credits reset. Refer to [When your Assistant credits run out](README.md#when-your-assistant-credits-run-out) for details.
+When your balance runs out, n8n Assistant shows **You've run out of AI credits**, and you can't send new messages. Refer to [When your Assistant credits run out](README.md#when-your-assistant-credits-run-out) for how to get more.
 
 ## Related resources
 

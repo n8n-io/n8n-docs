@@ -132,7 +132,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `workflowId` | `string` | Yes | | The ID of the workflow to execute |
-| `executionMode` | `"manual" \| "production"` | Yes | | `"manual"` tests the current version, `"production"` executes the published (active) version |
+| `executionMode` | `"manual" \| "production"` | Yes | | Your execution intent. Use `"manual"` to test or validate the current version of the workflow, including tests against live external services. Use `"production"` only when you intend to run the published version as a live execution. From n8n 2.30.6 and n8n 2.31.2, `executionMode` is required. Earlier versions use `"production"` when you omit it. |
 | `triggerNodeName` | `string` | No | | Name of the trigger node to execute. Required when providing `inputs`. If omitted, the workflow must have exactly one eligible trigger that doesn't require inputs, such as a **Schedule Trigger** or a **Manual Trigger** in manual mode. Use `get_workflow_details` to see available trigger names |
 | `inputs` | `object` | No | | Inputs to provide to the workflow (discriminated union, see below) |
 

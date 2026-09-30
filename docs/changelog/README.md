@@ -40,6 +40,37 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Build agents you set up once and use anywhere
+
+**Released:** 2026-09-21 in [n8n 2.40](release-notes.md#n8n240)
+
+You can now build agents in n8n. Describe what an agent should do, give it a model and the tools and workflows it can use, and it works out the steps itself. Open the **Agents** tab and select **Create Agent**, or describe what you want to n8n Assistant and it drafts the agent for you.
+
+Agents suit jobs where the next step depends on the last answer: a question in Slack that takes a few rounds, a support ticket, a new GitHub issue. Each agent has:
+
+* **A model:** any model you have credentials for, or Gateway credits.
+* **Instructions:** its role, tone, and what it should and shouldn't do, written in plain language.
+* **Tools:** n8n nodes, MCP servers, and your own workflows.
+* **Skills, sub-agents, knowledge files, and memory,** plus a stored session for every conversation.
+
+Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
+
+Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to wait for approval, and review each session's tool calls, inputs, and outputs.
+
+One turn with an agent counts as one execution. Calls to workflow tools and sub-agents don't count separately. The AI Agent node hasn't changed, and everything you've built with it keeps working.
+
+{% hint style="warning" %}
+**Preview status**
+
+Agents are in Preview. They can make mistakes, and their behavior may change while they're in development. Test before you publish, and require approval on tools that write to your systems.
+{% endhint %}
+
+Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#self-hosted).
+
+{% hint style="info" %}
+**Availability:** Starter, Pro, and Business. Enterprise support is coming.
+{% endhint %}
+
 ## Error workflow executions no longer count towards your quota
 
 **Released:** 2026-09-01 in [n8n 2.38](release-notes.md#n8n2381)

@@ -1882,6 +1882,7 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | `published` | `boolean` | Whether the agent has a published (active) version |
 | `activeVersionId` | `string \| null` | The published version ID, or null if unpublished |
 | `configHash` | `string` | The configuration hash after this change |
+| `warning` | `string \| object` | On a Slack `connect` with an explicit credential: a string that explains n8n couldn't confirm the Slack app, so the agent may receive no events. On `disconnect`: an object with `integrationType`, `code`, and an optional `action` URL, when n8n couldn't delete an external resource. For example, `code: "app_not_deleted"` when n8n couldn't delete the Slack app |
 
 Every call can also return `ok`, and a failed call returns `ok: false` with `code` and `error`. Slack `connect` calls can add the following fields:
 
@@ -1900,7 +1901,6 @@ Every call can also return `ok`, and a failed call returns `ok: false` with `cod
 | `slackApp.requestUrl` | `string` | The URL a Slack app must send Event Subscriptions and Interactivity to |
 | `slackApp.manifest` | `object` | Slack app manifest for manual setup |
 | `slackApp.configuredForAgent` | `boolean` | `true` only when n8n built the Slack app behind the credential for this agent |
-| `warning` | `string \| object` | On a Slack `connect` with an explicit credential: a string that explains n8n couldn't confirm the Slack app, so the agent may receive no events. On `disconnect`: an object with `integrationType`, `code`, and an optional `action` URL, when n8n couldn't delete an external resource. For example, `code: "app_not_deleted"` when n8n couldn't delete the Slack app |
 
 #### Notes <a href="#notes" id="notes"></a>
 

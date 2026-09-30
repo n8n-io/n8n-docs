@@ -17,7 +17,12 @@ This section is the complete endpoint reference for n8n's public REST API, gener
 {% hint style="info" %}
 **Feature availability**
 
-The n8n API isn't available during the free trial. Please upgrade to access this feature.
+The n8n API is available on:
+
+- **n8n Cloud:** Starter, Pro, Enterprise
+- **Self-hosted:** All editions
+
+It isn't available on the free trial.
 {% endhint %}
 
 ## Before you start

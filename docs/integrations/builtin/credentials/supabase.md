@@ -75,14 +75,16 @@ Existing credentials that use a legacy `service_role` secret keep working, but S
 
 ## Using OAuth2
 
-To configure OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+
+Managed OAuth2 uses the permissions in the **Supabase node and MCP server** column below. For custom OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
 
 ### OAuth2 prerequisites
 
 Before you begin, make sure:
 
 * The Supabase [Data API](https://supabase.com/docs/guides/api) is enabled for the projects you use with the Supabase node.
-* Your Supabase account has the **Owner** or **Administrator** role for the organization. Supabase requires one of these roles to publish an OAuth app.
+* For custom OAuth2, your Supabase account has the **Owner** or **Administrator** role for the organization. Supabase requires one of these roles to publish an OAuth app.
 * Your Supabase account has the **Owner** or **Administrator** role for each project you connect. n8n needs this access to create the managed secret key.
 
 Refer to Supabase's [access control documentation](https://supabase.com/docs/guides/platform/access-control) for more information about organization and project roles.
@@ -102,7 +104,7 @@ Configure the application permissions based on how you'll use the OAuth credenti
 
 Leave all scopes not listed in the table set to **No access**. The additional permissions in the **Supabase node and MCP server** column are required by Supabase MCP tools, not by the Supabase node.
 
-To create and connect the OAuth app:
+To configure custom OAuth2:
 
 1. In n8n, create a **Supabase OAuth2 API** credential and copy the **OAuth Redirect URL**.
 2. In the [Supabase dashboard](https://supabase.com/dashboard), select your organization and go to **Organization Settings > OAuth Apps**.

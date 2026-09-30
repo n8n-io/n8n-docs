@@ -1514,7 +1514,7 @@ The `data` field's shape depends on `kind`:
 |--------|--------------|
 | `models` (no `provider`) | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models. |
 | `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }] }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. |
-| `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. |
+| `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow. |
 | `workflows` | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool |
 | `subagents` | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId` |
 | `mcpServers` | Array of MCP registry servers, each with `name`, `title`, `description`, `url`, `transport`, `authentication`, `credentialType`, `tools`, `metadata` |
@@ -1855,7 +1855,7 @@ List the publish history of an agent, newest first.
 
 ### update_agent_integration <a href="#updateagentintegration" id="updateagentintegration"></a>
 
-Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them.
+Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them. For Slack, connect without `credentialId` first so n8n can create the Slack app for the agent.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
@@ -1864,7 +1864,9 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | `agentId` | `string` | Yes | The ID of the agent |
 | `action` | `"connect" \| "disconnect"` | Yes | Whether to connect or disconnect the integration |
 | `type` | `string` | Yes | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, or `"linear"`) |
-| `credentialId` | `string` | Yes | Accessible credential for this integration |
+| `credentialId` | `string` | No | Accessible credential for this integration. Required for `disconnect`, and for `connect` on every type other than Slack. Omit it to connect Slack through managed setup |
+| `managerCredentialId` | `string` | No | Slack managed setup only: the `managerCredentialId` returned by a Slack connect call without `credentialId` |
+| `workspaceId` | `string` | No | Slack managed setup only: the `workspaceId` returned by a Slack connect call without `credentialId` |
 | `settings` | `object` | No | Integration settings. Required for Telegram `connect` operations (`accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user). |
 
 #### Output <a href="#output" id="output"></a>
@@ -1879,11 +1881,39 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | `activeVersionId` | `string \| null` | The published version ID, or null if unpublished |
 | `configHash` | `string` | The configuration hash after this change |
 
+Slack managed setup calls add the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | Whether the call succeeded |
+| `status` | `string` | `"workspace_selection_required"` when n8n needs a workspace choice, or `"install_approval_required"` when someone must approve the Slack app install |
+| `code` | `string` | Error code: `"slack_workspace_not_connected"`, `"slack_manager_reconnect_required"`, `"slack_managed_setup_unavailable"`, or `"slack_app_built_for_another_agent"` |
+| `error` | `string` | What went wrong |
+| `managerCredentials` | `array` | Slack workspace credentials in the project, each with `managerCredentialId` and `name` |
+| `managerCredentials[].workspaces` | `array` | Workspaces the credential covers, each with `workspaceId`, `name`, `connected`, and `credentialId` when a bot credential exists. `connected: true` means the workspace already has this agent |
+| `installUrl` | `string` | URL the user opens to approve the Slack app install. Present when `status` is `"install_approval_required"` |
+| `agentUrl` | `string` | URL to open the agent in n8n, where the user can use **Add channel** |
+| `nextStep` | `string` | The next action to take |
+| `slackApp.requestUrl` | `string` | The URL a Slack app must send Event Subscriptions and Interactivity to |
+| `slackApp.manifest` | `object` | Slack app manifest for manual setup |
+| `slackApp.configuredForAgent` | `boolean` | `true` only when n8n built the Slack app behind the credential for this agent |
+| `warning` | `string` | Explains that n8n couldn't confirm the Slack app, so the agent may receive no events |
+
 #### Notes <a href="#notes" id="notes"></a>
 
 - Configuring an integration never publishes the agent. If the agent is already published, connecting starts the channel immediately; otherwise the channel stays inactive until `publish_agent` is called.
 - Disconnecting tears down the live channel immediately, whether or not the agent is published.
 - Confirm with the user before connecting a channel on an already-published agent, since it connects immediately.
+- A Slack app sends events only to the request URL in its own configuration, so a Slack channel works only with a Slack app that points at this agent. A `slackApi` credential made for another use, such as a Slack Trigger or another agent, passes every credential check but the agent receives nothing.
+- To connect Slack, call with `action: "connect"`, `type: "slack"`, and no `credentialId` first. Nothing changes. n8n returns the workspaces where it can create a Slack app for the agent, or the steps the user must take in n8n.
+- When the first call returns `status: "workspace_selection_required"`, ask the user which workspace to use and confirm that n8n may create a Slack app there. Then call again with that `managerCredentialId` and `workspaceId`. n8n creates the Slack app, installs it, and connects the channel.
+- If the second call returns `status: "install_approval_required"`, give the user `installUrl`. n8n connects the channel after they approve the install. Call `get_agent` to confirm.
+- `code: "slack_app_built_for_another_agent"` means the agent already uses a bot credential from another Slack app. Disconnect that credential, then install again.
+- `code: "slack_workspace_not_connected"` means no Slack workspace is connected to n8n yet. Give the user `agentUrl` and ask them to connect the workspace once through **Add channel**, then retry.
+- `code: "slack_manager_reconnect_required"` means the user must reconnect the listed Slack workspace credentials through **Add channel**. Give them `agentUrl`, then retry.
+- `code: "slack_managed_setup_unavailable"` means this instance can't create Slack apps. Relay `slackApp.requestUrl` and `slackApp.manifest` so the user can configure a Slack app, then connect with that app's `slackApi` credential.
+- When you connect with an explicit `slackApi` credential, check `slackApp.configuredForAgent`. If it's `false`, relay the warning and `slackApp.requestUrl` to the user instead of reporting the channel as ready.
+- `credentialId` is required to disconnect. `managerCredentialId` and `workspaceId` apply only to `connect`.
 
 ---
 

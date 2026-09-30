@@ -292,11 +292,13 @@ Instance context gives n8n Assistant a short summary of the project a conversati
 
 The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
 
-On a self-hosted instance, use `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. Preserve any other entries in the JSON object.
+On a self-hosted instance, set `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
 
 ```bash
-N8N_FEATURE_FLAG_OVERRIDES={"114_instance_activity_context":true}
+N8N_FEATURE_FLAG_OVERRIDES='{"114_instance_activity_context":true}'
 ```
+
+Restart n8n to apply the change.
 
 | `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
 | --- | --- |
@@ -311,7 +313,16 @@ One flag controls both halves. With the flag off, n8n writes no activity entries
 
 The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own flag.
 
-Turning the flag off removes instance context and the tool that reads the activity log. Entries recorded earlier stay in the log, and n8n Assistant reads none of them.
+Turning the flag off stops new activity recording and new instance context reads. The activity log tool is unavailable. Entries recorded earlier remain subject to these retention settings:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_ACTIVITY_LOG_RETENTION_DAYS` | `0` | Days to keep activity entries. `0` disables age-based pruning. |
+| `N8N_ACTIVITY_LOG_MAX_ENTRIES` | `1000` | Maximum activity entries across all projects. `0` disables count-based pruning. |
+
+By default, n8n keeps the newest 1,000 activity entries across the instance. It doesn't remove entries based on age. An entry can remain indefinitely if the log stays below this limit.
+
+Pruning runs hourly and continues when the flag is off. Restart n8n after changing these environment variables.
 
 ## Enable node type counting
 

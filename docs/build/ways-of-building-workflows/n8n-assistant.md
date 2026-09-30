@@ -76,7 +76,7 @@ Instance context holds pointers, not contents. From it, n8n Assistant can:
 - **Read further back through recent changes.** Instance context covers a recent window. n8n Assistant can list older entries, filter to workflow or credential changes, or open one entry to see a single workflow's recent change history.
 - **Open the live record.** Every line carries an ID, so n8n Assistant can fetch the workflow, execution, or credential it points to.
 
-Change entries are pruned as they age, and executions stay only as long as your [execution data retention](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data) allows. An entry n8n Assistant can no longer open is a normal outcome, not an error, and it carries on without that entry.
+Activity entries follow your [activity log retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context). Executions follow your [execution data retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data). If an activity entry has been pruned, n8n Assistant continues without it.
 
 ### How n8n Assistant learns which nodes you use
 
@@ -91,7 +91,7 @@ The activity log records that a change happened, not what the change contained. 
 Instance context doesn't include:
 
 - **Parameter values.** A change entry names the node types you added or removed, and which settings you changed. It never records the values you set.
-- **Individual nodes.** Adding a second **Slack** node looks the same as adding the first. A change entry names the node types that changed, not how many nodes of each type you have.
+- **Individual nodes.** A save entry names added or removed node types, not individual nodes. Adding a second **Slack** node changes the total node count but doesn't add a new type.
 - **Every node type in a large change.** When one save adds many node types, the entry lists some of them and reports the total.
 - **Work in projects you didn't open.** See [Instance context stays inside one project](#instance-context-stays-inside-one-project).
 
@@ -105,7 +105,7 @@ Make sure that:
 - You have permission to use the workflows, credentials, and resources needed for the task.
 - You know what you want the workflow to do.
 
-n8n Assistant uses the permissions of your n8n user. It can only access the workflows, credentials, and resources that you can access in the selected project.
+n8n Assistant uses the permissions of your n8n user. It can only access workflows, credentials, and resources that you have permission to use.
 
 ## Write effective prompts
 
@@ -210,11 +210,11 @@ Don't paste sensitive data into chat unless it's necessary for the task. AI-gene
 
 ### Instance context stays inside one project
 
-A conversation is bound to the project you opened it in, and n8n Assistant reads instance context from that project only. It doesn't read your other projects, even ones you can open yourself, so work in one project never reaches a conversation in another.
+A conversation is bound to the project you opened it in. Automatic instance context and activity log lookups read only that project. Workflow searches and node type counting can include other projects you have permission to read.
 
 n8n Assistant reads instance context with your own permissions, and n8n checks them on every message rather than once at the start. If you lose access to the project, n8n Assistant stops reading it.
 
-An ID from outside the conversation's project gives the same answer as one that no longer exists. Neither can be used to find out whether something exists elsewhere in the instance.
+Looking up an activity-entry ID outside the conversation's project gives the same answer as looking up a missing entry. These lookups don't reveal whether an entry exists in another project.
 
 ## Credit usage
 

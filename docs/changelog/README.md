@@ -68,7 +68,7 @@ Agents are in Preview. They can make mistakes, and their behavior may change whi
 Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#self-hosted).
 
 {% hint style="info" %}
-**Availability:** Starter, Pro, and Business. Enterprise support is coming.
+**Availability:** All plans. On Enterprise, agents are in Preview, with additional governance features on the way.
 {% endhint %}
 
 ## Error workflow executions no longer count towards your quota

@@ -66,9 +66,12 @@ Enter these parameters:
 
 ### Reading rows while the table changes
 
-**Get** reads large result sets in pages. The read continues if the number of matching rows changes. Changes during the read can cause missing or repeated rows. The output can also contain values read at different times. For a consistent result, prevent inserts, updates, and deletes until the read finishes.
+When you ask for a lot of results at once, n8n fetches them in smaller batches ("pages") one after another, rather than all in one go.
 
-If the number of matching rows keeps increasing, **Return All** might not finish. Cancel the execution to stop further page requests after the current request finishes.
+Because this can take a little time, if someone changes the underlying data while it's still fetching (adding, editing, or deleting records), the results you get back might be a bit off. Some records could be missing, some could show up twice, and different parts of the results might reflect the data as it was at slightly different moments.
+
+* **To get a fully accurate result:** Make sure no one is adding, editing, or deleting records until the fetch is completely finished.
+* **If you're using "Return All":** If new matching records keep getting added while the fetch is running, **Return All** may never finish, since there's always more data to retrieve. If that happens, you can cancel the operation, and it will stop after the current batch finishes.
 
 ## If row exists <a href="#if-row-exists" id="if-row-exists"></a>
 

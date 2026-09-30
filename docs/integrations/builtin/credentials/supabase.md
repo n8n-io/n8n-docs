@@ -120,13 +120,3 @@ n8n creates or reuses a dedicated Supabase secret key named `n8n_managed_data_ap
 If you change the OAuth app permissions, reconnect the n8n credential to apply the new permissions.
 
 Refer to Supabase's [OAuth app guide](https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration) and [OAuth scopes documentation](https://supabase.com/docs/guides/integrations/build-a-supabase-oauth-integration/oauth-scopes) for more information.
-
-## OAuth2 troubleshooting
-
-### Projects don't appear
-
-Make sure the OAuth app has **Projects** read access and **Organizations** read access. Reconnect the credential after adding permissions or selecting a different organization.
-
-### n8n can't create the managed secret key
-
-Make sure the OAuth app has both read and write access for **Secrets**, then reconnect the credential.

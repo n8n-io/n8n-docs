@@ -38,7 +38,7 @@ You can use these credentials to authenticate the following nodes:
 * [Supabase](../app-nodes/n8n-nodes-base.supabase/README.md): Use a secret key or OAuth2.
 * [Supabase Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md): Use a secret key.
 
-You can also use the OAuth2 credential to connect the Supabase server from the [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry.
+You can also use the OAuth2 credential to connect the Supabase MCP server from the [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry.
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -75,22 +75,32 @@ Existing credentials that use a legacy `service_role` secret keep working, but S
 
 ## Using OAuth2
 
-To configure OAuth2, create a Supabase OAuth app and enter its client credentials in n8n. The Supabase [Data API](https://supabase.com/docs/guides/api) must be enabled for the projects you use with the Supabase node.
+To configure OAuth2, create a Supabase OAuth app and enter its client credentials in n8n.
 
-Configure these application permissions to use the OAuth app with both the Supabase node and the Supabase MCP server:
+### OAuth2 prerequisites
 
-| Scope | Access |
-| --- | --- |
-| Analytics | Read-only |
-| Database | Read and write |
-| Edge Functions | Read and write |
-| Environment | Read and write |
-| Organizations | Read-only |
-| Projects | Read and write |
-| Secrets | Read and write |
-| Storage | Read and write |
+Before you begin, make sure:
 
-Leave all other application permissions set to **No access**.
+* The Supabase [Data API](https://supabase.com/docs/guides/api) is enabled for the projects you use with the Supabase node.
+* Your Supabase account has the **Owner** or **Administrator** role for the organization. Supabase requires one of these roles to publish an OAuth app.
+* Your Supabase account has the **Owner** or **Administrator** role for each project you connect. n8n needs this access to create the managed secret key.
+
+Refer to Supabase's [access control documentation](https://supabase.com/docs/guides/platform/access-control) for more information about organization and project roles.
+
+Configure the application permissions based on how you'll use the OAuth credential:
+
+| Scope | Supabase node only | Supabase node and MCP server |
+| --- | --- | --- |
+| Analytics | No access | Read-only |
+| Database | No access | Read and write |
+| Edge Functions | No access | Read and write |
+| Environment | No access | Read and write |
+| Organizations | No access | Read-only |
+| Projects | Read-only | Read and write |
+| Secrets | Read and write | Read and write |
+| Storage | No access | Read and write |
+
+Leave all scopes not listed in the table set to **No access**. The additional permissions in the **Supabase node and MCP server** column are required by Supabase MCP tools, not by the Supabase node.
 
 To create and connect the OAuth app:
 
@@ -99,7 +109,7 @@ To create and connect the OAuth app:
 3. Select **Publish OAuth app**.
 4. Enter an **Application name** and **Website URL**.
 5. Under **Authorization callback URLs**, enter the **OAuth Redirect URL** from n8n.
-6. Set the application permissions to the access levels listed above.
+6. Set the application permissions using the column that matches how you'll use the credential.
 7. Select **Confirm**.
 8. Copy the **Client ID** and **Client Secret**. Supabase displays the client secret only once.
 9. Enter the **Client ID** and **Client Secret** in the n8n credential.

@@ -1069,12 +1069,17 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 | `results[].description` | `string` | Description of the resource, when available |
 | `paginationToken` | `string` | Pass back as `paginationToken` to fetch the next page. Absent when there are no more results. |
 | `builderHint` | `string` | Selection guidance from the node's `@builderHint` annotation, when present |
+| `error` | `string` | Error message when the lookup fails. `error` is available from n8n 2.43.0. |
+| `httpCode` | `string` | HTTP status code the upstream API returned, when the lookup fails on an API call. `httpCode` is available from n8n 2.43.0. |
+| `errorDescription` | `string` | The upstream API's own error text, when the lookup fails on an API call. Use it to tell a missing permission apart from an invalid credential. n8n truncates it to 4,000 characters. `errorDescription` is available from n8n 2.43.0. |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Requires a `credentialId` from `list_credentials`; the lookup runs as the current user using that credential.
 - `listSearch` methods support `filter` and pagination via `paginationToken`; `loadOptions` methods don't.
 - This tool reaches out to external services, unlike most other read-only tools.
+- From n8n 2.43.0, a failed lookup returns an error result with an empty `results` array and the `error` field. When the failure comes from an upstream API call, the result also includes `httpCode` and `errorDescription`. Earlier versions return only the error message, which for an API failure is a generic status sentence.
+- n8n removes secrets from `error` and `errorDescription` before returning them.
 
 ---
 

@@ -277,7 +277,7 @@ Fill in the real n8n version number the feature ships in. Don't merge this
 page with the placeholder still in place.
 -->
 
-Instead of adding a vault through **Settings** > **External Secrets**, you can declare one or more vaults in a JSON file and have n8n create, update, or remove them automatically at startup. This is useful for infrastructure-as-code deployments, where you want your vault configuration to live alongside the rest of your n8n deployment config instead of being a manual setup step.
+Instead of adding a vault through **Settings** > **External Secrets**, you can declare one or more vaults in a JSON file. On startup, n8n creates, updates, or removes them automatically. This is useful for infrastructure-as-code deployments, where you want your vault configuration to live alongside the rest of your n8n deployment config instead of being a manual setup step.
 
 Set [`N8N_EXTERNAL_SECRETS_CONFIG_FILE`](../../deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/external-secrets.md) to the path of a JSON file. On startup, n8n reads the file and applies it:
 

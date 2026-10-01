@@ -12,8 +12,7 @@ GitBook rules enforced (see docs/contribute + the internal-linking guide):
      documented exception is a bare directory reference (a relative path
      ending in `/`, no filename, e.g. `./`, `../`, `../../`, `sibling/`), which
      GitBook resolves natively to that folder's own README.md at any relative
-     depth (see the style guide's "Link to the current page's parent page"
-     section).
+     depth (see the style guide's "Parent pages" note).
   2. A relative `.md` link must point at a file that exists.
   3. Relative `../` links can't cross GitBook spaces (top-level folders under
      docs/). Cross-space links must use an app.gitbook.com URL, so a relative
@@ -64,13 +63,11 @@ EXCLUDE_FILES = {
     "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
 }
 
-# The style guide holds the canonical `space folder -> space ID` table used for
-# cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
-# single source of truth the team already maintains.
-# Generated from each space's GitBook Git Sync config by the DocFather "Space Index"
-# workflow, so it cannot drift the way a hand-kept table can. The style guide keeps a
-# copy for people reading the published docs (this file lives at the repo root and
-# isn't published); the test suite asserts that copy agrees with this one.
+# Space IDs for cross-space (app.gitbook.com/s/<id>/...) links come from this
+# generated file, built from each space's GitBook Git Sync config by the
+# DocFather "Space Index" workflow, so it cannot drift the way a hand-kept
+# table can. The style guide and the n8n-docs-author skill both link to it
+# instead of keeping their own copy.
 SPACE_ID_TABLE_FILE = REPO_ROOT / "SPACE_INDEX.md"
 # Row form: | `space-folder` | `SpaceId` |
 SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
@@ -80,7 +77,7 @@ APP_GITBOOK_RE = re.compile(
 
 
 def load_space_ids() -> dict[str, str]:
-    """Parse the style-guide table into {space_id: folder}. Empty on failure."""
+    """Parse SPACE_INDEX.md into {space_id: folder}. Empty on failure."""
     id_to_folder: dict[str, str] = {}
     try:
         for line in SPACE_ID_TABLE_FILE.read_text(encoding="utf-8").split("\n"):
@@ -533,8 +530,8 @@ def classify(md_file: Path, src_rel: str, target: str):
 
     # Rule 1 exception: a bare directory reference (a relative path ending in
     # `/`, no filename) is the documented way to link to that folder's own
-    # landing page -- see the style guide's "Link to the current page's parent
-    # page" section. GitBook resolves this natively to the folder's README.md
+    # landing page -- see the style guide's "Parent pages" note. GitBook
+    # resolves this natively to the folder's README.md
     # at any relative depth (`./`, `../`, `../../`, `sibling/`, ...), unlike a
     # bare path with no trailing slash, so it doesn't 404 the way Rule 1
     # assumes. Route it through the same file it names: `<path>README.md`.

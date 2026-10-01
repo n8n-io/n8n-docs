@@ -35,7 +35,7 @@ n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/st
 * Use present tense.
 * Keep your writing as concise as possible. Two free browser apps to help:
   * [Hemingway](https://hemingwayapp.com/) measures language complexity. There's no fixed rule about what grade to aim for, but the lower the reading grade, the better.
-  * [Lexi](https://rebilly.github.io/lexi/) measures writing complexity in Markdown text, combining several measures into one readability score. The ideal combined readability score of 60 should be regarded as a minimum — most pages should score higher.
+  * [Lexi](https://rebilly.github.io/lexi/) measures writing complexity in Markdown text, combining several measures into one readability score. Aim for 60 or higher; most pages should score above that.
 
 Watch for these common patterns and prefer the plainer version:
 
@@ -75,7 +75,7 @@ Write for everyone.
 
 Use the same term for the same concept everywhere, and prefer the official product term over a plausible synonym (for example, "publish a workflow", not "activate a workflow"). In prose, use sentence case; for a literal UI label or node name, use bold with the product's exact casing. Write the product name as "n8n", lowercase, even at the start of a sentence.
 
-See the [Terminology and naming](terminology.md) word list for the full set of terms to use and avoid.
+See [Terminology and naming](terminology.md) for the full set of terms to use and avoid.
 
 ### Text formatting
 
@@ -119,14 +119,14 @@ Obvious exceptions:
 
 ## Page length and granularity
 
-Split content into focused pages, each covering a single concept, task, or reference category. Aim for a middle band: neither one monolithic page nor scattered fragments. Human readers and AI tools both do best with self-contained, heading-structured pages: the AI tools that power search and the docs assistant chunk content on `##` and `###` headings, retrieving one section at a time.
+Split content into focused pages, each covering a single concept, task, or reference category, in a middle band between one monolithic page and scattered fragments. Self-contained, heading-structured pages work best for both readers and AI tools (see [Agent-friendly docs](agent-friendly-docs.md) for why).
 
 ### Length
 
-* **Healthy range:** about 1,500 to 20,000 characters (250 to 3,000 words). This reads as scannable sections for people, and as clean retrievable chunks for AI tools.
-* **Merge if under ~1,500 characters.** A page or section that small sits below the useful chunk size: AI search merges it with unrelated neighbours, and over-splitting a topic across small pages measurably lowers answer quality. Fold stubs into a parent or sibling page.
+* **Healthy range:** about 1,500 to 20,000 characters (250 to 3,000 words): scannable for people, retrievable for AI tools.
+* **Merge if under ~1,500 characters.** Below the useful chunk size. Fold stubs into a parent or sibling page.
 * **Split if over ~25,000 characters**, if the page mixes content types (concept, how-to, and reference together), or if one section grows without bound (such as a list of per-client examples).
-* **Never exceed ~50,000 characters.** Agents truncate longer pages, so anything past the limit is invisible to them.
+* **Never exceed ~50,000 characters.** Agents truncate anything past this limit.
 
 ### How to split
 
@@ -135,26 +135,26 @@ Split content into focused pages, each covering a single concept, task, or refer
 
 ### Keep each section self-contained
 
-Retrieved on its own, a section that leans on its neighbours arrives stripped of that context, so the agent fills the gap by guessing. Write each section so a reader who lands on it alone can understand it:
+Write each section so a reader who lands on it alone, without its neighbours for context, can still understand it (see [Agent-friendly docs](agent-friendly-docs.md) for why):
 
 * **Write descriptive, sentence-case headings.** The heading is the unit AI search retrieves, often without the rest of the page, so name the section's topic in full: "Configure the Schedule Trigger", not "Configuration".
-* **Make each section understandable on its own.** Restate the key context a reader needs instead of pointing back to it. Avoid "as mentioned above", "as described in the previous section", and "see below". An agent that retrieves this section out of order, or a reader who arrives from search, can't follow those references.
+* **Make each section understandable on its own.** Restate the key context instead of pointing back to it: avoid "as mentioned above", "as described in the previous section", and "see below", which break for an agent retrieving this section out of order or a reader arriving from search.
 * **Restate, don't duplicate.** Repeat the one or two facts the section needs, not whole paragraphs. If two sections need the same long explanation, that's a sign they belong together under one heading. Keep restatements short so the page stays concise (see [Plain language](#plain-language)).
 
 ### Link to related pages, prerequisites, and next steps
 
-Connect each page to the others on its topic. Explicit, descriptive links let an agent follow a path directly instead of guessing a URL, and they group your pages into a topic cluster that AI search reads as a signal of depth.
+Connect each page to the others on its topic (see [Agent-friendly docs](agent-friendly-docs.md)).
 
-**The specific guidelines below don't apply to pages in the `docs/integrations/` ("Nodes") space**. The structure and hierarchy of pages in this section are different to the rest of the site.
+**These guidelines below don't apply `docs/integrations/` ("Nodes") pages**, which use a different structure.
 
-* **Always link the prerequisites and the next step**, at minimum.
-* **Every section landing page links down to its children.** With two or more children, list them under an "In this section" heading as a plain bullet list (link plus a short description). With only one child, skip the list and link it inline at its first mention instead.
-* **Every child page links back up and sideways, in a "Related resources" section at the end.** List a link back to the parent, plus a link to each direct sibling in the same section. Link to the parent with `./` if the current page sits in the same folder as the parent's `README.md`, or `../` if the current page is itself a section landing page one level below its parent (see [Link to the current page's parent page](#link-to-the-current-pages-parent-page)). This is a plain link list, structural rather than curated — bare links, no descriptions. Unlike "In this section", the reader has already read a page from this cluster, so the descriptive anchor text alone carries enough signal; a repeated one-line description would just restate the title. Add other genuinely related pages at your discretion, even outside the current section.
-* **Past about eight to 10 siblings, drop the sibling list.** Beyond that size, a full sibling list is mostly boilerplate for the reader and turns into an O(n²) maintenance job (add, rename, or remove one page, and every other page in the section needs an edit). Link back to the parent only; the parent's "In this section" already carries the exhaustive list.
-* **A page that is itself a parent does both.** A section landing page one level down (for example, a subsection README) gets its own "In this section" for its children, plus a "Related resources" footer relating it to its own parent and its own siblings at its level. Reach only one level up and one level sideways — don't chain further up to a grandparent section; that connectivity already exists transitively through the parent's own links.
-* **Skip sibling links for flat reference collections** where every page follows the same one-fact template (for example, one page per expression data type). These pages still link back to the parent in "Related resources", just without a sibling list.
-* **Aim for a cluster of five or more interlinked pages** on the same topic. AI search cites connected clusters far more than standalone pages.
-* **When you reference another page in prose, link it at its first meaningful mention** — not every mention. Use descriptive anchor text that names the target: [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here". If the page already names its topic in passing ("this workflow's flow logic"), link that phrase instead of adding a new sentence. A link points to a separate topic; it can't stand in for context this section needs, so if a section can't be understood without the linked page, restate the key fact instead (see [Keep each section self-contained](#keep-each-section-self-contained)).
+* **Always link prerequisites and the next step**.
+* **Section landing pages link down to children.** Two or more childre: list under an "In this section" heading as bullets (link + short description). One: skip the list, and link it inline at first mention instead..
+* **Child pages link back up and sideways, in a "Related resources" section at page-end.** A bare link to the parent, plus one to each direct sibling — no descriptions. Use `./` for the parent if the page shares a folder with the parent's `README.md`, or `../` if the page is itself a section landing page one level below the parent (see [Parent pages](#parent-pages)). Add other genuinely related pages at your discretion.
+* **Past 10 siblings, drop the sibling list.** Link only the parent (its "In this section" already has the full list).
+* **A page that is itself a parent does both.** It has its own "In this section" for children, plus a "Related resources" footer for its own parent and siblings — one level up and sideways only, never to a grandparent.
+* **Skip sibling links for flat reference collections** where every page follows the same one-fact template (for example, one page per expression data type). Link back to the parent only in "Related resources".
+* **Aim for a cluster of five or more interlinked pages** on the same topic.
+* **In prose, link at first meaningful mention only**, with descriptive anchor text naming the target (e.g. [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here") — reuse an existing mention of the topic rather than adding a sentence for it. A link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Feature availability
 
@@ -164,15 +164,15 @@ A feature's availability can be limited in three ways:
 * **Version**: which n8n version introduced, deprecated, or removed it.
 * **Preview status**: whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
 
-Plan/platform and version limits share one documentation system, covered first below. Preview status works differently and is always documented separately, see [Preview status](#preview-status), further down.
+[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) works differently and is always documented separately.
 
 ### Plan, platform, and version limits
 
-Document these at one of three scopes:
+Document at one of three scopes:
 
-* **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See Feature availability hints, below.
-* **Inline or passing mention:** a short note next to a small option, field, role, or behavior within a larger feature, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions), below.
-* **Table row:** one row among many, put the limit in the description cell, or a dedicated column if several rows differ. See Table rows, below.
+* **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See [Feature availability hints](#feature-availability-hints).
+* **Inline or passing mention:** a short note next to a small option, field, role, or behavior, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions)
+* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See [Table rows](#table-rows).
 
 #### Feature availability hints
 
@@ -193,66 +193,13 @@ Available from n8n 2.30.0.
 {% endhint %}
 ```
 
-**Plan only:**
-
-```
-{% hint style="info" %}
-**Feature availability**
-
-Single sign-on is available on:
-
-- **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
-{% endhint %}
-```
-
-**Plan only, one platform**, with the required absence line:
-
-```
-{% hint style="info" %}
-**Feature availability**
-
-Multi-main setup is available on:
-
-- **Self-hosted:** Enterprise
-
-It isn't available on n8n Cloud.
-{% endhint %}
-```
-
-**Plan caveat, plus version:**
-
-```
-{% hint style="info" %}
-**Feature availability**
-
-Custom roles are available on:
-
-- **Self-hosted:** Enterprise
-
-On n8n Cloud Enterprise, contact n8n to enable it.
-
-Available from n8n 2.30.0.
-{% endhint %}
-```
-
-**Version only**: the subject can be a named feature:
+**Version only**: the subject can be a feature or a node:
 
 ```
 {% hint style="info" %}
 **Feature availability**
 
 Canvas Groups are available from n8n 2.28.0.
-{% endhint %}
-```
-
-**Version only, node case**: the subject can be a node:
-
-```
-{% hint style="info" %}
-**Feature availability**
-
-The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node.
 {% endhint %}
 ```
 
@@ -266,7 +213,7 @@ The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Tr
 {% endhint %}
 ```
 
-If the entire page is about a deprecated or removed feature, also add a primary `deprecated` tag (see [Tags](#tags), under Frontmatter, for how tags work). Don't add a `status:` field, since `deprecated` isn't a verified value for it:
+If the entire page is about a deprecated or removed feature, also add a primary `deprecated` tag (see [Tags](#tags), under Frontmatter). Don't add a `status:` field, since `deprecated` isn't a verified value for it:
 
 ```
 ---
@@ -280,25 +227,26 @@ The tag needs label "Deprecated" and color red defined in the space's `.gitbook/
 
 Rules:
 
-* **Hint style:** `warning` for a deprecation or removal (the reader needs to act); `info` for everything else. A hint combining both uses `warning`.
-* **Name the subject in the body.** The "Feature availability" hint title doesn't say what's available, so name the node, setting, or feature in the following sentence. Don't rely on a heading outside the hint. Keep "available from n8n X.Y.Z" as an unbroken substring.
-* **Platform bullets:** lead with "<Feature> <is/are> available on:". Name both platforms, never by omission. Available on both: one bullet each. Available on one only: that bullet, then an absence line below it ("It isn't available on n8n Cloud." / "...self-hosted."). Available on the other only under a condition (for example, on request): a caveat line takes the absence line's place.
-* **Tiers:** list low to high, comma-separated, never "and". Cloud order: Starter, Pro, Enterprise. Self-hosted order: Community, Registered Community, Business, Enterprise. Use the exact capitalized names, and spell out "Registered Community" in full.
-* **Write "n8n Cloud", not "Cloud".** Bare "Cloud" is ambiguous.
-* **Whole platform:** write `All plans` or `All editions` instead of listing every tier. "All plans" includes the free trial (which mirrors Pro). Never list the trial itself; cover it only on the trial page.
-* **Below the bullets, in order:** (1) the absence line, or a caveat line in its place, (2) the version sentence, (3) any other feature-specific caveat.
-* **No plan limit** (version-only, deprecation, or removal): skip the bullets, just the title and the sentence.
-* **Don't link to Compare plans and editions or the release notes.** Earlier drafts of this guidance added those links to every hint; state the fact in the sentence instead and let the reader search if they need the source.
+* **Hint style:** `warning` for deprecation or removal (reader must act); `info` otherwise. A combined hint uses `warning`.
+* **Name the subject in the body**, not just the title — the hint title doesn't say what's available, and don't rely on an outside heading either. Keep "available from n8n X.Y.Z" unbroken. A version-only subject can name what it replaces, e.g. "The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node."
+* **Platform bullets:** lead with "<Feature> <is/are> available on:". Always name both platforms. Both: one bullet each. One only: that bullet plus an absence line below it ("It isn't available on n8n Cloud."/"...self-hosted."). Available elsewhere only conditionally (e.g. on request): a caveat line replaces the absence line (e.g. "On n8n Cloud Enterprise, contact n8n to enable it.").
+* **Tiers:** low to high, comma-separated, never "and". Cloud: Starter, Pro, Enterprise. Self-hosted: Community, Registered Community, Business, Enterprise. Use exact capitalized names; spell out "Registered Community".
+* **Write "n8n Cloud", never bare "Cloud".**
+* **Whole platform:** write `All plans`/`All editions`, not every tier. "All plans" includes the free trial (mirrors Pro) — never list the trial itself; cover it only on the trial page.
+* **Order below the bullets:** (1) absence/caveat line, (2) version sentence, (3) other feature-specific caveats.
+* **No plan limit** (version-only, deprecation, removal): just the title and sentence, no bullets.
+* **Don't link to Compare plans and editions or release notes** — state the fact in the sentence and let readers search if needed.
+
 
 #### Inline and passing mentions
 
-Use inline wording for a small control, option, field, or role inside a larger feature, or for a whole feature or node named in prose with no heading of its own. Not for a page- or section-wide limit: use a hint instead.
+Use inline wording for a small control, option, field, or role within a larger feature, or for a whole feature/node named in prose with no heading of its own — not for a page- or section-wide limit (use a hint instead).
 
-* Name the specific thing, not "this feature" or "this option", since it must stand on its own out of context.
-* One sentence per item; two if plan/platform and version both apply, plan/platform first.
-* Mention both platforms if both matter; don't imply absence by omission.
-* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X"). Skip the hint-style "Available from" lead-in.
-* More than two sentences, or both platform bullets: promote it to a scoped hint instead.
+* Name the specific thing, not "this feature" or "this option" — it must stand alone out of context.
+* One sentence per item; two if both plan/platform and version apply (plan/platform first).
+* Mention both platforms if both matter; never imply absence by omission.
+* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X") — skip the hint's "Available from" lead-in.
+* More than two sentences, or both platform bullets needed: promote to a scoped hint instead.
 
 For a control, option, field, or role:
 
@@ -322,9 +270,7 @@ The environments feature (n8n Cloud Enterprise, self-hosted Enterprise) lets you
 
 #### Table rows
 
-For one row among many in a table. Use the same vocabulary and ordering as inline text.
-
-Put the limit in the description cell:
+For one row among many, using the same vocabulary and ordering as inline text. Put the limit in the description cell:
 
 | Variable | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
@@ -341,27 +287,27 @@ Or add a dedicated column if several rows differ:
 
 #### Two version types
 
-n8n has two separate version numbers. Never leave the reader guessing which one you mean.
+n8n has two separate version numbers — never leave the reader guessing which.
 
-* **Instance version**: the n8n release, written as three-part semver, such as 2.30.0. Use it for features, environment variables, APIs, CLI commands, and hooks.
-* **Node version**: a node's version number, usually two parts, such as 4.7. Use it only for node-specific facts.
+* **Instance version**: the n8n release, three-part semver (e.g. 2.30.0). Use for features, environment variables, APIs, CLI commands, hooks.
+* **Node version**: a node's version, usually two parts (e.g. 4.7). Use only for node-specific facts.
 
-In prose, qualify a bare number: write "n8n 2.30.0" or "node version 4.7", not just "version 2".
+Qualify bare numbers in prose: "n8n 2.30.0" or "node version 4.7", not "version 2".
 
 #### Writing version numbers
 
-Follow the [numbers guidance](#numbers-dates-and-times), plus these rules for n8n instance versions:
+Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance versions:
 
-* **Use the product name and numerals**: n8n 2.30.0.
-* **Don't add a `v` prefix**: write "n8n 2.30.0", not "n8n v2.30.0".
-* **Don't write the word "version" after "n8n"**: the number alone is clear. Write "n8n 2.30.0", not "n8n version 2.30.0".
-* **Don't put the version number in inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Only use code formatting when the version appears inside an actual code snippet, command, or file path, for example `n8n@2.30.0`, a Docker tag, or a `package.json` value.
+* **Product name + numerals**: n8n 2.30.0.
+* **No `v` prefix**: not "n8n v2.30.0".
+* **No "version" after "n8n"**: not "n8n version 2.30.0".
+* **No inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Use code formatting only when the version appears in an actual snippet, command, or file path, e.g. `n8n@2.30.0`, a Docker tag, or a `package.json` value.
 
 ### Preview status
 
-A feature in Preview is available but not yet complete or stable, and may change. "Preview" is a feature's maturity label, capitalized wherever it names that status: "is in Preview", "a Preview feature", "In Preview from n8n 2.20.0". Use "Preview", not "beta". This capitalization only applies to the maturity label — leave unrelated senses of the word (a link preview, a UI preview action) in lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`); they're literal identifiers, not prose.
+A Preview feature is available but not yet complete or stable, and may change. Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0") — use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
-**Page or section:** use a `**Preview status**` title, not `**Feature availability**`. Preview status is a different question from availability (how stable is this? vs. where/when does this exist?), so it gets its own title, not a second hint with the same label as the availability hint next to it. Name the node or feature in the sentence below it, not in the title. Hints get skimmed independently of the surrounding heading, so the sentence must carry the naming, not the title:
+**Page or section:** title the hint `**Preview status**`, not `**Feature availability**` — stability and availability are different questions, so each gets its own hint rather than a second one with the availability hint's label. Name the node or feature in the sentence below, not the title (hints are skimmed independently of surrounding headings):
 
 ```
 {% hint style="info" %}
@@ -371,7 +317,7 @@ The Data table node is in Preview and may change in future releases. Avoid relyi
 {% endhint %}
 ```
 
-If the entire page is about a feature in Preview, also set `status: preview` and add a primary `preview` tag (see [Tags](#tags), under Frontmatter, for how tags work):
+If the whole page covers a Preview feature, also set `status: preview` and add a primary `preview` tag (see [Tags](#tags), under Frontmatter):
 
 ```
 ---
@@ -394,19 +340,20 @@ The **Streaming response** option is in Preview and may change in future release
 The Data table node is in Preview and may change in future releases.
 ```
 
-* **Tie it to a version when it helps**: "In Preview from n8n 2.20.0".
-* **Keep it separate from the Feature availability hint or note.** If a feature also has a plan or version limit, stack both: a Preview status hint alongside a Feature availability hint, or a Preview sentence alongside an availability sentence, rather than folding the Preview wording into the other one.
-* **If an inline Preview note needs more than one sentence, promote it to a page- or section-level hint instead.**
+* **Tie to a version when helpful**: "In Preview from n8n 2.20.0".
+* **Keep separate from Feature availability.** If both apply, stack them (hint + hint, or sentence + sentence) rather than folding one into the other.
+* **An inline note needing more than one sentence**: promote to a page- or section-level hint instead.
+link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Vale linting
 
-n8n uses [Vale](https://vale.sh/) to lint documentation. Linting enforces the rules defined in this guide and supports writing quality.
+n8n uses [Vale](https://vale.sh/) to lint documentation against the rules in this guide.
 
 The setup comprises:
 
 * A `.vale.ini` file in the root of the repo, containing the configuration.
 * A `styles` directory, containing the style definitions. This includes off-the-shelf style libraries and n8n-specific styles.
-* A GitHub Action. This runs Vale when a PR is opened or modified, and reports any contraventions directly on the PR.
+* A GitHub Action hat runs Vale on every PR and reports violations directly on it.
 
 You can run Vale locally on your machine as follows:
 
@@ -483,7 +430,7 @@ When you move, rename, or delete a page, update its `SUMMARY.md` entry to match.
 
 ## Markdown and GitBook blocks
 
-The site is generated with [GitBook](https://www.gitbook.com/). Pages are written in [Markdown](https://commonmark.org/), plus GitBook-specific components like callouts, tabs, and structured page elements. GitBook calls these components **blocks**, and the sections below cover the ones you'll use most often.
+The site is generated with [GitBook](https://www.gitbook.com/). Pages are written in [Markdown](https://commonmark.org/), plus GitBook-specific components called **blocks** (callouts, tabs, and other structured page elements). The sections below cover common blocks.
 
 {% hint style="info" %}
 For the Markdown representation of every available block type, see the [GitBook documentation](https://gitbook.com/docs/creating-content/blocks).
@@ -499,7 +446,7 @@ You'll see explicit anchor tags on existing pages, like:
 ## Heading text <a href="#heading-text" id="heading-text"></a>
 ```
 
-These pin a stable anchor, so links to the heading keep working even if its text changes later. It is not necessary to add them to new headings, but leave the existing ones in place. If you reword a heading that already has one, keep its anchor tag so existing links don't break.
+These pin a stable anchor, so links to the heading keep working even if its text changes later. If you reword a heading, keep its anchor tag so existing links don't break.
 
 ### Links
 
@@ -540,37 +487,18 @@ docs/                                     # docs root
 └── administer/                           # another space
 ```
 
-**Link to a page in the same subfolder in the same space**
+| Target location | Link syntax |
+| --- | --- |
+| Same subfolder, same space | `[link text](another-page.md)` |
+| Parent page, parent is a `README.md` | `[link to a parent page](./)` |
+| Parent page, parent is a named page (no `README.md` in this folder, e.g. `connect-to-n8n-mcp-server.md`) | `[link to a parent page](connect-to-n8n-mcp-server.md)`, linking to the file directly, not `./` |
+| Parent page, when the current page is itself a section landing page (a `README.md`) | `[link to a parent page](../)`, since `./` would point at itself, not the parent |
+| Different subfolder, same space | `[link to a page](../manage-workflows/export-import.md)` |
+| Different space | `[link to a page](https://app.gitbook.com/s/<spaceId>/<page-path>)` |
 
-Use the file name on its own:
+**Parent pages**
 
-```
-[link text](another-page.md)
-```
-
-**Link to the current page's parent page**
-
-Use `./` only if the current folder's landing page is a `README.md`, it points there:
-
-```
-[link to a parent page](./)
-```
-
-If the parent is a named page instead (no `README.md` in this folder, e.g. `connect-to-n8n-mcp-server.md`), link to that file directly rather than using `./`.
-
-If the current page is itself a section landing page (a `README.md`), `./` points at itself, not its parent — its actual parent is one level up. Step up with `../` instead, the same bare-directory reference one level higher:
-
-```
-[link to a parent page](../)
-```
-
-**Link to a page in a different subfolder in the same space**
-
-Step up out of the current folder with `../` for each level, then down into the target folder:
-
-```
-[link to a page](../manage-workflows/export-import.md)
-```
+`./` and `../` are bare directory references, which GitBook resolves natively to that folder's own `README.md` at any relative depth. `./` points at the current folder's landing page, which is the parent only when the current page sits inside that folder as a child. If the current page is itself a section landing page (a `README.md`), `./` points at itself instead, so step up with `../` to reach the actual parent one level up.
 
 **Link to a page in a different space**
 
@@ -593,33 +521,13 @@ For example, to link from a page in the `administer` space to `docs/deploy/host-
 
 Use this form only for a page in a *different* space. For a page in the space you're already editing, use a relative `.md` link instead. GitBook renders both forms, but a space URL drops out of GitBook's rename tracking, so the link breaks when someone moves the target page. It also escapes the revision on a GitBook preview, resolving against published content instead of your changes. The `internal-links` CI check reports these as `same-space-absolute`.
 
-Each top-level folder under `docs/` is a separate space. The table below is a copy kept for
-convenience. The authoritative list is [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md)
-in the repository root, generated daily from each space's GitBook Git Sync settings and
-checked against this table in CI. If the two ever disagree, the generated file is right.
-
-| Space folder | Space ID |
-| ------------------------------ | ---------------------- |
-| `get-started`                  | `CxSeOtVxqqhfxMSac0AV` |
-| `build`                        | `rPN1zU5jaYNvwH7RzxqA` |
-| `connect`                      | `r7wKI4I1BgdBCuq5Cvcx` |
-| `integrations`                 | `BKcbOzIWja8NfqKDcqHc` |
-| `deploy`                       | `jm0ZYRpZIPWge2ZSiDYO` |
-| `administer`                   | `wMJrGrimpx3PxCJpUswm` |
-| `privacy-and-security`         | `ukPPOMQ6NId4gpAIkPXa` |
-| `changelog`                    | `hhM8Cox90Piiv0u0EgHM` |
-| `contribute`                   | `6OmLnmci5kZDzdkzKREn` |
-| `n8n-community-license`        | `WcrJOYW6B9JlV5aiivMA` |
+Each top-level folder under `docs/` is a separate space. Find the space ID for your target space in [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md) in the repository root, generated daily from each space's GitBook Git Sync settings.
 
 If you'd rather not build the URL by hand, open the target page in GitBook and copy its link. If you don't have GitBook access, use the page's published `https://docs.n8n.io/...` address instead.
 
-{% hint style="info" %}
-Update this table if a space is added, removed, or recreated. Space IDs are stable as long as the space exists. Adding, moving, or editing pages doesn't change them, but a deleted and recreated space gets a new ID.
-{% endhint %}
-
 ### Images
 
-Images supplement the text; they never carry information on their own. Agents and screen readers receive only an image's alt text and file path, not the picture, so anything the reader must do or know has to be in the prose:
+Images supplement the text; they never carry information on their own (see [Agent-friendly docs](agent-friendly-docs.md) for why). Put anything the reader must do or know in the prose:
 
 * **Write every instruction in text.** A screenshot can show what a screen looks like, but the step ("Select **Add trigger**, then choose **On schedule**") must be written out. Never leave the only copy of a setting, value, menu path, or click target inside an image.
 * **Don't screenshot text.** Put code, commands, error messages, and configuration values in code blocks or tables, so readers can copy them and agents can read them. Don't paste a picture of a terminal or a code editor.
@@ -667,7 +575,7 @@ Always write descriptive alt text. It supports accessibility and is displayed if
 
 * Use PNG for screenshots and diagrams.
 * Use SVG for icons and simple illustrations where available.
-* Keep file sizes reasonable — compress PNGs before committing. [Squoosh](https://squoosh.app/) is a free browser tool.
+* Keep file sizes reasonable: compress PNGs before committing. [Squoosh](https://squoosh.app/) is a free browser tool.
 * Use lowercase, hyphenated file names: `workflow-overview.png`, not `WorkflowOverview.PNG`.
 
 **Inline icons**
@@ -684,7 +592,7 @@ select **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal.png"
 
 ### Videos
 
-Don't store video files in the n8n-docs repository. Host videos externally — for example on YouTube, Loom or another [supported domain](https://iframely.com/domains) — and embed them in the page.
+Don't store video files in the n8n-docs repository. Host videos externally, for example on YouTube, Loom, or another [supported domain](https://iframely.com/domains), and embed them in the page.
 
 To embed a video, paste the URL inside embed tags as follows:
 
@@ -804,7 +712,7 @@ Some collapsible content. Standard Markdown works inside the block.
 
 When a block of content is different due to external considerations (platform, coding language etc) it **can** be useful to separate it using tabs, so the user sees only the content relevant to them. Use tabbed sections sparingly as they could impact discoverability.
 
-Use tabs only for **short** parallel variants. A reader sees one variant, but AI tools read every variant, so long or numerous variants bloat the page. Keep the whole tab block under about one screen (~3,000 characters combined). When variants outgrow that (a full procedure each, or four or more non-trivial variants), drop the tabs and give each variant its own heading on the page, so each becomes a clean, self-contained section. Split into a page per variant only if the combined page would exceed the [page length guidance](#page-length-and-granularity), or the set of variants is open-ended. Keep shared setup and explanation outside the tabbed block so it isn't repeated across variants.
+Use tabs only for **short** parallel variants (see [Agent-friendly docs](agent-friendly-docs.md) for why). Keep the whole tab block under about one screen (~3,000 characters combined). When variants outgrow that (a full procedure each, or four or more non-trivial variants), drop the tabs and give each variant its own heading on the page, so each becomes a clean, self-contained section. Split into a page per variant only if the combined page would exceed the [page length guidance](#page-length-and-granularity), or the set of variants is open-ended. Keep shared setup and explanation outside the tabbed block so it isn't repeated across variants.
 
 Denote tabbed content like this:
 

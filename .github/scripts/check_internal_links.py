@@ -228,8 +228,7 @@ def classify_cross_space(target: str, src_rel: str):
     reject a URL pointing back into that file's own space (rule 4).
 
     Returns (category, message) if broken, "unknown" if the space ID isn't in
-    the table (can't verify — e.g. the reusable-content utility space), or None
-    if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
+    SPACE_INDEX.md (can't verify), or None if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
     matching `.md` file or a directory (folder page, whatever its index file).
     """
     m = APP_GITBOOK_RE.match(target)
@@ -238,8 +237,8 @@ def classify_cross_space(target: str, src_rel: str):
     space_id, page_path = m.group(1), (m.group(2) or "")
     folder = SPACE_ID_TO_FOLDER.get(space_id)
     if folder is None:
-        # Space ID not in the table (e.g. the reusable-content utility space);
-        # we can't map it to a folder, so we don't verify it. Track for transparency.
+        # Space ID not in SPACE_INDEX.md; we can't map it to a folder, so we
+        # don't verify it. Track for transparency.
         _STATS["unknown_space_ids"].add(space_id)
         _STATS["unknown_space_links"] += 1
         return "unknown"
@@ -637,8 +636,7 @@ def main() -> int:
         n_ids = len(_STATS["unknown_space_ids"])
         print(
             f"ℹ️  Skipped {n_links} cross-space link(s) to {n_ids} space ID(s) not in "
-            f"the style-guide table (e.g. the reusable-content utility space); "
-            f"can't verify these.\n"
+            f"the generated SPACE_INDEX.md; can't verify these.\n"
         )
 
     if _STATS["generated_links"]:

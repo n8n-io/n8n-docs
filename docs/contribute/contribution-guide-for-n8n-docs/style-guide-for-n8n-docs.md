@@ -35,7 +35,7 @@ n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/st
 * Use present tense.
 * Keep your writing as concise as possible. Two free browser apps to help:
   * [Hemingway](https://hemingwayapp.com/) measures language complexity. There's no fixed rule about what grade to aim for, but the lower the reading grade, the better.
-  * [Lexi](https://rebilly.github.io/lexi/) measures writing complexity in Markdown text, combining several measures into one readability score. Aim for 60 or higher; most pages should score above that.
+  * [Lexi](https://rebilly.github.io/lexi/) measures writing complexity in Markdown text, combining several measures into one readability score. Aim for 60 or higher. Most pages should score above that.
 
 Watch for these common patterns and prefer the plainer version:
 
@@ -124,7 +124,7 @@ Split content into focused pages, each covering a single concept, task, or refer
 ### Length
 
 * **Healthy range:** about 1,500 to 20,000 characters (250 to 3,000 words): scannable for people, retrievable for AI tools.
-* **Merge if under ~1,500 characters.** Below the useful chunk size. Fold stubs into a parent or sibling page.
+* **Merge if under ~1,500 characters**, too small to retrieve well. Fold stubs into a parent or sibling page.
 * **Split if over ~25,000 characters**, if the page mixes content types (concept, how-to, and reference together), or if one section grows without bound (such as a list of per-client examples).
 * **Never exceed ~50,000 characters.** Agents truncate anything past this limit.
 
@@ -140,6 +140,16 @@ Write each section so a reader who lands on it alone, without its neighbours for
 * **Write descriptive, sentence-case headings.** The heading is the unit AI search retrieves, often without the rest of the page, so name the section's topic in full: "Configure the Schedule Trigger", not "Configuration".
 * **Make each section understandable on its own.** Restate the key context instead of pointing back to it: avoid "as mentioned above", "as described in the previous section", and "see below", which break for an agent retrieving this section out of order or a reader arriving from search.
 * **Restate, don't duplicate.** Repeat the one or two facts the section needs, not whole paragraphs. If two sections need the same long explanation, that's a sign they belong together under one heading. Keep restatements short so the page stays concise (see [Plain language](#plain-language)).
+
+### Lead with a one-sentence answer
+
+Add one plain-language sentence directly after the H1, before any existing intro, hint, or include: a concrete answer to what the page is about (see [Agent-friendly docs](agent-friendly-docs.md) for why).
+
+* State what the page or node lets the reader do, naming the actual product, node, or technology, not "it lets you do things."
+* One sentence; two only if a short qualifier is genuinely needed.
+* Skip it if the existing intro already opens with a similar sentence.
+
+For example: "The Code node lets you run your own JavaScript or Python inside a workflow, so you can transform data or add logic the built-in nodes don't cover."
 
 ### Link to related pages, prerequisites, and next steps
 
@@ -509,7 +519,7 @@ https://app.gitbook.com/s/<spaceId>/<page-path>
 
 Build the URL from two parts:
 
-* `<spaceId>`: the ID of the space the target page lives in. Find it in the table below.
+* `<spaceId>`: the ID of the space the target page lives in. Find it in [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md).
 * `<page-path>`: the target page's path within its space folder, with the `.md` extension dropped. A `README.md` becomes its folder path (for example, `host-n8n/configure-n8n/README.md` is just `host-n8n/configure-n8n`).
 
 For example, to link from a page in the `administer` space to `docs/deploy/host-n8n/configure-n8n/user-management.md` in the `deploy` space:

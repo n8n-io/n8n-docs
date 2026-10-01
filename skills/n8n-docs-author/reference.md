@@ -166,9 +166,7 @@ lowercased with spaces replaced by hyphens:
 
 ### Utility folders (not link targets)
 
-Only top-level folders with a `SUMMARY.md` are GitBook spaces and valid
-cross-space link targets. Four top-level folders under `docs/` are utility
-folders, not spaces, and aren't in the table above:
+Four top-level folders under `docs/` hold non-navigable content, not pages to link to directly:
 
 - `_images`, `_video` — shared media assets
 - `_workflows` — workflow assets

@@ -1078,7 +1078,7 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 - Requires a `credentialId` from `list_credentials`; the lookup runs as the current user using that credential.
 - `listSearch` methods support `filter` and pagination via `paginationToken`; `loadOptions` methods don't.
 - This tool reaches out to external services, unlike most other read-only tools.
-- From n8n 2.43.0, a failed lookup returns an error result with an empty `results` array and the `error` field. When the failure comes from an upstream API call, the result also includes `httpCode` and `errorDescription`. Earlier versions return only the error message, which for an API failure is a generic status sentence.
+- From n8n 2.43.0, a failed lookup returns an error result with an empty `results` array and the `error` field. When the failure comes from an upstream API call, the result includes `httpCode` and `errorDescription` when available. Earlier versions return only the error message, which for an API failure is a generic status sentence.
 - n8n removes secrets from `error` and `errorDescription` before returning them.
 
 ---

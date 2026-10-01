@@ -272,7 +272,7 @@ from google.adk.agents import Agent
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPServerParams
 
-N8N_INSTANCE_URL = "https://localhost:5678"
+N8N_INSTANCE_URL = "https://n8n.example.com"
 N8N_MCP_TOKEN = "YOUR_N8N_MCP_TOKEN"
 
 root_agent = Agent(

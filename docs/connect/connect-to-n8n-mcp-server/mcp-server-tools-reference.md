@@ -1069,9 +1069,9 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 | `results[].description` | `string` | Description of the resource, when available |
 | `paginationToken` | `string` | Pass back as `paginationToken` to fetch the next page. Absent when there are no more results. |
 | `builderHint` | `string` | Selection guidance from the node's `@builderHint` annotation, when present |
-| `error` | `string` | Error message when the lookup fails. `error` is available from n8n 2.43.0. |
-| `httpCode` | `string` | HTTP status code the upstream API returned, when the lookup fails on an API call. `httpCode` is available from n8n 2.43.0. |
-| `errorDescription` | `string` | The upstream API's own error text, when the lookup fails on an API call. Use it to tell a missing permission apart from an invalid credential. n8n truncates it to 4,000 characters. `errorDescription` is available from n8n 2.43.0. |
+| `error` | `string` | Error message when the lookup fails |
+| `httpCode` | `string` | HTTP status code the upstream API returned, when the lookup fails on an API call |
+| `errorDescription` | `string` | The upstream API's own error text, when the lookup fails on an API call. Use it to tell a missing permission apart from an invalid credential. n8n truncates it to 4,000 characters. |
 
 #### Notes <a href="#notes" id="notes"></a>
 

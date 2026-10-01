@@ -91,10 +91,10 @@ Write zero to nine in letters, 10 and above in numerals.
 
 Obvious exceptions:
 
-* **Decimals**: always use numerals, even under 10 (e.g. 3.5, not three point five)
-* **Percentages**: use numerals (e.g. 5%, not five percent)
-* **Versions and other technical strings**: use numerals (e.g. n8n 2.1, step 3)
-* **Units of measurement**: use numerals (e.g. 5px, 3MB)
+* **Decimals**: always use numerals, even under 10 (for example, 3.5, not three point five)
+* **Percentages**: use numerals (for example, 5%, not five percent)
+* **Versions and other technical strings**: use numerals (for example, n8n 2.1, step 3)
+* **Units of measurement**: use numerals (for example, 5px, 3MB)
 
 **Dates and times**
 
@@ -154,7 +154,7 @@ Connect each page to the others on its topic (see [Agent-friendly docs](agent-fr
 * **A page that is itself a parent does both.** It has its own "In this section" for children, plus a "Related resources" footer for its own parent and siblings: one level up and sideways only, never to a grandparent.
 * **Skip sibling links for flat reference collections** where every page follows the same one-fact template (for example, one page per expression data type). Link back to the parent only in "Related resources".
 * **Aim for a cluster of five or more interlinked pages** on the same topic.
-* **In prose, link at first meaningful mention only**, with descriptive anchor text naming the target (e.g. [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here"), reusing an existing mention of the topic rather than adding a sentence for it. A link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
+* **In prose, link at first meaningful mention only**, with descriptive anchor text naming the target (for example, [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here"), reusing an existing mention of the topic rather than adding a sentence for it. A link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Feature availability
 
@@ -228,8 +228,8 @@ The tag needs label "Deprecated" and color red defined in the space's `.gitbook/
 Rules:
 
 * **Hint style:** `warning` for deprecation or removal (reader must act); `info` otherwise. A combined hint uses `warning`.
-* **Name the subject in the body**, not just the title: the hint title doesn't say what's available, and don't rely on an outside heading either. Keep "available from n8n X.Y.Z" unbroken. A version-only subject can name what it replaces, e.g. "The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node."
-* **Platform bullets:** lead with "<Feature> <is/are> available on:". Always name both platforms. Both: one bullet each. One only: that bullet plus an absence line below it ("It isn't available on n8n Cloud."/"...self-hosted."). Available elsewhere only conditionally (e.g. on request): a caveat line replaces the absence line (e.g. "On n8n Cloud Enterprise, contact n8n to enable it.").
+* **Name the subject in the body**, not just the title: the hint title doesn't say what's available, and don't rely on an outside heading either. Keep "available from n8n X.Y.Z" unbroken. A version-only subject can name what it replaces, for example, "The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node."
+* **Platform bullets:** lead with "<Feature> <is/are> available on:". Always name both platforms. Both: one bullet each. One only: that bullet plus an absence line below it ("It isn't available on n8n Cloud."/"...self-hosted."). Available elsewhere only conditionally (for example, on request): a caveat line replaces the absence line (for example, "On n8n Cloud Enterprise, contact n8n to enable it.").
 * **Tiers:** low to high, comma-separated, never "and". Cloud: Starter, Pro, Enterprise. Self-hosted: Community, Registered Community, Business, Enterprise. Use exact capitalized names; spell out "Registered Community".
 * **Write "n8n Cloud", never bare "Cloud".**
 * **Whole platform:** write `All plans`/`All editions`, not every tier. "All plans" includes the free trial (mirrors Pro); never list the trial itself, cover it only on the trial page.
@@ -289,8 +289,8 @@ Or add a dedicated column if several rows differ:
 
 n8n has two separate version numbers. Never leave the reader guessing which.
 
-* **Instance version**: the n8n release, three-part semver (e.g. 2.30.0). Use for features, environment variables, APIs, CLI commands, hooks.
-* **Node version**: a node's version, usually two parts (e.g. 4.7). Use only for node-specific facts.
+* **Instance version**: the n8n release, three-part semver (for example, 2.30.0). Use for features, environment variables, APIs, CLI commands, hooks.
+* **Node version**: a node's version, usually two parts (for example, 4.7). Use only for node-specific facts.
 
 Qualify bare numbers in prose: "n8n 2.30.0" or "node version 4.7", not "version 2".
 
@@ -301,7 +301,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 * **Product name + numerals**: n8n 2.30.0.
 * **No `v` prefix**: not "n8n v2.30.0".
 * **No "version" after "n8n"**: not "n8n version 2.30.0".
-* **No inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Use code formatting only when the version appears in an actual snippet, command, or file path, e.g. `n8n@2.30.0`, a Docker tag, or a `package.json` value.
+* **No inline code formatting in running text**: write n8n 2.30.0, not n8n `2.30.0`. Use code formatting only when the version appears in an actual snippet, command, or file path, for example, `n8n@2.30.0`, a Docker tag, or a `package.json` value.
 
 ### Preview status
 
@@ -352,7 +352,7 @@ The setup comprises:
 
 * A `.vale.ini` file in the root of the repo, containing the configuration.
 * A `styles` directory, containing the style definitions. This includes off-the-shelf style libraries and n8n-specific styles.
-* A GitHub Action hat runs Vale on every PR and reports violations directly on it.
+* A GitHub Action that runs Vale on every PR and reports violations directly on it.
 
 You can run Vale locally on your machine as follows:
 
@@ -490,7 +490,7 @@ docs/                                     # docs root
 | --- | --- |
 | Same subfolder, same space | `[link text](another-page.md)` |
 | Parent page, parent is a `README.md` | `[link to a parent page](./)` |
-| Parent page, parent is a named page (no `README.md` in this folder, e.g. `connect-to-n8n-mcp-server.md`) | `[link to a parent page](connect-to-n8n-mcp-server.md)`, linking to the file directly, not `./` |
+| Parent page, parent is a named page (no `README.md` in this folder, for example `connect-to-n8n-mcp-server.md`) | `[link to a parent page](connect-to-n8n-mcp-server.md)`, linking to the file directly, not `./` |
 | Parent page, when the current page is itself a section landing page (a `README.md`) | `[link to a parent page](../)`, since `./` would point at itself, not the parent |
 | Different subfolder, same space | `[link to a page](../manage-workflows/export-import.md)` |
 | Different space | `[link to a page](https://app.gitbook.com/s/<spaceId>/<page-path>)` |
@@ -554,11 +554,11 @@ Images must be stored in the `.gitbook/assets/` folder of the space where they'r
 
 Reference images using a path relative to the page you're editing. From any page within the space, step up to the space root first, then into `.gitbook/assets/`:
 
-**From a page one level deep** (e.g. `build-workflows/manage-workflows/export-import.md`):
+**From a page one level deep** (for example, `build-workflows/manage-workflows/export-import.md`):
 
 ​ `![Alt text](../.gitbook/assets/workflow-overview.png) ​`
 
-**From a page two levels deep** (e.g. `build-workflows/understand-workflows/current-page.md`):
+**From a page two levels deep** (for example, `build-workflows/understand-workflows/current-page.md`):
 
 ​ `![Alt text](../../.gitbook/assets/workflow-overview.png) ​`
 

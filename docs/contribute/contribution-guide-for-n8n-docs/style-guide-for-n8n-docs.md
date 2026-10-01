@@ -145,16 +145,16 @@ Write each section so a reader who lands on it alone, without its neighbours for
 
 Connect each page to the others on its topic (see [Agent-friendly docs](agent-friendly-docs.md)).
 
-**These guidelines below don't apply `docs/integrations/` ("Nodes") pages**, which use a different structure.
+**These guidelines below don't apply to `docs/integrations/` ("Nodes") pages**, which use a different structure.
 
 * **Always link prerequisites and the next step**.
-* **Section landing pages link down to children.** Two or more childre: list under an "In this section" heading as bullets (link + short description). One: skip the list, and link it inline at first mention instead..
-* **Child pages link back up and sideways, in a "Related resources" section at page-end.** A bare link to the parent, plus one to each direct sibling — no descriptions. Use `./` for the parent if the page shares a folder with the parent's `README.md`, or `../` if the page is itself a section landing page one level below the parent (see [Parent pages](#parent-pages)). Add other genuinely related pages at your discretion.
+* **Section landing pages link down to children.** Two or more children: list under an "In this section" heading as bullets (link + short description). One: skip the list, and link it inline at first mention instead.
+* **Child pages link back up and sideways, in a "Related resources" section at page-end.** A bare link to the parent, plus one to each direct sibling, no descriptions. Use `./` for the parent if the page shares a folder with the parent's `README.md`, or `../` if the page is itself a section landing page one level below the parent (see [Parent pages](#parent-pages)). Add other genuinely related pages at your discretion.
 * **Past 10 siblings, drop the sibling list.** Link only the parent (its "In this section" already has the full list).
-* **A page that is itself a parent does both.** It has its own "In this section" for children, plus a "Related resources" footer for its own parent and siblings — one level up and sideways only, never to a grandparent.
+* **A page that is itself a parent does both.** It has its own "In this section" for children, plus a "Related resources" footer for its own parent and siblings: one level up and sideways only, never to a grandparent.
 * **Skip sibling links for flat reference collections** where every page follows the same one-fact template (for example, one page per expression data type). Link back to the parent only in "Related resources".
 * **Aim for a cluster of five or more interlinked pages** on the same topic.
-* **In prose, link at first meaningful mention only**, with descriptive anchor text naming the target (e.g. [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here") — reuse an existing mention of the topic rather than adding a sentence for it. A link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
+* **In prose, link at first meaningful mention only**, with descriptive anchor text naming the target (e.g. [Configure the Schedule Trigger](configure-schedule-trigger.md), not "click here"), reusing an existing mention of the topic rather than adding a sentence for it. A link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Feature availability
 
@@ -171,8 +171,8 @@ A feature's availability can be limited in three ways:
 Document at one of three scopes:
 
 * **Page or section:** an `info` hint titled **Feature availability**, under the page title or the relevant heading. See [Feature availability hints](#feature-availability-hints).
-* **Inline or passing mention:** a short note next to a small option, field, role, or behavior, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions)
-* **Table row:** one row among many — put the limit in the description cell, or a dedicated column if several rows differ. See [Table rows](#table-rows).
+* **Inline or passing mention:** a short note next to a small option, field, role, or behavior, or a whole feature or node named in prose with no heading of its own - fold the limit into the sentence. See [Inline and passing mentions](#inline-and-passing-mentions).
+* **Table row:** one row among many; put the limit in the description cell, or a dedicated column if several rows differ. See [Table rows](#table-rows).
 
 #### Feature availability hints
 
@@ -228,24 +228,24 @@ The tag needs label "Deprecated" and color red defined in the space's `.gitbook/
 Rules:
 
 * **Hint style:** `warning` for deprecation or removal (reader must act); `info` otherwise. A combined hint uses `warning`.
-* **Name the subject in the body**, not just the title — the hint title doesn't say what's available, and don't rely on an outside heading either. Keep "available from n8n X.Y.Z" unbroken. A version-only subject can name what it replaces, e.g. "The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node."
+* **Name the subject in the body**, not just the title: the hint title doesn't say what's available, and don't rely on an outside heading either. Keep "available from n8n X.Y.Z" unbroken. A version-only subject can name what it replaces, e.g. "The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node."
 * **Platform bullets:** lead with "<Feature> <is/are> available on:". Always name both platforms. Both: one bullet each. One only: that bullet plus an absence line below it ("It isn't available on n8n Cloud."/"...self-hosted."). Available elsewhere only conditionally (e.g. on request): a caveat line replaces the absence line (e.g. "On n8n Cloud Enterprise, contact n8n to enable it.").
 * **Tiers:** low to high, comma-separated, never "and". Cloud: Starter, Pro, Enterprise. Self-hosted: Community, Registered Community, Business, Enterprise. Use exact capitalized names; spell out "Registered Community".
 * **Write "n8n Cloud", never bare "Cloud".**
-* **Whole platform:** write `All plans`/`All editions`, not every tier. "All plans" includes the free trial (mirrors Pro) — never list the trial itself; cover it only on the trial page.
+* **Whole platform:** write `All plans`/`All editions`, not every tier. "All plans" includes the free trial (mirrors Pro); never list the trial itself, cover it only on the trial page.
 * **Order below the bullets:** (1) absence/caveat line, (2) version sentence, (3) other feature-specific caveats.
 * **No plan limit** (version-only, deprecation, removal): just the title and sentence, no bullets.
-* **Don't link to Compare plans and editions or release notes** — state the fact in the sentence and let readers search if needed.
+* **Don't link to Compare plans and editions or release notes.** State the fact in the sentence and let readers search if needed.
 
 
 #### Inline and passing mentions
 
-Use inline wording for a small control, option, field, or role within a larger feature, or for a whole feature/node named in prose with no heading of its own — not for a page- or section-wide limit (use a hint instead).
+Use inline wording for a small control, option, field, or role within a larger feature, or for a whole feature/node named in prose with no heading of its own. Not for a page- or section-wide limit (use a hint instead).
 
-* Name the specific thing, not "this feature" or "this option" — it must stand alone out of context.
+* Name the specific thing, not "this feature" or "this option": it must stand alone out of context.
 * One sentence per item; two if both plan/platform and version apply (plan/platform first).
 * Mention both platforms if both matter; never imply absence by omission.
-* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X") — skip the hint's "Available from" lead-in.
+* State version, deprecation, or removal plainly ("available from n8n X", "deprecated from n8n X"). Skip the hint's "Available from" lead-in.
 * More than two sentences, or both platform bullets needed: promote to a scoped hint instead.
 
 For a control, option, field, or role:
@@ -287,7 +287,7 @@ Or add a dedicated column if several rows differ:
 
 #### Two version types
 
-n8n has two separate version numbers — never leave the reader guessing which.
+n8n has two separate version numbers. Never leave the reader guessing which.
 
 * **Instance version**: the n8n release, three-part semver (e.g. 2.30.0). Use for features, environment variables, APIs, CLI commands, hooks.
 * **Node version**: a node's version, usually two parts (e.g. 4.7). Use only for node-specific facts.
@@ -305,9 +305,9 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 
 ### Preview status
 
-A Preview feature is available but not yet complete or stable, and may change. Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0") — use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
+A Preview feature is available but not yet complete or stable, and may change. Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"); use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
-**Page or section:** title the hint `**Preview status**`, not `**Feature availability**` — stability and availability are different questions, so each gets its own hint rather than a second one with the availability hint's label. Name the node or feature in the sentence below, not the title (hints are skimmed independently of surrounding headings):
+**Page or section:** title the hint `**Preview status**`, not `**Feature availability**`. Stability and availability are different questions, so each gets its own hint rather than a second one with the availability hint's label. Name the node or feature in the sentence below, not the title (hints are skimmed independently of surrounding headings):
 
 ```
 {% hint style="info" %}
@@ -343,7 +343,6 @@ The Data table node is in Preview and may change in future releases.
 * **Tie to a version when helpful**: "In Preview from n8n 2.20.0".
 * **Keep separate from Feature availability.** If both apply, stack them (hint + hint, or sentence + sentence) rather than folding one into the other.
 * **An inline note needing more than one sentence**: promote to a page- or section-level hint instead.
-link can't substitute for context the section needs; restate the key fact instead if so (see [Keep each section self-contained](#keep-each-section-self-contained)).
 
 ## Vale linting
 
@@ -496,11 +495,11 @@ docs/                                     # docs root
 | Different subfolder, same space | `[link to a page](../manage-workflows/export-import.md)` |
 | Different space | `[link to a page](https://app.gitbook.com/s/<spaceId>/<page-path>)` |
 
-**Parent pages**
+##### Parent pages
 
 `./` and `../` are bare directory references, which GitBook resolves natively to that folder's own `README.md` at any relative depth. `./` points at the current folder's landing page, which is the parent only when the current page sits inside that folder as a child. If the current page is itself a section landing page (a `README.md`), `./` points at itself instead, so step up with `../` to reach the actual parent one level up.
 
-**Link to a page in a different space**
+##### Link to a page in a different space
 
 Relative file paths only resolve within a space. GitBook resolves links between spaces as page references, not file paths, so a `../../` path into another space won't work. Instead, link to the target page's GitBook URL:
 

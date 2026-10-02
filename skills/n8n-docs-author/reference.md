@@ -166,9 +166,8 @@ lowercased with spaces replaced by hyphens:
 
 ### Utility folders (not link targets)
 
-Four top-level folders under `docs/` hold non-navigable content, not pages to link to directly:
+Two top-level folders under `docs/` hold non-navigable content, not pages to link to directly:
 
-- `_images`, `_video` — shared media assets
 - `_workflows` — workflow assets
 - `reusable-content` — shared includes
 

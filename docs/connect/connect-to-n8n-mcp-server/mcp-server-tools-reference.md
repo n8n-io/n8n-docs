@@ -762,7 +762,7 @@ MCP clients that support resources can read the same content from the [instance 
 |-------|------|-------------|
 | `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
 | `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
-| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are available in MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
 
 #### Notes <a href="#notes" id="notes"></a>
 

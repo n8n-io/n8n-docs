@@ -1005,7 +1005,7 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
 | `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
 | `error` | `string` | Error message if the update failed |
-| `errorCode` | `string` | Machine-readable error code |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 

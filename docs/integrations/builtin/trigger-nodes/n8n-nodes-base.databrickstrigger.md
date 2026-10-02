@@ -9,7 +9,11 @@ layout:
 
 # Databricks Trigger node
 
-<!-- ENT-424: before this page leaves draft, add a "Feature availability" info hint here with the sentence "The Databricks Trigger node is available from n8n X.Y.Z." Fill X.Y.Z from the first n8n release that contains the commit that un-hides the node. Do not invent a version. -->
+{% hint style="info" %}
+**Feature availability**
+
+The Databricks Trigger node is available from n8n 2.42.0.
+{% endhint %}
 
 Use the Databricks Trigger node to respond to events in [Databricks](https://www.databricks.com/) and integrate Databricks with other applications. The node starts a workflow when a run of a Databricks job or an update of a Databricks pipeline starts, succeeds, or fails.
 
@@ -21,7 +25,7 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 
 ## Set up the trigger
 
-1. Add a **Databricks Trigger** node to a workflow.
+1. Add a **Databricks Trigger** node to a workflow. In the node picker, search for `Databricks` and open the **Databricks** entry. It lists the job events as triggers; pick any of them, then set **Resource** and **Events** in the node.
 2. Set **Authentication** to **Access Token** or **OAuth2** and select the credential. For an **OAuth2** credential, set its **Grant Type** to **Client Credentials (Service Principal)** for a service principal, or to **Authorization Code (User)** for a signed-in user. Refer to [Use a service principal](#use-a-service-principal).
 3. Set **Resource** to **Job** to watch the runs of a job, or to **Pipeline** to watch the updates of a Databricks pipeline.
 4. Select the job in **Job**, or the pipeline in **Pipeline**. Each field offers three modes:
@@ -79,12 +83,12 @@ With **Simplify** on, each item has the same top-level keys for both resources: 
 | `run.creator` | The user or service principal that created the run. |
 | `run.parameters` | The job parameters of the run, as name and value pairs. A parameter without a value shows its default. |
 | `result.state` | The life cycle state. `TERMINATED` for a finished run. |
-| `result.code` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `CANCELED`, or `RUN_EXECUTION_ERROR`. |
+| `result.code` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. A run canceled by a user has `USER_CANCELED`. `CANCELED` means Databricks canceled the run, for example when it exceeded its maximum duration. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
 | `result.type` | The termination type, for example `SUCCESS` or `CLIENT_ERROR`. |
 | `result.message` | The termination message. Absent when Databricks gives none. |
 | `timing.startedAt` | The start time in UTC. |
 | `timing.endedAt` | The end time in UTC. Absent while the run is still going. |
-| `timing.durationMs` | The run duration in milliseconds. Absent while the run is still going. |
+| `timing.durationMs` | The run duration in milliseconds. On a **Run Started** item, the time the run had been going when the trigger polled. |
 | `timing.queuedMs` | The time the run waited in the queue, in milliseconds. |
 
 A **Run Failed** item looks like this:
@@ -196,6 +200,7 @@ Before you start:
 * A Databricks workspace admin must create the notification destination. Databricks doesn't sign the payload, so the Basic Auth username and password on the Webhook node are the only check.
 * The payload holds only IDs, so the workflow reads the run with the Databricks node.
 * Databricks documents no retry, so keep a Databricks Trigger node as the fallback for missed events.
+* Databricks doesn't guarantee the order of the calls. A `jobs.on_success` call can arrive before the `jobs.on_start` call of the same run, and the first run after you add a destination can skip `jobs.on_start`. Branch on `$json.body.event_type`, not on the order the calls arrive in.
 * Databricks must reach your n8n instance over HTTPS. For a self-hosted instance behind a firewall, allow the Databricks outbound IP ranges listed under **Networking requirements** on the [notification destinations](https://docs.databricks.com/aws/en/admin/workspace-settings/notification-destinations) page.
 
 To set it up:
@@ -243,6 +248,7 @@ Refer to [Pipeline task for jobs](https://docs.databricks.com/aws/en/jobs/tasks/
 
 * The first time you publish the workflow, the trigger starts from that moment and doesn't replay older runs. Start a new run or update to test it.
 * Open the **Executions** list. A failed poll shows there with the Databricks error.
+* For a job, a missing **CAN VIEW** permission doesn't produce an error. The trigger polls without failing and never fires. Refer to [Permission errors](#permission-errors).
 * Check the **Events** selection. **Run Started** and **Update Started** aren't selected by default.
 * A continuous pipeline never produces **Update Completed**. Refer to [Watch a pipeline through a job](#watch-a-pipeline-through-a-job).
 * A run that's still going produces only **Run Started**. Its final event follows once Databricks reports it as finished.
@@ -265,6 +271,8 @@ Grant Can View on the pipeline to the user or service principal of the credentia
 ```
 
 You see the error in the node when you select **Fetch Test Event**. In a published workflow, each failed poll appears as a failed execution in the **Executions** list. Refer to [Grant CAN VIEW](#grant-can-view).
+
+For a job, Databricks answers the run list with an empty result instead of `PERMISSION_DENIED` when the identity lacks **CAN VIEW**. **Fetch Test Event** then returns nothing, and a published trigger polls without errors and never fires. The only visible sign is that the job is missing from the **From List** picker. Grant **CAN VIEW** on the job, then select **Fetch Test Event** again. The trigger reports runs that happened in the five minutes before the grant on its next poll.
 
 ### Invalid job or pipeline ID
 

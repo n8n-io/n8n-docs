@@ -9,12 +9,6 @@ layout:
 
 # Databricks Trigger node
 
-{% hint style="info" %}
-**Feature availability**
-
-The Databricks Trigger node is available from n8n 2.42.0.
-{% endhint %}
-
 Use the Databricks Trigger node to respond to events in [Databricks](https://www.databricks.com/) and integrate Databricks with other applications. The node starts a workflow when a run of a Databricks job or an update of a Databricks pipeline starts, succeeds, or fails.
 
 {% hint style="info" %}

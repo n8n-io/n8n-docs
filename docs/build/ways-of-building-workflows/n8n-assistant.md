@@ -46,6 +46,7 @@ You can ask n8n Assistant to:
 - **Create workflows:** describe the automation you want, and n8n Assistant can generate a workflow.
 - **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 - **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
+- **Work in your browser:** connect [Browser Use](n8n-assistant/browser-use.md) so n8n Assistant can browse sites, fill in forms, and set up credentials for you.
 - **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.
@@ -130,7 +131,9 @@ When a workflow needs credentials, n8n Assistant prompts you with a credential c
 - Select an existing credential that you have access to in the project.
 - Create a new credential.
 
-If you create a new credential, you enter the secret in the standard n8n credential screen, not in the chat. Don't paste API keys, passwords, or tokens into the conversation.
+You can also ask n8n Assistant to create the credential for you in your browser with [Browser Use](n8n-assistant/browser-use.md#set-up-credentials-with-browser-use). The secret goes straight into the credential and the AI never sees it.
+
+If you create a new credential yourself, you enter the secret in the standard n8n credential screen, not in the chat. Don't paste API keys, passwords, or tokens into the conversation.
 
 ## Web access
 
@@ -190,6 +193,7 @@ Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n As
 ## Related resources
 
 * [Ways of building workflows](./)
+* [Use Browser Use](n8n-assistant/browser-use.md)
 * [Use n8n MCP server](connect-to-n8n-mcp-server.md)
 * [Use templates](use-templates.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)

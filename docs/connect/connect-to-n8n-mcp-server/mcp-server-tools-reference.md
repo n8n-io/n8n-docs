@@ -762,7 +762,7 @@ MCP clients that support resources can read the same content from the [instance 
 |-------|------|-------------|
 | `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
 | `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
-| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are available in MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -911,7 +911,7 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
+| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"groups"` (available from n8n 2.41.0), `"all"` |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -924,6 +924,7 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 - Should be called first before building any workflows.
 - Omit `section`, or set it to `"all"`, to retrieve the full reference.
 - Use `"patterns_detailed"` for expanded workflow pattern examples.
+- Use `"groups"` for the rules that node groups must follow. The full reference also covers them.
 - Renamed from `get_sdk_reference` in n8n 2.34.0.
 
 ---
@@ -1029,6 +1030,7 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 #### Notes <a href="#notes" id="notes"></a>
 
 - When called with `technique: "list"`, will list all available techniques
+- From n8n 2.41.0, the `"list"` response also ends with guidance on when to organize a workflow into node groups.
 - Some known techniques may not have detailed documentation yet. In that case, the tool returns a message without `documentation`.
 - This replaces the previous `get_suggested_nodes` workflow-planning guidance.
 
@@ -1117,6 +1119,7 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 
 - Must be called before `create_workflow_from_code` or `update_workflow`.
 - Warnings may be present even when the code is valid.
+- From n8n 2.41.0, if the code defines node groups, the tool checks them against the node group rules. A violation sets `valid` to `false`. The `errors` array then holds the same message that the save path returns when it rejects the group.
 - If `valid` is `false` and `hint` is present, follow the hint before retrying.
 
 ---
@@ -1199,12 +1202,22 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
 | `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `skippedGroups` | `array` | Node groups the tool dropped because they break the node group rules. Absent when the tool kept every group |
+| `skippedGroups[].groupName` | `string` | The name of the dropped group |
+| `skippedGroups[].reason` | `string` | Why the tool dropped the group |
+| `warnings` | `array` | Warnings about the created workflow. Holds the warnings from parsing the SDK code, a `TOP_LEVEL_ITEMS_OVER_CEILING` warning when the canvas holds too many top-level items, and an `UNINSTALLED_COMMUNITY_NODE` warning for each node whose type ships in a verified community package that the instance doesn't have installed. Absent when there are no warnings |
+| `warnings[].code` | `string` | The warning code that identifies the type of warning |
+| `warnings[].message` | `string` | The warning message |
+| `warnings[].nodeName` | `string` | Optional node associated with the warning |
+| `warnings[].parameterPath` | `string` | Optional parameter path associated with the warning |
 | `targetProject` | `object` | The project the workflow was created in |
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
 | `targetProject.type` | `"personal" \| "team"` | Whether the workflow was created in a personal or team project |
-| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
+| `targetFolder` | `object` | The folder holding the workflow, with `id` and `name`. Omitted when the workflow sits at the project root |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment, a description that was shortened to 255 characters, or a post-save step that failed after n8n saved the workflow |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -1213,10 +1226,13 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - Sets `availableInMCP` flag to true on the created workflow.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 - Resolves webhook node IDs automatically.
+- From n8n 2.41.0, the tool saves the node groups that the SDK code defines. If a group breaks the node group rules, the tool drops that group, reports it in `skippedGroups`, and creates the rest of the workflow. A broken group never fails the creation. Repair the group with `update_workflow`.
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
 - From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- If n8n saves the workflow but a later step fails, the tool confirms the saved workflow and explains the failed step in `note`, instead of reporting the call as an error.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 
@@ -1228,7 +1244,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 `update_workflow` is available from n8n 2.12.0. From n8n 2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 {% endhint %}
 
-Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved. From n8n 2.41.0, node group operations are the exception. n8n skips a failing group operation, reports it in `skippedOperations`, and applies the rest of the batch.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
@@ -1254,6 +1270,10 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
 | `setNodeSettings` | `nodeName`, `settings` |  | Updates node-level execution settings. `settings` must include at least one supported setting. |
 | `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
+| `setNodeGroups` | `nodeGroups` |  | Replaces all node groups. Pass `[]` to clear them. Each group has `name` and `nodeNames`, plus optional `id` and `description`. Group members are node names, not IDs. Available from n8n 2.41.0. |
+| `addNodeGroup` | `name`, `nodeNames` | `description`, `id` | Adds one node group. `name` must be unique. `nodeNames` must list at least one existing node. `id` is generated if you omit it. Available from n8n 2.41.0. |
+| `removeNodeGroup` | `groupName` |  | Removes one node group. The grouped nodes stay in the workflow. Available from n8n 2.41.0. |
+| `updateNodeGroup` | `groupName` | `newName`, `nodeNames`, `description` | Updates one node group. Pass at least one of `newName`, `nodeNames`, or `description`. `nodeNames` replaces the group membership. Pass an empty string in `description` to clear it. Available from n8n 2.41.0. |
 
 #### `setNodeSettings` fields <a href="#setnodesettings-fields" id="setnodesettings-fields"></a>
 
@@ -1275,6 +1295,13 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `nodeCount` | `number` | The number of nodes in the workflow |
 | `url` | `string` | The URL to open the workflow in n8n |
 | `appliedOperations` | `number` | The number of operations applied |
+| `skippedOperations` | `array` | Node group operations n8n skipped instead of failing the batch |
+| `skippedOperations[].opIndex` | `number` | Position of the skipped operation in the `operations` array |
+| `skippedOperations[].type` | `string` | The type of the skipped operation |
+| `skippedOperations[].reason` | `string` | Why n8n skipped the operation |
+| `removedGroups` | `array` | Existing node groups that this update made invalid, so n8n removed them. Absent when the update removed no group |
+| `removedGroups[].groupName` | `string` | The name of the removed group |
+| `removedGroups[].reason` | `string` | Why n8n removed the group |
 | `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update |
 | `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned |
@@ -1285,15 +1312,20 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
 | `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
 | `error` | `string` | Error message if the update failed |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- Operations are applied in order and saved atomically.
+- Operations are applied in order and saved atomically, apart from node group operations, which n8n skips and reports in `skippedOperations`.
+- The node group operations must produce a valid, connected, trigger-free section of the graph. n8n checks this on save. A group `description` has a maximum length of 145 characters.
+- Other operations in the batch can make an existing node group invalid. n8n removes that group and reports it in `removedGroups`. The rest of the batch still saves.
+- Read `skippedOperations` and `removedGroups` after the call and repair any node group that the update skipped or removed.
 - Existing credentials are preserved unless explicitly changed.
 - Credential auto-assignment runs only for nodes added in the current call.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 
@@ -1506,7 +1538,7 @@ Discover model catalogs, chat integrations, attachable workflows, published sub-
 |------|------|----------|-------------|
 | `projectId` | `string` | Yes | The project to discover assets in |
 | `kind` | `"models" \| "integrations" \| "workflows" \| "subagents" \| "mcpServers"` | Yes | The kind of asset to discover |
-| `query` | `string` | No | Filter for `workflows`, `subagents`, or `mcpServers` |
+| `query` | `string` | No | Filter for model IDs, `workflows`, `subagents`, or `mcpServers`. From n8n 2.43.0, with `kind=models` and a `provider`, `query` keeps only models whose ID contains the text, ignoring case. Earlier versions ignore `query` for models. |
 | `provider` | `string` | No | Model provider for `kind=models` (for example `"openai"`, `"anthropic"`). Omit to get a provider summary without model lists. |
 | `credentialId` | `string` | No | Accessible credential used to verify live models for the selected provider |
 | `excludeAgentId` | `string` | No | Agent to omit when `kind=subagents` |
@@ -1518,7 +1550,7 @@ The `data` field's shape depends on `kind`:
 | `kind` | `data` shape |
 |--------|--------------|
 | `models` (no `provider`) | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models. |
-| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }] }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. |
+| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }], truncated, hint? }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. From n8n 2.43.0, `models` holds at most 50 entries. `truncated` is `true` when more models match, and `hint` then asks you to pass `query` to filter models by ID. Earlier versions return the full model list without `truncated` or `hint`. |
 | `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow. |
 | `workflows` | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool |
 | `subagents` | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId` |
@@ -1529,6 +1561,7 @@ Top-level response: `{ ok, kind, data }`.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Omitting `provider` for `kind=models` returns a summary only; the full model catalog is too large for most MCP clients' token limits.
+- For `kind=models` with a `provider`, n8n returns up to 50 models. If `truncated` is `true`, call again with `query` set to part of the model ID you want. The `truncated` and `hint` fields are available from n8n 2.43.0.
 - For `kind=mcpServers`, omit `query` to list up to 20 registry servers; pass `query` to search by name.
 - Attaching a discovered asset (a workflow, sub-agent, or MCP server) still requires adding it to the agent's config with `mutate_agent`.
 - The `setupGuidance` field for Slack entries is available from n8n 2.43.0.

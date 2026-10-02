@@ -135,6 +135,9 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
+- **Answer-first opening:** one plain sentence right after the H1, before any
+  existing intro or hint. Concrete, not "it lets you do things." One sentence; two only
+  if genuinely needed. Skip it if the intro already opens with an equivalent line.
 - **Cross-references:** the linking rule doesn't apply to node/integration reference pages
   (`docs/integrations/`) — fixed one-page-per-node template, often
   automation-managed, no natural parent/child or sibling relationship to link.
@@ -265,7 +268,7 @@ See [reference.md](reference.md) for full examples. Quick reference:
 |---------|--------|
 | External link | standard Markdown `[text](url)` (opens in a new tab automatically) |
 | Internal link (same space) | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
-| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. See [reference.md](reference.md) for the space ID table |
+| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. Find space IDs in [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md) |
 | Image | `![Alt text](../.gitbook/assets/file.png)` — stored in the space's `.gitbook/assets/` folder |
 | Video | `{% embed url="..." %}` — host externally; can't go inside a hint |
 | Hint / callout | `{% hint style="info" %}` … `{% endhint %}` |

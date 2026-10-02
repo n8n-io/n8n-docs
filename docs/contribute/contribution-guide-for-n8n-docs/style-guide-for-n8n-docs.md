@@ -505,11 +505,11 @@ docs/                                     # docs root
 | Different subfolder, same space | `[link to a page](../manage-workflows/export-import.md)` |
 | Different space | `[link to a page](https://app.gitbook.com/s/<spaceId>/<page-path>)` |
 
-##### Parent pages
+#### Parent pages
 
 `./` and `../` are bare directory references, which GitBook resolves natively to that folder's own `README.md` at any relative depth. `./` points at the current folder's landing page, which is the parent only when the current page sits inside that folder as a child. If the current page is itself a section landing page (a `README.md`), `./` points at itself instead, so step up with `../` to reach the actual parent one level up.
 
-##### Link to a page in a different space
+#### Link to a page in a different space
 
 Relative file paths only resolve within a space. GitBook resolves links between spaces as page references, not file paths, so a `../../` path into another space won't work. Instead, link to the target page's GitBook URL:
 

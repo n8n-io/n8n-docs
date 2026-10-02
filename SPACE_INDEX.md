@@ -9,11 +9,11 @@
 | `administer` | `wMJrGrimpx3PxCJpUswm` | Administer | public | 2026-09-23 |
 | `build` | `rPN1zU5jaYNvwH7RzxqA` | Build | public | 2026-09-30 |
 | `changelog` | `hhM8Cox90Piiv0u0EgHM` | Release notes | public | 2026-09-30 |
-| `connect` | `r7wKI4I1BgdBCuq5Cvcx` | Connect | public | 2026-09-30 |
+| `connect` | `r7wKI4I1BgdBCuq5Cvcx` | Connect | public | 2026-10-01 |
 | `contribute` | `6OmLnmci5kZDzdkzKREn` | Contribute | public | 2026-09-25 |
 | `deploy` | `jm0ZYRpZIPWge2ZSiDYO` | Deploy | public | 2026-09-30 |
 | `get-started` | `CxSeOtVxqqhfxMSac0AV` | Get started | public | 2026-09-23 |
 | `integrations` | `BKcbOzIWja8NfqKDcqHc` | Integrations (Nodes) | public | 2026-09-30 |
 | `n8n-community-license` | `WcrJOYW6B9JlV5aiivMA` | n8n Community license | public | 2026-09-22 |
 | `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` | Privacy and security | public | 2026-09-23 |
-| `reusable-content` | `GixZThfitWP21x2gQFpD` | Reusable Content | private | 2026-09-30 |
+| `reusable-content` | `GixZThfitWP21x2gQFpD` | Reusable Content | private | 2026-10-01 |

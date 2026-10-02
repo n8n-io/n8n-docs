@@ -293,7 +293,7 @@ Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant wo
 {% hint style="info" %}
 **Feature availability**
 
-Agents aren't available on self-hosted Enterprise yet.
+On self-hosted Enterprise, agents are in Preview, with additional governance features on the way.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. n8n Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.

@@ -39,7 +39,7 @@ Agents are available on:
 - **n8n Cloud:** All plans
 - **Self-hosted:** Available from n8n 2.32.3 with extra setup, see [Self-hosted](build-and-manage-agents.md#self-hosted)
 
-They aren't available on self-hosted Enterprise yet.
+On Enterprise, agents are in Preview, with additional governance features on the way.
 {% endhint %}
 
 {% hint style="info" %}
@@ -291,7 +291,7 @@ There are two ways to set up agents on self-hosted n8n:
 {% hint style="warning" %}
 **Feature availability**
 
-Agents are available on all self-hosted plans except Enterprise from n8n 2.32.3. Support for self-hosted Enterprise is coming soon.
+Agents are available on all self-hosted plans from n8n 2.32.3. On Enterprise, agents are in Preview, with additional governance features on the way.
 {% endhint %}
 
 {% hint style="warning" %}

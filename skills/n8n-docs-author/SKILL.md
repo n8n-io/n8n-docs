@@ -136,7 +136,7 @@ docs assistant) chunk on `##`/`###` headings.
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
 - **Answer-first opening:** one plain sentence right after the H1, before any
-  existing intro. Concrete, not "it lets you do things." One sentence; two only
+  existing intro or hint. Concrete, not "it lets you do things." One sentence; two only
   if genuinely needed. Skip it if the intro already opens with an equivalent line.
 - **Cross-references:** the linking rule doesn't apply to node/integration reference pages
   (`docs/integrations/`) — fixed one-page-per-node template, often

@@ -762,7 +762,7 @@ MCP clients that support resources can read the same content from the [instance 
 |-------|------|-------------|
 | `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
 | `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
-| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are available in MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -1506,7 +1506,7 @@ Discover model catalogs, chat integrations, attachable workflows, published sub-
 |------|------|----------|-------------|
 | `projectId` | `string` | Yes | The project to discover assets in |
 | `kind` | `"models" \| "integrations" \| "workflows" \| "subagents" \| "mcpServers"` | Yes | The kind of asset to discover |
-| `query` | `string` | No | Filter for `workflows`, `subagents`, or `mcpServers` |
+| `query` | `string` | No | Filter for model IDs, `workflows`, `subagents`, or `mcpServers`. From n8n 2.43.0, with `kind=models` and a `provider`, `query` keeps only models whose ID contains the text, ignoring case. Earlier versions ignore `query` for models. |
 | `provider` | `string` | No | Model provider for `kind=models` (for example `"openai"`, `"anthropic"`). Omit to get a provider summary without model lists. |
 | `credentialId` | `string` | No | Accessible credential used to verify live models for the selected provider |
 | `excludeAgentId` | `string` | No | Agent to omit when `kind=subagents` |
@@ -1518,7 +1518,7 @@ The `data` field's shape depends on `kind`:
 | `kind` | `data` shape |
 |--------|--------------|
 | `models` (no `provider`) | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models. |
-| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }] }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. |
+| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }], truncated, hint? }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. From n8n 2.43.0, `models` holds at most 50 entries. `truncated` is `true` when more models match, and `hint` then asks you to pass `query` to filter models by ID. Earlier versions return the full model list without `truncated` or `hint`. |
 | `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow. |
 | `workflows` | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool |
 | `subagents` | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId` |
@@ -1529,6 +1529,7 @@ Top-level response: `{ ok, kind, data }`.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Omitting `provider` for `kind=models` returns a summary only; the full model catalog is too large for most MCP clients' token limits.
+- For `kind=models` with a `provider`, n8n returns up to 50 models. If `truncated` is `true`, call again with `query` set to part of the model ID you want. The `truncated` and `hint` fields are available from n8n 2.43.0.
 - For `kind=mcpServers`, omit `query` to list up to 20 registry servers; pass `query` to search by name.
 - Attaching a discovered asset (a workflow, sub-agent, or MCP server) still requires adding it to the agent's config with `mutate_agent`.
 - The `setupGuidance` field for Slack entries is available from n8n 2.43.0.

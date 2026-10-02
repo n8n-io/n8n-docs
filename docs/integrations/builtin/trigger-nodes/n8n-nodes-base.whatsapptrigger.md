@@ -103,7 +103,7 @@ If your app isn't subscribed to your WABA, messages sent to your WhatsApp number
 
 To check the subscription and fix it:
 
-1. In the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/), select your app, then go to **WhatsApp** > **API Setup**. Copy the WhatsApp Business Account ID. Don't use the phone number ID.
+1. In the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/), select your app, then go to **WhatsApp** > **API Setup**. Copy the **WhatsApp Business Account ID**. Don't use the **Phone number ID**.
 2. Get an access token for the same Meta app as your n8n WhatsApp Trigger credential. The request in step 4 subscribes the app that the token belongs to. The token needs the `whatsapp_business_management` permission. For example, in Meta's [Graph API Explorer](https://developers.facebook.com/tools/explorer/), select your app under **Meta App**, add the permission, and generate a token.
 3. List the apps subscribed to your WABA:
 
@@ -129,7 +129,7 @@ To check the subscription and fix it:
 {% hint style="warning" %}
 **Don't delete the subscription to fix a webhook conflict**
 
-The "already has a webhook subscription" error refers to your app's webhook URL, not to your WABA subscription. Don't send a `DELETE` request to `subscribed_apps` to clear it. That request unsubscribes your app from your WABA, and Meta stops sending webhooks for that account.
+The `already has a webhook subscription` error refers to your app's webhook URL, not to your WABA subscription. Don't send a `DELETE` request to `subscribed_apps` to clear it. That request unsubscribes your app from your WABA, and Meta stops sending webhooks for that account.
 {% endhint %}
 
 Refer to Meta's [Subscribed Apps API](https://developers.facebook.com/documentation/business-messaging/whatsapp/reference/whatsapp-business-account/subscribed-apps-api/) reference and [Webhook overrides](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/override/) for more information.

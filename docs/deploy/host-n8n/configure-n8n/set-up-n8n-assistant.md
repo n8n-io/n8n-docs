@@ -286,6 +286,62 @@ If you configure both, Brave Search takes priority over SearXNG. Free or unauthe
 
 If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
 
+## Enable instance context
+
+Instance context gives n8n Assistant a short summary of the project a conversation is opened in: which workflows exist, what changed recently, and what has run or failed. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+
+The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
+
+On a self-hosted instance, set `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
+
+```bash
+N8N_FEATURE_FLAG_OVERRIDES='{"114_instance_activity_context":true}'
+```
+
+Restart n8n to apply the change.
+
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+| --- | --- |
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
+
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
+
+One flag controls both halves. With the flag off, n8n writes no activity entries and n8n Assistant reads no instance context.
+
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own flag.
+
+Turning the flag off stops new activity recording and new instance context reads. The activity log tool is unavailable. Entries recorded earlier remain subject to these retention settings:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_ACTIVITY_LOG_RETENTION_DAYS` | `0` | Days to keep activity entries. `0` disables age-based pruning. |
+| `N8N_ACTIVITY_LOG_MAX_ENTRIES` | `1000` | Maximum activity entries across all projects. `0` disables count-based pruning. |
+
+By default, n8n keeps the newest 1,000 activity entries across the instance. It doesn't remove entries based on age. An entry can remain indefinitely if the log stays below this limit.
+
+Pruning runs hourly and continues when the flag is off. Restart n8n after changing these environment variables.
+
+## Enable node type counting
+
+Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and has its own flag.
+
+The `109_instance_ai_node_usage` PostHog flag controls it. On a self-hosted instance, `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` force-enables it:
+
+```bash
+N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
+```
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to turn node type counting on, whatever the PostHog flag returns. |
+
+This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the PostHog flag, so it isn't a way to keep the feature off.
+
+Node type counting reports counts of node types, never parameter values.
+
 ## Enable agents
 
 Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
@@ -369,6 +425,18 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 * `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
 * If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
+
+**Instance context**
+
+* The `114_instance_activity_context` flag is on for your instance. Set `N8N_FEATURE_FLAG_OVERRIDES` to `{"114_instance_activity_context":true}` to force it on.
+* Nothing changed in the project yet. The activity log only records changes made after the flag went on.
+* The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
+
+**Node type counting**
+
+* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
+* Setting the variable to `false` doesn't keep the feature off. It hands the decision back to the flag.
+* It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
 ## Related resources
 

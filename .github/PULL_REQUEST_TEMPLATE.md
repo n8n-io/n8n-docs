@@ -8,7 +8,7 @@ Screenshots are helpful for layout or formatting changes.
 ## Related PRs, Linear tickets, issues, and forum posts
 
 <!--
-+If this PR accompanies a code change, link the related PR(s) in the main n8n repo or other n8n-io repos first. Reviewers need these to understand what prompted the docs update.
+If this PR accompanies a code change, link the related PR(s) in the main n8n repo or other n8n-io repos first. Reviewers need these to understand what prompted the docs update.
 https://github.com/n8n-io/n8n/pull/[PR-NUMBER]
 
 Also include links to any Linear ticket, GitHub issue, or community forum post for context.

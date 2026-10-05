@@ -37,9 +37,7 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 Agents are available on:
 
 - **n8n Cloud:** All plans
-- **Self-hosted:** Available from n8n 2.32.3 with extra setup, see [Self-hosted](build-and-manage-agents.md#self-hosted)
-
-They aren't available on self-hosted Enterprise yet.
+- **Self-hosted:** All plans from n8n 2.32.3. See [Self-hosted](build-and-manage-agents.md#self-hosted) for setup details.
 {% endhint %}
 
 {% hint style="info" %}
@@ -47,6 +45,41 @@ They aren't available on self-hosted Enterprise yet.
 
 Agents are in Preview. They can make mistakes, and their behavior may change while the feature is in development. On self-hosted, knowledge bases are also in Preview.
 {% endhint %}
+
+### Enable or disable agents
+
+Agents are on by default on all plans, including Enterprise. Instance owners and admins can change this setting for the whole instance:
+
+1. Open **Settings > Agents**.
+2. Turn **Enable Agents** on or off.
+
+n8n saves your choice across restarts and license changes. The setting is separate from the n8n Assistant setting.
+
+When you turn agents off:
+
+* Users can't create agents. New runs can't start from Preview, chat, schedules, channels, MCP, evaluations, or the **Message an Agent** node.
+* Active runs can finish, including runs waiting for approval.
+* n8n cancels queued messages for future runs. They don't run after you enable agents again.
+* n8n keeps saved agents and session history. You can access them again after you enable agents.
+
+Schedules stay saved. They can trigger new runs again after you enable agents. n8n doesn't replay schedule triggers that occurred while agents was off.
+
+This setting doesn't affect the **AI Agent** workflow node.
+
+### Configure the shared sandbox
+
+Agents and n8n Assistant share the same sandbox connection. Changes apply to both features. You can configure the connection while either feature is off.
+
+On self-hosted instances, an instance owner or admin can configure the connection:
+
+1. Open **Settings > Agents**.
+2. Under **Shared sandbox**, select **Add sandbox**. To edit an existing connection, select the **Code sandbox** row.
+3. Choose a sandbox provider and enter its connection details.
+4. Select **Save**. n8n checks the connection before saving it.
+
+n8n Cloud manages the sandbox connection. If environment variables configure a self-hosted connection, the page shows **Found in server configuration** without edit controls. If that connection is configured but the sandbox is off, select **Enable sandbox**.
+
+For environment variables and module requirements, see [Enable agents on self-hosted n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 
 ### Video: how agents fit with workflows and AI
 
@@ -78,7 +111,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
 | **Sub-agents**     | Other published agents this agent can delegate work to.                                                         |
-| **Knowledge base** | Files the agent can search and read for context (n8n Cloud, or self-hosted in preview with a Daytona sandbox).   |
+| **Knowledge base** | Files the agent can search and read for context (n8n Cloud, or self-hosted in Preview with a configured sandbox). |
 | **Memory**         | Session memory keeps the current conversation. Episodic memory recalls context from earlier sessions.           |
 
 Model, Instructions, Tools, Skills, Knowledge, Memory, and Sub-agents are configured while building the agent. Channels and Schedules take effect once you publish.
@@ -285,13 +318,13 @@ To let an agent hand work to another agent, connect **Message an Agent Tool** to
 
 There are two ways to set up agents on self-hosted n8n:
 
-* **Build manually**: enable the `agents` module (add `agents` to `N8N_ENABLED_MODULES`). You pick the model, write the instructions, and attach tools and skills yourself. This is all you need to build and run agents.
-* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a Daytona sandbox, and connecting channels needs a public `WEBHOOK_URL`.
+* **Build manually**: Agents are on by default. You pick the model, write the instructions, and attach tools and skills yourself. An instance owner or admin can turn agents on or off in **Settings > Agents**.
+* **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a configured sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Feature availability**
 
-Agents are available on all self-hosted plans except Enterprise from n8n 2.32.3. Support for self-hosted Enterprise is coming soon.
+Agents are available on all self-hosted plans from n8n 2.32.3.
 {% endhint %}
 
 {% hint style="warning" %}

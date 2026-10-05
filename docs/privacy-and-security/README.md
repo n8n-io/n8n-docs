@@ -36,144 +36,133 @@ You can find a list of n8n sub-processors [here](https://n8n.io/legal/sub-proces
 {% hint style="info" %}
 **Self-hosted n8n**
 
-For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
+For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data.
 {% endhint %}
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
 
-Email help@n8n.io to make an account deletion request.
+Email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
 
 ### Sub-processors <a href="#sub-processors" id="sub-processors"></a>
 
-The sub-processor list has moved to [n8n.io/legal/sub-processors](https://n8n.io/legal/sub-processors/).
+The sub-processor list is available at [n8n.io/legal/sub-processors](https://n8n.io/legal/sub-processors/).
 
 ### GDPR for self-hosted users <a href="#gdpr-for-self-hosted-users" id="gdpr-for-self-hosted-users"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iLayKGKnzGLWFd5VGZVk/" %}
 
 
+## Telemetry
 
-## Data collection <a href="#data-collection" id="data-collection"></a>
+n8n collects a limited amount of information about how the product is used, so we can keep it working, fix what breaks, and decide what to build next. This page sets out what we collect, why, and what you can switch off.
 
-n8n collects selected usage and performance data to help diagnose problems and improve the platform. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy).
+The short version. We collect information about how you use n8n. We do not collect the data that flows through your workflows, and we do not collect your credentials.
 
-The data gathered is different in self-hosted n8n and n8n Cloud.
+### How to read this page
 
-### Data collection in self-hosted n8n <a href="#data-collection-in-self-hosted-n8n" id="data-collection-in-self-hosted-n8n"></a>
+**Self-hosted** means n8n running on your own server. This covers both the free Community Edition and a paid licence, including Enterprise.
 
-n8n takes care to keep self-hosted data anonymous and avoids collecting sensitive data. 
+**n8n Cloud** means n8n hosted by us, that you use in your browser. Everything below applies to Cloud as well, with the differences set out in [If you use n8n Cloud](#if-you-use-n8n-cloud).
 
-#### What n8n collects <a href="#what-n8n-collects" id="what-n8n-collects"></a>
+**Pseudonymous** means the data is tied to a code rather than to your name or email, and cannot be traced back to you without information we hold separately. It is still personal data under the GDPR and we treat it as such. 
 
-- Error codes and messages of failed executions (excluding any payload data, and not for custom nodes)
-- Error reports for app crashes and API issues
-- The graph of a workflow (types of nodes used and how they're connected)
-- From node parameters:
-    - The 'resource' and 'operation' that a node is set to (if applicable)
-    - For HTTP request nodes, the domain, path, and method (with personal data anonymized)
-- Data around workflow executions:  
-    - Status
-    - The user ID of the user who ran the execution
-    - The first time a workflow loads data from an external source
-    - The first successful production (non-manual) workflow execution
-- The domain of webhook calls, if specified (excluding subdomain).
-- Details on how the UI is used (for example, navigation, nodes panel searches)
-- Diagnostic information:
-    - n8n version
-    - Selected settings:
-        - DB_TYPE
-        - N8N_VERSION_NOTIFICATIONS_ENABLED
-        - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
-        - [Execution variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/executions)
-    - OS, RAM, and CPUs
-    - Anonymous instance ID
- - IP address
+### Who is responsible for this data
 
-#### What n8n doesn't collect <a href="#what-n8n-doesnt-collect" id="what-n8n-doesnt-collect"></a>
+For the data that flows through your workflows on a self-hosted instance, n8n is neither a controller nor a processor. That data stays on your infrastructure and we never receive it.
 
-n8n doesn't collect private or sensitive information, such as:
+Telemetry is different. Where your instance sends us usage and diagnostic data, n8n is the controller of that data and decides how it is used.
 
-- Personally identifiable information (except IP address)
-- Credential information
-- Node parameters (except 'resource' and 'operation')
-- Execution data
-- Sensitive settings (for example, endpoints, ports, DB connections, username/password)
-- Error payloads
+### What n8n collects for telemetry
 
-#### How collection works <a href="#how-collection-works" id="how-collection-works"></a>
+n8n keeps telemetry pseudonymous wherever possible, and avoids collecting sensitive data. We collect the following categories.
 
-Most data is sent to n8n as events that generate it occur. Workflow execution counts and an instance pulse are sent periodically (every 6 hours).
+| What we collect | Example | Why we collect it | Can you switch it off? |
+| --- | --- | --- | --- |
+| **Instance and configuration.** A code identifying your instance, the n8n version you run, your database and deployment type, selected configuration settings, and basic details of the server such as operating system, memory, and CPUs. | Deployment type `default`, database postgres, version `1.105.0` | To tell whether an n8n update has broken something that was working, and to understand how instances are configured in practice | Yes |
+| **Identifiers.** A code combining your instance and your user number, and a truncated IP address. The code does not contain your name or email.  | User `5678` on instance `abc123`. `12.214.31.144` is stored as `12.214.31.0` | To tell repeat activity apart from new activity, and to keep the service secure and stable | Yes |
+| **IP address.** A truncated IP address. The last part is removed, so what we store identifies a network rather than a device. On a self-hosted instance this is your server's address, not the address of the person at the browser. On n8n Cloud, see [If you use n8n Cloud](#if-you-use-n8n-cloud). We use it to work out the country an instance is in. | `12.214.31.144` is stored as `12.214.31.0` | To keep the service secure and stable, and to understand which countries n8n is used in | Yes |
+| **What you do in the product.** Creating, saving, running, and deleting workflows. The shape of your workflow, meaning which node types are connected to which, but not the information flowing through them. Which features and templates you use, and how you move around the interface. | "Workflow ran successfully in production for the first time" | To find where people get stuck, and to decide what to build next | Yes |
+| **Errors and diagnostics.** Error messages and failure details from the interface and the server, failed executions, and system health signals. Error messages can sometimes include text drawn from your workflow, such as a node name or an error returned by a service you connect to. | `ECONNREFUSED`, together with the node type that failed | Troubleshooting, and keeping n8n reliable | Yes |
+| **Which outside services you connect to.** The registrable domain of any address configured in an HTTP Request node, and the domain of webhook calls. Since January 2026 we no longer collect the subdomain or the path. | A node pointing at `api.stripe.com/v1/charges` is recorded as `stripe.com` | To decide which services deserve a purpose-built n8n integration | Yes |
+| **Licence and usage counts.** Active workflows, total workflows, executions, and how many users your instance has. If you hold a paid licence, these are reported with your licence identifier. | Active workflows: 3. Production executions: 45678 | To operate your licence and bill correctly, since n8n pricing is based on executions | No. These are needed to run your subscription or licence. |
 
-#### Opting out of telemetry <a href="#opting-out-of-telemetry" id="opting-out-of-telemetry"></a>
+### How collection works
 
-Telemetry collection is enabled by default. To disable it you can configure the following environment variables.
+Most data is sent to n8n as the events that generate it occur. Workflow execution counts and an instance pulse are sent every six hours.
+
+### What n8n doesn't collect
+
+-   The data that flows through your workflows, meaning the information your nodes send and receive
+-   The contents of your credentials
+-   Node parameters, other than the `resource` and `operation` a node is set to
+-   Sensitive configuration settings, for example endpoints, ports, database connections and usernames or passwords
+-   Error payloads
+
+We do not sell telemetry data, and we do not share it for anyone else's commercial purposes.
+
+### Turning telemetry off
+
+Telemetry is on by default. To switch it off on a self-hosted instance, set the following environment variables. This has to be done by whoever administers the instance. There is no switch inside the n8n interface.
 
 To opt out of telemetry events:
 
-```bash
+```shell
 export N8N_DIAGNOSTICS_ENABLED=false
 ```
 
 To opt out of checking for new versions of n8n:
 
-```bash
+```shell
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
-To disable the templates feature (prevents background health check calls):
+To disable the templates feature, which prevents background health check calls:
 
-```bash
+```shell
 export N8N_TEMPLATES_ENABLED=false
 ```
 
-See [configuration](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration) for more info on how to set environment variables.
+See [configuration](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration) for how to set environment variables.
 
-### Data collection in n8n Cloud <a href="#data-collection-in-n8n-cloud" id="data-collection-in-n8n-cloud"></a>
+{% hint style="warning" %} What the opt-out does not cover
 
-n8n Cloud collects everything listed in [Data collection in self-hosted n8n](#data-collection-in-self-hosted-n8n).
+If you hold a paid licence, your instance continues to report usage counts and your licence identifier whether or not telemetry is switched off. This reporting is necessary to operate your licence and cannot be disabled.
 
-Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/) to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
-
-### AI in n8n <a href="#ai-in-n8n" id="ai-in-n8n"></a>
-
-To provide enhanced assistance, n8n integrates AI-powered features that leverage Large Language Models (LLMs).
-
-#### How n8n uses AI <a href="#how-n8n-uses-ai" id="how-n8n-uses-ai"></a>
-
-To assist and improve user experience, n8n may send specific context data to LLMs. This context data is strictly limited to information about the current workflow. n8n does not send any values from credential fields or actual output data to AI services. The data will not be incorporated, used, or retained to train the models of the AI services. Any data will be deleted after 30 days.
-
-#### AI usage settings <a href="#ai-usage-settings" id="ai-usage-settings"></a>
-
-{% hint style="info" %}
-**Feature availability**
-
-AI usage settings are available from n8n 2.7.0.
+Telemetry cannot currently be switched off on n8n Cloud.
 {% endhint %}
 
-You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance.
+### If you use n8n Cloud
 
-More details can be found on the [n8n Assistant documentation page](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/use-the-ai-assistant#ai-usage-settings).
+Everything above applies to n8n Cloud as well, with three differences.
 
-#### When n8n shares data <a href="#when-n8n-shares-data" id="when-n8n-shares-data"></a>
+**You cannot switch telemetry off.** There is no opt-out for Cloud and no setting in the interface.
 
-Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the n8n Assistant, ensuring no unnecessary data sharing occurs.
+**The IP address we see is different.** For anything your Cloud instance sends, the address belongs to our infrastructure rather than to you. For the Cloud dashboard in your browser, it is your network's address, truncated in the same way as above.
 
-#### What n8n shares <a href="#what-n8n-shares" id="what-n8n-shares"></a>
+**We record sessions in the n8n interface.** On Cloud only, we capture what happens on screen while you use n8n, so we can see where the product is confusing. Credential values are never recorded. Recordings are deleted after 21 days. 
 
-- **General Workflow Information**: This includes details about which nodes are present in your workflow, the number of items currently in the workflow, and whether the workflow is active.
-- **Input & Output Schemas of Nodes**: This includes the schema of all nodes with incoming data and the output schema of a node in question. We do not send the actual data value of the schema.
-- **Node Configuration**: This includes the operations, options, and settings chosen in the referenced node.
-- **Code and Expressions**: This includes any code or expressions in the node in question to help with debugging potential issues and optimizations.
+### AI features
 
-#### What n8n doesn't share <a href="#what-n8n-doesnt-share" id="what-n8n-doesnt-share"></a>
+n8n integrates AI-powered features that use large language models. To answer you, n8n may send context about the workflow you have open to those models.
 
-- **Credentials**: Any values of the credential fields of your nodes.
-- **Output Data**: The actual data processed by your workflows.
-- **Sensitive Information**: Any personally identifiable information or other sensitive data that could compromise your privacy or security that you have not explicitly mentioned in node parameters or your code of a [Code Node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code).
+**What n8n sends**
 
-### Documentation telemetry <a href="#documentation-telemetry" id="documentation-telemetry"></a>
+- **General workflow information**, including which nodes are present, how many items are in the workflow, and whether the workflow is active
+- **Input and output schemas of nodes**, meaning the shape of the data, not the values in it
++- **Node configuration**, meaning the operations, options, and settings chosen in the node in question
+- **Code and expressions** in the node in question, so the model can help debug it
 
-n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better. You can control cookie consent using the cookie widget.
+**What n8n doesn't send**
+
+- **Credentials.** Any values in the credential fields of your nodes  
+- **Output data.** The actual data processed by your workflows  
+- **Sensitive information** that you have not explicitly put into node parameters or into the code of a [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code)
+
+Data is only sent to AI services if your workspace has opted in to use the Assistant, which is on by default for n8n Cloud. Node-specific data is transmitted only during a direct interaction with the Assistant. This data is not used to train the AI services' models.
+
+## Documentation telemetry
+
+This documentation site uses cookies to recognise your repeated visits and preferences, and to measure whether people find what they are looking for. You can control cookie consent using the cookie widget.
 
 ## Retention and deletion of personal identifiable data <a href="#retention-and-deletion-of-personal-identifiable-data" id="retention-and-deletion-of-personal-identifiable-data"></a>
 

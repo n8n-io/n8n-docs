@@ -288,41 +288,53 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ## Enable agents
 
-Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
+You can [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) with or without n8n Assistant. Agents are in Preview and available from n8n 2.32.3.
 
 {% hint style="info" %}
 **Feature availability**
 
-Agents aren't available on self-hosted Enterprise yet.
+Agents are on by default on all self-hosted plans, including Enterprise.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. n8n Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
 
-Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-assisted building:
+To change the instance setting:
+
+1. Sign in as an instance owner or admin.
+2. Open **Settings > Agents**.
+3. Turn **Enable Agents** on or off.
+
+n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning Agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
+
+The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved Agents setting.
+
+### Shared sandbox and optional features
+
+Use **Settings > Agents > Shared sandbox** to [configure the sandbox connection](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#configure-the-shared-sandbox). Agents and n8n Assistant use the same connection. Changes affect both features. You can configure it while either feature is off.
+
+The shared sandbox editor requires the `instance-ai` module, which also loads by default. If you excluded it with `N8N_DISABLED_MODULES`, remove it from that list and restart n8n. You can keep n8n Assistant off in **Settings > Assistant**. You can also configure the sandbox with environment variables.
+
+Enabling the shared sandbox also enables the agent knowledge base. For an environment-based setup, use these optional settings:
 
 ```bash
-# Enable the agents module (keep instance-ai for AI-assisted building)
-N8N_ENABLED_MODULES=instance-ai,agents
-
-# Knowledge base, optional: reuses the Daytona sandbox you set up for n8n Assistant
+# Enable the agent knowledge base with your existing Daytona connection
 N8N_AGENTS_AI_SANDBOX_ENABLED=true
-N8N_AGENTS_AI_SANDBOX_PROVIDER=daytona
+N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
 
-# Channels, optional: public URL so Slack, Telegram, and Linear can reach your instance
-WEBHOOK_URL=https://your-public-url
+# Let channels reach your instance
+WEBHOOK_URL=https://<your-public-hostname>
 ```
 
 | Variable | Description |
 | --- | --- |
-| `N8N_ENABLED_MODULES` | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building. |
-| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox. |
-| `N8N_AGENTS_AI_SANDBOX_PROVIDER` | Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for n8n Assistant. |
+| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base when the shared sandbox isn't already enabled. Requires a configured sandbox. Default: `false`. |
+| `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Shared sandbox provider for agents and n8n Assistant. Use `n8n-sandbox` or `daytona`. Default: `n8n-sandbox`. |
 | `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
 
 {% hint style="info" %}
 **Feature availability**
 
-The knowledge base needs the Daytona sandbox on self-hosted. Without it, the rest of the agent still works.
+The knowledge base needs a configured sandbox on self-hosted n8n. Without it, the rest of the agent still works. See [Pick your setup](#pick-your-setup) for sandbox options.
 {% endhint %}
 
 {% hint style="info" %}
@@ -331,17 +343,17 @@ The knowledge base needs the Daytona sandbox on self-hosted. Without it, the res
 On self-hosted, the knowledge base is in Preview.
 {% endhint %}
 
-For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+For a full deployment example, see [Installation options](../install-options/README.md). To create your first agent, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
 ## Disable n8n Assistant
 
-To disable n8n Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.
-
-You can also disable the module explicitly:
+To turn n8n Assistant off, use **Settings > Assistant**. To unload its module, add `instance-ai` to `N8N_DISABLED_MODULES` and restart n8n:
 
 ```bash
 N8N_DISABLED_MODULES=instance-ai
 ```
+
+Unloading `instance-ai` also removes the shared sandbox editor from **Settings > Agents**. You can still configure the sandbox with environment variables.
 
 ## Troubleshooting
 
@@ -349,7 +361,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 **General**
 
-* `N8N_ENABLED_MODULES` includes `instance-ai`.
+* `N8N_DISABLED_MODULES` doesn't include `instance-ai`.
 * The model value uses `provider/model` format if you set `N8N_INSTANCE_AI_MODEL`.
 * The API key is valid for the selected provider.
 * `N8N_INSTANCE_AI_SANDBOX_ENABLED` is set to `true`.

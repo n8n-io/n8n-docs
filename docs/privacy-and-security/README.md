@@ -149,7 +149,7 @@ n8n integrates AI-powered features that use large language models. To answer you
 
 - **General workflow information**, including which nodes are present, how many items are in the workflow, and whether the workflow is active
 - **Input and output schemas of nodes**, meaning the shape of the data, not the values in it
-- **Node configuration**, meaning the operations, options and settings chosen in the node in question
++- **Node configuration**, meaning the operations, options, and settings chosen in the node in question
 - **Code and expressions** in the node in question, so the model can help debug it
 
 **What n8n doesn't send**

@@ -17,6 +17,13 @@ layout:
 
 # Flow credentials <a href="#flow-credentials" id="flow-credentials"></a>
 
+
+{% hint style="warning" %}
+**Feature availability**
+
+The Flow service has shut down and its API no longer responds, so the Flow and Flow Trigger nodes can't connect to it. Workflows using these nodes will fail. Remove them or switch to another service.
+{% endhint %}
+
 You can use these credentials to authenticate the following nodes:
 
 - [Flow](../app-nodes/n8n-nodes-base.flow.md)
@@ -36,5 +43,3 @@ To configure this credential, you'll need:
 
 - Your numeric **Organization ID**
 - An **Access Token**
-
-Refer to the Flow API Getting Started documentation for instructions on generating your Access Token and viewing your Organization ID.

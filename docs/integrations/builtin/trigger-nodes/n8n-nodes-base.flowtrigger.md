@@ -19,6 +19,13 @@ layout:
 
 # Flow Trigger node <a href="#flow-trigger-node" id="flow-trigger-node"></a>
 
+
+{% hint style="warning" %}
+**Feature availability**
+
+The Flow service has shut down and its API no longer responds, so the Flow and Flow Trigger nodes can't connect to it. Workflows using these nodes will fail. Remove them or switch to another service.
+{% endhint %}
+
 Flow is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
 {% hint style="info" %}

@@ -762,7 +762,7 @@ MCP clients that support resources can read the same content from the [instance 
 |-------|------|-------------|
 | `context` | `string` | The instance context, as prose. Absent when there is nothing to report |
 | `empty` | `boolean` | Set when there is nothing to report. Read `nothingExposed` for the reason |
-| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are exposed to MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
+| `nothingExposed` | `boolean` | Present when the answer is empty. `true` means workflows exist here but none are available in MCP, so the estate is real and out of reach. `false` means the instance holds nothing yet |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -911,7 +911,7 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
-| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"all"` |
+| `section` | `string` | No | `"all"` | Documentation section to retrieve. One of: `"patterns"`, `"patterns_detailed"`, `"expressions"`, `"functions"`, `"rules"`, `"import"`, `"guidelines"`, `"design"`, `"groups"` (available from n8n 2.41.0), `"all"` |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -924,6 +924,7 @@ Get the n8n Workflow SDK reference documentation including patterns, expression 
 - Should be called first before building any workflows.
 - Omit `section`, or set it to `"all"`, to retrieve the full reference.
 - Use `"patterns_detailed"` for expanded workflow pattern examples.
+- Use `"groups"` for the rules that node groups must follow. The full reference also covers them.
 - Renamed from `get_sdk_reference` in n8n 2.34.0.
 
 ---
@@ -1029,6 +1030,7 @@ Get best-practices guidance for a workflow technique. Useful this before searchi
 #### Notes <a href="#notes" id="notes"></a>
 
 - When called with `technique: "list"`, will list all available techniques
+- From n8n 2.41.0, the `"list"` response also ends with guidance on when to organize a workflow into node groups.
 - Some known techniques may not have detailed documentation yet. In that case, the tool returns a message without `documentation`.
 - This replaces the previous `get_suggested_nodes` workflow-planning guidance.
 
@@ -1069,12 +1071,17 @@ Resolve the real values behind a node's resource locator or load-options dropdow
 | `results[].description` | `string` | Description of the resource, when available |
 | `paginationToken` | `string` | Pass back as `paginationToken` to fetch the next page. Absent when there are no more results. |
 | `builderHint` | `string` | Selection guidance from the node's `@builderHint` annotation, when present |
+| `error` | `string` | Error message when the lookup fails |
+| `httpCode` | `string` | HTTP status code the upstream API returned, when the lookup fails on an API call |
+| `errorDescription` | `string` | The upstream API's own error text, when the lookup fails on an API call. Use it to tell a missing permission apart from an invalid credential. n8n truncates it to 4,000 characters. |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Requires a `credentialId` from `list_credentials`; the lookup runs as the current user using that credential.
 - `listSearch` methods support `filter` and pagination via `paginationToken`; `loadOptions` methods don't.
 - This tool reaches out to external services, unlike most other read-only tools.
+- From n8n 2.43.0, a failed lookup returns an error result with an empty `results` array and the `error` field. When the failure comes from an upstream API call, the result includes `httpCode` and `errorDescription` when available. Earlier versions return only the error message, which for an API failure is a generic status sentence.
+- n8n removes secrets from `error` and `errorDescription` before returning them.
 
 ---
 
@@ -1112,6 +1119,7 @@ Validate n8n Workflow SDK code. Parses the code into a workflow and checks for e
 
 - Must be called before `create_workflow_from_code` or `update_workflow`.
 - Warnings may be present even when the code is valid.
+- From n8n 2.41.0, if the code defines node groups, the tool checks them against the node group rules. A violation sets `valid` to `false`. The `errors` array then holds the same message that the save path returns when it rejects the group.
 - If `valid` is `false` and `hint` is present, follow the hint before retrying.
 
 ---
@@ -1194,12 +1202,22 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 | `autoAssignedCredentials[].nodeName` | `string` | The name of the node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The name of the credential that was auto-assigned |
 | `autoAssignedCredentials[].credentialType` | `string` | The credential type that was auto-assigned |
+| `skippedGroups` | `array` | Node groups the tool dropped because they break the node group rules. Absent when the tool kept every group |
+| `skippedGroups[].groupName` | `string` | The name of the dropped group |
+| `skippedGroups[].reason` | `string` | Why the tool dropped the group |
+| `warnings` | `array` | Warnings about the created workflow. Holds the warnings from parsing the SDK code, a `TOP_LEVEL_ITEMS_OVER_CEILING` warning when the canvas holds too many top-level items, and an `UNINSTALLED_COMMUNITY_NODE` warning for each node whose type ships in a verified community package that the instance doesn't have installed. Absent when there are no warnings |
+| `warnings[].code` | `string` | The warning code that identifies the type of warning |
+| `warnings[].message` | `string` | The warning message |
+| `warnings[].nodeName` | `string` | Optional node associated with the warning |
+| `warnings[].parameterPath` | `string` | Optional parameter path associated with the warning |
 | `targetProject` | `object` | The project the workflow was created in |
 | `targetProject.id` | `string` | The ID of the project |
 | `targetProject.name` | `string` | The display name of the project |
 | `targetProject.type` | `"personal" \| "team"` | Whether the workflow was created in a personal or team project |
-| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment or a description that was shortened to 255 characters |
+| `targetFolder` | `object` | The folder holding the workflow, with `id` and `name`. Omitted when the workflow sits at the project root |
+| `note` | `string` | Additional notes about workflow creation, for example nodes skipped during credential auto-assignment, a description that was shortened to 255 characters, or a post-save step that failed after n8n saved the workflow |
 | `hint` | `string` | Actionable recovery hint, if available after an error |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -1208,10 +1226,13 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - Sets `availableInMCP` flag to true on the created workflow.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
 - Resolves webhook node IDs automatically.
+- From n8n 2.41.0, the tool saves the node groups that the SDK code defines. If a group breaks the node group rules, the tool drops that group, reports it in `skippedGroups`, and creates the rest of the workflow. A broken group never fails the creation. Repair the group with `update_workflow`.
 - `folderId` requires `projectId` to also be provided.
 - If the user names a target project, call `search_projects` first and pass the resolved `projectId`; don't guess.
 - After creation, tell the user which project the workflow was created in using the `targetProject` field.
 - From n8n 2.27.0, a `description` longer than 255 characters is truncated (not rejected); the response `note` mentions when this happens.
+- If n8n saves the workflow but a later step fails, the tool confirms the saved workflow and explains the failed step in `note`, instead of reporting the call as an error.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 
@@ -1223,7 +1244,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 `update_workflow` is available from n8n 2.12.0. From n8n 2.20.0, this tool switched to performing partial updates instead of re-writing the full workflow on every update.
 {% endhint %}
 
-Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved.
+Update an existing workflow in n8n by applying an ordered batch of targeted partial updates. The batch is atomic: if any operation fails, no changes are saved. From n8n 2.41.0, node group operations are the exception. n8n skips a failing group operation, reports it in `skippedOperations`, and applies the rest of the batch.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
@@ -1249,6 +1270,10 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `setNodeDisabled` | `nodeName`, `disabled` |  | Enables or disables a node. |
 | `setNodeSettings` | `nodeName`, `settings` |  | Updates node-level execution settings. `settings` must include at least one supported setting. |
 | `setWorkflowMetadata` |  | `name`, `description` | Updates workflow metadata. `name` has a maximum length of 128 characters; `description` has a maximum length of 255 characters. |
+| `setNodeGroups` | `nodeGroups` |  | Replaces all node groups. Pass `[]` to clear them. Each group has `name` and `nodeNames`, plus optional `id` and `description`. Group members are node names, not IDs. Available from n8n 2.41.0. |
+| `addNodeGroup` | `name`, `nodeNames` | `description`, `id` | Adds one node group. `name` must be unique. `nodeNames` must list at least one existing node. `id` is generated if you omit it. Available from n8n 2.41.0. |
+| `removeNodeGroup` | `groupName` |  | Removes one node group. The grouped nodes stay in the workflow. Available from n8n 2.41.0. |
+| `updateNodeGroup` | `groupName` | `newName`, `nodeNames`, `description` | Updates one node group. Pass at least one of `newName`, `nodeNames`, or `description`. `nodeNames` replaces the group membership. Pass an empty string in `description` to clear it. Available from n8n 2.41.0. |
 
 #### `setNodeSettings` fields <a href="#setnodesettings-fields" id="setnodesettings-fields"></a>
 
@@ -1270,6 +1295,13 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `nodeCount` | `number` | The number of nodes in the workflow |
 | `url` | `string` | The URL to open the workflow in n8n |
 | `appliedOperations` | `number` | The number of operations applied |
+| `skippedOperations` | `array` | Node group operations n8n skipped instead of failing the batch |
+| `skippedOperations[].opIndex` | `number` | Position of the skipped operation in the `operations` array |
+| `skippedOperations[].type` | `string` | The type of the skipped operation |
+| `skippedOperations[].reason` | `string` | Why n8n skipped the operation |
+| `removedGroups` | `array` | Existing node groups that this update made invalid, so n8n removed them. Absent when the update removed no group |
+| `removedGroups[].groupName` | `string` | The name of the removed group |
+| `removedGroups[].reason` | `string` | Why n8n removed the group |
 | `autoAssignedCredentials` | `array` | Credentials automatically assigned to nodes added in this update |
 | `autoAssignedCredentials[].nodeName` | `string` | The node that had credentials auto-assigned |
 | `autoAssignedCredentials[].credentialName` | `string` | The credential that was auto-assigned |
@@ -1280,15 +1312,20 @@ Update an existing workflow in n8n by applying an ordered batch of targeted part
 | `validationWarnings[].nodeName` | `string` | Optional node associated with the warning |
 | `note` | `string` | Additional notes about the workflow update, for example HTTP Request nodes skipped during credential auto-assignment |
 | `error` | `string` | Error message if the update failed |
+| `errorCode` | `string` | Machine-readable error code. Present only on failure |
 
 #### Notes <a href="#notes" id="notes"></a>
 
-- Operations are applied in order and saved atomically.
+- Operations are applied in order and saved atomically, apart from node group operations, which n8n skips and reports in `skippedOperations`.
+- The node group operations must produce a valid, connected, trigger-free section of the graph. n8n checks this on save. A group `description` has a maximum length of 145 characters.
+- Other operations in the batch can make an existing node group invalid. n8n removes that group and reports it in `removedGroups`. The rest of the batch still saves.
+- Read `skippedOperations` and `removedGroups` after the call and repair any node group that the update skipped or removed.
 - Existing credentials are preserved unless explicitly changed.
 - Credential auto-assignment runs only for nodes added in the current call.
 - HTTP Request nodes are skipped during credential auto-assignment and must be configured manually.
 - The resulting workflow is validated before saving. Validation warnings are returned in `validationWarnings`.
 - Marks the workflow with `aiBuilderAssisted` metadata and `builderVariant: mcp`.
+- `errorCode` holds `HTTP_` plus the HTTP status code when the error carries one, the error's own error code when it has one, or `UNKNOWN_ERROR`.
 
 ---
 
@@ -1501,7 +1538,7 @@ Discover model catalogs, chat integrations, attachable workflows, published sub-
 |------|------|----------|-------------|
 | `projectId` | `string` | Yes | The project to discover assets in |
 | `kind` | `"models" \| "integrations" \| "workflows" \| "subagents" \| "mcpServers"` | Yes | The kind of asset to discover |
-| `query` | `string` | No | Filter for `workflows`, `subagents`, or `mcpServers` |
+| `query` | `string` | No | Filter for model IDs, `workflows`, `subagents`, or `mcpServers`. From n8n 2.43.0, with `kind=models` and a `provider`, `query` keeps only models whose ID contains the text, ignoring case. Earlier versions ignore `query` for models. |
 | `provider` | `string` | No | Model provider for `kind=models` (for example `"openai"`, `"anthropic"`). Omit to get a provider summary without model lists. |
 | `credentialId` | `string` | No | Accessible credential used to verify live models for the selected provider |
 | `excludeAgentId` | `string` | No | Agent to omit when `kind=subagents` |
@@ -1513,8 +1550,8 @@ The `data` field's shape depends on `kind`:
 | `kind` | `data` shape |
 |--------|--------------|
 | `models` (no `provider`) | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models. |
-| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }] }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. |
-| `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. |
+| `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }], truncated, hint? }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. From n8n 2.43.0, `models` holds at most 50 entries. `truncated` is `true` when more models match, and `hint` then asks you to pass `query` to filter models by ID. Earlier versions return the full model list without `truncated` or `hint`. |
+| `integrations` | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow. |
 | `workflows` | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool |
 | `subagents` | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId` |
 | `mcpServers` | Array of MCP registry servers, each with `name`, `title`, `description`, `url`, `transport`, `authentication`, `credentialType`, `tools`, `metadata` |
@@ -1524,8 +1561,10 @@ Top-level response: `{ ok, kind, data }`.
 #### Notes <a href="#notes" id="notes"></a>
 
 - Omitting `provider` for `kind=models` returns a summary only; the full model catalog is too large for most MCP clients' token limits.
+- For `kind=models` with a `provider`, n8n returns up to 50 models. If `truncated` is `true`, call again with `query` set to part of the model ID you want. The `truncated` and `hint` fields are available from n8n 2.43.0.
 - For `kind=mcpServers`, omit `query` to list up to 20 registry servers; pass `query` to search by name.
 - Attaching a discovered asset (a workflow, sub-agent, or MCP server) still requires adding it to the agent's config with `mutate_agent`.
+- The `setupGuidance` field for Slack entries is available from n8n 2.43.0.
 
 ---
 
@@ -1855,7 +1894,7 @@ List the publish history of an agent, newest first.
 
 ### update_agent_integration <a href="#updateagentintegration" id="updateagentintegration"></a>
 
-Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them.
+Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them. For Slack, n8n recommends that you connect without `credentialId` first, so that n8n can create the Slack app for the agent. You can also connect an existing `slackApi` credential.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
@@ -1864,7 +1903,10 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 | `agentId` | `string` | Yes | The ID of the agent |
 | `action` | `"connect" \| "disconnect"` | Yes | Whether to connect or disconnect the integration |
 | `type` | `string` | Yes | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, or `"linear"`) |
-| `credentialId` | `string` | Yes | Accessible credential for this integration |
+| `credentialId` | `string` | No | Accessible credential for this integration. Required for `disconnect` and for `connect` on every type other than Slack. Omit it to connect Slack through managed setup |
+| `managerCredentialId` | `string` | No | Slack managed setup only: the `managerCredentialId` returned by a Slack connect call without `credentialId` |
+| `workspaceId` | `string` | No | Slack managed setup only: the `workspaceId` returned by a Slack connect call without `credentialId` |
+| `replacesCredentialId` | `string` | No | On `connect`, the credential of the same type that this one replaces. Swaps both in one operation instead of a separate `disconnect` |
 | `settings` | `object` | No | Integration settings. Required for Telegram `connect` operations (`accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user). |
 
 #### Output <a href="#output" id="output"></a>
@@ -1873,17 +1915,49 @@ Configure or disconnect a Slack, Telegram, or Linear conversation integration. T
 |-------|------|-------------|
 | `agentId` | `string` | The agent ID |
 | `integration` | `object` | `{ type, credentialId }` |
-| `configured` | `boolean` | Present on `connect`: `true` |
+| `configured` | `boolean` | Present on `connect`. `true` when n8n saved the channel. `false` when n8n returns a setup step, waits for install approval, or can't install |
 | `connected` | `boolean` | Whether the channel is live right now |
 | `published` | `boolean` | Whether the agent has a published (active) version |
 | `activeVersionId` | `string \| null` | The published version ID, or null if unpublished |
 | `configHash` | `string` | The configuration hash after this change |
+| `warning` | `string \| object` | On a Slack `connect` with an explicit credential: a string that explains n8n couldn't confirm the Slack app, so the agent may receive no events. On `disconnect`: an object with `integrationType`, `code`, and an optional `action` URL, when n8n couldn't delete an external resource. For example, `code: "app_not_deleted"` when n8n couldn't delete the Slack app |
+
+Every call can also return `ok`, and a failed call returns `ok: false` with `code` and `error`. Slack `connect` calls can add the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | Whether the call succeeded |
+| `status` | `string` | `"workspace_selection_required"` when n8n needs a workspace choice, or `"install_approval_required"` when someone must approve the Slack app install |
+| `code` | `string` | Slack error code: `"slack_workspace_not_connected"`, `"slack_manager_reconnect_required"`, `"slack_managed_setup_unavailable"`, or `"slack_app_built_for_another_agent"` |
+| `error` | `string` | What went wrong |
+| `managerCredentials` | `array` | Slack workspace credentials in the project, each with `managerCredentialId` and `name`. With `status: "workspace_selection_required"`, it lists only the credentials that are ready to use, with their `workspaces`. With `code: "slack_manager_reconnect_required"`, it lists the credentials to reconnect |
+| `managerCredentials[].workspaces` | `array` | Workspaces the credential covers, each with `workspaceId`, `name`, and `connected`. `connected: true` means the agent already has a bot credential for the workspace, and the entry then includes that `credentialId` |
+| `appId` | `string` | The Slack app ID. Present after a managed install, and when `status` is `"install_approval_required"` |
+| `installUrl` | `string` | URL the user opens to approve the Slack app install. Present when `status` is `"install_approval_required"` |
+| `agentUrl` | `string` | URL to open the agent in n8n, where the user can use **Add channel** |
+| `nextStep` | `string` | The next action to take |
+| `slackApp.requestUrl` | `string` | The URL a Slack app must send Event Subscriptions and Interactivity to |
+| `slackApp.manifest` | `object` | Slack app manifest for manual setup |
+| `slackApp.configuredForAgent` | `boolean` | `true` only when n8n built the Slack app behind the credential for this agent |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Configuring an integration never publishes the agent. If the agent is already published, connecting starts the channel immediately; otherwise the channel stays inactive until `publish_agent` is called.
 - Disconnecting tears down the live channel immediately, whether or not the agent is published.
 - Confirm with the user before connecting a channel on an already-published agent, since it connects immediately.
+- Slack managed setup is available from n8n 2.43.0. This covers the `managerCredentialId` and `workspaceId` parameters, and the `status`, `code`, `managerCredentials`, `appId`, `installUrl`, `agentUrl`, `nextStep`, and `slackApp` fields. From n8n 2.43.0, `credentialId` is optional for Slack `connect`. Earlier versions require `credentialId` on every call, and return `configured: true` for any accessible `slackApi` credential without checking the Slack app.
+- A Slack app sends events only to the request URL in its own configuration, so a Slack channel works only with a Slack app that points at this agent. A `slackApi` credential made for another use, such as a Slack Trigger or another agent, passes every credential check but the agent receives nothing.
+- To connect Slack, call with `action: "connect"`, `type: "slack"`, and no `credentialId` first. Nothing changes. n8n returns the workspaces where it can create a Slack app for the agent, or the steps the user must take in n8n.
+- When the first call returns `status: "workspace_selection_required"`, ask the user which workspace to use and confirm that n8n may create a Slack app there. Then call again with that `managerCredentialId` and `workspaceId`. n8n creates the Slack app, installs it, and connects the channel.
+- If the second call returns `status: "install_approval_required"`, give the user `installUrl`. n8n connects the channel after they approve the install. Call `get_agent` to confirm.
+- `code: "slack_app_built_for_another_agent"` means the agent already uses a bot credential from another Slack app. Disconnect `integration.credentialId`, then install again.
+- `code: "slack_workspace_not_connected"` means no Slack workspace is connected to n8n yet. Give the user `agentUrl` and ask them to connect the workspace once through **Add channel**, then retry.
+- `code: "slack_manager_reconnect_required"` means the user must reconnect the listed Slack workspace credentials through **Add channel**. Give them `agentUrl`, then retry.
+- `code: "slack_managed_setup_unavailable"` means this instance can't create Slack apps. Relay `slackApp.requestUrl` and `slackApp.manifest` so the user can configure a Slack app, then connect with that app's `slackApi` credential.
+- When you connect with an explicit `slackApi` credential, check `slackApp.configuredForAgent`. If it's `false`, relay the warning and `slackApp.requestUrl` to the user instead of reporting the channel as ready.
+- A managed Slack install creates a credential, so the user needs permission to create credentials in the project.
+- Managed setup creates its own credential. Don't pass `credentialId`, `replacesCredentialId`, or `settings` with `managerCredentialId` and `workspaceId`.
+- `credentialId` is required to disconnect. `managerCredentialId` and `workspaceId` apply only to `connect`.
 
 ---
 

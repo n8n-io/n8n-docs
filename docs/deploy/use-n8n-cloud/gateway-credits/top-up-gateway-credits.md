@@ -13,6 +13,12 @@ When your [Gateway credits](README.md) balance runs low, top it up from the Clou
 
 Only the instance owner can top up, and topping up requires an active paid subscription. Free trials include Gateway credits, but not top-ups: if you use up your free credit during a trial, upgrade to a paid plan to add more.
 
+{% hint style="warning" %}
+**Gateway credits don't pay for n8n Assistant**
+
+Gateway credits only pay for AI models and services that nodes use in your workflows. To get more credits for n8n Assistant, [top up Assistant credits](../assistant-credits/top-up-assistant-credits.md) instead. Top-ups are final, so check which balance you're topping up before you pay.
+{% endhint %}
+
 ## Top up manually
 
 1. Open the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Gateway credits** tab.

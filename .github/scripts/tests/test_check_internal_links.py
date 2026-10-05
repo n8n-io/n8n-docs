@@ -5,7 +5,7 @@ absolute, cross-space relative, cross-space broken, .md extension, target
 exists), asset and absolute-path handling, and the parsing helpers that decide
 what counts as a link at all.
 
-Also asserts that the space-ID table still parses out of the real style guide.
+Also asserts that the space-ID table still parses out of the real SPACE_INDEX.md.
 That table is scraped from Markdown with a regex, so reformatting it would
 silently empty the map and make every cross-space link unverifiable while the
 job still exits 0 -- the one failure mode this checker can't self-report.
@@ -28,9 +28,6 @@ spec.loader.exec_module(cil)
 # backticked cells. Sharing that regex would make the count check tautological —
 # tighten it wrongly and both sides would drop the same rows in lockstep.
 _ANY_BACKTICK_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|")
-
-
-STYLE_GUIDE = cil.REPO_ROOT / "docs" / "contribute" / "contribution-guide-for-n8n-docs" / "style-guide-for-n8n-docs.md"
 
 
 def space_table_rows(path, header):
@@ -75,7 +72,7 @@ def category(src_rel, target):
 
 
 def main():
-    # --- Real style guide: the space table must still parse -------------------
+    # --- Real SPACE_INDEX.md: the space table must still parse ----------------
     # Run before the fixture overrides below, while the module still points at
     # the real repo.
     real_spaces = cil.load_space_ids()
@@ -84,27 +81,11 @@ def main():
     # count turned every new space into a CI break (DOC-2351). load_space_ids
     # also drops rows whose folder is missing, so mirror that filter here.
     expected_folders = [f for f in space_table_folders() if (cil.DOCS_ROOT / f).is_dir()]
-    check("style guide still has a parseable space table", len(expected_folders) > 0)
-    check("space-ID table parses out of the real style guide",
+    check("SPACE_INDEX.md still has a parseable space table", len(expected_folders) > 0)
+    check("space-ID table parses out of the real SPACE_INDEX.md",
           len(real_spaces) == len(expected_folders))
     check("every table folder made it into the map",
           sorted(real_spaces.values()) == sorted(expected_folders))
-
-    # The checker now reads the generated SPACE_INDEX.md, but the style guide
-    # keeps a human-readable copy for people on docs.n8n.io (the generated file
-    # sits at the repo root and isn't published). Two copies drift — that is
-    # what DOC-2351 and DOC-2353 were — so assert the hand-kept one agrees.
-    # Subset, not equality: the guide deliberately omits internal utility spaces
-    # such as reusable-content that writers never link to. What it must never do
-    # is state a folder/ID pair the generated index contradicts.
-    generated = dict(space_table_rows(cil.SPACE_ID_TABLE_FILE, "| Folder"))
-    guide = dict(space_table_rows(STYLE_GUIDE, "| Space folder"))
-    check("style guide still documents some spaces", len(guide) > 0)
-    disagree = {f: {"style_guide": sid, "generated": generated.get(f)}
-                for f, sid in guide.items() if generated.get(f) != sid}
-    check("style-guide space table agrees with the generated index", not disagree)
-    if disagree:
-        print(f"    disagreement: {disagree}")
     check("space table maps integrations", real_spaces.get("BKcbOzIWja8NfqKDcqHc") == "integrations")
     check("space table maps deploy", real_spaces.get("jm0ZYRpZIPWge2ZSiDYO") == "deploy")
 

@@ -136,6 +136,7 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 
 | Teams operation | Application permission |
 |---|---|
+| Activity Notification: Send | `TeamsActivity.Send`, plus `User.Read.All` to pick the recipient from the list. The recipient also needs a companion Teams app installed. Refer to [Send an activity notification](../app-nodes/n8n-nodes-base.microsoftteams.md#send-an-activity-notification). |
 | Channel: Get, Get Many | `Channel.ReadBasic.All` |
 | Channel: Create | `Channel.Create` |
 | Channel: Update | `ChannelSettings.ReadWrite.All` |

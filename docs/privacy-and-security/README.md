@@ -41,7 +41,7 @@ For self-hosted versions, n8n is neither a Controller nor a Processor, as we don
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
 
-Email [mailto:help@n8n.io](help@n8n.io) to make an account deletion request.
+Email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
 
 ### Sub-processors <a href="#sub-processors" id="sub-processors"></a>
 

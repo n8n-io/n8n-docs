@@ -200,7 +200,7 @@ Every event carries `executionId`, `workflowId`, and `workflowName`.
 | `isManual` | `true` when someone starts the execution manually from the editor. |
 | `projectId`, `projectName` | The project the workflow belongs to, when it belongs to one. |
 
-`n8n.workflow.success` and `n8n.workflow.failed` also carry `success`, `true` or `false` to match the event name.
+`n8n.workflow.success` and `n8n.workflow.failed` also carry a `success` boolean: `true` on the success event, `false` on the failed event.
 
 `n8n.workflow.failed` additionally carries:
 

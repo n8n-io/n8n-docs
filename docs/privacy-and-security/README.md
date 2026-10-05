@@ -54,7 +54,7 @@ The sub-processor list is available at [n8n.io/legal/sub-processors](https://n8n
 
 ## Telemetry
 
-n8n collects a limited amount of information about how the product is used, so we can keep it working, fix what breaks and decide what to build next. This page sets out what we collect, why, and what you can switch off.
+n8n collects a limited amount of information about how the product is used, so we can keep it working, fix what breaks, and decide what to build next. This page sets out what we collect, why, and what you can switch off.
 
 The short version. We collect information about how you use n8n. We do not collect the data that flows through your workflows, and we do not collect your credentials.
 

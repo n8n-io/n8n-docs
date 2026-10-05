@@ -218,7 +218,7 @@ This release contains bug fixes.
 [niclox44](https://github.com/niclox44)\
 [Rohit-Gahlawat](https://github.com/Rohit-Gahlawat)\
 [hammadxcm](https://github.com/hammadxcm)\
-[aikido-autofix\[bot\]](https://github.com/apps/aikido-autofix-bot)\
+[aikido-autofix\[bot\]](https://github.com/apps/aikido-autofix)\
 [corazzione](https://github.com/corazzione)\
 [Wujerry](https://github.com/Wujerry)\
 [davidangularme](https://github.com/davidangularme)\

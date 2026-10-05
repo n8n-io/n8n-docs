@@ -19,7 +19,7 @@ layout:
 
 # Flow Trigger node <a href="#flow-trigger-node" id="flow-trigger-node"></a>
 
-[Flow](https://www.getflow.com/) is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
+Flow is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
 {% hint style="info" %}
 **Credentials**
@@ -43,4 +43,3 @@ n8n provides an app node for Flow. Refer to the [Flow node documentation](../app
 
 View [example workflows and related content](https://n8n.io/integrations/flow-trigger/) on n8n's website.
 
-Refer to [Flow's documentation](https://developer.getflow.com/api/) for details about their API.

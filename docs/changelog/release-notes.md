@@ -56,7 +56,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 2.41` Add mentions in Microsoft Teams messages, plus 7 other features <a href="#n8n241" id="n8n241"></a>
+## `n8n 2.41` Add mentions to Microsoft Teams messages, plus 7 other features <a href="#n8n241" id="n8n241"></a>
 
 **Released:** 2026-09-22
 

@@ -333,6 +333,8 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
+For a reference multi-main deployment on AWS, including worker autoscaling and Redis high availability, see [Scale and run at high availability on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/scale-and-run-at-high-availability.md).
+
 
 
 ## Related resources

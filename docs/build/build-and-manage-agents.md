@@ -55,14 +55,14 @@ Agents are on by default on all plans, including Enterprise. Instance owners and
 
 n8n saves your choice across restarts and license changes. The setting is separate from the n8n Assistant setting.
 
-When you turn Agents off:
+When you turn agents off:
 
 * Users can't create agents. New runs can't start from Preview, chat, schedules, channels, MCP, evaluations, or the **Message an Agent** node.
 * Active runs can finish, including runs waiting for approval.
-* n8n cancels queued messages for future runs. They don't run after you enable Agents again.
-* n8n keeps saved agents and session history. You can access them again after you enable Agents.
+* n8n cancels queued messages for future runs. They don't run after you enable agents again.
+* n8n keeps saved agents and session history. You can access them again after you enable agents.
 
-Schedules stay saved. They can trigger new runs again after you enable Agents. n8n doesn't replay schedule triggers that occurred while Agents was off.
+Schedules stay saved. They can trigger new runs again after you enable agents. n8n doesn't replay schedule triggers that occurred while agents was off.
 
 This setting doesn't affect the **AI Agent** workflow node.
 
@@ -318,7 +318,7 @@ To let an agent hand work to another agent, connect **Message an Agent Tool** to
 
 There are two ways to set up agents on self-hosted n8n:
 
-* **Build manually**: Agents are on by default. You pick the model, write the instructions, and attach tools and skills yourself. An instance owner or admin can turn Agents on or off in **Settings > Agents**.
+* **Build manually**: Agents are on by default. You pick the model, write the instructions, and attach tools and skills yourself. An instance owner or admin can turn agents on or off in **Settings > Agents**.
 * **Full experience**: also set up [n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) (`instance-ai`) for AI-assisted building, where you describe an agent and n8n scaffolds it. The knowledge base needs a configured sandbox, and connecting channels needs a public `WEBHOOK_URL`.
 
 {% hint style="info" %}

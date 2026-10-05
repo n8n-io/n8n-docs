@@ -304,9 +304,9 @@ To change the instance setting:
 2. Open **Settings > Agents**.
 3. Turn **Enable Agents** on or off.
 
-n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning Agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
+n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
 
-The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved Agents setting.
+The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved agents setting.
 
 ### Shared sandbox and optional features
 

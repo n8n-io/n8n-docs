@@ -140,7 +140,7 @@ Then in **Query Parameters**, provide the values to use. You can provide comma-s
 {{ [ "Alex", 20 ] }}
 ```
 
-#### Handle queries that return no rows <a href="#handle-queries-that-return-no-rows" id="handle-queries-that-return-no-rows"></a>
+#### Handle queries that return no rows
 
 Use **Options** > **Empty Query Result** to choose what the node outputs when the query runs without errors but returns no rows:
 

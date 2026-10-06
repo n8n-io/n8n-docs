@@ -112,4 +112,11 @@ Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/a
 
 ### Give the application access <a href="#give-the-application-access" id="give-the-application-access"></a>
 
-The application needs a data-plane role on your Azure resource. Without the role, model calls fail with an authorization error. Assign a role that allows inference calls to the resource, in the **Access control (IAM)** section of the resource.
+The application needs a role on your Azure resource. Without the role, model calls fail with a `403` error. Role assignments can take up to five minutes to start.
+
+In the Azure portal, open your resource and go to **Access control (IAM)**. Assign the role to your application. Select **User, group, or service principal** as the member type.
+
+* **Classic** endpoint type: Assign the **Cognitive Services OpenAI User** role. The **Cognitive Services OpenAI Contributor** role also works.
+* **Microsoft Foundry** endpoint type: Assign the **Foundry User** role on the Foundry resource. Microsoft previously named this role **Azure AI User**, and you may still see that name in the portal.
+
+Refer to Microsoft's documentation on [Entra ID authentication for Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/managed-identity) and [role-based access control for Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry) for more information.

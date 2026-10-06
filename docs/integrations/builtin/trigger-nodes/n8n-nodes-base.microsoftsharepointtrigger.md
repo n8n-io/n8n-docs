@@ -65,7 +65,7 @@ If you need to tell new items from edited ones, compare `createdDateTime` with `
 
 **Poll Times** sets how often the node checks for changes. It defaults to every minute. n8n supplies this field for every polling trigger, and rejects an interval shorter than one minute when you publish the workflow.
 
-A change is picked up on the next check. One check reads at most 40 pages of changes, and stops early if it runs out of time. If more changes are waiting, the node saves its place and carries on at the next check. A large burst of changes therefore arrives over several executions, and can take longer to clear than one interval.
+A change is picked up on the next check. One check reads about 40 pages of changes at default settings, and stops early if it runs out of time. If more changes are waiting, the node saves its place and carries on at the next check. A large burst of changes therefore arrives over several executions, and can take longer to clear than one interval.
 
 ## Output
 

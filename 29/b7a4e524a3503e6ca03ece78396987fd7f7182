@@ -1,0 +1,14 @@
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  h_5d40c27a8fdfd1 17-19,231
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "29b7a4e524a3503e6ca03ece78396987fd7f7182",
+  "prompts": {},
+  "humans": {
+    "h_5d40c27a8fdfd1": {
+      "author": "Sam Wooler <swooler592@gmail.com>"
+    }
+  }
+}

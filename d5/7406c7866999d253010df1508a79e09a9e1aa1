@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_85c4f2303aecc4::t_a82a7f5deaf754 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "d57406c7866999d253010df1508a79e09a9e1aa1",
+  "prompts": {},
+  "sessions": {
+    "s_85c4f2303aecc4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "682406f4-a7b5-454c-9a67-dc0302df48da",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

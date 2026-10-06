@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/keep-n8n-running/visualize-metrics-with-grafana.md
+  s_0974f15b44b537::t_6793ef63dabbb4 171
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8fd4287398f35b4f20c946d6779e7c375fbb2980",
+  "prompts": {},
+  "sessions": {
+    "s_0974f15b44b537": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b0de9d8a-dbcb-4f01-880e-7866c480c9ee",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

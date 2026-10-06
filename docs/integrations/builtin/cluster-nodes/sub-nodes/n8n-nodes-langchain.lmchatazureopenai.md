@@ -21,7 +21,7 @@ layout:
 
 # Microsoft Foundry Chat Model node <a href="#azure-openai-chat-model-node" id="azure-openai-chat-model-node"></a>
 
-Use the Microsoft Foundry Chat Model node to use the chat models available on your Microsoft Foundry or Azure OpenAI resource with conversational agents[^1].
+The Microsoft Foundry Chat Model node connects conversational agents[^1] to the chat models on your Microsoft Foundry or Azure OpenAI resource.
 
 On this page, you'll find the node parameters for the Microsoft Foundry Chat Model node, and links to more resources.
 
@@ -35,7 +35,7 @@ Refer to the [Microsoft Foundry credentials documentation](../../credentials/azu
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-* **Authentication**: Choose **API Key** or **Azure Entra ID (OAuth2)**. Each option uses its own credential. Refer to the [credentials documentation](../../credentials/azureopenai.md).
+* **Authentication**: Choose **API Key** or **Azure Entra ID (OAuth2)**. Each option uses its own credential.
 * **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
 * **Model (Deployment)**: Select the deployment to use to generate the completion.
     * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and the **Project** field. Set **Project** first.

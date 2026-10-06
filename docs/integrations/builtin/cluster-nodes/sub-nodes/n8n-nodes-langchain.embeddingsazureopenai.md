@@ -22,7 +22,7 @@ layout:
 
 Use the Microsoft Foundry Embeddings node to generate embeddings[^1] for a given text.
 
-This node was previously called the Embeddings Azure OpenAI node.
+This node was previously called the **Embeddings Azure OpenAI** node.
 
 On this page, you'll find the node parameters for the Microsoft Foundry Embeddings node, and links to more resources.
 

@@ -18,12 +18,12 @@ layout:
 
 # Microsoft Foundry credentials <a href="#azure-openai-credentials" id="azure-openai-credentials"></a>
 
-These credentials were previously called Azure OpenAI credentials (API key) and Azure Entra ID (Azure Active Directory) API (Entra ID).
-
 You can use these credentials to authenticate the following nodes:
 
 - [Microsoft Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 - [Microsoft Foundry Embeddings](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
+
+These credentials were previously called **Azure OpenAI credentials** (API key) and **Azure Entra ID (Azure Active Directory) API** (Entra ID).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 

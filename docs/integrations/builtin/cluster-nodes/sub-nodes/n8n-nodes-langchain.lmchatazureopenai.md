@@ -23,7 +23,7 @@ layout:
 
 The Microsoft Foundry Chat Model node connects conversational agents[^1] to the chat models on your Microsoft Foundry or Azure OpenAI resource.
 
-This node was previously called the Azure AI Foundry Chat Model node and the Azure OpenAI Chat Model node.
+This node was previously called the **Azure AI Foundry Chat Model** node and the **Azure OpenAI Chat Model** node.
 
 On this page, you'll find the node parameters for the Microsoft Foundry Chat Model node, and links to more resources.
 

@@ -1,12 +1,12 @@
 ---
-title: Embeddings Azure OpenAI node documentation
+title: Microsoft Foundry Embeddings node documentation
 description: >-
-  Learn how to use the Embeddings Azure OpenAI node in n8n. Follow technical
-  documentation to integrate Embeddings Azure OpenAI node into your workflows.
+  Learn how to use the Microsoft Foundry Embeddings node in n8n. Follow technical
+  documentation to integrate Microsoft Foundry Embeddings node into your workflows.
 contentType:
   - integration
   - reference
-nodeTitle: Embeddings Azure OpenAI node documentation
+nodeTitle: Microsoft Foundry Embeddings node documentation
 originalFilePath: >-
   integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
 originalUrl: >-
@@ -18,16 +18,16 @@ layout:
     visible: false
 ---
 
-# Embeddings Azure OpenAI node <a href="#embeddings-azure-openai-node" id="embeddings-azure-openai-node"></a>
+# Microsoft Foundry Embeddings node <a href="#embeddings-azure-openai-node" id="embeddings-azure-openai-node"></a>
 
-Use the Embeddings Azure OpenAI node to generate embeddings[^1] for a given text.
+Use the Microsoft Foundry Embeddings node to generate embeddings[^1] for a given text.
 
-On this page, you'll find the node parameters for the Embeddings Azure OpenAI node, and links to more resources.
+On this page, you'll find the node parameters for the Microsoft Foundry Embeddings node, and links to more resources.
 
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Azure OpenAI credentials documentation](../../credentials/azureopenai.md) for authentication information for this node.
+Refer to the [Microsoft Foundry credentials documentation](../../credentials/azureopenai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -43,7 +43,7 @@ Refer to the [Azure OpenAI credentials documentation](../../credentials/azureope
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse Embeddings Azure OpenAI node documentation integration templates](https://n8n.io/integrations/embeddings-azure-openai) or [search all templates](https://n8n.io/workflows/)
+[Browse Microsoft Foundry Embeddings node documentation integration templates](https://n8n.io/integrations/embeddings-azure-openai) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

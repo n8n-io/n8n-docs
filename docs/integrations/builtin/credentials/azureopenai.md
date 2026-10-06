@@ -1,13 +1,13 @@
 ---
-title: Azure OpenAI credentials
+title: Microsoft Foundry credentials
 description: >-
-  Documentation for Azure OpenAI credentials. Use these credentials to
+  Documentation for Microsoft Foundry credentials. Use these credentials to
   authenticate OpenAI in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
 priority: medium
-nodeTitle: Azure OpenAI credentials
+nodeTitle: Microsoft Foundry credentials
 originalFilePath: integrations/builtin/credentials/azureopenai.md
 originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/azureopenai'
 url: 'https://docs.n8n.io/integrations/builtin/credentials/azureopenai'
@@ -16,12 +16,12 @@ layout:
     visible: false
 ---
 
-# Azure OpenAI credentials <a href="#azure-openai-credentials" id="azure-openai-credentials"></a>
+# Microsoft Foundry credentials <a href="#azure-openai-credentials" id="azure-openai-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Azure AI Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
-- [Embeddings Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
+- [Microsoft Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+- [Microsoft Foundry Embeddings](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -31,7 +31,7 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
-- Azure Entra ID (OAuth2)
+- Microsoft Foundry (Entra ID)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -48,9 +48,9 @@ To configure this credential, you'll need:
 To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource).
 
 {% hint style="info" %}
-**Model name for Azure OpenAI nodes**
+**Model name for Microsoft Foundry nodes**
 
-Once you deploy the resource, use the **Deployment name** as the model name for the Azure OpenAI nodes where you're using this credential.
+Once you deploy the resource, use the **Deployment name** as the model name for the Microsoft Foundry nodes where you're using this credential.
 {% endhint %}
 
 ## Using Azure Entra ID (OAuth2) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>

@@ -1,13 +1,13 @@
 ---
-title: Azure AI Foundry Chat Model node documentation
+title: Microsoft Foundry Chat Model node documentation
 description: >-
-  Learn how to use the Azure AI Foundry Chat Model node in n8n. Follow technical
-  documentation to integrate Azure AI Foundry Chat Model node into your workflows.
+  Learn how to use the Microsoft Foundry Chat Model node in n8n. Follow technical
+  documentation to integrate Microsoft Foundry Chat Model node into your workflows.
 contentType:
   - integration
   - reference
 priority: medium
-nodeTitle: Azure AI Foundry Chat Model node documentation
+nodeTitle: Microsoft Foundry Chat Model node documentation
 originalFilePath: >-
   integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
 originalUrl: >-
@@ -19,30 +19,30 @@ layout:
     visible: false
 ---
 
-# Azure AI Foundry Chat Model node <a href="#azure-openai-chat-model-node" id="azure-openai-chat-model-node"></a>
+# Microsoft Foundry Chat Model node <a href="#azure-openai-chat-model-node" id="azure-openai-chat-model-node"></a>
 
-Use the Azure AI Foundry Chat Model node to use the chat models available on your Azure AI Foundry or Azure OpenAI resource with conversational agents[^1].
+Use the Microsoft Foundry Chat Model node to use the chat models available on your Microsoft Foundry or Azure OpenAI resource with conversational agents[^1].
 
-On this page, you'll find the node parameters for the Azure AI Foundry Chat Model node, and links to more resources.
+On this page, you'll find the node parameters for the Microsoft Foundry Chat Model node, and links to more resources.
 
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Azure OpenAI credentials documentation](../../credentials/azureopenai.md) for authentication information for this node.
+Refer to the [Microsoft Foundry credentials documentation](../../credentials/azureopenai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-* **Project**: Enter the name of the Azure AI Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
+* **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
 * **Model (Deployment)**: Select the deployment to use to generate the completion.
-    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs an Azure AI Foundry credential and the **Project** field. Set **Project** first.
+    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and the **Project** field. Set **Project** first.
     * **By ID**: Enter the deployment name. Use this for a classic Azure OpenAI credential, or for a deployment that isn't in the list.
 * **Model Family**: Choose the API family the deployment uses. Azure doesn't report this, so set it to match your deployment.
     * **OpenAI**: For GPT and other OpenAI-compatible models.
-    * **Anthropic**: For Claude models. This needs a credential that uses the Azure AI Foundry endpoint type. The **Frequency Penalty**, **Presence Penalty**, and **Response Format** options aren't available for this family.
-* **Use Responses API**: Choose which API the node calls for an OpenAI family deployment. This needs a credential that uses the Azure AI Foundry endpoint type.
+    * **Anthropic**: For Claude models. This needs a credential that uses the Microsoft Foundry endpoint type. The **Frequency Penalty**, **Presence Penalty**, and **Response Format** options aren't available for this family.
+* **Use Responses API**: Choose which API the node calls for an OpenAI family deployment. This needs a credential that uses the Microsoft Foundry endpoint type.
     * **Off** (default): The node calls the Chat Completions API. Use this for most deployments.
     * **On**: The node calls the Responses API. Turn this on for a deployment that only supports the Responses API. Azure returns a `400 Model not supported` error if you call such a deployment with Chat Completions.
 
@@ -71,7 +71,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
-[Browse Azure AI Foundry Chat Model node documentation integration templates](https://n8n.io/integrations/azure-openai-chat-model) or [search all templates](https://n8n.io/workflows/)
+[Browse Microsoft Foundry Chat Model node documentation integration templates](https://n8n.io/integrations/azure-openai-chat-model) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

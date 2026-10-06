@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Azure](https://azure.microsoft.com) subscription.
-- Access to Azure OpenAI or Microsoft Foundry within that subscription. You may need to [request access](https://aka.ms/oai/access) if your organization doesn't yet have it.
+- Access to Azure OpenAI or Microsoft Foundry within that subscription. For Azure OpenAI, you may need to [request access](https://aka.ms/oai/access) if your organization doesn't yet have it.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

@@ -42,26 +42,35 @@ Pin the chart version with `--version` every time you install or upgrade, so you
 
 The chart reads n8n's core settings and passwords from Kubernetes Secrets that you create before you install.
 
-Create the core Secret. It holds the encryption key that n8n uses for credentials, and the host, port, and protocol of your instance. Replace `<your-n8n-domain>` with the domain you use to reach n8n:
+The core Secret holds the encryption key that n8n uses for credentials, and the host, port, and protocol of your instance.
+
+First, generate the encryption key and store a copy outside the cluster, for example in your password manager or secrets store:
 
 ```bash
-kubectl create secret generic n8n-core-secrets \
-	--from-literal=N8N_ENCRYPTION_KEY="$(openssl rand -base64 32)" \
-	--from-literal=N8N_HOST="<your-n8n-domain>" \
-	--from-literal=N8N_PORT="5678" \
-	--from-literal=N8N_PROTOCOL="https"
+N8N_ENCRYPTION_KEY="$(openssl rand -base64 32)"
+echo "$N8N_ENCRYPTION_KEY"
 ```
 
 {% hint style="warning" %}
 **Back up the encryption key**
 
-n8n encrypts stored credentials with `N8N_ENCRYPTION_KEY`. Without the same key, n8n can't decrypt credentials after a reinstall or restore. Keep a copy outside the cluster. For more information, see [Back up and restore](../keep-n8n-running/backup-and-restore.md).
+n8n encrypts stored credentials with `N8N_ENCRYPTION_KEY`. Without the same key, n8n can't decrypt credentials after a reinstall, a restore, or the loss of the cluster. For more information, see [Back up and restore](../keep-n8n-running/backup-and-restore.md).
 {% endhint %}
+
+Then create the core Secret. Replace `<your-n8n-domain>` with the domain you use to reach n8n:
+
+```bash
+kubectl create secret generic n8n-core-secrets \
+	--from-literal=N8N_ENCRYPTION_KEY="$N8N_ENCRYPTION_KEY" \
+	--from-literal=N8N_HOST="<your-n8n-domain>" \
+	--from-literal=N8N_PORT="5678" \
+	--from-literal=N8N_PROTOCOL="https"
+```
 
 In queue mode, also create a Secret for the PostgreSQL password. Reading the password into a variable keeps special characters intact:
 
 ```bash
-read -s -p "PostgreSQL password: " DB_PASSWORD
+read -r -s -p "PostgreSQL password: " DB_PASSWORD
 kubectl create secret generic n8n-db-secret \
 	--from-literal=password="$DB_PASSWORD"
 ```

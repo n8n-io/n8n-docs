@@ -59,7 +59,7 @@ Twist doesn't accept a localhost callback URL. These steps should allow you to c
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step. `N8N_WEBHOOK_URL` is available from n8n 2.30.0. On earlier versions, use `WEBHOOK_URL`.
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step. `N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 ```sh
 export N8N_WEBHOOK_URL=<YOUR-NGROK-URL>
 ```

@@ -209,7 +209,7 @@ To configure your webhook URL, execute the following command on the machine runn
 export N8N_WEBHOOK_URL=https://your-webhook-url.com
 ```
 
-`N8N_WEBHOOK_URL` is available from n8n 2.30.0. On earlier versions, use `WEBHOOK_URL`.
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 
 You can also set this value in the configuration file.
 

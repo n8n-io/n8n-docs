@@ -206,7 +206,7 @@ docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" n8nio/n8n we
 To configure your webhook URL, execute the following command on the machine running the main n8n instance:
 
 ```bash
-export WEBHOOK_URL=https://your-webhook-url.com
+export N8N_WEBHOOK_URL=https://your-webhook-url.com
 ```
 
 You can also set this value in the configuration file.

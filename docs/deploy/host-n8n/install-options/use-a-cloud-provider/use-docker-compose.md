@@ -165,7 +165,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=https  
       - NODE_ENV=production
-      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - N8N_WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - TZ=${GENERIC_TIMEZONE}
       - N8N_RESTRICT_FILE_ACCESS_TO=/files

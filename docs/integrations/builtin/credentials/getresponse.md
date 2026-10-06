@@ -65,7 +65,7 @@ ngrok http 5678
 ```
 2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step.
 ```sh
-export WEBHOOK_URL=<YOUR-NGROK-URL>
+export N8N_WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Follow the [Using OAuth2](#using-oauth2) instructions to configure your credentials, using this URL as your **Redirect URL**.
 

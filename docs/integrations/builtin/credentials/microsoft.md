@@ -240,6 +240,8 @@ Microsoft Teams credentials use the following scopes by default:
 * `TeamworkTag.Read` (available from n8n 2.41.0)
 * `TeamsActivity.Send` (available from n8n 2.42.0)
 
+For the permission each Microsoft Teams Trigger event needs, refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation.
+
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 
 The following services require extra information for OAuth2:

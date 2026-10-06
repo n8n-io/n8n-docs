@@ -35,6 +35,7 @@ Refer to the [Microsoft Foundry credentials documentation](../../credentials/azu
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
+* **Authentication**: Choose **API Key** or **Azure Entra ID (OAuth2)**. Each option uses its own credential. Refer to the [credentials documentation](../../credentials/azureopenai.md).
 * **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
 * **Model (Deployment)**: Select the deployment to use to generate the completion.
     * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and the **Project** field. Set **Project** first.
@@ -58,7 +59,7 @@ Workflows created before these changes keep the **Model (Deployment) Name** text
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Response Format**: Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
 * **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations. The maximum is 2 for the **OpenAI** model family and 1 for the **Anthropic** model family.
 * **Timeout**: Enter the maximum request time in milliseconds.
 * **Max Retries**: Enter the maximum number of times to retry a request.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.

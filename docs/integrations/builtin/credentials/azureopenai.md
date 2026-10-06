@@ -31,19 +31,31 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
-- Microsoft Foundry (Entra ID)
+- Microsoft Foundry (Entra ID): the app signs in with a client ID and secret. No user sign-in is needed.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for more information about the service.
 
+## Endpoint type <a href="#endpoint-type" id="endpoint-type"></a>
+
+Both credential types have an **Endpoint Type** setting. It sets which Azure endpoint the nodes call.
+
+* **Classic**: Use this for an Azure OpenAI resource at `*.openai.azure.com`. The credential needs a **Resource Name** and an **API Version**. You can also enter an optional **Endpoint**.
+* **Microsoft Foundry**: Use this for a Microsoft Foundry resource at `*.services.ai.azure.com`. The credential needs the full **Endpoint** URL, for example `https://<resource>.services.ai.azure.com/openai/v1`.
+
+Some Chat Model node features need the **Microsoft Foundry** endpoint type: the deployment list, Claude models, and the Responses API. Refer to [Microsoft Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md) for details.
+
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
-- A **Resource Name**: the **Name** you give the resource
+- An **Endpoint Type**: **Classic** or **Microsoft Foundry**.
 - An **API key**: **Key 1** works well. This can be accessed before deployment in **Keys and Endpoint**.
-- The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation) for more information about API versioning in Azure OpenAI.
+- For the **Classic** endpoint type:
+    - A **Resource Name**: the **Name** you give the resource.
+    - The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation) for more information about API versioning in Azure OpenAI.
+- For the **Microsoft Foundry** endpoint type: the full **Endpoint** URL of your resource.
 
 To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource).
 
@@ -55,14 +67,21 @@ Once you deploy the resource, use the **Deployment name** as the model name for 
 
 ## Using Azure Entra ID (OAuth2) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
+The Microsoft Foundry (Entra ID) credential signs in as your Entra application. It uses the client credentials grant. You don't sign in with a browser, and there is no **Connect** button or redirect URI.
 
-For self-hosted users, there are two main steps to configure OAuth2 from scratch:
+To configure this credential, you'll need:
+
+- An **Endpoint Type** and the matching endpoint fields. Refer to [Endpoint type](#endpoint-type).
+- A **Tenant ID**: the **Directory (tenant) ID** of your app registration. There is no default value.
+- A **Client ID** and a **Client Secret** for the app registration.
+
+Follow these steps:
 
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
 2. [Generate a client secret](#generate-a-client-secret) for that application.
+3. [Give the application access](#give-the-application-access) to your resource.
 
-Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts). 
+Existing credentials keep working. The **Connect** button and the scope settings no longer show. The stored sign-in token is no longer used.
 
 ### Register an application <a href="#register-an-application" id="register-an-application"></a>
 
@@ -71,13 +90,10 @@ Register an application with the Microsoft Identity Platform:
 1. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations).
 2. Select **Register an application**.
 3. Enter a **Name** for your app.
-4. In **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
-5. In **Register an application**:
-    1. Copy the **OAuth Callback URL** from your n8n credential.
-    2. Paste it into the **Redirect URI (optional)** field.
-    3. Select **Select a platform** > **Web**.
-6. Select **Register** to finish creating your application.
-7. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
+4. In **Supported account types**, select an option that includes your tenant.
+5. Select **Register** to finish creating your application. You don't need a **Redirect URI**.
+6. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
+7. Copy the **Directory (tenant) ID** and paste it into n8n as the **Tenant ID**.
 
 Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2) for more information.
 
@@ -91,25 +107,9 @@ With your application created, generate a client secret for it:
 1. Select **Add**.
 1. Copy the **Secret** in the **Value** column.
 1. Paste it into n8n as the **Client Secret**.
-1. Select **Connect my account** in n8n to finish setting up the connection.
-1. Log in to your Microsoft account and allow the app to access your info.
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
 
-## Setting custom scopes <a href="#setting-custom-scopes" id="setting-custom-scopes"></a>
+### Give the application access <a href="#give-the-application-access" id="give-the-application-access"></a>
 
-Azure Entra ID credentials use the following scopes by default:
-
-* [`openid`](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-openid-scope)
-* [`offline_access`](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#the-offline_access-scope)
-* [`AccessReview.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#accessreviewreadwriteall)
-* [`Directory.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#directoryreadwriteall)
-* [`NetworkAccessPolicy.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#networkaccesspolicyreadwriteall)
-* [`DelegatedAdminRelationship.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#delegatedadminrelationshipreadwriteall)
-* [`EntitlementManagement.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#entitlementmanagementreadwriteall)
-* [`User.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#userreadwriteall)
-* [`Directory.AccessAsUser.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#directoryaccessasuserall)
-* [`Sites.FullControl.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#sitesfullcontrolall)
-* [`GroupMember.ReadWrite.All`](https://learn.microsoft.com/en-us/graph/permissions-reference#groupmemberreadwriteall)
-
-To select different scopes for your credentials, enable the **Custom Scopes** slider and edit the **Enabled Scopes** list. Keep in mind that some features may not work as expected with more restrictive scopes.
+The application needs a data-plane role on your Azure resource. Without the role, model calls fail with an authorization error. Assign a role that allows inference calls to the resource, in the **Access control (IAM)** section of the resource.

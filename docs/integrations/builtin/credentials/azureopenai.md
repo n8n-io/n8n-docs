@@ -2,7 +2,7 @@
 title: Microsoft Foundry credentials
 description: >-
   Documentation for Microsoft Foundry credentials. Use these credentials to
-  authenticate OpenAI in n8n, a workflow automation platform.
+  authenticate Microsoft Foundry in n8n, a workflow automation platform.
 contentType:
   - integration
   - reference
@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Azure](https://azure.microsoft.com) subscription.
-- Access to Azure OpenAI within that subscription. You may need to [request access](https://aka.ms/oai/access) if your organization doesn't yet have it.
+- Access to Azure OpenAI or Microsoft Foundry within that subscription. You may need to [request access](https://aka.ms/oai/access) if your organization doesn't yet have it.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
@@ -57,7 +57,10 @@ To configure this credential, you'll need:
     - The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation) for more information about API versioning in Azure OpenAI.
 - For the **Microsoft Foundry** endpoint type: the full **Endpoint** URL of your resource.
 
-To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource).
+To get the information above, create and deploy a resource:
+
+- **Classic**: [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource).
+- **Microsoft Foundry**: [create a Microsoft Foundry resource](https://learn.microsoft.com/en-us/azure/foundry/tutorials/quickstart-create-foundry-resources) and deploy a model to it.
 
 {% hint style="info" %}
 **Model name for Microsoft Foundry nodes**
@@ -65,14 +68,14 @@ To get the information above, [create and deploy an Azure OpenAI Service resourc
 Once you deploy the resource, use the **Deployment name** as the model name for the Microsoft Foundry nodes where you're using this credential.
 {% endhint %}
 
-## Using Azure Entra ID (OAuth2) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>
+## Using Microsoft Foundry (Entra ID) <a href="#using-azure-entra-id-oauth2" id="using-azure-entra-id-oauth2"></a>
 
 The Microsoft Foundry (Entra ID) credential signs in as your Entra application. It uses the client credentials grant. You don't sign in with a browser, and there is no **Connect** button or redirect URI.
 
 To configure this credential, you'll need:
 
 - An **Endpoint Type** and the matching endpoint fields. Refer to [Endpoint type](#endpoint-type).
-- A **Tenant ID**: the **Directory (tenant) ID** of your app registration. There is no default value.
+- A **Tenant ID**: the **Directory (tenant) ID** of your app registration. It has no default value.
 - A **Client ID** and a **Client Secret** for the app registration.
 
 Follow these steps:
@@ -116,7 +119,7 @@ The application needs a role on your Azure resource. Without the role, model cal
 
 In the Azure portal, open your resource and go to **Access control (IAM)**. Assign the role to your application. Select **User, group, or service principal** as the member type.
 
-* **Classic** endpoint type: Assign the **Cognitive Services OpenAI User** role. The **Cognitive Services OpenAI Contributor** role also works.
+* **Classic** endpoint type: Assign the **Cognitive Services OpenAI User** role.
 * **Microsoft Foundry** endpoint type: Assign the **Foundry User** role on the Foundry resource. Microsoft previously named this role **Azure AI User**, and you may still see that name in the portal.
 
 Refer to Microsoft's documentation on [Entra ID authentication for Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/managed-identity) and [role-based access control for Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry) for more information.

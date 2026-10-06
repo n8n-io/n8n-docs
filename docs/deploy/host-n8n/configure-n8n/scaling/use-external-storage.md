@@ -117,8 +117,8 @@ Restart the server to load the new configuration.
 
 After you enable S3, n8n writes and reads any new binary data to and from the S3 bucket. n8n writes binary data to your S3 bucket in this format:
 
-```
-workflows/{workflowId}/executions/{executionId}/binary_data/{binaryFileId}
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
 ```
 
 n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
@@ -182,8 +182,8 @@ Restart the server to load the new configuration.
 
 After you enable Azure Blob Storage, n8n writes and reads any new binary data to and from the container. n8n writes binary data to your container in this format:
 
-```
-workflows/{workflowId}/executions/{executionId}/binary_data/{binaryFileId}
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
 ```
 
 n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
@@ -210,8 +210,8 @@ S3 execution data storage requires a Business or Enterprise plan with an active 
 
 After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:
 
-```
-workflows/{workflowId}/executions/{executionId}/execution_data/bundle.json
+```text
+workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
 ```
 
 n8n records where each execution's data is stored, so switching modes is non-destructive. Older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.

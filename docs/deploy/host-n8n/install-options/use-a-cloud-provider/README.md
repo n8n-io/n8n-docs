@@ -42,3 +42,4 @@ Configuration guides to help you get started on other platforms:
 * [Install using Docker Compose](../install-using-docker-compose.md)
 * [Install with npm](../install-with-npm.md)
 * [Install with Docker](../install-with-docker.md)
+* [Install with Helm](../install-with-helm.md)

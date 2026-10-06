@@ -68,6 +68,8 @@ Create and configure a bucket following the [AWS documentation](https://docs.aws
 
 Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a lifecycle configuration is required unless you want to preserve binary data indefinitely.
 
+If the bucket also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a rule.
+
 Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
 
 ```sh
@@ -165,6 +167,8 @@ For authentication, n8n supports a connection string, an account name and key, o
 
 n8n delegates pruning of binary data to Azure, so set a [lifecycle management policy](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview) on the container to automatically delete old binary data. Setting a lifecycle policy is required unless you want to preserve binary data indefinitely.
 
+If the container also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a policy.
+
 Tell n8n to store binary data in Azure Blob Storage:
 
 ```sh
@@ -213,6 +217,40 @@ workflows/{workflowId}/executions/{executionId}/execution_data/bundle.json
 n8n records where each execution's data is stored, so switching modes is non-destructive. Older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.
 
 n8n prunes execution data in S3 itself, using the standard [executions pruning](manage-execution-data.md#enable-executions-pruning) settings (the `EXECUTIONS_DATA_*` variables). Unlike binary data, execution data doesn't rely on an S3 lifecycle rule. Don't add a lifecycle rule for execution data, as it could delete data that n8n still references.
+
+To expire binary data in a bucket that also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage).
+
+## Lifecycle rules when binary data and execution data share storage
+
+When you store both binary data and execution data with the same provider, they share one S3 bucket (`N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`) or Azure container (`N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME`). Both data types sit under the same prefix for each execution:
+
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
+workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
+```
+
+S3 key-prefix filters and Azure `prefixMatch` filters match from the start of the object name. On Azure, the prefix also starts with the container name. No single prefix covers all binary data without also covering execution data, and n8n doesn't tag objects by data type. As a result, a lifecycle rule for the whole bucket or container can expire both data types.
+
+### Expire binary data when execution data stays in the database or filesystem
+
+If execution data stays in the database or on the filesystem, n8n doesn't write new execution data to the bucket or container. A lifecycle rule for the whole bucket or container can then expire binary data, within these limits:
+
+* The bucket or container can still hold execution data from an earlier setup. Switching `N8N_EXECUTION_DATA_STORAGE_MODE` doesn't move existing execution data. A lifecycle rule can delete data that n8n still references, so check for `execution_data/` objects before you add the rule.
+* Lifecycle rules use object timestamps, not execution completion times. n8n measures execution age from when the execution finished, and it can write binary data earlier. Setting the expiry age to match `EXECUTIONS_DATA_MAX_AGE` doesn't guarantee that binary data stays available for every execution that n8n keeps. A shorter age can delete binary data for executions that n8n still keeps.
+* [Executions pruning](manage-execution-data.md#enable-executions-pruning) skips annotated executions and executions with the `new`, `running`, or `waiting` status. These executions can stay in n8n longer than any expiry age, and lose their binary data when the rule expires it.
+
+### Expire binary data when execution data is also in object storage
+
+If you set `N8N_EXECUTION_DATA_STORAGE_MODE` to `s3` or `azure` and store binary data with the same provider, n8n doesn't provide a lifecycle configuration that expires only binary data. Don't add a lifecycle rule that expires current objects in the bucket or container, because it also expires execution data that n8n still references.
+
+Keeping execution data in the database avoids storing execution bundles alongside binary data.
+
+### Object versioning and lifecycle rules
+
+With versioning on, objects that expire or that n8n deletes stay as older versions, and you keep paying to store them. Cleaning up older versions is separate from expiring current objects:
+
+* **S3:** n8n deletes objects without a version ID, which adds a delete marker in a versioned bucket. Add a `NoncurrentVersionExpiration` rule to remove older versions. See [S3 lifecycle configuration elements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html).
+* **Azure:** blob versioning is a storage account setting, and lifecycle policies apply to the whole storage account. Add an action for previous versions, and scope the rule with a `prefixMatch` that starts with your container name and a slash, for example `<container-name>/`. See [Azure lifecycle policy structure](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-structure).
 
 ## Related resources
 

@@ -109,7 +109,7 @@ Set a custom slug for the form.
 {% hint style="info" %}
 **Node version 2.1 and earlier only**
 
-From node version 2.2, **Form Path** is no longer a main parameter. Set it in [Node options](#node-options) instead. If you create or update the workflow with the API or by editing its JSON, put `path` inside the node's `options` parameter. n8n ignores a top-level `path` on node version 2.2 and later, and uses the automatically generated ID in the form URL.
+From node version 2.2, **Form Path** is no longer a main parameter. Set it in [Node options](#node-options) instead. If you create or update the workflow with the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n drops a top-level `parameters.path` when it loads the workflow, so the form URL uses the automatically generated ID instead.
 {% endhint %}
 
 ### Form Title <a href="#form-title" id="form-title"></a>

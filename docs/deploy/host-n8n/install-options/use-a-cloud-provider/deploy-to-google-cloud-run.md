@@ -245,6 +245,8 @@ gcloud run services update n8n \
     --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),N8N_WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
 ```
 
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0. On earlier versions, use `WEBHOOK_URL`.
+
 Lastly, you must setup OAuth for these services. Visit `https://console.cloud.google.com/auth` and follow these steps:
 
 1. Click "Get Started" if this button shows (when you have not yet setup OAuth in this Cloud project).

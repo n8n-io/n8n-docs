@@ -178,6 +178,8 @@ volumes:
   traefik_data:
 ```
 
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0. On earlier versions, use `WEBHOOK_URL`.
+
 The Docker Compose file above configures two containers: one for n8n, and one to run [Traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
 
 It also creates and mounts two [Docker volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:

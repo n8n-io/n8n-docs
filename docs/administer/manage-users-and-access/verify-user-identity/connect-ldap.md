@@ -49,7 +49,7 @@ These fields appear once you turn on **Enable LDAP Login**.
 | **LDAP Login** | The label n8n shows on the username field of the login page, in place of **Email**. |
 | **LDAP Server Address** | The IP address or domain of your LDAP server. |
 | **LDAP Server Port** | The port n8n connects to. n8n pre-fills `389`, the standard LDAP port. If you select **TLS**, change it to your server's LDAPS port, which is `636` by default. |
-| **Connection Security** | **None**, **TLS**, or **STARTTLS**. **TLS** connects with `ldaps://`. **None** and **STARTTLS** connect with `ldap://`, and **STARTTLS** then upgrades the connection. |
+| **Connection Security** | **None**, **TLS**, or **STARTTLS**. **TLS** connects with `ldaps://`. **None** and **STARTTLS** connect with `ldap://`. **STARTTLS** then upgrades that connection to TLS. |
 | **Ignore SSL/TLS Issues** | Connect even when the certificate check fails. This field only appears when **Connection Security** isn't **None**. |
 | **Base DN** | Where n8n starts looking for users in the directory tree, for example `o=acme,dc=example,dc=com`. |
 | **Binding as** | **Admin** or **Anonymous**. Refer to [Bind methods](#bind-methods). |

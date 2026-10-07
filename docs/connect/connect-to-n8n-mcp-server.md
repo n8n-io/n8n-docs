@@ -158,19 +158,13 @@ If you lose your token or need to rotate it:
 
 MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. Clients can't access full workflow data, execute, or modify a workflow unless you explicitly enable MCP access for that workflow.
 
-{% hint style="info" %}
-**Workflow eligibility** <a href="#workflow-eligibility" id="workflow-eligibility"></a>
-
-You can only enable MCP access for published workflows that contain a webhook, form, schedule, or chat trigger node.
-{% endhint %}
-
 ### Enabling access for individual workflows <a href="#enabling-access-for-individual-workflows" id="enabling-access-for-individual-workflows"></a>
 
-#### Option 1: From the Workflows exposed page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
+#### Option 1: From the Workflows enabled page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
-From the **Workflows exposed** page (available from n8n 2.2.0), you can enable access for individual workflows:
+From the **Workflows enabled** page (available from n8n 2.2.0), you can enable access for individual workflows:
 1. Navigate to **Settings > Instance-level MCP**.
-2. Select **Workflows exposed**.
+2. Select **Workflows enabled**.
 3. Click the **Enable workflows** button (in the workflows table header or in the table's empty state).
 4. Search for the desired workflow (by name or description) and select it from the list.
 5. Click **Enable** to confirm.
@@ -230,12 +224,12 @@ Only instance owners and admins can change this setting. It's read-only on insta
 {% hint style="info" %}
 **Note**
 
-Workflows still need to meet the [eligibility rules](#exposing-workflows-to-mcp-clients) to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
+Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>
 
-The **Workflows exposed** page (**Access > Workflows exposed**) shows all workflows enabled for MCP clients to access and operate on. From this list you can:
+The **Workflows enabled** page (**Access > Workflows enabled**) lists every workflow that MCP clients can access and operate on. From this list you can:
 
 * Open a workflow, its home project or parent folder directly
 * Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
@@ -246,9 +240,9 @@ The **Workflows exposed** page (**Access > Workflows exposed**) shows all workfl
 
 To help MCP clients identify workflows, you can add free-text descriptions as follows:
 
-1. Option 1: From the **Workflows exposed** page
+1. Option 1: From the **Workflows enabled** page
    1. Navigate to **Settings > Instance-level MCP**.
-   2. Select **Workflows exposed**.
+   2. Select **Workflows enabled**.
    3. Use the action menu in the desired workflow's row and select the **Edit description** action.
    4. Alternatively, click the description text directly to open the edit dialog.
 2.  Option 2: From the workflow editor

@@ -130,7 +130,7 @@ If you store binary data in S3 and later switch to filesystem mode, the instance
 When using S3 or S3-compatible storage:
 
 1. Upgrade all n8n components (main, worker, runner) to the same version simultaneously to avoid protocol incompatibilities.
-2. For self-hosted S3-compatible storage over HTTP, set `N8N_EXTERNAL_STORAGE_S3_PROTOCOL=http` and include the protocol in the host configuration.
+2. For on-premise or S3-compatible storage over HTTP, set `N8N_EXTERNAL_STORAGE_S3_PROTOCOL=http` and include the protocol in the host configuration.
 3. Use only supported environment variable names: for access key, use `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY`.
 
 Newer n8n versions have stricter validation and protocol handling. Older configurations may need updates after upgrading.

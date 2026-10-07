@@ -162,7 +162,7 @@ MCP clients can discover previews of all workflows the current user has access t
 
 #### Option 1: From the Workflows enabled page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
-From the **Workflows enabled** page (available from n8n 2.2.0), you can enable access for individual workflows:
+From the **Workflows enabled** page (available from n8n 2.2.0; renamed from **Workflows exposed** in n8n 2.42.0), you can enable access for individual workflows:
 1. Navigate to **Settings > Instance-level MCP**.
 2. Select **Workflows enabled**.
 3. Click the **Enable workflows** button (in the workflows table header or in the table's empty state).

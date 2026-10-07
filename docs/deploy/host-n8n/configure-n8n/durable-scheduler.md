@@ -97,7 +97,7 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` has two values:
 
 - `legacy` (default): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
-- `new`: runs fire a fixed number of seconds apart, counted from the moment you activated the workflow instead of from clock boundaries. If you activate at :07, "every 30 seconds" fires at :07, :37, :07, and so on. The gap stays exactly the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
+- `new`: runs fire a fixed number of seconds apart, counted from the moment you published the workflow instead of from clock boundaries. If you activate at :07, "every 30 seconds" fires at :07, :37, :07, and so on. The gap stays exactly the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
 
 `legacy` is the default, so timing doesn't change when you switch to the durable scheduler. `new` is the intended future default.
 

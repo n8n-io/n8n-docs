@@ -41,7 +41,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Agent node users**
 
-The Agent node doesn't support SSH tunnels.
+The AI Agent node doesn't support SSH tunnels.
 {% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>

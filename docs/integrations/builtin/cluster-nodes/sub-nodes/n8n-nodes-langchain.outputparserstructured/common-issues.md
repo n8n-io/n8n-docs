@@ -65,5 +65,5 @@ Structured output parsing is often not reliable when working with [agents](../..
 
 If your workflow uses agents, n8n recommends using a separate [LLM-chain](../../root-nodes/n8n-nodes-langchain.chainllm.md) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.
 
-[^1]: n8n cluster nodes consist of one or more sub nodes connected to a root node. Sub nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
-[^2]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub nodes attach to the root node to extend its functionality.
+[^1]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
+[^2]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.

@@ -82,7 +82,7 @@ n8n provides keyboard shortcuts for some actions.
 
 ## Node panel <a href="#node-panel" id="node-panel"></a>
 
- - **N**: open the Node Panel
+ - **N**: open the Nodes panel
  - **Enter**: insert selected node into workflow
  - **Escape**: close Node panel
 

@@ -499,7 +499,7 @@ n8n-main-7d9f8b-xxxx       1/1     Running   0          3m
 
 Multi-instance queue mode runs multiple n8n pods with a shared database, message queue, and object storage. It requires an [n8n Enterprise license](https://n8n.io/pricing/).
 
-Instead of AWS managed services, this guide uses in-cluster equivalents that mirror what you would find in an on-premises or customer OpenShift environment:
+Instead of AWS managed services, this guide uses in-cluster equivalents that mirror what you would find in a self-hosted OpenShift environment:
 
 | AWS Service | Local Equivalent |
 | --- | --- |

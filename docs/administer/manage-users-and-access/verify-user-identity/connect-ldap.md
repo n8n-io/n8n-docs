@@ -57,7 +57,7 @@ These fields appear once you turn on **Enable LDAP Login**.
 | **Binding Password** | The password for the **Binding DN** user. This field only appears when **Binding as** is **Admin**. |
 | **User Filter** | An LDAP query that limits who can sign in, for example `(ObjectClass=user)`. Only the users this query returns can sign in. |
 
-The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The right values depend on your directory, and the examples n8n shows in these fields don't suit every server. Query your LDAP server with a tool such as `ldapsearch` to see which attributes your setup has.
+The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The right values depend on your directory, and the examples n8n shows in these fields don't suit every server. Query your LDAP server with a tool such as `ldapsearch`, then look at one user entry in the output. Note the attribute names that hold each of the five values, and enter those names in the mapping fields.
 
 The synchronization fields come last. They only appear when you turn on **Enable periodic LDAP synchronization**.
 

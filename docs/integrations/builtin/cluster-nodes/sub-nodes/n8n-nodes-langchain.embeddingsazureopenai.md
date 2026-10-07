@@ -37,6 +37,14 @@ Refer to the [Microsoft Foundry credentials documentation](../../credentials/azu
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
+
+* **Authentication**: Choose how the node signs in to Azure. Each option uses its own credential.
+    * **API Key**: Use a stored API key. This is the default. Refer to [Using API key](../../credentials/azureopenai.md#using-api-key).
+    * **Azure Entra ID (OAuth2)**: Sign in as your Entra application with a client ID and secret. Use this when your organization doesn't allow stored API keys. No API key is stored in n8n. Refer to [Using Microsoft Foundry (Entra ID)](../../credentials/azureopenai.md#using-azure-entra-id-oauth2).
+
+Both options work with the **Classic** and the **Microsoft Foundry** endpoint types.
+
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Model (Deployment) Name**: Select the model (deployment) to use for generating embeddings.

@@ -24,5 +24,5 @@ Each cluster starts with one [root node](#user-content-fn-1)[^1].
 
 Each root node can have one or more sub-nodes[^2] attached to it.
 
-[^1]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.
+[^1]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.
 [^2]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.

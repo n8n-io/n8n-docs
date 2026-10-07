@@ -46,9 +46,9 @@ These fields appear once you turn on **Enable LDAP Login**.
 
 | Field | What to enter |
 | -- | -- |
-| **LDAP Login** | The text users see in the login field on the n8n login page. |
+| **LDAP Login** | The label n8n shows on the username field of the login page, in place of **Email**. |
 | **LDAP Server Address** | The IP address or domain of your LDAP server. |
-| **LDAP Server Port** | The port n8n connects to. |
+| **LDAP Server Port** | The port n8n connects to. n8n pre-fills `389`, the standard LDAP port. If you select `TLS`, change it to your server's LDAPS port, which is `636` by default. |
 | **Connection Security** | `None`, `TLS`, or `STARTTLS`. `TLS` connects with `ldaps://`. `None` and `STARTTLS` connect with `ldap://`, and `STARTTLS` then upgrades the connection. |
 | **Ignore SSL/TLS Issues** | Connect even when the certificate check fails. This field only appears when **Connection Security** isn't `None`. |
 | **Base DN** | Where n8n starts looking for users in the directory tree, for example `o=acme,dc=example,dc=com`. |
@@ -56,11 +56,12 @@ These fields appear once you turn on **Enable LDAP Login**.
 | **Binding DN** | The account n8n uses to search the directory, for example `uid=2da2de69435c,ou=Users,o=Acme,dc=com`. This field only appears when **Binding as** is `Admin`. |
 | **Binding Password** | The password for the **Binding DN** user. This field only appears when **Binding as** is `Admin`. |
 | **User Filter** | An LDAP query that limits who can sign in, for example `(ObjectClass=user)`. Only the users this query returns can sign in. |
-| **Enforce Email Uniqueness** | Blocks sign in when more than one LDAP account uses the same email address. |
 
 The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The right values depend on your directory, and the examples n8n shows in these fields don't suit every server. Query your LDAP server with a tool such as `ldapsearch` to see which attributes your setup has.
 
 The synchronization fields come last. They only appear when you turn on **Enable periodic LDAP synchronization**.
+
+**Enforce Email Uniqueness** sits at the bottom of the form, below the synchronization fields. It blocks sign in when more than one LDAP account uses the same email address.
 
 ## Bind methods
 

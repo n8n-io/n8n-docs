@@ -35,6 +35,10 @@ The editor is the n8n UI where you create and manage workflows. Its main area is
 
 Expressions set node parameters dynamically using JavaScript. Instead of a static value, you write an expression that uses data from previous nodes, other workflows, or your n8n environment. Learn more: [Expressions for data transformation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expressions-for-data-transformation).
 
+### Gateway credits (n8n)
+
+Gateway credits let you run supported AI models and third-party services in your workflows without creating provider accounts or setting up credentials. n8n routes the requests through its own gateway and bills the usage from your instance's prepaid credit balance. Learn more: [Use Gateway credits](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/use-gateway-credits).
+
 ### node (n8n) <a href="#node-n8n" id="node-n8n"></a>
 
 Nodes are the components you connect to build a workflow. A node can start the workflow, fetch, send, or process data, control the flow of execution, or connect to an external service. Learn more: [Work with nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes).
@@ -61,6 +65,10 @@ A workflow is a set of connected nodes that automates a process. A workflow runs
 
 ## Data
 
+### binary data (n8n)
+
+Binary data is file-type data, such as images and documents. An item holds binary data in its `binary` object, separate from its `json` data. Learn more: [Binary data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-files-and-images).
+
 ### data pinning (n8n) <a href="#data-pinning-n8n" id="data-pinning-n8n"></a>
 
 Data pinning temporarily freezes the output data of a node during workflow development. This lets you build with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution. Learn more: [Data mocking and pinning](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/pin-and-mock-data).
@@ -81,7 +89,7 @@ A custom variable stores a read-only value that you reuse across workflows. A va
 
 ### agent (n8n)
 
-An agent is an autonomous assistant you build in n8n. Each agent has a language model, instructions, and capabilities you configure, such as tools, skills, memory, and a knowledge base. Agents are separate items in your project, not part of a workflow, and people reach them through chat, channels, and schedules. Agents are in Preview. Don't confuse an agent with the [AI Agent node](#ai-agent-node-n8n), which runs inside a workflow. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+An agent is an autonomous assistant you build in n8n. Each agent has a language model, instructions, and capabilities you configure, such as tools, [skills](#skill-n8n), memory, a [knowledge base](#knowledge-base-n8n), and [sub-agents](#sub-agent-n8n). Agents are separate items in your project, not part of a workflow, and people reach them through chat, channels, and schedules. Agents are in Preview. Don't confuse an agent with the [AI Agent node](#ai-agent-node-n8n), which runs inside a workflow. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
 ### AI agent <a href="#ai-agent" id="ai-agent"></a>
 
@@ -103,25 +111,49 @@ Memory lets an AI keep message context across interactions. This gives you an on
 
 A tool is a resource an AI agent can call to get information or take an action, such as searching the web, calling an API, or running a workflow. The model decides when to use a tool to answer a request. Learn more: [What's a tool in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work).
 
+### Chat Hub (n8n)
+
+Chat Hub is a central chat interface where you can talk to multiple AI models and n8n agents, and create your own agents. Chat Hub also adds the Chat user role, which lets people use the chat interface without access to workflows. Learn more: [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub).
+
 ### cluster node (n8n) <a href="#cluster-node-n8n" id="cluster-node-n8n"></a>
 
 Cluster nodes are groups of nodes that work together to provide functionality in a workflow. A cluster node consists of a root node and one or more sub-nodes that extend its functionality. Learn more: [Cluster nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes).
 
+### knowledge base (n8n)
+
+A knowledge base is a set of files that an [agent](#agent-n8n) can search and read for context when it answers. You upload files to the agent, such as CSV, PDF, Markdown, and text files. Knowledge bases are available on n8n Cloud, and in Preview on self-hosted instances. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#upload-knowledge).
+
 ### Model Context Protocol (MCP)
 
-Model Context Protocol (MCP) is an open standard that lets AI clients connect to external tools and data. n8n works as an MCP client, so agents can use tools from MCP servers. n8n also works as an MCP server, so other MCP clients can use your workflows. Learn more: [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers).
+Model Context Protocol (MCP) is an open standard that lets AI clients connect to external tools and data. n8n works as an MCP client, so agents can use tools from MCP servers. n8n also works as an MCP server, so supported MCP clients can connect to your instance. A connected client can search the workflows you can view, but it gets previews only. To let a client read full workflow data, run a workflow, or edit it, you enable MCP access on the instance and then enable each workflow individually. Learn more: [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) and [Set up and use n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
+
+### n8n Assistant
+
+n8n Assistant is a chat-based agent in n8n that helps you create, edit, test, and troubleshoot workflows from natural language. It can also build agents and help with instance tasks. n8n Assistant is in Preview. Learn more: [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant).
 
 ### root node (n8n) <a href="#root-node-n8n" id="root-node-n8n"></a>
 
 Each cluster node contains a single root node that defines its main functionality. You attach one or more sub-nodes to the root node to extend it. Learn more: [Cluster nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes).
 
+### sandbox (n8n)
+
+A sandbox is an isolated environment that agents and n8n Assistant use to run code. They share one sandbox connection. n8n Cloud manages the connection. On self-hosted instances, an instance owner or admin configures a sandbox provider. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#configure-the-shared-sandbox).
+
 ### skill (n8n)
 
 A skill bundles instructions with the tools an agent needs for a specific task. Add a skill to an agent to reuse that behavior. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#bundle-capabilities-with-skills).
 
+### sub-agent (n8n)
+
+A sub-agent is a published agent that another agent can hand work to. Use sub-agents when a task has separate parts and a specialized agent can handle each part better. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#add-sub-agents).
+
 ### sub-node (n8n) <a href="#sub-node-n8n" id="sub-node-n8n"></a>
 
 A sub-node connects to the root node of a cluster node and extends it. Sub-nodes provide access to specific services or resources, or add dedicated processing, such as a calculator. Learn more: [Sub-nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes).
+
+### tool approval (n8n)
+
+Tool approval is a human-in-the-loop check on an AI tool call. For a sensitive tool, the agent pauses and waits for a person to approve or reject the call before the tool runs. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#approve-tool-calls) and [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
 ## General AI terms
 
@@ -174,6 +206,10 @@ A role defines what a user can do. Instance roles apply across the whole instanc
 Tags label workflows so you can filter them. Tags are global: a tag you create is available to every user on the instance. Learn more: [Workflow tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows).
 
 ## Run and publish
+
+### draft (n8n)
+
+A draft is the working version of a workflow, or of an agent. n8n saves your edits to the draft automatically, and the draft doesn't run in production until you publish it. See also [publish](#publish-n8n). Learn more: [Save and publish workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows).
 
 ### error workflow (n8n)
 

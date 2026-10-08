@@ -5,7 +5,7 @@ title: agent-search-endpoint
 {% hint style="info" %}
 #### Searching these docs as an agent
 
-Ask up-to-date n8n developer documentation, forum answers and API specs a question with a GET request. No authentication needed.
+Ask up-to-date n8n developer documentation, forum answers, and API specs a question with a GET request. No authentication needed.
 
 `GET https://n8n-docs-retrieval.n8n-docs-retrieval.workers.dev/?q=<question>`
 

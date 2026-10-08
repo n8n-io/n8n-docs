@@ -107,9 +107,11 @@ The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n dis
 Set a custom slug for the form.
 
 {% hint style="info" %}
-**Node version 2.1 and earlier only**
+**Feature availability**
 
-From node version 2.2, **Form Path** is no longer a main parameter. Set it in [Node options](#node-options) instead. If you create or update the workflow with the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n drops a top-level `parameters.path` when it loads the workflow, so the form URL uses the automatically generated ID instead.
+**Form Path** is a main parameter in node version 2.1 and earlier. From node version 2.2, it's optional and you set it in [Node options](#node-options).
+
+If you create or update the workflow using the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n ignores a top-level `parameters.path` when it loads the workflow, and the form URL ends in the webhook ID instead.
 {% endhint %}
 
 ### Form Title <a href="#form-title" id="form-title"></a>

@@ -142,12 +142,16 @@ Then in **Query Parameters**, provide the values to use. You can provide comma-s
 
 #### Handle queries that return no rows
 
-Use **Options** > **Empty Query Result** to choose what the node outputs when the query runs without errors but returns no rows:
+{% hint style="info" %}
+**Feature availability**
+
+The **Empty Query Result** option is available from n8n 1.95.0, on Merge node version 3.2. Merge nodes created before that use an older node version, don't show the option, and always output `{ "success": true }` when the query returns no rows. To use the option, add a new Merge node, then copy over your query and options.
+{% endhint %}
+
+Use **Options > Empty Query Result** to choose what the node outputs when the query runs without errors but returns no rows:
 
 * **Empty Result** (default): the node outputs no items.
 * **Success**: the node outputs a single item, `{ "success": true }`.
-
-The **Empty Query Result** option is available from n8n 1.95.0. Merge nodes added to a workflow before that version don't show it, and always output `{ "success": true }` when the query returns no rows. To use the option, add a new Merge node.
 
 ### Choose Branch <a href="#choose-branch" id="choose-branch"></a>
 

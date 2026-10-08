@@ -93,6 +93,8 @@ n8n automatically prunes execution logs after a certain time or once you reach t
 * Pro plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
 
+You reach the maximum storage limit either by exceeding the maximum number of saved executions or by exceeding the instance's database storage size. If the instance's database reaches this limit, n8n removes only the execution data and keeps the execution record. Pruning based on execution count or retention time, however, removes the record completely.
+
 ### Manual data pruning <a href="#manual-data-pruning" id="manual-data-pruning"></a>
 
 Heavier executions and use cases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.

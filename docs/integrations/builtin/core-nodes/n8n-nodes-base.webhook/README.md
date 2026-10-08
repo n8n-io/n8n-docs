@@ -45,6 +45,8 @@ You can use the Webhook node as a trigger for a workflow when you want to receiv
 
 The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/DT39xDgilsstSTl0Vk0T/" %}
+
 ## Workflow development process <a href="#workflow-development-process" id="workflow-development-process"></a>
 
 n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](workflow-development.md) for more information on building, testing, and shifting your Webhook node to production.

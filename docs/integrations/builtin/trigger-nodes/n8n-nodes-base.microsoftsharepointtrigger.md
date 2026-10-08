@@ -12,7 +12,7 @@ layout:
 
 Use the Microsoft SharePoint Trigger node to start a workflow when a file or a list item changes in [Microsoft SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration).
 
-The node watches one document library or one list on one site. It checks for changes on a schedule you set. Each check starts the workflow at most once. If several items changed since the last check, they all arrive in one execution, with one item for each entry. If nothing changed, the node starts no execution.
+The node watches one document library or one list on one site. It checks for changes on a schedule you set. Each check starts the workflow at most once. If more than one item changed since the last check, they all arrive in one execution, with one item for each entry. If nothing changed, the node starts no execution.
 
 On this page, you'll find what the node watches, the events it produces, and the limits worth knowing before you build on it.
 
@@ -21,7 +21,7 @@ On this page, you'll find what the node watches, the events it produces, and the
 
 The node offers two ways to sign in, chosen with the **Authentication** dropdown:
 
-* **Microsoft OAuth2 (Graph)**: sign in as a person with the generic [Microsoft OAuth2 credential](../credentials/microsoft.md). Enter `Sites.Read.All` in the credential's **Scope** field, together with `openid offline_access` so the credential can refresh its tokens. For example: `openid offline_access Sites.Read.All`. If your organization grants access site by site, use `openid offline_access Sites.Selected` instead.
+* **Microsoft OAuth2 (Graph)**: sign in as a person with the generic [Microsoft OAuth2 credential](../credentials/microsoft.md). Enter `Sites.Read.All` in the credential's **Scope** field, together with `openid offline_access` so the credential can refresh its tokens. For example: `openid offline_access Sites.Read.All`. If your organization grants access site by site, use `openid offline_access Sites.Selected` instead. `Sites.Selected` on its own grants nothing: an administrator also has to [grant the app access to each site](../credentials/microsoftentraserviceprincipal.md#grant-access-per-site), and the signed-in user needs access to that site too.
 * **Microsoft Entra Service Principal (App-Only)**: sign in as an app, for unattended workflows where no user is present, with the [Microsoft Entra Service Principal credential](../credentials/microsoftentraserviceprincipal.md). Grant the app registration the `Sites.Read.All` application permission, with admin consent. To limit the app to specific sites, grant `Sites.Selected` instead and [grant access per site](../credentials/microsoftentraserviceprincipal.md#grant-access-per-site).
 
 A trigger keeps checking for changes when nobody is signed in, so the Service Principal credential suits it better for production workflows. A user credential stops working when that user's session is revoked, for example after they leave the organization or reset their password.
@@ -63,9 +63,11 @@ If you need to tell new items from edited ones, compare `createdDateTime` with `
 
 ## How often the node checks
 
-**Poll Times** sets how often the node checks for changes. It defaults to every minute. n8n supplies this field for every polling trigger, and rejects an interval shorter than one minute when you publish the workflow.
+**Poll Times** sets how often the node checks for changes. It defaults to every minute. n8n supplies this field for every polling trigger.
 
-A change is picked up on the next check. One check reads about 40 pages of changes at default settings, and stops early if it runs out of time. If more changes are waiting, the node saves its place and carries on at the next check. A large burst of changes therefore arrives over several executions, and can take longer to clear than one interval.
+The preset choices go down to once a minute. A **Custom** cron expression can go finer, down to seconds, but a SharePoint site will start throttling you long before that pays off.
+
+A change is picked up on the next check. One check reads about 40 pages of changes at default settings, and stops early if it runs out of time. If more changes are waiting, the node saves its place and carries on at the next check. A large burst of changes therefore arrives over multiple executions, and can take longer to clear than one interval.
 
 ## Output
 
@@ -73,7 +75,7 @@ The node outputs each changed entry exactly as Microsoft Graph returns it, with 
 
 An entry with a `deleted` property is a deletion. An entry without one is a change.
 
-Watching a list, an entry carries the item's identity. The node reads Graph's default payload and doesn't expand the item's `fields`, so don't rely on an entry carrying column values. To read a column, add a Microsoft SharePoint node after the trigger and get the item by `id`.
+When watching a list, an entry carries the item's identity. The node reads Graph's default payload and doesn't expand the item's `fields`, so don't rely on an entry carrying column values. To read a column, add a Microsoft SharePoint node after the trigger and get the item by `id`.
 
 A deletion entry carries much less than a change entry, because Microsoft Graph drops most fields from it. Expect the item's `id` and the `deleted` property, and don't rely on anything else being present. If your workflow needs a deleted item's name, keep your own record of the items you've seen, keyed by `id`.
 
@@ -84,7 +86,7 @@ When watching a document library, don't rely on the entry carrying `parentRefere
 * A created file and an edited file both raise **Changed**. So do renames, moves, and metadata-only edits such as a changed column value.
 * Changes are picked up no faster than the **Poll Times** interval.
 * When you publish the workflow, the node starts watching from that moment. Files and items that already exist raise no event. To process a library's existing contents, use the Microsoft SharePoint node instead.
-* The node collapses repeated changes to the same item within one check only. An item can reach your workflow more than once while a burst drains, so make the workflow safe to run twice for the same item.
+* The node collapses repeated changes to the same item within one check only. An item can reach your workflow more than once while a burst drains, so make the workflow safe to run again for the same item.
 * If the node doesn't run for a long time, its saved position can expire on Microsoft's side. The node then starts watching from that moment and logs a warning. Changes made while the position was expired aren't reported.
 * Changing the **Authentication** method, **Site**, **Resource**, **Document Library**, or **List** resets the saved position. The node starts watching from that moment, and doesn't report what changed before. Choosing a different credential of the same type keeps the position.
 * Testing the node in the editor doesn't move the saved position, so a test never consumes real events. A test lists items that already exist in the library or list, up to one page of them. It doesn't wait for a change, and it never shows a deletion. Use it to see the shape of an entry, not to check your event selection.

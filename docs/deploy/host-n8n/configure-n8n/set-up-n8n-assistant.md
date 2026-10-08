@@ -288,7 +288,19 @@ If an instance admin selects a Brave Search or SearXNG credential in the AI sett
 
 ## Enable instance context
 
-Instance context gives n8n Assistant a short summary of the project a conversation is opened in: which workflows exist, what changed recently, and what has run or failed. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+{% hint style="info" %}
+**Feature availability**
+
+The shared instance context flag and activity log retention settings documented here are available from n8n 2.41.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Instance context is in Preview and may change in future releases. n8n hasn't enabled instance context for all instances. Avoid relying on instance context for production work.
+{% endhint %}
+
+Instance context gives n8n Assistant a short summary of the project you open a conversation in. It includes workflows, recent changes, and execution results. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
 
 The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
 
@@ -322,9 +334,15 @@ Turning the flag off stops new activity recording and new instance context reads
 
 By default, n8n keeps the newest 1,000 activity entries across the instance. It doesn't remove entries based on age. An entry can remain indefinitely if the log stays below this limit.
 
-Pruning runs hourly and continues when the flag is off. Restart n8n after changing these environment variables.
+Pruning runs every hour and continues when the flag is off. Restart n8n after changing these environment variables.
 
 ## Enable node type counting
+
+{% hint style="info" %}
+**Feature availability**
+
+Node type counting is available from n8n 2.39.0. Enable node type counting with the feature flag or environment variable below.
+{% endhint %}
 
 Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and has its own flag.
 
@@ -434,7 +452,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 **Node type counting**
 
-* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` is set to `true`.
+* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` has the value `true`.
 * Setting the variable to `false` doesn't keep the feature off. It hands the decision back to the flag.
 * It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 

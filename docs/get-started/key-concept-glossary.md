@@ -111,10 +111,6 @@ Memory lets an AI keep message context across interactions. This gives you an on
 
 A tool is a resource an AI agent can call to get information or take an action, such as searching the web, calling an API, or running a workflow. The model decides when to use a tool to answer a request. Learn more: [What's a tool in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-tools-work).
 
-### Chat Hub (n8n)
-
-Chat Hub is a central chat interface where you can talk to multiple AI models and n8n agents, and create your own agents. Chat Hub also adds the Chat user role, which lets people use the chat interface without access to workflows. Learn more: [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub).
-
 ### cluster node (n8n) <a href="#cluster-node-n8n" id="cluster-node-n8n"></a>
 
 Cluster nodes are groups of nodes that work together to provide functionality in a workflow. A cluster node consists of a root node and one or more sub-nodes that extend its functionality. Learn more: [Cluster nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes).

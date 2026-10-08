@@ -887,7 +887,7 @@ The server instructions name both, so a client that reads the instructions knows
 
 Read the resource without parameters. To read one project, call `get_instance_context` with `projectId`.
 
-The resource uses the same scope gate as the tool. A grant that can't call `get_instance_context` can't read the resource either.
+The resource follows the same access rules as the tool. A grant that can't call `get_instance_context` can't read the resource either.
 
 The response holds per-user data and n8n serves it uncached. Two users who read the same URI get different content.
 

@@ -1,0 +1,19 @@
+docs/integrations/builtin/credentials/azureopenai.md
+  s_aa5791b5056069::t_1618d980a76489 5,29,60-63,71,78,122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3dfe9d497d63de1526f79783177db1517225dd6f",
+  "prompts": {},
+  "sessions": {
+    "s_aa5791b5056069": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c3ba50c-1281-4a2b-8747-60f723d98557",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

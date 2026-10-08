@@ -1,0 +1,27 @@
+docs/integrations/SUMMARY.md
+  s_aa5791b5056069::t_f823f47844bea1 542,556,633
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+  s_aa5791b5056069::t_caa554ca1a19ee 55
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
+  s_aa5791b5056069::t_02462f68be76d5 2,4-5,9,21,23,25,30,46
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+  s_aa5791b5056069::t_c37cf5df5d21c2 2,4-5,10,22,24,26,31,38,40,44-45,74
+docs/integrations/builtin/credentials/azureopenai.md
+  s_aa5791b5056069::t_8f2d3c1a981f4a 2,4,10,19,23-24,34,51,53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a3382a3815ef976c152b008d044a94a7b4273c4c",
+  "prompts": {},
+  "sessions": {
+    "s_aa5791b5056069": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c3ba50c-1281-4a2b-8747-60f723d98557",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+docs/integrations/builtin/credentials/microsoftentra.md
+  s_1184a4ed1ab5ff::t_5caecc844687cd 192
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ed6c1230ec82b96c1b8d643e4ce148abee9500e1",
+  "prompts": {},
+  "sessions": {
+    "s_1184a4ed1ab5ff": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae6ab34e-57cb-4e4b-bf37-d6fc6e7471b3",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

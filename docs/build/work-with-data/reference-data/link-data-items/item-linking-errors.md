@@ -27,6 +27,7 @@ When using `.item`, n8n displays an error when:
 
 - The thread is broken
 - The thread points to more than one item in the previous node (as it's unclear which one to use)
+- The node you reference is on a different branch from the current item
 
 To solve these errors, you can either avoid using `.item`, or fix the root cause.
 
@@ -57,6 +58,21 @@ When you use `.item` and there are multiple possible matches, n8n doesn't know w
 
 - Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.
+
+### Fix for 'Node is on another branch' <a href="#fix-for-node-is-on-another-branch" id="fix-for-node-is-on-another-branch"></a>
+
+This is the error message:
+
+> ERROR: '<node-name>' is on another branch
+
+The node you reference with `.item` is upstream of the current node, but the current item didn't come from it. n8n can't match the current item to an item in that node. This happens when a node combines branches without merging their items. For example, a Merge node in Append mode outputs items from input 1 and input 2 one after the other. Each item links back to only one of those inputs, so `{{ $('<node-on-input-2>').item.json.value }}` fails on items that came from input 1.
+
+The node still runs, but the expression returns no data.
+
+To solve this, you can either:
+
+- Use `.first()`, `.last()` or `.all()[index]` instead of `.item`. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
+- Set the Merge node to Combine mode, so that each output item contains data from both branches.
 
 ## Related resources
 

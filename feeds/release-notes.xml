@@ -85,7 +85,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/39580</guid>
 <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.43</category>
-<description>The canvas Execute button has been redesigned: it now simply reads &quot;Execute&quot; and shows the selected trigger's icon instead of a second &quot;from &lt;trigger&gt;&quot; line, with the trigger name still shown in a tooltip. Choosing a trigger from the dropdown now immediately runs the workflow and sets it as the default trigger. The button is now a consistent height, so adjacent Stop buttons no longer resize. The Builder chat uses the same updated component.</description>
+<description>The canvas Execute button has been redesigned: it now simply reads &quot;Execute&quot; and shows the selected trigger's icon instead of a second &quot;from [trigger name]&quot; line, with the trigger name still shown in a tooltip. Choosing a trigger from the dropdown now immediately runs the workflow and sets it as the default trigger. The button is now a consistent height, so adjacent Stop buttons no longer resize. The Builder chat uses the same updated component.</description>
 </item>
 <item>
 <title>Hide generated AI tools listed in NODES_EXCLUDE and empty node creator entries</title>
@@ -113,10 +113,10 @@
 </item>
 <item>
 <title>Show Gateway credits promotions on community nodes</title>
-<link>https://github.com/n8n-io/n8n/pull/40109</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40109</guid>
+<link>https://github.com/n8n-io/n8n/pull/40010</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40010</guid>
 <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n stable</category>
+<category>n8n 2.43</category>
 <description>n8n now displays Gateway credits promotions for eligible community nodes, shown as a callout in the node creator, the NDV, and the credential modal. The promotion text is sourced dynamically and only appears while Gateway credits support the node and the current time falls within the promotion's active window, disappearing automatically once it expires.</description>
 </item>
 <item>
@@ -125,7 +125,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/39646</guid>
 <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.42</category>
-<description>The node credential picker now groups credentials by where they come from, showing personal credentials under 'Available to you' and project or instance-shared credentials under headings like 'Available in &lt;project&gt;' or 'Available to everyone'. Empty groups are hidden and search filtering respects the groups. This is only active when granular credential sharing (N8N_ENV_FEAT_CRED_SHARING) is enabled; otherwise the dropdown looks unchanged.</description>
+<description>The node credential picker now groups credentials by where they come from, showing personal credentials under 'Available to you' and project or instance-shared credentials under headings like 'Available in [project name]' or 'Available to everyone'. Empty groups are hidden and search filtering respects the groups. This is only active when granular credential sharing (N8N_ENV_FEAT_CRED_SHARING) is enabled; otherwise the dropdown looks unchanged.</description>
 </item>
 <item>
 <title>Suggest Gateway credit services during node discovery</title>
@@ -392,7 +392,7 @@
 <description>The MiniMax and MiniMax Chat Model nodes now fetch available models directly from the MiniMax API instead of relying on a hardcoded list, so new models appear automatically. The Model field (version 1.2) offers a searchable, credential-aware list plus an option to enter a custom model ID. Existing workflows keep their prior node version and static model list unchanged.</description>
 </item>
 <item>
-<title>Microsoft Teams Node: Add [@mention](https://github.com/mention) support to message Create</title>
+<title>Microsoft Teams Node: Add @mention support to message Create</title>
 <link>https://github.com/n8n-io/n8n/pull/37624</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37624</guid>
 <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>

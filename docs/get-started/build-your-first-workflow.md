@@ -37,7 +37,7 @@ When it runs, your workflow produces a report like this:
 The temperature in berlin is 7.4°C. It's currently overcast.
 ```
 
-The build takes about 15 minutes. You don’t need any accounts, API keys, or coding experience. The weather data comes from Mockingbird, a sample-data service n8n provides for tutorials, so you’ll get similar results to this guide.
+The build takes about 15 minutes. Apart from n8n, you don’t need any accounts, API keys, or coding experience. The weather data comes from Mockingbird, a sample-data service n8n provides for tutorials, so you’ll get similar results to this guide.
 
 ## Before you start
 
@@ -224,14 +224,14 @@ n8n Assistant is another way to build workflows, using prompts. Now that you’v
     ```
     Every day at 8am:
     - Get the weather for Berlin from https://mockingbird.n8n.io/v1/weather/berlin
-    - Add a report field that contains the city, temperature and the conditions
+    - Add a report field that contains the city, temperature, and conditions
     - Save the report to a data table called weather_data
     ```
 
     ![n8n Assistant with the Weather Log prompt entered](.gitbook/assets/build-your-first-workflow-assistant-03.png)
 
     {% hint style="info" %}
-    n8n Assistant detects your **Weather Log** workflow. Ask it to “build a fresh, separate copy”.
+    n8n Assistant may detect your existing **Weather Log** workflow. Ask it to “build a fresh, separate copy”.
     {% endhint %}
 
 4. Approve each step when n8n Assistant asks. When it finishes, you should see output similar to:

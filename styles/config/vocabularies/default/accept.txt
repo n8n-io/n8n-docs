@@ -150,6 +150,7 @@ Kitemaker
 kubectl
 Kafka
 kafkajs
+Lakebase
 Lemlist
 Lenovo
 librdkafka

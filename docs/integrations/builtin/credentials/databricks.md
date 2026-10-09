@@ -33,7 +33,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only.
+- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only, and not by its **Lakebase** resource.
 - [OAuth2 with user login](#using-oauth2-with-user-login): the credential is connected by signing in to a Databricks account in the browser. Operations run with that user's permissions and appear in Databricks audit logs under their identity. Each user can create their own credential to run workflows under their own account. Databricks recommends this for attended, interactive use.
 - [OAuth2 with a service principal](#using-oauth2-service-principal): n8n authenticates as a service principal with a client ID and secret, without user interaction. Databricks recommends this for unattended scenarios, such as fully automated production workflows.
 
@@ -47,6 +47,7 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Databricks SQL (Execute Query) | The **Databricks SQL access** entitlement and **CAN USE** on the SQL warehouse |
 | Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
 | Job (Run) | **CAN MANAGE RUN** on the job |
+| Lakebase | A Postgres role on the project's branch, granted to `authenticator`, with the table and function grants the operation needs. Refer to [Set up Lakebase for the Data API](#set-up-lakebase-for-the-data-api) |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
 | Genie (Databricks node operations and the Genie MCP server) | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
@@ -221,3 +222,65 @@ In your n8n credential:
 3. Set **Grant Type** to **Client Credentials (Service Principal)**. This is the default.
 4. Enter the **Client ID** you copied from the service principal.
 5. Enter the **Client Secret** you generated.
+
+## Set up Lakebase for the Data API
+
+The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.databricks.md#lakebase-operations) reads and writes rows over the Lakebase Data API. The API is off by default, and the identity the credential authenticates as needs a Postgres role before any operation works. Do these steps once for each Lakebase project, in this order.
+
+{% hint style="info" %}
+**The Data API doesn't accept personal access tokens**
+
+A personal access token fails with `Provided authentication token is not a valid JWT encoding`. Use [OAuth2 with user login](#using-oauth2-with-user-login) or [OAuth2 with a service principal](#using-oauth2-service-principal) for the Lakebase resource.
+{% endhint %}
+
+### Enable the Data API
+
+In Databricks, open the Lakebase project, then select **App Backend** > **Data API** > **Enable Data API**. There's no API or CLI for this step. Databricks creates the `authenticator` role that the grant below needs.
+
+The API exposes only the `public` schema by default. Add any other schema you want to reach in the same settings.
+
+### Turn on the OpenAPI specification
+
+In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. The change takes effect right away.
+
+The node reads this document to list a table's columns and a function's arguments. Without it, the **Columns** mapper and the column dropdowns stay empty, and the node shows this hint:
+
+```text
+Turn on Data API > API > Advanced settings > OpenAPI specification for this Lakebase project, so the node can list its columns.
+```
+
+**Follow privileges** lists only the objects the connected identity can use. **Ignore privileges** lists everything, including the internal tables and functions Databricks creates.
+
+### Create a Postgres role for the n8n identity
+
+Run this in the Lakebase SQL editor, as an identity that can manage the project:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS databricks_auth;
+SELECT databricks_create_role('<identity>', 'SERVICE_PRINCIPAL');
+```
+
+`<identity>` is the service principal's application ID. For a user identity, pass the email address and `'USER'` instead.
+
+Create the role this way even if the identity already appears in the Databricks UI. The next step works only on a role created with `databricks_create_role`.
+
+### Grant the role to authenticator
+
+```sql
+GRANT "<role>" TO authenticator;
+```
+
+Run this as the identity that created the role. No role reaches the Data API without this grant. Operations fail with `permission denied to set role` until you run it.
+
+Then grant the role what it needs on your data, the same as any other Postgres role:
+
+```sql
+GRANT SELECT, INSERT, UPDATE, DELETE ON <table> TO "<role>";
+GRANT EXECUTE ON FUNCTION <function>(<argument-types>) TO "<role>";
+```
+
+{% hint style="warning" %}
+**Don't connect as the project owner**
+
+Databricks excludes the database owner from the Data API by design. The owner can't grant their own role to `authenticator`, and the grant fails with `permission denied to grant role`. Use an identity that doesn't own the project.
+{% endhint %}

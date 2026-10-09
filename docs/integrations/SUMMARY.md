@@ -600,7 +600,7 @@
       * [AI Agent Tool](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolaiagent.md)
       * [Calculator](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md)
       * [Custom Code Tool](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md)
-      * [Databricks Genie MCP server](builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md)
+      * [Databricks Genie One MCP server](builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md)
       * [MCP Client Tool](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
       * [SearXNG Tool](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md)
       * [SerpApi (Google Search)](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md)

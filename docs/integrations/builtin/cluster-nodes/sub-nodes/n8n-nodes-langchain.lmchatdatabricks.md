@@ -72,7 +72,7 @@ Use user login when the agent should run with your own Databricks permissions an
 
 Not every model service works as an agent's tool-calling model through this node. The model must support tool calling, and some endpoints that advertise it don't return tool calls the AI Agent can execute. In n8n's testing:
 
-- **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
+- **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
 - **gpt-oss** and **Llama 4 Maverick** endpoints don't return tool calls the AI Agent can execute. Agents using them loop until they hit **Max Iterations** without calling any tool.
 
 Your workspace may list other model services. To test one, ask the agent a question that requires a tool call and check the execution log. A model that doesn't work shows the same symptom: the agent uses all its iterations without a single tool call.
@@ -82,8 +82,8 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 ## Related resources
 
 - [Databricks credentials](../../credentials/databricks.md)
-- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie REST operations
-- [Databricks Genie MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie
+- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie agent REST operations
+- [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

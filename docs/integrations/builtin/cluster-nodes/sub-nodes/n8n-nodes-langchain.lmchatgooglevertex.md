@@ -35,7 +35,7 @@ Use [Google Vertex AI credentials](../../credentials/googlevertexai.md) to store
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Authentication**: Select **Google Vertex AI** or **Google Service Account**.
-* **Project ID**: For **Google Service Account** authentication, select or enter the project ID in the node. For **Google Vertex AI** authentication, configure the project in the credential.
+* **Project ID**: For **Google Service Account** authentication, n8n loads the project list from your Google Cloud account. Select a listed project, or enter the project ID manually. For **Google Vertex AI** authentication, configure the project in the credential.
 * **Model Name**: Select the name of the model to use to generate the completion, for example `gemini-1.5-flash-001`, `gemini-1.5-pro-001`, etc. Refer to [Google models](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models) for a list of available models.
 
 ## Node options <a href="#node-options" id="node-options"></a>

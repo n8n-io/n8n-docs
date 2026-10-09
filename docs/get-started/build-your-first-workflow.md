@@ -246,9 +246,9 @@ n8n Assistant is another way to build workflows, using prompts. Now that you’v
 
 ## Next steps
 
-The workflow you built reports the weather, but it can’t tell you what to do about it. “7.4°C and overcast” doesn’t say whether you need a coat or an umbrella, and writing a rule for every possible combination wouldn’t be practical.
-
-This is what agents are for. In [Build your first agent, link TBC], you’ll add an agent that decides what the weather means for your day.
+- Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai).
+- Take [courses at n8n Academy](https://go.n8n.io/gfzWgF).
+- Explore more examples in [workflow templates](https://n8n.io/workflows/).
 
 ## Related resources
 

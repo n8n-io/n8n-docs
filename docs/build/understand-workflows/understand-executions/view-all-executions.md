@@ -61,6 +61,17 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yD2T5eTeZvZaPRV8P7MJ/" %}
 
+### What a retry runs
+
+When a node fails, a retry resumes from the saved execution state instead of starting the workflow again from the trigger:
+
+* n8n keeps the results of completed node runs. For example, if a workflow adds a row and then fails when sending a message, retrying the failed message node doesn't repeat the earlier row addition.
+* The failed node receives its saved input again. It may repeat actions for items it handled before it failed, such as adding rows or sending messages. Check for completed actions before retrying a batch that failed after processing some items.
+* **Retry with original workflow** runs the workflow as it was when the execution failed. If you changed the workflow to fix the failure, choose **Retry with currently saved workflow**.
+* Each retry is a new execution. If a retry fails, both the original execution and the failed retry show the retry option. Retry only one of them: retrying both can repeat work for the same data. To avoid extra failed retries, fix the cause before you retry.
+* You can't retry an execution that succeeded, even if it didn't do what you expected. For example, an **If** node may have sent every item to the false branch. Use **Copy to editor** to load the saved data into your current workflow, then run it again. Refer to [Debug and re-run past executions](debug-executions.md) for availability and steps.
+* You can retry an execution only while n8n still stores it. Refer to [Execution data](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data) for self-hosted instances, or [Manage your data](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/manage-your-data) for n8n Cloud.
+
 ## Load data from previous executions into your current workflow <a href="#load-data-from-previous-executions-into-your-current-workflow" id="load-data-from-previous-executions-into-your-current-workflow"></a>
 
 You can load data from a previous workflow back into the canvas. Refer to [Debug executions](debug-executions.md) for more information.

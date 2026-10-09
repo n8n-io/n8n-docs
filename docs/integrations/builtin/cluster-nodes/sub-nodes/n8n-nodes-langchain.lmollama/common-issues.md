@@ -101,4 +101,4 @@ Ollama doesn't support custom HTTP agents in its configuration. This makes it di
 Refer to [Ollama's FAQ](https://docs.ollama.com/faq#how-do-i-use-ollama-behind-a-proxy) for more information.
 
 [^1]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
-[^2]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.
+[^2]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.

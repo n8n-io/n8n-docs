@@ -12,8 +12,7 @@ layout:
 
 n8n 3.0 has been released, and with it came some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
-
-Before you upgrade, open the [Migration Report](v30-migration-tool.md) at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
+Before you upgrade, open the Migration Report at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
 
 ## Deployment <a href="#deployment" id="deployment"></a>
 
@@ -43,7 +42,7 @@ The remaining changes affect the [`n8n-node dev`](https://app.gitbook.com/s/r7wK
 
 `n8n-node dev` started n8n with `npx n8n@latest`. n8n 3.0 doesn't publish a runnable `n8n` package to npm, so the command now runs the official image in a container.
 
-**What to do:** Install Docker or Podman. To run n8n yourself instead, use `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`. To pin an n8n version, pass the tag: `n8n-node dev --n8n-image docker.n8n.io/n8nio/n8n:<n8n-version>`. Hot reload only works on images that serve `POST /rest/dev/reload`, so older tags load your node but need a restart to pick up changes.
+**What to do:** For the default container path, install Docker or Podman. To use an externally managed instance instead, run `n8n-node dev --external-n8n` and start that instance with `N8N_DEV_RELOAD=true`. To pin a version on the container path, pass the tag: `n8n-node dev --n8n-image docker.n8n.io/n8nio/n8n:<n8n-version>`. Hot reload only works on images that serve `POST /rest/dev/reload`, so older tags load your node but need a restart to pick up changes.
 
 ### n8n-node dev test data moves to a per-image container volume
 
@@ -149,7 +148,7 @@ n8n 3.0 changes how some nodes and credentials behave. These nodes stay availabl
 
 ### Always Output Data on nodes with several outputs
 
-With **[Always Output Data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes)** on, nodes with several outputs, for example [If](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) and [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch), now add an empty item only when every output is empty. Previously, each empty output got an empty item, so branches ran when they shouldn't have.
+With **[Always Output Data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes)** on, nodes with multiple outputs, for example [If](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) and [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch), now add an empty item only when every output is empty. Previously, each empty output got an empty item, so branches ran when they shouldn't have.
 
 **What to do:** Before you upgrade, go to **Settings > Migration Report** to identify the nodes this change affects. Review each node and adjust the setting to match your intent.
 
@@ -181,7 +180,13 @@ The n8n chat widget (`@n8n/chat`) understands both formats from version 1.31.0, 
 
 Security defaults are getting stronger to make n8n safer by default. These changes may affect existing workflows or credentials.
 
-- **Key rotation enabled by default.**
+### Encryption key rotation on by default
+
+n8n 3.0 turns on [encryption key rotation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/rotate-encryption-keys) by default. Before, self-hosted instances had to opt in to the feature. With it on, n8n keeps a data encryption key that you can rotate from **Settings > Data Encryption Keys**. Credentials and other data encrypted before the upgrade stay readable, and n8n re-encrypts each record to the current key the next time you update it.
+
+Turning the feature on used to be permanent. From n8n 2.40.3, you can turn it off again.
+
+**What to do:** Nothing. As with any upgrade, back up your database first.
 
 ### Slack API credential requires the signing secret
 

@@ -111,7 +111,7 @@ Set a custom slug for the form.
 
 **Form Path** is a main parameter in node version 2.1 and earlier. From node version 2.2, it's optional and you set it in [Node options](#node-options).
 
-If you create or update the workflow using the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n ignores a top-level `parameters.path` when it loads the workflow, and the form URL ends in the webhook ID instead.
+If you create or update the workflow using the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n ignores a top-level `parameters.path` when it loads the workflow. The form URL then ends in the webhook ID instead.
 {% endhint %}
 
 ### Form Title <a href="#form-title" id="form-title"></a>

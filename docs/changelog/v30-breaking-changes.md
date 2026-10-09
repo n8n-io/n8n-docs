@@ -1,14 +1,31 @@
 ---
 title: n8n 3.0 breaking changes
-description: Breaking changes coming in n8n 3.0
 contentType: reference
 nodeTitle: n8n 3.0 breaking changes
+description: Breaking changes coming in n8n 3.0
 layout:
+  width: default
+  title:
+    visible: true
   description:
     visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
-# n8n 3.0 breaking changes <a href="#n8n-v30-breaking-changes" id="n8n-v30-breaking-changes"></a>
+# v3.0 Breaking changes
 
 n8n 3.0 has been released, and with it came some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
@@ -156,9 +173,9 @@ With **[Always Output Data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/under
 
 n8n 3.0 removes the separate behavior of **Gmail Trigger** node versions 1 to 1.3. Workflows that use these versions keep loading, but the node runs with the version 1.4 behavior:
 
-- **Max Emails per Poll** applies to every poll. The default is 10 emails, and you can set up to 50. The node picks up the remaining emails in later polls.
-- The node skips drafts unless you turn on the **Include Drafts** filter. Versions 1 and 1.1 included drafts by default.
-- Sent emails that aren't in the inbox, and scheduled emails, no longer trigger the workflow.
+* **Max Emails per Poll** applies to every poll. The default is 10 emails, and you can set up to 50. The node picks up the remaining emails in later polls.
+* The node skips drafts unless you turn on the **Include Drafts** filter. Versions 1 and 1.1 included drafts by default.
+* Sent emails that aren't in the inbox, and scheduled emails, no longer trigger the workflow.
 
 **What to do:** Review workflows with a **Gmail Trigger** node below version 1.4. Before you upgrade, go to **Settings > Migration Report** to identify the affected nodes. If a workflow relies on drafts, turn on **Include Drafts**. If a workflow relies on sent or scheduled emails, replace the trigger with a [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) node followed by the [Gmail](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.gmail) node's **Get Many** messages operation.
 

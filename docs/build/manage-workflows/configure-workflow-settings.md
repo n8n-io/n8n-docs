@@ -34,7 +34,7 @@ You can customize workflow behavior for individual workflows using workflow sett
 To open the settings:
 
 1. Open your workflow.
-2. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**. n8n opens the **Workflow settings** modal.
 
 ## Available settings <a href="#available-settings" id="available-settings"></a>

@@ -53,7 +53,7 @@ A trigger node is a special node responsible for executing the workflow in respo
 
 ### workflow (n8n) <a href="#workflow-n8n" id="workflow-n8n"></a>
 
-An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs, when you run them manually, or when another workflow calls them. They execute node by node, and can branch, merge, and loop, to achieve complex tasks. Learn more: [Create and run workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-run-workflows).
+An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs, when you run them manually, or when another workflow calls them. They execute node by node, and can branch, merge, and loop to achieve complex tasks. Learn more: [Create and run workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-run-workflows).
 
 ## Data
 
@@ -67,11 +67,11 @@ Data pinning lets you temporarily freeze the output data of a node during workfl
 
 ### data table (n8n)
 
-A data table stores structured, tabular data inside n8n. Workflows in the same project can read and write a data table without an external database. Learn more: [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
+A data table stores structured, tabular data inside n8n, so you don't need an external database. Data tables are scoped to a [project](#project-n8n), and workflows in that project can read and write them with the [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable). You can also manage them in the Data tables tab and through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference). Data tables suit light to moderate storage. Learn more: [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) and [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable).
 
 ### variable (n8n)
 
-A custom variable stores a read-only value that you reuse across workflows. A variable is either global, available across the whole instance, or scoped to a single project. Learn more: [Custom variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables).
+A custom variable stores a read-only string that you reuse across workflows. A variable is either global, available across the whole instance, or scoped to a single project. Learn more: [Custom variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables).
 
 ## Agents and AI in n8n
 
@@ -93,7 +93,7 @@ An AI chain calls an LLM and other components in a fixed sequence. Unlike an age
 
 ### AI memory <a href="#ai-memory" id="ai-memory"></a>
 
-In an AI context, memory lets AI tools persist message context across interactions. This lets you have continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, agents and AI agent nodes can use memory, but AI chains can't. Learn more: [What's memory in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-memory-works).
+In an AI context, memory lets AI tools persist message context across interactions. This lets you have continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, agents and AI Agent nodes can use memory, but AI chains can't. Learn more: [What's memory in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/how-memory-works).
 
 ### AI tool <a href="#ai-tool" id="ai-tool"></a>
 
@@ -109,7 +109,12 @@ A knowledge base is a set of files that an [agent](#agent-n8n) can search and re
 
 ### Model Context Protocol (MCP)
 
-Model Context Protocol (MCP) is an open standard that lets AI clients connect to external tools and data. n8n works as an MCP client, so agents can use tools from MCP servers. n8n also works as an MCP server, so supported MCP clients can connect to your instance. Learn more: [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) and [Set up and use n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
+Model Context Protocol (MCP) is an open standard that lets AI clients connect to external tools and data. n8n supports both sides of it:
+
+- **As an MCP client**, n8n lets agents and the AI Agent node use tools from MCP servers, either from the one-click server registry or through the MCP Client Tool node.
+- **As an MCP server**, n8n lets MCP clients such as Claude connect to your instance. The instance-level MCP server lets a client build, edit, run, and test workflows and manage data tables and agents. The MCP Server Trigger node exposes a single workflow's tools as its own MCP server.
+
+Learn more: [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) and [Set up and use n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server).
 
 ### n8n Assistant
 

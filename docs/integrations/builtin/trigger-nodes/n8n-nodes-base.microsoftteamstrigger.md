@@ -45,26 +45,26 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 
 ## Required scopes
 
-Each event subscribes to a Microsoft Graph resource and needs one delegated permission for it:
+Each event subscribes to a Microsoft Graph resource and needs one of the delegated permissions in the table, least privileged first:
 
 | Event | Delegated permission |
 |---|---|
-| **New Channel** | `Group.ReadWrite.All` |
+| **New Channel** | `Channel.ReadBasic.All` |
 | **New Channel Message** | `ChannelMessage.Read.All` |
 | **New Chat** | `Chat.ReadBasic`, `Chat.Read`, or `Chat.ReadWrite` |
 | **New Chat Message** | `Chat.Read` or `Chat.ReadWrite` |
 | **New Team Member** | `TeamMember.Read.All` |
 
-Listing teams and channels in the node needs `User.Read.All` and `Group.ReadWrite.All`. Every permission except the `Chat` ones needs admin consent from a Microsoft Entra administrator.
+Listing teams in the node needs `Team.ReadBasic.All`, and listing channels needs `Channel.ReadBasic.All`. `ChannelMessage.Read.All` and `TeamMember.Read.All` need admin consent from a Microsoft Entra administrator. The `Team`, `Channel`, and `Chat` permissions don't.
 
-The **Teams OAuth2** credential covers every event by default, except New Team Member: it doesn't request `TeamMember.Read.All` yet.
+The **Teams OAuth2** credential covers every event by default, except New Team Member: it doesn't request `TeamMember.Read.All` yet. Its default `User.Read.All` and `Group.ReadWrite.All` scopes also authorise the team and channel lists and the New Channel subscription, as higher privileged alternatives, so the credential needs no extra grant for those. Both need admin consent.
 
 Until the n8n release that adds `TeamMember.Read.All` to the [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams), enable **Custom Scopes** on the credential, add the scope to **Enabled Scopes**, and reconnect.
 
-With the **Microsoft OAuth2 (Graph)** credential, enter the scopes in the credential's **Scope** field. Include `openid offline_access` so the credential can refresh its tokens. For example, to use every event:
+With the **Microsoft OAuth2 (Graph)** credential, enter the scopes in the credential's **Scope** field. Include `openid offline_access` so the credential can refresh its tokens. For example, to use every event with the least privileged scopes:
 
 ```
-openid offline_access User.Read.All Group.ReadWrite.All Chat.ReadWrite ChannelMessage.Read.All TeamMember.Read.All
+openid offline_access Team.ReadBasic.All Channel.ReadBasic.All Chat.ReadWrite ChannelMessage.Read.All TeamMember.Read.All
 ```
 
 The **Service Principal (App-Only)** credential uses application permissions instead. Refer to [Required application permissions by node](../credentials/microsoftentraserviceprincipal.md#required-application-permissions-by-node) in the Microsoft Entra Service Principal credentials documentation for the permission each event needs. Chat events aren't available with this credential.

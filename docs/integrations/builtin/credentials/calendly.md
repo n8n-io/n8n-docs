@@ -63,7 +63,7 @@ To get your access token:
 5. Select **Create token**.
 6. Select **Copy token** and enter it in your n8n credential.
 
-Refer to [Calendly's API authentication documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens) for more information.
+Refer to [Calendly's API authentication documentation](https://developer.calendly.com/docs/authentication/how-to-authenticate-with-personal-access-tokens) for more information.
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
@@ -91,7 +91,7 @@ To get both, create a new OAuth app in Calendly:
 8. Copy the **Client secret** and enter this as your n8n **Client Secret**.
 9. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.
 
-Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account) for more information.
+Refer to [Registering your application with Calendly](https://developer.calendly.com/docs/authentication/creating-an-oauth-app) for more information.
 
 {% hint style="info" %}
 **Local OAuth2 testing**

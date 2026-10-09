@@ -27,19 +27,23 @@ The service account can belong to a different project. Grant its Vertex AI permi
 
 * Service account email and private key.
 
+## Related resources
+
+Refer to [Google's Vertex AI documentation](https://cloud.google.com/vertex-ai/generative-ai/docs) for more information about the service.
+
 ## Using a service account
 
 Create a **Google Vertex AI** credential in n8n. Open your service account's JSON key file, then complete these fields:
 
 | Field | Value |
 | --- | --- |
+| **Region** | A location that supports your model. The default is **Global (multi-region) - global**. Refer to [Google's model locations](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations). |
 | **Service Account Email** | The `client_email` value from the JSON key file. |
 | **Private Key** | The complete `private_key` value from the JSON key file, including the `BEGIN PRIVATE KEY` and `END PRIVATE KEY` lines. Omit the surrounding JSON quotation marks. |
-| **Project** | Select a listed project, or select **Custom** to enter a project ID. Enter the email and private key before loading the list. |
+| **Impersonate a User** | Leave off when you use the Vertex nodes. |
+| **Set up for use in HTTP Request node** | Leave off when you use the Vertex nodes. |
+| **Project** | Select a listed project, or select **Custom** to enter a project ID. The default is **Custom**. Enter the email and private key before loading the list. |
 | **Project ID** | The Google Cloud project ID, such as `my-project-id`. This field appears when **Project** is **Custom**. Use the project ID, rather than its display name or project number. |
-| **Region** | A location that supports your model. The default is **Global (multi-region) - global**. Refer to [Google's model locations](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations). |
-
-Leave **Impersonate a User** and **Set up for use in HTTP Request node** off when you use the Vertex nodes.
 
 Select **Save** to save the credential.
 
@@ -49,7 +53,7 @@ The project list uses the service account's access, rather than your personal Go
 
 If the project list is empty or fails to load, select **Custom** and enter the **Project ID**. Project lookup is optional. The service account still needs Vertex AI access in the selected project.
 
-A listed project doesn't confirm access to Vertex models. The project's enabled APIs, permissions, and model availability still apply. Changing **Region** keeps your project selection.
+A listed project doesn't confirm access to Vertex models. The project's enabled APIs, permissions, and model availability still apply.
 
 ### Use the credential in a workflow
 

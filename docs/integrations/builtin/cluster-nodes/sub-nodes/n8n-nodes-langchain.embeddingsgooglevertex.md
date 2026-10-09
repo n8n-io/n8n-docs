@@ -35,9 +35,10 @@ Use [Google Vertex AI credentials](../../credentials/googlevertexai.md) to store
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-- **Authentication**: Select **Google Vertex AI** or **Google Service Account**.
-- **Project ID**: For **Google Service Account** authentication, select or enter the project ID in the node. For **Google Vertex AI** authentication, configure the project in the credential.
-- **Model**: Select the model to use to generate the embedding.
+- **Authentication**: Select **Google Service Account** (the default) or **Google Vertex AI**.
+- **Project ID**: For **Google Service Account** authentication, n8n loads the project list using the service account's access. Select a listed project, or enter the project ID manually. For **Google Vertex AI** authentication, configure the project in the credential.
+- **Model Name**: Enter the model name to use to generate the embedding.
+- **Region**: Select **Default (Use Credential Region)** to use the region set in the credential. To override it, select **Global**, **EU (Multi-Region)**, or **US (Multi-Region)**.
 
 Learn more about available embedding models in [Google VertexAI embeddings API documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api).
 

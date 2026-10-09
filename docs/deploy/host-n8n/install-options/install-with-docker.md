@@ -211,4 +211,5 @@ pnpm --filter n8n-containers services:clean
 * [One-line setup](one-line-setup.md)
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)
+* [Install with Helm](install-with-helm.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)

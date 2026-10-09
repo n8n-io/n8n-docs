@@ -11,6 +11,8 @@ n8n's AI nodes implement [LangChain](https://js.langchain.com/docs/get_started/i
 
 This page is for readers who already know LangChain and want to see how its concepts map onto n8n. If you're new to AI concepts, start with [Understand AI components](understand-ai-components/README.md) instead.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How LangChain concepts map to n8n nodes
 
 n8n represents most LangChain concepts as [cluster nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes): a [root node](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#root-node-n8n) that defines the cluster's main functionality, with one or more [sub-nodes](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/key-concept-glossary#sub-node-n8n) attached to extend it.

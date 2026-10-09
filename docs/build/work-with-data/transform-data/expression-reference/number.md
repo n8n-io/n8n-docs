@@ -10,6 +10,8 @@ layout:
 ---
 # Number <a href="#number" id="number"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`Number`_.**`abs()`** <a href="#numberabs" id="numberabs"></a>
 
 **Description:** Returns the number’s absolute value, i.e. removes any minus sign

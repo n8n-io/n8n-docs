@@ -47,6 +47,8 @@ The Qwen Cloud node lets you call models available on Qwen Cloud from n8n. Use i
 Refer to the [Qwen Cloud credentials documentation](../credentials/alibaba.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>
 
 * **Text**: Message a model to create text completions and agent-like responses.

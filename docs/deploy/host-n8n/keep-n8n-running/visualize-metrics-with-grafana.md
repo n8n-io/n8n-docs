@@ -24,6 +24,8 @@ The `/metrics` endpoint is available on:
 It isn't available on n8n Cloud.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Reusable dashboard templates <a href="#reusable-dashboard-templates" id="reusable-dashboard-templates"></a>
 
 Once you enable Prometheus metrics for your n8n instance, you'll want to build dashboards to observe them.

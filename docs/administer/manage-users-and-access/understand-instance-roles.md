@@ -53,6 +53,8 @@ n8n recommends that owners create a second account with the **Member** role for 
 | Add and remove users | ✅ | ✅ | ❌ |
 | Access the Cloud dashboard | ✅ | ❌ | ❌ |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Custom instance roles <a href="#custom-instance-roles" id="custom-instance-roles"></a>
 
 If the built-in roles don't match your access needs, you can create custom instance roles with granular permissions. Custom instance roles let you grant specific instance-level capabilities (such as managing users, tags, or API keys) without giving full Admin access.

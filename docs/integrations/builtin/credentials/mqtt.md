@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [MQTT](../app-nodes/n8n-nodes-base.mqtt.md)
 - [MQTT Trigger](../trigger-nodes/n8n-nodes-base.mqtttrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install an [MQTT broker](https://mqtt.org/).

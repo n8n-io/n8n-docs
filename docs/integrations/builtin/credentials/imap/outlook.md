@@ -41,3 +41,5 @@ To replace IMAP triggers for incoming email, use the [Microsoft Outlook Trigger 
 For general Microsoft Outlook automation, use the [Microsoft Outlook node](../../app-nodes/n8n-nodes-base.microsoftoutlook.md), which uses OAuth 2.0 as required by Microsoft.
 
 For more information, refer to [Microsoft's deprecation notice](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online#what-we-are-changing).
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

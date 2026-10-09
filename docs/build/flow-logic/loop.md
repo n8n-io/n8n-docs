@@ -15,6 +15,8 @@ Looping is useful when you want to process multiple items or perform an action r
 
 Looping is one part of n8n's [flow logic](./), alongside [splitting](split-with-conditionals.md) and [merging](merge-data.md) data streams, and [waiting](wait.md) between executions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Using loops in n8n <a href="#using-loops-in-n8n" id="using-loops-in-n8n"></a>
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.

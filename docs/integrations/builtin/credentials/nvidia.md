@@ -27,6 +27,8 @@ A single credential covers both deployment modes:
 - **Cloud**: NVIDIA-hosted Nemotron models on [build.nvidia.com](https://build.nvidia.com/).
 - **Self-hosted NIM**: a [NVIDIA Inference Microservice](https://docs.nvidia.com/nim/) container running on your own infrastructure.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 For cloud access, create an [NVIDIA build](https://build.nvidia.com/) account.

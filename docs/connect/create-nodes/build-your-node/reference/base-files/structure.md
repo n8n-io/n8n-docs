@@ -23,6 +23,8 @@ The node base file follows this basic structure:
 
 A programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Outline structure for a declarative-style node <a href="#outline-structure-for-a-declarative-style-node" id="outline-structure-for-a-declarative-style-node"></a>
 
 This code snippet gives an outline of the node structure. 

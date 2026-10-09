@@ -26,6 +26,8 @@ Work with JSON web tokens in your n8n workflows.
 Refer to the [JWT credentials documentation](../credentials/jwt.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Decode

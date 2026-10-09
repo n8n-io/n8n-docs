@@ -28,6 +28,8 @@ This page tells you how to enable LDAP in n8n. It assumes you're familiar with L
 
 LDAP allows users to sign in to n8n with their organization credentials, instead of an n8n login.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Enable LDAP <a href="#enable-ldap" id="enable-ldap"></a>
 
 1. Log in to n8n as the instance owner.

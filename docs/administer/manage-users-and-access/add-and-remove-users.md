@@ -13,6 +13,8 @@ layout:
 
 The **Settings** > **Users** page shows all users, including ones with pending invitations.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Delete a user <a href="#delete-a-user" id="delete-a-user"></a>
 
 1. Open the **three-dot menu** for the user you want to delete and select **Delete user**.

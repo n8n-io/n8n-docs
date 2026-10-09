@@ -19,6 +19,8 @@ Making a workflow wait uses the [Wait](https://app.gitbook.com/s/BKcbOzIWja8NfqK
 
 n8n provides a workflow template with a basic example of [Rate limiting and waiting for external events](https://n8n.io/workflows/1749-rate-limiting-and-waiting-for-external-events/).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Flow logic](./)

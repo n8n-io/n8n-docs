@@ -45,6 +45,8 @@ On this page, you'll find a list of events the Airtable Trigger node can respond
 Refer to the [Airtable credentials documentation](../credentials/airtable.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 * **New Airtable event**

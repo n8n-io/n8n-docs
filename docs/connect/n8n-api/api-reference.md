@@ -25,6 +25,8 @@ The n8n API is available on:
 It isn't available on the free trial.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Before you start
 
 * **Authenticate**: every request needs an API key. Refer to [Authentication](authentication.md).

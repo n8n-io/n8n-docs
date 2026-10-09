@@ -24,6 +24,8 @@ User management is available from n8n 0.195.0.
 Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Step one: In-app setup <a href="#step-one-in-app-setup" id="step-one-in-app-setup"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}

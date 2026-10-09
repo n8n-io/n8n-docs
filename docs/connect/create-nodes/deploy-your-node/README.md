@@ -13,6 +13,8 @@ layout:
 
 This section contains details on how to deploy and share your node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Submit community nodes](submit-community-nodes.md): submit your node to the community node repository, so anyone can [install and use it](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) like any other community node. This is the only way to use custom nodes on Cloud.

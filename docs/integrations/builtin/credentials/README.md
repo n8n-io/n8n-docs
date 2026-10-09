@@ -14,3 +14,5 @@ layout:
 This section contains step-by-step information about authenticating the different nodes in n8n.
 
 
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

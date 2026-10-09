@@ -19,6 +19,8 @@ Only the instance owner can top up, and topping up requires an active paid subsc
 Gateway credits only pay for AI models and services that nodes use in your workflows. To get more credits for n8n Assistant, [top up Assistant credits](../assistant-credits/top-up-assistant-credits.md) instead. Top-ups are final, so check which balance you're topping up before you pay.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Top up manually
 
 1. Open the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Gateway credits** tab.

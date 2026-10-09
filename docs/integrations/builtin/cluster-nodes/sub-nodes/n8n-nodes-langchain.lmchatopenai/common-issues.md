@@ -24,6 +24,8 @@ layout:
 
 Here are some common errors and issues with the [OpenAI Chat Model node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
 The OpenAI Chat Model node is a sub-node[^1]. Sub-nodes behave differently than other nodes when processing multiple items using expressions.

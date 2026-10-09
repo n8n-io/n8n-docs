@@ -180,6 +180,8 @@ This agent supports the following chat models:
 
 </details>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the Tools Agent using the following parameters.

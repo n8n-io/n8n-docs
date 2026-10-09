@@ -23,6 +23,8 @@ layout:
 
 Use this operation to create, delete, list, message, or update a file in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Delete a File <a href="#delete-a-file" id="delete-a-file"></a>
 
 Use this operation to delete a file from the server.

@@ -33,6 +33,8 @@ Refer to the [Autopilot credentials documentation](../credentials/autopilot.md) 
 For usage examples and templates to help you get started, refer to n8n's [Autopilot Trigger integrations](https://n8n.io/integrations/autopilot-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 - Contact added

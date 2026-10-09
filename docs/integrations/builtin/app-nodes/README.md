@@ -14,3 +14,5 @@ layout:
 
 This section provides information about n8n's Actions.
 
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -15,6 +15,8 @@ layout:
 
 [Task runners](../set-up-task-runners.md) are responsible for executing code from the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Run task runners as sidecars in external mode <a href="#run-task-runners-as-sidecars-in-external-mode" id="run-task-runners-as-sidecars-in-external-mode"></a>
 
 To increase the isolation between the core n8n process and code in the Code node, run task runners in [external mode](../set-up-task-runners.md#setting-up-external-mode). External task runners launch as separate containers, providing a fully isolated environment to execute the JavaScript defined in the Code node.

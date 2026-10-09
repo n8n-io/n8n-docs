@@ -14,6 +14,8 @@ layout:
 
 This page contains advice on best practices relating to user management in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## All platforms <a href="#all-platforms" id="all-platforms"></a>
 
 * n8n recommends that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.

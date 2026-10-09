@@ -27,6 +27,8 @@ Luxon is a JavaScript library. The two convenience [variables](#get-the-current-
 * The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-luxon), isn't available for Python users.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Date and time behavior in n8n <a href="#date-and-time-behavior-in-n8n" id="date-and-time-behavior-in-n8n"></a>
 
 Be aware of the following:

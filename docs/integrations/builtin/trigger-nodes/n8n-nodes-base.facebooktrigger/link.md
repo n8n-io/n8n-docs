@@ -35,6 +35,8 @@ Refer to the [Facebook App credentials documentation](../../credentials/facebook
 For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Trigger configuration <a href="#trigger-configuration" id="trigger-configuration"></a>
 
 To configure the trigger with this Object:

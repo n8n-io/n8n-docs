@@ -19,3 +19,5 @@ n8n publishes incident notifications to a status page at [n8n Status](https://s
 
 n8n notifies customers of any data breaches according to the company's [Data Processing Addendum](https://n8n.io/legal/#data).
 
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

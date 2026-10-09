@@ -15,6 +15,8 @@ This section provides guidance on designing your node, including key technical d
 
 When building a node, there are design choices you need to make before you start:
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Choose a node type](choose-a-node-type.md): which node type you need to build.

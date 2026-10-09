@@ -61,6 +61,8 @@ These settings only control compaction workload and scheduling. They don't chang
 
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

@@ -14,6 +14,8 @@ layout:
 
 You build workflows from a small set of components that you connect together on the canvas.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Work with nodes](work-with-nodes.md): add, configure, and control the nodes in your workflow.

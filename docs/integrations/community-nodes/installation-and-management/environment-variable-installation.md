@@ -26,6 +26,8 @@ On self-hosted n8n, you can manage the set of installed community packages from 
 The first time you start n8n with `N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true`, n8n uninstalls any currently-installed community packages that aren't included in `N8N_COMMUNITY_PACKAGES`. If you already manage packages through the UI, review the **Community nodes** settings page and add the packages you want to keep to `N8N_COMMUNITY_PACKAGES` before enabling this variable.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Configure <a href="#configure" id="configure"></a>
 
 Set the following environment variables on your n8n instance, then restart:

@@ -24,6 +24,8 @@ Refer to [the list of timezone names](https://momentjs.com/timezone/) to find yo
 
 Refer to [Environment variables reference](../use-environment-variables/timezone-and-localization.md) for more information on this variable.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Configuration examples](./)

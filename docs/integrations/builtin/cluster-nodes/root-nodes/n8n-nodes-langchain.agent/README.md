@@ -40,6 +40,8 @@ The version of the node (v1) that has the agent type setting **will be removed f
 {% endhint %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 [Browse n8n-nodes-langchain.agent integration templates](https://n8n.io/integrations/agent) or [search all templates](https://n8n.io/workflows/)

@@ -41,6 +41,8 @@ The SSH node is useful for executing commands using the Secure Shell Protocol.
 Refer to the [SSH credentials documentation](../credentials/ssh.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Execute** a command](n8n-nodes-base.ssh.md#execute-command)

@@ -23,6 +23,8 @@ Log Streaming is available on:
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Set up log streaming <a href="#set-up-log-streaming" id="set-up-log-streaming"></a>
 
 To use log streaming, you have to add a streaming destination.

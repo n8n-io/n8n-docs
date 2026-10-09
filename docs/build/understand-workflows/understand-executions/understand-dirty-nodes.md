@@ -16,6 +16,8 @@ layout:
 
 A **dirty node** is a node that executed successfully in the past, but whose output n8n now considers stale or unreliable. They're labeled like this to indicate that if the node executes again, the output may be different. It may also be the point where a [partial execution](types-of-executions.md#partial-executions) starts from.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How to recognize dirty node data <a href="#how-to-recognize-dirty-node-data" id="how-to-recognize-dirty-node-data"></a>
 
 In the canvas of the workflow editor, you can identify dirty notes by their different-colored border and a yellow triangle in place of the previous green tick symbol. For example:

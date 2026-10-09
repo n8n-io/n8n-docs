@@ -39,6 +39,8 @@ layout:
 
 Here are some common errors and issues with the [Question and Answer Chain node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## No prompt specified error <a href="#no-prompt-specified-error" id="no-prompt-specified-error"></a>
 
 This error displays when the **Prompt** is empty or invalid.

@@ -24,6 +24,8 @@ Use the Message operations to send, reply to, delete, mark read or unread, add a
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add Label to a message <a href="#add-label-to-a-message" id="add-label-to-a-message"></a>
 
 Use this operation to add one or more labels to a message.

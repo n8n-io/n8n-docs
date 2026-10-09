@@ -34,6 +34,8 @@ Both `main` and `worker` instances are able to expose metrics.
 
 For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](../../../keep-n8n-running/visualize-metrics-with-grafana.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Queue metrics <a href="#queue-metrics" id="queue-metrics"></a>
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.

@@ -38,6 +38,8 @@ You can use these credentials to authenticate the following nodes:
 * [Airtable](../app-nodes/n8n-nodes-base.airtable/README.md)
 * [Airtable Trigger](../trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Airtable](https://airtable.com/) account.

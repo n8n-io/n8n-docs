@@ -41,6 +41,8 @@ Use this operation to search for files and folders in Google Drive. Refer to [Go
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Search files and folders <a href="#search-files-and-folders" id="search-files-and-folders"></a>
 
 Use this operation to search for files and folders in a drive.

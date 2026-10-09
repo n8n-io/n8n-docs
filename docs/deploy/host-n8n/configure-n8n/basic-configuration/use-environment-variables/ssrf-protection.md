@@ -26,6 +26,8 @@ Server-Side Request Forgery (SSRF) is an attack that tricks a server into making
 
 SSRF protection is off by default. This page lists the variables that turn it on and tune it.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What protection covers
 
 | Variable | Type | Default | Description |

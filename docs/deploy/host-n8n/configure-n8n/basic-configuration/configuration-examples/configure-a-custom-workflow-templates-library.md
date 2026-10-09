@@ -21,6 +21,8 @@ n8n provides a library of workflow templates[^1]. When self-hosting n8n, you can
 * Disable workflow templates
 * Create your own workflow templates library
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Disable workflow templates <a href="#disable-workflow-templates" id="disable-workflow-templates"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/d0B6W4LSyDTfMfmxdG4T/" %}

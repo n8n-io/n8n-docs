@@ -10,6 +10,8 @@ layout:
 ---
 # Array <a href="#array" id="array"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`Array`_.**`append()`** <a href="#arrayappend" id="arrayappend"></a>
 
 **Description:** Adds new elements to the end of the array. Similar to <code>push()</code>, but returns the modified array. Consider using spread syntax instead (see examples).

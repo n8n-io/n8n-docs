@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [FileMaker](../app-nodes/n8n-nodes-base.filemaker.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/) with the `fmrest` extended privilege to [Access the FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html).

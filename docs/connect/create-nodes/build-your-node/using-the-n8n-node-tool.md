@@ -18,6 +18,8 @@ The `n8n-node` tool is the official CLI for developing community nodes for n8n. 
 
 Using `n8n-node`, you can create nodes that adhere to the [guidelines for verified community nodes](reference/verification-guidelines.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Get n8n-node <a href="#get-n8n-node" id="get-n8n-node"></a>
 
 ### Run n8n-node without installing <a href="#run-n8n-node-without-installing" id="run-n8n-node-without-installing"></a>

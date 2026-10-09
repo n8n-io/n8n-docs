@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Google Sheets node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Append an array <a href="#append-an-array" id="append-an-array"></a>
 
 To insert an array of data into Google Sheets, you must convert the array into a valid JSON (key, value) format.

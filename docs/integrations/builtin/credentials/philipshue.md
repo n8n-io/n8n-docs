@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Philips Hue](../app-nodes/n8n-nodes-base.philipshue.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Philips Hue](https://www.philips-hue.com/en-us) account.

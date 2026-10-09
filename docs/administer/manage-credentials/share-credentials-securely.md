@@ -51,6 +51,8 @@ In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.m
 Sharing an [end-user credential](end-user-credentials.md) shares the credential itself, not a connection. Users you share it with connect their own account, they don't use yours.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 
 To share a credential:

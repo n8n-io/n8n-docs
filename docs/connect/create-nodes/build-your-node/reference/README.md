@@ -13,6 +13,8 @@ layout:
 
 This section contains reference information for node builders. It covers node UI elements, key parameters in your node's base and credentials files, and the guidelines for submitting your node for [verification by n8n](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management/install-verified-community-nodes).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Node UI elements](node-ui-elements.md): the predefined UI components available for your node's parameters.

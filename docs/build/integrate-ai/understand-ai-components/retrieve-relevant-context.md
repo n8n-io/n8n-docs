@@ -20,6 +20,8 @@ layout:
 
 # RAG in n8n <a href="#rag-in-n8n" id="rag-in-n8n"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What is RAG <a href="#what-is-rag" id="what-is-rag"></a>
 
 [Retrieval-Augmented Generation (RAG)](#user-content-fn-1)[^1] is a technique that improves AI responses by combining language models with external data sources. Instead of relying solely on the model's internal training data, RAG systems retrieve relevant documents to ground[^2] responses in up-to-date, domain-specific, or proprietary knowledge. RAG workflows typically rely on vector stores to manage and search this external data efficiently.

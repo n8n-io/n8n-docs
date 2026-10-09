@@ -18,6 +18,8 @@ layout:
 
 These are the standard parameters for the [node base file](README.md). They're the same for all node types.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `displayName` <a href="#displayname" id="displayname"></a>
 
 _String_ | _Required_

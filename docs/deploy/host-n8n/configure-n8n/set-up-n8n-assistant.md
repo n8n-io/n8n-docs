@@ -43,6 +43,8 @@ It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're
 n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What n8n Assistant needs
 
 Every self-hosted n8n Assistant setup needs three things:

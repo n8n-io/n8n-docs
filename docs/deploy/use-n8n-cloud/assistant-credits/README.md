@@ -13,6 +13,8 @@ Assistant credits pay for your usage of [n8n Assistant](https://app.gitbook.com/
 
 Assistant credits only pay for n8n Assistant. They don't pay for AI model calls that your workflows or agents make when they run, such as the model behind an AI Agent node. Those calls use [Gateway credits](../gateway-credits/README.md) or your own provider credentials.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Top up Assistant credits](top-up-assistant-credits.md): buy extra credits manually or automatically.

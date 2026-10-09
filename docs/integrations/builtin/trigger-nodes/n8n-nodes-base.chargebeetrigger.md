@@ -33,6 +33,8 @@ Refer to the [Chargebee credentials documentation](../credentials/chargebee.md) 
 For usage examples and templates to help you get started, refer to n8n's [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add webhook URL in Chargebee <a href="#add-webhook-url-in-chargebee" id="add-webhook-url-in-chargebee"></a>
 
 To add a Webhook URL in Chargebee:

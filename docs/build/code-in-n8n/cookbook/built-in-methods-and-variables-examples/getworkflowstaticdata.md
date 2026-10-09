@@ -74,6 +74,8 @@ nodeStaticData.lastExecution = new Date().getTime();
 delete nodeStaticData.lastExecution;
 ```
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

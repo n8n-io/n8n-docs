@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Telegram node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add a bot to a Telegram channel <a href="#add-a-bot-to-a-telegram-channel" id="add-a-bot-to-a-telegram-channel"></a>
 
 For a bot to send a message to a channel, you must add the bot to the channel. If you haven't added the bot to the channel, you'll see an error with a description like: `Error: Forbidden: bot is not a participant of the channel`.

@@ -27,6 +27,8 @@ Use the MCP Server Trigger node to allow n8n to act as a [Model Context Protocol
 Refer to the [HTTP Request credentials documentation](../credentials/httprequest.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How the MCP Server Trigger node works <a href="#how-the-mcp-server-trigger-node-works" id="how-the-mcp-server-trigger-node-works"></a>
 
 The MCP Server Trigger node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools.

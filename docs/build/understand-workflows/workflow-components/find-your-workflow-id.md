@@ -18,6 +18,8 @@ Your workflow ID is available in:
 * The URL of the open workflow.
 * The workflow settings title.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Workflow components](./)

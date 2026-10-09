@@ -15,6 +15,8 @@ layout:
 
 You can run a security audit on your n8n instance, to detect common security issues.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How do I run a security audit in n8n? <a href="#run-an-audit" id="run-an-audit"></a>
 
 You can run an audit using the CLI, the public API, or the n8n node.

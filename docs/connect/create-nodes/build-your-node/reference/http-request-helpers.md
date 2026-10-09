@@ -20,6 +20,8 @@ n8n provides a flexible helper for making HTTP requests, which abstracts away mo
 The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Usage <a href="#usage" id="usage"></a>
 
 Call the helper inside the `execute` function. 

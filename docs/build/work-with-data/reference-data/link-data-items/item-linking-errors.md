@@ -76,6 +76,8 @@ To solve this, you can either:
 - Use `.first()`, `.last()` or `.all()[index]` instead of `.item`. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
 - If a **Merge** node brought the branches together, set it to **Combine** mode, so that each output item contains data from both branches.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Link data items](./)

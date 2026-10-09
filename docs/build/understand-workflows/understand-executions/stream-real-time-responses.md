@@ -44,6 +44,8 @@ You can enable streaming using either:
 
 In both cases, set the node's **Response Mode** to **Streaming**.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Configure nodes for streaming <a href="#configure-nodes-for-streaming" id="configure-nodes-for-streaming"></a>
 
 To stream data, you need to add nodes to the workflow that support streaming output. Not all nodes support this feature.

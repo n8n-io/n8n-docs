@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the TimescaleDB node supports and
 Refer to [TimescaleDB credentials](../credentials/timescaledb.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Execute an SQL query

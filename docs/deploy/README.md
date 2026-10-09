@@ -71,3 +71,5 @@ Requires Docker on Linux or macOS (or WSL on Windows). Sets up n8n locally in on
 {% content-ref url="host-n8n/" %}
 [host-n8n](host-n8n/README.md)
 {% endcontent-ref %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Keap](../app-nodes/n8n-nodes-base.keap.md)
 - [Keap Trigger](../trigger-nodes/n8n-nodes-base.keaptrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Keap](https://developer.keap.com/) developer account.

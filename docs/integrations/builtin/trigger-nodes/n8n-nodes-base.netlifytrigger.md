@@ -33,6 +33,8 @@ Refer to the [Netlify credentials documentation](../credentials/netlify.md) for 
 For usage examples and templates to help you get started, refer to n8n's [Netlify Trigger integrations](https://n8n.io/integrations/netlify-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 n8n provides an app node for Netlify. Refer to the [Netlify node documentation](../app-nodes/n8n-nodes-base.netlify.md) for more information.

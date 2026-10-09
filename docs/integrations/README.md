@@ -37,6 +37,8 @@ n8n calls integrations nodes.
 
 Nodes are the building blocks of workflows in n8n. They're an entry point for retrieving data, a function to process data, or an exit for sending data. The data process includes filtering, recomposing, and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create complex workflows.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Built-in nodes <a href="#built-in-nodes" id="built-in-nodes"></a>
 
 n8n includes a collection of built-in integrations. Refer to [Built-in nodes](builtin/node-types.md) for documentation on all n8n's built-in nodes.

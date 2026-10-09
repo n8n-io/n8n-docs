@@ -28,6 +28,8 @@ The node offers two ways to sign in, chosen with the **Authentication** dropdown
 With either method, you choose the Confluence site in the node itself.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Choosing a site
 
 Every operation starts with the **Site** parameter, which selects the Confluence Cloud site to work with:

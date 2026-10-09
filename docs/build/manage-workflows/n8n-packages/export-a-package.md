@@ -39,6 +39,8 @@ curl -X POST 'https://n8n.example.com/api/v1/n8n-packages/export' \
 
 For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Choose what to export
 
 Pass at least one ID. Repeat a flag to name several: there's no comma-separated form.

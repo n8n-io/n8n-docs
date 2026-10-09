@@ -25,6 +25,8 @@ layout:
 Refer to the [Git credentials documentation](../credentials/git.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * **Add** a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add).

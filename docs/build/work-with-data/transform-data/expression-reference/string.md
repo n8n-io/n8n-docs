@@ -10,6 +10,8 @@ layout:
 ---
 # String <a href="#string" id="string"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`String`_.**`base64Decode()`** <a href="#stringbase64decode" id="stringbase64decode"></a>
 
 **Description:** Converts plain text to a base64-encoded string

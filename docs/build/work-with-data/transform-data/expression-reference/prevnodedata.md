@@ -10,6 +10,8 @@ layout:
 ---
 # PrevNodeData <a href="#prevnodedata" id="prevnodedata"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## **`name`** <a href="#name" id="name"></a>
 
 **Description:** The name of the node that the current input came from. 

@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Invoice Ninja](../app-nodes/n8n-nodes-base.invoiceninja.md)
 - [Invoice Ninja Trigger](../trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Invoice Ninja](https://www.invoiceninja.com/) account. Only the Pro and Enterprise plans support API integrations.

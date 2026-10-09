@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [Affinity](../app-nodes/n8n-nodes-base.affinity.md)
 - [Affinity Trigger](../trigger-nodes/n8n-nodes-base.affinitytrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Affinity](https://www.affinity.co/) account at the Scale, Advanced, or Enterprise subscription tiers.

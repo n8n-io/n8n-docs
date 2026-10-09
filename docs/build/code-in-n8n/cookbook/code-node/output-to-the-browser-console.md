@@ -17,6 +17,8 @@ You can use `console.log()` or `print()` in the Code node to help when writing a
 
 For help opening your browser console, refer to [this guide by Balsamiq](https://balsamiq.com/support/faqs/browserconsole/).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## console.log (JavaScript) <a href="#consolelog-javascript" id="consolelog-javascript"></a>
 
 For technical information on `console.log()`, refer to the [MDN developer docs](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).

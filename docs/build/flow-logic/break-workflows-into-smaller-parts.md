@@ -18,6 +18,8 @@ You can call one workflow from another workflow. This allows you to build modula
 
 Sub-wokflow executions don't count towards your plan's monthly execution or active workflow limits.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Set up and use a sub-workflow <a href="#set-up-and-use-a-sub-workflow" id="set-up-and-use-a-sub-workflow"></a>
 
 This section walks through setting up both the parent workflow and sub-workflow.

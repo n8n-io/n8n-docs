@@ -46,6 +46,8 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
 | `QUEUE_WORKER_MAX_STALLED_COUNT` (**deprecated**) | Number | `1` | **Deprecated** Removed in n8n 2.0. Setting this has no effect. See [Remove QUEUE_WORKER_MAX_STALLED_COUNT](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes#remove-queueworkermaxstalledcount) for migration details. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Webhook responses
 
 In queue mode, a worker sends a webhook response back to the main instance inside a queue message. These variables set how large that message can be, and whether n8n stores a larger response body in binary data storage instead of failing the node. Refer to [Large webhook responses](../../scaling/enable-queue-mode.md#large-webhook-responses) for details.

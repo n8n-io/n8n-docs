@@ -21,6 +21,8 @@ layout:
 
 Use the [Gmail Trigger node's](README.md) **Poll Time** parameter to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Poll mode options <a href="#poll-mode-options" id="poll-mode-options"></a>
 
 Refer to the sections below for details on using each **Mode**.

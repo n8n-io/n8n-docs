@@ -24,6 +24,8 @@ layout:
 
 Here are some common errors and issues with the [Chat Trigger node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Pass data from a website to an embedded Chat Trigger node <a href="#pass-data-from-a-website-to-an-embedded-chat-trigger-node" id="pass-data-from-a-website-to-an-embedded-chat-trigger-node"></a>
 
 When [embedding](https://www.npmjs.com/package/@n8n/chat) the Chat Trigger node in a website, you might want to pass extra information to the Chat Trigger. For example, passing a user ID stored in a site cookie.

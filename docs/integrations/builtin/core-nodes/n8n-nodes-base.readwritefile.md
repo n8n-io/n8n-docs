@@ -39,6 +39,8 @@ Use the Read/Write Files from Disk node to read and write files from/to the mach
 
 The paths this node can access depend on your n8n deployment. Refer to [File locations](n8n-nodes-base.readwritefile.md#file-locations) for details.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Read File(s) From Disk**](n8n-nodes-base.readwritefile.md#read-files-from-disk): Use this operation to retrieve one or more files from the computer that runs n8n.

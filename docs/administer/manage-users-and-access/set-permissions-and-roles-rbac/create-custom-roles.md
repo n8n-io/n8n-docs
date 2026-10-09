@@ -25,6 +25,8 @@ Custom roles let you define granular permissions beyond the built-in roles. Inst
 
 n8n has two types of custom roles: project roles, scoped to a single project, and instance roles, which apply across your whole n8n instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Create custom project roles](create-custom-project-roles.md): Define permissions within a specific project, including access to workflows, credentials, folders, and other project resources. Assign them to project members to control what they can do inside that project.

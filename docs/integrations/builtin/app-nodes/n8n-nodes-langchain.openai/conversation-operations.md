@@ -39,6 +39,8 @@ layout:
 
 Use this operation to create, get, update, or remove a conversation in OpenAI. Refer to [OpenAI](./README.md) for more information on the OpenAI node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a Conversation <a href="#create-a-conversation" id="create-a-conversation"></a>
 
 Use this operation to create a new conversation.

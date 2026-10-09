@@ -10,6 +10,8 @@ layout:
 ---
 # Date <a href="#date" id="date"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`Date`_.**`toDateTime()`** <a href="#datetodatetime" id="datetodatetime"></a>
 
 **Description:** Converts a JavaScript Date to a Luxon DateTime. The DateTime contains the same information, but is easier to manipulate.

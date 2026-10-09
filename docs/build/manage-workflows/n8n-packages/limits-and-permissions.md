@@ -21,6 +21,8 @@ n8n packages are in Preview. These limits and requirements may change in future 
 
 Reference for what constrains [package](README.md) export and import: size caps, license features, API key scopes, and observability.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Package size limits
 
 Four environment variables cap what an import accepts. They protect the instance against a small archive that expands to an enormous one:

@@ -15,6 +15,8 @@ layout:
 
 This page describes the purpose of each table in the n8n database.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Database and query technology <a href="#database-and-query-technology" id="database-and-query-technology"></a>
 
 By default, n8n uses SQLite as the database. If you are using another database the structure will be similar, but the data-types may be different depending on the database.

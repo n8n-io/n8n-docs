@@ -24,6 +24,8 @@ layout:
 | :------- | :---- | :------- | :---------- |
 | `N8N_WORKFLOW_HISTORY_PRUNE_TIME` | Number | `-1` | How long to keep workflow history versions before automatically deleting them (in hours). Set to `-1` to keep all versions indefinitely. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

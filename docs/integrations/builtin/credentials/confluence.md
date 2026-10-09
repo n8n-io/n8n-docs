@@ -12,6 +12,8 @@ layout:
 
 Use the **Confluence Cloud OAuth2 API** credential to authenticate with [Confluence Cloud](https://www.atlassian.com/software/confluence) in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 - A [Confluence Cloud](https://www.atlassian.com/software/confluence) site.

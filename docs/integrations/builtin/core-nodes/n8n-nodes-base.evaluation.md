@@ -31,6 +31,8 @@ Use the Evaluation node in these scenarios:
 The Evaluation node's **Set Outputs** operation records evaluation results to data tables or Google Sheets. To use Google Sheets as a recording location, configure a [Google Sheets credential](../credentials/google/README.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 The Evaluation node offers the following operations:

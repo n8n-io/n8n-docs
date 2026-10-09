@@ -38,6 +38,8 @@ You can use these credentials to authenticate the following nodes:
 * [WhatsApp Business Cloud](../app-nodes/n8n-nodes-base.whatsapp/README.md)
 * [WhatsApp Trigger](../trigger-nodes/n8n-nodes-base.whatsapptrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Requirements <a href="#requirements" id="requirements"></a>
 
 To create credentials for WhatsApp, you need the following Meta assets:

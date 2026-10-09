@@ -41,6 +41,8 @@ Use this operation to create or delete a Google spreadsheet from Google Sheets. 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a spreadsheet <a href="#create-a-spreadsheet" id="create-a-spreadsheet"></a>
 
 Use this operation to create a new spreadsheet.

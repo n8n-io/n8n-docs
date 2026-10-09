@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Peekalink node supports and l
 Refer to [Peekalink credentials](../credentials/peekalink.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Check whether preview for a given link is available

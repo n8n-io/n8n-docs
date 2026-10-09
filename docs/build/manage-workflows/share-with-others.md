@@ -25,6 +25,8 @@ Workflow sharing allows you to share workflows between users of the same n8n ins
 
 Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Instance roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/understand-instance-roles) for more information about owners and admins.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Share a workflow <a href="#share-a-workflow" id="share-a-workflow"></a>
 
 1. Open the workflow you want to share.

@@ -16,6 +16,8 @@ layout:
 
 # Tips and common issues <a href="#tips-and-common-issues" id="tips-and-common-issues"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Combining multiple triggers <a href="#combining-multiple-triggers" id="combining-multiple-triggers"></a>
 
 If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluationtrigger). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.

@@ -10,6 +10,8 @@ layout:
 ---
 # Boolean <a href="#boolean" id="boolean"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`Boolean`_.**`isEmpty()`** <a href="#booleanisempty" id="booleanisempty"></a>
 
 **Description:** Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.

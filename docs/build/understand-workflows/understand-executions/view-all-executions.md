@@ -38,6 +38,8 @@ If your n8n instance supports **projects**, you'll also be able to view the exec
 When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Filter executions <a href="#filter-executions" id="filter-executions"></a>
 
 You can filter the executions list:

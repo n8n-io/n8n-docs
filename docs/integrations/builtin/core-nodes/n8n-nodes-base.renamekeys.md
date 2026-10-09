@@ -20,6 +20,8 @@ layout:
 
 Use the Rename Keys node to rename the keys of a key-value pair in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 You can rename one or multiple keys using the Rename Keys node. Select the **Add new key** button to rename a key.

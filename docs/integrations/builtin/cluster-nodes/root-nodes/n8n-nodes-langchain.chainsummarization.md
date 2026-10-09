@@ -25,6 +25,8 @@ Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Choose the type of data you need to summarize in **Data to Summarize**. The data type you choose determines the other node parameters.

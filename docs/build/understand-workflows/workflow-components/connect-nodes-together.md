@@ -34,6 +34,8 @@ A connection establishes a link between nodes to route data through the workflow
 
 ![Example of creating and deleting a connection](../../.gitbook/assets/example.gif)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a connection <a href="#create-a-connection" id="create-a-connection"></a>
 
 To create a connection between two nodes, select the grey dot or **Add node** <img src="../../.gitbook/assets/add-node-small (1).png" alt="Add node icon" data-size="line"> on the right side of a node and slide the arrow to the grey rectangle on the left side of the following node.

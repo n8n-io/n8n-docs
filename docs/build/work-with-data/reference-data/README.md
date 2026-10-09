@@ -17,6 +17,8 @@ When you reference data, you're not changing it. You're pointing to values that 
 
 If you want to change the data you're referencing, see [Transforming data](../transform-data/approaches-for-transforming-data.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How to reference data <a href="#how-to-reference-data" id="how-to-reference-data"></a>
 
 The main way to reference data is using [expressions](../expressions-versus-data-nodes.md#expressions). You can create expressions by typing them in a parameter's field or dragging and dropping fields from the Input panel in the UI. Expressions will automatically figure out the correct item to use using [item linking](link-data-items/README.md).

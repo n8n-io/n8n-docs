@@ -14,6 +14,8 @@ layout:
 
 An execution is a single run of a workflow.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.

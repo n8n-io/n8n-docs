@@ -15,6 +15,8 @@ There are two node types you can build for n8n: trigger nodes and action nodes.
 
 Both types provide integrations with external services. 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Trigger nodes <a href="#trigger-nodes" id="trigger-nodes"></a>
 
 [Trigger nodes](#user-content-fn-1)[^1] start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute, depending on the triggering event.

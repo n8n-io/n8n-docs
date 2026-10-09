@@ -39,6 +39,8 @@ layout:
 
 Here are some common errors and issues with the [Schedule Trigger node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Invalid cron expression <a href="#invalid-cron-expression" id="invalid-cron-expression"></a>
 
 This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n doesn't understand your cron expression. This may mean that there is a mistake in your cron expression or that you're using an incompatible syntax.

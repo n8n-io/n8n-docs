@@ -60,6 +60,8 @@ Refer to [AI Agent](./README.md) for more information on the AI Agent node itsel
 You must use the [OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatopenai/README.md) with this agent.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the OpenAI Functions Agent using the following parameters.

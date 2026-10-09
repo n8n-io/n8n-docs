@@ -37,6 +37,8 @@ The Plan and Execute Agent is like the [ReAct agent](react-agent.md) but with a 
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the Plan and Execute Agent using the following parameters.

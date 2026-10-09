@@ -25,6 +25,8 @@ The owner email must not already belong to another user on the instance. If the 
 
 Changing the owner email updates the existing instance owner account. It doesn't transfer ownership to another existing user or merge user accounts.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Change the owner email in the UI <a href="#change-the-owner-email-in-the-ui" id="change-the-owner-email-in-the-ui"></a>
 
 1. Log in as the instance owner.

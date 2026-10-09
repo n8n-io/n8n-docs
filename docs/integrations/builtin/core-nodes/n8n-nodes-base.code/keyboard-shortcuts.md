@@ -20,6 +20,8 @@ layout:
 
 The Code node editing environment supports a range of keyboard shortcuts to speed up and enhance your experience. Select the appropriate tab to see the relevant shortcuts for your operating system.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Cursor Movement <a href="#cursor-movement" id="cursor-movement"></a>
 
 {% tabs %}

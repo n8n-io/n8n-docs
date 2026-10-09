@@ -17,6 +17,8 @@ Proper error handling is crucial for creating robust n8n nodes that provide clea
 - [**`NodeApiError`**](#nodeapierror): For API-related errors and external service failures
 - [**`NodeOperationError`**](#nodeoperationerror): For operational errors, validation failures, and configuration issues
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## NodeApiError <a href="#nodeapierror" id="nodeapierror"></a>
 
 Use `NodeApiError` when dealing with external API calls and HTTP requests. This error class is specifically designed to handle API response errors and provides enhanced features for parsing and presenting API-related failures such as:

@@ -26,6 +26,8 @@ Use the Crypto node to perform cryptographic operations in workflows.
 Refer to the [Crypto credentials documentation](../credentials/crypto.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Actions <a href="#actions" id="actions"></a>
 
 * [**Decrypt** a string](#decrypt-parameters) with a passphrase or private key

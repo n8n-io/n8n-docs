@@ -80,6 +80,8 @@ This means that:
 
 For example, if a webhook node receives an access token and you reference it in a credential field using an expression, the value is resolved using the execution data of that specific workflow run.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Example: Writing longer JavaScript as expressions <a href="#example-writing-longer-javascript-as-expressions" id="example-writing-longer-javascript-as-expressions"></a>
 
 You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an Immediately Invoked Function Expression (IIFE).

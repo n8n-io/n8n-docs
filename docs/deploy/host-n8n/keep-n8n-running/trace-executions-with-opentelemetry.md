@@ -31,6 +31,8 @@ Watch an overview of OpenTelemetry tracing in n8n:
 
 {% embed url="https://www.youtube.com/embed/xOi8K_-GLRM" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What you get <a href="#what-you-get" id="what-you-get"></a>
 
 When you turn on tracing, n8n exports two kinds of spans for each execution:

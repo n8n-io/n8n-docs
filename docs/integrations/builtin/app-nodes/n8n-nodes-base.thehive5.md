@@ -32,6 +32,8 @@ n8n provides two nodes for TheHive. Use this node (TheHive 5) if you want to use
 Refer to [TheHive credentials](../credentials/thehive5.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Alert

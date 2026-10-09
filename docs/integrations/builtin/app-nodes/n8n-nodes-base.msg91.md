@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the MSG91 node supports and links
 Refer to [MSG91 credentials](../credentials/msg91.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * SMS

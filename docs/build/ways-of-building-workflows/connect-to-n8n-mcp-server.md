@@ -39,6 +39,8 @@ This page gives an overview of what building with MCP looks like in n8n. For set
 * [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference) — every tool an MCP client can call.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What is MCP?
 
 Model Context Protocol (MCP) is an open standard for connecting AI applications to external systems. It defines two roles:

@@ -13,6 +13,8 @@ layout:
 
 Filtering in n8n can mean different things depending on what you want to accomplish. This guide covers both visual filtering in the UI and data filtering during workflow execution.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Filter data visually in the UI <a href="#filter-data-visually-in-the-ui" id="filter-data-visually-in-the-ui"></a>
 
 {% hint style="info" %}

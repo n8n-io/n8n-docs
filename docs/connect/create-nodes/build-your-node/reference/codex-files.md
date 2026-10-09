@@ -24,6 +24,8 @@ The codex filename must match the node base filename. For example, given a node 
 | `categories` | The settings in the `categories` array determine which category n8n adds your node to in the GUI. See [Node categories](#node-categories) for more information. |
 | `resources` | The `resources` object contains links to your node documentation. n8n automatically adds help links to credentials and nodes in the GUI. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node categories <a href="#node-categories" id="node-categories"></a>
 
 You can define one or more categories in your node configuration JSON. This helps n8n put the node in the correct category in the nodes panel.

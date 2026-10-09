@@ -23,6 +23,8 @@ layout:
 
 Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Analyze Image <a href="#analyze-image" id="analyze-image"></a>
 
 Use this operation to take in images and answer questions about them.

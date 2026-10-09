@@ -7,6 +7,8 @@ layout:
 
 Learn how n8n works and how it structures its database.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [How n8n works](how-n8n-works.md): understand n8n's architecture.

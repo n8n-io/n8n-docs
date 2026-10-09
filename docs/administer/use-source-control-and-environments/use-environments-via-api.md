@@ -21,6 +21,8 @@ The Source Control `status` and `push` endpoints are available from n8n version 
 Environments is an Enterprise feature.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## The endpoints
 
 The public API exposes three source control operations:

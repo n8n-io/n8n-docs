@@ -41,4 +41,4 @@ To configure this credential, you'll need:
 - A **Username** to connect as.
 - A **Password** for that user account.
 
-n8n uses These fields to build the `-u` parameter in the format of `-u username:pw`. Refer to [Web API basics](https://docs.trellix.com/docs/web-api-basics) for more information.
+n8n uses these fields to build the `-u` parameter in the format of `-u username:pw`. Refer to [Web API basics](https://docs.trellix.com/docs/web-api-basics) for more information.

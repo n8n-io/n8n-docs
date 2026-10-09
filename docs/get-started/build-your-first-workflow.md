@@ -190,19 +190,15 @@ Your workflow is built. Test it, then publish it so it runs every day at 8 AM.
 
     ![Publish button in the canvas header](.gitbook/assets/build-your-first-workflow-test-and-publish-03.png)
 
-## Congratulations
-
-Your workflow now runs at 8 AM every day.
-
 ## What you learned
 
-You’ve built a working workflow, and along the way you’ve learned how to:
+Congratulations, your workflow now runs at 8 AM every day. Along the way, you’ve learned how to:
 
-- **Start a workflow with a trigger.** Yours runs on a schedule. [Triggers, link TBC]
-- **Add and connect nodes.** Each node does one job and passes its result to the next. [Nodes, link TBC]
-- **Fetch data from an API.** You used the HTTP Request node to get weather data from a web address. [HTTP Request, link TBC]
-- **Work with data between nodes.** The output of one node becomes the input of the next. [Data structure, link TBC]
-- **Use expressions.** Dragging fields in builds an expression for you, so you can use live data without writing code. [Expressions, link TBC]
+- **Start a workflow with a trigger.** Yours runs on a schedule. [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger)
+- **Add and connect nodes.** Each node does one job and passes its result to the next. [Work with nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes)
+- **Fetch data from an API.** You used the HTTP Request node to get weather data from a web address. [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest)
+- **Work with data between nodes.** The output of one node becomes the input of the next. [Understand n8n's data structure](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/understand-n8ns-data-structure)
+- **Use expressions.** Dragging fields in builds an expression for you, so you can use live data without writing code. [Expressions for data transformation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expressions-for-data-transformation)
 - **Store data.** Each run saves a new row to your data table, so your reports are kept after the workflow finishes. [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables)
 
 ## Optional: Build with n8n Assistant

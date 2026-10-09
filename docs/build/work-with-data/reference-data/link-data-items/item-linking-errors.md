@@ -59,20 +59,22 @@ When you use `.item` and there are multiple possible matches, n8n doesn't know w
 - Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.
 
-### Fix for 'Node is on another branch' <a href="#fix-for-node-is-on-another-branch" id="fix-for-node-is-on-another-branch"></a>
+### Fix for 'Node is on another branch'
 
 This is the error message:
 
-> ERROR: '<node-name>' is on another branch
+> `ERROR: '<node-name>' is on another branch`
 
-The node you reference with `.item` is upstream of the current node, but the current item didn't come from it. n8n can't match the current item to an item in that node. This happens when a node combines branches without merging their items. For example, a Merge node in Append mode outputs items from input 1 and input 2 one after the other. Each item links back to only one of those inputs, so `{{ $('<node-on-input-2>').item.json.value }}` fails on items that came from input 1.
+The node you reference with `.item` is upstream of the current node, but the current item didn't come from it, so n8n can't match the current item to an item in that node. This happens when two branches come back together but their items stay separate.
 
-The node still runs, but the expression returns no data.
+For example, a **Merge** node in **Append** mode outputs the items from **Input 1** first, then the items from **Input 2**. Each output item still links back to only one input. If **Input 2** comes from a node called **Get orders**, then `{{ $('Get orders').item.json.total }}` resolves for items that came from **Input 2** and fails for items that came from **Input 1**.
+
+The expression resolves to `null` and the node still succeeds, so the execution doesn't stop. n8n shows the error in the expression preview in the editor.
 
 To solve this, you can either:
 
 - Use `.first()`, `.last()` or `.all()[index]` instead of `.item`. Refer to [Referencing previous nodes](../reference-previous-nodes.md) for more detail on these methods.
-- Set the Merge node to Combine mode, so that each output item contains data from both branches.
+- If a **Merge** node brought the branches together, set it to **Combine** mode, so that each output item contains data from both branches.
 
 ## Related resources
 

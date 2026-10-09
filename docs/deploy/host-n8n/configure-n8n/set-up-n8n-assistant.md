@@ -396,14 +396,14 @@ N8N_AGENTS_AI_SANDBOX_ENABLED=true
 N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
 
 # Let channels reach your instance
-WEBHOOK_URL=https://<your-public-hostname>
+N8N_WEBHOOK_URL=https://<your-public-hostname>
 ```
 
 | Variable | Description |
 | --- | --- |
 | `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base when the shared sandbox isn't already enabled. Requires a configured sandbox. Default: `false`. |
 | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Shared sandbox provider for agents and n8n Assistant. Use `n8n-sandbox` or `daytona`. Default: `n8n-sandbox`. |
-| `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
+| `N8N_WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. Available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`. |
 
 {% hint style="info" %}
 **Feature availability**

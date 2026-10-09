@@ -60,7 +60,7 @@ Log in to your n8n instance, then:
 
 3. Select the workflow’s name and change it to `Weather Log`. Select anywhere on the canvas to save the name.
 
-    [Video: rename the workflow to Weather Log](.gitbook/assets/build-your-first-workflow-create-workflow-03.mp4)
+    [Video: rename the workflow to Weather Log](https://youtu.be/VLvskeTzSSs)
 
 ## 2. Run it at 8 AM every day
 
@@ -117,7 +117,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     The temperature in {{ $json.city }}
     ```
 
-    [Video: drag the city field into the report Value field](.gitbook/assets/build-your-first-workflow-report-02.mp4)
+    [Video: drag the city field into the report Value field](https://youtu.be/VTkAWAUTmoQ)
 
     {% hint style="info" %}
     **What's an expression?**

@@ -103,7 +103,7 @@ SKIP_FILE_RE = re.compile(r"(\.test\.|\.spec\.|\.snap$|-lock\.json$|^package-loc
 # their pages still in flight (ENT-438, ENT-301), and the sweep reported all
 # three as dead every week (DOC-2380). A missing page for a hidden node is the
 # expected state, not a finding.
-HIDDEN_NODE_RE = re.compile(r"^\s*hidden:\s*true\s*,?\s*$", re.MULTILINE)
+HIDDEN_NODE_RE = re.compile(r"^\s*hidden:\s*true\s*,?\s*(//.*)?$", re.MULTILINE)
 
 # Stop at whitespace, quote/backtick, and the bracket/paren characters that
 # wrap a URL in code and markdown.

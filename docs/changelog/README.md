@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Changelog
@@ -39,6 +41,27 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+## TypeSafe AI node for smarter workflow routing with Jev
+
+**Released:** 2026-09-30&#x20;
+
+You can now use TypeSafe AI's Jev model in n8n to make decisions from unstructured data, without using a general-purpose LLM to generate and parse text.
+
+Think of Jev as an **If** or **Switch** for the fuzzy parts of a workflow. Give it some input, a question, and the possible outcomes. It returns a decision with its confidence, which you can use to branch, sort, route, or decide when a human should take over.
+
+For example, you could use it to decide:
+
+* **Priority:** Is this support ticket critical, high, medium, or low priority?
+* **Routing:** Is this inbound email a complaint, a question, or spam?
+* **Review:** Does this deal need executive review?
+* **Confidence gating:** Is the model confident enough to continue automatically, or should this go to a human?
+
+Unlike a text-generating LLM, Jev is designed for decisions rather than writing. If you already have a deterministic rule such as `amount > 10000`, an **If** node is still the right tool. If the decision depends on unstructured input, Jev gives you a new way to turn that judgment into workflow logic.
+
+**Availability:** The TypeSafe AI node is availalble to n8n Cloud and self-hosted users with your own TypeSafe AI API key. n8n Cloud users (Starter, Pro and new trials) can also use Jev via Gateway credits without setting up a seperate TypeSafe AI account or API key.
+
+<figure><img src=".gitbook/assets/typesafe Jev 2 square.png" alt=""><figcaption></figcaption></figure>
 
 ## Build agents you set up once and use anywhere
 
@@ -95,7 +118,7 @@ Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Q
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](<.gitbook/assets/select credits.png>)
+![Select Gateway credits in the Credetial dropdown](<.gitbook/assets/select credits.png>)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -413,11 +436,11 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup

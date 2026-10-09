@@ -65,7 +65,7 @@ You configure redaction per workflow in the workflow settings. You need the `wor
 To configure redaction:
 
 1. Open your workflow.
-2. Select the **three dots icon** <img src="../../../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../../../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**.
 4. Find the **Redact production execution data** and **Redact manual execution data** settings.
 5. For each setting, choose either **Default - Do not redact** or **Redact**.

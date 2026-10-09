@@ -37,7 +37,7 @@ In n8n, expressions let you populate node parameters dynamically by executing Ja
 
 ### node (n8n) <a href="#node-n8n" id="node-n8n"></a>
 
-In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, let you fetch, send, and process data, can define flow control logic, and connect with external services. Learn more: [Work with nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes).
+In n8n, nodes are individual components that you compose to create workflows. Some nodes start workflows; others fetch, send, and process data, define flow control logic, or connect with external services. Learn more: [Work with nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes).
 
 ### sub-workflow (n8n)
 
@@ -81,7 +81,7 @@ An agent is an autonomous assistant you build in n8n. Each agent has a language 
 
 ### AI agent <a href="#ai-agent" id="ai-agent"></a>
 
-AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available. In n8n you can build an AI agent in two ways: as an [agent](#agent-n8n), or with the [AI Agent node](#ai-agent-node-n8n) in a workflow. Learn more: [What's an agent in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/what-agents-do).
+An AI agent is an AI system that uses a large language model (LLM) to interpret a request and decide which actions to take, such as calling tools, to complete it. In n8n you can build an AI agent in two ways: as an [agent](#agent-n8n), or with the [AI Agent node](#ai-agent-node-n8n) in a workflow. Learn more: [What's an agent in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/what-agents-do).
 
 ### AI Agent node (n8n)
 
@@ -89,7 +89,7 @@ The AI Agent node adds an AI agent to a workflow. It's a cluster node: a root no
 
 ### AI chain <a href="#ai-chain" id="ai-chain"></a>
 
-AI chains let you interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this). Learn more: [What's a chain in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/what-chains-do).
+An AI chain calls an LLM and other components in a fixed sequence. Unlike an agent, a chain doesn't decide which steps to take. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this). Learn more: [What's a chain in AI?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/what-chains-do).
 
 ### AI memory <a href="#ai-memory" id="ai-memory"></a>
 
@@ -149,7 +149,7 @@ In AI, and specifically in retrieval-augmented generation (RAG) contexts, ground
 
 ### AI hallucination <a href="#ai-hallucination" id="ai-hallucination"></a>
 
-Hallucination in AI is when an LLM (large language model) mistakenly perceives patterns or objects that don't exist. Techniques such as RAG reduce hallucinations by grounding responses in source documents. Learn more: [RAG in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).
+A hallucination is output from an LLM (large language model) that sounds plausible but is false or unsupported by any source. Techniques such as RAG reduce hallucinations by grounding responses in source documents. Learn more: [RAG in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).
 
 ### AI reranking <a href="#ai-reranking" id="ai-reranking"></a>
 
@@ -161,7 +161,7 @@ Retrieval-augmented generation, or RAG, is a technique for providing LLMs access
 
 ### AI vector store <a href="#ai-vector-store" id="ai-vector-store"></a>
 
-A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions. Learn more: [What are vector databases?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/store-and-search-data-with-vectors).
+A vector store, or vector database, stores embeddings and returns the ones closest in meaning to a query. Combine a vector store with embeddings and a retriever to give your AI access to your own data. Learn more: [What are vector databases?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/store-and-search-data-with-vectors).
 
 ### LangChain <a href="#langchain" id="langchain"></a>
 

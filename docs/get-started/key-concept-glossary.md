@@ -140,42 +140,6 @@ n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub
 
 Tool approval is a human-in-the-loop check on an AI tool call. For a sensitive tool, the agent pauses and waits for a person to approve or reject the call before the tool runs. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#approve-tool-calls) and [Human-in-the-loop for AI tool calls](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/ai-examples/human-in-the-loop-for-tools).
 
-## General AI terms
-
-These terms aren't specific to n8n. Each definition explains how the term applies when you build AI workflows in n8n.
-
-### AI embedding <a href="#ai-embedding" id="ai-embedding"></a>
-
-Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or [vector stores](#ai-vector-store), are databases designed to store and access embeddings. Learn more: [What are vector databases?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/store-and-search-data-with-vectors).
-
-### AI groundedness <a href="#ai-groundedness" id="ai-groundedness"></a>
-
-In AI, and specifically in retrieval-augmented generation (RAG) contexts, groundedness and ungroundedness are measures of how much a model's responses accurately reflect source information. The model uses its source documents to generate grounded responses, while ungrounded responses involve speculation or hallucination unsupported by those same sources. Learn more: [RAG in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).
-
-### AI hallucination <a href="#ai-hallucination" id="ai-hallucination"></a>
-
-A hallucination is output from an LLM (large language model) that sounds plausible but is false or unsupported by any source. Techniques such as RAG reduce hallucinations by grounding responses in source documents. Learn more: [RAG in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).
-
-### AI reranking <a href="#ai-reranking" id="ai-reranking"></a>
-
-Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-augmented generation (RAG) and other applications use reranking to surface the most relevant information for generation or downstream tasks. Learn more: [Reranker Cohere](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere).
-
-### AI retrieval-augmented generation (RAG) <a href="#ai-retrieval-augmented-generation-rag" id="ai-retrieval-augmented-generation-rag"></a>
-
-Retrieval-augmented generation, or RAG, is a technique for providing LLMs access to new information from external sources to improve AI responses. RAG systems retrieve relevant documents to ground responses in up-to-date, domain-specific, or proprietary knowledge to supplement their original training data. RAG systems often rely on vector stores to manage and search this external data efficiently. Learn more: [RAG in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/retrieve-relevant-context).
-
-### AI vector store <a href="#ai-vector-store" id="ai-vector-store"></a>
-
-A vector store, or vector database, stores embeddings and returns the ones closest in meaning to a query. Combine a vector store with embeddings and a retriever to give your AI access to your own data. Learn more: [What are vector databases?](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/understand-ai-components/store-and-search-data-with-vectors).
-
-### LangChain <a href="#langchain" id="langchain"></a>
-
-LangChain is an AI-development framework used to work with large language models (LLMs). LangChain provides a standardized system for working with a wide variety of models and other resources and linking different components together to build complex applications. n8n represents most LangChain concepts as cluster nodes. Learn more: [LangChain in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n).
-
-### Large language model (LLM) <a href="#large-language-model-llm" id="large-language-model-llm"></a>
-
-Large language models, or LLMs, are AI machine learning models designed to excel in natural language processing (NLP) tasks. They're built by training on large amounts of data to develop probabilistic models of language and other data. In n8n, you connect an LLM to an agent or chain with a chat model sub-node. Learn more: [Sub-nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes).
-
 ## Organize, run, and publish
 
 ### draft (n8n)

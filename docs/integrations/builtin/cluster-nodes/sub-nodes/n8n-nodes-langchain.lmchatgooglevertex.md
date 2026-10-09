@@ -27,14 +27,15 @@ On this page, you'll find the node parameters for the Google Vertex AI Chat Mode
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Google Service Account documentation](../../credentials/google/service-account.md) for authentication information for this node.
+Use [Google Vertex AI credentials](../../credentials/googlevertexai.md) to store the project and region with your service account details. This node also supports [Google Service Account credentials](../../credentials/google/service-account.md).
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
-* **Project ID**: Select the project ID from your Google Cloud account to use. n8n dynamically loads projects from the Google Cloud account, but you can also enter it manually.
+* **Authentication**: Select **Google Vertex AI** or **Google Service Account**.
+* **Project ID**: For **Google Service Account** authentication, select or enter the project ID in the node. For **Google Vertex AI** authentication, configure the project in the credential.
 * **Model Name**: Select the name of the model to use to generate the completion, for example `gemini-1.5-flash-001`, `gemini-1.5-pro-001`, etc. Refer to [Google models](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models) for a list of available models.
 
 ## Node options <a href="#node-options" id="node-options"></a>

@@ -28,13 +28,15 @@ On this page, you'll find the node parameters for the Embeddings Google Vertex n
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Google Service Account documentation](../../credentials/google/service-account.md) for authentication information for this node.
+Use [Google Vertex AI credentials](../../credentials/googlevertexai.md) to store the project and region with your service account details. This node also supports [Google Service Account credentials](../../credentials/google/service-account.md).
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
+- **Authentication**: Select **Google Vertex AI** or **Google Service Account**.
+- **Project ID**: For **Google Service Account** authentication, select or enter the project ID in the node. For **Google Vertex AI** authentication, configure the project in the credential.
 - **Model**: Select the model to use to generate the embedding.
 
 Learn more about available embedding models in [Google VertexAI embeddings API documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api).

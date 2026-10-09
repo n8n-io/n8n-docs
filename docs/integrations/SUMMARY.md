@@ -718,6 +718,7 @@
       * [Google OAuth2 generic](builtin/credentials/google/oauth-generic.md)
       * [Google Service Account](builtin/credentials/google/service-account.md)
     * [Google Gemini(PaLM) credentials](builtin/credentials/googleai.md)
+    * [Google Vertex AI credentials](builtin/credentials/googlevertexai.md)
     * [Gotify credentials](builtin/credentials/gotify.md)
     * [GoToWebinar credentials](builtin/credentials/gotowebinar.md)
     * [Grafana credentials](builtin/credentials/grafana.md)

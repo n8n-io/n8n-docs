@@ -10,7 +10,7 @@ layout:
 
 # Databricks Genie One MCP server
 
-The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace. Genie One is the Databricks assistant for business users. It answers natural-language questions about your data by generating and running SQL against the tables that your workspace's Genie agents make available. To call one specific Genie agent (formerly a Genie space) by its Agent ID, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. The tile is labeled **Powered by Genie**, and every answer links back to the conversation in Databricks.
+The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace. Genie One is the Databricks assistant for business users. It routes each question to the relevant Genie agent in your workspace, or to other governed data assets when no agent matches, then generates and runs SQL to answer it. To call one specific Genie agent (formerly a Genie space) by its **Agent ID**, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. The tile is labeled **Powered by Genie**, and every answer links back to the conversation in Databricks.
 
 On this page, you'll find the prerequisites, setup steps, agent settings, and known issues for using Genie with an n8n agent.
 
@@ -44,7 +44,7 @@ Send the agent a question about your data, for example "How many trips are in th
 
 ## Tools
 
-Genie exposes four tools. Databricks picks the Genie agent, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the server name, for example `Databricks_Genie_One_MCP_genie_ask`, so don't reference the short names in prompts.
+Genie One exposes four tools. Databricks routes each question to a Genie agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the server name, for example `Databricks_Genie_One_MCP_genie_ask`, so don't reference the short names in prompts.
 
 | Tool | What it does |
 |------|--------------|

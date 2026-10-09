@@ -83,7 +83,7 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 
 - [Databricks credentials](../../credentials/databricks.md)
 - [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie agent REST operations
-- [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie
+- [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie One
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

@@ -1,5 +1,5 @@
 ---
-title: Use Browser Use
+title: Work with Browser Use
 description: >-
   Connect the n8n Browser Use extension so n8n Assistant can work in your
   browser and set up credentials for you.
@@ -12,7 +12,7 @@ layout:
     visible: false
 ---
 
-# Use Browser Use
+# Work with Browser Use
 
 Browser Use lets n8n Assistant work in your own browser. After you install the **n8n Browser Use** Chrome extension and connect it, n8n Assistant can open tabs, navigate sites, click, type, read pages, and set up credentials for you.
 
@@ -80,7 +80,7 @@ The secret goes straight from the page into the n8n credential. n8n Assistant ne
 ## Control what Browser Use can access
 
 - **Tabs:** n8n Assistant can only use tabs it opens itself and tabs you share when you connect. Shared tabs apply to the current connection only.
-- **Sites:** before n8n Assistant uses a new site, it asks **Allow n8n Assistant to access `<domain>`?** Select **Allow once**, **Always allow `<domain>`**, **Allow all domains**, or **Deny**.
+- **Sites:** before n8n Assistant uses a new site, it asks for permission. Select **Allow once** for the current response, **Allow for session** for the rest of the conversation, or **Deny**.
 - **Secrets on pages:** n8n hides API keys, passwords, and other secrets from n8n Assistant when it reads a page. It also blocks screenshots of pages that show secrets.
 - **Admin permissions:** instance admins can change these in **Settings** > **Assistant** > **Permissions**. Each can be **Allow**, **Ask first** (default), or **Block**:
   - **Fetch URLs** (in **Web**): controls the site prompt above. **Allow** skips it, and **Block** stops n8n Assistant from opening sites. This setting also applies to n8n Assistant's web access outside Browser Use.
@@ -94,7 +94,7 @@ Browser Use acts with your signed-in sessions. Check which site and action n8n A
 
 To disconnect, select **+** beside the chat input and select **Disconnect** next to Browser Use. You can also select **Disconnect** in the extension popup.
 
-If you selected **Always allow** for an instance, the extension connects to it without asking. To change this, open the extension and remove the instance from **Allowed instances**.
+Disconnecting ends the current connection only. If you selected **Always allow `<your-instance-host>`** when you connected, the extension reconnects to that instance without asking the next time n8n Assistant starts a browser connection. To stop this, open the extension and remove the instance from **Allowed instances**.
 
 ## Limitations
 
@@ -105,7 +105,7 @@ If you selected **Always allow** for an instance, the extension connects to it w
 
 ## Troubleshooting
 
-### We can't detect the extension
+### n8n can't detect the extension
 
 n8n can't find the n8n Browser Use extension. Check that it's installed and enabled in your browser's extension settings, then select **Try again**.
 

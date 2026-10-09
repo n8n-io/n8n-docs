@@ -185,7 +185,7 @@ For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
 ## Related resources
 
 * [Ways of building workflows](./)
-* [Use Browser Use](n8n-assistant/browser-use.md)
+* [Work with Browser Use](n8n-assistant/browser-use.md)
 * [Use n8n MCP server](connect-to-n8n-mcp-server.md)
 * [Use templates](use-templates.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)

@@ -12,6 +12,8 @@ layout:
 
 # Use a cloud provider <a href="#server-setups" id="server-setups"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 Self-host with Docker Compose:

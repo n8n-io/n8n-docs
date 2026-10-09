@@ -7,6 +7,8 @@ layout:
 
 # One-line setup <a href="#one-line-setup" id="one-line-setup"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Who this is for
 
 This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0. It's the fastest way to get n8n running, whether you've used Docker before or not.

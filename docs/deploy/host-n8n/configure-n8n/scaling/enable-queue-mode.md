@@ -19,6 +19,8 @@ You can run n8n in different modes depending on your needs. The queue mode provi
 n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](use-external-storage.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 

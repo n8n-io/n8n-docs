@@ -31,6 +31,8 @@ You can define external hooks that n8n executes whenever a specific operation ru
 | `EXTERNAL_HOOK_FILES_SEPARATOR` | String | `:` | Separator character for `EXTERNAL_HOOK_FILES`. Use `;` on Windows to avoid conflicts with drive-letter paths like `C:\`. |
 | `EXTERNAL_FRONTEND_HOOKS_URLS` | String | - | URLs to files containing frontend external hooks. Provide multiple URLs as a colon-separated list ("`:`"). |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

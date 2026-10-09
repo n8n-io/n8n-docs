@@ -26,6 +26,8 @@ The node saves the original incoming data, and with each iteration, returns a pr
 
 When the node execution completes, it combines all of the processed data and returns it through the **done** output.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## When to use the Loop Over Items node <a href="#when-to-use-the-loop-over-items-node" id="when-to-use-the-loop-over-items-node"></a>
 
 By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/loop) page.

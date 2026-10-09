@@ -12,6 +12,8 @@ layout:
 
 # `execution` <a href="#execution" id="execution"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `execution.id` <a href="#executionid" id="executionid"></a>
 
 Contains the unique ID of the current workflow execution.

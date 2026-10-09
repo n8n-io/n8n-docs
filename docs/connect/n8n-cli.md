@@ -27,6 +27,8 @@ Use the API CLI to:
 
 All operations respect the permissions of the user and the scope of the API key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n CLI versus server CLI <a href="#n8n-cli-versus-server-cli" id="n8n-cli-versus-server-cli"></a>
 
 If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.

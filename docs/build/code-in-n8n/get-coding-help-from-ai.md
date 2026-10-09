@@ -28,6 +28,8 @@ layout:
 
 # Get coding help from AI
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Use AI in the Code node <a href="#use-ai-in-the-code-node" id="use-ai-in-the-code-node"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1MYzyKWyHTaQMU44vlTt/" %}

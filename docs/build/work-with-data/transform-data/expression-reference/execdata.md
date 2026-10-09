@@ -10,6 +10,8 @@ layout:
 ---
 # ExecData <a href="#execdata" id="execdata"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$exec`.**`customData`** <a href="#dollarexeccustomdata" id="dollarexeccustomdata"></a>
 
 **Description:** Set and get custom execution data (e.g. to filter executions by). You can also do this with the ‘Execution Data’ node. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>

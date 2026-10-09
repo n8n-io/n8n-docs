@@ -10,6 +10,8 @@ layout:
 ---
 # CustomData <a href="#customdata" id="customdata"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$execution.customData`.**`get()`** <a href="#dollarexecutioncustomdataget" id="dollarexecutioncustomdataget"></a>
 
 **Description:** Returns the custom execution data stored under the given key. <a href="../../../understand-workflows/understand-executions/customize-executions-data.md">More info</a>

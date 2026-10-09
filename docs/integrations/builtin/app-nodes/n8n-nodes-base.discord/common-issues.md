@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Discord node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add extra fields to embeds <a href="#add-extra-fields-to-embeds" id="add-extra-fields-to-embeds"></a>
 
 Discord messages can optionally include embeds, a rich preview component that can include a title, description, image, link, and more.

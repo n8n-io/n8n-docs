@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [Azure AI Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 - [Embeddings Azure OpenAI](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Azure](https://azure.microsoft.com) subscription.

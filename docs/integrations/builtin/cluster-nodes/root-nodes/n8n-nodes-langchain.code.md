@@ -54,6 +54,8 @@ The LangChain Code node has critical security issues and isn't safe to use. It's
 This node is only available on self-hosted n8n.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Add Code <a href="#add-code" id="add-code"></a>

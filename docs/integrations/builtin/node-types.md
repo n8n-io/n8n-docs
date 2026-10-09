@@ -16,6 +16,8 @@ This section contains the node[^1] library: reference documentation for every bu
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nqwVeyXZtOyDsX8afllD/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Core nodes <a href="#core-nodes" id="core-nodes"></a>
 
 Core nodes can be actions or triggers[^2]. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.

@@ -10,6 +10,8 @@ layout:
 ---
 # DateTime <a href="#datetime" id="datetime"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## _`DateTime`_.**`day`** <a href="#datetimeday" id="datetimeday"></a>
 
 **Description:** The day of the month (1-31)

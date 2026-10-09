@@ -25,6 +25,8 @@ Use this operation to create, delete, change, and manage files in Google Drive. 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Copy a file <a href="#copy-a-file" id="copy-a-file"></a>
 
 Use this operation to copy a file to a drive.

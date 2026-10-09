@@ -25,3 +25,5 @@ Here are some common errors and issues with the [OpenAI node](README.md) and ste
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wqdQXLzKrIsqxA7CuhxT/" %}
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nAnAPqDqAcOOqFiJJrTl/" %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -17,6 +17,8 @@ The credentials file defines the authorization methods for the node. The setting
 
 In the credentials file, you can use all the [n8n UI elements](node-ui-elements.md). n8n encrypts the data that's stored using credentials using an encryption key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Structure of the credentials file <a href="#structure-of-the-credentials-file" id="structure-of-the-credentials-file"></a>
 
 The credentials file follows this basic structure:

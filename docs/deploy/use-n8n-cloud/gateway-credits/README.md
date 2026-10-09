@@ -13,6 +13,8 @@ Gateway credits let you use supported AI models and third-party services in your
 
 Gateway credits only pay for nodes in your workflows. They don't pay for n8n Assistant, which uses separate [Assistant credits](../assistant-credits/README.md), starting with a monthly allowance included in your plan. Topping up Gateway credits doesn't give n8n Assistant more credits.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Top up Gateway credits](top-up-gateway-credits.md): add credit manually or automatically.

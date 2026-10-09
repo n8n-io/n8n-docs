@@ -21,6 +21,8 @@ n8n packages are in Preview. Import behavior may change in future releases.
 
 This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Check everything, then write
 
 An import runs in two phases. First n8n plans it: it reads the package, works out what it would do with every entity, and collects any reason the import can't go ahead. Then it checks the collected reasons, along with license, permission, and quota requirements. Only if nothing is blocking does it start writing.

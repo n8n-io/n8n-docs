@@ -34,6 +34,8 @@ There are two concerns when managing data on n8n Cloud:
 
 To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Memory limits on each n8n Cloud plan <a href="#memory-limits-on-each-cloud-plan" id="memory-limits-on-each-cloud-plan"></a>
 
 Current plans:

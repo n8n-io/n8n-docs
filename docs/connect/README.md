@@ -76,3 +76,5 @@ Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server.md).
 {% endtabs %}
 
 You can also connect an MCP client to [the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md) so AI tools can search the docs, or [create your own node](create-nodes/README.md) to add a custom integration to n8n.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -33,6 +33,8 @@ Refer to the [Pushcut credentials documentation](../credentials/pushcut.md) for 
 For usage examples and templates to help you get started, refer to n8n's [Pushcut Trigger integrations](https://n8n.io/integrations/pushcut-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Configure a Pushcut action <a href="#configure-a-pushcut-action" id="configure-a-pushcut-action"></a>
 
 Follow these steps to configure your Pushcut Trigger node with your Pushcut app.

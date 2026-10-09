@@ -29,6 +29,8 @@ The Code node lets you run your own JavaScript or Python inside a workflow, so y
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/A6AUEJWQnhjgrypgRNwY/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 For common questions or issues and suggested solutions, refer to [Common Issues](common-issues.md).

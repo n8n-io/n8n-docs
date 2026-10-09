@@ -29,6 +29,8 @@ layout:
 
 n8n auto saves your workflow while you're editing. When you're ready to put the workflow into production, publish your workflow. This approach prevents accidental production changes while enabling safe iteration and review.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How saving works <a href="#how-saving-works" id="how-saving-works"></a>
 
 Changes save automatically as you edit, typically within 1 to 5 seconds. No manual save button is required. All edits remain in draft until you publish.

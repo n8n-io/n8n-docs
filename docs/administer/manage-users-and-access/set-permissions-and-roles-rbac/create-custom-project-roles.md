@@ -37,6 +37,8 @@ n8n has two types of custom roles:
 
 Custom project roles allow you to create roles with specific permissions tailored to your team's needs. Unlike the built-in project roles (Admin, Editor, Viewer), custom roles let you define granular access to workflows, credentials, and other project resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a custom role <a href="#create-a-custom-role" id="create-a-custom-role"></a>
 
 Instance owners and instance admins can create custom roles.

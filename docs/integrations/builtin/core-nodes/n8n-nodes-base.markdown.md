@@ -20,6 +20,8 @@ layout:
 
 The Markdown node converts between Markdown and HTML formats.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 This node's operations are **Modes**:

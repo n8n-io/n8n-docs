@@ -28,6 +28,8 @@ layout:
 Refer to the [Stripe credentials documentation](../credentials/stripe.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Webhook authentication <a href="#webhook-authentication" id="webhook-authentication"></a>
 
 {% hint style="info" %}

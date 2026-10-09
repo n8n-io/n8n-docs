@@ -35,6 +35,8 @@ RBAC in n8n lets you control access at two levels:
 
 This section provides guidance on setting up and using RBAC in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [See available roles](see-available-roles.md): understand the RBAC roles available in n8n, and the access they have.

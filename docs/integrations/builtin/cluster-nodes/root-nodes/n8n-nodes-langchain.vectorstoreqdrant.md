@@ -48,6 +48,8 @@ Refer to the [Qdrant credentials documentation](../../credentials/qdrant.md) for
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the Qdrant Vector Store node in the following patterns.

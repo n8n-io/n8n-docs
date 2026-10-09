@@ -23,6 +23,8 @@ The file and directory structure of your node depends on:
 
 n8n recommends using the [`n8n-node` tool](../build-your-node/using-the-n8n-node-tool.md) to create the expected node file structure. You can customize the generated scaffolding as required to meet more complex needs.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Required files and directories <a href="#required-files-and-directories" id="required-files-and-directories"></a>
 
 Your node must include:

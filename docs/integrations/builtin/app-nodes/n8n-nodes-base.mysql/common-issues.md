@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [MySQL node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Update rows by composite key <a href="#update-rows-by-composite-key" id="update-rows-by-composite-key"></a>
 
 The MySQL node's **Update** operation lets you to update rows in a table by providing a **Column to Match On** and a value. This works for tables where single column values can uniquely identify individual rows.

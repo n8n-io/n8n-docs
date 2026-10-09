@@ -35,6 +35,8 @@ Refer to the [Slack credentials documentation](../credentials/slack.md) for auth
 For usage examples and templates to help you get started, refer to n8n's [Slack integrations](https://n8n.io/integrations/slack-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 * **Any Event**: The node triggers on any event in Slack.

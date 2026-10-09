@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Microsoft SQL](../app-nodes/n8n-nodes-base.microsoftsql.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on a [Microsoft SQL server](https://learn.microsoft.com/en-us/sql/sql-server/what-is-sql-server) database.

@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Action Network](../app-nodes/n8n-nodes-base.actionnetwork.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key

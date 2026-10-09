@@ -15,6 +15,8 @@ You can favorite workflows, folders, projects, and data tables to pin them for q
 
 Favorites are personal to each user. Favoriting an item doesn't change who can view or edit it, and doesn't affect other users' favorites.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Favorite an item
 
 To favorite an item, select its **three-dot menu**, then select **Favorite**. To remove it from your favorites, select the same **three-dot menu**, then select **Unfavorite**.

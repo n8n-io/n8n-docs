@@ -20,6 +20,8 @@ layout:
 
 Use the Summarize node to aggregate items together, in a manner similar to Excel pivot tables.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Fields to Summarize <a href="#fields-to-summarize" id="fields-to-summarize"></a>

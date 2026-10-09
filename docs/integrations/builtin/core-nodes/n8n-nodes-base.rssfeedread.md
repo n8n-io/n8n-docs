@@ -20,6 +20,8 @@ layout:
 
 Use the RSS Read node to read data from RSS feeds published on the internet.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 - **URL**: Enter the URL for the RSS publication you want to read.

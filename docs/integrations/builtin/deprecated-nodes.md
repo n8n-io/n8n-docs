@@ -13,6 +13,8 @@ layout:
 
 n8n improves its node library over time. This page lists removed nodes (fully removed), deprecated nodes (retired but still functional), and versioned nodes (active with multiple versions available).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Deprecated nodes <a href="#deprecated-nodes" id="deprecated-nodes"></a>
 
 n8n won't release further updates or bug fixes for deprecated nodes. Existing workflows that use them continue to run, but you should migrate to a supported alternative.

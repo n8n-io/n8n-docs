@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Wekan](../app-nodes/n8n-nodes-base.wekan.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install [Wekan](https://github.com/wekan/wekan/wiki) on your server.

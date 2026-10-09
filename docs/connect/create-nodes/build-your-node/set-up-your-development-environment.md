@@ -15,6 +15,8 @@ layout:
 
 This document lists the essential dependencies for developing a node, as well as guidance on setting up your editor.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Requirements <a href="#requirements" id="requirements"></a>
 
 To build and test a node, you need: 

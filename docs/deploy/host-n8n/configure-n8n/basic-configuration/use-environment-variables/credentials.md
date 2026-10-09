@@ -33,6 +33,8 @@ Enable credential overwrites using the following environment variables. Refer to
 | `N8N_MANAGED_OAUTH_SHOW_SCOPES` | String | - | Comma-separated list of managed OAuth credential types for which users can configure scope fields. |
 | `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | The default name for credentials. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

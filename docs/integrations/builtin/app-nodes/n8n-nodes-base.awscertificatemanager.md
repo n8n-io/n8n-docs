@@ -29,6 +29,8 @@ On this page, you'll find a list of operations the AWS Certificate Manager node 
 Refer to [AWS Certificate Manager credentials](../credentials/aws.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Certificate

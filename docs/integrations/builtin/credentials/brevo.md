@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 * [Brevo node](../app-nodes/n8n-nodes-base.brevo.md)
 * [Brevo Trigger node](../trigger-nodes/n8n-nodes-base.brevotrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Brevo](https://www.brevo.com/) developer account.

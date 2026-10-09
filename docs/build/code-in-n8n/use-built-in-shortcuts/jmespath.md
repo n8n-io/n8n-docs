@@ -26,6 +26,8 @@ The Python Code node doesn't provide this method. To query JSON in Python, use s
 | ------ | ----------- | :-------------------------: |
 | `$jmespath()` | Perform a search on a JSON object using JMESPath. | ✅ |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Use built-in shortcuts](../use-built-in-shortcuts.md)

@@ -7,6 +7,8 @@ layout:
 
 Learn the core building blocks of AI workflows in n8n: chains, agents, memory, tools, and vector databases.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [What chains do](what-chains-do.md): understand chains in the context of AI.

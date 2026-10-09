@@ -20,6 +20,8 @@ layout:
 
 Use row operations to delete, get, insert, update, upsert, or filter rows in a data table. Refer to the [Data Table node](README.md) documentation for more information on the node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Delete row <a href="#delete-row" id="delete-row"></a>
 
 Use this operation to delete one or more rows from a data table, based on a defined condition(s).

@@ -48,6 +48,8 @@ Every message to the Chat Trigger executes your workflow. This means that one co
 The Chat Trigger node is available from n8n 1.24.0, replacing the Manual Chat Trigger node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Make Chat Publicly Available <a href="#make-chat-publicly-available" id="make-chat-publicly-available"></a>

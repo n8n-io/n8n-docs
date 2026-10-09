@@ -17,6 +17,8 @@ Use the Databricks Trigger node to respond to events in [Databricks](https://www
 Refer to [Databricks credentials](../credentials/databricks.md) for guidance on setting up authentication. The node accepts the **Databricks** (access token) and **Databricks OAuth2 API** credentials.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Set up the trigger
 
 1. Add a **Databricks Trigger** node to a workflow. In the node picker, search for `Databricks` and open the **Databricks** entry. It lists the job events as triggers; pick any of them, then set **Resource** and **Events** in the node.

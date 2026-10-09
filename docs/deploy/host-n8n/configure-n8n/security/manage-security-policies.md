@@ -30,6 +30,8 @@ Security settings let you manage instance-wide security policies. You can enforc
 
 To access security settings, navigate to **Settings** > **Security**.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Enforce two-factor authentication <a href="#enforce-two-factor-authentication" id="enforce-two-factor-authentication"></a>
 
 You can require all users on your instance to set up two-factor authentication (2FA) when they sign in with email and password.

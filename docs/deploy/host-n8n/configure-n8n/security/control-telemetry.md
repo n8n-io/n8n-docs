@@ -30,6 +30,8 @@ layout:
 
 n8n collects anonymous telemetry data from self-hosted n8n installations. You can opt out of data telemetry collection.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Collected data <a href="#collected-data" id="collected-data"></a>
 
 Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#data-collection-in-self-hosted-n8n) for details on the data n8n collects.

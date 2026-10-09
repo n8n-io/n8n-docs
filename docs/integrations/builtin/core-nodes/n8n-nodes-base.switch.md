@@ -20,6 +20,8 @@ layout:
 
 Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](n8n-nodes-base.if.md) node, but supports multiple output routes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Select the **Mode** the node should use:

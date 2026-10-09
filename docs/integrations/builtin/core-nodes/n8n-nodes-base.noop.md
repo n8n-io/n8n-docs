@@ -20,6 +20,8 @@ layout:
 
 Use the No Operation, do nothing node when you don't want to perform any operations. The purpose of this node is to make the workflow easier to read and understand where the flow of data stops. This can help others visually get a better understanding of the workflow.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

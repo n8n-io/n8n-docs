@@ -14,6 +14,8 @@ layout:
 
 # Troubleshooting OIDC SSO <a href="#troubleshooting-oidc-sso" id="troubleshooting-oidc-sso"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Known issues <a href="#known-issues" id="known-issues"></a>
 
 ### State parameter not supported <a href="#state-parameter-not-supported" id="state-parameter-not-supported"></a>

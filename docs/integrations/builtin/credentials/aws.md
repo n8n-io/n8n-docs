@@ -25,6 +25,8 @@ n8n offers two credential types for AWS:
 
 If you self-host n8n on AWS infrastructure (EKS, ECS, or EC2) and want to avoid storing static keys in n8n, see [Using AWS system credentials](#using-aws-system-credentials-federated-authentication).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## AWS (IAM) credentials <a href="#aws-iam-credentials" id="aws-iam-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:

@@ -35,6 +35,8 @@ Refer to the [Workable credentials documentation](../credentials/workable.md) fo
 For usage examples and templates to help you get started, refer to n8n's [Workable Trigger integrations](https://n8n.io/integrations/workable-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 - **Candidate Created**

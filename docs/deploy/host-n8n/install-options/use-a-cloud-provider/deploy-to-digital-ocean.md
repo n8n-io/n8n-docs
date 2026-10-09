@@ -23,6 +23,8 @@ Once n8n is up and running, an optional last section covers adding n8n Assistant
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a Droplet <a href="#create-a-droplet" id="create-a-droplet"></a>
 
 1. [Log in](https://cloud.digitalocean.com/login) to DigitalOcean. 

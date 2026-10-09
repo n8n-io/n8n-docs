@@ -25,6 +25,8 @@ Here are a couple of other ways of expressing it:
 
 > We can think of these tools as being almost like functions that your AI model can call ([source](https://www.udemy.com/course/chatgpt-and-langchain-the-complete-developers-masterclass/))
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## AI tools in n8n <a href="#ai-tools-in-n8n" id="ai-tools-in-n8n"></a>
 
 n8n provides built in nodes[^1] and a registry of [MCP servers](../mcp-servers.md) that you can connect to your [AI agent](#user-content-fn-2)[^2] as tools. Built-in nodes include popular services such as [Wikipedia](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia) and [SerpAPI](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi).

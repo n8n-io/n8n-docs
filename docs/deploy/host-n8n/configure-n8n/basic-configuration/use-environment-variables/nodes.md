@@ -25,6 +25,8 @@ layout:
 
 This page lists the environment variables configuration options for managing nodes[^1] in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, enabling community nodes, and configuring node-specific limits.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Nodes and community node settings <a href="#nodes-and-community-node-settings" id="nodes-and-community-node-settings"></a>
 
 | Variable                                 | Type             | Default                       | Description                                                                                                                                                                                                                           |

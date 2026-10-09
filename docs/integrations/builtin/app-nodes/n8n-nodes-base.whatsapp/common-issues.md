@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [WhatsApp Business Cloud node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Bad request - please check your parameters <a href="#bad-request-please-check-your-parameters" id="bad-request-please-check-your-parameters"></a>
 
 This error occurs when WhatsApp Business Cloud rejects your request because of a problem with its parameters. It's common to see this when using the **Send Template** operation if the data you send doesn't match the format of your template.

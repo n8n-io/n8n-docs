@@ -30,6 +30,8 @@ All data transformation functions (the top-level helper functions listed in this
 
 The [Cookbook](README.md) contains examples for some common tasks, including some [Code node only](cookbook/code-node/README.md) functions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [JMESPath](use-built-in-shortcuts/jmespath.md): use the JMESPath library in n8n.

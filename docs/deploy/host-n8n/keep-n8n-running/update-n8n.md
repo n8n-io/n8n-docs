@@ -29,6 +29,8 @@ For instructions on how to update, refer to the documentation for your installat
 * [Installed with npm](../install-options/install-with-npm.md#updating)
 * [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Keep n8n running](./)

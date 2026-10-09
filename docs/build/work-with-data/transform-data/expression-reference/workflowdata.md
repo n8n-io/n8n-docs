@@ -10,6 +10,8 @@ layout:
 ---
 # WorkflowData <a href="#workflowdata" id="workflowdata"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$workflow`.**`active`** <a href="#dollarworkflowactive" id="dollarworkflowactive"></a>
 
 **Description:** Whether the workflow is active

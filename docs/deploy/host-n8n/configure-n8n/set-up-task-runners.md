@@ -42,6 +42,8 @@ Task runners are the only isolation layer between user-provided code and n8n. Wi
 In production, and on any instance holding sensitive data, use [external mode](set-up-task-runners.md#external-mode) plus the measures in [Hardening task runners](security/harden-task-runners.md). Skipping external mode to save hosting costs is only a reasonable tradeoff on isolated instances that hold nothing but trusted or mock data.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.

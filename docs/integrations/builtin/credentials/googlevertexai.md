@@ -14,6 +14,8 @@ You can use these credentials with the following nodes:
 * [Google Vertex Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md)
 * [Embeddings Google Vertex](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 * A [Google Cloud](https://cloud.google.com/) account.

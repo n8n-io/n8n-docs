@@ -13,6 +13,8 @@ layout:
 
 Understanding how n8n structures and passes data between nodes is fundamental to building workflows. This guide covers both the data structure format and how data flows through your workflow.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Data structure <a href="#data-structure" id="data-structure"></a>
 
 In n8n, all data passed between nodes is an array of objects. It has the following structure:

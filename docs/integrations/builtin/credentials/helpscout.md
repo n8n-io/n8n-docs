@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Help Scout](../app-nodes/n8n-nodes-base.helpscout.md)
 - [Help Scout Trigger](../trigger-nodes/n8n-nodes-base.helpscouttrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Help Scout](https://www.helpscout.com/) account.

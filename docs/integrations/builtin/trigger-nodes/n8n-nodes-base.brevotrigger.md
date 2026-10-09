@@ -33,6 +33,8 @@ Refer to the [Brevo credentials documentation](../credentials/brevo.md) for auth
 For usage examples and templates to help you get started, refer to n8n's [Brevo Trigger integrations](https://n8n.io/integrations/brevo-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 * Email blocked

@@ -30,6 +30,8 @@ Refer to the [Perplexity credentials documentation](../credentials/perplexity.md
 {% endhint %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * **Message a Model**: Create one or more completions for a given text.

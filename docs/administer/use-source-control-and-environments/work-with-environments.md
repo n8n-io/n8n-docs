@@ -19,6 +19,8 @@ n8n has built its environments feature on top of Git, a version control software
 * The purpose of environments.
 * How environments work in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Environments: What and why <a href="#environments-what-and-why" id="environments-what-and-why"></a>
 
 In software development, the environment is all the infrastructure and tooling around the code, including the tools that run the software, and the specific configuration of those tools. For a more detailed introduction to environments in software development, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments).

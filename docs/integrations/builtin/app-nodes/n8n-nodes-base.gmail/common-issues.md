@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [Gmail node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Remove the n8n attribution from sent messages <a href="#remove-the-n8n-attribution-from-sent-messages" id="remove-the-n8n-attribution-from-sent-messages"></a>
 
 If you're using the node to [send a message](message-operations.md#send-a-message) or [reply to a message](message-operations.md#reply-to-a-message), the node appends this statement to the end of the email:

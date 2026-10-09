@@ -15,6 +15,8 @@ layout:
 
 There are two methods to support TLS/SSL in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Use a reverse proxy (recommended) <a href="#use-a-reverse-proxy-recommended" id="use-a-reverse-proxy-recommended"></a>
 
 Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/) or a Network Load Balancer (NLB) in front of the n8n instance. This should also take care of certificate renewals.

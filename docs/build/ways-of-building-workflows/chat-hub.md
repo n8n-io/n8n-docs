@@ -27,6 +27,8 @@ layout:
 
 # Chat Hub
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Overview <a href="#overview" id="overview"></a>
 
 Chat Hub is a centralized AI chat interface where you can access multiple AI models, interact with n8n agents, and create your own agents. Chat Hub also introduces Chat user, a role that lets users interact with the chat interface without accessing n8n workflows.

@@ -32,3 +32,5 @@ Refer to the [SurveyMonkey credentials documentation](../credentials/surveymonke
 
 For usage examples and templates to help you get started, refer to n8n's [SurveyMonkey Trigger integrations](https://n8n.io/integrations/surveymonkey-trigger/) page.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

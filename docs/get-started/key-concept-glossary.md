@@ -13,6 +13,8 @@ layout:
 
 This glossary defines the terms n8n uses for building, running, and managing workflows and agents. Each entry links to the page that explains the concept in full.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Workflow building blocks
 
 ### canvas (n8n) <a href="#canvas-n8n" id="canvas-n8n"></a>

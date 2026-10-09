@@ -28,6 +28,8 @@ Server-Side Request Forgery (SSRF) attacks abuse workflow nodes to make requests
 SSRF protection is an additional application-level defense. You should always configure network-level protections (firewalls, security groups, network policies) on your infrastructure as your primary line of defense. n8n's SSRF protection adds defense-in-depth on top of those controls.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Enable SSRF protection <a href="#enable-ssrf-protection" id="enable-ssrf-protection"></a>
 
 ```

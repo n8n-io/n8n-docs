@@ -24,6 +24,8 @@ The RSS Feed Trigger node allows you to start an n8n workflow when a new RSS fee
 
 On this page, you'll find a list of operations the RSS Feed Trigger node supports, and links to more resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to the sections below to configure the parameters for each mode type.

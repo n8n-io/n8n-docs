@@ -31,6 +31,8 @@ The HTML node is available from n8n 0.213.0, replacing the HTML Extract node. If
 When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://community.owasp.org/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Generate HTML template**](#generate-html-template): Use this operation to create an HTML template. This allows you to take data from your workflow and output it as HTML.

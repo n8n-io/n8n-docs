@@ -25,6 +25,8 @@ layout:
 Here are some common errors and issues with the [Google Drive Trigger node](README.md) and steps to resolve or troubleshoot them.
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## 401 unauthorized error <a href="#401-unauthorized-error" id="401-unauthorized-error"></a>
 
 The full text of the error looks like this:

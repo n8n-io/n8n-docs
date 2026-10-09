@@ -41,6 +41,8 @@ If n8n instance is setup with [Task Runners](../../set-up-task-runners.md), add 
 
 Refer to [Environment variables reference](../use-environment-variables/nodes.md) for more information on these variables.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Configuration examples](./)

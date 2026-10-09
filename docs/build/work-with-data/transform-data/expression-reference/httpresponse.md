@@ -10,6 +10,8 @@ layout:
 ---
 # HTTPResponse <a href="#httpresponse" id="httpresponse"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$response`.**`body`** <a href="#dollarresponsebody" id="dollarresponsebody"></a>
 
 **Description:** The body of the response object from the last HTTP call. Only available in the ‘HTTP Request’ node

@@ -38,6 +38,8 @@ layout:
 | `N8N_GIT_NODE_ENABLE_HOOKS` | Boolean | `false` | Set to `true` to allow the [Git node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.git) to execute Git hooks. |
 | `N8N_POSTMESSAGE_ALLOWED_ORIGINS` | String |  | Origins allowed to exchange `postMessage` commands with the editor when it's embedded in another page. Only relevant when embedding the editor is possible, for example when running with `N8N_PREVIEW_MODE=true`. Provide multiple origins as a comma-separated list, for example `https://n8n.io,https://app.example.com`. When empty (the default), the editor accepts messages from any origin. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Security policy using environment variables <a href="#security-policy-using-environment-variables" id="security-policy-using-environment-variables"></a>
 
 Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` to manage the security policy from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.

@@ -7,6 +7,8 @@ layout:
 
 Configure, tag, share, and maintain your workflows as they grow.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Configure workflow settings](configure-workflow-settings.md): manage settings for an individual workflow.

@@ -23,6 +23,8 @@ You can find Docker Compose configurations for various architectures in the [n8n
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## 1. Install Docker and Docker Compose <a href="#1-install-docker-and-docker-compose" id="1-install-docker-and-docker-compose"></a>
 
 The way that you install Docker and Docker Compose depends on your Linux distribution. You can find specific instructions for each component in the links below:

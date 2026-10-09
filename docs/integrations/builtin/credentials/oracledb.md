@@ -44,6 +44,8 @@ You can use these credentials to authenticate the following nodes:
 These nodes do not support SSH tunnels. They require Oracle Database **19c or later**. For advanced Oracle Database features like Transparent Application Continuity (TAC) and Sharding, they also require Oracle Client Libraries **19c or later**.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on an [Oracle Database](https://www.oracle.com/pls/topic/lookup?ctx=dblatest\&id=GUID-F0246961-558F-480B-AC0F-14B50134621C) server.

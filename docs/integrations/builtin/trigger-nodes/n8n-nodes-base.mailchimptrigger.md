@@ -32,3 +32,5 @@ Refer to the [Mailchimp credentials documentation](../credentials/mailchimp.md) 
 
 For usage examples and templates to help you get started, refer to n8n's [Mailchimp Trigger integrations](https://n8n.io/integrations/mailchimp-trigger/) page.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

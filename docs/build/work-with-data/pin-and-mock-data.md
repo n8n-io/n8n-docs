@@ -26,6 +26,8 @@ Both approaches save time and resources during development, help you work with c
 Data pinning and mocking are features to help test workflows during development. Data pinning isn't available for production workflow executions.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Data mocking approaches <a href="#data-mocking-approaches" id="data-mocking-approaches"></a>
 
 Create test data to work with during development. You can create mock data in several ways:

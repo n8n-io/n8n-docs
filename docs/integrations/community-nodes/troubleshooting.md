@@ -11,6 +11,8 @@ layout:
 
 # Troubleshooting and errors <a href="#troubleshooting-and-errors" id="troubleshooting-and-errors"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Error: Missing packages <a href="#error-missing-packages" id="error-missing-packages"></a>
 
 n8n installs community nodes directly onto the hard disk. The files must be available at startup for n8n to load them. If the packages aren't available at startup, you get an error warning of missing packages.

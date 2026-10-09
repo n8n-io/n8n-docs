@@ -17,6 +17,8 @@ One way to think of an agent[^1] is as a [chain](what-chains-do.md) that knows h
 
 Agents are the part of AI that act as decision-makers. They can interact with other agents and tools[^2]. When you send a query to an agent, it tries to choose the best tools to use to answer. Agents adapt to your specific queries, as well as the prompts that configure their behavior.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Agents in n8n <a href="#agents-in-n8n" id="agents-in-n8n"></a>
 
 n8n provides one Agent node, which can act as different types of agent depending on the settings you choose. Refer to the [Agent node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) for details on the available agent types.

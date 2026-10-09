@@ -17,6 +17,8 @@ Workflow tags allow you to label your workflows. You can then filter workflows b
 
 Tags are global. This means when you create a tag, it's available to all users on your n8n instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add a tag to a workflow <a href="#add-a-tag-to-a-workflow" id="add-a-tag-to-a-workflow"></a>
 
 To add a tag to your workflow:

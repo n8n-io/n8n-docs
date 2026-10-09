@@ -38,6 +38,8 @@ You can use these credentials to authenticate the following nodes:
 * [JWT](../core-nodes/n8n-nodes-base.jwt.md)
 * [Webhook](../core-nodes/n8n-nodes-base.webhook/README.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * Passphrase: Signed with a secret with HMAC algorithm

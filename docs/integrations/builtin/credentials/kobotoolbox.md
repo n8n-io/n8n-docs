@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 * [KoboToolbox trigger](../trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md)
 * [KoboToolbox](../app-nodes/n8n-nodes-base.kobotoolbox.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [KoboToolbox](https://www.kobotoolbox.org/) account.

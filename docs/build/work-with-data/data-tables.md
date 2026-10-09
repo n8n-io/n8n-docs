@@ -17,6 +17,8 @@ layout:
 
 # Data tables <a href="#data-tables" id="data-tables"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Overview <a href="#overview" id="overview"></a>
 
 Data tables integrate data storage within your n8n environment. Using data tables, you can save, manage, and interact with data directly in your workflows without relying on external database systems for scenarios such as:

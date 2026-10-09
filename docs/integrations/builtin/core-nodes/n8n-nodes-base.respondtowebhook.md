@@ -43,6 +43,8 @@ Use the Respond to Webhook node to control the response to incoming webhooks. Th
 The Respond to Webhook node runs once, using the first incoming data item. Refer to [Return more than one data item](n8n-nodes-base.respondtowebhook.md#return-more-than-one-data-item-deprecated) for more information.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How to use Respond to Webhook <a href="#how-to-use-respond-to-webhook" id="how-to-use-respond-to-webhook"></a>
 
 To use the Respond to Webhook node:

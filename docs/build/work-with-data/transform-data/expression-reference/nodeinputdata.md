@@ -10,6 +10,8 @@ layout:
 ---
 # NodeInputData <a href="#nodeinputdata" id="nodeinputdata"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$input`.**`all()`** <a href="#dollarinputall" id="dollarinputall"></a>
 
 **Description:** Returns an array of the current node’s input items

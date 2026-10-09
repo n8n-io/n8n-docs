@@ -8,6 +8,8 @@ layout:
 
 Compare ways to install self-hosted n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [One-line setup](one-line-setup.md): install n8n from the command line using a one-line setup.

@@ -40,6 +40,8 @@ This page describes version 3.1. Some controls aren't available on earlier versi
 You can find the node version at the bottom of the node's settings panel.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters
 
 ### Agent

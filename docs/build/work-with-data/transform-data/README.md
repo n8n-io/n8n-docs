@@ -7,6 +7,8 @@ layout:
 
 n8n gives you several ways to modify, restructure, or enrich data as it moves through your workflow.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Approaches for transforming data](approaches-for-transforming-data.md): compare transformation nodes, expressions, the Code node, and the AI Transform node.

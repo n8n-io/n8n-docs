@@ -21,6 +21,8 @@ This section includes:
 * How to [share your node](deploy-your-node/submit-community-nodes.md) with the community, submit it for [verification by n8n](deploy-your-node/submit-community-nodes.md), or use it as a [private node](deploy-your-node/install-private-nodes.md).
 * [Reference material](build-your-node/reference/README.md), including UI elements and information on the individual files that make up a node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 This section assumes the following:

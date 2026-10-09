@@ -28,6 +28,8 @@ Use the Convert to File node to take input data and output it as a file. This co
 To extract data from a file and convert it to JSON, use the [Extract from File](n8n-nodes-base.extractfromfile.md) node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Convert to CSV**](#convert-to-csv)

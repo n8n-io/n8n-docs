@@ -7,6 +7,8 @@ layout:
 
 Store and share the authentication details your workflows need, without spreading secrets across your instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Share credentials securely](share-credentials-securely.md): share credentials within an organization.

@@ -17,6 +17,8 @@ layout:
 
 When working with data in n8n, you'll often need to reference information from the current node or from previous nodes in your workflow. 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Common ways of referencing <a href="#common-ways-of-referencing" id="common-ways-of-referencing"></a>
 
 The most frequently used methods for accessing data are:

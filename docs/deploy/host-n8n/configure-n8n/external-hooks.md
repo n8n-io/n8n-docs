@@ -24,6 +24,8 @@ There are two types:
 
 For the environment variables used to register hooks, refer to [External hooks environment variables](basic-configuration/use-environment-variables/external-hooks.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Backend hooks <a href="#backend-hooks" id="backend-hooks"></a>
 
 ### Available hooks <a href="#available-hooks" id="available-hooks"></a>

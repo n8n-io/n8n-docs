@@ -22,6 +22,8 @@ layout:
 
 Use the Stop And Error node to display custom error messages, cause executions to fail under certain conditions, and send custom error information to error workflows.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Error Message

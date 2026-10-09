@@ -45,6 +45,8 @@ If you call the endpoint rather than using the CLI, the request must be `multipa
 Omit an option you don't want to set rather than sending it empty. A blank value for one of the policy or mode fields is rejected with a `400`. Only `projectId`, `folderId`, and `bindings` accept a blank value, which n8n treats as omitted.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Where the contents land
 
 For a workflow or folder package, you choose the destination:

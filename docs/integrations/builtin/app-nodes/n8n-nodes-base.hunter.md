@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Hunter node supports and link
 Refer to [Hunter credentials](../credentials/hunter.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Get every email address found on the internet using a given domain name, with sources

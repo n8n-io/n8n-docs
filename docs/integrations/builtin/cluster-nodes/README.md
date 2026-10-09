@@ -16,6 +16,8 @@ layout:
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/nQYOCBZiuZBtHlBAOFq9/" %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Root nodes <a href="#root-nodes" id="root-nodes"></a>
 
 Each cluster starts with one [root node](#user-content-fn-1)[^1].

@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [HTTP Request node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Bad request - please check your parameters <a href="#bad-request-please-check-your-parameters" id="bad-request-please-check-your-parameters"></a>
 
 This error displays when the node receives a 400 error indicating a bad request. This error most often occurs because:

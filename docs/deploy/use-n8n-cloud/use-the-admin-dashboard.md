@@ -14,6 +14,8 @@ layout:
 
 Instance owners can access the admin dashboard to manage their Cloud instance. This is where you can upgrade your n8n version and set the timezone.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Access the dashboard from the app <a href="#access-the-dashboard-from-the-app" id="access-the-dashboard-from-the-app"></a>
 
 1. [Log in to n8n](https://app.n8n.cloud/magic-link)

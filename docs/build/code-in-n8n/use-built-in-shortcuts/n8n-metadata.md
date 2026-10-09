@@ -28,6 +28,8 @@ This includes:
 You can use Python in the Code node. It isn't available in expressions.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## JavaScript
 
 | Method | Description | Available in Code node? |

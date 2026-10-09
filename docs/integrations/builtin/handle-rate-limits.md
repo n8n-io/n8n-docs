@@ -32,6 +32,8 @@ API[^1] rate limits are restrictions on request frequency. For example, an API m
 
 APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Identify rate limit issues <a href="#identify-rate-limit-issues" id="identify-rate-limit-issues"></a>
 
 When an n8n node hits a rate limit, it errors. n8n displays the error message in the node output panel. This includes the error message from the service.

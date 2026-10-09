@@ -25,6 +25,8 @@ Watch a tutorial on credential overwrites, including how to set them up [using t
 
 {% embed url="https://www.youtube.com/embed/VtCbCdKrqAE" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Using environment variables <a href="#using-environment-variables" id="using-environment-variables"></a>
 
 Set `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.

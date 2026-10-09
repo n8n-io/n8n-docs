@@ -36,6 +36,8 @@ The SQL Agent uses a SQL database as a data source. It can understand natural la
 
 Refer to [AI Agent](README.md) for more information on the AI Agent node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the SQL Agent using the following parameters.

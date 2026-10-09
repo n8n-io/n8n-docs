@@ -27,6 +27,8 @@ You can use these credentials to authenticate the following nodes:
 n8n provides two nodes for TheHive. Use these credentials with TheHive node for TheHive 3 or TheHive 4. If you're using TheHive5 node, use [TheHive 5 credentials](thehive5.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install [TheHive](https://docs.strangebee.com/thehive/installation/installation-methods/) on your server.

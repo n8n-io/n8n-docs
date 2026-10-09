@@ -38,6 +38,8 @@ layout:
 
 Here are some common issues and questions for the [Webhook node](./README.md) and suggested solutions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Listen for multiple HTTP methods <a href="#listen-for-multiple-http-methods" id="listen-for-multiple-http-methods"></a>
 
 By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:

@@ -33,6 +33,8 @@ Use this operation to create, delete, list, message, or update an assistant in O
 Assistant operations are deprecated in OpenAI node V2, introduced in n8n 1.117.0. OpenAI node V2 supports the OpenAI Responses API, and removes support for the [to-be-deprecated Assistants API](https://platform.openai.com/docs/assistants/migration).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create an Assistant <a href="#create-an-assistant" id="create-an-assistant"></a>
 
 Use this operation to create a new assistant.

@@ -27,6 +27,8 @@ layout:
 
 Use the If node to split a workflow conditionally based on comparison operations.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add conditions <a href="#add-conditions" id="add-conditions"></a>
 
 Create comparison **Conditions** for your If node.

@@ -14,6 +14,8 @@ layout:
 
 You can build your own nodes and install them in your n8n instance without publishing them on npm. This is useful for nodes that you create for internal use only at your company.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Install your node in a Docker n8n instance <a href="#install-your-node-in-a-docker-n8n-instance" id="install-your-node-in-a-docker-n8n-instance"></a>
 
 If you're running n8n using Docker, you need to create a Docker image with the node installed in n8n. 

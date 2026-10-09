@@ -19,6 +19,8 @@ You can use these credentials to authenticate the following nodes when you enabl
 
 The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro messages. This credential is separate from your [Kafka credentials](kafka.md): the registry has its own endpoint and authentication, distinct from the Kafka brokers.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods
 
 - None

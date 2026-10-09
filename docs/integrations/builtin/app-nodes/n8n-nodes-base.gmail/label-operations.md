@@ -22,6 +22,8 @@ layout:
 
 Use the Label operations to create, delete, or get a label or list labels in Gmail. Refer to the [Gmail node](README.md) for more information on the Gmail node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a label <a href="#create-a-label" id="create-a-label"></a>
 
 Use this operation to create a new label.

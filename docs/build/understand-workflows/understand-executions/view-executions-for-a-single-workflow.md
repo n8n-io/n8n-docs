@@ -32,6 +32,8 @@ Workflow history is previous versions of the workflow: for example, a version wi
 {% endhint %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## View executions for a single workflow <a href="#view-executions-for-a-single-workflow" id="view-executions-for-a-single-workflow"></a>
 
 In the workflow, select the **Executions** tab in the top menu. You can preview all executions of that workflow.

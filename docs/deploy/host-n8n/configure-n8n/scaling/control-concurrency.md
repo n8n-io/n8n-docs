@@ -38,6 +38,8 @@ Keep in mind:
 
 When you enable concurrency control, you can view the number of active executions and the configured limit at the top of a project's or workflow's executions tab.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Comparison to queue mode <a href="#comparison-to-queue-mode" id="comparison-to-queue-mode"></a>
 
 In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](enable-queue-mode.md#configure-worker-concurrency).

@@ -16,6 +16,8 @@ This guide walks you through deploying n8n on OpenShift Local (CRC), Red Hat's t
 
 You will need a machine with significant resources available, given how many resources OpenShift itself consumes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## OpenShift concepts vs standard Kubernetes <a href="#openshift-concepts-vs-standard-kubernetes" id="openshift-concepts-vs-standard-kubernetes"></a>
 
 OpenShift is built on Kubernetes but uses different terminology and has stricter security defaults. If you are familiar with standard Kubernetes, or with a guide that targets a managed Kubernetes service such as EKS, the table below maps the equivalent concepts so you know what to expect.

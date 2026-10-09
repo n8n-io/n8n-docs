@@ -22,6 +22,8 @@ Use the n8n Form trigger to start a workflow when a user submits a form, taking 
 
 You can add more pages to continue the form with the [n8n Form](n8n-nodes-base.form.md) node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Build and test workflows <a href="#build-and-test-workflows" id="build-and-test-workflows"></a>
 
 While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 

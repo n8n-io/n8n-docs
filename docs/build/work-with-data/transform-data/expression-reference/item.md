@@ -10,6 +10,8 @@ layout:
 ---
 # Item <a href="#item" id="item"></a>
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## `$item`.**`binary`** <a href="#dollaritembinary" id="dollaritembinary"></a>
 
 **Description:** Returns any binary data the item contains

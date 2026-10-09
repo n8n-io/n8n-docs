@@ -48,6 +48,8 @@ Refer to [User management](../../user-management.md) for more information on set
 | `N8N_INVITE_LINKS_EMAIL_ONLY` | Boolean | `false` | When set to true, n8n will only deliver invite links via email and will not expose them through the API. This option enhances security by preventing invite URLs from being accessible programmatically, or to high privileged users. |
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Instance owner using environment variables <a href="#instance-owner-using-environment-variables" id="instance-owner-using-environment-variables"></a>
 
 Set `N8N_INSTANCE_OWNER_MANAGED_BY_ENV` to `true` to pre-provision the instance owner from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.

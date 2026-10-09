@@ -33,6 +33,8 @@ layout:
 Only users with an Owner or Admin role can install and manage community nodes from npm on a self-hosted n8n instance. The instance owner is the person who sets up and manages user management.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Install a community node <a href="#install-a-community-node" id="install-a-community-node"></a>
 
 To install a community node from npm:

@@ -35,6 +35,8 @@ The **Server CLI** is a built-in command-line interface that runs on the same ma
 Looking to interact with n8n programmatically from a remote machine or integrate with AI agents? Check out the [n8n CLI](https://app.gitbook.com/o/gkeAaBEvbwHB2NmepVHG/s/r7wKI4I1BgdBCuq5Cvcx/).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## When to use Server CLI vs n8n CLI <a href="#when-to-use-server-cli-vs-n8n-cli" id="when-to-use-server-cli-vs-n8n-cli"></a>
 
 | Feature                  | Server CLI                                                    | n8n CLI                                                  |

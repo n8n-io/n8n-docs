@@ -49,7 +49,7 @@ You can combine workflows and folders in one export. You can't combine either wi
 | Folders and their nesting | Data table rows |
 | Projects: name, description, icon | Executions and execution history |
 | Credential references: ID, name, and type only | Users, project members, roles, and sharing |
-| Data table schemas: column names and types | Pinned data and workflow static data |
+| Data table schemas: column IDs, names, and types | Pinned data and workflow static data |
 | Variables: name and type, and the value unless you exclude it | Workflow version history |
 | Tags | Whether a workflow is marked as a favorite |
 

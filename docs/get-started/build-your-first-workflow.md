@@ -4,7 +4,7 @@ nodeTitle: Build your first workflow
 originalFilePath: try-it-out/tutorial-first-workflow.md
 originalUrl: https://docs.n8n.io/try-it-out/tutorial-first-workflow
 url: https://docs.n8n.io/get-started/build-your-first-workflow
-description: Build a workflow that fetches the weather every morning, turns it into a short report, and saves it to a data table.
+description: Create your first workflow in n8n and learn some key concepts.
 layout:
   width: default
   title:
@@ -93,6 +93,10 @@ You’ve got your trigger, so it’s time to fetch the weather. The **HTTP Reque
 2. In the Node details view, paste `https://mockingbird.n8n.io/v1/weather/berlin` into the **URL** field.
 
     ![Mockingbird URL in the URL field](.gitbook/assets/build-your-first-workflow-get-weather-02.png)
+
+    {% hint style="info" %}
+    Mockingbird is a sample API with weather for about 40 European cities. Other cities return an error.
+    {% endhint %}
 
 3. Select the node’s name at the top left and rename it to `Get Berlin Weather`, then select **Execute step**. You should see the weather for Berlin in the output, including the `city`, `temp_c`, and `condition` fields you’ll use in the next step.
 

@@ -466,6 +466,7 @@
     * [Mautic Trigger](builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md)
     * [Microsoft OneDrive Trigger](builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md)
     * [Microsoft Outlook Trigger](builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
+    * [Microsoft SharePoint Trigger](builtin/trigger-nodes/n8n-nodes-base.microsoftsharepointtrigger.md)
     * [Microsoft Teams Trigger](builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
     * [MQTT Trigger](builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md)
     * [Netlify Trigger](builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md)

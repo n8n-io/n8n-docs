@@ -39,6 +39,8 @@ layout:
 
 Use these operations to create, delete, get, and update events in Google Calendar. Refer to [Google Calendar](./README.md) for more information on the Google Calendar node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create <a href="#create" id="create"></a>
 
 Use this operation to add an event to a Google Calendar.

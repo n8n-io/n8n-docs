@@ -35,6 +35,8 @@ Refer to the [Microsoft credentials documentation](../credentials/microsoft.md) 
 If you're using a government cloud tenant (US Government, US Government DOD, or China), make sure to select the appropriate **Microsoft Graph API Base URL** in your Microsoft credentials configuration.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 * **New Channel**

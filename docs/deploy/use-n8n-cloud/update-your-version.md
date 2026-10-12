@@ -41,6 +41,8 @@ To open the settings:
 
 Changing the version triggers a 1 to 2 minute restart. The other maintenance settings apply without a restart. Select **Save changes** to apply your changes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n version
 
 The **n8n version** dropdown sets the version your workspace runs. Choose a version, then select **Change version** to apply it. To compare versions before you change, select **Open changelog**.

@@ -52,6 +52,8 @@ Refer to the [Supabase credentials documentation](../../credentials/supabase.md)
 
 Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql). If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the Supabase Vector Store node in the following patterns.

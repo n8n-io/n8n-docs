@@ -41,6 +41,8 @@ Use this operation to create, delete, get, and update shared drives in Google Dr
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a shared drive <a href="#create-a-shared-drive" id="create-a-shared-drive"></a>
 
 Use this operation to create a new shared drive.

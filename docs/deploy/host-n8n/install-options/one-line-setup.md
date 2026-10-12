@@ -11,6 +11,8 @@ layout:
 
 This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0. It's the fastest way to get n8n running, whether you've used Docker before or not.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 It's meant for fresh installs, not for changing an existing setup:
 
 - **Already self-hosting with your own Docker Compose file?** You don't need to switch to this script, but feel free to take inspiration from [the Docker Compose setup process](./install-using-docker-compose.md).

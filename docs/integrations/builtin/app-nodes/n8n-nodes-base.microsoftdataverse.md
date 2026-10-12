@@ -15,6 +15,8 @@ Use the Microsoft Dataverse node to automate work in Microsoft Dataverse and int
 Refer to [Microsoft Dataverse credentials](../credentials/microsoftdataverse.md) for authentication setup. The node supports delegated user access and app-only access through the **Microsoft Dataverse OAuth2 API** credential.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations
 
 * **Row**

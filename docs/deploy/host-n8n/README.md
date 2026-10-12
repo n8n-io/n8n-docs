@@ -33,6 +33,8 @@ Requires Docker on Linux or macOS (or WSL on Windows). Sets up n8n locally in on
 
 All self-hosted installations use the same core product. Without a license key, n8n runs as the free Community edition. Adding a Business or Enterprise license key enables those editions. See [Compare editions](community-edition-features.md) for the differences between the self-hosted editions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Install options](install-options/README.md): set up n8n with Docker, npm, Docker Compose, or a cloud provider.

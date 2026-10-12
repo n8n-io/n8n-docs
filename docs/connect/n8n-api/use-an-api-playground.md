@@ -14,6 +14,8 @@ layout:
 
 This documentation site provides a playground to test out calls. Self-hosted users also have access to a built-in playground hosted as part of their instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Documentation playground <a href="#documentation-playground" id="documentation-playground"></a>
 
 You can test API calls from this site's [endpoint reference](api-reference.md). You need to set your server's base URL and instance name, and add an API key.

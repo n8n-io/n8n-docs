@@ -24,6 +24,8 @@ layout:
 
 Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler.com/products/zscaler-internet-access) cloud instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth and API key combo

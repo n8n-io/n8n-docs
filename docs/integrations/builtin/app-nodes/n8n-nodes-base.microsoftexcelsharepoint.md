@@ -29,6 +29,8 @@ The node offers two ways to sign in, chosen with the **Authentication** dropdown
 These are the only credentials the node accepts. The node-specific **Microsoft Excel** and **Microsoft SharePoint** credentials don't work with it: the Excel credential doesn't include the SharePoint (`Sites.*`) scopes, and the SharePoint credential issues tokens for the SharePoint REST API rather than for Microsoft Graph, which this node uses.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Which Excel node should I use?
 
 n8n has two Excel nodes:

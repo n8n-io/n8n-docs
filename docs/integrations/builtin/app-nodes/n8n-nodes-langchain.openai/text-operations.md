@@ -29,6 +29,8 @@ Use this operation to message a model or classify text for violations in OpenAI.
 n8n 1.117.0 introduces the OpenAI node V2 that supports the OpenAI Responses API. It renames the 'Message a Model' operation to 'Generate a Chat Completion' to clarify its association with the Chat Completions API and introduces a separate 'Generate a Model Response' operation that uses the Responses API.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Generate a Chat Completion <a href="#generate-a-chat-completion" id="generate-a-chat-completion"></a>
 
 Use this operation to send a message or prompt to an OpenAI model - using the Chat Completions API - and receive a response.

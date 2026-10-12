@@ -26,6 +26,8 @@ The built-in methods and variables on this page are for use in expressions in th
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iIcw3xaOoa9HryGmR8dX/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Use built-in shortcuts](../use-built-in-shortcuts.md)

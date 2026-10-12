@@ -34,6 +34,8 @@ Refer to the [Trello credentials documentation](../credentials/trello.md) for au
 For usage examples and templates to help you get started, refer to n8n's [Trello Trigger integrations](https://n8n.io/integrations/trello-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Find the Model ID <a href="#find-the-model-id" id="find-the-model-id"></a>
 
 The model ID is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.

@@ -20,6 +20,8 @@ Merging brings multiple data streams together, as part of n8n's [flow logic](./)
 
 Explore each method in more detail in the sections below.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Merge data from different data streams <a href="#merge-data-from-different-data-streams" id="merge-data-from-different-data-streams"></a>
 
 If your workflow [splits](split-with-conditionals.md), you combine the separate streams back into one stream.

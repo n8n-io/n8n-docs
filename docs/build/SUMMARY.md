@@ -23,6 +23,7 @@
 * [Build and manage agents](build-and-manage-agents.md)
 * [Ways of building workflows](ways-of-building-workflows/README.md)
   * [Use n8n Assistant](ways-of-building-workflows/n8n-assistant.md)
+    * [Work with Browser Use](ways-of-building-workflows/n8n-assistant/browser-use.md)
   * [Use n8n MCP server](ways-of-building-workflows/connect-to-n8n-mcp-server.md)
   * [Use templates](ways-of-building-workflows/use-templates.md)
   * [Use AI Workflow Builder](ways-of-building-workflows/ai-workflow-builder.md)

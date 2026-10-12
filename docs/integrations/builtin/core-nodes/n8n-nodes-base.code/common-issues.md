@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Code node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Code doesn't return items properly <a href="#code-doesnt-return-items-properly" id="code-doesnt-return-items-properly"></a>
 
 This error occurs when the code in your Code node doesn't return data in the expected format.

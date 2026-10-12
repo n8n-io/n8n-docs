@@ -29,6 +29,8 @@ export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on this variable.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Configuration examples](./)

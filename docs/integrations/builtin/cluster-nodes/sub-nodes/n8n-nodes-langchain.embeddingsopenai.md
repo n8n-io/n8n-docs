@@ -34,6 +34,8 @@ Refer to the [OpenAI credentials documentation](../../credentials/openai.md) for
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Model**: Select the model to use for generating embeddings.

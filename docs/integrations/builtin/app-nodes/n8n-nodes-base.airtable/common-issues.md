@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [Airtable node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Forbidden - perhaps check your credentials <a href="#forbidden-perhaps-check-your-credentials" id="forbidden-perhaps-check-your-credentials"></a>
 
 This error displays when trying to perform actions not permitted by your current level of access. The full text looks something like this:

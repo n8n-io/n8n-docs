@@ -17,6 +17,8 @@ n8n Cloud instance owners can download workflows from the most recent backup.
 
 You can do this with the [Cloud admin dashboard](use-the-admin-dashboard.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How to download workflows <a href="#how-to-download-workflows" id="how-to-download-workflows"></a>
 
 1. [Log in to n8n](https://app.n8n.cloud/magic-link).

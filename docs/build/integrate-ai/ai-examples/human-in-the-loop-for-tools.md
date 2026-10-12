@@ -22,6 +22,8 @@ You can require human approval before an AI Agent executes a specific tool. When
 
 This feature allows for selective oversight of tool use within AI workflows, making it easier to apply additional review to tools with higher risk, such as sending messages, modifying records, or deleting data.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## When to use human review <a href="#when-to-use-human-review" id="when-to-use-human-review"></a>
 
 Human-in-the-loop (HITL) review is useful when:

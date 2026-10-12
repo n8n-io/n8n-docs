@@ -17,6 +17,8 @@ You can change the timezone for your n8n instance. This affects the [Schedule Tr
 1. On your dashboard, select **Manage**.
 1. Change the **Timezone** dropdown to the timezone you want.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Configure Cloud](./)

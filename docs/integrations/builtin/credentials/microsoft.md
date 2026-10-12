@@ -28,6 +28,7 @@ You can use these credentials to authenticate the following nodes:
 - [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
 - [Microsoft Outlook Trigger](../trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
 - [Microsoft SharePoint](../app-nodes/n8n-nodes-base.microsoftsharepoint.md)
+- [Microsoft SharePoint Trigger](../trigger-nodes/n8n-nodes-base.microsoftsharepointtrigger.md)
 - [Microsoft Teams](../app-nodes/n8n-nodes-base.microsoftteams.md)
 - [Microsoft Teams Trigger](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 - [Microsoft To Do](../app-nodes/n8n-nodes-base.microsofttodo.md)
@@ -169,6 +170,7 @@ This setting applies to all Microsoft Graph API nodes that use Microsoft credent
 - Microsoft OneDrive
 - Microsoft Graph Security
 - Microsoft SharePoint (from version 2 of the node)
+- Microsoft SharePoint Trigger
 - Microsoft To Do
 
 {% hint style="warning" %}

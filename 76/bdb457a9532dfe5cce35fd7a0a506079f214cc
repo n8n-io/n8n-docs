@@ -1,0 +1,24 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md
+  s_1c3e70ccfa419c::t_ed11eba5950ac7 38-39
+docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md
+  s_1c3e70ccfa419c::t_e1d0c429d9e938 456-457
+  s_1c3e70ccfa419c::t_ed7f4d7578be65 430
+  s_1c3e70ccfa419c::t_c54c9064d8eb30 182-206,208
+  s_1c3e70ccfa419c::t_b602abdabf8819 38-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "76bdb457a9532dfe5cce35fd7a0a506079f214cc",
+  "prompts": {},
+  "sessions": {
+    "s_1c3e70ccfa419c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e7247b5f-4840-45ac-bcc5-4aa213ac4547",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Olivier de Jong <olivier.dejong@n8n.io>"
+    }
+  }
+}

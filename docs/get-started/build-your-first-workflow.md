@@ -177,7 +177,7 @@ You’ve fetched the data and formatted it, so now it’s time to store it. For 
 5. Rename the node to `Save Weather Report`.
 6. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Format Weather Message** has the same name as the column in the data table, so n8n maps them for you.
 
-    ![Data table node settings](.gitbook/assets/build-your-first-workflow-save-data-05.png)
+    ![Save Weather Report node with weather_data selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-save-data-05.png)
 
 ## 6. Test and publish the workflow
 

@@ -1,5 +1,4 @@
 ---
-
 description: >-
   How n8n checks a package before writing it, the order it writes things in, and
   how it resolves credentials, variables, data tables, tags, folders, and projects.
@@ -8,10 +7,8 @@ layout:
   description:
     visible: false
 tags:
-
-- tag: preview
-primary: true
-
+  - tag: preview
+    primary: true
 ---
 
 # How import works
@@ -58,10 +55,10 @@ For a project package, n8n plans every project, checks the whole package, create
 
 An imported workflow's references have to point at entities on the target instance, not the source. n8n builds a map of source ID to target ID as it goes, and rewrites four things through it:
 
-- Credential IDs on nodes.
-- Sub-workflow IDs on **Execute Workflow**, **Call n8n Workflow Tool**, and **Workflow Retriever** nodes, but only when the node selects its workflow from a list rather than by expression.
-- The error workflow in workflow settings.
-- The caller allowlist in workflow settings, element by element. IDs it can't map are left as they are.
+* Credential IDs on nodes.
+* Sub-workflow IDs on **Execute Workflow**, **Call n8n Workflow Tool**, and **Workflow Retriever** nodes, but only when the node selects its workflow from a list rather than by expression.
+* The error workflow in workflow settings.
+* The caller allowlist in workflow settings, element by element. IDs it can't map are left as they are.
 
 Two things aren't rewritten. A reference set by an expression is left untouched, because n8n can't know what it evaluates to. And the cached display name shown on a sub-workflow node isn't updated, so a remapped sub-workflow can show a stale name in the editor until you reopen the node.
 
@@ -121,18 +118,16 @@ Tables are matched by ID within the target project, never by name. A created tab
 
 `--data-table-schema-conflict-policy` decides what happens when a matched table's schema differs from the package:
 
-
-| Policy                      | What it does                                                                                                                                                                  |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `keep-existing` (default)   | Never changes the target table. Refuses the import when a package column is missing from the target or has a different type. Extra columns the target has of its own are fine |
-| `fail`                      | Same as `keep-existing`, but also refuses the import when the target has extra columns                                                                                        |
-| `overwrite`                 | Changes the target table to match the package. It adds, renames, removes (destructive), retypes (destructive), and reorders columns, and renames the table                    |
-| `overwrite-non-destructive` | Makes the same changes as `overwrite`, but stops the import when a change is destructive and reports those changes. Nothing is written                                        |
-
+| Policy | What it does |
+|--------|--------------|
+| `keep-existing` (default) | Never changes the target table. Refuses the import when a package column is missing from the target or has a different type. Extra columns the target has of its own are fine |
+| `fail` | Same as `keep-existing`, but also refuses the import when the target has extra columns |
+| `overwrite` | Changes the target table to match the package. It adds, renames, removes (destructive), retypes (destructive), and reorders columns, and renames the table |
+| `overwrite-non-destructive` | Makes the same changes as `overwrite`, but stops the import when a change is destructive and reports those changes. Nothing is written |
 
 Neither `keep-existing` nor `fail` adds or renames a column on the target table. A missing column refuses the import, including a column renamed on the source. To apply a rename, use `overwrite` or `overwrite-non-destructive`. Column order and the table name aren't compared, and column names are compared case-sensitively.
 
-A destructive change removes a column or changes its type. The values in those columns are removed. Date in other columns are preserved. Renaming a column isn't destructive: it keeps its values. Under both `overwrite` policies, the changes apply to every workflow that uses the table.
+A destructive change removes a column or changes its type. The values in those columns are removed. Data in other columns is preserved. Renaming a column isn't destructive: it keeps its values. Under both `overwrite` policies, the changes apply to every workflow that uses the table.
 
 Packages exported before n8n 2.44.0 don't carry column IDs. In those packages, both `overwrite` policies treat a renamed column as removed and added again, which is a destructive change and gets flagged as such.
 
@@ -144,8 +139,8 @@ Tags are global in n8n, and their names are unique across the instance. n8n matc
 
 There are two kinds of conflict:
 
-- **Rename drift**: the ID matches a tag on the target, but the names differ, so someone renamed it on one instance.
-- **Name collision**: the ID isn't on the target, but another tag already holds the name. This is the common case on an established instance, where tags were created independently and have unrelated IDs.
+* **Rename drift**: the ID matches a tag on the target, but the names differ, so someone renamed it on one instance.
+* **Name collision**: the ID isn't on the target, but another tag already holds the name. This is the common case on an established instance, where tags were created independently and have unrelated IDs.
 
 `--tag-conflict-policy=rename` handles both: it renames a drifted tag to the package's name, and resolves a name collision by moving the existing tag onto the package's ID, keeping its name and everything already tagged with it. The one case it still refuses is a drifted tag whose new name is already held by a third tag.
 
@@ -171,15 +166,13 @@ Under the default `--missing-node-type-mode=fail`, a package using a node type o
 
 Every workflow in the response carries a `publishing.state`:
 
-
-| State         | Meaning                                                                             |
-| ------------- | ----------------------------------------------------------------------------------- |
-| `published`   | The workflow is live                                                                |
-| `unpublished` | The workflow isn't live, as the policy intended                                     |
-| `unchanged`   | Publishing wasn't attempted, or was skipped. An existing live version keeps running |
-| `blocked`     | n8n refused to publish it. `blockedReason` says why                                 |
-| `failed`      | Publishing was attempted and failed. `error` says why                               |
-
+| State | Meaning |
+|-------|---------|
+| `published` | The workflow is live |
+| `unpublished` | The workflow isn't live, as the policy intended |
+| `unchanged` | Publishing wasn't attempted, or was skipped. An existing live version keeps running |
+| `blocked` | n8n refused to publish it. `blockedReason` says why |
+| `failed` | Publishing was attempted and failed. `error` says why |
 
 `blockedReason` is either `stub-credential` or `missing-node-type`. A workflow blocked for both reports `missing-node-type`, because that one means it physically can't run.
 
@@ -197,22 +190,20 @@ n8n only compares paths it can read literally: the node has to be enabled, and i
 
 There are 12 reasons an import can be blocked. Each appears in the `issues` array with a `type`, and some carry a `kind` narrowing it further:
 
-
-| Type                       | Kinds                                                                                                    | What it means                                                                                                                                                  |
-| -------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `workflow-conflict`        |                                                                                                          | The workflow exists on the target and `--workflow-conflict-policy` is `fail`                                                                                   |
-| `workflow-id-conflict`     |                                                                                                          | Under `--workflow-id-policy=source`, that workflow ID is already used somewhere on the instance, including in another project and including archived workflows |
-| `workflow-folder-conflict` |                                                                                                          | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--workflow-conflict-policy=skip`        |
-| `project-conflict`         | `fail-policy`                                                                                            | The project exists and `--project-conflict-policy` is `fail`                                                                                                   |
-| `folder-conflict`          | `parent-mismatch`, `id-in-other-project`, `fail-policy`                                                  | The first two refuse whatever the policy                                                                                                                       |
-| `credential-unresolved`    | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch`                                         | Only `not_found` can be resolved by a placeholder credential                                                                                                   |
-| `data-table-unresolved`    | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | Under `overwrite-non-destructive`, `schema-incompatible` means a change would remove or retype a column, and lists those columns                               |
-| `tag-unresolved`           | `rename-drift`, `name-collision`, `invalid-name`, `invalid-id`, `permission-denied`                      |                                                                                                                                                                |
-| `variable-unresolved`      |                                                                                                          | A referenced variable doesn't resolve and `--variable-missing-mode` is `must-preexist`                                                                         |
-| `variable-conflict`        |                                                                                                          | A resolved variable's value differs and `--variable-conflict-policy` is `fail`                                                                                 |
-| `variable-limit-exceeded`  |                                                                                                          | The new variables would exceed the instance's variable limit                                                                                                   |
-| `missing-node-type`        |                                                                                                          | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail`                                                        |
-
+| Type | Kinds | What it means |
+|------|-------|---------------|
+| `workflow-conflict` | | The workflow exists on the target and `--workflow-conflict-policy` is `fail` |
+| `workflow-id-conflict` | | Under `--workflow-id-policy=source`, that workflow ID is already used somewhere on the instance, including in another project and including archived workflows |
+| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--workflow-conflict-policy=skip` |
+| `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
+| `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
+| `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |
+| `data-table-unresolved` | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | Under `overwrite-non-destructive`, `schema-incompatible` means a change would remove or retype a column, and lists those columns |
+| `tag-unresolved` | `rename-drift`, `name-collision`, `invalid-name`, `invalid-id`, `permission-denied` | |
+| `variable-unresolved` | | A referenced variable doesn't resolve and `--variable-missing-mode` is `must-preexist` |
+| `variable-conflict` | | A resolved variable's value differs and `--variable-conflict-policy` is `fail` |
+| `variable-limit-exceeded` | | The new variables would exceed the instance's variable limit |
+| `missing-node-type` | | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail` |
 
 The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, project, folder, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
 
@@ -222,17 +213,14 @@ Missing permission to create a tag, or to create or change a data table, isn't a
 
 ## Read next
 
-- [Import a package](import-a-package.md) for the options this page refers to.
-- [Limits and permissions](limits-and-permissions.md) for the license features, scopes, and quotas an import checks.
-- [Package format](package-format.md) for what's in the files n8n is reading.
-
-
+* [Import a package](import-a-package.md) for the options this page refers to.
+* [Limits and permissions](limits-and-permissions.md) for the license features, scopes, and quotas an import checks.
+* [Package format](package-format.md) for what's in the files n8n is reading.
 
 ## Related resources
 
-- [n8n packages](./)
-- [Package format](package-format.md)
-- [Export a package](export-a-package.md)
-- [Import a package](import-a-package.md)
-- [Limits and permissions](limits-and-permissions.md)
-
+* [n8n packages](./)
+* [Package format](package-format.md)
+* [Export a package](export-a-package.md)
+* [Import a package](import-a-package.md)
+* [Limits and permissions](limits-and-permissions.md)

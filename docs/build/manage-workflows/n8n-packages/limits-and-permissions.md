@@ -91,18 +91,19 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | `folder:create` and `folder:update` | The package contains folders |
 | `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
 | `dataTable:create` | The package references data tables and `--data-table-missing-mode` is `create` |
+| `dataTable:update` | The import actually changes a data table under `--data-table-schema-conflict-policy=overwrite` or `overwrite-non-destructive` |
 | `variable:create` | The import actually creates a variable |
 | `variable:update` | The import actually overwrites a variable |
 | `tag:create` | The import actually creates a tag |
 | `tag:update` | The import actually renames or reconciles a tag |
 
-The last four are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
+`dataTable:update` and the last four are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
 
-A member-role API key can't import a project package, can't import a package containing folders, and can't create or overwrite variables: `project:create`, `project:update`, `folder:create`, `folder:update`, `variable:create`, and `variable:update` are owner and admin scopes. Members can hold `workflow:export`, `workflow:import`, `project:export`, `variable:list`, `dataTable:create`, `tag:create`, and `tag:update`, so a member can bundle variable values on export.
+A member-role API key can't import a project package, can't import a package containing folders, and can't create or overwrite variables: `project:create`, `project:update`, `folder:create`, `folder:update`, `variable:create`, and `variable:update` are owner and admin scopes. Members can hold `workflow:export`, `workflow:import`, `project:export`, `variable:list`, `dataTable:create`, `dataTable:update`, `tag:create`, and `tag:update`, so a member can bundle variable values on export.
 
 API key scopes are checked on top of your own permissions, not instead of them. On export you can only take what you can read, so n8n checks your access to each workflow, folder, project, and credential. On import it checks your permission to write to the target project. A credential you can't read is recorded as a requirement rather than bundled, so a partial view of an instance produces a package that says plainly what the target has to supply.
 
-Missing permission to create a tag or a data table is reported as a blocking issue rather than a `403`. See [Why an import is refused](how-import-works.md#why-an-import-is-refused).
+Missing permission to create a tag, or to create or change a data table, is reported as a blocking issue rather than a `403`. See [Why an import is refused](how-import-works.md#why-an-import-is-refused).
 
 ## Variable limit
 

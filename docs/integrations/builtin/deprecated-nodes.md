@@ -44,8 +44,6 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | Line | 1 |
 | Manual Chat Trigger | 1.1 |
 | MCP Registry Client (internal) | 1.1 |
-| Message an Agent | 3.1 |
-| Message an Agent Tool | 3.1 |
 | Motorhead | 1.4 |
 | OpenAI Assistant | 1.1 |
 | OpenAI Model | 1 |

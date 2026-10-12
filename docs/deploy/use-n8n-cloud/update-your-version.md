@@ -75,6 +75,7 @@ The maintenance window sets when n8n can apply upgrades, so you can reduce disru
 * [Use the admin dashboard](use-the-admin-dashboard.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Understand concurrency](understand-concurrency.md)
 * [Download workflows](download-workflows.md)
 

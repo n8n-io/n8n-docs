@@ -30,5 +30,6 @@ If your instance is down, you can still access the admin dashboard. When you log
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Understand concurrency](understand-concurrency.md)
 * [Download workflows](download-workflows.md)

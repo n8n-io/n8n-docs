@@ -286,43 +286,129 @@ If you configure both, Brave Search takes priority over SearXNG. Free or unauthe
 
 If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
 
-## Enable agents
-
-Agents run on the same self-hosted stack as n8n Assistant. Once n8n Assistant works, add the `agents` module to [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents). Agents are in Preview and available from n8n 2.32.3.
+## Enable instance context
 
 {% hint style="info" %}
 **Feature availability**
 
-Agents aren't available on self-hosted Enterprise yet.
+The shared instance context flag and activity log retention settings documented here are available from n8n 2.41.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Instance context is in Preview and may change in future releases. n8n hasn't enabled instance context for all instances. Avoid relying on instance context for production work.
+{% endhint %}
+
+Instance context gives n8n Assistant a short summary of the project you open a conversation in. It includes workflows, recent changes, and execution results. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+
+The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
+
+On a self-hosted instance, set `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
+
+```bash
+N8N_FEATURE_FLAG_OVERRIDES='{"114_instance_activity_context":true}'
+```
+
+Restart n8n to apply the change.
+
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+| --- | --- |
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
+
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
+
+One flag controls both halves. With the flag off, n8n writes no activity entries and n8n Assistant reads no instance context.
+
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own flag.
+
+Turning the flag off stops new activity recording and new instance context reads. The activity log tool is unavailable. Entries recorded earlier remain subject to these retention settings:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_ACTIVITY_LOG_RETENTION_DAYS` | `0` | Days to keep activity entries. `0` disables age-based pruning. |
+| `N8N_ACTIVITY_LOG_MAX_ENTRIES` | `1000` | Maximum activity entries across all projects. `0` disables count-based pruning. |
+
+By default, n8n keeps the newest 1,000 activity entries across the instance. It doesn't remove entries based on age. An entry can remain indefinitely if the log stays below this limit.
+
+Pruning runs every hour and continues when the flag is off. Restart n8n after changing these environment variables.
+
+## Enable node type counting
+
+{% hint style="info" %}
+**Feature availability**
+
+Node type counting is available from n8n 2.39.0. Enable node type counting with the feature flag or environment variable below.
+{% endhint %}
+
+Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and has its own flag.
+
+The `109_instance_ai_node_usage` PostHog flag controls it. On a self-hosted instance, `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` force-enables it:
+
+```bash
+N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
+```
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to turn node type counting on, whatever the PostHog flag returns. |
+
+This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the PostHog flag, so it isn't a way to keep the feature off.
+
+Node type counting reports counts of node types, never parameter values.
+
+## Enable agents
+
+You can [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) with or without n8n Assistant. Agents are in Preview and available from n8n 2.32.3.
+
+{% hint style="info" %}
+**Feature availability**
+
+Agents are on by default on all self-hosted plans, including Enterprise.
 {% endhint %}
 
 You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. n8n Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
 
-Add `agents` to `N8N_ENABLED_MODULES`, alongside `instance-ai` if you want AI-assisted building:
+To change the instance setting:
+
+1. Sign in as an instance owner or admin.
+2. Open **Settings > Agents**.
+3. Turn **Enable Agents** on or off.
+
+n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
+
+The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved agents setting.
+
+### Shared sandbox and optional features
+
+Use **Settings > Agents > Shared sandbox** to [configure the sandbox connection](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#configure-the-shared-sandbox). Agents and n8n Assistant use the same connection. Changes affect both features. You can configure it while either feature is off.
+
+The shared sandbox editor requires the `instance-ai` module, which also loads by default. If you excluded it with `N8N_DISABLED_MODULES`, remove it from that list and restart n8n. You can keep n8n Assistant off in **Settings > Assistant**. You can also configure the sandbox with environment variables.
+
+Enabling the shared sandbox also enables the agent knowledge base. For an environment-based setup, use these optional settings:
 
 ```bash
-# Enable the agents module (keep instance-ai for AI-assisted building)
-N8N_ENABLED_MODULES=instance-ai,agents
-
-# Knowledge base, optional: reuses the Daytona sandbox you set up for n8n Assistant
+# Enable the agent knowledge base with your existing Daytona connection
 N8N_AGENTS_AI_SANDBOX_ENABLED=true
-N8N_AGENTS_AI_SANDBOX_PROVIDER=daytona
+N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
 
-# Channels, optional: public URL so Slack, Telegram, and Linear can reach your instance
-WEBHOOK_URL=https://your-public-url
+# Let channels reach your instance
+N8N_WEBHOOK_URL=https://<your-public-hostname>
 ```
 
 | Variable | Description |
 | --- | --- |
-| `N8N_ENABLED_MODULES` | Include `agents` to enable the module. Keep `instance-ai` for AI-assisted building. |
-| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base, so agents can search uploaded files. Requires a Daytona sandbox. |
-| `N8N_AGENTS_AI_SANDBOX_PROVIDER` | Sandbox provider for the knowledge base. Use `daytona`. Reuses the Daytona keys you set for n8n Assistant. |
-| `WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. |
+| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base when the shared sandbox isn't already enabled. Requires a configured sandbox. Default: `false`. |
+| `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Shared sandbox provider for agents and n8n Assistant. Use `n8n-sandbox` or `daytona`. Default: `n8n-sandbox`. |
+| `N8N_WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. Available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`. |
 
 {% hint style="info" %}
 **Feature availability**
 
-The knowledge base needs the Daytona sandbox on self-hosted. Without it, the rest of the agent still works.
+The knowledge base needs a configured sandbox on self-hosted n8n. Without it, the rest of the agent still works. See [Pick your setup](#pick-your-setup) for sandbox options.
 {% endhint %}
 
 {% hint style="info" %}
@@ -331,17 +417,17 @@ The knowledge base needs the Daytona sandbox on self-hosted. Without it, the res
 On self-hosted, the knowledge base is in Preview.
 {% endhint %}
 
-For a full deployment example, see [Installation options](../install-options/README.md). After you enable the module, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+For a full deployment example, see [Installation options](../install-options/README.md). To create your first agent, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
 ## Disable n8n Assistant
 
-To disable n8n Assistant, remove `instance-ai` from `N8N_ENABLED_MODULES`.
-
-You can also disable the module explicitly:
+To turn n8n Assistant off, use **Settings > Assistant**. To unload its module, add `instance-ai` to `N8N_DISABLED_MODULES` and restart n8n:
 
 ```bash
 N8N_DISABLED_MODULES=instance-ai
 ```
+
+Unloading `instance-ai` also removes the shared sandbox editor from **Settings > Agents**. You can still configure the sandbox with environment variables.
 
 ## Troubleshooting
 
@@ -349,7 +435,7 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 **General**
 
-* `N8N_ENABLED_MODULES` includes `instance-ai`.
+* `N8N_DISABLED_MODULES` doesn't include `instance-ai`.
 * The model value uses `provider/model` format if you set `N8N_INSTANCE_AI_MODEL`.
 * The API key is valid for the selected provider.
 * `N8N_INSTANCE_AI_SANDBOX_ENABLED` is set to `true`.
@@ -369,6 +455,18 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 
 * `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
 * If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
+
+**Instance context**
+
+* The `114_instance_activity_context` flag is on for your instance. Set `N8N_FEATURE_FLAG_OVERRIDES` to `{"114_instance_activity_context":true}` to force it on.
+* Nothing changed in the project yet. The activity log only records changes made after the flag went on.
+* The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
+
+**Node type counting**
+
+* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` has the value `true`.
+* Setting the variable to `false` doesn't keep the feature off. It hands the decision back to the flag.
+* It's independent of instance context. Turning instance context on doesn't turn node type counting on.
 
 ## Related resources
 

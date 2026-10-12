@@ -33,12 +33,44 @@ LDAP allows users to sign in to n8n with their organization credentials, instead
 1. Log in to n8n as the instance owner.
 2. Select **Settings** <img src="../../.gitbook/assets/settings.png" alt="Settings icon" data-size="line"> > **LDAP**.
 3. Toggle on **Enable LDAP Login**.
-4. Complete the fields with details from your LDAP server.
+4. Complete the fields with details from your LDAP server. Refer to [Connection settings](#connection-settings).
 5. Select **Test connection** to check your connection setup, or **Save connection** to create the connection.
 
 After enabling LDAP, anyone on your LDAP server can sign in to the n8n instance, unless you exclude them using the **User Filter** setting.
 
 You can still create non-LDAP users (email users) on the **Settings** > **Users** page.
+
+## Connection settings
+
+These fields appear once you turn on **Enable LDAP Login**.
+
+| Field | What to enter |
+| -- | -- |
+| **LDAP Login** | The label n8n shows on the username field of the login page, in place of **Email**. |
+| **LDAP Server Address** | The IP address or domain of your LDAP server. |
+| **LDAP Server Port** | The port n8n connects to. n8n pre-fills `389`, the standard LDAP port. If you select **TLS**, change it to your server's LDAPS port, which is `636` by default. |
+| **Connection Security** | **None**, **TLS**, or **STARTTLS**. **TLS** connects with `ldaps://`. **None** and **STARTTLS** connect with `ldap://`. **STARTTLS** then upgrades that connection to TLS. |
+| **Ignore SSL/TLS Issues** | Connect even when the certificate check fails. This field only appears when **Connection Security** isn't **None**. |
+| **Base DN** | Where n8n starts looking for users in the directory tree, for example `o=acme,dc=example,dc=com`. |
+| **Binding as** | **Admin** or **Anonymous**. Refer to [Bind methods](#bind-methods). |
+| **Binding DN** | The account n8n uses to search the directory, for example `uid=2da2de69435c,ou=Users,o=Acme,dc=com`. This field only appears when **Binding as** is **Admin**. |
+| **Binding Password** | The password for the **Binding DN** user. This field only appears when **Binding as** is **Admin**. |
+| **User Filter** | An LDAP query that limits who can sign in, for example `(ObjectClass=user)`. Only the users this query returns can sign in. |
+
+The **Attribute mapping** fields come next. They tell n8n which LDAP attributes to read for a user's ID, login ID, email, first name, and last name. The right values depend on your directory, and the examples n8n shows in these fields don't suit every server. Query your LDAP server with a tool such as `ldapsearch`, then look at one user entry in the output. Note the attribute names that hold each of the five values, and enter those names in the mapping fields.
+
+The synchronization fields come last. They only appear when you turn on **Enable periodic LDAP synchronization**.
+
+**Enforce Email Uniqueness** sits at the bottom of the form, below the synchronization fields. It blocks sign in when more than one LDAP account uses the same email address.
+
+## Bind methods
+
+n8n uses a simple bind to connect to your LDAP server. **Binding as** sets how:
+
+- **Admin**: n8n binds with the **Binding DN** and **Binding Password** you enter.
+- **Anonymous**: n8n sends an empty DN and password, so your server has to allow anonymous search.
+
+n8n doesn't support SASL binds, including GSSAPI and Kerberos. There's no field for a SASL mechanism, a keytab, or a Kerberos ticket cache. If your directory needs Kerberos-based binding, common in Active Directory setups, you can't use LDAP login. n8n also supports [SAML](use-saml/README.md) and [OIDC](use-oidc/README.md) for single sign-on.
 
 ## Merging n8n and LDAP accounts <a href="#merging-n8n-and-ldap-accounts" id="merging-n8n-and-ldap-accounts"></a>
 

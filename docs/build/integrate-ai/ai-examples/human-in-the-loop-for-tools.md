@@ -124,9 +124,9 @@ Consider including:
 
 
 
-## Chaining and subagents <a href="#chaining-and-subagents" id="chaining-and-subagents"></a>
+## Chaining and sub-agents <a href="#chaining-and-subagents" id="chaining-and-subagents"></a>
 
-When using an AI Agent as a tool for another AI Agent, human review steps in the subagent work correctly.
+When using an AI Agent as a tool for another AI Agent, human review steps in the sub-agent work correctly.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

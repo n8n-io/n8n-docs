@@ -11,6 +11,8 @@ layout:
 
 Gateway credits let you run supported AI models and third-party services in your workflows without creating provider accounts or setting up [credentials](create-and-edit-credentials.md). n8n routes the requests through its own gateway and bills the usage from your instance's prepaid credit balance. For how billing works, refer to [Gateway credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/gateway-credits).
 
+Gateway credits don't pay for [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md), which uses separate [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits).
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -18,7 +20,7 @@ Gateway credits are available on:
 
 - **n8n Cloud:** Starter, Pro
 
-They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credits are available from n8n 2.36.0.
+They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credits are available from n8n 2.36.0. Free trials include Gateway credits, but you can't top up until you upgrade to a paid plan.
 {% endhint %}
 
 ## Use Gateway credits on a node

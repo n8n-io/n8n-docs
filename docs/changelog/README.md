@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Changelog
@@ -39,6 +41,58 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+## TypeSafe AI node for smarter workflow routing with Jev
+
+**Released:** 2026-09-30&#x20;
+
+You can now use TypeSafe AI's Jev model in n8n to make decisions from unstructured data, without using a general-purpose LLM to generate and parse text.
+
+Think of Jev as an **If** or **Switch** for the fuzzy parts of a workflow. Give it some input, a question, and the possible outcomes. It returns a decision with its confidence, which you can use to branch, sort, route, or decide when a human should take over.
+
+For example, you could use it to decide:
+
+* **Priority:** Is this support ticket critical, high, medium, or low priority?
+* **Routing:** Is this inbound email a complaint, a question, or spam?
+* **Review:** Does this deal need executive review?
+* **Confidence gating:** Is the model confident enough to continue automatically, or should this go to a human?
+
+Unlike a text-generating LLM, Jev is designed for decisions rather than writing. If you already have a deterministic rule such as `amount > 10000`, an **If** node is still the right tool. If the decision depends on unstructured input, Jev gives you a new way to turn that judgment into workflow logic.
+
+**Availability:** The TypeSafe AI node is availalble to n8n Cloud and self-hosted users with your own TypeSafe AI API key. n8n Cloud users (Starter, Pro and new trials) can also use Jev via Gateway credits without setting up a seperate TypeSafe AI account or API key.
+
+<figure><img src=".gitbook/assets/typesafe Jev 2 square.png" alt=""><figcaption></figcaption></figure>
+
+## Build agents you set up once and use anywhere
+
+**Released:** 2026-09-21 in [n8n 2.40](release-notes.md#n8n240)
+
+You can now build agents in n8n. Describe what an agent should do, give it a model and the tools and workflows it can use, and it works out the steps itself. Open the **Agents** tab and select **Create Agent**, or describe what you want to n8n Assistant and it drafts the agent for you.
+
+Agents suit jobs where the next step depends on the last answer: a question in Slack that takes a few rounds, a support ticket, a new GitHub issue. Each agent has:
+
+* **A model:** any model you have credentials for, or Gateway credits.
+* **Instructions:** its role, tone, and what it should and shouldn't do, written in plain language.
+* **Tools:** n8n nodes, MCP servers, and your own workflows.
+* **Skills, sub-agents, knowledge files, and memory,** plus a stored session for every conversation.
+
+Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
+
+Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to require approval before the agent runs them, and review each session's tool calls, inputs, and outputs.
+
+One turn with an agent counts as one execution. Calls to workflow tools and sub-agents don't count separately. The AI Agent node hasn't changed, and everything you've built with it keeps working.
+
+{% hint style="warning" %}
+**Preview status**
+
+Agents are in Preview. They can make mistakes, and their behavior may change while they're in development. Test before you publish, and require approval on tools that write to your systems.
+{% endhint %}
+
+Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#self-hosted).
+
+{% hint style="info" %}
+**Availability:** All plans. On Enterprise, agents are in Preview, with additional governance features on the way.
+{% endhint %}
 
 ## Error workflow executions no longer count towards your quota
 
@@ -64,7 +118,7 @@ Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Q
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](<.gitbook/assets/select credits.png>)
+![Select Gateway credits in the Credetial dropdown](<.gitbook/assets/select credits.png>)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -382,11 +436,11 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup

@@ -36,4 +36,5 @@ You have **90 days** to download your workflows after your free trial ends. Afte
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Understand concurrency](understand-concurrency.md)

@@ -83,7 +83,7 @@ Once enabled, the page groups settings into three sections:
 
 * **Connection details**: shows the **MCP status** and a **Connect** button that opens setup steps for your MCP client.
 * **Access**: shows how many workflows (and, if your instance has the agents feature, agents) are exposed to MCP clients, see [Exposing workflows to MCP clients](#exposing-workflows-to-mcp-clients) and [Exposing agents to MCP clients](#exposing-agents-to-mcp-clients). Instance owners and admins also see **Allowed callback URLs** here, see [Restricting OAuth callback URLs](#restricting-oauth-callback-urls).
-* **Connected clients**: shows how many clients currently have access, each with its own granted permissions. Select **View all** to review or revoke access for individual clients, see [Reviewing and revoking client access](#revoking-client-access).
+* **Connected clients**: previews up to three of your own connected clients and their permissions, and shows how many clients currently have access. Select a client to open its details, or **Revoke access** to disconnect it. Select **View all** to [review or revoke access for individual clients](#revoking-client-access).
 
 ![The Instance-level MCP page after you enable MCP access, showing Connection details, Access, and Connected clients](.gitbook/assets/mcp-enabled-screen.png)
 
@@ -130,7 +130,7 @@ In **Connection details**, select **Connect** to open the **Connect a client** d
 Each connected client only has the permissions you granted it when it connected, for example reading workflows without being able to create or run them. To review or revoke a client's access:
 
 1. Navigate to **Settings > Instance-level MCP**.
-2. In **Connected clients**, select **View all**. You should see a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
+2. In **Connected clients**, select a previewed client to open its details, or **Revoke access** to disconnect it. Select **View all** for clients not previewed. Switch to the all-users view for other users' clients. This shows a table of connected OAuth clients, their access level, and when they connected. Clients using an API key don't appear here, since they authenticate with a bearer token rather than an OAuth connection.
 3. Select a client's row to open its details and see every permission you granted it, or select **Revoke access** directly on the row to skip straight to revoking.
 4. Confirm the revocation. n8n disconnects the client at once; it must reconnect and sign in again to regain access.
 
@@ -158,19 +158,13 @@ If you lose your token or need to rotate it:
 
 MCP clients can discover previews of all workflows the current user has access to using `search_workflows`. Clients can't access full workflow data, execute, or modify a workflow unless you explicitly enable MCP access for that workflow.
 
-{% hint style="info" %}
-**Workflow eligibility** <a href="#workflow-eligibility" id="workflow-eligibility"></a>
-
-You can only enable MCP access for published workflows that contain a webhook, form, schedule, or chat trigger node.
-{% endhint %}
-
 ### Enabling access for individual workflows <a href="#enabling-access-for-individual-workflows" id="enabling-access-for-individual-workflows"></a>
 
-#### Option 1: From the Workflows exposed page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
+#### Option 1: From the Workflows enabled page <a href="#option-1-from-mcp-settings-page-available-from-n8n-v220" id="option-1-from-mcp-settings-page-available-from-n8n-v220"></a>
 
-From the **Workflows exposed** page (available from n8n 2.2.0), you can enable access for individual workflows:
+From the **Workflows enabled** page (available from n8n 2.2.0; renamed from **Workflows exposed** in n8n 2.42.0), you can enable access for individual workflows:
 1. Navigate to **Settings > Instance-level MCP**.
-2. Select **Workflows exposed**.
+2. Select **Workflows enabled**.
 3. Click the **Enable workflows** button (in the workflows table header or in the table's empty state).
 4. Search for the desired workflow (by name or description) and select it from the list.
 5. Click **Enable** to confirm.
@@ -230,12 +224,12 @@ Only instance owners and admins can change this setting. It's read-only on insta
 {% hint style="info" %}
 **Note**
 
-Workflows still need to meet the [eligibility rules](#exposing-workflows-to-mcp-clients) to become available to MCP clients. Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
+Turning this setting on doesn't expose anything while MCP access is disabled for the instance.
 {% endhint %}
 
 ### Managing access <a href="#managing-access" id="managing-access"></a>
 
-The **Workflows exposed** page (**Access > Workflows exposed**) shows all workflows enabled for MCP clients to access and operate on. From this list you can:
+The **Workflows enabled** page (**Access > Workflows enabled**) lists every workflow that MCP clients can access and operate on. From this list you can:
 
 * Open a workflow, its home project or parent folder directly
 * Revoke access using the action menu (or use **Disable MCP access** from the workflow card menu)
@@ -246,9 +240,9 @@ The **Workflows exposed** page (**Access > Workflows exposed**) shows all workfl
 
 To help MCP clients identify workflows, you can add free-text descriptions as follows:
 
-1. Option 1: From the **Workflows exposed** page
+1. Option 1: From the **Workflows enabled** page
    1. Navigate to **Settings > Instance-level MCP**.
-   2. Select **Workflows exposed**.
+   2. Select **Workflows enabled**.
    3. Use the action menu in the desired workflow's row and select the **Edit description** action.
    4. Alternatively, click the description text directly to open the edit dialog.
 2.  Option 2: From the workflow editor

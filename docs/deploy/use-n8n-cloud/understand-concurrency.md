@@ -56,4 +56,5 @@ Concurrency in queue mode is a separate mechanism from concurrency in regular mo
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Download workflows](download-workflows.md)

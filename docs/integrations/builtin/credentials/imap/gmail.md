@@ -46,4 +46,4 @@ To set up the IMAP credential with a Gmail account, use these settings:
 5. Turn on the **SSL/TLS** toggle.
 6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
 
-Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en) for more information. You may need to **Enable IMAP** if you're using a personal Google account before June 2024.
+Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en) for more information. For personal Google accounts, IMAP access is always enabled. Google removed the **Enable IMAP** / **Disable IMAP** toggle in January 2025. If you're using a Google Workspace account and IMAP doesn't work, check with your email administrator whether they allow IMAP access for your account.

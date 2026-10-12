@@ -132,8 +132,8 @@ Refer to the [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) node docu
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 - The Chat node isn't supported when the Chat Trigger node's **Mode** is set to **Embedded**. In Embedded mode, the Chat Trigger node only offers **Respond to Webhook** as a response mode. Use the [Respond to Webhook](n8n-nodes-base.respondtowebhook.md) node instead.
-- The Chat node doesn't work when used as a tool of a subagent.
-- The Chat node doesn't work when used in a subworkflow. This includes usage in a subworkflow that's being used as a tool for an AI Agent.
+- The Chat node doesn't work when used as a tool of a sub-agent.
+- The Chat node doesn't work when used in a sub-workflow. This includes usage in a sub-workflow that's being used as a tool for an AI Agent.
 - Make sure the Chat Trigger node's Response Mode is set to "Using Response Nodes" for the Chat node to function properly.
 
 For common questions or issues with the Chat Trigger node, refer to [Common Chat Trigger Node Issues](n8n-nodes-langchain.chattrigger/common-issues.md).

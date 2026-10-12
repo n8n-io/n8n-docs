@@ -52,7 +52,7 @@ This agent supports the following chat models:
 * [Groq Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatgroq.md)
 * [Mistral Cloud Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
 * [Anthropic Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
-* [Azure OpenAI Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+* [Azure AI Foundry Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 
 <details>
 

@@ -15,6 +15,7 @@ Manage your n8n Cloud trial, plan, and instance.
 * [Update your version](update-your-version.md): update your n8n version on Cloud.
 * [Configure Cloud](configure-cloud/README.md): set your timezone, find your IP addresses, and manage your data.
 * [Gateway credits](gateway-credits/README.md): use AI models and third-party services without provider accounts or API keys.
+* [Assistant credits](assistant-credits/README.md): understand the monthly n8n Assistant allowance in your plan and buy extra credits.
 * [Understand concurrency](understand-concurrency.md): how n8n Cloud handles concurrent executions.
 * [Download workflows](download-workflows.md): download workflows from n8n Cloud with the admin dashboard.
 

@@ -23,7 +23,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/) account.
+Create a [Freshworks CRM](https://www.freshworks.com/crm/sales/) account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

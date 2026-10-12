@@ -21,5 +21,6 @@ Configure timezone, IP addresses, data management, and ownership settings for yo
 * [Use the admin dashboard](../use-the-admin-dashboard.md)
 * [Update your version](../update-your-version.md)
 * [Gateway credits](../gateway-credits/README.md)
+* [Assistant credits](../assistant-credits/README.md)
 * [Understand concurrency](../understand-concurrency.md)
 * [Download workflows](../download-workflows.md)

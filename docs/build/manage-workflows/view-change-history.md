@@ -35,9 +35,9 @@ Full workflow history is available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
-
-Versions from the last five days are available for n8n Cloud Pro users. Versions from the last 24 hours are available for all users.
 {% endhint %}
+
+Versions from the last 24 hours are available for all users. Versions from the last five days are available on n8n Cloud Pro.
 
 Use workflow history to view and restore previous versions of your workflows.
 

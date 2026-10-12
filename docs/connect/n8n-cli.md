@@ -189,6 +189,7 @@ n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
 n8n-cli package export --project-id=<project-id> --output=project.n8np
 n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
 n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
+n8n-cli package import --file=export.n8np --project-id=<project-id> --data-table-schema-conflict-policy=overwrite-non-destructive
 ```
 
 See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages/import-a-package) for every available flag.

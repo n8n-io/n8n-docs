@@ -29,7 +29,7 @@ layout:
 
 In this quick start, you’ll build a workflow that fetches the weather for Berlin every morning and turns it into a short report anyone can read at a glance. The workflow saves each report to a data table, so you build up a weather log over time.
 
-![The finished Weather Log workflow](.gitbook/assets/build-your-first-workflow.png)
+![Every day at 8am trigger connected to Get Berlin Weather, Format Weather Message, and Save Weather Report](.gitbook/assets/build-your-first-workflow.png)
 
 When it runs, your workflow produces a report like this:
 

@@ -21,6 +21,8 @@ layout:
 
 n8n provides keyboard shortcuts for some actions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Workflow controls <a href="#workflow-controls" id="workflow-controls"></a>
  
  - **Ctrl/Cmd** + **Alt** + **n**: create new workflow

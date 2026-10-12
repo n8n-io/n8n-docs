@@ -32,6 +32,8 @@ The insights dashboard is available on:
 - **Self-hosted:** Business, Enterprise
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Insights summary banner <a href="#insights-summary-banner" id="insights-summary-banner"></a>
 
 n8n collects several metrics for both the insights summary banner and dashboard. They include:

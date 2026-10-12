@@ -20,6 +20,8 @@ The [Webhook node](README.md) works a bit differently from other core nodes. n8n
 
 n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Build and test workflows <a href="#build-and-test-workflows" id="build-and-test-workflows"></a>
 
 While building or testing a workflow, use the **Test** webhook URL.

@@ -339,6 +339,8 @@ One turn with an agent counts as one execution. A turn is a single exchange, whe
 
 Agents share the same execution quota as workflows. Executions from your agents and workflows count toward the same total on your plan.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Build](./)

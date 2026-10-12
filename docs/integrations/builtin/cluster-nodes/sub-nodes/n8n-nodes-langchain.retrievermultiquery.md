@@ -27,6 +27,8 @@ On this page, you'll find the node parameters for the MultiQuery Retriever node,
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Query Count**: Enter how many different versions of the query to generate.

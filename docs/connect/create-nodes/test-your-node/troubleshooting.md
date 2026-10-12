@@ -20,6 +20,8 @@ layout:
 
 Check that the name in the credentials array matches the name used in the property name of the credentials' class. For example, this credential class sets `name` to `friendGridApi`:
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ```typescript
 export class FriendGridApi implements ICredentialType {
 	name = 'friendGridApi';

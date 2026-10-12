@@ -29,6 +29,8 @@ layout:
 
 You can customize workflow behavior for individual workflows using workflow settings.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Access workflow settings <a href="#access-workflow-settings" id="access-workflow-settings"></a>
 
 To open the settings:

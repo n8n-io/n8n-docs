@@ -35,6 +35,8 @@ Using n8n's public API[^1], you can programmatically perform many of the same ta
 
 n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Authentication](authentication.md): how to authenticate requests to the n8n API.

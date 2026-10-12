@@ -25,6 +25,8 @@ This section provides:
 * Support for end users who need to [work with the data path](preserving-linking-in-the-code-node.md) to retrieve item data from previous nodes and link items when using the Code node.
 * Guidance on troubleshooting [errors](item-linking-errors.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [How items link through workflows](how-items-link-through-workflows.md): a conceptual overview of item linking.

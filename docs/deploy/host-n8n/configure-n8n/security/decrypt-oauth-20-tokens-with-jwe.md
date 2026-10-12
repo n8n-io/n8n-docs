@@ -36,6 +36,8 @@ JWE token decryption is in Preview and gated by an environment flag. Field names
 
 JWE token decryption lets your identity provider return OAuth 2.0 access and ID tokens encrypted as [JWE](https://datatracker.ietf.org/doc/html/rfc7516). Your n8n instance decrypts the tokens on the OAuth callback using a private key that never leaves the instance. This protects token contents from anything that sits between your IdP and n8n, including reverse proxies, browsers, and logs.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How JWE token decryption works <a href="#how-jwe-token-decryption-works" id="how-jwe-token-decryption-works"></a>
 
 When you enable the feature, n8n:

@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [WooCommerce](../app-nodes/n8n-nodes-base.woocommerce.md)
 - [WooCommerce Trigger](../trigger-nodes/n8n-nodes-base.woocommercetrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Install the [WooCommerce](https://woocommerce.com/) plugin on your WordPress website.

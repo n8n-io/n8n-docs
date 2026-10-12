@@ -26,6 +26,8 @@ For information on errors with mapping and linking items, refer to [Item linking
 
 See [Common ways of referencing](reference-previous-nodes.md#common-ways-of-referencing).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Reference data](./)

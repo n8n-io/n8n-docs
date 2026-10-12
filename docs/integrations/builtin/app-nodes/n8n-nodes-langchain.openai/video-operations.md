@@ -23,6 +23,8 @@ layout:
 
 Use this operation to generate a video in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Generate Video <a href="#generate-video" id="generate-video"></a>
 
 Use this operation to generate a video from a text prompt.

@@ -12,6 +12,8 @@ layout:
     visible: false
 ---
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Change instance ownership <a href="#change-instance-ownership" id="change-instance-ownership"></a>
 
 You can change the ownership of an instance by navigating to the **Settings > Personal** page in the owner's account and editing the **Email** field. After making the changes, scroll down and press **Save**.

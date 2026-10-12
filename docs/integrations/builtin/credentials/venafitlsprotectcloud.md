@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 * [Venafi TLS Protect Cloud node](../app-nodes/n8n-nodes-base.venafitlsprotectcloud.md)
 * [Venafi TLS Protect Cloud Trigger node](../trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a Venafi [TLS Protect Cloud](https://venafi.com/tls-protect/) account.

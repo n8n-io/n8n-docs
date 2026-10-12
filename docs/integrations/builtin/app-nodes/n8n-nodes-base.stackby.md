@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Stackby node supports and lin
 Refer to [Stackby credentials](../credentials/stackby.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 - Append

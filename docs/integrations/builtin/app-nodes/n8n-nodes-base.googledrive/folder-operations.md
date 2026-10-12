@@ -40,6 +40,8 @@ Use this operation to create, delete, and share folders in Google Drive. Refer t
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a folder <a href="#create-a-folder" id="create-a-folder"></a>
 
 Use this operation to create a new folder in a drive.

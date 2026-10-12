@@ -13,6 +13,8 @@ The **Gateway credits** tab in the Cloud admin dashboard shows your balance, you
 
 You can also see your current balance in the editor, next to the Gateway credits option on supported nodes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Balance
 
 The balance card shows your remaining credit, including how much of your free sign-up credit is left. If you're on a paid plan, you can top up from here. Refer to [Top up Gateway credits](top-up-gateway-credits.md) for details.

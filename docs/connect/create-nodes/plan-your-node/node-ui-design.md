@@ -15,6 +15,8 @@ Most nodes are a GUI (graphical user interface) representation of an API. Design
 
 This document provides design guidance and standards to follow. These guidelines are the same as those used by n8n. This helps provide a smooth and consistent user experience for users mixing community and built-in nodes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Design guidance <a href="#design-guidance" id="design-guidance"></a>
 
 All node's use n8n's [node UI elements](../build-your-node/reference/node-ui-elements.md), so you don't need to consider style details such as colors, borders, and so on. However, it's still useful to go through a basic design process:

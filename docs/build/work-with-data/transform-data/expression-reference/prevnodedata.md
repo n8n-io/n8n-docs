@@ -16,6 +16,8 @@ layout:
 
 Always uses the current node’s first input connector if there is more than one (e.g. in the ‘Merge’ node).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 **Syntax:** **`name`**
 
 **Returns:** String

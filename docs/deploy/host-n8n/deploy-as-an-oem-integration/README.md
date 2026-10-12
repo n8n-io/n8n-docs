@@ -21,6 +21,8 @@ n8n's OEM deployment option lets you embed and surface n8n's interface inside yo
 
 This is distinct from [using n8n as a backend](../README.md), where workflows execute behind the scenes and end users never see n8n. In that model, your product calls n8n using a webhook or the [API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) to trigger workflows, and n8n behaves like any other self-hosted service in your infrastructure - your users never see any n8n UI. This is available on all paid plans, under the standard license, with no separate agreement needed. OEM deployment is only necessary when you want your users to interact with the n8n editor directly.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What's covered <a href="#whats-covered" id="whats-covered"></a>
 
 - [Prerequisites](prerequisites.md): Guidance on CPU, memory, and database requirements for planning your deployment.

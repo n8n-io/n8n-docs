@@ -22,6 +22,8 @@ Binary data is any file-type data, such as image files or documents.
 
 This page collects resources relating to binary data in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Working with binary data in your workflows <a href="#working-with-binary-data-in-your-workflows" id="working-with-binary-data-in-your-workflows"></a>
 
 You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code.

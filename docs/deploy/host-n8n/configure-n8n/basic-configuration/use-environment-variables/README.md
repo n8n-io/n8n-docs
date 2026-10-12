@@ -27,6 +27,8 @@ This section lists the environment variables that you can use to change n8n's co
 You can provide a [configuration file](../../basic-configuration.md) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Ask n8n AI](ai-assistant.md): variables for n8n's built-in AI help assistant.

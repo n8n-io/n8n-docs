@@ -7,6 +7,8 @@ layout:
 
 This section contains examples and recipes for common coding tasks in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Built-in methods and variables examples](built-in-methods-and-variables-examples/README.md): usage examples for n8n's built-in methods and variables.

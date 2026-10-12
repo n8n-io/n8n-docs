@@ -26,6 +26,8 @@ Follow these guidelines while building your node if you want to submit it for ve
 From May 1st 2026 you must publish **ALL** community nodes using a GitHub action and include a [provenance statement](https://docs.npmjs.com/generating-provenance-statements)
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Use the n8n-node tool <a href="#use-the-n8n-node-tool" id="use-the-n8n-node-tool"></a>
 
 All verified community node authors should use the [`n8n-node` tool](../using-the-n8n-node-tool.md) to create and check their package. This helps n8n ensure quality and consistency by:

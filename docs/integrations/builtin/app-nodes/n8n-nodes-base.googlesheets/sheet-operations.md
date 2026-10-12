@@ -40,6 +40,8 @@ Use this operation to create, update, clear or delete a sheet in a Google spread
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Append or Update Row <a href="#append-or-update-row" id="append-or-update-row"></a>
 
 Use this operation to update an existing row or add a new row at the end of the data if a matching entry isn't found in a sheet.

@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes with Shopify.
 - [Shopify](../app-nodes/n8n-nodes-base.shopify.md)
 - [Shopify Trigger](../trigger-nodes/n8n-nodes-base.shopifytrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Access token (recommended): For private apps/single store use. Can be created by regular admins.

@@ -26,6 +26,8 @@ Use the XML node to convert data from and to XML.
 If your XML is within a binary file, use the [Extract from File](n8n-nodes-base.extractfromfile.md) node to convert it to text first.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 - **Mode**: The format the data should be converted from and to.

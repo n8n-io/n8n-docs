@@ -41,6 +41,8 @@ Version 2 of the node offers two ways to sign in, chosen with the **Authenticati
 Version 1 of the node uses the node-specific [Microsoft SharePoint credential](../credentials/microsoft.md#sharepoint). Version 2 doesn't offer it: its tokens are issued for the older SharePoint REST API and don't work with Microsoft Graph.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Choosing how to sign in
 
 Both sign-in methods support every operation. Pick based on how the workflow runs:

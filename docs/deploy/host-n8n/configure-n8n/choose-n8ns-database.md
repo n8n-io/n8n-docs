@@ -13,6 +13,8 @@ layout:
 
 By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB. Refer to [Supported PostgreSQL versions](#supported-postgresql-versions) for n8n's PostgreSQL version policy.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Database type by n8n installation <a href="#database-type-by-n8n-installation" id="database-type-by-n8n-installation"></a>
 
 The database type used varies depending on your n8n installation:

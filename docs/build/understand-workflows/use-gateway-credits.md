@@ -23,6 +23,8 @@ Gateway credits are available on:
 They aren't available on n8n Cloud Enterprise or self-hosted n8n. Gateway credits are available from n8n 2.36.0. Free trials include Gateway credits, but you can't top up until you upgrade to a paid plan.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Use Gateway credits on a node
 
 On a supported node, the credential field offers Gateway credits alongside your own credentials:

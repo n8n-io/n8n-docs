@@ -7,6 +7,8 @@ layout:
 
 Use n8n evaluations to build reliable AI workflows and compare output against known test cases.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Understand why to test](understand-why-to-test.md): build confidence in your LLM-powered workflows.

@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Figma Trigger (Beta)](../trigger-nodes/n8n-nodes-base.figmatrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Figma](https://www.figma.com/) account. You need an admin or owner level account.

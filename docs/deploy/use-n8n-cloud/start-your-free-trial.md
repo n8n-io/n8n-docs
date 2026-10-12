@@ -17,6 +17,8 @@ layout:
 
 [n8n Cloud](README.md) is the managed way to run n8n: n8n hosts your instance, so you don't set up or maintain any infrastructure. The best way to start is with a free trial, then move to a paid plan that fits your needs.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Start with a free trial <a href="#start-with-a-free-trial" id="start-with-a-free-trial"></a>
 
 When you create a new n8n Cloud trial, you have 14 days to try all the features of the [Pro plan](https://n8n.io/pricing/), including:

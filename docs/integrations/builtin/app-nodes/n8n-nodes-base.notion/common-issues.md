@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Notion node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Relation property not displaying <a href="#relation-property-not-displaying" id="relation-property-not-displaying"></a>
 
 The Notion node only supports displaying the data relation property for [two-way relations](https://www.notion.com/help/relations-and-rollups). When you connect two Notion databases with a two-way relationship, you can select or filter by the relation property when working with the Notion node's **Database Page** resource.

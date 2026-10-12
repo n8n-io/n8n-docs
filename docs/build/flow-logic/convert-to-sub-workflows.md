@@ -23,6 +23,8 @@ Use sub-workflow conversion to refactor your workflows into reusable parts, as p
 
 See [sub-workflows](break-workflows-into-smaller-parts.md) for a general introduction to the concept.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Selecting nodes for a sub-workflow <a href="#selecting-nodes-for-a-sub-workflow" id="selecting-nodes-for-a-sub-workflow"></a>
 
 To convert part of a workflow to a sub-workflow, you must select the nodes in the original workflow that you want to convert.

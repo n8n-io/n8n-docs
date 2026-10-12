@@ -40,6 +40,8 @@ On this page, you'll find a list of operations the Motorhead node supports, and 
 Refer to the [Motorhead credentials documentation](../../credentials/motorhead.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Session ID**: Enter the ID to use to store the memory in the workflow data.

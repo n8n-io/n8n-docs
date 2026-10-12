@@ -52,6 +52,8 @@ To enable certain licensed features, you must first activate your license. You c
 | `N8N_LICENSE_TENANT_ID`                   | Number  | `1`                            | Tenant ID associated with the license. Only set this variable if explicitly instructed by n8n.                                                                                                                                                                                                                                                                                                                                      |
 | `https_proxy_license_server`              | String  | `https://user:pass@proxy:port` | Proxy server URL for HTTPS requests to retrieve license. This variable name needs to be lowercase.                                                                                                                                                                                                                                                                                                                                  |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

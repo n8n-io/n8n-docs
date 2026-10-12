@@ -40,6 +40,8 @@ You can use these credentials to authenticate the following nodes:
 
 You can also use the OAuth2 credential to connect the Supabase MCP server from the [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Supabase](https://supabase.com/dashboard/sign-up) account.

@@ -30,6 +30,8 @@ The `.n8np` extension is a naming convention. n8n doesn't check the file name on
 
 Inside the archive, every entity is its own small JSON file in its own directory, and a `manifest.json` at the root indexes the whole thing. `manifest.json` must be the first file in the archive, so n8n can validate a package before reading the rest of it.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Three package shapes
 
 The shape depends on what you exported. All three carry the same kinds of file, arranged differently.

@@ -67,6 +67,8 @@ This section provides explanations of important AI concepts, and workflow templa
 [^5]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
 [^6]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Use Google Sheets as a data source](ai-examples/use-google-sheets-as-a-data-source.md): use the n8n workflow tool to load data from Google Sheets into your AI workflow.

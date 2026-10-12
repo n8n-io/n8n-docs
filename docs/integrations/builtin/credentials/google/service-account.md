@@ -38,6 +38,8 @@ Using service accounts is more complex than OAuth2. Before you begin:
 * Make sure you need to use Service Account. For most use cases, [OAuth2](oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * Create a [Google Cloud](https://cloud.google.com/) account.

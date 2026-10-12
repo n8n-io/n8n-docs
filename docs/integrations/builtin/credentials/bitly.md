@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following node:
 
 - [Bitly](../app-nodes/n8n-nodes-base.bitly.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Bitly](https://www.bitly.com/) account.

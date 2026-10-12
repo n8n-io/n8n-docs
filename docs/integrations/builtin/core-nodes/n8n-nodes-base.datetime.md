@@ -28,6 +28,8 @@ The Date & Time node manipulates date and time data and convert it to different 
 You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/handle-special-data-types/work-with-dates-and-times) for more information.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * **Add to a Date**: Add a specified amount of time to a date.

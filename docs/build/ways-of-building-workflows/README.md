@@ -23,6 +23,8 @@ layout:
 
 n8n gives you several ways to build a workflow, from typing a request in natural language to writing every node by hand.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Use n8n Assistant](n8n-assistant.md): create, edit, test, and troubleshoot workflows from a chat.

@@ -15,6 +15,8 @@ layout:
 There are three API endpoints you can call to check the status of your instance: `/healthz`, `healthz/readiness`, and `/metrics`.
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## healthz and healthz/readiness <a href="#healthz-and-healthzreadiness" id="healthz-and-healthzreadiness"></a>
 
 The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It doesn't indicate DB status. It's available for both self-hosted and Cloud users.

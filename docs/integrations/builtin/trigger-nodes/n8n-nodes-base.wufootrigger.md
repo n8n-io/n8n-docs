@@ -32,3 +32,5 @@ Refer to the [Wufoo credentials documentation](../credentials/wufoo.md) for auth
 
 For usage examples and templates to help you get started, refer to n8n's [Wufoo Trigger integrations](https://n8n.io/integrations/wufoo-trigger/) page.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

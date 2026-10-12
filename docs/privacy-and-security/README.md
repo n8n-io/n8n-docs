@@ -23,6 +23,8 @@ layout:
 
 This page describes n8n's data privacy practices.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## GDPR <a href="#gdpr" id="gdpr"></a>
 
 ### Data processing agreement <a href="#data-processing-agreement" id="data-processing-agreement"></a>

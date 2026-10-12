@@ -22,6 +22,8 @@ layout:
 
 An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for more information about authenticating with the service.

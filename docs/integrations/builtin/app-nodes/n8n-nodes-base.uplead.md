@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the UpLead node supports and link
 Refer to [UpLead credentials](../credentials/uplead.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Company

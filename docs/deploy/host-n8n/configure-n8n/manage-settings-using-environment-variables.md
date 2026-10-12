@@ -20,6 +20,8 @@ You can manage a subset of instance settings from environment variables, instead
 
 Each supported area has a dedicated environment variable named `<AREA>_MANAGED_BY_ENV`. Set this variable to `true` to activate environment variable management for that area. n8n then applies the related environment variables and locks the matching UI controls.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 When you set `<AREA>_MANAGED_BY_ENV` to `true`:

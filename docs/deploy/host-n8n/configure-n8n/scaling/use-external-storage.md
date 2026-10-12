@@ -32,6 +32,8 @@ It isn't available on n8n Cloud.
 
 n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Storing n8n's binary data in S3 <a href="#storing-n8ns-binary-data-in-s3" id="storing-n8ns-binary-data-in-s3"></a>
 
 n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.

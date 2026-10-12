@@ -11,6 +11,8 @@ layout:
 
 These are some commonly used expressions. A more exhaustive list appears below.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Array](array.md): methods for working with arrays.

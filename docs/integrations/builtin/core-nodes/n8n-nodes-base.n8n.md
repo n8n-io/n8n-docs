@@ -49,6 +49,8 @@ Refer to the [API authentication documentation](https://app.gitbook.com/s/r7wKI4
 This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Audit

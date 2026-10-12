@@ -42,6 +42,8 @@ layout:
 
 Set `N8N_SECURITY_POLICY_MANAGED_BY_ENV` to `true` to manage the security policy from environment variables. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/xVIddGVtWAPFZlRYTrwL/" %}
 
 ## Related resources

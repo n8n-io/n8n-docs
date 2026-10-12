@@ -26,6 +26,8 @@ You can retrieve custom execution data during workflow execution using the Code 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/hEbJHXcEBce6m2wEE65f/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Save Execution Data for Search

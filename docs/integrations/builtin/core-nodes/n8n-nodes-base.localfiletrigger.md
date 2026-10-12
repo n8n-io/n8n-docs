@@ -34,6 +34,8 @@ The Local File Trigger node can introduce significant security risks in environm
 This node isn't available on n8n Cloud.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 You can choose what event to watch for using the **Trigger On** parameter.

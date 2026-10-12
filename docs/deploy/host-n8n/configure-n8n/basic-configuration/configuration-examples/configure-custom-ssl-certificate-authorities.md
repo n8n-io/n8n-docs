@@ -27,6 +27,8 @@ You can use your own certificate authority or self-signed certificate starting f
 
 To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container. 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Docker <a href="#docker" id="docker"></a>
 
 The examples below assume you have a folder called `pki` that contains your certificates in either the directory you run the command from or next to your docker compose file.

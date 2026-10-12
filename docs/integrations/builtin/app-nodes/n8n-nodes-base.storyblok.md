@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Storyblok node supports and l
 Refer to [Storyblok credentials](../credentials/storyblok.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 ### Content API <a href="#content-api" id="content-api"></a>

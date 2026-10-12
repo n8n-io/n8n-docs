@@ -27,6 +27,8 @@ When configuring tools[^1] connected to the Tools Agent, many parameters can be 
 
 There are two ways to do this, and you can switch between them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Let the model fill in the parameter <a href="#let-the-model-fill-in-the-parameter" id="let-the-model-fill-in-the-parameter"></a>
 
 Each appropriate parameter field in the tool's editing dialog has an extra button at the end:

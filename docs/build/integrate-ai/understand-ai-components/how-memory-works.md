@@ -18,6 +18,8 @@ layout:
 
 Memory is a key part of AI chat services. The memory[^1] keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## AI memory in n8n <a href="#ai-memory-in-n8n" id="ai-memory-in-n8n"></a>
 
 To add memory to your AI workflow you can use either:

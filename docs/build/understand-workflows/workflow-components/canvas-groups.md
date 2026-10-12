@@ -23,6 +23,8 @@ Canvas Groups let you organize related nodes into a single named group on the ca
 
 ![A workflow with expanded and collapsed Canvas Groups, some with descriptions](../../.gitbook/assets/canvas-groups-overview.png)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a Canvas Group <a href="#create-a-canvas-group" id="create-a-canvas-group"></a>
 
 1. Select the nodes you want to group. Drag a selection box around them, or hold `Ctrl/Cmd` and click each node.

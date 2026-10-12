@@ -35,6 +35,8 @@ n8n has two types of custom roles:
 
 Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike built-in roles (Owner, Admin, Member), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide management.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a custom instance role <a href="#create-a-custom-instance-role" id="create-a-custom-instance-role"></a>
 
 Instance owners and instance admins can create custom instance roles.

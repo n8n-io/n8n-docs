@@ -33,6 +33,8 @@ Credentials are securely stored authentication information used to connect n8n w
 On n8n Cloud, supported AI models and services don't need a credential at all: select **Use Gateway credits** on the node to run it with [Gateway credits](use-gateway-credits.md) instead of your own API key.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a credential <a href="#create-a-credential" id="create-a-credential"></a>
 
 1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **Create** button in the upper-left corner of the side menu. Select credential.

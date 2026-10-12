@@ -28,6 +28,8 @@ You can use these credentials to authenticate the following nodes:
 You need a paid plan to access the Bubble APIs.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key

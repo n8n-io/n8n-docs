@@ -36,6 +36,8 @@ You can use these credentials to authenticate the following nodes:
 The Microsoft Excel (OneDrive), Microsoft Outlook, Microsoft SharePoint, and Microsoft Teams nodes support this credential from version 2 of the node. The Microsoft Excel (SharePoint) node supports it from version 1.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 - A Microsoft 365 organization tenant. Personal Microsoft accounts don't support application permissions.

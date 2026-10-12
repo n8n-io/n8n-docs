@@ -18,6 +18,8 @@ For security reasons, you may want to block your users from accessing or working
 
 Use the `NODES_EXCLUDE` environment variable to prevent your users from accessing specific nodes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Exclude nodes <a href="#exclude-nodes" id="exclude-nodes"></a>
 
 Update your `NODES_EXCLUDE` environment variable to include an array of strings containing any nodes you want to block your users from using.

@@ -43,6 +43,8 @@ This quickstart uses [n8n Cloud](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/
 
 Prefer to self-host? Run `curl -fsSL https://get.n8n.io | sh` to get n8n running locally in one step (see the [one-line setup guide](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/one-line-setup)), then come back and follow the steps below at `http://localhost:5678` instead of your Cloud instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Step one: Create a new workflow <a href="#step-one-create-a-new-workflow" id="step-one-create-a-new-workflow"></a>
 
 When you open n8n, you'll see either:

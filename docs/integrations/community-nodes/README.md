@@ -28,3 +28,5 @@ layout:
 {% content-ref url="building-community-nodes.md" %}
 [building-community-nodes.md](building-community-nodes.md)
 {% endcontent-ref %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

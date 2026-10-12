@@ -20,6 +20,8 @@ n8n uses API keys to authenticate API calls.
 The n8n API isn't available during the free trial. Please upgrade to access this feature.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create an API key <a href="#create-an-api-key" id="create-an-api-key"></a>
 
 1. Log in to n8n.

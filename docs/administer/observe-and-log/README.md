@@ -7,6 +7,8 @@ layout:
 
 Track usage across your instance, and send events from n8n to your own logging tools.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Track usage with Insights](track-usage-with-insights.md): understand workflow execution volume and performance.

@@ -33,6 +33,8 @@ For usage examples and templates to help you get started, refer to n8n's [Vector
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Description of Data <a href="#description-of-data" id="description-of-data"></a>

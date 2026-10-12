@@ -8,6 +8,8 @@ layout:
 
 Manage your n8n Cloud trial, plan, and instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Try free then choose a plan](start-your-free-trial.md): start a free trial, then compare the Starter, Pro, and Enterprise plans.

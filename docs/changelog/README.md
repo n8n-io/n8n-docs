@@ -42,6 +42,23 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Durable scheduler on by default for Schedule Trigger nodes
+
+**Released:** 2026-10-20 in [n8n 2.45](release-notes.md#n8n245)
+
+Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops them. In a multi-main setup, each run executes once, on whichever main claims it first.
+
+Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before.
+
+You can keep the previous behavior while you adapt:
+
+* Set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy` to keep clock-aligned timing on the durable scheduler.
+* Set `N8N_SCHEDULER_ENABLED=false` to return the whole instance to the in-memory scheduler.
+
+Both variables are now deprecated, and n8n logs a warning at startup if you set either one. A future version will remove them, along with the in-memory scheduler. This release also removes the Skip Durable Scheduler node setting and its `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` flag.
+
+Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+
 ## TypeSafe AI node for smarter workflow routing with Jev
 
 **Released:** 2026-09-30&#x20;

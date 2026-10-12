@@ -67,6 +67,14 @@ from check_internal_links import blank_gitbook_native, strip_code  # noqa: E402
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 MAX_FINDINGS = 500
+
+# Per-class caps, because the classes are not equally actionable. The first full run
+# (2026-10-12) produced 719 redirect-reliant links against 23 dead ones; a flat cap of
+# 500 sorted by severity would still have pushed every blocked and error row out of the
+# report. Everything somebody can act on today is kept in full; the long tail is capped
+# and the sheet keeps the rest.
+CLASS_CAPS = {"dead": None, "soft-404": None, "redirect-reliant": 300,
+              "blocked": 100, "error": 100}
 BODY_BYTES = 65536
 DEFAULT_WORKERS = 8
 DEFAULT_TIMEOUT = 20
@@ -76,9 +84,14 @@ DEFAULT_TIMEOUT = 20
 USER_AGENT = ("Mozilla/5.0 (compatible; DocOps-LinkQuality/1.0; "
               "+https://github.com/n8n-io/n8n-docs)")
 
-# Same stop characters as product_links_report.py: whitespace, quotes, backtick, and the
-# bracket/paren characters that wrap a URL in markdown.
-URL_RE = re.compile(r"https?://[^\s\"'`\\)\]}<>]*")
+# Stop characters as in product_links_report.py (whitespace, quotes, backtick, and the
+# brackets that wrap a URL in markdown) with one addition: a balanced pair of
+# parentheses is part of the URL, exactly as CommonMark treats a link destination.
+#
+# Stopping at the first ")" turns `[HAR file](https://en.wikipedia.org/wiki/HAR_(file_format))`
+# into `.../HAR_(file_format`, which 404s. The first full run reported that as a dead
+# link; the page is fine and the markdown is fine, the regex was wrong.
+URL_RE = re.compile(r"""https?://(?:[^\s"'`\\()\[\]{}<>]|\([^\s"'`\\()\[\]{}<>]*\))*""")
 TRAILING_RE = re.compile(r"[.,;:!?\\]+$")
 
 # Checked against <title> and the first <h1> only. Anchored phrases, not a bare "404"
@@ -195,6 +208,21 @@ def order_findings(findings):
                   key=lambda f: (SEVERITY.get(f["kind"], 9), f["page"], f["url"]))
 
 
+def cap_findings(ordered):
+    """Trim the long tail per class. Returns (kept, dropped_by_class)."""
+    kept, used, dropped = [], {}, {}
+    for f in ordered:
+        kind = f.get("kind", "")
+        cap = CLASS_CAPS.get(kind, 100)
+        n = used.get(kind, 0)
+        if cap is not None and n >= cap:
+            dropped[kind] = dropped.get(kind, 0) + 1
+            continue
+        used[kind] = n + 1
+        kept.append(f)
+    return kept[:MAX_FINDINGS], dropped
+
+
 # Three distinct source URLs landing on one target is no longer a coincidence; it is a
 # vendor docs migration with a catch-all redirect. Below that, treat them as individual
 # links so a shared "/docs" landing page doesn't read as a migration.
@@ -253,7 +281,10 @@ def summary_markdown(report):
             detail = f["detail"].replace("|", "\\|")
             lines.append(f"| {f['kind']} | `{f['page']}` | `{f['url']}` | {detail} |")
     if report.get("findings_truncated"):
-        lines += ["", f"Only the first {MAX_FINDINGS} findings were kept."]
+        dropped = report.get("findings_dropped") or {}
+        detail = ", ".join(f"{v} {k}" for k, v in sorted(dropped.items()))
+        lines += ["", f"Long tail trimmed from the report ({detail}); "
+                      "the full list is in the sheet."]
     return "\n".join(lines) + "\n"
 
 
@@ -295,40 +326,34 @@ def collect_urls(docs_dir: Path, patterns):
 
 
 def probe(url, timeout=DEFAULT_TIMEOUT):
-    """(status, final_url, body-or-None). Body only when the URL moved."""
-    def request(method, read_body):
-        req = urllib.request.Request(url, method=method,
-                                     headers={"User-Agent": USER_AGENT})
+    """(status, final_url, body). One GET, following redirects, body capped.
+
+    GET rather than HEAD, for two reasons learned the hard way on 2026-10-12.
+
+    HEAD lies. The first full run reported 23 dead links; 4 of the 5 spot-checked were
+    wrong, because marketplace.visualstudio.com, support.google.com, figma.com and
+    reddit.com all answer 404 to a HEAD and 200 to a GET. Falling back to GET on a bad
+    HEAD fixed that but meant two requests for every real failure.
+
+    And the body is the whole point. A soft 404 answers 200 at its own URL with no
+    redirect at all -- cloud.google.com/resource-manager/reference/rest/v3/projects/search
+    does exactly that, with an h1 reading "Sorry, we can't find that page". Only the
+    body shows it. HEAD would never have caught it.
+
+    So: one request per URL instead of one-or-two, and strictly better detection. The
+    cost is bytes, capped at BODY_BYTES, on a job that runs once a week.
+    """
+    req = urllib.request.Request(url, method="GET",
+                                 headers={"User-Agent": USER_AGENT})
+    try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            body = None
-            if read_body:
-                body = resp.read(BODY_BYTES).decode("utf-8", errors="replace")
-            return resp.status, resp.geturl(), body
-
-    try:
-        status, final_url, _ = request("HEAD", False)
+            return resp.status, resp.geturl(), resp.read(BODY_BYTES).decode(
+                "utf-8", errors="replace")
     except urllib.error.HTTPError as e:
-        # Plenty of servers refuse HEAD but answer GET.
-        if e.code in (403, 405, 501):
-            try:
-                return request("GET", True)
-            except urllib.error.HTTPError as e2:
-                return e2.code, e2.geturl(), None
-            except Exception:  # noqa: BLE001 - DNS, TLS, timeout: no verdict
-                return None, url, None
+        # The error page body is not worth reading: the status already decided it.
         return e.code, e.geturl(), None
-    except Exception:  # noqa: BLE001
+    except Exception:  # noqa: BLE001 - DNS, TLS, timeout: all "no verdict"
         return None, url, None
-
-    if normalize(final_url) == normalize(url):
-        return status, final_url, None
-    # It moved: fetch the body so a "not found" landing page can be recognised.
-    try:
-        return request("GET", True)
-    except urllib.error.HTTPError as e:
-        return e.code, e.geturl(), None
-    except Exception:  # noqa: BLE001
-        return status, final_url, None
 
 
 def run(docs_dir, config_path, workers, timeout, prober=None):
@@ -361,13 +386,18 @@ def run(docs_dir, config_path, workers, timeout, prober=None):
             })
 
     ordered_findings = order_findings(findings)
+    # Group before capping, so a 60-link migration is still reported as 60 even if the
+    # individual rows are trimmed.
+    groups = collapse_redirects(ordered_findings)
+    kept, dropped = cap_findings(ordered_findings)
     return {
         "source": "link-second-pass",
         "checked_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "totals": totals,
-        "collapsed_redirects": collapse_redirects(ordered_findings),
-        "findings": ordered_findings[:MAX_FINDINGS],
-        "findings_truncated": len(ordered_findings) > MAX_FINDINGS,
+        "collapsed_redirects": groups,
+        "findings": kept,
+        "findings_truncated": len(kept) < len(ordered_findings),
+        "findings_dropped": dropped,
     }
 
 

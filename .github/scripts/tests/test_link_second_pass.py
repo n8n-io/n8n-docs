@@ -116,6 +116,48 @@ check("collapse: non-redirect findings are ignored",
       lsp.collapse_redirects([{"kind": "dead", "url": "https://x.com/a",
                                "final_url": "https://x.com/b", "page": "docs/a.md"}]) == [])
 
+# --- URL_RE -----------------------------------------------------------------------------
+# CommonMark allows balanced parentheses in a link destination. Stopping at the first
+# ")" turned the Wikipedia HAR link into a 404 and the first full run reported it as a
+# dead link, when both the page and the markdown were fine.
+def extracted(text):
+    return [lsp.clean_url(u) for u in lsp.URL_RE.findall(text)]
+
+
+check("URL_RE: balanced parens stay in the URL",
+      "https://en.wikipedia.org/wiki/HAR_(file_format)" in
+      extracted("[HAR file](https://en.wikipedia.org/wiki/HAR_(file_format)) in your message"))
+check("URL_RE: the closing paren of a markdown link is not swallowed",
+      extracted("see [docs](https://example.com/a) here") == ["https://example.com/a"])
+check("URL_RE: query strings survive",
+      extracted("[x](https://example.com/a?b=1&c=2)") == ["https://example.com/a?b=1&c=2"])
+check("URL_RE: angle-bracket autolinks",
+      extracted("<https://example.com/a>") == ["https://example.com/a"])
+check("URL_RE: a trailing sentence period is not part of the URL",
+      extracted("bare https://example.com/a. end") == ["https://example.com/a"])
+
+# --- cap_findings -------------------------------------------------------------------------
+# First full run: 719 redirect-reliant against 23 dead. A flat cap sorted by severity
+# would have pushed every blocked and error row out of the report entirely.
+mk = lambda kind, i: {"kind": kind, "page": f"docs/p{i}.md", "url": f"https://x/{i}", "detail": ""}
+mixed = ([mk("redirect-reliant", i) for i in range(719)] + [mk("dead", i) for i in range(23)]
+         + [mk("blocked", i) for i in range(129)] + [mk("error", i) for i in range(20)])
+kept, dropped = lsp.cap_findings(lsp.order_findings(mixed))
+kept_by = {}
+for f in kept:
+    kept_by[f["kind"]] = kept_by.get(f["kind"], 0) + 1
+check("cap: every dead link is kept, none capped away", kept_by.get("dead") == 23)
+check("cap: the redirect-reliant tail is trimmed to its cap",
+      kept_by.get("redirect-reliant") == lsp.CLASS_CAPS["redirect-reliant"])
+check("cap: blocked still gets its share instead of being squeezed out",
+      kept_by.get("blocked") == lsp.CLASS_CAPS["blocked"])
+check("cap: errors are kept when under the cap", kept_by.get("error") == 20)
+check("cap: what was dropped is reported, not silently lost",
+      dropped.get("redirect-reliant") == 719 - lsp.CLASS_CAPS["redirect-reliant"]
+      and dropped.get("blocked") == 129 - lsp.CLASS_CAPS["blocked"])
+check("cap: nothing dropped when everything fits",
+      lsp.cap_findings([mk("dead", 1)])[1] == {})
+
 # --- excludes -------------------------------------------------------------------------
 # One source of truth with lychee: a host someone already triaged into lychee.toml must
 # not come straight back through this report.

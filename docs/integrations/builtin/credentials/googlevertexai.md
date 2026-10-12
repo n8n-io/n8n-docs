@@ -47,7 +47,7 @@ Select **Save** to save the credential.
 
 ### Select a project
 
-The project list uses the service account's access, rather than your personal Google account. Google returns projects for which the service account has the `resourcemanager.projects.get` permission. Refer to [Google's project search documentation](https://cloud.google.com/resource-manager/reference/rest/v3/projects/search).
+The project list uses the service account's access, rather than your personal Google account. Google returns projects for which the service account has the `resourcemanager.projects.get` permission. Refer to [Google's project search documentation](https://docs.cloud.google.com/resource-manager/reference/rest/v3/projects/search).
 
 If the project list is empty or fails to load, select **Custom** and enter the **Project ID**. Project lookup is optional. The service account still needs Vertex AI access in the selected project.
 

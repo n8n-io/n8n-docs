@@ -60,10 +60,6 @@ Log in to your n8n instance, then:
 
 3. Select the workflow’s name and change it to `Weather Log`. Select anywhere on the canvas to save the name.
 
-    {% embed url="https://youtu.be/VLvskeTzSSs" %}
-    Rename the workflow to Weather Log
-    {% endembed %}
-
 ## 2. Run it at 8 AM every day
 
 You’ll use: **Schedule Trigger**
@@ -113,15 +109,18 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     ![Edit Fields (Set) under Data transformation in the node list](.gitbook/assets/build-your-first-workflow-report-01.png)
 
 2. Select **Add Field** in the middle of the Node details view. For **Name**, enter `report`.
+
+    ![Add Field button in the middle of the Edit Fields (Set) Node details view](.gitbook/assets/build-your-first-workflow-report-02.png)
+
+    ![New field with the name report](.gitbook/assets/build-your-first-workflow-report-03.png)
+
 3. For **Value**, enter `The temperature in`, then drag `city` from the input panel on the left. When you drop a field in, n8n switches **Value** to **Expression** mode, and you see:
 
     ```
     The temperature in {{ $json.city }}
     ```
 
-    {% embed url="https://youtu.be/VTkAWAUTmoQ" %}
-    Drag the city field into the report Value field
-    {% endembed %}
+    ![city dragged from the input panel into the report Value field, with the preview showing The temperature in berlin](.gitbook/assets/build-your-first-workflow-report-04.png)
 
     {% hint style="info" %}
     **What's an expression?**
@@ -135,7 +134,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     The temperature in {{ $json.city }} is {{ $json.temp_c }}°C.
     ```
 
-    ![report Value field with the city and temp_c expressions](.gitbook/assets/build-your-first-workflow-report-03.png)
+    ![report Value field with the city and temp_c expressions](.gitbook/assets/build-your-first-workflow-report-05.png)
 
     Add `It's currently` to the end, then drag `condition` in:
 
@@ -143,7 +142,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     The temperature in {{ $json.city }} is {{ $json.temp_c }}°C. It's currently {{ $json.condition }}.
     ```
 
-    ![report Value field with the city, temp_c, and condition expressions](.gitbook/assets/build-your-first-workflow-report-04.png)
+    ![report Value field with the city, temp_c, and condition expressions](.gitbook/assets/build-your-first-workflow-report-06.png)
 
 5. Rename the node to `Format Weather Message` and select **Execute step**. You should see output similar to:
 
@@ -151,7 +150,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
     The temperature in berlin is 7.4°C. It's currently overcast.
     ```
 
-    ![Format Weather Message output showing the finished weather report](.gitbook/assets/build-your-first-workflow-report-05.png)
+    ![Format Weather Message output showing the finished weather report](.gitbook/assets/build-your-first-workflow-report-07.png)
 
 ## 5. Save the data
 

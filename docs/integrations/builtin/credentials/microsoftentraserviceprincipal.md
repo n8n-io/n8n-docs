@@ -156,7 +156,7 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 
 ## Grant access per site
 
-Tenant-wide `Sites.Read.All` or `Sites.ReadWrite.All` gives the app access to every SharePoint site in your organization. If your security team prefers to grant access site by site, use the `Sites.Selected` permission instead. The Microsoft SharePoint node (from version 2) and the Microsoft Excel (SharePoint) node support it.
+Tenant-wide `Sites.Read.All` or `Sites.ReadWrite.All` gives the app access to every SharePoint site in your organization. If your security team prefers to grant access site by site, use the `Sites.Selected` permission instead. The Microsoft SharePoint node (from version 2), the Microsoft SharePoint Trigger node, and the Microsoft Excel (SharePoint) node support it.
 
 Per-site access takes two steps. The second step has no page in the Entra admin center or the SharePoint admin center, which is why many setups miss it:
 

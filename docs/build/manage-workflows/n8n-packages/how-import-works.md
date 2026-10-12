@@ -120,7 +120,7 @@ Tables are matched by ID within the target project, never by name. A created tab
 
 | Policy | What it does |
 |--------|--------------|
-| `keep-existing` (default) | Never changes the target table. Refuses the import when a package column is missing from the target or has a different type. Extra columns the target has of its own are fine |
+| `keep-existing` (default) | Never changes the target table. Refuses the import when a data table column from the package is missing on the target or has a different type. Extra columns the target has of its own are fine |
 | `fail` | Same as `keep-existing`, but also refuses the import when the target has extra columns |
 | `overwrite` | Changes the target table to match the package. It adds, renames, removes (destructive), retypes (destructive), and reorders columns, and renames the table |
 | `overwrite-non-destructive` | Makes the same changes as `overwrite`, but stops the import when a change is destructive and reports those changes. Nothing is written |

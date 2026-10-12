@@ -225,7 +225,7 @@ In your n8n credential:
 
 ## Set up Lakebase for the Data API
 
-The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.databricks.md#lakebase-operations) reads and writes rows over the Lakebase Data API. The API is off by default, and the identity the credential authenticates as needs a Postgres role before any operation works. Do these steps once for each Lakebase project, in this order.
+The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.databricks.md#lakebase-operations) reads and writes rows over the Lakebase Data API. The API is off by default, and the identity the credential authenticates as needs a Postgres role before any operation works. Do these steps in this order. The steps have different scopes. You turn on the Data API and the OpenAPI specification once for each project. You create the Postgres role and grant it to `authenticator` once for each branch. You install the `databricks_auth` extension and grant privileges on tables and functions once for each database the node reaches.
 
 {% hint style="info" %}
 **The Data API doesn't accept personal access tokens**
@@ -262,9 +262,13 @@ SELECT databricks_create_role('<identity>', 'SERVICE_PRINCIPAL');
 
 `<identity>` is the service principal's application ID. For a user identity, pass the email address and `'USER'` instead.
 
+A Postgres extension belongs to one database. Run `CREATE EXTENSION` in every database the node reaches. The role covers the whole branch, not one database. Run `databricks_create_role` again on any branch that has no role for the identity. Without a role there, the Data API returns `invalid token permissions` (`PGRST301`).
+
 Create the role this way even if the identity already appears in the Databricks UI. The next step works only on a role created with `databricks_create_role`.
 
 ### Grant the role to authenticator
+
+`<role>` is the identity you passed to `databricks_create_role`. Use the application ID for a service principal, or the email address for a user.
 
 ```sql
 GRANT "<role>" TO authenticator;
@@ -272,7 +276,7 @@ GRANT "<role>" TO authenticator;
 
 Run this as the identity that created the role. No role reaches the Data API without this grant. Operations fail with `permission denied to set role` until you run it.
 
-Then grant the role what it needs on your data, the same as any other Postgres role:
+Then grant the role what it needs on your data, the same as any other Postgres role. Run these in each database that holds a table or function the node uses:
 
 ```sql
 GRANT SELECT, INSERT, UPDATE, DELETE ON <table> TO "<role>";

@@ -215,7 +215,7 @@ Use the **Lakebase** resource to read and write rows in a Lakebase database, the
 {% hint style="info" %}
 **One-time setup in Databricks**
 
-The Data API is off by default, and the identity the credential authenticates as needs a Postgres role on the project. Follow [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) before you use these operations. The Data API rejects personal access tokens, so the Lakebase resource needs an OAuth2 credential.
+The Data API is off by default, and the identity the credential authenticates as needs a Postgres role on every branch the node reads or writes. Follow [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) before you use these operations. The Data API rejects personal access tokens, so the Lakebase resource needs an OAuth2 credential.
 {% endhint %}
 
 ### Select a table
@@ -231,6 +231,10 @@ Every operation starts with the same five fields. Each offers a **From list** mo
 | **Table** | The table to work on. **Execute Function** takes a **Function** instead. |
 
 The table, column, and function lists read the project's OpenAPI document. They stay empty until you turn that setting on.
+
+The node reads and writes rows in tables that already exist. It doesn't create tables. Create the table in the Lakebase SQL editor first, and grant the credential's Postgres role access to it.
+
+The `orders` table in the examples below has an `id` primary key, and `status` and `created_at` columns.
 
 ### Get Many
 
@@ -282,17 +286,17 @@ The mapper marks a column required when it's `NOT NULL` and has no default.
 
 **Update** changes the rows that match a column you choose.
 
-Set **Column to match on** to the column that identifies the row, usually the primary key. The node matches rows where that column equals the value you give, and writes the other mapped columns to them. A column you leave empty in **Map Each Column Manually** isn't sent, so it keeps its current value.
+Set **Columns to match on** to the columns that identify the row, usually the primary key. The node matches rows where every one of those columns equals the value you give, and writes the other mapped columns to them. A composite primary key needs every one of its columns selected, or the update reaches more rows than you mean. A column you leave empty in **Map Each Column Manually** isn't sent, so it keeps its current value.
 
 The node returns one item for each updated row. A match that finds nothing returns no items, and isn't an error. The operation fails before sending anything when a matching column has no value, because that would update rows you didn't mean to.
 
 #### Example: Mark an order as shipped
 
-Set **Table** to `orders` and **Mapping Column Mode** to **Map Each Column Manually**. Set **Column to match on** to `id`. Set `id` to `{{ $json.order_id }}` and `status` to `shipped`. Leave every other column empty, so only `status` changes.
+Set **Table** to `orders` and **Mapping Column Mode** to **Map Each Column Manually**. Set **Columns to match on** to `id`. Set `id` to `{{ $json.order_id }}` and `status` to `shipped`. Leave every other column empty, so only `status` changes.
 
 ### Insert or Update
 
-**Insert or Update** writes the row, and updates the existing row instead when one already matches.
+**Insert or Update** writes the row, and updates the existing row instead when one already matches. It takes the same **Mapping Column Mode** field as **Insert**, so the values come from the node or from the input item.
 
 Set **Columns to match on** to the columns that decide whether the row is already there. Those columns have to carry a primary key or a unique constraint together, so a composite key needs every one of its columns selected. Without such a constraint the operation fails, and the node tells you to add one in Databricks.
 
@@ -301,6 +305,10 @@ Unlike **Update**, the matching columns stay in the written row, because Postgre
 A matching column with no value fails the operation. Postgres counts two nulls as different, so a null would never match an existing row and the operation would insert a duplicate on every run.
 
 The node returns one item for each row it wrote, new or updated.
+
+#### Example: Keep an orders table up to date
+
+Set **Table** to `orders` and **Columns to match on** to `id`, the table's primary key. Set **Mapping Column Mode** to **Map Automatically**, so each item's `id`, `status`, and `created_at` fields go to the columns of the same name. The node updates the row when the table already holds that `id`. The node writes a new row when it doesn't.
 
 ### Delete
 
@@ -315,6 +323,10 @@ The node returns one item for each deleted row, so a later node can record what 
 
 A delete through the Data API isn't wrapped in a transaction the workflow can roll back. Run the same conditions through **Get Many** first to see what the delete will match.
 {% endhint %}
+
+#### Example: Remove old canceled orders
+
+Set **Table** to `orders`. Under **Select Rows**, add `status` **Equals** `canceled`, then add `created_at` **Less Than** `{{ $now.minus({ days: 30 }) }}`. Leave **Combine Conditions** as **AND**.
 
 ### Execute Function
 

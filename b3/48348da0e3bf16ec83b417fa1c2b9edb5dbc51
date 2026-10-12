@@ -1,0 +1,19 @@
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal-sharepoint.md
+  s_74fc353a79c0bf::t_6bd8af5073bc8b 79,96,104,109-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b348348da0e3bf16ec83b417fa1c2b9edb5dbc51",
+  "prompts": {},
+  "sessions": {
+    "s_74fc353a79c0bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "55c528c5-98ab-42b8-8487-789d12d6f9a8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

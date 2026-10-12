@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Zammad](../app-nodes/n8n-nodes-base.zammad.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a hosted [Zammad](https://zammad.com/) account or set up your own Zammad instance.

@@ -14,6 +14,8 @@ layout:
 This section contains information about testing your node. You can test nodes manually and automatically. You should use both testing methods before publishing your node.
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Run your node locally](run-your-node-locally.md): manually test your node on your own machine, within a local n8n instance.

@@ -28,6 +28,8 @@ The `execute()` method creates and returns an instance of `INodeExecutionData`.
 You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](../item-linking.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Base files](./)

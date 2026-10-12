@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [AMQP Sender](../app-nodes/n8n-nodes-base.amqp.md)
 - [AMQP Trigger](../trigger-nodes/n8n-nodes-base.amqptrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/). Refer to [AMQP Products](https://www.amqp.org/about/examples.html) for a list of options.

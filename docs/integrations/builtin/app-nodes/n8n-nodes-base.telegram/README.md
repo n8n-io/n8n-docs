@@ -44,6 +44,8 @@ On this page, you'll find a list of operations the Telegram node supports and li
 Refer to [Telegram credentials](../../credentials/telegram.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Chat** operations](chat-operations.md)

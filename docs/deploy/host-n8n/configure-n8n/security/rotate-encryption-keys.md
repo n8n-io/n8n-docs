@@ -32,6 +32,8 @@ You need to be the instance owner to turn the feature on or off and to rotate ke
 
 Encryption key rotation lets you periodically replace the key that encrypts your n8n data, like credentials, OAuth tokens, and other sensitive content, without changing your instance's master encryption key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How encryption key rotation works <a href="#how-encryption-key-rotation-works" id="how-encryption-key-rotation-works"></a>
 
 n8n uses a two-layer key model:

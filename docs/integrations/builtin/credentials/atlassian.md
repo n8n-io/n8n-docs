@@ -18,6 +18,8 @@ The **Atlassian OAuth2 API** credential is a generic OAuth2 credential for [Atla
 The product-specific credentials, [Jira SW Cloud OAuth2 API](jira.md) and [Confluence Cloud OAuth2 API](confluence.md), build on this credential and are the right choice for the Jira and Confluence nodes: they request the scopes those nodes need. Use the generic **Atlassian OAuth2 API** credential for advanced cases, for example with the HTTP Request node, where you define the scopes yourself.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 - An [Atlassian Cloud](https://www.atlassian.com/) site for the product you want to access, such as Jira or Confluence.

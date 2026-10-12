@@ -28,6 +28,8 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 * Reuse a workflow: for example, you could have multiple workflows pulling and processing data from different sources, then have all those workflows call a single workflow that generates a report.
 * Break large workflows into smaller components.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Usage <a href="#usage" id="usage"></a>
 
 This node runs in response to a call from the [Execute Sub-workflow](n8n-nodes-base.executeworkflow.md) or [Call n8n Workflow Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) nodes.

@@ -33,6 +33,8 @@ Refer to the [Box credentials documentation](../credentials/box.md) for authenti
 For usage examples and templates to help you get started, refer to n8n's [Box Trigger integrations](https://n8n.io/integrations/box-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Find your Box Target ID <a href="#find-your-box-target-id" id="find-your-box-target-id"></a>
 
 To get your Target ID in Box:

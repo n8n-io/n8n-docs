@@ -23,6 +23,8 @@ The requirements provided here are an example based on n8n Cloud and are for ill
 | Database  | 512 MB - 4 GB SSD | SQLite or PostgreSQL |
 | Memory    | 320 MB - 2 GB | |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## CPU considerations <a href="#cpu-considerations" id="cpu-considerations"></a>
 
 n8n isn't CPU intensive so even small instances (of providers such as AWS and GCP) should be enough for most use cases. Usually, memory requirements supersede CPU requirements, so focus resources there when planning your infrastructure.

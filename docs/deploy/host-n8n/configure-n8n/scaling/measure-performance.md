@@ -16,6 +16,8 @@ n8n can handle up to 220 workflow executions per second on a single instance, wi
 
 This document outlines n8n's performance benchmarking. It describes the factors that affect performance, and includes two example benchmarks.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Performance factors <a href="#performance-factors" id="performance-factors"></a>
 
 The performance of n8n depends on factors including: 

@@ -39,6 +39,8 @@ Reviews are optional after you enable the feature. You can still publish directl
 
 n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left menu for requests that need your attention.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How reviews work
 
 A review is tied to one saved version of a workflow, the *pinned version*. You can keep editing while a review is open. New saves create newer versions and don't change the pinned version until someone submits those changes to the review.

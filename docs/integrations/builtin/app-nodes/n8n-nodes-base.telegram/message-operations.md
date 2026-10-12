@@ -48,6 +48,8 @@ To use most of these operations, you must add your bot to a channel so that it c
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Delete Chat Message <a href="#delete-chat-message" id="delete-chat-message"></a>
 
 Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage) method.

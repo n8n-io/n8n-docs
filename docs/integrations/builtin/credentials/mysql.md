@@ -44,6 +44,8 @@ You can use these credentials to authenticate the following nodes:
 The Agent node doesn't support SSH tunnels.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a user account on a [MySQL](https://www.mysql.com/) server database.

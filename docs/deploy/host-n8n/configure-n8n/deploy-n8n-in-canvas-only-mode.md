@@ -17,6 +17,8 @@ In canvas-only mode, when you open a workflow you see only that workflow's canva
 Canvas-only mode is available from n8n 2.15.0.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Turn on canvas-only mode
 
 Set `N8N_CANVAS_ONLY` to `true`:

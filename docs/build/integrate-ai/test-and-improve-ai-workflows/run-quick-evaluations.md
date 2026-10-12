@@ -26,6 +26,8 @@ Light evaluations are available on:
 - **Self-hosted:** Registered Community, Business, Enterprise
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What are light evaluations? <a href="#what-are-light-evaluations" id="what-are-light-evaluations"></a>
 
 When building your workflow, you often want to test it with a handful of examples to get a sense of how it performs and make improvements. At this stage of workflow development, looking over workflow outputs for each example is often enough. The benefits of setting up more [formal scoring or metrics](use-metrics-to-measure-quality.md) don't yet justify the effort.

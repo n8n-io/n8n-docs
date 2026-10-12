@@ -38,6 +38,8 @@ layout:
 
 Here are some common errors and issues with the [Supabase node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Filtering rows by metadata <a href="#filtering-rows-by-metadata" id="filtering-rows-by-metadata"></a>
 
 To filter rows by [Supabase metadata](https://supabase.com/docs/guides/ai/python/metadata), set the **Select Type** to **String**.

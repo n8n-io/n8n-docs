@@ -22,6 +22,8 @@ PostBin is a service that helps you test API clients and webhooks. Use the PostB
 
 On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Bin

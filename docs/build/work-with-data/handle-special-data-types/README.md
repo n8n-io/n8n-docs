@@ -7,6 +7,8 @@ layout:
 
 Some data needs handling beyond n8n's standard JSON structure, such as binary files, dates, and nested JSON.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Work with files and images](work-with-files-and-images.md): understand and use binary data in n8n.

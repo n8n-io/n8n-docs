@@ -48,6 +48,8 @@ When you enable redaction, execution metadata (status, timing, node names) remai
 
 You can configure redaction per workflow, or [enforce it instance-wide](redact-execution-data.md#instance-level-enforcement) so that every workflow redacts execution data.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Why use execution data redaction <a href="#why-use-execution-data-redaction" id="why-use-execution-data-redaction"></a>
 
 Workflows often process data that the workflow builder or viewers shouldn't have access to outside of n8n. Common scenarios include:

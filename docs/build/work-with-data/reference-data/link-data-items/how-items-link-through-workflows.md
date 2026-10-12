@@ -20,6 +20,8 @@ This document provides a conceptual overview of this feature. For usage details,
 * [Preserving linking in the Code node](preserving-linking-in-the-code-node.md), to learn how to handle item linking in the Code node.
 * [Item linking errors](item-linking-errors.md), to understand the errors you may encounter in the editor UI.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n's automatic item linking <a href="#n8ns-automatic-item-linking" id="n8ns-automatic-item-linking"></a>
 
 If a node doesn't control how to link input items to output items, n8n tries to guess how to link the items automatically:

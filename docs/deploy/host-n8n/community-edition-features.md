@@ -53,6 +53,8 @@ An **edition** is the variant of the self-hosted software you run: Community, Re
 Exact features per plan and edition can change. For the current breakdown, see the [pricing page](https://n8n.io/pricing/). This page explains what the plans and editions are and the main differences between them, not the full feature list.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Community edition <a href="#community-edition" id="community-edition"></a>
 
 The Community edition includes almost the complete feature set of n8n. It doesn't include these features:

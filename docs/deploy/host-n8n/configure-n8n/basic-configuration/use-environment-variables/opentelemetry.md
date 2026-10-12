@@ -42,6 +42,8 @@ n8n can export workflow and node execution traces over OTLP to an OpenTelemetry 
 | `N8N_AGENTS_TRACING_RECORD_INPUTS` | Boolean | `true` | Whether agent tracing records inputs, such as prompts and tool arguments. Set to `false` to exclude sensitive input data from traces. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_OUTPUTS` | Boolean | `true` | Whether agent tracing records outputs, such as responses and tool results. Set to `false` to exclude sensitive output data from traces. | 2.33.0 |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

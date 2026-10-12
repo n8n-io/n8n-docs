@@ -25,6 +25,8 @@ Risks include:
 In addition to publicly available community nodes from npm, n8n inspects some nodes and makes them available as [verified community node inside the nodes panel](installation-and-management/install-verified-community-nodes.md). These nodes have to meet a set of data and system security requirements for approval.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Report bad community nodes <a href="#report-bad-community-nodes" id="report-bad-community-nodes"></a>
 
 

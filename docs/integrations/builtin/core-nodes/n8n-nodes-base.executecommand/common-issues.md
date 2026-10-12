@@ -24,6 +24,8 @@ layout:
 Here are some common errors and issues with the [Execute Command node](README.md) and steps to resolve or troubleshoot them.
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found <a href="#command-failed-andltcommandandgt-binsh-andltcommandandgt-not-found" id="command-failed-andltcommandandgt-binsh-andltcommandandgt-not-found"></a>
 
 

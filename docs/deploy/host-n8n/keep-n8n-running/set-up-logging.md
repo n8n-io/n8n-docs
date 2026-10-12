@@ -28,6 +28,8 @@ All logging options described in this document (except Log streaming) are availa
 
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How do I set up logging in n8n? <a href="#setup" id="setup"></a>
 
 To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](../configure-n8n/basic-configuration/use-environment-variables/README.md))

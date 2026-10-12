@@ -28,6 +28,13 @@ from pathlib import Path
 MAP_KEYS = ("error_map", "fail_map", "timeout_map")
 MAX_FAILURES = 500
 
+# Statuses that mean "the host refused to answer a bot", not "this link is dead".
+# They used to sit in `accept` in lychee.toml, which scored them as healthy and hid
+# them completely: the 2026-10-05 sweep passed 64 such links without a word. They now
+# fail in lychee and get separated here, so they are visible as their own bucket
+# instead of either vanishing or drowning the real breakages (DOC-2396).
+BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
+
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
 
@@ -87,7 +94,9 @@ def build_payload(stats, ctx):
     """The contract between this Action and the n8n webhook. `stats` is the parsed
     lychee JSON (or {} when the report is missing); `ctx` carries run metadata."""
     stats = stats or {}
-    failures = flatten_failures(stats)
+    all_failures = flatten_failures(stats)
+    failures = [f for f in all_failures if f["status"] not in BLOCKED_STATUSES]
+    blocked = [f for f in all_failures if f["status"] in BLOCKED_STATUSES]
     # `errors` = the rows we actually deliver (errors AND timeouts), so counts shown in
     # Slack/DocFather always match the sheet/Supabase rows. lychee's own counter, which
     # excludes timeouts, is kept separately as `lychee_errors`.
@@ -97,6 +106,7 @@ def build_payload(stats, ctx):
         "excluded": _int(stats.get("excludes", stats.get("excluded"))),
         "timeouts": _int(stats.get("timeouts")),
         "errors": len(failures),
+        "blocked": len(blocked),
         "lychee_errors": _int(stats.get("errors")),
     }
     return {
@@ -111,7 +121,35 @@ def build_payload(stats, ctx):
         "totals": totals,
         "failures": failures[:MAX_FAILURES],
         "failures_truncated": len(failures) > MAX_FAILURES,
+        "blocked": blocked[:MAX_FAILURES],
+        "blocked_truncated": len(blocked) > MAX_FAILURES,
     }
+
+
+def merge_quality(payload, quality):
+    """Fold the second pass (link_second_pass.py) into the one weekly payload.
+
+    One POST, one run_id, one Slack message, one sheet tab. A finding the second pass
+    made about a link lychee already reported is dropped: lychee saw it first and the
+    reader only needs to be told once.
+    """
+    if not quality:
+        return payload
+    already = {(f["page"], f["url"]) for f in payload.get("failures", [])}
+    already |= {(f["page"], f["url"]) for f in payload.get("blocked", [])}
+    kept = [f for f in quality.get("findings", [])
+            if (f.get("page"), f.get("url")) not in already]
+    q_totals = quality.get("totals") or {}
+    payload["quality"] = kept[:MAX_FAILURES]
+    payload["quality_truncated"] = len(kept) > MAX_FAILURES
+    payload["collapsed_redirects"] = quality.get("collapsed_redirects") or []
+    payload["totals"].update({
+        "quality_checked": _int(q_totals.get("checked")),
+        "soft_404": _int(q_totals.get("soft_404")),
+        "redirect_reliant": _int(q_totals.get("redirect_reliant")),
+        "dead_to_browser": _int(q_totals.get("dead")),
+    })
+    return payload
 
 
 def summary_markdown(payload):
@@ -125,6 +163,9 @@ def summary_markdown(payload):
     lines.append(f"- Checked: {t['total']} (excluded {t['excluded']}, "
                  f"successful {t['successful']}, timeouts {t['timeouts']})")
     lines.append(f"- Broken: {t['errors']}")
+    if t.get("blocked"):
+        lines.append(f"- Blocked by the host (401/403/407/429, not verifiable): "
+                     f"{t['blocked']}")
     pages = {}
     for f in payload["failures"]:
         pages[f["page"]] = pages.get(f["page"], 0) + 1
@@ -137,6 +178,15 @@ def summary_markdown(payload):
     if payload.get("failures_truncated"):
         lines.append("")
         lines.append(f"Only the first {MAX_FAILURES} broken links were sent to n8n.")
+
+    # The second pass: the two things a status code cannot tell you (DOC-2396).
+    if "quality_checked" in payload["totals"]:
+        lines += ["", "### Second pass", "",
+                  f"- Soft 404s: {t.get('soft_404', 0)} | "
+                  f"redirect-reliant: {t.get('redirect_reliant', 0)} | "
+                  f"dead to a browser user agent: {t.get('dead_to_browser', 0)}"]
+        for g in (payload.get("collapsed_redirects") or [])[:5]:
+            lines.append(f"- **{g['count']} links now all land on** `{g['final_url']}`")
     return "\n".join(lines) + "\n"
 
 
@@ -174,6 +224,15 @@ def main():
         "report_found": stats is not None,
     }
     payload = build_payload(stats, ctx)
+
+    quality_path = Path(os.environ.get("QUALITY_REPORT", "lychee/quality.json"))
+    if quality_path.is_file():
+        try:
+            payload = merge_quality(payload, json.loads(
+                quality_path.read_text(encoding="utf-8")))
+        except json.JSONDecodeError as e:
+            # The second pass is an add-on. A bad file must not cost us the lychee report.
+            print(f"::warning::second-pass report at {quality_path} is not valid JSON: {e}")
 
     summary = summary_markdown(payload)
     print(summary)

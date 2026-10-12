@@ -27,11 +27,11 @@ Neither is visible to a status check. This pass re-requests each outbound URL, f
 the redirects, and reports those classes. Hard 404s stay lychee's job; anything this pass
 finds that lychee already reported is dropped at merge time in lychee_report.py.
 
-Scope and cost. HEAD for every URL, following redirects, which is the cheap part. The
-body is only downloaded when the URL actually redirected, capped at BODY_BYTES, because
-that is where soft-404s live: a vendor that serves a not-found page in place of the real
-one almost always redirects to it first. A page that answers 200 with a not-found body at
-its original URL is not caught, and that is a deliberate trade for bounded runtime.
+Scope and cost. One GET per URL, following redirects, reading at most BODY_BYTES of the
+body. An earlier version sent HEAD first and only fetched a body when the URL had moved.
+That was wrong twice over: HEAD lies on several large hosts (see probe()), and a soft 404
+can answer 200 at its own URL with no redirect at all, which a HEAD can never show. One
+request per URL is both fewer requests than HEAD-then-GET and strictly better detection.
 
 The soft-404 heuristic is deliberately narrow: `<title>` and the first `<h1>` only, never
 the whole body. DOC-2310 shipped a loose offline heuristic for redirect chains, got 1,421
@@ -91,15 +91,26 @@ USER_AGENT = ("Mozilla/5.0 (compatible; DocOps-LinkQuality/1.0; "
 # Stopping at the first ")" turns `[HAR file](https://en.wikipedia.org/wiki/HAR_(file_format))`
 # into `.../HAR_(file_format`, which 404s. The first full run reported that as a dead
 # link; the page is fine and the markdown is fine, the regex was wrong.
-URL_RE = re.compile(r"""https?://(?:[^\s"'`\\()\[\]{}<>]|\([^\s"'`\\()\[\]{}<>]*\))*""")
+_URL_CHAR = r"""[^\s"'`\\()\[\]{}<>]"""
+# Two levels of balanced parentheses. A regex cannot match arbitrary nesting; two covers
+# every real case in these docs (Wikipedia-style disambiguation suffixes). Deeper nesting
+# truncates, which at worst probes a shorter URL and reports it, rather than passing a
+# broken link silently.
+URL_RE = re.compile(
+    r"https?://(?:" + _URL_CHAR + r"|\((?:" + _URL_CHAR + r"|\(" + _URL_CHAR + r"*\))*\))*")
 TRAILING_RE = re.compile(r"[.,;:!?\\]+$")
 
 # Checked against <title> and the first <h1> only. Anchored phrases, not a bare "404"
 # anywhere in the markup, which would match analytics snippets and nav links.
+# Page-level phrases only. A bare "not found" would flag a real page titled "Node not
+# found" or "Credential not found", and a bare "oops" flags half the web. The bar for
+# this check is no false positives, not maximum recall: the three real soft 404s we have
+# seen are titled "Page not found" (telegram), "404" (peekalink) and "Sorry, we can't
+# find that page" (Google), and all three still match.
 NOT_FOUND_RE = re.compile(
-    r"(^|\W)(404|page not found|not found|page does ?n[o']?t exist|"
+    r"(^|\W)(404|page not found|page does ?n[o']?t exist|"
     r"page (is )?(no longer|not) available|page unavailable|"
-    r"we can'?t find|couldn'?t find that page|oops)(\W|$)", re.I)
+    r"we can'?t find (that |this )?page|couldn'?t find (that |this )?page)(\W|$)", re.I)
 TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
 H1_RE = re.compile(r"<h1[^>]*>(.*?)</h1>", re.I | re.S)
 TAG_RE = re.compile(r"<[^>]+>")
@@ -220,6 +231,11 @@ def cap_findings(ordered):
             continue
         used[kind] = n + 1
         kept.append(f)
+    # The overall cap can still bite after the per-class ones. Count what it removes,
+    # or the report claims completeness it does not have.
+    for f in kept[MAX_FINDINGS:]:
+        kind = f.get("kind", "")
+        dropped[kind] = dropped.get(kind, 0) + 1
     return kept[:MAX_FINDINGS], dropped
 
 
@@ -283,8 +299,8 @@ def summary_markdown(report):
     if report.get("findings_truncated"):
         dropped = report.get("findings_dropped") or {}
         detail = ", ".join(f"{v} {k}" for k, v in sorted(dropped.items()))
-        lines += ["", f"Long tail trimmed from the report ({detail}); "
-                      "the full list is in the sheet."]
+        lines += ["", f"Long tail trimmed ({detail}). These rows are not in the "
+                      "report, the sheet or Supabase: raise CLASS_CAPS if you need them."]
     return "\n".join(lines) + "\n"
 
 
@@ -308,13 +324,21 @@ def collect_urls(docs_dir: Path, patterns):
         text = strip_code(blank_gitbook_native(raw))
         for raw_url in URL_RE.findall(text):
             url = clean_url(raw_url)
-            if not url or url.startswith("https://docs.n8n.io"):
+            if not url:
+                continue
+            # Compare the host, not a string prefix: "docs.n8n.io.evil.example" starts
+            # with the same characters and is a different site entirely.
+            try:
+                host = urllib.parse.urlsplit(url).netloc.lower().split("@")[-1].split(":")[0]
+            except ValueError:
+                continue
+            if host == "docs.n8n.io":
                 continue
             # Cross-space GitBook links are internal, not outbound. They sit behind a
             # login, so a live probe only ever learns "redirected to sign-in".
             # check_internal_links.py resolves them against the filesystem, which is
             # the authoritative answer.
-            if url.startswith("https://app.gitbook.com/"):
+            if host == "app.gitbook.com":
                 continue
             if is_excluded(url, patterns):
                 excluded += 1

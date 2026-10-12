@@ -6,9 +6,9 @@
     "absolute-path": 1,
     "broken-anchor": 1
   },
-  "errors": 4,
-  "warnings": 1,
-  "strict_anchors": false,
+  "errors": 5,
+  "warnings": 0,
+  "strict_anchors": true,
   "findings": [
     {
       "page": "docs/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md",
@@ -48,7 +48,7 @@
       "category": "broken-anchor",
       "message": "no heading carries the id 'missing-section'",
       "target": "other-page.md#missing-section",
-      "severity": "warning"
+      "severity": "error"
     }
   ]
 }

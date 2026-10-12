@@ -130,6 +130,37 @@ check("merge: lychee's own counts are untouched",
       merged["totals"]["errors"] == 3 and merged["totals"]["blocked"] == 1)
 check("merge: no second-pass report leaves the payload alone",
       "quality" not in lr.merge_quality(lr.build_payload(stats, ctx), None))
+# A URL lychee could only call `blocked` is the case the second pass exists for: lychee
+# never got past the WAF. If the second pass proves it dead, that must not be swallowed.
+promote = {
+    "totals": {"checked": 10, "dead": 1},
+    "findings": [
+        {"page": "docs/integrations/builtin/credentials/airtable.md",
+         "url": "https://www.npmjs.com/package/pg", "kind": "dead",
+         "detail": "returns 404 to a browser user agent"},
+    ],
+}
+promoted = lr.merge_quality(lr.build_payload(stats, ctx), promote)
+check("merge: a second-pass 'dead' beats lychee's 'blocked' instead of being dropped",
+      [f["url"] for f in promoted["quality"]] == ["https://www.npmjs.com/package/pg"])
+check("merge: the superseded blocked row is withdrawn, so one url carries one answer",
+      all(f["url"] != "https://www.npmjs.com/package/pg" for f in promoted["blocked"]))
+check("merge: the blocked total follows the withdrawal",
+      promoted["totals"]["blocked"] == len(promoted["blocked"]) == 0)
+
+same_verdict = {"totals": {}, "findings": [
+    {"page": "docs/integrations/builtin/credentials/airtable.md",
+     "url": "https://www.npmjs.com/package/pg", "kind": "blocked", "detail": "403"}]}
+kept_same = lr.merge_quality(lr.build_payload(stats, ctx), same_verdict)
+check("merge: a second-pass 'blocked' adds nothing and is dropped",
+      kept_same["quality"] == [] and len(kept_same["blocked"]) == 1)
+
+# The second pass caps per class before sending, so our own slice is not the signal.
+pre_capped = {"totals": {}, "findings_truncated": True,
+              "findings": [{"page": "docs/a.md", "url": "https://x/1", "kind": "redirect-reliant", "detail": ""}]}
+check("merge: the second pass's own truncation flag is preserved",
+      lr.merge_quality(lr.build_payload(stats, ctx), pre_capped)["quality_truncated"] is True)
+
 merged_summary = lr.summary_markdown(merged)
 check("merge: the summary names the collapse", "all land on" in merged_summary
       and "docs.langchain.com/overview" in merged_summary)

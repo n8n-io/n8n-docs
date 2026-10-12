@@ -124,9 +124,11 @@ def extracted(text):
     return [lsp.clean_url(u) for u in lsp.URL_RE.findall(text)]
 
 
-check("URL_RE: balanced parens stay in the URL",
-      "https://en.wikipedia.org/wiki/HAR_(file_format)" in
-      extracted("[HAR file](https://en.wikipedia.org/wiki/HAR_(file_format)) in your message"))
+check("URL_RE: balanced parens stay in the URL, and the markdown paren does not",
+      extracted("[HAR file](https://en.wikipedia.org/wiki/HAR_(file_format)) in your message")
+      == ["https://en.wikipedia.org/wiki/HAR_(file_format)"])
+check("URL_RE: two levels of nesting survive",
+      extracted("[a](https://example.com/a_(b_(c))) x") == ["https://example.com/a_(b_(c))"])
 check("URL_RE: the closing paren of a markdown link is not swallowed",
       extracted("see [docs](https://example.com/a) here") == ["https://example.com/a"])
 check("URL_RE: query strings survive",
@@ -135,6 +137,35 @@ check("URL_RE: angle-bracket autolinks",
       extracted("<https://example.com/a>") == ["https://example.com/a"])
 check("URL_RE: a trailing sentence period is not part of the URL",
       extracted("bare https://example.com/a. end") == ["https://example.com/a"])
+
+# The bar is no false positives. These are the three real soft 404s we have seen, and
+# the page titles that must not be mistaken for them.
+for _title in ["Page not found", "404", "Sorry, we can't find that page"]:
+    check("soft-404: still catches " + repr(_title),
+          lsp.looks_like_not_found("<title>" + _title + "</title>", "https://x.com/a")[0])
+for _title in ["Node not found", "Credential not found error", "Oops, an n8n guide",
+               "Handling not found errors", "Vector stores"]:
+    check("soft-404: does not flag " + repr(_title),
+          not lsp.looks_like_not_found("<title>" + _title + "</title>", "https://x.com/a")[0])
+
+# --- collect_urls host handling ---------------------------------------------------------
+# A prefix test would skip this: it starts with the same characters and is another site.
+import types as _types
+_pats = []
+_tmp = Path(__file__).resolve().parent / "_hosttest"
+_tmp.mkdir(exist_ok=True)
+(_tmp / "p.md").write_text(
+    "a https://docs.n8n.io/real b https://docs.n8n.io.evil.example/x "
+    "c https://app.gitbook.com/s/ABC/page d https://ok.example/y\n", encoding="utf-8")
+_urls, _ = lsp.collect_urls(_tmp, _pats)
+check("collect_urls: our own docs host is skipped", "https://docs.n8n.io/real" not in _urls)
+check("collect_urls: a lookalike host is NOT skipped",
+      "https://docs.n8n.io.evil.example/x" in _urls)
+check("collect_urls: cross-space gitbook links are skipped",
+      "https://app.gitbook.com/s/ABC/page" not in _urls)
+check("collect_urls: an ordinary host is kept", "https://ok.example/y" in _urls)
+import shutil as _shutil
+_shutil.rmtree(_tmp, ignore_errors=True)
 
 # --- cap_findings -------------------------------------------------------------------------
 # First full run: 719 redirect-reliant against 23 dead. A flat cap sorted by severity
@@ -157,6 +188,12 @@ check("cap: what was dropped is reported, not silently lost",
       and dropped.get("blocked") == 129 - lsp.CLASS_CAPS["blocked"])
 check("cap: nothing dropped when everything fits",
       lsp.cap_findings([mk("dead", 1)])[1] == {})
+# `dead` has no per-class cap, so only the overall MAX_FINDINGS slice can trim it. That
+# slice used to drop rows without recording them, so the report looked complete.
+_many_dead = [mk("dead", i) for i in range(lsp.MAX_FINDINGS + 7)]
+_kept, _dropped = lsp.cap_findings(lsp.order_findings(_many_dead))
+check("cap: the overall MAX_FINDINGS slice is counted, not silent",
+      len(_kept) == lsp.MAX_FINDINGS and _dropped.get("dead") == 7)
 
 # --- excludes -------------------------------------------------------------------------
 # One source of truth with lychee: a host someone already triaged into lychee.toml must

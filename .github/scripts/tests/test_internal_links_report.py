@@ -53,12 +53,28 @@ check("severity table has no stale entries", not (set(ilr.SEVERITY) - emitted))
 
 # --- order_findings ----------------------------------------------------------------
 ordered = ilr.order_findings(report["findings"])
-check("order: errors come before warnings",
-      [f["severity"] for f in ordered] == ["error"] * 4 + ["warning"])
 check("order: the dead cross-space link is first",
       ordered[0]["category"] == "cross-space-broken")
-check("order: ties are stable by page then line",
-      [f["line"] for f in ordered if f["category"] == "same-space-absolute"] == [89, 91])
+
+# Errors before warnings. The fixture is a strict run, which has no warnings at all, so
+# this needs its own case rather than riding on the fixture.
+mixed = [
+    {"category": "broken-anchor", "severity": "warning", "page": "docs/a.md", "line": 1},
+    {"category": "missing-target", "severity": "error", "page": "docs/z.md", "line": 9},
+]
+check("order: errors come before warnings regardless of category rank",
+      [f["severity"] for f in ilr.order_findings(mixed)] == ["error", "warning"])
+
+# Same severity and same category, deliberately out of order on both keys, so dropping
+# either the page or the line sort would change the result.
+ties = [
+    {"category": "same-space-absolute", "severity": "error", "page": "docs/b.md", "line": 2},
+    {"category": "same-space-absolute", "severity": "error", "page": "docs/b.md", "line": 1},
+    {"category": "same-space-absolute", "severity": "error", "page": "docs/a.md", "line": 5},
+]
+check("order: ties break by page then line",
+      [(f["page"], f["line"]) for f in ilr.order_findings(ties)]
+      == [("docs/a.md", 5), ("docs/b.md", 1), ("docs/b.md", 2)])
 check("order: an unknown category sorts last rather than crashing",
       ilr.order_findings([{"category": "brand-new", "severity": "error", "page": "a", "line": 1},
                           {"category": "missing-target", "severity": "error", "page": "a", "line": 2}]
@@ -71,12 +87,19 @@ check("payload: source and run metadata",
       and payload["sha"] == "def")
 check("payload: totals carry scan size, errors and warnings",
       payload["totals"]["files_scanned"] == 1464
-      and payload["totals"]["errors"] == 4
-      and payload["totals"]["warnings"] == 1
+      and payload["totals"]["errors"] == 5
+      and payload["totals"]["warnings"] == 0
       and payload["totals"]["findings"] == 5)
 check("payload: category breakdown passed through",
       payload["totals"]["by_category"]["same-space-absolute"] == 2)
-check("payload: strict_anchors reflected", payload["strict_anchors"] is False)
+# The weekly sweep runs --strict-anchors, so the fixture is a strict report; the PR gate
+# never calls this reporter. Both directions asserted so the flag cannot silently stick.
+check("payload: strict_anchors reflected when true", payload["strict_anchors"] is True)
+check("payload: strict_anchors reflected when false",
+      ilr.build_payload({"files_scanned": 1, "errors": 0, "warnings": 1, "counts": {},
+                         "strict_anchors": False, "findings": []}, ctx)["strict_anchors"] is False)
+check("payload: strict_anchors defaults to false when absent",
+      ilr.build_payload({"files_scanned": 1, "findings": []}, ctx)["strict_anchors"] is False)
 check("payload: findings not truncated", payload["findings_truncated"] is False)
 
 big = {"files_scanned": 1, "errors": ilr.MAX_FINDINGS + 5, "warnings": 0, "counts": {},
@@ -96,7 +119,7 @@ check("payload: missing report yields zero totals and report_found False",
 # --- summary_markdown ----------------------------------------------------------------
 summary = ilr.summary_markdown(payload)
 check("summary: reports scan size and counts",
-      "Scanned: 1464" in summary and "Broken: 4" in summary and "warnings: 1" in summary)
+      "Scanned: 1464" in summary and "Broken: 5" in summary and "warnings: 0" in summary)
 check("summary: breaks down by category", "same-space-absolute=2" in summary)
 check("summary: tabulates the findings",
       "| Page | Line | Category | Detail |" in summary and "workflow-development.md" in summary)

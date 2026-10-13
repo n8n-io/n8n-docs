@@ -28,7 +28,7 @@ The in-memory scheduler was the default before n8n 2.45.0. It works out when its
 The durable scheduler addresses both by moving scheduling into the database:
 
 - **Runs survive restarts.** The scheduler records each upcoming run in the database before it's due. A restart doesn't drop it. A run whose time passed while the instance was down still fires late when the instance comes back, as long as it's within its grace period; beyond that, the trigger's [misfire policy](#misfire-policy) decides what happens to it.
-- **Each run executes once across instances.** Every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so the work spreads across your mains instead of depending on a single leader.
+- **One instance claims each run.** Every main instance shares the same queue and claims runs from it. Only one instance holds each run at a time, so the work spreads across your mains instead of depending on a single leader.
 
 ### What changes functionally <a href="#functional-changes" id="functional-changes"></a>
 
@@ -105,7 +105,7 @@ To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE`
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 
-Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (missed runs following a misfire policy, and each run executing once across instances), two cadences fire differently from the in-memory scheduler in specific cases:
+Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (missed runs following a misfire policy, and one instance claiming each run), two cadences fire differently from the in-memory scheduler in specific cases:
 
 - **"Every N seconds" and "every N minutes".** `N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how these fire. It's the only cadence the setting affects.
 - **"Every N hours", "days", "weeks", or "months".** These fire as before in everyday use, under either mode. The durable scheduler handles a few rare calendar edge cases more correctly than the in-memory scheduler: leap years, the 53rd week of a year, and daylight-saving transitions, where the in-memory scheduler could be off by one period.

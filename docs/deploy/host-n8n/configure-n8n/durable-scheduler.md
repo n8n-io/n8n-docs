@@ -105,7 +105,7 @@ To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE`
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 
-Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (missed runs following a misfire policy, and one instance claiming each run), two cadences fire differently from the in-memory scheduler in specific cases:
+Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. The instance-wide changes above still apply: missed runs follow a misfire policy, and one instance claims each run. On top of that, two cadences fire differently from the in-memory scheduler in specific cases:
 
 - **"Every N seconds" and "every N minutes".** `N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how these fire. It's the only cadence the setting affects.
 - **"Every N hours", "days", "weeks", or "months".** These fire as before in everyday use, under either mode. The durable scheduler handles a few rare calendar edge cases more correctly than the in-memory scheduler: leap years, the 53rd week of a year, and daylight-saving transitions, where the in-memory scheduler could be off by one period.

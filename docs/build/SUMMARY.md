@@ -21,6 +21,7 @@
   * [Create and edit credentials](understand-workflows/create-and-edit-credentials.md)
   * [Use Gateway credits](understand-workflows/use-gateway-credits.md)
 * [Build and manage agents](build-and-manage-agents.md)
+  * [Connect an agent to Microsoft Teams](agents-microsoft-teams.md)
 * [Ways of building workflows](ways-of-building-workflows/README.md)
   * [Use n8n Assistant](ways-of-building-workflows/n8n-assistant.md)
     * [Work with Browser Use](ways-of-building-workflows/n8n-assistant/browser-use.md)

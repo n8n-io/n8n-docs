@@ -40,7 +40,7 @@ When you upgrade to n8n 2.45.0 or turn on the durable scheduler, these behaviors
 
 ## Configure the durable scheduler <a href="#turn-on" id="turn-on"></a>
 
-From n8n 2.45.0, `N8N_SCHEDULER_ENABLED` defaults to `true`, so you don't need to set it. If you set it to `false` on an earlier version, remove that override and restart n8n. Before n8n 2.45.0, set it to `true` to opt in.
+From n8n 2.45.0, `N8N_SCHEDULER_ENABLED` defaults to `true`, so you don't need to set it. If you set it to `false` before upgrading, keep it to stay on the in-memory scheduler, or remove it and restart n8n to use the durable scheduler. Before n8n 2.45.0, set it to `true` to opt in.
 
 {% hint style="warning" %}
 The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is on by default. If you set it to `false`, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler, even when `N8N_SCHEDULER_ENABLED` is `true`.

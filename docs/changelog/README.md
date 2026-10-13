@@ -44,7 +44,7 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 ## Durable scheduler on by default for Schedule Trigger nodes
 
-**Released:** 2026-10-20 in [n8n 2.45](release-notes.md#n8n245)
+**Released:** 2026-10-20 in n8n 2.45
 
 Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops them. In a multi-main setup, each run executes once, on whichever main claims it first.
 

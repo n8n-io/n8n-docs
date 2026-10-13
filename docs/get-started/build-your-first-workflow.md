@@ -215,7 +215,7 @@ Congratulations, your workflow now runs at 8 AM every day. Along the way, you’
 {% hint style="info" %}
 **Preview status**
 
-n8n Assistant is in Preview and may change in future releases. Check the [Use n8n Assistant](https://go.n8n.io/ZzxXro) page for availability.
+n8n Assistant is in Preview and may change in future releases. See [Use the n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant) page for availability.
 {% endhint %}
 
 n8n Assistant is another way to build workflows, using prompts. Now that you’ve built **Weather Log** yourself, you’ll understand what n8n Assistant creates.

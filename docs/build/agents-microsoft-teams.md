@@ -147,7 +147,7 @@ This keeps the agent from opening files that aren't part of the conversation.
 An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, n8n shows how in the **Choose where it works** step, and later in the channel settings under **Where it works**:
 
 - **Recommended setup:** select **Approve file access**. This opens the Microsoft admin consent screen. If you aren't an administrator, select **Copy link** and send it to one.
-- **Manual setup:** add `Files.Read.All` to the app registration in Microsoft Entra. The setup shows **Open API permissions** to take you there:
+- **Manual setup:** add the permission to the app registration in Microsoft Entra. The setup shows **Open API permissions** to take you there:
 	1. Go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**.
 	2. Search for `Files.Read.All` and add it.
 	3. Select **Grant admin consent**.

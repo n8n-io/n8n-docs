@@ -112,7 +112,7 @@ Under the durable scheduler, most Schedule Trigger schedules fire the same way t
 
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` has two values:
 
-- `new` (default from n8n 2.45.0): runs fire a fixed number of seconds apart, counted from the moment you published the workflow instead of from clock boundaries. For example, publishing at seven seconds past the minute places "every 30 seconds" runs at :37, then :07 of the next minute, and so on. The gap stays at the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
+- `new` (default from n8n 2.45.0): runs fire a fixed number of seconds apart, counted from the moment you published the workflow instead of from clock boundaries. For example, publishing at 7 seconds past the minute places "every 30 seconds" runs at :37, then :07 of the next minute, and so on. The gap stays at the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
 - `legacy` (default before n8n 2.45.0): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
 
 To keep clock-aligned timing, set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy`. This keeps the durable scheduler on. n8n 2.45.0 deprecates the `legacy` mode and this variable. A future version will remove them. If you already set the variable to `new`, you can remove it.

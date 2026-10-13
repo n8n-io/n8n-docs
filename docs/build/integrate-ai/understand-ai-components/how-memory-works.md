@@ -22,7 +22,7 @@ Memory is a key part of AI chat services. The memory[^1] keeps a history of prev
 
 ## AI memory in n8n <a href="#ai-memory-in-n8n" id="ai-memory-in-n8n"></a>
 
-To add memory to your AI workflow you can use either:
+To add memory to your AI workflow you can use:
 
 * [Simple Memory](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow): stores a customizable length of chat history for the current session. This is the easiest to get started with.
 * One of the memory services that n8n provides nodes for. These include:
@@ -31,6 +31,8 @@ To add memory to your AI workflow you can use either:
 	* [Postgres Chat Memory](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat) 
 	* [Xata](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata)
 	* [Zep](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep)
+
+* [**Cognee Memory**](https://docs.cognee.ai/integrations/n8n-integration#give-an-ai-agent-chat-memory) (community node, installed separately): stores conversation history and recalls relevant knowledge across conversations.
 
 If you need to do advanced AI memory management in your workflows, use the [Chat Memory Manager](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) node. 
 

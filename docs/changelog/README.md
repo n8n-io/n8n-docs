@@ -48,7 +48,7 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops them. In a multi-main setup, each run executes once, on whichever main claims it first.
 
-Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before.
+Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before in everyday use. They differ only in rare leap-year, 53rd-week, and daylight-saving edge cases, where the durable scheduler fixes an off-by-one-period error.
 
 You can keep the previous behavior while you adapt:
 

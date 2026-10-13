@@ -53,7 +53,7 @@ Refer to the sections below for more detail on configuring each **Trigger Interv
 {% hint style="info" %}
 **Default timing from n8n 2.45.0**
 
-Schedule Trigger nodes use the durable scheduler by default. The Seconds and Minutes trigger intervals run at uniform intervals measured from workflow publication, rather than on clock boundaries. Custom (Cron) intervals keep their timing. See [Schedule Trigger timing](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#trigger-node-mode) for clock-aligned timing, or [Use the in-memory scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#use-the-in-memory-scheduler) to switch schedulers.
+Schedule Trigger nodes use the durable scheduler by default, as long as `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` stays on (its default). The Seconds and Minutes trigger intervals run at uniform intervals measured from workflow publication, rather than on clock boundaries. Custom (Cron) intervals keep their timing. See [Schedule Trigger timing](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#trigger-node-mode) for clock-aligned timing, or [Use the in-memory scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#use-the-in-memory-scheduler) to switch schedulers.
 {% endhint %}
 
 ### Seconds trigger interval <a href="#seconds-trigger-interval" id="seconds-trigger-interval"></a>

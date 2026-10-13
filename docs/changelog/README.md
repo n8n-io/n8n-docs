@@ -46,7 +46,7 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 **Released:** 2026-10-20 in n8n 2.45
 
-Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's misfire policy decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
+Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's [misfire policy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#misfire-policy) decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
 
 Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before in everyday use. They differ only in rare leap-year, 53rd-week, and daylight-saving edge cases, where the durable scheduler fixes an off-by-one-period error.
 

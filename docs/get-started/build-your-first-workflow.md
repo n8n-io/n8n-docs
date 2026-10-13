@@ -195,7 +195,7 @@ Your workflow is complete. Test it, then publish it so it runs every day at 8 AM
 
     ![New row in the data table](.gitbook/assets/build-your-first-workflow-test-and-publish-02.png)
 
-2. Select **Publish** in the canvas header and follow the prompts to publish the workflow.
+2. Select **Publish** in the Canvas header and follow the prompts to publish the workflow.
 
     ![Publish button](.gitbook/assets/build-your-first-workflow-test-and-publish-03.png)
 

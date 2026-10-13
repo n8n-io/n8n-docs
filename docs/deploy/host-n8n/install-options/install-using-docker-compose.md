@@ -67,8 +67,8 @@ N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
 
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
-SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
-SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
+SANDBOX_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
+SANDBOX_RUNNER_API_KEY=change-me-runner-key
 
 # Must match a value in SANDBOX_API_KEYS above — this is how n8n authenticates to the sandbox
 N8N_SANDBOX_SERVICE_API_KEY=change-me-api-key

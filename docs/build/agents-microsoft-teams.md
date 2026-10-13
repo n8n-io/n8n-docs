@@ -147,7 +147,10 @@ This keeps the agent from opening files that aren't part of the conversation.
 An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, n8n shows how in the **Choose where it works** step, and later in the channel settings under **Where it works**:
 
 - **Recommended setup:** select **Approve file access**. This opens the Microsoft admin consent screen. If you aren't an administrator, select **Copy link** and send it to one.
-- **Manual setup:** in Microsoft Entra, open the app registration and go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**. Add `Files.Read.All`, then select **Grant admin consent**. The setup shows **Open API permissions** to take you there.
+- **Manual setup:** add `Files.Read.All` to the app registration in Microsoft Entra. The setup shows **Open API permissions** to take you there:
+	1. Go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**.
+	2. Search for `Files.Read.All` and add it.
+	3. Select **Grant admin consent**.
 
 {% hint style="warning" %}
 **Use application permissions**
@@ -155,7 +158,7 @@ An administrator of your Microsoft organization grants file access once per app.
 Add `Files.Read.All` as an **Application** permission, not a **Delegated** one. The agent reads files as the app, not as a signed-in user, so it can't use delegated permissions.
 {% endhint %}
 
-After the channel is connected, the channel settings check the status for you, in both the recommended and the manual setup. Once Microsoft confirms the approval, they show **File access is approved.** It can take up to an hour before the agent can read files.
+After you connect the channel, the channel settings check the status for you, in both the recommended and the manual setup. Once Microsoft confirms the approval, they show **File access is approved.** It can take up to an hour before the agent can read files.
 
 ### When the agent can't read a file
 
@@ -183,7 +186,7 @@ The recommended setup creates everything in Microsoft for you. n8n Cloud offers 
 
 To connect Teams:
 
-1. Open the agent, go to **Channels**, and select **Microsoft Teams**. Make sure **Recommended setup** is selected.
+1. Open the agent, go to **Channels**, and select **Microsoft Teams**. Make sure you've selected **Recommended setup**.
 2. In **Connect to Microsoft**, select **Sign in with Microsoft** and sign in with a work or school account of the organization where people use the agent.
 3. In **Create Teams app**, select **Create Teams app**. n8n registers the app in Microsoft Entra. This can take up to 30 seconds.
 4. In **Deploy Azure Bot**, choose an **Azure subscription** and select **Create Azure Bot**. This can take up to a minute.
@@ -397,11 +400,11 @@ When you disconnect the Teams channel or delete the agent, n8n doesn't delete an
 
 ## Troubleshooting
 
-### "This account is not allowed to register applications"
+### Your account can't register applications
 
 Your Microsoft account can't create app registrations. Ask an administrator to give you that permission, or use the [manual setup](#manual-setup) with an app registration an administrator creates for you.
 
-### "This account cannot create resources in that Azure subscription"
+### Your account can't create resources in the Azure subscription
 
 You need the Contributor role on the Azure subscription you picked. Ask your Azure administrator for access, or pick another subscription.
 
@@ -421,7 +424,7 @@ Your Teams policy doesn't allow custom app uploads. Ask your Teams administrator
 
 Check that:
 
-- The agent is published.
+- You've published the agent.
 - **Team channels** is on and the latest app package is in Teams.
 - Someone @mentioned the agent in the thread, or **Read all channel messages** is on.
 

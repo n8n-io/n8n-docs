@@ -1,0 +1,19 @@
+docs/privacy-and-security/README.md
+  s_354c957e03eb30::t_5b96e8487afe90 83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "24eb08064a707716f7ac64d6cc182d5dc6611cc5",
+  "prompts": {},
+  "sessions": {
+    "s_354c957e03eb30": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "88346052-aee3-4a6f-b660-0ac63a1cce3d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

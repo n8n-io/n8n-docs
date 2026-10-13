@@ -44,7 +44,7 @@ The build takes about 15 minutes. Apart from n8n, you don’t need any accounts,
 You need an n8n instance. Either:
 
 - **n8n Cloud**: [sign up for a free trial](https://go.n8n.io/ekXKXJ), or
-- **Self-hosted**: follow the [host n8n](https://go.n8n.io/caqo7e) guide
+- **Self-hosted**: follow the [host n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) guide
 
 ## 1. Create the workflow
 

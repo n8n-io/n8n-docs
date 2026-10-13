@@ -255,7 +255,6 @@ n8n Assistant is another way to build workflows, using prompts. Now that you’v
 
 ## Next steps
 
-- Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai).
 - Take [courses at n8n Academy](https://go.n8n.io/gfzWgF).
 - Explore more examples in [workflow templates](https://n8n.io/workflows/).
 

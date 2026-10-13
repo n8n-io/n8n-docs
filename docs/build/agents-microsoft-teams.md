@@ -41,7 +41,7 @@ The Microsoft Teams channel is available wherever agents are. See [Build and man
 {% hint style="info" %}
 **Preview status**
 
-Agents are in Preview. The Teams channel and its setup may change while the feature is in development.
+The Microsoft Teams channel for agents is in Preview and may change in future releases. Avoid relying on it in production.
 {% endhint %}
 
 There are two ways to connect Teams:
@@ -71,7 +71,7 @@ When someone messages the agent in Teams:
 
 Each thread is its own session, so the agent remembers earlier messages in the same thread. To start over, send `/new`. If a tool needs approval, the agent posts an approval card. In channels and group chats, only the person who has to answer sees the card.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Publish the agent first**
 
 The Teams channel runs the published version of the agent. If the agent isn't published, people see **Publish this agent before you message it in Teams.**
@@ -116,7 +116,7 @@ When you turn on **Read all channel messages** or **Read all group-chat messages
 - Every message uses model credits, even when the agent doesn't reply.
 - n8n ignores messages that other bots send.
 
-Use mention only when people ask the agent for help directly. Use read all messages when the agent needs to follow the whole conversation, for example to answer questions nobody addressed to it. Keep in mind the cost in busy channels.
+Keep the default when people ask the agent for help directly. Turn on the read-all options when the agent needs to follow the whole conversation, for example to answer questions nobody addressed to it. In busy channels, this uses a lot of model credits.
 
 ## Files and file permissions
 
@@ -132,7 +132,7 @@ In direct chats, Teams sends files with the message itself. You don't need any e
 
 In team channels and group chats, Teams doesn't include files in the message. n8n reads the message again through Microsoft Graph to find them:
 
-- **Pasted images** work with the RSC permission from [Where people can use the agent](#where-people-can-use-the-agent). You don't need anything else.
+- **Pasted images** work with the RSC permission the app already has (`ChannelMessage.Read.Group` or `ChatMessage.Read.Chat`, see [Where people can use the agent](#where-people-can-use-the-agent)). You don't need anything else.
 - **Attached files** are stored in SharePoint or OneDrive. To download them, the app registration needs the Microsoft Graph **application** permission `Files.Read.All`, with admin consent.
 
 Even with `Files.Read.All`, n8n only downloads a file if one of these is true:
@@ -144,7 +144,7 @@ This keeps the agent from opening files that aren't part of the conversation.
 
 ### Grant file access
 
-An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, n8n shows how. You find this in the **Choose where it works** step during setup, and later in the channel settings under **Where it works**:
+An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, n8n shows how in the **Choose where it works** step, and later in the channel settings under **Where it works**:
 
 - **Recommended setup:** select **Approve file access**. This opens the Microsoft admin consent screen. If you aren't an administrator, select **Copy link** and send it to one.
 - **Manual setup:** in Microsoft Entra, open the app registration and go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**. Add `Files.Read.All`, then select **Grant admin consent**. The setup shows **Open API permissions** to take you there.
@@ -173,18 +173,18 @@ Before you start, make sure you have:
 
 - An agent you can edit, published at least once.
 - An n8n instance that Microsoft can reach over HTTPS. On self-hosted n8n, set `N8N_WEBHOOK_URL` to the public HTTPS URL of your instance.
-- A Microsoft 365 work or school account in the global Microsoft cloud. Personal accounts and sovereign clouds, like GCC or Microsoft Azure operated by 21Vianet, don't work.
+- A Microsoft 365 work or school account in the global Microsoft cloud. Personal accounts and sovereign clouds, such as GCC or Microsoft Azure operated by 21Vianet, don't work.
 - An Azure subscription for the Azure Bot.
 - Permission to add custom apps in Teams. Either your Teams policy allows uploading custom apps, or an administrator can publish the app to your organization.
 
 ## Recommended setup
 
-The recommended setup creates everything in Microsoft for you. n8n Cloud offers it out of the box. On self-hosted n8n, it's available once an instance owner sets it up, see [Use the recommended setup on self-hosted n8n](#use-the-recommended-setup-on-self-hosted-n8n). If it's not available, the Teams channel only shows the [manual setup](#manual-setup).
+The recommended setup creates everything in Microsoft for you. n8n Cloud offers it out of the box. On self-hosted n8n, an instance owner must set it up first. See [Use the recommended setup on self-hosted n8n](#use-the-recommended-setup-on-self-hosted-n8n). If it's not available, the Teams channel only shows the [manual setup](#manual-setup).
 
 To connect Teams:
 
 1. Open the agent, go to **Channels**, and select **Microsoft Teams**. Make sure **Recommended setup** is selected.
-2. In **Connect to Microsoft**, select **Sign in with Microsoft** and sign in with a work or school account of the organization where people will use the agent.
+2. In **Connect to Microsoft**, select **Sign in with Microsoft** and sign in with a work or school account of the organization where people use the agent.
 3. In **Create Teams app**, select **Create Teams app**. n8n registers the app in Microsoft Entra. This can take up to 30 seconds.
 4. In **Deploy Azure Bot**, choose an **Azure subscription** and select **Create Azure Bot**. This can take up to a minute.
 5. In **Choose where it works**, pick the options from [Where people can use the agent](#where-people-can-use-the-agent).
@@ -242,7 +242,7 @@ Select **Manual setup** in the Teams channel, then follow these steps:
 If you already have a credential for an app registration that no other agent uses, skip this step.
 
 1. Select **Open Microsoft Entra**, or go to [Microsoft Entra admin center](https://entra.microsoft.com/) > **App registrations** > **New registration**.
-2. Enter a name, for example the name of your agent.
+2. Enter a name, for example, the name of your agent.
 3. In **Supported account types**, select **Accounts in this organizational directory only** (single tenant).
 4. You don't need a redirect URI. Select **Register**.
 5. On the **Overview** page, copy the **Directory (tenant) ID** and the **Application (client) ID**.
@@ -255,6 +255,8 @@ The bot doesn't need any API permissions to send and receive messages.
 To let the agent read files attached in channels and group chats, add the Microsoft Graph permission `Files.Read.All` and grant admin consent. See [Grant file access](#grant-file-access).
 
 {% hint style="warning" %}
+**Use application permissions**
+
 Add `Files.Read.All` under **Application permissions**, not **Delegated permissions**. The agent can't use delegated permissions.
 {% endhint %}
 
@@ -270,7 +272,7 @@ In **Create credential**, create a new credential:
 4. **Client Secret:** the secret value you copied.
 5. **Microsoft Graph API Base URL:** **Global**.
 
-n8n checks the credential with Microsoft and shows **Credential verified with Microsoft Entra.** when it works. Each credential can only connect one agent to Teams. If another agent already uses it, register a new app for this agent.
+n8n checks the credential with Microsoft. When the check passes, n8n shows **Credential verified with Microsoft Entra.** Each credential can only connect one agent to Teams. If another agent already uses it, register a new app for this agent.
 
 For more about this credential type, see [Microsoft Entra Service Principal credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/microsoftentraserviceprincipal).
 
@@ -283,7 +285,7 @@ Choose one of these options:
 
 ### Choose where it works
 
-Pick where people can use the agent and how it listens. See [Where people can use the agent](#where-people-can-use-the-agent) and [How the agent listens in channels and group chats](#how-the-agent-listens-in-channels-and-group-chats).
+Pick where people can use the agent and how it listens. Direct chat is always on. Turn on **Team channels** or **Group and meeting chats** to let people add the agent there and @mention it. The read-all options make the agent run on every message, which uses model credits each time. For details, see [Where people can use the agent](#where-people-can-use-the-agent) and [How the agent listens in channels and group chats](#how-the-agent-listens-in-channels-and-group-chats).
 
 ### Download the app package and add it in Teams
 
@@ -330,7 +332,7 @@ Once the overwrite is in place, the Teams channel shows **Recommended setup**. F
 
 ## Manage the Teams channel
 
-After you connect Teams, open the channel settings on the agent to change it.
+After you connect Teams, you change it in the channel settings. Open the agent, go to **Channels**, and select **Microsoft Teams**.
 
 ### Upload the app or publish it to your organization
 
@@ -354,7 +356,7 @@ If you don't see **Upload an app**, ask your Teams administrator to allow custom
 
 **Publish to organisation** adds the app to your organization's app catalog in Teams:
 
-- **If you're a Teams administrator,** the app goes live right away. Microsoft can take up to a day before people can add it.
+- **If you're a Teams administrator,** n8n publishes the app right away, but Microsoft can take up to a day to list it.
 - **If you aren't,** n8n submits the app for approval. It waits in the Teams admin center under **Teams apps** > **Manage apps**, as **Pending approval**. Select **Copy a request for your administrator** to send them a message with the link. Nobody can add the app until an administrator approves it.
 
 The channel settings show where the app stands: published, waiting for approval, or rejected. If an administrator rejects it, Microsoft doesn't share the reason, so ask them directly.
@@ -379,7 +381,7 @@ Client secrets expire. When the secret expires, the agent stops replying in Team
 
 ### Disconnect Teams
 
-When you disconnect the Teams channel or delete the agent, n8n doesn't delete anything in Microsoft. People may still have the app installed. If you no longer need them, remove these yourself:
+When you disconnect the Teams channel or delete the agent, n8n doesn't delete anything in Microsoft. People may still have the app installed. If you no longer need these resources, remove them yourself:
 
 - The app registration, in [Microsoft Entra](https://entra.microsoft.com/) under **App registrations**.
 - The Azure Bot, in the [Azure portal](https://portal.azure.com/). With the recommended setup, it's in the `n8n-agents` resource group.
@@ -395,19 +397,19 @@ When you disconnect the Teams channel or delete the agent, n8n doesn't delete an
 
 ## Troubleshooting
 
-### This account is not allowed to register applications in the organisation
+### "This account is not allowed to register applications"
 
 Your Microsoft account can't create app registrations. Ask an administrator to give you that permission, or use the [manual setup](#manual-setup) with an app registration an administrator creates for you.
 
-### This account cannot create resources in that Azure subscription
+### "This account cannot create resources in that Azure subscription"
 
 You need the Contributor role on the Azure subscription you picked. Ask your Azure administrator for access, or pick another subscription.
 
-### Microsoft rejected these details
+### "Microsoft rejected these details"
 
 The credential's details don't match the app registration. Check that the client secret hasn't expired, and that the tenant ID and client ID belong to the same app registration.
 
-### The Teams bot needs an HTTPS messaging endpoint
+### "The Teams bot needs an HTTPS messaging endpoint"
 
 Microsoft only sends messages to HTTPS URLs. On self-hosted n8n, set `N8N_WEBHOOK_URL` to the public HTTPS URL of your instance.
 
@@ -425,7 +427,7 @@ Check that:
 
 ### The agent can't read attached files
 
-Files in channels and group chats need the `Files.Read.All` application permission. See [Files and file permissions](#files-and-file-permissions).
+Files in channels and group chats need the `Files.Read.All` application permission. An administrator grants it once with admin consent. It can take up to an hour to apply. See [Files and file permissions](#files-and-file-permissions).
 
 ## Related resources
 

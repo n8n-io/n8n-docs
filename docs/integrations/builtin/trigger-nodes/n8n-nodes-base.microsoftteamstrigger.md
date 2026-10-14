@@ -59,14 +59,14 @@ Each event subscribes to a Microsoft Graph resource and needs one of the delegat
 
 Listing teams in the node needs `Team.ReadBasic.All`, and listing channels needs `Channel.ReadBasic.All`. `ChannelMessage.Read.All` and `TeamMember.Read.All` need admin consent from a Microsoft Entra administrator. The `Team`, `Channel`, and `Chat` permissions don't.
 
-The **Teams OAuth2** credential covers every event by default, except New Team Member: it doesn't request `TeamMember.Read.All` yet. Its default `User.Read.All` and `Group.ReadWrite.All` scopes also authorise the team and channel lists and the New Channel subscription, as higher privileged alternatives, so the credential needs no extra grant for those. Both need admin consent.
+The **Teams OAuth2** credential covers every event by default, except New Team Member: it doesn't request `TeamMember.Read.All` yet. Its default `User.Read.All` and `Group.ReadWrite.All` scopes also authorise the team and channel lists and the New Channel subscription as higher privileged alternatives. The credential needs no extra grant for those. Both scopes need admin consent.
 
 Until the n8n release that adds `TeamMember.Read.All` to the [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams), enable **Custom Scopes** on the credential, add the scope to **Enabled Scopes**, and reconnect.
 
 With the **Microsoft OAuth2 (Graph)** credential, enter the scopes in the credential's **Scope** field. Include `openid offline_access` so the credential can refresh its tokens. For example, to use every event with the least privileged scopes:
 
 ```
-openid offline_access Team.ReadBasic.All Channel.ReadBasic.All Chat.ReadWrite ChannelMessage.Read.All TeamMember.Read.All
+openid offline_access Team.ReadBasic.All Channel.ReadBasic.All Chat.Read ChannelMessage.Read.All TeamMember.Read.All
 ```
 
 The **Service Principal (App-Only)** credential uses application permissions instead. Refer to [Required application permissions by node](../credentials/microsoftentraserviceprincipal.md#required-application-permissions-by-node) in the Microsoft Entra Service Principal credentials documentation for the permission each event needs. Chat events aren't available with this credential.

@@ -49,11 +49,17 @@ ROW_RE = re.compile(
     r"^\|\s*`([A-Za-z0-9_-]+)`\s*\|\s*([^|]*?)\s*\|\s*`([A-Za-z0-9]+)`\s*\|\s*`([^`]*)`\s*\|(.*)$"
 )
 SEPARATOR_CELL_RE = re.compile(r"^:?-{3,}:?$")
-# What the CONSUMERS see. check_internal_links.reusable_blocks and
-# gitbook_preview_links both scan every line in the file, not a scoped table, so any
-# line matching this anywhere is read as a block row even if it sits outside the table
-# we validate. Stray rows escalate rather than merge.
-CONSUMER_ROW_RE = re.compile(r"^\|\s*`([A-Za-z0-9]+)`\s*\|\s*([^|]+?)\s*\|")
+# What the CONSUMERS see, which is BROADER than the table grammar above.
+# gitbook_preview_links.load_reusable_index accepts any line starting with "| `" that
+# splits into at least 3 cells - no character class on the ID at all, so IDs with
+# hyphens or underscores count. check_internal_links.reusable_blocks is stricter.
+# Take the broader of the two: a row only one consumer reads is still a row that
+# reaches production, and both scan every line in the file rather than a scoped table.
+def is_consumer_row(line):
+    """True if any downstream reader would treat this line as a block row."""
+    if not line.startswith("| `"):
+        return False
+    return len([c.strip() for c in line.strip().strip("|").split("|")]) >= 3
 # Exact header, not a prefix: matching only "| ID" would let a table with arbitrary
 # column labels through to a merge verdict.
 HEADER = ["ID", "Name", "Parent space", "Include snippet", "Preview", "Used in"]
@@ -88,7 +94,7 @@ def stray_consumer_rows(text, start, count):
     """Lines outside the parsed table that the consumers would still read as rows."""
     lines = (text or "").split("\n")
     outside = lines[:start] + lines[start + count:]
-    return [l for l in outside if CONSUMER_ROW_RE.match(l)]
+    return [l for l in outside if is_consumer_row(l)]
 
 
 def parse_table(text):

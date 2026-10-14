@@ -138,6 +138,21 @@ def main():
     check("one below half escalates",
           verdict(index(many), index(many[:9])) == "escalate")
 
+    # --- the consumer-row predicate must cover the BROADEST consumer ---
+    # gitbook_preview_links.load_reusable_index takes any "| `" line with >=3 cells,
+    # with no character class on the ID, so hyphenated and underscored IDs count.
+    check("a hyphenated stray ID is seen as a consumer row",
+          cri.is_consumer_row("| `id-with-hyphens` | name | docs/a.md |"))
+    check("an underscored stray ID is seen as a consumer row",
+          cri.is_consumer_row("| `id_under` | name | docs/a.md |"))
+    check("a two-cell line is not a consumer row",
+          not cri.is_consumer_row("| `only` | two |"))
+    check("a non-backticked line is not a consumer row",
+          not cri.is_consumer_row("| junk | a | b |"))
+    check("a hyphenated stray row below the table escalates",
+          verdict(base, index() + "\n\n| `ghost-block-id` | ghost | docs/a.md |\n")
+          == "escalate")
+
     # --- the real file in this repo still parses cleanly ---
     live = (REPO_ROOT / "REUSABLE_CONTENT_INDEX.md").read_text(encoding="utf-8")
     rows, err = cri.parse_table(live)

@@ -6,6 +6,7 @@ Table-driven, no pytest, same harness as the sibling script tests.
 Run: python3 .github/scripts/tests/test_check_space_index_pr.py
 """
 import importlib.util
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -15,6 +16,11 @@ REPO_ROOT = HERE.parents[2]
 spec = importlib.util.spec_from_file_location("csi", SCRIPT)
 csi = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(csi)
+
+# The real consumer, so drift between the two patterns fails CI rather than silently
+# opening a gap a stray row can slip through.
+sys.path.insert(0, str(HERE.parent))
+import check_internal_links as cil  # noqa: E402
 
 HEADER_4 = ("| Folder | Space ID | Title | Visibility |\n"
             "|--------|----------|-------|------------|")
@@ -139,6 +145,12 @@ def main():
           verdict(index(rows=half), index(rows=half[:10])) == "merge")
     check("one below half escalates",
           verdict(index(rows=half), index(rows=half[:9])) == "escalate")
+
+    # --- the verdict's consumer regex must not drift from the consumer itself ---
+    # If check_internal_links.SPACE_ID_ROW_RE is widened and this copy is not, a stray
+    # row matching only the consumer slips past the outside-table guard.
+    check("CONSUMER_ROW_RE matches check_internal_links.SPACE_ID_ROW_RE exactly",
+          csi.CONSUMER_ROW_RE.pattern == cil.SPACE_ID_ROW_RE.pattern)
 
     # --- the real file in this repo still parses ---
     rows, err = csi.parse_table((REPO_ROOT / "SPACE_INDEX.md").read_text(encoding="utf-8"))

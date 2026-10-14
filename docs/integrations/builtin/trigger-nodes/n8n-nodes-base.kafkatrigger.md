@@ -53,7 +53,7 @@ For usage examples and templates to help you get started, refer to n8n's [Kafka 
 {% hint style="info" %}
 **Feature availability**
 
-Version 2 of the Kafka Trigger is available from n8n 2.36.0. Version 1.3 stays the default: triggers you add from the Nodes panel use version 1.3, and existing workflows keep their current version.
+Version 2 of the Kafka Trigger is the default from n8n 2.45.0: triggers you add from the Nodes panel use version 2. Version 2 is available from n8n 2.36.0 for workflows that opt in. Existing workflows keep the version they were built with until you switch them.
 {% endhint %}
 
 Version 2 runs on a new, actively maintained Kafka engine. The trigger keeps the same fields and credential as version 1, with these differences:
@@ -79,7 +79,7 @@ Every other option keeps its name and default. Three behave differently:
 
 ### Switch a workflow to Kafka Trigger version 2
 
-The editor has no version picker. To use version 2, import a workflow JSON file where the Kafka Trigger node has `"typeVersion": 2`. To switch an existing workflow:
+Triggers you add from the Nodes panel are already version 2. The editor has no version picker, so to move an existing version 1 workflow:
 
 1. Download the workflow (**Workflow menu** > **Download**) and keep that file unchanged: it's your rollback point.
 2. In a copy of the file, set `"typeVersion": 2` on the Kafka Trigger node, and set the consumer group ID as described in [Choose the consumer group ID](#choose-the-consumer-group-id).
@@ -105,7 +105,7 @@ Rolling back loses no read position: when you unpublish a version 2 workflow, it
 The editor has no control to change an existing node's version. If the original version 1 workflow still exists, unpublish the version 2 workflow, then publish the original again. Otherwise, use one of these paths. Prefer the first if you still have the export from step 1 of the switch. Use the second for a workflow that started on version 2 and has no version 1 export.
 
 - **Restore the export:** unpublish the version 2 workflow. Then import the file from step 1 of the switch into a new, empty workflow (**Workflow menu** > **Import from File**), or restore the previous version from [workflow history](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/view-change-history), if your plan keeps it. Re-select the Kafka credential if the import cleared it, then publish the restored workflow.
-- **Replace the node:** unpublish the workflow, note the trigger's settings, delete the version 2 node, and add a new **Kafka Trigger** node from the Nodes panel. A trigger you add from the Nodes panel uses the default version, which is still version 1.3. Re-enter the settings, select the credential, reconnect the node, then publish the workflow.
+- **Edit the workflow JSON:** unpublish the version 2 workflow and download it (**Workflow menu** > **Download**). In a copy of the file, set `"typeVersion": 1.3` on the Kafka Trigger node and keep the same consumer group ID, then import the copy into a new, empty workflow. Re-select the Kafka credential if the import cleared it, then publish the restored workflow. A trigger you add from the Nodes panel is version 2, so adding a new trigger doesn't roll you back.
 
 What the consumer group does afterward depends on how you ran version 2:
 

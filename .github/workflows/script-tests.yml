@@ -12,7 +12,11 @@ on:
       - docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md
       # check_internal_links now resolves space IDs from this generated file, and
       # the tests assert the style-guide copy above still agrees with it.
+      # The auto-merge verdict tests also assert both generated indexes still parse
+      # and carry no degraded rows, so a PR that regenerates either must run them -
+      # otherwise the break lands on main unseen (DOC-2459).
       - SPACE_INDEX.md
+      - REUSABLE_CONTENT_INDEX.md
   workflow_dispatch: {}
 
 permissions:
@@ -46,14 +50,20 @@ jobs:
       - name: Run check_gitbook_syntax tests
         run: python3 .github/scripts/tests/test_check_gitbook_syntax.py
 
-  check-version-snippet:
-    name: runner / check-version-snippet
+  check-docops-automations:
+    # Covers every auto-merge automation: the orchestrator plus one verdict module
+    # per flow (version snippet, reusable content index, space index).
+    name: runner / check-docops-automations
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run check_version_snippet_pr tests
         run: python3 .github/scripts/tests/test_check_version_snippet_pr.py
+      - name: Run check_reusable_index_pr tests
+        run: python3 .github/scripts/tests/test_check_reusable_index_pr.py
+      - name: Run check_space_index_pr tests
+        run: python3 .github/scripts/tests/test_check_space_index_pr.py
       - name: Run docops_auto_merge tests
         run: python3 .github/scripts/tests/test_docops_auto_merge.py
 

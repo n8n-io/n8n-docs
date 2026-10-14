@@ -1,9 +1,15 @@
-name: DocOps auto-merge (version snippet)
-# Auto-merges the DocOps version-snippet PRs a human currently rubber-stamps.
+name: DocOps auto-merge
+# Auto-merges the mechanical DocOps PRs a human currently rubber-stamps.
 #
-# It acts ONLY on PRs carrying the body marker written by the DocOps engine
-# (<!-- docops:automation=version-snippet -->). Every other PR - including the
-# hand-merged v1 snippet PRs - is ignored, so there is no flag day.
+# One job per automation (see .github/scripts/docops_automations.py):
+#   version-snippet         the stable/beta version numbers  (live since DOC-2269)
+#   reusable-content-index  REUSABLE_CONTENT_INDEX.md        (DOC-2459)
+#   space-index             SPACE_INDEX.md                   (DOC-2461)
+#
+# Each acts ONLY on PRs carrying its own body marker
+# (<!-- docops:automation=<name> -->), written by the n8n flow that opens the PR.
+# Every other PR is ignored, so an automation stays dormant until its flow opts in
+# and there is never a flag day.
 #
 # It never merges via admin bypass. It approves and enables GitHub's NATIVE
 # auto-merge as the n8n-assistant GitHub App (not github-actions[bot]), so the
@@ -14,7 +20,7 @@ name: DocOps auto-merge (version snippet)
 # Security: every trigger fires the workflow from the DEFAULT branch (there is
 # deliberately no `pull_request` trigger, which would run the PR-head copy of this
 # file/scripts). Checkout is pinned to `main`; PR file contents are pulled through
-# the API as data; the verdict is a pure imported function. Actions are SHA-pinned.
+# the API as data; each verdict is a pure imported function. Actions are SHA-pinned.
 on:
   check_suite:
     types: [completed]
@@ -27,19 +33,37 @@ on:
       pr:
         description: PR number to evaluate (blank = sweep open PRs)
         required: false
+      flow:
+        description: Which automation to run (blank = all)
+        required: false
+        type: choice
+        default: ""
+        options:
+          - ""
+          - version-snippet
+          - reusable-content-index
+          - space-index
 
 permissions:
   contents: write
   pull-requests: write
   checks: write
 
-concurrency:
-  group: docops-auto-merge
-  cancel-in-progress: false
-
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false          # one automation escalating must not cancel the others
+      matrix:
+        flow:
+          - version-snippet
+          - reusable-content-index
+          - space-index
+    # Per-automation group: sweeps of different flows must not serialise behind
+    # each other, but two sweeps of the SAME flow still must.
+    concurrency:
+      group: docops-auto-merge-${{ matrix.flow }}
+      cancel-in-progress: false
     steps:
       # Approve/merge must act as the App, not github-actions[bot] (per DevX review).
       # Same identity + secrets the CLA workflow (ci-cla-check.yml) already uses.
@@ -56,26 +80,31 @@ jobs:
         with:
           ref: main
 
+      # Only the dispatched automation runs when one is named; otherwise all of them.
+      # The filter lives at STEP level on purpose: the `matrix` context is not
+      # available in a job-level `if`, which is evaluated before the matrix is
+      # applied, so a job-level guard here would silently skip every leg.
       - name: Evaluate and act
+        if: github.event.inputs.flow == '' || github.event.inputs.flow == matrix.flow
         shell: bash
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
           GH_REPO: ${{ github.repository }}
+          FLOW: ${{ matrix.flow }}
           INPUT_PR: ${{ github.event.inputs.pr }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           WEBHOOK_URL: ${{ secrets.DOCOPS_AUTOMERGE_WEBHOOK_URL }}
           WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
           WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
-          # Config consumed by docops_auto_merge.py:
-          SNIPPET_PATH: docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
-          MARKER: "<!-- docops:automation=version-snippet -->"
-          BRANCH_RE: "^doc-[0-9]+-update-version-snippet$"
+          # Marker, branch pattern, files and verdict live in the profile. Only the
+          # two deployment-specific values are overridable here, and both currently
+          # match the profile defaults.
           ALLOWED_AUTHORS: "its-imad"          # phase 2 may add a dedicated author bot
           REQUIRED_CHECKS: "runner / vale,link-check,cubic · AI code reviewer,CLA Check"
         run: |
           set -euo pipefail
           if [ -n "${INPUT_PR:-}" ]; then
-            python3 .github/scripts/docops_auto_merge.py --pr "$INPUT_PR"
+            python3 .github/scripts/docops_auto_merge.py --flow "$FLOW" --pr "$INPUT_PR"
           else
-            python3 .github/scripts/docops_auto_merge.py
+            python3 .github/scripts/docops_auto_merge.py --flow "$FLOW"
           fi

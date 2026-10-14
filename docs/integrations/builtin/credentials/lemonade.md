@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 * [Lemonade Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmlemonade.md)
 * [Embeddings Lemonade](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingslemonade.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Lemonade runs AI inference locally. These nodes connect directly to a Lemonade server process running on your machine or network. [Install and run Lemonade server](https://lemonade-server.ai/install_options.html) before creating credentials in n8n.

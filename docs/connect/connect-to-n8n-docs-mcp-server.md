@@ -37,6 +37,8 @@ You can connect both. Use the GitBook server when you want answers grounded in t
 
 Both servers use HTTP transport, so your AI tool needs to support remote MCP servers over HTTP. Neither supports stdio or SSE.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## MCP server URLs
 
 Use the endpoint for the server you want:

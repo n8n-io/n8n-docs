@@ -34,6 +34,8 @@ Support for basic auth and JWT authentication was removed from n8n 1.0.
 The `N8N_USER_MANAGEMENT_DISABLED` environment variable was also removed from n8n 1.0. No supported way to disable the login screen exists in recent versions of n8n, including for local or development use. If you need to simplify login for local development, consider using a password manager, setting a simple local password, or scripting the standard login flow.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Setup <a href="#setup" id="setup"></a>
 
 There are three stages to set up user management in n8n:

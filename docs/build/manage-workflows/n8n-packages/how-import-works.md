@@ -21,6 +21,8 @@ n8n packages are in Preview. Import behavior may change in future releases.
 
 This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Check everything, then write
 
 An import runs in two phases. First n8n plans it: it reads the package, works out what it would do with every entity, and collects any reason the import can't go ahead. Then it checks the collected reasons, along with license, permission, and quota requirements. Only if nothing is blocking does it start writing.
@@ -33,7 +35,7 @@ An import runs in two phases. First n8n plans it: it reads the package, works ou
 There's no rollback. n8n has no database transaction around an import, so its promise that a refused import writes nothing covers the problems it can predict, not every possible failure. If something unexpected goes wrong while an import is being written, such as a dropped database connection, whatever was already written stays on the instance, and there's no cleanup afterward. Checking first makes this rare, not impossible.
 {% endhint %}
 
-Import never deletes a workflow, folder, project, data table, or tag.
+Import never deletes a workflow, folder, project, data table, or tag. Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
 
 ## Write order
 
@@ -116,11 +118,22 @@ Only the schema travels. Rows never move in either direction, so a table the imp
 
 Tables are matched by ID within the target project, never by name. A created table keeps the source ID.
 
-Every column in the package must exist on a matched target table with the same name and type. A missing column or a type mismatch refuses the import under both schema policies. `keep-existing` tolerates extra columns the target has of its own, and `fail` refuses those too. Column order isn't compared, and column names are compared case-sensitively.
+`--data-table-schema-conflict-policy` decides what happens when a matched table's schema differs from the package:
 
-Import never changes a data table that already exists. No column is added, removed, renamed, or retyped, and the table isn't renamed. Creating an absent table is the only write. So package columns are never added to a matched table, which is why a missing column has to refuse rather than resolve.
+| Policy | What it does |
+|--------|--------------|
+| `keep-existing` (default) | Never changes the target table. Refuses the import when a data table column from the package is missing on the target or has a different type. Extra columns the target has of its own are fine |
+| `fail` | Same as `keep-existing`, but also refuses the import when the target has extra columns |
+| `overwrite` | Changes the target table to match the package. It adds, renames, removes (destructive), retypes (destructive), and reorders columns, and renames the table |
+| `overwrite-non-destructive` | Makes the same changes as `overwrite`, but stops the import when a change is destructive and reports those changes. Nothing is written |
 
-Creating a table also fails if its ID already exists anywhere on the instance, including in another project, or if its name is already taken in the target project.
+Neither `keep-existing` nor `fail` adds or renames a column on the target table. A missing column refuses the import, including a column renamed on the source. To apply a rename, use `overwrite` or `overwrite-non-destructive`. Column order and the table name aren't compared, and column names are compared case-sensitively.
+
+A destructive change removes a column or changes its type. The values in those columns are removed. Data in other columns is preserved. Renaming a column isn't destructive: it keeps its values. Under both `overwrite` policies, the changes apply to every workflow that uses the table.
+
+Packages exported before n8n 2.44.0 don't carry column IDs. In those packages, both `overwrite` policies treat a renamed column as removed and added again, which is a destructive change and gets flagged as such.
+
+Creating a table also fails if its ID already exists anywhere on the instance, including in another project, or if its name is already taken in the target project. Renaming a table under an `overwrite` policy fails in the same way if the new name is taken in the target project.
 
 ## Tags
 
@@ -187,7 +200,7 @@ There are 12 reasons an import can be blocked. Each appears in the `issues` arra
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
 | `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |
-| `data-table-unresolved` | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | |
+| `data-table-unresolved` | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | Under `overwrite-non-destructive`, `schema-incompatible` means a change would remove or retype a column, and lists those columns |
 | `tag-unresolved` | `rename-drift`, `name-collision`, `invalid-name`, `invalid-id`, `permission-denied` | |
 | `variable-unresolved` | | A referenced variable doesn't resolve and `--variable-missing-mode` is `must-preexist` |
 | `variable-conflict` | | A resolved variable's value differs and `--variable-conflict-policy` is `fail` |
@@ -198,7 +211,7 @@ The HTTP status depends on the kind of problem. The response is a `409` if any i
 
 Some failures are reported on their own rather than batched with the rest, because they stop n8n before it can plan: a missing license feature, a missing API key scope, and a malformed package.
 
-Missing permission to create a tag or a data table isn't a `403`. It comes back as a `permission-denied` blocking issue naming the scope it needed.
+Missing permission to create a tag, or to create or change a data table, isn't a `403`. It comes back as a `permission-denied` blocking issue naming the scope it needed.
 
 ## Read next
 

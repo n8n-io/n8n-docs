@@ -11,6 +11,8 @@ n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://m
 
 You can also connect MCP servers in the registry to [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add a registry server to an agent
 
 1. Open the tools panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node in the canvas (by clicking on "Tool +"), or in [Build and manage agents](../build-and-manage-agents.md#add-tools) by clicking on "Add Tool".

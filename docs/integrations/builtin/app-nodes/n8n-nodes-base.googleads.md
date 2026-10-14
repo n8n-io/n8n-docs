@@ -28,6 +28,8 @@ On this page, you'll find a list of operations the Google Ads node supports and 
 Refer to [Google Ads credentials](../credentials/google/README.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Campaign

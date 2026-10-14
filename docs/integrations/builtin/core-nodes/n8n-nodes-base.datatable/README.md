@@ -41,6 +41,8 @@ As well as using the Data Tables node in a workflow, you can view and manage dat
 For information about working with data tables in this tab, and guidance on when to use data tables and their limitations, see [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Resources <a href="#resources" id="resources"></a>
 
 The Data Table node supports the following resources:

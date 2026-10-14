@@ -27,6 +27,8 @@ Use the API CLI to:
 
 All operations respect the permissions of the user and the scope of the API key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n CLI versus server CLI <a href="#n8n-cli-versus-server-cli" id="n8n-cli-versus-server-cli"></a>
 
 If you need to manage your n8n instance (backups, license management, emergency resets), see the [Server CLI](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/use-the-command-line), a built-in tool that runs on the same machine as n8n.
@@ -187,6 +189,7 @@ n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
 n8n-cli package export --project-id=<project-id> --output=project.n8np
 n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
 n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
+n8n-cli package import --file=export.n8np --project-id=<project-id> --data-table-schema-conflict-policy=overwrite-non-destructive
 ```
 
 See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) for what makes up a package, and [Import a package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages/import-a-package) for every available flag.

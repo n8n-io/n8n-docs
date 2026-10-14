@@ -9,6 +9,8 @@ layout:
 
 Back up a self-hosted n8n instance so you can recover from data loss, roll back a failed update, or move to a new server. A complete backup includes more than the CLI export commands produce on their own. This page explains what a complete backup contains, what the CLI `--backup` flag exports, and how to restore each kind of backup.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What a complete backup includes
 
 A complete backup of a self-hosted n8n instance consists of two parts:

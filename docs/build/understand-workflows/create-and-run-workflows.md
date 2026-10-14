@@ -29,6 +29,8 @@ layout:
 
 A workflow[^1] is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](#user-content-fn-2)[^2].
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a workflow <a href="#create-a-workflow" id="create-a-workflow"></a>
 
 1. Select the <img src="../.gitbook/assets/universal-resource-button (1).png" alt="universal create resource icon" data-size="line"> **button** in the upper-left corner of the side menu. Select workflow.

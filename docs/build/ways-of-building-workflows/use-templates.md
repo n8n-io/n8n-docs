@@ -20,6 +20,8 @@ Templates provide:
 * Examples of what you can build
 * Best practices for creating your own workflows
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Access templates <a href="#access-templates" id="access-templates"></a>
 
 Select <img src="../.gitbook/assets/templates.png" alt="View templates icon" data-size="line"> **Templates** to view the templates library.

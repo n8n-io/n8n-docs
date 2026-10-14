@@ -30,6 +30,8 @@ The **Project Viewer** role is available on:
 
 Within projects, there are three user roles: Admin, Editor, and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Project Admin <a href="#project-admin" id="project-admin"></a>
 
 A Project Admin role has the highest level of permissions. Project admins can:

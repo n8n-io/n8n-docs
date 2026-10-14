@@ -46,6 +46,8 @@ Use this trigger:
 * To test your workflow before you add an automatic trigger of some kind.
 * When you don't want the workflow to run automatically.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
 Here are some common errors and issues with the Manual Trigger node and steps to resolve or troubleshoot them.

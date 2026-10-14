@@ -23,6 +23,8 @@ layout:
 
 Here are some common errors and issues with the [Postgres node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Dynamically populate SQL `IN` groups with parameters <a href="#dynamically-populate-sql-in-groups-with-parameters" id="dynamically-populate-sql-in-groups-with-parameters"></a>
 
 In Postgres, you can use the SQL [`IN` comparison construct](https://www.postgresql.org/docs/current/functions-comparisons.html#FUNCTIONS-COMPARISONS-IN-SCALAR) to make comparisons between groups of values:

@@ -36,6 +36,8 @@ layout:
 
 During the trial phase there are no usage limits. If n8n makes the feature permanent, there may be usage limits as part of your pricing tier.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Feature limits <a href="#feature-limits" id="feature-limits"></a>
 
 The ChatGPT implementation in n8n has the following limitations:

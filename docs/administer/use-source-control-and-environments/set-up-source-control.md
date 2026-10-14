@@ -18,6 +18,8 @@ Link a Git repository to an n8n instance and configure your source control.
 
 n8n uses source control to provide environments. Refer to [Environments in n8n](work-with-environments.md) for more information.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To use source control with n8n, you need a Git repository with either:

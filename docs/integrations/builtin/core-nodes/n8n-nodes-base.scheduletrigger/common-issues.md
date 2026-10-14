@@ -39,6 +39,8 @@ layout:
 
 Here are some common errors and issues with the [Schedule Trigger node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Invalid cron expression <a href="#invalid-cron-expression" id="invalid-cron-expression"></a>
 
 This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n doesn't understand your cron expression. This may mean that there is a mistake in your cron expression or that you're using an incompatible syntax.
@@ -63,7 +65,7 @@ If you're [self hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n
 To set the timezone for an individual workflow:
 
 1. Open the workflow on the canvas.
-2. Select the <img src="../../../.gitbook/assets/three-dots-horizontal (2).png" alt="three dots menu" data-size="line"> **Three dots icon** in the upper-right corner.
+2. Select the <img src="../../../.gitbook/assets/three-dots-horizontal (2).png" alt="Workflow menu icon" data-size="line"> **Workflow menu** in the upper-right corner.
 3. Select **Settings**.
 4. Change the **Timezone** setting.
 5. Select **Save**.

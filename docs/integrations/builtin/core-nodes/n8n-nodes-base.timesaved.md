@@ -19,6 +19,8 @@ Use this node when different paths through a workflow save different amounts of 
 This node only counts if the workflow's **Estimated time saved** setting is set to **Dynamic**. See [Setting the time saved by a workflow](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/track-usage-with-insights#setting-the-time-saved-by-a-workflow).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters
 
 * **Calculation Mode**: Choose how n8n counts the minutes:

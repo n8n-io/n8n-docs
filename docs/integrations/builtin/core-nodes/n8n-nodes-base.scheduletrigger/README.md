@@ -30,6 +30,8 @@ If a workflow uses the Schedule node as a trigger, make sure that you save and p
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ttmJg4aaEfjB4LyKpCzt/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Add **Trigger Rules** to determine when the trigger should run.
@@ -47,6 +49,12 @@ Use the **Trigger Interval** to select the time interval unit of measure to sche
 You can add multiple **Trigger Rules** to run the node on different schedules.
 
 Refer to the sections below for more detail on configuring each **Trigger Interval**. Refer to [Templates and examples](#templates-and-examples) for further examples.
+
+{% hint style="info" %}
+**Default timing from n8n 2.45.0**
+
+Schedule Trigger nodes use the durable scheduler by default, as long as `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` stays on (its default). The Seconds and Minutes trigger intervals run at uniform intervals measured from workflow publication, rather than on clock boundaries. Custom (Cron) intervals keep their timing. See [Schedule Trigger timing](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#trigger-node-mode) for clock-aligned timing, or [Use the in-memory scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#use-the-in-memory-scheduler) to switch schedulers.
+{% endhint %}
 
 ### Seconds trigger interval <a href="#seconds-trigger-interval" id="seconds-trigger-interval"></a>
 
@@ -141,7 +149,7 @@ The node's **Settings** tab offers options controlling what happens when an exec
 {% hint style="info" %}
 **Feature availability**
 
-These options are available from n8n 2.36, on Schedule Trigger nodes added from that version on. They take effect only when the instance runs the [durable scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler); the default in-memory scheduler never runs missed executions.
+These options are available from n8n 2.36, on Schedule Trigger nodes added from that version on. They take effect only when the instance runs the [durable scheduler](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler), which is on by default from n8n 2.45.0. If you set `N8N_SCHEDULER_ENABLED=false`, Schedule Trigger nodes use the in-memory scheduler, which never runs missed executions.
 {% endhint %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>

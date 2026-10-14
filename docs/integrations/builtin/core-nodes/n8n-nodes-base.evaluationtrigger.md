@@ -29,6 +29,8 @@ On this page, you'll find the Evaluation Trigger node parameters and options.
 The Evaluation Trigger node uses data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](../credentials/google/README.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Parameters <a href="#parameters" id="parameters"></a>
 
 - **Source:** Select the location to which you want to output the evaluation results. Default value is **Data table**.

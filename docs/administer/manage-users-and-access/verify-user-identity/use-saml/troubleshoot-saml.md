@@ -22,6 +22,8 @@ If you get an error when testing your SAML setup, check the following:
 
 For more support, use the [forum](https://community.n8n.io/), or contact your support representative if you have a paid support plan.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Use SAML](./)

@@ -16,6 +16,8 @@ A workflow[^1] is a collection of nodes connected together to automate a process
 
 If it's your first time building a workflow, you may want to use the [quickstart guide](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/build-your-first-workflow) to quickly try out n8n features.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Create and run workflows](create-and-run-workflows.md): create, run, and publish workflows.

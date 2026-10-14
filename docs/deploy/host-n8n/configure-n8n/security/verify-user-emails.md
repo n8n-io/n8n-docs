@@ -15,6 +15,8 @@ layout:
 
 You can require all new accounts to be verified by email. This prevents malicious admins from registering accounts without email verification.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * SMTP must be set up and n8n must be able to send emails.

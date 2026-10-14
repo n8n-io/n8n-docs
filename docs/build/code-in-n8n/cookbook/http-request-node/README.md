@@ -17,6 +17,8 @@ Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/c
 
 See [Pagination](pagination.md) for examples of paging through results with this node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 * [Cookbook](../)

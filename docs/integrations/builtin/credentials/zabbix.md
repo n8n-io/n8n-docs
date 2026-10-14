@@ -24,6 +24,8 @@ layout:
 
 Create a [Zabbix Cloud](https://www.zabbix.com/) account or self-host your own Zabbix server.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * API key

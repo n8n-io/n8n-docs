@@ -16,6 +16,8 @@ layout:
 
 This section contains examples for how to configure n8n to solve particular use cases.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Isolate n8n](isolate-n8n.md): prevent your n8n instance from connecting with n8n's servers.

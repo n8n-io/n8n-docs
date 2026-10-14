@@ -18,6 +18,8 @@ To avoid this, n8n recommends that you don't save unnecessary data, and enable p
 
 To do this, configure the corresponding [environment variables](../basic-configuration/use-environment-variables/executions.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Reduce saved data <a href="#reduce-saved-data" id="reduce-saved-data"></a>
 
 {% hint style="info" %}

@@ -52,7 +52,7 @@ This agent supports the following chat models:
 * [Groq Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatgroq.md)
 * [Mistral Cloud Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
 * [Anthropic Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
-* [Azure AI Foundry Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
+* [Microsoft Foundry Chat Model](../../sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 
 <details>
 
@@ -179,6 +179,8 @@ This agent supports the following chat models:
 * [Zoom](../../../app-nodes/n8n-nodes-base.zoom.md)
 
 </details>
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 

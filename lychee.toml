@@ -106,6 +106,7 @@ exclude = [
   '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
   '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
   '^https://platform\.deepseek\.com/.*',                 # Actively blocks linkchecks
+  '^https://cratedb\.com/docs/.*',                      # Returns 406 to the checker, 200 in a browser
   '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
   '^https://reddit\.com/.*',                             # Actively blocks linkchecks
   '^https://www\.mysql\.com/.*',                         # Actively blocks linkchecks

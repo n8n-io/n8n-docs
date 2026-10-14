@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Copper](../app-nodes/n8n-nodes-base.copper.md)
 - [Copper Trigger](../trigger-nodes/n8n-nodes-base.coppertrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Copper](https://www.copper.com/) account at the **Professional** or **Business** plan level.

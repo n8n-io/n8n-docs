@@ -21,9 +21,11 @@ You can use these credentials to authenticate the following nodes:
 
 - [Freshworks CRM](../app-nodes/n8n-nodes-base.freshworkscrm.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/) account.
+Create a [Freshworks CRM](https://www.freshworks.com/crm/sales/) account.
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

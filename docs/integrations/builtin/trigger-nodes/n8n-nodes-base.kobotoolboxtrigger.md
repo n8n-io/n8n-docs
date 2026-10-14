@@ -36,3 +36,5 @@ For usage examples and templates to help you get started, refer to n8n's [KoboTo
 This node starts a workflow upon new submissions of a specified form. The trigger node handles the creation/deletion of the hook, so you don't need to do any setup in KoboToolbox.
 
 It works the same way as the Get Submission operation in the [KoboToolbox](../app-nodes/n8n-nodes-base.kobotoolbox.md) node, including supporting the same reformatting options.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

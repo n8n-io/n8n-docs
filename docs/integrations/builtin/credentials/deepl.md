@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [DeepL](../app-nodes/n8n-nodes-base.deepl.md)
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [DeepL developer](https://www.deepl.com/pro-api) account. n8n works with both Free and Pro API Plans.

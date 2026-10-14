@@ -23,3 +23,5 @@ There are four ways to install community nodes:
 
 Unverified community nodes aren't available on n8n cloud and require [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

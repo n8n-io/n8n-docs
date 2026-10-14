@@ -36,3 +36,5 @@ Refer to the [Venafi TLS Protect Cloud credentials documentation](../credentials
 
 For usage examples and templates to help you get started, refer to n8n's [Venafi TLS Protect Cloud Trigger integrations](https://n8n.io/integrations/venafi-tls-protect-cloud-trigger/) page.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

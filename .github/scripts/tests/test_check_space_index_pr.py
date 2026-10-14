@@ -123,10 +123,15 @@ def main():
           verdict(base4, index(header=HEADER_4.split("\n")[0] + "\n||||||")) == "escalate")
     check("a separator with the wrong cell count escalates",
           verdict(base4, index(header=HEADER_4.split("\n")[0] + "\n|---|---|")) == "escalate")
-    # A stray table further down the file must not contribute rows.
-    check("rows stop at the first non-table line",
-          verdict(base4, index() + "\nsome prose\n\n| `x` | `y` | z | public |\n")
-          == "merge")
+    # A row below the table is NOT ignorable: check_internal_links.load_space_ids
+    # scans every line in the file, so it would feed link resolution unvalidated.
+    check("a stray row below the table escalates",
+          verdict(base4, index() + "\nsome prose\n\n| `build` | `rPN1zU5jaYNvwH7RzxqA` | B | public |\n")
+          == "escalate")
+    check("a stray row with a short space ID escalates",
+          verdict(base4, index() + "\n\n| `x` | `SHORT` | z | public |\n") == "escalate")
+    check("prose below the table is fine",
+          verdict(base4, index(rows=ROWS_4[:2]) + "\nsome closing prose\n") == "merge")
 
     # --- collapse-guard boundary ---
     half = [f"| `h{i:02d}` | `{'B' * 18}{i:02d}` | H{i} | public |" for i in range(20)]

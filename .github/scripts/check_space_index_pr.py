@@ -44,6 +44,12 @@ from pathlib import Path
 # SPACE_ID_ROW_RE reads exactly those and ignores the rest, so they are what a
 # corrupted render would break. A space ID is a 20-char GitBook object ID.
 ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]{20})`\s*\|(.*)\|\s*$")
+# What the CONSUMER sees. check_internal_links.load_space_ids scans every line in the
+# file, not a scoped table, and accepts a space ID of any length. So any line matching
+# this anywhere feeds link resolution, even one sitting outside the table we validate.
+# A row we skip but the link checker reads is exactly the drift this file exists to
+# prevent, so stray rows escalate rather than merge.
+CONSUMER_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
 SEPARATOR_CELL_RE = re.compile(r"^:?-{3,}:?$")
 VISIBILITIES = {"public", "private", "unlisted", "share-link", "visitor-auth"}
 
@@ -70,13 +76,20 @@ def _table_lines(text):
     lines = (text or "").split("\n")
     start = next((i for i, l in enumerate(lines) if l.strip().startswith("|")), None)
     if start is None:
-        return []
+        return 0, []
     out = []
     for line in lines[start:]:
         if not line.strip().startswith("|"):
             break
         out.append(line)
-    return out
+    return start, out
+
+
+def stray_consumer_rows(text, start, count):
+    """Lines outside the parsed table that the consumer would still read as rows."""
+    lines = (text or "").split("\n")
+    outside = lines[:start] + lines[start + count:]
+    return [l for l in outside if CONSUMER_ROW_RE.match(l)]
 
 
 def parse_table(text):
@@ -85,9 +98,14 @@ def parse_table(text):
     Returns (rows, error). `rows` is a list of (folder, space_id, cell_count).
     `error` is None on success, else a short human-readable reason.
     """
-    lines = _table_lines(text)
+    start, lines = _table_lines(text)
     if len(lines) < 3:
         return [], "no space table found (need a header, a separator and a row)"
+
+    stray = stray_consumer_rows(text, start, len(lines))
+    if stray:
+        return [], (f"{len(stray)} row(s) outside the table that the link checker would "
+                    f"still read: {stray[0].strip()[:80]}")
 
     header, separator, body = lines[0], lines[1], lines[2:]
     header_cells = _cells(header)

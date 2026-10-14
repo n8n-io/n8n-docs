@@ -49,6 +49,11 @@ ROW_RE = re.compile(
     r"^\|\s*`([A-Za-z0-9_-]+)`\s*\|\s*([^|]*?)\s*\|\s*`([A-Za-z0-9]+)`\s*\|\s*`([^`]*)`\s*\|(.*)$"
 )
 SEPARATOR_CELL_RE = re.compile(r"^:?-{3,}:?$")
+# What the CONSUMERS see. check_internal_links.reusable_blocks and
+# gitbook_preview_links both scan every line in the file, not a scoped table, so any
+# line matching this anywhere is read as a block row even if it sits outside the table
+# we validate. Stray rows escalate rather than merge.
+CONSUMER_ROW_RE = re.compile(r"^\|\s*`([A-Za-z0-9]+)`\s*\|\s*([^|]+?)\s*\|")
 # Exact header, not a prefix: matching only "| ID" would let a table with arbitrary
 # column labels through to a merge verdict.
 HEADER = ["ID", "Name", "Parent space", "Include snippet", "Preview", "Used in"]
@@ -70,13 +75,20 @@ def _table_lines(text):
     lines = (text or "").split("\n")
     start = next((i for i, l in enumerate(lines) if l.strip().startswith("|")), None)
     if start is None:
-        return []
+        return 0, []
     out = []
     for line in lines[start:]:
         if not line.strip().startswith("|"):
             break
         out.append(line)
-    return out
+    return start, out
+
+
+def stray_consumer_rows(text, start, count):
+    """Lines outside the parsed table that the consumers would still read as rows."""
+    lines = (text or "").split("\n")
+    outside = lines[:start] + lines[start + count:]
+    return [l for l in outside if CONSUMER_ROW_RE.match(l)]
 
 
 def parse_table(text):
@@ -85,9 +97,14 @@ def parse_table(text):
     Returns (rows, error). `rows` is a list of dicts with block_id / name /
     space_id / include / preview / used_in. `error` is None on success.
     """
-    lines = _table_lines(text)
+    start, lines = _table_lines(text)
     if len(lines) < 3:
         return [], "no index table found (need a header, a separator and a row)"
+
+    stray = stray_consumer_rows(text, start, len(lines))
+    if stray:
+        return [], (f"{len(stray)} row(s) outside the table that the index consumers "
+                    f"would still read: {stray[0].strip()[:80]}")
 
     header, separator, body = lines[0], lines[1], lines[2:]
     header_cells = _cells(header)

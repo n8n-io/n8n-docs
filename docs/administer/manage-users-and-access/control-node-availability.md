@@ -32,7 +32,19 @@ Node type policies are available from n8n 2.42.0.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
-An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference). There's no settings page for them yet. The editor shows users the result: it hides blocked nodes and refuses to publish or run a workflow that uses them. It also refuses a save that adds a blocked node.
+An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
+
+## Turn on node type policies
+
+On self-hosted instances, node type policies need an Enterprise license and the `type-availability-policies` module:
+
+```bash
+N8N_ENABLED_MODULES=type-availability-policies
+```
+
+If `N8N_ENABLED_MODULES` already lists other modules, add `type-availability-policies` to the comma-separated list. Don't replace the existing value.
+
+Set this variable on every n8n process. In [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), that includes every worker. A worker without the module doesn't check policies, so it runs every workflow it receives.
 
 ## How node type policies work
 
@@ -53,6 +65,8 @@ A selector matches nodes in one of two ways:
 
 n8n checks the rules in order and uses the first rule that matches. If no rule matches, n8n uses the policy's `defaultAction`.
 
+To find a node's type name, select the node on the canvas and copy it. Paste it into a text editor and read the `type` field.
+
 A `name` rule also matches the tool versions of that node. For example, a rule on `n8n-nodes-base.gmail` also blocks the **Gmail Tool** that AI agents use.
 
 ### How instance and project policies combine
@@ -69,28 +83,20 @@ Use `delegate` for nodes you want blocked by default but that a project admin ca
 
 Without any policy, every node is available.
 
-## Turn on node type policies
-
-On self-hosted instances, node type policies need an Enterprise license and the `type-availability-policies` module:
-
-```bash
-N8N_ENABLED_MODULES=type-availability-policies
-```
-
-If `N8N_ENABLED_MODULES` already lists other modules, add `type-availability-policies` to the comma-separated list. Don't replace the existing value.
-
-Set this variable on every n8n process. In [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), that includes every worker. A worker without the module doesn't check policies, so it runs every workflow it receives.
+Use a policy to block nodes per project and keep them installed. Use [`NODES_EXCLUDE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes) to remove nodes from the whole instance.
 
 ## Set a policy with the API
 
 ### Authentication and permissions
 
-Send an API key in the `X-N8N-API-KEY` header. The key needs the `nodeTypePolicy:manage` scope.
+Send an API key in the `X-N8N-API-KEY` header. The key needs the `nodeTypePolicy:manage` scope. Refer to [Create an API key](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/authentication#create-an-api-key).
 
 | Endpoint | Who can call it |
 |----------|-----------------|
 | `GET` and `PUT /api/v1/node-type-policies/instance` | Instance owners and admins |
 | `GET` and `PUT /api/v1/node-type-policies/projects/<project-id>` | Instance owners and admins, and admins of that project |
+
+To find a project ID, open the project in n8n. The ID is the part of the URL after `/projects/`.
 
 ### Read, change, then write the policy
 
@@ -101,6 +107,23 @@ To change a policy:
 1. Read the current policy with `GET`.
 2. Change the `rules` or the `defaultAction`.
 3. Send the whole policy back with `PUT`, with the same `version`.
+
+A `GET` returns the policy in this shape:
+
+```json
+{
+	"scopeId": "<scope-id>",
+	"defaultAction": "allow",
+	"rules": [
+		{
+			"id": "block-execute-command",
+			"action": "deny",
+			"selector": { "kind": "name", "value": "n8n-nodes-base.executeCommand" }
+		}
+	],
+	"version": 3
+}
+```
 
 A policy that was never set returns `version: 0`, so the first `PUT` sends `0`. If someone changed the policy after you read it, n8n returns `409 Conflict`. Read the policy again and retry.
 
@@ -135,11 +158,11 @@ curl --request PUT \
 	}'
 ```
 
-The response returns the saved policy with its new `version`. It can also include `warnings`, which list rules that an earlier rule already covers. n8n never reaches those rules.
+The response returns the saved policy with its new `version`. It can also include `warnings`, which list rules that an earlier rule already covers. n8n never reaches those rules. The change takes effect within about one second.
 
-### Example: block AI nodes in one project
+### Example: turn on a delegated node in one project
 
-This project policy blocks every node in the AI package and keeps all other nodes available:
+The instance policy above delegates the **SSH** node. This project policy turns it on for one project:
 
 ```bash
 curl --request PUT \
@@ -151,15 +174,15 @@ curl --request PUT \
 		"defaultAction": "allow",
 		"rules": [
 			{
-				"id": "no-ai-nodes",
-				"action": "deny",
-				"selector": { "kind": "package", "value": "@n8n/n8n-nodes-langchain" }
+				"id": "allow-ssh",
+				"action": "allow",
+				"selector": { "kind": "name", "value": "n8n-nodes-base.ssh" }
 			}
 		]
 	}'
 ```
 
-A project policy can't override an instance `deny`. It can only allow a node that the instance policy allows or delegates.
+The `allow` rule is necessary. The project's `defaultAction: allow` doesn't turn on a delegated node.
 
 ### Share one policy across scopes
 
@@ -199,7 +222,6 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 - **Not a data boundary:** blocking a node doesn't block the service behind it. Users can still reach the same API with the **HTTP Request** or **Code** node. To stop n8n from loading a node at all, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes).
 - **Source control pulls:** n8n skips a pulled workflow that uses a blocked node and reports it in the pull result. The workflow in Git and in n8n stay different until you allow the node or remove it.
 - **Sub-workflows inside node parameters:** n8n doesn't check nodes in a sub-workflow that's defined inside another node's parameters.
-- **Delay:** a policy change takes effect within about one second.
 
 ## Related resources
 

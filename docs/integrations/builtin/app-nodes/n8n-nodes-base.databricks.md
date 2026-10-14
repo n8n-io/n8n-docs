@@ -234,7 +234,7 @@ The table, column, and function lists read the project's OpenAPI document. They 
 
 The node reads and writes rows in tables that already exist. It doesn't create tables. Create the table in the Lakebase SQL editor first, and grant the credential's Postgres role access to it.
 
-The `orders` table in the examples below has an `id` primary key, and `status` and `created_at` columns.
+The `orders` table in the examples below has an `id` primary key, plus `status` and `created_at` columns.
 
 ### Get Many
 

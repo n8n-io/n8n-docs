@@ -32,7 +32,7 @@ Node type policies are available from n8n 2.42.0.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
-An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference). There's no settings page for them yet. The editor shows users the result: it hides blocked nodes and refuses to save, publish, or run a workflow that uses them.
+An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference). There's no settings page for them yet. The editor shows users the result: it hides blocked nodes and refuses to publish or run a workflow that uses them. It also refuses a save that adds a blocked node.
 
 ## How node type policies work
 
@@ -77,6 +77,8 @@ On self-hosted instances, node type policies need an Enterprise license and the 
 N8N_ENABLED_MODULES=type-availability-policies
 ```
 
+If `N8N_ENABLED_MODULES` already lists other modules, add `type-availability-policies` to the comma-separated list. Don't replace the existing value.
+
 Set this variable on every n8n process. In [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), that includes every worker. A worker without the module doesn't check policies, so it runs every workflow it receives.
 
 ## Set a policy with the API
@@ -102,11 +104,13 @@ To change a policy:
 
 A policy that was never set returns `version: 0`, so the first `PUT` sends `0`. If someone changed the policy after you read it, n8n returns `409 Conflict`. Read the policy again and retry.
 
+A `PUT` also returns `409 Conflict` if the scope has more than one attached policy, or if its policy is shared with another scope. In that case, update the shared policy or the scope's attachments instead. Refer to [Share one policy across scopes](#share-one-policy-across-scopes).
+
 A `PUT` replaces every rule in the policy. To add one rule, send the existing rules plus the new one.
 
 ### Example: block nodes for the whole instance
 
-This instance policy blocks the **Execute Command** node, and lets project admins turn on the **SSH** node for their own project:
+This instance policy blocks the **Execute Command** node and lets project admins turn on the **SSH** node for their own project:
 
 ```bash
 curl --request PUT \
@@ -155,7 +159,7 @@ curl --request PUT \
 	}'
 ```
 
-A project policy can only restrict. If the instance policy denies a node, this project can't allow it.
+A project policy can't override an instance `deny`. It can only allow a node that the instance policy allows or delegates.
 
 ### Share one policy across scopes
 
@@ -168,7 +172,7 @@ When a node is blocked in a project, users in that project see:
 - **Nodes panel:** blocked nodes don't appear when browsing. They still appear in search, at the end of the list, with a lock. Users can't add them.
 - **Canvas:** a blocked node already in a workflow shows a restricted label. Users can't copy it.
 - **Node details:** the parameters are read-only. Users can contact an instance admin or replace the node.
-- **Save, publish, and run:** n8n refuses the action and shows a message that lists each blocked node, with a link to find it in the workflow.
+- **Publish and run:** n8n refuses the action and shows a message that lists each blocked node, with a link to find it in the workflow. n8n refuses a save in the same way if the save adds a blocked node.
 
 ## Workflows that already use a blocked node
 
@@ -200,8 +204,12 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 ## Related resources
 
 * [Manage users and access](./)
+* [Set up for Cloud](set-up-for-cloud.md)
+* [Add and remove users](add-and-remove-users.md)
 * [Understand instance roles](understand-instance-roles.md)
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
+* [Verify user identity](verify-user-identity/README.md)
+* [Follow best practices](follow-best-practices.md)
 * [Organize work in projects](set-permissions-and-roles-rbac/organize-work-in-projects.md)
 * [Block specific nodes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes)
 * [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference)

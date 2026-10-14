@@ -272,7 +272,8 @@ def handle_pr(repo, cfg, pr):
         if key in v:
             ctx[key] = v[key]
     verdict, vreason = v["verdict"], v["reason"]
-    log(pr, f"verdict={verdict} ({vreason})")
+    detail = " ".join(f"{k}={v[k]}" for k in ("base", "head", "npm") if k in v)
+    log(pr, f"verdict={verdict} ({vreason}){' ' + detail if detail else ''}")
 
     action = action_for_verdict(verdict)
     if action == "close":

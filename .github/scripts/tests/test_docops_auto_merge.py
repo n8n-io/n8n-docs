@@ -130,11 +130,24 @@ def main():
           space["marker"] != reusable["marker"])
 
     # --- load_cfg ---
-    cfg = dam.load_cfg("space-index")
-    check("load_cfg resolves the profile",
-          cfg["content_path"] == "SPACE_INDEX.md" and cfg["flow"] == "space-index")
-    check("load_cfg defaults the allowed authors", cfg["allowed"] == {"its-imad"})
-    check("load_cfg defaults the required checks", "runner / vale" in cfg["required"])
+    # Clear the overrides first: inheriting ALLOWED_AUTHORS or REQUIRED_CHECKS from the
+    # caller's shell would make these assertions test the environment, not the defaults.
+    saved = {k: os.environ.pop(k, None) for k in ("ALLOWED_AUTHORS", "REQUIRED_CHECKS")}
+    try:
+        cfg = dam.load_cfg("space-index")
+        check("load_cfg resolves the profile",
+              cfg["content_path"] == "SPACE_INDEX.md" and cfg["flow"] == "space-index")
+        check("load_cfg defaults the allowed authors", cfg["allowed"] == {"its-imad"})
+        check("load_cfg defaults the required checks", "runner / vale" in cfg["required"])
+
+        os.environ["ALLOWED_AUTHORS"] = "someone-else"
+        check("load_cfg honours an ALLOWED_AUTHORS override",
+              dam.load_cfg("space-index")["allowed"] == {"someone-else"})
+    finally:
+        os.environ.pop("ALLOWED_AUTHORS", None)
+        for k, v in saved.items():
+            if v is not None:
+                os.environ[k] = v
 
     # --- verdicts reachable through the profiles ---
     space_index = (
@@ -145,6 +158,25 @@ def main():
     )
     v = dam.PROFILES["space-index"]["verdict"](space_index, space_index, {})
     check("identical space index does not merge", v["verdict"] == "escalate")
+    changed = space_index + "| `deploy` | `jm0ZYRpZIPWge2ZSiDYO` | Deploy | public |\n"
+    check("a changed space index merges through the profile",
+          dam.PROFILES["space-index"]["verdict"](space_index, changed, {})["verdict"]
+          == "merge")
+
+    reusable_index = (
+        "# Reusable content index\n\n"
+        "| ID | Name | Parent space | Include snippet | Preview | Used in |\n"
+        "|----|------|--------------|-----------------|---------|---------|\n"
+        "| `KbKP88R2IFii1k97togq` | agent-search-endpoint | `GixZThfitWP21x2gQFpD` "
+        "| `{% include \"x\" %}` | preview text | docs/a.md |\n"
+    )
+    rv = dam.PROFILES["reusable-content-index"]["verdict"]
+    check("identical reusable index does not merge",
+          rv(reusable_index, reusable_index, {})["verdict"] == "escalate")
+    check("a changed reusable index merges through the profile",
+          rv(reusable_index,
+             reusable_index.replace("preview text", "edited preview"), {})["verdict"]
+          == "merge")
 
 
 if __name__ == "__main__":

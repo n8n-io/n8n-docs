@@ -114,6 +114,26 @@ def main():
     check("an unreadable base escalates",
           verdict("not a table at all", index()) == "escalate")
 
+    # --- header and separator must be exact, not prefix-matched ---
+    check("a renamed column escalates",
+          verdict(base, index(header="| ID | Name | Parent space | Include snippet "
+                                     "| Preview | Banana |\n|---|---|---|---|---|---|"))
+          == "escalate")
+    check("a missing header column escalates",
+          verdict(base, index(header="| ID | Name | Parent space | Include snippet "
+                                     "| Preview |\n|---|---|---|---|---|")) == "escalate")
+    check("a pipes-only separator escalates",
+          verdict(base, index(header=HEADER.split("\n")[0] + "\n|||||||")) == "escalate")
+    # A stray table further down the file must not contribute rows.
+    check("rows stop at the first non-table line",
+          verdict(base, index() + "\nsome prose\n\n| junk |\n") == "merge")
+
+    # --- collapse-guard boundary ---
+    check("exactly half the blocks surviving still merges",
+          verdict(index(many), index(many[:10])) == "merge")
+    check("one below half escalates",
+          verdict(index(many), index(many[:9])) == "escalate")
+
     # --- the real file in this repo still parses cleanly ---
     live = (REPO_ROOT / "REUSABLE_CONTENT_INDEX.md").read_text(encoding="utf-8")
     rows, err = cri.parse_table(live)

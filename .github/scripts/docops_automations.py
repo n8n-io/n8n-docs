@@ -112,8 +112,9 @@ PROFILES = {
         "merged_title_search": "in:title update GitBook space index",
         "check_name": "DocOps / auto-merge (space index)",
         "approve_body": (
-            "Automated space-index update: the proposed SPACE_INDEX.md was verified "
-            "as a well-formed space table with no lost or duplicated spaces. "
+            "Automated space-index update: SPACE_INDEX.md parses as a well-formed "
+            "space table, every folder resolves under docs/, no folder or space ID is "
+            "duplicated, and the space count did not collapse. "
             "Auto-merges once all required checks pass."),
         "supports_close": False,
         "verdict": _space_index_verdict,
@@ -127,8 +128,9 @@ PROFILES = {
         "merged_title_search": "in:title update reusable content index",
         "check_name": "DocOps / auto-merge (reusable content index)",
         "approve_body": (
-            "Automated reusable-content-index update: the proposed index was verified "
-            "as well-formed with no degraded rows and no lost blocks. "
+            "Automated reusable-content-index update: the index parses with the "
+            "expected header, no degraded rows (empty name/preview, or a name equal to "
+            "its own block ID), no duplicate block IDs, and no collapse in block count. "
             "Auto-merges once all required checks pass."),
         "supports_close": False,
         "verdict": _reusable_index_verdict,

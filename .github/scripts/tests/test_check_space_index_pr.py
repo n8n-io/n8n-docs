@@ -83,8 +83,8 @@ def main():
     check("an empty title escalates",
           verdict(base4, index(rows=["| `build` | `rPN1zU5jaYNvwH7RzxqA` |  | public |"]
                                + ROWS_4[1:])) == "escalate")
-    check("a row with the wrong cell count escalates",
-          verdict(base4, index(rows=[ROWS_4[0][:-1] + " extra |"] + ROWS_4[1:]))
+    check("a row with more cells than the header escalates",
+          verdict(base4, index(rows=[ROWS_4[0] + " extra |"] + ROWS_4[1:]))
           == "escalate")
     check("an empty table escalates", verdict(base4, index(rows=[])) == "escalate")
     check("empty text escalates", verdict(base4, "") == "escalate")
@@ -111,6 +111,29 @@ def main():
     # --- an unparseable base cannot be compared against ---
     check("an unreadable base escalates",
           verdict("not a table at all", index(rows=ROWS_4)) == "escalate")
+
+    # --- header and separator must be exact, not prefix-matched ---
+    check("a renamed column escalates",
+          verdict(base4, index(header="| Folder | Space ID | Title | Banana |\n"
+                                      "|---|---|---|---|")) == "escalate")
+    check("an extra header column escalates",
+          verdict(base4, index(header="| Folder | Space ID | Title | Visibility | X |\n"
+                                      "|---|---|---|---|---|")) == "escalate")
+    check("a pipes-only separator escalates",
+          verdict(base4, index(header=HEADER_4.split("\n")[0] + "\n||||||")) == "escalate")
+    check("a separator with the wrong cell count escalates",
+          verdict(base4, index(header=HEADER_4.split("\n")[0] + "\n|---|---|")) == "escalate")
+    # A stray table further down the file must not contribute rows.
+    check("rows stop at the first non-table line",
+          verdict(base4, index() + "\nsome prose\n\n| `x` | `y` | z | public |\n")
+          == "merge")
+
+    # --- collapse-guard boundary ---
+    half = [f"| `h{i:02d}` | `{'B' * 18}{i:02d}` | H{i} | public |" for i in range(20)]
+    check("exactly half the spaces surviving still merges",
+          verdict(index(rows=half), index(rows=half[:10])) == "merge")
+    check("one below half escalates",
+          verdict(index(rows=half), index(rows=half[:9])) == "escalate")
 
     # --- the real file in this repo still parses ---
     rows, err = csi.parse_table((REPO_ROOT / "SPACE_INDEX.md").read_text(encoding="utf-8"))

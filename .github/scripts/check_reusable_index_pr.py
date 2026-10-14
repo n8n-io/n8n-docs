@@ -48,8 +48,35 @@ import sys
 ROW_RE = re.compile(
     r"^\|\s*`([A-Za-z0-9_-]+)`\s*\|\s*([^|]*?)\s*\|\s*`([A-Za-z0-9]+)`\s*\|\s*`([^`]*)`\s*\|(.*)$"
 )
-HEADER_PREFIX = "| ID"
+SEPARATOR_CELL_RE = re.compile(r"^:?-{3,}:?$")
+# Exact header, not a prefix: matching only "| ID" would let a table with arbitrary
+# column labels through to a merge verdict.
+HEADER = ["ID", "Name", "Parent space", "Include snippet", "Preview", "Used in"]
 INCLUDE_HINT = "{% include"
+
+
+def _cells(line):
+    """Cells of a Markdown table row, without the leading/trailing empties."""
+    return [c.strip() for c in line.strip().split("|")[1:-1]]
+
+
+def _table_lines(text):
+    """The header, separator and contiguous body rows of the first pipe table.
+
+    Rows are taken only while they stay contiguous: a blank or prose line ends the
+    table. Collecting every pipe-prefixed line in the file instead would let an
+    unrelated table further down contribute rows.
+    """
+    lines = (text or "").split("\n")
+    start = next((i for i, l in enumerate(lines) if l.strip().startswith("|")), None)
+    if start is None:
+        return []
+    out = []
+    for line in lines[start:]:
+        if not line.strip().startswith("|"):
+            break
+        out.append(line)
+    return out
 
 
 def parse_table(text):
@@ -58,15 +85,19 @@ def parse_table(text):
     Returns (rows, error). `rows` is a list of dicts with block_id / name /
     space_id / include / preview / used_in. `error` is None on success.
     """
-    lines = [l for l in (text or "").split("\n") if l.strip().startswith("|")]
+    lines = _table_lines(text)
     if len(lines) < 3:
         return [], "no index table found (need a header, a separator and a row)"
 
     header, separator, body = lines[0], lines[1], lines[2:]
-    if not header.strip().startswith(HEADER_PREFIX):
-        return [], f"table header does not start with '{HEADER_PREFIX}'"
-    if not set(separator.replace("|", "").strip()) <= set("- :"):
-        return [], "second table line is not a separator row"
+    header_cells = _cells(header)
+    if header_cells != HEADER:
+        return [], f"unexpected table header {header_cells} (expected {HEADER})"
+
+    sep_cells = _cells(separator)
+    if (len(sep_cells) != len(HEADER)
+            or not all(SEPARATOR_CELL_RE.match(c) for c in sep_cells)):
+        return [], "second table line is not a valid separator row"
 
     rows = []
     for line in body:

@@ -44,18 +44,39 @@ from pathlib import Path
 # SPACE_ID_ROW_RE reads exactly those and ignores the rest, so they are what a
 # corrupted render would break. A space ID is a 20-char GitBook object ID.
 ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]{20})`\s*\|(.*)\|\s*$")
-HEADER_PREFIX = "| Folder"
+SEPARATOR_CELL_RE = re.compile(r"^:?-{3,}:?$")
 VISIBILITIES = {"public", "private", "unlisted", "share-link", "visitor-auth"}
 
 # The table is currently 5 columns and drops to 4 when the volatile "Last synced"
-# column goes (DOC-2461). Accept either, but require every row to agree with the
-# header - a row with a different cell count is a render that went wrong.
-ALLOWED_COLUMN_COUNTS = {4, 5}
+# column goes (DOC-2461). Accept either exact header, nothing else - matching only a
+# prefix would let a table with arbitrary column labels through to a merge verdict.
+HEADER_4 = ["Folder", "Space ID", "Title", "Visibility"]
+HEADER_5 = HEADER_4 + ["Last synced"]
+ALLOWED_HEADERS = (HEADER_4, HEADER_5)
 
 
 def _cells(line):
     """Cells of a Markdown table row, without the leading/trailing empties."""
     return [c.strip() for c in line.strip().split("|")[1:-1]]
+
+
+def _table_lines(text):
+    """The header, separator and contiguous body rows of the first pipe table.
+
+    Rows are taken only while they stay contiguous: a blank or prose line ends the
+    table. Collecting every pipe-prefixed line in the file instead would let an
+    unrelated table further down contribute rows.
+    """
+    lines = (text or "").split("\n")
+    start = next((i for i, l in enumerate(lines) if l.strip().startswith("|")), None)
+    if start is None:
+        return []
+    out = []
+    for line in lines[start:]:
+        if not line.strip().startswith("|"):
+            break
+        out.append(line)
+    return out
 
 
 def parse_table(text):
@@ -64,19 +85,20 @@ def parse_table(text):
     Returns (rows, error). `rows` is a list of (folder, space_id, cell_count).
     `error` is None on success, else a short human-readable reason.
     """
-    lines = [l for l in (text or "").split("\n") if l.strip().startswith("|")]
+    lines = _table_lines(text)
     if len(lines) < 3:
         return [], "no space table found (need a header, a separator and a row)"
 
     header, separator, body = lines[0], lines[1], lines[2:]
-    if not header.strip().startswith(HEADER_PREFIX):
-        return [], f"table header does not start with '{HEADER_PREFIX}'"
-    if not set(separator.replace("|", "").strip()) <= set("- :"):
-        return [], "second table line is not a separator row"
+    header_cells = _cells(header)
+    if header_cells not in ALLOWED_HEADERS:
+        return [], (f"unexpected table header {header_cells} (expected {HEADER_4} "
+                    f"or {HEADER_5})")
 
-    width = len(_cells(header))
-    if width not in ALLOWED_COLUMN_COUNTS:
-        return [], f"unexpected column count {width} (expected one of {sorted(ALLOWED_COLUMN_COUNTS)})"
+    width = len(header_cells)
+    sep_cells = _cells(separator)
+    if len(sep_cells) != width or not all(SEPARATOR_CELL_RE.match(c) for c in sep_cells):
+        return [], "second table line is not a valid separator row"
 
     rows = []
     for line in body:

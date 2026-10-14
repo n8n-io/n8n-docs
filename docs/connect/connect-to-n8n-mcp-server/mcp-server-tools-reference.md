@@ -1483,6 +1483,7 @@ When `versionId` is omitted, the response describes the current draft:
 | `isRunnable` | `boolean` | Whether the agent has everything it needs to run |
 | `missing` | `string[]` | Config paths still needed before the agent is runnable |
 | `skills` | `object` | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`) |
+| `outdatedSkillIds` | `string[]` | IDs of skills the agent pins to a saved version that has a newer version available. To use the latest version, remove `versionId` from the skill ref with `config.patch` in `mutate_agent`. `outdatedSkillIds` is available from n8n 2.45.0. |
 | `tasks` | `array` | Scheduled tasks, each with `id`, `name`, `objective`, `cronExpression`, and `enabled` |
 | `customTools` | `array` | Custom tools, each with `id` and `descriptor` (`name`, `description`, `inputSchema`, `outputSchema`, and related metadata) |
 | `integrations` | `array` | Configured Slack, Telegram, or Linear integrations. Read-only here; manage with `update_agent_integration`. |
@@ -1619,8 +1620,8 @@ Apply one config, skill, task, or custom-tool mutation to an agent draft. Return
 |--------|--------|-------------|
 | `config.replace` | `config: object` | Replace the full editable agent configuration. Can't include `integrations`. |
 | `config.patch` | `patch: array` (min 1) | Apply an array of RFC 6902 JSON Patch operations (`add`, `remove`, `replace`, `move`, `copy`, `test`). Paths under `/integrations` are rejected. |
-| `skill.upsert` | `skill: object`, `skillId?: string` | Omit `skillId` to create and attach a new skill; pass it to replace an existing skill body |
-| `skill.delete` | `skillId: string` | Delete a skill and remove its config reference |
+| `skill.upsert` | `skill: object`, `skillId?: string` | Omit `skillId` to create a new skill in the agent's project and attach it. From n8n 2.45.0, pass `skillId` to save the next version of an attached skill. Agents can share a skill, so every agent that uses it runs the new version. Earlier versions replace the existing skill body. Skills ignore `allowedTools`. |
+| `skill.delete` | `skillId: string` | From n8n 2.45.0, detach the skill from the agent. The skill stays available to other agents. Earlier versions delete the skill and remove its config reference. |
 | `task.upsert` | `task: object`, `taskId?: string`, `enabled?: boolean` | Omit `taskId` to create a new scheduled task; pass it to replace an existing one. `task` has `name`, `objective`, and `cronExpression` (a standard five-field cron expression). |
 | `task.delete` | `taskId: string` | Delete a task and remove its config reference |
 | `customTool.upsert` | `code: string` | Compile, validate, store, and attach a custom tool from source code |
@@ -1653,6 +1654,7 @@ On a stale configuration:
 - Integrations (Slack, Telegram, Linear) can't be changed through `config.replace` or `config.patch`; use [update_agent_integration](#updateagentintegration).
 - Custom tool code may only import `@n8n/agents` and `zod`. Its default export must be a `Tool` builder chain with `description`, `input` (a Zod schema), and `handler`; `output` is optional.
 - Fetch [get_agent_builder_reference](#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.
+- A skill ref with `versionId` pins that saved version of the skill. `get_agent` lists pinned skills that have a newer version in `outdatedSkillIds`. To use the latest version, remove `versionId` from the ref with `config.patch`. Don't delete and add the skill again. Skill version pinning is available from n8n 2.45.0.
 
 ---
 
@@ -1673,6 +1675,7 @@ Validate an agent draft, its sidecar references, and user-accessible credentials
 | `valid` | `boolean` | Whether the agent is valid and runnable |
 | `errors` | `string[]` | Configuration schema errors |
 | `missing` | `string[]` | Config paths still needed before the agent is runnable |
+| `warnings` | `string[]` | Warnings that don't affect `valid`. Holds a message when the agent's skills have names that are hard to tell apart, asking you to rename one of them. Absent when n8n has no warnings to report. `warnings` is available from n8n 2.45.0. |
 | `url` | `string` | The URL to open the agent in the n8n editor |
 
 #### Notes <a href="#notes" id="notes"></a>

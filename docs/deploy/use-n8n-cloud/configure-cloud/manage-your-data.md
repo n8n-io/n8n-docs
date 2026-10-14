@@ -73,11 +73,11 @@ If a workflow consumes a large amounts of data and is past testing stage, it's a
 
 There are two ways you can control how much execution data n8n stores in the database:
 
-In the admin dashboard:
+In the n8n Cloud console:
 
-1. From your workspace or editor, navigate to **Admin Panel**.
-2. Select **Manage**.
-3. In **Executions to Save** deselect the executions you don't want to log.
+1. Open the [Cloud console](../use-the-cloud-console.md) and select **Instance settings**.
+2. In the **Runtime** section, under **Executions to save**, deselect the execution types you don't want to log: **Manual**, **Failed**, or **Successful**.
+3. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change.
 
 In your workflow settings:
 

@@ -1,7 +1,7 @@
 ---
 description: >-
   Monitor your Assistant credit balance, spend, top users, and top-up history
-  in the n8n Cloud admin dashboard and the n8n Assistant panel.
+  in the n8n Cloud console and the n8n Assistant panel.
 layout:
   description:
     visible: false
@@ -9,7 +9,7 @@ layout:
 
 # Track Assistant credit spend
 
-The **Assistant credits** tab in the Cloud admin dashboard shows your [Assistant credit](README.md) balance, spend over time, top users, and top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Assistant credits** tab.
+The **Assistant credits** page in the n8n Cloud console shows your [Assistant credit](README.md) balance, spend over time, top users, and top-up history. To open it, go to the [Cloud console](../use-the-cloud-console.md) and select **Assistant credits** in the sidebar. You can also select **Manage** next to your Assistant balance on the **Overview** page.
 
 You can also check your balance in the editor, from the n8n Assistant panel.
 

@@ -58,9 +58,15 @@ check("order: the dead cross-space link is first",
 
 # Errors before warnings. The fixture is a strict run, which has no warnings at all, so
 # this needs its own case rather than riding on the fixture.
+#
+# The warning deliberately carries the BEST category rank and the error the worst
+# (cross-space-broken is 0, broken-anchor is 7), so the category key alone would put the
+# warning first. Only the severity key produces the asserted order, which is what makes
+# this a test. The earlier pairing had the error already winning on category rank, so it
+# passed with the severity key deleted.
 mixed = [
-    {"category": "broken-anchor", "severity": "warning", "page": "docs/a.md", "line": 1},
-    {"category": "missing-target", "severity": "error", "page": "docs/z.md", "line": 9},
+    {"category": "cross-space-broken", "severity": "warning", "page": "docs/a.md", "line": 1},
+    {"category": "broken-anchor", "severity": "error", "page": "docs/z.md", "line": 9},
 ]
 check("order: errors come before warnings regardless of category rank",
       [f["severity"] for f in ilr.order_findings(mixed)] == ["error", "warning"])

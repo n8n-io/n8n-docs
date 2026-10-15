@@ -147,6 +147,58 @@ check("merge: the superseded blocked row is withdrawn, so one url carries one an
       all(f["url"] != "https://www.npmjs.com/package/pg" for f in promoted["blocked"]))
 check("merge: the blocked total follows the withdrawal",
       promoted["totals"]["blocked"] == len(promoted["blocked"]) == 0)
+check("merge: a promoted finding keeps its own verdict rather than lychee's",
+      [f["kind"] for f in promoted["quality"]] == ["dead"])
+
+# The second pass deduplicates by URL and sets `page` to the first of its `pages`, while
+# lychee emits one row per occurrence. Matching the pair only ever lined up on that first
+# page, so the other blocked rows survived and the same URL was reported twice with two
+# different verdicts. Three pages, one of which is NOT the one the second pass names.
+multi = {
+    "error_map": {
+        "docs/a.md": [{"url": "https://waf.example/x", "status": {"code": 403, "text": "Forbidden"}}],
+        "docs/b.md": [{"url": "https://waf.example/x", "status": {"code": 403, "text": "Forbidden"}}],
+        "docs/c.md": [{"url": "https://waf.example/x", "status": {"code": 403, "text": "Forbidden"}}],
+    },
+    "total": 3, "successful": 0, "errors": 3,
+}
+multi_quality = {"totals": {"checked": 1, "dead": 1}, "findings": [
+    {"page": "docs/b.md", "pages": ["docs/b.md", "docs/a.md", "docs/c.md"],
+     "url": "https://waf.example/x", "kind": "dead", "detail": "404 to a browser"}]}
+m = lr.merge_quality(lr.build_payload(multi, ctx), multi_quality)
+check("merge: every blocked row for a promoted url is withdrawn, not just its first page",
+      m["blocked"] == [])
+check("merge: the blocked total drops by all three rows, not by one",
+      m["totals"]["blocked"] == 0)
+
+# Same shape, but lychee already called it broken. The reader is told once, and the page
+# lychee happened to list it under must not decide that.
+multi_reported = {
+    "error_map": {"docs/b.md": [{"url": "https://gone.example/x",
+                                 "status": {"code": 404, "text": "Not Found"}}]},
+    "total": 1, "successful": 0, "errors": 1,
+}
+dupe = {"totals": {}, "findings": [
+    {"page": "docs/a.md", "pages": ["docs/a.md", "docs/b.md"],
+     "url": "https://gone.example/x", "kind": "soft-404", "detail": ""}]}
+check("merge: a url lychee already reported is dropped whichever page the second pass names",
+      lr.merge_quality(lr.build_payload(multi_reported, ctx), dupe)["quality"] == [])
+
+# `blocked` is capped at MAX_FAILURES before delivery, so recounting the delivered list
+# reported 500 whenever more than 500 links were blocked -- and only when a second pass
+# ran, which is what made it easy to miss.
+many = {
+    "error_map": {f"docs/p{i}.md": [{"url": f"https://waf.example/{i}",
+                                     "status": {"code": 403, "text": "Forbidden"}}]
+                  for i in range(lr.MAX_FAILURES + 40)},
+    "total": lr.MAX_FAILURES + 40, "successful": 0, "errors": lr.MAX_FAILURES + 40,
+}
+big = lr.build_payload(many, ctx)
+check("build: the blocked total is the real count, not the delivered slice",
+      big["totals"]["blocked"] == lr.MAX_FAILURES + 40 and big["blocked_truncated"])
+merged_big = lr.merge_quality(lr.build_payload(many, ctx), {"totals": {}, "findings": []})
+check("merge: a second pass that promotes nothing leaves the blocked total alone",
+      merged_big["totals"]["blocked"] == lr.MAX_FAILURES + 40)
 
 same_verdict = {"totals": {}, "findings": [
     {"page": "docs/integrations/builtin/credentials/airtable.md",
@@ -173,6 +225,18 @@ check("summary: mentions counts (Broken = rows in the table)", "Checked: 120" in
 check("summary: lists pages with counts", "airtable.md` | 1" in summary)
 check("summary: reports the blocked bucket separately", "Blocked by the host" in summary and "not verifiable): 1" in summary)
 check("summary: missing report explained", "did not produce a report" in lr.summary_markdown(missing))
+
+# --- BLOCKED_STATUSES, which exists twice -------------------------------------------
+# link_second_pass.py keeps its own copy, because the two scripts run as separate jobs
+# and neither imports the other. Two copies drift silently: a status added to one would
+# be bucketed as blocked by that script and as broken by the other, in the same report.
+# Read it out of the source rather than importing, so this stays network- and import-free.
+_lsp_src = (HERE.parent / "link_second_pass.py").read_text(encoding="utf-8")
+_m = __import__("re").search(r"BLOCKED_STATUSES = frozenset\(\{([0-9,\s]+)\}\)", _lsp_src)
+check("blocked statuses: link_second_pass.py still declares the set where we can read it", bool(_m))
+check("blocked statuses: the two copies have not drifted",
+      bool(_m) and {int(x) for x in _m.group(1).replace(" ", "").strip(",").split(",")}
+      == set(lr.BLOCKED_STATUSES))
 
 # --- report ------------------------------------------------------------------------
 failed = [name for name, ok in checks if not ok]

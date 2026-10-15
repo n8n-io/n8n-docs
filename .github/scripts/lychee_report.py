@@ -30,14 +30,21 @@ MAX_FAILURES = 500
 
 # Statuses that mean "the host refused to answer a bot", not "this link is dead".
 #
-# 403 and 429 used to sit in `accept` in lychee.toml, which scored them as healthy and
-# hid them completely: the 2026-10-05 sweep passed 64 such links without a word. For
-# those two, this bucket is a gain in visibility.
+# 403 used to sit in `accept` in lychee.toml, which scored it as healthy and hid it
+# completely: the 2026-10-05 sweep passed 64 such links without a word. For 403 this
+# bucket is a gain in visibility.
 #
 # 401 and 407 were never in `accept`, so they already counted as broken. Putting them
 # here deliberately takes them OUT of the broken count, because an auth challenge is not
 # evidence that a page is gone. The second pass can still prove one dead, and
 # `merge_quality` promotes that verdict over this bucket when it does.
+#
+# 429 is UNREACHABLE today and is kept as a guard, not as live behaviour: `accept` in
+# lychee.toml is still `["200", "429"]`, so lychee scores a rate-limited link as healthy
+# and it never reaches a failure map. Whether a 429 should be hidden that way is the same
+# question 403 already lost, but changing `accept` changes what the weekly sweep reports
+# and is not a review fix. Listed here so that removing it from `accept` needs no second
+# edit. Keep in step with the copy in link_second_pass.py; a test asserts they match.
 BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
 
 # --------------------------------------------------------------------- pure helpers
@@ -141,29 +148,36 @@ def merge_quality(payload, quality):
     if not quality:
         return payload
 
-    # lychee saw these fail first and said why. Nothing to add.
-    reported = {(f["page"], f["url"]) for f in payload.get("failures", [])}
-    blocked_keys = {(f["page"], f["url"]) for f in payload.get("blocked", [])}
+    # Both lookups are keyed by URL alone, NOT by (page, url). The second pass
+    # deduplicates by URL and emits one finding per URL, carrying `pages` but setting
+    # `page` to the first of them. lychee reports one row per occurrence. Matching on
+    # the pair therefore only ever lines up on whichever page happened to sort first,
+    # so a URL blocked on three pages had one row withdrawn and two left behind, and the
+    # same URL appeared as "dead" in `quality` and "blocked" elsewhere in the same report.
+    reported = {f["url"] for f in payload.get("failures", [])}
+    blocked_urls = {f["url"] for f in payload.get("blocked", [])}
 
     # A URL lychee could only call `blocked` is exactly the case the second pass exists
     # for: lychee never got past the WAF, so it learned nothing about the page. If the
     # second pass reached it with a browser user agent and found it dead or gone, that
-    # verdict wins and the `blocked` row is withdrawn, so one URL carries one answer.
+    # verdict wins and the `blocked` rows are withdrawn, so one URL carries one answer.
     # Dropping it here instead would report a dead page as merely "not verifiable".
     kept, promoted = [], set()
     for f in quality.get("findings", []):
-        key = (f.get("page"), f.get("url"))
-        if key in reported:
+        url = f.get("url")
+        if url in reported:
             continue
-        if key in blocked_keys:
+        if url in blocked_urls:
             if f.get("kind") == "blocked":
                 continue          # same verdict, no new information
-            promoted.add(key)
+            promoted.add(url)
         kept.append(f)
 
+    withdrawn = 0
     if promoted:
-        payload["blocked"] = [f for f in payload["blocked"]
-                              if (f["page"], f["url"]) not in promoted]
+        before = len(payload["blocked"])
+        payload["blocked"] = [f for f in payload["blocked"] if f["url"] not in promoted]
+        withdrawn = before - len(payload["blocked"])
 
     q_totals = quality.get("totals") or {}
     payload["quality"] = kept[:MAX_FAILURES]
@@ -172,7 +186,13 @@ def merge_quality(payload, quality):
     payload["quality_truncated"] = (bool(quality.get("findings_truncated"))
                                     or len(kept) > MAX_FAILURES)
     payload["collapsed_redirects"] = quality.get("collapsed_redirects") or []
-    payload["totals"]["blocked"] = len(payload.get("blocked", []))
+    # Subtract what was actually withdrawn rather than recounting the list. `blocked` is
+    # already capped at MAX_FAILURES, so recounting it silently reported 500 whenever
+    # more than 500 links were blocked, and only when a quality report existed.
+    # The one case this still cannot see is a promoted URL whose other rows fall beyond
+    # the cap; those stay counted, which overstates rather than hides. `blocked_truncated`
+    # remains the flag that the list is partial.
+    payload["totals"]["blocked"] = max(0, _int(payload["totals"].get("blocked")) - withdrawn)
     payload["totals"].update({
         "quality_checked": _int(q_totals.get("checked")),
         "soft_404": _int(q_totals.get("soft_404")),

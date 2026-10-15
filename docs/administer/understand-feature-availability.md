@@ -1,5 +1,5 @@
 ---
-description: Understand what Preview, GA, deprecated, and removed mean for n8n features, how n8n versioning works, and how plan, platform, and role limits apply.
+description: Understand what Preview, Limited enterprise support, GA, deprecated, and removed mean for n8n features, how n8n versioning works, and how plan, platform, and role limits apply.
 layout:
   description:
     visible: false
@@ -8,15 +8,16 @@ layout:
 # Understand feature availability
 
 Whether you have access to an n8n feature depends on your **plan**, **platform**, and **n8n version**. 
-To what extent you can rely on it depends on its maturity status: **Preview**, **GA**, **deprecated**, or **removed**.
+To what extent you can rely on it depends on its maturity status (**Preview**, **GA**, **deprecated**, or **removed**) and, for enterprise setups, whether it is **Enterprise ready**, or has **Limited enterprise support**.
 
 This page explains:
 
 * How platform, plan, and role limits apply
 * How n8n versioning works
 * What each maturity status means, and where it sits in a feature's lifecycle
+* What Limited enterprise support means, and how it differs from Preview
 
-Each of these has its own label or hint in n8n docs, for example a **Feature availability** hint or a **Preview status** hint, so you'll recognize the same information wherever a page states it.
+Each of these has its own label or hint in n8n docs, for example a **Feature availability** hint, a **Preview status** hint, or a **Limited enterprise support** hint, so you'll recognize the same information wherever a page states it.
 
 ## Feature availability by platform
 
@@ -56,9 +57,7 @@ A feature that needs a higher plan or edition still shows up in the n8n interfac
 
 ## Feature availability by n8n version
 
-CONTINUE FROM HERE
-
-n8n has two separate types of version number:
+n8n has two types of version number:
 
 * **Instance version**: the n8n release itself, written as three-part [semantic versioning](https://semver.org/), for example n8n 2.30.0. The MAJOR number increments for incompatible changes that can need user action, MINOR for backward-compatible new features, and PATCH for backward-compatible fixes. Environment variables, APIs, CLI commands, and hooks are all tied to this version.
 * **Node version**: a single node's own version number, usually two parts, for example node version 4.7. A node can gain a new version independently of the n8n release it ships in.
@@ -84,19 +83,50 @@ Publishing in the changelog or release notes doesn't guarantee a feature has rea
 
 This is a limit your own admin sets, not n8n. See [Understand instance roles](manage-users-and-access/understand-instance-roles.md) and [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md) for how roles and permissions work.
 
-## Feature maturity: Preview, deprecated, and removed
+## Feature maturity: Preview, GA, deprecated, and removed
 
 Every n8n feature has a maturity status:
 
-* **Preview**: The feature works, but isn't complete or stable yet, and may change. Avoid relying on a Preview feature in a production workflow. A page or section about a Preview feature carries a **Preview status** hint.
-* **Generally available (GA)**: The default, stable status. A GA feature is complete and supported, and n8n only changes its behavior through the deprecation process below rather than without warning. Docs don't call this out explicitly, since it's the default: if a page has neither a Preview status hint nor a Deprecated or Removed tag, the feature is GA.
+* **Preview**: n8n doesn't yet commit to keeping the feature stable, compatible, or available. The feature works today, but n8n reserves the right to make breaking changes to it, such as changing an API shape, export format, node parameters, or execution outcomes, or to remove it. Avoid relying on a Preview feature in a production workflow. A page or section about a Preview feature carries a **Preview status** hint.
+* **Generally available (GA)**: The default status. A GA feature is stable and production ready, with normal support and deprecation policies. n8n only changes its behavior in a way that breaks existing setups through the deprecation process below, not without warning. Docs don't call this out explicitly, since it's the default: if a page has neither a Preview status hint nor a Deprecated or Removed tag, the feature is GA.
 * **Deprecated**: The feature still works, but n8n plans to remove it and recommends moving away from it. A deprecated feature, setting, or node names the n8n version it was deprecated from, and its replacement, where one exists.
 * **Removed**: The feature no longer exists in the current version. Removal always happens at a major version. Check that version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes), for what to do instead.
 
+Preview isn't a label for bugs, missing options, unfinished UI, or newness. A GA feature can have known bugs, gain new options, or get a redesigned interface. n8n adds Preview only when it might still change something in a way that breaks what you've built on the feature, or might remove the feature.
+
+Preview is the same for every user, regardless of plan or platform.
+
 For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for the current, automatically updated list, rather than relying on any single node's page.
 
+## Enterprise readiness: Limited enterprise support
 
+Separately from maturity, a feature can have **Limited enterprise support**. This status tells enterprise admins that some enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
 
+There are two states:
 
+* **Enterprise ready**: every enterprise requirement that applies to the feature is met. The feature carries no label. Docs and the n8n interface show nothing, so a feature with no label is enterprise ready.
+* **Limited enterprise support**: at least one applicable enterprise requirement isn't met yet. The feature carries a **Limited enterprise support** label in the n8n interface.
+
+Docs list the gaps for a feature under an **Enterprise readiness: limited** heading, named by capability (for example "Audit logging, Environments"), together with whether n8n plans to close them. Some gaps may be marked as not planned. Not every capability applies to every feature, so a page lists only the ones that do. For example, a feature without credentials doesn't need external secrets support.
+
+A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).
+
+### How Preview and Limited enterprise support differ
+
+The two statuses are independent. A feature can be GA and have Limited enterprise support, or be in Preview and fully enterprise ready, although that combination is rare.
+
+| | Preview | Limited enterprise support |
+|---|---|---|
+| **Question it answers** | Might n8n make breaking changes to this feature, or remove it? | Do all the enterprise capabilities that apply to this feature work with it? |
+| **Who sees it** | Everyone | Enterprise admins |
+| **What a gap means** | n8n doesn't commit to stability or compatibility. | The feature doesn't yet work with part of your enterprise setup. |
+| **Where it appears** | The feature's own surface, its settings entry, and docs | Next to the admin toggle and in docs |
+| **When it's removed** | When n8n no longer plans breaking changes or removal | When every applicable enterprise requirement is met |
+
+A gap in enterprise support doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
+
+### Admin control on Enterprise
+
+On Enterprise plans, a feature that's in Preview or has Limited enterprise support should be off by default. Admins turn it on from the settings page, or with an environment variable on self-hosted instances. The Preview and Limited enterprise support labels appear next to the toggle, so you can make an informed choice before you enable the feature. On self-serve plans, Preview features can be on by default.
 
 A page limited to certain plans or platforms carries a hint titled **Feature availability** stating exactly which ones. For the full breakdown of what each self-hosted edition includes, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For the current feature list per plan, the [pricing page](https://n8n.io/pricing/) is the source of truth, since plan contents can change.

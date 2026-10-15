@@ -47,7 +47,7 @@ The Microsoft Teams channel for agents is in Preview and may change in future re
 There are two ways to connect Teams:
 
 - **Recommended setup:** you sign in with Microsoft and n8n creates the app registration, the Azure Bot, and the Teams app for you.
-- **Manual setup:** you create the app registration and the Azure Bot yourself, then give n8n the credential.
+- **Manual setup:** shown as **Use your own Microsoft app**. You create the app registration and the Azure Bot yourself, then give n8n the credential.
 
 Both setups end with the same result. The sections on where the agent works, how it listens, and file access apply to both.
 
@@ -74,7 +74,7 @@ Each thread is its own session, so the agent remembers earlier messages in the s
 {% hint style="info" %}
 **Publish the agent first**
 
-The Teams channel runs the published version of the agent. If the agent isn't published, people see **Publish this agent before you message it in Teams.**
+The Teams channel runs the published version of the agent. Until you publish the agent, it doesn't receive messages from Teams. You can set up the channel before you publish, and n8n connects it when you publish.
 {% endhint %}
 
 ## Where people can use the agent
@@ -144,11 +144,18 @@ This keeps the agent from opening files that aren't part of the conversation.
 
 ### Grant file access
 
-An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, n8n shows how in the **Choose where it works** step, and later in the channel settings under **Where it works**:
+An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, both setups show an **Allow file access** step. Until an administrator approves, the channel settings also show a warning under **Where it works**.
 
-- **Recommended setup:** select **Approve file access**. This opens the Microsoft admin consent screen. If you aren't an administrator, select **Copy link** and send it to one.
-- **Manual setup:** add the permission to the app registration in Microsoft Entra. The setup shows **Open API permissions** to take you there:
-	1. Go to **API permissions** > **Add a permission** > **Microsoft Graph** > **Application permissions**.
+To grant file access, select **Approve file access**, then choose one of these:
+
+- **Approve now:** if you're an administrator in the organization, open the approval yourself.
+- **Copy link for admin:** copy the link and send it to an administrator who can approve it.
+
+What the link opens depends on the setup:
+
+- **Recommended setup:** the Microsoft admin consent screen. The administrator reviews the permission and accepts it.
+- **Manual setup:** the app registration's **API permissions** page in Microsoft Entra. The administrator adds the permission there:
+	1. Select **Add a permission** > **Microsoft Graph** > **Application permissions**.
 	2. Search for `Files.Read.All` and add it.
 	3. Select **Grant admin consent**.
 
@@ -158,7 +165,7 @@ An administrator of your Microsoft organization grants file access once per app.
 Add `Files.Read.All` as an **Application** permission, not a **Delegated** one. The agent reads files as the app, not as a signed-in user, so it can't use delegated permissions.
 {% endhint %}
 
-After you connect the channel, the channel settings check the status for you, in both the recommended and the manual setup. Once Microsoft confirms the approval, they show **File access is approved.** It can take up to an hour before the agent can read files.
+After you connect the channel, the channel settings check the status for you, in both setups. Once Microsoft confirms the approval, they show **File access approved.** It can take up to an hour before the agent can read files.
 
 ### When the agent can't read a file
 
@@ -188,19 +195,20 @@ To connect Teams:
 
 1. Open the agent, go to **Channels**, and select **Microsoft Teams**. Make sure you've selected **Recommended setup**.
 2. In **Connect to Microsoft**, select **Sign in with Microsoft** and sign in with a work or school account of the organization where people use the agent.
-3. In **Create Teams app**, select **Create Teams app**. n8n registers the app in Microsoft Entra. This can take up to 30 seconds.
+3. In **Create Teams app**, select **Create app**. n8n registers the app in Microsoft Entra. This can take up to 30 seconds.
 4. In **Deploy Azure Bot**, choose an **Azure subscription** and select **Create Azure Bot**. This can take up to a minute.
 5. In **Choose where it works**, pick the options from [Where people can use the agent](#where-people-can-use-the-agent).
-6. In **Install app**, choose **Install for me** or **Publish to organisation**. See [Upload the app or publish it to your organization](#upload-the-app-or-publish-it-to-your-organization).
-7. Finish adding the app in Teams, then select **Done**.
+6. In **Install app**, choose **Install for me** or **Publish to organization**. See [Upload the app or publish it to your organization](#upload-the-app-or-publish-it-to-your-organization).
+7. If you turned on **Team channels** or **Group and meeting chats**, the **Allow file access** step follows. Approve file access now, or later in the channel settings. See [Grant file access](#grant-file-access).
+8. In **Connect Microsoft Teams**, finish adding the app in Teams, then select **Done**.
 
 ### What n8n creates for you
 
 | Resource | Details |
 | --- | --- |
-| App registration | Named `<agent-name> (n8n)`, single-tenant, with a client secret named `n8n agent channel`. n8n also creates its service principal. Select **View in Microsoft Entra** to find it. |
+| App registration | Named `<agent-name> (n8n)`, single-tenant, with a client secret named `n8n agent channel`. n8n also creates its service principal. |
 | Resource group | `n8n-agents` in West Europe, created in the subscription you pick if it doesn't exist yet. |
-| Azure Bot | Named after the agent, on the free F0 tier, with the Microsoft Teams channel turned on. |
+| Azure Bot | Named after the agent, on the free F0 tier, with the Microsoft Teams channel turned on. The channel settings link to it. |
 | n8n credential | A Microsoft Entra Service Principal credential with the app's IDs and secret. You don't need to copy the secret anywhere. |
 
 If you run a step again, n8n reuses the same app registration and bot instead of creating new ones.
@@ -217,28 +225,29 @@ When you sign in, n8n asks Microsoft for these delegated permissions. n8n only u
 | `AppCatalog.Submit` | Submit the Teams app for an administrator's approval when you can't publish it directly. |
 | Azure Service Management (`user_impersonation`) | List your Azure subscriptions and create the Azure Bot. |
 
-`Application.ReadWrite.All` and `AppCatalog.ReadWrite.All` need admin consent. An administrator of your Microsoft organization approves n8n once, and after that anyone can sign in without a permissions screen. If the sign-in stops at a permissions screen, select **Sign-in blocked by a permissions screen?** and send the link to an administrator.
+`Application.ReadWrite.All` and `AppCatalog.ReadWrite.All` need admin consent. An administrator of your Microsoft organization approves n8n once, and after that anyone can sign in without a permissions screen. If Microsoft shows **Need admin approval** when you sign in, an administrator has to approve n8n first. Select **Copy link for an admin** and send the link to one.
 
 The permissions only let n8n act as you. You also need these rights in Microsoft:
 
 | Step | What your account needs | If it's missing |
 | --- | --- | --- |
-| **Create Teams app** | Permission to register applications in Microsoft Entra. Your organization may limit this to certain roles. | Ask an administrator, or use the [manual setup](#manual-setup). |
-| **Deploy Azure Bot** | The Contributor role on an Azure subscription. | Ask your Azure administrator for access, or select **Use your own Microsoft app instead** to switch to the manual setup. |
-| **Publish to organisation** | The Teams administrator role to publish directly. | n8n submits the app for approval instead. See [Publish to your organization](#publish-to-your-organization). |
+| **Create Teams app** | Permission to register applications in Microsoft Entra. Your organization may limit this to certain roles. | Ask an administrator to register the app, or select **Use your own Microsoft app instead** to switch to the [manual setup](#manual-setup). |
+| **Deploy Azure Bot** | The Contributor role on an Azure subscription. | Ask your Azure administrator for Contributor access, or select the **your own Microsoft app** link to switch to the manual setup. |
+| **Publish to organization** | The Teams administrator role to publish directly. | n8n submits the app for approval instead. See [Publish to your organization](#publish-to-your-organization). |
 
 ## Manual setup
 
 Use the manual setup if the recommended setup isn't available, or if your organization doesn't allow it. You create the resources in Microsoft yourself and connect them with a credential.
 
-Select **Manual setup** in the Teams channel, then follow these steps:
+Select **Use your own Microsoft app** in the Teams channel, then follow these steps:
 
 1. [Register the app in Microsoft Entra](#register-the-app-in-microsoft-entra).
-2. [Add the file permission](#add-the-file-permission) (optional).
-3. [Create the credential in n8n](#create-the-credential-in-n8n).
-4. [Deploy the Azure Bot](#deploy-the-azure-bot).
-5. [Choose where it works](#choose-where-it-works).
-6. [Download the app package and add it in Teams](#download-the-app-package-and-add-it-in-teams).
+2. [Create the credential in n8n](#create-the-credential-in-n8n).
+3. [Deploy the Azure Bot](#deploy-the-azure-bot).
+4. [Choose where it works](#choose-where-it-works).
+5. [Download the app package](#download-the-app-package).
+6. [Allow file access](#allow-file-access) (optional).
+7. [Add the app in Teams](#add-the-app-in-teams).
 
 ### Register the app in Microsoft Entra
 
@@ -249,21 +258,9 @@ If you already have a credential for an app registration that no other agent use
 3. In **Supported account types**, select **Accounts in this organizational directory only** (single tenant).
 4. You don't need a redirect URI. Select **Register**.
 5. On the **Overview** page, copy the **Directory (tenant) ID** and the **Application (client) ID**.
-6. Go to **Certificates & secrets** > **Client secrets** > **New client secret**. Add a description and an expiry, then copy the secret **Value**. Microsoft only shows it once.
+6. Go to **Certificates & secrets** > **Client secrets** > **New client secret**. Add a description and an expiry, then copy the secret **Value**, not the **Secret ID**. Microsoft only shows the value once.
 
 The bot doesn't need any API permissions to send and receive messages.
-
-### Add the file permission
-
-To let the agent read files attached in channels and group chats, add the Microsoft Graph permission `Files.Read.All` and grant admin consent. See [Grant file access](#grant-file-access).
-
-{% hint style="warning" %}
-**Use application permissions**
-
-Add `Files.Read.All` under **Application permissions**, not **Delegated permissions**. The agent can't use delegated permissions.
-{% endhint %}
-
-Skip this step if the agent only needs files from direct messages or pasted images. You can add it later.
 
 ### Create the credential in n8n
 
@@ -284,18 +281,35 @@ For more about this credential type, see [Microsoft Entra Service Principal cred
 Choose one of these options:
 
 - **New bot:** select **Deploy to Azure**. The Azure portal opens with a template that n8n fills in with the bot name, the app's IDs, and the messaging endpoint. Azure may note that the template isn't from Microsoft. Choose a subscription and resource group, then create the deployment. You need the Contributor role on the subscription.
-- **Existing bot:** select **Use an existing Azure Bot** and copy the **Messaging endpoint URL**. In the Azure portal, open the bot's **Configuration** page, paste it into **Messaging endpoint**, and make sure the bot uses the same app registration. Then go to **Channels** and turn on **Microsoft Teams**.
+- **Existing bot:** select **Use an existing Azure Bot** and copy the **Messaging endpoint**. In the Azure portal, open the bot's **Configuration** page, paste it into **Messaging endpoint**, and make sure the bot uses the same app registration. Then go to **Channels** and turn on **Microsoft Teams**.
 
 ### Choose where it works
 
 Pick where people can use the agent and how it listens. Direct chat is always on. Turn on **Team channels** or **Group and meeting chats** to let people add the agent there and @mention it. The read-all options make the agent run on every message, which uses model credits each time. For details, see [Where people can use the agent](#where-people-can-use-the-agent) and [How the agent listens in channels and group chats](#how-the-agent-listens-in-channels-and-group-chats).
 
-### Download the app package and add it in Teams
+### Download the app package
 
-1. Select **Download app package**. This also connects the channel to the agent.
-2. In Teams, go to **Apps** > **Manage your apps** > **Upload an app**, and upload the zip file.
-3. Choose **Add to a team** or **Add to a chat**, depending on where the agent should work.
-4. In n8n, select **Done**.
+Select **Download app package**. This also connects the channel to the agent. The package uses the agent's name and icon.
+
+### Allow file access
+
+To let the agent read files attached in channels and group chats, an administrator adds the Microsoft Graph permission `Files.Read.All` and grants admin consent.
+
+This step appears when **Team channels** or **Group and meeting chats** is on. Select **Approve file access**, then **Approve now** or **Copy link for admin**. See [Grant file access](#grant-file-access).
+
+{% hint style="warning" %}
+**Use application permissions**
+
+Add `Files.Read.All` under **Application permissions**, not **Delegated permissions**. The agent can't use delegated permissions.
+{% endhint %}
+
+Skip this step if the agent only needs files from direct messages or pasted images. You can approve file access later in the channel settings.
+
+### Add the app in Teams
+
+1. In Teams, go to **Apps** > **Manage your apps** > **Upload an app**, and upload the zip file.
+2. Choose **Add to a team** or **Add to a chat**, depending on where the agent should work.
+3. In n8n, select **Done**.
 
 If you don't see **Upload an app**, your Teams policy doesn't allow custom apps. Ask your Teams administrator to allow custom app uploads, or to upload the app to your organization's app catalog.
 
@@ -337,11 +351,17 @@ Once the overwrite is in place, the Teams channel shows **Recommended setup**. F
 
 After you connect Teams, you change it in the channel settings. Open the agent, go to **Channels**, and select **Microsoft Teams**.
 
+The channel settings show:
+
+- **Where it works:** the options from [Where people can use the agent](#where-people-can-use-the-agent), and whether file access is approved.
+- **Appearance in Teams:** the app's display name, description, and icon. With the recommended setup, this also has the **Install app** menu.
+- **The Azure Bot:** with the recommended setup, **Linked to Azure Bot** and a **Find it in Azure** link. With the manual setup, a **Find your Azure Bot** link.
+
 ### Upload the app or publish it to your organization
 
 There are two ways to get the app into Teams:
 
-| | Install for me (upload) | Publish to organisation |
+| | Install for me (upload) | Publish to organization |
 | --- | --- | --- |
 | **Who can add the app** | You, and anyone you give the zip file to | Anyone in your organization, from the Teams app store |
 | **Who approves** | Nobody, if your Teams policy allows custom app uploads | A Teams administrator, unless you are one |
@@ -357,12 +377,12 @@ If you don't see **Upload an app**, ask your Teams administrator to allow custom
 
 #### Publish to your organization
 
-**Publish to organisation** adds the app to your organization's app catalog in Teams:
+**Publish to organization** adds the app to your organization's app catalog in Teams. You find it in the **Install app** step of the recommended setup, and later in the **Install app** menu in the channel settings.
 
-- **If you're a Teams administrator,** n8n publishes the app right away, but Microsoft can take up to a day to list it.
-- **If you aren't,** n8n submits the app for approval. It waits in the Teams admin center under **Teams apps** > **Manage apps**, as **Pending approval**. Select **Copy a request for your administrator** to send them a message with the link. Nobody can add the app until an administrator approves it.
+- **If you're a Teams administrator,** n8n publishes the app right away, but Microsoft can take up to a day to list it. Depending on your organization's app policies, a Teams administrator may still need to make it available to everyone in the Teams admin center.
+- **If you aren't,** n8n submits the app for approval. It waits in the Teams admin center under **Teams apps** > **Manage apps**, as **Pending approval**. Nobody can add the app until an administrator approves it. In the setup, select **Copy a request for your administrator** to copy a message with the app name and a link to that page.
 
-The channel settings show where the app stands: published, waiting for approval, or rejected. If an administrator rejects it, Microsoft doesn't share the reason, so ask them directly.
+If the app is waiting for approval or an administrator rejected it, the channel settings say so. If an administrator rejects it, Microsoft doesn't share the reason, so ask them directly.
 
 In the manual setup, n8n can't publish the app for you. Ask a Teams administrator to upload the app package in the Teams admin center instead.
 
@@ -371,20 +391,22 @@ In the manual setup, n8n can't publish the app for you. Ask a Teams administrato
 In the channel settings, you can change **Where it works** and **Appearance in Teams**, like the display name and description. Teams keeps the previous version of the app until you send the new one:
 
 - **Manual setup:** select **Save and download package**, then upload the new package in Teams under **Apps** > **Manage your apps** > **Upload an app**.
-- **Recommended setup:** select **Publish to organisation**, or download the new package and upload it.
+- **Recommended setup:** open the **Install app** menu and select **Publish to organization**, or **Install for me** to download and upload the new package.
 
-The app uses the n8n icon. The display name comes from the agent unless you change it.
+The app uses the agent's name and icon. If you change the agent's name or icon later, the channel settings show **Changes to the agent aren't in Teams yet.** Install or publish the app again to update it.
 
 ### Renew the client secret
 
 Client secrets expire. When the secret expires, the agent stops replying in Teams.
 
-- **Recommended setup:** n8n creates the secret with the longest lifetime your organization allows, up to 24 months. Run **Create Teams app** again to renew it. n8n creates a new secret when the current one expires within seven days.
+- **Recommended setup:** n8n creates the secret with the longest lifetime your organization allows, up to 24 months. When the **Create Teams app** step runs again, n8n reuses the app registration and creates a new secret if the current one expires within seven days.
 - **Manual setup:** create a new client secret in Microsoft Entra, then update the credential in n8n.
 
 ### Disconnect Teams
 
-When you disconnect the Teams channel or delete the agent, n8n doesn't delete anything in Microsoft. People may still have the app installed. If you no longer need these resources, remove them yourself:
+To disconnect Teams, remove the channel from the agent and confirm with **Yes, remove**. Messages already sent stay in Teams. To reconnect later, you set up the channel again.
+
+When you disconnect the Teams channel or delete the agent, n8n doesn't delete anything in Microsoft. People may still have the app installed, but the agent no longer responds. For apps the recommended setup created, n8n shows a reminder with an **Open Teams** link to the Teams admin center. If you no longer need these resources, remove them yourself:
 
 - The app registration, in [Microsoft Entra](https://entra.microsoft.com/) under **App registrations**.
 - The Azure Bot, in the [Azure portal](https://portal.azure.com/). With the recommended setup, it's in the `n8n-agents` resource group.
@@ -400,17 +422,25 @@ When you disconnect the Teams channel or delete the agent, n8n doesn't delete an
 
 ## Troubleshooting
 
-### Your account can't register applications
+### Your organization doesn't let you register apps
 
 Your Microsoft account can't create app registrations. Ask an administrator to give you that permission, or use the [manual setup](#manual-setup) with an app registration an administrator creates for you.
+
+### Teams apps need a work or school account
+
+You signed in with a personal Microsoft account. Sign in again with your organization's work or school account.
 
 ### Your account can't create resources in the Azure subscription
 
 You need the Contributor role on the Azure subscription you picked. Ask your Azure administrator for access, or pick another subscription.
 
-### "Microsoft rejected these details"
+### The credential doesn't match an app in Microsoft Entra
 
-The credential's details don't match the app registration. Check that the client secret hasn't expired, and that the tenant ID and client ID belong to the same app registration.
+The credential's details don't match the app registration. Check that:
+
+- The tenant ID and client ID belong to the same app registration.
+- The client secret is the secret's **Value**, not its **Secret ID**.
+- The client secret hasn't expired.
 
 ### "The Teams bot needs an HTTPS messaging endpoint"
 

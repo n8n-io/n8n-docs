@@ -215,7 +215,7 @@ Use the **Lakebase** resource to read and write rows in a Lakebase database, the
 {% hint style="info" %}
 **One-time setup in Databricks**
 
-The Data API is off by default, and the identity the credential authenticates as needs a Postgres role on every branch the node reads or writes. Follow [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) before you use these operations. The Data API rejects personal access tokens, so the Lakebase resource needs an OAuth2 credential.
+The Data API is off by default, and the identity the credential authenticates as needs a Postgres role on every branch the node reads or writes. Follow [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) before you use these operations. The Data API rejects personal access tokens, so set the node's **Authentication** to **OAuth2** and select a Databricks OAuth2 credential. **Authentication** defaults to **Access Token**.
 {% endhint %}
 
 ### Select a table
@@ -227,10 +227,10 @@ Every operation starts with the same five fields. Each offers a **From list** mo
 | **Project** | The Lakebase project. |
 | **Branch** | The branch of the project, for example `production`. Lakebase branches a database the way Git branches code. |
 | **Database** | The Postgres database on the branch, for example `databricks_postgres`. |
-| **Schema** | The schema that holds the table. `public` by default. The lists offer only the schemas the Data API exposes. |
+| **Schema** | The schema that holds the table. `public` by default. The list offers only `public`, because Databricks has no endpoint that lists Postgres schemas. For another schema, select **By ID** and enter its name. The Data API has to expose that schema. |
 | **Table** | The table to work on. **Execute Function** takes a **Function** instead. |
 
-The table, column, and function lists read the project's OpenAPI document. They stay empty until you turn that setting on.
+The table, column, and function lists read the project's OpenAPI document. Until you turn on the **OpenAPI specification** setting of the Data API, the column lists stay empty and the **Table** and **Function** lists show an error. Select **By ID** and type the name to carry on without the document.
 
 The node reads and writes rows in tables that already exist. It doesn't create tables. Create the table in the Lakebase SQL editor first, and grant the credential's Postgres role access to it.
 
@@ -251,9 +251,15 @@ The `orders` table in the examples below has an `id` primary key, plus `status` 
 
 The **Condition** list offers **Equals**, **Not Equals**, **Greater Than**, **Greater Than or Equal**, **Less Than**, **Less Than or Equal**, **Like**, **Like (Case-Insensitive)**, **Is Null**, and **Is Not Null**. The two **Like** conditions take `*` in place of `%`, and `_` for a single character. **Is Null** and **Is Not Null** take no value.
 
-The node reads 1,000 rows for each request and makes at most 100 requests, so **Return All** returns up to 100,000 rows. A project's **Maximum rows** setting can cap a single response below 1,000.
+The node reads up to 1,000 rows for each request and makes at most 100 requests. When 100 requests don't reach the end of the table, the node fails rather than hand back part of it:
 
-Paging needs a stable order. With **Return All** on, or a **Limit** above 1,000, and no **Sort** rule set, the node orders by the table's primary key, so no row arrives twice or gets skipped. A table with no primary key still pages, but in whatever order Postgres returns.
+```text
+The table holds more rows than one run can read (100000)
+```
+
+Narrow the result with a condition under **Select Rows**, or turn off **Return All** and set a **Limit**. The cap counts requests, not rows, so a project's **Maximum rows** setting lowers the row count with it: at 500 rows for each request the same error arrives after 50,000 rows.
+
+Paging needs a total order. With **Return All** on, or a **Limit** above 1,000, the node adds the table's primary key after any **Sort** rules you set. Rows that tie on your sort then still come back in a fixed order, so no row arrives twice or gets skipped. A table with no primary key still pages, but in whatever order Postgres returns.
 
 #### Example: Read today's failed orders
 
@@ -316,7 +322,7 @@ Set **Table** to `orders` and **Columns to match on** to `id`, the table's prima
 
 Delete needs at least one condition. The Data API applies no filter of its own, so an unfiltered request would empty the table with nothing to undo it. The node refuses to send one.
 
-The node returns one item for each deleted row, so a later node can record what the operation removed.
+The node returns one item for each deleted row, so a later node can record what the operation removed. When nothing matches, it returns one item, `{"success": true}`, because an empty response can't tell "nothing matched" apart from a project that doesn't echo the rows it removed. **Update** returns no items in the same case.
 
 {% hint style="warning" %}
 **Deleted rows don't come back**
@@ -379,15 +385,22 @@ Two things to know when a table returns nothing:
 
 | What you see | What to do |
 |--------------|------------|
-| `Provided authentication token is not a valid JWT encoding` | The credential uses a personal access token. The Data API takes OAuth2 only. Switch the credential to OAuth2. |
+| `Lakebase requires OAuth2 authentication` | The node's **Authentication** is set to **Access Token**. The node checks this before it calls the Data API, so the **Table** and **Function** lists fail the same way. Set **Authentication** to **OAuth2** and select a Databricks OAuth2 credential. |
 | `invalid token permissions` (`PGRST301`) | The identity has no Postgres role on this branch. Create one with `databricks_create_role`. If the credential itself expired, reconnect it. |
 | `permission denied to set role` (`42501`) | The role isn't granted to the Data API. Run `GRANT "<role>" TO authenticator` as the role's creator. A project owner can't use the Data API at all, so connect a non-owner identity. |
-| Empty column lists, or `Turn on Data API > API > Advanced settings > OpenAPI specification` | The project doesn't serve its schema document. Turn on the **OpenAPI specification** setting. |
+| `permission denied for table`, `for schema`, `for sequence`, or `for function` (`42501`) | The role reaches the Data API but holds no grant on the object. Run the data grants in [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api). The node shows the same `authenticator` hint for every `42501`, so read the Postgres message rather than the hint. |
+| `new row violates row-level security policy` (`42501`) | A policy on the table rejects the write for this role. Add a policy that allows it, or write as a role the policy admits. |
+| Empty column lists, or a **Table** or **Function** list that errors | The project doesn't serve its schema document. Turn on **Data API** > **API** > **Advanced settings** > **OpenAPI specification**. Until then, select **By ID** and type the name. |
 | `Could not find the table` (`PGRST205`) | Check the schema and table names, and that the Data API exposes the schema. Right after you create or alter a table, the same request can fail once and succeed on a retry while the API reloads its schema. |
-| `Could not find the column` (`PGRST204`) | A mapped column isn't in the table. Reopen the node to refresh the column list. |
+| `Could not find the '<column>' column of '<table>' in the schema cache` (`PGRST204`) | A mapped column isn't in the table. Reopen the node to refresh the column list. |
 | The schema isn't exposed (`PGRST106`) | Add the schema to the exposed schemas in the project's Data API settings. |
 | `there is no unique or exclusion constraint matching the ON CONFLICT specification` (`42P10`) | The columns in **Columns to match on** don't carry a unique constraint or primary key together. Select every column of the key, or add a constraint in Databricks. |
 | A duplicate key, a null in a `NOT NULL` column, a type mismatch, or a foreign key still in use | The write breaks a rule the table enforces. The node shows the Postgres message and names the column. Fix the value, or the table. |
+| `The branch has no read-write compute endpoint` | The branch serves reads only. Point the node at a branch with read-write compute. |
+| `At least one condition is required` | **Delete** refuses to run without a condition, because the Data API would empty the table. Add one under **Select Rows**. |
+| `The column to match on has no value: <columns>` | An item reached **Update** or **Insert or Update** with nothing in a match column. Check the field the mapper reads for those columns. |
+| `Could not find the function` (`PGRST202`) | **Execute Function** can't see the function. Check the name and that the role holds `EXECUTE` on it. |
+| A table missing from the **Table** list | With **Follow privileges** on, the schema document hides objects the role has no grant on. Grant the role access, or select **By ID** and type the name. |
 
 Refer to [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api) for the role and grant steps these messages point at.
 

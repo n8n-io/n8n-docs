@@ -230,7 +230,7 @@ The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.d
 {% hint style="info" %}
 **The Data API doesn't accept personal access tokens**
 
-A personal access token fails with `Provided authentication token is not a valid JWT encoding`. Use [OAuth2 with user login](#using-oauth2-with-user-login) or [OAuth2 with a service principal](#using-oauth2-service-principal) for the Lakebase resource.
+The node checks this before it calls the Data API, so a personal access token fails with `Lakebase requires OAuth2 authentication` rather than anything from Databricks. Set the node's **Authentication** to **OAuth2** and use [OAuth2 with user login](#using-oauth2-with-user-login) or [OAuth2 with a service principal](#using-oauth2-service-principal).
 {% endhint %}
 
 ### Enable the Data API
@@ -241,12 +241,12 @@ The API exposes only the `public` schema by default. Add any other schema you wa
 
 ### Turn on the OpenAPI specification
 
-In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. The change takes effect right away.
+In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. Select **Save** to apply the change, which then takes effect right away.
 
-The node reads this document to list a table's columns and a function's arguments. Without it, the **Columns** mapper and the column dropdowns stay empty, and the node shows this hint:
+The node reads this document to list tables, functions, a table's columns and a function's arguments. Without it the **Columns** mapper and the column dropdowns stay empty, and the **Table** and **Function** lists show an error. Each message names the same setting:
 
 ```text
-Turn on Data API > API > Advanced settings > OpenAPI specification for this Lakebase project, so the node can list its columns.
+Data API > API > Advanced settings > OpenAPI specification
 ```
 
 **Follow privileges** lists only the objects the connected identity can use. **Ignore privileges** lists everything, including the internal tables and functions Databricks creates.
@@ -279,9 +279,13 @@ Run this as the identity that created the role. No role reaches the Data API wit
 Then grant the role what it needs on your data, the same as any other Postgres role. Run these in each database that holds a table or function the node uses:
 
 ```sql
+GRANT USAGE ON SCHEMA <schema> TO "<role>";
 GRANT SELECT, INSERT, UPDATE, DELETE ON <table> TO "<role>";
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA <schema> TO "<role>";
 GRANT EXECUTE ON FUNCTION <function>(<argument-types>) TO "<role>";
 ```
+
+Schema `USAGE` matters for every schema except `public`. Without the sequence grant, an insert into a `serial` column fails with `permission denied for sequence`.
 
 {% hint style="warning" %}
 **Don't connect as the project owner**

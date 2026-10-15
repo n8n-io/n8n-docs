@@ -150,22 +150,24 @@ for _title in ["Node not found", "Credential not found error", "Oops, an n8n gui
 
 # --- collect_urls host handling ---------------------------------------------------------
 # A prefix test would skip this: it starts with the same characters and is another site.
-import types as _types
+#
+# The fixture lives in a temp directory, not in the repo tree. The earlier version made
+# and removed a fixed `_hosttest/` next to this file, which reused anything already there
+# and left it behind if the run raised before the cleanup line.
+import tempfile as _tempfile
 _pats = []
-_tmp = Path(__file__).resolve().parent / "_hosttest"
-_tmp.mkdir(exist_ok=True)
-(_tmp / "p.md").write_text(
-    "a https://docs.n8n.io/real b https://docs.n8n.io.evil.example/x "
-    "c https://app.gitbook.com/s/ABC/page d https://ok.example/y\n", encoding="utf-8")
-_urls, _ = lsp.collect_urls(_tmp, _pats)
+with _tempfile.TemporaryDirectory(prefix="lsp-hosttest-") as _tmpdir:
+    _tmp = Path(_tmpdir)
+    (_tmp / "p.md").write_text(
+        "a https://docs.n8n.io/real b https://docs.n8n.io.evil.example/x "
+        "c https://app.gitbook.com/s/ABC/page d https://ok.example/y\n", encoding="utf-8")
+    _urls, _ = lsp.collect_urls(_tmp, _pats)
 check("collect_urls: our own docs host is skipped", "https://docs.n8n.io/real" not in _urls)
 check("collect_urls: a lookalike host is NOT skipped",
       "https://docs.n8n.io.evil.example/x" in _urls)
 check("collect_urls: cross-space gitbook links are skipped",
       "https://app.gitbook.com/s/ABC/page" not in _urls)
 check("collect_urls: an ordinary host is kept", "https://ok.example/y" in _urls)
-import shutil as _shutil
-_shutil.rmtree(_tmp, ignore_errors=True)
 
 # --- cap_findings -------------------------------------------------------------------------
 # First full run: 719 redirect-reliant against 23 dead. A flat cap sorted by severity

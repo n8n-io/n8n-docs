@@ -30,8 +30,12 @@ finds that lychee already reported is dropped at merge time in lychee_report.py.
 Scope and cost. One GET per URL, following redirects, reading at most BODY_BYTES of the
 body. An earlier version sent HEAD first and only fetched a body when the URL had moved.
 That was wrong twice over: HEAD lies on several large hosts (see probe()), and a soft 404
-can answer 200 at its own URL with no redirect at all, which a HEAD can never show. One
-request per URL is both fewer requests than HEAD-then-GET and strictly better detection.
+can answer 200 at its own URL with no redirect at all, which a HEAD can never show.
+
+The change is made for detection, not for cost. Against a healthy URL it is one request
+either way, and this one reads a body where HEAD did not; it saves the second request
+only where HEAD-then-GET would have made one, which is a URL that moved. Request count
+was never the reason to switch.
 
 The soft-404 heuristic is deliberately narrow: `<title>` and the first `<h1>` only, never
 the whole body. DOC-2310 shipped a loose offline heuristic for redirect chains, got 1,421

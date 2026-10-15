@@ -353,7 +353,7 @@ After you connect Teams, you change it in the channel settings. Open the agent, 
 
 The channel settings show:
 
-- **Where it works:** the options from [Where people can use the agent](#where-people-can-use-the-agent), and whether file access is approved.
+- **Where it works:** the options from [Where people can use the agent](#where-people-can-use-the-agent), and whether an administrator approved file access.
 - **Appearance in Teams:** the app's display name, description, and icon. With the recommended setup, this also has the **Install app** menu.
 - **The Azure Bot:** with the recommended setup, **Linked to Azure Bot** and a **Find it in Azure** link. With the manual setup, a **Find your Azure Bot** link.
 

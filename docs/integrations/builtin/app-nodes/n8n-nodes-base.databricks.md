@@ -205,7 +205,7 @@ To send one message for the whole run instead of one for each task, add an [Aggr
 
 Every **Genie Agent** operation returns a `deep_link` field with the URL of the Genie Agent, or of the conversation, in your Databricks workspace. Use it to let users inspect the SQL and the results in Databricks.
 
-When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to render the `deep_link` field as a link, for example `[Explore in Databricks](deep_link)`.
+When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to end its reply with a Markdown link whose text is **Explore in Databricks** and whose URL is the value of the `deep_link` field, for example `[Explore in Databricks](<deep_link value>)`.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

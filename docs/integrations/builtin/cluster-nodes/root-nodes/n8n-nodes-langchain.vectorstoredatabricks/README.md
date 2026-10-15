@@ -41,8 +41,9 @@ The Databricks Vector Store node is in Preview and may change in future releases
 - These privileges for the identity the credential authenticates as:
 	- **USE CATALOG** on the catalog and **USE SCHEMA** on the schema that hold the index.
 	- **SELECT** on the index. **Insert Documents** also needs **MODIFY** on the index.
-	- **SELECT** on the source table of a Delta Sync index that syncs all of its columns, so the node can list the columns in **Content Column** and **Metadata Columns**. Without it, the lists stay empty and documents come back with content only.
-	- **EXECUTE** on the embeddings model service the Embeddings Databricks node uses. Databricks grants it on the `system.ai` services to all users by default.
+	- **SELECT** on the source table of a Delta Sync index that syncs all of its columns, so the node can list the columns in **Content Column** and **Metadata Columns**. Without it, **Metadata Columns** stays empty, **Content Column** offers only the embedding source column, and documents come back with content only.
+	- **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the embeddings model service the Embeddings Databricks node uses, and **EXECUTE** on the service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default.
+	- Read access on the Vector Search endpoint that serves the index, if you use **Metadata Filter**. The node reads the endpoint type once per execution to check that the filter applies. Workspace users have it by default.
 
 A service principal must be a member of the workspace with the **Workspace access** entitlement. A service principal that only exists at the account level fails with `invalid_client` from the workspace token endpoint, which looks like a wrong client secret. Refer to [Required Databricks privileges](../../../credentials/databricks.md#required-databricks-privileges) for the full list.
 
@@ -57,7 +58,7 @@ Two properties of a Databricks index decide what the node can do with it: how ro
 | Delta Sync | A Delta table that Databricks keeps in sync with the index | Not supported. Add rows to the source table instead. The node fails before writing with `Index <name> syncs from its source table. Use a Direct Access index to insert documents`. |
 | Direct Access | Rows you write through the Vector Search API | Supported. In **Insert Documents** mode, the **Index** list shows only Direct Access indexes. |
 
-All four operation modes can search both index types.
+The three search modes work with both index types. **Insert Documents** works with Direct Access indexes only.
 
 ### Managed and self-managed embeddings
 
@@ -79,7 +80,7 @@ The rules for the Embeddings Databricks node follow from the table:
 3. Set **Operation Mode**. Refer to [Node parameters](#node-parameters) for the fields of each mode.
 4. Select the index in **Index**:
 	- **From List**: the node lists every index on every Vector Search endpoint the credential can see, described as `DELTA_SYNC - <endpoint>` or `DIRECT_ACCESS - <endpoint>`. Type to filter by name. In **Insert Documents** mode, the list shows Direct Access indexes only.
-	- **Name**: enter the full Unity Catalog name, `catalog.schema.index`. The node rejects any other form with `Use the full name: catalog.schema.index`.
+	- **Name**: enter the full Unity Catalog name, `catalog.schema.index`. The node rejects any other form, with `Use the full name: catalog.schema.index` in the editor and `Invalid Databricks index "<name>": use catalog.schema.index` when an expression produces the name at run time.
 5. In **Content Column**, pick the column that becomes the document text (`pageContent`). The list shows the index's columns without the primary key and the vector column. On a managed index, the embedding source column comes first, marked `Embedding source column`, and you can leave the field empty to use it. On a self-managed index, you must pick a column: an empty value fails with `Index <name> uses self-managed embeddings. Select a content column`.
 6. Select the **+** on the **Embedding** connector and add an [Embeddings Databricks](../../sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md) node.
 7. Fill in the fields of the operation mode, and the [options](#node-options) you need.
@@ -138,8 +139,8 @@ Connect a document loader, such as the [Default Data Loader](../../sub-nodes/n8n
 
 How the node fills the row:
 
-- The primary key gets a random UUID. The node doesn't take an ID from the document, so running the same insert twice adds the documents twice. It never updates existing rows. Remove duplicates upstream, or delete the old rows in Databricks.
-- Loader metadata keys that match a column of the index go into that column. The node drops keys without a matching column and doesn't warn about them, although its output items still show them.
+- The primary key gets a random UUID. The built-in document loaders don't set a document ID, so running the same insert twice adds the documents twice instead of updating them. Remove duplicates upstream, or delete the old rows in Databricks. A document that carries its own `id`, for example from a [LangChain Code](../n8n-nodes-langchain.code.md) node, is written under that key and replaces the row that has it.
+- Loader metadata keys that match a column of the index go into that column. The node drops keys without a matching column, and keys that name the primary key, the content column, or the vector column, and doesn't warn about them, although its output items still show them.
 - Cancelling an execution stops the insert. Rows the node already wrote stay in the index.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
@@ -158,7 +159,7 @@ The options apply to the three search modes: **Get Many**, **Retrieve Documents 
 
 ### Metadata Columns
 
-The columns to return in the document metadata. By default the node returns every column of the index except the primary key, the content column, and the vector column. Pick a subset to keep the payload an agent reads small. You can include the primary key.
+The columns to return in the document metadata. By default the node returns every column of the index except the primary key, the content column, and the vector column. Pick a subset to keep the payload an agent reads small. The list doesn't offer the primary key or the vector column.
 
 ### Search Mode
 
@@ -181,9 +182,9 @@ A JSON object that restricts results to rows matching a condition on the index's
 
 Things to know:
 
-- The filter uses the JSON syntax of **Standard** Vector Search endpoints. Storage Optimized endpoints expect a SQL filter string that the node doesn't send, so leave **Metadata Filter** empty on those endpoints.
+- The filter works on **Standard** Vector Search endpoints only. Storage Optimized endpoints expect a SQL filter string that the node doesn't support yet. With a filter set, the node reads the endpoint type once per execution and fails before the query when the endpoint isn't Standard: `Index <name> runs on endpoint <endpoint> of type STORAGE_OPTIMIZED. The Metadata Filter works on STANDARD endpoints only.` Queries without a filter work on every endpoint type.
 - A strict filter can return fewer rows than **Limit**. Databricks fetches the nearest candidates first and filters them afterwards, so raise **Limit** when you need more matches.
-- A filter that matches nothing returns zero items without an error. Malformed JSON fails before any request with `Parameter 'options.searchFilterJson' could not be parsed`.
+- A filter that matches nothing returns zero items without an error. Malformed JSON fails before any request with a validation error that names the **Metadata Filter** field.
 - `BETWEEN`, wildcards in `LIKE`, and numeric comparisons on values nested in JSON columns aren't supported. Refer to the [Databricks filtering guide](https://docs.databricks.com/aws/en/ai-search/filtering-guide) for the full syntax.
 
 ## Known limits
@@ -191,7 +192,7 @@ Things to know:
 - **Embeddings input always required**: Every mode needs an Embeddings Databricks node, including managed indexes where Databricks embeds the query and the node is never called.
 - **Insert Documents on Direct Access indexes only**: Delta Sync indexes are read-only for the node. The insert rejects the primary key or the vector column as **Content Column**.
 - **Inserted rows get random keys**: There's no upsert by ID. A re-run duplicates rows.
-- **Metadata Filter on Standard endpoints only**: Storage Optimized endpoints take a SQL filter string the node doesn't send.
+- **Metadata Filter on Standard endpoints only**: Storage Optimized endpoints take a SQL filter string the node doesn't support yet. A filtered query on such an endpoint fails before it runs.
 - **Hybrid search returns at most 200 results** for each query.
 - **A strict filter can return fewer rows than Limit**, because Databricks filters after fetching the nearest candidates.
 - **Pay-per-token rate limits**: Embedding a large batch of documents at once can hit the workspace rate limit of the embeddings model service. Refer to [Rate limits](../../sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md#rate-limits) on the Embeddings Databricks page for how to avoid it.
@@ -263,11 +264,15 @@ The credential can't get a token from the workspace. With a service principal, `
 
 ### Host must use HTTPS
 
-The node fails with `Databricks host must use https` because the credential's **Host** starts with `http://`. Every request carries a token, so the node refuses plain HTTP. Change the host to `https://`.
+The node fails with `Databricks host must use https` because the credential's **Host** isn't an `https://` URL, for example because it starts with `http://` or has no scheme. Every request carries a token, so the node refuses plain HTTP. Enter the full workspace URL with `https://`.
 
 ### Rate limit reached during an insert
 
-The embeddings model service rejected a batch with `REQUEST_LIMIT_EXCEEDED` and the node wrote nothing. Refer to [Rate limits](../../sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md#rate-limits) on the Embeddings Databricks page.
+The embeddings model service rejected a batch with `REQUEST_LIMIT_EXCEEDED`. The node didn't write the chunk that hit the limit, but chunks it wrote before stay in the index, so check the index before you retry. Refer to [Rate limits](../../sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md#rate-limits) on the Embeddings Databricks page.
+
+### The Metadata Filter works on STANDARD endpoints only
+
+A **Metadata Filter** is set, and the index runs on a Storage Optimized endpoint, which takes a SQL filter string the node doesn't support yet. Remove the filter, or move the index to a Standard endpoint. If the message starts with `Could not read the type of the endpoint`, the credential's identity can't read the Vector Search endpoint: grant it read access on the endpoint, or remove the filter.
 
 [^1]: AI chains allow you to interact with large language models (LLMs) and other resources in sequences of calls to components. AI chains in n8n don't use persistent memory, so you can't use them to reference previous context (use AI agents for this).
 [^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.

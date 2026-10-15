@@ -52,7 +52,7 @@ The Embeddings Databricks node is in Preview and may change in future releases. 
 Which model you pick depends on the index the Databricks Vector Store node works with:
 
 - **Managed index** (a Delta Sync index with a Databricks embedding model): Databricks embeds the queries itself with the index's own model. The Embeddings Databricks node must be connected, but it's never called, so any model service works.
-- **Self-managed index** (a Direct Access index, or a Delta Sync index with its own vector column): the Embeddings Databricks node embeds every search query and every inserted document. Pick the model and dimension the index was built with. An index built with `databricks-gte-large-en`, which has 1024 dimensions, needs the `system.ai.gte-large-en` model service. A different model fails with `query vector dimension <n> does not match index vector dimension <m>` on a search, and with `Databricks rejected the upsert into <index>. Failed primary keys: ...` on an insert.
+- **Self-managed index** (a Direct Access index, or a Delta Sync index with its own vector column): the Embeddings Databricks node embeds every search query, and on a Direct Access index every inserted document. Pick the model and dimension the index was built with. An index built with `databricks-gte-large-en`, which has 1024 dimensions, needs the `system.ai.gte-large-en` model service. A different model fails with `query vector dimension <n> does not match index vector dimension <m>` on a search, and with `Databricks rejected the upsert into <index>. Failed primary keys: ...` on an insert.
 
 Refer to [Index types and embeddings](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md#index-types-and-embeddings) on the Databricks Vector Store page for how the vector store node decides which query form to send.
 
@@ -73,7 +73,7 @@ The node is a standard embeddings sub-node, so it also works with the other vect
 
 ## Rate limits
 
-Pay-per-token model services are rate limited per workspace. When the Databricks Vector Store node inserts documents, it embeds them in chunks of its **Embedding Batch Size** (`200` by default), and each chunk is split into requests of this node's **Batch Size** that go out in parallel. A small **Batch Size** turns one chunk into many simultaneous requests, which can exceed the workspace limit of the model service. The insert then fails with `Databricks rate limit reached for <service>: REQUEST_LIMIT_EXCEEDED: Exceeded workspace QPS rate limit` and writes nothing.
+Pay-per-token model services are rate limited per workspace. When the Databricks Vector Store node inserts documents, it embeds them in chunks of its **Embedding Batch Size** (`200` by default), and each chunk is split into requests of this node's **Batch Size** that go out in parallel. A small **Batch Size** turns one chunk into many simultaneous requests, which can exceed the workspace limit of the model service. The node retries a rejected request with backoff up to **Max Retries**, then the insert fails with `Databricks rate limit reached for <service>: REQUEST_LIMIT_EXCEEDED: Exceeded workspace QPS rate limit`. The node doesn't write the chunk that hit the limit, but chunks it embedded and wrote before it stay in the index, so check the index before you retry.
 
 To avoid it, keep **Batch Size** at its default so a chunk goes out in one request, keep concurrent inserts low, or use a [provisioned throughput](https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/deploy-prov-throughput-foundation-model-apis) endpoint for the model.
 
@@ -112,7 +112,7 @@ The execution fails with `Databricks rate limit reached for <service>` and a 429
 
 ### Host must use HTTPS
 
-The node fails with `Databricks host must use https` because the credential's **Host** starts with `http://`. Every request carries a token, so the node refuses plain HTTP. Change the host to `https://`.
+The node fails with `Databricks host must use https` because the credential's **Host** isn't an `https://` URL, for example because it starts with `http://` or has no scheme. Every request carries a token, so the node refuses plain HTTP. Enter the full workspace URL with `https://`.
 
 ### Connection error
 

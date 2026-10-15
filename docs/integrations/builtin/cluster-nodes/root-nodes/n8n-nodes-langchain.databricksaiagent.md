@@ -13,7 +13,7 @@ layout:
 
 # Databricks AI Agent node
 
-Use the Databricks AI Agent node to build an AI agent[^1] whose runs show up in [MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/) in your Databricks workspace. The node runs the same agent as the [AI Agent](n8n-nodes-langchain.agent/README.md) node: it takes the same chat model, memory, tool[^2], and output parser sub-nodes and offers the same options. What it adds is **Export Traces to MLflow**. With the option on, every model call and tool call of a run is recorded as a trace in an MLflow experiment, so the team that runs your Databricks workspace can inspect n8n agents next to the rest of their AI systems.
+Use the Databricks AI Agent node to build an AI agent[^1] whose runs show up in [MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/) in your Databricks workspace. The node runs the same agent as the [AI Agent](n8n-nodes-langchain.agent/README.md) node: it takes the same chat model, memory, tool[^2], and output parser sub-nodes and offers the same options. What it adds is **Export Traces to MLflow**. With the option on, each run creates one trace in an MLflow experiment, with a span for every model call and tool call, so the team that runs your Databricks workspace can inspect n8n agents next to the rest of their AI systems.
 
 On this page, you'll find the prerequisites, setup steps, node parameters, what a trace contains, and how the export behaves when something fails.
 
@@ -33,7 +33,7 @@ The Databricks AI Agent node is in Preview and may change in future releases. Av
 
 ## Prerequisites
 
-To run the agent, you need a chat model sub-node with its own credential, such as the [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node, and at least one tool. To export traces, you also need:
+To run the agent, you need a chat model sub-node with its own credential, such as the [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node. To export traces, you also need:
 
 - A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, with a service principal or user login. A service principal must be a member of the workspace with the **Workspace access** entitlement.
 - **CAN EDIT** on the experiment that receives the traces. **CAN READ** isn't enough: the export fails with a `403` that says the identity doesn't have permission to edit the experiment.
@@ -52,17 +52,20 @@ Permission changes take a minute or more to reach the trace service. A run right
 
 ## Node parameters
 
-- **Source for Prompt (User Message)**: Where the user message comes from: **Connected Chat Trigger Node**, **Connected Guardrails Node**, or **Define below**. Works like the same field on the [AI Agent](n8n-nodes-langchain.agent/README.md) node.
+- **Source for Prompt (User Message)**: Where the user message comes from: **Connected Chat Trigger Node** or **Define below**. Works like the same field on the [AI Agent](n8n-nodes-langchain.agent/README.md) node. The node doesn't offer the **Connected Guardrails Node** source.
 - **Require Specific Output Format**: Turn on to connect an output parser sub-node that shapes the agent's output.
 - **Enable Fallback Model**: Turn on to connect a second chat model that the agent uses when the main model fails.
 - **Export Traces to MLflow**: Whether to send each run to MLflow Tracing in the workspace of the credential selected on this node. Turned off by default.
 - **Experiment**: Where the traces are stored. Shown when **Export Traces to MLflow** is on.
 	- **By Name**: The experiment path, for example `/Shared/my-agent-traces`. The node creates the experiment if it doesn't exist. Leave the field empty to use `/Shared/n8n-workflows-<workflow-id>`, one experiment for each workflow.
-	- **By ID**: The numeric ID of an existing experiment, as shown in its URL in Databricks. An ID that doesn't exist doesn't fail the run: the export is skipped with a warning in the n8n log.
+	- **By ID**: The numeric ID of an existing experiment, as shown in its URL in Databricks. An ID that doesn't exist doesn't fail the run: the agent answers, and the export fails afterwards with a warning in the n8n log.
 
 ## Node options
 
-The options are the ones of the AI Agent node: **System Message**, **Max Iterations** (default `10`), **Return Intermediate Steps**, **Automatically Passthrough Binary Images**, **Automatically Passthrough Binary PDFs**, **Tracing Metadata**, **Batch Processing**, and **Enable Streaming**. Refer to [Tools Agent](n8n-nodes-langchain.agent/tools-agent.md) for what each one does.
+The options are the ones of the AI Agent node. Refer to [Tools Agent](n8n-nodes-langchain.agent/tools-agent.md) for **System Message**, **Max Iterations** (default `10`), **Return Intermediate Steps**, **Automatically Passthrough Binary Images**, **Tracing Metadata**, and **Enable Streaming**. Two more options:
+
+- **Automatically Passthrough Binary PDFs**: Whether to pass binary PDF documents from the input to the model as part of the message. Turned off by default. Use it with a model that accepts PDF input.
+- **Batch Processing**: **Batch Size** sets how many input items the agent processes at once (default `1`), and **Delay Between Batches** waits the given number of milliseconds between batches (default `0`). Use it to stay under the rate limit of a pay-per-token model service.
 
 ## What the node exports
 
@@ -71,6 +74,7 @@ Each item the node processes becomes one trace. A trace holds a tree of spans:
 - The agent run at the top, with the user message as input and the final answer as output.
 - One span for each model call, with the messages sent to the model and its completion in OpenAI format, including tool calls, plus the token usage of the call.
 - One span for each tool call, with the arguments and the result. A vector store tool's span shows the documents it returned.
+- One span for each retriever call, when a tool such as the Vector Store Question Answer Tool queries a vector store through a retriever.
 
 Every span carries its start and end time. The trace itself carries:
 
@@ -80,12 +84,12 @@ Every span carries its start and end time. The trace itself carries:
 - The total token usage of the run, so the trace list shows cost per run without opening a span.
 - A state: `OK`, or `ERROR` when the run failed. A failed model call makes the trace `ERROR` with the Databricks error message on the model span. A tool that throws is recorded as an `ERROR` tool span, while the trace stays `OK` when the agent recovers and answers.
 
-Streaming runs export the same spans, with end times and token counts filled in. Runs you cancel write no trace. A model span is named `ChatOpenAI` rather than after the model service, because the Databricks Chat Model node calls the gateway through an OpenAI-compatible client.
+Streaming runs export the same spans, with end times and token counts filled in. When you cancel a run, the export stops with it: expect no trace, or a trace without spans, and an export failure in the n8n log. A model span is named `ChatOpenAI` rather than after the model service, because the Databricks Chat Model node calls the gateway through an OpenAI-compatible client.
 
 {% hint style="warning" %}
 **Traces contain your data**
 
-Trace export sends the real prompts, model outputs, and tool results of every run to the Databricks workspace of the selected credential, without redaction. n8n masks only values that look like secrets, such as API tokens, before they land in a span. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
+Trace export sends the real prompts, model outputs, and tool results of every run to the Databricks workspace of the selected credential, without redaction. n8n masks strings that look like credentials, such as API tokens, and nothing else. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
 {% endhint %}
 
 ## How export failures behave

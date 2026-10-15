@@ -48,7 +48,8 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
 | Job (Run) | **CAN MANAGE RUN** on the job |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
-| Genie (Databricks node Genie Agent operations and the Genie One MCP server) | **CAN RUN** on the Genie agent and **CAN USE** on its SQL warehouse |
+| Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
+| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
 | Unity AI Gateway model services (Databricks Chat Model) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
 | Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |

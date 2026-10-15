@@ -10,7 +10,7 @@ layout:
 
 # Databricks Genie One MCP server
 
-The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace. Genie One is the Databricks assistant for business users. It routes each question to the relevant Genie agent in your workspace, or to other governed data assets when no agent matches, then generates and runs SQL to answer it. To call one specific Genie agent (formerly a Genie space) by its **Agent ID**, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. The tile is labeled **Powered by Genie**, and every answer links back to the conversation in Databricks.
+The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie One MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace. Genie One is the Databricks assistant for business users. It routes each question to the relevant Genie Agent in your workspace, or to other governed data assets when no agent matches, then generates and runs SQL to answer it. To call one specific Genie Agent (formerly a Genie space) by its **Agent ID**, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. n8n appends the **Powered by Databricks Genie** label to every agent reply that used Genie One, and every answer links back to the conversation in Databricks.
 
 On this page, you'll find the prerequisites, setup steps, agent settings, and known issues for using Genie with an n8n agent.
 
@@ -23,7 +23,7 @@ The tile uses a [Databricks OAuth2 credential](../../credentials/databricks.md#u
 ## Prerequisites
 
 - A Databricks account admin has [created a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) whose scopes cover the tile's request. The tile requests the `genie` and `offline_access` scopes. An app connection with just those two scopes is the narrowest setup and n8n recommends it when the connection serves only Genie. **All APIs** also covers the request in n8n's testing. Use it only when the same app connection serves the Databricks node or the Databricks Chat Model node, which need it. If connecting fails with a `genie` scope error, the admin [adds the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to the app connection.
-- You have **CAN RUN** on the Genie agent and **CAN USE** on its SQL warehouse. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
+- You have **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
 - A chat model that calls tools reliably. n8n recommends the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node with Llama 3.3 70B or Qwen 3.5. Refer to [Choose a model for agents](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents).
 
 ## Connect Genie to an agent
@@ -32,7 +32,7 @@ The Genie MCP server uses one authentication type, user login. The agent asks Ge
 
 1. Open an [AI Agent](../root-nodes/n8n-nodes-langchain.agent/README.md) node on the canvas and select the **+** on its **Tool** connector.
 2. Search for `Databricks Genie One`, or open the **MCP Servers** section to browse the registry.
-3. Select the **Databricks Genie One** tile. n8n adds a Databricks Genie One node to the agent and opens its settings.
+3. Select the **Databricks Genie One** tile. n8n adds a node named **Databricks Genie One MCP** to the agent and opens its settings.
 4. Under **Credential to connect with**, select **Create new credential**.
 5. Enter your workspace URL as the **Host**, for example `https://adb-1234567890123456.7.azuredatabricks.net`.
 6. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection your admin created.
@@ -44,7 +44,7 @@ Send the agent a question about your data, for example "How many trips are in th
 
 ## Tools
 
-Genie One exposes four tools. Databricks routes each question to a Genie agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the server name, for example `Databricks_Genie_One_MCP_genie_ask`, so don't reference the short names in prompts.
+Genie One exposes four tools. Databricks routes each question to a Genie Agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the node's name, for example `Databricks_Genie_One_MCP_genie_ask` for the default node name. A node you renamed, or added before the tile was renamed, keeps its own name as the prefix, for example `Databricks_Genie_MCP_genie_ask`. Don't reference the short names in prompts.
 
 | Tool | What it does |
 |------|--------------|
@@ -75,16 +75,16 @@ Genie answers asynchronously. The agent calls `genie_ask`, then calls `genie_pol
 
 Databricks requires Genie-powered integrations to identify Genie. In n8n:
 
-- The tile in the node panel and the node's description carry the **Powered by Genie** label.
+- The AI Agent node (version 3 or later) and n8n Agents append the **Powered by Databricks Genie** label after the reply when the run called a Genie One tool. n8n adds the label in code after the model answers, so a system message can't drop it. The AI Agent node skips the label when **Require Specific Output Format** is on, because the structured output must stay parseable.
 - Every completed Genie answer includes an **Explore in Databricks** link that opens the conversation in Genie in your workspace, so users can inspect the SQL and results. Genie instructs the model to render this link verbatim, and n8n passes the tool result through unchanged. Don't strip the link in your system message or output parsing.
 
 ## Related resources
 
 - [Databricks credentials](../../credentials/databricks.md), including the `genie` scope setup for admins
 - [Databricks Chat Model node](n8n-nodes-langchain.lmchatdatabricks.md)
-- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for calling a Genie agent's REST API directly without an AI agent
+- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for calling a Genie Agent's REST API directly without an AI agent
 - [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) for how the registry works
-- [Genie MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in the Databricks documentation
+- [Genie One MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in the Databricks documentation
 
 ## Common issues
 
@@ -111,4 +111,4 @@ The agent uses all its iterations without a single tool call. Two causes look th
 
 ### Genie reports a SQL or permission error
 
-Genie returns its own error text, for example `[TABLE_OR_VIEW_NOT_FOUND] The table or view samples.nyctaxi.does_not_exist cannot be found`, and the agent relays it. Fix the underlying data or grant issue in Databricks. The connected user needs **CAN RUN** on the Genie agent and the Unity Catalog privileges on the tables the agent uses.
+Genie returns its own error text, for example `[TABLE_OR_VIEW_NOT_FOUND] The table or view samples.nyctaxi.does_not_exist cannot be found`, and the agent relays it. Fix the underlying data or grant issue in Databricks. The connected user needs **CAN RUN** on the Genie Agent that answered and the Unity Catalog privileges on the tables it uses.

@@ -46,9 +46,9 @@ Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/az
 Both credential types have an **Endpoint Type** setting. It sets which Azure endpoint the nodes call.
 
 * **Classic**: Use this for an Azure OpenAI resource at `*.openai.azure.com`. The credential needs a **Resource Name** and an **API Version**. You can also enter an optional **Endpoint**.
-* **Microsoft Foundry**: Use this for a Microsoft Foundry resource at `*.services.ai.azure.com`. The credential needs the full **Endpoint** URL, for example `https://<resource>.services.ai.azure.com/openai/v1`. You can also enter an optional **Project**. Refer to [Project](#project).
+* **Microsoft Foundry**: Use this for a Microsoft Foundry resource at `*.services.ai.azure.com`. The credential needs the full **Endpoint** URL, for example `https://<resource>.services.ai.azure.com/openai/v1`. You can also enter an optional [**Project**](#project).
 
-### Project <a href="#project" id="project"></a>
+### Project
 
 The **Project** field is optional. It shows only for the **Microsoft Foundry** endpoint type. Enter the name of the Microsoft Foundry project that owns your deployments. The project overview page in the Foundry portal shows the name.
 

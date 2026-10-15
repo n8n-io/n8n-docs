@@ -34,18 +34,6 @@ Node type policies are available from n8n 2.42.0.
 
 An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
 
-## Turn on node type policies
-
-On self-hosted instances, node type policies need an Enterprise license and the `type-availability-policies` module:
-
-```bash
-N8N_ENABLED_MODULES=type-availability-policies
-```
-
-If `N8N_ENABLED_MODULES` already lists other modules, add `type-availability-policies` to the comma-separated list. Don't replace the existing value.
-
-Set this variable on every n8n process. In [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode), that includes every worker. A worker without the module doesn't check policies, so it runs every workflow it receives.
-
 ## How node type policies work
 
 A policy has a list of rules and a default action.
@@ -197,6 +185,13 @@ When a node is blocked in a project, users in that project see:
 - **Node details:** the parameters are read-only. Users can contact an instance admin or replace the node.
 - **Publish and run:** n8n refuses the action and shows a message that lists each blocked node, with a link to find it in the workflow. n8n refuses a save in the same way if the save adds a blocked node.
 
+## What users see in agents
+
+- **Tool picker:** blocked nodes appear at the end of the list with a lock. Users can't add them. Chat Hub tools work the same way.
+- **Chat:** n8n refuses a call to a blocked tool and marks the step as restricted. The agent tells the user what it couldn't do.
+- **Save and publish:** n8n refuses to save an agent that adds a blocked tool, and refuses to publish an agent that uses one.
+- **AI builders:** the agent builder and n8n Assistant can suggest a blocked node. n8n then refuses the save.
+
 ## Workflows that already use a blocked node
 
 A new policy doesn't change existing workflows, but it limits what users can do with them:
@@ -215,7 +210,7 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 
 ## Limitations
 
-- **No settings page:** you manage policies only through the public API.
+- **No settings page yet:** you manage policies only through the public API. A settings page is planned.
 - **No wildcards:** a `name` rule matches one exact node type. To match many nodes, use a `package` rule.
 - **`package` rules need an installed package:** n8n rejects a `package` rule for a package that isn't installed. A `name` rule doesn't have this limit, so you can block a community node before anyone installs it.
 - **No nodes are exempt:** a policy with `defaultAction: deny` also blocks nodes like **Manual Trigger** and **Sticky Note**. Add `allow` rules for every node your users need.

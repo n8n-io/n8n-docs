@@ -27,7 +27,7 @@ Node type policies are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Node type policies are available from n8n 2.42.0.
+Node type policies are available from n8n 2.45.0.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
@@ -102,7 +102,7 @@ A `PUT` also returns `409 Conflict` if the scope has more than one attached poli
 
 A `PUT` replaces every rule in the policy. To add one rule, send the existing rules plus the new one.
 
-### Example: block nodes for the whole instance
+### Example: Block nodes for the whole instance
 
 This instance policy blocks the **Execute Command** node and lets project admins turn on the **SSH** node for their own project. Send it with [`PUT /node-type-policies/instance`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#put-node-type-policies-instance), with the current `version`:
 
@@ -127,7 +127,7 @@ This instance policy blocks the **Execute Command** node and lets project admins
 
 The response returns the saved policy with its new `version`. It can also include `warnings`, which list rules that an earlier rule already covers. n8n never reaches those rules. The change takes effect within about one second.
 
-### Example: turn on a delegated node in one project
+### Example: Turn on a delegated node in one project
 
 The instance policy above delegates the **SSH** node. This project policy turns it on for one project. Send it with [`PUT /node-type-policies/projects/<project-id>`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#put-node-type-policies-projects-projectid), with the current `version`:
 
@@ -188,7 +188,7 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 - **No settings page yet:** you manage policies only through the public API. A settings page is planned.
 - **No wildcards:** a `name` rule matches one exact node type. To match many nodes, use a `package` rule.
 - **`package` rules need an installed package:** n8n rejects a `package` rule for a package that isn't installed. A `name` rule doesn't have this limit, so you can block a community node before anyone installs it.
-- **No nodes are exempt:** a policy with `defaultAction: deny` also blocks nodes like **Manual Trigger** and **Sticky Note**. Add `allow` rules for every node your users need.
+- **No nodes are exempt:** if a policy denies by default, it also blocks nodes like **Manual Trigger** and **Sticky Note**. Add `allow` rules for every node your users need.
 - **Not a data boundary:** blocking a node doesn't block the service behind it. Users can still reach the same API with the **HTTP Request** or **Code** node. On self-hosted instances, to stop n8n from loading a node at all, use [`NODES_EXCLUDE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes).
 - **Source control pulls:** n8n skips a pulled workflow that uses a blocked node and reports it in the pull result. The workflow in Git and in n8n stay different until you allow the node or remove it.
 - **Sub-workflows inside node parameters:** n8n doesn't check nodes in a sub-workflow that's defined inside another node's parameters.

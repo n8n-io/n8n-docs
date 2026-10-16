@@ -151,6 +151,16 @@ The `allow` rule is necessary. The project's `defaultAction: allow` doesn't turn
 
 The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/attachments` endpoints let instance admins reuse one set of rules in more than one project. Most setups don't need them. Refer to the [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy) for details.
 
+A scope is the instance or one project. Each scope has a list of attached policies. To change that list, read it, change it, then write it back:
+
+1. Get the `scopeId` from `GET` for the [instance](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#get-node-type-policies-instance) or a [project](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#get-node-type-policies-projects-projectid). The `scopeId` is `null` until you set a policy for that scope.
+2. Read the attachments with [`GET /node-type-policies/scopes/<scope-id>/attachments`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#get-node-type-policies-scopes-scopeid-attachments). The response lists each attached policy with its `policyId`, `rules`, `priority`, and `isFloor`, in the order n8n checks them. It also returns the scope's `version`.
+3. Send the whole new list with [`PUT /node-type-policies/scopes/<scope-id>/attachments`](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy#put-node-type-policies-scopes-scopeid-attachments), with the same `version`.
+
+If someone changed the attachments after you read them, n8n returns `409 Conflict`. Read the attachments again and retry.
+
+Only instance owners and admins can read or change attachments, also for a project scope.
+
 ## What users see when a node is blocked in the editor
 
 When a node is blocked in a project, users in that project see:

@@ -137,7 +137,7 @@ Some features require certain paid plan subscriptions, including:
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how plan, platform, n8n version, and maturity status (Preview, GA, deprecated, or removed) combine to decide whether you can use a feature, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how your plan, platform, and n8n version determine access, and how maturity status (Preview, GA, deprecated, or removed) affects whether you can rely on a feature, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 

@@ -12,10 +12,10 @@ To what extent you can rely on it depends on its maturity status (**Preview**, *
 
 This page explains:
 
-* How platform, plan, and role limits apply
-* How n8n versioning works
+* How platform and plan limits apply
 * What each maturity status means, and where it sits in a feature's lifecycle
 * What Limited enterprise support means, and how it differs from Preview
+* How n8n versioning works
 
 Each of these has its own label or hint in n8n docs, for example a **Feature availability** hint, a **Preview status** hint, or a **Limited enterprise support** hint, so you'll recognize the same information wherever a page states it.
 
@@ -28,13 +28,23 @@ n8n offers two primary deployment options:
 
 Most features are available on both platforms. Only a few exist on one platform or the other. For example, the [AI Transform](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aitransform) node is only available on n8n Cloud, while [LangSmith tracing](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/langchain-in-n8n#use-langsmith-with-a-self-hosted-n8n-instance) is only available on self-hosted.
 
-For such features, in n8n Docs, a platform-specific **Feature availability** hint names only the platform the feature is on, and adds a line stating that it isn't available on the other:
+### In the docs
 
-![A Feature availability hint showing a feature available on self-hosted only, with a line stating it isn't available on n8n Cloud](.gitbook/assets/feature-availability-hint-platform-example.png)
+Docs assume a feature works on both platforms. If it doesn't, the feature's page carries a platform-specific **Feature availability** hint, for example:
 
-<!-- TODO: replace with a real screenshot of a platform-specific Feature availability hint, for example the one on the "Rotate encryption keys" or "Use external storage" page. -->
+{% hint style="info" %}
+**Feature availability**
 
-A feature that's not available on your platform doesn't usually appear in the n8n interface at all, rather than showing up locked.
+The AI Transform node is available on:
+
+- **n8n Cloud:** All plans
+
+It isn't available on self-hosted n8n.
+{% endhint %}
+
+### In the product
+
+A feature that's not available on your platform doesn't usually appear in your n8n interface at all, rather than showing up locked.
 
 ## Feature availability by plan
 
@@ -45,71 +55,68 @@ Plan or edition is your [commercial tier](https://n8n.io/pricing/):
 
 For example, [log streaming](observe-and-log/stream-logs-to-external-systems.md) is only available on Enterprise. The number of [shared projects](manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md) you can have differs according to your plan.
 
-For such features, in n8n Docs, a plan-specific **Feature availability** hint lists the plan or edition required on each platform separately:
+### In the docs
 
-![A Feature availability hint listing different plan and edition requirements for n8n Cloud and self-hosted](.gitbook/assets/feature-availability-hint-plan-example.png)
+Docs assume a feature is available on every plan and edition. If it isn't, the feature's page carries a plan-specific **Feature availability** hint that lists the plan or edition required on each platform. Where a platform includes the feature in every plan or edition, the hint says so.
 
-<!-- TODO: replace with a real screenshot of a plan-specific Feature availability hint, for example the one on the "Configure SSO" or "Share credentials securely" page. -->
+{% hint style="info" %}
+**Feature availability**
 
-A feature that needs a higher plan or edition still shows up in the n8n interface, but grayed out with an **Upgrade** badge and a tooltip linking to the pricing or billing page.
+Credential sharing is available on:
 
-<TODO screenshot of interface>
+- **n8n Cloud:** All plans
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
 
-## Feature availability by n8n version
+For the full breakdown of what each self-hosted edition includes, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For the current feature list per plan, the [pricing page](https://n8n.io/pricing/) is the source of truth, since plan contents can change.
 
-n8n has two types of version number:
+### In the product
 
-* **Instance version**: the n8n release itself, written as three-part [semantic versioning](https://semver.org/), for example n8n 2.30.0. The MAJOR number increments for incompatible changes that can need user action, MINOR for backward-compatible new features, and PATCH for backward-compatible fixes. Environment variables, APIs, CLI commands, and hooks are all tied to this version.
-* **Node version**: a single node's own version number, usually two parts, for example node version 4.7. A node can gain a new version independently of the n8n release it ships in.
+A feature that needs a higher plan or edition still shows up in the n8n interface, but is blocked, with a note about the required plan to access it.
 
-n8n Cloud workspaces choose a release track and an update cadence, rather than a single fixed version you upgrade by hand:
-
-* **Release track**: **Beta** delivers new releases as soon as they're ready. **Stable** runs a later, more proven patch that's already spent time on Beta. n8n recommends Stable for mission-critical workloads.
-* **Update cadence**: **Security & stability** upgrades roughly every two weeks. **Every new release** upgrades on every release, on average about once a day. Security and stability fixes apply automatically either way.
-
-Switch tracks or cadence anytime from **Updates & maintenance** in your workspace settings, see [Update your version](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version). Self-hosted instances update on your own schedule instead, see [Update n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/update-n8n).
-
-To find out what's available in a given version, use whichever of these matches how much detail you need:
-
-* [Changelog](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/): a curated, narrative summary of the most important features as n8n rolls them out.
-* [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes): every feature-level update, one line per feature, newest first, also available as an RSS feed.
-* [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail linked to commits, including bug fixes and minor changes the other two skip.
-
-Publishing in the changelog or release notes doesn't guarantee a feature has reached your instance yet. Some features ship behind a flag you need to enable, and others roll out gradually to n8n Cloud or self-hosted instances before reaching everyone.
-
-## Other factors influencing feature availability 
-
-* **Role or permissions**: even when your plan, platform, and version all include a feature, your instance owner or admin decides whether your role can see or use it.
-
-This is a limit your own admin sets, not n8n. See [Understand instance roles](manage-users-and-access/understand-instance-roles.md) and [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md) for how roles and permissions work.
+![The Environments settings page on an instance without Enterprise, showing a message saying it is available on the Enterprise plan](.gitbook/assets/n8n-enterprise-only.png)
 
 ## Feature maturity: Preview, GA, deprecated, and removed
 
 Every n8n feature has a maturity status:
 
-* **Preview**: n8n doesn't yet commit to keeping the feature stable, compatible, or available. The feature works today, but n8n reserves the right to make breaking changes to it, such as changing an API shape, export format, node parameters, or execution outcomes, or to remove it. Avoid relying on a Preview feature in a production workflow. A page or section about a Preview feature carries a **Preview status** hint.
-* **Generally available (GA)**: The default status. A GA feature is stable and production ready, with normal support and deprecation policies. n8n only changes its behavior in a way that breaks existing setups through the deprecation process below, not without warning. Docs don't call this out explicitly, since it's the default: if a page has neither a Preview status hint nor a Deprecated or Removed tag, the feature is GA.
-* **Deprecated**: The feature still works, but n8n plans to remove it and recommends moving away from it. A deprecated feature, setting, or node names the n8n version it was deprecated from, and its replacement, where one exists.
-* **Removed**: The feature no longer exists in the current version. Removal always happens at a major version. Check that version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes), for what to do instead.
+* **Preview**: n8n might still make breaking changes to the feature, such as changing an API shape, export format, node parameters, or execution outcomes, or remove it entirely. Avoid relying on Preview features in a production workflow. Preview isn't for bugs, missing options, unfinished UI, or newness: a GA feature can have those too.
+* **Generally available (GA)**: Not a label n8n shows, but the default where no other label is given. A GA feature is stable and production ready, and n8n only makes breaking changes to it through the deprecation process.
+* **Deprecated**: The feature still works, but n8n plans to remove it and recommends moving away from it.
+* **Removed**: The feature no longer exists in the current version. Removal always happens at a major version.
 
-Preview isn't a label for bugs, missing options, unfinished UI, or newness. A GA feature can have known bugs, gain new options, or get a redesigned interface. n8n adds Preview only when it might still change something in a way that breaks what you've built on the feature, or might remove the feature.
+For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for the current, automatically updated list.
 
-Preview is the same for every user, regardless of plan or platform.
+### In the docs
 
-For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) for the current, automatically updated list, rather than relying on any single node's page.
+Docs mark each status differently:
+
+* **Preview**: when a whole page covers a Preview feature, a **Preview** tag appears in the page header and in the navigation menu. A **Preview status** hint on the page or section is also included, for example:
+
+    {% hint style="info" %}
+    **Preview status**
+
+    OpenTelemetry tracing is in Preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows.
+    {% endhint %}
+
+* **GA**: no marker, since it's the default.
+* **Deprecated**: when a whole page covers a deprecated feature, a **Deprecated** tag appears in the page header and in the navigation menu. A note on the page, setting, or node names the version it was deprecated from and its replacement, where one exists.
+* **Removed**: the version's breaking changes page, for example [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes), records the removal and what to do instead. The feature's own page may no longer exist.
+
+### In the product
+
+Preview and Deprecated show as a label in the n8n interface. Preview labels appear on the feature's own surface and next to its toggle in settings. Deprecated labels appear next to a node in the node panel and in its settings. A feature or node with no label is GA.
+
+A removed feature doesn't appear in the interface. If a workflow relied on it, check the breaking changes page for the version you updated to.
 
 ## Enterprise readiness: Limited enterprise support
 
-Separately from maturity, a feature can have **Limited enterprise support**. This status tells enterprise admins that some enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
+Separately from maturity, a feature can have **Limited enterprise support**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
 
 There are two states:
 
-* **Enterprise ready**: every enterprise requirement that applies to the feature is met. The feature carries no label. Docs and the n8n interface show nothing, so a feature with no label is enterprise ready.
-* **Limited enterprise support**: at least one applicable enterprise requirement isn't met yet. The feature carries a **Limited enterprise support** label in the n8n interface.
-
-Docs list the gaps for a feature under an **Enterprise readiness: limited** heading, named by capability (for example "Audit logging, Environments"), together with whether n8n plans to close them. Some gaps may be marked as not planned. Not every capability applies to every feature, so a page lists only the ones that do. For example, a feature without credentials doesn't need external secrets support.
-
-A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).
+* **Enterprise ready**: every enterprise requirement that applies to the feature is met.
+* **Limited enterprise support**: at least one applicable enterprise requirement isn't met yet.
 
 ### How Preview and Limited enterprise support differ
 
@@ -125,8 +132,58 @@ The two statuses are independent. A feature can be GA and have Limited enterpris
 
 A gap in enterprise support doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
 
-### Admin control on Enterprise
+### In the docs
 
-On Enterprise plans, a feature that's in Preview or has Limited enterprise support should be off by default. Admins turn it on from the settings page, or with an environment variable on self-hosted instances. The Preview and Limited enterprise support labels appear next to the toggle, so you can make an informed choice before you enable the feature. On self-serve plans, Preview features can be on by default.
+Docs show nothing for an enterprise ready feature, so a feature with no label is enterprise ready. If a feature has Limited enterprise support, the feature's page lists the gaps under an **Enterprise readiness: limited** heading, named by capability (for example "Audit logging, Environments"), together with whether n8n plans to close them. Some gaps may be marked as not planned. Not every capability applies to every feature, so a page lists only the ones that do. For example, a feature without credentials doesn't need external secrets support.
 
-A page limited to certain plans or platforms carries a hint titled **Feature availability** stating exactly which ones. For the full breakdown of what each self-hosted edition includes, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For the current feature list per plan, the [pricing page](https://n8n.io/pricing/) is the source of truth, since plan contents can change.
+A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).
+
+### In the product
+
+The n8n interface likewise shows nothing for an enterprise ready feature. A feature with Limited enterprise support carries a **Limited enterprise support** label in the n8n interface, wherever you encounter its toggle. On Enterprise plans, a feature that's in Preview or has Limited enterprise support should be off by default. Admins turn it on from the settings page, or with an environment variable on self-hosted instances. The Preview and Limited enterprise support labels appear next to the toggle, so you can make an informed choice before you enable the feature. On self-serve plans, Preview features can be on by default.
+
+## Feature availability by n8n version
+
+n8n has two types of version number:
+
+* **Instance version**: the n8n release itself, written as three-part [semantic versioning](https://semver.org/), for example n8n 2.30.0. The MAJOR number increments for incompatible changes that can need user action, MINOR for backward-compatible new features, and PATCH for backward-compatible fixes. Environment variables, APIs, CLI commands, and hooks are all tied to this version.
+* **Node version**: a single node's own version number, usually two parts, for example node version 4.7. A node can gain a new version independently of the n8n release it ships in.
+
+n8n Cloud workspaces choose a release track and an update cadence, rather than a single fixed version you upgrade by hand. The two settings are:
+
+* **Release track**: **Beta** delivers new releases as soon as they're ready. **Stable** runs a later, more proven patch that's already spent time on Beta. n8n recommends Stable for mission-critical workloads.
+* **Update cadence**: **Security & stability** upgrades roughly every two weeks. **Every new release** upgrades on every release, on average about once a day. Security and stability fixes apply automatically either way.
+
+Switch tracks or cadence anytime from **Updates & maintenance** in your workspace settings, see [Update your version](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/update-your-version). Self-hosted instances update on your own schedule instead, see [Update n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/update-n8n).
+
+### In the docs
+
+Individual doc pages don't systematically record the version a feature arrived in. For many newer features, the page carries a version-based **Feature availability** hint, for example:
+
+{% hint style="info" %}
+**Feature availability**
+
+Canvas Groups are available from n8n 2.28.0.
+{% endhint %}
+
+Older features and smaller changes often have no such hint, so a missing hint doesn't mean a feature exists in every version.
+
+To find out what's available in a given version, use whichever of these matches how much detail you need:
+
+* [Changelog](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/): a curated, narrative summary of the most important features as n8n rolls them out.
+* [Release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes): every feature-level update, one line per feature, newest first, also available as an RSS feed.
+* [GitHub releases](https://github.com/n8n-io/n8n/releases): full change detail linked to commits, including bug fixes and minor changes the other two skip.
+
+### In the product
+
+Your instance version appears at the bottom of the **Settings** sidebar. On n8n Cloud, **Updates & maintenance** also shows the version your workspace runs.
+
+A feature that was added in a later version than yours doesn't appear in your n8n interface until you update.
+
+Publishing in the changelog or release notes doesn't guarantee a feature has reached your instance yet. Some features ship behind a flag you need to enable, and others roll out gradually to n8n Cloud or self-hosted instances before reaching everyone.
+
+## Other factors influencing feature availability 
+
+* **Role or permissions**: even when your plan, platform, and version all include a feature, your instance owner or admin decides whether your role can see or use it.
+
+This is a limit your own admin sets, not n8n. See [Understand instance roles](manage-users-and-access/understand-instance-roles.md) and [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md) for how roles and permissions work.

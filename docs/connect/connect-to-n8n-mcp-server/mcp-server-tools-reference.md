@@ -1,3 +1,5 @@
+Your custom prompt fully satisfies this request (current tool reference page provided with skill_name_taken diff applied below).
+
 ---
 title: n8n MCP server tools reference
 description: >-
@@ -1647,9 +1649,20 @@ On a stale configuration:
 | `configHash` | `string` | The current, correct configuration hash |
 | `message` | `string` | `"Call get_agent before retrying the mutation."` |
 
+On a taken skill name:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | `false`. `ok` is available from n8n 2.45.0. |
+| `code` | `string` | `"skill_name_taken"`. `code` is available from n8n 2.45.0. |
+| `agentId` | `string` | The agent ID. `agentId` is available from n8n 2.45.0. |
+| `configHash` | `string` | The current configuration hash. Pass it as `baseConfigHash` on your next call. `configHash` is available from n8n 2.45.0. |
+| `message` | `string` | Names the skill whose name is already taken. `message` is available from n8n 2.45.0. |
+
 #### Notes <a href="#notes" id="notes"></a>
 
 - Every mutation requires `baseConfigHash` from `get_agent` or the previous successful mutation. If the agent changed since that hash was read, the call returns `stale_config` instead of applying the mutation; call `get_agent` and retry against the returned `configHash`.
+- From n8n 2.45.0, if the mutation uses a skill name that's already taken, the call returns `code: "skill_name_taken"` instead of applying the mutation. Unlike `stale_config`, retrying with only the returned `configHash` fails the same way. Change the skill name, then retry with the returned `configHash`.
 - Integrations (Slack, Telegram, Linear) can't be changed through `config.replace` or `config.patch`; use [update_agent_integration](#updateagentintegration).
 - Custom tool code may only import `@n8n/agents` and `zod`. Its default export must be a `Tool` builder chain with `description`, `input` (a Zod schema), and `handler`; `output` is optional.
 - Fetch [get_agent_builder_reference](#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.

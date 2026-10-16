@@ -4,16 +4,16 @@
 > Source of truth: each space GitBook Git Sync config, not a hand-kept table.
 > Only spaces synced to this repo on its default branch are listed.
 
-| Folder | Space ID | Title | Visibility | Last synced |
-|--------|----------|-------|------------|-------------|
-| `administer` | `wMJrGrimpx3PxCJpUswm` | Administer | public | 2026-10-09 |
-| `build` | `rPN1zU5jaYNvwH7RzxqA` | Build | public | 2026-10-09 |
-| `changelog` | `hhM8Cox90Piiv0u0EgHM` | Release notes | public | 2026-10-09 |
-| `connect` | `r7wKI4I1BgdBCuq5Cvcx` | Connect | public | 2026-10-08 |
-| `contribute` | `6OmLnmci5kZDzdkzKREn` | Contribute | public | 2026-10-02 |
-| `deploy` | `jm0ZYRpZIPWge2ZSiDYO` | Deploy | public | 2026-10-09 |
-| `get-started` | `CxSeOtVxqqhfxMSac0AV` | Get started | public | 2026-10-09 |
-| `integrations` | `BKcbOzIWja8NfqKDcqHc` | Integrations (Nodes) | public | 2026-10-09 |
-| `n8n-community-license` | `WcrJOYW6B9JlV5aiivMA` | n8n Community license | public | 2026-09-22 |
-| `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` | Privacy and security | public | 2026-10-05 |
-| `reusable-content` | `GixZThfitWP21x2gQFpD` | Reusable Content | private | 2026-10-09 |
+| Folder | Space ID | Title | Visibility |
+|--------|----------|-------|------------|
+| `administer` | `wMJrGrimpx3PxCJpUswm` | Administer | public |
+| `build` | `rPN1zU5jaYNvwH7RzxqA` | Build | public |
+| `changelog` | `hhM8Cox90Piiv0u0EgHM` | Release notes | public |
+| `connect` | `r7wKI4I1BgdBCuq5Cvcx` | Connect | public |
+| `contribute` | `6OmLnmci5kZDzdkzKREn` | Contribute | public |
+| `deploy` | `jm0ZYRpZIPWge2ZSiDYO` | Deploy | public |
+| `get-started` | `CxSeOtVxqqhfxMSac0AV` | Get started | public |
+| `integrations` | `BKcbOzIWja8NfqKDcqHc` | Integrations (Nodes) | public |
+| `n8n-community-license` | `WcrJOYW6B9JlV5aiivMA` | n8n Community license | public |
+| `privacy-and-security` | `ukPPOMQ6NId4gpAIkPXa` | Privacy and security | public |
+| `reusable-content` | `GixZThfitWP21x2gQFpD` | Reusable Content | private |

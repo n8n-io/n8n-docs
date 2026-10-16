@@ -51,17 +51,6 @@ You need an n8n instance. Either:
 ## Build the workflow with n8n Assistant
 
 {% hint style="info" %}
-**Feature availability**
-
-n8n Assistant is available on:
-
-- **n8n Cloud:** Starter, Pro
-- **Self-hosted:** Community, Registered Community, Business
-
-It isn’t ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you’re an Enterprise customer, contact your Customer Success Manager about preview access.
-{% endhint %}
-
-{% hint style="info" %}
 **Preview status**
 
 n8n Assistant is in Preview and may change in future releases. See [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant) for availability.

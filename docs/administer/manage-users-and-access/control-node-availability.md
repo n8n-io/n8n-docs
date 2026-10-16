@@ -108,6 +108,7 @@ This instance policy blocks the **Execute Command** node and lets project admins
 
 ```json
 {
+	"version": 0,
 	"defaultAction": "allow",
 	"rules": [
 		{
@@ -132,6 +133,7 @@ The instance policy above delegates the **SSH** node. This project policy turns 
 
 ```json
 {
+	"version": 0,
 	"defaultAction": "allow",
 	"rules": [
 		{

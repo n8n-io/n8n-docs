@@ -4,6 +4,7 @@
 * [n8n API](n8n-api/README.md)
   * [Authentication](n8n-api/authentication.md)
   * [Pagination](n8n-api/pagination.md)
+  * [Idempotency](n8n-api/idempotency.md)
   * [Use an API playground](n8n-api/use-an-api-playground.md)
   * [Endpoint reference](n8n-api/api-reference.md)
   * ```yaml

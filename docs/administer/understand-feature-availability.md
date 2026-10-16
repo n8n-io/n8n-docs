@@ -35,7 +35,7 @@ Docs assume a feature works on both platforms. If it doesn't, the feature's page
 {% hint style="info" %}
 **Feature availability**
 
-The AI Transform node is available on:
+**AI Transform** is available on:
 
 - **n8n Cloud:** All plans
 

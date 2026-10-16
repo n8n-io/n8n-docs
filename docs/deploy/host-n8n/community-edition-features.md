@@ -55,7 +55,7 @@ Exact features per plan and edition can change. For the current breakdown, see t
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
-For how plan and platform limits combine with feature maturity (Preview, GA, deprecated, removed) and n8n versioning, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+For how plan and platform limits combine with feature maturity (Preview, GA, deprecated, and removed) and n8n versioning, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ## Community edition <a href="#community-edition" id="community-edition"></a>
 

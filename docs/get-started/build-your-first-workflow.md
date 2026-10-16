@@ -97,9 +97,9 @@ As the assistant builds the workflow, you'll see the progress on the canvas to t
 
     ![n8n Assistant asking to run a live test, with the finished workflow on the canvas](.gitbook/assets/build-your-first-workflow-assistant-04-1.png)
 
-    Alternatively, ask the Assistant to execute it on your behalf.
+    You can also ask the Assistant to execute it on your behalf.
 
-To ensure the workflow runs at 8am every day, it needs to be published.
+To ensure the workflow runs at 8 AM every day, you need to publish it.
 
 5. Click Publish, if prompted by the assistant:
 
@@ -111,11 +111,11 @@ To test the workflow executed as intended.
 
 6. Click on the `weather_data` data table at the top of the right hand pane:
 
-    ![Weather Data data table at the top right hand menu](.gitbook/assets/build-your-first-workflow-assistant-06.png)
+    ![Weather Data table at the top right hand menu](.gitbook/assets/build-your-first-workflow-assistant-06.png)
 
-    Alternatively, ask the Assistant to open the data table for you.
+    You can also ask the Assistant to open the data table for you.
 
-All workflows created by the Assistant are saved under **Personal**.
+The Assistant saves all workflows under **Personal**.
 
 7. Click Personal on the left hand menu to see the workflow:
 
@@ -172,7 +172,7 @@ You’ll set it to run at 8 AM every day, the same schedule n8n Assistant used. 
 
     ![On a schedule option](.gitbook/assets/build-your-first-workflow-schedule-01.png)
 
-2. In the Node details view, select `8am` from the **Trigger at Hour** field.
+2. Select `8am` from the **Trigger at Hour** field in the Node details view.
 
     ![Trigger at Hour set to 8 AM](.gitbook/assets/build-your-first-workflow-schedule-02.png)
 
@@ -192,7 +192,7 @@ You’ve got your trigger, so it’s time to fetch the weather. The **HTTP Reque
 
     ![HTTP Request in the search results](.gitbook/assets/build-your-first-workflow-get-weather-01.png)
 
-2. In the Node details view, paste `https://mockingbird.n8n.io/v1/weather/berlin` into the **URL** field.
+2. Paste `https://mockingbird.n8n.io/v1/weather/berlin` into the **URL** field in the Node details view.
 
     ![Mockingbird URL in the URL field](.gitbook/assets/build-your-first-workflow-get-weather-02.png)
 
@@ -220,7 +220,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
 
     ![Field named report](.gitbook/assets/build-your-first-workflow-report-03.png)
 
-3. For **Value**, enter `The temperature in`, then drag `city` from the input panel on the left. When you drop a field in, n8n switches **Value** to **Expression** mode, and you see:
+3. Enter `The temperature in` for **Value**, then drag `city` from the input panel on the left. When you drop a field in, n8n switches **Value** to **Expression** mode, and you see:
 
     ```
     The temperature in {{ $json.city }}

@@ -257,7 +257,7 @@ The node reads up to 1,000 rows for each request and makes at most 100 requests.
 The table holds more rows than one run can read (100000)
 ```
 
-Narrow the result with a condition under **Select Rows**, or turn off **Return All** and set a **Limit**. The cap counts requests, not rows, so a project's **Maximum rows** setting lowers the row count with it: at 500 rows for each request the same error arrives after 50,000 rows.
+Narrow the result with a condition under **Select Rows**, or turn off **Return All** and set a **Limit**. The cap counts requests, not rows, so a project's **Maximum rows** setting lowers the row count with it. At 500 rows for each request, the same error appears after 50,000 rows.
 
 Paging needs a total order. With **Return All** on, or a **Limit** above 1,000, the node adds the table's primary key after any **Sort** rules you set. Rows that tie on your sort then still come back in a fixed order, so no row arrives twice or gets skipped. A table with no primary key still pages, but in whatever order Postgres returns.
 

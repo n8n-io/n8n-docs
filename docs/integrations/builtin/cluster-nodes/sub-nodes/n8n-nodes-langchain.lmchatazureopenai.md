@@ -40,9 +40,9 @@ Refer to the [Microsoft Foundry credentials documentation](../../credentials/azu
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Authentication**: Choose **API Key** or **Azure Entra ID (OAuth2)**. Each option uses its own credential.
-* **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
+* **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Leave it empty to use the **Project** from the credential. A classic Azure OpenAI resource doesn't use it.
 * **Model (Deployment)**: Select the deployment to use to generate the completion.
-    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and the **Project** field. Set **Project** first.
+    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and a **Project**, in this field or in the credential. Set **Project** first.
     * **By ID**: Enter the deployment name. Use this for a classic Azure OpenAI credential, or for a deployment that isn't in the list.
 * **Model Family**: Choose the API family the deployment uses. Azure doesn't report this, so set it to match your deployment.
     * **OpenAI**: For GPT and other OpenAI-compatible models.

@@ -91,7 +91,7 @@ For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbo
 
 Docs mark each status differently:
 
-* **Preview**: when a whole page covers a Preview feature, a **Preview** tag appears in the page header and in the navigation menu. The page or section also carries a **Preview status** hint, for example:
+* **Preview**: when a whole page covers a Preview feature, a **Preview** tag appears in the page header, but never in the navigation menu. The page or section also carries a **Preview status** hint, for example:
 
     {% hint style="info" %}
     **Preview status**
@@ -105,11 +105,7 @@ Docs mark each status differently:
 
 ### Maturity status in the product
 
-Preview and Deprecated show as a label in the n8n interface. Preview labels appear on the feature's own surface and next to its toggle in settings. Deprecated labels appear next to a node in the node panel and in its settings. A feature or node with no label is GA.
-
-In the following screenshot, the **Assistant** entry in the sidebar and the **Agents** tab on the **Overview** page both carry a **Preview** label:
-
-![The n8n Overview page with a Preview label next to Assistant in the sidebar and next to the Agents tab](.gitbook/assets/n8n-preview-hints.png)
+Preview and Deprecated show as a label in the n8n interface. Preview labels appear where you encounter the feature, such as its page header, node, or panel, and next to its toggle in settings. They don't appear in the main navigation, such as the sidebar. Deprecated labels appear next to a node in the node panel and in its settings. A feature or node with no label is GA.
 
 A removed feature doesn't appear in the interface. If a workflow relied on it, check the breaking changes page for the version you updated to.
 
@@ -131,7 +127,7 @@ The two statuses are independent. A feature can be GA and have Limited enterpris
 | **Question it answers** | Might n8n make breaking changes to this feature, or remove it? | Do all the Enterprise capabilities that apply to this feature work with it? |
 | **Who sees it** | Everyone | Enterprise admins |
 | **What a gap means** | n8n doesn't commit to stability or compatibility. | The feature doesn't yet work with part of your Enterprise setup. |
-| **Where it appears** | The feature's own surface, its settings entry, and docs | Next to the admin toggle and in docs |
+| **Where it appears** | The feature's own surface, its settings entry, docs, and API reference | Next to the admin toggle and in docs |
 | **When it's removed** | When n8n no longer plans breaking changes or removal | When every applicable Enterprise requirement is met |
 
 A gap in Enterprise support doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.

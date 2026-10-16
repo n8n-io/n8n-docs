@@ -4,7 +4,7 @@ status: preview
 description: >-
   Connect an n8n agent to Microsoft Teams so people can chat with it in direct
   messages, team channels, and group chats. Covers the recommended and manual
-  setup, permissions, file access, and publishing.
+  setup, permissions, files, scheduled messages, and publishing.
 layout:
   width: default
   title:
@@ -49,7 +49,7 @@ There are two ways to connect Teams:
 - **Recommended setup:** you sign in with Microsoft and n8n creates the app registration, the Azure Bot, and the Teams app for you.
 - **Manual setup:** shown as **Use your own Microsoft app**. You create the app registration and the Azure Bot yourself, then give n8n the credential.
 
-Both setups end with the same result. The sections on where the agent works, how it listens, and file access apply to both.
+Both setups end with the same result. The sections on where the agent works, how it listens, messages it sends on its own, files, and Microsoft Graph permissions apply to both.
 
 ## How the Teams channel works
 
@@ -118,6 +118,20 @@ When you turn on **Read all channel messages** or **Read all group-chat messages
 
 Keep the default when people ask the agent for help directly. Turn on the read-all options when the agent needs to follow the whole conversation, for example to answer questions nobody addressed to it. In busy channels, this uses a lot of model credits.
 
+## Messages the agent sends on its own
+
+The agent doesn't only reply. It can also start a conversation, for example from a scheduled task like "Send anna@example.com the Monday summary":
+
+- **Direct messages:** the agent sends a direct message to a person. The person must have added the app in Teams first.
+- **Channel and group chat posts:** the agent starts a new post in a team channel or group chat. The app must already be in that team or chat.
+
+To reach someone, the agent needs their Teams ID or the ID of the channel. It can look them up for you:
+
+- By email: the agent finds a person from their email address. This needs `User.ReadBasic.All`.
+- By name: the agent finds a channel from the team and channel name, for example "Marketing General". This needs `Team.ReadBasic.All` and `Channel.ReadBasic.All`.
+
+An administrator approves these permissions together with file access. See [Microsoft Graph permissions](#microsoft-graph-permissions). Without them, the agent can still reach a channel once someone has @mentioned it there, or a person whose Teams ID it already knows.
+
 ## Files and file permissions
 
 People can attach files to their messages, and the agent receives them along with the text. Each file can be up to 10 MB, and a message can have up to 10 files. If n8n can't read a file, the agent still gets the message.
@@ -133,7 +147,7 @@ In direct chats, Teams sends files with the message itself. You don't need any e
 In team channels and group chats, Teams doesn't include files in the message. n8n reads the message again through Microsoft Graph to find them:
 
 - **Pasted images** work with the RSC permission the app already has (`ChannelMessage.Read.Group` or `ChatMessage.Read.Chat`, see [Where people can use the agent](#where-people-can-use-the-agent)). You don't need anything else.
-- **Attached files** are stored in SharePoint or OneDrive. To download them, the app registration needs the Microsoft Graph **application** permission `Files.Read.All`, with admin consent.
+- **Attached files** are stored in SharePoint or OneDrive. To download them, the app registration needs the Microsoft Graph **application** permission `Files.Read.All`, with admin consent. See [Microsoft Graph permissions](#microsoft-graph-permissions).
 
 Even with `Files.Read.All`, n8n only downloads a file if one of these is true:
 
@@ -142,40 +156,53 @@ Even with `Files.Read.All`, n8n only downloads a file if one of these is true:
 
 This keeps the agent from opening files that aren't part of the conversation.
 
-### Grant file access
-
-An administrator of your Microsoft organization grants file access once per app. When **Team channels** or **Group and meeting chats** is on, both setups show an **Allow file access** step. Until an administrator approves, the channel settings also show a warning under **Where it works**.
-
-To grant file access, select **Approve file access**, then choose one of these:
-
-- **Approve now:** if you're an administrator in the organization, open the approval yourself.
-- **Copy link for admin:** copy the link and send it to an administrator who can approve it.
-
-What the link opens depends on the setup:
-
-- **Recommended setup:** the Microsoft admin consent screen. The administrator reviews the permission and accepts it.
-- **Manual setup:** the app registration's **API permissions** page in Microsoft Entra. The administrator adds the permission there:
-	1. Select **Add a permission** > **Microsoft Graph** > **Application permissions**.
-	2. Search for `Files.Read.All` and add it.
-	3. Select **Grant admin consent**.
-
-{% hint style="warning" %}
-**Use application permissions**
-
-Add `Files.Read.All` as an **Application** permission, not a **Delegated** one. The agent reads files as the app, not as a signed-in user, so it can't use delegated permissions.
-{% endhint %}
-
-After you connect the channel, the channel settings check the status for you, in both setups. Once Microsoft confirms the approval, they show **File access approved.** It can take up to an hour before the agent can read files.
-
 ### When the agent can't read a file
 
 If n8n can't download a file, it tells the agent why, so the agent can explain it to the person who sent it:
 
 | Reason | What to do |
 | --- | --- |
-| No administrator has approved file access yet | Grant `Files.Read.All` as described in [Grant file access](#grant-file-access), then wait up to an hour. |
+| No administrator has approved the permissions yet | Approve them as described in [Approve access](#approve-access), then wait up to an hour. |
 | The app in Teams is missing a permission | Upload or publish the latest app package. Older packages may not have the RSC permissions. |
 | The file isn't in the channel's files and the sender doesn't own it | Ask the person to share the file in the channel or from their own OneDrive. |
+
+## Microsoft Graph permissions
+
+Replying in a conversation and reading pasted images work with the permissions in the app package. For anything beyond that, the app registration needs four Microsoft Graph **application** permissions:
+
+| Permission | What the agent can do with it |
+| --- | --- |
+| `User.ReadBasic.All` | Find people by email, so it can send them direct messages and mention them. |
+| `Team.ReadBasic.All` | Find teams by name, so it can post in their channels. |
+| `Channel.ReadBasic.All` | Find channels by name, so it can post in them. |
+| `Files.Read.All` | Read files people attach in channels and group chats. |
+
+An administrator of your Microsoft organization approves all four at once. You can't approve only some of them. Without them, the agent can only reply when someone messages it.
+
+### Approve access
+
+Both setups show an **Approve access** step. Its description lists what the approval unlocks for the places you turned on. You can also approve later: until an administrator approves, the channel settings show a warning under **Where it works**.
+
+Select **Approve access**, then choose one of these:
+
+- **Approve now:** if you're an administrator in the organization, open the approval yourself.
+- **Copy link for admin:** copy the link and send it to an administrator who can approve it.
+
+What the link opens depends on the setup:
+
+- **Recommended setup:** the Microsoft admin consent screen. n8n already added the permissions to the app registration. The administrator reviews them and accepts.
+- **Manual setup:** the app registration's **API permissions** page in Microsoft Entra. The administrator adds the permissions there:
+	1. Select **Add a permission** > **Microsoft Graph** > **Application permissions**.
+	2. Search for and add each permission from the table above.
+	3. Select **Grant admin consent**.
+
+{% hint style="warning" %}
+**Use application permissions**
+
+Add the permissions as **Application** permissions, not **Delegated** ones. The agent acts as the app, not as a signed-in user, so it can't use delegated permissions.
+{% endhint %}
+
+After you connect the channel, the channel settings check the status for you, in both setups. Once Microsoft confirms the approval, they show **Permissions approved.** It can take up to an hour before the agent can use them.
 
 ## Prerequisites
 
@@ -199,7 +226,7 @@ To connect Teams:
 4. In **Deploy Azure Bot**, choose an **Azure subscription** and select **Create Azure Bot**. This can take up to a minute.
 5. In **Choose where it works**, pick the options from [Where people can use the agent](#where-people-can-use-the-agent).
 6. In **Install app**, choose **Install for me** or **Publish to organization**. See [Upload the app or publish it to your organization](#upload-the-app-or-publish-it-to-your-organization).
-7. If you turned on **Team channels** or **Group and meeting chats**, the **Allow file access** step follows. Approve file access now, or later in the channel settings. See [Grant file access](#grant-file-access).
+7. In **Approve access**, approve the Microsoft Graph permissions now, or later in the channel settings. See [Approve access](#approve-access).
 8. In **Connect Microsoft Teams**, finish adding the app in Teams, then select **Done**.
 
 ### What n8n creates for you
@@ -246,7 +273,7 @@ Select **Use your own Microsoft app** in the Teams channel, then follow these st
 3. [Deploy the Azure Bot](#deploy-the-azure-bot).
 4. [Choose where it works](#choose-where-it-works).
 5. [Download the app package](#download-the-app-package).
-6. [Allow file access](#allow-file-access) (optional).
+6. [Approve the Graph permissions](#approve-the-graph-permissions) (optional).
 7. [Add the app in Teams](#add-the-app-in-teams).
 
 ### Register the app in Microsoft Entra
@@ -291,19 +318,11 @@ Pick where people can use the agent and how it listens. Direct chat is always on
 
 Select **Download app package**. This also connects the channel to the agent. The package uses the agent's name and icon.
 
-### Allow file access
+### Approve the Graph permissions
 
-To let the agent read files attached in channels and group chats, an administrator adds the Microsoft Graph permission `Files.Read.All` and grants admin consent.
+To let the agent find people and channels and read attached files, an administrator adds the Microsoft Graph application permissions and grants admin consent. Select **Approve access**, then **Approve now** or **Copy link for admin**. See [Approve access](#approve-access).
 
-This step appears when **Team channels** or **Group and meeting chats** is on. Select **Approve file access**, then **Approve now** or **Copy link for admin**. See [Grant file access](#grant-file-access).
-
-{% hint style="warning" %}
-**Use application permissions**
-
-Add `Files.Read.All` under **Application permissions**, not **Delegated permissions**. The agent can't use delegated permissions.
-{% endhint %}
-
-Skip this step if the agent only needs files from direct messages or pasted images. You can approve file access later in the channel settings.
+Skip this step if the agent only replies when someone messages it. You can approve later in the channel settings.
 
 ### Add the app in Teams
 
@@ -320,7 +339,7 @@ If you don't see **Upload an app**, your Teams policy doesn't allow custom apps.
 | Register applications | Microsoft Entra setting or role | Your Microsoft Entra administrator | Registering the app | You can't create the app registration. |
 | Contributor | Azure role on a subscription | Your Azure administrator | Deploying the Azure Bot | You can't create the bot. |
 | Upload custom apps | Teams app setup policy | Your Teams administrator | Uploading the app package | Only an administrator can add the app, through the Teams admin center. |
-| `Files.Read.All` | Microsoft Graph application permission | A Microsoft administrator, with admin consent | Files attached in channels and group chats | The agent can't read those files. Everything else works. |
+| `User.ReadBasic.All`, `Team.ReadBasic.All`, `Channel.ReadBasic.All`, and `Files.Read.All` | Microsoft Graph application permissions | A Microsoft administrator, with admin consent | Finding people and channels, and files attached in channels and group chats | The agent can only reply when messaged, and can't read those files. |
 | `ChannelMessage.Read.Group` | RSC permission, added by **Team channels** | The team owner, when adding the app | Reading channel messages and pasted images | The agent can't work in channels. |
 | `ChatMessage.Read.Chat` | RSC permission, added by **Group and meeting chats** | The person adding the app to the chat | Reading chat messages and pasted images | The agent can't work in group chats. |
 
@@ -353,7 +372,7 @@ After you connect Teams, you change it in the channel settings. Open the agent, 
 
 The channel settings show:
 
-- **Where it works:** the options from [Where people can use the agent](#where-people-can-use-the-agent), and whether an administrator approved file access.
+- **Where it works:** the options from [Where people can use the agent](#where-people-can-use-the-agent), and whether an administrator approved the Microsoft Graph permissions.
 - **Appearance in Teams:** the app's display name, description, and icon. With the recommended setup, this also has the **Install app** menu.
 - **The Azure Bot:** with the recommended setup, **Linked to Azure Bot** and a **Find it in Azure** link. With the manual setup, a **Find your Azure Bot** link.
 
@@ -395,6 +414,10 @@ In the channel settings, you can change **Where it works** and **Appearance in T
 
 The app uses the agent's name and icon. If you change the agent's name or icon later, the channel settings show **Changes to the agent aren't in Teams yet.** Install or publish the app again to update it.
 
+### Switch to another credential or sign-in
+
+A different credential or Microsoft sign-in means a different bot, so n8n can't swap it into a connected channel. If you pick another one in the channel settings, n8n asks **Set up Microsoft Teams again?** Select **Set up again** to remove the current Teams connection and its settings and start the setup from the beginning. The agent stops answering in Teams until you finish the new setup.
+
 ### Renew the client secret
 
 Client secrets expire. When the secret expires, the agent stops replying in Teams.
@@ -416,7 +439,8 @@ When you disconnect the Teams channel or delete the agent, n8n doesn't delete an
 
 - The Teams channel only works in the global Microsoft cloud. Sovereign clouds aren't supported.
 - The bot credential must use a client secret. Certificate authentication isn't supported.
-- Each credential can connect only one agent to Teams.
+- Each credential can connect only one agent to Teams, and each agent has one Teams connection.
+- When the agent looks for channels by name, it searches up to 50 teams.
 - The recommended setup always creates the bot in the `n8n-agents` resource group in West Europe.
 - Files can be up to 10 MB each, with up to 10 files per message.
 
@@ -460,7 +484,15 @@ Check that:
 
 ### The agent can't read attached files
 
-Files in channels and group chats need the `Files.Read.All` application permission. An administrator grants it once with admin consent. It can take up to an hour to apply. See [Files and file permissions](#files-and-file-permissions).
+Files in channels and group chats need the `Files.Read.All` application permission. An administrator grants it once with admin consent, together with the other Graph permissions. It can take up to an hour to apply. See [Approve access](#approve-access).
+
+### The agent can't find a person or channel
+
+Finding people by email needs `User.ReadBasic.All`, and finding channels by name needs `Team.ReadBasic.All` and `Channel.ReadBasic.All`. An administrator approves them in [Approve access](#approve-access). Until then, @mention the agent once in the channel, or give the agent the person's Teams ID.
+
+### The agent can't send a direct message or post
+
+Teams only delivers messages the agent starts where the app is installed. For a direct message, the person must have added the app in Teams. For a post, the app must be in that team or group chat. Ask the person, or a team owner, to add the app, then try again.
 
 ## Related resources
 

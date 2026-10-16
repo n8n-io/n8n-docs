@@ -492,7 +492,7 @@ Finding people by email needs `User.ReadBasic.All`, and finding channels by name
 
 ### The agent can't send a direct message or post
 
-Teams only delivers messages the agent starts where the app is installed. For a direct message, the person must have added the app in Teams. For a post, the app must be in that team or group chat. Ask the person, or a team owner, to add the app, then try again.
+Teams only delivers messages the agent starts where people have added the app. For a direct message, the person must have added the app in Teams. For a post, the app must be in that team or group chat. Ask the person, or a team owner, to add the app, then try again.
 
 ## Related resources
 

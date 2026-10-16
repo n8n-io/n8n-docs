@@ -115,6 +115,7 @@ This reduces DNS query volume substantially at scale and removes failed requests
 ## Related resources
 
 * [Deploy to AWS with Terraform](./)
+* [Deploy your first n8n instance on AWS](deploy-your-first-instance.md)
 * [Scale and run at high availability on AWS](scale-and-run-at-high-availability.md)
 * [Configure Enterprise features on AWS](use-enterprise-features-on-aws.md)
 * [Maintain and tear down the AWS deployment](maintain-and-tear-down.md)

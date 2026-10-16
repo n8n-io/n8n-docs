@@ -30,6 +30,7 @@
       * [Deploy to Hetzner](host-n8n/install-options/use-a-cloud-provider/deploy-to-hetzner.md)
       * [Deploy to AWS](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws.md)
       * [Deploy to AWS with Terraform](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/README.md)
+        * [Deploy your first n8n instance on AWS](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/deploy-your-first-instance.md)
         * [Scale and run at high availability on AWS](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/scale-and-run-at-high-availability.md)
         * [Configure Enterprise features on AWS](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md)
         * [Customize the AWS infrastructure](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/customize-the-infrastructure.md)

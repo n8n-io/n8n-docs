@@ -336,3 +336,6 @@ Zoho
 Zscaler
 endhint
 iCalendar
+[Ww]alkthrough
+[Ss]ubpath
+[Aa]utoscaling

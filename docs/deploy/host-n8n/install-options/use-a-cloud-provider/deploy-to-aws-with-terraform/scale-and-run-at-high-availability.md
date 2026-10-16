@@ -104,6 +104,7 @@ terraform output -raw redis_auth_token
 ## Related resources
 
 * [Deploy to AWS with Terraform](./)
+* [Deploy your first n8n instance on AWS](deploy-your-first-instance.md)
 * [Configure Enterprise features on AWS](use-enterprise-features-on-aws.md)
 * [Customize the AWS infrastructure](customize-the-infrastructure.md)
 * [Maintain and tear down the AWS deployment](maintain-and-tear-down.md)

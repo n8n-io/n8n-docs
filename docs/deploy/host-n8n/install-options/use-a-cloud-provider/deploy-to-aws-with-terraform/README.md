@@ -48,6 +48,8 @@ AWS grants pods permissions (for the Load Balancer Controller, Cluster Autoscale
 
 ## Usage
 
+For a step-by-step walkthrough that takes you from an empty folder to a running instance, see [Deploy your first n8n instance on AWS](deploy-your-first-instance.md). The configuration below is the minimum set of inputs:
+
 ```hcl
 module "n8n" {
   source  = "n8n-io/n8n/aws"
@@ -82,7 +84,7 @@ The module ships three sizing examples. Use one as your starting point, then tun
 
 | | [small](https://github.com/n8n-io/terraform-aws-n8n/tree/main/examples/small) (default) | [medium](https://github.com/n8n-io/terraform-aws-n8n/tree/main/examples/medium) | [large](https://github.com/n8n-io/terraform-aws-n8n/tree/main/examples/large) |
 |---|---|---|---|
-| Target scale | Dev or small team | ~5-15M executions/day | ~50-60M+ executions/day |
+| Target scale | Development or small team | ~5-15M executions/day | ~50-60M+ executions/day |
 | Node type | t3.xlarge | m6i.2xlarge | m7i.4xlarge |
 | Nodes (min/max) | 3/6 | 5/15 | 10/50 |
 | Database | RDS db.t3.small | RDS db.m6g.2xlarge | Aurora PostgreSQL I/O-Optimized |
@@ -97,6 +99,7 @@ This module is open source, maintained by the n8n Solutions team independently o
 
 ## In this section
 
+- [Deploy your first n8n instance on AWS](deploy-your-first-instance.md): a step-by-step walkthrough, from an empty folder to a running instance.
 - [Scale and run at high availability on AWS](scale-and-run-at-high-availability.md): configure multi-main, worker autoscaling, and Redis high availability.
 - [Configure Enterprise features on AWS](use-enterprise-features-on-aws.md): wire up S3 execution data, Prometheus metrics, OpenTelemetry tracing, log streaming, and external secrets.
 - [Customize the AWS infrastructure](customize-the-infrastructure.md): bring your own VPC, database, cache, or cluster, split ingress, or use a custom n8n image.

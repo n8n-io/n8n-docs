@@ -131,6 +131,7 @@ n8n reads this file once, at startup. After rotating the Secret's contents, rest
 ## Related resources
 
 * [Deploy to AWS with Terraform](./)
+* [Deploy your first n8n instance on AWS](deploy-your-first-instance.md)
 * [Scale and run at high availability on AWS](scale-and-run-at-high-availability.md)
 * [Customize the AWS infrastructure](customize-the-infrastructure.md)
 * [Maintain and tear down the AWS deployment](maintain-and-tear-down.md)

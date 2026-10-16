@@ -41,7 +41,7 @@ A policy has a list of rules and a default action.
 Each rule has:
 
 - `id`: a name for the rule, unique in the policy. n8n reports this ID when the rule blocks a node.
-- `action`: `allow`, `deny`, or `delegate`.
+- `action`: `allow`, `deny`, or `delegate`. Only the instance policy accepts `delegate`.
 - `selector`: the nodes the rule matches.
 
 A selector matches nodes in one of two ways:
@@ -156,7 +156,7 @@ The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/at
 When a node is blocked in a project, users in that project see:
 
 - **Nodes panel:** blocked nodes don't appear when browsing. They still appear in search, at the end of the list, with a lock. Users can't add them.
-- **Canvas:** a blocked node already in a workflow shows a restricted label. Users can't copy it.
+- **Canvas:** a blocked node already in a workflow shows a restricted label.
 - **Node details:** the parameters are read-only. Users can contact an instance admin or replace the node.
 - **Publish and run:** n8n refuses the action and shows a message that lists each blocked node, with a link to find it in the workflow. n8n refuses a save in the same way if the save adds a blocked node.
 

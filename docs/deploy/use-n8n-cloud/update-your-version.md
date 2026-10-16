@@ -54,7 +54,7 @@ The release track sets which n8n release stream your workspace follows. n8n test
 * **Beta**: new releases delivered as soon as they're ready. Choose Beta to try the latest features first.
 * **Stable**: a later, more proven patch of a release, cut after it's spent time on the Beta track. n8n recommends Stable for all mission-critical workloads.
 
-You can switch between tracks at any time.
+You can switch between tracks at any time. For how n8n versions and feature availability relate to your release track, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-availability-by-n8n-version).
 
 ## Update cadence
 

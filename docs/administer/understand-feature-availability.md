@@ -107,6 +107,10 @@ Docs mark each status differently:
 
 Preview and Deprecated show as a label in the n8n interface. Preview labels appear on the feature's own surface and next to its toggle in settings. Deprecated labels appear next to a node in the node panel and in its settings. A feature or node with no label is GA.
 
+In the following screenshot, the **Assistant** entry in the sidebar and the **Agents** tab on the **Overview** page both carry a **Preview** label:
+
+![The n8n Overview page with a Preview label next to Assistant in the sidebar and next to the Agents tab](.gitbook/assets/n8n-preview-hints.png)
+
 A removed feature doesn't appear in the interface. If a workflow relied on it, check the breaking changes page for the version you updated to.
 
 ## Enterprise readiness: Limited enterprise support
@@ -189,6 +193,8 @@ To find out what's available in a given version, use whichever of these matches 
 ### Version availability in the product
 
 Your instance version appears at the bottom of the **Settings** sidebar. On n8n Cloud, **Updates & maintenance** also shows the version your workspace runs.
+
+![The Settings sidebar with the instance version, n8n 2.44.0, shown as a link at the bottom](.gitbook/assets/n8n-settings-version.png)
 
 A feature that was added in a later version than yours doesn't appear in your n8n interface until you update.
 

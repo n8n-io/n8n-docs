@@ -64,6 +64,14 @@
 <description>When an agent tool's node type is blocked by an instance or project policy, opening it in the agent builder now shows a callout explaining the restriction with a link to contact instance admins. The configuration form is locked read-only (parameters, credentials, approval setting, title), Save is disabled, but the tool can still be removed so the agent can be fixed and published.</description>
 </item>
 <item>
+<title>Google Gemini Node: Show Nano Banana 2.1 and 2 Lite in the image model list</title>
+<link>https://github.com/n8n-io/n8n/pull/40596</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40596</guid>
+<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.44</category>
+<description>The Google Gemini node's Image Generate model list now correctly includes Nano Banana 2.1 and Nano Banana 2 Lite models, which were previously hidden because their model IDs don't contain the word &quot;image&quot;. The dropdown now shows friendly labels for these models while keeping them out of text and audio model lists.</description>
+</item>
+<item>
 <title>Explain instance-role access in the credential sharing &quot;Used in&quot; row</title>
 <link>https://github.com/n8n-io/n8n/pull/40555</link>
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40555</guid>
@@ -150,14 +158,6 @@
 <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.44</category>
 <description>The Microsoft Foundry Embeddings (Azure OpenAI) node now supports Microsoft Entra ID (OAuth2) authentication as an alternative to API keys, matching the existing chat model node. Enterprises that disallow stored API keys can now use Azure OpenAI embeddings by selecting Entra ID authentication, which works with both classic and Foundry deployment endpoints.</description>
-</item>
-<item>
-<title>Google Gemini Node: Show Nano Banana 2.1 and 2 Lite in the image model list</title>
-<link>https://github.com/n8n-io/n8n/pull/40656</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40656</guid>
-<pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n stable</category>
-<description>The Google Gemini node's Image Generate model list now correctly includes Nano Banana 2.1 and Nano Banana 2 Lite models, which were previously hidden because their model IDs don't contain the word &quot;image&quot;. The dropdown now shows friendly labels for these models while keeping them out of text and audio model lists.</description>
 </item>
 <item>
 <title>Show whose credential a node uses and let others switch from it</title>

@@ -35,7 +35,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 2.44` Add Google Vertex AI credentials support, plus 17 other features <a href="#n8n244" id="n8n244"></a>
+## `n8n 2.44` Add Google Vertex AI credentials support, plus 18 other features <a href="#n8n244" id="n8n244"></a>
 
 **Released:** 2026-10-13
 
@@ -47,6 +47,7 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 * [Add Antigravity to the MCP client connection dialog](https://github.com/n8n-io/n8n/pull/40879): The MCP client connection dialog now includes Antigravity in the IDE group, with its own color icon shown in the dropdown and selected-client button. Selecting it displays a copyable mcpServers config snippet with the instance server URL, plus setup steps pointing to ~/.gemini/config/mcp_config.json, noting that the Antigravity IDE, desktop app, and agy CLI share this file. Gemini CLI remains unchanged in the CLI group.
 * [Animate the n8n Assistant activity indicator](https://github.com/n8n-io/n8n/pull/40497): The n8n Assistant's activity indicator while it edits an agent has been refreshed. It now shows a new animated grid spinner, a colorful animated glow beneath the editor, and a status label that cycles through playful words like 'Imagining…' and 'Tinkering…' every five seconds. Panel headings and row labels dim while changes are in progress. Animations respect reduced-motion settings.
 * [Explain instance-role access in the credential sharing "Used in" row](https://github.com/n8n-io/n8n/pull/40555): In the credential Sharing tab, the "Used in" row for your own personal project now clarifies access when your instance role (Owner, admin, or custom role) lets you use any credential. It shows "Can use in personal space" with a tooltip explaining you can already use the credential there without a share, while the Share button's tooltip clarifies that sharing additionally grants access in team projects.
+* [Google Gemini Node: Show Nano Banana 2.1 and 2 Lite in the image model list](https://github.com/n8n-io/n8n/pull/40596): The Google Gemini node's Image Generate model list now correctly includes Nano Banana 2.1 and Nano Banana 2 Lite models, which were previously hidden because their model IDs don't contain the word "image". The dropdown now shows friendly labels for these models while keeping them out of text and audio model lists.
 * [Recommend Claude Opus 5.5 and GPT-6 models in AI Assistant setup](https://github.com/n8n-io/n8n/pull/40660): The AI Assistant setup model picker now suggests newer models by default: Claude Opus 5.5 and Claude Sonnet 5.5 for Anthropic, GPT-6.1 Sol and GPT-6 Astra for OpenAI, and updated equivalents for OpenRouter, with the first option in each provider marked as Recommended. Existing instances keep their previously saved model, and the default instance AI model environment variable is unchanged.
 * [Add project selection to Vertex AI credentials](https://github.com/n8n-io/n8n/pull/40667): Google Vertex AI credentials now let you pick a Google Cloud project from a dropdown populated via your service account, or select Custom to enter a Project ID manually. Manual entry remains available while the list loads or if lookup fails. The credential's connection test now checks whichever project (selected or custom) the node will actually use for requests.
 * [Sort the credential sharing list by people, then projects](https://github.com/n8n-io/n8n/pull/40478): The credential sharing modal now lists people first, then projects, each sorted alphabetically, instead of grouping by access. Projects the credential is only used in (not yet shared) now appear inline with shared ones rather than in a separate block, and keep their position when the owner shares the credential with them, making the list easier to follow. Requires the N8N_ENV_FEAT_CRED_SHARING flag.
@@ -952,14 +953,6 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 * [Kitemaker node Remove Kitemaker node](https://github.com/n8n-io/n8n/pull/22470): The Kitemaker node and its credential have been removed from n8n, as the Kitemaker service has been retired by its provider. Workflows using the Kitemaker node will no longer function and should be migrated away from this integration.
 * [Spontit Node Remove Spontit node](https://github.com/n8n-io/n8n/pull/22467): The Spontit node and its credential type have been removed from n8n, as the Spontit service has been retired and the integration no longer functions. Workflows using the Spontit node will need to be updated to use an alternative notification service.
 * [Validate nodes before activating](https://github.com/n8n-io/n8n/pull/22916): Workflow activation now validates that a workflow contains at least one trigger-like node (trigger, poller, or webhook) before activating, fixing a bug where this check was unreliable in multi-main setups. Attempting to activate an invalid workflow returns a clear validation error and the workflow's previous active state is preserved. Additional validation checks currently done only on the frontend will be added in future updates.
-
----
-
-## `n8n stable` Gemini node adds Nano Banana 2.1 models <a href="#n8nstable" id="n8nstable"></a>
-
-**Released:** 2026-10-09
-
-* [Google Gemini Node: Show Nano Banana 2.1 and 2 Lite in the image model list](https://github.com/n8n-io/n8n/pull/40656): The Google Gemini node's Image Generate model list now correctly includes Nano Banana 2.1 and Nano Banana 2 Lite models, which were previously hidden because their model IDs don't contain the word "image". The dropdown now shows friendly labels for these models while keeping them out of text and audio model lists.
 
 ---
 

@@ -177,6 +177,7 @@ Metabase
 [Mm]illicore
 Milvus('s)?
 Mindee
+MLflow
 [Mm]inimum
 Mocean
 [Mm]ultipart

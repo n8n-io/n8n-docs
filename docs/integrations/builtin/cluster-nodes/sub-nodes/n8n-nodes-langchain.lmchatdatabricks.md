@@ -86,6 +86,8 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 - [Databricks credentials](../../credentials/databricks.md)
 - [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie REST operations
 - [Databricks Genie MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie
+- [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) and [Embeddings Databricks](n8n-nodes-langchain.embeddingsdatabricks.md) to let an agent search a Databricks Vector Search index
+- [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

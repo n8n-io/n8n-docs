@@ -40,6 +40,8 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
+For what Preview, GA, deprecated, and removed mean, and how n8n's version numbers work, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Durable scheduler on by default for Schedule Trigger nodes

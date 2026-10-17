@@ -348,8 +348,9 @@ to `https://api.n8n.io/workflows/templates/`):
 ## Feature availability
 
 A feature's availability can be limited by plan/platform, by n8n version
-(introduced, deprecated, removed), or by Preview status. Reference all three
-consistently so readers can tell whether their install supports a feature, and
+(introduced, deprecated, removed), and a feature has a Preview status and an
+Enterprise readiness. Reference all of them consistently so readers can tell
+whether their install supports a feature and how far they can rely on it, and
 so automated tools (search, docs assistants, chunk-based retrieval) can extract
 the facts reliably even without the surrounding page for context.
 
@@ -491,7 +492,12 @@ automatically updated from the codebase, so don't edit it by hand.
 
 ### Preview status
 
-A feature in Preview works but isn't complete or stable, and may change. "Preview"
+A feature in Preview works today, but n8n doesn't yet commit to keeping it
+stable, compatible, or available. n8n might make breaking changes to it, such
+as changing an API shape, export format, node parameters, or execution
+outcomes, or remove it. Preview isn't for bugs, missing options, unfinished UI,
+or newness: a GA feature can have those too. Preview is the same for every
+user, regardless of plan or platform. "Preview"
 is a feature's maturity label, capitalized wherever it names that status ("is in
 Preview", "a Preview feature"), same as "Deprecated"/"Archived". Use "Preview",
 not "beta". Frontmatter and tag values stay lowercase (`status: preview`,
@@ -539,6 +545,49 @@ The **Streaming response** option is in Preview and may change in future release
   availability".
 - If an inline Preview note needs more than one sentence, promote it to a
   page- or section-level hint instead.
+
+### Enterprise readiness
+
+A feature can have **Limited enterprise support**: some Enterprise capabilities
+(for example SSO, RBAC, audit logging, environments, multi-main mode, external
+secrets, and the public API) don't cover it yet. This is separate from Preview.
+A feature can be GA with Limited enterprise support, or in Preview and fully
+Enterprise ready. A gap in Enterprise support never makes a feature Preview.
+
+Write "Enterprise ready" for a feature that meets every Enterprise requirement
+that applies to it, and "Limited enterprise support" (lowercase "enterprise",
+the literal label in the n8n interface) for one that doesn't. An Enterprise
+ready feature carries nothing in the docs, so don't add a hint for it. A
+feature that isn't available on Enterprise at all doesn't carry this label.
+That's a plan or platform limit, so use a **Feature availability** hint instead.
+
+**Page or section:** an `info` hint titled `**Enterprise readiness: limited**`,
+not `**Feature availability**` or `**Preview status**`. Name the feature in the
+sentence below, then list each Enterprise capability that doesn't cover it yet,
+with **Planned** or **Not planned** for each. List only the capabilities that
+apply to the feature (a feature without credentials doesn't need external
+secrets support). Write "Not planned" rather than omitting a gap n8n won't
+close.
+
+```markdown
+{% hint style="info" %}
+**Enterprise readiness: limited**
+
+The Example feature has Limited enterprise support. Some Enterprise capabilities don't cover it yet:
+
+- **Log streaming:** Planned
+- **Environments:** Not planned
+
+{% endhint %}
+```
+
+- Keep it separate from Preview status and Feature availability. If more than
+  one applies, stack the hints rather than folding one into another.
+- No visual tag or frontmatter. Limited enterprise support isn't one of the
+  three allowed visual tags (see [Tags](#tags)), and there's no `status:` value
+  for it, even when the whole page covers the feature.
+- Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness-limited-enterprise-support)
+  when a reader may need the definition.
 
 ---
 

@@ -31,7 +31,7 @@ The n8n API is available on:
 It isn't available on the free trial.
 {% endhint %}
 
-Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI.
+Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. To retry a POST without running it again, send an [idempotency key](idempotency.md).
 
 n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 
@@ -41,6 +41,7 @@ n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/bu
 
 * [Authentication](authentication.md): how to authenticate requests to the n8n API.
 * [Pagination](pagination.md): paginate large result sets.
+* [Idempotency](idempotency.md): retry a POST with an `Idempotency-Key` header.
 * [Use an API playground](use-an-api-playground.md): try out the API in a built-in playground (self-hosted n8n only).
 * [Endpoint reference](api-reference.md): the complete endpoint reference, generated from the OpenAPI specification.
 

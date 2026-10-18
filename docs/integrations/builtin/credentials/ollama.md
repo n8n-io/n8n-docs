@@ -68,8 +68,6 @@ Refer to [How do I configure Ollama server?](https://github.com/ollama/ollama/bl
 
 ### Ollama and self-hosted n8n <a href="#ollama-and-self-hosted-n8n" id="ollama-and-self-hosted-n8n"></a>
 
-If you're self-hosting n8n on the same machine as Ollama, you may run into issues if they're running in different containers.
+If n8n and Ollama run in separate Docker containers, connect both containers to the same user-defined network. Set **Base URL** to the Ollama container's name and port, for example `http://my-ollama:11434`.
 
-For this setup, open a specific port for n8n to communicate with Ollama by setting the `OLLAMA_ORIGINS` variable or adjusting `OLLAMA_HOST` to an address the other container can access.
-
-Refer to Ollama's [How can I allow additional web origins to access Ollama?](https://docs.ollama.com/faq#how-can-i-allow-additional-web-origins-to-access-ollama) for more information.
+For the setup steps, refer to [Connect n8n and Ollama in separate Docker containers](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md#if-ollama-and-n8n-are-running-in-separate-docker-containers).

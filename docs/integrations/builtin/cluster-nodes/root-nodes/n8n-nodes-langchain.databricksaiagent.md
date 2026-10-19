@@ -37,14 +37,14 @@ To run the agent, you need a chat model sub-node with its own credential, such a
 
 - A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, with a service principal or user login. A service principal must be a member of the workspace with the **Workspace access** entitlement.
 - **CAN EDIT** on the experiment that receives the traces. **CAN READ** isn't enough: the export fails with a `403` that says the identity doesn't have permission to edit the experiment.
-- For the default experiment the node creates under `/Shared`, no extra grant. Databricks gives all workspace users **CAN MANAGE** on objects in the `/Shared` folder by default, so the identity can create the experiment and write to it. The same default means every workspace user can open and delete those traces. For workflows that handle personal or confidential data, set **Experiment** to a path in a folder you control, or create the experiment first and set its permissions before you turn on the export.
+- For the default experiment the node creates under `/Shared`, no extra grant. Databricks gives all workspace users **CAN MANAGE** on objects in the `/Shared` folder by default, so the identity can create the experiment and write to it. The same default means every workspace user can open and delete those traces. For workflows that handle personal or confidential data, set **Experiment** to a path in a folder you control. Alternatively, create the experiment first and set its permissions before you turn on the export.
 
 Permission changes take a minute or more to reach the trace service. A run right after a change can still use the old permissions.
 
 ## Set up the node
 
 1. Add a **Databricks AI Agent** node to your workflow, for example after a [Chat Trigger](../../core-nodes/n8n-nodes-langchain.chattrigger/README.md) node.
-2. Select the **+** on the **Chat Model** connector and add a chat model, such as the [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node. Add memory, tools, and an output parser the same way you would for the [AI Agent](n8n-nodes-langchain.agent/README.md) node. The [Databricks Vector Store](n8n-nodes-langchain.vectorstoredatabricks/README.md) node and the [Databricks Genie MCP server](../sub-nodes/n8n-mcp-registry.databricksgenie.md) both work as tools.
+2. Select the **+** on the **Chat Model** connector and add a chat model, such as the [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node. Add memory, tools, and an output parser the same way you would for the [AI Agent](n8n-nodes-langchain.agent/README.md) node. The [Databricks Vector Store](n8n-nodes-langchain.vectorstoredatabricks/README.md) node and the [Databricks Genie One MCP server](../sub-nodes/n8n-mcp-registry.databricksgenie.md) both work as tools.
 3. Set **Source for Prompt (User Message)** and the [node options](#node-options).
 4. To export traces, select a Databricks OAuth2 credential under **Credential to connect with** and turn on **Export Traces to MLflow**.
 5. In **Experiment**, leave the name empty to let the node create an experiment for the workflow, or enter the path or ID of an existing experiment. Refer to [Node parameters](#node-parameters).
@@ -89,7 +89,7 @@ Streaming runs export the same spans, with end times and token counts filled in.
 {% hint style="warning" %}
 **Traces contain your data**
 
-Trace export sends the real prompts, including the system message and memory, model outputs, tool results, and retrieved documents of every run to the Databricks workspace of the selected credential. Inside spans, n8n redacts well-known token formats and labelled secrets such as `password=...`, and nothing else. The question and answer previews shown in the trace list aren't redacted. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
+Trace export sends the real prompts, including the system message and memory, model outputs, tool results, and retrieved documents of every run to the Databricks workspace of the selected credential. Inside spans, n8n redacts well-known token formats and labeled secrets such as `password=...`, and nothing else. The question and answer previews shown in the trace list aren't redacted. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
 {% endhint %}
 
 ## How export failures behave
@@ -109,7 +109,7 @@ The export makes three calls for each trace: it registers the trace in the exper
 - [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md)
 - [Databricks Vector Store](n8n-nodes-langchain.vectorstoredatabricks/README.md), including a [worked example](n8n-nodes-langchain.vectorstoredatabricks/README.md#example-answer-questions-from-a-databricks-index-with-an-ai-agent) of an agent that answers from a Databricks index
 - [Embeddings Databricks](../sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md)
-- [Databricks Genie MCP server](../sub-nodes/n8n-mcp-registry.databricksgenie.md)
+- [Databricks Genie One MCP server](../sub-nodes/n8n-mcp-registry.databricksgenie.md)
 - [Databricks credentials](../../credentials/databricks.md)
 - Migrating from the community package: refer to [Migrate from the n8n-nodes-databricks community package](n8n-nodes-langchain.vectorstoredatabricks/migrate-from-the-community-package.md)
 - [MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/) and [MLflow experiment permissions](https://docs.databricks.com/aws/en/security/auth/access-control/#mlflow-experiment-acls) in the Databricks documentation

@@ -43,11 +43,11 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 	* Get File Metadata
 	* List Directory
 	* Upload File
-* Genie
+* Genie Agent
 	* Create Conversation Message
 	* Execute Message SQL Query
 	* Get Conversation Message
-	* Get Genie Space
+	* Get Genie Agent
 	* Get Query Results
 	* Start Conversation
 * Job
@@ -203,6 +203,12 @@ Both Databricks nodes can share one credential. It needs **CAN VIEW** on the job
 
 To send one message for the whole run instead of one for each task, add an [Aggregate](../core-nodes/n8n-nodes-base.aggregate.md) node before the Slack node, or turn on **Execute Once** in the Slack node's settings.
 
+## Genie Agent operations
+
+Every **Genie Agent** operation returns a `deep_link` field with the URL of the Genie Agent, or of the conversation, in your Databricks workspace. Use it to let users inspect the SQL and the results in Databricks.
+
+When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to end its reply with a Markdown link whose text is **Explore in Databricks** and whose URL is the value of the `deep_link` field, for example `[Explore in Databricks](<deep_link value>)`.
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
@@ -212,6 +218,6 @@ To send one message for the whole run instead of one for each task, add an [Aggr
 
 Refer to [Databricks' REST API documentation](https://docs.databricks.com/api/) for details about their API.
 
-To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), and [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) nodes, and the [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
+To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), and [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

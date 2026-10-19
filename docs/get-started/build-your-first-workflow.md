@@ -245,7 +245,7 @@ To create the data table:
 
     ![Navigating to Data tables](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
 
-2. Click **Create data table**, name it `weather_data` and click **Create**.
+2. Click **Create data table**, name it `weather_data`, and click **Create**.
 
     ![Create data table](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
 

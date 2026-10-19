@@ -110,10 +110,25 @@ The tool assigns credentials it finds on the instance to nodes that need them. I
 
 ## Add a branch
 
-Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way. Every If condition needs `options`, `conditions`, and `combinator`:
+Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way, and one Edit Fields node per branch. Every If condition needs `options`, `conditions`, and `combinator`. The complete file:
 
 ```javascript
 import { workflow, node, trigger, ifElse, expr } from '@n8n/workflow-sdk';
+
+const start = trigger({
+  type: 'n8n-nodes-base.manualTrigger',
+  version: 1,
+  config: { name: 'Start' }
+});
+
+const fetchRepo = node({
+  type: 'n8n-nodes-base.httpRequest',
+  version: 4.3,
+  config: {
+    name: 'Fetch repository',
+    parameters: { method: 'GET', url: 'https://api.github.com/repos/n8n-io/n8n' }
+  }
+});
 
 const isPopular = ifElse({
   version: 2.2,
@@ -131,6 +146,42 @@ const isPopular = ifElse({
   }
 });
 
+const markPopular = node({
+  type: 'n8n-nodes-base.set',
+  version: 3.4,
+  config: {
+    name: 'Mark popular',
+    parameters: {
+      mode: 'manual',
+      includeOtherFields: false,
+      assignments: {
+        assignments: [
+          { id: 'popular', name: 'popular', value: true, type: 'boolean' },
+          { id: 'stars', name: 'stars', value: expr('{{ $json.stargazers_count }}'), type: 'number' }
+        ]
+      }
+    }
+  }
+});
+
+const markNotPopular = node({
+  type: 'n8n-nodes-base.set',
+  version: 3.4,
+  config: {
+    name: 'Mark not popular',
+    parameters: {
+      mode: 'manual',
+      includeOtherFields: false,
+      assignments: {
+        assignments: [
+          { id: 'popular', name: 'popular', value: false, type: 'boolean' },
+          { id: 'stars', name: 'stars', value: expr('{{ $json.stargazers_count }}'), type: 'number' }
+        ]
+      }
+    }
+  }
+});
+
 export default workflow('github-stars', 'GitHub stars')
   .add(start)
   .to(fetchRepo)
@@ -139,9 +190,9 @@ export default workflow('github-stars', 'GitHub stars')
     .onFalse(markNotPopular));
 ```
 
-`markPopular` and `markNotPopular` are two Edit Fields nodes declared like Keep stars. Each branch is a complete path: chain more nodes inside `.onTrue()` or `.onFalse()` with `.to()`.
+Each branch is a complete path: chain more nodes inside `.onTrue()` or `.onFalse()` with `.to()`.
 
-To change the workflow you created, call `update_workflow` with the workflow id and the new code instead of creating a second workflow.
+To change the workflow you created, don't create a second one. Call `update_workflow` with the workflow ID and an `operations` array of partial changes, such as `addNode` or `updateNodeParameters`. The [tool reference](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder) lists the operations.
 {% endstep %}
 {% endstepper %}
 

@@ -75,6 +75,6 @@ Start with [Connect to n8n MCP server](connect-to-n8n-mcp-server.md).
 {% endtab %}
 {% endtabs %}
 
-You can also describe workflows as code with the [Workflow SDK](workflow-sdk/README.md), connect an MCP client to [the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md) so AI tools can search the docs, or [create your own node](create-nodes/README.md) to add a custom integration to n8n.
+You can also describe workflows as code with the [Workflow SDK](workflow-sdk/README.md). To let AI tools search the docs, connect an MCP client to [the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md). To add a custom integration to n8n, [create your own node](create-nodes/README.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

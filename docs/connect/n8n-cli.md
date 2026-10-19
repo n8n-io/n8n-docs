@@ -199,6 +199,6 @@ See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflo
 * [Connect](./)
 * [n8n API](n8n-api/README.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
-* [Workflow SDK](workflow-sdk/README.md): describe workflows as code and create them through the MCP server
+* [Workflow SDK](workflow-sdk/README.md)
 * [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
 * [Create nodes](create-nodes/README.md)

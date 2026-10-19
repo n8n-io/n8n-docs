@@ -69,7 +69,7 @@ Refer to the linked Microsoft API documentation below for more information about
 
 Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
 
-Self-hosted users, and n8n Cloud users who select **Custom OAuth2** in the credential, configure OAuth2 from scratch in two main steps:
+If you're self-hosted, or on n8n Cloud and select **Custom OAuth2** in the credential, configure OAuth2 from scratch in two main steps:
 
 1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
 2. Add a credential to that application, either by [generating a client secret](#generate-a-client-secret) or [registering a certificate](#authenticate-with-a-certificate).
@@ -298,7 +298,7 @@ Delegated permissions:
 
 On n8n Cloud, a Microsoft Entra administrator of your organization approves the managed Microsoft Teams credential's permissions once, before users who aren't administrators can connect or reconnect it.
 
-Several of the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) are permissions that only an administrator can grant. n8n requests them when you select **Connect my account**, and Microsoft treats the request as all or nothing: if your tenant hasn't approved every requested permission, the sign-in fails and n8n gets no token. Once an administrator approves the permissions on behalf of the organization, every user in the tenant can connect without seeing the prompt again. The same credential serves the Microsoft Teams node and the Microsoft Teams Trigger, so one approval covers both.
+Several of the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) are permissions that only an administrator can grant. n8n requests them when you select **Connect my account**, and Microsoft treats the request as all or nothing: if your tenant hasn't approved every requested permission, the sign-in fails and n8n gets no token. Once an administrator approves the permissions on behalf of the organization, users of your n8n Cloud instance can connect without seeing the prompt again. The same credential serves the Microsoft Teams node and the Microsoft Teams Trigger. For the scope each Trigger event needs, refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation.
 
 ### Why reconnecting alone fails
 
@@ -308,7 +308,7 @@ If the screen offers **Request approval**, your tenant has Microsoft's [admin co
 
 ### Approve the permissions for your organization
 
-These steps are for the Microsoft Entra administrator. Microsoft shows the organization-wide consent option only to Global Administrators and Privileged Role Administrators. You also need a user account on the n8n Cloud instance, or ask the blocked user to start the connection and sign in to Microsoft in their popup.
+These steps are for the Microsoft Entra administrator. Microsoft shows the **Consent on behalf of your organization** option only to Global Administrators and Privileged Role Administrators. A designated reviewer with the Cloud Application Administrator or Application Administrator role can approve the same permissions through a user's request in the [admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests) instead. You also need a user account on the n8n Cloud instance, or ask the blocked user to start the connection and sign in to Microsoft in their popup.
 
 1. In n8n, open a Microsoft Teams credential, or create one: select **Create credential**, choose **Microsoft Teams OAuth2 API**, and keep **Managed OAuth2**.
 2. Select **Connect my account**, or **Reconnect** on an existing credential, and sign in with your administrator account.
@@ -325,11 +325,11 @@ n8n requests the Microsoft Teams permissions at sign-in instead of declaring the
 
 ### New scopes need a new approval
 
-n8n adds scopes to the Microsoft Teams credential over time, and the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) list the n8n release each one arrived in. A credential you connected before that release keeps working with its old token, but the operations that need the new scope fail with a 403 error until you reconnect. If the new scope needs admin consent, the reconnect hits the approval screen again, even in a tenant that approved the credential before. The sequence is the same: your administrator approves the new permission as described above, then every user reconnects.
+n8n adds scopes to the Microsoft Teams credential over time, and the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) note the n8n release that added each newer scope. A credential you connected before that release keeps working with its old token, but the operations that need the new scope fail with a 403 error until you reconnect. If the new scope needs admin consent, the reconnect hits the approval screen again, even in a tenant that approved the credential before. The sequence is the same: your administrator approves the new permission as described above, then every user reconnects.
 
 ### Use your own app registration instead
 
-If your organization doesn't allow consent to n8n's shared app, or wants to control the permissions itself, connect through your own Microsoft Entra app registration. This works on n8n Cloud too:
+If your organization doesn't allow consent to n8n's shared app or wants to control the permissions itself, connect through your own Microsoft Entra app registration. This works on n8n Cloud too:
 
 1. In the credential, switch from **Managed OAuth2** to **Custom OAuth2**.
 2. [Register an application](#register-an-application) and add a [client secret](#generate-a-client-secret) or a [certificate](#authenticate-with-a-certificate), as described above. Use the **OAuth Redirect URL** the credential shows. On n8n Cloud, it's a shared n8n callback URL rather than your instance URL.

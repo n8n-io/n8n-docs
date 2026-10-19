@@ -16,6 +16,8 @@ layout:
 
 The steps to send work from one n8n instance to another are different depending on whether you use a single Git branch or multiple branches.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Single branch <a href="#single-branch" id="single-branch"></a>
 
 If you have a single Git branch the steps to copy work are:

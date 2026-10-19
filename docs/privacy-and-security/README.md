@@ -23,6 +23,8 @@ layout:
 
 This page describes n8n's data privacy practices.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## GDPR <a href="#gdpr" id="gdpr"></a>
 
 ### Data processing agreement <a href="#data-processing-agreement" id="data-processing-agreement"></a>
@@ -78,7 +80,7 @@ n8n keeps telemetry pseudonymous wherever possible, and avoids collecting sensit
 
 | What we collect | Example | Why we collect it | Can you switch it off? |
 | --- | --- | --- | --- |
-| **Instance and configuration.** A code identifying your instance, the n8n version you run, your database and deployment type, selected configuration settings, and basic details of the server such as operating system, memory, and CPUs. | Deployment type `default`, database postgres, version `1.105.0` | To tell whether an n8n update has broken something that was working, and to understand how instances are configured in practice | Yes |
+| **Instance and configuration.** A code identifying your instance, the n8n version you run, your database and deployment type, selected configuration settings, and basic details of the server such as operating system, memory, and CPUs. This includes deployment artefact and version, runtime and infrastructure provider, database and cache provider, allocated CPU and memory resources, and periodic consolidated counts of n8n processes and their allocated resources. | Deployment type `default`, database postgres, version `1.105.0`, installed with `helm-chart/1.14.0` on Kubernetes, two workers with one CPU each | To tell whether an n8n update has broken something that was working, to understand how instances are configured in practice, and to set sensible defaults in the deployment templates we publish | Yes |
 | **Identifiers.** A code combining your instance and your user number, and a truncated IP address. The code does not contain your name or email.  | User `5678` on instance `abc123`. `12.214.31.144` is stored as `12.214.31.0` | To tell repeat activity apart from new activity, and to keep the service secure and stable | Yes |
 | **IP address.** A truncated IP address. The last part is removed, so what we store identifies a network rather than a device. On a self-hosted instance this is your server's address, not the address of the person at the browser. On n8n Cloud, see [If you use n8n Cloud](#if-you-use-n8n-cloud). We use it to work out the country an instance is in. | `12.214.31.144` is stored as `12.214.31.0` | To keep the service secure and stable, and to understand which countries n8n is used in | Yes |
 | **What you do in the product.** Creating, saving, running, and deleting workflows. The shape of your workflow, meaning which node types are connected to which, but not the information flowing through them. Which features and templates you use, and how you move around the interface. | "Workflow ran successfully in production for the first time" | To find where people get stuck, and to decide what to build next | Yes |

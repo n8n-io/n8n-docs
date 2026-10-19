@@ -34,6 +34,8 @@ n8n recommends using sticky notes on template workflows[^1] to help other users 
 
 ![A basic workflow with a sticky note attached](../../.gitbook/assets/example-sticky-note.png)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a sticky note <a href="#create-a-sticky-note" id="create-a-sticky-note"></a>
 
 Sticky notes are a core node. To add a new sticky note:

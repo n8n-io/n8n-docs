@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Peekalink](../app-nodes/n8n-nodes-base.peekalink.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Peekalink](https://www.peekalink.io/) account.
@@ -37,4 +39,4 @@ Refer to [Peekalink's API documentation](https://docs.peekalink.io/) for more in
 
 To configure this credential, you'll need:
 
-- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/quickstart#1-get-your-api-key) for more information.
+- An **API Key**: To get your API key, access your Peekalink [dashboard](https://peekalink.io/app) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/quickstart#1-get-your-api-key) for more information.

@@ -32,6 +32,8 @@ The MCP Client node supports [Bearer](../credentials/httprequest.md#using-bearer
 {% endhint %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Configure the node with the following parameters.

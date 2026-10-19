@@ -22,6 +22,8 @@ layout:
 
 Use the Draft operations to create, delete, or get a draft or list drafts in Gmail. Refer to the [Gmail node](README.md) for more information on the Gmail node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a draft <a href="#create-a-draft" id="create-a-draft"></a>
 
 Use this operation to create a new draft.

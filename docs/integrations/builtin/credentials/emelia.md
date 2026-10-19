@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Emelia](../app-nodes/n8n-nodes-base.emelia.md)
 - [Emelia Trigger](../trigger-nodes/n8n-nodes-base.emeliatrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an [Emelia](https://emelia.io) account.

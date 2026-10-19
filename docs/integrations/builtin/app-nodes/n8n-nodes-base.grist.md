@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Grist node supports and links
 Refer to [Grist credentials](../credentials/grist.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Create rows in a table

@@ -17,6 +17,8 @@ layout:
 
 There are some important differences in how n8n executes workflows manually (by clicking the **Execute Workflow** button) and automatically (when the workflow is **published** and triggered by an event or schedule).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Manual executions <a href="#manual-executions" id="manual-executions"></a>
 
 Manual executions allow you to run workflows directly from the canvas[^1] to test your workflow logic. These executions are "ad-hoc": they run only when you manually select the **Execute workflow** button.

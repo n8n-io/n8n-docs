@@ -14,6 +14,8 @@ layout:
 
 Your node's UI must conform to these guidelines to be a [verified community node](../../deploy-your-node/submit-community-nodes.md#submit-your-node-for-verification-by-n8n) candidate.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Credentials <a href="#credentials" id="credentials"></a>
 
 API key and sensitive credentials should always be password fields.

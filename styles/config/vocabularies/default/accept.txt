@@ -1,5 +1,6 @@
 ABCorp
 accessors?
+ACLs?
 Adalo
 [Aa]ddon
 [Aa]gent
@@ -84,10 +85,12 @@ Dropcontact
 Dynatrace
 eksctl
 [Ee]mbeddable
+else's
 Emelia
 [Ee]nqueued?
 Entra
 [Ee]num
+ePO's
 ERPNext
 [Ee]rroring
 ESLint

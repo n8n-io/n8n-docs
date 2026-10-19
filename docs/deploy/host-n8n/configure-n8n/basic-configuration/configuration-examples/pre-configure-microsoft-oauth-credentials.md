@@ -22,6 +22,8 @@ After [setting up a Microsoft Entra ID app registration with delegated access](h
 
 n8n supports three environment variables for credential overwrites. This guide uses `CREDENTIALS_OVERWRITE_DATA_FILE`. Refer to [Credentials environment variables](../use-environment-variables/credentials.md) for the full variable reference.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create the credentials file <a href="#create-the-credentials-file" id="create-the-credentials-file"></a>
 
 On the host running n8n, create a file named `credentials-overwrite.json` in the same directory as your `docker-compose.yaml`.

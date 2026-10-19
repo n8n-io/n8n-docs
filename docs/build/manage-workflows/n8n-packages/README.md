@@ -31,6 +31,8 @@ A package is a gzipped tar archive with the `.n8np` extension. Inside it, each e
 
 Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same two endpoints. There's no way to export or import a package from the n8n editor.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Three package shapes
 
 What you export decides the shape of the package, and the shape decides how the contents land on import:
@@ -49,7 +51,7 @@ You can combine workflows and folders in one export. You can't combine either wi
 | Folders and their nesting | Data table rows |
 | Projects: name, description, icon | Executions and execution history |
 | Credential references: ID, name, and type only | Users, project members, roles, and sharing |
-| Data table schemas: column names and types | Pinned data and workflow static data |
+| Data table schemas: column IDs, names, and types | Pinned data and workflow static data |
 | Variables: name and type, and the value unless you exclude it | Workflow version history |
 | Tags | Whether a workflow is marked as a favorite |
 

@@ -25,6 +25,8 @@ This node allows you to interact with your LDAP servers to create, find, and upd
 Refer to the [LDAP credentials documentation](../credentials/ldap.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Compare**](#compare) an attribute

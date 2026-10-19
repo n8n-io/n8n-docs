@@ -20,6 +20,8 @@ layout:
 
 Use the Aggregate node to take separate items, or portions of them, and group them together into individual items.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 To begin using the node, select the **Aggregate** you'd like to use:

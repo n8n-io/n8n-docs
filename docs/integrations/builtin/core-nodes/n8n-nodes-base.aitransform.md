@@ -44,6 +44,8 @@ The AI Transform node is available on:
 It isn't available on self-hosted n8n.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Instructions <a href="#instructions" id="instructions"></a>

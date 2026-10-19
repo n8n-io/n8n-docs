@@ -39,6 +39,8 @@ layout:
 
 Here are some common errors and issues with the [AI Agent node](./README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Internal error: 400 Invalid value for 'content' <a href="#internal-error-400-invalid-value-for-content" id="internal-error-400-invalid-value-for-content"></a>
 
 A full error message might look like this:

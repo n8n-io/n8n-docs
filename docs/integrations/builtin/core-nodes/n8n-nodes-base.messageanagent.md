@@ -40,6 +40,8 @@ This page describes version 3.1. Some controls aren't available on earlier versi
 You can find the node version at the bottom of the node's settings panel.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters
 
 ### Agent
@@ -86,7 +88,7 @@ Select **Add Option** under **Advanced** to add these options.
 
 Whether to stream the agent's response as it generates text, instead of waiting for the complete reply. Enabled by default.
 
-Streaming only reaches the caller if the trigger is set up for it. Set **Response Mode** to **Streaming** on the connected [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) or [Webhook](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook) node. With any other response mode the workflow waits for the full reply, and turning this option on makes no visible difference.
+Streaming only reaches the caller if the trigger is set up for it. Set **Response Mode** to **Streaming** on the connected [Chat Trigger](n8n-nodes-langchain.chattrigger/README.md) or [Webhook](n8n-nodes-base.webhook/README.md) node. With any other response mode the workflow waits for the full reply, and turning this option on makes no visible difference.
 
 ### Invoke Agent
 

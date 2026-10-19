@@ -34,3 +34,5 @@ For usage examples and templates to help you get started, refer to n8n's [Clocki
 {% endhint %}
 
 This node uses the workflow timezone setting to specify the range of time entries starting time. Configure the timezone in your [Workflow Settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) if you want this trigger node to retrieve the right time entries.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

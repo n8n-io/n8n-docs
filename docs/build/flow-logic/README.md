@@ -15,6 +15,8 @@ layout:
 
 n8n allows you to represent complex logic in your workflows.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section <a href="#in-this-section" id="in-this-section"></a>
 
 * [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.

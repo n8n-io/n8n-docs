@@ -39,6 +39,8 @@ layout:
 
 Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](./README.md) for more information on the Google Calendar node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Availability <a href="#availability" id="availability"></a>
 
 Use this operation to check if a time-slot is available in a calendar.

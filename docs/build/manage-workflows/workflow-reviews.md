@@ -37,7 +37,9 @@ Workflow reviews let your team approve a specific [workflow version](view-change
 
 Reviews are optional after you enable the feature. You can still publish directly unless that workflow already has an open review.
 
-n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left sidebar for requests that need your attention.
+n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left menu for requests that need your attention.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## How reviews work
 
@@ -86,7 +88,7 @@ A *version* is the snapshot of the workflow being reviewed and published. The *r
 
 The reviewer needs `workflow:read` on that workflow. They don't need `workflow:publish`.
 
-n8n creates a review for the current saved version. Open it from **Reviews** in the left sidebar.
+n8n creates a review for the current saved version. Open it from **Reviews** in the left menu.
 
 ### Submit later changes to an open review
 

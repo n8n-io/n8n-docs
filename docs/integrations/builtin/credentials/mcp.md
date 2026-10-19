@@ -13,6 +13,8 @@ You can use these credentials to authenticate the following nodes:
 
 * [MCP Client Tool](../cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 You need an MCP server that supports OAuth2 authentication.

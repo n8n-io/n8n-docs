@@ -29,12 +29,14 @@ layout:
 
 You can customize workflow behavior for individual workflows using workflow settings.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Access workflow settings <a href="#access-workflow-settings" id="access-workflow-settings"></a>
 
 To open the settings:
 
 1. Open your workflow.
-2. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**. n8n opens the **Workflow settings** modal.
 
 ## Available settings <a href="#available-settings" id="available-settings"></a>

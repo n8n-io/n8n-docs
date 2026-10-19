@@ -16,6 +16,8 @@ You can secure a self-hosted n8n instance to protect credentials and workflow da
 
 Securing your n8n instance can take several forms.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Manage security policies](security/manage-security-policies.md): manage instance-wide security policies including MFA enforcement and personal space controls.

@@ -27,6 +27,8 @@ Debugging and re-running past executions is available on:
 
 You can load data from a previous execution into your current workflow. This is useful for debugging data from failed production executions: you can see a failed execution, make changes to your workflow to fix it, then re-run it with the previous execution data.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Load data <a href="#load-data" id="load-data"></a>
 
 To load data from a previous execution:

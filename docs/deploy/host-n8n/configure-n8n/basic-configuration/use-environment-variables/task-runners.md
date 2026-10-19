@@ -27,6 +27,8 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 
 [Task runners](../../set-up-task-runners.md) execute code defined by the [Code node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n instance environment variables <a href="#n8n-instance-environment-variables" id="n8n-instance-environment-variables"></a>
 
 | Variable | Type  | Default  | Description |

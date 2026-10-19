@@ -27,6 +27,8 @@ On this page, you'll find a list of operations the Netscaler ADC node supports a
 Refer to [Netscaler ADC credentials](../credentials/netscaleradc.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Certificate
@@ -44,7 +46,7 @@ Refer to [Netscaler ADC credentials](../credentials/netscaleradc.md) for guidanc
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/) for more information about the service.
+Refer to the [Netscaler ADC documentation](https://docs.netscaler.com/en-us/citrix-adc/current-release) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

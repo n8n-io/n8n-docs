@@ -33,6 +33,8 @@ Refer to the [Mautic credentials documentation](../credentials/mautic.md) for au
 For usage examples and templates to help you get started, refer to n8n's [Mautic Trigger integrations](https://n8n.io/integrations/mautic-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 n8n provides an app node for Mautic. Refer to the [Mautic node documentation](../app-nodes/n8n-nodes-base.mautic.md) for more information.

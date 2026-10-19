@@ -31,6 +31,8 @@ When managing an n8n OEM deployment spanning across teams or organizations, you 
 The APIs referenced in this document are subject to change at any time. Be sure to check for continued functionality with each version upgrade.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Workflow per user <a href="#workflow-per-user" id="workflow-per-user"></a>
 
 There are three general steps to follow:

@@ -29,6 +29,8 @@ These variables are for use in expressions in the HTTP node. You can't use them 
 {% endhint %}
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I3wrw8MpZtbjn2khruiw/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Use built-in shortcuts](../use-built-in-shortcuts.md)

@@ -1,0 +1,24 @@
+docs/deploy/host-n8n/configure-n8n/external-hooks.md
+  s_48874ebba5611f::t_9fb77197832bb4 49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c5c4050073c6415af8cd7d40affd70eb7f55d299",
+  "prompts": {},
+  "humans": {
+    "h_ed1b2d65e81e8e": {
+      "author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_48874ebba5611f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "90eddcc4-a0fb-4511-bb77-47e26f2d2992",
+        "model": "grok-4.6"
+      },
+      "human_author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  }
+}

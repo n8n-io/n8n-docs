@@ -1,0 +1,31 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+  s_342fd6342f1217::t_0e6ef1e5025f32 31-32
+.github/scripts/gitbook_preview_links.py
+  s_342fd6342f1217::t_0e6ef1e5025f32 270-273,275-277,290-291,372-374
+docs/changelog/v30-breaking-changes.md
+  s_342fd6342f1217::t_0e6ef1e5025f32 13,17-65
+docs/integrations/builtin/credentials/aws.md
+  s_342fd6342f1217::t_0e6ef1e5025f32 78-81,166-167
+.github/scripts/tests/test_gitbook_preview_links.py
+  s_342fd6342f1217::t_0e6ef1e5025f32 97-99,160
+docs/build/keyboard-shortcuts.md
+  s_342fd6342f1217::t_0e6ef1e5025f32 55-56,63-64,80
+docs/build/understand-workflows/workflow-components/canvas-groups.md
+  s_342fd6342f1217::t_0e6ef1e5025f32 19,22,24,29,36-50,54,56,62-68,77,79-82,94-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "bfa09cfc4fa3ac338ca9eac8bf041953026d3f64",
+  "prompts": {},
+  "sessions": {
+    "s_342fd6342f1217": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8ffc5e98-ffae-4eb0-8a5a-be21b70c2f07",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

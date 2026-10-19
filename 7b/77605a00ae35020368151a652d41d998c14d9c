@@ -1,0 +1,19 @@
+docs/workflows/executions/execution-data-redaction.md
+  s_af9367f311189b::t_498929ff9120cd 94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7b77605a00ae35020368151a652d41d998c14d9c",
+  "prompts": {},
+  "sessions": {
+    "s_af9367f311189b": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "de0ea561-77db-4045-8ca2-2a327c7e6ffc",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

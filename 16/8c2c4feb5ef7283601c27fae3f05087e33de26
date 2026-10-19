@@ -1,0 +1,19 @@
+docs/import-export/import-packages.md
+  s_acd0f248535fc1::t_f0ebff1a031968 92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "168c2c4feb5ef7283601c27fae3f05087e33de26",
+  "prompts": {},
+  "sessions": {
+    "s_acd0f248535fc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8e563e7b-0ce7-4e30-a199-206d6f231d7a",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James Gee <1285296+geemanjs@users.noreply.github.com>"
+    }
+  }
+}

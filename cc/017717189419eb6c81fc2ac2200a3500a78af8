@@ -1,0 +1,76 @@
+.github/workflows/gitbook-preview-links.yml
+  s_d19fd938c21412::t_f3c31b3524b0f7 3-6,32-38,41-42,97-104
+docs/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 59-68
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 23,56-58,72,77-81,85,88,92,154-180,187-188,191
+  s_d19fd938c21412::t_4cae8a056d3c2e 59
+docs/integrations/builtin/credentials/ldap.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 36-38,58-61
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 55
+.github/scripts/tests/test_gitbook_preview_links.py
+  s_d19fd938c21412::t_f3c31b3524b0f7 10,173-262,287-356
+  s_d19fd938c21412::t_9f1e8897f88eb0 357
+docs/build/build-and-manage-agents.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 265-278
+.github/scripts/check_internal_links.py
+  s_d19fd938c21412::t_f3c31b3524b0f7 70-74
+docs/build/ways-of-building-workflows/n8n-assistant.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 122-127,162
+styles/config/vocabularies/default/accept.txt
+  s_d19fd938c21412::t_f3c31b3524b0f7 144
+docs/connect/connect-to-n8n-mcp-server.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 86,133
+docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 180-234,399,403,406-408,423,491-499
+  s_d19fd938c21412::t_2b6438aa25f99c 500
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/expression-engine.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 4-5,29-30,32-35,38-55,58,61-62
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 2,4-5,10,22,24,26,58
+.github/scripts/tests/test_check_internal_links.py
+  s_d19fd938c21412::t_f3c31b3524b0f7 16,27-59,82-107
+docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 596-599
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 60,145-147,189-221,230,263
+docs/integrations/.gitbook/tags.yaml
+  s_d19fd938c21412::t_f3c31b3524b0f7 4-6
+.github/workflows/script-tests.yml
+  s_d19fd938c21412::t_f3c31b3524b0f7 8-15
+docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 9-10
+docs/integrations/SUMMARY.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 55,556
+docs/integrations/builtin/core-nodes/n8n-nodes-base.messageanagent.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 1-170
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 52-60
+docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 695,710-712
+docs/deploy/use-n8n-cloud/configure-cloud/find-your-ip-addresses.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 15-65,67,69
+docs/integrations/builtin/credentials/azureopenai.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 23
+SPACE_INDEX.md
+  s_d19fd938c21412::t_f3c31b3524b0f7 1-19
+.github/scripts/gitbook_preview_links.py
+  s_d19fd938c21412::t_f3c31b3524b0f7 11,15-18,117-159,162,185,196-225,336-337,340,375,380-382,388,416-425,451-461,492-494,498-501
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "cc017717189419eb6c81fc2ac2200a3500a78af8",
+  "prompts": {},
+  "sessions": {
+    "s_d19fd938c21412": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5fdf3254-3903-4517-9d8e-e8adffead4db",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

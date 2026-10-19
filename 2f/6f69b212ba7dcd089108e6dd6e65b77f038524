@@ -1,0 +1,26 @@
+docs/integrations/builtin/credentials/aws.md
+  s_f5aecebf2d3d62::t_7c418899dda386 131
+  s_f5aecebf2d3d62::t_33da1fe43c9a10 341,343
+  s_f5aecebf2d3d62::t_a3b6cc53fccea1 103,107-108
+  s_f5aecebf2d3d62::t_c29543cfcdb823 233-238
+  s_f5aecebf2d3d62::t_e50c2eb417da8f 184
+  s_f5aecebf2d3d62::t_34e2e90a8fb8d3 260,262-263
+  s_f5aecebf2d3d62::t_b94753573bc827 288-317
+  s_f5aecebf2d3d62::t_24ebedce11ac05 278
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "2f6f69b212ba7dcd089108e6dd6e65b77f038524",
+  "prompts": {},
+  "sessions": {
+    "s_f5aecebf2d3d62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "645a37dd-728b-4af9-9271-8dd2c257286c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

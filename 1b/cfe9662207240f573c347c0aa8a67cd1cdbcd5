@@ -1,0 +1,57 @@
+docs/hosting/oem-deployment/token-exchange.md
+  s_6d5ada260876a2::t_903c84dd309894 443-444,454-458,461-468
+  s_6d5ada260876a2::t_480eec167d0e39 99-100
+  s_6d5ada260876a2::t_bb9d9488fe0c8e 206
+  s_6d5ada260876a2::t_bfcde104ea15a3 171-172,177-178
+  s_6d5ada260876a2::t_bfedb4b7b624fb 147,157-159
+  s_6d5ada260876a2::t_cfd8b2fe5c93fe 185
+  s_6d5ada260876a2::t_fac2a07f629191 415,417-419
+  s_6d5ada260876a2::t_3f6b1b645c11ee 488
+  s_6d5ada260876a2::t_572ab03a1d5215 95
+  s_6d5ada260876a2::t_0a0917a48d046c 215
+  s_6d5ada260876a2::t_8633ea04f1176b 369-370,379,381-389,395
+  s_6d5ada260876a2::t_258f4640d7a68c 21
+  s_6d5ada260876a2::t_bf6bc2f9b62208 209
+  s_6d5ada260876a2::t_3a68d2b0003028 306
+  s_6d5ada260876a2::t_d68a19cc695a80 324,333,335,345,352
+  s_6d5ada260876a2::t_ac57111c4eb4a6 460
+  s_6d5ada260876a2::t_0a5228f03474d5 408
+  s_6d5ada260876a2::t_733d98f99c1559 22
+  s_6d5ada260876a2::t_b93951715cef9d 476-482
+  s_6d5ada260876a2::t_7acd8a74204355 123-124,135-136
+  s_6d5ada260876a2::t_2503914c86d668 423-424,428,430-432,436
+  s_6d5ada260876a2::t_d2cf7957b4a1f4 16
+  s_6d5ada260876a2::t_db14acf7cf401b 65,68,75-77,80,82-84,87-91
+  s_6d5ada260876a2::t_1cc2b2a1bb4d69 101
+  s_6d5ada260876a2::t_1223267cdedbdb 307
+  s_6d5ada260876a2::t_64f152fa18d41a 247,251,256,258,260-265
+  s_6d5ada260876a2::t_b3bf5774fa415c 61
+  s_6d5ada260876a2::t_0cb0615eeb51f4 31,33
+  s_6d5ada260876a2::t_97df8b43ca3fa0 486-487,489-504,509-511,513-518,520
+  s_6d5ada260876a2::t_0311a8f41c6b66 233-234
+  s_6d5ada260876a2::t_28174ebbfe2db9 276,278,280-285,288-290,296-298
+docs/hosting/configuration/environment-variables/deployment.md
+  s_6d5ada260876a2::t_6cfca599ae587a 42
+docs/hosting/securing/overview.md
+  s_6d5ada260876a2::t_aac938a39d44fe 15
+nav.yml
+  s_6d5ada260876a2::t_d284d90146f597 1337
+docs/hosting/oem-deployment/index.md
+  s_6d5ada260876a2::t_153b52116211a7 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "1bcfe9662207240f573c347c0aa8a67cd1cdbcd5",
+  "prompts": {},
+  "sessions": {
+    "s_6d5ada260876a2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9549febc-3c5a-4f9e-b19a-d5258fba04ca",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Andreas Fitzek <andreas.fitzek@n8n.io>"
+    }
+  }
+}

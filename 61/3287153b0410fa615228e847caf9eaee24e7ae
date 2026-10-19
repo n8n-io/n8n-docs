@@ -1,0 +1,24 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_c85fc1c1065441::t_a65faf302ebd33 35
+  s_c85fc1c1065441::t_89da77321df152 39
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_c85fc1c1065441::t_96489fc3243cbb 84
+  s_c85fc1c1065441::t_02ac455f65a4c7 79
+  s_c85fc1c1065441::t_c04fde8c0705c0 47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "613287153b0410fa615228e847caf9eaee24e7ae",
+  "prompts": {},
+  "sessions": {
+    "s_c85fc1c1065441": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10a824b0-1024-4275-ae1a-17c8694f2771",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

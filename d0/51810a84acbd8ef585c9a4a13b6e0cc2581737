@@ -1,0 +1,26 @@
+styles/config/vocabularies/default/accept.txt
+  s_2f64531d4927ce::t_5768c1280da952 12
+  s_2f64531d4927ce::t_cff49c5235a159 225
+docs/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+  s_2f64531d4927ce::t_7971614650522f 250,252,254,257
+  s_2f64531d4927ce::t_4d63f45d85b77c 267
+  s_2f64531d4927ce::t_0542bc538b38a0 240
+  s_2f64531d4927ce::t_64070828b8df32 282
+  s_2f64531d4927ce::t_670ecf050a6b0b 274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "d051810a84acbd8ef585c9a4a13b6e0cc2581737",
+  "prompts": {},
+  "sessions": {
+    "s_2f64531d4927ce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ebc7f5c-6cc6-415c-a9e3-59aec8d97ec5",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

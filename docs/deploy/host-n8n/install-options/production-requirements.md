@@ -10,7 +10,7 @@ layout:
 Before you run a production n8n deployment that you manage yourself, confirm that your database, operating system, runtime, storage, and deployment tooling meet n8n's requirements.
 
 {% hint style="info" %}
-**Just getting started?** You don't need this page. [One-line setup](one-line-setup.md) only needs Docker and handles the database and storage for you. [Install using Docker Compose](install-using-docker-compose.md) starts with the built-in SQLite database, with PostgreSQL as an optional step. Use this page when you move to production, run your own PostgreSQL, use queue mode, or deploy to Kubernetes or bare metal.
+**Looking for a quickstart?** You don't need this page. [One-line setup](one-line-setup.md) only needs Docker and handles the database and storage for you. [Install using Docker Compose](install-using-docker-compose.md) starts with the built-in SQLite database, with PostgreSQL as an optional step. Use this page when you move to production, run your own PostgreSQL, use queue mode, or deploy to Kubernetes or bare metal.
 {% endhint %}
 
 ## Database
@@ -106,16 +106,16 @@ Refer to [Install with Docker](install-with-docker.md) and [Install using Docker
 
 Use this checklist for production deployments. Skip items that don't apply to your setup, such as Redis and S3 if you don't use queue mode.
 
-- [ ] License key obtained and ready to activate, if you use Business or Enterprise features. Refer to [Manage your license](../configure-n8n/manage-your-license.md).
-- [ ] PostgreSQL provisioned and accessible, on a supported version. Refer to [Database](#database).
-- [ ] Redis provisioned and accessible (queue mode only). Refer to [Redis](#redis).
-- [ ] S3 bucket created (queue mode with external storage only). Refer to [Storage](#storage).
-- [ ] DNS record pointing to your load balancer. Refer to [DNS](#dns).
-- [ ] TLS certificate provisioned, or cert-manager configured. Refer to [TLS](#tls).
-- [ ] Firewall rules configured. Refer to [Firewall rules](#firewall-rules).
-- [ ] Persistent volumes available. Refer to [Storage](#storage).
-- [ ] Encryption key generated and stored securely. Run `openssl rand -hex 32` to generate one. Refer to [Set a custom encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md).
-- [ ] Backup strategy decided. Refer to [Back up and restore](../keep-n8n-running/backup-and-restore.md).
+- [ ] [License key](../configure-n8n/manage-your-license.md) obtained and ready to activate, if you use Business or Enterprise features.
+- [ ] [PostgreSQL](#database) provisioned and accessible, on a supported version.
+- [ ] [Redis](#redis) provisioned and accessible (queue mode only).
+- [ ] [S3 bucket](#storage) created (queue mode with external storage only).
+- [ ] [DNS record](#dns) pointing to your load balancer.
+- [ ] [TLS certificate](#tls) provisioned, or cert-manager configured.
+- [ ] [Firewall rules](#firewall-rules) configured.
+- [ ] [Persistent volumes](#storage) available.
+- [ ] [Encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md) generated and stored securely. Run `openssl rand -hex 32` to generate one.
+- [ ] [Backup strategy](../keep-n8n-running/backup-and-restore.md) decided.
 
 ## Related resources
 

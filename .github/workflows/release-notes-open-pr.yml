@@ -13,7 +13,7 @@ name: Release notes - open the weekly PR as the Assistant
 # auto-merge.
 on:
   repository_dispatch:
-    types: [release-notes-pr]
+    types: [release-notes-pr, sdk-docs-pr]
 
 permissions: {}
 
@@ -48,8 +48,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          if ! printf '%s' "$BRANCH" | grep -qE '^release-notes/[0-9]{8}-[0-9]{4}$'; then
-            echo "::error::Refusing to open a PR from '$BRANCH' - not a release-notes branch."
+          if ! printf '%s' "$BRANCH" | grep -qE '^(release-notes/[0-9]{8}-[0-9]{4}|sdk-docs/v[0-9]+\.[0-9]+\.[0-9]+-[0-9]{8}-[0-9]{4})$'; then
+            echo "::error::Refusing to open a PR from '$BRANCH' - not a release-notes or sdk-docs branch."
             exit 1
           fi
           if [ -z "$TITLE" ]; then

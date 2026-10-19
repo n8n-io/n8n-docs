@@ -19,6 +19,9 @@
           spec: n8n
     ```
 * [n8n CLI](n8n-cli.md)
+* [Workflow SDK](workflow-sdk/README.md)
+  * [Quickstart](workflow-sdk/quickstart.md)
+  * [Build with AI](workflow-sdk/build-with-ai.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)

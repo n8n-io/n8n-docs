@@ -31,7 +31,7 @@ The n8n API is available on:
 It isn't available on the free trial.
 {% endhint %}
 
-Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. To retry a POST without running it again, send an [idempotency key](idempotency.md).
+Using n8n's public API[^1], you can programmatically perform many of the same tasks as you can in the GUI. For supported POSTs, an [idempotency key](idempotency.md) returns the first successful response instead of running the request again.
 
 n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.n8n) to access the API in your workflows.
 

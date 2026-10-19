@@ -7,7 +7,7 @@ layout:
 
 # API idempotency
 
-Send an `Idempotency-Key` header on a public API POST so a retry returns the first successful response instead of running the request again.
+Send an `Idempotency-Key` header on a public API POST so a retry returns the first response, including an error, instead of running the request again.
 
 {% hint style="info" %}
 **Feature availability**
@@ -52,7 +52,7 @@ n8n ignores the header, and doesn't read or write a stored response, for `GET`, 
 
 ## How long n8n keeps the response
 
-n8n keeps the first successful response for 12 hours, starting when it accepts the key. A retry inside that window returns the stored response and doesn't run the POST again.
+n8n keeps the first response, including an error, for 12 hours, starting when it accepts the key. A retry inside that window returns the stored response and doesn't run the POST again.
 
 After 12 hours, the same key runs the POST again and can create a duplicate. Send a new key for the next operation.
 
@@ -60,7 +60,7 @@ Keys belong to the user, not to one API key. Two API keys for the same user shar
 
 ## Retry the same request
 
-Send the same key with the same path, query string, and body, including JSON field order and whitespace. A match returns the same status code and JSON body as the first successful response.
+Send the same key with the same path, query string, and body, including JSON field order and whitespace. A match returns the same status code and JSON body as the first response, including an error.
 
 n8n doesn't store a file download. A retry of a POST that returns a file runs the request again.
 
@@ -96,7 +96,9 @@ If n8n stops after it accepts the key and before it stores a response, later ret
 
 ## When the request fails
 
-n8n stores a successful response only. If the POST returns an error, n8n drops the key and returns that error. Send the same key again to run the POST again.
+n8n stores an error the same way it stores a success. If the POST returns an error, a retry with the same key and the same request returns that status code and JSON body. It doesn't run the POST again.
+
+Send a new key to run the POST again. If the first POST returns `400` because the body is invalid, correct the body and send a new key. The original key keeps returning that `400` for 12 hours.
 
 ## Limits of an idempotency key
 

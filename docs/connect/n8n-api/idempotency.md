@@ -48,7 +48,7 @@ A key that's too long, or that contains a space or another disallowed character,
 
 n8n uses the header on POST requests that create something or start work, such as creating a workflow or calling `POST /api/v1/executions/<execution-id>/retry`. The [endpoint reference](api-reference.md) shows the header on each POST that accepts it.
 
-n8n ignores the header for `GET`, `PUT`, `PATCH`, and `DELETE`. It also ignores POST requests whose URL ends with `activate`, `deactivate`, `publish`, `unpublish`, `archive`, `unarchive`, `transfer`, `test`, or `test-trace`.
+n8n ignores the header for `GET`, `PUT`, `PATCH`, and `DELETE`.
 
 ## How long n8n keeps the response
 

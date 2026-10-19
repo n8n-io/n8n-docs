@@ -127,7 +127,7 @@ n8n Assistant chooses the node names itself, so yours may differ from the ones a
 
 n8n Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
 
-You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every day at 8am**, **Get Berlin Weather**, **Add Weather Report**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
+You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every Day at 8am**, **Get Berlin Weather**, **Add Weather Report**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
 
 ### 1. Create the workflow
 

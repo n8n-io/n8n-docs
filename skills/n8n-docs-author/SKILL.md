@@ -1,9 +1,10 @@
 ---
 name: n8n-docs-author
 description: >-
-  Authors and reviews n8n documentation pages following the n8n docs style and
-  contribution guides. Use when writing new doc pages, editing existing docs,
-  reviewing doc PRs, or checking content against the style guide. Covers writing
+  Authors and reviews n8n documentation pages for customers using the product,
+  not for internal engineers. Follows the n8n docs style and contribution
+  guides. Use when writing new doc pages, editing existing docs, reviewing doc
+  PRs, or checking content against the style guide. Covers audience, writing
   style, GitBook formatting syntax (hints, collapsibles, tabs, code blocks),
   internal and external links, and linting guidance. Use when asked to write or
   edit docs, or to review content against the style guide.
@@ -23,6 +24,14 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
 code blocks). Use GitBook syntax, not MkDocs/Material syntax.
+
+## Audience
+
+n8n Docs are for customers using the product. They are not internal engineering notes.
+
+Write what the customer does and what they see: the control, the header, the status code, the error message, and the limit that changes their request. Leave out how n8n implements it. Storage, comparison mechanics, process crashes, internal APIs, and engine internals stay off the page.
+
+A ticket or design doc is a source of facts. It is not the page. Take the customer-facing contract from it, and drop the rest.
 
 ## Modes
 

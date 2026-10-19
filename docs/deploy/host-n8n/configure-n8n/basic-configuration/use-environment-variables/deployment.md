@@ -102,6 +102,8 @@ To learn more about proxy environment variables, check the [environment variable
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

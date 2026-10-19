@@ -17,6 +17,8 @@ layout:
 
 This section covers how to enable and manage OpenID Connect (OIDC) for single sign-on (SSO). You can learn more about how OIDC works by visiting [what is OpenID Connect](https://openid.net/developers/how-connect-works/) by the OpenID Foundation.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Set up OIDC](set-up-oidc.md): a general guide to setting up OpenID Connect (OIDC) SSO in n8n.

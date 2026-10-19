@@ -27,6 +27,8 @@ The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontex
 If the service you want is available in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers/) registry, you can connect it straight from the node panel without adding a credential. Use this node for MCP servers that aren't in the registry yet.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Credentials
 
 The MCP Client Tool node supports [Bearer](../../credentials/httprequest.md#using-bearer-auth), generic [header](../../credentials/httprequest.md#using-header-auth), multiple headers, and [OAuth2](../../credentials/mcp.md#using-oauth2) authentication methods.

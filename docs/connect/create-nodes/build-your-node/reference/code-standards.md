@@ -14,6 +14,8 @@ layout:
 
 Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](../../plan-your-node/node-ui-design.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Use the linter <a href="#use-the-linter" id="use-the-linter"></a>
 
 The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](../../test-your-node/node-linter.md) documentation for more information.

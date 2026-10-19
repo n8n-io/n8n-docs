@@ -15,6 +15,8 @@ n8n's node linter, [`@n8n/eslint-plugin-community-nodes`](https://github.com/n8n
 
 `@n8n/eslint-plugin-community-nodes` contains a [collection of rules](https://github.com/n8n-io/n8n/tree/master/packages/%40n8n/eslint-plugin-community-nodes#rules) for node files (`*.node.ts`), credential files (`*.credentials.ts`), and the `package.json` of a community package.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Setup <a href="#setup" id="setup"></a>
 
 If using the [n8n node starter](https://github.com/n8n-io/n8n-nodes-starter): Run `npm install` in the starter project to install all dependencies. Once the installation finishes, the linter is available to you.

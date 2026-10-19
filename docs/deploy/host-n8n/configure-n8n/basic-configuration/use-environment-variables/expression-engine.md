@@ -35,6 +35,8 @@ The `legacy` engine runs expressions without isolation, so it gives less protect
 * Set `N8N_EXPRESSION_ENGINE_FRONTEND` to `quickjs`. The editor still uses `legacy` by default.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Choose the expression engine
 
 n8n evaluates expressions in two places, and each has its own engine setting:

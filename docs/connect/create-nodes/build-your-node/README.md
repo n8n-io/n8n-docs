@@ -13,6 +13,8 @@ layout:
 
 This section provides tutorials on building nodes. It covers:
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Set up your development environment](set-up-your-development-environment.md): install the tools you need to build a node.

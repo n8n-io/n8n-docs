@@ -16,6 +16,8 @@ layout:
 Chains[^1] bring together different components of AI to create a cohesive system. They set up a sequence of calls between the components. These components can include models and memory[^2] (though note that in n8n chains can't use memory).
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Chains in n8n <a href="#chains-in-n8n" id="chains-in-n8n"></a>
 
 n8n provides three chain nodes:

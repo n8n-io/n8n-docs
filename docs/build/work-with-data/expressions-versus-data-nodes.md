@@ -75,6 +75,8 @@ n8n provides a collection of nodes to transform data:
 
 See [Work with data](README.md) for other ways to reference, transform, and structure data.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Work with data](./)

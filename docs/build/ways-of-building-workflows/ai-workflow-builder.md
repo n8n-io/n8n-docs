@@ -37,6 +37,8 @@ It handles the entire workflow construction process, including node selection, p
 
 For details of pricing and availability of AI Workflow Builder, see [n8n Plans and Pricing](https://n8n.io/pricing/).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Working with the builder <a href="#working-with-the-builder" id="working-with-the-builder"></a>
 
 1. **Describe your workflow:** Either select an example prompt or describe your requirements in natural language.

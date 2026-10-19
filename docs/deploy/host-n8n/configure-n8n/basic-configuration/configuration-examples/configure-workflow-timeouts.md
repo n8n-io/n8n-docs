@@ -30,6 +30,8 @@ export EXECUTIONS_TIMEOUT_MAX=7200
 ```
 Refer to [Environment variables reference](../use-environment-variables/executions.md) for more information on these variables.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Configuration examples](./)

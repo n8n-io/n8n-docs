@@ -35,6 +35,8 @@ layout:
 
 n8n recommends using [Docker](https://www.docker.com/) for most self-hosting needs. It provides a clean, isolated environment, avoids operating system and tooling incompatibilities, and makes database and environment management simpler.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 You can also use n8n in Docker with [Docker Compose](use-a-cloud-provider/use-docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/YLv7Cqg70tj1alDgktSX/" %}
@@ -65,7 +67,6 @@ docker run -it --rm \
  -e GENERIC_TIMEZONE="<YOUR_TIMEZONE>" \
  -e TZ="<YOUR_TIMEZONE>" \
  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
- -e N8N_RUNNERS_ENABLED=true \
  -v n8n_data:/home/node/.n8n \
  n8nio/n8n
 ```
@@ -77,7 +78,6 @@ This command creates a volume to store persistent data, downloads the required n
   * the `TZ` environment variable sets the system timezone to control what scripts and commands like `date` return.
   * the [`GENERIC_TIMEZONE` environment variable](../configure-n8n/basic-configuration/use-environment-variables/timezone-and-localization.md) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger).
 * Enforces secure file permissions for the n8n configuration file.
-* Enables [task runners](../configure-n8n/set-up-task-runners.md), the recommended way of executing tasks in n8n.
 * Mounts the `n8n_data` volume to the `/home/node/.n8n` directory to persist your data across container restarts.
 
 {% hint style="warning" %}
@@ -109,7 +109,6 @@ docker run -it --rm \
  -e GENERIC_TIMEZONE="<YOUR_TIMEZONE>" \
  -e TZ="<YOUR_TIMEZONE>" \
  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true \
- -e N8N_RUNNERS_ENABLED=true \
  -e DB_TYPE=postgresdb \
  -e DB_POSTGRESDB_DATABASE=<POSTGRES_DATABASE> \
  -e DB_POSTGRESDB_HOST=<POSTGRES_HOST> \

@@ -46,6 +46,8 @@ Refer to the [Weaviate credentials documentation](../../credentials/weaviate.md)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the Weaviate Vector Store node in the following patterns.
@@ -239,7 +241,7 @@ Whether to clear the collection or tenant before inserting new data.
 
 Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/) for more information about the service.
 
-Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self hosted Weaviate Cluster.
+Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self-hosted Weaviate Cluster.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -20,6 +20,8 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Fetch other people's work <a href="#fetch-other-peoples-work" id="fetch-other-peoples-work"></a>
 
 {% hint style="info" %}

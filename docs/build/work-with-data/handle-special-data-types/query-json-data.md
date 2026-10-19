@@ -19,6 +19,8 @@ layout:
 [JMESPath](https://jmespath.org/) is a query language for JSON that you can use to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html).
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## The `jmespath()` method <a href="#the-jmespath-method" id="the-jmespath-method"></a>
 
 n8n provides a custom method, `jmespath()`. Use this method to perform a search on a JSON object using the JMESPath query language.

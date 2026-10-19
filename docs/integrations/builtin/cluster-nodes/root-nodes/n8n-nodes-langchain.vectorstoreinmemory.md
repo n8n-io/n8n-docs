@@ -50,6 +50,8 @@ The simple vector storage described here is different to the AI memory nodes suc
 This node creates a [vector database](#user-content-fn-2)[^2] in the app memory.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Data safety limitations <a href="#data-safety-limitations" id="data-safety-limitations"></a>
 
 Before using the Simple Vector Store node, it's important to understand its limitations and how it works.

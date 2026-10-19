@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Zulip](../app-nodes/n8n-nodes-base.zulip.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Zulip](https://zulip.com/) account.

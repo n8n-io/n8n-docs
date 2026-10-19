@@ -8,17 +8,19 @@ layout:
 
 # Durable scheduler
 
-The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. This page explains what the durable scheduler changes, how to turn it on, and how it works. For the environment variables that configure it, see [Scheduler environment variables](basic-configuration/use-environment-variables/scheduler.md).
+The durable scheduler runs time-based workflows, such as those that start with a Schedule Trigger node, from a database-backed queue instead of from each instance's memory. It's on by default from n8n 2.45.0. This page explains what it changes, how to configure it, and how to [use the in-memory scheduler](#use-the-in-memory-scheduler). For the environment variables that configure it, see [Scheduler environment variables](basic-configuration/use-environment-variables/scheduler.md).
 
 {% hint style="info" %}
 **Feature availability**
 
-The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature. It's off by default: existing instances keep using the in-memory scheduler and behave as before until you opt in.
+The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature. Before n8n 2.45.0, it's off by default. From n8n 2.45.0, it's on by default for both new and existing instances, unless you explicitly turn it off.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## In-memory scheduler compared to the durable scheduler <a href="#in-memory-vs-durable" id="in-memory-vs-durable"></a>
 
-By default, n8n schedules time-based workflows in memory. Each main instance works out when its active schedules should fire and holds those timers in its own process. This works well for a single instance, but it has limits:
+The in-memory scheduler was the default before n8n 2.45.0. It works out when its active schedules should fire and holds those timers in the main instance's process. This works well for a single instance, but it has limits:
 
 - **Restarts lose pending runs.** When an instance stops, its in-memory timers go with it. n8n skips any run whose time passed during the downtime rather than catching it up.
 - **Multiple instances need a leader.** In a multi-main setup, only the leader fires schedules. If leadership changes at the wrong moment, timing can slip.
@@ -26,31 +28,45 @@ By default, n8n schedules time-based workflows in memory. Each main instance wor
 The durable scheduler addresses both by moving scheduling into the database:
 
 - **Runs survive restarts.** The scheduler records each upcoming run in the database before it's due. A restart doesn't drop it. A run whose time passed while the instance was down still fires late when the instance comes back, as long as it's within its grace period; beyond that, the trigger's [misfire policy](#misfire-policy) decides what happens to it.
-- **Each run executes once across instances.** Every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so the work spreads across your mains instead of depending on a single leader.
+- **One instance claims each run.** Every main instance shares the same queue and claims runs from it. Only one instance holds each run at a time, so the work spreads across your mains instead of depending on a single leader.
 
 ### What changes functionally <a href="#functional-changes" id="functional-changes"></a>
 
-When you turn the durable scheduler on, keep these behavior changes in mind:
+When you upgrade to n8n 2.45.0 or turn on the durable scheduler, these behaviors apply:
 
 - **Timing stays precise.** Runs still fire at their scheduled instant, as they do on the in-memory scheduler.
-- **Clock-aligned timing is the default.** For "every N seconds" and "every N minutes" schedules, the durable scheduler keeps the same clock-aligned timing as the in-memory scheduler unless you change `N8N_SCHEDULER_TRIGGER_NODE_MODE`. See [Schedule Trigger timing](#trigger-node-mode).
+- **Fixed intervals are the default from n8n 2.45.0.** "Every N seconds" and "every N minutes" schedules run at uniform intervals measured from workflow publication. Set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy` to keep clock-aligned timing. See [Schedule Trigger timing](#trigger-node-mode).
 - **Missed runs follow a misfire policy.** Because the scheduler records runs in advance, a run missed during downtime stays on record. Within its grace period it still fires, late; beyond that, the trigger's [misfire policy](#misfire-policy) decides whether n8n discards it or runs a catch-up run.
 
-## Turn on the durable scheduler <a href="#turn-on" id="turn-on"></a>
+## Configure the durable scheduler <a href="#turn-on" id="turn-on"></a>
 
-Set `N8N_SCHEDULER_ENABLED` to `true` to opt in.
+From n8n 2.45.0, `N8N_SCHEDULER_ENABLED` defaults to `true`, so you don't need to set it. If you set it to `false` before upgrading, keep it to stay on the in-memory scheduler, or remove it and restart n8n to use the durable scheduler. Before n8n 2.45.0, set it to `true` to opt in.
 
 {% hint style="warning" %}
-The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. Set both `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` to `true`. If you enable the scheduler without the publication service, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler.
+The durable scheduler only takes over Schedule Trigger nodes when the workflow publication service is also on. `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is on by default. If you set it to `false`, n8n logs a warning and Schedule Trigger nodes keep running on the in-memory scheduler, even when `N8N_SCHEDULER_ENABLED` is `true`.
 {% endhint %}
+
+The [remaining variables](basic-configuration/use-environment-variables/scheduler.md) only take effect while the scheduler is on. The defaults suit most instances, so change them only to tune timing precision, storage, or load across instances. All durations are in seconds unless stated otherwise.
+
+### Use the in-memory scheduler
+
+To keep or restore in-memory scheduling, set this environment variable and restart n8n:
+
+```bash
+export N8N_SCHEDULER_ENABLED=false
+```
+
+This applies to all Schedule Trigger and legacy Cron nodes on the instance. In a multi-main setup, use the same value on every main instance.
+
+n8n 2.45.0 deprecates the in-memory scheduler and `N8N_SCHEDULER_ENABLED`. They remain available as a fallback, but a future version will remove them. If you set `N8N_SCHEDULER_ENABLED` or `N8N_SCHEDULER_TRIGGER_NODE_MODE`, n8n logs a deprecation warning at startup. If the value matches the new default, remove the variable.
+
+n8n 2.45.0 also removes the **Skip Durable Scheduler** node setting and `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER`. Existing node settings no longer keep individual triggers in memory. Use `N8N_SCHEDULER_ENABLED=false` to switch the whole instance instead.
+
+### Poll triggers and system tasks
 
 Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows. For how polls behave under the durable scheduler, and for the [durable poll cursors](#durable-poll-cursors) that n8n recommends turning on together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, see [Poll triggers](#poll-triggers).
 
 n8n's internal maintenance jobs also stay on in-process timers unless you opt them in with [`N8N_SCHEDULER_SYSTEM_TASKS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.40.0. n8n moves these jobs to the durable scheduler one release at a time, and in n8n 2.40.0 no job uses it yet.
-
-To keep an individual Schedule Trigger node on the in-memory scheduler while the durable scheduler is on, set `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` to `true`; the node then shows a **Skip Durable Scheduler** setting. This escape hatch is temporary: a future release will remove it.
-
-The [remaining variables](basic-configuration/use-environment-variables/scheduler.md) only take effect once the scheduler is on. The defaults suit most instances, so change them only to tune timing precision, storage, or load across instances. All durations are in seconds unless stated otherwise.
 
 ## How the durable scheduler works <a href="#how-it-works" id="how-it-works"></a>
 
@@ -89,17 +105,17 @@ To pick a grace period, start from the floor: keep `N8N_SCHEDULER_MISFIRE_GRACE`
 
 ## Schedule Trigger timing (deviations) <a href="#trigger-node-mode" id="trigger-node-mode"></a>
 
-Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. On top of the instance-wide changes above (missed runs following a misfire policy, and each run executing once across instances), two cadences fire differently from the in-memory scheduler in specific cases:
+Under the durable scheduler, most Schedule Trigger schedules fire the same way they did in memory. The instance-wide changes above still apply: missed runs follow a misfire policy, and one instance claims each run. On top of that, two cadences fire differently from the in-memory scheduler in specific cases:
 
 - **"Every N seconds" and "every N minutes".** `N8N_SCHEDULER_TRIGGER_NODE_MODE` controls how these fire. It's the only cadence the setting affects.
 - **"Every N hours", "days", "weeks", or "months".** These fire as before in everyday use, under either mode. The durable scheduler handles a few rare calendar edge cases more correctly than the in-memory scheduler: leap years, the 53rd week of a year, and daylight-saving transitions, where the in-memory scheduler could be off by one period.
 
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` has two values:
 
-- `legacy` (default): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
-- `new`: runs fire a fixed number of seconds apart, counted from the moment you activated the workflow instead of from clock boundaries. If you activate at :07, "every 30 seconds" fires at :07, :37, :07, and so on. The gap stays exactly the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
+- `new` (default from n8n 2.45.0): runs fire a fixed number of seconds apart, counted from the moment you published the workflow instead of from clock boundaries. For example, publishing at 7 seconds past the minute places "every 30 seconds" runs at :37, then :07 of the next minute, and so on. The gap stays at the interval you set, including across minute boundaries, so "every 7 seconds" never drifts.
+- `legacy` (default before n8n 2.45.0): runs fire on clock boundaries, the same as the in-memory scheduler. "Every 30 seconds" fires at :00 and :30 of each minute. The pattern restarts at the top of every minute, so an interval that doesn't divide evenly into 60 leaves an uneven gap at the minute boundary. "Every 7 seconds" fires at :00, :07, :14, and so on up to :56, then jumps back to :00, a 4-second gap instead of 7.
 
-`legacy` is the default, so timing doesn't change when you switch to the durable scheduler. `new` is the intended future default.
+To keep clock-aligned timing, set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy`. This keeps the durable scheduler on. n8n 2.45.0 deprecates the `legacy` mode and this variable. A future version will remove them. If you already set the variable to `new`, you can remove it.
 
 {% hint style="info" %}
 `N8N_SCHEDULER_TRIGGER_NODE_MODE` only affects "every N seconds" and "every N minutes" schedules. Every other cadence, including raw cron expressions, fires the same way under either value.

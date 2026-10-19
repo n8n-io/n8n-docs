@@ -15,6 +15,8 @@ layout:
 
 It's also your responsibility as a customer to ensure you are securing your code and data. This document lists some steps you can take.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## All users <a href="#all-users" id="all-users"></a>
 
 * Report security issues and [terms of service](https://n8n.io/legal/#terms) violations to security@n8n.io.

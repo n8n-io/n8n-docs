@@ -19,6 +19,8 @@ This guide uses the Google Kubernetes Engine (GKE) as the hosting option. If you
 
 Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/)

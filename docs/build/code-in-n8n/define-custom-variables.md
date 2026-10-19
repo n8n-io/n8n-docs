@@ -34,6 +34,8 @@ Custom variables are read-only variables that you can use to store and reuse val
 * Project-scoped variables are available from n8n 1.118.0. Previous versions only support global variables accessible from the left side menu.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create variables <a href="#create-variables" id="create-variables"></a>
 
 You can access the **Variables** tab from either the overview page or a specific project.

@@ -17,6 +17,8 @@ It's written for the administrator who approves and creates the app registration
 
 The Microsoft SharePoint node supports app-only access from version 2 of the node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Before you start
 
 You need:

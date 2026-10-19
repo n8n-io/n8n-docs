@@ -46,6 +46,8 @@ On this page, you'll find the node parameters for the Chroma node, and links to 
 Refer to the [Chroma credentials documentation](../../credentials/chroma.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the Chroma Vector Store node in the following patterns.

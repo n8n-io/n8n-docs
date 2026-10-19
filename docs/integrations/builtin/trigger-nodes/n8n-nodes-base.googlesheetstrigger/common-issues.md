@@ -24,6 +24,8 @@ layout:
 
 Here are some common errors and issues with the [Google Sheets Trigger node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Stuck waiting for trigger event <a href="#stuck-waiting-for-trigger-event" id="stuck-waiting-for-trigger-event"></a>
 
 When testing the Google Sheets Trigger node with the **Execute step** or **Execute workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.

@@ -14,6 +14,8 @@ layout:
 
 When a workflow on n8n Cloud sends an outbound request, for example from the **HTTP Request** node or an app node, the request comes from one of the IP addresses on this page. Use these addresses to allowlist n8n Cloud in a firewall or a service that limits access by IP address. Inbound webhook traffic to your instance doesn't use these addresses.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How n8n Cloud outbound IP addresses work
 
 n8n Cloud runs on shared infrastructure. Many instances share each address, so there's no address unique to your instance. Your instance normally keeps the same address. It changes only in rare cases where n8n has to move instances between clusters. n8n doesn't send advance notice of these changes.

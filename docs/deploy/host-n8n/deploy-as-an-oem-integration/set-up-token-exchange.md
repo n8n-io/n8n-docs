@@ -39,6 +39,8 @@ OAuth 2.0 Token Exchange ([RFC 8693](https://datatracker.ietf.org/doc/html/rfc86
 
 Both flows start the same way. Your backend mints a short-lived JWT signed with your private key. n8n verifies it using the registered public key, resolves the user, and returns either a session cookie or an access token.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Before you begin
 
 You need:

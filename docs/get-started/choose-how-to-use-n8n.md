@@ -42,6 +42,8 @@ This page helps with both.
 [Start free trial](https://n8n.io/cloud/)
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Decision 1: Cloud or self-hosted <a href="#decision-1-cloud-or-self-hosted" id="decision-1-cloud-or-self-hosted"></a>
 
 Use this guide to choose a deployment option:

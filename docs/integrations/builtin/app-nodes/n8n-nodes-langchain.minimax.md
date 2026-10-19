@@ -45,6 +45,8 @@ The MiniMax node connects n8n workflows to MiniMax AI models. Use it to generate
 Refer to the [MiniMax credentials documentation](../credentials/minimax.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>
 
 * **Audio**: Convert text to speech using MiniMax speech synthesis models.

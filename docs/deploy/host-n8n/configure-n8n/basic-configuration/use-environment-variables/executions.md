@@ -47,6 +47,8 @@ This page lists environment variables to configure workflow execution settings.
 | `N8N_WORKFLOW_AUTODEACTIVATION_ENABLED` | Boolean | `false` | Whether workflows are automatically unpublished after repeated crashed executions. |
 | `N8N_WORKFLOW_AUTODEACTIVATION_MAX_LAST_EXECUTIONS` | Number | `3` | Number of crashed executions before unpublishing a workflow. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Environment variables](./)

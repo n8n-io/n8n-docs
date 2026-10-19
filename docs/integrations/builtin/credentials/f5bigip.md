@@ -24,6 +24,8 @@ layout:
 
 Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services) account.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
 - Account login

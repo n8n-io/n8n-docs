@@ -21,6 +21,8 @@ layout:
 
 n8n provides keyboard shortcuts for some actions.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Workflow controls <a href="#workflow-controls" id="workflow-controls"></a>
  
  - **Ctrl/Cmd** + **Alt** + **n**: create new workflow
@@ -80,13 +82,13 @@ n8n provides keyboard shortcuts for some actions.
  - **Space**: rename the selected group
  - **Ctrl/Cmd** + **Shift** + **o** on a sub-workflow node: open the sub-workflow in a new tab 
 
-## Node panel <a href="#node-panel" id="node-panel"></a>
+## Nodes panel <a href="#node-panel" id="node-panel"></a>
 
- - **N**: open the Node Panel
+ - **N**: open the Nodes panel
  - **Enter**: insert selected node into workflow
- - **Escape**: close Node panel
+ - **Escape**: close Nodes panel
 
-### Node panel categories <a href="#node-panel-categories" id="node-panel-categories"></a>
+### Nodes panel categories <a href="#node-panel-categories" id="node-panel-categories"></a>
 
 - **Enter**: insert node into workflow, collapse/expand category, open subcategory
 - **ArrowRight**: expand category, open subcategory 

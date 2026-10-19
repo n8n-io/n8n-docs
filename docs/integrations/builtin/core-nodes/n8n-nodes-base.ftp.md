@@ -43,6 +43,8 @@ Refer to the [FTP credentials documentation](../credentials/ftp.md) for authenti
 
 To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials](../credentials/ftp.md) for more information.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * [**Delete**](n8n-nodes-base.ftp.md#delete) a file or folder

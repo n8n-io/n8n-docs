@@ -77,6 +77,8 @@ The output will be similar to the following.
 {% endtab %}
 {% endtabs %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources
 
 * [Code node cookbook](./)

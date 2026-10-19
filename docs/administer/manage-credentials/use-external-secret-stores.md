@@ -33,6 +33,8 @@ You can use an external secrets store to manage credentials[^1] for n8n.
 
 n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](../use-source-control-and-environments/README.md) in one central place.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Global vaults <a href="#global-vaults" id="global-vaults"></a>
 
 By default, a secrets vault is **global**: users across the instance can use credentials that reference secrets from that vault.

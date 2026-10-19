@@ -60,7 +60,7 @@ Keys belong to the user, not to one API key. Two API keys for the same user shar
 
 ## Retry the same request
 
-Send the same path, query string, and body again, including the order of the JSON fields and any spaces. A match returns the same status code and JSON body as the first response, including an error.
+Send the same key with the same path, query string, and body again, including the order of the JSON fields and any spaces. A match returns the same status code and JSON body as the first response, including an error.
 
 A POST that returns a file isn't covered. Retrying it runs the request again.
 

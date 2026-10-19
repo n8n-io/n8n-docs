@@ -92,15 +92,15 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
     ![n8n Assistant asking the user for permission to create a data table](.gitbook/assets/build-your-first-workflow-assistant-03.png)
 
-4. Approve a test run with **Yes, run and save one report** if prompted by the Assistant. Otherwise, ask the Assistant to run a test for you.
+4. Approve a test run with **Yes, run and save one report** if prompted by the Assistant. Otherwise, ask n8n Assistant to run a test for you.
 
     ![n8n Assistant asking to run a live test, with the finished workflow on the canvas](.gitbook/assets/build-your-first-workflow-assistant-04.png)
 
-5. Select **Publish and enable the schedule** if prompted by the Assistant, as the workflow only runs at 8 AM every day once you publish it. Otherwise, ask the Assistant to publish it for you.
+5. Select **Publish and enable the schedule** if prompted by the Assistant, as the workflow only runs at 8 AM every day once you publish it. Otherwise, ask n8n Assistant to publish it for you.
 
     ![n8n Assistant asking whether to publish Weather Log and run it at 8 AM](.gitbook/assets/build-your-first-workflow-assistant-05.png)
 
-6. Select the `weather_data` data table at the top of the right hand pane to check the workflow ran as intended. Otherwise, ask the Assistant to show you the data table.
+6. Select the `weather_data` data table at the top of the right hand pane to check the workflow ran as intended. Otherwise, ask n8n Assistant to show you the data table.
 
     ![Weather Data tab selected at the top of the right hand pane](.gitbook/assets/build-your-first-workflow-assistant-06.png)
 

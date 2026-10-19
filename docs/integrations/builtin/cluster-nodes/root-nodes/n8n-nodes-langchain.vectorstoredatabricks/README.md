@@ -140,7 +140,7 @@ Connect a document loader, such as the [Default Data Loader](../../sub-nodes/n8n
 How the node fills the row:
 
 - The primary key gets a random UUID. The built-in document loaders don't set a document ID, so running the same insert twice adds the documents twice instead of updating them. Remove duplicates upstream, or delete the old rows in Databricks. A document that carries its own `id`, for example from a [LangChain Code](../n8n-nodes-langchain.code.md) node, is written under that key and replaces the row that has it.
-- Loader metadata keys that match a column of the index go into that column. The node drops keys without a matching column, and keys that name the primary key, the content column, or the vector column, and doesn't warn about them, although its output items still show them.
+- Loader metadata keys that match a column of the index go into that column. The node drops keys without a matching column. It also drops keys that name the primary key, the content column, or the vector column. There's no warning for dropped keys, and the output items still show them.
 - Cancelling an execution stops the insert. Rows the node already wrote stay in the index.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
@@ -191,7 +191,7 @@ Things to know:
 
 - **Embeddings input always required**: Every mode needs an Embeddings Databricks node, including managed indexes where Databricks embeds the query and the node is never called.
 - **Insert Documents on Direct Access indexes only**: Delta Sync indexes are read-only for the node. The insert rejects the primary key or the vector column as **Content Column**.
-- **Inserted rows get random keys**: There's no upsert by ID. A re-run duplicates rows.
+- **Inserted rows get random keys** unless the document carries its own `id`. The built-in document loaders don't set one, so a re-run duplicates rows instead of updating them.
 - **Metadata Filter on Standard endpoints only**: Storage Optimized endpoints take a SQL filter string the node doesn't support yet. A filtered query on such an endpoint fails before it runs.
 - **Hybrid search returns at most 200 results** for each query.
 - **A strict filter can return fewer rows than Limit**, because Databricks filters after fetching the nearest candidates.

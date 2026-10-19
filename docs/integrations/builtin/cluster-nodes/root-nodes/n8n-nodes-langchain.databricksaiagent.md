@@ -37,7 +37,7 @@ To run the agent, you need a chat model sub-node with its own credential, such a
 
 - A [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) in n8n, with a service principal or user login. A service principal must be a member of the workspace with the **Workspace access** entitlement.
 - **CAN EDIT** on the experiment that receives the traces. **CAN READ** isn't enough: the export fails with a `403` that says the identity doesn't have permission to edit the experiment.
-- For the default experiment the node creates under `/Shared`, no extra grant. Databricks gives all workspace users **CAN MANAGE** on objects in the `/Shared` folder by default, so the identity can create the experiment and write to it.
+- For the default experiment the node creates under `/Shared`, no extra grant. Databricks gives all workspace users **CAN MANAGE** on objects in the `/Shared` folder by default, so the identity can create the experiment and write to it. The same default means every workspace user can open and delete those traces. For workflows that handle personal or confidential data, set **Experiment** to a path in a folder you control, or create the experiment first and set its permissions before you turn on the export.
 
 Permission changes take a minute or more to reach the trace service. A run right after a change can still use the old permissions.
 
@@ -72,7 +72,7 @@ The options are the ones of the AI Agent node. Refer to [Tools Agent](n8n-nodes-
 Each item the node processes becomes one trace. A trace holds a tree of spans:
 
 - The agent run at the top, with the user message as input and the final answer as output.
-- One span for each model call, with the messages sent to the model and its completion in OpenAI format, including tool calls, plus the token usage of the call.
+- One span for each model call, with the full message list sent to the model and its completion in OpenAI format. The message list includes the system message, the conversation history loaded from memory, and any images or PDFs passed to the model as base64. The span also records tool calls and the token usage of the call.
 - One span for each tool call, with the arguments and the result. A vector store tool's span shows the documents it returned.
 - One span for each retriever call, when a tool such as the Vector Store Question Answer Tool queries a vector store through a retriever.
 
@@ -84,12 +84,12 @@ Every span carries its start and end time. The trace itself carries:
 - The total token usage of the run, so the trace list shows cost per run without opening a span.
 - A state: `OK`, or `ERROR` when the run failed. A failed model call makes the trace `ERROR` with the Databricks error message on the model span. A tool that throws is recorded as an `ERROR` tool span, while the trace stays `OK` when the agent recovers and answers.
 
-Streaming runs export the same spans, with end times and token counts filled in. When you cancel a run, the export stops with it: expect no trace, or a trace without spans, and an export failure in the n8n log. A model span is named `ChatOpenAI` rather than after the model service, because the Databricks Chat Model node calls the gateway through an OpenAI-compatible client.
+Streaming runs export the same spans, with end times and token counts filled in. When you cancel a run, the export stops with it. The experiment then shows no trace for the run, or a trace without spans. Either way, n8n logs an export failure. A model span is named `ChatOpenAI` rather than after the model service, because the Databricks Chat Model node calls the gateway through an OpenAI-compatible client.
 
 {% hint style="warning" %}
 **Traces contain your data**
 
-Trace export sends the real prompts, model outputs, and tool results of every run to the Databricks workspace of the selected credential, without redaction. n8n masks strings that look like credentials, such as API tokens, and nothing else. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
+Trace export sends the real prompts, including the system message and memory, model outputs, tool results, and retrieved documents of every run to the Databricks workspace of the selected credential. Inside spans, n8n redacts well-known token formats and labelled secrets such as `password=...`, and nothing else. The question and answer previews shown in the trace list aren't redacted. The export is off by default, and the data goes only to your own workspace, never to n8n or a third party. Agree the setting with your security team before you turn it on for workflows that handle personal or confidential data.
 {% endhint %}
 
 ## How export failures behave

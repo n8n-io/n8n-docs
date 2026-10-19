@@ -253,6 +253,8 @@ To create the data table:
 
     ![report column in the new data table](.gitbook/assets/build-your-first-workflow-optional-05-03.png)
 
+Back in the canvas:
+
 4. Add a **Data table** node after **Format Weather Message** and select **Insert row** as the action.
 
     ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-04.png)

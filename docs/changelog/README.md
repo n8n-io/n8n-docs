@@ -80,6 +80,30 @@ Unlike a text-generating LLM, Jev is designed for decisions rather than writing.
 
 <figure><img src=".gitbook/assets/typesafe Jev 2 square.png" alt=""><figcaption></figcaption></figure>
 
+## Control which nodes users can add and run per project
+
+**Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)
+
+You can now set rules that control which nodes users can add, publish, and run, either across the whole instance or within individual projects. Node type policies let instance and project admins enforce governance requirements through the public API without removing nodes from the instance entirely.
+
+Each policy has a `defaultAction` and an ordered list of rules. A rule pairs an `action` (`allow`, `deny`, or `delegate`) with a selector that matches either one exact node type by name or every node in a package. The instance policy is evaluated first. A `deny` at the instance level is final: no project can override it. An `allow` lets the project policy decide, so a project can only restrict further. `delegate` blocks a node by default but lets a project admin write an explicit `allow` rule to turn it on for their team. Without any policy, every node remains available.
+
+Policies enforce at every entry point: workflow saves, publishes, and executions; agent tool configurations and chat; CLI imports; source control pulls; and credential tests. In the editor, blocked nodes appear in search with a lock icon, node details become read-only, and the publish and run actions refuse with a message listing each blocked node and a link to contact the right admin. Every block also sends an audit event to your log streaming destinations.
+
+To get started, create an API key with the `nodeTypePolicy:manage` scope, read the current policy with `GET /api/v1/node-type-policies/instance`, add your rules, and send the whole policy back with `PUT` including the `version` you read. Changes take effect within about one second.
+
+Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability).
+
+{% hint style="warning" %}
+**Preview feature**
+
+Node type policies are in preview and may change in future releases. Test in a non-production environment before relying on them.
+{% endhint %}
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## Build agents you set up once and use anywhere
 
 **Released:** 2026-09-21 in [n8n 2.40](release-notes.md#n8n240)

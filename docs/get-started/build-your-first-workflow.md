@@ -39,16 +39,27 @@ The temperature in berlin is 11.6°C. It's currently clear.
 
 You’ll build it with n8n Assistant, which turns a prompt into a working workflow. That takes less than five minutes. If you’d rather build it node by node, an optional section at the end walks you through the same workflow by hand.
 
-Apart from n8n, you don’t need any accounts, API keys, or coding experience. The weather data comes from Mockingbird, a sample-data service n8n provides for tutorials, so you’ll get similar results to this guide.
+Apart from n8n, you don’t need any coding experience. The weather data comes from Mockingbird, a sample-data service n8n provides for tutorials, so you’ll get similar results to this guide.
 
 ## Before you start
 
 You need an n8n instance. Either:
 
 - **n8n Cloud**: [sign up for a free trial](https://go.n8n.io/ekXKXJ), or
-- **Self-hosted**: follow the [host n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) guide
+- **Self-hosted**: follow the [host n8n](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) guide, then [set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant) with your own AI provider account
 
 ## Build the workflow with n8n Assistant
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n Assistant is available on:
+
+- **n8n Cloud:** Starter, Pro
+- **Self-hosted:** Community, Registered Community, Business
+
+It isn’t ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you’re an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
 
 {% hint style="info" %}
 **Preview status**
@@ -81,7 +92,7 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
     ![n8n Assistant asking the user for permission to create a data table](.gitbook/assets/build-your-first-workflow-assistant-03.png)
 
-4. Approve a test run with **Yes, run and save one report** if prompted by the Assistant. Otherwise, ask the assistant to run a test for you.
+4. Approve a test run with **Yes, run and save one report** if prompted by the Assistant. Otherwise, ask the Assistant to run a test for you.
 
     ![n8n Assistant asking to run a live test, with the finished workflow on the canvas](.gitbook/assets/build-your-first-workflow-assistant-04.png)
 
@@ -233,7 +244,7 @@ You’ve fetched the data and formatted it, so now it’s time to store it. The 
     ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
 
 2. Rename the node to `Save Weather Report`.
-3. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Add Weather Report** has the same name as the column in the data table, so n8n maps them for you.
+3. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Format Weather Message** has the same name as the column in the data table, so n8n maps them for you.
 
     ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
 

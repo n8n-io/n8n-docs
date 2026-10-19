@@ -88,15 +88,15 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
     Mockingbird is a sample API with weather for about 40 European cities. Some cities may return an error.
     {% endhint %}
 
-3. Approve any prompts from the Assistant with **Allow once**. As it builds the workflow, you'll see the progress on the canvas to the right of the chat.
+3. Approve any prompts from n8n Assistant with **Allow once**. As it builds the workflow, you'll see the progress on the canvas to the right of the chat.
 
     ![n8n Assistant asking the user for permission to create a data table](.gitbook/assets/build-your-first-workflow-assistant-03.png)
 
-4. Approve a test run with **Yes, run and save one report** if prompted by the Assistant. Otherwise, ask n8n Assistant to run a test for you.
+4. Approve a test run with **Yes, run and save one report** if prompted by n8n Assistant. Otherwise, ask n8n Assistant to run a test for you.
 
     ![n8n Assistant asking to run a live test, with the finished workflow on the canvas](.gitbook/assets/build-your-first-workflow-assistant-04.png)
 
-5. Select **Publish and enable the schedule** if prompted by the Assistant, as the workflow only runs at 8 AM every day once you publish it. Otherwise, ask n8n Assistant to publish it for you.
+5. Select **Publish and enable the schedule** if prompted by n8n Assistant, as the workflow only runs at 8 AM every day once you publish it. Otherwise, ask n8n Assistant to publish it for you.
 
     ![n8n Assistant asking whether to publish Weather Log and run it at 8 AM](.gitbook/assets/build-your-first-workflow-assistant-05.png)
 

@@ -24,13 +24,14 @@ Each system task has its own cadence, either a fixed interval or a cron schedule
 
 ### Run system tasks on the durable scheduler
 
-To move system tasks to the durable scheduler, set this environment variable on every main instance and restart n8n:
+To move system tasks to the durable scheduler, set these environment variables on every main instance and restart n8n:
 
 ```bash
+export N8N_SCHEDULER_ENABLED=true
 export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=true
 ```
 
-This also requires `N8N_SCHEDULER_ENABLED`, which is on by default from n8n 2.45.0. Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest stay on the leader timer.
+From n8n 2.45.0, `N8N_SCHEDULER_ENABLED` is on by default, so you can leave it out. Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest stay on the leader timer.
 
 {% hint style="warning" %}
 Run the same n8n version on every main instance. During a rolling deploy, an older main instance can run a task from its leader timer while newer ones run it on the durable scheduler, so the task can run twice.
@@ -88,7 +89,7 @@ These series describe the schedule rather than a run, so they exist before the f
 | :----- | :--- | :---------------- |
 | `n8n_system_task_info` | Gauge | Always `1`, one series per task this instance can run, with its `mode`. Your inventory of system tasks: join against it to find a task that reports no runs. |
 | `n8n_system_task_interval_seconds` | Gauge | The task's declared cadence, for tasks on a fixed interval. This turns "late" into a query instead of a list of thresholds you maintain by hand. Tasks on a cron schedule don't report it. |
-| `n8n_system_task_next_run_timestamp_seconds` | Gauge | The Unix timestamp of the next occurrence, for interval and cron schedules. For a timer task, it's the occurrence the timer on this instance is armed for. A timestamp in the past means the timer stopped planning. For a durable task, n8n reads it from the database, so every main instance reports the same value. |
+| `n8n_system_task_next_run_timestamp_seconds` | Gauge | The Unix timestamp of the next occurrence, for interval and cron schedules. For a timer task, it's the occurrence the timer on this instance is armed for. A timestamp in the past means the timer stopped planning. For a durable task, it's the first occurrence the scheduler didn't plan yet, so a planned run can start earlier. Every main instance reports the same value, read from the database. |
 | `n8n_system_task_scheduled` | Gauge | `1` while n8n has the task scheduled, `0` once the task lost its schedule, because n8n couldn't plan its timer cadence or no runnable durable job exists for it. A `0` here means the task stopped rather than running late: it takes an instance restart, or a leadership change for a leader timer task, to get it scheduled again. Alert on it. |
 | `n8n_system_task_provision_check_failures_total` | Counter | How many times n8n couldn't check whether a task's durable job exists and ran the task from the leader timer instead. A rising count means database trouble, and a small risk of the same task running twice while both paths are live. |
 

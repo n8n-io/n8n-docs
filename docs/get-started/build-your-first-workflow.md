@@ -127,7 +127,7 @@ n8n Assistant chooses the node names itself, so yours may differ from the ones a
 
 n8n Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
 
-You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every day at 8am**, **Get Berlin Weather**, **Format Weather Message**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
+You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every day at 8am**, **Get Berlin Weather**, **Add Weather Report**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
 
 ### 1. Create the workflow
 
@@ -231,7 +231,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
 
     ![Value with city, temperature, and condition](.gitbook/assets/build-your-first-workflow-optional-04-04-02.png)
 
-5. Rename the node to `Format Weather Message` and click **Execute step**.
+5. Rename the node to `Add Weather Report` and click **Execute step**.
 
 ### 5. Save the data
 
@@ -255,12 +255,12 @@ To create the data table:
 
 Back in the canvas:
 
-4. Add a **Data table** node after **Format Weather Message** and select **Insert row** as the action.
+4. Add a **Data table** node after **Add Weather Report** and select **Insert row** as the action.
 
     ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-04.png)
 
 5. Rename the node to `Save Weather Report`.
-6. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Format Weather Message** has the same name as the column in the data table, so n8n maps them for you.
+6. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Add Weather Report** has the same name as the column in the data table, so n8n maps them for you.
 
     ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-06.png)
 

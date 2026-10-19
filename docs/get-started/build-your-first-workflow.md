@@ -104,7 +104,7 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
     ![Weather Data tab selected at the top of the right hand pane](.gitbook/assets/build-your-first-workflow-assistant-06.png)
 
-7. Select **Personal** in the left menu to see the workflow. The Assistant saves all workflows under **Personal**.
+7. Select **Personal** in the left menu to see the workflow. n8n Assistant saves all workflows under **Personal**.
 
     ![Weather Log listed under Personal, marked as Published](.gitbook/assets/build-your-first-workflow-assistant-07.png)
 
@@ -125,7 +125,7 @@ n8n Assistant chooses the node names itself, so yours may differ from the ones a
 
 ## Optional: Build the workflow yourself
 
-The Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
+n8n Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
 
 You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every day at 8am**, **Get Berlin Weather**, **Format Weather Message**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
 
@@ -237,16 +237,30 @@ Next, you’ll turn the weather data into a short report that anyone can read at
 
 You’ll use: **Data table**
 
-You’ve fetched the data and formatted it, so now it’s time to store it. The Assistant already created a [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) called `weather_data`, so this workflow writes to the same table.
+You’ve fetched the data and formatted it, so now it’s time to store it. If n8n Assistant already created the `weather_data` [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables), then move to step 4.
 
-1. Add a **Data table** node after **Format Weather Message** and select **Insert row** as the action.
+To create the data table:
 
-    ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
+1. Click **Personal** in the left menu then click **Data tables**.
 
-2. Rename the node to `Save Weather Report`.
-3. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Format Weather Message** has the same name as the column in the data table, so n8n maps them for you.
+    ![Navigating to Data tables](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
 
-    ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
+2. Click **Create data table**, name it `weather_data` and click **Create**.
+
+    ![Create data table](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
+
+3. Click **Add Column**, enter `report` for **Name**, then click **Add Column** again. This gives you a column to store the weather report in.
+
+    ![report column in the new data table](.gitbook/assets/build-your-first-workflow-optional-05-03.png)
+
+4. Add a **Data table** node after **Format Weather Message** and select **Insert row** as the action.
+
+    ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-04.png)
+
+5. Rename the node to `Save Weather Report`.
+6. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Format Weather Message** has the same name as the column in the data table, so n8n maps them for you.
+
+    ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-06.png)
 
 ### 6. Test and publish the workflow
 

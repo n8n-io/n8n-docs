@@ -12,7 +12,7 @@ Send an `Idempotency-Key` header on a public API POST so a retry returns the fir
 {% hint style="info" %}
 **Feature availability**
 
-Idempotency for the n8n API is available on:
+Idempotency for the n8n API is available from n8n 2.45.0 on:
 
 - **n8n Cloud:** Starter, Pro, Enterprise
 - **Self-hosted:** All editions
@@ -22,13 +22,13 @@ It isn't available on the free trial.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
-The header is optional. If you leave it off, n8n handles the POST as usual and doesn't look up or save a previous response.
+The header is optional. If you leave it off, each POST runs as usual.
 
 ## Send an idempotency key
 
-Set the `Idempotency-Key` header on the first POST, and send that same header again if you retry. Use a new key for each distinct request. A version 4 UUID is a safe choice. n8n doesn't require that format.
+Set the `Idempotency-Key` header on the first POST, and send that same header again when you retry. Use a new key for each distinct request. A version 4 UUID is a safe choice. n8n doesn't require that format.
 
-The value must be from 1 to 128 visible ASCII characters: letters, digits, and symbols, with no spaces. n8n trims leading and trailing whitespace, then compares the key character by character. An empty value, or a value that's only whitespace, is the same as leaving the header off.
+The value must be from 1 to 128 characters: letters, digits, and symbols, with no spaces. n8n ignores spaces before and after the key. An empty value is the same as leaving the header off.
 
 ```shell
 curl -X POST \
@@ -46,13 +46,13 @@ A key that's too long, or that contains a space or another disallowed character,
 
 ## Requests that use the key
 
-n8n honors the header on POST requests that create a resource or start work, such as creating a workflow or calling `POST /api/v1/executions/<execution-id>/retry`. The [endpoint reference](api-reference.md) shows the header on each POST that accepts it.
+n8n uses the header on POST requests that create something or start work, such as creating a workflow or calling `POST /api/v1/executions/<execution-id>/retry`. The [endpoint reference](api-reference.md) shows the header on each POST that accepts it.
 
-n8n ignores the header, and doesn't read or write a stored response, for `GET`, `PUT`, `PATCH`, and `DELETE`. It also ignores POST requests whose URL ends with `activate`, `deactivate`, `publish`, `unpublish`, `archive`, `unarchive`, `transfer`, `test`, or `test-trace`.
+n8n ignores the header for `GET`, `PUT`, `PATCH`, and `DELETE`. It also ignores POST requests whose URL ends with `activate`, `deactivate`, `publish`, `unpublish`, `archive`, `unarchive`, `transfer`, `test`, or `test-trace`.
 
 ## How long n8n keeps the response
 
-n8n keeps the first response, including an error, for 12 hours, starting when it accepts the key. A retry inside that window returns the stored response and doesn't run the POST again.
+n8n keeps the first response, including an error, for 12 hours from when you send the key. A retry inside that window returns that response and doesn't run the POST again.
 
 After 12 hours, the same key runs the POST again and can create a duplicate. Send a new key for the next operation.
 
@@ -60,9 +60,9 @@ Keys belong to the user, not to one API key. Two API keys for the same user shar
 
 ## Retry the same request
 
-Send the same key with the same path, query string, and body, including JSON field order and whitespace. A match returns the same status code and JSON body as the first response, including an error.
+Send the same path, query string, and body again, including the order of the JSON fields and any spaces. A match returns the same status code and JSON body as the first response, including an error.
 
-n8n doesn't store a file download. A retry of a POST that returns a file runs the request again.
+A POST that returns a file isn't covered. Retrying it runs the request again.
 
 ### Same key, different request
 
@@ -86,25 +86,17 @@ If the first request hasn't finished, n8n returns `409`:
 }
 ```
 
-Wait, then send the same key and the same request again. Two calls in flight with one key don't create two resources. One call finishes the work. The other receives `409`, or the stored response if the first call has already finished.
-
-{% hint style="warning" %}
-**No stored response yet**
-
-If n8n stops after it accepts the key and before it stores a response, later retries keep returning `409` until 12 hours have passed. Wait and retry with the same key. A new key can create a second resource if the first request already finished its write.
-{% endhint %}
+Wait, then send the same key and the same request again. Two requests at the same time with one key don't create two resources. One request finishes the work. The other receives `409`, or the first response if that request has already finished.
 
 ## When the request fails
 
-n8n stores an error the same way it stores a success. If the POST returns an error, a retry with the same key and the same request returns that status code and JSON body. It doesn't run the POST again.
+n8n keeps an error the same way it keeps a success. If the POST returns an error, a retry with the same key and the same request returns that status code and JSON body. It doesn't run the POST again.
 
 Send a new key to run the POST again. If the first POST returns `400` because the body is invalid, correct the body and send a new key. The original key keeps returning that `400` for 12 hours.
 
 ## Limits of an idempotency key
 
-An idempotency key doesn't make a workflow execution durable, and it doesn't replace engine-level execution durability. If an execution stops partway through, the same key doesn't resume it.
-
-n8n evaluates the idempotency header only on public API endpoints at `/api/v1`.
+The idempotency header applies only to public API endpoints at `/api/v1`.
 
 ## Related resources
 

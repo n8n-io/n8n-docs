@@ -32,7 +32,7 @@ The value must be from 1 to 128 visible ASCII characters: letters, digits, and s
 
 ```shell
 curl -X POST \
-  '<your-instance>/api/v1/workflows' \
+  'https://<your-instance>/api/v1/workflows' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>' \
   -H 'Idempotency-Key: <idempotency-key>' \

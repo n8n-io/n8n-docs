@@ -26,7 +26,7 @@ Refer to [Databricks credentials](../../../credentials/databricks.md) for guidan
 {% hint style="info" %}
 **Preview status**
 
-The Databricks Vector Store node is in Preview and may change in future releases. Avoid relying on it in production workflows.
+The Databricks Vector Store node is in Preview from n8n 2.45.0 and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

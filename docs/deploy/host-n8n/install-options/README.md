@@ -12,11 +12,11 @@ Compare ways to install self-hosted n8n.
 
 ## In this section
 
-* [Prerequisites](prerequisites.md): check database, operating system, runtime, storage, and software requirements before you install.
 * [One-line setup](one-line-setup.md): install n8n from the command line using a one-line setup.
 * [Install using Docker Compose](install-using-docker-compose.md): build a Docker Compose setup for self-hosted n8n.
 * [Install with npm](install-with-npm.md): install n8n directly using Node Package Manager.
 * [Install with Docker](install-with-docker.md): install and run n8n using Docker.
+* [Production requirements](production-requirements.md): check database, operating system, runtime, storage, and software requirements for a production deployment.
 * [Use a cloud provider](use-a-cloud-provider/README.md): deploy self-hosted n8n to DigitalOcean, AWS, Azure, Google Cloud, and more.
 
 ## Related resources

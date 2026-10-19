@@ -28,7 +28,7 @@ The header is optional. If you leave it off, each POST runs as usual.
 
 Set the `Idempotency-Key` header on the first POST, and send that same header again when you retry. Use a new key for each distinct request. A version 4 UUID is a safe choice. n8n doesn't require that format.
 
-The value must be from 1 to 128 characters: letters, digits, and symbols, with no spaces. n8n ignores spaces before and after the key. An empty value is the same as leaving the header off.
+The value must be from 1 to 128 visible ASCII characters: letters, digits, and symbols, with no spaces. n8n ignores spaces before and after the key. An empty value, or a value that's only spaces, is the same as leaving the header off.
 
 ```shell
 curl -X POST \

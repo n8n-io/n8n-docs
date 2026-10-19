@@ -104,7 +104,7 @@ Send a new key to run the POST again. If the first POST returns `400` because th
 
 An idempotency key doesn't make a workflow execution durable, and it doesn't replace engine-level execution durability. If an execution stops partway through, the same key doesn't resume it.
 
-The header applies to the public API at `/api/v1`. The internal API the n8n editor uses doesn't honor it.
+n8n evaluates the idempotency header only on public API endpoints at `/api/v1`.
 
 ## Related resources
 

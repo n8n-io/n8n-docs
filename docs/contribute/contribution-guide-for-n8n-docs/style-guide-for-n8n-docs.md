@@ -33,7 +33,7 @@ n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/st
 
 Write for people who use, operate, or build on n8n, not for n8n's own internal engineers.
 
-Include what the reader does and sees: controls, settings, fields, error messages, limits, and behaviour that affects what they've built.
+Include what the reader does and sees: controls, settings, fields, error messages, limits, and behavior that affects what they've built.
 
 Include an implementation detail only when the reader needs it to act, choose between options, or troubleshoot. For example, how execution data is stored matters on a self-hosting page and not on a node reference page. Otherwise leave it out.
 

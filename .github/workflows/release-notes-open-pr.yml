@@ -48,8 +48,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          if ! printf '%s' "$BRANCH" | grep -qE '^(release-notes/[0-9]{8}-[0-9]{4}|sdk-docs/v[0-9]+\.[0-9]+\.[0-9]+[0-9A-Za-z.+-]*-[0-9]{8}-[0-9]{4})$'; then
-            echo "::error::Refusing to open a PR from '$BRANCH' - not a release-notes or sdk-docs branch."
+          if ! printf '%s' "$BRANCH" | grep -qE '^(release-notes/[0-9]{8}-[0-9]{4}|doc-[0-9]+-workflow-sdk-reference-v[0-9]+\.[0-9]+\.[0-9]+[0-9A-Za-z.+-]*)$'; then
+            echo "::error::Refusing to open a PR from '$BRANCH' - not a release-notes or Workflow SDK reference branch."
             exit 1
           fi
           if [ -z "$TITLE" ]; then

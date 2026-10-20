@@ -7,7 +7,7 @@ layout:
 
 # API idempotency
 
-Send an `Idempotency-Key` header on a public API POST so a retry returns the first response, including an error, instead of running the request again.
+Send an `Idempotency-Key` header on a public API POST so a retry returns the first successful response instead of running the request again.
 
 {% hint style="info" %}
 **Feature availability**
@@ -52,7 +52,7 @@ n8n ignores the header for `GET`, `PUT`, `PATCH`, and `DELETE`.
 
 ## How long n8n keeps the response
 
-n8n keeps the first response, including an error, for 12 hours from when you send the key. A retry inside that window returns that response and doesn't run the POST again.
+n8n keeps the first successful response for 12 hours from when you send the key. A retry inside that window returns that response and doesn't run the POST again.
 
 After 12 hours, the same key runs the POST again and can create a duplicate. Send a new key for the next operation.
 
@@ -60,7 +60,7 @@ Keys belong to the user, not to one API key. Two API keys for the same user shar
 
 ## Retry the same request
 
-Send the same key with the same path, query string, and body again, including the order of the JSON fields and any spaces. A match returns the same status code and JSON body as the first response, including an error.
+Send the same key with the same path, query string, and body again, including the order of the JSON fields and any spaces. A match returns the same status code and JSON body as the first response.
 
 A POST that returns a file isn't covered. Retrying it runs the request again.
 
@@ -90,9 +90,9 @@ Wait, then send the same key and the same request again. Two requests at the sam
 
 ## When the request fails
 
-n8n keeps an error the same way it keeps a success. If the POST returns an error, a retry with the same key and the same request returns that status code and JSON body. It doesn't run the POST again.
+If the POST fails, n8n doesn't keep that response. A retry with the same key and the same request runs the POST again.
 
-Send a new key to run the POST again. If the first POST returns `400` because the body is invalid, correct the body and send a new key. The original key keeps returning that `400` for 12 hours.
+If the first POST returns `400` because the body is invalid, correct the body and send the same key again.
 
 ## Limits of an idempotency key
 

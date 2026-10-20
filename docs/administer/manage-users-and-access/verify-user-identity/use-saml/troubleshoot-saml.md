@@ -22,7 +22,7 @@ If you get an error when testing your SAML setup, check the following:
 
 For more support, use the [forum](https://community.n8n.io/), or contact your support representative if you have a paid support plan.
 
-## Several users land in the same account after SAML login
+## Users land in the same account after SAML login
 
 n8n links each SAML identity to an n8n account by the `userPrincipalName` (`upn`) claim. If your IdP sends the same value for more than one person, they all sign in to the same account. Give each user a distinct value. See [Set up SAML](set-up-saml.md) for the attribute mapping.
 

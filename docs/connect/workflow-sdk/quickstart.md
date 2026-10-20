@@ -110,7 +110,7 @@ The tool assigns credentials it finds on the instance to nodes that need them. I
 
 ## Add a branch
 
-Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way, and one Edit Fields node per branch. Every If condition needs `options`, `conditions`, and `combinator`. The complete file:
+Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way. Add one Edit Fields node per branch. Every If condition needs `options`, `conditions`, and `combinator`. The complete file:
 
 ```javascript
 import { workflow, node, trigger, ifElse, expr } from '@n8n/workflow-sdk';

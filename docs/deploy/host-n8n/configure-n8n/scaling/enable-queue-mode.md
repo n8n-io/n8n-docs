@@ -85,6 +85,12 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 ### Start Redis <a href="#start-redis" id="start-redis"></a>
 
 {% hint style="info" %}
+**Redis version**
+
+Queue mode needs Redis 6.2 or later. With an older version, executions can fail before they start when a worker is busy for a long time. Use a Redis version that still gets security updates, such as Redis 7.2 or later.
+{% endhint %}
+
+{% hint style="info" %}
 **Running Redis on a separate machine**
 
 You can run Redis on a separate machine, just make sure that it's accessible by the n8n instance.

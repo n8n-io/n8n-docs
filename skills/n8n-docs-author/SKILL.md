@@ -29,7 +29,7 @@ code blocks). Use GitBook syntax, not MkDocs/Material syntax.
 
 n8n Docs are for customers using the product. They are not internal engineering notes.
 
-Write what the customer does and what they see: the control, the header, the status code, the error message, and the limit that changes their request. Leave out how n8n implements it. Storage, comparison mechanics, process crashes, internal APIs, and engine internals stay off the page.
+Write what the customer does and what they see: the control, the header, the status code, the error message, and the limit that changes their request. Leave out how n8n implements it, such as internal APIs and engine internals. Keep customer-visible outcomes, such as a `crashed` execution status or a storage setting the customer configures, and describe only what the customer sees.
 
 A ticket or design doc is a source of facts. It is not the page. Take the customer-facing contract from it, and drop the rest.
 

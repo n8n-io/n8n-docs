@@ -20,9 +20,12 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 - [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) (OAuth2 only, used for the MLflow trace export)
 - [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) (OAuth2 only)
 - [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
 - [Databricks Trigger](../trigger-nodes/n8n-nodes-base.databrickstrigger.md)
+- [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) (OAuth2 only)
+- [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md) (OAuth2 only)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
@@ -53,7 +56,10 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
 | Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
-| Unity AI Gateway model services (Databricks Chat Model) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Unity AI Gateway model services (Databricks Chat Model, Embeddings Databricks) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Searching a vector search index (Databricks Vector Store: Get Many, Retrieve Documents, Retrieve as Tool) | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the index. **SELECT** on the source table of a Delta Sync index that syncs all of its columns lets the node list those columns. A self-managed index also needs the model service privileges above for the Embeddings Databricks node. **Metadata Filter** needs read access on the Vector Search endpoint |
+| Inserting documents (Databricks Vector Store: Insert Documents) | The privileges for searching, plus **MODIFY** on the index. Only Direct Access indexes accept inserts |
+| Exporting traces to MLflow (Databricks AI Agent) | **CAN EDIT** on the experiment. The default experiment the node creates under `/Shared` needs no extra grant, because all workspace users have **CAN MANAGE** on the `/Shared` folder by default |
 | Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |
 
 {% hint style="info" %}
@@ -204,7 +210,7 @@ There are two steps to setting up this credential:
 {% hint style="info" %}
 **Workspace assignment**
 
-The service principal must be assigned to the workspace it will access. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
+The service principal must be assigned to the workspace it will access, with the **Workspace access** entitlement. A service principal that only exists at the account level fails with `invalid_client` from the workspace token endpoint, which looks like a wrong client secret. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
 {% endhint %}
 
 {% hint style="warning" %}

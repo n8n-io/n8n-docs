@@ -31,7 +31,7 @@ export N8N_SCHEDULER_ENABLED=true
 export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=true
 ```
 
-From n8n 2.45.0, `N8N_SCHEDULER_ENABLED` is on by default, so you can leave it out. Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest keep their timer mode.
+Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest keep their timer mode.
 
 {% hint style="warning" %}
 Run the same n8n version on every main instance. During a rolling deploy, an older main instance can run a task from its leader timer while newer ones run it on the durable scheduler, so the task can run twice.

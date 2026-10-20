@@ -1,13 +1,12 @@
 ---
 name: n8n-docs-author
 description: >-
-  Authors and reviews n8n documentation pages for customers using the product,
-  not for internal engineers. Follows the n8n docs style and contribution
-  guides. Use when writing new doc pages, editing existing docs, reviewing doc
-  PRs, or checking content against the style guide. Covers audience, writing
-  style, GitBook formatting syntax (hints, collapsibles, tabs, code blocks),
-  internal and external links, and linting guidance. Use when asked to write or
-  edit docs, or to review content against the style guide.
+  Writes, edits, and reviews customer-facing n8n documentation pages in the
+  n8n-docs repo, following the style guide, contribution guide, and
+  terminology. Use when drafting a page, editing docs, reviewing a docs PR, or
+  checking content against the style guide. Covers audience, plain language,
+  page structure and links, feature availability, frontmatter, and GitBook
+  syntax.
 ---
 
 # n8n docs author
@@ -27,11 +26,13 @@ code blocks). Use GitBook syntax, not MkDocs/Material syntax.
 
 ## Audience
 
-n8n Docs are for customers using the product. They aren't internal engineering notes.
+Write for people who use, operate, or build on n8n, not for n8n's own internal engineers.
 
-Write what the customer does and what they see: the control, the header, the status code, the error message, and the limit that changes their request. Leave out how n8n implements it, such as internal APIs and engine internals. Keep customer-visible outcomes, such as a `crashed` execution status or a storage setting the customer configures, and describe only what the customer sees.
+Include what the reader does and sees: controls, settings, fields, error messages, limits, and behaviour that affects what they've built.
 
-A ticket or design doc is a source of facts. It is not the page. Take the customer-facing contract from it, and drop the rest.
+Include an implementation detail only when the reader needs it to act, choose between options, or troubleshoot. For example, how execution data is stored matters on a self-hosting page and not on a node reference page. Otherwise leave it out.
+
+Tickets, PRs, and design docs are sources of facts, not templates for the page. Keep what the reader needs and drop the rest.
 
 ## Modes
 

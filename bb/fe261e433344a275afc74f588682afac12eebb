@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_521e0a5448edfe::t_bd77e23f1b2a5a 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bbfe261e433344a275afc74f588682afac12eebb",
+  "prompts": {},
+  "sessions": {
+    "s_521e0a5448edfe": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "846ee954-ece5-4118-97dc-461d3b084437",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Veljko Terzic <veljko.terzic@n8n.io>"
+    }
+  }
+}

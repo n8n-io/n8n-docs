@@ -1,0 +1,22 @@
+docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md
+  s_7da6ace9eda03f::t_2936166b995db4 138
+  s_7da6ace9eda03f::t_7f27ba8823d230 149
+  s_7da6ace9eda03f::t_5f579e0ed3f378 424
+  s_7da6ace9eda03f::t_98ddb528a97875 123-124
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "2931ee1aad40097de7582e3868f4a87fec792985",
+  "prompts": {},
+  "sessions": {
+    "s_7da6ace9eda03f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a715692e-bfe9-4fc0-87de-28f136b5a469",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Olivier de Jong <olivier.dejong@n8n.io>"
+    }
+  }
+}

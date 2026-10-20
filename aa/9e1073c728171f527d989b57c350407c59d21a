@@ -1,0 +1,68 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
+  s_f0eb65f622ecc1::t_5cf07094174525 45,50,53,55-56,58,60-78
+docs/integrations/builtin/credentials/microsoft.md
+  s_f0eb65f622ecc1::t_5cf07094174525 247-248
+docs/integrations/builtin/app-nodes/n8n-nodes-base.databricks.md
+  s_f0eb65f622ecc1::t_5cf07094174525 46,50,206-211
+  s_f0eb65f622ecc1::t_31e9552dd3fe81 221
+docs/deploy/host-n8n/configure-n8n/security/block-specific-nodes.md
+  s_f0eb65f622ecc1::t_5cf07094174525 21-22
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md
+  s_f0eb65f622ecc1::t_5cf07094174525 3-5,11,13,28,36-37,49,80,87,89,116
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md
+  s_f0eb65f622ecc1::t_5cf07094174525 77,87-88
+docs/integrations/builtin/credentials/databricks.md
+  s_f0eb65f622ecc1::t_5cf07094174525 25,56-57,132,142,148,157,159
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+  s_f0eb65f622ecc1::t_5cf07094174525 38,40,51,56,59,61-64,66,68,70-72,74,76-114
+docs/reusable-content/.gitbook/includes/self-hosting/installation/latest-next-version.md
+  s_f0eb65f622ecc1::t_5cf07094174525 9-10
+REUSABLE_CONTENT_INDEX.md
+  s_f0eb65f622ecc1::t_5cf07094174525 9
+SPACE_INDEX.md
+  s_f0eb65f622ecc1::t_5cf07094174525 7-19
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md
+  s_f0eb65f622ecc1::t_e409cd868303aa 92
+  s_f0eb65f622ecc1::t_80931f7060a78b 40
+  s_f0eb65f622ecc1::t_31e9552dd3fe81 47,112
+docs/administer/manage-users-and-access/README.md
+  s_f0eb65f622ecc1::t_5cf07094174525 40
+docs/administer/SUMMARY.md
+  s_f0eb65f622ecc1::t_5cf07094174525 8
+docs/build/integrate-ai/mcp-servers.md
+  s_f0eb65f622ecc1::t_5cf07094174525 29
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
+  s_f0eb65f622ecc1::t_5cf07094174525 48-73
+styles/config/vocabularies/default/accept.txt
+  s_f0eb65f622ecc1::t_5cf07094174525 3
+docs/integrations/SUMMARY.md
+  s_f0eb65f622ecc1::t_5cf07094174525 608
+docs/privacy-and-security/README.md
+  s_f0eb65f622ecc1::t_5cf07094174525 83
+docs/integrations/builtin/credentials/microsoftentra.md
+  s_f0eb65f622ecc1::t_5cf07094174525 192,194
+docs/changelog/v30-breaking-changes.md
+  s_f0eb65f622ecc1::t_5cf07094174525 30
+docs/get-started/build-your-first-workflow.md
+  s_f0eb65f622ecc1::t_5cf07094174525 30,32,34,36-38,40,42,44,46-47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77-107,109,111,113,115,117,119,121,123,125-132,134-141,143,145-156,159,161,163-213,216,218,221,223-238,240,242-244,246,248,250,252,254,256,258-259
+docs/administer/manage-users-and-access/control-node-availability.md
+  s_f0eb65f622ecc1::t_5cf07094174525 1-207
+docs/deploy/use-n8n-cloud/configure-cloud/manage-your-data.md
+  s_f0eb65f622ecc1::t_5cf07094174525 43-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aa9e1073c728171f527d989b57c350407c59d21a",
+  "prompts": {},
+  "sessions": {
+    "s_f0eb65f622ecc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e872a7ba-8ecf-4689-aed8-d0f9a3201d0c",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

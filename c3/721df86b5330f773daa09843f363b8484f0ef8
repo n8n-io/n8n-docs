@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_2d3546a1b982e7::t_aa1bcf5546c23f 123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "c3721df86b5330f773daa09843f363b8484f0ef8",
+  "prompts": {},
+  "sessions": {
+    "s_2d3546a1b982e7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a451fea3-8826-4cc0-b2ab-5ad7ec44bb86",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Danny Martini <danny@n8n.io>"
+    }
+  }
+}

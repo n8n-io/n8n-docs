@@ -1,0 +1,19 @@
+docs/changelog/README.md
+  s_523607168806d1::t_5cebc1d8e79b49 456,460
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "83cefd1e85d391c8b755cbabd5cbdaa863708aea",
+  "prompts": {},
+  "sessions": {
+    "s_523607168806d1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "641bd5c2-e47d-4774-a7f2-c68d15139f2f",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

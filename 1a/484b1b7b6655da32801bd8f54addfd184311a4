@@ -1,0 +1,21 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+  s_2f64531d4927ce::t_edf4e0e0a9f2cb 285
+  s_2f64531d4927ce::t_fd45658c1a0466 245
+  s_2f64531d4927ce::t_2b6dd59a8843a1 239-244,246-284
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1a484b1b7b6655da32801bd8f54addfd184311a4",
+  "prompts": {},
+  "sessions": {
+    "s_2f64531d4927ce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ebc7f5c-6cc6-415c-a9e3-59aec8d97ec5",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Ilfat Mindubaev <ilfat.mindubaev@n8n.io>"
+    }
+  }
+}

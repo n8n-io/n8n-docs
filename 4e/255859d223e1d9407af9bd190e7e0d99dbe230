@@ -1,0 +1,19 @@
+docs/build/SUMMARY.md
+  s_bd2784a1eec4c6::t_de56150a9c101f 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "4e255859d223e1d9407af9bd190e7e0d99dbe230",
+  "prompts": {},
+  "sessions": {
+    "s_bd2784a1eec4c6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d469eab3-1400-4d1c-978f-015dd6a80099",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

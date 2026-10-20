@@ -22,6 +22,12 @@ If you get an error when testing your SAML setup, check the following:
 
 For more support, use the [forum](https://community.n8n.io/), or contact your support representative if you have a paid support plan.
 
+## Several users land in the same account after SAML login
+
+n8n links each SAML identity to an n8n account by the `userPrincipalName` (`upn`) claim. If your IdP sends the same value for more than one person, they all sign in to the same account. Give each user a distinct value. See [Set up SAML](set-up-saml.md) for the attribute mapping.
+
+n8n emits an `n8n.audit.user.login.emailConflict` audit event when a SAML login resolves to an existing user whose email differs from the asserted email. Stream it to catch this case. See [Log streaming](../../../observe-and-log/stream-logs-to-external-systems.md#events).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Related resources

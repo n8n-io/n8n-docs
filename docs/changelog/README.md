@@ -59,6 +59,24 @@ Both variables are now deprecated, and n8n logs a warning at startup if you set 
 
 Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
 
+## Control which nodes users can add and run, per instance or per project
+
+**Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)
+
+You can now set rules that control which nodes users can add, publish, and run, either across the whole instance or within individual projects. Node type policies let instance and project admins enforce governance requirements through the public API without removing nodes from the instance entirely.
+
+Each policy is an ordered list of rules plus a default action. A rule can allow, deny, or delegate one node type or every node in a package. n8n evaluates the instance policy first. A deny there is final: no project can override it. An allow lets the project policy decide, so a project can only restrict further. A delegate blocks the node by default, but a project admin can turn it on for their team with an explicit allow rule. Without any policy, every node remains available.
+
+n8n checks policies when workflows are saved, published, and run, and when agents use tools in configuration or chat. CLI imports, source control pulls, and credential tests are checked too. In the editor, blocked nodes show a lock icon in search and their node details become read-only. If you try to publish or run a workflow that uses one, n8n refuses and lists each blocked node with a link to find it. Every block also sends an audit event to your log streaming destinations.
+
+To get started, create an API key with the `nodeTypePolicy:manage` scope and read the current policy with `GET /api/v1/node-type-policies/instance`. Add your rules, then send the whole policy back with `PUT`, including the `version` you read. Changes take effect within about one second.
+
+Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## TypeSafe AI node for smarter workflow routing with Jev
 
 **Released:** 2026-09-30&#x20;

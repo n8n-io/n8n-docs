@@ -66,7 +66,7 @@ n8n 2.45.0 also removes the **Skip Durable Scheduler** node setting and `N8N_ENV
 
 Poll triggers (trigger nodes with a **Poll Times** parameter, such as Google Sheets Trigger or Airtable Trigger) stay on the in-memory scheduler unless you also opt them in with [`N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.33.0. Poll trigger support isn't 100% stable yet, so keep it off in production unless you're prepared to keep a close watch on your polling workflows. For how polls behave under the durable scheduler, and for the [durable poll cursors](#durable-poll-cursors) that n8n recommends turning on together with `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED`, see [Poll triggers](#poll-triggers).
 
-n8n's internal maintenance jobs also stay on in-process timers unless you opt them in with [`N8N_SCHEDULER_SYSTEM_TASKS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), available from n8n 2.40.0. n8n moves these jobs to the durable scheduler one release at a time, and in n8n 2.40.0 no job uses it yet.
+n8n's internal maintenance jobs also stay on in-process timers unless you opt them in with [`N8N_SCHEDULER_SYSTEM_TASKS_ENABLED`](basic-configuration/use-environment-variables/scheduler.md#enable-vars), from n8n 2.45.0. See [Run system tasks on the durable scheduler](system-tasks.md#run-system-tasks-on-the-durable-scheduler).
 
 ## How the durable scheduler works <a href="#how-it-works" id="how-it-works"></a>
 

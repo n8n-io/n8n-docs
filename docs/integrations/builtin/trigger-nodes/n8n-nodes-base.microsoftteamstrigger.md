@@ -85,7 +85,7 @@ Renewal works only while your n8n instance is reachable. If a subscription expir
 
 The trigger doesn't renew subscriptions for a workflow that has no stored subscription secret, for example after a loss of its static data or a workflow import. The subscriptions expire and the trigger stops receiving events. The instance log shows `Microsoft Teams Trigger: skipped lifecycle notifications: no stored secret, republish the workflow`. Republish the workflow to fix it.
 
-From n8n 2.45.1, lifecycle notifications (`reauthorizationRequired`, `subscriptionRemoved`, and `missed`) no longer reach the workflow as items. On earlier versions, every lifecycle notification started an execution. A workflow that filtered them with an [If node](../core-nodes/n8n-nodes-base.if.md) on `lifecycleEvent` can drop that branch.
+From n8n 2.45.1, lifecycle notifications (`reauthorizationRequired` and `subscriptionRemoved`) no longer reach the workflow as items. On earlier versions, every lifecycle notification started an execution. A workflow that filtered them with an [If node](../core-nodes/n8n-nodes-base.if.md) on `lifecycleEvent` can drop that branch.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

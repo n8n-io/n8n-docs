@@ -239,6 +239,7 @@ The following tables list the scopes available when you create a scoped API key,
 
 * [n8n API](./)
 * [Pagination](pagination.md)
+* [Idempotency](idempotency.md)
 * [Use an API playground](use-an-api-playground.md)
 * [Endpoint reference](api-reference.md)
 

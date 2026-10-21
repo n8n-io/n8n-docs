@@ -129,6 +129,7 @@ Homeserver
 howto
 HubSpot
 Humantic
+[Ii]dempotency
 Imperva
 indexable
 invalid

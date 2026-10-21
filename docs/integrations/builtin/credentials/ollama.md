@@ -68,6 +68,6 @@ Refer to [How do I configure Ollama server?](https://github.com/ollama/ollama/bl
 
 ### Ollama and self-hosted n8n <a href="#ollama-and-self-hosted-n8n" id="ollama-and-self-hosted-n8n"></a>
 
-If n8n and Ollama run in separate Docker containers, connect both containers to the same user-defined network. Set **Base URL** to `http://<ollama-container>:11434`. Replace `<ollama-container>` with your Ollama container's name. For example, for a container with the name `ollama`, use `http://ollama:11434`.
+If Ollama and n8n run in separate Docker containers, connect both containers to the same user-defined bridge network. Set **Base URL** to `http://<ollama-container>:11434`. Replace `<ollama-container>` with your Ollama container's name. For example, for a container with the name `ollama`, use `http://ollama:11434`.
 
-For the setup steps, refer to [Connect n8n and Ollama in separate Docker containers](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md#if-ollama-and-n8n-are-running-in-separate-docker-containers).
+For the setup steps, refer to [Ollama Chat Model node common issues](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md#if-ollama-and-n8n-are-running-in-separate-docker-containers).

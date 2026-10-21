@@ -76,11 +76,11 @@ When configuring [Ollama credentials](../../../credentials/ollama.md), use `host
 
 ### If Ollama and n8n are running in separate Docker containers <a href="#if-ollama-and-n8n-are-running-in-separate-docker-containers" id="if-ollama-and-n8n-are-running-in-separate-docker-containers"></a>
 
-Connect both containers to the same [user-defined bridge network](https://docs.docker.com/engine/network/drivers/bridge/). The default Docker bridge network doesn't resolve container names. Using a container name on the default bridge can cause an `ENOTFOUND` error, even when Ollama is running.
+Connect both containers to the same user-defined bridge network. For more information, refer to the Docker [bridge network driver documentation](https://docs.docker.com/engine/network/drivers/bridge/). The default Docker bridge network doesn't resolve container names. Using a container name on the default bridge can cause an `ENOTFOUND` error, even when Ollama is running.
 
 Configure Ollama to listen on `0.0.0.0` inside its container. The official Ollama image already uses this setting.
 
-For existing containers, follow these steps. Replace `<ollama-container>` and `<n8n-container>` with the names of your existing containers. Run `docker ps` to find their names.
+To connect existing containers, follow these steps. Replace `<ollama-container>` and `<n8n-container>` with the names of your existing containers. Run `docker ps` to find their names.
 
 1. Create a shared network:
 
@@ -102,7 +102,7 @@ For existing containers, follow these steps. Replace `<ollama-container>` and `<
 
 4. In your [Ollama credentials](../../../credentials/ollama.md), set **Base URL** to `http://<ollama-container>:11434`. Replace `<ollama-container>` with your Ollama container's name. For example, for a container with the name `ollama`, use `http://ollama:11434`.
 
-Both containers must be running. You don't need to publish Ollama's port to the host for communication over the shared network.
+Both containers must be running. Containers on the same network communicate directly, so you don't need to publish Ollama's port to the host.
 
 ### If Ollama and n8n are running in the same Docker container <a href="#if-ollama-and-n8n-are-running-in-the-same-docker-container" id="if-ollama-and-n8n-are-running-in-the-same-docker-container"></a>
 

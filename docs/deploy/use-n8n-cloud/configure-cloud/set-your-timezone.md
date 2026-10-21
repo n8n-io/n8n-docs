@@ -14,8 +14,11 @@ layout:
 
 You can change the timezone for your n8n instance. This affects the [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) and [Date & Time node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datetime). Users can configure the timezone for individual workflows in [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings).
 
-1. On your dashboard, select **Manage**.
-1. Change the **Timezone** dropdown to the timezone you want.
+To change the instance timezone:
+
+1. Open the [n8n Cloud console](../use-the-cloud-console.md) and select **Instance settings**.
+1. In the **Runtime** section, select the timezone you want from the **Time zone** dropdown. You can type to search the list.
+1. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change, and is offline until the restart completes.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 

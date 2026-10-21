@@ -101,8 +101,11 @@ n8n has several distinct AI-powered features for building workflows. Each is a s
 | n8n Cloud | Cloud, hosted version, SaaS, the cloud, managed n8n |
 | instance (a running n8n system) | server, box, deployment (as a noun for the running system) |
 | Enterprise (plan) | enterprise edition, premium, paid tier |
+| Cloud console (the n8n Cloud web app at app.n8n.cloud where the instance owner manages their instance, plan, billing, and credits) | admin dashboard, admin panel, Cloud dashboard, Cloud admin dashboard |
 
 "Deployment" isn't banned outright: it's correct for the act of deploying ("deployment methods", "the deployment finishes") and for a Kubernetes `Deployment` resource. Only replace it with "instance" when it's used as a noun for the running n8n system itself.
+
+Write "n8n Cloud console" on first mention in a page, to tell it apart from other vendors' consoles such as Google Cloud Console, then "Cloud console" after that. Call the n8n Cloud system the owner manages there an "instance", not a "workspace". The n8n editor's left menu labels its link to the Cloud console **Admin Panel**: use that exact label only in a step that tells the reader to select it.
 
 ### Plans and tiers
 

@@ -59,7 +59,7 @@ Both options work with the **Classic** and the **Microsoft Foundry** endpoint ty
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's OpenAI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/azure_openai) for more information about the service.
+Refer to [LangChain's Azure OpenAI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/azure_openai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

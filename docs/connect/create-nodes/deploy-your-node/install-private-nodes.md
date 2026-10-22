@@ -25,7 +25,7 @@ Before you start, [build your node with the n8n node CLI](../build-your-node/usi
 1. Run the build command from your node project:
 
 	```sh
-	pnpm build
+	npm run build
 	```
 
 	Check that `dist/` contains your compiled `.node.js` file and its assets.

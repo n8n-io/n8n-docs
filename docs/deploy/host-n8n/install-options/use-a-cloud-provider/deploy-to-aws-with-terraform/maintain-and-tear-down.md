@@ -52,7 +52,7 @@ aws kms enable-key --key-id <key-id>
 {% hint style="warning" %}
 **A pending-deletion key blocks recovery, even with a retained snapshot or S3 objects**
 
-RDS snapshots and S3 objects encrypted with the module's own KMS keys can't be decrypted once the key enters `PendingDeletion`. If you need encrypted backups to outlive a `terraform destroy`, bring your own KMS key (see above) and manage its lifecycle outside the module.
+RDS snapshots and S3 objects encrypted with the module's own KMS keys can't be decrypted once the key enters `PendingDeletion`. If you need encrypted backups to outlive a `terraform destroy`, manage a retained KMS key outside the module. For existing deployments, copy RDS snapshots with that key and re-encrypt or copy S3 objects before destroying; changing the configured key doesn't re-encrypt existing data.
 {% endhint %}
 
 ## Deletion protection and teardown

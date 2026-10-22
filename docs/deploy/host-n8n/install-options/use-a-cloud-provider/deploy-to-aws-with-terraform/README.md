@@ -76,7 +76,7 @@ module "n8n" {
 }
 ```
 
-Pass sensitive values such as `n8n_license_key` as Terraform variables from a secrets manager, never hardcoded in a `.tfvars` file you commit to version control.
+Pass sensitive values such as `n8n_license_key` from a secrets manager, and store Terraform state in an encrypted, access-controlled backend because the module writes the key into the Helm release. Never hardcode the key in a `.tfvars` file you commit to version control.
 
 ## Choose a starting size
 

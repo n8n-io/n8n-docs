@@ -107,6 +107,12 @@ Moving workflows or credentials removes all existing sharing. Be aware that this
 4. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
 5. Select **Confirm move to new project**.
 
+### Use personal credentials in team projects <a href="#use-personal-credentials-in-team-projects" id="use-personal-credentials-in-team-projects"></a>
+
+Project members can select their own personal credentials in any workflow in a team project they belong to, without sharing the credential with the project. The credential selector groups credentials into **Available to you** (your personal credentials), **Available in this project**, and **Available to everyone**.
+
+Only the owner can run or publish workflows with their personal credential, until they share it with the project. Refer to [Use personal credentials in projects](../../manage-credentials/use-personal-credentials-in-projects.md).
+
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

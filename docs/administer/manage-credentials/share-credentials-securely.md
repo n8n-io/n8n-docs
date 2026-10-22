@@ -39,7 +39,9 @@ Credential sharing is available on:
 
 You can share a credential directly with other users to use in their own workflows. Or share a credential in a project[^1] for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
 
-Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
+You don't need to share your own credentials to use them in a team project you're a member of. Share a credential when other people need to run or publish workflows with it. Refer to [Use personal credentials in projects](use-personal-credentials-in-projects.md) for how personal credentials work in team projects and who a workflow run acts as.
+
+Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance. On the **Sharing** tab, only the credential's owner, or users with permission to share credentials, can change who the credential is shared with.
 
 Refer to [Instance roles](../manage-users-and-access/understand-instance-roles.md) for more information about owners and admins.
 
@@ -65,6 +67,17 @@ To share a credential:
 6. Select a user or project.
 7. Select **Save** to apply the changes.
 
+People you share a credential with get the **Can use** role: they can run and publish workflows with it, but can't see or edit its secret.
+
+## Understand the Sharing tab <a href="#understand-the-sharing-tab" id="understand-the-sharing-tab"></a>
+
+The **Sharing** tab lists everyone with access to the credential, and every project that uses it:
+
+* **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md).
+* **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it. To give them access, select **Share**.
+
+Owners and Admins can use any credential in their own personal space without a share. To let them use the credential in team projects too, share it with them.
+
 ## Remove access to a credential <a href="#remove-access-to-a-credential" id="remove-access-to-a-credential"></a>
 
 To unshare a credential:
@@ -81,6 +94,7 @@ To unshare a credential:
 ## Related resources
 
 * [Manage credentials](./)
+* [Use personal credentials in projects](use-personal-credentials-in-projects.md)
 * [End-user credentials](end-user-credentials.md)
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)

@@ -1,0 +1,18 @@
+docs/build/understand-workflows/save-and-publish-workflows.md
+  h_760178ed151f13 99
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  h_760178ed151f13 93-95,106
+docs/build/manage-workflows/workflow-reviews.md
+  h_760178ed151f13 17,27,36,62-63,133,135
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "daf32aafe4944e952e8ce786cacd0695b38578c4",
+  "prompts": {},
+  "humans": {
+    "h_760178ed151f13": {
+      "author": "Sandra Zollner <sandra.zollner@n8n.io>"
+    }
+  }
+}

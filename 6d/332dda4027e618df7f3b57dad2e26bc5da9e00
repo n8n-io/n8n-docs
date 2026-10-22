@@ -1,0 +1,23 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_8d3ede7226e1b1::t_d1266846c30b5a 40
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_8d3ede7226e1b1::t_cad3c42b56344e 69
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_8d3ede7226e1b1::t_127e6bc44ea949 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6d332dda4027e618df7f3b57dad2e26bc5da9e00",
+  "prompts": {},
+  "sessions": {
+    "s_8d3ede7226e1b1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dc968485-1da9-4d9a-9c0e-e0b7fe23b8a5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Veljko Terzic <veljko.terzic@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+  s_aa5791b5056069::t_4fc68e5aef87f7 40,64
+docs/integrations/builtin/credentials/azureopenai.md
+  s_aa5791b5056069::t_33a62556f668ee 36,42-50,55,57-60,72,74-80,84,86,95-98,115,117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1386fbf72306e76b0f6d49acb534e912552bda02",
+  "prompts": {},
+  "sessions": {
+    "s_aa5791b5056069": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c3ba50c-1281-4a2b-8747-60f723d98557",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

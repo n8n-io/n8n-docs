@@ -1,0 +1,23 @@
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  s_02342595835f9e::t_cf787b4d580f29 112
+docs/build/manage-workflows/workflow-reviews.md
+  s_02342595835f9e::t_523b1792cf1913 27,31-32,37-40,43-47,49-50,58,64,100
+  s_02342595835f9e::t_a10ddbe48c84b8 41
+  s_02342595835f9e::t_ee5d5567b31f8f 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "368c05a5ddd7d28d90b0f445e321e10e425f4dfe",
+  "prompts": {},
+  "sessions": {
+    "s_02342595835f9e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "02eb2510-2d1d-474e-a33c-870a24fde270",
+        "model": "default"
+      },
+      "human_author": null
+    }
+  }
+}

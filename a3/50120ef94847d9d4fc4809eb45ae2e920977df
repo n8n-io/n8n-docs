@@ -1,0 +1,31 @@
+docs/deploy/SUMMARY.md
+  s_7dbe2a2c5f2869::t_8b13ce1ada5fda 84
+docs/deploy/host-n8n/configure-n8n/deploy-n8n-in-canvas-only-mode.md
+  h_c63dce324dfc7b 11,13,28,36-37,43
+  s_7dbe2a2c5f2869::t_4b5d4b29a2a76f 1-10,12,14-27,29-35,38-42,44
+docs/deploy/host-n8n/configure-n8n/README.md
+  s_7dbe2a2c5f2869::t_8e85780ac07a38 60-63
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/deployment.md
+  s_7dbe2a2c5f2869::t_613c93e1bc86d5 62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "a350120ef94847d9d4fc4809eb45ae2e920977df",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_7dbe2a2c5f2869": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "38034287-68e8-41d5-8ea4-93df2b19e402",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

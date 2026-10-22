@@ -1,0 +1,30 @@
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_e2fe0ca94f80a2::t_31d739d5bab155 67
+  s_e2fe0ca94f80a2::t_eaed384a5e627d 91
+  s_e2fe0ca94f80a2::t_7582b6e27eed04 56
+  s_e2fe0ca94f80a2::t_a4bf2170d0ccec 33,36
+  s_e2fe0ca94f80a2::t_369dde9d07a1e9 68
+  s_e2fe0ca94f80a2::t_743fc8df7825e3 92
+  s_e2fe0ca94f80a2::t_2d6ab901d90ea3 21-23
+  s_e2fe0ca94f80a2::t_65ab83b8dfc502 99
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_e2fe0ca94f80a2::t_2edb34469d1125 40
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_e2fe0ca94f80a2::t_6529bd505eff42 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6b03132712e3408d8c6e3f729ffe04d1c3cd8480",
+  "prompts": {},
+  "sessions": {
+    "s_e2fe0ca94f80a2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a078c24f-786a-4bf6-a02e-91d3443cdc86",
+        "model": "unknown"
+      },
+      "human_author": "Veljko Terzic <veljko.terzic@n8n.io>"
+    }
+  }
+}

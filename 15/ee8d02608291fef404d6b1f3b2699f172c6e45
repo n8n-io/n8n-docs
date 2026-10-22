@@ -1,0 +1,23 @@
+docs/build/ways-of-building-workflows/n8n-assistant.md
+  s_285b8731aa4005::t_8c4145097f6e81 125-126
+  s_285b8731aa4005::t_9c53360f469755 122,124
+docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md
+  s_285b8731aa4005::t_8c4145097f6e81 618,620
+  s_285b8731aa4005::t_9c53360f469755 603
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "15ee8d02608291fef404d6b1f3b2699f172c6e45",
+  "prompts": {},
+  "sessions": {
+    "s_285b8731aa4005": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0c372-fd5f-7790-91b4-047011134a19",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Arvin Ansari <arvin.ansari@n8n.io>"
+    }
+  }
+}

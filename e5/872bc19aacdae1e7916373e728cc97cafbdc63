@@ -1,0 +1,23 @@
+docs/connect/create-nodes/build-your-node/reference/verification-guidelines.md
+  s_ab3c08630da63a::t_cb5b79fec838f9 42
+docs/connect/create-nodes/build-your-node/using-the-n8n-node-tool.md
+  s_ab3c08630da63a::t_cb5b79fec838f9 118
+docs/connect/create-nodes/plan-your-node/choose-a-node-building-style.md
+  s_ab3c08630da63a::t_cb5b79fec838f9 30-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "e5872bc19aacdae1e7916373e728cc97cafbdc63",
+  "prompts": {},
+  "sessions": {
+    "s_ab3c08630da63a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "072f995a-8e56-47df-ac54-eeda29a1e5bc",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jonathan <jon@n8n.io>"
+    }
+  }
+}

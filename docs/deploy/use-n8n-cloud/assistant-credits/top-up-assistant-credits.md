@@ -1,8 +1,8 @@
 ---
 description: >-
   Buy extra Assistant credits manually or with auto top-up in the n8n Cloud
-  admin dashboard, so you can keep using n8n Assistant after your monthly
-  allowance runs out.
+  console, so you can keep using n8n Assistant after your monthly allowance
+  runs out.
 layout:
   description:
     visible: false
@@ -26,8 +26,8 @@ Extra Assistant credits only pay for your conversations with n8n Assistant. They
 
 ## Top up manually
 
-1. Open the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Assistant credits** tab.
-1. Select **Top up**.
+1. Open the [n8n Cloud console](../use-the-cloud-console.md) and select **Assistant credits** in the sidebar.
+1. On the **Balance** card, select **Top up**.
 1. Choose a credit package.
 1. Read the credit terms and select the checkbox to accept them.
 1. Select **Continue to checkout** and complete the payment. Taxes may apply depending on your billing country.
@@ -38,11 +38,11 @@ Your new extra credits appear on the page once the payment completes. They expir
 
 Auto top-up buys extra credits whenever your extra credit balance drops below a threshold you set. Use it if you rely on n8n Assistant every day and don't want it to pause when your included credits run out. Auto top-up always charges the payment method saved on your subscription.
 
-1. Open the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Assistant credits** tab.
+1. Open the [Cloud console](../use-the-cloud-console.md) and select **Assistant credits** in the sidebar.
 1. In the **Auto top-up extra credits** card, turn on auto top-up.
-1. Set **When extra credits drop to** (the extra credit balance that triggers a top-up) and **Top up extra credits to** (the extra credit balance to refill to). The dashboard shows the minimum values you can set.
+1. Set **When extra credits drop to** (the extra credit balance that triggers a top-up) and **Top up extra credits to** (the extra credit balance to refill to). The Cloud console shows the minimum values you can set.
 1. Optionally, set a **Monthly auto top-up limit** to cap how much auto top-up can charge per month. The limit is on by default.
-1. Select **Save changes**, then confirm.
+1. Select **Save changes**, then select **Turn on auto top-up** to confirm.
 
 {% hint style="info" %}
 Auto top-up only looks at your extra credits. Your included credits don't count toward the threshold, so auto top-up keeps a reserve of extra credits ready for when your included credits run out.

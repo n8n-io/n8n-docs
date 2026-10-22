@@ -47,8 +47,6 @@ n8n dynamically loads models from the Google PaLM API and you'll only see the mo
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/) for more information about the service.
-
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 [^1]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.

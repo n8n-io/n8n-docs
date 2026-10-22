@@ -48,7 +48,7 @@ Learn more about available models in [Google Gemini's models documentation](http
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Langchain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
+Refer to [LangChain's Google Generative AI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/google_generative_ai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

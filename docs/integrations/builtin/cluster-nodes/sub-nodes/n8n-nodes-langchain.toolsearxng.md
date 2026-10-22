@@ -66,7 +66,7 @@ The quality and availability of search results depend on the configuration and h
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service. You can also view [LangChain's documentation on their SearXNG integration](https://python.langchain.com/docs/integrations/tools/searx_search/).
+Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -79,6 +79,7 @@ The following events are available. You can choose which events to stream in **S
 * Audit
 	* User login success
 	* User login failed
+	* User login email conflict
 	* User signed up
 	* User updated
 	* User deleted

@@ -161,7 +161,7 @@ Configure the prompt filled with a unique ID, its version, and substitutable var
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the service.
+Refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/openai) for more information about the service.
 
 Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/responses/create) for more information about the parameters.
 

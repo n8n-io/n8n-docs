@@ -54,7 +54,7 @@ Concurrency in queue mode is a separate mechanism from concurrency in regular mo
 
 * [Use n8n Cloud](./)
 * [Try free then choose a plan](start-your-free-trial.md)
-* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Use the Cloud console](use-the-cloud-console.md)
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)

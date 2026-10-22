@@ -51,7 +51,7 @@ n8n recommends that owners create a second account with the **Member** role for 
 | Create [projects](set-permissions-and-roles-rbac/organize-work-in-projects.md) | ✅ | ✅ | ❌ |
 | View all projects | ✅ | ✅ | ❌ |
 | Add and remove users | ✅ | ✅ | ❌ |
-| Access the Cloud dashboard | ✅ | ❌ | ❌ |
+| Access the n8n Cloud console | ✅ | ❌ | ❌ |
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 

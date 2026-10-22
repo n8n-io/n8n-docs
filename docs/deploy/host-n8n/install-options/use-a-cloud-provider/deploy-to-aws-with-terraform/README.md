@@ -24,7 +24,7 @@ The default multi-main topology this module deploys is available on:
 
 - **Self-hosted:** Enterprise
 
-Setting `n8n_main_hpa_min_replicas = 1` runs a single main pod instead, which only requires a Business plan license. In that mode, the main pod's autoscaling maximum is forced to one, upgrades use a `Recreate` strategy, and you should expect editor, REST API, and scheduled-trigger downtime during upgrades and maintenance.
+Setting `n8n_main_hpa_min_replicas = 1` runs a single main pod instead, which only requires a Business plan license. In that mode, the main pod's autoscaling maximum is forced to one, and upgrades use a `Recreate` strategy. Expect downtime for the editor, REST API, and scheduled triggers during upgrades and maintenance.
 {% endhint %}
 
 ## Architecture

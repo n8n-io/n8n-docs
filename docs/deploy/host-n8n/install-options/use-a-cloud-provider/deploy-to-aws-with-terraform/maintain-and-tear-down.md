@@ -42,7 +42,7 @@ Download the combined CA bundle from AWS's trust store at `https://truststore.pk
 
 ## KMS keys after terraform destroy
 
-The module schedules its managed KMS keys for deletion seven days after a `terraform destroy`, rather than deleting them immediately. A key becomes unusable as soon as deletion is scheduled, even though permanent loss only occurs once the seven-day window completes. If you need to recover a deployment inside that window, cancel the deletion before re-applying:
+The module schedules its managed KMS keys for deletion seven days after a `terraform destroy`, rather than deleting them immediately. A key becomes unusable as soon as deletion is scheduled, even though permanent loss only occurs once the seven-day window completes. To reuse a key after a completed destroy, cancel its deletion, enable it, and import it back into Terraform state before re-applying:
 
 ```bash
 aws kms cancel-key-deletion --key-id <key-id>

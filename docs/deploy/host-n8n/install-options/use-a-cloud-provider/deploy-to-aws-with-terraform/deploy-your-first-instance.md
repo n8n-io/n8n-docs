@@ -47,7 +47,7 @@ The terraform-aws-n8n module ships three sizing examples. This walkthrough deplo
 
 | | small (default) | medium | large |
 |---|---|---|---|
-| Target scale | Development or small team | ~5-15M executions/day | ~50-60M+ executions/day |
+| Target scale | Development or small team | ~5–15M executions/day | ~50–60M+ executions/day |
 | Node type | t3.xlarge | m6i.2xlarge | m7i.4xlarge |
 | Estimated cost/month (on-demand) | ~$440 | ~$2,000 | ~$21,000+ |
 

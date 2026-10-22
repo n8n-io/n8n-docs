@@ -51,11 +51,11 @@ Only you can run workflows with your personal credential in that project. Other 
 Agents, including AI agents and the Slack and Microsoft Teams integrations, don't offer personal credentials yet. They can only use credentials the project holds.
 {% endhint %}
 
-## What teammates see when a workflow uses someone's personal credential
+## What teammates see when a workflow uses your credential
 
-Teammates who can't use the credential see its name and owner on the node, for example **Jane's Slack account**. n8n disables **Execute** and **Publish** for them.
+Teammates who can't use your credential see its name and owner on the node, for example **Jane's Slack account**. n8n disables **Execute** and **Publish** for them.
 
-To run the workflow, they can switch the node to their own credential, or ask the owner to share it.
+To run the workflow, they can switch the node to their own credential, or ask you to share yours.
 
 ## Who a workflow run acts as
 
@@ -66,7 +66,7 @@ Every run acts as a person, and that person must be able to use the credentials 
 
 Credentials the project holds work for every run in that project. They keep working on a schedule even if the publisher's own access changes later.
 
-Publishing a workflow requires access to every credential it uses. For how this affects publishing and what to do with older workflows, refer to [Who a published workflow runs as](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#who-a-published-workflow-runs-as).
+You can't publish a workflow that uses a credential you can't use. For how this affects publishing and what to do with older workflows, refer to [Who a published workflow runs as](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#who-a-published-workflow-runs-as).
 
 ## Credential access for Owners and Admins
 
@@ -77,9 +77,9 @@ Instance Owners and Admins can view and share every credential on the instance. 
 
 Refer to [Instance roles](../manage-users-and-access/understand-instance-roles.md) for the full list of Owner and Admin permissions.
 
-## Execution data from credentials without access
+## Execution data from credentials you can't use
 
-If an execution used a credential a user can't use, n8n hides its data from them. The execution's status and timing stay visible. This includes data that came back from a sub-workflow that used the credential, even when the parent workflow doesn't use it itself. The same rules apply to executions read through the public API or the n8n MCP server.
+If an execution used a credential you can't use, n8n hides its data from you. You still see the execution's status and timing. This includes data that came back from a sub-workflow that used the credential, even when the parent workflow doesn't use it itself. The same rules apply to executions you read through the public API or the n8n MCP server.
 
 ## Related resources
 

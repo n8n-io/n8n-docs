@@ -46,14 +46,14 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 **Released:** 2026-10-27 in n8n 2.46.0
 
-Members can now select their own personal credentials in any team project they belong to, without sharing them first. A credential always runs as a person who has the right to use it. Teammates can see that a workflow uses someone's personal credential, but they can't run or publish the workflow with it, and they can't see the execution data it produced. The credential selector groups credentials into **Available to you**, **Available in this project**, and **Available to everyone**.
+You can now select your own personal credentials in any team project you're a member of, without sharing them first. A credential always runs as a person who has the right to use it. Teammates can see that a workflow uses your credential, but they can't run or publish the workflow with it, and they can't see the execution data it produced. The credential selector groups credentials into **Available to you**, **Available in this project**, and **Available to everyone**.
 
-What changes after the upgrade:
+After you upgrade, you may notice:
 
-* **Disabled Execute and Publish buttons:** if a workflow uses another user's credential that the current user can't use, n8n names the credential and its owner. The workflow stays editable, and the node can switch to a usable credential.
-* **Publish checks:** publishing a workflow requires access to every credential it uses. The check names the credential that blocks it.
-* **Hidden execution data:** n8n hides the data of executions that used a credential the user can't use, including data returned from sub-workflows.
-* **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and offers one-step sharing with them.
+* **Disabled Execute and Publish buttons:** if a workflow uses someone else's credential that you can't use, n8n names the credential and its owner. You can still edit the workflow and switch to a credential you can use.
+* **Publish checks:** you can't publish a workflow with a credential you can't use. The check tells you which credential blocks it.
+* **Hidden execution data:** n8n hides the data of executions that used a credential you can't use, including data returned from sub-workflows.
+* **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and lets you share with them in one step.
 
 Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects).
 

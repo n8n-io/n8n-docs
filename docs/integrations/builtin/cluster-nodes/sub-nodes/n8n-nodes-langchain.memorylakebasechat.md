@@ -17,16 +17,18 @@ On this page, you'll find the one-time table setup, the node parameters, the com
 {% hint style="info" %}
 **Credentials**
 
-Refer to the [Databricks credentials documentation](../../credentials/databricks.md) for authentication information for this node. The node accepts a Databricks OAuth2 credential only, with [user login](../../credentials/databricks.md#using-oauth2-with-user-login) or a [service principal](../../credentials/databricks.md#using-oauth2-service-principal). The Data API rejects personal access tokens, and it excludes the project owner, so use an identity that doesn't own the Lakebase project.
+Refer to the [Databricks credentials documentation](../../credentials/databricks.md) for authentication information for this node. The node accepts a Databricks OAuth2 credential only, with [user login](../../credentials/databricks.md#using-oauth2-with-user-login) or a [service principal](../../credentials/databricks.md#using-oauth2-service-principal). A project owner can't use the Data API, so authenticate as an identity that doesn't own the Lakebase project.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create the table
 
-Unlike the [Postgres Chat Memory](n8n-nodes-langchain.memorypostgreschat.md) node, this node doesn't create its table. The Data API can't run `CREATE TABLE`, so you run the SQL once in the Lakebase SQL editor before the first run. A run against a missing table fails with the same SQL in the error, so you can also copy it from there.
+Unlike the [Postgres Chat Memory](n8n-nodes-langchain.memorypostgreschat.md) node, this node doesn't create its table. The Data API can't run `CREATE TABLE`, so you run the SQL once in the Lakebase SQL editor before the first run.
 
-Before you create the table, the Lakebase project needs the Data API turned on, and the identity your credential authenticates as needs a Postgres role on the branch. Follow [Set up Lakebase for the Data API](../../credentials/databricks.md#set-up-lakebase-for-the-data-api) for those steps. Then run this in the Lakebase SQL editor:
+Before you create the table, follow [Set up Lakebase for the Data API](../../credentials/databricks.md#set-up-lakebase-for-the-data-api) to turn on the Data API, create a Postgres role for the identity your credential authenticates as, and grant it to `authenticator`. You can skip the OpenAPI specification step and the data grants there: this node doesn't list tables, and the SQL below includes the grants it needs. Then, signed in to Databricks as yourself rather than as the n8n identity, run this in the Lakebase SQL editor:
 
 ```sql
 CREATE TABLE "public"."n8n_chat_histories" (id SERIAL PRIMARY KEY, session_id VARCHAR(255) NOT NULL, message JSONB NOT NULL);
@@ -39,14 +41,12 @@ GRANT USAGE ON SEQUENCE "public"."n8n_chat_histories_id_seq" TO "your-role";
 * Replace `"your-role"` with the Postgres role of the OAuth2 identity: the user's email address, or the application ID of the service principal. It's the role you created with `databricks_create_role` during setup.
 * If you set **Schema** or **Table Name** to something other than `public` and `n8n_chat_histories`, replace them in every statement, including the sequence name, which is the table name followed by `_id_seq`.
 
-The table layout is the one the Postgres Chat Memory node creates, so the node reads a chat history that a Postgres Chat Memory node wrote into Lakebase.
-
 ## Node parameters
 
-* **Project**: Select the Lakebase project from the list, or select **By ID** and enter its name.
+* **Project**: Select the Lakebase project from the list, or select **By ID** and enter its project ID.
 * **Branch**: Select the branch of the project from the list, or select **By ID** and enter its name.
 * **Database**: Select the Postgres database on the branch from the list, or select **By ID** and enter its name.
-* **Schema**: The Postgres schema that holds the table. `public` by default. The list offers only `public`, because Databricks has no endpoint that lists Postgres schemas. For another schema, select **By ID** and enter its name. The Data API has to expose that schema.
+* **Schema**: The Postgres schema that holds the table. Defaults to `public`, and the list offers only `public`. For another schema, select **By ID** and enter its name. The Data API has to expose that schema.
 * **Table Name**: Enter the name of the table to store the chat history in. Defaults to `n8n_chat_histories`. The node doesn't create the table. Refer to [Create the table](#create-the-table).
 * **Session ID**: Select how the node finds the session ID:
 	* **Connected Chat Trigger Node**: Reads the `sessionId` field from the input of a directly connected [Chat Trigger](../../core-nodes/n8n-nodes-langchain.chattrigger/README.md) node.
@@ -55,16 +55,21 @@ The table layout is the one the Postgres Chat Memory node creates, so the node r
 
 ## Common issues
 
-The node checks every parameter before it calls the Data API, so an empty **Project**, **Branch**, **Database**, or **Schema** fails in the memory node rather than inside the agent. These errors come from the table or the identity:
+### The table is missing
 
-| Error | Cause and fix |
-|-------|---------------|
-| `Table <schema>.<table> does not exist` | The table was never created, or the Data API schema cache still lists a table you dropped (`PGRST205` or `42P01`). The error description holds the `CREATE TABLE`, `CREATE INDEX`, and `GRANT` statements for the schema and table you selected. Run them in the Lakebase SQL editor as described in [Create the table](#create-the-table). |
-| `The OAuth2 identity cannot use table <schema>.<table>` | The table exists, but the role lacks one of the three grants: usage on the schema, `SELECT`, `INSERT`, and `DELETE` on the table, or usage on the sequence (`42501`). The error description holds the three `GRANT` statements. Run them as the table owner. |
-| `The session holds more rows than one run can read (100000)` | The session has more than 100,000 rows. The node fails rather than return part of the history, because the context window takes the newest messages and the [Chat Memory Manager](n8n-nodes-langchain.memorymanager.md) node rewrites the session from what it read. Clear the session with the Chat Memory Manager node, or use a new **Session ID**. |
-| `Lakebase requires OAuth2 authentication` | The credential is a personal access token. The Data API accepts OAuth2 only. Select a [Databricks OAuth2 credential](../../credentials/databricks.md#supported-authentication-methods) instead. |
+The node fails with `Table <schema>.<table> does not exist`. You haven't created the table yet (`PGRST205`), or the Data API schema cache still lists a table you dropped (`42P01`). The error description holds the `CREATE TABLE`, `CREATE INDEX`, and `GRANT` statements for the schema and table you selected. Run them in the Lakebase SQL editor as described in [Create the table](#create-the-table).
 
-A `permission denied to set role` error (`42501`) means the role isn't granted to the Data API, or the identity owns the project. Refer to [Set up Lakebase for the Data API](../../credentials/databricks.md#set-up-lakebase-for-the-data-api).
+### The role lacks a grant
+
+The node fails with `The OAuth2 identity cannot use table <schema>.<table>`. The table exists, but the role lacks a grant on the schema, the table, or the sequence (`42501`). The error description holds the three `GRANT` statements. Run them as the table owner.
+
+### The session is too large to read
+
+The node fails with `The session holds more rows than one run can read (100000)`. The session has more than 100,000 rows, and the node fails rather than returning part of the history. Clear the session with the [Chat Memory Manager](n8n-nodes-langchain.memorymanager.md) node, or use a new **Session ID**.
+
+### Setup errors
+
+`invalid token permissions` (`PGRST301`) and `permission denied to set role` (`42501`) come from the Data API setup, not from the table. Refer to [Common Lakebase issues](../../app-nodes/n8n-nodes-base.databricks.md#common-lakebase-issues) on the Databricks node page.
 
 ## Related resources
 
@@ -74,6 +79,6 @@ Refer to the [Lakebase Data API documentation](https://docs.databricks.com/aws/e
 
 ## Single memory instance
 
-If you add more than one Databricks Lakebase Chat Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
+With **Session ID** set to **Connected Chat Trigger Node**, each Databricks Lakebase Chat Memory node scopes its session to its own node name, so two memory nodes in one workflow don't share a history. To share one history between memory nodes, set **Session ID** to **Define below** in each node and use the same **Key**. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](n8n-nodes-langchain.memorymanager.md) node.
 
-[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+[^1]: In an AI context, memory allows AI tools to persist message context across interactions. This lets you hold continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

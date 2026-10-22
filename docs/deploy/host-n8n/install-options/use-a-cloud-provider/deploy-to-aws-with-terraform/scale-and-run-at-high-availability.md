@@ -60,7 +60,7 @@ Both nodes use `redis_node_type`, so enabling high availability roughly doubles 
 {% hint style="warning" %}
 **High availability doesn't prevent pod restarts**
 
-A Redis failover promotes the replica in about twenty seconds, and queued executions survive. However, every main, worker, and webhook pod still restarts: n8n's Redis client exits the process once Redis is unreachable for longer than `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` (ten seconds by default). This is a fail-fast design, not a crash loop. Kubernetes brings each pod back immediately, and recovery typically completes within a minute with the queue intact.
+A Redis failover promotes the replica in about twenty seconds, but Redis replication is asynchronous, so recent queue writes may be lost if the replica hasn't received them. However, every main, worker, and webhook pod still restarts: n8n's Redis client exits the process once Redis is unreachable for longer than `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` (ten seconds by default). This is a fail-fast design, not a crash loop. Kubernetes brings each pod back immediately, and recovery typically completes within a minute if Redis is available.
 {% endhint %}
 
 ### Avoid restarts during a failover

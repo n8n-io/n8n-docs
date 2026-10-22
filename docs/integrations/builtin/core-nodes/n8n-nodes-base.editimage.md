@@ -42,6 +42,8 @@ Use the Edit Image node to manipulate and edit images.
 2. You need to use a node such as the [Read/Write Files from Disk](n8n-nodes-base.readwritefile.md) node or the [HTTP Request](n8n-nodes-base.httprequest/README.md) node to pass the image file as a data property to the Edit Image node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Add a **Blur** to the image to reduce sharpness

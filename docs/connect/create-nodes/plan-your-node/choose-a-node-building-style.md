@@ -23,6 +23,8 @@ The declarative style:
 
 If you're not sure which style your node needs, start declarative. The [`n8n-node` tool](../build-your-node/using-the-n8n-node-tool.md) scaffolds a declarative node for you, and [Build a declarative-style node](../build-your-node/tutorial-build-a-declarative-style-node.md) walks through a complete example.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## When you need the programmatic style
 
 The programmatic style is more verbose, and it puts your node's behavior in code that you have to maintain. Treat it as the exception. Use the programmatic style when your node is one of these:

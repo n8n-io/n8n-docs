@@ -30,6 +30,8 @@ You can use these credentials to authenticate the following nodes:
 * [Google Gemini Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
 * [Embeddings Google PaLM](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * Create a [Google Cloud](https://cloud.google.com/) account.

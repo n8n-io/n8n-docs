@@ -29,6 +29,8 @@ n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO)
 * [Set up SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml/set-up-saml): a general guide to setting up SAML in n8n, and links to resources for common identity providers (IdPs).
 * [Set up OIDC](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc): a general guide to setting up OpenID Connect (OIDC) SSO in n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Configure SSO with environment variables <a href="#configure-sso-with-environment-variables" id="configure-sso-with-environment-variables"></a>
 
 {% hint style="info" %}

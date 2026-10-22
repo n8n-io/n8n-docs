@@ -18,6 +18,8 @@ layout:
 
 There are some user management tasks that are affected by SAML.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Exempt users from SAML <a href="#exempt-users-from-saml" id="exempt-users-from-saml"></a>
 
 You can allow users to log in without using SAML. To do this:

@@ -17,6 +17,8 @@ n8n can run in different [modes](scaling/enable-queue-mode.md) depending on your
 
 You can configure data saving and pruning to improve database performance. Refer to [Execution data](scaling/manage-execution-data.md) for details.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Measure performance](scaling/measure-performance.md): benchmark n8n's performance and resource consumption.

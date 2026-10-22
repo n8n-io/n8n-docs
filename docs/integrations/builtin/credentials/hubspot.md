@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md)
 - [HubSpot Trigger](../trigger-nodes/n8n-nodes-base.hubspottrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Service key (recommended): Use with the [HubSpot](../app-nodes/n8n-nodes-base.hubspot.md) node.

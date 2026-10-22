@@ -23,6 +23,8 @@ layout:
 
 Create a [Qualys](https://www.qualys.com/) user account with any user role except Contact.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth

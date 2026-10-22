@@ -19,6 +19,8 @@ You need to manually install community nodes in the following circumstances:
 * Your n8n instance runs in queue mode.
 * You want to install [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Install a community node <a href="#install-a-community-node" id="install-a-community-node"></a>
 
 Access your Docker shell:

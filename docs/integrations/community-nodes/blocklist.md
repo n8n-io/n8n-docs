@@ -23,3 +23,5 @@ n8n may add community nodes to the blocklist for a range of reasons, including:
 If you are a community node creator whose node is on the blocklist, and you believe this is a mistake, contact [hello@n8n.io](mailto: hello@n8n.io).
 
 
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -30,6 +30,8 @@ Your Oracle Database instance must support Oracle AI Vector Search for vector st
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns
 
 You can use the Oracle Database Vector Store node in the following patterns.

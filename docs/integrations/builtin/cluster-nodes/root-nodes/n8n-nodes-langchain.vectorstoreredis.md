@@ -48,6 +48,8 @@ Refer to the [Redis credentials documentation](../../credentials/redis.md) for a
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Before using this node, you need a Redis database with the [Redis Query Engine](https://redis.io/docs/latest/develop/ai/search-and-query/?utm_source=n8n\&utm_medium=docs) enabled. Use one of the following:
@@ -161,7 +163,7 @@ Refer to:
 
 * [Redis Vector Search documentation](https://redis.io/docs/latest/develop/ai/search-and-query/vectors/) for more information about Redis vector capabilities.
 * [RediSearch documentation](https://redis.io/docs/latest/develop/interact/search-and-query/) for more information about RediSearch.
-* [LangChain's Redis Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/redis) for more information about the service.
+* [LangChain's Redis Vector Store documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

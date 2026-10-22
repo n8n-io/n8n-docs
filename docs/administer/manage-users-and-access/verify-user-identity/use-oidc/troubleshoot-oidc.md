@@ -20,6 +20,8 @@ layout:
 
 When using OIDC providers that enforce the use of the `state` CSRF token parameter, authentication fails with the error:
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ```json
 {"code":0,"message":"authorization response from the server is an error"}
 ```

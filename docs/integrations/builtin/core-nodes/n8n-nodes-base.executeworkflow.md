@@ -22,6 +22,8 @@ layout:
 
 Use the Execute Sub-workflow node to run a different workflow on the host machine that runs n8n.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Source <a href="#source" id="source"></a>

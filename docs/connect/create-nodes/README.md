@@ -8,6 +8,8 @@ layout:
 
 Plan, build, test, and deploy a custom n8n node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Overview](overview.md): what node creation involves, and how to get started.

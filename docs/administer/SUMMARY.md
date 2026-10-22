@@ -5,6 +5,7 @@
   * [Set up for Cloud](manage-users-and-access/set-up-for-cloud.md)
   * [Add and remove users](manage-users-and-access/add-and-remove-users.md)
   * [Understand instance roles](manage-users-and-access/understand-instance-roles.md)
+  * [Control node availability](manage-users-and-access/control-node-availability.md)
   * [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md)
     * [See available roles](manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
     * [Organize work in projects](manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)

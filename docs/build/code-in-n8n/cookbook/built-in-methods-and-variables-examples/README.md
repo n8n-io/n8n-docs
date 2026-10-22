@@ -14,6 +14,8 @@ layout:
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides usage examples.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [execution](execution.md): set and get custom execution data.

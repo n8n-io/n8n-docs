@@ -7,6 +7,8 @@ layout:
 
 Configure timezone, IP addresses, data management, and ownership settings for your n8n Cloud instance.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Set your timezone](set-your-timezone.md): set your timezone on n8n Cloud.
@@ -18,7 +20,7 @@ Configure timezone, IP addresses, data management, and ownership settings for yo
 
 * [Use n8n Cloud](../)
 * [Try free then choose a plan](../start-your-free-trial.md)
-* [Use the admin dashboard](../use-the-admin-dashboard.md)
+* [Use the Cloud console](../use-the-cloud-console.md)
 * [Update your version](../update-your-version.md)
 * [Gateway credits](../gateway-credits/README.md)
 * [Assistant credits](../assistant-credits/README.md)

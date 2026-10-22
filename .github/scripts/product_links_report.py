@@ -96,6 +96,15 @@ SKIP_DIRS = frozenset({
 })
 SKIP_FILE_RE = re.compile(r"(\.test\.|\.spec\.|\.snap$|-lock\.json$|^package-lock\.json$)")
 
+# A node marked `hidden: true` is not in the node panel, so nobody can reach
+# its docs link and the page is not expected to exist yet. Nodes routinely ship
+# hidden for weeks while the pages are written: Databricks Vector Store,
+# Databricks Embeddings and SharePoint Trigger were all hidden in master with
+# their pages still in flight (ENT-438, ENT-301), and the sweep reported all
+# three as dead every week (DOC-2380). A missing page for a hidden node is the
+# expected state, not a finding.
+HIDDEN_NODE_RE = re.compile(r"^\s*hidden:\s*true\s*,?\s*(//.*)?$", re.MULTILINE)
+
 # Stop at whitespace, quote/backtick, and the bracket/paren characters that
 # wrap a URL in code and markdown.
 URL_RE = re.compile(r"https?://docs\.n8n\.io[^\s\"'`\\)\]}<>]*")
@@ -170,6 +179,27 @@ def resolve_path(path, docs_root=None):
         if c.is_file():
             return c
     return None
+
+
+def declares_hidden_node(path, text):
+    """True if `path` belongs to a node marked `hidden: true`.
+
+    The flag is set in the `.node.ts`, but a node's docs URL often lives in the
+    sibling `.node.json` codex, which carries no flag of its own: SharePoint
+    Trigger keeps `hidden: true` in the `.ts` and the docs.n8n.io URL in the
+    `.json`. So a `.node.json` defers to its twin, and a missing twin means we
+    cannot tell, which we read as visible rather than silently dropping a link.
+    """
+    path = Path(path)
+    if path.name.endswith(".node.ts"):
+        return bool(HIDDEN_NODE_RE.search(text))
+    if path.name.endswith(".node.json"):
+        try:
+            twin = path.with_suffix(".ts").read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            return False
+        return bool(HIDDEN_NODE_RE.search(twin))
+    return False
 
 
 def should_scan(rel_path):
@@ -304,6 +334,9 @@ def summary_markdown(payload):
     t = payload["totals"]
     lines = ["## docs.n8n.io links in n8n-io/n8n", ""]
     lines.append(f"- Scanned: {t['files_scanned']} files, {t['occurrences']} link occurrences")
+    if t.get("hidden_nodes"):
+        lines.append(f"- Skipped: {t['hidden_nodes']} file(s) belonging to a hidden node "
+                     "(page not expected to exist yet)")
     lines.append(f"- Unique URLs: {t['unique_urls']} ({t['ok']} resolve cleanly, "
                  f"{t['templated']} built at runtime, {t.get('generated', 0)} generated)")
     lines.append(f"- **Dead: {t.get('dead', 0)}** | "
@@ -355,6 +388,7 @@ def scan(src_root, live=True, resolver=None, docs_root=None):
     seen = {}
     files_scanned = 0
     occurrences = 0
+    hidden_nodes = 0
     for path in src_root.rglob("*"):
         if not path.is_file():
             continue
@@ -367,6 +401,9 @@ def scan(src_root, live=True, resolver=None, docs_root=None):
         except OSError:
             continue
         if "docs.n8n.io" not in text:
+            continue
+        if declares_hidden_node(path, text):
+            hidden_nodes += 1
             continue
         for lineno, line in enumerate(text.split("\n"), 1):
             for raw in URL_RE.findall(line):
@@ -385,6 +422,7 @@ def scan(src_root, live=True, resolver=None, docs_root=None):
                     entry["locations"].append(f"{rel}:{lineno}")
 
     totals = {"files_scanned": files_scanned, "occurrences": occurrences,
+              "hidden_nodes": hidden_nodes,
               "unique_urls": len(seen), "ok": 0, "broken_anchor": 0,
               "case_mismatch": 0, "unresolved_path": 0, "empty_anchor": 0,
               "templated": 0, "generated": 0, "dead": 0, "redirect_reliant": 0,

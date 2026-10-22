@@ -24,6 +24,8 @@ A common pattern in n8n workflows is to receive a file, either from an [HTTP Req
 
 The Extract From File node extracts data from a binary format file and converts it to JSON, which can then be easily manipulated by the rest of your workflow. For converting JSON back into a binary file type, please see the [Convert to File](n8n-nodes-base.converttofile.md) node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 Use the **Operations** drop-down to select the format of the source file to extract data from.

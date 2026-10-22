@@ -20,6 +20,8 @@ layout:
 
 n8n is a low-code tool. This means you can do a lot without code, then add code when needed.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## In this section
 
 * [Using the Code node](using-the-code-node.md): add JavaScript or Python code to your workflow.

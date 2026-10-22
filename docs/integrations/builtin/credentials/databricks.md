@@ -20,9 +20,14 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 - [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) (OAuth2 only, used for the MLflow trace export)
 - [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) (OAuth2 only)
-- [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
+- [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
 - [Databricks Trigger](../trigger-nodes/n8n-nodes-base.databrickstrigger.md)
+- [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) (OAuth2 only)
+- [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md) (OAuth2 only)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -48,9 +53,13 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
 | Job (Run) | **CAN MANAGE RUN** on the job |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
-| Genie (Databricks node operations and the Genie MCP server) | **CAN RUN** on the Genie space and **CAN USE** on its SQL warehouse |
+| Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
+| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
-| Unity AI Gateway model services (Databricks Chat Model) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Unity AI Gateway model services (Databricks Chat Model, Embeddings Databricks) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Searching a vector search index (Databricks Vector Store: Get Many, Retrieve Documents, Retrieve as Tool) | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the index. **SELECT** on the source table of a Delta Sync index that syncs all of its columns lets the node list those columns. A self-managed index also needs the model service privileges above for the Embeddings Databricks node. **Metadata Filter** needs read access on the Vector Search endpoint |
+| Inserting documents (Databricks Vector Store: Insert Documents) | The privileges for searching, plus **MODIFY** on the index. Only Direct Access indexes accept inserts |
+| Exporting traces to MLflow (Databricks AI Agent) | **CAN EDIT** on the experiment. The default experiment the node creates under `/Shared` needs no extra grant, because all workspace users have **CAN MANAGE** on the `/Shared` folder by default |
 | Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |
 
 {% hint style="info" %}
@@ -120,7 +129,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -130,13 +139,13 @@ Refer to [Enable or disable partner OAuth applications](https://docs.databricks.
 
 ### Add the genie scope for the Genie MCP server
 
-The [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
 
 ```text
 access_denied: Scopes 'genie' are not assigned to the client <client-id>
 ```
 
-To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie MCP server needs all three:
+To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
 
 ```bash
 databricks account custom-app-integration update <integration-id> \
@@ -145,9 +154,9 @@ databricks account custom-app-integration update <integration-id> \
 
 Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
 
-The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
+The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
 
-If the app connection serves only the Genie MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+If the app connection serves only the Genie One MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
 
 ### Configure token lifetimes
 
@@ -201,7 +210,7 @@ There are two steps to setting up this credential:
 {% hint style="info" %}
 **Workspace assignment**
 
-The service principal must be assigned to the workspace it will access. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
+The service principal must be assigned to the workspace it will access, with the **Workspace access** entitlement. A service principal that only exists at the account level fails with `invalid_client` from the workspace token endpoint, which looks like a wrong client secret. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
 {% endhint %}
 
 {% hint style="warning" %}

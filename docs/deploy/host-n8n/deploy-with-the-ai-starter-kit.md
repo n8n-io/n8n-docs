@@ -19,6 +19,8 @@ The Self-hosted AI Starter Kit is an open, docker compose template that bootstra
 
 Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n platform with a list of compatible AI products and components to get you started building self-hosted AI workflows.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What’s included <a href="#whats-included" id="whats-included"></a>
 
 ✅ [**Self-hosted n8n**](README.md): Low-code platform with over 400 integrations and advanced AI components.

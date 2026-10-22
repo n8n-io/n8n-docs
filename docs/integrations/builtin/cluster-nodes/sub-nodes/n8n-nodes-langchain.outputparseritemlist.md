@@ -25,6 +25,8 @@ Use the Item List Output Parser node to return a list of items with a specific l
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node options <a href="#node-options" id="node-options"></a>
 
 * **Number of Items**: Enter the maximum items to return. Set to `-1` for unlimited items.
@@ -37,7 +39,7 @@ Use the Item List Output Parser node to return a list of items with a specific l
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers) for more information about the service.
+Refer to [LangChain's structured output documentation](https://docs.langchain.com/oss/javascript/langchain/structured-output) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

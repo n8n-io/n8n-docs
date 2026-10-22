@@ -16,6 +16,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Crypto](../core-nodes/n8n-nodes-base.crypto.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Credential fields
 
 Configure only the fields the action you're using needs. All fields are optional.

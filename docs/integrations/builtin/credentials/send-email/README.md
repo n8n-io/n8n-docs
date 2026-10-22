@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Send Email](../../core-nodes/n8n-nodes-base.sendemail.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an email account on a service that supports SMTP.

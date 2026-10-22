@@ -23,6 +23,8 @@ You can use these credentials to authenticate the following nodes:
 - [Asana](../app-nodes/n8n-nodes-base.asana.md)
 - [Asana Trigger](../trigger-nodes/n8n-nodes-base.asanatrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Access token

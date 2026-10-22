@@ -41,6 +41,8 @@ Refer to the [Zep credentials documentation](../../credentials/zep.md) for authe
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Session ID**: Enter the ID to use to store the memory in the workflow data.
@@ -51,8 +53,6 @@ Refer to the [Zep credentials documentation](../../credentials/zep.md) for authe
 [Browse Zep node documentation integration templates](https://n8n.io/integrations/zep) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/memory/zep_memory) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

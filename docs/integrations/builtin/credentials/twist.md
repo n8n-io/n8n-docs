@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Twist](../app-nodes/n8n-nodes-base.twist.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Twist](https://twist.com/) account.
@@ -59,9 +61,9 @@ Twist doesn't accept a localhost callback URL. These steps should allow you to c
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step.
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step. `N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 ```sh
-export WEBHOOK_URL=<YOUR-NGROK-URL>
+export N8N_WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Use the generated URL as your **OAuth 2 redirect URL** in Twist.
 

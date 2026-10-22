@@ -35,6 +35,8 @@ Use the Microsoft Agent 365 Trigger node to receive messages from Microsoft Agen
 Refer to the [Microsoft Agent 365 credentials documentation](../../credentials/microsoftagent365.md) for authentication information for this node.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node connectors <a href="#node-connectors" id="node-connectors"></a>
 
 The Microsoft Agent 365 Trigger node can connect to the following sub-nodes:

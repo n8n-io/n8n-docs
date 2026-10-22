@@ -30,6 +30,8 @@ You can create an HTTP request two ways: configure the [node parameters](#node-p
 Refer to [HTTP Request credentials](../../credentials/httprequest.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Method <a href="#method" id="method"></a>

@@ -20,6 +20,8 @@ layout:
 
 Follow these steps to configure the Send Email credentials with a Gmail account.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To follow these instructions, you must first:

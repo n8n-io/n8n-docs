@@ -30,6 +30,8 @@ End-user credentials are available on:
 End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What are end-user credentials
 
 When you create or edit a credential, select a **Credential type**:

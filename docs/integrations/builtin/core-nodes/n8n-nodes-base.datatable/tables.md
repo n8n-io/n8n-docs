@@ -20,6 +20,8 @@ layout:
 
 Use table operations to create, delete, list and update data tables. Refer to the [Data Table node](README.md) documentation for more information on the node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Create a data table <a href="#create-a-data-table" id="create-a-data-table"></a>
 
 Use this operation to create a new data table.

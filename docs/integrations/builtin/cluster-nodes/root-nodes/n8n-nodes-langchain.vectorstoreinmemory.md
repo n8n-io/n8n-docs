@@ -50,6 +50,8 @@ The simple vector storage described here is different to the AI memory nodes suc
 This node creates a [vector database](#user-content-fn-2)[^2] in the app memory.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Data safety limitations <a href="#data-safety-limitations" id="data-safety-limitations"></a>
 
 Before using the Simple Vector Store node, it's important to understand its limitations and how it works.
@@ -150,7 +152,7 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/memory/) for more information about the service.
+Refer to [LangChain's Memory Vector Store documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/memory) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

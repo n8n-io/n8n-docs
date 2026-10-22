@@ -37,6 +37,8 @@ You can use these credentials to authenticate the following nodes:
 
 * [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/README.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 You must use the authentication method required by the app or service you want to query.

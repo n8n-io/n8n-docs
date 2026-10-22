@@ -38,6 +38,8 @@ If your n8n instance supports **projects**, you'll also be able to view the exec
 When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Filter executions <a href="#filter-executions" id="filter-executions"></a>
 
 You can filter the executions list:
@@ -60,6 +62,18 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 2. On the execution you want to retry, select **Retry execution** <img src="../../.gitbook/assets/three-dot-options-menu (1).png" alt="Options menu icon" data-size="line">.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/yD2T5eTeZvZaPRV8P7MJ/" %}
+
+### What a retry runs
+
+When a node fails, a retry resumes from the saved execution state instead of starting the workflow again from the trigger:
+
+* n8n keeps the results of completed node runs. For example, if a workflow adds a row and then fails when sending a message, retrying the failed message node doesn't repeat the earlier row addition.
+* The failed node receives its saved input again and processes every item, including items it handled before it failed. For example, a node that sent some messages before it failed sends those messages again. Before you retry, check the target app for items the node already handled. To make retries safe, use operations that update existing records instead of creating new ones, such as **Append or Update Row** in the Google Sheets node or **Insert or Update** in the Postgres node.
+* If the failed node is an **Execute Sub-workflow** node, the retry runs the whole sub-workflow again from its start.
+* **Retry with original workflow** runs the workflow as it was when the execution ran. If you changed the workflow to fix the failure, choose **Retry with currently saved workflow**. Your changes apply only to nodes that haven't completed: completed nodes keep their saved results. Both options load your credentials when the retry runs, so if you only fixed a credential, **Retry with original workflow** already uses the fix.
+* Each retry is a new execution. If a retry fails, both the original execution and the failed retry show the retry option. Retry only one of them: retrying both can repeat work for the same data. To avoid extra failed retries, fix the cause before you retry.
+* You can't retry an execution that succeeded, even if it didn't do what you expected. For example, an **If** node may have sent every item to the false branch. Use **Copy to editor** to pin the saved data in the first node of your current workflow, then run the workflow again. That run repeats every node after the first, including actions such as adding rows or sending messages. Refer to [Debug and re-run past executions](debug-executions.md) for availability and steps.
+* You can retry an execution only while n8n still stores it. n8n doesn't store failed production executions if the workflow's [Save failed production executions](../../manage-workflows/configure-workflow-settings.md#save-failed-production-executions) setting is **Do not save**. For how long n8n keeps executions, refer to [Execution data](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data) for self-hosted instances, or [Manage your data](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/configure-cloud/manage-your-data) for n8n Cloud.
 
 ## Load data from previous executions into your current workflow <a href="#load-data-from-previous-executions-into-your-current-workflow" id="load-data-from-previous-executions-into-your-current-workflow"></a>
 

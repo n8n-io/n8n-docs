@@ -39,6 +39,8 @@ This section contains:
 * [Service Account](service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview) credential for some specific service nodes.
 * [Google PaLM and Gemini](../googleai.md): Get a Google Gemini/Google PaLM API key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## OAuth2 and Service Account <a href="#oauth2-and-service-account" id="oauth2-and-service-account"></a>
 
 Google service nodes support two authentication methods:

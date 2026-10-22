@@ -21,6 +21,8 @@ Refer to [Databricks credentials](../../credentials/databricks.md) for guidance 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 - A Databricks workspace with Unity AI Gateway enabled.
@@ -72,7 +74,7 @@ Use user login when the agent should run with your own Databricks permissions an
 
 Not every model service works as an agent's tool-calling model through this node. The model must support tool calling, and some endpoints that advertise it don't return tool calls the AI Agent can execute. In n8n's testing:
 
-- **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
+- **Llama 3.3 70B** and **Qwen 3.5** call tools reliably and are a good default for the [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) and other tools.
 - **gpt-oss** and **Llama 4 Maverick** endpoints don't return tool calls the AI Agent can execute. Agents using them loop until they hit **Max Iterations** without calling any tool.
 
 Your workspace may list other model services. To test one, ask the agent a question that requires a tool call and check the execution log. A model that doesn't work shows the same symptom: the agent uses all its iterations without a single tool call.
@@ -82,8 +84,10 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 ## Related resources
 
 - [Databricks credentials](../../credentials/databricks.md)
-- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie REST operations
-- [Databricks Genie MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie
+- [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie Agent REST operations
+- [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie One
+- [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) and [Embeddings Databricks](n8n-nodes-langchain.embeddingsdatabricks.md) to let an agent search a Databricks Vector Search index
+- [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

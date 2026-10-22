@@ -40,6 +40,8 @@ This feature allows you to run evaluations that calculate metrics, track how tho
 
 Metrics can be deterministic functions (such as the distance between two strings) or you can calculate them using AI. Metrics often involve checking how far away the output is from a *reference output* (also called ground truth). To do so, the dataset must contain that reference output. Some evaluations don't need this reference output though (for example, checking text for sentiment or toxicity).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 {% hint style="info" %}

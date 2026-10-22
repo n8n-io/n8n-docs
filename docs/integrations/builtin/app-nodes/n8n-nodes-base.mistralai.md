@@ -28,6 +28,8 @@ Refer to the [Mistral Cloud credentials documentation](../credentials/mistral.md
 {% endhint %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Resource**: The resource that Mistral AI should operate on. The current implementation supports the "Document" resource.

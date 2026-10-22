@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [GetResponse](../app-nodes/n8n-nodes-base.getresponse.md)
 - [GetResponse Trigger](../trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [GetResponse](https://www.getresponse.com/) account.
@@ -63,9 +65,9 @@ GetResponse doesn't accept the localhost callback URL. Follow the steps below to
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step.
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step. `N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 ```sh
-export WEBHOOK_URL=<YOUR-NGROK-URL>
+export N8N_WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Follow the [Using OAuth2](#using-oauth2) instructions to configure your credentials, using this URL as your **Redirect URL**.
 

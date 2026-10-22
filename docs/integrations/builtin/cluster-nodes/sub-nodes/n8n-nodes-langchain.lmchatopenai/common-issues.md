@@ -24,6 +24,8 @@ layout:
 
 Here are some common errors and issues with the [OpenAI Chat Model node](README.md) and steps to resolve or troubleshoot them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
 The OpenAI Chat Model node is a sub-node[^1]. Sub-nodes behave differently than other nodes when processing multiple items using expressions.
@@ -34,5 +36,5 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/wqdQXLzKrIsqxA7CuhxT/" %}
 
-[^1]: n8n cluster nodes consist of one or more sub nodes connected to a root node. Sub nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
-[^2]: Each n8n cluster node contains a single root nodes that defines the main functionality of the cluster. One or more sub nodes attach to the root node to extend its functionality.
+[^1]: n8n cluster nodes consist of one or more sub-nodes connected to a root node. Sub-nodes extend the functionality of the root node, providing access to specific services or resources or offering specific types of dedicated processing, like calculator functionality, for example.
+[^2]: Each n8n cluster node contains a single root node that defines the main functionality of the cluster. One or more sub-nodes attach to the root node to extend its functionality.

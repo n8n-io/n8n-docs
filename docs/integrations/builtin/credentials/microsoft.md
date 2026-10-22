@@ -28,6 +28,7 @@ You can use these credentials to authenticate the following nodes:
 - [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
 - [Microsoft Outlook Trigger](../trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
 - [Microsoft SharePoint](../app-nodes/n8n-nodes-base.microsoftsharepoint.md)
+- [Microsoft SharePoint Trigger](../trigger-nodes/n8n-nodes-base.microsoftsharepointtrigger.md)
 - [Microsoft Teams](../app-nodes/n8n-nodes-base.microsoftteams.md)
 - [Microsoft Teams Trigger](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 - [Microsoft To Do](../app-nodes/n8n-nodes-base.microsofttodo.md)
@@ -37,6 +38,8 @@ You can use these credentials to authenticate the following nodes:
 
 Some nodes (such as Microsoft Excel (OneDrive) and Microsoft OneDrive) let you choose between the node-specific credential (for example, **Microsoft Excel OAuth2 API**) and this generic **Microsoft OAuth2 API** credential. You can reuse the generic credential across multiple Microsoft nodes. When you use it, make sure you grant it the scopes each node needs. Nodes that don't show this dropdown use their node-specific credential. The Microsoft Excel (SharePoint) node only works with this generic credential (or the Microsoft Entra Service Principal credential for app-only access); it doesn't accept the node-specific Microsoft Excel or Microsoft SharePoint credentials. The Microsoft SharePoint node works the same way from version 2 of the node, while version 1 keeps using the node-specific Microsoft SharePoint credential.
 {% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -169,6 +172,7 @@ This setting applies to all Microsoft Graph API nodes that use Microsoft credent
 - Microsoft OneDrive
 - Microsoft Graph Security
 - Microsoft SharePoint (from version 2 of the node)
+- Microsoft SharePoint Trigger
 - Microsoft To Do
 
 {% hint style="warning" %}
@@ -239,6 +243,8 @@ Microsoft Teams credentials use the following scopes by default:
 * `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
 * `TeamworkTag.Read` (available from n8n 2.41.0)
 * `TeamsActivity.Send` (available from n8n 2.42.0)
+
+For the permission each Microsoft Teams Trigger event needs, refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation.
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>
 

@@ -49,6 +49,7 @@ the changed files in a PR) to check only those. Exits 1 if any error is found.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -94,8 +95,12 @@ SPACE_ID_TO_FOLDER = load_space_ids()
 # Run-level stats for coverage transparency (not errors).
 _STATS = {"unknown_space_ids": set(), "unknown_space_links": 0, "generated_links": 0}
 
-# Hidden/utility spaces: include mechanisms, not real link targets.
-HIDDEN_SPACES = {"_workflows", "reusable-content"}
+# Utility spaces that hold no rendered content of their own.
+# `reusable-content` is deliberately NOT listed here. Its files are the git-sync
+# form of GitBook reusable blocks, so the links inside them render on live pages.
+# Skipping the space hid those links from every checker we run; one cross-space
+# link had been broken there unseen until DOC-2396.
+HIDDEN_SPACES = {"_workflows"}
 
 # Sub-trees inside a space whose pages GitBook generates (e.g. the public API
 # reference, rendered from an OpenAPI spec) rather than backing them with a `.md`
@@ -582,6 +587,13 @@ def main() -> int:
         action="store_true",
         help="Fail on broken anchors instead of warning (see rule 5).",
     )
+    ap.add_argument(
+        "--json",
+        metavar="PATH",
+        help="Also write the findings as JSON, for the weekly sweep reporter "
+             "(internal_links_report.py). Same split as lychee: this script "
+             "finds, the reporter delivers.",
+    )
     args = ap.parse_args()
 
     if args.files:
@@ -598,6 +610,8 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     counts: dict[str, int] = {}
+    records: list[dict] = []
+    scanned = 0
 
     for md_file in files:
         if not md_file.exists() or md_file.suffix != ".md":
@@ -611,6 +625,7 @@ def main() -> int:
         if space_of(rel) in HIDDEN_SPACES:
             continue
 
+        scanned += 1
         raw = md_file.read_text(encoding="utf-8", errors="replace")
         text = strip_code(blank_gitbook_native(raw))
         for line, target in iter_targets(text):
@@ -620,10 +635,25 @@ def main() -> int:
             category, message = result
             counts[category] = counts.get(category, 0) + 1
             entry = f"{rel}:{line}  [{category}]  {message}"
-            if category in warn_categories:
+            severity = "warning" if category in warn_categories else "error"
+            if severity == "warning":
                 warnings.append(entry)
             else:
                 errors.append(entry)
+            records.append({"page": rel, "line": line, "category": category,
+                            "message": message, "target": target,
+                            "severity": severity})
+
+    if args.json:
+        Path(args.json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.json).write_text(json.dumps({
+            "files_scanned": scanned,
+            "counts": counts,
+            "errors": len(errors),
+            "warnings": len(warnings),
+            "strict_anchors": bool(args.strict_anchors),
+            "findings": records,
+        }, indent=2), encoding="utf-8")
 
     if warnings:
         print(f"⚠️  {len(warnings)} warning(s):\n")
@@ -657,7 +687,7 @@ def main() -> int:
         )
         return 1
 
-    print(f"✅ No broken internal links found ({len(files)} file(s) scanned).")
+    print(f"✅ No broken internal links found ({scanned} file(s) scanned).")
     if warnings:
         print(f"   ({len(warnings)} warning(s) above — not failing the build.)")
     return 0

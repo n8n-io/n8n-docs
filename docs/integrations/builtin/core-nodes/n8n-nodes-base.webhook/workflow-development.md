@@ -20,6 +20,8 @@ The [Webhook node](README.md) works a bit differently from other core nodes. n8n
 
 n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Build and test workflows <a href="#build-and-test-workflows" id="build-and-test-workflows"></a>
 
 While building or testing a workflow, use the **Test** webhook URL.
@@ -30,8 +32,6 @@ When using the Webhook node on localhost on a [self-hosted](https://app.gitbook.
 
 * [npm with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm#n8n-with-tunnel)
 * [Docker with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker#n8n-with-tunnel)
-
-<video src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" controls width="100%"></video>
 
 ## Production workflows <a href="#production-workflows" id="production-workflows"></a>
 

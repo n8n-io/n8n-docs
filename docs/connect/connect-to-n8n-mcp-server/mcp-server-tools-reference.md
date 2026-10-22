@@ -20,6 +20,8 @@ This page describes all tools exposed by the instance-level MCP server.
 
 ---
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Workflow management <a href="#workflow-management" id="workflow-management"></a>
 
 ### search_workflows <a href="#searchworkflows" id="searchworkflows"></a>
@@ -890,6 +892,8 @@ For MCP clients that support resources, n8n also exposes the instance context as
 The server instructions name both, so a client that reads the instructions knows to read the resource, or to call the tool if it doesn't read resources.
 
 Read the resource without parameters. To read one project, call `get_instance_context` with `projectId`.
+
+The resource follows the same access rules as the tool. A grant that can't call `get_instance_context` can't read the resource either.
 
 The response holds per-user data and n8n serves it uncached. Two users who read the same URI get different content.
 
@@ -1767,13 +1771,16 @@ Test an MCP server with a user-accessible credential and return its available to
 
 | Field | Type | Description |
 |-------|------|-------------|
+| `ok` | `boolean` | `true` when n8n connected to the server and listed its tools. From n8n 2.44.0, `false` when n8n can't connect to the server. |
 | `tools` | `array` | Tools the server exposes, each with `name` and `description` |
+| `error` | `string` | The connection error message. Present when `ok` is `false`. `error` is available from n8n 2.44.0. |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 - Opens a temporary connection to verify the server; it doesn't need to be attached to the agent first.
 - `validate_agent` doesn't perform this live check, so an unverified `mcpServers` entry can pass validation and still fail at runtime.
 - Use the returned tool names to populate `toolFilter` in the agent's `mcpServers` config entry instead of guessing.
+- From n8n 2.44.0, if n8n can't connect to the server, the tool returns `ok: false` and the reason in `error`, instead of failing the call. Check `ok` before you use `tools`.
 
 ---
 

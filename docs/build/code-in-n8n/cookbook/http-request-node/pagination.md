@@ -19,6 +19,8 @@ Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/c
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/91KTZVqkKv8rY72iELNl/" %}
 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Enable pagination <a href="#enable-pagination" id="enable-pagination"></a>
 
 In the HTTP Request node, select **Add Option** > **Pagination**.

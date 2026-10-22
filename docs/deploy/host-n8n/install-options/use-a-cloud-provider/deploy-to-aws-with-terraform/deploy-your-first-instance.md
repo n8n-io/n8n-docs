@@ -158,7 +158,7 @@ Terraform writes a `terraform.tfstate` file in your project folder. It records y
 Follow two rules:
 
 - Never commit `terraform.tfstate` to version control.
-- For anything beyond a quick trial, store state remotely, either in an S3 bucket with state locking or in [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs). Remote state encrypts your secrets, backs them up, and gives your team one shared source of truth.
+- For anything beyond a quick trial, store state remotely in HCP Terraform or an S3 bucket configured with encryption, versioning, state locking, and strict access controls.
 
 ## Clean up
 

@@ -80,7 +80,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure) for more information about the service.
+Refer to [LangChain's Azure OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/azure) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

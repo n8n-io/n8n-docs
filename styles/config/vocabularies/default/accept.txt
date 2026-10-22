@@ -315,6 +315,7 @@ URIs
 URL
 URLencoded
 Venafi
+Vercel
 VERO
 Vhost
 VM

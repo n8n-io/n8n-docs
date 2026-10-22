@@ -443,6 +443,7 @@ When you disconnect the Teams channel or delete the agent, n8n doesn't delete an
 - When the agent looks for channels by name, it searches up to 50 teams.
 - The recommended setup always creates the bot in the `n8n-agents` resource group in West Europe.
 - Files can be up to 10 MB each, with up to 10 files per message.
+- Episodic memory doesn't apply to Teams conversations yet. The agent remembers earlier messages in the same thread, but not context from other threads or chats.
 
 ## Troubleshooting
 

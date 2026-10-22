@@ -1,0 +1,14 @@
+docs/administer/manage-credentials/share-credentials-securely.md
+  h_21437a83314767 79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bf9df2af07633d84909ffce0ab0c0aa2b1cab547",
+  "prompts": {},
+  "humans": {
+    "h_21437a83314767": {
+      "author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

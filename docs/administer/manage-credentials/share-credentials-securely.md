@@ -76,7 +76,7 @@ The **Sharing** tab lists everyone with access to the credential, and every proj
 * **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md).
 * **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it. Members you shared the credential with directly can still use it. To give the whole project access, select **Share**.
 
-Owners and Admins can use any credential in their own personal space without a share. To let them use the credential in team projects too, share it with them.
+In team projects, Owners and Admins follow the same sharing rules as everyone else: they can use your credential only after you share it with them. Their instance role only extends to their own personal space.
 
 ## Remove access to a credential <a href="#remove-access-to-a-credential" id="remove-access-to-a-credential"></a>
 

@@ -36,7 +36,7 @@ Only new executions move to S3: there's no backfill, and switching the mode back
 Unlike PostgreSQL, the module doesn't version or back up the S3 bucket. If execution history matters to you, add S3 versioning or a replication rule to the bucket (the `s3_bucket_name` output) yourself.
 {% endhint %}
 
-If you add an S3 lifecycle rule to expire old objects, set the expiration well beyond your execution data retention (`n8n_pruning_max_age`, 14 days by default). Binary data and execution data objects share the same key prefix, so a lifecycle rule can't target one without risking the other; set the expiration long enough that n8n has already pruned the execution before the rule reaches it.
+If you add a lifecycle rule, scope it to binary data objects only. n8n prunes execution data in S3 itself using its execution-pruning settings; don't add a lifecycle rule for it, because that can delete data n8n still references.
 
 ## Prometheus metrics
 
